@@ -1,0 +1,78 @@
+ ##################################################
+ ##### Dub's Mission Work - All credit to Dub for this #####
+ ##################################################
+#Updated vanilla missions to BT. Updates done by Dub.
+lithuanian_missions_slot = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = LIT
+	}
+	has_country_shield = yes
+	
+	polish_alliance_lit = {
+		icon = mission_alliances
+		required_missions = {  }
+		trigger = {
+			if = {
+				limit = {
+					exists = POL
+					NOT = { is_rival = POL }
+				}
+				OR = {
+					alliance_with = POL
+					POL = {
+						is_subject_of = ROOT
+					}
+				}
+			}
+			else = { #Seriously, what the hell kind of requirement is this??
+				samogitia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			#Claims
+			custom_tooltip = defeat_the_livonian_order_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						defeat_the_livonian_order_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+
+	defeat_the_livonian_order = {
+		icon = mission_conquer_5_states
+		required_missions = { polish_alliance_lit }
+		provinces_to_highlight = {
+			defeat_the_livonian_order_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=defeat_the_livonian_order_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {		
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 7300
+			}
+		}
+	}
+	
+	#There really ought to be a mission for Lithuania to subjugate the Russian vassals.
+}

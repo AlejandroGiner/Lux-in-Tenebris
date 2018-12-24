@@ -1,0 +1,73 @@
+# Greenland
+colonial_greenland = {
+	color = { 47 188 22 }
+
+	# Random New World
+	tax_income = 0
+	native_size = 8
+	native_ferocity = 1
+	native_hostileness = 8
+	
+	trade_goods = {
+		fish = 10
+	}
+	
+	culture = {
+		kalaallisut = 10
+	}
+	
+	religion = {
+		shamanism = 10
+	}
+
+	provinces = {
+		1104 1105 3111 3112 3113
+		#BTCHANGES
+		1804 5588 5589 5590
+	}
+
+	# Specific
+	names = {
+		trigger = {
+			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
+		}
+		name = "COLONIAL_GREENLAND_BTP_Groenland"
+	}
+	names = {
+		trigger = {
+			culture_group = germanic
+			NOT = {
+				primary_culture = dutch
+				tag = NED
+				tag = HOL
+			}
+		}
+		name = "COLONIAL_GREENLAND_BTP_Gruenland"
+	}
+	names = {
+		trigger = { culture_group = byzantine }
+		name = "COLONIAL_GREENLAND_BTP_Hupervoreios"
+	}
+	names = {
+		trigger = {
+			culture_group = gaelic
+		}
+		name = "COLONIAL_GREENLAND_BTP_IE"
+	}
+	names = {
+		trigger = {
+			primary_culture = breton
+		}
+		name = "COLONIAL_GREENLAND_BTP_BR"
+	}
+	names = {
+		trigger = {
+			culture_group = brythonic
+		}
+		name = "COLONIAL_GREENLAND_BTP_CY"
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_GREENLAND_Greenland"
+	}
+}
