@@ -1,0 +1,360 @@
+ ##################################################
+ ##### Dub's Mission Work - All credit to Dub for this #####
+ ##################################################
+#Updated vanilla missions to BT. Updates done by Dub.
+swedish_missions_scandinavia = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = SWE
+	}
+	has_country_shield = yes
+
+	swe_win_independence = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { }
+		trigger = {
+			is_subject = no
+			owns_core_province = 1
+			is_at_war = no
+		}
+		effect = {
+			#Claims
+			custom_tooltip = control_scania_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						control_scania_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	control_scania = {
+		icon = mission_assemble_an_army
+		required_missions = { swe_win_independence }
+		provinces_to_highlight = {
+			control_scania_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=control_scania_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "consolidated_sweden"
+				duration = 5475
+			}
+			#Copied from Austria's missions, adjusted to become a vassalization.
+			if = {
+				limit = {
+					exists = NOR
+					is_subject = no
+					NOR = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = NOR
+				}
+			}
+			else = {
+				#Claims
+				custom_tooltip = vassalize_norway_swe_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							vassalize_norway_swe_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	vassalize_norway_swe = {
+		icon = mission_have_two_subjects
+		required_missions = { control_scania }
+		provinces_to_highlight = {
+			vassalize_norway_swe_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=vassalize_norway_swe_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "norway_subjugated_swe"
+				duration = 5475
+			}
+			#BT adjusted, changed to Scandinavia region.
+			scandinavia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+	swedish_colonialism = {
+		icon = mission_colonial
+		required_missions = { vassalize_norway_swe }
+		trigger = {
+			any_subject_country = {
+				is_colonial_nation = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 5475
+			}
+		}
+	}
+}
+
+swedish_missions_baltic = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = SWE
+	}
+	has_country_shield = yes
+
+	swe_baltic_fleet = {
+		icon = mission_galleys_in_port
+		required_missions = { }
+		trigger = {
+			naval_forcelimit = 25
+			navy_size_percentage = 0.9
+			is_subject = no
+			is_at_war = no
+		}
+		effect = {
+			#Claims
+			custom_tooltip = control_latvia_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						control_latvia_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	control_latvia = {
+		icon = mission_sea_battles
+		required_missions = { swe_baltic_fleet }
+		provinces_to_highlight = {
+			control_latvia_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=control_latvia_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "baltic_ambition_new"
+				duration = 5475
+			}
+			#Claims
+			custom_tooltip = swedish_pommerania_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						swedish_pommerania_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2996 = { #Wismar was part of Swedish Pomerania at some point.
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+				}
+				add_claim = ROOT
+			}
+			#Treaty of Königsberg (1656)
+			if = {
+				limit = {
+					exists = PRU
+					is_subject = no
+					PRU = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_vassalize_mission
+					months = 300
+					target = PRU
+				}
+			}
+			else = {
+				east_prussia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_claim = ROOT
+				}
+				42 = { #Ermland
+					if = {
+						limit = {
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+					}
+					add_claim = ROOT
+				}	
+			}
+			#Treaty of Kiejdany
+			if = {
+				limit = {
+					exists = LIT
+					is_subject = no
+					LIT = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = LIT
+				}
+			}
+			else = {
+				samogitia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_claim = ROOT
+				}
+				lithuania_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_claim = ROOT
+				}
+				pripyat_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_claim = ROOT
+				}
+				white_ruthenia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_claim = ROOT
+				}
+			}
+			
+		}
+	}
+	swedish_pommerania = {
+		icon = mission_conquer_5_states
+		required_missions = { control_latvia }
+		provinces_to_highlight = {
+			swedish_pommerania_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=swedish_pommerania_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "swe_pommerania_conquered"
+				duration = 5475
+			}
+			#Moved claims here for further Swedish expansion into HRE lands
+			hinter_pommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			vorpommern_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			mecklenburg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			karelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			#BT added Kola lappland - The natural border of the three lakes was something the Swedes would've wanted had they beaten back Russia.
+			laponia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			weser_area = { #Represents Sweden's Bremen-Verden dominion
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+}
