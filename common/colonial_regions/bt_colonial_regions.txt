@@ -49,7 +49,7 @@ colonial_cascadia = {
 		5729 5730 5731 5732 5733 5734 5735 5736 5737 5738 5739 5740 5741 5742 5743 5744 5745 5746  5747 
 		5748 5749 5750 5751 5752 5753 5754 5755 5756 5757 5758 5759 5760 5761 5762 5777 5779 5780 5781 
 		5782 5776 5790 5801 5802 5803 5804 5805 5806 5807 5808 5809 5810 5811 5812 5813 5816 5819 5820 
-		5824 5825 
+		5824 5825 5847 
 		#BTNEWPROVINCESWASTELANDS
 		#5115 #5116 #5117 #1913
 	}
@@ -595,79 +595,80 @@ colonial_acadia = {
 	}
 }
 
+#BT's Florida reannexed to Eastern US CR for now.
 #Florida
-colonial_florida = {
-	color = { 78 202 78 }			#base caribbean colour
-
-	# Random New World
-	tax_income = 0
-	native_size = 10
-	native_ferocity = 1
-	native_hostileness = 3
-	
-	trade_goods = {
-		fish = 10
-		naval_supplies = 10
-	}
-	
-	culture = {
-		arawak = 15
-	}
-	
-	religion = {
-		shamanism = 10
-	}
-
-	provinces = {
-		923 926 927 928 2533 2534 2535 2536 
-	}
-
-	# Specific
-	names = {
-		trigger = { culture_group = french }
-		name = "COLONIAL_FLORIDA_Floride"
-	}
-	names = {
-		trigger = { culture_group = gaelic }
-		name = "COLONIAL_FLORIDA_Tir_Bhlafar"
-	}
-	names = {
-		trigger = {
-			culture_group = germanic
-			NOT = {
-				primary_culture = dutch
-				tag = NED
-				tag = HOL
-			}
-		}
-		name = "COLONIAL_FLORIDA_Osterkueste"
-	}
-	names = {
-		trigger = { culture_group = byzantine }
-		name = "COLONIAL_FLORIDA_Florinta"
-	}
-	names = {
-		name = "COLONIAL_FLORIDA_Florida"
-	}
-	names = {
-		trigger = {
-			OR = {
-				tag = SPA
-				tag = CAS
-				tag = ARA
-			}
-		}
-		name = "COLONIAL_EASTERN_AMERICA_Florida"
-	}
-	
-	# Generic
-	names = {
-		name = "COLONIAL_EASTERN_AMERICA_Florida"
-	}
-	names = {
-		name = "COLONIAL_REGION_New_Root_GetName"
-	}
-}
+#colonial_florida = {
+#	color = { 78 202 78 }			#base caribbean colour
+#
+#	# Random New World
+#	tax_income = 0
+#	native_size = 10
+#	native_ferocity = 1
+#	native_hostileness = 3
+#	
+#	trade_goods = {
+#		fish = 10
+#		naval_supplies = 10
+#	}
+#	
+#	culture = {
+#		arawak = 15
+#	}
+#	
+#	religion = {
+#		shamanism = 10
+#	}
+#
+#	provinces = {
+#		923 926 927 928 2533 2534 2535 2536 
+#	}
+#
+#	# Specific
+#	names = {
+#		trigger = { culture_group = french }
+#		name = "COLONIAL_FLORIDA_Floride"
+#	}
+#	names = {
+#		trigger = { culture_group = gaelic }
+#		name = "COLONIAL_FLORIDA_Tir_Bhlafar"
+#	}
+#	names = {
+#		trigger = {
+#			culture_group = germanic
+#			NOT = {
+#				primary_culture = dutch
+#				tag = NED
+#				tag = HOL
+#			}
+#		}
+#		name = "COLONIAL_FLORIDA_Osterkueste"
+#	}
+#	names = {
+#		trigger = { culture_group = byzantine }
+#		name = "COLONIAL_FLORIDA_Florinta"
+#	}
+#	names = {
+#		name = "COLONIAL_FLORIDA_Florida"
+#	}
+#	names = {
+#		trigger = {
+#			OR = {
+#				tag = SPA
+#				tag = CAS
+#				tag = ARA
+#			}
+#		}
+#		name = "COLONIAL_EASTERN_AMERICA_Florida"
+#	}
+#	
+#	# Generic
+#	names = {
+#		name = "COLONIAL_EASTERN_AMERICA_Florida"
+#	}
+#	names = {
+#		name = "COLONIAL_REGION_New_Root_GetName"
+#	}
+#}
 
 #Cuba
 colonial_cuba = {
@@ -693,7 +694,7 @@ colonial_cuba = {
 	}
 
 	provinces = {
-		484 485 486 2654 2655 2656 5569 5570 5571 5572
+		484 485 486 2654 2655 2656 4624 4622 4623 5572
 	}
 
 	# Specific
@@ -785,7 +786,7 @@ colonial_hispaniola = {
 	}
 
 	provinces = {
-		488 489 490 2658 2659 5562 5563 5564 5565 5566 5567 5568
+		488 489 490 2658 2659 4619 5563 4618 5565 4620 5567 4621
 	}
 
 	# Specific
