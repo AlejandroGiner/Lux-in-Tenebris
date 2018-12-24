@@ -2855,7 +2855,7 @@ venezuela_area = { #3
 }
 
 maracaibo_area = { #3
-	830 2807 2813
+	830 2807 4610 4611 4609 
 }
 
 eastern_llanos = { #5
@@ -2863,7 +2863,7 @@ eastern_llanos = { #5
 }
 
 western_llanos = { #3
-	2812 2814 2815
+	2812 2814 2815 4608
 }
 
 central_llanos_area = {
@@ -2871,15 +2871,23 @@ central_llanos_area = {
 }
 
 bogota_area = { #5
-	824 825 827 832 2817
+	832 825 4603 4602
+}
+
+colombian_amazonas_area = { #3
+	822 2816 4605
+}
+
+cordillera_occidental_area = { #5
+	824 827 2817 4600 4607
 }
 
 popayan_area = { #4	
-	822 823 2818 2816
+	823 2818 4604 826 4596 
 }
 
 coquivacoa_area = { #3
-	828 829 2806
+	828 829 2806 4601 4599
 }
 
 northern_chile_area = { #5
@@ -3138,11 +3146,23 @@ arizona_area = {
 }
 
 california_area = {
-	868 869 2476 5018 5792 5794 
+	868 2476 5018 5855 5857 4635 
+}
+
+northern_california_area = { #5
+	869 5792 5794 5767 4637 
+}
+
+baja_california_area = {
+    2620 5043 5859 5860 
+}
+
+lake_cahuilla_area = {
+	5774 5791 4639 5858 
 }
 
 central_valley_area = {
-	870 4950 5032 5795 
+	4950 5032 5795 5856 4636 
 }
 
 oregon_area = {
@@ -3282,16 +3302,20 @@ rio_grande_area = { # 4
     858 2499 2614 2668
 }
 
-sonora_y_sinaloa_area = {
-   862 2616 5061 5062 4964 5043 
+sonora_area = { #5
+	2616 5061 4649 4964 4577 
 }
 
-baja_california_area = {
-    865 866 2620 5862 5861 5860
+sonora_y_sinaloa_area = {			#Cut in vanilla 1.28, but kept in BT as an upper Sonora area
+   862 4633 4650
+}
+
+southern_lower_california_area = {
+	865 866 5861 5862 
 }
 
 jalisco_area = {
-	2617 2621 2657 4576 854
+	2617 2621 2657 4576 854 5020
 }
 
 nayarit_area = { #4
@@ -3380,21 +3404,18 @@ nicaragua_area = { #5
 
 costa_rica_area = {
 	836 2663 4597
+}
 
-panama_area = { #5
+panama_area = {
     835 2664 2819 4595
 }
 
-cuba_area = { #3
-	485 2656 5571
-}
-
 east_cuba_area = { #3
-	486 2654 2655 5572
+	486 2654 2655 2656 5572
 }
 
-hispaniola_area = { #5
-   2658 5565 5567 
+central_hispaniola_area = { #5
+   2658 2659 5565 5567 
 }
 
 greater_antilles_area = { #4
@@ -3896,8 +3917,12 @@ northern_rocky_mountains_area = {
 	5741 5779 
 }
 
-northern_california_area = {
-	871 2477 5031 5763 
+lost_cost_area = {
+	2477 5031 5848 5849 
+}
+
+eel_river_area = {
+	871 5763 5851 5853 5854 
 }
 
 vancouver_island_area = {
@@ -3944,11 +3969,11 @@ willamette_valley_area = {
 }	#This area might be cut and its provinces moved to oregon.
 
 klamath_area = {
-	5798 2480 4958 5800 
+	5798 2480 4958 5800 5850 
 }
 
 siskiyou_area = {
-	4956 5803 5804
+	4956 5803 5804 5847
 }
 
 bitterroot_mountain_area = {
@@ -4014,15 +4039,15 @@ great_basin_area = {
 }
 
 sacramento_valley_area = {
-	4951 5045 5765 5797 5799 5775 
+	5045 5765 5797 5799 5775 
+}
+
+central_valley_delta_area = {
+	870 4951 5766 
 }
 
 san_francisco_bay_area = {
-	2021 5030 5764 5766 5767 5814
-}
-
-lake_cahuilla_area = {
-	5774 5791 
+	2021 5030 5764 5814 5852 4638 
 }
 
 high_desert_area = {
@@ -4149,15 +4174,15 @@ bighorn_area = {
 #Caribbean
 
 west_cuba_area = {
-   484 5569 5570
+   484 485 4624 4622 4623
 }
 
-hispaniola_area = { #4
-    488 489 4618 4619
+west_hispaniola_area = { #4
+    488 489 4618 4619 5563
 }
 
 dominica_area = { #5
-   490 2658 2659 4620 4621
+   490 4620 4621
 }
 
 virgin_islands_area = {
