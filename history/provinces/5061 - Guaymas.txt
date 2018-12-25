@@ -1,9 +1,13 @@
 # No previous file for Hualapai
 
+owner = YAQ
+controller = YAQ
+add_core = YAQ
+is_city = yes
 culture = cahita
-religion = animism
+religion = totemism
 capital = "Guaymas"			#No good name of a settlement found, going with prov name
-trade_goods = unknown
+trade_goods = fish
 hre = no
 base_tax = 1 
 base_production = 1
@@ -16,19 +20,19 @@ discovered_by = north_american
 discovered_by = mesoamerican
 
 
-1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
-	owner = WWH			#Yaqui
-	controller = WWH
-	add_core = WWH
-	is_city = yes
-	trade_goods = wool
-}
-1444.11.14 = { #BeyondTypus batch edit shortcut native start date end
+1444.11.15 = { #BeyondTypus batch edit shortcut no native start date begin
 	owner = XXX
 	controller = XXX
-	remove_core = WWH
+	remove_core = YAQ
 	is_city = no
 	trade_goods = unknown
+}
+1444.11.17 = { #BeyondTypus batch edit shortcut no native start date end
+	owner = YAQ
+	controller = YAQ
+	add_core = YAQ
+	is_city = yes
+	trade_goods = fish
 }
 1539.1.1 = { discovered_by = SPA } # Francisco de Ulloa, who called the area 'the port of ports.'
 1620.1.1 = {

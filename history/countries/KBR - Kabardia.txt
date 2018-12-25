@@ -1,0 +1,27 @@
+government = tribal
+add_government_reform = tribal_kingdom
+government_rank = 1
+primary_culture = circassian
+religion = orthodox
+technology_group = eastern
+capital = 2197 # Kabardia
+
+1444.1.1 = {
+	monarch = {
+		name = "Inal"
+		dynasty = "Inalid"
+		adm = 1
+		dip = 3
+		mil = 2
+	}
+}
+
+1470.1.1 = {
+	monarch = {
+		name = "(Interregnum)"
+		adm = 0
+		mil = 0
+		dip = 0
+		regent = yes
+	}
+}

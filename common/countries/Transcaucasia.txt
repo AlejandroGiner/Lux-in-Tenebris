@@ -1,0 +1,293 @@
+graphical_culture = easterngfx
+
+color = { 147  136 173 }
+
+historical_idea_groups = { 
+	defensive_ideas
+	quantity_ideas
+	administrative_ideas
+	trade_ideas
+	spy_ideas
+	economic_ideas
+	aristocracy_ideas
+	diplomatic_ideas
+}
+historical_units = {
+	eastern_medieval_infantry
+	eastern_knights
+	slavic_stradioti
+	eastern_militia
+	muscovite_musketeer
+	muscovite_caracolle
+	muscovite_soldaty
+	muscovite_cossack
+	russian_petrine
+	russian_lancer
+	russian_green_coat
+	russian_cuirassier
+	eastern_skirmisher
+	eastern_uhlan
+	eastern_carabinier
+	russian_mass
+}
+
+monarch_names = {
+	"Surkhay #0" = 40
+	"Eldar #0" = 30
+	"Alibek #0" = 30
+	"Budai #0" = 30
+	"Alibek #0" = 20
+	"Murtazali #0" = 20
+	"Muhammad #0" = 20
+	"Aidemer #0" = 20
+	"Elisu #0" = -1
+	"Gulandash #0" = -1
+	"Istadjalu #0" = -1
+	"Shamay-beke #0" = -1
+	"Petrezok" = 40
+	"Verzacht" = 40
+	"Belzebuk" = 40
+	"Parsabok" = 40
+	"Taniel" = 40
+	"Bougatchik" = 20
+	"Tanachouk" = 20
+	"Sibok" = 20
+	"Atsymtchouk" = 20
+	"Toutaryk" = 20
+	"Ezgbold" = 20
+	"Koudadik" = 20
+	"Kavklytch" = 20
+	"Kanoukov" = 20
+	"Temriouk" = 20
+	"Tazriout" = 20
+	"Tchiourak" = 20
+	"Boulgairouk" = 20
+	"Namstriouk" = 20
+	"Chopchouk" = 0
+	"Tazriout" = 0
+	"Machik" = 0
+	"Otchikan" = 0
+	"Kanboulat" = 0
+	"Koudenet" = 0
+	"Khoudenet" = 0
+	"Damaniouk" = 0
+	"Isbouldoug" = 0
+	"Anzarouk" = 0
+	"Kanglytchev" = 0
+	"Bitemriouk" = 0
+	"Chimgalei" = 0
+	"Tachbsaroukov" = 0
+	"Cholokh" = 0
+	"Mait" = 0
+	"Otchikan" = 0
+	"Baachik" = 0
+	"Tachat" = 0
+	"Smbat" = 0
+	Zuliyzhan = -1
+	Susane = -1
+	Babishe = -1
+	"Giorgi #0" = 60
+	"David #0" = 60
+	"Vakhtang #0" = 60
+	"Bagrat #0" = 40
+	"Alexander #0" = 20
+	"Erekle #0" = 40
+	"Konstantine #0" = 40
+	"Luarsab #0" = 40
+	"Simon #0" = 40
+	"Teimuraz #0" = 40
+	"Archil #0" = 20
+	"Bakar #0" = 20
+	"Iesse #0" = 20
+	"Kaihosro #0" = 20
+	"Rostom-Mirza #0" = 20
+	"Levan #0" = 15
+	"Demetre #0" = 10
+	"Thamar #0" = -10
+	"Anna #0" = -10
+	"Stefanoz #0" = 10
+	"Anzori #0" = 0
+	"Bebur #0" = 0
+	"Birtveli #0" = 0
+	"Djurkha #0" = 0
+	"Gulikho #0" = 0
+	"Kartlos #0" = 0
+	"Koki #0" = 0
+	"Kviria #0" = 0
+	"Lukhum #0" = 0
+	"Malkhazi #0" = 0
+	"Mushni #0" = 0
+	"Okhropir #0" = 0
+	"Orbeli #0" = 0
+	"Revaz #0" = 0
+	"Takha #0" = 0
+	"Torgva #0" = 0
+	"Tornike #0" = 0
+	"Tsotne #0" = 0
+	"Xareba #0" = 0
+	"Zviadi #0" = 0
+	"Alp #0" = 10
+	"Arslan #0" = 10
+	"Adil #0" = 10
+	"Amin #0" = 10
+	"Bahadir #0" = 20
+	"Devlet #0" = 40
+	"Fetih #0" = 20
+	"Ghazi #0" = 30
+	"Haji #0" = 20
+	"Halim #0" = 10
+	"Haspulad #0" = 10
+	"Hayder #0" = 10
+	"Inayet #0" = 10
+	"Islam #0" = 30
+	"Janay #0" = 10
+	"Janibek #0" = 10
+	"Maqsud #0" = 10
+	"Mehmed #0" = 40
+	"Mengli #0" = 20
+	"Mubarek #0" = 10
+	"Murad #0" = 10
+	"Nur Devlet #0" = 10
+	"Otemesh #0" = 10
+	"Qaplan #0" = 20
+	"Qirim #0" = 10
+	"Saadet #0" = 20
+	"Safa #0" = 10
+	"Sahib #0" = 20
+	"Satilghan #0" = 10
+	"Shahin #0" = 10
+	"Shardan #0" = 10
+	"Selamet #0" = 20
+	"Selim #0" = 30
+	"Toqtamish #0" = 10
+	"Khalida #0" = -1	
+	"Mariam #0" = -1
+	"Sabah #0" = -1
+        "Attaces #0" = 20
+        "Respendial #0" = 20
+        "Alenquer #0" = 20
+        "Alda #0" = 20
+        "Kuluk #0" = 20
+}
+
+leader_names = {
+	Derbent
+	Tabasaran
+	Gumik
+	Sarir
+	Lakz
+	Haidak
+	Philan
+	Shandan
+	Zirihgeran
+	Tumen
+	Djidan
+	Khamzin
+	Samandar
+	Balanjar
+	Shamkal
+	Nijaloy
+	Makazhoy
+	Rigakhoy
+	Buni
+	Varandoy
+	Alaroy
+	Belgatoy
+	Benoy
+	Biltoy
+	Dishni
+	Chartoy
+	Chermoy
+	Elistanzhkhoy
+	Gendargenoy
+	Kharachoi
+	Guaye
+	Adamiy
+	Abzakh
+	Zhaney
+	Mamkhegh
+	Mokhosh
+	Natukhai 
+	Temirgoy
+	Hatuqwai
+	Khegaik
+	Khetuk 
+	Cöbein
+	Shapsug
+	Beslenei
+	Ubykh 
+	Tazryt
+	Okhlov
+	Siraci Iazyg Roxolan Aorsi Alan Sarmatian 
+	Andronikashvili
+	Asrenidze Avashvili 
+	Bakradze Chkheidze 
+	Chkhenkeli Devdariani
+	Gabashvili Gardapkhadze
+	Gedevanishvili Gegechkori
+	Gulisashvili Gvazava
+	Javakhishvili Karalashvili
+	Kereselidze Kvinitadze 
+	Lomtatitdze Maglakelidze
+	Mazniashvili Natadze
+	Nikoladze Robakidze
+	Sharashidze Surguladze
+	Takaishvili Tsereteli
+	Tsulukidze Vachnadze
+	Zaldastanishvili Zhordania 
+}
+
+ship_names = {
+	Lakia Tarki "Umal Muhammad" Gazi Kumukh Khundzal
+	Kumukh
+	Gazi
+	Machimi
+	Vitskhi
+	Gumuchi
+	Kullal
+	Uri-Mukarki
+	Bartki
+	Tarki
+	Kurkli
+	Avaria
+	Agul
+	Rutul
+	Cheberloy Sharoy Shotoy Akkiy Myalkiy
+	Nokhchmakhkakhoy
+	Orstkhoi
+	Terloy
+	Chantiy
+	Chinnakhoy
+	Mulkoy
+	Satoy
+	Bartki
+	Bakhchisaray "Çürük Suv" "Chufut Kale"
+	Hansaray "Haci Giray" "Meli I Giray" 
+	"Zincilri Medrese" Kyrym  "Qirq Yer"
+	"Cufut Qale" "Chingiz Khan"
+	Adyghe
+	Cöbein
+	Beslenei
+	Zichia
+	Natukhay
+	Mamkhegh
+	Tuapse
+	Anapa
+	Nalchik
+	Ossetia
+	Kabardia
+	Petrezok
+	Aragveti Anacopia Artaani Abkhazeti
+	Bichvinta Batomi
+	Dmanisi Demetre
+	Ereti
+	Geguti Gelati
+	Kutatsi Kharnabuji Kura
+	Lasharisjvari Lore
+	Mtkvari
+	Narikala
+	Ruisi Racha
+	Seti Svaneti
+	Tamar Tbilisi Telavi Tashiri
+	Urbnisi
+}

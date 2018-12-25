@@ -2612,7 +2612,7 @@ byzantine = {
 	}
 }
 
-caucasian = {
+caucasian = { #to be reworked one day
 	graphical_culture = easterngfx
 	
 	georgian = {
@@ -2650,6 +2650,55 @@ caucasian = {
 			Tamari Tamar Taplo Tinatini Tsiala Vardo
 		}
 	}
+	nakh = {
+	primary = VAK
+		dynasty_names = {
+			Nijaloy Makazhoy Rigakhoy Buni Chanti Chinkhoi Beshni Elistanzhkhoy Dishni Turkoy Mulkoy Centoroy Benoy Alaroy Varandoy Zandakhoi Yalkhoi
+		}
+		male_names = {
+			Adam Adlan Akbolat Alik Alkhazur Alu Alvi Anzor Ansar Apti Arbi  Arzu Asmart Asu Aydamir Ayndi Badruddin Baysangur Beslan Bibulat Bislan Bisolta Bolat Borz Boysaghar Bula Bulat Buvaysar Chaborz Dalkhan Daud Deni Dokka Doku Dugurkhan Duqvakha Durgali Edil Elberd Eldar Elimbi Elimkhan Elmurza Emi Eriskhan Fayzul Gada Gayr Idris Ilman Ilyas Imran Isa Kagir Kakhir Kameri Kazbek Keram Kerimsolta Khadzhimurat Khamzat Kharon Khasbulat Khasurt Khatu Khavazh Khaydarbi Khizir Khoza Khumid Kunta Kuyra Lecha Lechi Loma Makharbi Makkal Maskhud Mayra Mayrsolt Mirza Movladi Movlid Movsar Mukharbek Mumadi Murad Murvan Nasuh Naurbi Nazhmuddin Nazyr Nezh Nurali Nurdi Olkhazar Omar Ortsa Osman Payzulla Rakhim Rizvan Rustam Saipudi Salavdi Salikh Shamhan Shamsuddi Shapa Sharani Sherip Sirazhdi Soib Solsa Soltamurad Soltamurd Supyan Surkho Sutarbi Tapa Tasho Tovsolta Turpal Umalt Usam Ushurma Usman Vakha Vakhita Valid Vezirkhan Visa Visangiri Visiyta Yakhya Yandar Yandarbi Yunadi Yunus Zaur Zayndi Ziyardi Ziyauddi Zovra Zubair Zurab
+
+		}
+		female_names = {
+			Albina Alpatu Amina Aminat Asma Asya Asyat Aybika Aymani Ayna Aysha Ayshat Ayzan Ayza Aza Azni Batta Belita Bikatu Bilqiz Birlant Bitsi Busana Cheqag Chovka Dara Dagman Dagmara Deshi Deti Duqyaha Elbika Elina Elisa Eliza Elmira Eset Esila Ezinet Indira Izaket Kameta Kamisa Kaypa Kesira Kesirat Khazani Khazbika Kheda Khiazni Kusama Lala Lalita Lamara Larisa Layla Lida Liza Luiza  Makka Malkan Malkh Malkhazni Maret Marina Marisa Markha Maryam Marzet Marzhan Marziyet Milana Nura Nurbika Nurishat Nurset Nurzhan Petimat Polla Qoqa Raisa Rovzan Roza Rubati Ruket Rukiyat Ruman Rumisa Ruvayda Sakinat Satsita Seda   Sepi Sepiyat Shahidat Shahsuvar Shovda Sieda Sovbika Taisa Tamara Tamila Taus Toita Tumisha Valida Yahita Yakha Yeza Yisa Yisiyta Zakiya Zakiyat Zalina Zama Zamira Zara Zarema Zargan Zarina Zarita Zaynap Zeliha Zezag Zezig Zulay Zulikha
+		}
+	}
+	abkhaz = {
+		primary = ABK
+		male_names = {
+			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran Tornik 
+			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat 			
+			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
+			
+			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
+			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
+			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
+			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek Iansokh 
+			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
+			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
+			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
+		}
+		female_names = {
+			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
+			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa  
+		}
+		dynasty_names = {
+			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
+			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
+		}
+	}
+	alan = {
+		primary = ALA
+		male_names = {
+			Ælbeg Æmbalan Aghsartan Alatey Akhsar Anbal Anbazuk Aravat Arsen Askhkadar Ashot Aslan Aspar Athom Balambar Balsag Barlah Bæqætar Basil Bazuk Beler Ber Biræg Boz-Uruz Buürgur Buriberdi
+			Burikhan Candak Chelakhsartag Davit Djadaron Durgulel Dzæræs Gætæg Georgy Girgon Gokhar Gubaz Guram Hasqar Huddan Istor Itaz Iveri Kandak Kandz Kavtia Kaur
+			Khankhusy Khætag Konstantin Kubal Kuddana Kul Kuluk Lak Levan Pulad Respendial Rosmag Safrak Sakhir Sangipan Saros Sathis Savkudz Soslan Suarn Syrdon Taymuraz Taus Totraz Urdure Uruzma Uturku Yasynya Zaur
+		}
+		female_names = {
+			Adadza Alda Altun Ana Atsyrukhs Baia Bedisa Borena Btsenon Burudukan Duda Elene Eliso Gergana Gulchara Guranduht Kera Keratsa Ketevan Koser
+			Lamara Lashin Lela Mariami Natia Nino Rusudan Sanatha Satinik Shatana Shorena Shukhia Tamari Tinatini Tsiala Vardo Vedokha Yeran
+		}
+	}
 	circassian = {
 		primary = CIR
 		male_names = {
@@ -2677,15 +2726,39 @@ caucasian = {
 	dagestani = {
 		primary = GAZ
 		dynasty_names = {
-			Shamkhal Kumukh
+			Rutuli Mushkuri Aghuli Tabasarani Tsakhuri Ullubiy Taimaz Bahadur Derbendi Bammatullu Utamysh Endirey Mekhtiullu Gumbeti Untsukuli Khusheti Tsunti Andi
 		}
 		male_names = {
-			Surkhay Eldar Budai Alibek Aidemer Magomed Hassan Khalil Bahram Farrukhsiyar Ghazi Farrukhsiyar Mahmud Ghazi
+			Surkhay Eldar Budai Alibek Aidemer Magomed Hassan Khalil Bahram Ghazi Farrukhsiyar Mahmud Ghazi Gamzat Shamil Ahmed Chopan Adil Akhay Amir Giray Umalat Andiy Khasbulat Bammat Murtazali Mekhti Irazi Shamsutdin Nukhbek Rashid Tuchilav Kanbulak Moldar Mugri Gebek Ibrahim Kurkulu Mamedkhan Yusufbek Balal Kurkli Musa Daniyal
 		}
 		female_names = {
-			Elisu Gulandash Aamnat Ajmaani Ajsyat Ajza Ajzan Albiika Albiina Amiina Asma Asyat Azman Aznii Beliita Bilquis 
-			Busana Dagman Dagmani Dagmara Deshi Dikman Duqyaakha Eliina Eliita Eliiza Esiila Havaa Kamiila Kamiisa Kariina 
+			Elisu Gulandash Aamnat Ajmaani Ajsyat Ajza Ajzan Albiika Albiina Amiina Asma Asyat Azman Aznii Beliita Bilquis Farija Papubike Soltanatbike Nukhbike Shamay Gikhili Khistaman Bahubike Yakhsi Patimat
+			Busana Dagman Dagmani Dagmara Deshi Dikman Duqyaakha Eliina Eliita Eliiza Esiila Havaa Kamiila Kamiisa Kariina Tuti Nenekhanum Begumbike Karimat Imibike Bababike 
 			
+		}
+	}
+	lezgian = {
+		primary = LEK
+		male_names = {
+			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran 
+			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat
+			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
+			
+			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
+			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
+			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
+			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek 
+			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
+			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
+			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
+		}
+		female_names = {
+			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
+			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa
+		}
+		dynasty_names = {
+			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
+			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
 		}
 	}
 	armenian = {
@@ -2720,6 +2793,7 @@ caucasian = {
 	}
 	#BtPLegacy Culture
 	laz_culture = {
+		primary = LAZ
 		dynasty_names = { 
 			Bagrationi Mukhrani
 			# CKII
@@ -3252,6 +3326,60 @@ maghrebi = {
 		"al-Ilighi" "al-Tadsi" "Zayyanid"
 	}
 }
+
+aramaic_group = {
+	graphical_culture = easterngfx
+	assyrian = {
+		primary = ASY
+		dynasty_names = {
+			Bakhtyshu Ebraya Haydo Ishaq Koshaba Masawaih Monobaz Sulaqa
+		}
+		male_names = {
+			Abahu Abba Achan Allah Adlai Avahu Avda Avina Azai Bustan Caiaphas Cephas Cephus Chadlai Chozai Chuma Clopas 
+			Dikla Dikiah Foma Hozai Ilit Kelaya Laszio Lazaros Lebbaeus Maadai Macabee Nahor Niv Petros Petrus Rachim 
+			Raziel Saad Saba Samal Sami Shafer Shai Shamir Shammai Tabai Taddeo Tadeu Talmai Tamasine Tavares Tavis Thad 
+			Thadeus Thomas Tiv Todos Toma Tomasso Toms Yanai Zerika
+		}
+		female_names = {
+			Anina Chanina Chasina Diklit Hanina Hasna Ketina Kitra Magdala Mahalie Mariam Marta Mehalia Nahara Nura Samantha
+			Sameah Samiya Sidra Tabbi Tabetha Tadea Tam Thomasa Thomasina
+		}
+	}
+	aramean = {
+		#primary = AME
+		dynasty_names = {
+			Bakhtyshu Ebraya Haydo Ishaq Koshaba Masawaih Monobaz Sulaqa
+		}
+		male_names = {
+			Adam Ahrun Akkad Ammanuel Ashuri Asmar Asur Avrahim Aziz Babella Bartulme Bathishwa Bazi Behnam Binyamin 
+			Daniyel Dawid Dinkha Eliyah Enwiya Eshai Gabbara Geriel Hormuz Ishaia Ishu Iskhaq Issavi Izrael Jajji 
+			Lazar Luqa Malakha Malkuno Matti Mikhael Mirza Mourad Moushe Nasraya Natan Nukh Peera Petros Pithyou
+			Polous Rabo Rowel Rustam Saggo Sargon Sehyon Shahbaz Shahen Shalimoon Shimun Shlemun Shmuel Sohdo Somi 
+			Talya Tamraz Toma Yadgar Yaghoub Yosep Youel Youmaran Younadam Younan Yukhannan Yusef
+		}
+		female_names = {
+			Abdallah Ashurina Atoraya Brekha Dawa Dwura Elishva Gilyana Istir Khannah Khawa Khoshaba Kina Layah
+			Marta Maryam Nami Neesan Nina Nuri Oda Qayyoma Rama Rebqah Sabri Sahdah Sara Shamira Shapira Sharukina
+			Shooshan Sliwa Warduni Yalda Yawallaha
+		}
+	}
+	chaldean = {
+		#primary = CLD
+		dynasty_names = {
+			Bakhtyshu Ebraya Haydo Ishaq Koshaba Masawaih Monobaz Sulaqa
+		}
+		male_names = {
+			Abahu Abba Achan Allah Adlai Avahu Avda Avina Azai Bustan Caiaphas Cephas Cephus Chadlai Chozai Chuma Clopas 
+			Dikla Dikiah Foma Hozai Ilit Kelaya Laszio Lazaros Lebbaeus Maadai Macabee Nahor Niv Petros Petrus Rachim 
+			Raziel Saad Saba Samal Sami Shafer Shai Shamir Shammai Tabai Taddeo Tadeu Talmai Tamasine Tavares Tavis Thad 
+			Thadeus Thomas Tiv Todos Toma Tomasso Toms Yanai Zerika
+		}
+		female_names = {
+			Anina Chanina Chasina Diklit Hanina Hasna Ketina Kitra Magdala Mahalie Mariam Marta Mehalia Nahara Nura Samantha
+			Sameah Samiya Sidra Tabbi Tabetha Tadea Tam Thomasa Thomasina
+		}
+	}
+}
 	
 iranian	= {
 	graphical_culture = muslimgfx
@@ -3338,6 +3466,38 @@ iranian	= {
 			Ghoncheh Zernîšan Zerya Zerê Zerî Zerîxan Zeytîn Zeytûn Zilfê Zoya Zozan Zêrîn Zîlan Zînet Zînê 
 			Šana Šanaz Šayan Šehrîban Šelal Šemam Šengê Šepal Šepirze Šermîn Ševba Ševîn Šêlaz Šîlan Šînî 
 			Šîwen Atiya
+		}
+	}
+	tat = {
+		primary = SRV
+		male_names = { 
+			Abbas Abolhassan Afshar Afshar Ahmad Ahmad Akbar Akbar Allahyar Amin Anushirvan Anushirvan 
+			Aram Ardahan Ardahan Ardavan Ardavan Ardeshir Ardeshir Assad Aurang Ayeshah Babak Babak Bahman 
+			Bahram Bahram Bakhtiar Bakhtiar Behrad Behrouz Bozorg Danush Danush Darab Dariush Darius Davud 
+			David Djamasp Ebrahim Abraham Ehsan Esfandiar Esfandiar Eskander Alexander Esma'il Ismail 
+			Faramarz Faramarz Faraz Faraz Fareed Farid Farhad Farhad Fariborz Fariborz Farroukh Farroukh 
+			Farrukhzad Farrukhzad Farzad Farzad Fath Ferdows Ferdows Fereedun Feridun Ghobad Gholam Godarz 
+			Goshtasb Goshtasb Hafez Hassan Hasan Hazarasp Hazarasp Hedayat Hooshyar Hooshyar Hormazd 
+			Hormazd Hormoz Hossein Hossein Humayun Jahandar Jahandar Jahangir Jahangir Jahanshah Jahanshah 
+			Jamshid Jamshid Javeed Javeed Kambiz Kamran Kavoos Kavoos Keyghobad Keykhosrau Keykhosrau 
+			Kharmandar Kharmandar Khashayar Khashayar Kavadh Khodadad Khodadad Khosrau Khosrau Khudayar 
+			Khudayar Khurshid Khurshid Kurush Cyrus Mahmud Manuchihr Manuchihr Manushihr Manushihr Marzuban 
+			Marzuban Mashad Mashad Maziar Mehrab Mehrzad Mohammed Muhammad Morad Morad Morteza Mozaffar 
+			Nard Naveed Nawid Nezam Parviz Pashang Pashang Peroz Peroz Pujman Reza Rostam Rostam Ruhollah 
+			Sadri Salman Shahab Shahab Shahbaz Shahbaz Shahin Shahin Shahram Shahram Shahrokh Sharokh 
+			Shahruz Shahruz Shahryar Shahryar Shapur Shapur Shayan Shayan Sina Tahmasb Tahmasb Vahhab 
+			Vahhab Vahid Vali Vandad Varshasb Varshasb Vishtasb Vishtasb Yazdegerd Yousef Joseph Zahak 
+			Zakaria Zand Zartosht Zartosht Zia Joneid Haidar Ismâ'îl Tamâshp Mohammad Kodabânda 'Abbâs Safi 
+			Hosayn Nâder Shâh 'Âdel Shâh Ebrâhim Shâh Rukh Nâder Mirza Karim Khân Abu'l Fath 
+			Sâdiq Morâd Ja'far Loft Ali Aga Muhammad Fath Alî Solaymân
+		}
+		female_names = { 
+			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram 
+			Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva Furuzan Ghamze Ghazal 
+			Ghoncheh Ghoncheh Golbahar Golbahar Golnaz Golnaz Golpari Golshan Hamdam Hurmat Irandokht 
+			Jamileh Javaneh Leila Mahdokht Mahtab Mariam Mariam Navvaba Nazgol Nazgol Nazilla Noor Parvaneh 
+			Parvaneh Parvin Pertevniyal Pourandokht Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh 
+			Shirin Soraya Touran Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh Atiya
 		}
 	}
 	khorasani = {

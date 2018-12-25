@@ -45,3 +45,44 @@ PMO_ideas = {
 		hostile_attrition = 1			
 	}
 }
+
+MDG_ideas = {
+	start = {
+		land_attrition = -0.10
+	}
+	
+	bonus = {
+		land_forcelimit_modifier  = 0.25
+	}
+
+	trigger = {
+		tag = MDG
+	}
+	free = yes		# will be added at load
+	
+	madagascar_idea1 = {
+		hostile_attrition = 1.0
+	}
+	madagascar_idea2 = {
+		leader_naval_shock = 1
+		leader_naval_fire = 1
+	}
+	madagascar_idea3 = {
+		prestige_from_naval = 1.0
+		naval_tradition_from_battle = 0.5
+	}
+	madagascar_idea4 = {
+		manpower_recovery_speed = 0.20
+		sailors_recovery_speed = 0.20
+	}
+	madagascar_idea5 = {
+		colonist_placement_chance = 0.05
+	}
+	madagascar_idea6 = {
+		trade_efficiency = 0.2
+	}
+	madagascar_idea7 = {
+		fort_maintenance_modifier = -0.2
+		defensiveness = 0.25
+	}
+}
