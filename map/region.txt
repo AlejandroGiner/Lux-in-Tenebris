@@ -120,7 +120,7 @@ south_german_region = {
 		tirol_area
 		austria_proper_area
 		inner_austria_area
-		carinthia_area
+		carniola_area
 		switzerland_area
 		lower_bavaria_area
 		upper_bavaria_area
@@ -135,7 +135,7 @@ south_german_region = {
 		bohemia_area
 		#BTADDITIONS
 		moravia_area
-		carinthia_area
+		carniola_area
 	}
 }
 
@@ -205,8 +205,8 @@ iberia_region = {
 		beieras_area
 		macaronesia_area
 		basque_area
-		spanish_galicia_area
-		balearic_islands_area
+		galicia_area
+		baleares_area
 		#BTADDITIONS
 		extremadura_area
 		murcia_area
@@ -377,16 +377,16 @@ maghreb_region = {
 		western_morocco_area
 		tripolitania_area			#Was in 8.0's Libya region
 		cyrenaica_area			#Was in 8.0's Libya region
-		barbary_coast_area
 		#BTADDITIONS
 		tagmudant_area
 		djerid_area
 		east_aures_area
 		west_aures_area
 		constantine_area
-		#oran_area			#repurposing 1.28's new barbary_coast_area into a replacement for this.
+		oran_area
 		nafusa_mountains_area			#Was in 8.0's Libya region
 		kairouan_area
+		oran_area
 	}
 }
 
@@ -1765,42 +1765,3 @@ labrador_sea_region = {
 
 #Cut regions
 libya_region = { areas = { } }			#former region added by BT, removed in 9.0
-
-#Prevents crashes when testing new alpha drafts
-unused_region = {
-	areas = {
-		unused_area
-		east_china_sea_islands_area
-		east_african_islands_area
-		arabian_sea_islands_area
-		baltic_islands_area
-		east_altishahr_area
-		amnok_area
-		north_korea_area
-		kartli_kakheti_area
-		#northern_england_area			#Removed in 1.25 but still used in BT for now
-		mercia_area
-		eastern_ireland_area
-		western_ireland_area
-		seine_area
-		#brabant_area			#Removed in 1.25 but still used in BT for now
-		#luxemburg_liege_area			#Removed in 1.25 but still used in BT for now
-		lancashire_area
-		western_lowlands_area
-		southern_isles_area
-		#Temp unused for BT
-		holland_area
-		north_karelia
-		volga_area
-		#Removed in 1.26
-		coromandel_area
-		carnatic_area
-		kerala_area
-		maharashtra_area
-		gujarat_area
-		central_doab_area
-		nepalese_area
-		carinthia_area			#Temporarily disabled
-		basque_country
-	}
-}
