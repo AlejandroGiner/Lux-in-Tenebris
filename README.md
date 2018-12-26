@@ -61,6 +61,7 @@ Patchnotes/changelog
 -Coastline terrain type nation designer cost changed from 0.85 to 0.9
  Allowed number of buildings +1***
  
+ -Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.
  
  *Reasoning is flavor and historical accuracy to represent local tribes.
  **Reasoning is being politically and geographically isolated from the rest of Africa making it not that important/profitable as Trade charter. Also to better represent 1.28 pirates.
