@@ -106,6 +106,7 @@ SWE_ideas = {
 
 	kung_och_riksdag = {
 		legitimacy = 1
+		possible_policy = 1
 	}
 	swedish_steel = {
 		discipline = 0.05
@@ -131,8 +132,8 @@ SWE_ideas = {
 
 MOS_ideas = {
 	start = {
-		province_warscore_cost = -0.15			#I wanted another diplomatic relations slot here, but alas, we need this more to encourage Russia to form properly.
-		diplomatic_reputation = 2			#Cutting plus 10 percent shock damage in favour of diplo rep, moved from the 7th idea. The point of this is to try to give Moscovy a chance to keep at least some vassals... they start with 6 now, with another 2-4 likely soon after.
+		province_warscore_cost = -0.15
+		diplomatic_reputation = 2
 	}
 
 	bonus = {
@@ -224,50 +225,80 @@ RUS_ideas = {
 SPA_ideas = {
 	start = {
 		land_morale = 0.15
-		missionaries = 1
+		artillery_fire = 1
 	}
 	
 	bonus = {
-		global_colonial_growth = 25
+		discipline = 0.05
 	}
 	
 	trigger = {
-		OR = {
-			tag = SPA
-			tag = CAS
-		}
+		tag = SPA
 	}
 	free = yes		#will be added at load.
 
-	the_reconquista = {
-		discipline = 0.05
-	}
-	spanish_inquisition = {
-		global_missionary_strength = 0.02
+	devout_catholisism = {
+		papal_influence = 2
 	}
 	inter_caetera = {
 		idea_claim_colonies = yes
 		colonists = 1
 	}
-	devout_catholisism = {
-		papal_influence = 2
-	}
-
 	gold_fleet = {
-		global_tariffs = 0.15
-		global_prov_trade_power_modifier = 0.1
+		naval_forcelimit_modifier = 0.25
 	}
-
 	spanish_armada = {
-		heavy_ship_power = 0.10
-		global_sailors_modifier = 0.1
+		heavy_ship_power = 0.1
+		leader_naval_manuever = 1
 	}
-
+	spa_casa_de_contracion = {
+		envoy_travel_time = -0.33
+		global_tariffs = 0.15
+	}
+	spa_cortes = { 
+		possible_dip_policy = 1
+	}
 	siglo_de_oro = {
 		prestige = 1
 	}
 }
 
+CAS_ideas = {
+	start = {
+		land_morale = 0.15
+		missionaries = 1
+	}
+	bonus = {
+		global_colonial_growth = 25
+	}
+	trigger = {
+		tag = CAS
+	}
+	free = yes		#will be added at load.
+	the_reconquista = {
+		army_tradition_decay = -0.01
+	}
+	spanish_inquisition = {
+		global_missionary_strength = 0.02
+	}
+	cabildos = {
+		production_efficiency = 0.1
+	}
+	inter_caetera = {
+		idea_claim_colonies = yes
+		colonists = 1
+	}
+	infantas = {
+		diplomatic_reputation = 1
+		heir_chance = 0.33
+	}
+	salamanca_scholars = {
+		global_institution_spread = 0.1
+	}
+	nueva_planta = {
+		global_autonomy = -0.05
+	}
+}
 
 NED_ideas = {
 	start = {
@@ -531,11 +562,11 @@ PRU_ideas = {
 POR_ideas = {
 	start = {
 		trade_range_modifier = 0.30
-		trade_efficiency = 0.05
+		trade_efficiency = 0.15
 	}
 	
 	bonus = {
-		global_tariffs = 0.20
+		artillery_fire = 1
 	}
 	
 	trigger = {
@@ -561,10 +592,10 @@ POR_ideas = {
 		yearly_absolutism = 0.1
 	}
 	land_before_faith = {
-		global_colonial_growth = 15
+		global_colonial_growth = 20
 	}
 	open_up_the_guilds = {
-		trade_efficiency = 0.1
+		global_tariffs = 0.20
 	}
 }
 
@@ -987,8 +1018,8 @@ JAP_ideas = {
 
 MAM_ideas = {
 	start = {
-		trade_steering = 0.25
 		cavalry_power = 0.10
+		tolerance_heathen = 3
 	}
 	
 	bonus = {
@@ -1021,14 +1052,15 @@ MAM_ideas = {
 	}
 	mam_monopoly_ports = {
 		trade_efficiency = 0.10
+		trade_steering = 0.25
 	}
 }
 
 
 NAP_ideas = {
 	start = {
-		global_institution_spread = 0.1 #University of Naples, Angevine Heritage, Academies, centre of Neapolitan renaissance.
-		trade_efficiency = 0.1 #One of the main trade port of the mediterrenean for much of the timeframe
+		global_institution_spread = 0.1
+		trade_efficiency = 0.1
 	}
 	
 	bonus = {
@@ -1048,7 +1080,7 @@ NAP_ideas = {
 		technology_cost = -0.05
 	}
 	encouraged_city_living = {
-		development_cost = -0.1 #Often among the largest cities of Europe
+		development_cost = -0.1
 	}
 	crush_the_barons = {
 		land_morale = 0.1
@@ -1068,11 +1100,11 @@ NAP_ideas = {
 ARA_ideas = {
 	start = {
 		galley_power = 0.2
-		diplomatic_reputation = 2			#Replacing -  trade efficiency 0.1, becuase CoA PUs were rebelling too much and it seemed like a fun idea
+		diplomatic_reputation = 2
 	}
 	
 	bonus = {
-		culture_conversion_cost = -0.1
+		artillery_fire = 1
 	}
 	
 	trigger = {
@@ -1119,18 +1151,17 @@ MUG_ideas = {
 	}
 	free = yes
 	
-	an_indian_padshah = { #New name for tolerate the idol worshippers
-		tolerance_heathen = 3
-		religious_unity = 0.35
-	}
 	mansabdari_system = {
 		discipline = 0.05
 	}
 	control_of_the_ulema = {
-		war_exhaustion_cost = -0.1
+		global_unrest = -1
 	}
 	mughal_ibadat_khana = {
 		idea_cost = -0.1
+	}
+	an_indian_padshah = {
+		free_mil_policy = 1
 	}
 	zabt_system = {
 		global_tax_modifier = 0.1
@@ -1145,7 +1176,7 @@ MUG_ideas = {
 
 TIM_ideas = {
 	start = {
-		diplomatic_upkeep = 1
+		possible_dip_policy = 1
 		leader_land_shock = 1
 	}
 	
@@ -1940,7 +1971,6 @@ MAR_ideas = {
 	trigger = {
 		OR = {
 			tag = MAR	#Marathas
-			tag = NAG	#Bhonsles of Nagpur
 			tag = BDA	#Baroda
 			AND = {
 				TAG = GWA
@@ -1960,10 +1990,10 @@ MAR_ideas = {
 		infantry_cost = -0.2
 	}
 	office_of_the_peshwa = {
-		core_creation = -0.1
+		core_creation = -0.15
 	}
 	encourage_ties_with_brahmin_financial_families = {
-		global_tax_modifier = 0.1
+		reform_progress_growth = 0.15
 	}
 	reform_the_bureaucracy = {
 		global_trade_goods_size_modifier = 0.1
@@ -1985,30 +2015,72 @@ TAU_ideas = {
 	}
 	
 	trigger = {
-		tag = TAU
+		OR = {
+			tag = TAU
+			tag = BPR
+		}
+	}
+	free = yes
+	
+	mandala_system = {
+		global_manpower_modifier = 0.25
+	}
+	tau_elephant_battles = {
+		cavalry_power = 0.20
+	}
+	nat_worship = {
+		religious_unity = 0.2
+	}
+	chakravartin = {
+		army_tradition = 0.5
+	}
+	the_hluttaw = {
+		global_unrest = -2
+	}
+	tau_organized_campaigns = {
+		land_attrition = -0.10
+	}
+	bayingyi = {
+		infantry_cost = -0.2
+	}
+}
+
+
+AVA_ideas = {
+	start = {
+		land_morale = 0.1
+		infantry_cost = -0.15
+	}
+	
+	bonus = {
+		cavalry_power = 0.15
+	}
+	
+	trigger = {
+		tag = AVA
 	}
 	free = yes
 	
 	legacy_of_the_pagan_dynasty = {
 		prestige = 1
 	}
-	mandala_system = {
-		global_manpower_modifier = 0.2
-	}
-	nat_worship = {
-		religious_unity = 0.2
-	}
-	bayingyi = {
-		infantry_cost = -0.2
-	}
-	chakravartin = {
-		land_morale = 0.1
+	ava_rajadhiraja = {
+		land_forcelimit_modifier = 0.2
 	}
 	manu_kye_dhammathat = {
 		stability_cost_modifier = -0.10
 	}
-	the_hluttaw = {
-		global_unrest = -1
+	ava_bamar_literature = {
+		same_culture_advisor_cost = -0.2
+	}
+	ava_hill_tribes = {
+		global_manpower_modifier = 0.2
+	}
+	ava_shan_in_line = {
+		diplomatic_reputation = 1
+	}
+	ava_provincial_governors = {
+		global_autonomy = -0.05
 	}
 }
 
@@ -2075,7 +2147,7 @@ PAP_ideas = {
 		global_tax_modifier = 0.2
 	}
 	glory_of_rome = {
-		prestige = 1
+		prestige_decay = -0.01
 	}
 	donation_of_constantine = {
 		fabricate_claims_cost = -0.25
@@ -2084,7 +2156,7 @@ PAP_ideas = {
 		production_efficiency = 0.1
 	}
 	the_vatican_museums = {
-		prestige_decay = -0.01
+		free_dip_policy = 1
 	}
 	holy_father = {
 		ae_impact = -0.10
@@ -2173,11 +2245,11 @@ ORI_ideas = {
 PUN_ideas = {
 	start = {
 		religious_unity = 0.25	#melting pot of religions
-		tolerance_heathen = 2
+		land_morale = 0.10
 	}
 
 	bonus = {
-		land_morale = 0.10
+		cavalry_power = 0.1
 	}
 	
 	trigger = {
@@ -2955,7 +3027,11 @@ PUE_ideas = {
 	}
 	
 	trigger = {
-		tag = PUE
+		OR = {
+			tag = PUE
+			tag = KER
+			tag = ZNI
+		}
 	}
 	free = yes		# will be added at load
 	
@@ -3488,7 +3564,7 @@ NAV_ideas = {
 		idea_cost = -0.1
 	}
 	end_of_fueros = {
-		stability_cost_modifier = -0.10
+		autonomy_change_time = -0.25
 	}
 }
 
@@ -5136,7 +5212,7 @@ KAZ_ideas = {
 
 ARM_ideas = {
 	start = {
-		war_exhaustion_cost = -0.1
+		war_exhaustion = -0.02
 		recover_army_morale_speed = 0.05
 	}
 
@@ -5462,7 +5538,7 @@ KHI_ideas = {
 
 BAH_ideas = {
 	start = {
-		tolerance_heathen = 3
+		cavalry_power = 0.1
 		army_tradition = 0.5
 	}
 
@@ -5502,7 +5578,7 @@ BAH_ideas = {
 
 JAJ_ideas = {
 	start = {
-		capture_ship_chance = 0.2
+		may_perform_slave_raid = yes
 		light_ship_cost = -0.20
 	}
 
@@ -5541,7 +5617,7 @@ JAJ_ideas = {
 
 JNP_ideas = {
 	start = {
-		tolerance_heathen = 3
+		infantry_cost = -0.1
 		diplomatic_upkeep = 1
 	}
 
@@ -5574,7 +5650,7 @@ JNP_ideas = {
 		prestige = 1
 	}
 	modernization_of_jaunpuri_army = {
-		infantry_cost = -0.1
+		infantry_power = 0.1
 	}
 }
 
@@ -5724,7 +5800,7 @@ ZAZ_ideas = {
 		leader_land_manuever = 1
 	}
 	zaz_classy_diplomacy = {
-		diplomatic_reputation = 1
+		power_projection_from_insults = 1
 	}
 	zaz_zaporzhian_tolerance = {
 		religious_unity = 0.25	
@@ -5980,7 +6056,10 @@ CEY_ideas = {
 	}
 	
 	trigger = {
-		tag = CEY
+		OR = {
+			tag = CEY
+			tag = KND
+		}
 	}
 	free = yes		#will be added at load.
 	
@@ -6474,6 +6553,7 @@ CAT_ideas = {
 			tag = CAT
 			tag = VAL
 			tag = MLA
+			tag = MJO
 		}
     }	#2 new tags added by Beyond Typus
     free = yes
@@ -8158,7 +8238,7 @@ DMS_ideas = {
 
 MLW_ideas = {
 	start = {
-		tolerance_heathen = 3
+		infantry_power = 0.1
 		infantry_cost = -0.1
 	}
 
@@ -11485,12 +11565,12 @@ CRN_ideas = {
 
 irish_ideas = {
 	start = {
-		army_tradition = 0.5			#Draiocht changed from land_morale
-		global_unrest = -1			#Draiocht changed from trade_efficiency
+		army_tradition = 0.5
+		global_unrest = -1
 	}
 	
 	bonus = {
-		land_morale = 0.2			#Draiocht changed from legitimacy and republican_tradition. Hehe, Paradox took another of my ideas.
+		land_morale = 0.15
 	}
 	
 	trigger = {
@@ -11502,27 +11582,27 @@ irish_ideas = {
 	free = yes
 	
 	irish_endurance = {
-		war_exhaustion = -0.02			#I had hostile attrition, but this is even better, bravo. Switching places with endurance, though, for balance.
+		war_exhaustion = -0.02
 	}
 	the_clanns = {
-		stability_cost_modifier = -0.1			#Draiocht changed from same_culture_advisor_cost. Not a bad idea, but I think stability suits better
+		same_culture_advisor_cost = -0.2
 		republican_tradition = 0.5
 	}
 	more_than_irish = {
-		culture_conversion_cost = -0.2			#Draiocht changed from global unrest
+		culture_conversion_cost = -0.2
 	}
 	loyal_catholics = {
 		papal_influence = 1
-		global_heretic_missionary_strength = 0.02				#Hehe, Paradox took my idea =D Maybe I should apply for a job after all
+		global_heretic_missionary_strength = 0.02
 	}
 	ire_abundant_harvests = {
-		global_trade_goods_size_modifier = 0.10				#eh... this one is still a bit iffy. More dripping with 19th century resentment than working towards some ideal like most NIs, unfortunately. Was global_trade_goods_size_modifier, but changing it here and in localisation
+		global_trade_goods_size_modifier = 0.10
 	}
 	unconquerable_ireland = {
-		manpower_recovery_speed = 0.20			#Draiocht changed from shock_damage_received and switched with unconquerable
+		manpower_recovery_speed = 0.20
  	}
 	ire_gallowglasses = {
-		discipline = 0.05			#Yeah... this isn't bad at all, either. Bit OPed with my other idea changes, but ah well, Ireland rarely survives anyway.
+		discipline = 0.05
 	}
 }
 
@@ -11581,7 +11661,7 @@ MTH_ideas = {
 	free = yes
 	
 	innefectual_overlords = {
-		global_tax_modifier = 0.10
+		production_efficiency = 0.1
 	}
 	foreign_nationals = {
 		diplomatic_reputation = 1
@@ -11951,5 +12031,827 @@ KLE_ideas = {
 	}
 	kle_renovate_swan_castle = {
 		global_garrison_growth = 0.25
+	}
+}
+
+DEC_ideas = {
+	start = {
+		administrative_efficiency = 0.05
+		land_morale = 0.1
+	}
+
+	bonus = {
+		infantry_power = 0.1
+	}
+	
+	trigger = {
+		tag = DEC
+	}
+	free = yes
+	
+	dakani_language = {
+		#Copied from BAH
+	}
+	dec_diwan_funding = {
+		free_adm_policy = 1
+	}
+	dec_foreign_trade_privileges = {
+		global_trade_power = 0.1
+	}
+	dec_empower_paigah = {
+		land_forcelimit_modifier = 0.2
+	}
+	dec_modernize_the_sarf_e_khas = {
+		discipline = 0.05
+	}
+	dec_jewels_of_the_nizams = {
+		diplomatic_reputation = 1
+	}
+	dec_encourage_industries = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+DLH_ideas = {
+	start = {
+		cavalry_power = 0.15
+		diplomatic_reputation = 1
+	}
+	
+	bonus = {
+		num_accepted_cultures = 1
+	}
+	
+	trigger = {
+		tag = DLH
+	}
+	free = yes
+	
+	dlh_afghan_nobility = {
+		army_tradition = 0.5
+	}
+	dlh_suppress_rebellion = {
+		global_unrest = -1
+	}
+	dlh_expansionism = {
+		core_creation = -0.1
+	}
+	dlh_textile_innovation = {
+		production_efficiency = 0.1
+	}
+	dlh_reconquest = {
+		max_states = 5
+	}
+	dlh_grand_trunk = {
+		global_own_trade_power = 0.1
+	}
+	dlh_throne_of_india = {
+		legitimacy = 1
+	}
+}
+
+BHA_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		state_maintenance_modifier = -0.15
+	}
+	bonus = {
+		years_of_nationalism = -5
+	}
+	
+	trigger = {
+		tag = BHA
+	}
+	free = yes
+
+	bha_modernized_war_elephants = {
+		cavalry_power = 0.15
+	}
+	bha_united_india = {
+		num_accepted_cultures = 2
+	}
+	bha_sanskrit_golden_age = {
+		technology_cost = -0.05
+	}
+	bha_indian_army = {
+		discipline = 0.05
+	}
+	bha_ganga = {
+		tolerance_own = 2
+	}
+	bha_brahmin_administration = {
+		administrative_efficiency = 0.05
+	}
+	bha_rocketry = {
+		artillery_power = 0.1
+	}
+}
+
+HIN_ideas = {
+	start = {
+		max_states = 5
+		global_manpower_modifier = 0.2
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = HIN
+	}
+	free = yes
+	
+	hin_sepahi = {
+		infantry_power = 0.15
+	}
+	hin_persianate_court = {
+		advisor_cost = -0.1
+	}
+	hin_indian_empire = {
+		years_of_nationalism = -5
+	}
+	hin_peacock_throne = {
+		legitimacy = 1
+	}
+	hin_gunpowder_empire = {
+		fire_damage = 0.1
+	}
+	hin_sufism = {
+		global_missionary_strength = 0.02
+	}
+	hin_industrialization = {
+		development_cost = -0.1
+	}
+}
+
+RJP_ideas = {
+	start = {
+		free_mil_policy = 1
+		land_morale = 0.1
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = RJP
+	}
+	free = yes
+	
+	rjp_imperial_legacy = {
+		core_creation = -0.1
+	}
+	rjp_land_of_petty_princes = {
+		global_manpower_modifier = 0.15
+	}
+	marwari_horses = {
+		cavalry_power = 0.15
+		movement_speed = 0.1
+	}
+	rjp_purbia_legacy = {
+		fire_damage = 0.1
+	}
+	rjp_protectors_of_the_dharma = {
+		tolerance_own = 2
+	}
+	rjp_expanded_artillery_arm = {
+		artillery_cost = -0.15
+	}
+	rjp_monumental_architecture = {
+		legitimacy = 1
+	}
+}
+
+NAG_ideas = {
+	start = {
+		ae_impact = -0.15
+		land_morale = 0.15
+	}
+	bonus = {
+		free_leader_pool = 1
+	}
+	trigger = {
+		tag = NAG
+	}
+	free = yes
+	
+	nag_unite_gonds_and_garjats = {
+		global_unrest = -2
+	}
+	nag_harsh_terrain = {
+		leader_land_manuever = 1
+	}
+	nag_send_for_artisans = {
+		build_cost = -0.1
+	}
+	nag_invite_maratha_warriors = {
+		army_tradition = 0.5
+	}
+	nag_light_cav = {
+		shock_damage = 0.1
+	}
+	nag_cultivating_the_forest = {
+		production_efficiency = 0.1
+	}
+	nag_no_cb_best_cb = {
+		unjustified_demands = -0.25
+	}
+}
+
+MER_ideas = {
+	start = {	
+		infantry_power = 0.1
+		infantry_cost = -0.2
+	}
+	bonus = {
+		war_exhaustion = -0.03		
+	}
+	trigger = {
+		tag = MER
+	}
+	free = yes
+	
+	mer_rajput_heartland = {
+		army_tradition_decay = -0.01
+	}
+	mer_victory_tower = {
+		prestige = 1
+	}
+	mer_kumbhalgarh = {
+		defensiveness = 0.15
+	}
+	mer_city_of_lakes = {
+		development_cost = -0.1
+	}
+	mer_recall_purbias = {
+		global_manpower_modifier = 0.15
+	}
+	mer_firearm_drilling = {
+		fire_damage = 0.1
+	}
+	mer_reorganized_rajput_regiments = {
+		discipline = 0.05
+	}
+}
+
+BNG_ideas = {
+	start = {
+		infantry_power = 0.1
+		global_manpower_modifier = 0.15
+	}
+	
+	bonus = {
+		backrow_artillery_damage = 0.15
+	}
+	
+	trigger = {
+		tag = BNG
+	}
+    free = yes       #will be added at load.
+    
+	bng_combat_piracy = {
+		trade_efficiency = 0.1
+	}
+	bng_habshi_generals = {
+		army_tradition = 0.5
+	}
+	bng_clearing_the_delta = {
+		development_cost = -0.1
+	}
+	bng_attract_sufis = {
+		idea_cost = -0.1
+	}
+	bng_conquest_of_the_gangetic_plain = {
+		leader_land_shock = 1
+	}
+	bng_rupees = {
+		global_tax_modifier = 0.1
+	}
+	bng_bengali_industrialization = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+GUJ_ideas = {
+	start = {
+		global_ship_trade_power = 0.1
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		global_trade_power = 0.2
+	}
+	
+	trigger = {
+		tag = GUJ
+	}
+	free = yes #will be added at load.
+	
+	garba = {
+		religious_unity = 0.5
+	}
+	jain_routes = {
+		trade_range_modifier = 0.20
+	}
+	gujarati_lipi = {
+		stability_cost_modifier = -0.1
+	}
+	merchant_diaspora = {
+		light_ship_cost = -0.20
+	}
+	spice_trade = {
+		global_prov_trade_power_modifier = 0.20
+	}
+	western_factors = {
+		trade_efficiency = 0.1
+	}
+	guj_africa = {
+		merchants = 1
+	}
+}
+
+SND_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.25
+		missionaries = 1
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+	
+	trigger = {
+		tag = SND
+	}
+	free = yes #will be added at load.
+
+	snd_enduring_dynasty = {
+		legitimacy = 1
+	}
+	snd_bab_ul_islam = {
+		global_missionary_strength = 0.02
+	}
+	snd_gujarati_connections = {
+		placed_merchant_power = 5
+	}
+	snd_makli_necropolis = {
+		tolerance_own = 1
+	}
+	snd_end_judicial_corruption = {
+		yearly_corruption = -0.1
+	}
+	snd_oversee_rise_of_thatta = {
+		build_cost = -0.1
+	}
+	snd_recruit_baloch_tribesmen = {
+		mercenary_discipline = 0.025
+	}
+}
+
+DHU_ideas = {
+	start = {
+		land_morale = 0.1
+		caravan_power = 0.2
+	}
+	
+	bonus = {
+		fire_damage = 0.1
+	}
+	
+	trigger = {
+		tag = DHU
+	}
+	free = yes #will be added at load.
+	
+	dhu_improve_amer_fort = {
+		defensiveness = 0.2
+	}
+	dhu_seek_protection_of_great_powers = {
+		diplomatic_reputation = 1
+	}
+	dhu_restore_hindu_ceremonies = {
+		tolerance_own = 1
+	}
+	dhu_foundation_of_jaipur = {
+		development_cost = -0.1
+	}
+	dhu_battles_in_foreign_lands = {
+		army_tradition_from_battle = 0.5
+	}
+	dhu_astronomical_education = {
+		technology_cost = -0.05
+	}
+	dhu_recruit_from_the_pindari = {
+		land_attrition = -0.15
+	}
+}
+
+MYS_ideas = {
+	start = {
+		land_morale = 0.1
+		free_leader_pool = 1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = MYS
+	}
+	free = yes #will be added at load.
+	
+	mys_unification_of_mysore = {
+		core_creation = -0.1
+	}
+	mys_patronize_kannada_literature = {
+		legitimacy = 1
+	}
+	mys_religious_tolerance = {
+		tolerance_heathen = 2
+	}
+	mys_reform_silk_industry = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	mys_rockets = {
+		fire_damage = 0.1
+	}
+	mys_reform_mysorean_army = {
+		free_mil_policy = 1
+	}
+	mys_dynamic_diplomacy = {
+		diplomatic_reputation = 1
+	}
+}
+
+RIG_ideas = {
+	start = {
+		garrison_growth = 0.25
+		development_cost = -0.1
+	}
+	bonus = {
+		manpower_recovery_speed = 0.2
+	}
+	trigger = {
+		tag = RIG
+	}
+	free = yes
+	rig_legacy_of_bishop_albert = {
+		papal_influence = 2
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+	}
+	rig_hanseatic_port = {
+		trade_efficiency = 0.1
+	}
+	rig_monopoly_rights = {
+		global_own_trade_power = 0.25
+	}
+	rig_denounce_witchcraft = {
+		global_missionary_strength = 0.02
+	}
+	rig_free_city = {
+		diplomatic_reputation = 1
+	}	
+	rig_fortify_riga = {
+		defensiveness = 0.2
+	}
+	rig_restore_brothers_of_the_sword = {
+		discipline = 0.05
+	}
+}
+
+CRI_ideas = {
+	start = {
+		ae_impact = -0.1
+		leader_land_manuever = 1
+	}
+	bonus = {
+		core_creation = -0.25
+	}
+	trigger = {
+		tag = CRI
+	}
+	free = yes
+	cri_genghisid_legacy = {
+		cavalry_power = 0.2
+	}
+	cri_slavers = {
+		global_own_trade_power = 0.15
+	}
+	cri_ruthenian_raids = {
+		loot_amount = 0.25
+	}
+	cri_despoilers = {
+		leader_land_shock = 1
+	}
+	cri_free_cattle_grazing = {
+		production_efficiency = 0.1
+	}
+	cri_settle_the_steppes = {
+		build_cost = -0.1
+		manpower_recovery_speed = 0.1
+	}
+	cri_allow_nogai_protectorates = {
+		global_manpower_modifier = 0.25
+	}
+}
+
+# Chernigov
+CHR_ideas = {
+	start = {
+		land_morale = 0.1
+		global_regiment_cost = -0.1
+	}
+	bonus = {
+		state_maintenance_modifier = -0.15
+	}
+	trigger = {
+		tag = CHR
+	}
+	free = yes
+	chr_legacy_of_the_old_principality = {
+		max_states = 3
+	}
+	chr_cossack_regiments = {
+		cavalry_power = 0.15
+	}
+	chr_regimental_barracks = {
+		global_manpower_modifier = 0.2
+	}
+	chr_konotop_fortress = {
+		defensiveness = 0.15
+	}
+	chr_local_councils = {
+		global_unrest = -2
+	}
+	chr_renovate_transfiguration_cathedral = {
+		tolerance_own = 2
+	}
+	chr_cultivate_the_east_dniepr = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+# Ilkhanate
+ILK_ideas = {
+	start = {
+		cavalry_power = 0.2
+		cavalry_cost = -0.15
+	}
+	bonus = {
+		cavalry_flanking = 0.5
+	}
+	trigger = {
+		tag = ILK
+	}
+	free = yes
+	ilk_restored_ilkhanate = {
+		legitimacy = 1
+		horde_unity = 1
+	}
+	ilk_favor_sufism = {
+		tolerance_heretic = 2
+	}
+	ilk_persian_language_at_court = {
+		num_accepted_cultures = 1
+	}
+	ilk_yam_networks = {
+		movement_speed = 0.15
+		envoy_travel_time = -0.25
+	}
+	ilk_mongol_peace = {
+		years_of_nationalism = -5
+	}
+	ilk_patronize_observatories = {
+		technology_cost = -0.05
+	}
+	ilk_recruit_turkoman_gunners = {
+		fire_damage = 0.1
+	}
+}
+
+SYN_ideas = {
+	start = {
+		global_regiment_cost = -0.85
+		fire_damage_received = 0.5
+	}
+	bonus = {
+		production_efficiency = 0.15
+	}
+	trigger = {
+		tag = SYN
+	}
+	free = yes
+	synth_logic_engines = {
+		technology_cost = -0.25
+	}
+	synth_loyalty_circuits = {
+		land_morale = 0.2
+	}
+	synth_durable = {
+		shock_damage_received = -0.25
+	}
+	synth_mass_produced = {
+		land_forcelimit_modifier = 0.25
+		global_regiment_recruit_speed = -0.25
+	}
+	synth_propaganda_machines = {
+		ae_impact = -0.2
+	}
+	synth_harvesters = {
+		global_tax_modifier = 0.2
+	}
+	synth_emotion_emulators = {
+		diplomatic_reputation = 1
+	}
+}
+
+MOR_ideas = {
+	start = {
+		may_perform_slave_raid = yes
+		naval_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		hostile_attrition = 1
+	}
+	trigger = {
+		tag = MOR
+	}
+	free = yes
+	mor_powerful_viziers = {
+		same_culture_advisor_cost = -0.2
+	}
+	mor_marabouts = {
+		idea_cost = -0.1
+		monthly_piety = -0.001
+	}
+	trans_saharan_trade = {
+		trade_efficiency = 0.1
+		caravan_power = 0.2
+	}
+	mor_fleet = {
+		galley_power = 0.2
+	}
+	mor_pirate_republics = {
+		privateer_efficiency = 0.15
+	}
+	mor_slave_soldiers = {
+		land_maintenance_modifier = -0.05
+		cavalry_power = 0.1
+	}
+	mor_curb_power_of_the_tribes = {
+		global_autonomy = -0.05
+	}
+}
+
+TUN_ideas = {
+	start = {
+		may_perform_slave_raid = yes
+		galley_power = 0.2		
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		tag = TUN
+	}
+	free = yes
+	tun_catalan_guard = {
+		mercenary_discipline = 0.05
+		infantry_power = 0.05
+	}
+	dual_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	corsairs = {
+		navy_tradition = 1
+		privateer_efficiency = 0.10
+	}
+	tun_attract_foreign_pirates = {
+		global_sailors_modifier = 0.25
+	}
+	tun_board_of_captains = {
+		leader_naval_fire = 1
+	}
+	tun_export_monopolies = {
+		global_own_trade_power = 0.2
+		trade_efficiency = 0.05
+	}
+	tun_caliphate = {
+		tolerance_own = 1
+		monthly_piety = 0.001
+	}
+}
+
+TEX_ideas = {
+	start = {	
+		fire_damage_received = -0.1
+		no_religion_penalty = yes
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	trigger = {
+		tag = TEX
+	}
+	free = yes
+	lone_star_state = {
+		prestige = 1
+	}
+	tex_revolution = {
+		fire_damage = 0.1
+	}
+	cotton_plantations = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	vaqueros = {
+		land_attrition = -0.1
+		movement_speed = 0.15
+	}
+	tex_native_frontiers = {
+		army_tradition_decay = -0.01
+	}
+	tejanos = {
+		stability_cost_modifier = -0.15
+	}
+	adelsverin = {
+		development_cost = -0.1
+	}
+}
+
+ASU_ideas = {
+	start = {
+		missionaries = 1
+		merchants = 1
+	}
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+	trigger = {
+		tag = ASU
+	}
+	free = yes
+	asu_reconquista = {
+		province_warscore_cost = -0.15
+	}
+	asu_camino_de_santiago = {
+		tolerance_own = 2
+	}
+	asu_aristocracy = {
+		diplomats = 1
+	}
+	asu_colonialism = {
+		colonists = 1
+	}
+	asu_millenarian_revival = {
+		global_missionary_strength = 0.02
+	}
+	asu_unify_the_provinces = {
+		global_autonomy = -0.05
+	}
+	asu_early_industrialism = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+ADU_ideas = {
+	start = {
+		land_morale = 0.15 
+		global_ship_trade_power = 0.25 
+	}
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+    
+	trigger = {
+		tag = ADU
+	}
+	free = yes        #will be added at load.
+    
+	adu_stand_against_the_reconquista = {
+		fire_damage_received = -0.15
+	}
+	adu_taifa_adminstration = {
+		vassal_forcelimit_bonus = 1
+    }
+	adu_ahl_uhl_dhimma = {
+		tolerance_heathen = 3
+    }
+	adu_legacy_of_ibn_arabi = {
+		idea_cost = -0.1
+		monthly_piety = -0.001
+	}
+	adu_jund_settlements = {
+		global_manpower_modifier = 0.15
+		core_creation = -0.15
+	}
+	adu_expeditionary_sentiment = {
+		colonists = 1
+	}
+	adu_al_awasim = {
+		defensiveness = 0.1
+		rival_border_fort_maintenance = -0.25
 	}
 }
