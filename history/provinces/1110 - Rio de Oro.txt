@@ -7,26 +7,24 @@ religion = sunni
 capital = "Agadir"
 trade_goods = sugar
 hre = no
-base_tax = 1
+base_tax = 2
 base_production = 2
-base_manpower = 1
+base_manpower = 2
 is_city = yes
 estate = estate_nobles
 add_core = MOR
 add_core = SOS
-
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+extra_cost = 8
+center_of_trade = 1
 
-
-1465.1.1 = { unrest = 5 } #Marinid Sultan killed by mob. Mohammed ibn Ali Amrani-Joutey (Idrisid) proclaims himself Sultan. Unrest in the entire country. 
-
-1472.1.1 = {
+1444.1.1 = {
 	owner = SOS
 	controller = SOS
-	unrest = 0
+	add_core = SOS
 } #Area goes to the Saadians, no idea what tag is used here -vanilla seems to use three, depending on the year
 
 1500.1.1 = { discovered_by = eastern }
