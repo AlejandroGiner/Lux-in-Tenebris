@@ -419,7 +419,7 @@ germanic = {
 		Charlotte Chiara Christa Christel Christiane Christina Christine Clara Claudia Constanze Cordula Corina Corinna 
 		Cornelia Dagmar Daniela Denise Desirée Désirée Diana Dietlind Dietlinde Dora Doris Dorothea Edda Edith Elena 
 		Eleonora Eleonore Elfriede Elisa Elisabeth Elise Elke Ella Ellen Elli Elly Elma Elsa Elsbeth Else Elvira Emelie 
-		Emely Emilia Emilie Emily Emma Emmeline Emmi Emmy Erdmute Erica Erika Erna Ester E cont. Esther Eugenie Eva Evelyn 
+		Emely Emilia Emilie Emily Emma Emmeline Emmi Emmy Erdmute Erica Erika Erna Ester Esther Eugenie Eva Evelyn 
 		Fabienne Fanny Felicia Felicitas Felizia Felizitas Finja Finnja Fiona Flora Florentina Florentine Franziska Frauke 
 		Freya Frida Fridegunde Frieda Friedegund Friedegunde Friederike Gabriela Gabriele Genoveva Gerda Gerlind Gerlinde 
 		Gertraud Gertrud Gertrudis Gesine Gina Gisela Grete Gretel Grethe Gudrun Gunda Gundula Hanna Hannah Hanne Hannelore 
@@ -432,7 +432,7 @@ germanic = {
 		Lina Linda Lisa Liselotte Lore Lotte Louisa Louise Lucia Lucie Luisa Luise Lulu Luna Luzia Luzie Lydia Madeleine 
 		Madleen Madlen Madlene Magda Magdalena Magdalene Maike Maja Manuela Mareike Marga Margareta Margarete Margaretha 
 		Margarethe Margit Margot Margret Margrit Maria Marianne Marie Marie-Theres Marie-Therese Marina Marion Marleen 
-		Marlen Marlene Marlies Marlis Marta Martha Martina Mathilde Maya Mechthild Meike Melanie M cont. Melina Melissa 
+		Marlen Marlene Marlies Marlis Marta Martha Martina Mathilde Maya Mechthild Meike Melanie Melina Melissa 
 		Merle Meta Mia Michaela Michelle Minna Miriam Mirjam Mona Monica Monika Nadia Nadin Nadine Nadja Natali Natalie 
 		Natascha Nathalie Neele Nele Nicola Nicole Nina Noemi Nora Oda Olga Olivia Ottilie Patricia Patrizia Paula Paulina 
 		Pauline Petra Pia Rachel Rafaela Raffaela Rahel Ramona Raphaela Rebecca Rebekka Regina Renate Ricarda Rita Rolanda 
@@ -1232,8 +1232,23 @@ latin = {
 			"de Rohan-Polduc" "da Fonseca"
 		}
 	}
+	apulian = {
+		#primary = EBA
+	}
+	friulan = {
+		primary = AQU
+	}
+	corsican = {
+		primary = COR
+	}
+	dalmatian = {
+		primary = RAG
+	}
 	#BtPLegacy Culture
 	romanch_culture = {
+		#primary = XXX
+	}
+	ladin_culture = {
 		#primary = XXX
 	}
 	male_names = {
@@ -1409,7 +1424,7 @@ iberian	= {
 		}
 		male_names = {
 			Aaró Aaron Abelard Abraham Absaló Abundi Adalbert Adam Adrià Alaric Albà Albí Aleix Àlvar Àngel Antoni Arnau 
-			Artur Blai Carles Cecili Conrad Dari Dionís Emili E cont. Enric Felip Ferran Francés Francesc Fructuós Germà 
+			Artur Blai Carles Cecili Conrad Dari Dionís Emili Enric Felip Ferran Francés Francesc Fructuós Germà 
 			Gonçal Guillem Guiu Ignasi Israel Joan Jordi Josep Josep Maria Lleó Lluc Lluís Macedoni Màrius Martí Miquel 
 			Octavi Òscar Pau Pere Pol Pompeu Pròsper Prudenci Prudencià Quirze Rafael Ramir Raül Reginald Ricard Robert Roc 
 			Rubèn Sergi Simó Teodor Tomàs Vicenç Vicent Xavier
@@ -1495,6 +1510,73 @@ iberian	= {
 			Constance Dórdia Elvira Elvira Estevainha Stephania Fruilhe Fronilde Gontinha Gontroda 
 			Guiomar Inês Agnes Joana Joan Leonor Eleanor Mafalda Matilda Margarida Margaret Maria 
 			Marinha Marine Mor Mayor Ouroana Sancha Sancha Teresa Teresa Urraca Urraca Gotruda Constança
+		}
+	}
+	mexican = {
+		primary = MEX
+		dynasty_names = {
+			"de Trastámara" "de Guzmán" "Álvarez de Toledo" "de la Cerda" "de Castilla" "de Valencia"
+			Téllez-Girón "Manrique de Lara" "de Ávalos" Enríquez "Osuna" "Argavieso" Ruspoli "Lasso de la Vega" "de Hoyos" Zayas "de Alcalá"
+			#CK2
+			"de Menezes" "de Mendoza" "de Niebla" "de Silva" "de Alba" "de Borja"  
+			"de Medinaceli" "de Castro" "de Haro" "Santcliment" "de Altamira" Osorio
+			Zúñiga "de Villahermosa" Vilafermosa Garmendia "de Rocamora" "de Goyeneche"
+		}
+		male_names = {
+			Enrique Fernando Juan Felipe Alfonso Carlos Sancho Ramiro Pedro Alonso Álvaro Baltasar 
+			Bernardo Bertrán Hernando
+			Cristobal Diego Domingo Esteban Fadrique Francisco García Gómez Gonzalo Gutierre Hermenegildo 
+			Ignacio Laín Lope Miguel Nuño Odón Ramón Rodrigo Tomás Valeriano
+			Alfonso Alphonse Alonso Alphonse Álvar Oliver Álvaro Oliver Bermudo Vermudo Diego Diaco 
+			Henry Fadrique Frederick Felipe Philip Fernando Ferdinand Fruela Froila García Garcia Gil 
+			Egidius Gómez Gomez Gonzalo Gonzalo Guillén William Guillermo William Gutierre Walter Juan 
+			Lope Lupo Luis Louis Manrique Amalric Martín Martin Munio Munio Nuño Nuno Ordoño Ordono 
+			Obeko Pedro Peter Pelayo Pelagius Ramiro Ramiro Rodrigo Roderick Salvador Sancho Sancho 
+			Suero Tello Vela Vela Suero Oveco John Enrique
+		}
+		female_names = {
+			Aldonza Aldonza Anderquina Beatriz Beatrice Berenguela Berengaria Blanca Blanche Constanza 
+			Constance Elvira Elvira Estefanía Stephania Fronilda Fronilde Gontroda Gotruda Inés Agnes 
+			Elisabeth Jimena Ximena Juana Joan Leonor Eleanor Mafalda Matilda María Maria Marina Marine 
+			Mayor Mayor Mencía Mencia Milia Emily Sancha Sancha Teresa Teresa Toda Toda Urraca Urraca
+			Isabel
+		}
+	}
+	brazilian = {
+		primary = BRZ
+		dynasty_names = {
+			"de Bragança" "de Camargo" "de Alburquerque" "de Vassouras" "de Noronha" "de Melo" 
+			"de Moura" "de Medeiros" "de Menezes" "de Saldanha" "de Alencar"
+			#CK2
+			"da Câmara" "da Maia" "de Abrantes" "de Moura Barreto" "de Sousa" "de Guanabara" "de Oliveira"
+			"da Fonseca" "de Caxias"
+			
+		}
+		male_names = {
+			João Filipe Pedro António Duarte Henrique José Manuel Sebastião Miguel Teodósio Diniz 
+			Alexandre Carlos Diego Jaime Luís Álvaro André Bartolomeu Caetano Damião Estevão Francisco 
+			Xavier Gabriel Garcia Gaspar Gil Guilherme Inácio Joaquim Jorge Lourenço Marco Nicolau 
+			Paulo Rafael Rogério Rui Simão Vicente Otávio
+			Afonso Aires Álvaro Bermudo Diogo Diaco Egas Estêvão Fernão 
+			Ferdinando Fernando Garcia Gil Gomes Gonçalo Gutierre 
+			Valter Henrique Hermígio João Lourenço Martim Martin
+			Mendo Munio Nuno Pôncio Mem
+			Rodrigo Rui Raimundo Vasco Vicente
+			
+			Moacir Caíque Ubirajara Ubiratã Joacir Domingos Quintino Deodoro Eduardo Emílio Castro Pascoal
+			Moreira Cláudio Dirceu Evandro Tomé Amado Silvério Basílio Cipriano Amaro Cosme Júlio Lucas
+			Severino Severiano Benjamim Epaminondas Seixas Torquato Antônio Getúlio Silveriano Brás
+			
+			
+		}
+		female_names = {
+			Aldara Alduara Beatriz Berengária Branca
+			Constância Elvira Estevânia Fruilhe Fronilde Gontinha Gontroda 
+			Guiomar Inês Agnes Joana Leonor Eleanor Mafalda Matilda Margarida Maria 
+			Marinha Marinês Ouroana Teresa Urraca Constança Célia
+			
+			Maiara Janaína Iara Tainara Iracema Mariana Bárbara Josefina Ana "Ana Paula" Aurélia
+			Adelaide Firmina Emília Cecília Lauriana Isabel
 		}
 	}
 
@@ -2329,7 +2411,22 @@ baltic	= {
 			Imela Kordula Liga Maija Marite Naula Rasa Ruta Savna Viba Zigne Ieva
 		}
 	}
-	
+	yotvingian_culture = {
+		male_names = {
+			Zygimantas Kazimieras Aleksandras Jonas Albertas Zygimantas Augustas Vytautas Jogaila Vladislovas 
+			Algirdas Stanislovas Svitrigaila Mindaugas Albertas Andrius Antanas Aras Arturas Azuolas 
+			Gediminas Giedrius Gintaras Henrikas Jonas Jonusas Juozapas Jurgis Kaributas Karolis Kristupas 
+			Liudvikas Marijus Mykolas Paulius Petras Pranciskus Raimondas Ramunas Steponas Skirgaila Tomas 
+			Vincentas Vilhelmas Vytenis Kestutis Viktoras Leonas Linas Bronislovas Darius 
+		}
+		female_names = {
+			Agné Morta Viltauté Agné Aldona Amalija Audra Aurelija Aušra Austeja Barbora Daina Daiva Dalia Danute Diana Doroteja 
+			Edita Egle Elena Elžbieta Elze Emilija Ernesta Estera Gabija Gabriele Giedre Gintare Ieva Ilona Inga Irena Jadvyga 
+			Janina Jelena Yelena Jolanta Julija Justina Kamile Karolina Katre Kotryna Kristina Laima Leja Lilija Lina Liucija 
+			Liudvika Margarita Marija Marijona Melanija Migle Milda Monika Morta Ona Rasa Regina Rozalija Rože Ruta Sandra Saule 
+			Smilte Sofija Solveiga Svajone Tatjana Ugne Urte Valerija Veronika Viktorija Vilhelmina Viltaute Vilte Vita Vitalija
+		}
+	}
 	male_names = {
 		Algirdas Antanas Antavas Aras Arunas Azuolas Budrys Bukantas Butavas Butigeidis Butvydas 
 		Daugvilas Daumantas Dausprungas Dravenis Erdenis Erdvilas Gedigaudas
@@ -2515,7 +2612,7 @@ byzantine = {
 	}
 }
 
-caucasian = {
+caucasian = { #to be reworked one day
 	graphical_culture = easterngfx
 	
 	georgian = {
@@ -2553,6 +2650,55 @@ caucasian = {
 			Tamari Tamar Taplo Tinatini Tsiala Vardo
 		}
 	}
+	nakh = {
+	primary = VAK
+		dynasty_names = {
+			Nijaloy Makazhoy Rigakhoy Buni Chanti Chinkhoi Beshni Elistanzhkhoy Dishni Turkoy Mulkoy Centoroy Benoy Alaroy Varandoy Zandakhoi Yalkhoi
+		}
+		male_names = {
+			Adam Adlan Akbolat Alik Alkhazur Alu Alvi Anzor Ansar Apti Arbi  Arzu Asmart Asu Aydamir Ayndi Badruddin Baysangur Beslan Bibulat Bislan Bisolta Bolat Borz Boysaghar Bula Bulat Buvaysar Chaborz Dalkhan Daud Deni Dokka Doku Dugurkhan Duqvakha Durgali Edil Elberd Eldar Elimbi Elimkhan Elmurza Emi Eriskhan Fayzul Gada Gayr Idris Ilman Ilyas Imran Isa Kagir Kakhir Kameri Kazbek Keram Kerimsolta Khadzhimurat Khamzat Kharon Khasbulat Khasurt Khatu Khavazh Khaydarbi Khizir Khoza Khumid Kunta Kuyra Lecha Lechi Loma Makharbi Makkal Maskhud Mayra Mayrsolt Mirza Movladi Movlid Movsar Mukharbek Mumadi Murad Murvan Nasuh Naurbi Nazhmuddin Nazyr Nezh Nurali Nurdi Olkhazar Omar Ortsa Osman Payzulla Rakhim Rizvan Rustam Saipudi Salavdi Salikh Shamhan Shamsuddi Shapa Sharani Sherip Sirazhdi Soib Solsa Soltamurad Soltamurd Supyan Surkho Sutarbi Tapa Tasho Tovsolta Turpal Umalt Usam Ushurma Usman Vakha Vakhita Valid Vezirkhan Visa Visangiri Visiyta Yakhya Yandar Yandarbi Yunadi Yunus Zaur Zayndi Ziyardi Ziyauddi Zovra Zubair Zurab
+
+		}
+		female_names = {
+			Albina Alpatu Amina Aminat Asma Asya Asyat Aybika Aymani Ayna Aysha Ayshat Ayzan Ayza Aza Azni Batta Belita Bikatu Bilqiz Birlant Bitsi Busana Cheqag Chovka Dara Dagman Dagmara Deshi Deti Duqyaha Elbika Elina Elisa Eliza Elmira Eset Esila Ezinet Indira Izaket Kameta Kamisa Kaypa Kesira Kesirat Khazani Khazbika Kheda Khiazni Kusama Lala Lalita Lamara Larisa Layla Lida Liza Luiza  Makka Malkan Malkh Malkhazni Maret Marina Marisa Markha Maryam Marzet Marzhan Marziyet Milana Nura Nurbika Nurishat Nurset Nurzhan Petimat Polla Qoqa Raisa Rovzan Roza Rubati Ruket Rukiyat Ruman Rumisa Ruvayda Sakinat Satsita Seda   Sepi Sepiyat Shahidat Shahsuvar Shovda Sieda Sovbika Taisa Tamara Tamila Taus Toita Tumisha Valida Yahita Yakha Yeza Yisa Yisiyta Zakiya Zakiyat Zalina Zama Zamira Zara Zarema Zargan Zarina Zarita Zaynap Zeliha Zezag Zezig Zulay Zulikha
+		}
+	}
+	abkhaz = {
+		primary = ABK
+		male_names = {
+			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran Tornik 
+			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat 			
+			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
+			
+			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
+			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
+			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
+			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek Iansokh 
+			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
+			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
+			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
+		}
+		female_names = {
+			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
+			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa  
+		}
+		dynasty_names = {
+			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
+			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
+		}
+	}
+	alan = {
+		primary = ALA
+		male_names = {
+			Ælbeg Æmbalan Aghsartan Alatey Akhsar Anbal Anbazuk Aravat Arsen Askhkadar Ashot Aslan Aspar Athom Balambar Balsag Barlah Bæqætar Basil Bazuk Beler Ber Biræg Boz-Uruz Buürgur Buriberdi
+			Burikhan Candak Chelakhsartag Davit Djadaron Durgulel Dzæræs Gætæg Georgy Girgon Gokhar Gubaz Guram Hasqar Huddan Istor Itaz Iveri Kandak Kandz Kavtia Kaur
+			Khankhusy Khætag Konstantin Kubal Kuddana Kul Kuluk Lak Levan Pulad Respendial Rosmag Safrak Sakhir Sangipan Saros Sathis Savkudz Soslan Suarn Syrdon Taymuraz Taus Totraz Urdure Uruzma Uturku Yasynya Zaur
+		}
+		female_names = {
+			Adadza Alda Altun Ana Atsyrukhs Baia Bedisa Borena Btsenon Burudukan Duda Elene Eliso Gergana Gulchara Guranduht Kera Keratsa Ketevan Koser
+			Lamara Lashin Lela Mariami Natia Nino Rusudan Sanatha Satinik Shatana Shorena Shukhia Tamari Tinatini Tsiala Vardo Vedokha Yeran
+		}
+	}
 	circassian = {
 		primary = CIR
 		male_names = {
@@ -2580,15 +2726,39 @@ caucasian = {
 	dagestani = {
 		primary = GAZ
 		dynasty_names = {
-			Shamkhal Kumukh
+			Rutuli Mushkuri Aghuli Tabasarani Tsakhuri Ullubiy Taimaz Bahadur Derbendi Bammatullu Utamysh Endirey Mekhtiullu Gumbeti Untsukuli Khusheti Tsunti Andi
 		}
 		male_names = {
-			Surkhay Eldar Budai Alibek Aidemer Magomed Hassan Khalil Bahram Farrukhsiyar Ghazi Farrukhsiyar Mahmud Ghazi
+			Surkhay Eldar Budai Alibek Aidemer Magomed Hassan Khalil Bahram Ghazi Farrukhsiyar Mahmud Ghazi Gamzat Shamil Ahmed Chopan Adil Akhay Amir Giray Umalat Andiy Khasbulat Bammat Murtazali Mekhti Irazi Shamsutdin Nukhbek Rashid Tuchilav Kanbulak Moldar Mugri Gebek Ibrahim Kurkulu Mamedkhan Yusufbek Balal Kurkli Musa Daniyal
 		}
 		female_names = {
-			Elisu Gulandash Aamnat Ajmaani Ajsyat Ajza Ajzan Albiika Albiina Amiina Asma Asyat Azman Aznii Beliita Bilquis 
-			Busana Dagman Dagmani Dagmara Deshi Dikman Duqyaakha Eliina Eliita Eliiza Esiila Havaa Kamiila Kamiisa Kariina 
+			Elisu Gulandash Aamnat Ajmaani Ajsyat Ajza Ajzan Albiika Albiina Amiina Asma Asyat Azman Aznii Beliita Bilquis Farija Papubike Soltanatbike Nukhbike Shamay Gikhili Khistaman Bahubike Yakhsi Patimat
+			Busana Dagman Dagmani Dagmara Deshi Dikman Duqyaakha Eliina Eliita Eliiza Esiila Havaa Kamiila Kamiisa Kariina Tuti Nenekhanum Begumbike Karimat Imibike Bababike 
 			
+		}
+	}
+	lezgian = {
+		primary = LEK
+		male_names = {
+			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran 
+			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat
+			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
+			
+			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
+			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
+			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
+			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek 
+			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
+			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
+			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
+		}
+		female_names = {
+			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
+			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa
+		}
+		dynasty_names = {
+			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
+			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
 		}
 	}
 	armenian = {
@@ -2623,6 +2793,7 @@ caucasian = {
 	}
 	#BtPLegacy Culture
 	laz_culture = {
+		primary = LAZ
 		dynasty_names = { 
 			Bagrationi Mukhrani
 			# CKII
@@ -3155,6 +3326,60 @@ maghrebi = {
 		"al-Ilighi" "al-Tadsi" "Zayyanid"
 	}
 }
+
+aramaic_group = {
+	graphical_culture = easterngfx
+	assyrian = {
+		primary = ASY
+		dynasty_names = {
+			Bakhtyshu Ebraya Haydo Ishaq Koshaba Masawaih Monobaz Sulaqa
+		}
+		male_names = {
+			Abahu Abba Achan Allah Adlai Avahu Avda Avina Azai Bustan Caiaphas Cephas Cephus Chadlai Chozai Chuma Clopas 
+			Dikla Dikiah Foma Hozai Ilit Kelaya Laszio Lazaros Lebbaeus Maadai Macabee Nahor Niv Petros Petrus Rachim 
+			Raziel Saad Saba Samal Sami Shafer Shai Shamir Shammai Tabai Taddeo Tadeu Talmai Tamasine Tavares Tavis Thad 
+			Thadeus Thomas Tiv Todos Toma Tomasso Toms Yanai Zerika
+		}
+		female_names = {
+			Anina Chanina Chasina Diklit Hanina Hasna Ketina Kitra Magdala Mahalie Mariam Marta Mehalia Nahara Nura Samantha
+			Sameah Samiya Sidra Tabbi Tabetha Tadea Tam Thomasa Thomasina
+		}
+	}
+	aramean = {
+		#primary = AME
+		dynasty_names = {
+			Bakhtyshu Ebraya Haydo Ishaq Koshaba Masawaih Monobaz Sulaqa
+		}
+		male_names = {
+			Adam Ahrun Akkad Ammanuel Ashuri Asmar Asur Avrahim Aziz Babella Bartulme Bathishwa Bazi Behnam Binyamin 
+			Daniyel Dawid Dinkha Eliyah Enwiya Eshai Gabbara Geriel Hormuz Ishaia Ishu Iskhaq Issavi Izrael Jajji 
+			Lazar Luqa Malakha Malkuno Matti Mikhael Mirza Mourad Moushe Nasraya Natan Nukh Peera Petros Pithyou
+			Polous Rabo Rowel Rustam Saggo Sargon Sehyon Shahbaz Shahen Shalimoon Shimun Shlemun Shmuel Sohdo Somi 
+			Talya Tamraz Toma Yadgar Yaghoub Yosep Youel Youmaran Younadam Younan Yukhannan Yusef
+		}
+		female_names = {
+			Abdallah Ashurina Atoraya Brekha Dawa Dwura Elishva Gilyana Istir Khannah Khawa Khoshaba Kina Layah
+			Marta Maryam Nami Neesan Nina Nuri Oda Qayyoma Rama Rebqah Sabri Sahdah Sara Shamira Shapira Sharukina
+			Shooshan Sliwa Warduni Yalda Yawallaha
+		}
+	}
+	chaldean = {
+		#primary = CLD
+		dynasty_names = {
+			Bakhtyshu Ebraya Haydo Ishaq Koshaba Masawaih Monobaz Sulaqa
+		}
+		male_names = {
+			Abahu Abba Achan Allah Adlai Avahu Avda Avina Azai Bustan Caiaphas Cephas Cephus Chadlai Chozai Chuma Clopas 
+			Dikla Dikiah Foma Hozai Ilit Kelaya Laszio Lazaros Lebbaeus Maadai Macabee Nahor Niv Petros Petrus Rachim 
+			Raziel Saad Saba Samal Sami Shafer Shai Shamir Shammai Tabai Taddeo Tadeu Talmai Tamasine Tavares Tavis Thad 
+			Thadeus Thomas Tiv Todos Toma Tomasso Toms Yanai Zerika
+		}
+		female_names = {
+			Anina Chanina Chasina Diklit Hanina Hasna Ketina Kitra Magdala Mahalie Mariam Marta Mehalia Nahara Nura Samantha
+			Sameah Samiya Sidra Tabbi Tabetha Tadea Tam Thomasa Thomasina
+		}
+	}
+}
 	
 iranian	= {
 	graphical_culture = muslimgfx
@@ -3241,6 +3466,38 @@ iranian	= {
 			Ghoncheh Zernîšan Zerya Zerê Zerî Zerîxan Zeytîn Zeytûn Zilfê Zoya Zozan Zêrîn Zîlan Zînet Zînê 
 			Šana Šanaz Šayan Šehrîban Šelal Šemam Šengê Šepal Šepirze Šermîn Ševba Ševîn Šêlaz Šîlan Šînî 
 			Šîwen Atiya
+		}
+	}
+	tat = {
+		primary = SRV
+		male_names = { 
+			Abbas Abolhassan Afshar Afshar Ahmad Ahmad Akbar Akbar Allahyar Amin Anushirvan Anushirvan 
+			Aram Ardahan Ardahan Ardavan Ardavan Ardeshir Ardeshir Assad Aurang Ayeshah Babak Babak Bahman 
+			Bahram Bahram Bakhtiar Bakhtiar Behrad Behrouz Bozorg Danush Danush Darab Dariush Darius Davud 
+			David Djamasp Ebrahim Abraham Ehsan Esfandiar Esfandiar Eskander Alexander Esma'il Ismail 
+			Faramarz Faramarz Faraz Faraz Fareed Farid Farhad Farhad Fariborz Fariborz Farroukh Farroukh 
+			Farrukhzad Farrukhzad Farzad Farzad Fath Ferdows Ferdows Fereedun Feridun Ghobad Gholam Godarz 
+			Goshtasb Goshtasb Hafez Hassan Hasan Hazarasp Hazarasp Hedayat Hooshyar Hooshyar Hormazd 
+			Hormazd Hormoz Hossein Hossein Humayun Jahandar Jahandar Jahangir Jahangir Jahanshah Jahanshah 
+			Jamshid Jamshid Javeed Javeed Kambiz Kamran Kavoos Kavoos Keyghobad Keykhosrau Keykhosrau 
+			Kharmandar Kharmandar Khashayar Khashayar Kavadh Khodadad Khodadad Khosrau Khosrau Khudayar 
+			Khudayar Khurshid Khurshid Kurush Cyrus Mahmud Manuchihr Manuchihr Manushihr Manushihr Marzuban 
+			Marzuban Mashad Mashad Maziar Mehrab Mehrzad Mohammed Muhammad Morad Morad Morteza Mozaffar 
+			Nard Naveed Nawid Nezam Parviz Pashang Pashang Peroz Peroz Pujman Reza Rostam Rostam Ruhollah 
+			Sadri Salman Shahab Shahab Shahbaz Shahbaz Shahin Shahin Shahram Shahram Shahrokh Sharokh 
+			Shahruz Shahruz Shahryar Shahryar Shapur Shapur Shayan Shayan Sina Tahmasb Tahmasb Vahhab 
+			Vahhab Vahid Vali Vandad Varshasb Varshasb Vishtasb Vishtasb Yazdegerd Yousef Joseph Zahak 
+			Zakaria Zand Zartosht Zartosht Zia Joneid Haidar Ismâ'îl Tamâshp Mohammad Kodabânda 'Abbâs Safi 
+			Hosayn Nâder Shâh 'Âdel Shâh Ebrâhim Shâh Rukh Nâder Mirza Karim Khân Abu'l Fath 
+			Sâdiq Morâd Ja'far Loft Ali Aga Muhammad Fath Alî Solaymân
+		}
+		female_names = { 
+			Afsaneh Ahu Arghavan Azarmidokht Asa Azadeh Bahar Banafsheh Behnaz Burandokht Darya Delaram 
+			Delbar Dinah Donya Elham Elnaz Farah Fareedeh Farnaz Farrin Farva Furuzan Ghamze Ghazal 
+			Ghoncheh Ghoncheh Golbahar Golbahar Golnaz Golnaz Golpari Golshan Hamdam Hurmat Irandokht 
+			Jamileh Javaneh Leila Mahdokht Mahtab Mariam Mariam Navvaba Nazgol Nazgol Nazilla Noor Parvaneh 
+			Parvaneh Parvin Pertevniyal Pourandokht Pourandokht Roshanora Roxana Salomeh Shahrzad Shahzadeh 
+			Shirin Soraya Touran Tourandokht Yasaman Yekta Zarrindokht Zeynab Zohreh Atiya
 		}
 	}
 	khorasani = {
@@ -3553,7 +3810,7 @@ altaic = {
 			Aimgul Aimzhan Akbota Akjamal Akkenje Akmaral Aksamal Aktolkin Aktoty Aliya Alia Alma Altyn Altynai Altingul 
 			Alua Albina Alfia Amangul Amina Anar Anargul Aray Arai Araylim Arailym Aru Arujan Asel Asemgul Asiya Asyl Asil 
 			Asylgul Ayagoz Ayajan Ayazhan Bazargul Bakyt Balbike Balzhan Balziya Balkiya Balym Banu Bayan Bibigul Bibinur 
-			Bota Botagoz Botakoz Damilia? Damira Dana Danagul Daniya Dariga Dariya Diana Didar Didara Dilara Dilyara Dilda 
+			Bota Botagoz Botakoz Damilia Damira Dana Danagul Daniya Dariga Dariya Diana Didar Didara Dilara Dilyara Dilda 
 			Dilya Dina Dinara Enlik Erke Erkejan Farida Fariza Fatima Fatiha Gaziza Galiya Gaukhar Gul Gulayim Gulbarshin 
 			Gulbahram Gulim Gulnaz Gulbanu Guldana Guldariga Guldaria Guljazira Guljaina Guljan Gulzada Gulziya Gulmarzhan 
 			Gulmira Gulnur Gulsara Gulsezim Gulsim Gulshat Gulshakhar Hadisha Halila Halima Hamida Hanifa Hanshayim Hanym 
@@ -3660,25 +3917,6 @@ altaic = {
 	
 central_american = {
 	graphical_culture = southamericagfx
-
-	tecos = {
-		male_names = {
-			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin 
-			Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli 
-			Cuetzpalli Cuixtli Cuitlahuac 
-			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl 
-			Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl 
-			Nezahualcoyotl Nezahualpilli Nochehuatl 
-		}
-		female_names = {
-			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua 
-			Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma 
-			Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
-			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel 
-			Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli 
-			
-		}
-	}
 	aztek = {
 		primary = AZT
 		male_names = {
@@ -3718,7 +3956,81 @@ central_american = {
 			Yolyamanitzin 
 		}
 	}
+	matlatzinca = {
+		primary = MAT
+		male_names = {
+			Tariacuri Hiquingaje Hiripan Tangaxuan Tzitzipandaquare Zuangua Huitzimengari Tangaxoan Tzimtzincha 
+			Cuinierangari Bibejw Binech Bzojj Chsáaxcejj Cháalaxa Chonna Bicu Coqui Djoraxa Gwèibóoné Gyazob 
+			Ipalnemoani Ji Jzió Jituh Jzió Láxdaóxo Lyebe Mbalaz Na Yel Naquichinisa Naxiñanguiiu Ngolbex An 
+			Rire Nisa Ro Pijje Jzió Tobi Rusiguunda Véeni Veziá Zne Yel Zniá Zyrx Gyejj Nguiiu
+		}
+		female_names = {
+			Zyanya Nayeli Teiuc Teicuih Teyacapan Tepin 
+		}
+	}
+	dynasty_names = {
+		# CKII
+		"Acatl" "Atl" "Calli" "Cipactli" "Coatl" "Coyotl" "Cozcaquauhtli" "Cuetzpalin" "Ehecatl" "Icpalli" 
+		"Itz" "Itzcuintli" "Macehualli" "Malinalli" "Mazatl" "Miquiztli" "Nezahual" "Nochtli" "Ocelotl" 
+		"Ollin" "Otli" "Ozomatli" "Pipiltin" "Pochtecatl" "Quauhtli" "Quauitl" "Quiautl" "Tecpatl" 
+		"Tecuhtli" "Tepetl" "Tetl" "Tlantli" "Tochtli" "Toltecatl" "Xochitl"
+	}
+}
+
+aridoamerican = {			#New group added in 1.28... I'm.... not really a huge fan, but I'll leave it until I can handle it myself.
+	graphical_culture = southamericagfx
+	tecos = {
+		male_names = {
+			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin 
+			Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli 
+			Cuetzpalli Cuixtli Cuitlahuac 
+			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl 
+			Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl 
+			Nezahualcoyotl Nezahualpilli Nochehuatl 
+		}
+		female_names = {
+			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua 
+			Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma 
+			Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
+			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel 
+			Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli 
+			
+		}
+	}
+	totonac = {
+		primary = TOT
+		male_names = {
+			Moctezuma Auitzotl Axayacatl Cuauhtemoc Cuitlahuac Huitzilihuitl Itzcoatl Ohimalpopoca Tizoc 
+			Motelchiuh Tehuetstiquitzin Tlacotzin Xochiquentzin Acamapichtli Chimalpopoca Tenoch Acacitli 
+			Axacaya Cacamatzin Eyahue Huicton Ilhuicamina Itzquautzin Mazatl Nopaltzin Olintecke Opochtli 
+			Quetzalmantzin Quimichetl Texcoyo Timas Tlacaelel Tlotzin Xiuhcozcatl Xocoyol Yaztachimal Zolton
+			Ahcambal Huanitzin Panitzin
+		}
+		female_names = {
+			Centehua Moyolehuani Yaotl Xipil Xitlali Xiuhcoatl Xochicotzin Xochiyotl Xoco Yayauhqui Yolihuani Yoloxochitl 
+			Yolyamanitzin 
+		}
+	}
+	tepic = {
+		male_names = {
+			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin 
+			Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli 
+			Cuetzpalli Cuixtli Cuitlahuac 
+			Huitzilin Huitzilihuitl Huitzitl Huitztecol Iquehuacatzin Itzcoatl Itzli Itzcuintli Ixtlilxochitl 
+			Mahchimaleh Matlal Mazatl Matlalihuitl Matlatzincatzin Maxtla Miztli Moctezuma Moquihuix Necuametl 
+			Nezahualcoyotl Nezahualpilli Nochehuatl 
+		}
+		female_names = {
+			Achcauhtli Acxocueitl Ahuiliztli Amoxtli Atl Atotoztli Ayauhcihuatl Azcalxochitzin Centehua 
+			Cihuaton Citlalmina Chalchiuitl Chicahua Chichimecacihuatzin Chipahua Chicomecoatl Chimalma 
+			Cihuaton Citlali Citlalli Citlalmina Coaxoch Coszcatl 
+			Cozamalotl Cuicatl Eleuia Eloxochitl Etalpalli Eztli Huehue-Zaca Itotia Iuitl Ixcatzin Izel 
+			Malinalxochitl Manauia Matlalatzin Mecatl Meztli Miahuaxiuitl Miyaoaxochitl Mizquixahual Momoztli 
+			
+		}
+	}
 	chichimecan = {
+		primary = CCM
 		male_names = {
 			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc 
 			Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui 
@@ -3732,6 +4044,52 @@ central_american = {
 			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
 			Acacitlu Citali Citlamina Etapali Ichtaca Icnoyotl Ilhuitl Macuilxochitl Mahuitzic Moyolehuani Moztla 
 			Nenetl Nochtli Papan Teoxihuitl Teuicui Tlachinolli Tlaco Tlahutli Tlalli Tlazohtzin Tlexictli Tonatzin Xihuitl 
+		}
+	}
+	guamares = {
+		primary = GAM
+		male_names = {
+			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc 
+			Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui 
+			Topiltzin Totoquihuaztli 
+			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl 
+			Xochipepe Xochipilli Yaotl Zipactonal Zolin
+		}	
+		female_names = {
+			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin 
+			Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
+			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Acacitlu Citali Citlamina Etapali Ichtaca Icnoyotl Ilhuitl Macuilxochitl Mahuitzic Moyolehuani Moztla 
+			Nenetl Nochtli Papan Teoxihuitl Teuicui Tlachinolli Tlaco Tlahutli Tlalli Tlazohtzin Tlexictli Tonatzin Xihuitl 
+		}
+	}
+	otomi = {
+		primary = OTO
+		male_names = {
+			Ocuil Olli Opochtli Ozomatli Quauhtli Tapayaxi Tecocoltzin Tecolotl Tetlepanquetzaltzin Tezozomoc 
+			Tizoc Tizocic Tlacaelel Tlacaeleltzin Tlalli Tlaloc Tochtli Tototl Tzompantzin Tlilpotonqui 
+			Topiltzin Totoquihuaztli 
+			Ueman Yaotl Yayauhqui Yolotli Yolyamanitzin Xicohtencatl Xiuhpilli Xihuitl Xipil Xipilli Xochitl 
+			Xochipepe Xochipilli Yaotl Zipactonal Zolin
+		}	
+		female_names = {
+			Quiauhxochitl Sacnite Techichpotzin Tezozomoc Tziquetzalpoztectzin 
+			Tezcatlan Tlacotl Tlahco Tlahcoehua Toltecatl Tonalnan Tlazozomizqui
+			Yoltzin Xilonen Xiloxoch Xiuhtomiyauhtzin Xochitl Xocoh Xocoyotl Yaretzi Zeltzin Zyanya
+			Acacitlu Citali Citlamina Etapali Ichtaca Icnoyotl Ilhuitl Macuilxochitl Mahuitzic Moyolehuani Moztla 
+			Nenetl Nochtli Papan Teoxihuitl Teuicui Tlachinolli Tlaco Tlahutli Tlalli Tlazohtzin Tlexictli Tonatzin Xihuitl 
+		}	
+	}
+	yaqui = {
+		primary = YAQ
+		male_names = {
+			Tariacuri Hiquingaje Hiripan Tangaxuan Tzitzipandaquare Zuangua Huitzimengari Tangaxoan Tzimtzincha 
+			Cuinierangari Bibejw Binech Bzojj Chsáaxcejj Cháalaxa Chonna Bicu Coqui Djoraxa Gwèibóoné Gyazob 
+			Ipalnemoani Ji Jzió Jituh Jzió Láxdaóxo Lyebe Mbalaz Na Yel Naquichinisa Naxiñanguiiu Ngolbex An 
+			Rire Nisa Ro Pijje Jzió Tobi Rusiguunda Véeni Veziá Zne Yel Zniá Zyrx Gyejj Nguiiu
+		}
+		female_names = {
+			Zyanya Nayeli Teiuc Teicuih Teyacapan Tepin 
 		}
 	}
 	dynasty_names = {
@@ -3790,6 +4148,42 @@ maya = {
 		}
 	} 
 	highland_mayan = {
+		male_names = {
+			"Can Ek" "Balam Quitze" "Kan Boar" "Yax Kuk Mok" "Ah Can" "Vahxaqui Caam" "Ah Cacao" "Cham Bahlun" 
+			"Pacal Balam" "Yaxum Balam" "Butz Chan" "Chaan Muan" "Yax Pac" "Ahpop-Achi" "Kan Bahlun Mo" Cocom 
+			Pacal Ahmok Arana Bakan Bor Cocaib Cocoja Conache Cotuja Gucamatz Hnuyg Kayom Kukumatz 
+			Mochcouoh Nohochacyum Oxib Queh Tecunuman Tutul Xiu Tziquin Vataki Yumcaaz Zotz Ahkinxok "Cu Ix" 
+		}
+		female_names = {
+			Sacnite Adsila Aiyana Ayasha Ayita Bly Dena Halona Kimi Magena Nayeli Kisa Eme
+		}
+	}
+	lacandon = {
+		primary = LAC
+		male_names = {
+			"Can Ek" "Balam Quitze" "Kan Boar" "Yax Kuk Mok" "Ah Can" "Vahxaqui Caam" "Ah Cacao" "Cham Bahlun" 
+			"Pacal Balam" "Yaxum Balam" "Butz Chan" "Chaan Muan" "Yax Pac" "Ahpop-Achi" "Kan Bahlun Mo" Cocom 
+			Pacal Ahmok Arana Bakan Bor Cocaib Cocoja Conache Cotuja Gucamatz Hnuyg Kayom Kukumatz 
+			Mochcouoh Nohochacyum Oxib Queh Tecunuman Tutul Xiu Tziquin Vataki Yumcaaz Zotz Ahkinxok "Cu Ix" 
+		}
+		female_names = {
+			Sacnite Adsila Aiyana Ayasha Ayita Bly Dena Halona Kimi Magena Nayeli Kisa Eme
+		}
+	}
+	wastek = {
+		primary = HST
+		male_names = {
+			"Can Ek" "Balam Quitze" "Kan Boar" "Yax Kuk Mok" "Ah Can" "Vahxaqui Caam" "Ah Cacao" "Cham Bahlun" 
+			"Pacal Balam" "Yaxum Balam" "Butz Chan" "Chaan Muan" "Yax Pac" "Ahpop-Achi" "Kan Bahlun Mo" Cocom 
+			Pacal Ahmok Arana Bakan Bor Cocaib Cocoja Conache Cotuja Gucamatz Hnuyg Kayom Kukumatz 
+			Mochcouoh Nohochacyum Oxib Queh Tecunuman Tutul Xiu Tziquin Vataki Yumcaaz Zotz Ahkinxok "Cu Ix" 
+		}
+		female_names = {
+			Sacnite Adsila Aiyana Ayasha Ayita Bly Dena Halona Kimi Magena Nayeli Kisa Eme
+		}
+	}
+	chontales = {
+		primary = YOK
 		male_names = {
 			"Can Ek" "Balam Quitze" "Kan Boar" "Yax Kuk Mok" "Ah Can" "Vahxaqui Caam" "Ah Cacao" "Cham Bahlun" 
 			"Pacal Balam" "Yaxum Balam" "Butz Chan" "Chaan Muan" "Yax Pac" "Ahpop-Achi" "Kan Bahlun Mo" Cocom 
@@ -3969,7 +4363,7 @@ je = {
 			Sénaqué Sira Gununusa Puyucahua Mataojo Igualdad Yaró Guenoa Bohané Minuan
 		}
 		male_names = {
-			Zapicán Abayubá Vaimaca Perú Senacua Tabaré Itanú, Yrupé, Jasymimbí, Tacuabé Vaimaca-Pirú
+			Zapicán Abayubá Vaimaca Perú Senacua Tabaré Itanú Yrupé Jasymimbí Tacuabé Vaimaca-Pirú
 		}
 		female_names = {
 			Bartira Potira Porasy Jougousa Azelene
@@ -5184,7 +5578,7 @@ sonoran = {
 	}
 }
 
-na_dene = {			#Note this is turned into a Pueblo group in BT, mixing multiple different language families. True Na Dene group is now the Northern Na Dene group
+apachean = {			#Note this is turned into a Pueblo group in BT, mixing multiple different language families.
 	graphical_culture = northamericagfx
 
 	apache = {			#repurposed in BT to Plains Apache
@@ -5206,6 +5600,8 @@ na_dene = {			#Note this is turned into a Pueblo group in BT, mixing multiple di
 			Dahteste Ilthgozay Gouyen Lozen Tohayea 
 		}
 	}
+	#Mescalero cut for BT
+	#Lipan cut for BT
 	navajo = {
 		primary = NAH
 		dynasty_names = {
@@ -5260,7 +5656,7 @@ na_dene = {			#Note this is turned into a Pueblo group in BT, mixing multiple di
 	}
 	#Beyond Typus Culture
 	keres = {
-		primary = AOM
+		primary = KER
 		dynasty_names = {
 			Acoma Cochiti Isleta Jemez Laguna Nambe "Ohkay Owingeh" Picuris Pojoaque Sandia 
 			Taos Tesuque Zia Zuni Hopi Piru
@@ -5302,6 +5698,216 @@ na_dene = {			#Note this is turned into a Pueblo group in BT, mixing multiple di
 	}
 }
 
+na_dene = {
+	graphical_culture = northamericagfx
+
+	chipewyan = {
+		primary = CPY
+		dynasty_names = {
+			"Tsi'naajinii" "Deeshchii'nii" "Tl'izi Lani" "Tl'aaschi'I" Tsenabahituii Nashashi "T'üschebaanii" "Jaa'yaaloolii"
+			"Keha'atiintii" "Naashaashi"
+		}
+		male_names = {
+			"Chapitone" "Ashkii Diyin" "Dahaana Baadaane" "Hastiin Ch'ilhaajin" "Nabaah Jilt'aa" "Bislahalani" 
+			"Hozhooji Naat'a" "Hastiin Daghaa" "Hastiin Daagi" "Haske Yahne Yah" "Toh Yah" "Hastiin Klah" "Ahway Eskay" 
+			"Hoksay Nolyae" "Atsidi Sani" "Beshiltheeni"
+		}
+		female_names = {
+			"Dahteste" "Ilthgozay" "Gouyen" "Lozen" "Tohayea"
+		}
+	}
+	athabascan = {
+		primary = BVR
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	denaina = {
+		primary = YYA
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	kutchin = {
+		primary = YYD
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	koyukon = {
+		primary = YYE
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	tanana = {
+		primary = YYC
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	dakelh = {
+		primary = YYJ
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	tutchone = {
+		primary = YZA
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	slavey = {
+		primary = DNE
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	sahtu = {
+		primary = SLV
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	clatskanie = {
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	eyak = {			#A distant relative, but we don't want isolates.
+		primary = EYK
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+	#Beyond Typus Culture
+	tlingit = {			#A very distant relative, but we don't want isolates.
+		primary = TGI
+		dynasty_names = {
+			Kiusta Kung Yan Hiellan Skidegate "Cha'atl" Haina Kaisun Cumshewa Skedans Tanu Ninstints
+			Masset Atewaas Jaahguhl Kayung "Hlk'yah GaawGa" Klinkwan Sukkwan Howkan Kasaan
+		}
+		male_names = {
+			"Nanni Chaddi" "Na tio tish" Sitahle Oahtekah Ahzaah Kootzzah Moketaveto Ohtoahnesotowheo Harkkahome 
+			Munamenek Otoahnisto Mahvipah Choseta Nahtan Konzhontaco Bazheech Tillaka Chacon Dasoda-hae Cochise Juh 
+			Delshay Goyaale
+		}
+		female_names = {
+			Dahteste Ilthgozay Gouyen Lozen Tohayea
+		}
+	}
+}
+
 penutian = {
 	graphical_culture = northamericagfx
 	chinook = {
@@ -5323,6 +5929,7 @@ penutian = {
 		}
 	}
 	yokuts = {
+		primary = YKT
 		dynasty_names = {
 			Wishram Wasco Atfalati Yamel Lakmiut Chepenafa Santiam Chelamela Calapooya Yoncalla
 		}
@@ -6018,63 +6625,59 @@ japanese_g = {
 	}
 }
 
-mon_khmer = { 
+tibetan_group = { 
 	graphical_culture = asiangfx
 
-	khmer = {
-		primary = KHM
+	tibetan = {
+		primary = UTS
 		dynasty_names = {
-			Angkor "Siem Reap" Oudong Battambang "Stung Treng" Kratie "Phnom Penh"
+			Se Rmu Ldong Stong Dbra Dru Nyang Sbas Gnon Chespong Thonmi Mgar Bri Mong Zhang Mchims Bal Lang Cogro Bro Dbas 
+			Shudpu Gnyags Mgus Mjang Snang Sgro Rma Snyiba Khu Khun Mkar Rlangs Rinspungs Zhingshag Phjongsrgjas Nganlam Sba Lig 
+			Khjungpo Dbas Mnyammed
 		}
 		male_names = {
-			"Barom Reachea" "Noreay Ramathipatei" "Soriyotei" "Thommo Reachea" "Srey Sukonthor" "Ang Chan" "Reachea Ramathipatei"
-			"Barom Reachea" "Chey Chettha" "Ney Khan" "Preah Ram" "Keo Hua" "Outey Reachea" "Dharmaraja" "Padumaraja" "Ramathipadi" "Satha" "Ream Reachea" "Narayanaraja" "Ponhea Yat" "Narayanaraja" 
-			"Sri Raja" "Rajadhiraja" "Dharmarajadhiraja" "Damkhat Sukonthor" "Reamea Chungprey" "Keo Ban On" "Ponhea Yor" "Ponhea An" "Ponhea Nhom" "Srei Soriyopear" "Udayaraja" "Ponhea To" "Ang Non" "Ponhea Chan" "Ang Sur" 
-			"Ang Chea" "Ang Nan" "Ang Sor" "Ang Yong" "Ang Em" "Ang Tham" "Ang Sngoun" "Ang Tong" "Ang Ton" "Ang Eng" 
-			"Ang Duong"
+			"Gendun Drup" "Trakpa Chunge" "Sangye Gyantesen Pal Zangpo" "Dön-yö Dorje" "Ngawang Namgyal" "Töndup Tseten" "Phüntso Namgye" "Karma Tseten" "Lhawang Dorje" "Karma Ten-Kyong" "Gusri" "Dayan" "Tenzin Dalai" 
+			"Lhabzang" "Tsewang Arabtan" "Phola Sonam Topbgye" "Gyurme Namgyal" "Lozang Gyastro" "Tsangyang Gyatso" 
+			"Kelzang Gyatso" "Jamphel Gyatso" "Lungtok Gyatso" "Tsultrim Gyatso" "Gendun Gyastro" "Sonam Gyastro" "Desi Sangay Gyatso"
+			"Ngwaang Yeshi Gyatso" "Chang-chub" "Sakya Gyantsen" "Trakpa Richen" "Trakpa Chang-chub" 
+			"Trakpa Chungne" "Sangye Gyamtso" "Lobsang Yeshe" "Palden Yeshi" "Ngapoi Takna" "Jigme Wangyal" "Tashi Chophel" "Bapu Gendun" "Rabtan" "Sengge" "Galdan" "Gushi" Dorjee Dote Kalden
 		}
 		female_names = {
-			"Boupha" "Sakngea" "Ang Mey" "Anak Moneang Krachap" "Neang Pou" Achariya Akara Anchali Arunny Ary Bopha Botum 
-			Boupha Champei Champey Chamroeun Chan Chankrisna Chanlina Chanmony Channary Chanthavy Chantou Chantrea 
-			Chanvatey Chariya Chavy Chaya Chea Chenda Chhaiya Chhean Chhorvin Chhorvon Chivy Choum Da Daevy Dara 
-			Darareaksmey Davi Jorani Kalianne Kaliyanei Kalliyan Kanleakhana Kannareth Kannitha Kanya Kesor Kolab Kolthida 
-			Kravann Kun Thea Kunthea Leakena Leap Mach: Makara Malis Maly Mau Mealea Mean Mliss Mony Nakry Thom Thyda Tina 
-			Toch Tola Vanna Veasna Veata Vimean Nary Nearidei Neary Reach Reaksmey Rangsei Reasmey Sokha Sokhanya Sokhom 
-			Sok Mean Rom Chang Rotha Samphy Roumduol Roumjong Samnang Saley Savady Sawatdee Seda Seyha Sikha Sinuon Sita 
-			Soboen Socheat Sok Sombo Sonisay Sonith Peou Nuon Phally Phary Pich Pheakdei Pheakkley Phhoung Ponlok Ponnleu 
-			Pisey Putrea Punthea Rachana Rachany 
+			"Kamala" "Indira" Dawa Dechen Diki Choden Dohna Dolkar Karma Sonam Sangmu
 		}
 	}
-	mon = {
-		primary = PEG
+	yi = {
+		primary = CYI
 		dynasty_names = {
-			Pegu Dagon Thaton Martaban
+			"An" "She" "Liu" "Longzan" "Feng" "Pu"
 		}
 		male_names = {
-			"Razadarit" "Binnya Dhammaraza" "Binnya Ran" "Binnya Waru" "Binnya Kyan" "Leik Mawdaw" "Mawdaw" 
-			"Dhammazedi" "Takayutpi" "Smim Sawhtut" "Smim Htaw" "Binnya Dala"
+			Qizhen Qiyu Jianjun Youcheng Houzhao Houcong Zaihou Yijun Changluo Youjian Yousong Yujian Youlang Chenggong 
+			Kehshuan Biao Shuang Gang Su Zhen Fu Zi Qi Tan Chun Bai Gui Zhi Quan Pian Hui Song Mo Ying Jing Dang Nan 
+			Gaoxu Caosui Gauxi Youyuan Youlun Youbin Houwei Youxiao Youji Youxue Youyi Youshan Cixuan Cijiang Cizhao 
+			Cihuan Cican He Ji Da Yuchun
 		}
 		female_names = {
-			"Mya" "Shin Sawbu"
-		}	
+			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen
+		}
 	}
-	vietnamese = {
-		primary = DAI
+	bai = {
+		primary = CDL
 		dynasty_names = {
-			"Lê" "Tran" "Hau Le" "Mac" "Tay Son" "Nguyen" "Trinh"
+			"Duan" "Gao" "Meng"
 		}
 		male_names = {
-			"An" "Quy Ly" "Han Thuong" "Ngoi" "Quy Khoang" "Loi" "Nguyen Long" "Bang Co" "Nghi Dan" "Tu Thanh" "Tranh" 
-			"Thuan" "Tuan" "Oanh" "Y" "Xuan" "Dang Dung" "Dang Doanh" "Trang Tong" "Phuc Hai" "Phuc Nguyen" "Mau Hop" 
-			"Kinh Chi" "Kinh Cung" "Kinh Khoan" "Kinh Vu" "Duy Duong" "Duy Phuong" "Duy Tuong" "Duy Than" "Duy Dieu" 
-			"Duy Khiem" "Hue" "Quang Toan" "Duy Hop"
+			Qizhen Qiyu Jianjun Youcheng Houzhao Houcong Zaihou Yijun Changluo Youjian Yousong Yujian Youlang Chenggong 
+			Kehshuan Biao Shuang Gang Su Zhen Fu Zi Qi Tan Chun Bai Gui Zhi Quan Pian Hui Song Mo Ying Jing Dang Nan 
+			Gaoxu Caosui Gauxi Youyuan Youlun Youbin Houwei Youxiao Youji Youxue Youyi Youshan Cixuan Cijiang Cizhao 
+			Cihuan Cican He Ji Da Yuchun
 		}
 		female_names = {
-			"Kim Anh" "Thuy Tram" "Bich Ngoc" "Phuong Nga" "Thanh Thao"
+			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen
 		}
 	}
-
 }
+
 malay = { 
 	graphical_culture = asiangfx
 
@@ -6193,23 +6796,6 @@ malay = {
 			Vaite Vaitiare
 		}
 	} 
-	madagascan = {
-		dynasty_names = {
-			Palopo Makassar Manado Poso Palu
-		}
-		male_names = {
-			"Tunitangkalopi" "Batara Gowa" "Tuni Djallori" "Tuni Parisi" "Tuni Palonga" "Tuni Butta" "Tunyachoka-ri" 
-			"Karaeng Tunibatta" "Tuni Djallo" "Parabung" "Tuni Pasulu" "Allâh ad-Dîn" "Muhammad Malik" "Muhammad Sa'îd" 
-			"Amir Hamza" "'Abd al-Jalîl" "Shihâb ad-Dîn Ismâ'îl" "Muhammad Bakr Hasan" "Hamaza Tumammalianga" "Muhammad 'Ali" "Fakhr" "Shahab" "Siraj ad-Dîn" "'Abd al-Khayr al-Mansûr" "'Abd al-Qudus" "'Uthmân" "Muhammad Imad" 
-			"Zain" "'Imâd ad-Dîn" "Zaynal-'Abidîn" "Sankilang" "'Abd al-Hâdî" "'Abd al-Khaliq" "Limbangparang"
-		}
-		female_names = {
-			Cinta Wangi Merenui Metetini Miri Moea Moeata Moerani Mohea Nanihi Nu’utea Orama Poe Pear Poehina Poenui Poerava 
-			Puaiti Puatea Puaura Ra’ihau Ra’imere Ra’inui Ranitea Rarahu Raunui Raurii Tahiata Taiana Taina Tania Taurua 
-			Tautiare Tehani Tehea Teora Tera Tevai Titaina Titaua Tuianu Tumata Unutea Urarii Vaea Vaiana Vaianu Vaiata Vaihere 
-			Vaimiti Vairea Vaite Vaitiare
-		}
-	}
 	sulawesi = {
 		primary = MKS
 		dynasty_names = {
@@ -6266,7 +6852,7 @@ malay = {
 	}
 }
 
-thai = { 
+southeastasian_group = { 
 	graphical_culture = asiangfx
 
 	central_thai = {
@@ -6348,7 +6934,45 @@ thai = {
 			"Thou Umma" "Thin Bohme"
 		}
 	}
-	
+	khmer = {
+		primary = KHM
+		dynasty_names = {
+			Angkor "Siem Reap" Oudong Battambang "Stung Treng" Kratie "Phnom Penh"
+		}
+		male_names = {
+			"Barom Reachea" "Noreay Ramathipatei" "Soriyotei" "Thommo Reachea" "Srey Sukonthor" "Ang Chan" "Reachea Ramathipatei"
+			"Barom Reachea" "Chey Chettha" "Ney Khan" "Preah Ram" "Keo Hua" "Outey Reachea" "Dharmaraja" "Padumaraja" "Ramathipadi" "Satha" "Ream Reachea" "Narayanaraja" "Ponhea Yat" "Narayanaraja" 
+			"Sri Raja" "Rajadhiraja" "Dharmarajadhiraja" "Damkhat Sukonthor" "Reamea Chungprey" "Keo Ban On" "Ponhea Yor" "Ponhea An" "Ponhea Nhom" "Srei Soriyopear" "Udayaraja" "Ponhea To" "Ang Non" "Ponhea Chan" "Ang Sur" 
+			"Ang Chea" "Ang Nan" "Ang Sor" "Ang Yong" "Ang Em" "Ang Tham" "Ang Sngoun" "Ang Tong" "Ang Ton" "Ang Eng" 
+			"Ang Duong"
+		}
+		female_names = {
+			"Boupha" "Sakngea" "Ang Mey" "Anak Moneang Krachap" "Neang Pou" Achariya Akara Anchali Arunny Ary Bopha Botum 
+			Boupha Champei Champey Chamroeun Chan Chankrisna Chanlina Chanmony Channary Chanthavy Chantou Chantrea 
+			Chanvatey Chariya Chavy Chaya Chea Chenda Chhaiya Chhean Chhorvin Chhorvon Chivy Choum Da Daevy Dara 
+			Darareaksmey Davi Jorani Kalianne Kaliyanei Kalliyan Kanleakhana Kannareth Kannitha Kanya Kesor Kolab Kolthida 
+			Kravann Kun Thea Kunthea Leakena Leap Mach Makara Malis Maly Mau Mealea Mean Mliss Mony Nakry Thom Thyda Tina 
+			Toch Tola Vanna Veasna Veata Vimean Nary Nearidei Neary Reach Reaksmey Rangsei Reasmey Sokha Sokhanya Sokhom 
+			Sok Mean Rom Chang Rotha Samphy Roumduol Roumjong Samnang Saley Savady Sawatdee Seda Seyha Sikha Sinuon Sita 
+			Soboen Socheat Sok Sombo Sonisay Sonith Peou Nuon Phally Phary Pich Pheakdei Pheakkley Phhoung Ponlok Ponnleu 
+			Pisey Putrea Punthea Rachana Rachany 
+		}
+	}
+	vietnamese = {
+		primary = DAI
+		dynasty_names = {
+			"Lê" "Tran" "Hau Le" "Mac" "Tay Son" "Nguyen" "Trinh"
+		}
+		male_names = {
+			"An" "Quy Ly" "Han Thuong" "Ngoi" "Quy Khoang" "Loi" "Nguyen Long" "Bang Co" "Nghi Dan" "Tu Thanh" "Tranh" 
+			"Thuan" "Tuan" "Oanh" "Y" "Xuan" "Dang Dung" "Dang Doanh" "Trang Tong" "Phuc Hai" "Phuc Nguyen" "Mau Hop" 
+			"Kinh Chi" "Kinh Cung" "Kinh Khoan" "Kinh Vu" "Duy Duong" "Duy Phuong" "Duy Tuong" "Duy Than" "Duy Dieu" 
+			"Duy Khiem" "Hue" "Quang Toan" "Duy Hop"
+		}
+		female_names = {
+			"Kim Anh" "Thuy Tram" "Bich Ngoc" "Phuong Nga" "Thanh Thao"
+		}
+	}
 	dynasty_names = {
 		"Mangrai" "Chaochetton" "Phra Ruang" "Champassak"
 	}
@@ -6371,23 +6995,18 @@ burman = {
 			"Yaza Dewi" "Atula Thiri" "Khin Myo Sit" "Khin Myat Hset" "Khin Ma Lat"
 		}
 	}
-	tibetan = {
-		primary = UTS
+	mon = {
+		primary = PEG
 		dynasty_names = {
-			Se Rmu Ldong Stong Dbra Dru Nyang Sbas Gnon Chespong Thonmi Mgar Bri Mong Zhang Mchims Bal Lang Cogro Bro Dbas 
-			Shudpu Gnyags Mgus Mjang Snang Sgro Rma Snyiba Khu Khun Mkar Rlangs Rinspungs Zhingshag Phjongsrgjas Nganlam Sba Lig 
-			Khjungpo Dbas Mnyammed
+			Pegu Dagon Thaton Martaban
 		}
 		male_names = {
-			"Gendun Drup" "Trakpa Chunge" "Sangye Gyantesen Pal Zangpo" "Dön-yö Dorje" "Ngawang Namgyal" "Töndup Tseten" "Phüntso Namgye" "Karma Tseten" "Lhawang Dorje" "Karma Ten-Kyong" "Gusri" "Dayan" "Tenzin Dalai" 
-			"Lhabzang" "Tsewang Arabtan" "Phola Sonam Topbgye" "Gyurme Namgyal" "Lozang Gyastro" "Tsangyang Gyatso" 
-			"Kelzang Gyatso" "Jamphel Gyatso" "Lungtok Gyatso" "Tsultrim Gyatso" "Gendun Gyastro" "Sonam Gyastro" "Desi Sangay Gyatso"
-			"Ngwaang Yeshi Gyatso" "Chang-chub" "Sakya Gyantsen" "Trakpa Richen" "Trakpa Chang-chub" 
-			"Trakpa Chungne" "Sangye Gyamtso" "Lobsang Yeshe" "Palden Yeshi" "Ngapoi Takna" "Jigme Wangyal" "Tashi Chophel" "Bapu Gendun" "Rabtan" "Sengge" "Galdan" "Gushi" Dorjee Dote Kalden
+			"Razadarit" "Binnya Dhammaraza" "Binnya Ran" "Binnya Waru" "Binnya Kyan" "Leik Mawdaw" "Mawdaw" 
+			"Dhammazedi" "Takayutpi" "Smim Sawhtut" "Smim Htaw" "Binnya Dala"
 		}
 		female_names = {
-			"Kamala" "Indira" Dawa Dechen Diki Choden Dohna Dolkar Karma Sonam Sangmu
-		}
+			"Mya" "Shin Sawbu"
+		}	
 	}
 	chin = {
 		primary = MLB
@@ -6402,36 +7021,6 @@ burman = {
 		}
 		female_names = {
 			"Mangaldahi" "Jira" "Hira" Tashi Tenzin Tenzing Yangchen
-		}
-	}
-	yi = {
-		primary = CYI
-		dynasty_names = {
-			"An" "She" "Liu" "Longzan" "Feng" "Pu"
-		}
-		male_names = {
-			Qizhen Qiyu Jianjun Youcheng Houzhao Houcong Zaihou Yijun Changluo Youjian Yousong Yujian Youlang Chenggong 
-			Kehshuan Biao Shuang Gang Su Zhen Fu Zi Qi Tan Chun Bai Gui Zhi Quan Pian Hui Song Mo Ying Jing Dang Nan 
-			Gaoxu Caosui Gauxi Youyuan Youlun Youbin Houwei Youxiao Youji Youxue Youyi Youshan Cixuan Cijiang Cizhao 
-			Cihuan Cican He Ji Da Yuchun
-		}
-		female_names = {
-			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen
-		}
-	}
-	bai = {
-		primary = CDL
-		dynasty_names = {
-			"Duan" "Gao" "Meng"
-		}
-		male_names = {
-			Qizhen Qiyu Jianjun Youcheng Houzhao Houcong Zaihou Yijun Changluo Youjian Yousong Yujian Youlang Chenggong 
-			Kehshuan Biao Shuang Gang Su Zhen Fu Zi Qi Tan Chun Bai Gui Zhi Quan Pian Hui Song Mo Ying Jing Dang Nan 
-			Gaoxu Caosui Gauxi Youyuan Youlun Youbin Houwei Youxiao Youji Youxue Youyi Youshan Cixuan Cijiang Cizhao 
-			Cihuan Cican He Ji Da Yuchun
-		}
-		female_names = {
-			Heying Chunmei Tianhui Kon Mao Yuying Yuantong Yanxiang Xiurong Shouying Fuyuan Luzhen Ruirong Suzhen
 		}
 	}
 	karen = {
@@ -6616,6 +7205,55 @@ eastern_aryan = {
 			Syamadevi Vijnayavati Vina Yajnavati
 		}
 	}
+	kochi = {
+		primary = KMT
+		dynasty_names = {
+			"Ilyas Shahi" "Ganesha" "Hussein Shahi" "Najafi" "Afshari" "Nasiri" "Karrani"
+			# CKII
+			"Sur"
+		}
+		male_names = {
+			"Sikandar" "Sher" "Ala-ud-Din Firuz" "Rukn ad-Din Barbak" "Jalal ad-Din Fateh" "Nasir-ud-Din Mahmud" "Nasir ad-Din Nasrat"
+			"Jalaluddin Mohammed" "Islam" "Mirza Muhammad" "Shams-ud-Din Yusuf" "Shams-ud-Din Ahmad" 
+			"Shams-ud-Din Muhammad" "Mir Muhammad Ja'far" "Shihab-ud-Din Bayazid" "Mir Qasim 'Ali" "Sayf-ud-Din Hamza" 
+			"Ghiyasuddin Azam" "Ghiyasuddin Mahmud" "Ghiyat ad-Din Bahadur" "Ghiyat ad-Din Jalal" "Da'ud" "Sulayman" 
+			"Murshid Quli" "Shuja' ad-Din Muhammad" "Azam" "Ahmad" "Abu Nasr" "Barbak" "Farid" "Yusuf" "Husain" "Firuz" 
+			"Nasrat" "Fateh" "Bayazid" "Nasir" "Ghiyasuddin" "Mirza" "Raja" "Hamza"
+			Amritnarayan Balabhata Balinarayan Ballalsen Basudevnayaran 
+			Bhagadatta Bhairabendranarayan Bhatta Bhavashankari Bhimsingha Birnayaran 
+			Chandrasen Chandranarayan Chaturanan Chilarai 
+			Danujmadhava Dasharathadeva Devakhadga Devapala Devendranarayan 
+			Dhairjendranayaran Dharendranarayan Dharmapala Dhirsingha 
+			Gajnarayan Gopala Govindachandra Govindapala 
+			Hajo Harendranarayan Haridevnarayan Hariyamandal Hemantasen Indranarayan 
+			Jadu Jagaddipendranarayan Jatakhadga Jayanarayan Jayapala Jitendranarayan 
+			Kalyanachandra Kamalnarayan Keshabsen Khadgodyama Krishanmishra Krishnaroy 
+			Kumarapala Kumudnarayan Ladahachandra Lakshmansen Lakshmichandra Lakshminarayan Lomapada 
+			Madanapala Mahendrapala Mahendrasingha Mahindranarayan Mahipala Manava Mukundanarayan 
+			Naranarayan Narasingha Narayanapala Narendranarayan Nayapala Nripendranarayan 
+			Parikshitnayaran Prananarayan Prannath Pratapnarayan Pratapnarayanroy Pushkaranadhipa 
+			Raghudev Rajabhata Rajadinaj Rajaganesha Rajendranarayan Rajrajendranarayan Rajyapala 
+			Ramapala Ramnath Ranasura Ranjitsingha Roopnarayan Rudranarayan 
+			Samudrasen Shanibhangar Shashanka Shivanarayan Shivendranarayan Shukladhwaj Shurapala 
+			Srichandra Srimanta Subarnachandra Sukhdev Suryanarayan Traillokyachandra 
+			Udirnakhadga Uditanarayan Upendranayaran Vakapala Vapyata Vigrahapala 
+			Vijaynarayan Vijaysen Vijaysingha Virajdendranarayan Vishwarupsen Vishwasingha
+			"Bhairav Singh" "Bhavesh" "Bhogishwar" "Dev Singh" "Dhir Singh" Dhireshwar 
+			"Ganeshwar Singh" "Gang Dev" Harasimhadeva "Hari Singh" "Hemant Sen" 
+			"Kameshwar" "Kirti Singh" Jyotirishwar "Laxman Sen" "Laxminath Singh Dev" Madanpal 
+			"Nanya Dev" "Nar Singh" "Narsingh Dev" "Padma Singh" "Rambhadra Singh Dev" Rameshwar 
+			"Samant Sen" "Shakrasingh Dev" "Shiv Singh" "Vallal Sen" "Vijay Sen"
+			Agnimitra Andhraka Ayus Bhagabhadra Bhikhari Bhumimitra Devabhuti Ghosha Gopal Govindapal 
+			Khsetravridha Maharshi Mahendra Maurayadhwaj Narayana Pulindaka Pusyamitra 
+			Sahtiya Susarman Vajramitra Vasudeva Vasujyeshtha Vasumitra 
+		}
+		female_names = {
+			Amrapali Amritakala Asima Bhavashankari Bishwas Bhogavati Bibibai Dattadevi Devavati Devi 
+			Ahiylya Gandharavati "Malika Bibi" "Sharat" "Kamala"
+			Gayatri Himadrija Hira Jira Kanchani Mahendrani Malavyadevi Nayanadevi Rani Ratnadevi Suvrata
+			Syamadevi Vijnayavati Vina Yajnavati
+		}
+	}
 	bihari = {
 		primary = TRT
 		dynasty_names = {
@@ -6628,6 +7266,12 @@ eastern_aryan = {
 		female_names = {
 			"Bishwas Devi" "Bhanumati" "Sharat" Amrapali Amritakala Asima Bhavashankari Bishwas Bhogavati Bibibai Dattadevi 
 			Devavati Devi Ahiylya Gandharavati "Malika Bibi" "Kamala"
+		}
+	}
+	pahari = {
+		primary = GHR
+		dynasty_names = {
+			Chand Parmar Prakash Katoch
 		}
 	}
 	nepali = {
@@ -6767,6 +7411,12 @@ hindusthani = {
 			"Raziyya" "Bahar" "Roshanara" "Fakhr-un-Nisa"
 		}
 	}
+	vindhyan = { #Bundeli & Bagheli
+		primary = BND
+		dynasty_names = {
+			Baghela Malikzada Bundela Tomara Karkare Newalkar 
+		}
+	}
 	panjabi = {
 		primary = PUN
 		dynasty_names = {
@@ -6874,6 +7524,51 @@ western_aryan = {
 		primary = GUJ
 		dynasty_names = {
 			"Muzaffarid" "Ahmad Shahi" "Vadher" "Babi" "Rawal" "Jadeja" "Calukya" "Bhil" "Kathi"
+		}
+		male_names = {
+			Zafar Muhammad Mubarak Ahmad Dawud Mahmud Muzaffar Bahadur Sardar Tatar Fath Khalil Sikandar Nasir Amarji 
+			Bhenji Hamirji Bhav Natwar Sidhraj Rajsinhji Fulad Abdul
+			Abhayapala Acharya Ahila Ajairaja Jayaraja Ajayapala Ajay-Singh Alhana Allat Amarangeya 
+			Ambra-Prasad Amritapala Anahilla Ari-Singh Arjunavarman Arnoraja Asaraja Asvapala Balaprasada 
+			Baliraja Bhatarka Bhert-Patt Bhima Bhima Bhimadeva Bhima Bhim-Singh Bhuvan-Singh Bhoja Bhoo-Chand 
+			Chachiga Chamundaraja Chandanaraja Chandraraja Chaud-Singh Dadda Dambarisimha Deopali-Deo Devapala 
+			Dharapatta Dharasena Dharmapala Dhruvasena Dinakarn Dronasinha Dungar-Singh Durlabharaja Gajasimha 
+			Gopala Gopendraka Gopendraraja Gopendraraja Gopendraraja Govinda Govindaraja Govindapala 
+			Govindaraja Govindaraja Govindaraja Guhasena Guvaka Govindaraja Hammira Hammir-Singh Hanspal 
+			Hariraja Harischandra Hemachandra Jagadeva Jaitrasimha Jaitrasimha Jaitra-Singh Jaitrasimha 
+			Jaitugideva Jasapala Jaskarn Jayapala Jayaraja Jayaraja Jayasimha Jayasimha Jay-Singh Jayasimha 
+			Jay-Singh-Deo Jayat-Singh Jayasimha Jayavarman Jayshikari Jendraraja Jojalla Kalbhoj Kanhadadeva 
+			Karandeva Karnadeva Karan-Singh Karnadeva Karnadeva Katudeva Katukaraja Keerti-Verma Kirtivarman 
+			Kelhana Kharagraha Khuman Kirtipala Kirtivarman Kirtivarman Kumarapala Kshemraja Xemraja 
+			Kshem-Singh Kshetra-Singh Kumar-Singh Lakhanapala Lakhshaman-Singh Lakshmana Lakshmanadeva 
+			Lakshmanadeva Lakshmanadeva Lakshmivarman Lavanyakarna Lunavarman Luntiga Madanapala Mahap Mahayak 
+			Mahendra Mahendrapala Mahendrapala Mahendra Mahipala Mahlakadeva Maladeva Manavasimha Mathan-Singh 
+			Mattat Mihira Mulraja Nagabhata Nagarjuna Nagraja Naradeva Narapati Naravarman Naravarman 
+			Naravarmandeva Naravarman Narayanapala Nar-Verma Naravarman Narwahan Nayapala Padam-Singh 
+			Prahladana Pratapa Prithvipal Prithviraja Prithivipala Prithviraja Prithviraja Prithviraja Purnpala 
+			Rahap Rajapala Rajyapala Ramabhadra Ramapala Ratan-Singh Ratnapala Rayapala Rudrapala Sahajapala 
+			Sahanapala Samanta Samanta Samant-Singh Samanta Samantasimha Samanta Samarasimha Samarasimha 
+			Samar-Singh Samarasimha Shakti-Kumar Shaliwahan Shuchi-Verma Shurapala Siladitya Sindhuraja 
+			Singhraja Sinha Sinhad-Deo Siyaka Sohiya Someshwara Subhatavarman Suratrana Tejasimha Tejasimha 
+			Tej-Singh Tejasimha Trailokyavarman Tribhuvanapala Trilochanpala Udayaditya Udayasimha Udayavarman 
+			Upendra Vagbhata Vahadiasimha Vairisimha Vairisimha Vairsingh Vairisimha Vajradeva Vakapati Vakpati 
+			Vakpati Vakpati Vakpatiraja Vakpati Valhana Valhanadeva Valhanadeva Valhanadeva Vallabharaja 
+			Vanraja Vapyata Vasudeva Vatsaraja Vigrahapala Vigraharaja Vigraharaja Vigrharaja Vigraharaja 
+			Vijada-Dasasyandana Vijai-Singh Vikramaditya Vinaykpala Vindhyavarman Virama Viradeva Viranarayana 
+			Virsinh-Deo Viryarama Xemraja Xemraja Yasovarman Yograj
+		}
+		female_names = {
+			Fatima Ahmadi Mumtaz
+			Annaladevi Bauladevi Bhuyikadevi Candrabhattarikadevi Chachinidevi Dehanagadevi Delhanadevi 
+			Desaladevi Hariyadevi Laxmidevi Madhavi Mahalakshmi Mahidevi Manaladevi Mayanalladevi Namalladevi 
+			Padmaladevi Padmini Prasadhanadevi Pratha Rasaladevi Rudaladevi Rudrani Rupadevi Samyukta Sidhawa 
+			Somalladevi Suhava Sundaridevi Tihunaka Udayamati
+		}
+	}
+	saurashtri = {
+		primary = JGD
+		dynasty_names = {
+			"Yadava" "Gohil" "Vadher" "Babi" "Rawal" "Jadeja" "Calukya" "Bhil" "Kathi"
 		}
 		male_names = {
 			Zafar Muhammad Mubarak Ahmad Dawud Mahmud Muzaffar Bahadur Sardar Tatar Fath Khalil Sikandar Nasir Amarji 
@@ -7322,7 +8017,7 @@ central_indic = {
 		Gotama Gotama Govind Govinda Govinda Gulshanu Golshan Harendra Hari Harinder Arendra Harish Arisha Harisha Harsha 
 		Harshad Harshal Inderjit Indrajit Inderpal Indrajit Isha Jagannath Jagannatha Jagannatha Jagdish Jagjit Jai Jay 
 		Jaidev Jaswinder Jay Jaya Jaya Jayant Jayanta Jayanta Jayendra Jaywant Jeetendra Vjitendra Jitender Jitinder Jyothi 
-		Sjyoti Jyoti Kailash Kalidas Kalidasa Kalidasa Kkali??? Kalyan Kalyana Kalyana Kama Kamal Kamala Kamala Kapil 
+		Sjyoti Jyoti Kailash Kalidas Kalidasa Kalidasa Kkali Kalyan Kalyana Kalyana Kama Kamal Kamala Kamala Kapil 
 		Kapila Kapila Karan Karna Karna Kavi Kiran Kishan Krishna Kishen Krishna Kishor Kishore Vkishor Kistna Krishna 
 		Krishna Kshitij Kumar Kumara Kumara Kunal Kunala Kunala Lakshman Lakshmana Lakshmana Lal Lalit Lalita Lalita Laxman 
 		Vlakshman Lochan Madhav Madhava Madhava Madhu Madhukar Madhur Mahavir Mahavira Mahavira Mahendra Mahesh Mahesha 
