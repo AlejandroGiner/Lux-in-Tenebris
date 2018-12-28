@@ -142,6 +142,7 @@ kongo={
 }
 namibia_trade={
 	location=5393
+	color={194 140 86}
 	inland=yes
 	outgoing={
 		name="cape_of_good_hope"
@@ -192,6 +193,7 @@ zambezi={
 }
 patagonia={
 	location=2868
+	color={69 157 208}
 	outgoing={
 		name="laplata"
 		path={
@@ -207,6 +209,7 @@ patagonia={
 }
 amazonas_node={
 	location=2935
+	color={117 165 188}
 	outgoing={
 		name="brazil"
 		path={
@@ -266,6 +269,7 @@ california={
 }
 rio_grande={
 	location=2499
+	color={195 149 155}
 	outgoing={
 		name="mississippi_river"
 		path={
@@ -435,6 +439,7 @@ ohio={
 }
 mexico={
 	location=1551
+	color={59 158 125}
 	outgoing={
 		name="carribean_trade"
 		path={
@@ -459,6 +464,7 @@ mexico={
 }
 lhasa={
 	location=677
+	color={4 144 178}
 	inland=yes
 	outgoing={
 		name="kashmir"
@@ -484,6 +490,7 @@ lhasa={
 }
 chengdu={
 	location=679
+	color={191 113 133}
 	inland=yes
 	outgoing={
 		name="canton"
@@ -504,12 +511,12 @@ chengdu={
 		}
 	}
 	outgoing={
-		name="ganges_delta"
+		name="burma"
 		path={
-			2748 661 2396 2397 581 580 568 1343 
+			4213 675 2748 2167 661 2166 583 2400 584
 		}
 		control={
-			4243.000000 1442.000000 4227.000000 1416.000000 4205.000000 1405.000000 4182.000000 1388.000000 4175.000000 1378.000000 4176.000000 1341.000000 4158.000000 1312.000000 4160.000000 1268.000000 4122.000000 1248.000000 4081.000000 1286.000000 4056.000000 1319.000000 
+			4206.000 1401.000 
 		}
 	}
 	members={
@@ -518,6 +525,7 @@ chengdu={
 }
 canton={
 	location=1371
+	color={147 157 76}
 	outgoing={
 		name="malacca"
 		path={
@@ -551,6 +559,7 @@ canton={
 }
 australia={
 	location=1412
+	color={26 53 177}
 	outgoing={
 		name="the_moluccas"
 		path={
@@ -566,6 +575,7 @@ australia={
 }
 nippon={
 	location=1376
+	color={190 44 44}
 	outgoing={
 		name="hangzhou"
 		path={
@@ -587,6 +597,7 @@ nippon={
 }
 hangzhou={
 	location=684
+	color={121 162 109}
 	outgoing={
 		name="xian"
 		path={
@@ -620,6 +631,7 @@ hangzhou={
 }
 xian={
 	location=700
+	color={182 134 100}
 	inland=yes
 	outgoing={
 		name="beijing"
@@ -645,6 +657,7 @@ xian={
 }
 beijing={
 	location=1816
+	color={201 97 74}
 	outgoing={
 		name="yumen"
 		path={
@@ -660,6 +673,7 @@ beijing={
 }
 philippines={
 	location=1397
+	color={116 92 39}
 	outgoing={
 		name="the_moluccas"
 		path={
@@ -693,6 +707,7 @@ philippines={
 }
 the_moluccas={
 	location=1357
+	color={33 101 137}
 	outgoing={
 		name="malacca"
 		path={
@@ -725,6 +740,7 @@ gulf_of_siam={
 }
 malacca={
 	location=1361
+	color={118 99 151}
 	outgoing={
 		name="ganges_delta"
 		path={
@@ -749,6 +765,7 @@ malacca={
 }
 siberia={
 	location=1064
+	color={23 114 143}
 	inland=yes
 	outgoing={
 		name="kazan"
@@ -774,6 +791,7 @@ siberia={
 }
 yumen={
 	location=707
+	color={110 173 129}
 	inland=yes
 	outgoing={
 		name="samarkand"
@@ -875,6 +893,7 @@ burma={
 }
 ganges_delta={
 	location=1343
+	color={0 92 255}
 	outgoing={
 		name="comorin_cape"
 		path={
@@ -979,6 +998,7 @@ indus={
 }
 katsina={
 	location=1149
+	color={93 180 76}
 	inland=yes
 	outgoing={
 		name="timbuktu"
@@ -1032,6 +1052,7 @@ katsina={
 }
 ethiopia={
 	location=1224
+	color={120 148 140}
 	inland=yes
 	outgoing={
 		name="dongola_trade"
@@ -1056,6 +1077,7 @@ ethiopia={
 	} #47 provinces
 }
 dongola_trade={
+color={161 139 40}
 	location=1228
 	inland=yes
 	outgoing={
@@ -1073,6 +1095,7 @@ dongola_trade={
 }
 gulf_of_aden={
 	location=1331
+	color={36 109 194}
 	outgoing={
 		name="zanzibar"
 		path={
@@ -1106,6 +1129,7 @@ gulf_of_aden={
 }
 hormuz={
 	location=1334
+	color={140 207 116}
 	outgoing={
 		name="basra"
 		path={
@@ -1121,6 +1145,7 @@ hormuz={
 }
 zanzibar={
 	location=1448
+	color={130 25 74}
 	outgoing={
 		name="cape_of_good_hope"
 		path={
@@ -1136,6 +1161,7 @@ zanzibar={
 }
 cape_of_good_hope={
 	location=1460
+	color={178 163 143}
 	outgoing={
 		name="ivory_coast"
 		path={
@@ -1152,6 +1178,7 @@ cape_of_good_hope={
 }
 basra={
 	location=1335
+	color={154 129 35}
 	outgoing={
 		name="aleppo"
 		path={
@@ -1176,6 +1203,7 @@ basra={
 }
 samarkand={
 	location=454
+	color={117 161 67}
 	inland=yes
 	outgoing={
 		name="persia"
@@ -1224,7 +1252,7 @@ persia={
 		}
 	}
 	members={
-		411 414 415 416 417 421 424 426 427 428 429 433 436 437 438 2206 2207 2211 2212 2213 2214 2215 2216 2221 2222 2235 2236 2349 2350 4340 4299 4293 4294 4300 4339 4338 4337 4335 4325 4326 4336 4334 4324 4341 
+		411 414 415 416 417 421 424 426 427 428 429 433 436 437 438 2206 2207 2211 2212 2213 2214 2215 2216 2221 2222 2235 2236 2349 2350 4340 4299 4293 4294 4300 4339 4338 4337 4335 4325 4326 4336 4334 4324 4341 7020 7037 
 	}
 }
 pontus_trade={
@@ -1250,7 +1278,7 @@ pontus_trade={
 		}
 	}
 	members={
-		419 422 423 462 1856 2196 2204 4303 3250 3251 4301 3253 4304 3256 4305 420 2202 2203 2205 331 2305 2307 3254 1846 4315 5151 330 5206 5152 3248 2300 2304 329 4302 2306 4296 5331 5332 2201 3261 7020 7021 7022 7023 7024 7025 7026 7027 7028 7029 7030 7031 7032 7033 7034 7035 7036 7037
+		419 422 423 462 1856 2196 2204 4303 3250 3251 4301 3253 4304 3256 4305 420 2202 2203 2205 331 2305 2307 3254 1846 4315 5151 330 5206 5152 3248 2300 2304 329 4302 2306 4296 5331 5332 7032 7034 7035 7036 3261 
 	}
 }
 aleppo={
@@ -1316,6 +1344,7 @@ alexandria={
 }
 astrakhan={
 	location=464
+	color={193 26 14}
 	inland=yes
 	outgoing={
 		name="kazan"
@@ -1345,11 +1374,13 @@ astrakhan={
 		}
 	}
 	members={
-		288 425 439 443 464 465 466 468 469 470 474 1971 2197 2198 2199 2208 2365 2367 2366 2416 2417 2418 4306 3263 3264 3265 
+		288 425 439 443 464 465 466 468 469 470 474 1971 2197 2198 2199 2201 2208 2365 2367 2366 2416 2417 2418 4306 3263 3264 3265 7021 
+		7022 7023 7024 7025 7026 7027 7028 7029 7033
 	}
 }
 kazan={
 	location=1082
+	color={100 100 100}
 	inland=yes
 	outgoing={
 		name="moscow_trade"
@@ -1508,11 +1539,12 @@ crimea={
 		}
 	}
 	members={
-		1323 282 283 284 285 286 287 463 1322 1756 1974 2195 2405 2406 2410 2411 2412 2413 2414 2447 3243 3244 3245 3262 3302 
+		1323 282 283 284 285 286 287 463 1322 1756 1974 2195 2405 2406 2410 2411 2412 2413 2414 2447 3243 3244 3245 3262 3302 7030 7031
 	}
 }
 kiev={
 	location=280
+	color={112 150 105}
 	inland=yes
 	outgoing={
 		name="novgorod"
@@ -1547,6 +1579,7 @@ kiev={
 }
 krakow={
 	location=262
+	color={191 113 133}
 	inland=yes
 	outgoing={
 		name="wien"
@@ -1659,6 +1692,7 @@ novgorod={
 }
 laplata={
 	location=1536
+	color={202 112 85}
 	outgoing={
 		name="brazil"
 		path={
@@ -1683,6 +1717,7 @@ laplata={
 }
 cuiaba={
 	location=800
+	color={104 137 140}
 	outgoing={
 		name="lima"
 		path={
@@ -1698,6 +1733,7 @@ cuiaba={
 }
 lima={
 	location=809
+	color={220 150 158}
 	outgoing={
 		name="panama"
 		path={
@@ -1713,6 +1749,7 @@ lima={
 }
 timbuktu={
 	location=1132
+	color={166 72 57}
 	inland=yes
 	outgoing={
 		name="safi"
@@ -1738,6 +1775,7 @@ timbuktu={
 }
 ivory_coast={
 	location=1466
+	color={199 175 12}
 	outgoing={
 		name="carribean_trade"
 		path={
@@ -1808,6 +1846,7 @@ ivory_coast={
 }
 brazil={
 	location=1531
+	color={181 72 106}
 	outgoing={
 		name="porto_trade"
 		path={
@@ -1991,6 +2030,7 @@ wien={
 }
 saxony={
 	location=59
+	color={240 167 130}
 	inland=yes
 	outgoing={
 		name="rheinland"
@@ -2069,6 +2109,7 @@ rheinland={
 }
 panama={
 	location=835
+	color={140 207 116}
 	outgoing={
 		name="carribean_trade"
 		path={
