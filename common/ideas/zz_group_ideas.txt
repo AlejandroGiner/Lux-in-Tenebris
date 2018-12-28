@@ -198,7 +198,7 @@ cossack_ideas = {
 }
 
 
-berber_ideas = {
+maghrebi_ideas = {
 	start = {
 		naval_attrition = -0.25
 		may_perform_slave_raid = yes
@@ -209,7 +209,7 @@ berber_ideas = {
 	}
 	
 	trigger = {
-		culture_group = maghrebi
+		culture_group = berber_group
 	}
 	free = yes
 	

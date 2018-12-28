@@ -9,11 +9,14 @@ religion = sunni
 capital = "Ngala"
 is_city = yes
 base_manpower = 2
-trade_goods = cloth  #ParadoxPaperReplacedInBT #Producer of paper and exporter of Qurans throughout the Islamic world.
+trade_goods = paper
 hre = no
 base_tax = 3 
 base_production = 3
 discovered_by = sub_saharan
+
+extra_cost = 8
+center_of_trade = 1
 
 1505.1.1 = { owner = KBO controller = KBO add_core = KBO } #Idris Katakarmabe retakes Kanem
 1622.1.1 = { capital = "Mao" } #Reorganization of provincial governance shifts center of power

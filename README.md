@@ -84,4 +84,4 @@ Patchnotes/changelog
  #11.
 
  
-To-do list: Split bahamas. New provinces in Italy. Replace all generic national ideas with unique ones. Make Florida its own Colonial region. New tags in oceania and brazil. 
+To-do list: Split bahamas. New provinces in Italy. Replace all generic national ideas with unique ones. Make Florida its own Colonial region. New tags in oceania and brazil. Grand architect buildings into CoT mechanic.
