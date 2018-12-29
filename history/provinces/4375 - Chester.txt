@@ -25,16 +25,10 @@ discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
 
-   
-
- 
+add_permanent_province_modifier = {
+	name = mersey_estuary_modifier
+	duration = -1
 }
-
-#Decided to switch the modifier from an estuary to a CoT, for the other bonuses. Manchester's CoT worthiness going before the minor river estuary's worthiness, and don't want both for balance.
-#add_permanent_province_modifier = {
-#	name = mersey_estuary_modifier
-#	duration = -1
-#}
 
 1453.1.1 = { unrest = 5 } # Start of the War of the Roses
 1461.6.1 = { unrest = 2 } # Coronation of Edward IV
@@ -49,5 +43,4 @@ discovered_by = eastern
 1707.5.12 = {	owner = GBR
 	controller = GBR
 	add_core = GBR
-	remove_core = ENG
-}
+	remove_core = ENG}
