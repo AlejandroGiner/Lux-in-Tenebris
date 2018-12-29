@@ -625,7 +625,7 @@ colonial_government = {
 		global_autonomy = -0.05
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
-		max_states = 2
+		max_states = 8
 	}
 
 	custom_attributes = {
@@ -733,7 +733,7 @@ cossacks_reform = {
 		cavalry_power = 0.2
 		cavalry_cost = -0.2
 		cav_to_inf_ratio = 0.2
-		max_states = 1
+		max_states = 4
 		max_absolutism = -40
 	}
 	duration = 4
@@ -884,7 +884,7 @@ administrative_divisions_reform = {
 	icon = "map"
 	allow_normal_conversion = yes
 	modifiers = {
-		max_states = 5
+		max_states = 8
 	}
 }
 

@@ -71,7 +71,6 @@ despotic_monarchy = {
 	nation_designer_cost = 0
 	monarchy = yes
 	modifiers = {
-    	max_states = 1
 		global_unrest = -1
 		unjustified_demands = -0.1
 		max_absolutism = 5
@@ -248,7 +247,6 @@ merchant_republic = {
 		merchants = 1
 		caravan_power = 0.33
 		max_absolutism = -50
-    	max_states = 3
 	}
 
 	conditional = {
@@ -371,7 +369,6 @@ oligarchic_republic = {
 		stability_cost_modifier = -0.05
 		global_autonomy = -0.025
 		max_absolutism = -50
-    	max_states = 2
 	}
 
 	ai = {
@@ -611,7 +608,6 @@ noble_republic = {
 
 	monarchy = yes
 	modifiers = {
-   		max_states = 2
 		tolerance_heretic = 1
 		land_morale = 0.1
 		max_absolutism = -40
@@ -682,7 +678,7 @@ republican_dictatorship = {
 
 	dictatorship = yes
 	modifiers = {
-    	max_states = 3
+    	max_states = 2
 		global_autonomy = -0.075
 		tolerance_heathen = 1
 		land_morale = 0.1
@@ -850,7 +846,6 @@ theocratic_government = {
 
 	religion = yes
 	modifiers = {
-    	max_states = 3
 		tolerance_own = 2
 		tolerance_heretic = -1
 	}
@@ -891,7 +886,6 @@ monastic_order_government = {
 	religion = yes
 	monastic = yes
 	modifiers = {
-    	max_states = 3
 		tolerance_own = 1
 		fort_maintenance_modifier = -0.2
 	}
@@ -929,7 +923,6 @@ papal_government = {
 	religion = yes
 	monastic = yes
 	modifiers = {
-    	max_states = 1
 		tolerance_own = 1
 		prestige_per_development_from_conversion = 0.33
 		global_autonomy = -0.05
@@ -967,7 +960,7 @@ steppe_horde_legacy = {
 	monarchy = yes
 	start_territory_to_estates = 0.5
 	modifiers = {
-    	max_states = 1
+    	max_states = 4
 		global_manpower_modifier = 0.2
 		land_forcelimit_modifier = 0.2
 		loot_amount = 0.50
@@ -1001,7 +994,7 @@ great_mongol_state_legacy = {
 	start_territory_to_estates = 0.5
 	modifiers = {
 		horde_unity = 1
-    	max_states = 1
+    	max_states = 16
 		global_manpower_modifier = 0.2
 		land_forcelimit_modifier = 0.2
 		loot_amount = 0.50
@@ -1030,7 +1023,6 @@ tribal_despotism_legacy = {
 
 	monarchy = yes
 	modifiers = {
-    	max_states = 1
 		core_creation = -0.1
 		global_unrest = -1
 		diplomatic_upkeep = -1
@@ -1437,7 +1429,6 @@ ambrosian_republic_legacy = {
 
 	republic = yes
 	modifiers = {
-		max_states = 2
 		global_tax_modifier = 0.10
 		land_morale = 0.05
 		global_autonomy = -0.025
@@ -1471,7 +1462,6 @@ dutch_republic_legacy = {
 
 	republic = yes
 	modifiers = {
-		max_states = 2
 		heavy_ship_power = 0.10
 		trade_efficiency = 0.10
 		global_autonomy = -0.05
@@ -1571,7 +1561,7 @@ ottoman_government_legacy = {
 
 
 	modifiers = {
-		max_states = 5
+		max_states = 8
 		unjustified_demands = -0.1
 		legitimacy = 0.5
 		max_absolutism = 5
@@ -1601,7 +1591,7 @@ prussian_monarchy_legacy = {
 
 	monarchy = yes
 	modifiers = {
-		max_states = 2
+		max_states = 4
 		war_exhaustion = -0.02
 		global_unrest = -2
 		global_autonomy = -0.075
@@ -1636,7 +1626,6 @@ iqta_legacy = {
 
 	monarchy = yes
 	modifiers = {
-		max_states = 2
 		vassal_income = 0.33
 		global_tax_modifier = 0.05
 		global_autonomy = -0.025
@@ -1746,7 +1735,7 @@ shogunate_legacy = {
     fixed_rank = 2
 	monarchy = yes
 	modifiers = {
-		max_states = 2
+		max_states = 4
 		diplomats = 1
 		envoy_travel_time = -0.25
 		max_absolutism = 5
@@ -1806,7 +1795,7 @@ colonial_government_legacy = {
     fixed_rank = 1
 	republic = yes
 	modifiers = {
-		max_states = 2
+		max_states = 8
 		global_autonomy = -0.05
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
@@ -1911,7 +1900,6 @@ peasants_republic_legacy = {
 
 	republic = yes
 	modifiers = {
-		max_states = 1
 		production_efficiency = 0.1
 		land_morale = 0.05
 		global_autonomy = -0.05
@@ -2091,7 +2079,7 @@ tsardom_legacy = {
 
     fixed_rank = 3
 	modifiers = {
-		max_states = 10
+		max_states = 16
 		global_manpower_modifier = 0.20
 		yearly_absolutism = 0.1
 		global_autonomy = -0.05
@@ -2125,7 +2113,7 @@ cossacks_legacy_reform = {
 
 	republic = yes
 	modifiers = {
-   		max_states = 1
+   		max_states = 4
 		cavalry_power = 0.2
 		cavalry_cost = -0.2
 		cav_to_inf_ratio = 0.2
@@ -2258,7 +2246,6 @@ high_kingship_legacy = {
 	nation_designer_trigger = { culture_group = gaelic }
 	monarchy = yes
 	modifiers = {
-		max_states = 3
 		legitimacy = 1
 		prestige = 1
 		max_absolutism = -10
@@ -2279,7 +2266,6 @@ anglo_irish_monarchy_legacy = {			#BT changes this to a cross between an adminis
 	valid_for_nation_designer = no
 	monarchy = yes
 	modifiers = {
-		max_states = 2
 		production_efficiency = 0.1
 		global_tax_modifier = 0.1
 		global_autonomy = -0.05		
@@ -2305,7 +2291,6 @@ florence_republic_legacy = {
 	nation_designer_trigger = { capital_scope = { region = italy_region } }
 	monarchy = yes
 	modifiers = {
-		max_states = 2
 		merc_maintenance_modifier = -0.25
 		prestige = 1
 		max_absolutism = -30
@@ -2333,7 +2318,7 @@ regnum_dei_legacy = {
 	monastic = yes
 	fixed_rank = 3
 	modifiers = {
-    	max_states = 5
+		max_states = 8
 		tolerance_own = 1
 		prestige_per_development_from_conversion = 0.33
 		global_autonomy = -0.05
@@ -2392,5 +2377,23 @@ transitional_government_ireland_legacy = {			#A transitionary government based o
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
 	}
+	ai = { factor = 3 }
+}
+
+lithuanian_grand_duchy_legacy = {			#New in BT 10.0, this is a unique non Dharma government for Lithuania to fit the balance changes made in the Lithuanian Grand Duchy reform for Dharma users.
+	icon = "peasants"
+	allow_normal_conversion = yes
+	legacy_government = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	monarchy = yes
+	fixed_rank = 1
+	modifiers = {
+		diplomatic_upkeep = 2
+		min_autonomy_in_territories = -0.25
+		land_maintenance_modifier = -0.25
+		num_accepted_cultures = 2
+	}
+
 	ai = { factor = 3 }
 }
