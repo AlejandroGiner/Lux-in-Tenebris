@@ -1,5 +1,5 @@
 # BT-Classic
-BT 9, updated for EU4 1.28.
+BT 9, updated for EU4 1.28.\
 Patchnotes/changelog
 
 -Caucasus has received a province and tag overhaul, imported from Dynamo's Enhanced Typus mod.
@@ -39,26 +39,26 @@ Patchnotes/changelog
 
 -Highlands terrain type supply limit changed from 6 to 4.
 
--Hills terrain type supply limit changed from 5 to 2. 
- Local development cost changed from +25% to +35%. 
- Movement cost changed from 1.4 to 1.65. 
+-Hills terrain type supply limit changed from 5 to 2.\
+ Local development cost changed from +25% to +35%.\
+ Movement cost changed from 1.4 to 1.65.\
  Defence* changed from 1 to 2.
 
--Mountain terrain type supply limit changed from 4 to 1. 
- Local development cost changed from +35% to +45%. 
- Movement cost changed from 1.5 to 2.1.
- Defence* changed from 2 to 3.
- Local defensiveness changed from +25% to +35%.
- Nation designer cost changed from 0.75 to 0.85.
+-Mountain terrain type supply limit changed from 4 to 1. \
+ Local development cost changed from +35% to +45%. \
+ Movement cost changed from 1.5 to 2.1. \
+ Defence* changed from 2 to 3. \
+ Local defensiveness changed from +25% to +35%. \
+ Nation designer cost changed from 0.75 to 0.85. \
  Added +20% local building cost and +15% local building time.
 
--Jungle terrain type supply limit changed from 5 to 3.
+-Jungle terrain type supply limit changed from 5 to 3.\
  Movement cost changed from 1.5 to 2.0.
 
--Marsh terrain type supply limit changed from 5 to 3.
+-Marsh terrain type supply limit changed from 5 to 3.\
  Movement cost changed from 1.3 to 1.5.
 
--Coastline terrain type nation designer cost changed from 0.85 to 0.9.
+-Coastline terrain type nation designer cost changed from 0.85 to 0.9.\
  Allowed number of buildings +1. #3
  
 -Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.#4
@@ -69,19 +69,25 @@ Patchnotes/changelog
 
 -Timurids +1 diplomatic upkeep tradition changed to +1 possible diplomatic policy.#7
  
- Reasoning behind all terrain changes is to make terrain more meaningful and accurate without breaking the line between accuracy and game balance. 
- Mountains now represent much more important defensive lines but also are harder and more expensive to build forts on. Building modifiers added merely as a counter-balance to forts being more powerful now.
- #1.Reasoning is flavor and historical accuracy to represent local tribes.
- #2.Reasoning is being politically and geographically isolated from the rest of Africa making it not that important/profitable as Trade charter. Also to better represent 1.28 pirates.
- #3.Reasoning is to represent local port/harbor.
- #4.Reasoning is Beyond Typus moving most straits to a separate sub-addon. Readded some that felt important and few extras.
- #5.Reasoning is that Portuguese national ideas always felt underpowered, taking in context that despite never a major player, Portugal played an important rule in modern era Europe and was a major colonizer.
- #6.Reasoning is several coptic culture and religion provinces were added in Beyond Typus to represent the christian minorities and, sometimes, majorities within the Sultanate. +3 tolerance of heathens resembles as well their not-to-harsh attitude towards them.
- #7.Reasoning is Beyond Typus "decentralisation" mechanic. Timurids already get bonus diplomatic relation slots with their vassals, making their tradition pointless. This fixes that while not forgetting Timurids unique dynasty flavor.
- #8.
- #9.
- #10.
+ Reasoning behind all terrain changes is to make terrain more meaningful and accurate without breaking the line between accuracy and game balance.\
+ Mountains now represent much more important defensive lines but also are harder and more expensive to build forts on. Building modifiers added merely as a counter-balance to forts being more powerful now.\
+ #1.Reasoning is flavor and historical accuracy to represent local tribes.\
+ #2.Reasoning is being politically and geographically isolated from the rest of Africa making it not that important/profitable as Trade charter. Also to better represent 1.28 pirates.\
+ #3.Reasoning is to represent local port/harbor.\
+ #4.Reasoning is Beyond Typus moving most straits to a separate sub-addon. Readded some that felt important and few extras.\
+ #5.Reasoning is that Portuguese national ideas always felt underpowered, taking in context that despite never a major player, Portugal played an important rule in modern era Europe and was a major colonizer.\
+ #6.Reasoning is several coptic culture and religion provinces were added in Beyond Typus to represent the christian minorities and, sometimes, majorities within the Sultanate. +3 tolerance of heathens resembles as well their not-to-harsh attitude towards them.\
+ #7.Reasoning is Beyond Typus "decentralisation" mechanic. Timurids already get bonus diplomatic relation slots with their vassals, making their tradition pointless. This fixes that while not forgetting Timurids unique dynasty flavor.\
+ #8.\
+ #9.\
+ #10.\
  #11.
 
  
-To-do list: Split bahamas. New provinces in Italy. Replace all generic national ideas with unique ones. Make Florida its own Colonial region. New tags in oceania and brazil. Grand architect buildings into CoT mechanic.
+To-do list:
+ Split bahamas.\
+ New provinces in Italy.\
+ Replace all generic national ideas with unique ones.\
+ Make Florida its own Colonial region.\
+ New tags in oceania and brazil.\
+ Grand architect buildings into CoT mechanic.
