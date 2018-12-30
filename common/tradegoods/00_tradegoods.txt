@@ -48,6 +48,10 @@ grain = {
 			has_climate = arid
 		}
 		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
 			factor = 0.25
 			has_climate = tropical
 		}
@@ -183,9 +187,9 @@ grain = {
 		modifier = { #Rich Land
 			factor = 6.0
 			OR = {
-				area = hispaniola_area
+				area = central_hispaniola_area
 				area = west_hispaniola_area
-				area = east_hispaniola_area
+				area = dominica_area
 			}
 		}
 		modifier = { #Acadia actually has some decent farming   -x8 bonus because other factors cause penaltes
@@ -260,6 +264,10 @@ wine = {
 			}
 		}
 		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
 			factor = 0
 			normal_or_historical_nations = yes
 			NOT = { continent = south_america }
@@ -271,7 +279,7 @@ wine = {
 			NOT = { area = central_valley_area }
 			NOT = { area = sacramento_valley_area }
 			NOT = { area = san_francisco_bay_area }
-			NOT = { area = northern_california_area }
+			NOT = { area = lost_cost_area }
 			NOT = { area = columbia_river_area }
 			NOT = { area = macaronesia_area }
 			NOT = { province_id = 2607 }		# Okanogan
@@ -321,7 +329,7 @@ wine = {
 		modifier = { #West coast wine common
 			factor = 1.5
 			OR = {
-				area = northern_california_area
+				area = lost_cost_area
 				area = california_area
 			}
 		}
@@ -403,6 +411,10 @@ wool = {
 				region = mississippi_region
 			}
 			NOT = { has_terrain = mountain }
+		}
+		modifier = {
+			factor = 0.0
+			is_sea = yes
 		}
 		modifier = {
 			factor = 0.15
@@ -555,7 +567,7 @@ fish = {
 			factor = 3.0
 			OR = {
 				area = oregon_area
-				area = northern_california_area
+				area = lost_cost_area
 				area = columbia_river_area
 				area = polynesia_area
 				area = micronesia_area
@@ -861,6 +873,10 @@ naval_supplies = {
 			}
 		}
 		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
 			factor = 0.65
 			region = carribeans_region
 		}
@@ -902,7 +918,7 @@ naval_supplies = {
 			OR = {
 				area = salish_sea_area
 				area = oregon_area
-				area = northern_california_area
+				area = lost_cost_area
 			}
 		}
 		modifier = { #Fantastic wood in the rainforests of the Pacific Coast
@@ -986,7 +1002,7 @@ naval_supplies = {
 				province_id = 2484		# Olympic Peninsula
 				province_id = 4956		# Oregon timber
 				province_id = 497			# Dominica
-				province_id = 5570		# Isle of Pines
+				province_id = 4622		# Isle of Pines
 			}
 		}
 	}
@@ -1175,9 +1191,9 @@ gold = {
 			NOT = { region = alaska_region }
 			NOT = { region = northwest_territories_region }
 			NOT = { region = new_zealand_region }
-			NOT = { area = hispaniola_area }
+			NOT = { area = central_hispaniola_area }
 			NOT = { area = west_hispaniola_area }
-			NOT = { area = east_hispaniola_area }
+			NOT = { area = dominica_area }
 		}
 		modifier = {
 			factor = 0
@@ -1263,9 +1279,9 @@ gold = {
 		modifier = {	#Gold is common here
 			factor = 2.5
 			OR = {
-				area = hispaniola_area			#Hispaniola has been described as 'one immense gold field', though ironically, the Spanish didn't find many of the deposits in the colonial period, and instead travelled further inland in search of often poorer gold mines
+				area = central_hispaniola_area			#Hispaniola has been described as 'one immense gold field', though ironically, the Spanish didn't find many of the deposits in the colonial period, and instead travelled further inland in search of often poorer gold mines
 				area = west_hispaniola_area
-				area = east_hispaniola_area
+				area = dominica_area
 				area = sierra_nevada_area
 			}
 		}
@@ -1476,7 +1492,11 @@ slaves = {
 		modifier = {
 			factor = 0
 			island = yes
-		}		
+		}
+		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
 		modifier = {
 			factor = 2.0
 			OR = {
@@ -2216,6 +2236,10 @@ livestock = {
 			}
 		}
 		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				has_terrain = glacier
@@ -2382,27 +2406,27 @@ glass = {
 	}
 }
 
-paper = {	#Paper becomes beer in 9.0 (1.25 update)
+paper = {
 	color = { 0.76 0.73 0.6 }
 	modifier = {
-		global_unrest = -1
+		adm_tech_cost_modifier = -0.05
 	}
 	province = {
-		local_unrest = -1
+		local_state_maintenance_modifier = -0.1
 	}
 	chance = {
-		factor = 1
+		factor = 5
 		modifier = {
 			factor = 0
 			area = newfoundland_area
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 99 }	#Lower average dev in BT, so lowering from 18 to 12
+			NOT = { development = 12 }	#Lower average dev in BT, so lowering from 18 to 12
 		}
 		modifier = {
 			factor = 2.0
-			development = 100	#Lower average dev in BT, so lowering from 22 to 16
+			development = 16	#Lower average dev in BT, so lowering from 22 to 16
 		}
 	}
 }
@@ -2416,7 +2440,7 @@ gems = {
 		local_tax_modifier = 0.15
 	}
 	chance = {
-		factor = 3			#reduced from 5, gems were a bit too common
+		factor = 4			#reduced from 5, gems were a bit too common
 		modifier = {
 			factor = 0
 			OR = {
@@ -2657,7 +2681,31 @@ coal = {
 		factor = 1
 	}
 }
-
 unknown = {
 	color = { 0.5 0.5 0.5 }
+}
+
+beer = {
+	color = { 0.76 0.73 0.6 }
+	modifier = {
+		global_unrest = -1
+	}
+	province = {
+		local_unrest = -1
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			area = newfoundland_area
+		}
+		modifier = {
+			factor = 0
+			NOT = { development = 99 }	#Lower average dev in BT, so lowering from 18 to 12
+		}
+		modifier = {
+			factor = 2.0
+			development = 100	#Lower average dev in BT, so lowering from 22 to 16
+		}
+	}
 }

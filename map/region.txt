@@ -1353,7 +1353,6 @@ california_region = {
 		lake_cahuilla_area
 		san_francisco_bay_area
 		lower_colorado_river_area
-		high_desert_area
 		upper_colorado_area
 		#mogollon_rim_area			#Repurposing 1.28's apacheria_area into this.
 		painted_desert_area
@@ -1361,6 +1360,8 @@ california_region = {
 		central_valley_delta_area
 		southern_lower_california_area
 		mogollon_rim_area
+		lost_cost_area			#Formerly northern_california_area, changed in 1.28 to avoid conflict with 1.28's area with the same name.
+		eel_river_area
 	}
 }
 
@@ -1379,7 +1380,6 @@ cascadia_region = {
 		northern_cascades_area
 		southern_cascades_area
 		northern_rocky_mountains_area
-		lost_cost_area			#Formerly northern_california_area, changed in 1.28 to avoid conflict with 1.28's area with the same name.
 		vancouver_island_area
 		olympic_peninsula_area
 		columbia_plateau_area
@@ -1394,7 +1394,7 @@ cascadia_region = {
 		siskiyou_area
 		blue_mountains_area
 		bitterroot_mountain_area
-		eel_river_area
+		high_desert_area
 	}
 }
 
