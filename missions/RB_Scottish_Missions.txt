@@ -205,7 +205,18 @@ sco_rb_conquest_missions = {
 					add_permanent_claim = ROOT
 				}
 			}
-			scottish_marches_area = {
+			369 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			northern_england_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -225,13 +236,13 @@ sco_rb_conquest_missions = {
 		icon = mission_assemble_an_army
 		required_missions = { sco_auld_alliance }
 		provinces_to_highlight = {
-			area = scottish_marches_area
+			area = northern_england_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			scottish_marches_area = {
+			northern_england_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -358,6 +369,13 @@ sco_rb_conquest_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cornwall_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	sco_british_empire = {
@@ -368,9 +386,17 @@ sco_rb_conquest_missions = {
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			region = ireland_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			british_isles_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ireland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
