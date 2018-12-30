@@ -3234,67 +3234,24 @@ turko_semitic = { #Levantine   -Draiocht changed to Arabic
 			Raisa Randa Safiya Salma Shakira Suraya Tahira Tarifa Thashim Umm Wahida Yasmin Zahida Zahra
 		}
 	}
-	#BtPLegacy Culture
-	syriac_culture = {
-		graphical_culture = muslimgfx
-		primary = LEB			#Imperfect, but calling the Lebanon tag a Syriac tag, for now. May come back later with a proper Christian -Marionite or ER Orthodox- tag and make lebanon a druze tag, or something
+	#Christian Arab
+	maronite = {
+		primary = LEB
+		graphical_culture = easterngfx
 		dynasty_names = {
-			"Mirdasid" "Maanid" "al-Shihab"  Yakubid Hassanid
-			Katkhuda Abaza Qasimiyya Qitas al-Qazdughli 
+			Khoury Keyrouz Frangieh Habsheh Salibi Sebios Tadros Shihab Gemayel Mekary Haddad Karam Bayeh Kanaan
+			Chamoon Tawk Taraba Khazen Mekary Hbeish Gibran Labaki Joubran Sarkis Arlabosse Helou
 		}
 		male_names = {
-			al-Nasr al-Mu'azzam al-Salih al-'Adil al-Kamil al-Ashraf al-Afdal Tadj Mujir ud-Din Djamal ud-Din 
-			ud-Din Shams Saif 'Abbas 'Abd al-Rahman Anwar Atuf Bakr Fahd Hakim Harun Hikmat Hisham Husayn 
-			Jamaal Karim Malîk Mirza Muhammad Rashîd Rusul Shimun Tarîq Usama Yasir Yusuf Zaid Zîyad Isma'il 	
-			Jafar Shihab
-			Aaron Aaron Abanoub Abderahman Abderrahman Abdul-Aziz Abdul-Haq Abdul-Madjid Abdul-Salaam Abdullah 
-			Abdullah Abianos Abijah Abisalom Ablarion Abraam Abraham Abu-Bakr Abu-Bakr Adnan Agathon Agathos 
-			Agathonikos Agathonikos Agathos Agathos Ahmad Ahmad Akbar Akbar Alam Ali Ali Amr Androus Andrew 	
-			Anthinos Anthimos Arsenios Arsenios Ashraf Ashraf Asim Athanasios Athanasius Badr Bashir Biktor 
-			Victor Binyamin Benjamin Bishoi Bishara Boutros Peter Danyal Daniel Dawlat Da’oud David Ezra Ezra 
-			Farhan Firuz Gabri’el Gabriel Georgios George Ghiyasaddin Habil Abel Hakam Hakam Hammud Hanri Henry 
-			Haroun Aaron Hisham Hussayn Hussayn Ibrahim Abraham Ilyas Elijah Is'mail Ismail Izzaddin 
-			Jalaaladdin Jawdat Jerjer Gregory Kemaladdin Khalil Krystafer Christopher Latif Lot Lothair Malik 
-			Matta Matthew Mehtar Mikail Michael Mikhael Michael Milad Milad Mina Menas Muammar Muhammad 
-			Muhammad Mukhtar Murad Murshid Musa Moses Muzaffaraddin Nabil Nasir Nassib Nuraddin Pamin Qadir 
-			Ra'uf Rafiq Ridwan Sabah Salim Sha'ban Sharif Suhail Tadros Theodore Tajaddin Tayyib Touma Thomas 	
-			Usama Walid Yahya Yahya Yared Yassir Youkhanna John Youssef Joseph Zaia Isaiah Zakariyah Zachary
-			Abdul-Azeem Abdul-Hamid Abdul-Lateef Abdul-Razzaq Abdul-Wahad Abdullah Abdullah Adhid Adil Akab 
-			Ala'i Ali Ali Amir Ashraf Aziz Bashar Boutros Peter Da'ud David Faisal
-			Fayiz Ghazi Hakam Hakam Hamdan Hashmaddin Hussayn Hussayn Ibrahim Abraham Imamaddin Isa Is'mail 
-			Ismail Ismat Jahan Jamil Kamran Khalid Khudayar Majid Mas'ud
-			Muaddam Muhammad Muhammad Muhsin Mukhtar Murad Musa Moses Muzaffar Muzaffaraddin Nasraddin Nuraddin 
-			Nuri Radhi Rasul Sa'ud Salahaddin Seyfullah Sharaf
-			Sirhan Taimur Tawfiq Umaya Wahid Yahya Yahya Ya'qub Jacob Yasar Youkhanna John Zahir
+			Amine Antanios Boulos Butrous Charles Danny Emile Estephan Gerios Gibran Jebrayel Jeremi Josef Kahlil
+			Marada Maroun Maroun Mtanios Pierre Salibe Sayed Sharbel Tanios Tobias Yacoub John Yusuf Elias Geryes
+			Hanna Antoon Tannoos Yaacoob Yoosef Boulos Boutros Nqoula Sharbel Nehmetallah Maroon Morqos Roukoz Daniel
+			Gaby Christian Roofayel Michel Kahlil Gibran Michael Jibril Bashir Etienne Ritshard
 		}
 		female_names = {
-			Ihsan Marwa Aisha Aziza Duha Farida Golbahar Gulnar Gulnaz Gulpari Hafsa Hasti Huma Ibtisam Jalila Kamala 
-			Karima Khandan Khaterah Khatira Kinah Lala Madiha Mahdokht Nazy Neelab Negar Niki Nikoo Noushin Rabiya
-			Mahsa Mahwash Marwa Mastana Mehri Mina Minoo Munawwar Muzhdah Nahal Najela Nasiba Nastaran Nazaneen 
-			Rajiya Sadiya Salma Sitara Thana Zahra Zahra Zuhayra
+			Maryam Marie Rafqa Taqla Marana Sarah Najwa Elissa Nadine Samia Nawal Jana Lena Domnina 
+			Afef Celine Genevieve Jezebel Lilliana Lillianna Marina Massina Ouidat Majida
 		}
-	}
-	male_names = {		
-		# EGYPTIAN_ARABIC
-		Aaron Aaron Abanoub Abderahman Abderrahman Abdul-Aziz Abdul-Haq Abdul-Madjid Abdul-Salaam Abdullah 
-		Abdullah Abianos Abijah Abisalom Ablarion Abraam Abraham Abu-Bakr Abu-Bakr Adnan Agathon Agathos 
-		Agathonikos Agathonikos Agathos Agathos Ahmad Ahmad Akbar Akbar Alam Ali Ali Amr Androus Andrew 	
-		Anthinos Anthimos Arsenios Arsenios Ashraf Ashraf Asim Athanasios Athanasius Badr Bashir Biktor 
-		Victor Binyamin Benjamin Bishoi Bishara Boutros Peter Danyal Daniel Dawlat Da’oud David Ezra Ezra 
-		Farhan Firuz Gabri’el Gabriel Georgios George Ghiyasaddin Habil Abel Hakam Hakam Hammud Hanri Henry 
-		Haroun Aaron Hisham Hussayn Hussayn Ibrahim Abraham Ilyas Elijah Is'mail Ismail Izzaddin 
-		Jalaaladdin Jawdat Jerjer Gregory Kemaladdin Khalil Krystafer Christopher Latif Lot Lothair Malik 
-		Matta Matthew Mehtar Mikail Michael Mikhael Michael Milad Milad Mina Menas Muammar Muhammad 
-		Muhammad Mukhtar Murad Murshid Musa Moses Muzaffaraddin Nabil Nasir Nassib Nuraddin Pamin Qadir 
-		Ra'uf Rafiq Ridwan Sabah Salim Sha'ban Sharif Suhail Tadros Theodore Tajaddin Tayyib Touma Thomas 	
-		Usama Walid Yahya Yahya Yared Yassir Youkhanna John Youssef Joseph Zaia Isaiah Zakariyah Zachary
-		Abdul-Azeem Abdul-Hamid Abdul-Lateef Abdul-Razzaq Abdul-Wahad Abdullah Abdullah Adhid Adil Akab 
-		Ala'i Ali Ali Amir Ashraf Aziz Bashar Boutros Peter Da'ud David Faisal
-		Fayiz Ghazi Hakam Hakam Hamdan Hashmaddin Hussayn Hussayn Ibrahim Abraham Imamaddin Isa Is'mail 
-		Ismail Ismat Jahan Jamil Kamran Khalid Khudayar Majid Mas'ud
-		Muaddam Muhammad Muhammad Muhsin Mukhtar Murad Musa Moses Muzaffar Muzaffaraddin Nasraddin Nuraddin 
-		Nuri Radhi Rasul Sa'ud Salahaddin Seyfullah Sharaf
-		Sirhan Taimur Tawfiq Umaya Wahid Yahya Yahya Ya'qub Jacob Yasar Youkhanna John Zahir
 	}
 }
 

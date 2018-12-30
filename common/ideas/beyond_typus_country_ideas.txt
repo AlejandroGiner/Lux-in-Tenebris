@@ -86,3 +86,199 @@ MDG_ideas = {
 		defensiveness = 0.25
 	}
 }
+
+ICE_ideas = {
+	start = {
+		hostile_attrition = 1.0
+		land_morale = 0.1
+	}
+
+	bonus = {
+		core_creation = -0.15
+	}
+
+	trigger = {
+		tag = ICE
+	}
+	free = yes
+
+	north_sea_fishing_iceland = {
+		global_manpower_modifier = 0.2
+	}
+	recolonize_vinland = {
+		colonists = 1
+	}
+	the_freezing_north_iceland = {
+		land_attrition = -0.10
+	}
+	icelandic_sagas = {
+		prestige = 1
+	}
+	natural_harbors_iceland = {
+		naval_forcelimit_modifier = 0.20
+	}
+	the_althing = {
+		republican_tradition = 0.5
+	}
+	icelandic_heritage = {
+		enemy_core_creation = 0.5
+	}
+}
+
+TSI_ideas = {
+	start = {
+		merchants = 1
+		global_tax_modifier = 0.10
+	}
+	
+	bonus = {
+		naval_forcelimit_modifier = 0.4
+	}
+
+	#trigger = {
+	#	tag = TSI
+	#}
+	free = yes		# will be added at load
+	
+	TSI_idea1 = {
+		global_unrest = -2
+	}
+	TSI_idea2 = {
+		ship_power_propagation = 0.75
+	}
+	TSI_idea3 = {
+		land_morale = 0.15
+	}
+	TSI_idea4 = {
+		development_cost = -0.2
+	}
+	TSI_idea5 = {
+		galley_power = 0.3
+	}
+	TSI_idea6 = {
+		navy_tradition_decay = -0.02
+	}
+	TSI_idea7 = {
+		province_warscore_cost = -0.15
+	}
+}
+
+TKY_ideas = {
+	start = {
+		shock_damage_received = -0.2
+		artillery_bonus_vs_fort = 3
+	}
+	
+	bonus = {
+		fire_damage = 0.2
+	}
+
+	#trigger = {
+	#	tag = TKY
+	#}
+	free = yes		# will be added at load
+	
+	TKY_idea1 = {
+		global_autonomy = -0.025
+	}
+	TKY_idea2 = {
+		harsh_treatment_cost = -0.25
+	}
+	TKY_idea3 = {
+		warscore_cost_vs_other_religion = -0.15
+	}
+	TKY_idea4 = {
+		siege_blockade_progress = 2
+	}
+	TKY_idea5 = {
+		fabricate_claims_cost = -0.5
+	}
+	TKY_idea6 = {
+		recover_army_morale_speed = 0.2
+	}
+	TKY_idea7 = {
+		administrative_efficiency = 0.15
+	}
+}
+
+LEB_ideas = {
+	start = {
+		advisor_cost = -0.15
+		discipline = 0.05
+	}
+	
+	bonus = {
+		global_missionary_strength = 0.02
+	}
+
+	trigger = {
+		tag = LEB
+		tag = ATK
+	}
+	free = yes		# will be added at load
+	
+	successors_of_phoenicia = {
+		enemy_core_creation = 0.5
+	}
+	access_to_the_mediterranean = {
+		global_trade_power = 0.15
+	}
+	long_history = {
+		prestige = 1
+	}
+	legacy_of_maron = {
+		land_morale = 0.1
+	}
+	multicultural_state = {
+		global_unrest = -1
+		culture_conversion_cost = -0.25
+	}
+	mount_lebanon = {
+		defensiveness = 0.2
+	}
+	maronite_church = {
+		papal_influence = 2
+		tolerance_own = 1
+		devotion = 0.5
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+	}
+}
+
+ASY_ideas = {
+	start = {
+		build_cost = -0.15
+		stability_cost_modifier = -0.1
+	}
+
+	bonus = {
+		fort_maintenance_modifier = -0.2
+	}
+
+	trigger = {
+		tag = ASY
+	}
+	free = yes
+
+	heirs_of_ashurbanipal = {
+		legitimacy = 1
+	}
+	assyrian_homeland = {
+		enemy_core_creation = 0.5
+	}
+	nestorian_church = {
+		tolerance_own = 2
+	}
+	end_the_assyrian_diaspora = {
+		production_efficiency = 0.1
+	}
+	tigris_and_euphrates = {
+		trade_range_modifier = 0.2
+	}
+	mesopotamian_thinkers = {
+		advisor_cost = -0.10
+	}
+	assyrians_in_exile = {
+		global_colonial_growth = 15
+	}
+}
