@@ -170,6 +170,15 @@ eng_rb_islands_med = {
 			321 = {
 				add_permanent_claim = ROOT
 			}
+			3180 = {
+				add_permanent_claim = ROOT
+			}
+			5139 = {
+				add_permanent_claim = ROOT
+			}
+			5145 = {
+				add_permanent_claim = ROOT
+			}
 			delta_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -189,6 +198,9 @@ eng_rb_islands_med = {
 				province_id = 126
 				province_id = 163
 				province_id = 321
+				province_id = 3180
+				province_id = 5139
+				province_id = 5145
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -201,6 +213,15 @@ eng_rb_islands_med = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			321 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3180 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5145 = { 
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5139 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -259,6 +280,9 @@ eng_rb_egypt = {
 			2315 = {
 				add_permanent_claim = ROOT
 			}
+			363 = {
+				add_permanent_claim = ROOT
+			}
 			bahari_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -278,6 +302,7 @@ eng_rb_egypt = {
 			OR = {
 				area = bahari_area
 				province_id = 2315
+				province_id = 363
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -301,11 +326,22 @@ eng_rb_egypt = {
 					key = alexandria_ambition
 				}
 			}
-			cyrenaica_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
+			2325 = {
+				add_claim = ROOT
+			}
+			5272 = {
+				add_claim = ROOT
+			}
+			2326 = {
+				add_claim = ROOT
+			}
+			357 = {
+				add_claim = ROOT
+			}
+			356 = {
+				add_claim = ROOT
+			}
+			5274 = {
 				add_claim = ROOT
 			}
 		}
@@ -685,7 +721,10 @@ eng_rb_buildings_group = {
 			}	
 			246 = {
 				owned_by = ROOT
-			}	
+			}
+			4368 = {
+				owned_by = ROOT
+			}
 		}
 		
 		effect = {
@@ -714,6 +753,14 @@ eng_rb_buildings_group = {
 				}
 			}
 			246 = {
+				add_base_production = 3
+				add_base_manpower = 3
+				add_province_modifier = {
+					name = "eng_rb_coal_produced_mod"
+					duration = -1
+				}
+			}
+			4368 = {
 				add_base_production = 3
 				add_base_manpower = 3
 				add_province_modifier = {
@@ -752,6 +799,10 @@ eng_rb_buildings_group = {
 				has_building = furnace
 			}
 			246 = {
+				owned_by = ROOT
+				has_building = furnace
+			}
+			4368 = {
 				owned_by = ROOT
 				has_building = furnace
 			}
@@ -857,6 +908,18 @@ eng_rb_conquest_europe = {
 			195 = {
 				add_permanent_claim = ROOT
 			}
+			3087 = {
+				add_permanent_claim = ROOT
+			}
+			4387 = {
+				add_permanent_claim = ROOT
+			}
+			3109 = {
+				add_permanent_claim = ROOT
+			}
+			3075 = {
+				add_permanent_claim = ROOT
+			}
 		}
 	
 	}
@@ -876,6 +939,10 @@ eng_rb_conquest_europe = {
 				province_id = 178
 				province_id = 194
 				province_id = 195
+				province_id = 3087
+				province_id = 4387
+				province_id = 3109
+				province_id = 3075
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -905,6 +972,18 @@ eng_rb_conquest_europe = {
 				owned_by = ROOT
 			}
 			195 = {
+				owned_by = ROOT
+			}
+			3087 = {
+				owned_by = ROOT
+			}
+			4387 = {
+				owned_by = ROOT
+			}
+			3109 = {
+				owned_by = ROOT
+			}
+			3075 = {
 				owned_by = ROOT
 			}
 		}
@@ -1435,6 +1514,13 @@ gbr_rb_northern_colonial = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_greenland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -1444,6 +1530,9 @@ gbr_rb_northern_colonial = {
 		
 		provinces_to_highlight = {
 			area = greenland_area
+			NOT = { owned_by = ROOT }
+			has_discovered = ROOT
+			area = east_greenland_area
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
 		}
@@ -1458,10 +1547,18 @@ gbr_rb_northern_colonial = {
 				greenland_area = {
 					has_discovered = ROOT
 				}
+				east_greenland_area = {
+					has_discovered = ROOT
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_greenland
 				greenland_area = { 
+					type = all
+					owned_by = ROOT
+					is_city = yes
+				}
+				east_greenland_area = { 
 					type = all
 					owned_by = ROOT
 					is_city = yes
@@ -1535,6 +1632,30 @@ gbr_rb_northern_colonial = {
 				add_base_production = 2
 				add_base_manpower = 2
 			}
+			3111 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			3112 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			3113 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			5588 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			5589 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			5590 = {
+				add_base_production = 2
+				add_base_manpower = 2
+			}
 		}
 	
 	}
@@ -1575,7 +1696,7 @@ eng_rb_thirteen_colonies_group = {
 			custom_trigger_tooltip = {
 				tooltip = eng_rb_own_thirteen_colonies.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 15
+					value = 13
 					colonial_region = colonial_eastern_america
 					is_city = yes
 				}

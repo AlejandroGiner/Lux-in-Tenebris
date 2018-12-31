@@ -232,7 +232,6 @@ eng_british_conquest_scotland = {
 			if = {
 				limit = {
 					has_dlc = "Rule Britannia"
-					tag = GBR
 				}
 				369 = {
 					add_permanent_claim = ROOT
@@ -456,7 +455,7 @@ eng_exploration_americas = {
 	}
 	
 	english_colony_in_north_america = {
-		icon = mission_colonial
+		icon = mission_settlers_north_america
 		required_missions = { eng_discover_america_caribbean }
 		completed_by = 1610.1.1
 		
@@ -483,12 +482,16 @@ eng_exploration_americas = {
 	}
 	
 	english_colony_in_the_carribean = {
-		icon = mission_trade_company_region_abroad
+		icon = mission_iberian_conquistador
 		required_missions = { english_colony_in_north_america }
 		completed_by = 1610.1.1
 		
 		provinces_to_highlight = {
-			colonial_region = colonial_the_carribean
+			OR = {
+				colonial_region = colonial_the_carribean
+				colonial_region = colonial_hispaniola
+				colonial_region = colonial_bahamas
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -498,7 +501,11 @@ eng_exploration_americas = {
 			tooltip = english_colony_in_the_carribean.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					colonial_region = colonial_the_carribean
+					OR = {
+						colonial_region = colonial_the_carribean
+						colonial_region = colonial_hispaniola
+						colonial_region = colonial_bahamas
+					}
 					is_city = yes
 				}
 			}
@@ -578,7 +585,7 @@ eng_indian_ocean_exploration = {
 	has_country_shield = yes
 	
 	england_discovers_india = {
-		icon = mission_trade_company_region_abroad
+		icon = mission_junk_boat
 		required_missions = { }
 		position = 6
 		completed_by = 1680.1.1
