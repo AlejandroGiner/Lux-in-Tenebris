@@ -134,8 +134,8 @@ gc_spain_1_b = {
 			OR = {
 				colonial_region = colonial_the_carribean
 				colonial_region = colonial_cuba
-					colonial_region = colonial_hispaniola
-					colonial_region = colonial_bahamas
+				colonial_region = colonial_hispaniola
+				colonial_region = colonial_bahamas
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
