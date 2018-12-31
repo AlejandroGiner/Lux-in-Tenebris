@@ -90,4 +90,5 @@ To-do list:
  Replace all generic national ideas with unique ones.\
  Make Florida its own Colonial region.\
  New tags in oceania and brazil.\
- Grand architect buildings into CoT mechanic.
+ Grand architect buildings into CoT mechanic.\
+ Update flavorMOR.txt.
