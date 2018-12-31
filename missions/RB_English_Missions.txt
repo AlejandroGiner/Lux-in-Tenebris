@@ -164,19 +164,18 @@ eng_rb_islands_med = {
 			126 = {
 				add_permanent_claim = ROOT
 			}
-			163 = {
+			cyprus_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			321 = {
-				add_permanent_claim = ROOT
-			}
-			3180 = {
-				add_permanent_claim = ROOT
-			}
-			5139 = {
-				add_permanent_claim = ROOT
-			}
-			5145 = {
+			eastern_mediterrenean_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			delta_area = {
@@ -195,33 +194,23 @@ eng_rb_islands_med = {
 		
 		provinces_to_highlight = {
 			OR = {
+				area = cyprus_area
+				area = eastern_mediterrenean_islands_area
 				province_id = 126
-				province_id = 163
-				province_id = 321
-				province_id = 3180
-				province_id = 5139
-				province_id = 5145
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
+			cyprus_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			126 = { 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			163 = { 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			321 = { 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			3180 = { 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5145 = { 
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5139 = { 
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -277,13 +266,14 @@ eng_rb_egypt = {
 		}
 		
 		effect = {
-			2315 = {
-				add_permanent_claim = ROOT
-			}
-			363 = {
-				add_permanent_claim = ROOT
-			}
 			bahari_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			gulf_of_arabia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -301,8 +291,7 @@ eng_rb_egypt = {
 		provinces_to_highlight = {
 			OR = {
 				area = bahari_area
-				province_id = 2315
-				province_id = 363
+				area = gulf_of_arabia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -312,7 +301,8 @@ eng_rb_egypt = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2315 = {
+			gulf_of_arabia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -1177,6 +1167,13 @@ gbr_rb_spice_islands_group = {
 					}
 					add_permanent_claim = ROOT
 				}
+				east_bengal_area = {
+					limit = {
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -1202,7 +1199,10 @@ gbr_rb_indian_group = {
 		position = 9
 		
 		provinces_to_highlight = {
-			area = west_bengal_area
+			OR = {
+				area = west_bengal_area
+				area = east_bengal_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -1213,6 +1213,10 @@ gbr_rb_indian_group = {
 		
 		trigger = {
 			west_bengal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_bengal_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1233,7 +1237,7 @@ gbr_rb_indian_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-			gondwana_area = {
+			golconda_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1259,6 +1263,9 @@ gbr_rb_indian_group = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
+			}
+			2050 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -1389,8 +1396,9 @@ gbr_rb_india_princes = {
 			OR = {
 				area = telingana_area
 				area = maharashtra_area
-				area = gondwana_area
+				area = golconda_area
 				area = garjat_area
+				province_id = 2050
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
@@ -1405,7 +1413,7 @@ gbr_rb_india_princes = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			gondwana_area = {
+			golconda_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1434,7 +1442,7 @@ gbr_rb_india_princes = {
 					duration = 5475
 				}
 			}
-			gondwana_area = {
+			golconda_area = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -1529,11 +1537,11 @@ gbr_rb_northern_colonial = {
 		required_missions = { eng_rb_take_shetland_and_faro_isles }
 		
 		provinces_to_highlight = {
-			area = greenland_area
-			NOT = { owned_by = ROOT }
-			has_discovered = ROOT
-			area = east_greenland_area
-			NOT = { owned_by = ROOT }
+			OR = {
+				area = greenland_area
+				area = east_greenland_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -1555,18 +1563,34 @@ gbr_rb_northern_colonial = {
 				tooltip = miss_colonize_greenland
 				greenland_area = { 
 					type = all
-					owned_by = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
 					is_city = yes
 				}
 				east_greenland_area = { 
 					type = all
-					owned_by = ROOT
+					country_or_non_sovereign_subject_holds = ROOT
 					is_city = yes
 				}
 			}
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					any_subject_country = {
+						is_subject_of_type = colony
+						owns = 1104
+					}
+				}
+				every_subject_country = {
+					limit = {
+						owns = 1104
+					}
+					1104 = {
+						prev_move_capital_effect = yes
+					}
+				}
+			}
 			add_country_modifier = {
 				name = "eng_rb_colony_chance"
 				duration = 5475
@@ -1704,6 +1728,22 @@ eng_rb_thirteen_colonies_group = {
 		}
 		
 		effect = {
+			if = {
+				limit = {
+					any_subject_country = {
+						is_subject_of_type = colony
+						owns = 956
+					}
+				}
+				every_subject_country = {
+					limit = {
+						owns = 956
+					}
+					956 = {
+						prev_move_capital_effect = yes
+					}
+				}
+			}
 			add_country_modifier = {
 				name = "eng_rb_thirteen_colonies_mod"
 				duration = -1
