@@ -135,9 +135,9 @@ TSI_ideas = {
 		naval_forcelimit_modifier = 0.4
 	}
 
-	#trigger = {
-	#	tag = TSI
-	#}
+	trigger = {
+		tag = TSI
+	}
 	free = yes		# will be added at load
 	
 	TSI_idea1 = {
@@ -213,7 +213,6 @@ LEB_ideas = {
 
 	trigger = {
 		tag = LEB
-		tag = ATK
 	}
 	free = yes		# will be added at load
 	
