@@ -7,7 +7,9 @@ aragonese_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = ARA
+    NOT = { map_setup = map_setup_random }
+    tag = ARA
+    NOT = { has_dlc = "Golden Century" }
 	}
 	has_country_shield = yes
 
@@ -54,7 +56,7 @@ aragonese_missions_1 = {
 		}
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted
 				PROVINCES=ara_crowns_of_iberia_provinces
 				OWNER_TYPE=country_or_non_sovereign_subject_holds
 			}
@@ -86,10 +88,12 @@ aragonese_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = ARA
+    NOT = { map_setup = map_setup_random }
+    tag = ARA
+    NOT = { has_dlc = "Golden Century" }
 	}
 	has_country_shield = yes
-	
+
 	#Hey, what about Sardinia & Sicily? I think they should get missions before this one even. Technically should just be a simple job of copy-paste.
 	integrate_naples = {
 		icon = mission_conquer_50_development
@@ -102,7 +106,7 @@ aragonese_missions_2 = {
 		}
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_highlighted 
+				TOOLTIP=country_holds_highlighted
 				PROVINCES=integrate_naples_provinces
 				OWNER_TYPE=owned_by
 			}
@@ -137,7 +141,7 @@ aragonese_missions_2 = {
 		}
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted
 				PROVINCES=conquer_athens_provinces
 				OWNER_TYPE=country_or_non_sovereign_subject_holds
 			}
