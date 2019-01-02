@@ -1,0 +1,29 @@
+#1059 - East Tunguska
+
+owner = TSA
+controller = TSA
+culture = tungus
+religion = tengri_pagan_reformed
+capital = "Kezemskoe"
+trade_goods = unknown
+hre = no
+is_city = yes
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+add_core = TSA
+
+
+
+
+1631.1.1 = { discovered_by = RUS }
+
+1632.1.1 = {
+	owner = RUS
+	controller = RUS
+	religion = orthodox
+	culture = russian
+	is_city = yes
+	trade_goods = fur
+}
+1657.1.1 = { add_core = RUS }
