@@ -20,7 +20,7 @@ east_indian_trade_route = {
 				continent = oceania
 			}
 		}
-		
+
 	}
 
 	trigger = {
@@ -39,7 +39,7 @@ east_indian_trade_route = {
 		}
 	}
 
-	trade_efficiency = 0.05	
+	trade_efficiency = 0.05
 }
 
 #########################################################
@@ -302,9 +302,9 @@ catholic_rome = {
 		NOT = { tag = PAP }
 	}
 
-	trigger = {	
+	trigger = {
 		NOT = { overlord_of = PAP }
-		owns_or_vassal_of = 118 # Roma		
+		owns_or_vassal_of = 118 # Roma
 		NOT = { tag = ITA }
 		NOT = { tag = ROM }
 		NOT = { tag = ITL }			#BtP
@@ -323,7 +323,7 @@ papal_subjugation = {
 		NOT = { tag = PAP }
 	}
 
-	trigger = {	
+	trigger = {
 		overlord_of = PAP
 		NOT = { tag = ITA }
 		NOT = { tag = ITL }			#BtP
@@ -344,7 +344,7 @@ rapid_collapse_of_society = {
 				continent = new_world
 			}
 		}
-		
+
 	}
 	trigger = {
 		NOT = { has_institution = feudalism }
@@ -359,11 +359,11 @@ rapid_collapse_of_society = {
 			}
 		}
 	}
-	
+
 	all_power_cost = 0.33
 	discipline = -0.1
 	land_morale = -0.2
-	
+
 }
 
 ######################################
@@ -390,7 +390,7 @@ submission_to_emperor = {
 }
 
 
-	
+
 
 
 
@@ -415,17 +415,9 @@ counter_revolution = {
 			}
 			revolution_target = {
 				truce_with = ROOT
-			} 
+			}
 		}
-		OR = {
-			government = enlightened_despotism
-			government = despotic_monarchy
-			government = feudal_monarchy
-			government = administrative_monarchy
-			government = constitutional_monarchy
-			government = bureaucratic_despotism
-			government = elective_monarchy
-		}
+		government = monarchy
 	}
 
 	prestige = -5
@@ -449,16 +441,10 @@ reaction = {
 		revolution_target_exists = yes
 		is_revolution_target = no
 		is_free_or_tributary_trigger = yes
-		OR = {
-			government = despotic_monarchy
-			government = feudal_monarchy
-			government = administrative_monarchy
-			government = constitutional_monarchy
-			government = bureaucratic_despotism
-		}
+		government = monarchy
 		revolution_target = {
 			war_with = ROOT
-		}  
+		}
 
 	}
 
@@ -476,17 +462,17 @@ crusader = {
 		crusade_target = {
 			exists = yes
 		}
-		
+
 	}
 
 	trigger = {
-		
+
 		crusade_target = {
 			war_with = ROOT
 			any_province = {
 				controlled_by = root
 			}
-		}  
+		}
 		land_maintenance = 1.0
 	}
 
@@ -504,12 +490,12 @@ crusader = {
 ######################################
 excommunication = {
 	potential = {
-		religion = catholic	
+		religion = catholic
 	}
 
 	trigger = {
 		is_excommunicated = yes
-		
+
 	}
 
 	prestige = -2
@@ -547,7 +533,7 @@ pentarchy_mod = {
 		379 = { religion = orthodox }
 		358 = { religion = orthodox }
 	}
-	
+
 	prestige = 0.5
 	missionaries = 1
 }
@@ -557,11 +543,11 @@ pentarchy_mod = {
 ##################################################
 the_mandate_of_heaven = {
 	potential = {
-		government = celestial_empire
+		has_reform = celestial_empire
 		NOT = { has_dlc = "Mandate of Heaven" }
 	}
-	
-	trigger = {	
+
+	trigger = {
 		stability = 0
 		legitimacy = 60
 		num_of_cities = 20
@@ -573,7 +559,7 @@ the_mandate_of_heaven = {
 
 the_mandate_of_heaven_lost = {
 	potential = {
-		government = celestial_empire
+		has_reform = celestial_empire
 		NOT = { has_dlc = "Mandate of Heaven" }
 	}
 
@@ -581,7 +567,7 @@ the_mandate_of_heaven_lost = {
 		OR = {
 			NOT = { stability = 0 }
 			NOT = { legitimacy = 60 }
-			NOT = { num_of_cities = 20 }	
+			NOT = { num_of_cities = 20 }
 		}
 	}
 
@@ -609,7 +595,7 @@ hre_dominant_catholic = {
 		hre_religion = catholic
 		hre_religion_locked = yes
 	}
-	
+
 	legitimacy = 0.25
 	tolerance_own = 1
 	global_missionary_strength = 0.01
@@ -632,10 +618,43 @@ hre_dominant_protestant = {
 		hre_religion = protestant
 		hre_religion_locked = yes
 	}
-	
+
 	legitimacy = 0.25
 	tolerance_own = 1
 	global_missionary_strength = 0.01
 	imperial_authority = 0.25
 }
 
+######################################
+# Robot parts
+######################################
+
+synthetic_remnants = {
+	potential = {
+		has_global_flag = synthetics_defeated
+	}
+	trigger = {
+		has_global_flag = synthetics_defeated
+	}
+	technology_cost = -0.25
+}
+
+######################################
+# The Golden Age of Piracy
+######################################
+
+golden_age_of_piracy = {
+	potential = {
+		has_global_flag = golden_age_of_piracy
+		NOT = { # lasts 50 years
+			had_country_flag = { flag = golden_age_of_piracy days = 18250 }
+		}
+		1516 = { has_discovered = ROOT }
+	}
+	trigger = {
+		1516 = {
+			privateer_power = { country = ROOT share = 1 }
+		}
+	}
+	privateer_efficiency = 0.2
+}
