@@ -15,7 +15,6 @@ french_missions_north = {
 			OR = {
 				province_id = 167
 				province_id = 168
-				province_id = 177
 				province_id = 1879
 				province_id = 3073
 				province_id = 4385
@@ -27,7 +26,6 @@ french_missions_north = {
 		trigger = {
 			167 = { country_or_non_sovereign_subject_holds = ROOT }
 			168 = { country_or_non_sovereign_subject_holds = ROOT }
-			177 = { country_or_non_sovereign_subject_holds = ROOT }
 			1879 = { country_or_non_sovereign_subject_holds = ROOT }
 			3073 = { country_or_non_sovereign_subject_holds = ROOT }
 			4385 = { country_or_non_sovereign_subject_holds = ROOT }
@@ -149,7 +147,36 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
+			luxemburg_liege_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			87 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			92 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			1744 = {
 				if = {
 					limit = {
 						NOT = {
@@ -205,6 +232,9 @@ french_mission_slot_2 = {
 			OR = {
 				area = wallonia_area
 				area = flanders_area
+				area = luxemburg_liege_area
+				province_id = 92
+				province_id = 1744
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -219,6 +249,16 @@ french_mission_slot_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			luxemburg_liege_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			92 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1744 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			wallonia_area = {
@@ -228,6 +268,24 @@ french_mission_slot_2 = {
 				}
 			}
 			flanders_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			luxemburg_liege_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			92 = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			1744 = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300
@@ -266,21 +324,22 @@ french_missions_colonial = {
 			has_idea = quest_for_the_new_world
 			custom_trigger_tooltip = {
 				tooltip = fra_canada_discovery.tooltip
-				colonial_canada = {
-					has_discovered = ROOT
-				}
+				colonial_canada = { has_discovered = ROOT }
+				colonial_acadia = { has_discovered = ROOT }
+				colonial_newfoundland = { has_discovered = ROOT }
 			}
 			custom_trigger_tooltip = {
-				tooltip = fra_carib_discovery.tooltip
-				colonial_the_carribean = {
-					has_discovered = ROOT
-				}
+					tooltip = fra_louis_discovery.tooltip
+					OR = {
+					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_cuba = { has_discovered = ROOT }
+					colonial_hispaniola = { has_discovered = ROOT }
+					colonial_bahamas = { has_discovered = ROOT }
+					}
 			}
 			custom_trigger_tooltip = {
 				tooltip = fra_louis_discovery.tooltip
-				colonial_louisiana = {
-					has_discovered = ROOT
-				}
+				colonial_louisiana = { has_discovered = ROOT }
 			}
 		}
 		effect = {
@@ -398,7 +457,14 @@ french_missions_colonial = {
 				}
 				add_permanent_claim = ROOT
 			}
-			coromandel_area = {
+			north_carnatic_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_carnatic_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -414,7 +480,8 @@ french_missions_colonial = {
 			OR = {
 				area = andhra_area
 				area = orissa_area
-				area = coromandel_area
+				area = north_carnatic_area
+				area = south_carnatic_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -429,7 +496,11 @@ french_missions_colonial = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			coromandel_area = {
+			north_carnatic_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_carnatic_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -439,7 +510,7 @@ french_missions_colonial = {
 				name = "east_india_trade_rush"
 				duration = 9125 #25 years
 			}
-			telingana_area = {
+			golconda_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -501,38 +572,12 @@ french_missions_colonial = {
 					}
 					add_permanent_claim = ROOT
 				}
-				121 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
+				naples_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
 					}
-				}
-				120 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
-				}
-				2983 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -551,11 +596,6 @@ french_missions_colonial = {
 			}
 		}
 		trigger = {
-			OR = {
-				NAP = {
-					junior_union_with = ROOT
-				}
-				AND = {
 					calabria_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
@@ -565,10 +605,9 @@ french_missions_colonial = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 					naples_area = {
+						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
-				}
-			}
 		}
 		effect = {
 			add_prestige = 20
@@ -579,7 +618,7 @@ french_missions_colonial = {
 				}
 			}
 		}
-	}	
+	}
 }
 
 france_expand_south = {
