@@ -1362,7 +1362,7 @@ gold = {
 			FROM = {
 				OR = {
 					has_country_flag = por_bandeirantes_flag
-					colonial parent = { has_country_flag = por_bandeirantes_flag }
+					colonial_parent = { has_country_flag = por_bandeirantes_flag }
 				}
 			}
 		}
