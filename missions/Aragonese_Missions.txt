@@ -1,15 +1,11 @@
- ##################################################
- ##### Dub's Mission Work - All credit to Dub for this #####
- ##################################################
-#Updated vanilla missions to BT. Updates done by Dub.
 aragonese_missions_1 = {
 	slot = 1
 	generic = no
 	ai = yes
 	potential = {
-    NOT = { map_setup = map_setup_random }
-    tag = ARA
-    NOT = { has_dlc = "Golden Century" }
+		NOT = { map_setup = map_setup_random }
+		tag = ARA
+		NOT = { has_dlc = "Golden Century" }
 	}
 	has_country_shield = yes
 
@@ -32,13 +28,55 @@ aragonese_missions_1 = {
 				name = military_vassalization
 				duration = 7300
 			}
-			custom_tooltip = ara_crowns_of_iberia_claims
-			hidden_effect = {
-				every_province = {
+			castille_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			toledo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			asturias_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			leon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			extremadura_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			murcia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			209 = {
+				if = {
 					limit = {
-						ara_crowns_of_iberia_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -49,16 +87,46 @@ aragonese_missions_1 = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { vassalize_navarra }
 		provinces_to_highlight = {
-			ara_crowns_of_iberia_provinces = yes
+			OR = {
+				area = castille_area
+				area = toledo_area
+				area = asturias_area
+				area = leon_area
+				area = murcia_area
+				area = extremadura_area
+				province_id = 209
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted
-				PROVINCES=ara_crowns_of_iberia_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			castille_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			asturias_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			murcia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			extremadura_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			209 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -67,14 +135,14 @@ aragonese_missions_1 = {
 			add_legitimacy = 20
 			lower_andalucia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_claim = ROOT
 			}
 			upper_andalucia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
 				}
 				add_claim = ROOT
@@ -88,27 +156,37 @@ aragonese_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-    NOT = { map_setup = map_setup_random }
-    tag = ARA
-    NOT = { has_dlc = "Golden Century" }
+		NOT = { map_setup = map_setup_random }
+		tag = ARA
+		NOT = { has_dlc = "Golden Century" }
 	}
 	has_country_shield = yes
-
-	#Hey, what about Sardinia & Sicily? I think they should get missions before this one even. Technically should just be a simple job of copy-paste.
+	
 	integrate_naples = {
-		icon = mission_conquer_50_development
+		icon = mission_italian_condottiere
 		required_missions = { }
 		provinces_to_highlight = {
-			integrate_naples_provinces = yes
+			OR = {
+				area = calabria_area
+				area = apulia_area
+				area = naples_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_highlighted
-				PROVINCES=integrate_naples_provinces
-				OWNER_TYPE=owned_by
+			calabria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			apulia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			naples_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -117,33 +195,66 @@ aragonese_missions_2 = {
 				add_base_manpower = 2
 				add_base_production = 2
 			}
-			custom_tooltip = conquer_athens_claims
-			hidden_effect = {
-				every_province = {
-					limit = {
-						conquer_athens_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
+			}
+			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			western_aegean_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 	conquer_athens = {
-		icon = mission_non-western_soldiers
+		icon = mission_crusade_for_varna
 		required_missions = { integrate_naples }
 		provinces_to_highlight = {
-			conquer_athens_provinces = yes
+			OR = {
+				area = morea_area
+				area = northern_greece_area
+				area = eastern_mediterrenean_islands_area
+				area = western_aegean_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted
-				PROVINCES=conquer_athens_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_aegean_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
