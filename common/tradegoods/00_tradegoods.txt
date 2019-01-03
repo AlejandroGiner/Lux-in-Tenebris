@@ -127,19 +127,10 @@ grain = {
 		modifier = { #Newfoundland has the best fishing in the world but little else
 			factor = 0.0
 			OR = {
-				province_id = 980			#E Newfoundland
-				province_id = 981			#N Newfoundland
-				province_id = 2573			#S Newfoundland
+				area = newfoundland_area
+				area = avalon_area
 				province_id = 982			#Cape Breton
 				province_id = 983			#PEI
-			}
-		}
-		modifier = { #Really want Avalon to have fish
-			factor = 0.0
-			OR = {
-				area = avalon_area
-				province_id = 5019			#St Pierre et Miquelon
-				province_id = 4974			#Grand Banks
 			}
 		}
 		modifier = { #Grain very rare in Athabaska
@@ -354,7 +345,7 @@ wool = {
 		global_ship_cost = -0.05
 	}
 	province = {
-		local_ship_cost = -0.1
+		local_friendly_movement_speed = 0.10
 	}
 	chance = {
 		factor = 30
@@ -381,7 +372,7 @@ wool = {
 				}
 				AND = {
 					has_terrain = woods
-					NOT = { region = new_zealand_region }	
+					NOT = { region = new_zealand_region }
 				}
 				AND = {
 					has_climate = tropical
@@ -646,7 +637,7 @@ fur = {
 				has_terrain = farmlands
 				AND = {
 					has_terrain = mountain
-					NOT = { 
+					NOT = {
 						OR = {
 							region = northwest_territories_region
 							region = cascadia_region
@@ -1155,7 +1146,7 @@ copper = {
 gold = {
 	color = { 1.0 0.84 0.19 }
 	#no modifiers
-	
+
 	chance = {
 		factor = 5
 		modifier = {
@@ -1366,6 +1357,15 @@ gold = {
 				province_id = 5022		# NZ Islands
 			}
 		}
+		modifier = {
+			factor = 2
+			FROM = {
+				OR = {
+					has_country_flag = por_bandeirantes_flag
+					colonial_parent = { has_country_flag = por_bandeirantes_flag }
+				}
+			}
+		}
 	}
 }
 
@@ -1472,7 +1472,7 @@ iron = {
 
 #African Resources
 slaves = {
-	color = { 0.0 1.0 1.0 }
+	color = { 0.0 0.0 0.0 }
 	modifier = {
 		global_tariffs = 0.25
 	}
@@ -1541,7 +1541,7 @@ ivory = {
 			factor = 0
 			NOT = { continent = asia }
 			NOT = { continent = africa }
-			NOT = { 
+			NOT = {
 				AND = {
 					has_terrain = glacier
 					has_climate = arctic
@@ -2651,12 +2651,12 @@ gems = {
 }
 
 coal = {
-	color = { 0.0 0.0 0.0 }
+	color = { 0.0 1.0 1.0 }
 	is_latent = yes
 	is_valuable = yes
 
 	rnw_latent_chance = 7 # Kind of on average how many provinces we want to spawn with it
-	
+
 	trigger = {
 		OR = {
 			development = 20
@@ -2668,11 +2668,11 @@ coal = {
 		}
 		owner = { has_institution = enlightenment }
 	}
-	
+
 	modifier = {
 		global_trade_goods_size_modifier = 0.1
 	}
-	
+
 	province = {
 		local_state_maintenance_modifier = -0.2
 	}
