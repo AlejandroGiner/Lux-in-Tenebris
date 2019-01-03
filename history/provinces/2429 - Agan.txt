@@ -1,0 +1,37 @@
+#2429 - Agan
+
+culture = ostyaki
+religion = tengri_pagan_reformed
+capital = "Variegansk"
+trade_goods = fur
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+discovered_by = nomad_group
+native_size = 20
+native_ferocity = 3
+native_hostileness = 1
+
+
+
+discovered_by = nomad_group
+
+
+1468.1.1 = {
+	owner = SIB
+	controller = SIB
+	discovered_by = SIB
+} # Sibir khanate formed
+1582.10.23 = {
+	discovered_by = RUS
+	owner = RUS
+	controller = RUS
+	add_core = RUS
+	religion = orthodox
+	culture = russian 
+} # Yermak Timofeevich
+1666.1.1 = { unrest = 4 } # Samoyed rebellion
+1669.1.1 = { unrest = 0 }
+1679.1.1 = { unrest = 3 }
+1680.1.1 = { unrest = 0 }

@@ -1,5 +1,7 @@
 #2425 - Naryan-Mar
 
+owner = SMY
+controller = SMY
 culture = samoyed
 religion = tengri_pagan_reformed
 capital = "Telviska"			#Temp name, look for better later
@@ -8,9 +10,11 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
-native_size = 20
-native_ferocity = 3
-native_hostileness = 1
+is_city = yes
+add_core = SMY
+#native_size = 20
+#native_ferocity = 3
+#native_hostileness = 1
 
 discovered_by = eastern
 discovered_by = western
