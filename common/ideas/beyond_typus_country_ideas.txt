@@ -399,3 +399,42 @@ KRL_ideas = {
 		prestige = 1
 	}
 }
+
+ALU_ideas = {
+	start = {
+		global_spy_defence = 0.25
+		production_efficiency = 0.1
+	}
+	
+	bonus = {
+		fort_maintenance_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = ALU
+	}
+	free = yes
+	
+	ALU_idea1 = {
+		global_unrest = -2
+	}
+	ALU_idea2 = {
+ 		hostile_attrition = 1
+	}	
+	ALU_idea3 = {
+		defensiveness = 0.2
+	}
+	ALU_idea4 = {
+		tolerance_heathen = 1
+		tolerance_own = 1
+	}
+	ALU_idea5 = {
+		movement_speed = 0.15
+	}
+	ALU_idea6 = {
+		ship_durability = 0.05
+	}
+	ALU_idea7 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
