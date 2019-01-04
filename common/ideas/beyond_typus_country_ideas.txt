@@ -320,3 +320,82 @@ RSA_ideas = {
 		global_trade_goods_size_modifier = 0.15
 	}
 }
+
+LVA_ideas = {
+	start = {
+		global_unrest = -1
+		stability_cost_modifier = -0.1
+	}
+	
+	bonus = {
+		diplomats = 1
+	}
+
+	trigger = {
+		tag = LVA
+	}
+	free = yes		# will be added at load
+	
+	bugler_of_taalava = {
+		infantry_power = 0.15
+	}
+	the_palace_of_light = {
+		prestige = 1
+	}
+	saules_kauja = {
+		hostile_attrition = 1.0
+	}
+	the_window_to_the_west = {
+		global_trade_power = 0.15
+	}
+	livonian_tolerance = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	livonian_regiments = {
+		infantry_cost = -0.20
+		discipline = 0.05
+	}
+	tauta_uz_barikadem = {
+		defensiveness = 0.2
+	}
+}
+
+KRL_ideas = {
+	start = {
+		development_cost = -0.1
+		global_tax_modifier = 0.10
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = KRL
+	}
+	free = yes
+	
+	karelian_independence = {
+		defensiveness = 0.2
+	}
+	karelian_raids = {
+ 		leader_land_fire = 1
+		leader_land_manuever = 1
+	}	
+	karelian_defense = {
+		hostile_attrition = 1
+	}
+	karelian_religious = {
+		tolerance_own = 2
+	}
+	karelian_resilence = {
+		manpower_recovery_speed = 0.20
+	}
+	karelian_trade = {
+		global_trade_power = 0.15
+	}
+	kalevala = {
+		prestige = 1
+	}
+}
