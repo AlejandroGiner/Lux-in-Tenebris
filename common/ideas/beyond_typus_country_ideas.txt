@@ -281,3 +281,42 @@ ASY_ideas = {
 		global_colonial_growth = 15
 	}
 }
+
+RSA_ideas = {
+	start = {
+		infantry_power = 0.1
+		discipline = 0.05
+	}
+
+	bonus = {
+		development_cost = -0.1
+	}
+
+	trigger = {
+		tag = RSA
+	}
+	free = yes
+
+	diverse_geographic_landscape_south_africa = {
+		hostile_attrition = 1.0
+	}
+	the_great_trek = {
+		leader_land_manuever = 2
+	}
+	afrikaner_calvinism = {
+		global_missionary_strength = 0.02
+	}
+	boer_republicanism = {
+		republican_tradition = 0.5
+	}
+	skilled_gunmen_afrikaners = {
+		leader_land_fire = 1
+	}
+	boer_guerrilla_fighters = {
+		land_attrition = -0.10
+		army_tradition = 0.5
+	}
+	mineral_revolution = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
