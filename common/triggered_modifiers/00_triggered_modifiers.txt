@@ -308,6 +308,7 @@ catholic_rome = {
 		NOT = { tag = ITA }
 		NOT = { tag = ROM }
 		NOT = { tag = ITL }			#BtP
+		NOT = { tag = RMA }			#BtP
 	}
 
 	papal_influence = -10
@@ -327,6 +328,7 @@ papal_subjugation = {
 		overlord_of = PAP
 		NOT = { tag = ITA }
 		NOT = { tag = ITL }			#BtP
+		NOT = { tag = RMA }			#BtP
 	}
 
 	diplomatic_reputation = -2
