@@ -9910,8 +9910,10 @@ MVA_ideas = {
 		state_maintenance_modifier = -0.15
 	}
 	trigger = {
-		tag = MVA
-		tag = MRV
+		OR = {
+			tag = MVA
+			tag = MRV
+		}
 	}
 	free = yes
 	
