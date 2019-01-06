@@ -571,6 +571,7 @@ POR_ideas = {
 	
 	trigger = {
 		tag = POR
+		tag = AGV
 	}
 	free = yes		#will be added at load.
 	
@@ -9909,7 +9910,10 @@ MVA_ideas = {
 		state_maintenance_modifier = -0.15
 	}
 	trigger = {
-		tag = MVA
+		OR = {
+			tag = MVA
+			tag = MRV
+		}
 	}
 	free = yes
 	

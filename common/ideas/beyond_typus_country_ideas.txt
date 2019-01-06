@@ -281,3 +281,201 @@ ASY_ideas = {
 		global_colonial_growth = 15
 	}
 }
+
+RSA_ideas = {
+	start = {
+		infantry_power = 0.1
+		discipline = 0.05
+	}
+
+	bonus = {
+		development_cost = -0.1
+	}
+
+	trigger = {
+		tag = RSA
+	}
+	free = yes
+
+	diverse_geographic_landscape_south_africa = {
+		hostile_attrition = 1.0
+	}
+	the_great_trek = {
+		leader_land_manuever = 2
+	}
+	afrikaner_calvinism = {
+		global_missionary_strength = 0.02
+	}
+	boer_republicanism = {
+		republican_tradition = 0.5
+	}
+	skilled_gunmen_afrikaners = {
+		leader_land_fire = 1
+	}
+	boer_guerrilla_fighters = {
+		land_attrition = -0.10
+		army_tradition = 0.5
+	}
+	mineral_revolution = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
+
+LVA_ideas = {
+	start = {
+		global_unrest = -1
+		stability_cost_modifier = -0.1
+	}
+	
+	bonus = {
+		diplomats = 1
+	}
+
+	trigger = {
+		tag = LVA
+	}
+	free = yes		# will be added at load
+	
+	bugler_of_taalava = {
+		infantry_power = 0.15
+	}
+	the_palace_of_light = {
+		prestige = 1
+	}
+	saules_kauja = {
+		hostile_attrition = 1.0
+	}
+	the_window_to_the_west = {
+		global_trade_power = 0.15
+	}
+	livonian_tolerance = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	livonian_regiments = {
+		infantry_cost = -0.20
+		discipline = 0.05
+	}
+	tauta_uz_barikadem = {
+		defensiveness = 0.2
+	}
+}
+
+KRL_ideas = {
+	start = {
+		development_cost = -0.1
+		global_tax_modifier = 0.10
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = KRL
+	}
+	free = yes
+	
+	karelian_independence = {
+		defensiveness = 0.2
+	}
+	karelian_raids = {
+ 		leader_land_fire = 1
+		leader_land_manuever = 1
+	}	
+	karelian_defense = {
+		hostile_attrition = 1
+	}
+	karelian_religious = {
+		tolerance_own = 2
+	}
+	karelian_resilence = {
+		manpower_recovery_speed = 0.20
+	}
+	karelian_trade = {
+		global_trade_power = 0.15
+	}
+	kalevala = {
+		prestige = 1
+	}
+}
+
+ALU_ideas = {
+	start = {
+		global_spy_defence = 0.25
+		production_efficiency = 0.1
+	}
+	
+	bonus = {
+		fort_maintenance_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = ALU
+	}
+	free = yes
+	
+	ALU_idea1 = {
+		global_unrest = -2
+	}
+	ALU_idea2 = {
+ 		hostile_attrition = 1
+	}	
+	ALU_idea3 = {
+		defensiveness = 0.2
+	}
+	ALU_idea4 = {
+		tolerance_heathen = 1
+		tolerance_own = 1
+	}
+	ALU_idea5 = {
+		movement_speed = 0.15
+	}
+	ALU_idea6 = {
+		ship_durability = 0.05
+	}
+	ALU_idea7 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}
+
+KEM_ideas = {
+	start = {
+		trade_range_modifier = 0.33
+		global_manpower_modifier = 0.10
+	}
+
+	bonus = {
+		missionaries = 1
+	}
+
+	trigger = {
+		tag = KEM
+	}
+	free = yes
+
+	the_nile_old_egypt = {
+		development_cost = -0.2
+		global_trade_power = 0.10
+	}
+	the_two_lands = {
+		land_forcelimit_modifier = 0.33
+		war_exhaustion = -0.02
+	}
+	great_monuments_old_egypt = {
+		prestige = 1
+	}
+	coptic_church_old_egypt = {
+		tolerance_own = 3
+		devotion = 0.5
+	}
+	hieroglyphic_writing = {
+		global_institution_spread = 0.1
+	}
+	egyptian_technological_advancements = {
+		technology_cost = -0.10
+	}
+	maat = {
+		discipline = 0.10
+	}
+}
