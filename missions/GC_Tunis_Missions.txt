@@ -40,7 +40,7 @@ gc_tunis_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			nafusa_mountains = {
+			nafusa_mountains_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -720,23 +720,29 @@ gc_tunis_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			5272 = {
+			if = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
+					5272 = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
-				add_permanent_claim = ROOT
+				5272 = {
+					add_permanent_claim = ROOT
+				}
 			}
-			2325 = {
+			if = {
 				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
+					2325 = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
-				add_permanent_claim = ROOT
+				2325 = {
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
