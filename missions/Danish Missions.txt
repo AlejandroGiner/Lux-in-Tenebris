@@ -160,11 +160,22 @@ danish_missions_baltic = {
 			navy_size_percentage = 0.9
 		}
 		effect = {
-			35 = { # osel
+			1834 = { # Dörpt
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3229 = { # Fellin
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -174,7 +185,7 @@ danish_missions_baltic = {
 			estonia_ingria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -185,7 +196,8 @@ danish_missions_baltic = {
 		required_missions = { denmark_baltic_fleet }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 35
+				province_id = 1834
+				province_id = 3229
 				area = estonia_ingria_area
 			}
 			NOT = {
@@ -193,7 +205,10 @@ danish_missions_baltic = {
 			}
 		}
 		trigger = {
-			35 = {
+			1834 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3229 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			estonia_ingria_area = {
@@ -206,7 +221,7 @@ danish_missions_baltic = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -217,7 +232,7 @@ danish_missions_baltic = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -228,7 +243,7 @@ danish_missions_baltic = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
