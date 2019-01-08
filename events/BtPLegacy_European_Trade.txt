@@ -19,7 +19,7 @@ country_event = {
 	trigger = {
 		is_year = 1499
 		owns = 90			#Owns Brugge
-		90 = { has_province_modifier = center_of_trade_modifier }
+		90 = { province_has_center_of_trade_of_level = 3 }
 	}
 
 	mean_time_to_happen = {
@@ -59,7 +59,7 @@ country_event = {
 			factor = 98
 		}
 		90 = {
-			remove_province_modifier = center_of_trade_modifier
+			add_center_of_trade_level = -2
 			add_base_tax = -6
 			add_base_production = -6
 			add_base_manpower = -4
@@ -94,10 +94,7 @@ country_event = {
 	option = { # Wonderful
 		name = "BtPLegacy_european_trade.EVTOPTA2"
 		1744 = {
-			add_permanent_province_modifier = {
-				name = center_of_trade_modifier
-				duration = -1
-			}
+			center_of_trade = 3
 			add_base_tax = 7
 			add_base_production = 7
 			add_base_manpower = 4
@@ -117,7 +114,7 @@ country_event = {
 	
 	trigger = {
 		owns = 1744			#Owns Antwerp
-		1744 = { has_province_modifier = center_of_trade_modifier }	#Antwerp has a Centre of Trade, ie. Brugge didn't keep it
+		1744 = { province_has_center_of_trade_of_level = 3 }	#Antwerp has a Centre of Trade, ie. Brugge didn't keep it
 		OR = {	#OR lines, any one of these will enable the event
 			1744 = { controller = { is_in_deficit = yes } }	#Controller running in deficit
 			1744 = { controller = { is_bankrupt = yes } }	#Controller is bankrupt
@@ -203,7 +200,7 @@ country_event = {
 			factor = 99
 		}
 		1744 = {
-			remove_province_modifier = center_of_trade_modifier
+			add_center_of_trade_level = -2
 			add_base_tax = -7
 			add_base_production = -7
 			add_base_manpower = -4
@@ -236,10 +233,7 @@ country_event = {
 	option = { # Wonderful
 		name = "BtPLegacy_european_trade.EVTOPTA4"
 		97 = {
-			add_permanent_province_modifier = {
-				name = center_of_trade_modifier
-				duration = -1
-			}
+			center_of_trade = 3
 			add_base_tax = 8
 			add_base_production = 8
 			add_base_manpower = 4
@@ -290,12 +284,9 @@ country_event = {
 			add_base_manpower = 2
 		}
 		if = {
-			limit = { 97 = { NOT = { has_province_modifier = center_of_trade_modifier } } }
+			limit = { 97 = { NOT = { province_has_center_of_trade_of_level = 3 } } }
 			97 = {
-				add_permanent_province_modifier = {
-					name = center_of_trade_modifier
-					duration = -1
-				}
+				center_of_trade = 1
 			}
 		}	#If Player manages to keep CoT in Antwerp or Brugge until 1620 Amsterdam gets a new CoT and a larger boost
 	}
@@ -313,8 +304,9 @@ province_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		NOT = { has_dlc = "Dharma" }
 		province_id = 112
-		has_province_modifier = grand_center_of_trade_modifier
+		province_has_center_of_trade_of_level = 3
 		owner = {
 			NOT = {
 				OR = {
@@ -346,11 +338,7 @@ province_event = {
 				 }
 			}
 		}
-		remove_province_modifier = grand_center_of_trade_modifier
-		add_permanent_province_modifier = {
-			name = center_of_trade_modifier
-			duration = -1
-		}
+		add_center_of_trade_level = -1
 	}
 }
 
@@ -362,8 +350,9 @@ province_event = {
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
+		NOT = { has_dlc = "Dharma" }
 		province_id = 101
-		has_province_modifier = grand_center_of_trade_modifier
+		province_has_center_of_trade_of_level = 3
 		owner = {
 			NOT = {
 				OR = {
