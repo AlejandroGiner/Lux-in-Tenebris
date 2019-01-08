@@ -68,7 +68,7 @@ polish_missions_main_slot = {
 				}
 				west_prussia_area = {
 					limit = {
-						NOT = { is_core = ROOT	}
+						NOT = { is_core = ROOT}
 					}
 					add_core = ROOT
 				}
@@ -76,18 +76,11 @@ polish_missions_main_slot = {
 			else = {
 				west_prussia_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_permanent_claim = ROOT}
 						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
-			}
-			kuyavia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -100,23 +93,15 @@ polish_missions_main_slot = {
 		provinces_to_highlight = {
 			OR = {
 				area = west_prussia_area
-				area = kuyavia_area
 			}
 			NOT = {
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		trigger = {
 			west_prussia_area = {
 				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			kuyavia_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -408,7 +393,7 @@ polish_missions_slot_3 = {
 							type = all
 							owned_by = LIT
 						}
-						samogita_area = {
+						samogitia_area = {
 							type = all 
 							owned_by = LIT
 						}
@@ -420,7 +405,7 @@ polish_missions_slot_3 = {
 				}
 			}
 			else = {
-				samogita_area = {
+				samogitia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
@@ -478,7 +463,7 @@ polish_missions_slot_3 = {
 		completed_by = 1569.7.1
 		provinces_to_highlight = {
 			OR = {
-				area = samogita_area
+				area = samogitia_area
 				area = lithuania_area
 				area = minsk_area
 				area = west_dniepr_area
@@ -490,13 +475,14 @@ polish_missions_slot_3 = {
 			}
 		}
 		trigger = {
-			samogita_area = {
+			samogitia_area = {
 				type = all
 				owned_by = ROOT
 			}
 			lithuania_area = {
 				type = all
 				owned_by = ROOT
+			}
 			minsk_area = {
 				type = all
 				owned_by = ROOT
