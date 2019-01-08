@@ -218,7 +218,6 @@ destroy_ayyubids_provinces = {
 defeat_black_sheep_provinces = {
 	OR = {
 		area = north_kurdistan_area
-		area = armenia_area
 		area = tabriz_area
 		area = shahrizor_area
 		area = al_jazira_area
@@ -235,17 +234,12 @@ defeat_black_sheep_provinces = {
 }
 conquer_the_caucasus_akk_provinces = {
 	OR = {
+		area = westgeorgia_area
+		area = southgeorgia_area
+		area = eastgeorgia_area
+		area = sheki_area
 		area = shirvan_area
-		area = imereti_area
-		area = samtskhe_area
-		area = kartli_kakheti_area
-		#BT additions:
-		province_id = 2204
-		province_id = 3253
-	}
-	NOT = { #Exclusion of Circassia's province
-		province_id = 2195
-		province_id = 420 #Da Ganja!
+		area = armenia_area
 	}
 }
 conquer_iraq_akk_provinces = { #Unchanged
@@ -271,7 +265,6 @@ invade_persia_akk_2_provinces = { #So vanilla has split the claims for the next 
 		area = kerman_area
 		area = mogostan_area
 		#BT additions:
-		area = persian_gulf_islands_area
 	}
 }
 invade_persia_akk_provinces = { #To merge the above.
@@ -313,7 +306,6 @@ ara_crowns_of_iberia_provinces = {
 		#BT additions:
 		area = basque_area #Changed from just Viscaya, as BT does not have the issue of Basque/Vasconia going into France.
 		area = extremadura_area
-		area = murcia_area
 	}
 }
 integrate_naples_provinces = {

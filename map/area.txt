@@ -378,7 +378,7 @@ catalonia_area = { #4
 }
 
 valencia_area = { #3
-	220 1750 4550
+	220 1750 4550 3300
 }
 
 lower_andalucia_area = { #4
@@ -391,15 +391,15 @@ upper_andalucia_area = { #3
 
 castille_area = { #3
 	color = { 58 58 207 }
-	215 1746 2755 2989 4551 4552
+	215 2755 4551 4552 217 4549
 }
 
 toledo_area = { #4
-	219 2751 2754 217 4549
+	219 2751 2754 221 4547
 }
 
 asturias_area = { #4
-	207 1745 
+	207 1745 1746
 }
 
 galicia_area = { #4
@@ -411,7 +411,7 @@ baleares_area = {
 }
 
 basque_area = { #3
-	209 210
+	209 210 2989 
 }
 
 leon_area = { #4
@@ -1959,7 +1959,7 @@ persian_gulf_coast = { #4
 }
 
 mogostan_area = { #3
-	431 4327
+	431 4327 2999 5255
 }
 
 farsistan_area = { #4
@@ -2222,12 +2222,8 @@ kashmir_area = { #5
 	508 2073 2074 4449 4521
 }
 
-lanka_area = { #North Lanka #3
-	2100 4408 4409
-}
-
-south_lanka_area = { #3
-	572 2099 4407
+lanka_area = { #3
+	2100 4408 4409 572 2099 4407
 }
 
 ahmedabad_area = { #5
@@ -3719,10 +3715,6 @@ cornwall_area = {
 	233 4373 
 }
 
-murcia_area = {
-	221 4547
-}
-
 yorkshire_area = {
 	243 4367 245 1861 
 }
@@ -3973,10 +3965,6 @@ tripoli_area = {
 
 mardin_area = {
 	418 5295 4295 4292 2308 5330 
-}
-
-persian_gulf_islands_area = {
-	2999 5255
 }
 	
 ##############################################

@@ -572,17 +572,12 @@ gc_por_2_c = {
 		provinces_to_highlight = {
 			OR = {
 				area = lanka_area
-				area = south_lanka_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			lanka_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			south_lanka_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -908,13 +903,6 @@ gc_por_3_c = {
 		}
 		effect = {
 			lanka_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			south_lanka_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
