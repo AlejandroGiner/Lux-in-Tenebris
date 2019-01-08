@@ -137,25 +137,12 @@ mam_north_missions = {
 			}
 		}
 		effect = {
-			syrian_desert_area = {
+			egypt_region = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = ROOT
-			}
-			nafud_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			tabuk_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
+				is_city = yes
 				add_permanent_claim = ROOT
 			}
 		}
@@ -165,26 +152,18 @@ mam_north_missions = {
 		required_missions = { mam_alexandria_trade }
 		provinces_to_highlight = {
 			OR = {
-				area = syrian_desert_area
-				area = nafud_area
-				area = tabuk_area
+				region = egypt_region
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			is_city = yes
 		}
 		trigger = {
-			syrian_desert_area = {
-				type = all
+			egypt_region = {
+				type = city
 				country_or_non_sovereign_subject_holds = ROOT
-			}
-			nafud_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tabuk_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				
 			}
 		}
 		effect = {
@@ -199,7 +178,7 @@ mam_north_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			327 = {
+			2302 = {
 				if = {
 					limit = {
 						NOT = {
@@ -210,7 +189,7 @@ mam_north_missions = {
 					add_permanent_claim = ROOT
 				}
 			}
-			2302 = {
+			5147 = {
 				if = {
 					limit = {
 						NOT = {
@@ -223,16 +202,29 @@ mam_north_missions = {
 			}
 			karaman_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			dulkadir_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+						province_id = 2301
+						province_id = 5158
+					}
+				add_permanent_claim = ROOT
+			}
+			cukurova_area = {
+				limit = {
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -244,9 +236,12 @@ mam_north_missions = {
 			OR = {
 				area = aleppo_area
 				area = karaman_area
-				area = dulkadir_area
-				province_id = 327
+				area = cukurova_area
 				province_id = 2302
+				province_id = 5147
+				province_id = 332
+				province_id = 2303
+				province_id = 4298
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -257,46 +252,81 @@ mam_north_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			327 = {
+			karaman_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cukurova_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			332 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			2302 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			karaman_area = {
-				type = all
+			5147 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			dulkadir_area = {
-				type = all
+			2303 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			4298 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+
 		}
 		effect = {
 			add_country_modifier = {
 				name = "beyliks_subjugated"
 				duration = 7300
 			}
-			erzurum_area = {
+			germiyan_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
-			armenia_area = {
+			ankara_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
-			north_kurdistan_area = {
+			dulkadir_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			pamphylia_area = {
+				limit = {
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			aydin_area = {
+				limit = {
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}

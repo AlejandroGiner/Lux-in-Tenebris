@@ -22,7 +22,7 @@ venice_missions_1 = {
 		trigger = {
 			1308 = {
 				is_strongest_trade_power = ROOT
-			}
+			}`
 			1298 = {
 				is_strongest_trade_power = ROOT
 			}
@@ -136,6 +136,28 @@ venice_missions_2 = {
 			add_mercantilism = 2
 			add_dip_power = 100
 			321 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			5139 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			5145 = {
 				if = {
 					limit = {
 						NOT = {
