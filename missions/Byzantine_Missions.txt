@@ -6,7 +6,7 @@ byz_western = {
 		tag = BYZ
 	}
 	has_country_shield = yes
-	
+
 	recover_greece = {
 		icon = mission_assemble_an_army
 		required_missions = {  } #None
@@ -66,42 +66,42 @@ byz_western = {
 			bulgaria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_thrace_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			hudavendigar_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}	
+			}
 			aydin_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			northern_macedonia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			rascia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -112,14 +112,14 @@ byz_western = {
 				albania_area = {
 					limit = {
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
 				east_adriatic_coast_area = {
 					limit = {
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -151,21 +151,21 @@ byz_western = {
 			apulia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			calabria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			naples_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -207,6 +207,7 @@ byz_western = {
 			add_permanent_claim = 124
 			add_permanent_claim = 125
 			add_permanent_claim = 2982
+			add_permanent_claim = 3037
 		}
 	}
 	recover_sicily = {
@@ -217,6 +218,7 @@ byz_western = {
 				province_id = 124
 				province_id = 125
 				province_id = 2982
+				province_id = 3037
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -224,6 +226,7 @@ byz_western = {
 			owns_or_non_sovereign_subject_of = 124
 			owns_or_non_sovereign_subject_of = 125
 			owns_or_non_sovereign_subject_of = 2982
+			owns_or_non_sovereign_subject_of = 3037
 		}
 		effect = {
 			add_country_modifier = {
@@ -243,7 +246,7 @@ byz_generic_slot_2 = {
 		NOT = { has_dlc = "Purple Phoenix" }
 	}
 	has_country_shield = yes
-	
+
 	recover_rome = {
 		position = 6
 		icon = mission_early_game_buildings
@@ -263,13 +266,13 @@ byz_generic_slot_2 = {
 			venetia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
+
 	destroy_venice = {
 		icon = mission_monarch_in_throne_room
 		required_missions = { recover_rome }
@@ -301,13 +304,13 @@ byz_east = {
 	slot = 5
 	generic = no
 	ai = yes
-	
+
 	potential = {
 		tag = BYZ
 	}
-	
+
 	has_country_shield = yes
-	
+
 	recover_the_coast_of_asia_minor = {
 		icon = mission_galleys_in_port
 		required_missions = {  }
@@ -334,84 +337,54 @@ byz_east = {
 			}
 		}
 		effect = {
-			if = {
-				limit = { NOT = { has_dlc = "Purple Phoenix" } }
-				germiyan_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			germiyan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				ankara_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				karaman_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				kastamonu_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				rum_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				thrace_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				erzurum_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				add_permanent_claim = 327 # Adana
-				add_permanent_claim = 2302 # Icel
-				add_permanent_claim = 2750 # Plovdiv
-				add_permanent_claim = 4310 # Divrigi
+				add_permanent_claim = ROOT
 			}
-			else = {
-				germiyan_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+			ankara_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				ankara_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			karaman_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				kastamonu_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_permanent_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			kastamonu_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
+			}
+			rum_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thrace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			erzurum_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -426,7 +399,7 @@ byz_generic_slot_5 = {
 		NOT = { has_dlc = "Purple Phoenix" }
 	}
 	has_country_shield = yes
-	
+
 	reestablish_the_theme_system = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { recover_the_coast_of_asia_minor }
@@ -490,7 +463,7 @@ byz_generic_slot_5 = {
 			owns = 2302 # Icel
 			owns = 4310 # Divrigi
 			owns = 2750 # Plovdiv
-				
+
 		}
 		effect = {
 			hidden_effect = {
@@ -532,7 +505,7 @@ byz_generic_slot_5 = {
 				4313 = { change_province_name = Gangra rename_capital = Gangra }
 				4314 = { change_province_name = Justinianopolis rename_capital = Justinianopolis }
 				4315 = { change_province_name = Evdoksia rename_capital = Evdoksia }
-				
+
 			}
 			custom_tooltip = reestablishing_themes_names_tooltip
 			if = {
@@ -546,14 +519,14 @@ byz_generic_slot_5 = {
 				}
 				set_global_flag = constantinople_restored
 			}
-						
+
 			add_country_modifier = {
 				name = "the_theme_system"
 				duration = -1
 			}
 		}
 	}
-	
+
 	convert_asia_minor = {
 		icon = mission_hands_praying
 		required_missions = { reestablish_the_theme_system }
@@ -592,7 +565,7 @@ byz_generic_slot_5 = {
 			add_permanent_claim = 2313
 		}
 	}
-	
+
 	the_pentarchy = {
 		icon = mission_empire
 		position = 7

@@ -1,5 +1,5 @@
 byz_pp_balkans_north_italy = {
-	slot = 2 
+	slot = 2
 	generic = no
 	ai = yes
 	potential_on_load = {
@@ -10,7 +10,7 @@ byz_pp_balkans_north_italy = {
 		has_dlc = "Purple Phoenix"
 	}
 	has_country_shield = yes
-	
+
 	recover_albania = {
 		icon = mission_pf_soldier
 		required_missions = { recover_greece }
@@ -56,7 +56,7 @@ byz_pp_balkans_north_italy = {
 			}
 		}
 	}
-	
+
 	recover_western_balkans = {
 		icon = mission_pf_cross
 		required_missions = { recover_albania } #None
@@ -81,7 +81,7 @@ byz_pp_balkans_north_italy = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			
+
 		}
 		effect = {
 			carniola_area = {
@@ -104,7 +104,7 @@ byz_pp_balkans_north_italy = {
 			}
 		}
 	}
-	
+
 	recover_northern_balkans = { #Replaces Istria
 		icon = mission_conquer_5_states
 		required_missions = { recover_western_balkans }
@@ -145,9 +145,11 @@ byz_pp_balkans_north_italy = {
 		trigger = {
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				NOT = { country_or_non_sovereign_subject_holds = VEN }
+				}
+			112 = { owned_by = ROOT }
 			}
-		}
+
 		effect = {
 			country_event = { id = flavor_byz.1 }
 			add_country_modifier = {
@@ -170,7 +172,7 @@ byz_pp_italian = {
 		has_dlc = "Purple Phoenix"
 	}
 	has_country_shield = yes
-	
+
 	recover_rome_pp = {
 		position = 6
 		icon = mission_pf_cross
@@ -190,30 +192,23 @@ byz_pp_italian = {
 				name = "roman_italy"
 				duration = 5475
 			}
-			liguria_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			tuscany_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			emilia_romagna_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			emilia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -311,7 +306,7 @@ byz_pp_italian = {
 			}
 		}
 	}
-	
+
 	recover_lombardia = {
 		icon = mission_empire
 		required_missions = {
@@ -361,12 +356,12 @@ byz_pp_maritime = {
 		has_dlc = "Purple Phoenix"
 	}
 	has_country_shield = yes
-	
+
 	recover_east_islands = {
 		icon = mission_pf_map_table
-		
+
 		required_missions = {
-			
+
 		}
 		provinces_to_highlight = {
 			area = cyprus_area
@@ -381,14 +376,14 @@ byz_pp_maritime = {
 		effect = {
 			corsica_sardinia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
-			balearic_islands_area = {
+			baleares_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
@@ -404,7 +399,7 @@ byz_pp_maritime = {
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
-				area = balearic_islands_area
+				area = baleares_area
 				province_id = 126
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -414,7 +409,7 @@ byz_pp_maritime = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			balearic_islands_area = {
+			baleares_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -425,21 +420,21 @@ byz_pp_maritime = {
 		effect = {
 			tripolitania_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			djerba_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
+
 	recover_tripoli = {
 		icon = mission_arabian_fort
 		required_missions = {
@@ -465,49 +460,49 @@ byz_pp_maritime = {
 		effect = {
 			tunisia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			kabylia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			djerba_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			east_aures_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			constantine_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			west_aures_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			kairouan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
+
 	recover_tunis = {
 		icon = mission_pf_soldier
 		required_missions = {
@@ -517,7 +512,7 @@ byz_pp_maritime = {
 			OR = {
 				area = tunisia_area
 				area = kabylia_area
-				area = djerba_area
+				area = kairouan_area
 				area = east_aures_area
 				area = constantine_area
 				area = west_aures_area
@@ -533,7 +528,7 @@ byz_pp_maritime = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			djerba_area = {
+			kairouan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -553,21 +548,21 @@ byz_pp_maritime = {
 		effect = {
 			lower_andalucia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_andalucia_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
+
 	recover_south_spain = {
 		icon = mission_pf_map_table
 		required_missions = {
@@ -593,7 +588,7 @@ byz_pp_maritime = {
 		effect = {
 			northern_morocco_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_claim = ROOT
@@ -629,7 +624,7 @@ byz_pp_religion = {
 		has_dlc = "Purple Phoenix"
 	}
 	has_country_shield = yes
-	
+
 	convert_asia_minor_pp = {
 		icon = mission_pf_cross
 		position = 2
@@ -659,7 +654,7 @@ byz_pp_religion = {
 				religion = orthodox
 			}
 		}
-		
+
 		effect = {
 			add_patriarch_authority = 0.1
 			aleppo_area = {
@@ -718,8 +713,8 @@ byz_pp_religion = {
 			add_patriarch_authority = 0.1
 			palestine_area = {
 				limit = {
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -729,13 +724,9 @@ byz_pp_religion = {
 			trans_jordan_area = {
 				add_claim = ROOT
 			}
-			add_claim = 407
-			add_claim = 2309
-			add_claim = 2314
-			add_claim = 4292
 		}
 	}
-	
+
 	recover_jerusalem = {
 		icon = mission_pf_cross
 		required_missions = {
@@ -768,29 +759,27 @@ byz_pp_religion = {
 			delta_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			bahari_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			gulf_of_arabia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			add_claim = 365
-			add_claim = 2315
 		}
 	}
-	
+
 	recover_alexandria = {
 		icon = mission_pf_cross
 		provinces_to_highlight = {
@@ -823,34 +812,27 @@ byz_pp_religion = {
 			said_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_claim = ROOT
 			}
 			al_wahat_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_claim = ROOT
-			}
-			gulf_of_arabia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_claim = ROOT
 			}
 			cyrenaica_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_claim = ROOT
 			}
 		}
 	}
-	
+
 	the_pentarchy_pp = {
 		icon = mission_pf_cross
 		position = 7
@@ -884,7 +866,7 @@ byz_pp_religion = {
 			country_event = { id = catholic_flavor.3 }
 		}
 	}
-	
+
 	convert_rome = { #New/From Events
 		icon = mission_pf_cross
 		position = 7
@@ -926,7 +908,7 @@ byz_pp_east = {
 		has_dlc = "Purple Phoenix"
 	}
 	has_country_shield = yes
-	
+
 	recover_west_anatolia = {
 		icon = mission_non-western_cavalry_raid
 		position = 2
@@ -1031,11 +1013,11 @@ byz_pp_east = {
 			}
 		}
 	}
-	
+
 	reestablish_the_theme_system_pp = {
 		icon = mission_pf_map_table
 		position = 5
-		required_missions = { 
+		required_missions = {
 			recover_central_anatolia
 		}
 		provinces_to_highlight = {
@@ -1109,15 +1091,15 @@ byz_pp_east = {
 					add_base_manpower = 3
 				}
 				set_global_flag = constantinople_restored
-			}	
+			}
 			add_country_modifier = {
 				name = "the_theme_system"
 				duration = -1
 			}
 		}
 	}
-	
-	
+
+
 	recover_crimea = {
 		icon = mission_galleys_in_port
 		required_missions = {
@@ -1145,5 +1127,5 @@ byz_pp_east = {
 			}
 		}
 	}
-	
+
 }
