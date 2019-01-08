@@ -80,13 +80,6 @@ tr_novgorod_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			galich_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			moscow_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -135,7 +128,6 @@ tr_novgorod_1 = {
 			OR = {
 				area = vologda_area
 				area = beloozero_area
-				area = galich_area
 				area = moscow_area
 				area = suzdal_area
 				area = vladimir_area
@@ -152,10 +144,6 @@ tr_novgorod_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			beloozero_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			galich_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -84,7 +84,7 @@ byz_pp_balkans_north_italy = {
 			
 		}
 		effect = {
-			carinthia_area = {
+			carniola_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -110,13 +110,13 @@ byz_pp_balkans_north_italy = {
 		required_missions = { recover_western_balkans }
 		provinces_to_highlight = {
 			OR = {
-				area = carinthia_area
+				area = carniola_area
 				area = croatia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			carinthia_area = {
+			carniola_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -386,13 +386,6 @@ byz_pp_maritime = {
 				}
 				add_permanent_claim = ROOT
 			}
-			sardinia_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			balearic_islands_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -411,7 +404,6 @@ byz_pp_maritime = {
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
-				area = sardinia_area
 				area = balearic_islands_area
 				province_id = 126
 			}
@@ -419,10 +411,6 @@ byz_pp_maritime = {
 		}
 		trigger = {
 			corsica_sardinia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sardinia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -29,10 +29,6 @@ center_of_trade = 2
 #New history by Draiocht
 1477.1.5 = { owner = HAB controller = HAB add_core = HAB }	#from vanilla. Mary of Burgundy, an heiress, passes all Burgundian holdings in the Low Countries to the Habsburgs
 1500.1.1 = {
-	add_permanent_province_modifier = {
-		name = center_of_trade_modifier
-		duration = -1
-	}
 	extra_cost = 15
 	base_tax = 16
 	base_production = 16
@@ -44,8 +40,7 @@ center_of_trade = 2
 #Draiocht note - Base files say 'Flanders incorporated into the Holy Roman Empire' in 1548. I can neither easily find info on this, nor disprove it, unless it is refering to the 'Pragmatic Sanction of 1549'. While it is true that this act centralised the Low Countries and organised them within a HRE structure, it also appears to have explicitly outlined the Low Countries as 'not part of the HRE'.
 1549.11.4 = { owner = NED controller = NED add_core = NED remove_core = SPA hre = no }	#From vanilla, appears to be the creation date for the Netherlands according to Paradox, though still as a vassal of SPA. Calling this date good enough, and also removing province from HRE at this point.
 1566.1.1 = { unrest = 5 religion = reformed }	#Beeldenstorm causes religious tension between Reformist Spanish Netherlands and 'protector of the Counter-Reformation' Philip II.
-1576.11.4 = { 
-	remove_province_modifier = center_of_trade_modifier
+1576.11.4 = {
 	extra_cost = -10
 	base_tax = 6
 	base_production = 6
