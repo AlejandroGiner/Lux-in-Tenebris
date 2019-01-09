@@ -570,8 +570,10 @@ POR_ideas = {
 	}
 	
 	trigger = {
+		OR = {
 		tag = POR
 		tag = AGV
+		}
 	}
 	free = yes		#will be added at load.
 	
