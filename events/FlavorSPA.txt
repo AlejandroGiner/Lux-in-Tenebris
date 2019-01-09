@@ -97,6 +97,14 @@ country_event = {
 		ai_chance = { factor = 90 }
 		if = {
 			limit = { tag = CAS }
+			hidden_effect ={
+				ARA = {
+					every_subject_country = {
+						limit = {is_subject_of_type = personal_union}
+						CAS = {create_union = PREV}
+					}
+				}
+			}
 			create_union = ARA
 			add_opinion = {
 				who = ARA
@@ -121,6 +129,14 @@ country_event = {
 		}
 		if = {
 			limit = { tag = ARA }
+			hidden_effect ={
+				CAS = {
+					every_subject_country = {
+						limit = {is_subject_of_type = personal_union}
+						ARA = {create_union = PREV}
+					}
+				}
+			}
 			create_union = CAS
 			add_opinion = {
 				who = CAS
