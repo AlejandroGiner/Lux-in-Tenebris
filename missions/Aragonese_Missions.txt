@@ -42,7 +42,7 @@ aragonese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			asturias_area = {
+			basque_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -63,28 +63,6 @@ aragonese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			209 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			2989 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
 		}
 	}
 	ara_crowns_of_iberia = {
@@ -94,11 +72,9 @@ aragonese_missions_1 = {
 			OR = {
 				area = castille_area
 				area = toledo_area
-				area = asturias_area
+				area = basque_area
 				area = leon_area
 				area = extremadura_area
-				province_id = 209
-				province_id = 2989
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -113,7 +89,7 @@ aragonese_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			asturias_area = {
+			basque_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -123,12 +99,6 @@ aragonese_missions_1 = {
 			}
 			extremadura_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			209 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2989 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}

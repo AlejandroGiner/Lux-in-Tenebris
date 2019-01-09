@@ -1,0 +1,131 @@
+namespace = canary_events
+
+country_event = {
+	id = canary_events.1
+	title = "canary_events.1.t"
+	desc = "canary_events.1.d"
+	picture = "CARIBBEAN_PIRATE_FORT_eventPicture"
+	
+	trigger = {
+		is_year = 1455 #Donation of the Canaries by Enrique IV
+		NOT = {
+			is_year = 1479
+			has_country_flag = canaries_donated
+		}
+		366 = {
+			owned_by = ROOT
+		}
+		has_ruler = "Enrique IV"
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_country_flag = canaries_donated
+	}
+	
+	option = {
+		name = "canary_events.1.a"
+		tooltip = {
+			366 = {
+				remove_core = CAS
+				add_core = POR
+				cede_province = POR
+			}
+		}
+		hidden_effect = {
+			POR = {
+				country_event = {
+					id = canary_events.3
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = canary_events.2
+	title = "canary_events.2.t"
+	desc = "canary_events.2.d"
+	picture = "CARIBBEAN_PIRATE_FORT_eventPicture"
+	
+	trigger = {
+		is_year = 1479 #Treaty of Alcavocas
+		has_country_flag = canaries_donated
+		OR = {
+			366 = {NOT ={owned_by = ROOT}}
+			5096 = {NOT ={owned_by = ROOT}}
+			4565 = {NOT ={owned_by = ROOT}}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_country_flag = canaries_donated
+	}
+	
+	option = {
+		name = "canary_events.2.a"
+		ai_chance = { factor = 90 }
+		
+		if = {
+			limit = {
+				366 = {
+					NOT = {owned_by = ROOT}
+					is_city = yes
+				}
+			}
+			366 = { add_core = ROOT }
+		}
+		if = {
+			limit = {
+				4565 = {
+					NOT = {owned_by = ROOT}
+					is_city = yes
+				}
+			}
+			4565 = { add_core = ROOT }
+		}
+		if = {
+			limit = {
+				5096 = {
+					NOT = {owned_by = ROOT}
+					is_city = yes
+				}
+			}
+			5096 = { add_core = ROOT }
+		}
+	}
+	
+	option = {
+		name = "canary_events.2.b"
+		ai_chance = { factor = 10 }
+		add_prestige = 10
+	}
+}
+
+country_event = {
+	id = canary_events.3
+	title = "canary_events.3.t"
+	desc = "canary_events.3.d"
+	picture = "CARIBBEAN_PIRATE_FORT_eventPicture"
+
+	 
+	is_triggered_only = yes
+	
+	option = {
+		name = "canary_events.3.a"
+		366 = {
+				remove_core = CAS
+				add_core = POR
+				cede_province = POR
+		}
+	}
+}

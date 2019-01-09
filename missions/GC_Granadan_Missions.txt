@@ -644,15 +644,6 @@ adu_slot_2_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			asturias_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 			leon_area = {
 				limit = {
 					NOT = {
@@ -692,7 +683,6 @@ adu_slot_2_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = galicia_area
-				area = asturias_area
 				area = leon_area
 				area = basque_area
 				area = catalonia_area
@@ -706,11 +696,6 @@ adu_slot_2_missions = {
 		
 		trigger = {
 			galicia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			asturias_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
