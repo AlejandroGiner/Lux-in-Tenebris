@@ -31,7 +31,7 @@ gov_puppet_kingdom_of_ireland = {
 	}
 
 	trigger = {
-		has_reform = puppet_kingdom_of_ireland
+		government = puppet_kingdom_of_ireland_legacy
 	}
 }
 
@@ -79,6 +79,6 @@ gov_transitional_government_ireland = {
 	}
 	
 	trigger = {
-		has_reform = transitional_government_ireland
+		government = transitional_government_ireland_legacy
 	}
 }
