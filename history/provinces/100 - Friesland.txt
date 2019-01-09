@@ -28,9 +28,10 @@ discovered_by = eastern
 #New history by Draiocht
 1515.5.15 = {
 	owner = HAB
+	controller = HAB
 	add_core = HAB	#Adding the proper core
 }  # Sold to Karl von Habsburg (future Charles I of Spain and Charles V HRE). Old version puts rebels here on the same day... odd. Cutting it until I have time to sort it out. Rebel note was #'Kings' Pier Gerlofs Donia and Wijerd Jelckama
-1516.1.22 = { controller = HAB }	#removing rebels for Spain
+#1516.1.22 = { controller = HAB }	#removing rebels for Spain
 1516.1.23 = { owner = SPA controller = SPA add_core = SPA } #Only later grouped with Spain, but for engine/gameplay reasons, calling it Spain upon the countries creation.
 1519.1.12 = { remove_core = HAB hre = yes } # Charles V elected emperor and gains total control over his Burgundian inheritance.
 #Draiocht note - Base files say 'Flanders incorporated into the Holy Roman Empire' in 1548. I can neither easily find info on this, nor disprove it, unless it is refering to the 'Pragmatic Sanction of 1549'. While it is true that this act centralised the Low Countries and organised them within a HRE structure, it also appears to have explicitly outlined the Low Countries as 'not part of the HRE'.
