@@ -5,9 +5,9 @@ country_decision = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_arabia_flag }
 			NOT = { tag = ARB}
-			any_owned_province = {region = arabia}
+			any_owned_province = {region = arabia_region}
 			religion_group = muslim
-			culture_group = turkic_semitic
+			culture_group = turko_semitic
 		}
 		
 		provinces_to_highlight = { 
@@ -31,6 +31,7 @@ country_decision = {
 			}
 		}
 		effects = {
+			change_tag = ARB
 			btc_new_nation_effects = yes 
 			arabia_region = {
 				limit = {
