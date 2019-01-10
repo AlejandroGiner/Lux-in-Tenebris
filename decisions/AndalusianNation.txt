@@ -1,11 +1,8 @@
-###################################################################################################
-################################			Andalusia			 ##############################################
-###################################################################################################
 country_decisions = {
 	andalusian_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			religion_group = muslim
 			NOT = { has_country_flag = formed_andalusia_flag }
 			NOT = { tag = ADU }
@@ -56,8 +53,8 @@ country_decisions = {
 		allow = {
 			NOT = { exists = ADU }
 			is_nomad = no
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
 			religion_group = muslim
 			lower_andalucia_area = {type = all owned_by = ROOT}
 			upper_andalucia_area = {type = all owned_by = ROOT}
@@ -76,20 +73,10 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ADU
-			remove_non_electors_emperors_from_empire_effect = yes
-			swap_non_generic_missions = yes
+			btc_new_nation_effects = yes 
 			225 = {	#Cordoba
 				move_capital_effect = yes
 			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
-			add_prestige = 25
 			iberia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -104,14 +91,6 @@ country_decisions = {
 				}
 				change_primary_culture = andalusi_culture
 			}
-			if = {
-				limit = {
-					government = tribal
-				}
-				change_government = monarchy #Desert tribes settling down, theocracies become monarchies.
-				set_legacy_government = despotic_monarchy
-			}
-			
 			set_country_flag = formed_andalusia_flag
 			if = {
 				limit = {
