@@ -57,10 +57,8 @@ colonial_cascadia = {
 	# Specific
 	names = {
 		trigger = {
-			AND = {
 				culture_group = british
 				NOT = { tag = USA }
-			}
 		}
 		name = "COLONIAL_CALIFORNIA_New_Albion"
 	}
@@ -1067,7 +1065,7 @@ colonial_cape = {
 		name = "COLONIAL_CAPE_COLONY_EL"
 	}
 	names = {
-		trigger = { primary_culture = portuguese }
+		trigger = { primary_culture = portugese }
 		name = "COLONIAL_CAPE_COLONY_PT"
 	}
 	names = {
