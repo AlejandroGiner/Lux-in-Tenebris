@@ -12,10 +12,9 @@ country_decision = {
 		
 		provinces_to_highlight = { #Provinces for the decision
 			region = ###
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
@@ -70,10 +69,10 @@ country_decision = {
 		
 		provinces_to_highlight = { 
 			region = 
-				OR = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			NOT = { exists =  }
