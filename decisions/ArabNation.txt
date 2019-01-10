@@ -1,66 +1,44 @@
-country_decisions = {
-	###################################################################################################
-################################			Arabia			 ##############################################
-###################################################################################################
+country_decision = {
 	arab_nation = {
 		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
+		potential = { 
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_arabia_flag }
-			NOT = { tag = ARB }
-			culture_group = turko_semitic
-			any_owned_province = { region = arabia_region }
+			NOT = { tag = ARB}
+			any_owned_province = {region = arabia}
+			religion_group = muslim
+			culture_group = turkic_semitic
 		}
-		provinces_to_highlight = {
+		
+		provinces_to_highlight = { 
 			region = arabia_region
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
+				is_city = yes
 			}
 		}
 		allow = {
 			NOT = { exists = ARB }
 			religion_group = muslim
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			owns_core_province = 384			#Medina
-			owns_core_province = 385			#Mecca
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					region = arabia_region
-				}
-				amount = 50			#At least 2/3 of Arabia's 74 provinces
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			
+			num_of_owned_provinces_with = { 
+				value = 45
+				region = arabia_region
+				is_core = ROOT
 			}
-			
-			
 		}
-		effect = {
-			change_tag = ARB
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
+		effects = {
+			btc_new_nation_effects = yes 
 			arabia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 					is_city = yes
 				}
-				add_permanent_claim = ARB
-			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				add_permanent_claim = ROOT 
 			}
 			set_country_flag = formed_arabia_flag
 		}
@@ -68,9 +46,9 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { capital_scope = { region = arabia_region } }
+				NOT = { capital_scope = { region = arabia_region } } 
 			}
 		}
-		ai_importance = 400 #
+		ai_importance = 400 
 	}
 }
