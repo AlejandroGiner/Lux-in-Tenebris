@@ -1,0 +1,99 @@
+country_decisions = {
+	###################################################################################################
+################################			Westphalia			 ############################################## #leaf - "Was westfalia, needs new localisation"
+###################################################################################################
+	westphalian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_westphalia_flag }
+			NOT = { tag = WES }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = SWI }
+			OR = {
+				primary_culture = hannoverian #Westphalian
+				primary_culture = hessian
+				capital_scope = { area = westphalia_area }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 52	# Magdeburg
+				province_id = 82	# Westfalen
+				province_id = 1758	# Hannover
+				province_id = 1762	# Kassel
+				province_id = 2972	# Paderborn
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = WES }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			OR = {
+				NOT = { is_part_of_hre = yes }
+				is_elector = yes
+			}
+			capital_scope = { area = westphalia_area }
+			owns_core_province = 52	# Magdeburg
+			owns_core_province = 82	# Westfalen
+			owns_core_province = 1758	# Hannover
+			owns_core_province = 1762	# Kassel
+			owns_core_province = 2972	# Paderborn
+		}
+		effect = {
+			change_tag = WES
+			remove_non_electors_emperors_from_empire_effect = yes
+			capital_scope = { add_base_tax = 1 }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			westphalia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WES
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WES
+			}
+			every_province = {
+				limit = {
+					OR = {
+						province_id = 52
+						province_id = 81
+						province_id = 1762
+						province_id = 2964
+					}
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = WES
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_westphalia_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_part_of_hre = yes
+				is_elector = no	
+			}
+		}
+		ai_importance = 400 #
+	}
+}

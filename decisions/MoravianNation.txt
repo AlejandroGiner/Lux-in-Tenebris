@@ -1,4 +1,105 @@
-#Moving all BT and BtP forming decisions to BtPLNewCountryFormations and BtPLNewCountryFormationsSpecial
-
-#Leaving this empty file here, for now, so it overwrites the old version in any submods or addons using BT & doesn't cause doubled up decisions,
-#but I'll be deleting this eventually. Any submod devs may feel welcome to delete this from their version at any time. - Draiocht
+country_decisions = {
+	###################################################################################################
+#######################################			Moravia			 ############################################			#Note needs work
+###################################################################################################
+	#More or less HR's work with only a few adjustments from Draiocht
+	moravian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_moravia_flag_btp }
+			NOT = { tag = GMV }
+			NOT = { tag = PLC }
+			culture_group = west_slavic
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 60			# Lusatia
+				province_id = 154		# Nitra
+				province_id = 257		# Warsaw
+				province_id = 262		# Krakow
+				province_id = 263		# Ratibor
+				province_id = 264		# Breslau
+				province_id = 265		# Brno
+				province_id = 266		# Prague
+				province_id = 1763		# Lusatia
+				province_id = 1772		# Bratislava
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = GMV }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 60			# Lusatia
+			owns_core_province = 1763		# Lusatia
+			owns_core_province = 263		# Ratibor
+			owns_core_province = 264		# Breslau
+			owns_core_province = 265		# Brno
+			owns_core_province = 266		# Prague
+			owns_core_province = 154		# Nitra
+			owns_core_province = 1772		# Bratislava
+			owns_core_province = 262		# Krakow
+			owns_core_province = 257		# Warsaw
+			total_development = 300			#Special discount. Normal requirement for rank 3 is 1000 dev, so this is 70 percent discounted. Note base dev in 1444 of all Celtic countries is around 254 (and England is another 181).
+			prestige = 40			#Normal requirement for rank 3 is 75 prestige.
+		}
+		effect = {
+			change_tag = GMV
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			bohemia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			erzgebirge_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			silesia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			slovakia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			poland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			#Cutting this because there are currently no unique Moravian ideas
+			#if = {
+			#	limit = { has_custom_ideas = no }
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_moravia_flag_btp
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

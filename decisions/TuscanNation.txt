@@ -1,4 +1,91 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+country_decisions = {
+	###################################################################################################
+################################			Tuscany			 ##############################################			#Note needs work
+###################################################################################################
+	#More or less HR's work with only a few adjustments from Draiocht
+	tuscan_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_tuscany_flag }
+			NOT = { tag = ITL }
+			NOT = { tag = ITA }
+			NOT = { tag = TUS }
+			NOT = { tag = SPI }
+			NOT = { tag = EMR }
+			NOT = { tag = LMV }
+			OR = {
+				primary_culture = tuscan
+				tag = PGI
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2978	# Arezzo
+				province_id = 116	# Firenze
+				province_id = 115	# Pisa
+				province_id = 117	# Siena
+				province_id = 2980	# Lucca
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TUS }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 116	# Firenze
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						province_id = 2978	# Arezzo
+						province_id = 116	# Firenze
+						province_id = 115	# Pisa
+						province_id = 117	# Siena
+						province_id = 2980	# Lucca
+					}
+				}
+				amount = 4			#At least 4 of Tuscany's 5 provinces (approximate)
+			}
+		}
+		effect = {
+			change_tag = TUS
+			remove_non_electors_emperors_from_empire_effect = yes
+			every_province = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					culture = tuscan
+				}
+				add_permanent_claim = TUS
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			if = {
+				limit = {
+					NOT = { has_idea_group = TUS_ideas }
+					has_custom_ideas = no
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_tuscany_flag
+			hidden_effect = {
+				country_event = {
+					id = flavor_tus.2
+					days = 50
+					random = 20
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

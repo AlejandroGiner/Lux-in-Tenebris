@@ -1,4 +1,83 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+country_decisions = {
+	###################################################################################################
+################################			Poland			 ##############################################			#Note needs work
+###################################################################################################
+	polish_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_poland_flag }
+			NOT = { tag = PLC }
+			NOT = { tag = POL }
+			NOT = { tag = GMV  }
+			NOT = { tag = TUS }
+			NOT = { tag = EMR }
+			NOT = { tag = LMV }
+			OR = {
+				primary_culture = polish
+				#primary_culture = pommeranian
+				primary_culture = schlesian
+				tag = DNZ
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 262	# Krakow
+				province_id = 257	# Warszawa
+				province_id = 254	# Poznan
+				province_id = 255	# Kalish
+				province_id = 258	# Sieradz
+				province_id = 259	# Sandomierz
+				province_id = 1939	# Leczyca
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = POL }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 262	# Krakow
+			owns_core_province = 257	# Warszawa
+			owns_core_province = 254	# Poznan
+			owns_core_province = 255	# Kalish
+			owns_core_province = 258	# Sieradz
+			owns_core_province = 259	# Sandomierz
+			owns_core_province = 1939	# Leczyca
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = POL
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			poland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = POL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_poland_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

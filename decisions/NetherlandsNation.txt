@@ -1,4 +1,126 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+country_decisions = {
+###################################################################################################
+################################			Netherlands			 ##############################################			#Note needs work
+###################################################################################################
+	netherlands_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_netherlands_flag }
+			NOT = { tag = NED }
+			NOT = { tag = BEL }
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				tag = BUR
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 95 # Breda
+				province_id = 96 # Zeeland
+				province_id = 97 # Holland
+				province_id = 98 # Utrecht
+				province_id = 99 # Gelre
+				province_id = 100 # Friesland
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NED }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 95 # Breda
+			owns_core_province = 96 # Zeeland
+			owns_core_province = 97 # Holland
+			owns_core_province = 98 # Utrecht
+			owns_core_province = 99 # Gelre
+			owns_core_province = 100 # Friesland
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+	  		if = {
+	  			limit = { tag = BUR }
+	  			change_primary_culture = dutch
+			}
+			if = {
+				limit = {
+					tag = BUR
+					exists = FRA
+				}
+	  			france_region = {
+					limit = { owned_by = BUR }
+	  				remove_core = BUR
+	  				add_core = FRA
+	  				cede_province = FRA
+	  			}
+	  		}
+			if = {
+				limit = {
+					tag = BUR
+					exists = FRA
+					BUR = { any_subject_country = { france_region = { owned_by = PREV } } }
+				}
+				every_subject_country = {
+					limit = { france_region = { owned_by = PREV } }
+					france_region = {
+						limit = { owned_by = PREV }
+						remove_core = BUR
+						remove_core = PREV
+						add_core = FRA
+						cede_province = FRA
+					}
+				}
+	  		}
+			change_tag = NED
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			low_countries_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { province_id = 87 }
+					NOT = { province_id = 1931 }
+				}
+				add_permanent_claim = NED
+			}
+			picardy_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { province_id = 89 }
+					NOT = { province_id = 182 }
+				}
+				add_permanent_claim = NED
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = NED_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_netherlands_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = BUR
+			}
+		}
+		ai_importance = 400
+	}
+}

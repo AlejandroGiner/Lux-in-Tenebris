@@ -1,6 +1,100 @@
-#Moving all BT and BtP forming decisions to BtPLNewCountryFormations and BtPLNewCountryFormationsSpecial
-
-#Leaving this empty file here, for now, so it overwrites the old version in any submods or addons using BT & doesn't cause doubled up decisions,
-#but I'll be deleting this eventually. Any submod devs may feel welcome to delete this from their version at any time. - Draiocht
-
-#Also note LMV's 2 decisions have been merged into one.
+country_decisions = {
+	###################################################################################################
+############			LombardyVenetia (merged both of HR's decisions into one without gov type limits)			 ###########################			#Note needs work
+###################################################################################################
+	#More or less HR's work with only a few adjustments from Draiocht
+	lombardy_venetia_monarchy_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_lombardy_venetia_flag_btp }
+			NOT = { tag = LMV }
+			NOT = { tag = ITL }
+			NOT = { tag = ITA }
+			NOT = { tag = SPI }
+			NOT = { tag = EMR }
+			NOT = { tag = TUS }
+			OR = { 
+				primary_culture = lombard
+				primary_culture = venetian
+			}
+			#NOT = { government = republic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 104	# Milan
+				province_id = 107	# Brescia
+				province_id = 108	# Verona
+				province_id = 109	# Mantua
+				province_id = 110	# Trent
+				province_id = 111	# Friuli
+				province_id = 112	# Venezia
+				province_id = 1769	# Gorizia
+				province_id = 1774	# Treviso
+				province_id = 1862	# Cremona
+				province_id = 3047	# Bergamo
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			OR = {
+				tag = MLO
+				NOT = { exists = MLO }
+			}
+			OR = {
+				tag = VEN
+				NOT = { exists = VEN }
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			adm_tech = 15			#default 1596			#Note this is temp until Italy reoverhaul
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						province_id = 104	# Milan
+						province_id = 107	# Brescia
+						province_id = 108	# Verona
+						province_id = 109	# Mantua
+						province_id = 110	# Trent
+						province_id = 111	# Friuli
+						province_id = 112	# Venezia
+						province_id = 1769	# Gorizia
+						province_id = 1774	# Treviso
+						province_id = 1862	# Cremona
+						province_id = 3047	# Bergamo
+					}
+				}
+				amount = 7			#At least 2/3 of lmv's 11 provinces (approximate)
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = LMV
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_lombardy_venetia_flag_btp
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

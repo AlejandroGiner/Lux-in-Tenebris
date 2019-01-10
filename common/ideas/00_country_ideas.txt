@@ -8734,7 +8734,10 @@ HTK_ideas = {
 	}
 
 	trigger = {
-		tag = HTK
+		OR = {
+			tag = HTK
+			tag = TGS
+		}
 	}
 	free = yes
 	

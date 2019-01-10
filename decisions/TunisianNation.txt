@@ -1,0 +1,111 @@
+country_decisions = {
+	###################################################################################################
+################################			Tunisia			 ##############################################
+###################################################################################################
+	tunisian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_tunisia_flag }
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = OTN }
+			AND = {
+				primary_culture = tunisian
+				any_owned_province = {
+					OR = {
+						area = tunisia_area
+						area = djerba_area
+						area = djerid_area
+						area = east_aures_area
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = djerba_area
+				area = djerid_area
+				area = east_aures_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = OTN }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 341 #Tunis
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = tunisia_area
+						area = djerba_area
+						area = djerid_area
+						area = east_aures_area
+					}
+				}
+				amount = 10			#At least 2/3 of Tunisia's 15 provinces
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = OTN
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			tunisia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			djerba_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			djerid_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			east_aures_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			if = {
+				limit = {
+					OR = {
+						government = tribal_kingdom
+						government = tribal_despotism
+						government = tribal_federation
+						government = tribal_democracy
+					}
+				}
+				change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_tunisia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

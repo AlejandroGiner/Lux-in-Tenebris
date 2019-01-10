@@ -1,0 +1,113 @@
+country_decisions = {
+	###################################################################################################
+################################			Iceland			 ##############################################
+###################################################################################################
+	icelandic_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_iceland }
+			NOT = { tag = ICE }
+			NOT = { tag = SCA }
+			NOT = { tag = NOR }
+			NOT = { tag = DAN }
+			NOT = { tag = SWE }
+			OR = {
+				primary_culture = icelandic
+				AND = {
+					culture_group = scandinavian
+					any_owned_province = { area = iceland_area }
+				}
+			}
+			NOT = { num_of_cities = 40 }			#I was tired of looking at this =p
+		}
+		provinces_to_highlight = {
+			area = iceland_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ICE }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			calc_true_if = {
+				all_owned_province = {
+					area = iceland_area
+					is_core = owner
+				}
+				amount = 3			#3 of Iceland's 4 provinces
+			}
+		}
+		effect = {
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = ROOT
+						NOT = { owned_by = ROOT }
+					}
+					remove_core = ROOT
+					if = {
+						limit = { ROOT = { tag = NOR } }
+						set_province_flag = norwegian_core
+					}
+					if = {
+						limit = { ROOT = { tag = DAN } }
+						set_province_flag = danish_core
+					}
+					if = {
+						limit = { ROOT = { tag = SWE } }
+						set_province_flag = swedish_core
+					}					
+				}
+			}
+			change_tag = ICE
+			remove_non_electors_emperors_from_empire_effect = yes
+			hidden_effect = {
+				every_province = {
+					if = {
+						limit = {
+							has_province_flag = norwegian_core
+						}
+						add_core = NOR
+						clr_province_flag = norwegian_core					
+					}
+					if = {
+						limit = {
+							has_province_flag = danish_core
+						}
+						add_core = DAN
+						clr_province_flag = danish_core					
+					}
+					if = {
+						limit = {
+							has_province_flag = swedish_core
+						}
+						add_core = SWE
+						clr_province_flag = swedish_core					
+					}					
+				}
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_iceland
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				capital_scope = { NOT = { area = iceland_area } }
+			}
+		}
+		ai_importance = 400 #
+	}
+}

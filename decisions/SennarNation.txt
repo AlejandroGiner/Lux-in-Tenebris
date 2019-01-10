@@ -1,0 +1,95 @@
+country_decisions = {
+	###################################################################################################
+################################			Sennar			 ##############################################
+###################################################################################################
+	bt_sennar_formation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_sennar_bt }
+			NOT = { tag = NUB }
+			OR = {
+				tag = FNJ
+				AND = {
+					owns_core_province = 2799
+					culture_group = sudanese
+					religion_group = muslim
+				}
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 2799
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NUB }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 2799
+		}
+		effect = {
+			2799 = { move_capital_effect = yes }
+			change_tag = NUB
+			remove_non_electors_emperors_from_empire_effect = yes
+			every_province = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					OR = {
+						province_id = 2798
+						province_id = 5285
+						province_id = 1222
+						province_id = 5287
+						province_id = 2800
+						province_id = 2997
+						province_id = 5284
+						province_id = 1220
+						province_id = 5286
+						province_id = 1221
+						province_id = 1216
+					}
+				}
+				add_permanent_claim = NUB
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					OR = {
+						province_id = 5302
+						province_id = 5281
+						province_id = 5279
+						province_id = 1228
+					}
+				}
+				add_claim = NUB
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			2799 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 1
+			}
+			add_prestige = 10
+			change_religion = sunni
+			add_piety = -0.30
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_sennar_bt
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

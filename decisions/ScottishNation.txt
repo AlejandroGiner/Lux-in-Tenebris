@@ -1,4 +1,136 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+country_decision = {
+	###################################################################################################
+################################			Scotland			 ##############################################
+###################################################################################################
+	scottish_nation = {			#Formerly BT only btpl_scottish_nation, which still has a localisation
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_scotland_flag }
+			NOT = { tag = SCO }			#Hide this decision for Scotland... duh....
+			NOT = { tag = GBR }			#Scottish GBR shouldn't see this
+			NOT = { tag = TNA }			#Prevent any possible exploit of tag switching
+			OR = {
+				primary_culture = scottish
+				primary_culture = gallgaidheil
+				primary_culture = highland_scottish
+			}	#One of the Scottish cultures
+			any_owned_province = {
+				OR = {
+					area = lowlands_area
+					area = scottish_marches_area
+					area = highlands_area
+					area = kingdom_of_the_isles_area
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = scottish_marches_area
+				area = highlands_area
+				area = kingdom_of_the_isles_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SCO }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			if = {
+				limit = { primary_culture = scottish }
+				owns_core_province = 248			#Lothian
+			}
+			if = {
+				limit = { NOT = { primary_culture = scottish } }
+				owns_core_province = 250			#Fife
+			}
+			custom_trigger_tooltip = {
+				tooltip = two_thirds_of_scotland_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+						OR = {
+							area = lowlands_area
+							area = scottish_marches_area
+							area = highlands_area
+							area = kingdom_of_the_isles_area
+						}
+					}
+					amount = 12			#2/3 of Scotland's 17 provinces
+				}
+			}
+			total_development = 75			#Special discount. Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = SCO
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					OR = {
+						government = irish_clann
+						government = norman_lordship
+					}
+				}
+				change_government = feudal_monarchy
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			lowlands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SCO
+			}
+			highlands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SCO
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SCO
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_scotland_flag
+			hidden_effect = {
+				if = {
+					limit = {
+						tag = LOI
+					}
+					complete_mission = sco_highlands_mission
+				}	
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = SCO_Ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = ENG
+			}
+		}
+		ai_importance = 400
+	}
+}

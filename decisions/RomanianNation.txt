@@ -1,4 +1,89 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+country_decisions = {
+	###################################################################################################
+################################			Romania			 ##############################################			#Note needs work
+###################################################################################################
+	romanian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_romania_flag }
+			NOT = { tag = RMN }
+			NOT = { exists = ROM }
+			primary_culture = romanian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 158	# Transylvania
+				province_id = 159	# Silistria
+				province_id = 160	# Oltenia
+				province_id = 161	# Wallachia
+				province_id = 268	# Bessarabia
+				province_id = 1756	# Budjak
+				province_id = 3154	# Alba
+				province_id = 3164	# Constanta
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = RMN }
+			NOT = { exists = BYZ }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 158	# Transylvania
+			owns_core_province = 159	# Silistria
+			owns_core_province = 160	# Oltenia
+			owns_core_province = 161	# Wallachia
+			owns_core_province = 268	# Bessarabia
+			owns_core_province = 1756	# Budjak
+			owns_core_province = 3154	# Alba
+			owns_core_province = 3164	# Constanta
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = RMN
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			wallachia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RMN
+			}
+			moldavia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RMN
+			}
+			transylvania_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RMN
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_romania_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+}

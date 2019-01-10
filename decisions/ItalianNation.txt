@@ -1,73 +1,80 @@
 country_decisions = {
-
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
-	
-	gods_kingdom = {
+	###################################################################################################
+################################			Italy			 ##############################################
+###################################################################################################
+	italian_nation = {
 		major = yes
 		potential = {
-			normal_or_historical_nations = yes
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_italy_flag }
+			NOT = { tag = ITL }
+			NOT = { tag = ITA }
+			culture_group = latin
+		}
+		provinces_to_highlight = {
+			region = italy_region
 			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = ITA }
-			NOT = { exists = ITL }
-			tag = PAP
-			NOT = { has_country_modifier = btp_kingdom_of_god }
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 15
-				}
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
-			is_free_or_tributary_trigger = yes
+			NOT = { exists = ITL }
+			hidden_trigger  = { NOT = { exists = ITA } }
 			is_nomad = no
+			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			#Ecclesiastical provinces of Northern Italy
 			owns_core_province = 101	# Genoa
-			owns_core_province = 103	# Torino
-			owns_core_province = 104	# Milano
-			owns_core_province = 105	# Parma
-			owns_core_province = 106	# Modena
-			owns_core_province = 107	# Brescia
-			owns_core_province = 108	# Verona
-			owns_core_province = 109	# Mantua
-			owns_core_province = 110	# Trento
-			owns_core_province = 111	# Udine / Aquileia
+			owns_core_province = 104	# Milan
 			owns_core_province = 112	# Venice
-			owns_core_province = 113	# Ferrara
-			owns_core_province = 114	# Bologna + Ravenna
-			owns_core_province = 115	# Pisa
-			owns_core_province = 116	# Firenze
-			owns_core_province = 117	# Siena
-			owns_core_province = 118	# Roma
-			owns_core_province = 119	# Ancona + Fermo
-			owns_core_province = 2976	# Perugia
-			owns_core_province = 2977	# Pesaro
+			owns_core_province = 116	# Florence
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					region = italy_region
+				}
+				amount = 35			#At least 90 percent of N Italy's 38 provinces (Italy total has another 22 in Naples and the islands, so 35 is about 60 percent of total)
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
+			change_tag = ITL
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
 			add_country_modifier = {
-				name = "btp_kingdom_of_god"
-				duration = -1
+				name = centralization_modifier
+				duration = 7300
 			}
-			country_event  = { id = catholic_flavor.2 }
-			every_province = {
+			add_prestige = 25
+			italy_region = {
 				limit = {
-					region = italy_region
 					NOT = { owned_by = ROOT }
+					NOT = { owned_by = PAP }
+					NOT = { area = naples_area }
+					NOT = { area = calabria_area }
+					NOT = { area = apulia_area }
+					NOT = { area = sicily_area }
 				}
-				add_permanent_claim = ROOT
+				add_permanent_claim = ITL
 			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_italy_flag
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				government = republic
+			}
 		}
+		ai_importance = 400 #
 	}
-
 }

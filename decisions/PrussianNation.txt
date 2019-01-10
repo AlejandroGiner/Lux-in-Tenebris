@@ -1,4 +1,303 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
+country_decisions = {
+	###################################################################################################
+################################			Prussia (Kingdom, id est, BRA)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+###################################################################################################
+	form_kingdom_of_prussia = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { tag = PRU }
+			NOT = { tag = GER }
+			tag = BRA
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41	# Königsberg
+				AND = {
+					province_id = 43	# Danzig
+					ROOT = { NOT = { owns_core_province = 2995 } }
+				}
+				AND = {
+					province_id = 2995
+					ROOT = { NOT = { owns_core_province = 43 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = PRU }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 41			# Königsberg
+			OR = {
+				owns_core_province = 43		# Danzig
+				owns_core_province = 2995	# Stolp
+			}
+			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = PRU
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				change_government = prussian_monarchy
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			change_primary_culture = prussian
+			PRU = {
+				every_owned_province = {
+					limit = { 
+						OR = {
+							culture = saxon
+							culture = pommeranian
+						}
+					} 
+					change_culture = prussian
+				}
+			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+			west_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = PRU_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_prussia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
 
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+###################################################################################################
+################################			Prussia (id est, TEU)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+###################################################################################################
+	prussian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { tag = PRU }
+			NOT = { tag = GER }
+			tag = TEU
+			government = monastic_order_government
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41	# Königsberg
+				AND = {
+					province_id = 43	# Danzig
+					ROOT = { NOT = { owns_core_province = 2995 } }
+				}
+				AND = {
+					province_id = 2995
+					ROOT = { NOT = { owns_core_province = 43 } }
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = PRU }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 41			# Königsberg
+			OR = {
+				owns_core_province = 43		# Danzig
+				owns_core_province = 2995	# Stolp
+			}
+			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = PRU
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				change_government = prussian_monarchy
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			change_primary_culture = prussian
+			every_neighbor_country = {
+				limit = { government = monarchy }
+				add_opinion = { who = ROOT modifier = secularized_monastic_order }
+			}				#The special thing about this decision, apparently, instead of auto culture-flip
+			west_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = PRU_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_prussia_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_year = 1525 }
+			}
+		}
+		ai_importance = 400 #
+	}
+
+###################################################################################################
+################################			Prussia (general, id est, Non BRA, non monastic TEU)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+###################################################################################################
+	prussian_nation_general = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { tag = PRU }
+			NOT = { tag = GER }
+			OR = {
+				primary_culture = pommeranian
+				primary_culture = saxon
+				primary_culture = prussian
+			}
+			NOT = { tag = BRA }
+			OR = {
+				AND = {
+					tag = TEU
+					NOT = { government = monastic_order_government }
+				}
+				NOT = { tag = TEU }
+			}
+			owns_core_province = 41			# Königsberg
+			num_of_cities = 12			#If not one of the normal candidates, needs 12 provinces plus Koenigsberg to see
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 41	# Königsberg
+				province_id = 43	# Danzig
+				province_id = 2995	# Stolp
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = PRU }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 41			# Königsberg
+			owns_core_province = 43		# Danzig
+			owns_core_province = 2995	# Stolp
+			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = PRU
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { has_dlc = "Rights of Man" }
+				change_government = prussian_monarchy
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			change_primary_culture = prussian
+			PRU = {
+				every_owned_province = {
+					limit = { 
+						OR = {
+							culture = saxon
+							culture = pommeranian
+						}
+					} 
+					change_culture = prussian
+				}
+			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+			west_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = PRU_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_prussia_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_year = 1525 }
+			}
+		}
+		ai_importance = 400 #
+	}
+}

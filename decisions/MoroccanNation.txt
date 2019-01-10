@@ -1,0 +1,140 @@
+country_decisions = {
+	###################################################################################################
+################################			Morocco			 ##############################################
+###################################################################################################
+	moroccan_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_morocco_flag }
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = OTN }
+			OR = {
+				primary_culture = moroccan
+				AND = {
+					OR = {
+						culture_group = turko_semitic
+						culture_group = berber_group
+					}
+					any_owned_province = {
+						OR = {
+							area = northern_morocco_area
+							area = western_morocco_area
+							area = southern_morocco_area
+							area = marrekesh_area
+							area = sus_area
+							area = tafilalt_area
+							area = tagmudant_area
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = southern_morocco_area
+				area = marrekesh_area
+				area = sus_area
+				area = tafilalt_area
+				area = tagmudant_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = MOR }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 343 #Fez
+			owns_core_province = 344 #Marrekech
+			owns_core_province = 2467 #Meknes
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = northern_morocco_area
+						area = western_morocco_area
+						area = southern_morocco_area
+						area = marrekesh_area
+						area = sus_area
+						area = tafilalt_area
+						area = tagmudant_area
+					}
+				}
+				amount = 19			#At least 2/3 of Morocco's 28 provinces
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = MOR
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			tafilalt_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			sus_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			marrekesh_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			southern_morocco_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			northern_morocco_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			western_morocco_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			tagmudant_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					OR = {
+						government = tribal_kingdom
+						government = tribal_despotism
+						government = tribal_federation
+						government = tribal_democracy
+					}
+				}
+				change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_morocco_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

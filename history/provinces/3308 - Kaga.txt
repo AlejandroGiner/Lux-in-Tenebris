@@ -1,0 +1,29 @@
+#3307 - Noto
+
+owner = TGS
+controller = TGS
+culture = togoku
+religion = shinto
+capital = "Kuradagake"
+trade_goods = cloth
+hre = no
+base_tax = 4
+base_production = 3
+base_manpower = 3
+is_city = yes
+add_core = TGS
+discovered_by = chinese
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+discovered_by = ANU
+
+extra_cost = 8
+center_of_trade = 1
+
+1542.1.1 = { discovered_by = POR }
+1562.7.1 = { add_core = UES }
+1576.1.1 = { owner = UES controller = UES remove_core = TGS }
+1581.1.1 = { add_core = ODA owner = ODA controller = ODA remove_core = UES }
+1583.6.14 = { owner = MAE controller = MAE add_core = MAE remove_core = ODA }
