@@ -1,0 +1,111 @@
+#All text must be enclosed in this
+country_decision = {
+	###_nation = {
+		major = yes
+		potential = { #Conditions to see decision
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_xxx_flag }
+			NOT = { tag = ###}
+			any_owned_province = {}
+			religion_group = ###
+		}
+		
+		provinces_to_highlight = { #Provinces for the decision
+			region = ###
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+		}
+		allow = {
+			NOT = { exists = ### }
+			religion_group = ###
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			
+			num_of_owned_provinces_with = { #Provinces Checker
+				value = ###
+				region = ###
+				is_core = ROOT
+				owned_by = ROOT
+			}
+		}
+		effects = {
+			btc_new_nation_effects = yes 
+			xxx_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = xxx
+			}
+			set_country_flag = formed_xxx_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { region = xxx_region } } #Prevent AI from forming a nation that isn't historical to that region
+			}
+		}
+		ai_importance = 400 #AI will take decision
+	}
+}
+
+	#See below for full skeleton without comments for use
+	
+	
+country_decision = {
+	_nation = {
+		major = yes
+		potential = { 
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_ _flag }
+			NOT = { tag = }
+			any_owned_province = {}
+			religion_group = 
+		}
+		
+		provinces_to_highlight = { 
+			region = 
+				OR = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+		}
+		allow = {
+			NOT = { exists =  }
+			religion_group = 
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			
+			num_of_owned_provinces_with = { 
+				value = 
+				region = 
+				is_core = ROOT
+				owned_by = ROOT
+			}
+		}
+		effects = {
+			btc_new_nation_effects = yes 
+			_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					is_city = yes
+				}
+				add_permanent_claim = 
+			}
+			set_country_flag = formed_ _flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { region = _region } } 
+			}
+		}
+		ai_importance = 400 
+	}
+}
