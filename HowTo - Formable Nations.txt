@@ -6,7 +6,7 @@ country_decision = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_xxx_flag }
 			NOT = { tag = ###}
-			any_owned_province = {}
+			any_owned_province = {region = xxx}
 			religion_group = ###
 		}
 		
@@ -27,7 +27,6 @@ country_decision = {
 				value = ###
 				region = ###
 				is_core = ROOT
-				owned_by = ROOT
 			}
 		}
 		effects = {
@@ -63,7 +62,7 @@ country_decision = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ _flag }
 			NOT = { tag = }
-			any_owned_province = {}
+			any_owned_province = {region = }
 			religion_group = 
 		}
 		
@@ -84,7 +83,6 @@ country_decision = {
 				value = 
 				region = 
 				is_core = ROOT
-				owned_by = ROOT
 			}
 		}
 		effects = {
@@ -108,4 +106,72 @@ country_decision = {
 		}
 		ai_importance = 400 
 	}
+}
+
+
+	#see below for an idea on what the scripted triggers and effects are 
+
+btc_new_nation_effects = {
+
+	swap_non_generic_missions = yes
+	
+	remove_non_electors_emperors_from_empire_effect = yes
+	
+	add_prestige = 25
+	
+	if = {
+		limit = {
+			government = tribal
+		}
+		change_government = monarchy
+		set_legacy_government = despotic_monarchy
+	}
+	
+	if = {
+		limit = {
+			NOT = { government_rank = 2 }
+		}
+		set_government_rank = 2
+	}
+	
+	add_country_modifier = {
+		name = "centralization_modifier"
+		duration = 7300
+	}
+	
+	if = {
+		limit = { has_custom_ideas = no }
+		country_event = { id = ideagroups.1 } #Swap Ideas
+	}
+}
+
+btc_potential_trigger = {
+	#New btc checklist for nation forming
+	
+	#Generics
+	normal_or_historical_nations = yes
+	btc_was_never_end_game_tag_trigger = yes
+	OR = {
+		ai = no
+		is_playing_custom_nation = no
+	}
+	
+}
+
+btc_was_not_colonial_nation_trigger = {
+	is_colonial_nation = no
+		OR = {
+			is_former_colonial_nation = no
+			AND = {
+				is_former_colonial_nation = yes
+				ai = no
+			}
+		}
+	}
+}
+
+btc_can_form_trigger = {
+	is_free_or_tributary_trigger = yes
+	is_at_war = no
+	adm_tech = 10
 }
