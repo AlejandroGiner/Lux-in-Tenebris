@@ -1,4 +1,305 @@
-#Moving forming decisions to BtPLReplaceVanillaCountryFormations
-
-#I normally don't like messing with vanilla files when I don't have to, but between all the map changes and the fact that I wanted to clean up a few things
-#and make everything more dynamic anyway, I figured I'd just reorganise. Hope this doesn't mess with anyone too much. - Draiocht
+###################################################################################################
+################################			Andalusia			 ##############################################
+###################################################################################################
+country_decisions = {
+	andalusian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_andalusia_flag }
+			NOT = { tag = ADU }
+			OR = {
+				primary_culture = andalusi_culture
+				AND = {
+					culture_group = maghrebi
+					any_owned_province = { region = iberia_region }
+				}
+				AND = {
+					culture_group = turko_semitic
+					any_owned_province = { region = iberia_region }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			area = lower_andalucia_area
+			area = upper_andalucia_area
+			OR = {
+				AND = {
+					OR = {
+						province_id = 230			# Algarve
+						province_id = 229			# Beja
+					}
+					OR = {
+						ROOT = { NOT = { owns_core_province = 1750 } }
+						ROOT = { NOT = { owns_core_province = 4547 } }
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 1750			# Alicante
+						province_id = 4547			# Albacete
+					}
+					OR = {
+						ROOT = { NOT = { owns_core_province = 230 } }
+						ROOT = { NOT = { owns_core_province = 229 } }
+					}
+					
+				}
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ADU }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			religion_group = muslim
+			lower_andalucia_area = {owned_by = ROOT}
+			upper_andalucia_area = {owned_by = ROOT}
+			OR = {
+				AND = {
+					owns_core_province = 230			# Algarve
+					owns_core_province = 229			# Beja
+				}
+				AND = {
+					owns_core_province = 1750			# Alicante
+					owns_core_province = 4547			# Albacete
+				}
+			}
+			
+			
+		}
+		effect = {
+			change_tag = ADU
+			remove_non_electors_emperors_from_empire_effect = yes
+			swap_non_generic_missions = yes
+			225 = {	#Cordoba
+				move_capital_effect = yes
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			iberia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ADU
+			}
+			if = {
+				limit = {
+					culture_group = turko_semitic
+					NOT = { primary_culture = andalusi_culture }
+				}
+				change_primary_culture = andalusi_culture
+			}
+			if = {
+				limit = {
+					government = tribal
+				}
+				change_government = monarchy #Desert tribes settling down, theocracies become monarchies.
+				set_legacy_government = despotic_monarchy
+			}
+			
+			set_country_flag = formed_andalusia_flag
+			if = {
+				limit = {
+					has_dlc = "Golden Century"
+					NOT = { mission_completed = gra_overcome_internal_strife }
+				}
+				complete_mission = gra_overcome_internal_strife
+			}
+			if = {
+				limit = {
+					has_dlc = "Golden Century"
+					NOT = { mission_completed = gra_friends_in_high_places }
+				}
+				complete_mission = gra_friends_in_high_places
+			}
+			if = {
+				limit = {
+					mission_completed = gra_reconquer_sevilla
+					has_dlc = "Golden Century"
+				}
+				alentejo_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = gra_restore_trade_superiority
+					has_dlc = "Golden Century"
+				}
+				corsica_sardinia_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				baleares_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = gra_restore_faith_in_the_throne
+					has_dlc = "Golden Century"
+				}
+				algiers_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				hautes_plaines_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				oran_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				kabylia_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				tunisia_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				djerba_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				tripolitania_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = {
+					mission_completed = gra_restore_faith_in_the_throne
+					has_dlc = "Golden Century"
+				}
+				northern_morocco_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				marrekesh_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				western_morocco_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				num_of_owned_provinces_with = {				#Will not form if already owns over half of North Africa's 93 provinces
+					value = 47
+					region = maghreb_region
+				}
+			}
+			modifier = {
+				factor = 0
+				NOT = { capital_scope = { region = iberia_region } }			#Capital not in Iberia
+			}
+		}
+		ai_importance = 400 #
+	}
+}
