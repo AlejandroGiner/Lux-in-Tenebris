@@ -1311,9 +1311,7 @@ andalusia_slot_4_missions = {
 		position = 4
 		
 		provinces_to_highlight = {
-			OR = {
-				area = sicily_area
-			}
+			area = sicily_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}

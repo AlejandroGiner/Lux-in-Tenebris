@@ -18,6 +18,18 @@ on_startup = {
 		limit = { NOT = { has_global_flag = beyond_typus_mod_enabled } }
 		set_global_flag = beyond_typus_mod_enabled
 	}
+	if = {
+		limit = { started_in = 1459.1.1 }
+		set_global_flag = constantinople_restored
+		TUR = { set_country_flag = relocated_capital_constantinople }
+	}	#Preventing exploits relating to Contaninople's growth.
+	if = {
+		limit = {
+			started_in = 1495.1.1
+			NOT = { started_in = 1648.1.1 }
+		}
+		clr_global_flag = italy_out_of_HRE
+	}	#BT calls the Peace of Westphalia then end of the Italian HRE, not 1495, so delaying the global flag here without having to mess with the HAB history file for now.
 }
 
 # country 
@@ -89,7 +101,10 @@ on_new_monarch = {
 	#Apparently, the above vanilla code below must be included in any mod, else problems arise.... absolutely bizarre, but what can one do?
 	if = {
 		limit = {
-			government = high_kingship
+			OR = {
+			has_reform = high_kingship_legacy
+			has_reform = tanistry_reform
+			}
 			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
 		}
 		set_country_flag = bt_tanistry_king_just_died
@@ -123,7 +138,10 @@ on_monarch_death = {
 	#Apparently, the above vanilla code below must be included in any mod, else problems arise.... absolutely bizarre, but what can one do?
 	if = {
 		limit = {
-			government = high_kingship
+			OR = {
+			has_reform = high_kingship_legacy
+			has_reform = tanistry_reform
+			}
 			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
 		}
 		set_country_flag = bt_tanistry_king_just_died
@@ -179,7 +197,10 @@ on_heir_death = {
 	#Apparently, the above vanilla code below must be included in any mod, else problems arise.... absolutely bizarre, but what can one do?
 	if = {
 		limit = {
-			government = high_kingship
+			OR = {
+			has_reform = high_kingship_legacy
+			has_reform = tanistry_reform
+			}
 			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
 		}
 		remove_country_modifier = bt_tanistry_underaged_heir
