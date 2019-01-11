@@ -1,0 +1,95 @@
+country_decision = {
+	create_the_kingdom_of_ireland_as_england = {
+		major = yes
+		potential = {
+			NOT = { exists = ANI }
+			NOT = { exists = IRE }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			capital_scope = { region = british_isles_region }			#This will include England, Scotland, and Great Britain, but also dynamically any alt history powers in the British Isles. For non British polities history is out the window enough that this option shouldn't really be available, as it isn't for any other area.
+			NOT = { culture_group = gaelic }			#Gaels will try to form TnG
+			num_of_owned_provinces_with = {
+				value = 9
+				region = ireland_area
+			}	#over half of Ireland to see
+		}
+		provinces_to_highlight = {
+			region = ireland_area
+			owned_by = ROOT
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = IRE }
+			hidden_trigger = {
+				NOT = { exists = ANI }			#Hidden because it shows up in UI as doubled
+			}
+			custom_trigger_tooltip = {
+				tooltip = three_quarters_of_ireland_tooltip
+				num_of_owned_provinces_with = {
+					value = 13
+					region = ireland_area
+					is_core = ROOT
+				}	#3/4 of Ireland's 17 provinces
+			}
+		}
+		effect = {
+			ireland_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = ANI
+			}
+			hidden_effect = {
+				ireland_area = {
+					limit = { owned_by = ROOT }
+					remove_core = ROOT
+					add_core = ANI
+				}
+			}
+			ireland_area = {
+				limit = { owned_by = ROOT }
+				cede_province = ANI
+			}
+			hidden_effect = {
+				ANI = {
+					set_government_rank = 2
+					change_government = monarchy
+					add_government_reform = anglo_iris_monarchy_reform
+					add_historical_friend = ROOT
+					change_primary_culture = ROOT
+					change_religion = ROOT
+					set_country_flag = formed_kingdom_of_ireland_flag_btp
+				}
+			}
+			create_subject = {
+				subject_type = viceroyalty_bt
+				subject = ANI
+			}
+			add_country_modifier = {
+				name = "huzzah_for_devolution"
+				duration = 7300
+			}
+			add_dip_power = 300			#Little reward for founder in addition to dip rep
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { total_development = 300 }			#tag will not do if the new country (95 dev with 1444 values + Dublin decision) would have over 50 percent the dev of the remaining country. Note this is based on 1444 values, because there is no way to calculate dynamically.
+			}	#Also note England's base dev in 181, plus 28 in Wales and Cornwall, and 90 in Ireland so this will almost always be a yes even if England loses all French holdings and doesn't build up dev
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						tag = ENG
+						tag = GBR			#AI will not do unless one of the historical nations in Britain.
+						tag = SCO
+					}
+				}
+			}
+		}
+	}
+}
