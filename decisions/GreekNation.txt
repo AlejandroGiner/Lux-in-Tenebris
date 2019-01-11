@@ -44,39 +44,53 @@ country_decisions = {
 			btc_new_nation_effects = yes 
 			
 			western_aegean_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
 			morea_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
 			thrace_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
-			macedonia_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+			macedonia_area= {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
 			eastern_mediterrenean_islands_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
 			aegean_archipelago_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
 			northern_greece_area = {
-				type = all
-				limit = {NOT = {owned_by = ROOT is_core = ROOT}
-				add_permanent_claim = ROOT
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
 			set_country_flag = formed_greece_flag
 		}

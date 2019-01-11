@@ -27,7 +27,6 @@ btc_can_form_trigger = {
 }
 
 btc_was_never_end_game_tag_trigger = {	#Country Scope
-	NOT = {has_government_reform = celestial_empire}
 
 	NOT = { was_tag = MUG }
 	NOT = { was_tag = TUR }
