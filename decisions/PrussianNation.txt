@@ -13,7 +13,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# KÃ¶nigsberg
+				province_id = 41	# Königsberg
 				AND = {
 					province_id = 43	# Danzig
 					ROOT = { NOT = { owns_core_province = 2995 } }
@@ -33,7 +33,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# KÃ¶nigsberg
+			owns_core_province = 41			# Königsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
@@ -112,7 +112,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# KÃ¶nigsberg
+				province_id = 41	# Königsberg
 				AND = {
 					province_id = 43	# Danzig
 					ROOT = { NOT = { owns_core_province = 2995 } }
@@ -132,7 +132,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# KÃ¶nigsberg
+			owns_core_province = 41			# Königsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
@@ -216,12 +216,12 @@ country_decisions = {
 				}
 				NOT = { tag = TEU }
 			}
-			owns_core_province = 41			# KÃ¶nigsberg
+			owns_core_province = 41			# Königsberg
 			num_of_cities = 12			#If not one of the normal candidates, needs 12 provinces plus Koenigsberg to see
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# KÃ¶nigsberg
+				province_id = 41	# Königsberg
 				province_id = 43	# Danzig
 				province_id = 2995	# Stolp
 			}
@@ -235,7 +235,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# KÃ¶nigsberg
+			owns_core_province = 41			# Königsberg
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
 			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
