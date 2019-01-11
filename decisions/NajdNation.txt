@@ -5,7 +5,7 @@ country_decisions = {
 	bt_najd_formation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_najd_bt }
 			NOT = { tag = NAJ }
 			NOT = { tag = ALH }

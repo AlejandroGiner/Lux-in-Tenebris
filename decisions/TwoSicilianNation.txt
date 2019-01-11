@@ -3,7 +3,7 @@ country_decisions = {
 	two_sicilies_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { tag = PAP }
 			NOT = { tag = TSI }
 			NOT = { tag = ITA }

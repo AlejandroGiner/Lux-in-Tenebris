@@ -6,7 +6,7 @@ country_decisions = {
 	moravian_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_moravia_flag_btp }
 			NOT = { tag = GMV }
 			NOT = { tag = PLC }

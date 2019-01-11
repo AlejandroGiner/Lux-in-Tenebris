@@ -5,7 +5,7 @@ country_decisions = {
 	btpl_kabylia_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_kabylia_flag }
 			NOT = { tag = KBA }
 			OR = {

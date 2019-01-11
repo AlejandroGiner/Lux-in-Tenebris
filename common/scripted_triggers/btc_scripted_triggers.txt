@@ -1,27 +1,24 @@
 btc_potential_trigger = {
 	#New btc checklist for nation forming
-	
-	#Generics
 	normal_or_historical_nations = yes
 	btc_was_never_end_game_tag_trigger = yes
 	OR = {
 		ai = no
 		is_playing_custom_nation = no
-	}
-	
+	}	
 }
 
 btc_was_not_colonial_nation_trigger = {
 	is_colonial_nation = no
-		OR = {
-			is_former_colonial_nation = no
-			AND = {
-				is_former_colonial_nation = yes
-				ai = no
-			}
+	OR = {
+		is_former_colonial_nation = no
+		AND = {
+			is_former_colonial_nation = yes
+			ai = no
 		}
 	}
 }
+
 
 btc_can_form_trigger = {
 	is_free_or_tributary_trigger = yes
@@ -30,7 +27,6 @@ btc_can_form_trigger = {
 }
 
 btc_was_never_end_game_tag_trigger = {	#Country Scope
-	NOT = {has_government_reform = celestial_empire}
 
 	NOT = { was_tag = MUG }
 	NOT = { was_tag = TUR }

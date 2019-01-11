@@ -5,7 +5,7 @@ country_decisions = {
 	sardinia_piedmont_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_sardinia_piedmont_flag }
 			NOT = { tag = SPI }
 			NOT = { tag = ITL }
@@ -93,7 +93,7 @@ country_decisions = {
 	sardinia_piedmont_nation_inherit = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_sardinia_piedmont_flag }
 			NOT = { tag = SPI }
 			NOT = { tag = ITL }

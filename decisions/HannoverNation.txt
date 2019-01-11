@@ -1,18 +1,15 @@
 country_decisions = {
-###################################################################################################
-################################			Hannover			 ##############################################
-###################################################################################################
 	hannoverian_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_hannover_flag }
 			NOT = { tag = HAN }
 			NOT = { tag = GER }
 			NOT = { tag = PRU }
 			NOT = { tag = HSA }
 			NOT = { tag = SWI }
-			primary_culture = hannoverian #Westphalian
+			primary_culture = hannoverian
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -28,9 +25,8 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = HAN }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
 			OR = {
 				NOT = { is_part_of_hre = yes }
 				is_elector = yes
@@ -43,13 +39,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = HAN
-			remove_non_electors_emperors_from_empire_effect = yes
-			1758 = { add_base_tax = 1 }
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 3650
-			}
-			add_prestige = 10
+			btc_new_nation_effects = yes 
 			every_province = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -66,10 +56,6 @@ country_decisions = {
 					}
 				}
 				add_permanent_claim = HAN
-			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_hannover_flag
 		}

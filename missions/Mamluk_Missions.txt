@@ -151,9 +151,7 @@ mam_north_missions = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = { mam_alexandria_trade }
 		provinces_to_highlight = {
-			OR = {
-				region = egypt_region
-			}
+			region = egypt_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
