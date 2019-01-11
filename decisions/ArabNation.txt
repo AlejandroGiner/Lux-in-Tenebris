@@ -1,4 +1,4 @@
-country_decision = {
+country_decisions = {
 	arab_nation = {
 		major = yes
 		potential = { 
@@ -12,10 +12,10 @@ country_decision = {
 		
 		provinces_to_highlight = { 
 			region = arabia_region
+			limit = {is_city = yes}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
-				is_city = yes
 			}
 		}
 		allow = {

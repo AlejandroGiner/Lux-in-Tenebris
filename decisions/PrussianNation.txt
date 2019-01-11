@@ -5,7 +5,7 @@ country_decisions = {
 	form_kingdom_of_prussia = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
 			NOT = { tag = PRU }
 			NOT = { tag = GER }
@@ -103,7 +103,7 @@ country_decisions = {
 	prussian_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
 			NOT = { tag = PRU }
 			NOT = { tag = GER }
@@ -199,7 +199,7 @@ country_decisions = {
 	prussian_nation_general = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
 			NOT = { tag = PRU }
 			NOT = { tag = GER }

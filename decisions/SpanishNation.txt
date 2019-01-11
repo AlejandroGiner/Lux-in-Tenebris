@@ -5,7 +5,7 @@ country_decisions = {
 	spanish_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_spain_flag }
 			NOT = { tag = IBE }
 			NOT = { tag = SPA }
@@ -91,7 +91,7 @@ country_decisions = {
 	spanish_nation_diplomatically = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_spain_flag }
 			NOT = { tag = IBE }
 			NOT = { tag = SPA }

@@ -264,7 +264,7 @@ country_decisions = {
 	celtic_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_tir_na_gceilteach_btp }
 			NOT = { tag = CEL }
 			NOT = { tag = GBR }
@@ -883,7 +883,7 @@ country_decisions = {
 	anglo_irish_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ireland_flag }
 			NOT = { has_country_flag = formed_kingdom_of_ireland_flag_btp }			#remove this after 9.0.
 			NOT = { tag = ANI }
@@ -992,7 +992,7 @@ country_decisions = {
 	tir_na_ngael_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_tir_na_ngael_flag_bt }
 			NOT = { tag = TNA }
 			NOT = { tag = GBR }			#Unlikely, but doesn't do any harm here
@@ -1115,7 +1115,7 @@ country_decisions = {
 	albion_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ynys_y_cedyrn_flag_bt }
 			NOT = { tag = YYK }
 			NOT = { tag = GBR }			#Unlikely, but doesn't do any harm here
@@ -1189,7 +1189,7 @@ country_decisions = {
 	united_kingdom_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_united_kingdom_flag }
 			NOT = { tag = UNK }
 			NOT = { tag = CEL }

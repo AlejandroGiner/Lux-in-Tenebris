@@ -5,7 +5,7 @@ country_decisions = {
 	netherlands_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_netherlands_flag }
 			NOT = { tag = NED }
 			NOT = { tag = BEL }
