@@ -12,7 +12,7 @@ country_decisions = {
 		
 		provinces_to_highlight = { 
 			region = arabia_region
-			limit = {is_city = yes}
+			is_city = yes
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -30,7 +30,7 @@ country_decisions = {
 				is_core = ROOT
 			}
 		}
-		effects = {
+		effect = {
 			change_tag = ARB
 			btc_new_nation_effects = yes 
 			arabia_region = {

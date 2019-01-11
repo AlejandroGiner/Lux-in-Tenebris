@@ -74,9 +74,6 @@ country_decisions = {
 		effect = {
 			change_tag = ADU
 			btc_new_nation_effects = yes 
-			225 = {	#Cordoba
-				move_capital_effect = yes
-			}
 			iberia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }

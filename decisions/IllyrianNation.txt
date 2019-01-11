@@ -1,8 +1,4 @@
 country_decisions = {
-	###################################################################################################
-################################			Illyria			 ##############################################			#Note needs work
-###################################################################################################
-	#More or less HR's work with only a few adjustments from Draiocht
 	illyrian_nation = {
 		major = yes
 		potential = {
@@ -37,60 +33,51 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = ILY }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					OR = {
-						province_id = 131				# Zagreb
-						province_id = 137				# Ragusa
-						province_id = 138				# Zeta
-						province_id = 139				# Hum
-						province_id = 140				# Lasva
-						province_id = 141				# Belgrade
-						province_id = 1766			# Kosovo
-						province_id = 1767			# Slavonia
-						province_id = 1826			# Lika
-						province_id = 3001			# Skopje
-						province_id = 3002			# Sarajevo
-						province_id = 3187			# Podrinje
-						province_id = 3191			# Rijeka
-					}
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			num_of_owned_provinces_with = {
+				value = 8
+				OR = {
+					province_id = 131			# Zagreb
+					province_id = 137			# Ragusa
+					province_id = 138			# Zeta
+					province_id = 139			# Hum
+					province_id = 140			# Lasva
+					province_id = 141			# Belgrade
+					province_id = 1766			# Kosovo
+					province_id = 1767			# Slavonia
+					province_id = 1826			# Lika
+					province_id = 3001			# Skopje
+					province_id = 3002			# Sarajevo
+					province_id = 3187			# Podrinje
+					province_id = 3191			# Rijeka
 				}
-				amount = 9			#At least 2/3 of Illyria's 13 provinces (approximate)
+				is_core = ROOT
 			}
-			total_development = 300			#Special discount. Normal requirement for rank 3 is 1000 dev, so this is 70 percent discounted. Note base dev in 1444 of all Celtic countries is around 254 (and England is another 181).
-			prestige = 40			#Normal requirement for rank 3 is 75 prestige.
 		}
 		effect = {
 			change_tag = ILY
-			remove_non_electors_emperors_from_empire_effect = yes
+			btc_new_nation_effects = yes
 			if = {
 				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3
 			}
-			every_province = {
+			balkan_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					OR = {
-						region = balkan_region
-						area = carniola_area
-					}
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = CRO
+				add_permanent_claim = ILY
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			cariniola_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ILY
 			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_illyria_flag_btp
+			
+			set_country_flag = formed_illyria_flag
 		}
 		ai_will_do = {
 			factor = 1
