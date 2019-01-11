@@ -1,12 +1,9 @@
 country_decisions = {
-	###################################################################################################
-################################			Iceland			 ##############################################
-###################################################################################################
 	icelandic_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_iceland }
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_iceland_flag }
 			NOT = { tag = ICE }
 			NOT = { tag = SCA }
 			NOT = { tag = NOR }
@@ -19,7 +16,6 @@ country_decisions = {
 					any_owned_province = { area = iceland_area }
 				}
 			}
-			NOT = { num_of_cities = 40 }			#I was tired of looking at this =p
 		}
 		provinces_to_highlight = {
 			area = iceland_area
@@ -30,15 +26,12 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = ICE }
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			calc_true_if = {
-				all_owned_province = {
-					area = iceland_area
-					is_core = owner
-				}
-				amount = 3			#3 of Iceland's 4 provinces
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			num_of_owned_provinces_with = { 
+				value = 3
+				area = iceland_area
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -64,7 +57,6 @@ country_decisions = {
 				}
 			}
 			change_tag = ICE
-			remove_non_electors_emperors_from_empire_effect = yes
 			hidden_effect = {
 				every_province = {
 					if = {
@@ -90,16 +82,27 @@ country_decisions = {
 					}					
 				}
 			}
+			#Not using btc for iceland because it wouldn't make sense to make iceland a kingdom rank
+			#Modified btc effects
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			remove_non_electors_emperors_from_empire_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 3650
+				duration = 7300
 			}
-			add_prestige = 10
+			if = {
+				limit = {
+					government = tribal
+				}
+				change_government = monarchy
+				set_legacy_government = despotic_monarchy
+			}
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_iceland
+			set_country_flag = formed_iceland_flag
 		}
 		ai_will_do = {
 			factor = 1
