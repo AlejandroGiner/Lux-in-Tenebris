@@ -122,3 +122,19 @@ tugela_estuary_modifier = {
 	province_trade_power_value = 10
 	picture = "estuary_icon"
 }
+
+#arabia + egypt
+
+btpl_oasis = {
+	local_development_cost = -0.25
+}	#Note this is vanilla balanced, and adjusted by a copy of this file in my terrain addon.
+
+strait_of_hormuz_toll = {
+	province_trade_power_value = 10
+}
+
+btpl_nile_river_in_arid_desert_province = {
+	supply_limit = 1.0
+	supply_limit_modifier = 0.2
+	local_development_cost = -0.35
+}
