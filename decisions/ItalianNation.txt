@@ -1,15 +1,14 @@
 country_decisions = {
-	###################################################################################################
-################################			Italy			 ##############################################
-###################################################################################################
 	italian_nation = {
 		major = yes
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_italy_flag }
-			NOT = { tag = ITL }
 			NOT = { tag = ITA }
 			culture_group = latin
+			any_owned_province = {
+				region = italy_region
+			}
 		}
 		provinces_to_highlight = {
 			region = italy_region
@@ -19,42 +18,26 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = ITL }
-			hidden_trigger  = { NOT = { exists = ITA } }
-			is_nomad = no
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
+			NOT = { exists = ITA }
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
 			owns_core_province = 101	# Genoa
 			owns_core_province = 104	# Milan
 			owns_core_province = 112	# Venice
 			owns_core_province = 116	# Florence
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					region = italy_region
-				}
-				amount = 35			#At least 90 percent of N Italy's 38 provinces (Italy total has another 22 in Naples and the islands, so 35 is about 60 percent of total)
+			num_of_owned_provinces_with = { 
+				value = 30
+				region = italy_region
+				is_core = ROOT
 			}
-			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
-			change_tag = ITL
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
-			add_prestige = 25
+			change_tag = ITA
+			btc_new_nation_effects = yes
 			italy_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { owned_by = PAP }
+					NOT = { is_core = ROOT}
 					NOT = { area = naples_area }
 					NOT = { area = calabria_area }
 					NOT = { area = apulia_area }
@@ -62,18 +45,11 @@ country_decisions = {
 				}
 				add_permanent_claim = ITL
 			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+
 			set_country_flag = formed_italy_flag
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				government = republic
-			}
 		}
 		ai_importance = 400 #
 	}
