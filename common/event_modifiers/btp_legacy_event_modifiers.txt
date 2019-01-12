@@ -129,37 +129,25 @@ strait_of_hormuz_toll = {
 }
 
 btpl_funj_momentum = {
-	army_tradition = 2
-	land_morale = 0.1
-	mil_tech_cost_modifier = -0.25
 	land_forcelimit_modifier = 1.00
 	infantry_cost = -0.50
-	land_maintenance_modifier = -0.25
 }
 
 btpl_abdullahs_coffers = {
 	land_forcelimit_modifier = 1.0
-	possible_mercenaries = 1.0
 }
 
 btpl_spread_of_islam_in_alodia = {
 	global_missionary_strength = 0.05
-	tolerance_heathen = -2
-	religion = yes
+	tolerance_heathen = 3
 }
 
 btpl_funj_militarisation = {
-	manpower_recovery_speed = 0.50
-	siege_ability = 0.20
-	defensiveness = 0.20
-	infantry_power = 0.1
+	infantry_power = 0.2
 }
 
 btpl_funj_demilitarisation = {
-	adm_tech_cost_modifier = -0.1
-	dip_tech_cost_modifier = -0.1
-	production_efficiency = 0.1
-	diplomatic_reputation = 1
+	development_cost = -0.2
 }
 
 btpl_clearing_the_inlet = {
