@@ -18,15 +18,6 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 24
-		
-		modifier = {
-			factor = 0.5
-			is_year = 1505
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1510
-		}
 	}
 	
 	option = { # Allow ourselves to be pushed north
@@ -37,6 +28,8 @@ country_event = {
 			add_core = FNJ
 			change_culture = luo_culture
 			change_religion = shamanism
+			add_base_tax = 1
+			add_base_production = 1
 		}
 		set_capital = 2800
 		5290 = {
@@ -51,19 +44,14 @@ country_event = {
 					name = "Nyikaango I"
 					dynasty = "Shilluk" 
 					age = 25
-					claim = 95
-					regency = no
-					female = no
 					adm = 5
 					dip = 5
 					mil = 5
+					fixed = yes
 				}
 			}
 		}
 		add_prestige = -25
-		add_stability = -1
-		add_mil_power = 100
-		add_army_tradition = 25
 		add_country_modifier = {
 			name = "btpl_funj_momentum"
 			duration = 7300
@@ -79,8 +67,7 @@ country_event = {
 			spawn_rebels = {
 				type = nationalist_rebels
 				leader = "Nyikaango"
-				size = 2
-				friend = SLK
+				size = 1
 			}
 		}
 	}
@@ -105,26 +92,12 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 32
-		
-		modifier = {
-			factor = 0.5
-			is_year = 1480
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1485
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1490
-		}
 	}
 	
 	option = { # Uh oh
 		name = "BtPLegacyUpperNileEvents.EVTOPTA2"
 		ai_chance = { factor = 95 }
-		every_province = {
-			limit = { owned_by = ALO }
+		every_owned_province = {
 			add_claim = ABD
 		}
 		set_capital = 5285
@@ -138,12 +111,11 @@ country_event = {
 					name = "Abdullah Jamma"
 					dynasty = "Abdallab" 
 					age = 25
-					claim = 95
-					regency = no
-					female = no
+					male = yes
 					adm = 5
 					dip = 5
 					mil = 2
+					fixed = yes
 				}
 				change_religion = sunni
 				add_piety = 0.30
@@ -158,16 +130,20 @@ country_event = {
 				}
 				capital_scope = {
 					build_to_forcelimit = {
-						infantry = 0.7
-						cavalry = 0.3
+						infantry = 0.8
+						cavalry = 0.2
 					}
 				}
 			}
+			egypt_region = {discover_country = ABD}
+			horn_of_africa_region = {discover_country = ABD}
+			
 		}
 		ABD = {
 			declare_war_with_cb = {
-				who = ROOT
+				who = ALO
 				casus_belli = cb_conquest
+				war_goal_province = 5285
 			}
 		}
 	}
@@ -179,12 +155,10 @@ country_event = {
 			name = "Abdullah Jamma"
 			dynasty = "Abdallab" 
 			age = 25
-			claim = 30
-			regency = no
-			female = no
 			adm = 5
 			dip = 5
 			mil = 2
+			fixed = yes
 		}
 		change_religion = sunni
 		add_piety = 0.30
@@ -192,7 +166,7 @@ country_event = {
 			name = "btpl_spread_of_islam_in_alodia"
 			duration = 3650
 		}
-		add_stability = -3
+		add_stability = -1
 		add_prestige = -50
 		add_treasury = 300
 	}
@@ -217,16 +191,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 2
-		
-		modifier = {
-			factor = 0.5
-			is_year = 1502
-		}
-		modifier = {
-			factor = 0.5
-			is_year = 1504
-		}
+		months = 36
 	}
 	
 	option = { # Make use of this momentum
@@ -237,27 +202,22 @@ country_event = {
 			name = "btpl_funj_militarisation"
 			duration = 7300
 		}
-		every_province = {
-			limit = {
-				OR = {
-					owned_by = ALO
-					owned_by = ABD
-				}
-			}
-			add_claim = FNJ
-		}
 		if = {
-			limit = { exists = ALO }
+			limit = { 2799 = { owned_by = ALO } }
+			ALO = {every_owned_province = {add_claim = FNJ}}
 			declare_war_with_cb = {
 				who = ALO
 				casus_belli = cb_conquest
+				war_goal_province = 5285
 			}
 		}
 		if = {
-			limit = { exists = ABD }
+			limit = { 2799 = { owned_by = ALO }}
+			ABD = {every_owned_province = {add_claim = FNJ}}
 			declare_war_with_cb = {
 				who = ABD
 				casus_belli = cb_conquest
+				war_goal_province = 5285
 			}
 		}
 	}
@@ -268,7 +228,7 @@ country_event = {
 		remove_country_modifier = btpl_funj_momentum
 		add_country_modifier = {
 			name = "btpl_funj_demilitarisation"
-			duration = 7300
+			duration = 3650
 		}
 	}
 }
