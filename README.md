@@ -4,7 +4,7 @@ changelog
 
 -Caucasus has received a province and tag overhaul, imported from Dynamo's Enhanced Typus mod.
 
--New tags in South America, all OPM natives around Brazil region.#1
+-New tags in America.#1
 
 -New tags with their own technology group and national ideas in oceania.#1
 
