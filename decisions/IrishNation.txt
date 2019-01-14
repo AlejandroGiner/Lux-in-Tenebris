@@ -5,11 +5,14 @@ country_decisions = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ireland_flag }
 			NOT = { tag = IRE }
+			NOT = { tag = SCO }
+			NOT = { tag = ANI }
+			NOT = { tag = TNA }
 			OR = {
 				primary_culture = irish
 				AND = {
-					any_owned_province = {region = ireland_area}
 					culture_group = gaelic
+					any_owned_province = { region = ireland_area }
 				}
 			}
 		}
@@ -35,6 +38,12 @@ country_decisions = {
 		effect = {
 			change_tag = IRE
 			btc_new_nation_effects = yes 
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
 			ireland_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

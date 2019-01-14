@@ -1,0 +1,95 @@
+country_decisions = {
+	transcaucasian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_transcaucasia_flag_btp }
+			NOT = { tag = MOU }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = RUS }
+			NOT = { tag = MOS }
+			NOT = { tag = TUR }
+			NOT = { tag = TKY }
+			NOT = { tag = PER }
+			OR = { 
+				primary_culture = georgian
+				primary_culture = armenian
+				primary_culture = circassian
+				primary_culture = abkhaz
+				primary_culture = alan
+				primary_culture = lezgian
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 423 # Tbilisi
+				province_id = 419 # Yerevan
+				province_id = 422 # Imereti
+				province_id = 2203 # Kakheti
+				province_id = 7034 # Klarjeti
+				province_id = 7036 # Kars
+				province_id = 2201 # Alania
+				province_id = 1856 # Abkhazia
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = MOU }
+			adm_tech = 20
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 423 # Tbilisi
+			owns_core_province = 419 # Yerevan
+			owns_core_province = 422 # Imereti
+			owns_core_province = 2203 # Kakheti
+			owns_core_province = 7034 # Klarjeti
+			owns_core_province = 7036 # Kars
+			owns_core_province = 2201 # Alania
+			owns_core_province = 1856 # Abkhazia
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = westgeorgia_area
+						area = southgeorgia_area
+						area = eastgeorgia_area
+						area = armenia_area
+						area = alania_area
+					}
+				}
+				amount = 25			
+			}
+		}
+		effect = {
+			change_tag = MOU
+			remove_non_electors_emperors_from_empire_effect = yes
+			caucasia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = MOU
+			}	
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 25
+			#if = {
+			#	limit = { has_custom_ideas = no }
+			#	country_event = { id = ideagroups.1 } #Swap Ideas
+			#}
+			set_country_flag = formed_transcaucasia_flag_btp
+			set_government_rank = 3
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

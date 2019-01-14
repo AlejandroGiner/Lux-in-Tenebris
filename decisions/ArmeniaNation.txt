@@ -1,27 +1,27 @@
 country_decisions = {
 
-	georgia_nation = {
+	armenia_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_armenia_flag }
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_georgia_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = GEO }
+			NOT = { tag = ARM }
 			NOT = { tag = MOU }
 			OR = {
 				ai = no
 				AND = {
-					NOT = { exists = GEO }
+					NOT = { exists = ARM }
 					num_of_cities = 3 #Carnage
 				}
 			}
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
-			primary_culture = georgian
+			primary_culture = armenian
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -33,25 +33,17 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 422	# Imereti
-				province_id = 423	# Tblisi
-				province_id = 2203	# Kahketi
-				province_id = 2204	# Lomsia
-				province_id = 4301	# Kartli
+				province_id = 419	# Yerevan
+				province_id = 2202	# Melikates
+				province_id = 7036  # Kars
+				province_id = 4302	# Manzikert
 				AND = {
-                    province_id = 462
-                    ROOT = { NOT = { owns_core_province = 2196 } }
-                    ROOT = { NOT = { owns_core_province = 4303 } }
+                    province_id = 2306
+                    ROOT = { NOT = { owns_core_province = 2307 } }
                 }
 				AND = {
-                    province_id = 2196
-                    ROOT = { NOT = { owns_core_province = 462 } }
-                    ROOT = { NOT = { owns_core_province = 4303 } }
-                }
-				AND = {
-                    province_id = 4303
-                    ROOT = { NOT = { owns_core_province = 2196 } }
-                    ROOT = { NOT = { owns_core_province = 462 } }
+                    province_id = 2307
+                    ROOT = { NOT = { owns_core_province = 2306 } }
                 }
 			}
 			OR = {
@@ -60,48 +52,69 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = GEO }
+			NOT = { exists = ARM }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
+			religion = coptic
 			is_nomad = no
-			owns_core_province = 422	# Imereti
-			owns_core_province = 423	# Tblisi
-			owns_core_province = 2203	# Kahketi
-			owns_core_province = 2204	# Lomsia
-			owns_core_province = 4301	# Kartli
+			owns_core_province = 419	# Yerevan
+			owns_core_province = 2202	# Melikates
+			owns_core_province = 7036  # Kars
+			owns_core_province = 4302	# Manzikert
 			OR = {
-				owns_core_province = 462 #Mingrelia
-				owns_core_province = 2196 #Guria
-				owns_core_province = 4303 #Tao
+				owns_core_province = 2306 #Mush
+				owns_core_province = 2307 #Van
 			}
 		}
 		effect = {
-			change_tag = GEO
+			change_tag = ARM
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			kartli_kakheti_area = {
+			armenia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = GEO
+				add_permanent_claim = ARM
 			}
-			southgeorgia_area = {
+			samtskhe_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = GEO
+				add_permanent_claim = ARM
 			}
-			eastgeorgia_area = {
+			erzurum_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = GEO
+				add_permanent_claim = ARM
+			}
+			north_kurdistan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ARM
+			}
+			cukurova_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { province_id = 321 }
+				}
+				add_permanent_claim = ARM
+			}
+			north_kurdistan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ARM
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -111,11 +124,11 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = GEO_ideas }
+					NOT = { has_idea_group = ARM_ideas }
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			set_country_flag = formed_georgia_flag
+			set_country_flag = formed_armenia_flag
 		}
 		ai_will_do = {
 			factor = 1

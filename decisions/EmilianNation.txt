@@ -1,0 +1,73 @@
+country_decisions = {
+	emilian_nation = {
+		major = yes
+		potential = {
+			bt_generic_can_form_potential_check = yes
+			NOT = { has_country_flag = formed_emilia_flag_btp }
+			NOT = { tag = EMR }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ITL }
+			NOT = { tag = ITA }
+			NOT = { tag = TUS }
+			NOT = { tag = LMV }
+			OR = { 
+				primary_culture = romagnan
+				tag = URB
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 105	# Parma
+				province_id = 106	# Modena
+				province_id = 109	# Mantua
+				province_id = 113	# Ferrara
+				province_id = 114	# Romagna
+				province_id = 3041	# Bologna
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = EMR }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 3041	# Bologna
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						province_id = 105	# Parma
+						province_id = 106	# Modena
+						province_id = 109	# Mantua
+						province_id = 113	# Ferrara
+						province_id = 114	# Romagna
+						province_id = 3041	# Bologna
+					}
+				}
+				amount = 6			#At least all of Emilia's 6 provinces (approximate)
+			}
+		}
+		effect = {
+			change_tag = EMR
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_emilia_flag_btp
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
