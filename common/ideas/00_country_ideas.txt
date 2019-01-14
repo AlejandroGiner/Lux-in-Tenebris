@@ -1984,7 +1984,7 @@ MAR_ideas = {
 	free = yes
 	
 	tradition_of_military_service = {
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	forts_of_maharashtra = {
 		defensiveness = 0.20
@@ -7270,44 +7270,6 @@ LUX_ideas = {
 	}
 	lux_rivals_rivals_everywhere = {
 		diplomats = 1
-	}
-}
-
-YOR_ideas = {
-	start = {
-		defensiveness = 0.2
-		merc_maintenance_modifier = -0.15
-	}
-
-	bonus = {
-		global_manpower_modifier = 0.1
-	}
-	
-	trigger = {
-		tag = YOR
-	}
-	free = yes
-	
-	yor_patronize_telugu_literature = {
-		prestige = 1
-	}
-	yor_telugu_warrior_aristocrats = {
-		army_tradition = 0.5
-	}
-	yor_kakatiya_legacy = {
-		global_tax_modifier = 0.1
-	}
-	yor_great_forts_of_the_east = {
-		fort_maintenance_modifier = -0.15
-	}
-	yor_legend_of_prataparudra = {
-		legitimacy = 1
-	}
-	yor_diamond_mines_of_kollur = {
-		production_efficiency = 0.1
-	}
-	yor_encourage_coromandel_trade = {
-		global_own_trade_power = 0.1
 	}
 }
 
