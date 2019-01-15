@@ -678,3 +678,86 @@ UDI_ideas = {
 		province_warscore_cost = -0.15
 	}
 }
+
+KCY_ideas = {
+	start = {
+		movement_speed = 0.10
+		free_leader_pool = 1
+	}
+
+	bonus = {
+		caravan_power = 0.2
+	}
+
+	trigger = {
+		OR = {
+			tag = KCY
+			tag = BLK
+			#tag = KUM
+		}
+	}
+	free = yes
+
+	KCY_idea1 = {
+		cavalry_power = 0.1
+	}
+	KCY_idea2 = {
+		land_attrition = -0.10
+	}
+	KCY_idea3 = {
+		build_cost = -0.1
+	}
+	KCY_idea4 = {
+		land_morale = 0.10
+	}
+	KCY_idea5 = {
+		global_autonomy = -0.025
+		production_efficiency = 0.10
+	}
+	KCY_idea6 = {
+		global_own_trade_power = 0.15
+	}
+	KCY_idea7 = {
+		tolerance_heathen = 1
+		tolerance_heretic = 1	
+	}
+}
+
+AVR_ideas = {
+	start = {
+		legitimacy = 1
+		cavalry_power = 0.1
+	}
+
+	bonus = {
+		army_tradition = 1
+	}
+
+	trigger = {
+		tag = AVR
+	}
+	free = yes
+
+	AVR_idea1 = {
+		land_attrition = -0.10
+	}
+	AVR_idea2 = {
+		stability_cost_modifier = -0.2
+	}
+	AVR_idea3 = {
+		defensiveness = 0.15
+	}
+	AVR_idea4 = {ì
+		enemy_core_creation = 0.5
+	}
+	AVR_idea5 = {
+		land_morale = 0.15
+	}
+	AVR_idea6 = {
+		discipline = 0.05
+	}
+	AVR_idea7 = {
+		prestige = 1
+		global_unrest = -1
+	}
+}
