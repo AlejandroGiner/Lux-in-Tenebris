@@ -14,6 +14,7 @@ country_decisions = {
 			NOT = { tag = SUN }
 			NOT = { tag = JAV }
 			NOT = { tag = MSA }
+			NOT = { tag = MAJ }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -23,7 +24,7 @@ country_decisions = {
 				}
 			}
 			OR = {
-				tag = BAL
+				tag = BLI
 				primary_culture = javanese
 			}
 			religion_group = hinduism
@@ -95,7 +96,7 @@ country_decisions = {
 				}
 				add_permanent_claim = MAJ
 			}
-			
+
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
