@@ -598,3 +598,41 @@ ABK_ideas = {
 		army_tradition = 0.5
 	}
 }
+
+ALA_ideas = {
+	start = {
+		tolerance_own = 1
+		army_tradition_decay = -0.01
+	}
+
+	bonus = {
+		cavalry_cost = -0.1
+	}
+
+	trigger = {
+		tag = ALA
+	}
+	free = yes
+
+	alani_migrations = {
+		leader_land_manuever = 1
+	}
+	alliance_makers_alans = {
+		diplomatic_upkeep = 2
+	}
+	gate_of_the_alans = {
+		defensiveness = 0.25
+	}
+	alani_mercenaries = {
+		mercenary_cost = -0.25
+	}
+	skilled_plunderers_alans = {
+		global_tax_modifier = 0.1
+	}
+	fierce_horsemen_alans = {
+		cavalry_power = 0.1
+	}
+	caucasus_mountains_alans = {
+		hostile_attrition = 1.0
+	}
+}
