@@ -556,3 +556,45 @@ LUS_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 }
+
+ABK_ideas = {
+	start = {
+		global_manpower_modifier = 0.10
+		infantry_power = 0.15
+	}
+
+	bonus = {
+		production_efficiency = 0.10
+	}
+
+	trigger = {
+		OR = {
+			tag = ABK
+			tag = ABZ
+		}
+	}
+	free = yes
+
+	ABK_idea1 = {
+		discipline = 0.025
+	}
+	ABK_idea2 = {
+		global_unrest = -1
+	}
+	ABK_idea3 = {
+		diplomatic_reputation = 1
+	}
+	ABK_idea4 = {
+		defensiveness = 0.15
+	}
+	ABK_idea5 = {
+		manpower_recovery_speed = 0.1
+	}
+	ABK_idea6 = {
+		global_ship_recruit_speed = -0.1
+		global_ship_cost = -0.05
+	}
+	ABK_idea7 = {
+		army_tradition = 0.5
+	}
+}
