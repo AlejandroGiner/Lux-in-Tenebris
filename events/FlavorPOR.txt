@@ -260,7 +260,7 @@ country_event = {
 	}
 }
 
-# King Sebasti?o's Expedition to North Africa
+# King Sebastião's Expedition to North Africa
 country_event = {
 	id = flavor_por.3272
 	title = "flavor_por.EVTNAME3272"
@@ -550,7 +550,7 @@ country_event = {
 	}
 }
 
-# Marqu?s de Pombal
+# Marquês de Pombal
 country_event = {
 	id = flavor_por.3279
 	title = "flavor_por.EVTNAME3279"
@@ -646,7 +646,7 @@ country_event = {
 	}
 }
 
-# The Expulsion of Marqu?s de Pombal
+# The Expulsion of Marquês de Pombal
 country_event = {
 	id = flavor_por.3281
 	title = "flavor_por.EVTNAME3281"
@@ -695,7 +695,7 @@ country_event = {
 			duration = -1
 		}
 	}
-	option = {		# Let the 'Great Marqu?s' rule
+	option = {		# Let the 'Great Marquês' rule
 		name = "flavor_por.EVTOPTB3281"
 		ai_chance = { factor = 25 }
 		every_owned_province = {
@@ -812,7 +812,7 @@ country_event = {
 		set_global_flag = columbus_happened
 		add_years_of_income = -0.10
 		define_explorer = {
-			name = "Crist?v?o Colombo"
+			name = "Cristóvão Colombo"
 			fire = 2
 			shock = 2
 			manuever = 6
@@ -893,7 +893,7 @@ country_event = {
 		num_of_owned_provinces_with = {
 			region = moluccas_region
 			NOT = { religion = ROOT }
-			value = 1
+			value = 4
 		}
 		is_year = 1500
 		has_discovered = 646	# Ambon
@@ -907,9 +907,26 @@ country_event = {
 
 	option = {		# Spread the Catholic faith
 		name = "flavor_por.EVTOPTA3"
-		add_country_modifier = {
-			name = portuguese_missionaries
-			duration = -1
+		random_owned_province = {
+			limit = {
+				region = moluccas_region
+				NOT = { religion = ROOT }
+			}
+			change_religion = ROOT
+		}
+		random_owned_province = {
+			limit = {
+				region = moluccas_region
+				NOT = { religion = ROOT }
+			}
+			change_religion = ROOT
+		}
+		random_owned_province = {
+			limit = {
+				region = moluccas_region
+				NOT = { religion = ROOT }
+			}
+			change_religion = ROOT
 		}
 		random_owned_province = {
 			limit = {

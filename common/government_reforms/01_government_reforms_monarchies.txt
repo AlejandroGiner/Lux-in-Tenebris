@@ -50,6 +50,8 @@ plutocratic_reform = {
 			technology_group = muslim
 			technology_group = chinese
 			technology_group = east_african
+			technology_group = indochinese
+			technology_group = malay_group
 		}
 	}
 	nation_designer_trigger = {
@@ -58,6 +60,8 @@ plutocratic_reform = {
 			technology_group = muslim
 			technology_group = chinese
 			technology_group = east_african
+			technology_group = indochinese
+			technology_group = malay_group
 		}
 	}
 	valid_for_nation_designer = yes
@@ -536,7 +540,7 @@ tsardom = {
 		global_manpower_modifier = 0.20
 		yearly_absolutism = 0.1
 		global_autonomy = -0.05
-		max_states = 10
+		max_states = 16
 	}
 
 	conditional = {
@@ -833,7 +837,11 @@ mandala_reform = {
 			religion_group = muslim
 			religion = animism
 		}
-		technology_group = chinese
+		OR = {
+			technology_group = chinese
+			technology_group = indochinese
+			technology_group = malay_group
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
@@ -845,7 +853,11 @@ mandala_reform = {
 			religion_group = dharmic
 			religion_group = muslim
 		}
-		technology_group = chinese
+		OR = {
+			technology_group = chinese
+			technology_group = indochinese
+			technology_group = malay_group
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	modifiers = {
@@ -987,6 +999,8 @@ enforce_trader_privileges_reform = {
 			technology_group = muslim
 			technology_group = chinese
 			technology_group = east_african
+			technology_group = indochinese
+			technology_group = malay_group
 		}
 	}
 	trigger = {

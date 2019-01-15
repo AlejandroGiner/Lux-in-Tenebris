@@ -1,0 +1,49 @@
+namespace = mma_fall
+normal_or_historical_nations = yes
+
+#The Fall of Mong Mao
+country_event = {
+	id = mma_fall.1
+	title = "mma_fall.1.t"
+	desc = "mma_fall.1.d"
+	picture = BATTLE_eventPicture
+
+	fire_only_once = yes	
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = MNG
+				NOT = { exists = QNG }
+			}
+			tag = QNG
+		}
+		2166 = {
+			owned_by = MMA
+		}
+		2166 = {
+			controlled_by = ROOT
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+
+	option = {
+		name = "mma_fall.1.a" #We stand triumphant!
+		MMA = { release = MKA release = MYA }
+                2166 = { cede_province = ROOT }
+                MYA { change_government_via_reform = monarchy set_legacy_government = mandala_system_legacy }
+                MKA { change_government_via_reform = monarchy set_legacy_government = mandala_system_legacy }
+	}
+
+	option = {
+		name = mma_fall.1.b #We are not finished with this war
+		ai_chance = {
+			factor = 0
+		}
+		add_war_exhaustion = 2
+	}
+}

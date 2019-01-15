@@ -922,6 +922,9 @@ burma_region = {
 		arakan_area
 		central_burma_area
 		chindwin_area
+		#BTC
+		yawnghwe_area
+		mong_yang_area
 	}
 	monsoon = {
 		00.06.01
@@ -996,6 +999,8 @@ xinan_region = {
 		chuannan_area
 		yun_gui_borderland_area
 		chuanbei_area
+		#BTC
+		koshanpye_area
 	}
 }
 
@@ -1131,10 +1136,13 @@ malaya_region = {	#Western Indonesia Malaya.
 		indian_ocean_islands_area
 		tenasserim_area
 		malaya_area
-		north_tenasserim_area
 		malacca_area
 		batak_area
 		minangkabau_area
+		#BTC
+		northern_malaya_area
+		johor_area
+		barisan_area
 	}
 	monsoon = {
 		00.10.01
@@ -1163,6 +1171,9 @@ moluccas_region = {
 		south_sulawesi_area
 		ceram_area
 		spice_islands_area
+		#BTC
+		luwu_area
+		banggai_area
 	}
 	monsoon = {
 		00.10.01
@@ -1186,6 +1197,13 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 		west_java_area
 		lesser_sunda_islands_area
 		indonesian_islands_area
+		#BTC
+		iban_area
+		dayak_area
+		kotawaringin_area
+		berau_area
+		yogyakarta_area
+		cirebon_area
 	}
 	monsoon = {
 		00.11.01
@@ -1219,14 +1237,36 @@ indo_china_region = {
 	areas = {
 		vietnam_area
 		south_laos_area
+		basac_area
 		north_laos_area
-		central_thai_area
-		northern_thai_area
+		muang_phuan_area
 		cambodia_area
+		eastern_cambodia_area
 		mekong_area
 		champa_area
-		khorat_area
 		red_river_delta_area
+		cao_bac_area
+		central_highlands_area
+	}
+	monsoon = {
+		00.05.01
+		00.08.30
+	}
+}
+
+siam_region = { #BTC
+	areas = {
+		central_thai_area
+		northern_thai_area
+		nan_area
+		western_thai_area
+		tenasserim_area
+		north_tenasserim_area
+		sukhothai_area
+		khorat_area
+		inner_cambodia_area
+		suwannaphum_area
+                
 	}
 	monsoon = {
 		00.05.01

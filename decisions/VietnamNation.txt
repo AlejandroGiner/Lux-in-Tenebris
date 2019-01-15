@@ -1,0 +1,134 @@
+country_decisions = {
+
+	vietnam_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_vietnam_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				primary_culture = vietnamese
+				primary_culture = zhuang
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 4
+				}
+				AND = {
+					ai = yes
+					is_year = 1700
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 613
+				province_id = 2373
+				province_id = 1022
+                                province_id = 607
+				province_id = 605
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 20
+			NOT = { exists = VTN }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 613
+			owns_core_province = 2373
+			owns_core_province = 1022
+			owns_core_province = 607
+			owns_core_province = 605
+		}
+		effect = {
+			mekong_area = {
+				add_base_tax = 2
+                                add_base_production = 2
+                                add_base_manpower = 2
+				change_culture = ROOT
+                                change_religion = ROOT
+			}
+			change_tag = VTN
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			vietnam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VTN
+			}
+			red_river_delta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VTN
+			}
+			cao_bac_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VTN
+			}
+			muang_phuan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VTN
+			}
+			mekong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VTN
+			}
+			cambodia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = VTN
+			}
+			add_prestige = 25
+			set_country_flag = formed_vietnam_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+                }
+		ai_will_do = {
+			factor = 1
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}
