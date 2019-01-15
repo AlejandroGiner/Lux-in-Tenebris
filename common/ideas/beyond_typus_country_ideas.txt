@@ -686,7 +686,7 @@ KCY_ideas = {
 	}
 
 	bonus = {
-		caravan_power = 0.2
+		land_maintenance_modifier = -0.1
 	}
 
 	trigger = {
@@ -759,5 +759,83 @@ AVR_ideas = {
 	AVR_idea7 = {
 		prestige = 1
 		global_unrest = -1
+	}
+}
+
+DRB_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		garrison_size = 0.1
+	}
+
+	bonus = {
+		caravan_power = 0.2
+	}
+
+	trigger = {
+		tag = DRB
+	}
+	free = yes
+
+	DRB_idea1 = {
+		defensiveness = 0.25
+	}
+	DRB_idea2 = {
+		num_accepted_cultures = 2
+	}
+	DRB_idea3 = {
+		land_morale = 0.10
+	}
+	DRB_idea4 = {
+		leader_land_manuever = 1
+	}
+	DRB_idea5 = {
+		prestige = 1
+	}
+	DRB_idea6 = {
+		global_own_trade_power = 0.25
+	}
+	DRB_idea7 = {
+		fort_maintenance_modifier = -0.15
+	}
+}
+
+VAK_ideas = {
+	start = {
+		enemy_core_creation = 0.5
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		land_morale = 0.10
+	}
+
+	trigger = {
+		tag = VAK
+	}
+	free = yes
+
+	VAK_idea1 = {
+		land_attrition = -0.15
+	}
+	VAK_idea2 = {
+		movement_speed = 0.15
+		shock_damage = 0.10
+	}
+	VAK_idea3 = {
+		state_maintenance_modifier = -0.15
+		global_unrest = -1
+	}
+	VAK_idea4 = {
+		defensiveness = 0.15
+	}
+	VAK_idea5 = {
+		tolerance_own = 1
+	}
+	VAK_idea6 = {
+		production_efficiency = 0.10
+	}
+	VAK_idea7 = {
+		recover_army_morale_speed = 0.15
 	}
 }
