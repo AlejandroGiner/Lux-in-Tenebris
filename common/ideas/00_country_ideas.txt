@@ -3311,6 +3311,12 @@ GEO_ideas = {
 		OR = {
 			tag = GEO
 			tag = IME
+			tag = MGL
+			tag = GUR
+			tag = SVN
+			tag = KRT
+			tag = KAH
+			tag = LAZ
 		}
 	}
 	free = yes
@@ -5433,7 +5439,10 @@ CIR_ideas = {
 	}
 	
 	trigger = {
-		tag = CIR
+		OR = {
+			tag = CIR
+			tag = KBR
+		}
 	}
 	free = yes
 	
