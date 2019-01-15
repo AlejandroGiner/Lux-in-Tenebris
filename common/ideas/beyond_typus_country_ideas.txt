@@ -636,3 +636,45 @@ ALA_ideas = {
 		hostile_attrition = 1.0
 	}
 }
+
+UDI_ideas = {
+	start = {
+		development_cost = -0.1
+		stability_cost_modifier = -0.1
+	}
+
+	bonus = {
+		diplomatic_reputation = 2
+	}
+
+	trigger = {
+		tag = UDI
+	}
+	free = yes
+
+	UDI_idea1 = {
+		legitimacy = 1
+		prestige_decay = -0.01
+	}
+	UDI_idea2 = {
+		prestige = 1
+		land_morale = 0.1
+	}
+	UDI_idea3 = {
+		war_exhaustion = -0.02
+	}
+	UDI_idea4 = {
+		tolerance_own = 2
+		global_missionary_strength = 0.01
+	}
+	UDI_idea5 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	UDI_idea6 = {
+		global_manpower_modifier = 0.20
+		discipline = 0.05
+	}
+	UDI_idea7 = {
+		province_warscore_cost = -0.15
+	}
+}
