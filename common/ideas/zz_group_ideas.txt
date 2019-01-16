@@ -755,9 +755,18 @@ malayan_ideas = {
 	
 	trigger = {
 		religion_group = muslim
-		culture_group = malay
+		primary_culture = malayan
 		NOT = {
 			primary_culture = sumatran
+			primary_culture = javanese
+			primary_culture = sundanese
+			primary_culture = sulawesi
+			primary_culture = kutainese
+			primary_culture = butonese
+			primary_culture = nusa_tenggara
+			primary_culture = bugis
+			primary_culture = acehnese
+			primary_culture = bornean
 		}
 	}
 	free = yes
@@ -1006,8 +1015,12 @@ sumatran_ideas = {
 	}
 	
 	trigger = {
-		primary_culture = sumatran
 		religion_group = muslim
+		OR = {
+			primary_culture = acehnese
+			primary_culture = sumatran
+			primary_culture = batak
+		}
 	}
 	free = yes
 
@@ -1754,9 +1767,9 @@ sulawesi_ideas = {
 	
 	trigger = {
 		OR = {
-			tag = MKS
-			tag = BTN
-			tag = LUW
+			primary_culture = sulawesi
+                        primary_culture = bugis
+                        primary_culture = butonese
 		}
 	}
 	free = yes

@@ -2,29 +2,31 @@ BT-Classic
 BT 9, updated for EU4 1.28.\
 changelog
 
--Caucasus has received a province and tag overhaul, imported from Dynamo's Enhanced Typus mod.
+-Caucasus has received a major overhaul with 18 new provinces, cultures, tags and unique national ideas.
 
--New tags in America.#1
+-Madagascar has received a moderate overhaul with 20 new provinces.
+
+-Italy has received a light overhaul with 4 new provinces and 15 new tags.
+
+-Japan has received a moderate overhaul with 14 new provinces and 6 new tags each with their own national ideas plus 2 releasables from vanilla present in 1444.
+
+-South east Asia has received a major overhaul with +80 provinces, many cultures, missions, tags, 2 new technology groups, disaster, events and national ideas.
+
+-China superregion has received a major overhaul with many new provinces.
+
+-Iberia has received a light overhaul with 4 new provinces.
+
+-New tags in America scattered around the continent.#1
 
 -New tags with their own technology group and national ideas in oceania.#1
 
--New tags in Siberia.
+-4 new tags in Siberia.
 
 -Madagascar island is now its own region and colonial region.#2
 
--Revamped Madagascar with many new provinces.
-
--Several new provinces and tags in Italy.
-
--Japan overhaul with 14 new provinces and 8 new Clans each with their own national ideas.
-
--Hong Kong province added to South China. 
-
 -Hong Kong and Macau provinces now have straits to make it possible to blockade them like Venice.
 
--Several new provinces added to Iberia and Maghreb to represent 1.28 vanilla changes.
-
--Basque country province revamped into the 3 historically provinces that formed it.
+-Several new provinces added to Maghreb to represent 1.28 vanilla changes.
 
 -General area adjusting to adapt new 1.28 vanilla changes to already existing Beyond Typus provinces.
 
@@ -44,9 +46,9 @@ changelog
 
 -Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.#4
 
--Expanded dynamic province naming for Andalusí and Castilian cultures.
+-Expanded dynamic province naming for several cultures, including south east Asia, Andalusí and Castilian.
 
--New national ideas to several nations that use generic ideas.
+-New national ideas to several nations that previously used generic ideas.
 
 -Removed Lisbon and Tripoli trade nodes.
 

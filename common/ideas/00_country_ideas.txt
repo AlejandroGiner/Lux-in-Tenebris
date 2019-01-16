@@ -1384,12 +1384,12 @@ VIJ_ideas = {
 
 AYU_ideas = {
 	start = {
-		religious_unity = 0.20
-		num_accepted_cultures = 1
+		trade_steering = 0.20
+		cavalry_power = 0.10
 	}
 	
 	bonus = {
-		vassal_income = 0.25
+		trade_efficiency = 0.10
 	}
 	
 	trigger = {
@@ -1397,23 +1397,25 @@ AYU_ideas = {
 	}
 	free = yes
 	
-	white_elephant = {
-		global_tax_modifier = 0.10
+	ayu_bunga_mas = {
+                global_tax_modifier = 0.10
+		vassal_income = 0.15
+	}
+	ayu_mueang = {
+		fort_maintenance_modifier = -0.1
 	}
 	corvee_system = {
 		global_manpower_modifier = 0.10
 	}
-	ayu_foreign_mercenaries = {
-		merc_maintenance_modifier = -0.15
+	ayu_trade_settlements = {
+                global_institution_spread = 0.1
+		tolerance_heathen = 2
+	}
+	ayu_foreign_firepower = {
+		mil_tech_cost_modifier = -0.1
 	}
 	ayu_embassies = {
 		diplomats = 1
-	}
-	trading_links = {
-		trade_range_modifier = 0.20
-	}
-	personal_executions = {
-		stability_cost_modifier = -0.1
 	}
 	phrai_luang = {
 		global_unrest = -1
@@ -1796,7 +1798,7 @@ ETH_ideas = {
 
 DAI_ideas = {
 	start = {
-		hostile_attrition = 1.0
+		defensiveness = 0.25
 		enemy_core_creation = 0.5
 	}
 	
@@ -1807,8 +1809,7 @@ DAI_ideas = {
 	trigger = {
 		OR = {
 			tag = DAI
-			tag = TOK
-			tag = ANN
+			primary_culture = vietnamese
 		}
 	}
 	free = yes		#will be added at load.
@@ -1819,8 +1820,8 @@ DAI_ideas = {
 	confucian_revival = {
 		prestige = 1
 	}
-	autonomous_villages = {
-		defensiveness = 0.2
+	nam_tien = {
+		culture_conversion_cost = -0.25
 	}
 	village_militia = {
 		global_manpower_modifier = 0.25
@@ -2018,10 +2019,7 @@ TAU_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			tag = TAU
-			tag = BPR
-		}
+		tag = TAU
 	}
 	free = yes
 	
@@ -3347,23 +3345,26 @@ GEO_ideas = {
 
 javan_ideas = {
 	start = {
+		tolerance_heretic = 2
 		tolerance_heathen = 2
-		prestige_decay = -0.01	
 	}
 	
 	bonus = {
-		naval_maintenance_modifier = -0.2
+		naval_maintenance_modifier = -0.1
 	}
 	
 	trigger = {
+		NOT = { tag = MAJ }
+		NOT = { tag = SUN }
+		NOT = { tag = MSA }
 		OR = {
-			tag = MAJ
-			tag = SUN
+			primary_culture = javanese
+			primary_culture = sundanese
 		}
 	}
 	free = yes
 	
-	candi_shrines = {
+	kejawen = {
 		religious_unity = 0.20
 	}
 	indianization = {
@@ -3379,11 +3380,11 @@ javan_ideas = {
 	bi_yearly_harvest = {
 		global_trade_goods_size_modifier = 0.10
 	}
-	modernized_shipbuilding = {
-		global_ship_cost = -0.10
+	javanese_migration = {
+		global_colonial_growth = 25
 	}
-	terracotta_banking = {
-		trade_efficiency = 0.1
+	jawanisasi = {
+		culture_conversion_cost = -0.15
 	}
 }
 
@@ -6900,16 +6901,20 @@ PEG_ideas = {
 
 KUT_ideas = {
 	start = {
-		global_prov_trade_power_modifier = 0.1
-		trade_steering = 0.2
+		trade_efficiency = 0.1
+		hostile_attrition = 1
 	}
 
 	bonus = {
-		global_own_trade_power = 0.2
+		global_trade_goods_size_modifier = 0.1
 	}
 	
 	trigger = {
-		tag = KUT
+		OR = {
+			primary_culture = bornean
+			primary_culture = banjarese
+			primary_culture = kutainese
+		}
 	}
 	free = yes
 	
@@ -6929,7 +6934,7 @@ KUT_ideas = {
 		global_manpower_modifier = 0.15
 	}
 	kut_consolidation_of_kutai = {
-		global_tax_modifier = 0.1
+		global_autonomy = -0.05
 	}
 	kut_subdue_the_inlands = {
 		global_unrest = -1
