@@ -236,3 +236,28 @@ lao_monarchy = {
 		primary_culture = laotian
 	}
 }
+
+latinempire_monarchy = {
+	rank = {
+		1 = EMPIRE
+		2 = EMPIRE
+		3 = EMPIRE
+	}
+
+	ruler_male = {
+		1 = EMPEROR
+		2 = EMPEROR
+		3 = EMPEROR
+	}
+
+	ruler_female = {
+		1 = EMPRESS
+		2 = EMPRESS
+		3 = EMPRESS
+	}
+
+	trigger = {
+		government = monarchy
+		tag = LTE
+	}
+}
