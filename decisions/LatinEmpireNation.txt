@@ -81,8 +81,15 @@ country_decisions = {
 				limit = {
 					OR = {
 						area = macedonia_area
-						area = western_aegean_area
 						area = thrace_area
+					}
+				}
+				add_core = LTE
+			}
+			every_province = {
+				limit = {
+					OR = {
+						area = western_aegean_area
 						area = east_adriatic_coast_area
 					}
 				}
