@@ -67,32 +67,27 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			owns_core_province = 151
-			owns_core_province = 149
-			owns_core_province = 3170
-			owns_core_province = 3171
+			thrace_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 			151 = {
 				is_state = yes
 			}
 		}
 		effect = {
 			add_prestige = 25
-			every_province = {
-				limit = {
-					OR = {
-						area = macedonia_area
-						area = thrace_area
-					}
-				}
+			macedonia_area = {
 				add_core = LTE
 			}
-			every_province = {
-				limit = {
-					OR = {
-						area = western_aegean_area
-						area = east_adriatic_coast_area
-					}
+			thrace_area = {
+				add_core = LTE
+			}
+			western_aegean_area = {
+				add_permanent_claim = LTE
 				}
+			east_adriatic_coast_area = {
 				add_permanent_claim = LTE
 			}
 			if = {
