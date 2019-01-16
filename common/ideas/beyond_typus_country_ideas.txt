@@ -839,3 +839,43 @@ VAK_ideas = {
 		recover_army_morale_speed = 0.15
 	}
 }
+
+LTE_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		land_morale = 0.1
+	}
+
+	bonus = {
+		global_manpower_modifier = 0.2
+	}
+
+	trigger = {
+		tag = LTE
+	}
+	free = yes
+
+	latinokratia = {
+		num_accepted_cultures = 1
+		prestige = 1
+	}
+	latin_patriarchate = {
+		papal_influence = 2
+		tolerance_own = 2
+		tolerance_heretic = 1
+	}
+	crown_of_thorns_latin_empire = {
+		global_unrest = -2
+	}
+	imperium_romaniae_latin_empire = {
+		legitimacy = 1
+	}
+	western_administration_principles_latin_empire = {
+		technology_cost = -0.10
+	}
+	venetian_merchants_and_mercenaries_latin_empire = {
+		mercenary_cost = -0.25
+	}
+	traditions_of_warfare_latin_empire = {
+		army_tradition = 1
+	}

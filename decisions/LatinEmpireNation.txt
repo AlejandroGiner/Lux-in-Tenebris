@@ -1,0 +1,158 @@
+country_decisions = {
+
+	latin_empire_formation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_latinempire }
+			NOT = { exists = LTE }
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion = catholic
+			NOT = { government = republic }
+			NOT = { has_reform = celestial_empire }
+			OR = {
+				owns = 151
+				AND = {
+					ai = no
+					tag = KNI
+				}
+				AND = {
+					ai = no
+					tag = CYP
+				}
+				AND = {
+					ai = no
+					tag = NAX
+				}
+				AND = {
+					ai = no
+					tag = ATH
+				}
+				AND = {
+					ai = no
+					tag = ACH
+				}
+				AND = {
+					ai = no
+					tag = LES
+				}
+				AND = {
+					ai = no
+					tag = HAI
+				}
+				AND = {
+					ai = no
+					tag = FLA
+				}
+			}
+			OR = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 151
+				province_id = 149
+				province_id = 3170
+				province_id = 3171
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			owns_core_province = 151
+			owns_core_province = 149
+			owns_core_province = 3170
+			owns_core_province = 3171
+			151 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			add_prestige = 25
+			every_province = {
+				limit = {
+					OR = {
+						area = macedonia_area
+						area = western_aegean_area
+						area = thrace_area
+						area = east_adriatic_coast_area
+					}
+				}
+				add_permanent_claim = LTE
+			}
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							NOT = { tag = KNI }
+							NOT = { tag = CYP }
+							NOT = { tag = NAX }
+							NOT = { tag = ATH }
+							NOT = { tag = ACH }
+							NOT = { tag = LES }
+							NOT = { tag = HAI }
+							NOT = { tag = FLA }
+						}
+						was_never_end_game_tag_trigger = no
+					}
+				}
+				release = LTE
+				LTE = { change_primary_culture = ROOT }
+			}
+			if = {
+				limit = {
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = NAX
+						tag = ATH
+						tag = ACH
+						tag = LES
+						tag = HAI
+						tag = FLA
+					}
+					was_never_end_game_tag_trigger = yes
+				}
+				change_tag = LTE
+				if = {
+					limit = { has_custom_ideas = no }
+					country_event = { id = ideagroups.1 } #Swap Ideas
+				}
+			}
+			if = {
+				limit = { tag = KNI }
+				set_country_flag = knights_formed_latinempire
+			}
+			LTE = {
+				set_capital = 151 #Constantinople
+				change_religion = catholic
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+					}
+					change_government = monarchy
+					set_legacy_government = feudal_monarchy
+				}
+				if = {
+					limit = {
+						NOT = { government_rank = 3 }
+					}
+					set_government_rank = 3
+				}
+				set_country_flag = formed_latinempire
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}
