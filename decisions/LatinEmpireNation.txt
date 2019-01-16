@@ -54,12 +54,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 151
-				province_id = 149
-				province_id = 3170
-				province_id = 3171
-			}
+			area = thrace_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -67,13 +62,41 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			thrace_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+			if = {								#non crusader state
+				limit = {
+					NOT = { tag = KNI }
+					NOT = { tag = CYP }
+					NOT = { tag = NAX }
+					NOT = { tag = ATH }
+					NOT = { tag = ACH }
+					NOT = { tag = LES }
+					NOT = { tag = HAI }
+					NOT = { tag = FLA }
+				}
+				thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
-			151 = {
-				is_state = yes
+			if = {							#crusader state
+				limit = {
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = NAX
+						tag = ATH
+						tag = ACH
+						tag = LES
+						tag = HAI
+						tag = FLA
+					}
+				}
+				thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_state_core = ROOT
+				}
 			}
 		}
 		effect = {
