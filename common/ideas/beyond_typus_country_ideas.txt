@@ -693,7 +693,7 @@ KCY_ideas = {
 		OR = {
 			tag = KCY
 			tag = BLK
-			#tag = KUM
+			tag = TUM
 		}
 	}
 	free = yes
@@ -875,6 +875,82 @@ GAZ_ideas = {
 	}
 	GAZ_idea7 = {
 		artillery_cost = -0.1
+	}
+}
+
+KTG_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		fabricate_claims_cost = -0.25
+	}
+
+	bonus = {
+		trade_steering = 0.20
+	}
+
+	trigger = {
+		tag = KTG
+	}
+	free = yes
+
+	KTG_idea1 = {
+		state_maintenance_modifier = -0.15
+	}
+	KTG_idea2 = {
+		idea_cost = -0.1
+	}
+	KTG_idea3 = {
+		global_manpower_modifier = 0.1
+	}
+	KTG_idea4 = {
+		build_cost = -0.15
+	}
+	KTG_idea5 = {
+		discipline = 0.05
+	}
+	KTG_idea6 = {
+		global_own_trade_power = 0.1
+	}
+	KTG_idea7 = {
+		reinforce_speed = 0.15
+	}
+}
+
+LEK_ideas = {
+	start = {
+		production_efficiency = 0.1
+		hostile_attrition = 1.0
+	}
+
+	bonus = {
+		army_tradition_decay = -0.02
+	}
+
+	trigger = {
+		tag = LEK
+	}
+	free = yes
+
+	LEK_idea1 = {
+		land_attrition = -0.15
+	}
+	LEK_idea2 = {
+		global_unrest = -1
+	}
+	LEK_idea3 = {
+		global_manpower_modifier = 0.1
+	}
+	LEK_idea4 = {
+		advisor_pool = 1
+	}
+	LEK_idea5 = {
+		loot_amount = 0.20
+	}
+	LEK_idea6 = {
+		leader_land_manuever = 2
+	}
+	LEK_idea7 = {
+		land_morale = 0.10
 	}
 }
 
