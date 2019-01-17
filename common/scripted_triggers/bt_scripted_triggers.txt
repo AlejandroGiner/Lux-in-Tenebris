@@ -1,18 +1,5 @@
 #Province Scope unless otherwise specified
 
-#BT's heavy handed historical colony events candidate
-bt_historical_colony_events_for_the_ai_candidate = {
-	is_empty = yes
-	range = ROOT
-	has_discovered = ROOT
-	NOT = {
-		AND = {
-			has_terrain = glacier
-			has_climate = arctic
-		}
-	}
-}
-
 #Check for more colonies than colonists, or more than 8 colonies.
 bt_more_colonies_than_colonists_check = {
 	NOT = {
