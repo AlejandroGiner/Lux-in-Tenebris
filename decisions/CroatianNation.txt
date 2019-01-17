@@ -2,7 +2,7 @@ country_decisions = {
 	croatian_nation = {
 		major = yes
 		potential = {
-			#bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_croatia_flag_btp }
 			NOT = { tag = CRO }
 			NOT = { tag = ILY }

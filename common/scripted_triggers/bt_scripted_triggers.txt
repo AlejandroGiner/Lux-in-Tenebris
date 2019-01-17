@@ -46,40 +46,7 @@ bt_more_colonies_than_colonists_check = {
 	}
 }
 
-#Generic shortcut for form nation potential, based on copy-pasted default from vanilla
-bt_generic_can_form_potential_check = {
-	#Generic Requirements all or (almost all to the point of looking like an oversight when missing) vanilla decisions have. Note colonial nations do have some quirks.
-	normal_or_historical_nations = yes
-	OR ={
-		ai = no
-		is_playing_custom_nation = no
-	}
-	OR = {
-		ai = no
-		AND = {
-			ai = yes
-			num_of_cities = 6			#3 is common in vanilla, but more provinces in BT
-		}
-	}
-	is_colonial_nation = no
-	OR = {
-		is_former_colonial_nation = no
-		AND = {
-			is_former_colonial_nation = yes
-			ai = no
-		}
-	}
-	#Special tags we don't want forming anything else
-	NOT = { government = celestial_empire }
-	NOT = { tag = PAP }
-	#These are top-level empire tags and should not try to switch to anything else
-	NOT = { tag = HLR }
-	NOT = { tag = ROM }
-	NOT = { tag = UNK }
-	NOT = { tag = CEL }
-}
 
- 
  ##################################################
  ##### Dub's Mission Work's Triggers - All credit to Dub #####
  ##################################################

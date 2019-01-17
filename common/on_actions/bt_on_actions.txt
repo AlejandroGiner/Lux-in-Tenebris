@@ -209,16 +209,15 @@ on_heir_death = {
 	}
 }
 
-#Doesn't work for unknown reasons, so #ing it out for now.
-#on_new_heir = {
-#	if = {
-#		limit = {
-#			government = high_kingship
-#			has_country_modifier = bt_tanistry_waiting_on_heir
-#			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
-#		}
-#		country_event = { id = BeyondTypusCelticFlavour.2 days = 1 }			#Male heir born/introduced			- doesn't seem to work, I'll look into this later, added a 1 day MTTH in the meantime
-#		country_event = { id = BeyondTypusCelticFlavour.3 days = 1 }			#Female heir born/introduced			- doesn't seem to work, I'll look into this later, added a 1 day MTTH in the meantime
-#	}
-#}
-
+# country
+# root = winning country, from = location
+on_siege_won_country = {
+	events = {
+		tyw_events.14 # Fall of Prague in Religious War
+		btc_lc_cities.12
+	}
+	random_events = {
+		10 = army_professionalism_events.1 #City Sacked
+		100 = 0
+	}
+}

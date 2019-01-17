@@ -2,7 +2,7 @@ country_decisions = {
 	emilian_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_emilia_flag_btp }
 			NOT = { tag = EMR }
 			NOT = { tag = PAP }
