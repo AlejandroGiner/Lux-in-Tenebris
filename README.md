@@ -68,21 +68,21 @@ changelog
 
 -Added Hiemal
 
--Glacier terrain type supply limit changed from 2 to 0. 
- Local development cost changed from +50% to +100%. 
+-Glacier terrain type supply limit changed from 2 to 0.\
+ Local development cost changed from +50% to +100%.\
  Movement cost changed from 1.25 to 2.0.
 
--Desert terrain type supply limit changed from 4 to 0.
- Local development cost changed from +50% to +60%.
+-Desert terrain type supply limit changed from 4 to 0.\
+ Local development cost changed from +50% to +60%.\
  Movement cost changed from 1.05 to 1.4
 
--Coastal desert terrain type supply limit changed from 4 to 1.
- Local development cost changed from +35% to +45%
+-Coastal desert terrain type supply limit changed from 4 to 1.\
+ Local development cost changed from +35% to +45%\
  Movement cost changed from 1.0 to 1.20.
 
--Forest terrain type supply limit changed from 4 to 2. 
- Local development cost changed from +20% to +25%. 
- Movement cost changed from 1.25 to 1.3. 
+-Forest terrain type supply limit changed from 4 to 2.\
+ Local development cost changed from +20% to +25%.\
+ Movement cost changed from 1.25 to 1.3.\
  Defence* changed from 1 to 2.
 
 -Highlands terrain type supply limit changed from 6 to 4.
@@ -125,10 +125,10 @@ changelog
 
  
 To-do list:
- Split bahamas.\
- New provinces in Italy.\
  Replace all generic national ideas with unique ones.\
- Make Florida its own Colonial region.\
  New tags in oceania and brazil.\
  Grand architect buildings into CoT mechanic.\
+ Fix terrain.txt.\
+ China overhaul.\
+ Implement chieftains.\
  Update flavorMOR.txt.
