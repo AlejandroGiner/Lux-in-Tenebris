@@ -46,6 +46,8 @@ changelog
 
 -Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.#4
 
+-Readded Persia and Khorasan wastelands removed in BT 9.0.
+
 -Expanded dynamic province naming for several cultures, including south east Asia, Andalusí and Castilian.
 
 -New national ideas to several nations that previously used generic ideas.
