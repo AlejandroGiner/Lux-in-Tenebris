@@ -4,6 +4,9 @@ namespace = btc_ai_colony_helper
 
 country_event = { #forced colonialization
 	id = btc_ai_colony_helper.1
+	title = btc_ai_colony_helper.1.t
+	desc = btc_ai_colony_helper.1.d
+	picture = btc_ai_colony_helper.1.p
 
 	trigger = {
 		ai = yes
@@ -54,7 +57,7 @@ country_event = { #forced colonialization
 
 			save_event_target_as = random_colony_target
 		}
-
+		
 		random_empty_neighbour_province = { #Grabs an empty neighbour province if exists
 			limit = {
 				has_discovered = ROOT
@@ -109,10 +112,13 @@ country_event = { #forced colonialization
 
 	option = { #unless empty neighbour, then do this one instead
 		name = btc_ai_colony_helper.1.b #Just for the option to show up
+		trigger = {
+			has_saved_event_target = event_target:random_neighbour_colony_target
+		}
 		ai_chance = {
 			factor =  #Ensure this is not taken
 			modifier = {
-				has_saved_event_target = random_neighbour_colony_target
+				has_saved_event_target = event_target:random_neighbour_colony_target
 				factor = 100 #Unless a neighbour empty province exists
 			}
 		}
@@ -127,9 +133,13 @@ country_event = { #forced colonialization
 
 country_event = { #Colonial Nation clean-up
 	id = btc_ai_colony_helper.2
+	title = btc_ai_colony_helper.2.t
+	desc = btc_ai_colony_helper.2.d
+	picture = btc_ai_colony_helper.2.p
 
 	trigger = {
 		is_colonial_nation = yes
+		colonial_parent = {NOT = {same_continent = ROOT}
 		capital_scope = {
 			OR = {
 				colonial_region = colonial_alaska
@@ -138,19 +148,19 @@ country_event = { #Colonial Nation clean-up
 				colonial_region = colonial_louisiana
 				colonial_region = colonial_california
 				colonial_region = colonial_mexico
-			colonial_region = colonial_the_carribean
+				colonial_region = colonial_the_carribean
 				colonial_region = colonial_colombia
 				colonial_region = colonial_peru
 				colonial_region = colonial_la_plata
 				colonial_region = colonial_brazil
 				colonial_region = colonial_australia
 				colonial_region = colonial_cascadia
-	    	colonial_region = colonial_northwest_territories
+				colonial_region = colonial_northwest_territories
 				colonial_region = colonial_hudson_bay
 				colonial_region = colonial_newfoundland
 				colonial_region = colonial_acadia
 				colonial_region = colonial_florida
-	    	colonial_region = colonial_cuba
+				colonial_region = colonial_cuba
 				colonial_region = colonial_hispaniola
 				colonial_region = colonial_bahamas
 				colonial_region = colonial_polynesia
