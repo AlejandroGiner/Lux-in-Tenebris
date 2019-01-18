@@ -1,0 +1,676 @@
+namespace = btc_lc_cities
+
+country_event = { #Silting of the Zwin
+	id = btc_lc_cities.1
+	title = btc_lc_cities.1.t
+	desc = btc_lc_cities.1.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		is_year = 1490
+		90 = {
+			owned_by = ROOT
+			is_core = ROOT
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		set_global_flag = the_fall_of_brugge_flag
+	}
+	
+	option = {
+		name = btc_lc_cities.1.a #There is nothing we can do
+		ai_chance = { factor = 50 }
+		90 = {
+			add_base_tax = -6
+			add_base_production = -6
+			add_base_manpower = -6
+			add_center_of_trade_level = -1
+		}
+		
+		1744= { #Antwerp
+			add_base_tax = 2
+			add_base_production = 4
+			add_base_manpower = 2
+		}
+		95 = { #Breda
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		4383 = { #Gravenhage
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		hidden_effect = {
+			SCO = {
+				country_event = {
+					id = btc_lc_cities.3
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = btc_lc_cities.1.b #Attempt to Extend the city to the coast
+		trigger = {
+			treasury = 250 
+		}
+		highlight = yes
+		ai_chance = { 
+			factor = 0
+			modifier = {
+				factor = 50
+				treasury = 250 
+			}
+		}
+		
+		custom_tooltip = extend_brugge_tooltip
+		add_treasury = -500
+		
+		90 = {
+			set_province_flag = extend_brugge_flag
+			add_base_tax = -6
+			add_base_production = -6
+			add_base_manpower = -6
+			add_center_of_trade_level = -1
+		}
+		
+		1744= { #Antwerp
+			add_base_tax = 2
+			add_base_production = 4
+			add_base_manpower = 2
+		}
+		95 = { #Breda
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		4383 = { #Gravenhage
+			add_base_tax = 2
+			add_base_production = 1
+			add_base_manpower = 2
+		}
+		
+		hidden_effect = {
+			SCO = {
+				country_event = {
+					id = btc_lc_cities.3
+				}
+			}
+		}
+	}
+}
+
+country_event = { #The Expansion of Brugge
+	id = btc_lc_cities.2
+	title = btc_lc_cities.2.t
+	desc = btc_lc_cities.2.d
+	picture = CITY_VIEW_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		93 = {
+			owned_by = ROOT
+			had_province_flag = {
+				flag = extend_brugge_flag
+				days = 7300
+			}
+		}
+	}
+	
+	option = {
+		name = btc_lc_cities.2.a
+		90 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+	}
+}
+
+country_event = { #The Scottish Staple
+	id = btc_lc_cities.3
+	title = btc_lc_cities.3.t
+	desc = btc_lc_cities.3.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Move the Staple to Antwerp
+		name = btc_lc_cities.3.a
+		ai_chance = {factor = 0}
+		
+		add_country_modifier = {
+			name = btc_a_new_staple_port
+			duration = 3650
+		}
+		90 = {
+			remove_province_modifier = scottish_staple_port
+		}
+		
+		1744 = {
+			add_permanent_province_modifier = {
+				name = scottish_staple_port
+				duration = -1
+			}
+		}
+	}
+	
+	option = { #Move the Staple to Amsterdam
+		name = btc_lc_cities.3.b
+		ai_chance = {factor = 100} #Historical
+		
+		add_country_modifier = {
+			name = btc_a_new_staple_port
+			duration = 3650
+		}
+		
+		90 = {
+			remove_province_modifier = scottish_staple_port
+		}
+		
+		97 = {
+			add_permanent_province_modifier = {
+				name = scottish_staple_port
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { #Move the English Staple
+	id = btc_lc_cities.4
+	title = btc_lc_cities.4.t
+	desc = btc_lc_cities.4.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	
+	trigger = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+		87 = {
+			NOT = {owned_by = ROOT}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Move the Staple to Brugge
+		name = btc_lc_cities.4.a
+		ai_chance = (factor = 100} #Historical
+		
+		add_country_modifier = {
+			name = btc_a_new_staple_port
+			duration = 3650
+		}
+		
+		1744 = {
+			add_permanent_province_modifier = {
+				name = english_staple_port
+				duration = -1
+			}
+		}
+	}
+	option = { #Move the Staple to Antwerp
+		name = btc_lc_cities.4.b
+		ai_chance = {factor = 0}
+		
+		add_country_modifier = {
+			name = btc_a_new_staple_port
+			duration = 3650
+		}
+		
+		90 = {
+			add_permanent_province_modifier = {
+				name = english_staple_port
+				duration = -1
+			}
+		}
+	}
+	option = { #Move the Staple to Amsterdam
+		name = btc_lc_cities.4.c
+		ai_chance = {factor = 0}
+		
+		add_country_modifier = {
+			name = btc_a_new_staple_port
+			duration = 3650
+		}
+		
+		90 = {
+			add_permanent_province_modifier = {
+				name = english_staple_port
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = { #Fall of power of the staple ports
+	id = btc_lc_cities.5
+	title = btc_lc_cities.5.t
+	desc = btc_lc_cities.5.d
+	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
+	
+	trigger = {
+		is_year = 1600
+		any_owned_province = {
+			OR = {
+				has_province_modifier = english_staple_port
+				has_province_modifier = scottish_staple_port
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 240
+	}
+	
+	option = { #Favored exportation of Raw Materials
+		name = btc_lc_cities.5.a
+		every_owned_province = {
+			if = {
+				limit = {has_province_modifier = english_staple_port}
+				remove_province_modifier = english_staple_port
+				add_base_production = 2
+				if = {
+					limit = {province_id = 97} #Amsterdam
+					change_trade_goods = cloth
+				}
+			}
+			else_if = {
+				limit = {has_province_modifier = scottish_staple_port}
+				remove_province_modifier = scottish_staple_port
+				add_base_production = 2
+				if = {
+					limit = {province_id = 97} #Amsterdam
+					change_trade_goods = cloth
+				}
+			}
+		}
+	}
+}
+
+country_event = { #The Revolt of Flanders against Maximillian V of Austria
+	id = btc_lc_cities.6
+	title = btc_lc_cities.6.t
+	desc = btc_lc_cities.6.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	trigger = {
+		is_year = 1500
+		flanders_area = {
+			owned_by = ROOT
+			ROOT = {
+				NOT = {
+					primary_culture = dutch
+					primary_culture = flemish
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	immediate = {
+		90 = {
+			anti_tax_rebels = 1
+		}
+	}
+	
+	option = { #Embargo the Cities
+		name = btc_lc_cities.6.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 100
+				1744 = {owned_by = ROOT}
+			}
+		}
+		flanders_area = {
+			random_list = {
+				33 = {add_base_tax = -1}
+				33 = {add_base_production = -1}
+				33 = {add_base_manpower = -1}
+			}
+		}
+		1744 = {
+			add_base_production = 2
+			add_base_tax = 2
+		}
+		97 = {
+			add_base_production = 1
+			add_base_tax = 1
+		}
+	}
+}
+
+country_event = { #The Golden Age of Antwerp
+	id = btc_lc_cities.7
+	title = btc_lc_cities.7.t
+	desc = btc_lc_cities.7.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		1744 = {
+			owned_by = ROOT
+			owner = { 
+				has_institution = new_world_i
+			}
+		}
+	}
+	
+	fire_only_once = yes	
+	
+	option = { #The colonial market of the low countries
+		name = btc_lc_cities.7.a
+		1744 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = { #The evolution to a permanent market
+	id = btc_lc_cities.8
+	title = btc_lc_cities.8.t
+	desc = btc_lc_cities.8.d
+	picture = CITY_VIEW_eventPicture
+	
+	trigger = {
+		1744 = {owned_by = ROOT}
+	}
+	mean_time_to_happen = {
+		days = 7300
+	}
+	
+	fire_only_once = yes
+	
+	option = { #The permanent market
+		name = btc_lc_cities.8.a
+		1744 = {
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+	}
+}
+
+country_event = { #The Portugese use Antwerp for Silver and Copper
+	id = btc_lc_cities.9
+	title = btc_lc_cities.9.t
+	desc = btc_lc_cities.9.d
+	picture = PORTUGUESE_MERCHANTS_eventPicture
+	
+	trigger = {
+		POR = {
+			has_institution = new_world_i
+		}
+		is_year = 1504 #Historical date for the establishment of Antwerp as a shipping base
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Well, who can say no to more trade?
+	name = btc_lc_cities.9.a
+		if = {
+			limit = { 
+				1744 = {
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			1744 = {
+				add_center_of_trade_level = 1
+		}
+		else = {
+			1744 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				}
+			}
+		}
+	}
+}
+
+
+country_event = { #Amsterdam Grain Imports
+	id = btc_lc_cities.10
+	title = btc_lc_cities.10.t
+	desc = btc_lc_cities.10.d
+	picture = TRADEGOODS_eventPicture
+	
+	trigger = {
+		is_year = 1530
+		97 = {owned_by = ROOT}
+	}
+	
+	fire_only_once = yes
+	
+	
+	option = { #Import more grain!
+		name = btc_lc_cities.10.a
+		97 = {
+			add_base_production = 2
+			add_base_tax = 2
+			add_base_manpower = 2
+		}
+	}
+}
+
+country_event = { #Dutch Revolts
+	id = btc_lc_cities.11
+	title = btc_lc_cities.11.t
+	desc = btc_lc_cities.11.d
+	picture = COUNTRY_COLLAPSE_eventPicture
+	
+	trigger = {
+		has_global_flag = dutch_revolts
+		tag = NED
+		ROOT = {
+			owns = 97 #Amsterdam
+			NOT = {owns = 1744} #Antwerp
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = { #Amsterdam shall be the new capital of the dutch!
+		name = btc_lc_cities.11.a
+		ROOT = {
+			set_capital = 971
+		}
+		97 = {
+			add_base_tax = 2
+			add_base_production = 2
+			add_base_manpower = 2
+		}
+		1744 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+		}
+		if = {
+			limit = { 
+				97 = {
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			97 = {
+				add_center_of_trade_level = 1
+			}
+		}
+		else_if = {
+			limit = { 
+				97 = {
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			97 = {
+				add_center_of_trade_level = 1
+			}
+		}
+		else = {
+			97 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+country_event = { #The dutch migrate from the south
+	id = btc_lc_cities.12
+	title = btc_lc_cities.12.t
+	desc = btc_lc_cities.12.d
+	picture = CITY_VIEW_eventPicture
+
+	trigger = {
+		has_global_flag = dutch_revolts
+		tag = NED
+		ROOT = {
+			owns = 97 #Amsterdam
+			NOT = {owns = 1744} #Antwerp
+		}
+		low_countries_region = {
+			any_province = {
+				NOT = {
+					owned_by = ROOT
+					owner = {
+						primary_culture = dutch
+						primary_culture = flemish
+						primary_culture = walloon
+						accepted_culture = dutch
+						accepted_culture = flemish
+						accepted_culture = walloon
+					}
+				}
+			}
+		}
+	}
+	
+	
+	fire_only_once = yes
+	
+	option = {#The oppressed shall be welcome
+		name  = btc_lc_cities.12.a
+		custom_tooltip = dutch_nigration_tooltip
+		hidden_effect = {
+			low_countries_region = {
+				limit = {
+					OR = {
+						owner = {
+							NOT = {
+								primary_culture = dutch
+								primary_culture = flemish
+								primary_culture = walloon
+								accepted_culture = dutch
+								accepted_culture = flemish
+								accepted_culture = walloon
+							}
+						}
+						NOT = {
+							religion = owner
+						}
+					}
+				}
+				random_list = {
+					33 = {add_base_tax = -1}
+					33 = {add_base_production = -1}
+					33 = {add_base_manpower = -1}
+				}
+			}
+		}
+		97 = {
+			add_base_tax = 4
+			add_base_production = 4
+			add_base_manpower = 4
+		}
+	}
+}
+
+country_event = { #Spanish Fury
+	id = btc_lc_cities.13
+	title = btc_lc_cities.13.t
+	desc = btc_lc_cities.13.d
+	picture = SIEGE_eventPicture
+	
+	is_triggered_only = yes	
+	
+	trigger = {
+		has_global_flag = dutch_revolts	
+		ROOT = {
+			NOT = {
+				primary_culture = dutch
+				primary_culture = flemish
+			}
+			war_with = NED
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 0.5
+			army_professionalism = 0.30
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {#let them sack the city
+		name = btc_lc_cities.13.a
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 100
+				is_in_deficit = yes
+			}
+		}
+		ROOT = {
+			add_army_professionalism = -0.05
+			add_years_of_income = 0.5
+		}
+			
+		1744 = {
+			add_base_manpower = -5
+			add_base_production = -5 
+			add_base_tax = -5
+			add_devastation = 50
+			add_center_of_trade_level = -2
+		}
+	}
+	
+	option = {#Make an effort to pay them
+		name = btc_lc_cities.13.b
+		ai_chance = {
+			factor = 10
+		}
+		ROOT = {
+			add_army_professionalism = 0.05
+			add_years_of_income = -0.55
+		}
+	}
+}
+
+#Triple booms of Antwerp

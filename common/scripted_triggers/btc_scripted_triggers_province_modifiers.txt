@@ -64,6 +64,7 @@ has_river_estuary_trigger = {
 			has_province_modifier = red_river_estuary_modifier
 			has_province_modifier = irrawaddy_estuary_modifier
 			has_province_modifier = kongo_estuary_modifier
+			
 			#Added estuaries in BT. Thanks for the note in event_modifiers Paradox! =D -Draiocht
 			has_province_modifier = fraiser_estuary_modifier
 			has_province_modifier = yukon_estuary_modifier
@@ -153,6 +154,7 @@ has_no_river_estuary_trigger = {
 			has_province_modifier = red_river_estuary_modifier
 			has_province_modifier = irrawaddy_estuary_modifier
 			has_province_modifier = kongo_estuary_modifier
+			
 			#Added estuaries in BT. Thanks for the note in event_modifiers Paradox! =D -Draiocht
 			has_province_modifier = fraiser_estuary_modifier
 			has_province_modifier = yukon_estuary_modifier
@@ -193,7 +195,9 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = bookmarket_of_x
 		has_province_modifier = grand_bank_fisheries
 		has_province_modifier = diamond_district
+		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		
 		#Added special goods in BT
 		has_province_modifier = grand_banks_of_newfoundland
 	}
@@ -216,22 +220,11 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = bookmarket_of_x
 		has_province_modifier = grand_bank_fisheries
 		has_province_modifier = diamond_district
+		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		has_latent_trade_goods = coal
+		
 		#Added special goods in BT
 		has_province_modifier = grand_banks_of_newfoundland
-	}
-}
-
-is_religious_center_province = {
-	OR = {
-		province_id = 118
-		province_id = 2075
-		province_id = 2099
-		province_id = 677
-		province_id = 385
-		province_id = 2311
-		province_id = 409
-		province_id = 2221
-		province_id = 2095
 	}
 }

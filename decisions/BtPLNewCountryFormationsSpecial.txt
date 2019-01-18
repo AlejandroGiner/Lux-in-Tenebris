@@ -264,7 +264,7 @@ country_decisions = {
 	celtic_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_tir_na_gceilteach_btp }
 			NOT = { tag = CEL }
 			NOT = { tag = GBR }
@@ -879,111 +879,6 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
-	anglo_irish_nation = {
-		major = yes
-		potential = {
-			bt_generic_can_form_potential_check = yes
-			NOT = { has_country_flag = formed_ireland_flag }
-			NOT = { has_country_flag = formed_kingdom_of_ireland_flag_btp }			#remove this after 9.0.
-			NOT = { tag = ANI }
-			NOT = { tag = IRE }
-			NOT = { tag = SCO }
-			NOT = { tag = ENG }
-			NOT = { tag = GBR }
-			OR = {
-				primary_culture = anglo_irish
-				AND = {
-					culture_group = british
-					capital_scope = { region = ireland_area }
-				}
-			}
-			OR = {
-				tag = LEI
-				tag = ULS
-				tag = MNS
-				tag = CNN
-				calc_true_if = {
-					all_owned_province = {
-						region = ireland_area
-						is_core = owner
-					}
-					amount = 9			#over half of Ireland to see if not one of the four primary provincial kingdoms
-				}		
-			}
-			NOT = { government = norman_lordship }			#Lordships need to create duchy first
-		}
-		provinces_to_highlight = {
-			region = ireland_area
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = ANI }
-			hidden_trigger = { NOT = { exists = IRE } }			#Hidden because it shows up in UI as doubled Ireland
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			owns_core_province = 373			# The Pale and Dublin
-			custom_trigger_tooltip = {
-				tooltip = two_thirds_of_ireland_tooltip
-				calc_true_if = {
-					all_owned_province = {
-						is_core = ROOT
-						region = ireland_area
-					}
-					amount = 12			#At least 2/3 of Ireland's 17 provinces
-				}	#requires roughly two thirds of Ireland to form, so ANI can be formed without the west or IRE can be formed without the Pale and the NE plantations
-			}
-			total_development = 75			#Special discount. Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-		}
-		effect = {
-			change_tag = ANI
-			change_government = anglo_irish_monarchy
-			remove_non_electors_emperors_from_empire_effect = yes
-			ireland_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ANI
-			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			if = {
-				limit = {
-					exists = ENG
-					NOT = { historical_friend_with = ENG }
-					NOT = { historical_rival_with = ENG }
-					has_opinion = { who = ENG value = 1 }
-				}
-				add_historical_rival = ENG
-			}			#Add England as a historical friend if relations are positive (and not already rival or friends)
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			#I decided to remove the development bonus from forming altogether. With the ability to build up provinces already there, this isn't really needed and can get out of hand quickly. Plus capital should move to Dublin anyway.
-			add_prestige = 25
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = ANI_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-			set_country_flag = formed_ireland_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 400 #
-	}
 
 ############################################################################################
 ################################## Driaocht's New Celtic Tags ################################### 
@@ -992,7 +887,7 @@ country_decisions = {
 	tir_na_ngael_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_tir_na_ngael_flag_bt }
 			NOT = { tag = TNA }
 			NOT = { tag = GBR }			#Unlikely, but doesn't do any harm here
@@ -1115,7 +1010,7 @@ country_decisions = {
 	albion_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ynys_y_cedyrn_flag_bt }
 			NOT = { tag = YYK }
 			NOT = { tag = GBR }			#Unlikely, but doesn't do any harm here
@@ -1189,7 +1084,7 @@ country_decisions = {
 	united_kingdom_nation = {
 		major = yes
 		potential = {
-			bt_generic_can_form_potential_check = yes
+			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_united_kingdom_flag }
 			NOT = { tag = UNK }
 			NOT = { tag = CEL }
