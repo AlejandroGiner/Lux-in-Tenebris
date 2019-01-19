@@ -115,8 +115,6 @@ pirate_1 = {
 							share = 25
 						}
 					}
-				}
-				OR = {
 					1293 = {
 						privateer_power = {
 							country = ROOT
@@ -252,7 +250,7 @@ pirate_2 = {
 				area = east_cuba_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 
 		trigger = {
@@ -283,7 +281,7 @@ pirate_2 = {
 		provinces_to_highlight = {
 			region = carribeans_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 
 		trigger = {

@@ -42,11 +42,12 @@ country_event = { #Colonial Nation clean-up
 			}
 		}
 		any_owned_province = {
+			is_core = ROOT
 			OR = {
 				AND = {
 					owner = { capital_scope = { colonial_region = colonial_mexico } }
 					NOT = { colonial_region = colonial_mexico }
-					}
+				}
 				AND = {
 					owner = { capital_scope = { colonial_region = colonial_alaska } }
 					NOT = { colonial_region = colonial_alaska }
@@ -139,20 +140,20 @@ country_event = { #Colonial Nation clean-up
 					owner = { capital_scope = { colonial_region = colonial_madagascar } }
 					NOT = { colonial_region = colonial_madagascar }
 				}
-			}	
+			}
 		}
 	}
-	
+
 	immediate = {
     colonial_parent = {
         save_event_target_as = colonial_parent_target
 		}
 	}
-	
+
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
 	option = {
 		name = btc_ai_colony_helper.2.a
 		ai_chance = { factor = 100 }

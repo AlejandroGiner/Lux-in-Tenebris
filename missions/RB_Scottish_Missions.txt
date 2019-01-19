@@ -134,7 +134,7 @@ sco_rb_adm_missions = {
 			249 = {
 				add_base_tax = 6
 				add_base_manpower = 2
-				add_base_tax = 2
+				add_base_production = 2
 				add_province_modifier = {
 					name = "central_belt_coal" # goods produced
 					duration = 7300
@@ -382,11 +382,10 @@ sco_rb_conquest_missions = {
 		icon = mission_rb_rule_britannia_scottish_version
 		required_missions = { sco_conquer_london sco_conquer_ireland }
 		provinces_to_highlight = {
-			region = british_isles_region
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+			OR = {
+				region = british_isles_region
+				region = ireland_area
 			}
-			region = ireland_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}

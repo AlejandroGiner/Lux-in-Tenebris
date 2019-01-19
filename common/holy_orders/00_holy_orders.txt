@@ -62,7 +62,7 @@ dominican_order = {
         }
         modifier = {
             factor = 2.0
-            NOT { culture = ROOT }
+            NOT = { culture = ROOT }
         }
     }
 }

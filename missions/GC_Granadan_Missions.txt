@@ -811,9 +811,7 @@ adu_slot_2_missions = {
 		position = 8
 		
 		provinces_to_highlight = {
-			OR = {
-				region = guinea_region
-			}
+			region = guinea_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -953,9 +951,7 @@ granada_slot_3_missions = {
 		position = 3
 		
 		provinces_to_highlight = {
-			OR = {
 				area = lower_andalucia_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
