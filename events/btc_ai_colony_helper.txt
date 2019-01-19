@@ -2,135 +2,6 @@ namespace = btc_ai_colony_helper
 
 #Note: Not going to bother with localization for an AI only event
 
-country_event = { #forced colonialization
-	id = btc_ai_colony_helper.1
-	title = btc_ai_colony_helper.1.t
-	desc = btc_ai_colony_helper.1.d
-	picture = btc_ai_colony_helper.1.p
-
-	trigger = {
-		ai = yes
-		bt_more_colonies_than_colonists_check = yes
-	}
-
-	#hidden = yes
-
-	immediate = {
-		random_province = { #Grabs a random empty province
-			limit = {
-				is_empty = yes
-				range = ROOT
-				has_discovered = ROOT
-				OR = {
-
-					#New world check
-					continent = north_america
-					continent = south_america
-
-					#Or old world colonial regions if same continent
-					AND = {
-						continent = africa
-						same_continent = CAPITAL
-						OR = {
-							colonial_region = colonial_madagascar
-							colonial_region = colonial_cape
-						}
-					}
-
-					#Or Polynesia if capital is in region
-
-					AND = {
-						ROOT = {
-							capital_scope = {
-								colonial_region = colonial_polynesia
-							}
-						}
-						colonial_region = colonial_polynesia
-					}
-
-					#Or Australia
-					colonial_region = colonial_australia
-
-				}
-
-			}
-
-			save_event_target_as = random_colony_target
-		}
-		
-		random_empty_neighbour_province = { #Grabs an empty neighbour province if exists
-			limit = {
-				has_discovered = ROOT
-				OR = {
-
-					#New world check
-					continent = north_america
-					continent = south_america
-
-					#Or old world colonial regions if same continent
-					AND = {
-						continent = africa
-						same_continent = CAPITAL
-						OR = {
-							colonial_region = colonial_madagascar
-							colonial_region = colonial_cape
-						}
-					}
-
-					#Or Polynesia if capital is in region
-
-					AND = {
-						ROOT = {
-							capital_scope = {
-								colonial_region = colonial_polynesia
-							}
-						}
-						colonial_region = colonial_polynesia
-					}
-
-					#Or Australia
-					colonial_region = colonial_australia
-
-
-				}
-
-			}
-			save_event_target_as = random_neighbour_colony_target
-		}
-	}
-
-	option = { #colonize a random province
-		name = btc_ai_colony_helper.1.a #Just for the option to show up
-		ai_chance = {
-			factor = 90 # Ensure this is taken
-		}
-		event_target:random_colony_target = {
-			create_colony = 1
-		}
-
-	}
-
-	option = { #unless empty neighbour, then do this one instead
-		name = btc_ai_colony_helper.1.b #Just for the option to show up
-		trigger = {
-			has_saved_event_target = event_target:random_neighbour_colony_target
-		}
-		ai_chance = {
-			factor =  #Ensure this is not taken
-			modifier = {
-				has_saved_event_target = event_target:random_neighbour_colony_target
-				factor = 100 #Unless a neighbour empty province exists
-			}
-		}
-
-		event_target:random_neighbour_colony_target = {
-			create_colony = 1
-		}
-	}
-
-}
-
-
 country_event = { #Colonial Nation clean-up
 	id = btc_ai_colony_helper.2
 	title = btc_ai_colony_helper.2.t
@@ -139,7 +10,8 @@ country_event = { #Colonial Nation clean-up
 
 	trigger = {
 		is_colonial_nation = yes
-		colonial_parent = {NOT = {same_continent = ROOT}
+		ai = yes
+		colonial_parent = {NOT = {same_continent = ROOT}}
 		capital_scope = {
 			OR = {
 				colonial_region = colonial_alaska
@@ -170,11 +42,12 @@ country_event = { #Colonial Nation clean-up
 			}
 		}
 		any_owned_province = {
+			is_core = ROOT
 			OR = {
 				AND = {
 					owner = { capital_scope = { colonial_region = colonial_mexico } }
 					NOT = { colonial_region = colonial_mexico }
-					}
+				}
 				AND = {
 					owner = { capital_scope = { colonial_region = colonial_alaska } }
 					NOT = { colonial_region = colonial_alaska }
@@ -270,14 +143,17 @@ country_event = { #Colonial Nation clean-up
 			}
 		}
 	}
+
 	immediate = {
     colonial_parent = {
         save_event_target_as = colonial_parent_target
-    }
+		}
 	}
+
 	mean_time_to_happen = {
 		days = 1
 	}
+
 	option = {
 		name = btc_ai_colony_helper.2.a
 		ai_chance = { factor = 100 }
