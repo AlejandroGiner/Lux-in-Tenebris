@@ -159,9 +159,11 @@ mam_north_missions = {
 		}
 		trigger = {
 			egypt_region = {
-				type = city
-				country_or_non_sovereign_subject_holds = ROOT
-				
+				type = all
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					is_empty = yes
+				}
 			}
 		}
 		effect = {

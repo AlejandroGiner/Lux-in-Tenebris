@@ -25,8 +25,10 @@ gc_spain_1 = {
 		completed_by = 1492.1.1
 		
 		provinces_to_highlight = {
-			province_id = 4565
-			province_id = 5096
+			OR = {
+				province_id = 4565
+				province_id = 5096
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
@@ -869,7 +871,7 @@ gc_spain_3_b = {
 		provinces_to_highlight = {
 			colonial_region = colonial_colombia
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		# free mission
@@ -1761,7 +1763,7 @@ gc_spain_4_c = {
 		provinces_to_highlight = {
 			colonial_region = colonial_la_plata
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {

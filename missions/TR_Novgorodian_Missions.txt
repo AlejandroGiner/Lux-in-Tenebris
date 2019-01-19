@@ -285,10 +285,8 @@ tr_novgorod_2 = {
 				province_id = 274
 				province_id = 1960
 				owner = {
-					AND = {
-						dynasty = "Rurikovich"
-						culture_group = east_slavic
-					}
+					dynasty = "Rurikovich"
+					culture_group = east_slavic
 				}
 			}
 			NOT = {
@@ -298,12 +296,10 @@ tr_novgorod_2 = {
 		trigger = {
 			NOT = {
 				any_country = {
-					AND = {
-						dynasty = "Rurikovich"
-						culture_group = east_slavic
-						NOT = {
-							is_subject_of = ROOT
-						}
+					dynasty = "Rurikovich"
+					culture_group = east_slavic
+					NOT = {
+						is_subject_of = ROOT
 					}
 				}
 			}

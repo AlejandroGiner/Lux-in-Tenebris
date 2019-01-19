@@ -55,7 +55,7 @@ spa_colonial_group = {
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {
@@ -86,7 +86,7 @@ spa_colonial_group = {
 		provinces_to_highlight = {
 			colonial_region = colonial_la_plata
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {
@@ -141,7 +141,7 @@ spa_colonial_group_rnw_off = {
 				province_id = 2837
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {
@@ -216,7 +216,7 @@ spa_colonial_group_rnw_off = {
 				province_id = 2822
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {
@@ -309,7 +309,7 @@ spa_colonial_group_two = {
 		provinces_to_highlight = {
 			colonial_region = colonial_colombia
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {
@@ -494,7 +494,7 @@ spa_colonial_group_two_rnw_off = {
 				owned_by = AZT
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 			
 		trigger = {
@@ -594,7 +594,7 @@ spa_colonial_group_three_rnw_off = {
 				owned_by = TAR
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 		
 		trigger = {

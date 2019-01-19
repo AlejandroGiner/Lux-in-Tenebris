@@ -103,9 +103,7 @@ majapahit_missions_1 = {
 		icon = mission_iberian_conquistador
 		required_missions = { maj_conquer_sunda }
 		provinces_to_highlight = {
-			OR = {
 				area = lesser_sunda_islands_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}

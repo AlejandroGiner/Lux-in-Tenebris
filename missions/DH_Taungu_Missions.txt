@@ -451,9 +451,11 @@ tau_slot_2 = {
 		required_missions = { tau_conquer_siam tau_conquer_lxa }
 		position = 6
 		provinces_to_highlight = {
-			region = burma_region
-			region = siam_region
-			region = indo_china_region
+			OR = {
+				region = burma_region
+				region = siam_region
+				region = indo_china_region
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -781,9 +783,7 @@ tau_slot_4 = {
 		required_missions = { tau_restore_pagodas }
 		position = 6
 		provinces_to_highlight = {
-			OR = {
-				area = lanka_area
-			}
+			area = lanka_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
