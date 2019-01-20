@@ -105,7 +105,7 @@ country_decisions = {
 
 	devshirme_system = {
 		potential = {
-			government = ottoman_government
+			has_reform = ottoman_government
 			NOT = { has_disaster = janissary_decadence }
 			NOT = { has_country_modifier = the_devshirme_system }
 			NOT = { has_country_flag = lapse_of_devshirme }

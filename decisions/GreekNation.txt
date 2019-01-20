@@ -8,9 +8,11 @@ country_decisions = {
 			NOT = { tag = BYZ }
 			primary_culture = greek
 			any_owned_province = {
-				province_id = 151
-				province_id = 1853
-				province_id = 146
+				OR = {
+					province_id = 151
+					province_id = 1853
+					province_id = 146
+				}
 			}
 		}
 		

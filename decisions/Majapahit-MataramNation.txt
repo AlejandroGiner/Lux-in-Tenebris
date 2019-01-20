@@ -6,6 +6,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_majapahit_flag }
 			OR = {
 				ai = no
+				is_playing_custom_nation = no
 			}
 
 			NOT = { tag = PAP }
@@ -27,7 +28,7 @@ country_decisions = {
 				tag = BLI
 				primary_culture = javanese
 			}
-			religion_group = hinduism
+			religion_group = dharmic
 		}
 		provinces_to_highlight = {
 			OR = {

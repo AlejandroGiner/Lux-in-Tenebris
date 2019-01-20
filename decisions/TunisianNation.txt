@@ -13,15 +13,13 @@ country_decisions = {
 			NOT = { tag = ALG }
 			NOT = { tag = TRP }
 			NOT = { tag = OTN }
-			AND = {
-				primary_culture = tunisian
-				any_owned_province = {
-					OR = {
-						area = tunisia_area
-						area = djerba_area
-						area = djerid_area
-						area = east_aures_area
-					}
+			primary_culture = tunisian
+			any_owned_province = {
+				OR = {
+					area = tunisia_area
+					area = djerba_area
+					area = djerid_area
+					area = east_aures_area
 				}
 			}
 		}
@@ -88,13 +86,13 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						government = tribal_kingdom
-						government = tribal_despotism
-						government = tribal_federation
-						government = tribal_democracy
+						has_reform = tribal_kingdom
+						has_reform = tribal_despotism
+						has_reform = tribal_federation
+						has_reform = tribal_democracy
 					}
 				}
-				change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
+				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
 			}
 			add_prestige = 25
 			if = {
