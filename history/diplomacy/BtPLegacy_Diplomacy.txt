@@ -113,12 +113,14 @@ vassal = {
 	end_date = 1471.1.1
 }	#From start date to date Karaman takes over fully, followed by Ottomans
 
-royal_marriage = {
-	first = FRA
-	second = BRI
-	start_date = 1440.1.1
-	end_date = 1500.1.1
-}	#To encourage France getting a PU over Brittany. Bug report says France rarely if ever expands this way. Between (historical) older, infertile heir, and France having the first RM, AI France has a chance to inherit as junior. Not too bad historically, great deal of intermarriage, and the dukes of Brittany were a French dynasty anyhow
+#royal_marriage = {
+#	first = FRA
+#	second = BRI
+#	start_date = 1440.1.1
+#	end_date = 1500.1.1
+#}	#To encourage France getting a PU over Brittany. Bug report says France rarely if ever expands this way. 
+	#Between (historical) older, infertile heir, and France having the first RM, AI France has a chance to inherit as junior. 
+	#Not too bad historically, great deal of intermarriage, and the dukes of Brittany were a French dynasty anyhow
 
 royal_marriage = {
 	first = SCO
@@ -495,6 +497,34 @@ vassal = {
 	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1494.1.1
 }
+
+vassal = {
+	first = LIT
+	second = SMG
+	start_date = 1444.1.1
+	end_date = 1444.11.13 #BeyondTypus batch edit shortcut the second shattering begins
+}	#Duchy of Samogitia under Lithuania
+
+vassal = {
+	first = LIT
+	second = SMG
+	start_date = 1444.11.18 #BeyondTypus batch edit shortcut second performance start ends
+	end_date = 1500.1.1 #Generic End Date, replace when I have time to do proper later starts history work
+}	#Duchy of Samogitia under Lithuania
+
+vassal = {
+	first = LIT
+	second = KIE
+	start_date = 1444.1.1
+	end_date = 1444.11.13 #BeyondTypus batch edit shortcut the second shattering begins
+}	#Kiev Principality under Lithuania
+
+vassal = {
+	first = LIT
+	second = KIE
+	start_date = 1444.11.18 #BeyondTypus batch edit shortcut second performance start ends
+	end_date = 1471.1.1 #Principality of Kiev fully annexed to Lithuania with the death of Prince Simeon Olelkovich
+}	#Kiev Principality under Lithuania
 
 vassal = {
 	first = MOS

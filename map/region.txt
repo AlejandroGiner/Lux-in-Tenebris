@@ -154,6 +154,7 @@ russia_region = {
 		oka_area
 		arkhangelsk_area			#Repurposed to Onega
 		vologda_area
+		smolensk_area
 		#BTADDITIONS
 		laponia_area			#moved from Scandinavia
 		toropets_area
@@ -162,6 +163,7 @@ russia_region = {
 		upper_don_area
 		murom_area
 		northern_upper_oka_area
+		west_oka_area
 		nizhny_novgorod_area
 	}
 }
@@ -252,6 +254,8 @@ baltic_region = {
 		east_prussia_area
 		pomerelia_area
 		samogitia_area
+		yotvingia_area
+		trakai_area
 	}
 }
 
@@ -261,10 +265,13 @@ poland_region = {
 		malopolska_area
 		mazovia_area
 		silesia_area
+		central_poland_area
+		sandomierz_area			#added by Paradox in 1.27, same id so no change needed.
+		kuyavia_area			#Repurposing this into BT's old Kalisz area
+		podlasie_area			#moved from Ruthenia
 		#BTADDITIONS
 		lower_silesia_area
-		sandomierz_area
-		kalisz_area
+		lublin_area
 	}
 }
 
@@ -272,17 +279,26 @@ ruthenia_region = {
 	areas = {
 		west_dniepr_area
 		east_dniepr_area
-		sloboda_ukraine_area
 		white_ruthenia_area
 		podolia_volhynia_area
 		pripyat_area
-		smolensk_area
 		red_ruthenia_area			#moved from Poland
-		#minsk_area			#removed
-		#BTADDITIONS
+		minsk_area
 		volhynia_area
+		chernigov_area
+		#BTADDITIONS
 		bryansk_area
-		west_oka_area
+		central_galicia_area
+		eastern_volhynia_area
+		western_podolia_area
+		eastern_severia
+		western_severia
+		cherkasy_area
+		mazur_area
+		mstislavl_area
+		vitebsk_area
+		polotsk_area
+		novogrudok_area
 	}
 }
 
@@ -294,8 +310,13 @@ crimea_region = {
 		zaporizhia_area
 		yedisan_area
 		azov_area
+		sloboda_ukraine_area
 		#BTADDITIONS
 		middle_don_area
+		western_zaporizhia_area
+		northern_crimea_area
+		lower_dnieper_area
+		pryazovia_area
 	}
 }
 
@@ -319,6 +340,7 @@ balkan_region = {
 		slavonia_area
 		upper_thrace_area
 		northern_macedonia_area
+		lower_danube_area
 	}
 }
 
@@ -333,7 +355,8 @@ carpathia_region = {
 		moldavia_area
 		#BTADDITIONS
 		carpathian_ruthenia_area
-		lower_danube_area
+		bukovina_area
+		western_moldovia
 	}
 }
 

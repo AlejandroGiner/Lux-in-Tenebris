@@ -1,7 +1,8 @@
 #2447 - Matrega
 
-owner = GEN
-controller = GEN
+owner = GZR
+controller = GZR
+add_core = GZR
 culture = circassian
 religion = orthodox
 hre = no
@@ -11,9 +12,11 @@ trade_goods = grain
 base_manpower = 1
 capital = "Matrega"
 is_city = yes
-add_core = GEN
 add_core = CIR
 add_core = CRI
+
+extra_cost = 8
+center_of_trade = 1
 
 discovered_by = western
 discovered_by = eastern
