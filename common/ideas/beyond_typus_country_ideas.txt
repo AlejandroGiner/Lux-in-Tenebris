@@ -995,3 +995,43 @@ LTE_ideas = {
 	}
 }
 
+GZR_ideas = {
+	start = {
+		trade_steering = 0.2
+		tolerance_heretic = 3
+	}
+
+	bonus = {
+		trade_efficiency = 0.2
+	}
+
+	trigger = {
+		tag = GZR
+	}
+	free = yes
+
+	GZR_idea1 = {
+		development_cost = -0.15
+	}
+	GZR_idea2 = {
+		defensiveness = 0.20
+	}
+	GZR_idea3 = {
+		improve_relation_modifier = 0.25
+	}
+	GZR_idea4 = {
+		naval_forcelimit_modifier = 0.25
+		galley_power = 0.15
+	}
+	GZR_idea5 = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.1
+	}
+	GZR_idea6 = {
+		republican_tradition = 0.5
+	}
+	GZR_idea7 = {
+		state_maintenance_modifier = -0.2
+	}
+}
+
