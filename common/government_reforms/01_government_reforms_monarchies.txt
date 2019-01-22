@@ -93,10 +93,12 @@ grand_duchy_reform = {
 	legacy_equivalent = lithuanian_grand_duchy_legacy
 	fixed_rank = 1
 	valid_for_nation_designer = yes
-	nation_designer_cost = 10
+	nation_designer_cost = 20
 	modifiers = {
-		max_states = 10
+		max_states = 5
 		num_accepted_cultures = 1
+		reduced_liberty_desire = 25
+		diplomatic_upkeep = 1
 	}
 }
 
