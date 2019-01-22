@@ -1,0 +1,123 @@
+country_decisions = {
+	###################################################################################################
+################################			Tripolitania			 ##############################################
+###################################################################################################
+	tripoli_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_tripoli_flag }
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = OTN }
+			OR = {
+				primary_culture = tunisian
+				AND = {
+					OR = {
+						culture_group = turko_semitic
+						culture_group = berber_group
+					}
+					OR = {
+						capital_scope = { area = tripolitania_area }
+						capital_scope = { area = fezzan_area }
+						capital_scope = { area = cyrenaica_area }
+						capital_scope = { area = nafusa_mountains_area }
+					}
+				}
+			}
+			any_owned_province = {
+				OR = {
+					area = tripolitania_area
+					area = fezzan_area
+					area = cyrenaica_area
+					area = nafusa_mountains_area
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tripolitania_area
+				area = fezzan_area
+				area = cyrenaica_area
+				area = nafusa_mountains_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TRP }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 354 #Tripoli
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = tripolitania_area
+						area = fezzan_area
+						area = cyrenaica_area
+						area = nafusa_mountains_area
+					}
+				}
+				amount = 13			#At least 2/3 of Libya's 19 provinces
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = TRP
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			tripolitania_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			fezzan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			cyrenaica_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			nafusa_mountains_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = tribal_kingdom
+						has_reform = tribal_despotism
+						has_reform = tribal_federation
+						has_reform = tribal_democracy_legacy
+					}
+				}
+				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_tripoli_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		#ai_importance = 400
+	}
+}

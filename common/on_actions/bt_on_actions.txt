@@ -217,3 +217,22 @@ on_siege_won_country = {
 		100 = 0
 	}
 }
+
+# province
+# FROM = old owner
+on_province_owner_change = {
+	events = {
+		japan.1
+		grand_centers_of_trade.1
+	}
+
+	if = {
+		limit = {
+			owned_by = SRU
+			exists = ARA
+		}
+		ARA = {
+			set_country_flag = ARA_defeat_saruhan
+		}
+	}
+}
