@@ -1933,7 +1933,10 @@ LIT_ideas = {
 	}
 	
 	trigger = {
+		OR = {
 			tag = LIT
+			tag = SMG
+		}
 	}
 	free = yes		#will be added at load.
 	
