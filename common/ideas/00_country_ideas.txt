@@ -5278,7 +5278,10 @@ WLS_ideas = {
 	}
 	
 	trigger = {
-		tag = WLS
+		OR = {
+			tag = WLS
+			tag = WMC
+		}
 	}
 	free = yes		#will be added at load.
 	
