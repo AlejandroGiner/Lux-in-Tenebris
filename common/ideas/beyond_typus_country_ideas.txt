@@ -466,7 +466,7 @@ KEM_ideas = {
 		prestige = 1
 	}
 	coptic_church_old_egypt = {
-		tolerance_own = 3
+		tolerance_own = 2
 		devotion = 0.5
 	}
 	hieroglyphic_writing = {
@@ -476,7 +476,7 @@ KEM_ideas = {
 		technology_cost = -0.10
 	}
 	maat = {
-		discipline = 0.10
+		discipline = 0.05
 	}
 }
 
@@ -644,7 +644,7 @@ UDI_ideas = {
 	}
 
 	bonus = {
-		diplomatic_reputation = 2
+		diplomatic_reputation = 1
 	}
 
 	trigger = {
@@ -664,15 +664,15 @@ UDI_ideas = {
 		war_exhaustion = -0.02
 	}
 	UDI_idea4 = {
-		tolerance_own = 2
+		tolerance_own = 1
 		global_missionary_strength = 0.01
 	}
 	UDI_idea5 = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	UDI_idea6 = {
-		global_manpower_modifier = 0.20
-		discipline = 0.05
+		global_manpower_modifier = 0.10
+		discipline = 0.025
 	}
 	UDI_idea7 = {
 		province_warscore_cost = -0.15
