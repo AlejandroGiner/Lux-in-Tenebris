@@ -111,13 +111,12 @@ province_event = {
 	
 	trigger = {
 		owner = {
+			NOT = {has_country_flag = growth_of_x_flag}
 			any_owned_province = {
 				is_core = PREV
-				OR = {
-						NOT = {province_has_center_of_trade_of_level = 1}
-						NOT = {province_has_center_of_trade_of_level = 2}
-						NOT = {province_has_center_of_trade_of_level = 3}
-				}
+				NOT = {province_has_center_of_trade_of_level = 1}
+				NOT = {province_has_center_of_trade_of_level = 2}
+				NOT = {province_has_center_of_trade_of_level = 3}
 				OR = {
 					AND = {
 						has_river_estuary_trigger = yes
@@ -133,59 +132,22 @@ province_event = {
 					}
 				}
 			}
-		}
+		}	
 	}
 	
 	mean_time_to_happen = {
-		months = 600 #It's actually not supposed to fire more than once per game
-		modifier = { 
-			factor = 0.01
-			stability = 1
-		}
-		modifier = {
-			factor = 0.01
-			stability = 3
-		}
-		modifier = {
-			factor = 0.01
-			stability = 2
-		}
-		modifier = {
-			factor = 0.05
-			trade_income_percentage = 0.1
-		}
-		modifier = {
-			factor = 0.05
-			trade_income_percentage = 0.2
-		}
-		modifier = {
-			factor = 0.05
-			trade_income_percentage = 0.3
-		}
-		modifier = {
-			factor = 0.05
-			trade_income_percentage = 0.4
-		}
-		modifier = {
-			factor = 0.05
-			trade_income_percentage = 0.5
-		}
-		modifier = {
-			factor = 0.1
-			is_capital = yes
-		}
+		months = 900
 	}
 	
 	immediate = {
 		owner = {
+			set_country_flag = growth_of_x_flag
 			random_owned_province = {
 				limit = {
 					is_core = PREV
-					OR = {
-						NOT = {province_has_center_of_trade_of_level = 1}
-						NOT = {province_has_center_of_trade_of_level = 2}
-						NOT = {province_has_center_of_trade_of_level = 3}
-					}
+					NOT = {province_has_center_of_trade_of_level = 1}
+					NOT = {province_has_center_of_trade_of_level = 2}
+					NOT = {province_has_center_of_trade_of_level = 3}
 					OR = {
 						AND = {
 							has_river_estuary_trigger = yes
