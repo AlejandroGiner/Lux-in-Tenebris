@@ -117,20 +117,8 @@ province_event = {
 				NOT = {province_has_center_of_trade_of_level = 1}
 				NOT = {province_has_center_of_trade_of_level = 2}
 				NOT = {province_has_center_of_trade_of_level = 3}
-				OR = {
-					AND = {
-						has_river_estuary_trigger = yes
-						development = 25
-					}
-					AND = {
-						development = 35 
-						has_port = no #inland
-					}
-					AND = {
-						development = 30
-						has_port = yes #coastal
-					}
-				}
+				has_river_estuary_trigger = yes
+				development = 35
 			}
 		}	
 	}
@@ -148,20 +136,8 @@ province_event = {
 					NOT = {province_has_center_of_trade_of_level = 1}
 					NOT = {province_has_center_of_trade_of_level = 2}
 					NOT = {province_has_center_of_trade_of_level = 3}
-					OR = {
-						AND = {
-							has_river_estuary_trigger = yes
-							development = 25
-						}
-						AND = {
-							development = 35 
-							has_port = no #inland
-						}
-						AND = {
-							development = 30
-							has_port = yes #coastal
-						}
-					}
+					has_river_estuary_trigger = yes
+					development = 35
 				}
 				save_event_target_as = growing_cot_province
 			}
