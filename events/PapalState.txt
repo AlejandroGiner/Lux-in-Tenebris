@@ -102,7 +102,7 @@ country_event = {
 		NOT = { exists = ITA }
 		NOT = { exists = ITL }
 		religion = catholic
-		government = theocratic_government
+		government = theocracy
 		NOT = { has_ruler_flag = refused_papacy }
 		is_at_war = no
 		NOT = { tag = TEU }
@@ -213,10 +213,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = unsupportive_cardinals }
-		OR = {
-			government = papal_government
-			government = regnum_dei
-		}
+		has_reform = papacy_reform
 		overextension_percentage = 0.25
 	}
 
@@ -291,7 +288,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = cardinal_infiltrator }
-		government = papal_government
+		has_reform = papacy_reform
 		NOT = { adm = 1 }
 	}
 
