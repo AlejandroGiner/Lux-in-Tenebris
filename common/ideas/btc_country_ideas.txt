@@ -803,7 +803,8 @@ MAG_ideas = {
     MAG_idea_4 = {
         diplomatic_reputation = 1
         papal_influence = 1
-        church_power_modifier = 0.1
+        church_power_modifier = 0.2
+		monthly_fervor_increase = 0.5
     }
     MAG_idea_5 = {
         development_cost = -0.1
@@ -1405,12 +1406,12 @@ JUL_ideas = {
 
 NUM_ideas = {
     start = {
-         artillery_power = 0.1
-         global_tax_modifier = 0.2
+        artillery_power = 0.1
+        global_tax_modifier = 0.1
     }
 
     bonus = {
-         inflation_reduction = 0.1
+        inflation_reduction = 0.1
     }
     trigger = {
         tag = NUM
@@ -1418,41 +1419,41 @@ NUM_ideas = {
     free = yes
 
     NUM_Regalia = {
-         prestige = 1
-         prestige_decay = -0.01
+        prestige = 0.5
+        prestige_decay = -0.01
     }
     NUM_Library = {
-         global_institution_spread = 0.1
+        global_institution_spread = 0.1
     }
     NUM_Bookbusy = {
-         technology_cost = -0.05
-         idea_cost = -0.05
+        technology_cost = -0.05
+        idea_cost = -0.05
     }
     NUM_growth = {
-         global_manpower_modifier = 0.1
-         manpower_recovery_speed = 0.1
+        global_manpower_modifier = 0.1
+        manpower_recovery_speed = 0.1
     }
     NUM_merchants = {
-         trade_efficiency = 0.1
+        trade_efficiency = 0.1
     }
     NUM_bridges = {
-         movement_speed = 0.15
-         caravan_power = 0.2
+        movement_speed = 0.1
+        caravan_power = 0.2
     }
     NUM_cityhall = {
-         global_autonomy = -0.05
-         global_unrest = -1
+        global_autonomy = -0.05
+        global_unrest = -1
     }
 }
 
 MEM_ideas = {
     start = {
-         advisor_cost = -0.2
-         production_efficiency = 0.10
+        advisor_cost = -0.2
+        production_efficiency = 0.10
     }
 
     bonus = {
-         discipline = 0.05
+        discipline = 0.05
     }
     trigger = {
         tag = MEM
@@ -1460,29 +1461,30 @@ MEM_ideas = {
     free = yes
 
     mem_salt_road = {
-         trade_efficiency = 0.1
-         trade_steering = 0.1
+        trade_efficiency = 0.1
+        trade_steering = 0.1
     }
     mem_welf_city = {
-         prestige = 1
+        prestige = 1
     }
     mem_christopher = {
-         tolerance_own = 2
-         church_power_modifier = 0.1
+        tolerance_own = 2
+        church_power_modifier = 0.2
+		monthly_fervor_increase = 0.5
     }
     mem_tetrapolitan = {
-         global_manpower_modifier = 0.1
+        global_manpower_modifier = 0.1
     }
     mem_twelve_articles = {
-         republican_tradition = 0.25
-         global_unrest = -1
+        republican_tradition = 0.25
+        global_unrest = -1
     }
     mem_swe_garrison = {
-         infantry_power = 0.1
-         land_morale = 0.05
+        infantry_power = 0.1
+        land_morale = 0.05
     }
     mem_big_city = {
-         development_cost = -0.1
+        development_cost = -0.1
     }
 }
 
@@ -1676,17 +1678,17 @@ BSL_ideas = {
         technology_cost = -0.10
     }
     The_cultural_capital_of_switzerland = {
-         advisor_cost = -0.10
+        advisor_cost = -0.10
     }
     Zuenfte_of_basel = {
-         production_efficiency = 0.10
+        production_efficiency = 0.10
     }
     The_abolishment_of_the_bishop = {
-         global_tax_modifier = 0.10
+        global_tax_modifier = 0.10
     }
     Urban_rural_conflict = {
-         global_unrest = -1
-         global_autonomy = -0.05
+        global_unrest = -1
+        global_autonomy = -0.05
     }
 }
 
@@ -1867,11 +1869,11 @@ SAR_ideas = {
 		naval_forcelimit_modifier = 0.25
 	}
 	Unified_island = {
-		stability_cost_modifier = 0.10
+		stability_cost_modifier = -0.10
 		global_autonomy = -0.05
 	}
 	Sardinian_navy = {
-		ship_recruit_speed = -0.15
+		ship_recruit_speed = -0.1
 		naval_morale = 0.10
 	}
 	Sant_Efis = {
@@ -1908,11 +1910,13 @@ A7D_ideas = {
         tolerance_own = 1
     }
     Mountainside_Churches = {
-        devotion = 0.2            #Andorra will be a theocracy
-        religious_unity = 0.2
+        devotion = 0.5           #Andorra will be a theocracy
+		legitimacy = 0.20
+		republican_tradition = 0.15
+        religious_unity = 0.25
     }
     Pont_de_la_Margineda = {
-        tech_cost = -0.05
+        technology_cost = -0.05
         idea_cost = -0.05
     }
     A_Catalan_Country = {
@@ -1929,7 +1933,7 @@ free_city_ideas = {
 		build_cost = -0.25
 	}
 	trigger = {
-		has_reform = imperial_city
+		has_reform = free_city
 	}
 	free = yes
 	
