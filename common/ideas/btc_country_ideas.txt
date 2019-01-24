@@ -1960,3 +1960,43 @@ free_city_ideas = {
 		prestige = 1
 	}
 }
+
+crusader_ideas = {
+    start = {
+        tolerance_heretic = 3
+        papal_influence = 2
+    }
+
+    bonus = {
+        prestige = 1
+    }
+
+    trigger = {
+        OR = {
+            tag = CDA
+        }
+    }
+    free = yes
+
+    stone_fortresses_crusaders = {
+        defensiveness = 0.25
+    }
+    soldiers_of_god_crusaders = {
+        global_missionary_strength = 0.02
+    }
+    mediterranean_traders_crusaders = {
+        merchants = 1
+    }
+    reclaiming_the_holy_land = {
+        core_creation = -0.15
+    }
+    monastic_orders_crusaders = {
+        mercenary_cost = -0.15
+    }
+    pilgrim_fighters = {
+        manpower_recovery_speed = 0.25
+    }
+    deus_vult = {
+        land_morale = 0.15
+    }
+}
