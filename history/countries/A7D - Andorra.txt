@@ -1,0 +1,18 @@
+government = theocracy
+add_government_reform = leading_clergy_reform
+primary_culture = catalan
+religion = catholic
+technology_group = western
+capital = 3320
+
+1434.10.9 = {
+	monarch = {
+		name = "Andreu"
+		dynasty = "d'Alas"
+		adm = 5
+		dip = 3
+		mil = 3
+	}
+	add_opinion = { who = FRA modifier = fra_dynastic_rivalry }
+	add_opinion = { who = ARA modifier = fra_dynastic_rivalry }
+}

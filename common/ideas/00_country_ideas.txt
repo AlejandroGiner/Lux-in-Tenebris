@@ -5075,7 +5075,6 @@ NAX_ideas = {
 	trigger = {
 		OR = {
 			tag = NAX
-			tag = LES
 			tag = CDA
 		}
 	}
@@ -5278,10 +5277,7 @@ WLS_ideas = {
 	}
 	
 	trigger = {
-		OR = {
 			tag = WLS
-			tag = WMC
-		}
 	}
 	free = yes		#will be added at load.
 	
