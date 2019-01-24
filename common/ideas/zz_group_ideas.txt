@@ -1,44 +1,5 @@
 # These ideas are loaded after all country ideas, but before default idea.
 
-free_city_ideas = {
-	start = {
-		republican_tradition = 0.5
-		diplomatic_reputation = 1
-	}
-	bonus = {
-		build_cost = -0.25
-	}
-	trigger = {
-		has_reform = imperial_city
-	}
-	free = yes
-	
-	free_city_1 = {
-		prestige = 1
-	}
-	free_city_2 = {
-		diplomats = 1
-	}	
-	free_city_3 = {
-		production_efficiency = 0.1
-		stability_cost_modifier = -0.1
-	}
-	free_city_4 = {
-		trade_efficiency = 0.25
-	}	
-	free_city_5 = {
-		global_tax_modifier = 0.10
-	}
-	free_city_6 = {
-		merc_maintenance_modifier = -0.30
-	}
-	free_city_7 = {
-		defensiveness = 0.2
-		prestige = 1
-	}
-}
-
-
 client_ideas = {
 	start = {
 		land_morale = 0.1
