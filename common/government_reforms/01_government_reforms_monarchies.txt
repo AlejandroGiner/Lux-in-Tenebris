@@ -831,7 +831,11 @@ mughal_government = {
 			stability_cost_modifier = -0.05
 		}
 		aramaic_group = {
-			same_culture_advisor_cost = -0.10
+			advisor_pool = 1
+		}
+		unified_celtic_group = { 
+			defensiveness = 0.10
+			shock_damage = 0.05
 		}
 	}
 }
@@ -1017,7 +1021,11 @@ roman_empire_reform = {
 			stability_cost_modifier = -0.05
 		}
 		aramaic_group = {
-			same_culture_advisor_cost = -0.10
+			advisor_pool = 1
+		}
+		unified_celtic_group = { 
+			defensiveness = 0.10
+			shock_damage = 0.05
 		}
 	}
 }
