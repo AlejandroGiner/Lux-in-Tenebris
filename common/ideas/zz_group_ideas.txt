@@ -2164,7 +2164,10 @@ caspian_ideas = {
 	}
 	
 	trigger = {
-		primary_culture = mazandarani
+		OR = {
+			primary_culture = mazandarani
+			primary_culture = tat
+		}
 	}
 	free = yes
 	
