@@ -659,13 +659,7 @@ HAB_ideas = {
 	}
 	
 	trigger = {
-		OR = {
 			tag = HAB
-			AND = {
-				tag = STY
-				dynasty = "von Habsburg"
-			}
-		}
 	}
 	free = yes		#will be added at load.
 
