@@ -318,8 +318,10 @@ country_event = { #The Revolt of Flanders against Maximillian V of Austria
 			owned_by = ROOT
 			ROOT = {
 				NOT = {
-					primary_culture = dutch
-					primary_culture = flemish
+					OR = {
+						primary_culture = dutch
+						primary_culture = flemish
+					}
 				}
 			}
 		}
@@ -558,14 +560,16 @@ country_event = { #The dutch migrate from the south
 				NOT = {
 					owned_by = ROOT
 					owner = {
-						primary_culture = dutch
-						primary_culture = flemish
-						primary_culture = wallonian
-						primary_culture = frisian
-						accepted_culture = dutch
-						accepted_culture = flemish
-						accepted_culture = wallonian
-						accepted_culture = frisian
+						OR = {
+							primary_culture = dutch
+							primary_culture = flemish
+							primary_culture = wallonian
+							primary_culture = frisian
+							accepted_culture = dutch
+							accepted_culture = flemish
+							accepted_culture = wallonian
+							accepted_culture = frisian
+						}
 					}
 				}
 			}
@@ -584,14 +588,16 @@ country_event = { #The dutch migrate from the south
 					OR = {
 						owner = {
 							NOT = {
-								primary_culture = dutch
-								primary_culture = flemish
-								primary_culture = wallonian
-								primary_culture = frisian
-								accepted_culture = dutch
-								accepted_culture = flemish
-								accepted_culture = wallonian
-								accepted_culture = frisian
+								OR = {
+									primary_culture = dutch
+									primary_culture = flemish
+									primary_culture = wallonian
+									primary_culture = frisian
+									accepted_culture = dutch
+									accepted_culture = flemish
+									accepted_culture = wallonian
+									accepted_culture = frisian
+								}
 							}
 						}
 						NOT = {
@@ -626,8 +632,10 @@ country_event = { #Spanish Fury
 		has_global_flag = dutch_revolts	
 		ROOT = {
 			NOT = {
-				primary_culture = dutch
-				primary_culture = flemish
+				OR = {
+					primary_culture = dutch
+					primary_culture = flemish
+				}
 			}
 			war_with = NED
 		}
@@ -661,7 +669,7 @@ country_event = { #Spanish Fury
 			add_base_production = -5 
 			add_base_tax = -5
 			add_devastation = 50
-			add_center_of_trade_level = -2
+			add_center_of_trade_level = -1
 		}
 	}
 	
