@@ -1,0 +1,28 @@
+# 3363 - Yizhou
+
+owner = MNG
+controller = MNG
+add_core = MNG
+add_core = QIC
+culture = zhongyuan
+religion = confucianism
+capital = "Yizhou"
+trade_goods = rice
+hre = no
+base_tax = 5
+base_production = 5
+base_manpower = 2
+is_city = yes
+
+discovered_by = chinese
+discovered_by = indochinese
+discovered_by = malay_group
+discovered_by = nomad_group
+
+1601.1.1 = { discovered_by = SPA }
+
+1645.6.1 = {
+	owner = QNG
+	controller = QNG
+	add_core = QNG
+}
