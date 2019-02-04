@@ -5066,7 +5066,10 @@ NAX_ideas = {
 		diplomatic_annexation_cost = -0.15
 	}
 	trigger = {
-		tag = CDA
+		OR = {
+			tag = NAX
+			tag = CDA
+		}
 	}
 	free = yes
 	
