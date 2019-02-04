@@ -2901,7 +2901,7 @@ maize = {
 		local_manpower_modifier = 0.1
 	}
 	chance = {
-		factor = 10
+		factor = 9
 		modifier = {
 			factor = 0.0
 			is_sea = yes
@@ -2925,7 +2925,7 @@ maize = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 3
 			OR  = {
 				region = mexico_region
 				region = central_america_region
@@ -2933,7 +2933,7 @@ maize = {
 			}
 		}
 		modifier = {
-			factor = 7
+			factor = 5
 			OR  = {
 				region = southeast_america_region
 				region = northeast_america_region
@@ -2941,7 +2941,7 @@ maize = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 7
 			OR  = {
 				region = great_lakes_region
 				region = mississippi_region
@@ -3061,7 +3061,7 @@ apiculture = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { is_year = 1600 }
+			NOT = { is_year = 1820 }
 		}
 	}
 }
@@ -3092,6 +3092,10 @@ olives = {
 				region = ural_region
 			}
 			NOT = { has_global_flag = olives_traded }
+		}
+		modifier = {
+			factor = 5
+			region = la_plata_region
 		}
 	}
 }

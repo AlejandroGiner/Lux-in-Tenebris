@@ -184,6 +184,45 @@ MYI_ideas = {
 	}
 }
 
+knights_templar_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		may_perform_slave_raid = yes
+	}
+
+	bonus = {
+		global_manpower_modifier = 0.25
+	}
+
+    trigger = {
+		tag = KNT
+		religion_group = christian
+    }
+	free = yes
+
+	latin_rule = {
+		discipline = 0.05
+    }
+    letters_of_credit = {
+		global_tax_modifier = 0.2
+	}
+	assault_troops_of_the_crusades = {
+		cavalry_power = 0.1
+    }
+	bank_of_europe = {
+		inflation_reduction = 0.1
+    }
+	the_templar_enterprise = {
+		production_efficiency = 0.2
+    }
+	the_supporting_infrastructure = {
+		advisor_pool = 1
+    }
+	crusader_traditions = {
+		free_leader_pool = 1
+	}
+}
+
 #SEA Ideas (From Suvarnabhumi)
 
 MAJ_ideas = {
@@ -1972,9 +2011,7 @@ crusader_ideas = {
     }
 
     trigger = {
-        OR = {
             tag = CDA
-        }
     }
     free = yes
 
