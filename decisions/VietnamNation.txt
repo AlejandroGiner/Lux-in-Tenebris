@@ -49,7 +49,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 20
-			NOT = { exists = VTN }
+			NOT = { exists = VTM }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
@@ -67,7 +67,7 @@ country_decisions = {
 				change_culture = ROOT
                                 change_religion = ROOT
 			}
-			change_tag = VTN
+			change_tag = VTM
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -78,42 +78,42 @@ country_decisions = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = VTN
+				add_permanent_claim = VTM
 			}
 			red_river_delta_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = VTN
+				add_permanent_claim = VTM
 			}
 			cao_bac_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = VTN
+				add_permanent_claim = VTM
 			}
 			muang_phuan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = VTN
+				add_permanent_claim = VTM
 			}
 			mekong_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = VTN
+				add_permanent_claim = VTM
 			}
 			cambodia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = VTN
+				add_permanent_claim = VTM
 			}
 			add_prestige = 25
 			set_country_flag = formed_vietnam_flag
