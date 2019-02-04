@@ -35,8 +35,8 @@ country_event = {
 		name = "mma_fall.1.a" #We stand triumphant!
 		MMA = { release = MKA release = MYA }
                 2166 = { cede_province = ROOT }
-                MYA = { change_government_via_reform = monarchy set_legacy_government = mandala_system_legacy }
-                MKA = { change_government_via_reform = monarchy set_legacy_government = mandala_system_legacy }
+                MYA = { change_government = monarchy set_legacy_government = mandala_system_legacy }
+                MKA = { change_government = monarchy set_legacy_government = mandala_system_legacy }
 	}
 
 	option = {

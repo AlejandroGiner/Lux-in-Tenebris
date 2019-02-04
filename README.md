@@ -6,15 +6,15 @@ changelog
 
 -Madagascar has received a moderate overhaul with 20 new provinces.
 
--Italy has received a light overhaul with 4 new provinces and 15 new tags.
+-Italy has received a moderate overhaul with 13 new provinces and 24 new tags.
 
 -Japan has received a moderate overhaul with 14 new provinces and 6 new tags each with their own national ideas plus 2 releasables from vanilla present in 1444.
 
 -South east Asia has received a major overhaul with +80 provinces, many cultures, missions, tags, 2 new technology groups, disaster, events and national ideas.
 
--China superregion has received a major overhaul with many new provinces.
+-China superregion has received a major overhaul with 38 new provinces.
 
--Iberia has received a light overhaul with 4 new provinces.
+-Iberia has received a light overhaul with 6 new provinces.
 
 -New tags in America scattered around the continent.#1
 
@@ -52,13 +52,13 @@ changelog
 
 -New national ideas to several nations that previously used generic ideas.
 
+-13 new trade goods, including amaranth, rubber or fruit.
+
 -Removed Lisbon and Tripoli trade nodes.
 
 -Tweaks on several provinces development around eastern europe.
 
 -Several Center of trade additions around the world.
-
--Paper trade good readded. Beer moved into a separate trade good.
 
 -Removed several governments reforms and types for Ireland and related from BT.
 
