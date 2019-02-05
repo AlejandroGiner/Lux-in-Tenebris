@@ -2872,7 +2872,7 @@ potatoes = {
 			is_sea = yes
 		}
 		modifier = {
-			factor = 10
+			factor = 15
 			OR  = {
 				region = peru_region
 				region = upper_peru_region
@@ -2901,7 +2901,7 @@ maize = {
 		local_manpower_modifier = 0.1
 	}
 	chance = {
-		factor = 9
+		factor = 6
 		modifier = {
 			factor = 0.0
 			is_sea = yes
@@ -2933,7 +2933,7 @@ maize = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 4
 			OR  = {
 				region = southeast_america_region
 				region = northeast_america_region
@@ -2941,7 +2941,7 @@ maize = {
 			}
 		}
 		modifier = {
-			factor = 7
+			factor = 5
 			OR  = {
 				region = great_lakes_region
 				region = mississippi_region
@@ -2967,7 +2967,7 @@ millet = {
 		land_forcelimit = 0.75
 	}
 	chance = {
-		factor = 10
+		factor = 5
 		modifier = {
 			factor = 0.0
 			is_sea = yes
@@ -2977,14 +2977,13 @@ millet = {
 			OR = {
 				continent = north_america
 				continent = south_america
-				continent = asia
 				continent = europe
 				continent = oceania
 			}
 			NOT = { has_global_flag = millet_traded }
 		}
 		modifier = {
-			factor = 8
+			factor = 3
 			OR  = {
 				region = south_africa_region
 				region = east_africa_region
@@ -2992,7 +2991,13 @@ millet = {
 			}
 		}
 		modifier = {
-			factor = 10
+			factor = 1
+			OR  = {
+				continent = asia
+			}
+		}
+		modifier = {
+			factor = 6
 			OR  = {
 				region = niger_region
 				region = sahel_region
@@ -3254,7 +3259,7 @@ amaranth = {
 			is_sea = yes
 		}
 		modifier = {
-			factor = 13
+			factor = 10
 			OR  = {
 				region = peru_region
 				region = upper_peru_region
