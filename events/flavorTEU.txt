@@ -17,6 +17,7 @@ country_event = {
 		is_year = 1450
 		NOT = { is_year = 1500 }
 		tag = TEU
+		NOT = { is_at_war = yes}
 		NOT = { has_country_flag = pru_confederation_curtailed }
 		has_country_flag = pru_confederation_flag
 		is_subject = no
