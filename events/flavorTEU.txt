@@ -17,14 +17,12 @@ country_event = {
 		is_year = 1450
 		NOT = { is_year = 1500 }
 		tag = TEU
-		NOT = { is_at_war = yes}
 		NOT = { has_country_flag = pru_confederation_curtailed }
 		has_country_flag = pru_confederation_flag
 		is_subject = no
-		owns_core_province = 43 # danzig
 		exists = POL
 		is_neighbor_of = POL
-		NOT = { war_with = POL }
+		is_at_war = no
 		NOT = { alliance_with = POL }
 		POL = { is_subject = no }
 		POL = { num_of_cities = 10 }
@@ -34,6 +32,13 @@ country_event = {
 			DNZ = {
 				is_subject_of = ROOT
 			}
+		}
+		OR = {
+			AND = {
+				owns = 43
+				controls = 43
+			}
+			DNZ = { owns = 43 controls = 43 }
 		}
 		estate_influence = {
 			estate = estate_burghers
@@ -61,10 +66,8 @@ country_event = {
 			set_country_flag = pru_confederation_happened
 			every_owned_province = {
 				limit = {
-					OR = {
-						has_estate = estate_burghers
-						area = pomerelia_area
-					}
+					has_estate = estate_burghers
+					controlled_by = ROOT
 				}
 				add_core = DNZ
 			}

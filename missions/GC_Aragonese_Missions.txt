@@ -90,17 +90,15 @@ gc_aragon_1 = {
 					has_dlc = "Dharma"
 				}
 				220 = {
-					province_has_center_of_trade_of_level = 3
+					OR = { 
+						province_has_center_of_trade_of_level = 3
+						development = 20
+					}
 				}
 			}
 			else = {
-				OR = {
-					220 = {
+				220 = {
 						development = 20
-					}
-					220 = {
-						has_building = workshop
-						has_building = temple
 					}
 				}
 			}
@@ -218,18 +216,16 @@ gc_aragon_2 = {
 					has_dlc = "Dharma"
 				}
 				101 = {
-					province_has_center_of_trade_of_level = 3
+					OR = {
+						province_has_center_of_trade_of_level = 3
+						development = 30
+					}
 				}
 			}
 			else = {
-				OR = {
 					101 = {
 						development = 30
 					}
-					101 = {
-						has_building = trade_depot
-					}
-				}
 			}
 		}
 		effect = {

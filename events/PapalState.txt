@@ -12,6 +12,7 @@ country_event = {
 		religion = catholic
 		NOT = { tag = PAP }
 		NOT = { tag = ROM }
+		NOT = { tag = RMA }
 		NOT = { exists = ITA }
 		NOT = { exists = ITL }
 		NOT = { has_country_flag = no_support }
@@ -76,14 +77,12 @@ country_event = {
 		118 = {
 			add_core = PAP
 			cede_province = PAP
-		}
-		if = {
-			limit = {
-				118 = {
+			if = {
+				limit = {
 					is_core = ROOT
 				}
+				remove_core = ROOT
 			}
-			remove_core = ROOT
 		}
 		add_prestige = 25
 	}

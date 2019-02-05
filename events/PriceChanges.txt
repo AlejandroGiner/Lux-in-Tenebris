@@ -258,19 +258,19 @@ country_event = {
 			continent = europe
 		} 
 		OR = {
-			504 = { #Indus
+			1337 = { #Indus
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			2030 = { #Goa
+			1948 = { #Deccan
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			1340 = { #Ceylon
+			1340 = { #Comorin Cape
 				trade_share = {
 					country = ROOT
 					share = 10
@@ -344,7 +344,7 @@ country_event = {
 			}
 		}
 		set_country_flag = cotton_imports
-		504 = { #Indus
+		1337 = { #Indus
 			add_trade_modifier = {
 				who = root
 				duration = -1
@@ -352,7 +352,7 @@ country_event = {
 				key = COTTON_IMPORTS_BANNED
 			}
 		}
-		2030 = { #Goa
+		1948 = { #Deccan
 			add_trade_modifier = {
 				who = root
 				duration = -1
@@ -360,7 +360,7 @@ country_event = {
 				key = COTTON_IMPORTS_BANNED
 			}
 		}
-		1340 = { #Ceylon
+		1340 = { #Comorin Cape
 			add_trade_modifier = {
 				who = root
 				duration = -1
@@ -497,9 +497,8 @@ country_event = {
 			OR = {
 				province_id = 1361 # Straits of Johor
 				province_id = 1343 # Ganges Delta
-				province_id = 504 # Thatta
+				province_id = 1337 # Indus
 				province_id = 1340 # Comorin Cape
-				province_id = 2030 # Goa
 			}
 		}
 		NOT = { has_global_flag = spice_trade_happened }
@@ -850,19 +849,19 @@ country_event = {
 		capital_scope = { continent = europe }
 		dip_tech = 22
 		OR = {
-			504 = { #Indus
+			1339 = { #Indus
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			2030 = { #Goa
+			1948 = { #Deccan
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			1340 = { #Ceylon
+			1340 = { #Comorin Cape
 				trade_share = {
 					country = ROOT
 					share = 10
@@ -1200,19 +1199,19 @@ country_event = {
 			current_age = age_of_revolutions
 		}
 		OR = {
-			504 = { #Indus
+			1337 = { #Indus
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			2030 = { #Goa
+			1948 = { #Deccan
 				trade_share = {
 					country = ROOT
 					share = 10
 				}
 			}
-			1340 = { #Ceylon
+			1340 = { #Comorin Cape
 				trade_share = {
 					country = ROOT
 					share = 10
@@ -1333,13 +1332,13 @@ country_event = {
 			current_age = age_of_revolutions
 		}
 		OR = {
-			2030 = { #Goa
+			1948 = { #Deccan
 				trade_share = {
 					country = ROOT
 					share = 5
 				}
 			}
-			1340 = { #Ceylon
+			1340 = { #Comorin cape
 				trade_share = {
 					country = ROOT
 					share = 5
@@ -2619,10 +2618,8 @@ country_event = {
 				}
 				random_owned_province = {
 					limit = {
-						any_owned_province = {
 							trade_goods = coal
 							NOT = { has_building = furnace }
-						}
 					}
 					save_event_target_as = potential_furnace
 				}

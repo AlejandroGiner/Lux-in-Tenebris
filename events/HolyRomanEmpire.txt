@@ -148,7 +148,7 @@ country_event = {
 			limit = { has_dlc = "Common Sense" }
 			random_country = {
 				limit = {
-					government = imperial_city 
+					has_reform = free_city
 					religion = catholic
 					is_at_war = no
 				}
@@ -388,7 +388,16 @@ country_event = {
 			tuscany_area = {	
 				is_part_of_hre = no
 			}
+			central_italy_area = {	
+				is_part_of_hre = no
+			}
+			south_tuscany_area = {
+				is_part_of_hre = no
+			}
 			emilia_romagna_area = {	
+				is_part_of_hre = no
+			}
+			verona_area = {	
 				is_part_of_hre = no
 			}
 			emilia_area = {	
@@ -401,15 +410,6 @@ country_event = {
 				is_part_of_hre = no
 			}
 			lombardy_area = {	
-				is_part_of_hre = no
-			}
-			2977 = {
-				is_part_of_hre = no
-			}
-			119 = {
-				is_part_of_hre = no
-			}
-			2976 = {
 				is_part_of_hre = no
 			}
 			108 = {	
@@ -430,7 +430,10 @@ country_event = {
 			any_country = {
 				overlord_of = ROOT
 				is_part_of_hre = yes
-				culture_group = germanic
+				OR = {
+					culture_group = germanic
+					is_emperor = yes
+				}
 			}
 		}
 	}

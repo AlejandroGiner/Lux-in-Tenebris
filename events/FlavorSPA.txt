@@ -29,6 +29,8 @@ country_event = {
 					was_player = no
 					is_subject = no
 					is_neighbor_of = ROOT
+					NOT = { is_in_war = { attacker_leader = ARA } }
+					NOT = { is_in_war = { defender_leader = ARA } }
 				}
 				num_of_cities = 25
 			}
@@ -42,6 +44,8 @@ country_event = {
 					was_player = no
 					is_subject = no
 					is_neighbor_of = ROOT
+					NOT = { is_in_war = { attacker_leader = CAS } }
+					NOT = { is_in_war = { defender_leader = CAS } }
 				}
 				num_of_cities = 16
 			}
@@ -719,6 +723,10 @@ country_event = {
 			}
 			has_country_flag = sevilla_trade_center_flag
 		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
 	}
 	
 
@@ -2669,8 +2677,13 @@ country_event = {
 				name = merino_wool
 				duration = -1
 			}
-			if = {
+		}
+		custom_tooltip = merino_wool_tooltip
+		hidden_effect = {
+			every_owned_province = {
 				limit = {
+					region = iberia_region
+					trade_goods = wool
 					has_estate = no
 				}
 				random_list = {

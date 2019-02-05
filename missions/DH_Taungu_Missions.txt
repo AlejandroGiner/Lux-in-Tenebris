@@ -927,9 +927,19 @@ tau_slot_5 = {
 		effect = {
 			if = {
 				limit = {
+					has_dlc = "Mandate of Heaven"
 					is_emperor_of_china = yes
 				}
 				add_mandate_large_effect = yes
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+					any_country = {
+						is_emperor_of_china = yes
+					}
+				}
+				custom_tooltip = tau_dragon_throne_fake_mandate # Mandate effects normally don't appear for countries that don't have the Mandate mechanic enabled, as in they're not the current Emperor of China
 			}
 			else = {
 				add_prestige = 20

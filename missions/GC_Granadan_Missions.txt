@@ -53,23 +53,11 @@ granada_development_missions = {
 			province_id = 223
 		}
 		trigger = {
-			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
 				223 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = ROOT
 					development = 20
 					has_building = temple
 				}
-			}
-			else = {
-				223 = {
-					country_or_non_sovereign_subject_holds = ROOT
-					has_building = workshop
-					has_building = temple
-				}
-			}
 		}
 		
 		effect = {
@@ -123,7 +111,7 @@ andalusia_slot_1_missions = {
 			225 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				OR = {
-					development = 25
+					development = 15
 					has_building = temple
 				}
 			}
@@ -1296,6 +1284,15 @@ andalusia_slot_4_missions = {
 					name = "adu_trade_hub"
 					duration = -1
 				}
+			}
+			sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 		

@@ -530,10 +530,10 @@ vij_tamil_conquest = {
 				province_id = 1340
 				AND = {
 					province_id = 539
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-						province_has_center_of_trade_of_level = 3
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { province_has_center_of_trade_of_level = 3 }
 					}
 				}
 			}

@@ -767,6 +767,7 @@ gc_por_3_c = {
 		tag = POR
 		NOT = { map_setup = map_setup_random }
 	}
+	has_country_shield = yes
 	gc_por_discovers_cape_good_hope = {
 		icon = mission_sea_battles
 		required_missions = { gc_por_colonise_west_africa }
@@ -1210,7 +1211,6 @@ gc_por_4 = {
 			}
 			country_event = {
 				id = flavor_por.11
-				days = 30
 			}
 			malabar_area = {
 				limit = {
@@ -1270,7 +1270,7 @@ gc_por_4 = {
 		icon = mission_establish_high_seas_navy
 		required_missions = { gc_por_discovers_indonesia }
 		completed_by = 1542.1.1
-		position = 8
+		position = 7
 
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1323,27 +1323,32 @@ gc_por_4 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					668 = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-						owner = {
-							is_subject = no
+			custom_tooltip = macau_event_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						668 = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							owner = {
+								is_subject = no
+							}
+						}
+					}
+					
+										
+					hidden_effect = {
+						668 = {
+							owner = {
+								country_event = { id = more_flavor_por.1 }
+							}
 						}
 					}
 				}
-				custom_tooltip = macau_event_tooltip
-				hidden_effect = {
-					668 = {
-						owner = {
-							country_event = { id = more_flavor_por.1 }
-						}
-					}
+	
+				else = {
+					add_mercantilism = 3
 				}
-			}
-			else = {
-				add_mercantilism = 3
-			}
+			}	
 		}
 	}
 	gc_por_japanese_trade = {
@@ -1353,7 +1358,11 @@ gc_por_4 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1376
-				province_id = 4182
+				AND = {
+					province_id = 4182
+					NOT = { owned_by = ROOT }
+					owner = { NOT = { vassal_of = ROOT } }
+				}
 			}
 		}
 
@@ -1378,23 +1387,26 @@ gc_por_4 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
+			custom_tooltip = por_japan_mission_tooltip
+			hidden_effect = {
+				if = {
+					limit = {
+						4182 = {
+							NOT = { country_or_non_sovereign_subject_holds = ROOT }
+							owner = {
+								is_subject = no
+							}
+						}
+					}
 					4182 = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 						owner = {
-							is_subject = no
+							country_event = { id = more_flavor_por.3 }
 						}
 					}
 				}
-				4182 = {
-					owner = {
-						country_event = { id = more_flavor_por.3 }
-					}
+				else = {
+					add_mercantilism = 3
 				}
-			}
-			else = {
-				add_mercantilism = 3
 			}
 		}
 	}
@@ -1425,6 +1437,17 @@ gc_por_5 = {
 		effect = {
 			add_dip_power = 50
 			add_navy_tradition = 15
+			334 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	gc_por_conquer_tangiers = {
@@ -1538,9 +1561,9 @@ gc_por_5 = {
 			mascat_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
 		}
 	}

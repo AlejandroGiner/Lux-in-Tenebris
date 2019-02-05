@@ -82,6 +82,13 @@ polish_missions_main_slot = {
 					add_permanent_claim = ROOT
 				}
 			}
+			kuyavia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -91,15 +98,26 @@ polish_missions_main_slot = {
 		completed_by = 1466.10.19
 		position = 3
 		provinces_to_highlight = {
-			area = west_prussia_area
+			OR = {
+				area = west_prussia_area
+				area = kuyavia_area
+			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT	
+				AND = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {
 			west_prussia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kuyavia_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -198,14 +216,16 @@ plc_missions_1 = {
 		provinces_to_highlight = {
 			province_id = 43
 			NOT = {
-				owned_by = ROOT
-				OR = {
-					has_building = dock
-					has_building = drydock
-				}
-				OR = {
-					has_building = shipyard
-					has_building = grand_shipyard
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_building = dock
+						has_building = drydock
+					}
+					OR = {
+						has_building = shipyard
+						has_building = grand_shipyard
+					}
 				}
 			}
 		}
@@ -733,34 +753,16 @@ polish_missions_slot_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			if = {
-				limit = {
-					OR = {
-						has_dlc = "Dharma"
-						has_dlc = "Common Sense"
-					}
-				}
-				280 = {
-					development = 20
-				}
-				num_of_owned_provinces_with = {
-					OR = {
-						area = west_dniepr_area
-						area = east_dniepr_area
-					}
-					development = 10
-					value = 5
-				}
+			280 = {
+				development = 20
 			}
-			else = {
-				num_of_owned_provinces_with = {
-					OR = {
-						area = west_dniepr_area
-						area = east_dniepr_area
-					}
-					has_building = cathedral
-					value = 5
+			num_of_owned_provinces_with = {
+				OR = {
+					area = west_dniepr_area
+					area = east_dniepr_area
 				}
+				development = 10
+				value = 5
 			}
 		}
 		effect = {
@@ -932,21 +934,8 @@ polish_missions_slot_5 = {
 			owns_core_province = 260
 			owns_core_province = 2961
 			260 = {
-				if = {
-					limit = {
-						OR = {
-							has_dlc = "Dharma"
-							has_dlc = "Common Sense"
-						}
-					}
 					development = 20
-				}
-				else = {
-					OR = {
-						has_building = cathedral
-						has_building = counting_house
-					}
-				}				
+				}	
 				has_manufactory_trigger = yes
 				if = {
 					limit = {
@@ -962,20 +951,7 @@ polish_missions_slot_5 = {
 				}				
 			}
 			2961 = {
-				if = {
-					limit = {
-						OR = {
-							has_dlc = "Dharma"
-							has_dlc = "Common Sense"
-						}
-					}
 					development = 20
-				}
-				else = {
-					OR = {
-						has_building = cathedral
-						has_building = counting_house
-					}
 				}
 				has_manufactory_trigger = yes
 				if = {

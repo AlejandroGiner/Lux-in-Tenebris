@@ -141,6 +141,12 @@ country_event = {
 	option = { # Another investment pays off.
 		name = flavor_kon.2.a
 		add_papal_influence = 25
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		
 		reverse_add_opinion = {
 			who = KON
@@ -199,7 +205,8 @@ country_event = {
 		change_religion = catholic
 		if = {
 			limit = { is_tribal = yes }
-			change_government = despotic_monarchy
+			change_government = monarchy
+			set_legacy_government = despotic_monarchy
 		}
 		add_stability = -3
 

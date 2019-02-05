@@ -541,6 +541,7 @@ eng_chesapeake_dominance = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { english_colony_in_north_america }
 		position = 7
+		completed_by = 1618.5.1
 		
 		provinces_to_highlight = {
 			province_id = 1500
@@ -587,8 +588,8 @@ eng_indian_ocean_exploration = {
 	england_discovers_india = {
 		icon = mission_junk_boat
 		required_missions = { }
-		position = 6
-		completed_by = 1680.1.1
+		position = 7
+		completed_by = 1618.5.1
 		
 		trigger = {
 			custom_trigger_tooltip = {
@@ -677,28 +678,29 @@ eng_indian_cot_dominance = {
 		icon = mission_war_chest
 		required_missions = { england_discovers_india }
 		position = 7
+		completed_by = 1776.7.1
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 504
+				province_id = 1337
 				province_id = 1340
 				province_id = 1343
-				province_id = 2030
+				province_id = 1948
 			}
 		}
 		
 		trigger = { 
 			OR = {
-				504 = {		# Sind
+				1337 = {		# Indus
 					is_strongest_trade_power = ROOT
 				}
 				1340 = {	# Comorin Cape
 					is_strongest_trade_power = ROOT
 				}
-				1343 = {	# Ganges Delta
+				1343 = {	# Bengal
 					is_strongest_trade_power = ROOT
 				}
-				2030 = {	# Goa
+				1948 = {	# Deccan
 					is_strongest_trade_power = ROOT
 				}
 			}
