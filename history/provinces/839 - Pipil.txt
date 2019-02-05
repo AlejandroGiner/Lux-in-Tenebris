@@ -1,0 +1,38 @@
+#839 - Pipil
+
+latent_trade_goods = {
+	rubber
+}
+
+owner = LCA
+controller = LCA
+add_core = LCA
+culture = lenca
+religion = mesoamerican_religion
+capital = "Pipil" 
+trade_goods = grain
+hre = no 
+base_tax = 4
+base_production = 4
+base_manpower = 4 
+
+
+
+discovered_by = MAY
+discovered_by = ZAP
+discovered_by = AZT
+discovered_by = mesoamerican
+
+1522.5.31 = { discovered_by = SPA } # Andres Nino 
+
+1525.1.1 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	capital = "San Salvador"
+	culture = castillian
+	trade_goods = cocoa
+	religion = catholic
+	is_city = yes
+} 
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence
