@@ -3273,3 +3273,41 @@ amaranth = {
 		}
 	}
 }
+
+legumes = {
+	color = { 129 136 57 }
+	modifier = {
+		land_maintenance_modifier = -0.05
+	}
+	province = {
+		local_manpower_modifier = 0.1
+	}
+	chance = {
+		factor = 4
+		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
+			factor = 9
+			OR  = {
+				region = guinea_region
+				region = central_africa_region
+				region = south_africa_region
+				region = brazil_region
+				region = colombia_region
+				region = mexico_region
+			}
+		}
+		modifier = {
+			factor = 6
+			OR  = {
+				region = northeast_america_region
+				region = great_lakes_region
+				region = canada_region
+				region = southeast_america_region
+				region = colombia_region
+			}
+		}
+	}
+}
