@@ -95,7 +95,7 @@ grand_duchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	modifiers = {
-		max_states = 5
+		max_states = 2
 		num_accepted_cultures = 1
 		reduced_liberty_desire = 25
 		diplomatic_upkeep = 1
@@ -449,7 +449,7 @@ prussian_monarchy = {
 			}
 			AND = {
 				tag = GER
-				NOT = { map_setup = map_setup_random }
+				have_had_reform = prussian_monarchy
 			}
 			AND = {
 				is_playing_custom_nation = yes
@@ -575,7 +575,6 @@ mamluk_government = {
 		}
 	}
 	legacy_equivalent = mamluk_government_legacy
-	heir = no
 	queen = no
 
 	valid_for_nation_designer = yes
@@ -600,6 +599,7 @@ mamluk_government = {
 		government_abilities = {
 			mamluk_mechanic
 		}
+		heir = no
 		foreign_slave_rulers = yes
 	}
 }
@@ -649,19 +649,11 @@ mughal_government = {
 	icon = "peacock_throne"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
 			AND = {
 				tag = MUG
 				NOT = { map_setup = map_setup_random }
 			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = mughal_government
-			}
-		}
 	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 60
 	lock_level_when_selected = yes
 	legacy_equivalent = feudal_monarchy
 

@@ -49,6 +49,18 @@ on_new_monarch = {
 	}
 	if = {
 		limit = {
+			has_consort_regency = no
+			any_owned_province = {
+				has_province_modifier = home_of_consort
+			}
+		}
+		random_owned_province = {
+			limit = { has_province_modifier = home_of_consort }
+			remove_province_modifier = home_of_consort
+		}
+	}
+	if = {
+		limit = {
 			NOT = { has_dlc = "Mandate of Heaven" }
 			has_country_modifier = the_mandate_of_heaven
 			NOT = { legitimacy = 80 }
@@ -96,21 +108,6 @@ on_new_monarch = {
 		50 = dynastic_events.5	
 		25 = harem_events.7		#Failed Policy of Fratricide
 	}
-	
-	if = {
-		limit = {
-			OR = {
-			has_reform = high_kingship_legacy
-			has_reform = tanistry_reform
-			}
-			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
-		}
-		set_country_flag = bt_tanistry_king_just_died
-		clr_country_flag = bt_tanistry_high_queen_reigning
-		remove_country_modifier = bt_uncertainty_about_a_high_queen
-		country_event = { id = BeyondTypusCelticFlavour.1 days = 1 }				#New Tanist election
-		country_event = { id = BeyondTypusCelticFlavour.6 days = 1 }			#High Queen comes to power, will only fire for female rulers
-	}
 }
 
 # country
@@ -127,26 +124,14 @@ on_monarch_death = {
 			kill_heir = yes #If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
 		}
 	}
+	if = {
+		limit = { has_country_modifier = sought_after_bachelor }
+		remove_country_modifier = sought_after_bachelor
+	}
 	events = {
 		flavor_tus.16 #Savanorola Leaves This World
 		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
 		flavor_nav.4 # Navarra succession event
-	}
-	
-	if = {
-		limit = {
-			OR = {
-			has_reform = high_kingship_legacy
-			has_reform = tanistry_reform
-			}
-			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
-		}
-		set_country_flag = bt_tanistry_king_just_died
-		clr_country_flag = bt_tanistry_high_queen_reigning
-		remove_country_modifier = bt_uncertainty_about_a_high_queen
-		remove_country_modifier = bt_tanistry_underaged_heir
-		remove_country_modifier = bt_tanistry_female_heir
-		remove_country_modifier = bt_tanistry_waiting_on_heir
 	}
 }
 
@@ -154,15 +139,15 @@ on_monarch_death = {
 on_heir_death = {
 	if = {
 		limit = { has_country_flag = heir_dip_education }
-		clr_ruler_flag = heir_dip_education
+		clr_country_flag = heir_dip_education
 	}
 	if = {
 		limit = { has_country_flag = heir_mil_education }
-		clr_ruler_flag = heir_mil_education
+		clr_country_flag = heir_mil_education
 	}
 	if = {
 		limit = { has_country_flag = heir_adm_education }
-		clr_ruler_flag = heir_adm_education
+		clr_country_flag = heir_adm_education
 	}
 	if = {
 		limit = { has_ruler_flag = well_advised_tutored_heir }
@@ -189,50 +174,5 @@ on_heir_death = {
 	if = {
 		limit = { has_ruler_flag = returned_from_sancaga_sikma_province }
 		clr_ruler_flag = returned_from_sancaga_sikma_province
-	}
-	
-	if = {
-		limit = {
-			OR = {
-			has_reform = high_kingship_legacy
-			has_reform = tanistry_reform
-			}
-			NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
-		}
-		remove_country_modifier = bt_tanistry_underaged_heir
-		remove_country_modifier = bt_tanistry_female_heir
-		country_event = { id = BeyondTypusCelticFlavour.8 days = 1 }			#Tanist dies, new tanist event
-	}
-}
-
-# country
-# root = winning country, from = location
-on_siege_won_country = {
-	events = {
-		tyw_events.14 # Fall of Prague in Religious War
-		btc_lc_cities.12 #Spanish Fury
-	}
-	random_events = {
-		10 = army_professionalism_events.1 #City Sacked
-		100 = 0
-	}
-}
-
-# province
-# FROM = old owner
-on_province_owner_change = {
-	events = {
-		japan.1
-		grand_centers_of_trade.1
-	}
-
-	if = {
-		limit = {
-			owned_by = SRU
-			exists = ARA
-		}
-		ARA = {
-			set_country_flag = ARA_defeat_saruhan
-		}
 	}
 }

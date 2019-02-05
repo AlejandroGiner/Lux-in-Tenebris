@@ -72,6 +72,9 @@ country_decisions = {
 			
 		}
 		effect = {
+			225 = {	#Cordoba
+				move_capital_effect = yes
+			}
 			change_tag = ADU
 			btc_new_nation_effects = yes 
 			iberia_region = {
@@ -89,19 +92,23 @@ country_decisions = {
 				change_primary_culture = andalusi_culture
 			}
 			set_country_flag = formed_andalusia_flag
-			if = {
-				limit = {
-					has_dlc = "Golden Century"
-					NOT = { mission_completed = gra_overcome_internal_strife }
+			hidden_effect = {
+				if = {
+					limit = { 
+						tag = MOR 
+						has_dlc = "Golden Century"
+					}
+					complete_mission = gra_overcome_internal_strife
 				}
-				complete_mission = gra_overcome_internal_strife
 			}
-			if = {
-				limit = {
-					has_dlc = "Golden Century"
-					NOT = { mission_completed = gra_friends_in_high_places }
+			hidden_effect = {
+				if = {
+					limit = { 
+						tag = MOR 
+						has_dlc = "Golden Century"
+					}
+					complete_mission = gra_friends_in_high_places
 				}
-				complete_mission = gra_friends_in_high_places
 			}
 			if = {
 				limit = {
