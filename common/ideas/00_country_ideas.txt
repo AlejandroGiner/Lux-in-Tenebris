@@ -573,6 +573,10 @@ POR_ideas = {
 		OR = {
 		tag = POR
 		tag = AGV
+		tag = CIM
+		tag = BGC
+		tag = VSU
+		tag = BJ1
 		}
 	}
 	free = yes		#will be added at load.
@@ -6558,13 +6562,8 @@ CAT_ideas = {
     }
  
     trigger = {
-		OR = {
 			tag = CAT
-			tag = VAL
-			tag = MLA
-			tag = MJO
-		}
-    }	#2 new tags added by Beyond Typus
+    }
     free = yes
  
 	cat_consulate_of_the_sea = {
