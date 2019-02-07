@@ -1,0 +1,80 @@
+country_decisions = {
+	###################################################################################################
+################################			Bulgaria			 ##############################################	
+	###################################################################################################
+	bulgarian_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_bulgaria_flag }
+			NOT = { tag = BUL }
+			NOT = { tag = BYZ }
+			NOT = { tag = SER }
+			NOT = { tag = TUR }
+			NOT = { tag = RMN }
+			primary_culture = bulgarian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 150	# Tarnovo
+				province_id = 3165	# Varna
+				province_id = 3169	# Boruy
+				province_id = 2750	# Plovdiv
+				province_id = 3166	# Pleven
+				province_id = 1765	# Sofia
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = BUL }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 150	# Tarnovo
+			owns_core_province = 3165	# Varna
+			owns_core_province = 3169	# Boruy
+			owns_core_province = 2750	# Plovdiv
+			owns_core_province = 3166	# Pleven
+			owns_core_province = 1765	# Sofia
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = BUL
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			bulgaria_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BUL
+			}
+			upper_thrace_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BUL
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_bulgaria_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+}
