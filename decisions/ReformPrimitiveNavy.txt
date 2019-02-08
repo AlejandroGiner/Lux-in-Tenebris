@@ -1,0 +1,31 @@
+country_decisions = {
+
+	reform_primitive_navy = {
+		potential = {
+			has_country_modifier = primitive_navy
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			stability = 2
+			legitimacy = 90
+			adm_power = 100
+			mil_power = 100
+			dip_power = 100
+			treasury = 500
+			num_of_provinces_in_states = 12
+		}
+		effect = {
+			ROOT = {
+				remove_country_modifier = "primitive_navy"	
+			}			
+			add_adm_power = -100
+			add_dip_power = -100
+			add_mil_power = -100
+			add_treasury = -500
+			add_legitimacy = -30
+			add_stability = -1
+		}
+		ai_will_do = {
+			factor = 0			
+		}
+	}
