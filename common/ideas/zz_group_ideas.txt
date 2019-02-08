@@ -2439,3 +2439,40 @@ malabari_ideas = {
 		global_unrest = -1
 	}
 }
+
+polynesian_ideas = {
+	start = {
+		range = 0.5
+		trade_range_modifier = 0.20
+	}
+	bonus = {
+		navy_tradition = 2
+	}
+	
+	trigger = {
+		culture_group = oceanic
+	}
+	
+	free = yes
+	surfing = {
+		prestige = 1
+	}
+	tatau = {
+		legitimacy = 1
+	}
+	haka = {
+		land_morale = 0.10
+	}
+	catamaran = {
+		colonists = 1
+	}
+	hula = {
+		stability_cost_modifier = -0.1
+	}
+	moai = {
+		build_cost = -0.1
+	}
+	sea_gardens = {
+		development_cost = -0.1
+	}
+}

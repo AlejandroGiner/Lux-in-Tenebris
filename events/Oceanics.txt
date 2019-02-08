@@ -1,0 +1,333 @@
+########################################
+# Events for Oceanic nations
+#
+# written by Buchitaton
+########################################
+
+namespace = oceanics
+
+
+# Nan Madol Oceanics Navies
+country_event = {
+	id = oceanics.1
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = NMD
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+
+# Fiji Oceanics Navies
+country_event = {
+	id = oceanics.2
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = FIJ
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Tonga Oceanics Navies
+country_event = {
+	id = oceanics.3
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = TON
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Tahiti Oceanics Navies
+country_event = {
+	id = oceanics.4
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = THT
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Hawaii Oceanics Navies
+country_event = {
+	id = oceanics.5
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = HWI
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Rapa Nui Oceanics Navies
+country_event = {
+	id = oceanics.6
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = NUI
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Mataatua Oceanics Navies
+country_event = {
+	id = oceanics.7
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = MTT
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Aotea Oceanics Navies
+country_event = {
+	id = oceanics.8
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = AOT
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Kaurahuapo Oceanics Navies
+country_event = {
+	id = oceanics.9
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = KRH
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Tainui Oceanics Navies
+country_event = {
+	id = oceanics.10
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = TNI
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Tinana Oceanics Navies
+country_event = {
+	id = oceanics.11
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = TNN
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
+
+# Maori Oceanics Navies
+country_event = {
+	id = oceanics.12
+	title = "oceanics.1.t"
+	desc = "oceanics.1.d"
+	picture = NATIVES_eventPicture	
+	fire_only_once = yes
+
+	trigger = {
+		is_year = 1444
+		tag = MAO
+		technology_group = oceanian			
+	}
+
+	mean_time_to_happen = {
+		months = 0
+	}
+
+	option = {
+		name = "oceanics.1.a"
+		add_country_modifier = {
+			name = "primitive_navy"
+			duration = 365000
+		}
+	}
+}
