@@ -6,7 +6,7 @@ changelog
 
 -Madagascar has received a moderate overhaul with 20 new provinces.
 
--Italy has received a moderate overhaul with 13 new provinces and 24 new tags.
+-Italy has received a moderate overhaul with 15 new provinces and 24 new tags.
 
 -Japan has received a moderate overhaul with 14 new provinces and 6 new tags each with their own national ideas plus 2 releasables from vanilla present in 1444.
 
@@ -14,7 +14,7 @@ changelog
 
 -China superregion has received a major overhaul with 38 new provinces.
 
--Iberia has received a light overhaul with 6 new provinces.
+-Iberia has received a major overhaul with 23 new provinces, 15 new tags, 2 new cultures and many national ideas.
 
 -New tags in America scattered around the continent.#1
 
