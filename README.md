@@ -16,6 +16,8 @@ changelog
 
 -Iberia has received a major overhaul with 23 new provinces, 15 new tags, 2 new cultures and many national ideas.
 
+-France has received a moderate overhaul with 4 new provinces, 2 new tags, 3 new cultures and many national ideas.
+
 -New tags in America scattered around the continent.#1
 
 -New tags with their own technology group and national ideas in oceania.#1
@@ -128,9 +130,27 @@ changelog
  
 To-do list:
  Replace all generic national ideas with unique ones.\
- New tags in oceania and brazil.\
- Grand architect buildings into CoT mechanic.\
+ Colonial empire decision and missions.\
+ Flavor historical modifiers.\
  Fix terrain.txt.\
- China overhaul.\
- Implement chieftains.\
+ Tweak China a lil bit more.\
+ Finish implementing chieftains once it updates.\
+ Do British Isles.\
+ Finish France.\
+ Overhaul Horn of Africa.\
+ Overhaul Persia/Khorasan.\
+ Add Japanese tech group. Maybe Persian and Korean.\
+ Overhaul South America.\
+ Implement IR's north america.\
+ Implement Albert's ages, institutions and timeframe.\
+ Add english minors.\
+ Finish trade goods with price change events and other flavor.\
+ Adapt missions to new provinces.\
+ Add Jarilov.\
+ Update SEA addon once it finishes its BT version.\
+ Advisor events.\
+ Some government types from IR.\
+ Government type for Iroquois.\
+ Split Turkish culture.\
+ Finish granting new trade goods to the world.\
  Update flavorMOR.txt.
