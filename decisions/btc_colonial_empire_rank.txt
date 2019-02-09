@@ -1,0 +1,116 @@
+country_decisions = {
+  btc_colonial_empire_rank = {
+    potential = {
+      NOT = {
+        OR = {
+          tag = CAS
+          tag = SPA
+          tag = FRA
+          tag = POR
+          tag = IBE
+          tag = ENG
+          tag = GBR
+          tag = NED
+        }
+      }
+      has_idea = quest_for_the_new_world
+    }
+    allow = {
+      total_development = 600
+      government_rank = 2
+      NOT = { government_rank = 3 }
+      prestige = 75
+      #either 4 colonies, 2 of them having a least 10 cities
+      #either 2 colonies, 1 of them having Mexico area and 150-200 dev
+      #either 2 colonies, 1 of them having East yucatan and 130-150 dev
+      #either 2 colonies, 1 of them having Kuntisuyu and 140-180 dev
+      OR = {
+
+        AND = {
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+            }
+            amount = 4
+          }
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+              num_of_cities = 10
+              total_development = 100
+            }
+            amount = 2
+          }
+        }
+
+        AND = {
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+            }
+            amount = 2
+          }
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+              total_development = 200
+              mexico_area = {
+                type = all
+                owned_by = PREV
+              }
+            }
+            amount = 1
+          }
+        }
+
+        AND = {
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+            }
+            amount = 2
+          }
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+              total_development = 150
+              east_yucatan_area = {
+                type = all
+                owned_by = PREV
+              }
+            }
+            amount = 1
+          }
+        }
+
+        AND = {
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+            }
+            amount = 2
+          }
+          calc_true_if = {
+            all_subject_country = {
+              is_colonial_nation = yes
+              total_development = 180
+              kuntisuyu_area = {
+                type = all
+                owned_by = PREV
+              }
+            }
+            amount = 1
+          }
+        }
+
+      }
+    }
+    effect = {
+      set_government_rank = 3
+      add_prestice = 25
+    }
+    ai_will_do = {
+      factor = 1
+    }
+  }
+}
