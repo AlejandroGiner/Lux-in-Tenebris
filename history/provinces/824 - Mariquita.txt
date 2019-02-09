@@ -1,0 +1,35 @@
+#824 - Mariquita
+
+add_core = PAE
+owner = PAE
+controller = PAE
+culture = paezan
+
+religion = inti
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = south_american
+discovered_by = andean
+capital = "Mariquita"
+trade_goods = cotton
+hre = no
+is_city = yes
+
+
+1536.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	is_city = yes
+	culture = castillian
+	religion = catholic
+	trade_goods = sugar
+} # Gonzalo Jimanez de Quesada
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recongnized

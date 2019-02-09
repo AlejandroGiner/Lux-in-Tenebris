@@ -1,0 +1,36 @@
+# No previous file for Magangué
+
+culture = tayrona
+add_core = TAY
+owner = TAY
+controller = TAY
+discovered_by = south_american
+discovered_by = MCA
+religion = inti
+is_city = yes
+capital = "Magangué"
+trade_goods = grain
+hre = no
+base_tax = 1
+base_production = 2
+base_manpower = 1
+
+
+
+1539.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = gems
+}
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recongnized
+
+

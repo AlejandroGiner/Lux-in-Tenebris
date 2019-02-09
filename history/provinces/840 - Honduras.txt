@@ -1,0 +1,36 @@
+#840 - Honduras
+
+owner = SUM
+controller = SUM
+add_core = SUM
+culture = miskito
+religion = mesoamerican_religion
+capital = "Honduras"
+trade_goods = tropical_wood
+hre = no 
+base_tax = 3
+
+base_production = 3
+base_manpower = 3 
+
+
+
+discovered_by = mesoamerican
+discovered_by = MAY
+discovered_by = ZAP
+discovered_by = AZT
+
+1502.1.1 = { discovered_by = CAS } # Christopher Columbus 
+1516.1.23 = { discovered_by = SPA }
+
+1525.1.1 = {
+ 	owner = SPA
+	controller = SPA
+	add_core = SPA
+	capital = "Trujillo"
+	religion = catholic
+	is_city = yes
+ } # de Olid
+1548.1.1 = { unrest = 5 } # Slave rebellion 
+1549.1.1 = { unrest = 0 } 
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence

@@ -1,0 +1,43 @@
+#830 - Maracaibo
+
+add_core = WAY
+owner = WAY
+controller = WAY
+culture = wayuu
+is_city = yes
+religion = inti
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = south_american
+discovered_by = andean
+capital = "Maracaibo"
+trade_goods = fish
+hre = no
+
+
+
+1525.1.1 = { discovered_by = SPA }
+
+1571.1.1 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = coffee
+} 
+1811.7.5 = {
+	owner = VNZ
+	controller = VNZ
+	add_core = VNZ
+} # Venezuela declared its independence
+1812.7.25 = { controller = SPA } # The revolutionary army is defeated
+1813.8.7 = { controller = VNZ } # The Second Republic of Venezuela is established
+1814.1.1 = { controller = SPA } # The end of the second republic
+1819.12.17 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+	remove_core = SPA
+} # The establishment of Gran Colombia

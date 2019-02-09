@@ -1,0 +1,32 @@
+# No previous file for Lenca
+
+owner = LCA
+controller = LCA
+add_core = LCA
+culture = lenca
+religion = mesoamerican_religion
+capital = "Teguzgalpa"
+trade_goods = grain
+hre = no
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+
+
+
+discovered_by = mesoamerican
+
+
+1525.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	is_city = yes
+	capital = "Choluteca"
+	trade_goods = gold
+} # First settlers
+1578.1.1 = { capital = "Tegucigalpa" }
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence
