@@ -649,10 +649,8 @@ mughal_government = {
 	icon = "peacock_throne"
 	allow_normal_conversion = yes
 	potential = {
-			AND = {
-				tag = MUG
-				NOT = { map_setup = map_setup_random }
-			}
+			tag = MUG
+			NOT = { map_setup = map_setup_random }
 	}
 	lock_level_when_selected = yes
 	legacy_equivalent = feudal_monarchy
@@ -844,7 +842,6 @@ roman_empire_reform = {
 			has_reform = roman_empire_reform
 			have_had_reform = roman_empire_reform
 			tag = ROM
-			primary_culture = roman
 		}
 	}
 	modifiers = {
