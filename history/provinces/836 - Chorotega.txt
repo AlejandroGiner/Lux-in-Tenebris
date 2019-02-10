@@ -5,7 +5,6 @@ controller = MGN
 add_core = MGN
 culture = mangue
 religion = mesoamerican_religion
-discovered_by = MCA
 capital = "Chorotega"
 trade_goods = grain
 hre = no
@@ -13,10 +12,13 @@ base_tax = 1
 base_production = 1
 base_manpower = 1
 
-
-
+discovered_by = WAY
+discovered_by = TAY
+discovered_by = MCA
+discovered_by = PAE
+discovered_by = TIT
+discovered_by = CWM
 discovered_by = mesoamerican
-discovered_by = south_american
 
 1502.1.1 = { discovered_by = CAS } # Christopher Columbus 
 1516.1.23 = { discovered_by = SPA }

@@ -2991,12 +2991,6 @@ millet = {
 			}
 		}
 		modifier = {
-			factor = 1
-			OR  = {
-				continent = asia
-			}
-		}
-		modifier = {
 			factor = 7
 			OR  = {
 				region = niger_region
@@ -3031,8 +3025,8 @@ fruit = {
 				has_climate = arctic
 				has_terrain = desert
 				has_terrain = coastal_desert
-				has_terrain = glacial
-				has_terrain = mountains
+				has_terrain = glacier
+				has_terrain = mountain
 			}
 		}
 		modifier = {

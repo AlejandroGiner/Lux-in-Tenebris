@@ -1,35 +1,30 @@
-# - Zaraza
+# - Meta
 
-culture = mariche
-add_core = CWM
-owner = CWM
-controller = CWM
+culture = carib
+
 discovered_by = andean
-is_city = yes
-religion = inti
-capital = "Zaraza"
-trade_goods = grain
+
+religion = animism
+capital = "Meta"
+trade_goods = unknown
 hre = no
-base_tax = 2 
+base_tax = 1 
 base_production = 1
 base_manpower = 1
+native_size = 15
+native_ferocity = 1
+native_hostileness = 3
 
-
-
-
-1498.1.1 = { discovered_by = CAS } # Christopher Columbus
-1516.1.23 = { discovered_by = SPA }
-
-1645.1.1 = {
-	owner = SPA 
+1571.1.1 = {
+	discovered_by = SPA
+	owner = SPA
 	controller = SPA
 	add_core = SPA
+	is_city = yes
 	culture = castillian
 	religion = catholic
-	capital = "San Miguel de la Nueva Tarragona del Batey"
-	is_city = yes
-	trade_goods = grain
-}
+	trade_goods = cocoa
+} 
 1811.7.5 = {
 	owner = VNZ
 	controller = VNZ
