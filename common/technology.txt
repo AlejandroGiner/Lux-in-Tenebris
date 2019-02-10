@@ -158,13 +158,6 @@ groups = {
 		start_cost_modifier = 0
 		nation_designer_unit_type = high_american
 		nation_designer_trigger = {
-			NOT = {
-				capital_scope = {
-					continent = europe
-				}
-			}
-		}
-		nation_designer_trigger = {
 			capital_scope = {
 				OR = {
 					continent = new_world
