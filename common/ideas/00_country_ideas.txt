@@ -895,6 +895,51 @@ GEN_Ideas = {
 }
 
 
+NRM_Ideas = {
+	start = {
+		diplomatic_reputation = 1
+		mercenary_cost = -0.15
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = NRM
+			tag = JER
+		}
+	}
+	free = yes
+	
+	from_dukes_to_kings = {
+		legitimacy = 1
+	}
+	norman_adventurers = {
+		possible_mercenaries = 0.25
+	}	
+	journey_across_the_continent = {
+		envoy_travel_time = -0.25
+		movement_speed = 0.15
+	}
+	norman_architecture = {
+		build_cost = -0.25
+	}
+	catholic_piety_norman = {
+		papal_influence = 1
+		tolerance_own = 1
+	}
+	norman_victories = {
+		prestige_from_land = 0.5
+		land_morale = 0.1
+	}
+	norman_law = {
+		state_maintenance_modifier = -0.25
+	}
+}
+
+
 SCO_Ideas = {
 	start = {
 		leader_land_shock = 1
