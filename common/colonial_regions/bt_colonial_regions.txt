@@ -46,10 +46,10 @@ colonial_cascadia = {
 		973 2484 2485 874 873 872 2481 2482 2483 2486 2489 2603 2604 2605 2606 2607 2488 2019 2003 2487 2020
 		#BTNEWPROVINCES
 		4941 4949 4946 4956 4958 4947 4948 4960 4940 4942 4943 4944 4945 4961 4957 4988 4982 5612 5017
-		5729 5730 5731 5732 5733 5734 5735 5736 5737 5738 5739 5740 5741 5742 5743 5744 5745 5746  5747 
-		5748 5749 5750 5751 5752 5753 5754 5755 5756 5757 5758 5759 5760 5761 5762 5777 5779 5780 5781 
-		5782 5776 5790 5801 5802 5803 5804 5805 5806 5807 5808 5809 5810 5811 5812 5813 5816 5819 5820 
-		5824 5825 5847 
+		5729 5730 5731 5732 5733 5734 5735 5736 5737 5738 5739 5740 5741 5742 5743 5744 5745 5746  5747
+		5748 5749 5750 5751 5752 5753 5754 5755 5756 5757 5758 5759 5760 5761 5762 5777 5779 5780 5781
+		5782 5776 5790 5801 5802 5803 5804 5805 5806 5807 5808 5809 5810 5811 5812 5813 5816 5819 5820
+		5824 5825 5847
 		#BTNEWPROVINCESWASTELANDS
 		#5115 #5116 #5117 #1913
 	}
@@ -95,7 +95,7 @@ colonial_cascadia = {
 		trigger = { culture_group = gaelic }
 		name = "COLONIAL_CASCADIA_Tir_na_Easanna"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_CALIFORNIA_Root_Culture_GetGroupName_Cascadia"
@@ -120,7 +120,7 @@ colonial_northwest_territories = {
 	native_size = 4
 	native_ferocity = 2
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		fur = 10
 		naval_supplies = 6
@@ -129,12 +129,12 @@ colonial_northwest_territories = {
 		copper = 2
 		gold = 1
 	}
-	
+
 	culture = {
 		athabascan = 10
 		chipewyan = 3
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -142,9 +142,9 @@ colonial_northwest_territories = {
 	provinces = {
 		2599 2600 2601 1812
 		#BTNEWPROVINCES
-		4980 4985 4983 4986 4987 5041 4989 4937 4938 5040 4976 4977 4978 5000 5001 5033 4984 4972 4981 5070 5071 5072 5073 5074 5075 5078 5079  
+		4980 4985 4983 4986 4987 5041 4989 4937 4938 5040 4976 4977 4978 5000 5001 5033 4984 4972 4981 5070 5071 5072 5073 5074 5075 5078 5079
 		#BTNEWPROVINCESWASTELANDS
-		#5114 #5122 #5126 #1811 #1812 #1814 
+		#5114 #5122 #5126 #1811 #1812 #1814
 	}
 
 	# Specific
@@ -169,7 +169,7 @@ colonial_northwest_territories = {
 		trigger = { culture_group = gaelic }
 		name = "COLONIAL_NWT_Culchriocha_an_Iarthuaiscirt"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_NWT_Northwest_Territories"
@@ -188,7 +188,7 @@ colonial_hudson_bay = {
 	native_size = 4
 	native_ferocity = 2
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		fur = 10
 		naval_supplies = 6
@@ -197,7 +197,7 @@ colonial_hudson_bay = {
 		copper = 2
 		gold = 1
 	}
-	
+
 	culture = {
 		cree = 10
 		inuit = 10
@@ -205,7 +205,7 @@ colonial_hudson_bay = {
 		cheyenne = 2
 		chipewyan = 2
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -213,8 +213,8 @@ colonial_hudson_bay = {
 	provinces = {
 		999 1000 1003 1004 1005 1006 1008 1009 1010 1011 1805 1806 1811 1813 2004 2005 2016 2017 2018 2589 2591 2592 2593 2594 2596 2597 2598 2602 2511 1002 2595
 		#BTNEWPROVINCES
-		4990 4991 4992 4993 4994 4995 4996 4997 4998 4999 5002 5003 5004 5005 5006 5007 5008 5009 5034 5035 5036 5057 5067 5068 5069 
-		5592 5593 5594 5595 5596 4939 5623 5624 5625 5626 5634 5635 5636 5637 5783 5784 5785 5786 5787 5788 5789 
+		4990 4991 4992 4993 4994 4995 4996 4997 4998 4999 5002 5003 5004 5005 5006 5007 5008 5009 5034 5035 5036 5057 5067 5068 5069
+		5592 5593 5594 5595 5596 4939 5623 5624 5625 5626 5634 5635 5636 5637 5783 5784 5785 5786 5787 5788 5789
 		#BTNEWPROVINCESWASTELANDS
 		998
 	}
@@ -269,7 +269,7 @@ colonial_hudson_bay = {
 		}
 		name = "PROV1010"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_CANADA_Borealia"
@@ -288,22 +288,22 @@ colonial_newfoundland = {
 	native_size = 4
 	native_ferocity = 2
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		fish = 10
 	}
-	
+
 	culture = {
 		beothuk = 10
 		mikmaq = 1
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
 
 	provinces = {
-		980 981 2573 
+		980 981 2573
 		#BTNEWPROVINCES
 		5013 5019 4974 5058 5059
 	}
@@ -399,7 +399,7 @@ colonial_newfoundland = {
 		trigger = { culture_group = byzantine }
 		name = "COLONIAL_CANADA_Nea_Taurike"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
@@ -418,17 +418,17 @@ colonial_acadia = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		mikmaq = 10
 		abenaki = 1
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -580,7 +580,7 @@ colonial_acadia = {
 #		}
 #		name = "COLONIAL_CANADA_Nouvelle_�cosse"
 #	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_CANADA_Acadia"
@@ -602,16 +602,16 @@ colonial_florida = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		arawak = 15
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -657,7 +657,7 @@ colonial_florida = {
 		}
 		name = "COLONIAL_EASTERN_AMERICA_Florida"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_EASTERN_AMERICA_Florida"
@@ -909,7 +909,7 @@ colonial_polynesia = {
 	}
 
 	culture = {
-		maori_culture = 10
+		maori = 10
 	}
 
 	religion = {
