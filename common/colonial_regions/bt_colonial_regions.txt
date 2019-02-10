@@ -7,7 +7,7 @@ colonial_cascadia = {
 	native_size = 4
 	native_ferocity = 2
 	native_hostileness = 8
-	
+
 	trade_goods = {
 		fish = 10
 		fur = 6
@@ -16,7 +16,7 @@ colonial_cascadia = {
 		iron = 1
 		copper = 1
 	}
-	
+
 	culture = {
 		salish = 10
 		interior_salish = 10
@@ -34,7 +34,7 @@ colonial_cascadia = {
 		quileute = 1
 		tsimshianic = 1
 	}
-	
+
 	religion = {
 		shamanism = 10
 	}
@@ -572,13 +572,13 @@ colonial_acadia = {
 #				alliance_with = SCO
 #			}
 #		}
-#		name = "COLONIAL_CANADA_Nouvelle_Écosse"
+#		name = "COLONIAL_CANADA_Nouvelle_ï¿½cosse"
 #	}
 #	names = {
 #		trigger = {
 #			tag = SCO
 #		}
-#		name = "COLONIAL_CANADA_Nouvelle_Écosse"
+#		name = "COLONIAL_CANADA_Nouvelle_ï¿½cosse"
 #	}
 	
 	# Generic
@@ -676,22 +676,22 @@ colonial_cuba = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		arawak = 10
 	}
-	
+
 	religion = {
 		animism = 10
 	}
 
 	provinces = {
-		484 485 486 2654 2655 2656 4624 4622 4623 5572
+		484 485 486 2654 2655 2656 4624 4622 4623 5572 3321 3322
 	}
 
 	# Specific
@@ -749,7 +749,7 @@ colonial_cuba = {
 		trigger = { culture_group = byzantine }
 		name = "COLONIAL_CUBA_Kouva"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_THE_CARRIBEAN_Cuba"
@@ -768,16 +768,16 @@ colonial_hispaniola = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		arawak = 10
 	}
-	
+
 	religion = {
 		animism = 10
 	}
@@ -816,7 +816,7 @@ colonial_hispaniola = {
 		}
 		name = "COLONIAL_HISPANIOLA_CY"
 	}
-	
+
 	# Generic
 	names = {
 		name = "COLONIAL_HISPANIOLA_Haiti"
@@ -835,16 +835,16 @@ colonial_bahamas = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		arawak = 10
 	}
-	
+
 	religion = {
 		animism = 10
 	}
@@ -902,23 +902,23 @@ colonial_polynesia = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		maori_culture = 10
 	}
-	
+
 	religion = {
 		animism = 10
 	}
 
 	provinces = {
-		1106 1107 1108 1109 1246 2737 2738 2739 5021 5022 
-		1243 1989 1990 5023 
+		1106 1107 1108 1109 1246 2737 2738 2739 5021 5022
+		1243 1989 1990 5023
 		5597 5598 5599 5600 5601 5602 5603 5604 5605 5606 5607 5608 5609 5610
 		1986 1239 1242 			#Fiji, New Caledonia and Vanuatu, went back and forth over adding these quite a few times
 		1244 1987 5024 5025 5026 			#West side of the map. Appears to display alright, unlike Alaska. I'll have to look into why and perhaps finally fix Alaska as well.
@@ -1009,23 +1009,23 @@ colonial_cape = {
 	native_size = 10
 	native_ferocity = 1
 	native_hostileness = 3
-	
+
 	trade_goods = {
 		fish = 10
 		naval_supplies = 10
 	}
-	
+
 	culture = {
 		khoisan = 10
 	}
-	
+
 	religion = {
 		animism = 10
 	}
 
 	provinces = {
-		833 1176 1177 1178 1179 
-		5340 5341 5342 5343 5344 5345 5346 5348 5349 5350 5351 5352 5353 5354 5355 5356 5357 5361 5428 
+		833 1176 1177 1178 1179
+		5340 5341 5342 5343 5344 5345 5346 5348 5349 5350 5351 5352 5353 5354 5355 5356 5357 5361 5428
 	}
 
 	# Specific
