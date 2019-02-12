@@ -1,12 +1,14 @@
 country_decisions = {
   btc_native_exploration = {
     potential = {
-      always = yes
-    }
-    allow = {
-      treasury = 20
-      manpower = 700
-      all_owned_province = {
+      OR = {
+        had_country_flag =  {
+        flag = btc_native_recently_explored
+        days = 180  #6 months
+        }
+        NOT = { has_country_flag = btc_native_recently_explored }
+      }
+      any_owned_province = {
         any_neighbor_province = {
           is_empty = no
           NOT = { has_discovered = ROOT }
@@ -14,10 +16,38 @@ country_decisions = {
         }
       }
     }
+    allow = {
+      treasury = 20
+      manpower = 0.7
+    }
     effect = {
-      add_manpower = -700
+      add_manpower = -0.7
       add_treasury = -20
-      
+      set_country_flag = btc_native_recently_explored
+      random_list = {
+        90 = {
+          random_owned_province = {
+            limit = {
+              any_neighbor_province = {
+                is_empty = no
+                NOT = { has_discovered = ROOT }
+                NOT = { owned_by = ROOT }
+              }
+            }
+            random_neighbor_province = {
+              limit = {
+                is_empty = no
+                NOT = { has_discovered = ROOT }
+                NOT = { owned_by = ROOT }
+              }
+            discover_country = ROOT
+            }
+          }
+        }
+        10 = {
+          add_manpower = 0.3
+        }
+      }
     }
     ai_will_do = {
       factor = 0
