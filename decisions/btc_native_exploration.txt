@@ -1,0 +1,27 @@
+country_decisions = {
+  btc_native_exploration = {
+    potential = {
+      always = yes
+    }
+    allow = {
+      treasury = 20
+      manpower = 700
+      all_owned_province = {
+        any_neighbor_province = {
+          is_empty = no
+          NOT = { has_discovered = ROOT }
+          NOT = { owned_by = ROOT }
+        }
+      }
+    }
+    effect = {
+      add_manpower = -700
+      add_treasury = -20
+      
+    }
+    ai_will_do = {
+      factor = 0
+    }
+  }
+
+}
