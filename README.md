@@ -112,7 +112,7 @@ changelog
 
 -Coastline terrain type nation designer cost changed from 0.85 to 0.9.\
  Allowed number of buildings +1. #3
- 
+
  Reasoning behind all terrain changes is to make terrain more meaningful and accurate without breaking the line between accuracy and game balance.\
  Mountains now represent much more important defensive lines but also are harder and more expensive to build forts on. Building modifiers added merely as a counter-balance to forts being more powerful now.\
  #1.Reasoning is flavor and historical accuracy to represent local tribes.\
@@ -127,7 +127,7 @@ changelog
  #10.\
  #11.
 
- 
+
 To-do list:
  Replace all generic national ideas with unique ones.\
  Colonial empire decision and missions.\
