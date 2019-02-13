@@ -133,13 +133,13 @@ To-do list:
  Colonial empire decision and missions.\
  Flavor historical modifiers.\
  Fix terrain.txt.\
- Tweak China a lil bit more.\
+ Tweak China a lil bit more and fix localisation.\
  Finish implementing chieftains once it updates.\
  Do British Isles.\
  Finish France.\
  Overhaul Horn of Africa.\
  Overhaul Persia/Khorasan.\
- Add Japanese tech group. Maybe Persian and Korean.\
+ Add Persian and Japanese tech groupS. Maybe Korean.\
  Overhaul South America.\
  Implement IR's north america.\
  Implement Albert's ages, institutions and timeframe.\
@@ -153,4 +153,6 @@ To-do list:
  Government type for Iroquois.\
  Split Turkish culture.\
  Finish granting new trade goods to the world.\
+ Import generic missions from ME/MEIOU.\
+ DYNAMOMO DO KOREA ALREADY.\
  Update flavorMOR.txt.
