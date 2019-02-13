@@ -6,6 +6,7 @@ country_decisions = {
 			NOT = { has_country_flag = formed_italy_flag }
 			NOT = { tag = ITA }
 			NOT = { tag = LTE }
+			NOT = { tag = ITL }
 			culture_group = latin
 			any_owned_province = {
 				region = italy_region
@@ -20,13 +21,14 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = ITA }
+			is_nomad = no
 			btc_can_form_trigger = yes
 			btc_was_not_colonial_nation_trigger = yes
 			owns_core_province = 101	# Genoa
 			owns_core_province = 104	# Milan
 			owns_core_province = 112	# Venice
 			owns_core_province = 116	# Florence
-			num_of_owned_provinces_with = { 
+			num_of_owned_provinces_with = {
 				value = 30
 				region = italy_region
 				is_core = ROOT
@@ -44,7 +46,7 @@ country_decisions = {
 					NOT = { area = apulia_area }
 					NOT = { area = sicily_area }
 				}
-				add_permanent_claim = ITL
+				add_permanent_claim = ITA
 			}
 
 			set_country_flag = formed_italy_flag
