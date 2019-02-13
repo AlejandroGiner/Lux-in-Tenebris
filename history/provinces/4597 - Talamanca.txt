@@ -1,0 +1,37 @@
+# No previous file for Talamanca
+
+owner = TMA
+controller = TMA
+add_core = TMA
+culture = talamanca
+religion = mesoamerican_religion
+capital = "Talamanca"
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+discovered_by = WAY
+discovered_by = TAY
+discovered_by = MCA
+discovered_by = PAE
+discovered_by = TIT
+discovered_by = CWM
+discovered_by = mesoamerican
+
+1502.1.1 = { discovered_by = CAS } # Christopher Columbus 
+1516.1.23 = { discovered_by = SPA }
+
+1563.1.1 = { 
+	capital = "Cartago"
+	owner = SPA 
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = naval_supplies
+	is_city = yes
+} # Founded by Juan Vásquez de Coronado
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence
+

@@ -277,9 +277,7 @@ vij_south_conquest = {
 		icon = mission_conquer_lanka
 		required_missions = { vij_integrate_jaffna }
 		provinces_to_highlight = {
-			OR = {
-				area = lanka_area
-			}
+			area = lanka_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -532,10 +530,10 @@ vij_tamil_conquest = {
 				province_id = 1340
 				AND = {
 					province_id = 539
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-						province_has_center_of_trade_of_level = 3
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { province_has_center_of_trade_of_level = 3 }
 					}
 				}
 			}

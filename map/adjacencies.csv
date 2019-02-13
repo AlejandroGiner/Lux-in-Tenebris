@@ -39,15 +39,14 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4131;4193;sea;1387;-1;-1;-1;-1;Oshima-Mutsu
 1032;1852;sea;4225;-1;-1;-1;-1;Kurils-Tokachi
 1199;1201;sea;1448;-1;-1;-1;-1;Bagamoyo-Zanzibar
-1247;127;sea;1298;2777;1684;2777;1674;Corsica-Sardinia
+1247;127;sea;1298;2777;1684;2777;1677;Corsica-Sardinia
 394;396;sea;1335;3421;1426;3426;1422;Al Hasa-Bahrain
 395;396;sea;1335;3435;1419;3429;1422;Qatar-Bahrain
 627;631;sea;1354;-1;-1;-1;-1;Blambangan-Bali
 4354;4351;sea;4357;-1;-1;-1;-1;Zamboanga-Buglas
 654;2699;sea;1397;-1;-1;-1;-1;Samar-Bikol
 654;4353;sea;1397;-1;-1;-1;-1;Samar-Leyte
-648;649;sea;1400;-1;-1;-1;-1;Halmahera-Ternate
-648;650;sea;1400;-1;-1;-1;-1;Halmahera-Tidore
+648;650;sea;1400;-1;-1;-1;-1;Ternate-Tidore
 1107;2738;sea;1423;-1;-1;-1;-1;Taranaki-Waitaha
 1268;1258;canal;1775;-1;-1;-1;-1;kiel_canal
 1548;1515;canal;835;-1;-1;-1;-1;panama_canal
@@ -60,8 +59,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 628;2692;sea;1355;-1;-1;-1;-1;Surabaya-Madura
 631;2693;sea;1355;-1;-1;-1;-1;Bali-Lombok
 2693;632;sea;1355;-1;-1;-1;-1;Lombok-Sumbawa
-632;633;sea;1356;-1;-1;-1;-1;Sumbawa-Flores
-633;2695;sea;1401;-1;-1;-1;-1;Flores-East Timor
+4730;633;sea;1356;-1;-1;-1;-1;Bima-Flores
+4731;2695;sea;1401;-1;-1;-1;-1;East flores-East Timor
 2716;642;sea;1357;-1;-1;-1;-1;Buton-Kendari
 2700;4351;sea;1397;-1;-1;-1;-1;Cebu-Panay
 4353;4355;sea;1402;-1;-1;-1;-1;Leyte-Caraga
@@ -84,12 +83,12 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 3175;3176;sea;1312;-1;-1;-1;-1;Aetolia-Cephalonia
 3177;3178;sea;1312;-1;-1;-1;-1;Thebes-Achaea
 149;3195;sea;1319;-1;-1;-1;-1;Edirne-Lemnos
-1974;3244;sea;1323;3176;1771;3175;1764;Yedishkul-Qirim
+7200;7193;sea;1323;3176;1771;3175;1764;Kyzyl Yar-Ichki
 3230;35;sea;1926;-1;-1;-1;-1;Hiiumaa-Ösel
 3231;35;sea;1256;-1;-1;-1;-1;Haapsalu-Ösel
 112;7019;sea;1308;-1;-1;-1;-1;Venice-Padua
 130;136;sea;1308;-1;-1;-1;-1;Istria-Dalmatia
-3018;4364;sea;1283;-1;-1;-1;-1;Argyll-Inner Hebrides
+4363;4364;sea;1283;-1;-1;-1;-1;Argyll-Inner Hebrides
 252;4364;sea;1283;-1;-1;-1;-1;Inverness-Inner Hebrides
 3137;4364;sea;1283;-1;-1;-1;-1;Ross-Inner Hebrides
 747;2890;sea;1529;-1;-1;-1;-1;Amapa-Marajo
@@ -112,13 +111,12 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 1775;1983;sea;1258;-1;-1;-1;-1;Holstein-Lolland
 3;3121;sea;1255;-1;-1;-1;-1;Smaland-Kalmar
 227;3108;sea;1292;-1;-1;-1;-1;Lisboa-Setubal
-282;1974;sea;1322;-1;-1;-1;-1;Yedisan-Yedishkul
+282;7194;sea;1322;-1;-1;-1;-1;Ochakiv-Kinburn
 112;1774;sea;1308;-1;-1;-1;-1;Venice-Treviso
 111;112;sea;1308;-1;-1;-1;-1;Friuli-Venice
 3173;5131;sea;1319;3052;1643;3056;1643;Lesbos-Ayvalik
 741;502;sea;1522;-1;-1;-1;-1;Cumana-Trinidad
 741;5579;sea;1520;-1;-1;-1;-1;Cumana-Waikeri
-484;5570;sea;1518;-1;-1;-1;-1;Havana-Siwanea
 2022;5728;sea;1559;-1;-1;-1;-1;Haida-Taan
 2219;5255;sea;1334;3481;1430;3484;1432;Bandar Langeh-Kish
 5747;5781;sea;1558;-1;-1;-1;-1;Lummi-Chimakum
@@ -177,7 +175,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 365;2327;sea;1328;3175;1456;3179;1456;Makna-Sinai
 2051;4512;sea;1337;-1;-1;-1;-1;Gohilvad-Bharuch
 4399;590;sea;1345;-1;-1;-1;-1;Dagon-Martaban
-1822;685;sea;1373;-1;-1;-1;-1;Yangzhou-Suzhou
+1822;3347;sea;1373;-1;-1;-1;-1;Tongzhou-Suzhou
 2149;684;sea;1373;-1;-1;-1;-1;Hangzhou-Ningbo
 667;668;sea;1371;-1;-1;-1;-1;Canton-Macau
 667;3305;sea;1371;-1;-1;-1;-1;Canton-Hong Kong
@@ -191,4 +189,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 3182;4174;sea;1310;2941;1686;2941;1691;Scutari-Durazzo
 4189;4190;sea;4224;-1;-1;-1;-1;Shimouza-Sagami
 4181;3313;sea;1389;4678;1534;4675;1534;Shimabara-Higo
+4715;4712;sea;1357;-1;-1;-1;-1;Wajo-Luwu
+4735;4733;sea;1400;-1;-1;-1;-1;Jailolo-Moro
+2414;7203;sea;1323;-1;-1;-1;-1;Yeysk-Taganrog
 -1;-1;;-1;-1;-1;-1;-1;-1;

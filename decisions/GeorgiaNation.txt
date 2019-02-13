@@ -11,6 +11,7 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = { tag = GEO }
+			NOT = { tag = MOU }
 			OR = {
 				ai = no
 				AND = {

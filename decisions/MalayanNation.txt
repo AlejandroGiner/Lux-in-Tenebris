@@ -1,0 +1,104 @@
+country_decisions = {
+
+	malayan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_malaya_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = MSA }
+			culture_group = malay
+			NOT = { has_reform = steppe_horde }
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+			OR = {
+				ai = no
+				num_of_cities = 30
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 622
+				province_id = 2681
+				province_id = 626
+				province_id = 636
+				province_id = 596
+				province_id = 2673
+				province_id = 638
+				province_id = 639
+				province_id = 624
+				province_id = 631
+				province_id = 629
+				province_id = 628
+				province_id = 594
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 622
+			owns_core_province = 2681
+			owns_core_province = 626
+			owns_core_province = 636
+			owns_core_province = 596
+			owns_core_province = 2673
+			owns_core_province = 638
+			owns_core_province = 639
+			owns_core_province = 624
+			owns_core_province = 631
+			owns_core_province = 629
+			owns_core_province = 628
+			owns_core_province = 594
+		}
+		effect = {
+			change_tag = MSA
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+				}
+				set_government_rank = 3
+			}
+			every_province ={
+				limit = {
+					OR = {
+						region = malaya_region
+						region = moluccas_region
+						region = indonesia_region
+                                                area = tenasserim_area
+                                                area = north_tenasserim_area
+					}
+				}
+				add_permanent_claim = MSA
+			}
+			set_country_flag = formed_malaya_flag
+			add_prestige = 25
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

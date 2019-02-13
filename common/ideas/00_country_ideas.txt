@@ -573,6 +573,10 @@ POR_ideas = {
 		OR = {
 		tag = POR
 		tag = AGV
+		tag = CIM
+		tag = BGC
+		tag = VSU
+		tag = BJ1
 		}
 	}
 	free = yes		#will be added at load.
@@ -659,13 +663,7 @@ HAB_ideas = {
 	}
 	
 	trigger = {
-		OR = {
 			tag = HAB
-			AND = {
-				tag = STY
-				dynasty = "von Habsburg"
-			}
-		}
 	}
 	free = yes		#will be added at load.
 
@@ -893,6 +891,51 @@ GEN_Ideas = {
 	}
 	standardisation_of_designs = {
 		global_ship_recruit_speed = -0.10
+	}
+}
+
+
+NRM_Ideas = {
+	start = {
+		diplomatic_reputation = 1
+		mercenary_cost = -0.15
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = NRM
+			tag = JER
+		}
+	}
+	free = yes
+	
+	from_dukes_to_kings = {
+		legitimacy = 1
+	}
+	norman_adventurers = {
+		possible_mercenaries = 0.25
+	}	
+	journey_across_the_continent = {
+		envoy_travel_time = -0.25
+		movement_speed = 0.15
+	}
+	norman_architecture = {
+		build_cost = -0.25
+	}
+	catholic_piety_norman = {
+		papal_influence = 1
+		tolerance_own = 1
+	}
+	norman_victories = {
+		prestige_from_land = 0.5
+		land_morale = 0.1
+	}
+	norman_law = {
+		state_maintenance_modifier = -0.25
 	}
 }
 
@@ -1384,12 +1427,12 @@ VIJ_ideas = {
 
 AYU_ideas = {
 	start = {
-		religious_unity = 0.20
-		num_accepted_cultures = 1
+		trade_steering = 0.20
+		cavalry_power = 0.10
 	}
 	
 	bonus = {
-		vassal_income = 0.25
+		trade_efficiency = 0.10
 	}
 	
 	trigger = {
@@ -1397,23 +1440,25 @@ AYU_ideas = {
 	}
 	free = yes
 	
-	white_elephant = {
-		global_tax_modifier = 0.10
+	ayu_bunga_mas = {
+                global_tax_modifier = 0.10
+		vassal_income = 0.15
+	}
+	ayu_mueang = {
+		fort_maintenance_modifier = -0.1
 	}
 	corvee_system = {
 		global_manpower_modifier = 0.10
 	}
-	ayu_foreign_mercenaries = {
-		merc_maintenance_modifier = -0.15
+	ayu_trade_settlements = {
+                global_institution_spread = 0.1
+		tolerance_heathen = 2
+	}
+	ayu_foreign_firepower = {
+		mil_tech_cost_modifier = -0.1
 	}
 	ayu_embassies = {
 		diplomats = 1
-	}
-	trading_links = {
-		trade_range_modifier = 0.20
-	}
-	personal_executions = {
-		stability_cost_modifier = -0.1
 	}
 	phrai_luang = {
 		global_unrest = -1
@@ -1796,7 +1841,7 @@ ETH_ideas = {
 
 DAI_ideas = {
 	start = {
-		hostile_attrition = 1.0
+		defensiveness = 0.25
 		enemy_core_creation = 0.5
 	}
 	
@@ -1807,8 +1852,7 @@ DAI_ideas = {
 	trigger = {
 		OR = {
 			tag = DAI
-			tag = TOK
-			tag = ANN
+			primary_culture = vietnamese
 		}
 	}
 	free = yes		#will be added at load.
@@ -1819,8 +1863,8 @@ DAI_ideas = {
 	confucian_revival = {
 		prestige = 1
 	}
-	autonomous_villages = {
-		defensiveness = 0.2
+	nam_tien = {
+		culture_conversion_cost = -0.25
 	}
 	village_militia = {
 		global_manpower_modifier = 0.25
@@ -1932,7 +1976,10 @@ LIT_ideas = {
 	}
 	
 	trigger = {
+		OR = {
 			tag = LIT
+			tag = SMG
+		}
 	}
 	free = yes		#will be added at load.
 	
@@ -1984,7 +2031,7 @@ MAR_ideas = {
 	free = yes
 	
 	tradition_of_military_service = {
-		cavalry_power = 0.10
+		cavalry_power = 0.15
 	}
 	forts_of_maharashtra = {
 		defensiveness = 0.20
@@ -2018,10 +2065,7 @@ TAU_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			tag = TAU
-			tag = BPR
-		}
+		tag = TAU
 	}
 	free = yes
 	
@@ -3311,6 +3355,12 @@ GEO_ideas = {
 		OR = {
 			tag = GEO
 			tag = IME
+			tag = MGL
+			tag = GUR
+			tag = SVN
+			tag = KRT
+			tag = KAH
+			tag = LAZ
 		}
 	}
 	free = yes
@@ -3341,23 +3391,26 @@ GEO_ideas = {
 
 javan_ideas = {
 	start = {
+		tolerance_heretic = 2
 		tolerance_heathen = 2
-		prestige_decay = -0.01	
 	}
 	
 	bonus = {
-		naval_maintenance_modifier = -0.2
+		naval_maintenance_modifier = -0.1
 	}
 	
 	trigger = {
+		NOT = { tag = MAJ }
+		NOT = { tag = SUN }
+		NOT = { tag = MSA }
 		OR = {
-			tag = MAJ
-			tag = SUN
+			primary_culture = javanese
+			primary_culture = sundanese
 		}
 	}
 	free = yes
 	
-	candi_shrines = {
+	kejawen = {
 		religious_unity = 0.20
 	}
 	indianization = {
@@ -3373,11 +3426,11 @@ javan_ideas = {
 	bi_yearly_harvest = {
 		global_trade_goods_size_modifier = 0.10
 	}
-	modernized_shipbuilding = {
-		global_ship_cost = -0.10
+	javanese_migration = {
+		global_colonial_growth = 25
 	}
-	terracotta_banking = {
-		trade_efficiency = 0.1
+	jawanisasi = {
+		culture_conversion_cost = -0.15
 	}
 }
 
@@ -5061,11 +5114,10 @@ NAX_ideas = {
 	bonus = {
 		diplomatic_annexation_cost = -0.15
 	}
-	
 	trigger = {
 		OR = {
 			tag = NAX
-			tag = LES
+			tag = CDA
 		}
 	}
 	free = yes
@@ -5267,7 +5319,7 @@ WLS_ideas = {
 	}
 	
 	trigger = {
-		tag = WLS
+			tag = WLS
 	}
 	free = yes		#will be added at load.
 	
@@ -5433,7 +5485,10 @@ CIR_ideas = {
 	}
 	
 	trigger = {
-		tag = CIR
+		OR = {
+			tag = CIR
+			tag = KBR
+		}
 	}
 	free = yes
 	
@@ -6552,13 +6607,8 @@ CAT_ideas = {
     }
  
     trigger = {
-		OR = {
 			tag = CAT
-			tag = VAL
-			tag = MLA
-			tag = MJO
-		}
-    }	#2 new tags added by Beyond Typus
+    }
     free = yes
  
 	cat_consulate_of_the_sea = {
@@ -6891,16 +6941,20 @@ PEG_ideas = {
 
 KUT_ideas = {
 	start = {
-		global_prov_trade_power_modifier = 0.1
-		trade_steering = 0.2
+		trade_efficiency = 0.1
+		hostile_attrition = 1
 	}
 
 	bonus = {
-		global_own_trade_power = 0.2
+		global_trade_goods_size_modifier = 0.1
 	}
 	
 	trigger = {
-		tag = KUT
+		OR = {
+			primary_culture = bornean
+			primary_culture = banjarese
+			primary_culture = kutainese
+		}
 	}
 	free = yes
 	
@@ -6920,7 +6974,7 @@ KUT_ideas = {
 		global_manpower_modifier = 0.15
 	}
 	kut_consolidation_of_kutai = {
-		global_tax_modifier = 0.1
+		global_autonomy = -0.05
 	}
 	kut_subdue_the_inlands = {
 		global_unrest = -1
@@ -7270,44 +7324,6 @@ LUX_ideas = {
 	}
 	lux_rivals_rivals_everywhere = {
 		diplomats = 1
-	}
-}
-
-YOR_ideas = {
-	start = {
-		defensiveness = 0.2
-		merc_maintenance_modifier = -0.15
-	}
-
-	bonus = {
-		global_manpower_modifier = 0.1
-	}
-	
-	trigger = {
-		tag = YOR
-	}
-	free = yes
-	
-	yor_patronize_telugu_literature = {
-		prestige = 1
-	}
-	yor_telugu_warrior_aristocrats = {
-		army_tradition = 0.5
-	}
-	yor_kakatiya_legacy = {
-		global_tax_modifier = 0.1
-	}
-	yor_great_forts_of_the_east = {
-		fort_maintenance_modifier = -0.15
-	}
-	yor_legend_of_prataparudra = {
-		legitimacy = 1
-	}
-	yor_diamond_mines_of_kollur = {
-		production_efficiency = 0.1
-	}
-	yor_encourage_coromandel_trade = {
-		global_own_trade_power = 0.1
 	}
 }
 
@@ -12862,5 +12878,80 @@ ADU_ideas = {
 	adu_al_awasim = {
 		defensiveness = 0.1
 		rival_border_fort_maintenance = -0.25
+	}
+}
+
+TAO_ideas = {
+	start = {
+		movement_speed = 0.1
+		war_exhaustion = -0.1
+	}
+	
+	bonus = {
+		navy_tradition = 1
+	}
+	
+	trigger = {
+		tag = TAO
+	}
+	free = yes
+	kanoa = {
+		migration_cooldown = -0.2
+	}
+	caciques = {
+		monarch_admin_power = 1
+	}
+	batey = {
+		diplomatic_reputation = 1
+	}
+	bohiques = {
+		tolerance_own = 1
+	}
+	cohoba = {
+		global_unrest = -2
+	}
+	guanahatabey_assimilation = {
+		native_assimilation = 0.25
+	}
+	caribbean_alliance = {
+		manpower_recovery_speed = 0.1
+	}
+}
+
+YZW_ideas = {
+	start = {
+		naval_morale = 0.1
+		naval_forcelimit_modifier = 0.20
+	}
+
+	bonus = {
+		light_ship_cost = -0.20
+	}
+
+	trigger = {
+		tag = YZW
+	}
+	free = yes
+
+	hawaii_settlers = {
+		colonists = 1
+	}
+	great_mahele = {
+		stability_cost_modifier = -0.1
+	}
+	iolani_palace = {
+		prestige = 1
+	}
+	hawaiian_neutrality = {
+		diplomatic_upkeep = 1
+	}
+	edict_of_toleration = {
+		tolerance_heretic = 2
+	}
+	kamehameha_the_great = {
+		legitimacy = 1
+	}
+	kanawai_mamalahoe = {
+		global_unrest = -2
 	}
 }

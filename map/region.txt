@@ -77,6 +77,7 @@ italy_region = {
 		liguria_area
 		corsica_sardinia_area
 		sicily_area
+		eastsicily_area
 		naples_area
 		calabria_area
 		apulia_area
@@ -84,12 +85,15 @@ italy_region = {
 		central_italy_area
 		#BTADDITIONS
 		emilia_area
+		abruzzo_area
+		verona_area
+		south_tuscany_area
 	}
 }
 
 
 north_german_region = {
-	areas = { 
+	areas = {
 		south_saxony_area
 		northern_saxony_area
 		thuringia_area
@@ -115,7 +119,7 @@ north_german_region = {
 
 
 south_german_region = {
-	areas = { 
+	areas = {
 		tirol_area
 		austria_proper_area
 		inner_austria_area
@@ -134,7 +138,6 @@ south_german_region = {
 		bohemia_area
 		#BTADDITIONS
 		moravia_area
-		carniola_area
 	}
 }
 
@@ -155,6 +158,7 @@ russia_region = {
 		oka_area
 		arkhangelsk_area			#Repurposed to Onega
 		vologda_area
+		smolensk_area
 		#BTADDITIONS
 		laponia_area			#moved from Scandinavia
 		toropets_area
@@ -163,6 +167,7 @@ russia_region = {
 		upper_don_area
 		murom_area
 		northern_upper_oka_area
+		west_oka_area
 		nizhny_novgorod_area
 	}
 }
@@ -205,6 +210,13 @@ iberia_region = {
 		baleares_area
 		#BTADDITIONS
 		extremadura_area
+		barcelona_area
+		cantabrian_range_area
+		madrid_area
+		btc_murcia_area
+		baetica_area
+		south_beieras_area
+		south_alentejo_area
 	}
 }
 
@@ -253,6 +265,7 @@ baltic_region = {
 		east_prussia_area
 		pomerelia_area
 		samogitia_area
+		trakai_area
 	}
 }
 
@@ -262,10 +275,13 @@ poland_region = {
 		malopolska_area
 		mazovia_area
 		silesia_area
+		central_poland_area
+		sandomierz_area			#added by Paradox in 1.27, same id so no change needed.
+		kuyavia_area			#Repurposing this into BT's old Kalisz area
+		podlasie_area			#moved from Ruthenia
 		#BTADDITIONS
 		lower_silesia_area
-		sandomierz_area
-		kalisz_area
+		lublin_area
 	}
 }
 
@@ -273,17 +289,26 @@ ruthenia_region = {
 	areas = {
 		west_dniepr_area
 		east_dniepr_area
-		sloboda_ukraine_area
 		white_ruthenia_area
 		podolia_volhynia_area
 		pripyat_area
-		smolensk_area
 		red_ruthenia_area			#moved from Poland
-		#minsk_area			#removed
-		#BTADDITIONS
+		minsk_area
 		volhynia_area
+		chernigov_area
+		#BTADDITIONS
 		bryansk_area
-		west_oka_area
+		central_galicia_area
+		eastern_volhynia_area
+		western_podolia_area
+		eastern_severia
+		western_severia
+		cherkasy_area
+		mazur_area
+		mstislavl_area
+		vitebsk_area
+		polotsk_area
+		novogrudok_area
 	}
 }
 
@@ -293,10 +318,14 @@ crimea_region = {
 		lower_don_area
 		astrakhan_area
 		zaporizhia_area
-		yedisan_area
 		azov_area
+		sloboda_ukraine_area
 		#BTADDITIONS
 		middle_don_area
+		western_zaporizhia_area
+		northern_crimea_area
+		lower_dnieper_area
+		pryazovia_area
 	}
 }
 
@@ -320,6 +349,7 @@ balkan_region = {
 		slavonia_area
 		upper_thrace_area
 		northern_macedonia_area
+		lower_danube_area
 	}
 }
 
@@ -334,7 +364,8 @@ carpathia_region = {
 		moldavia_area
 		#BTADDITIONS
 		carpathian_ruthenia_area
-		lower_danube_area
+		bukovina_area
+		western_moldovia
 	}
 }
 
@@ -381,18 +412,16 @@ maghreb_region = {
 		oran_area
 		nafusa_mountains_area			#Was in 8.0's Libya region
 		kairouan_area
-		oran_area
 	}
 }
 
 mashriq_region = {
-	areas = {		
+	areas = {
 		syria_area
 		palestine_area
 		aleppo_area
 		syrian_desert_area			#Repurposed to Sinai
 		trans_jordan_area
-		syrian_desert_area
 		#BTADDITIONS
 		cyprus_area
 		tripoli_area
@@ -443,9 +472,6 @@ khorasan_region = {
 		sistan_area
 		makran_area
 		kalat_area
-		birjand_area
-		herat_area
-		mashhad_area
 		birjand_area
 		herat_area
 		mashhad_area
@@ -524,6 +550,8 @@ guinea_region = {
 		west_africa_coast_area
 		jolof_area
 		sao_tome_area
+		ivory_coast_area
+		ashanti_area
 	}
 	monsoon = {
 		00.06.01
@@ -922,6 +950,9 @@ burma_region = {
 		arakan_area
 		central_burma_area
 		chindwin_area
+		#BTC
+		yawnghwe_area
+		mong_yang_area
 	}
 	monsoon = {
 		00.06.01
@@ -982,6 +1013,9 @@ south_china_region = {
 		taiwan_area
 		hunan_area
 		guangxi_area
+		hainan_area
+		east_guangxi_area
+		south_zhejiang_area
 	}
 	monsoon = {
 		00.05.01
@@ -996,11 +1030,13 @@ xinan_region = {
 		chuannan_area
 		yun_gui_borderland_area
 		chuanbei_area
+		#BTC
+		koshanpye_area
 	}
 }
 
 north_china_region = {
-	
+
 	areas = {
 		hebei_area
 		south_hebei_area
@@ -1013,11 +1049,14 @@ north_china_region = {
 		anhui_area
 		jiangsu_area
 		south_jiangsu_area
+		north_shaanxi_area
+		south_shandong_area
+		south_anhui_area
 	}
 }
 
 brazil_region = {
-	
+
 	areas = {
 		rio_grande_do_sol_area
 		minas_gerais_area
@@ -1079,7 +1118,6 @@ colombia_region = {
 		coquivacoa_area
 		bogota_area
 		popayan_area
-		panama_area
 		maracaibo_area
 		central_llanos_area
 		cordillera_occidental_area
@@ -1129,12 +1167,14 @@ malaya_region = {	#Western Indonesia Malaya.
 		central_sumatra_area
 		south_sumatra_area
 		indian_ocean_islands_area
-		tenasserim_area
 		malaya_area
-		north_tenasserim_area
 		malacca_area
 		batak_area
 		minangkabau_area
+		#BTC
+		northern_malaya_area
+		johor_area
+		barisan_area
 	}
 	monsoon = {
 		00.10.01
@@ -1151,18 +1191,15 @@ moluccas_region = {
 	areas = {
 		molluca_area
 		sulawesi_area
-		luzon_area
-		southern_luzon_area
-		mindanao_area
-		west_mindanao_area
-		visayas_area
-		palawan_area
 		papua_area
 		vogelkop_area
 		timor_area
 		south_sulawesi_area
 		ceram_area
 		spice_islands_area
+		#BTC
+		luwu_area
+		banggai_area
 	}
 	monsoon = {
 		00.10.01
@@ -1174,7 +1211,24 @@ moluccas_region = {
 	}
 }
 
-
+philippines_region = {
+	areas = {
+		luzon_area
+		southern_luzon_area
+		mindanao_area
+		west_mindanao_area
+		visayas_area
+		palawan_area
+	}
+	monsoon = {
+		00.10.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
+}
 
 indonesia_region = { #Eastern Indonesian/Malayan Islands.
 	areas = {
@@ -1186,6 +1240,13 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 		west_java_area
 		lesser_sunda_islands_area
 		indonesian_islands_area
+		#BTC
+		iban_area
+		dayak_area
+		kotawaringin_area
+		berau_area
+		yogyakarta_area
+		cirebon_area
 	}
 	monsoon = {
 		00.11.01
@@ -1219,14 +1280,36 @@ indo_china_region = {
 	areas = {
 		vietnam_area
 		south_laos_area
+		basac_area
 		north_laos_area
-		central_thai_area
-		northern_thai_area
+		muang_phuan_area
 		cambodia_area
+		eastern_cambodia_area
 		mekong_area
 		champa_area
-		khorat_area
 		red_river_delta_area
+		cao_bac_area
+		central_highlands_area
+	}
+	monsoon = {
+		00.05.01
+		00.08.30
+	}
+}
+
+siam_region = { #BTC
+	areas = {
+		central_thai_area
+		northern_thai_area
+		nan_area
+		western_thai_area
+		tenasserim_area
+		north_tenasserim_area
+		sukhothai_area
+		khorat_area
+		inner_cambodia_area
+		suwannaphum_area
+
 	}
 	monsoon = {
 		00.05.01
@@ -1263,7 +1346,7 @@ great_lakes_region = {
 		illinois_country_area
 		michigan_area
 		miami_river_area
-		lake_superior_area 
+		lake_superior_area
 		wisconsin_area
 		#BT Moved from Great Plains region
 		dakota_area
@@ -1289,7 +1372,7 @@ southeast_america_region =  {
 		chesapeake_area
 		great_valley_area
 		piedmont_north_america_area
-		american_georgia_area 
+		american_georgia_area
 		florida_area
 		carolinas_area
 		south_carolina_area
@@ -1326,9 +1409,7 @@ great_plains_region = {
 		central_plains_area
 		high_plains_area
 		south_dakota_area
-		upper_missouri_area
 		badlands_area
-		llano_estacado_area
 		#BTADDITIONS
 		southern_rockies
 		lakota_area
@@ -1443,15 +1524,13 @@ mexico_region = {
 		durango_area
 		jalisco_area
 		gran_chichimeca_area
-		#nayarit_area			#Cut in BT, probably temporarily.
+		nayarit_area
 		zacatecas_area
 		tierra_caliente_area
 		puebla_area
 		huasteca_area
 		mixteca_area
 		guanajuato_area
-		#BTADDITIONS
-		nayarit_area
 	}
 	monsoon = {
 		00.06.01
@@ -1489,6 +1568,7 @@ central_america_region = {
 		chiapas_area
 		guatemala_lowlands_area
 		costa_rica_area
+		panama_area
 		campeche_area
 	}
 	monsoon = {
@@ -1774,3 +1854,8 @@ labrador_sea_region = {
 
 #Cut regions
 libya_region = { areas = { } }			#former region added by BT, removed in 9.0
+unused_region = {
+	areas = {
+		unused_area
+	}
+}

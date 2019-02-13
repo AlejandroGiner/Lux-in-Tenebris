@@ -1,0 +1,109 @@
+country_decisions = {
+
+	srivijaya_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_srivijaya_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+                        NOT = { exists = SVJ }
+                        NOT = { tag = MSA }
+                        NOT = { tag = JAV }
+			OR = {
+				primary_culture = sumatran
+				primary_culture = malayan
+                                primary_culture = musi
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 622
+				province_id = 2681
+				province_id = 626
+				province_id = 2390
+				province_id = 596
+				province_id = 2673
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = SVJ }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 622
+			owns_core_province = 2681
+			owns_core_province = 626
+			owns_core_province = 2390
+			owns_core_province = 596
+			owns_core_province = 2673
+		}
+		effect = {
+			622 = {
+				add_base_tax = 3
+                                add_base_production = 3
+                                add_base_manpower = 2
+				move_capital_effect = yes
+			}
+			change_tag = SVJ
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			malaya_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SVJ
+			}
+			west_java_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SVJ
+			}
+			cirebon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SVJ
+			}
+			central_java_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SVJ
+			}
+			add_prestige = 25
+			set_country_flag = formed_srivijaya_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+                }
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+}

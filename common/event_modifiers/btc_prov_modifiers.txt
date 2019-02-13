@@ -8,10 +8,42 @@ theodosian_walls = { #Constantinople
 
 scottish_staple_port = {
 	province_trade_power_modifier = 0.2
-	trade_value = 5
+	trade_value = 2.5
 }
 
 english_staple_port = {
 	province_trade_power_modifier = 0.2
-	trade_value = 5
+	trade_value = 2.5
+}
+
+volta_estuary_modifier = {
+	province_trade_power_value = 10
+	picture = "estuary_icon"
+}
+
+#From IR
+por_sacres = {
+	picture = "navigator_school"
+	navy_tradition = 0.25
+	local_sailors_modifier = 0.5
+	local_ship_cost = -0.25
+	naval_forcelimit = 5
+	province_trade_power_modifier = 0.1
+}
+
+cas_segovia_alcazar = {
+	picture = "segovia_alcazar"
+	monthly_splendor = 1
+	local_defensiveness = 0.15
+	province_trade_power_modifier = 0.1
+}
+
+bt_forests_of_cadore = {
+	trade_goods_size = 1.5
+	naval_forcelimit = 3
+}
+
+#From Suvarnabhumi: The land of gold
+mlc_sound_toll = {
+	province_trade_power_value = 20
 }

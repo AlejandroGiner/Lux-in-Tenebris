@@ -23,6 +23,21 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = eng_civil_war_happened
 			add_stability = -3
+			random_owned_province = {
+				limit = {
+					region = british_isles_region
+					NOT = { area = munster_area }
+					NOT = { area = connacht_area }
+					NOT = { area = leinster_area }
+					NOT = { area = ulster_area }
+					NOT = { units_in_province = 1 }
+					is_capital = no
+				}
+				spawn_rebels = {
+					type = anti_tax_rebels
+					size = 1
+				}
+			}
 		}
 	}
 	
@@ -38,6 +53,8 @@ country_event = {
 				kill_heir = yes
 			}
 		}
+		change_government = republic
+		add_government_reform = presidential_despot_reform
 		define_ruler = {
 			name = "Oliver"
 			dynasty = Cromwell
@@ -50,13 +67,13 @@ country_event = {
 			hidden_effect = { add_ruler_personality = strict_personality }
 		}
 		set_ruler_flag = cromwell_flag
-		change_government = republican_dictatorship
 		random_owned_province = {
 			limit = {
 				region = british_isles_region
-				NOT = { area = wales_area }
-				NOT = { area = highlands_area }
-				NOT = { area = kingdom_of_the_isles_area }
+				NOT = { area = munster_area }
+				NOT = { area = connacht_area }
+				NOT = { area = leinster_area }
+				NOT = { area = ulster_area }
 				NOT = { units_in_province = 1 }
 				is_capital = no
 			}
@@ -74,9 +91,10 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				region = british_isles_region
-				NOT = { area = wales_area }
-				NOT = { area = highlands_area }
-				NOT = { area = kingdom_of_the_isles_area }
+				NOT = { area = munster_area }
+				NOT = { area = connacht_area }
+				NOT = { area = leinster_area }
+				NOT = { area = ulster_area }
 				NOT = { units_in_province = 1 }
 				is_capital = no
 			}
@@ -122,7 +140,7 @@ country_event = {
 	option = {			# It is not needed
 		name = "flavor_eng.EVTOPTB9226"
 		ai_chance = { factor = 10 }
-		add_stability = 1
+		add_stability_or_adm_power = yes
 		add_manpower = 2
 	}
 }
@@ -160,7 +178,7 @@ country_event = {
 	option = {			# It is not needed
 		name = "flavor_eng.EVTOPTB9227"
 		ai_chance = { factor = 10 }
-		add_stability = 1
+		add_stability_or_adm_power = yes
 		add_manpower = 2
 	}
 }
@@ -186,14 +204,6 @@ country_event = {
 			}
 			any_owned_province = {
 				area = lowlands_area
-				religion = catholic
-			}
-			any_owned_province = {
-				area = scottish_marches_area
-				religion = catholic
-			}
-			any_owned_province = {
-				area = kingdom_of_the_isles_area
 				religion = catholic
 			}
 		}
@@ -240,35 +250,35 @@ country_event = {
 				change_religion = protestant
 			}
 		}
-		if = {
-			limit = {
-				any_owned_province = {
-					area = scottish_marches_area
-					religion = catholic
-				}
+		if = {		
+			limit = {		
+				any_owned_province = {		
+					area = scottish_marches_area		
+					religion = catholic		
+				}		
 			}
-			every_owned_province = {
-				limit = {
-					area = scottish_marches_area
-					religion = catholic
-				}
+			every_owned_province = {		
+				limit = {		
+					area = scottish_marches_area		
+					religion = catholic		
+				}		
+				change_religion = protestant		
+			}		
+		}		
+		if = {		
+			limit = {		
+				any_owned_province = {		
+					area = kingdom_of_the_isles_area		
+					religion = catholic		
+				}		
+			}
+			every_owned_province = {		
+				limit = {		
+					area = kingdom_of_the_isles_area		
+					religion = catholic		
+				}		
 				change_religion = protestant
-			}
-		}
-		if = {
-			limit = {
-				any_owned_province = {
-					area = kingdom_of_the_isles_area
-					religion = catholic
-				}
-			}
-			every_owned_province = {
-				limit = {
-					area = kingdom_of_the_isles_area
-					religion = catholic
-				}
-				change_religion = protestant
-			}
+			}			
 		}
 	}
 	option = {			# Who are they to demand anything!
@@ -312,14 +322,6 @@ country_event = {
 			}
 			any_owned_province = {
 				area = lowlands_area
-				religion = catholic
-			}
-			any_owned_province = {
-				area = scottish_marches_area
-				religion = catholic
-			}
-			any_owned_province = {
-				area = kingdom_of_the_isles_area
 				religion = catholic
 			}
 		}
@@ -366,35 +368,35 @@ country_event = {
 				change_religion = protestant
 			}
 		}
-		if = {
-			limit = {
-				any_owned_province = {
-					area = scottish_marches_area
-					religion = catholic
-				}
+		if = {		
+			limit = {		
+				any_owned_province = {		
+					area = scottish_marches_area		
+					religion = catholic		
+				}		
 			}
-			every_owned_province = {
-				limit = {
-					area = scottish_marches_area
-					religion = catholic
-				}
+			every_owned_province = {		
+				limit = {		
+					area = scottish_marches_area		
+					religion = catholic		
+				}		
+				change_religion = protestant		
+			}		
+		}		
+		if = {		
+			limit = {		
+				any_owned_province = {		
+					area = kingdom_of_the_isles_area		
+					religion = catholic		
+				}		
+			}
+			every_owned_province = {		
+				limit = {		
+					area = kingdom_of_the_isles_area		
+					religion = catholic		
+				}		
 				change_religion = protestant
-			}
-		}
-		if = {
-			limit = {
-				any_owned_province = {
-					area = kingdom_of_the_isles_area
-					religion = catholic
-				}
-			}
-			every_owned_province = {
-				limit = {
-					area = kingdom_of_the_isles_area
-					religion = catholic
-				}
-				change_religion = protestant
-			}
+			}			
 		}
 	}
 
@@ -525,7 +527,12 @@ country_event = {
 		NOT = { has_country_flag = ENG_had_event_9232 }
 		has_country_flag = supports_parliamentarians
 		any_owned_province = {
-			region = ireland_area
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+			}
 			unrest = 1
 		}
 	}
@@ -538,7 +545,14 @@ country_event = {
 		set_country_flag = ENG_had_event_9232
 		random_owned_province = {
 			limit = {
-				region = ireland_area
+				area = leinster_area
+				unrest = 1
+			}
+			set_province_flag = irish_rebellion
+		}
+		random_owned_province = {
+			limit = {
+				area = munster_area
 				unrest = 1
 			}
 			set_province_flag = irish_rebellion
@@ -579,7 +593,12 @@ country_event = {
 		NOT = { has_country_flag = ENG_had_event_9233 }
 		has_country_flag = supports_royalists
 		any_owned_province = {
-			region = ireland_area
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+				area = ulster_area
+			}
 			unrest = 1
 		}
 	}
@@ -592,7 +611,14 @@ country_event = {
 		set_country_flag = ENG_had_event_9233
 		random_owned_province = {
 			limit = {
-				region = ireland_area
+				area = leinster_area
+				unrest = 1
+			}
+			set_province_flag = irish_rebellion
+		}
+		random_owned_province = {
+			limit = {
+				area = munster_area
 				unrest = 1
 			}
 			set_province_flag = irish_rebellion
@@ -647,9 +673,10 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				region = british_isles_region
-				NOT = { area = wales_area }
-				NOT = { area = highlands_area }
-				NOT = { area = kingdom_of_the_isles_area }
+				NOT = { area = munster_area }
+				NOT = { area = connacht_area }
+				NOT = { area = leinster_area }
+				NOT = { area = ulster_area }
 				is_capital = no
 			}
 			spawn_rebels = {
@@ -666,9 +693,10 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				region = british_isles_region
-				NOT = { area = wales_area }
-				NOT = { area = highlands_area }
-				NOT = { area = kingdom_of_the_isles_area }
+				NOT = { area = munster_area }
+				NOT = { area = connacht_area }
+				NOT = { area = leinster_area }
+				NOT = { area = ulster_area }
 				is_capital = no
 			}
 			spawn_rebels = {
@@ -697,7 +725,17 @@ country_event = {
 	option = {			# Order has finally been restored
 		name = "flavor_eng.EVTOPTA9235"
 		trigger = { has_country_flag = supports_royalists }
-		change_government = despotic_monarchy
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+		}
+		if = {
+			limit = { has_reform = english_monarchy }
+			add_government_reform = autocracy_reform
+			set_legacy_government = despotic_monarchy
+		}	
 		clr_country_flag = supports_royalists
 		add_prestige = 50
 		add_absolutism = 10
@@ -739,12 +777,22 @@ country_event = {
 	option = {			# A Republic
 		name = "english_civil_war.11.a"
 		ai_chance = { factor = 25 }
-		change_government = constitutional_republic
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		change_government_reform_progress = 100
+		set_legacy_government = constitutional_republic
 	}
 	option = {			# A Monarchy
 		name = "english_civil_war.11.b"
 		ai_chance = { factor = 75 }
-		change_government = constitutional_monarchy
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		add_government_reform = english_monarchy
+		set_legacy_government = constitutional_monarchy
 	}
 }
 
@@ -764,18 +812,27 @@ country_event = {
 	trigger = {
 		has_country_flag = english_civil_war_won_by_parliamentarians
 		NOT = { has_ruler_flag = cromwell_flag }
-		NOT = { government = constitutional_republic }
-		NOT = { government = constitutional_monarchy }
+		NOT = { has_reform = parliamentary_reform }
 	}
 	
 	option = {			# A Republic
 		name = "english_civil_war.11.a"
 		ai_chance = { factor = 25 }
-		change_government = constitutional_republic
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		change_government_reform_progress = 100
+		set_legacy_government = constitutional_republic
 	}
 	option = {			# A Monarchy
 		name = "english_civil_war.11.b"
 		ai_chance = { factor = 75 }
-		change_government = constitutional_monarchy
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		add_government_reform = english_monarchy
+		set_legacy_government = constitutional_monarchy
 	}
 }

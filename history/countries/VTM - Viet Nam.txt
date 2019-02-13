@@ -1,0 +1,29 @@
+government = monarchy
+add_government_reform = autocracy_reform
+primary_culture = vietnamese
+religion = mahayana
+technology_group = chinese
+capital = 613	# Hanoi
+
+# Tai Son dynasty
+
+1788.1.1 = {
+	monarch = {
+		name = "Hue"
+		dynasty = "Nguyen"
+		adm = 3
+		dip = 3
+		mil = 4
+	}
+	leader = {	name = "Nguyen Hue"	type = general	fire = 2	shock = 3	manuever = 4	siege = 1	death_date = 1792.1.1  }
+}
+
+1792.1.1 = {
+	monarch = {
+		name = "Quang Toan"
+		dynasty = "Nguyen"
+		adm = 1
+		dip = 1
+		mil = 0
+	}
+}

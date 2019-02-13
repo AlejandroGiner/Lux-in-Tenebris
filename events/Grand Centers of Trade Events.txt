@@ -1,0 +1,156 @@
+namespace = grand_centers_of_trade
+
+province_event = {
+	id = grand_centers_of_trade.1 
+	title = grand_centers_of_trade.1.t
+	desc = grand_centers_of_trade.1.d
+	picture = HOUSE_OF_TRADE_eventPicture
+	
+	trigger = {
+		owner = {
+			any_owned_province = {
+				NOT = { 
+					has_province_flag = sacked_cot_flag
+					has_province_flag = was_magdeburgerized
+					is_core = ROOT
+				}
+				province_has_center_of_trade_of_level = 2
+				nationalism = 1
+			}
+			had_recent_war = 3
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_province_flag = sacked_cot_flag
+	}
+	
+	option = { #Burn it
+		name = grand_centers_of_trade.1.a
+		ai_chance = {
+			factor = 10
+			modifier = {
+				is_in_deficit = yes
+				factor = 100
+			}
+		}
+		add_devastation = 70
+		add_center_of_trade_level = -1
+		add_base_manpower = -4
+		add_base_production = -4
+		add_base_tax = -4
+		add_loot_from_province_effect = yes
+		add_army_professionalism = -0.05
+	}
+	
+	option = { #Forcefully Relocate the population to our own center of trade
+		name = grand_centers_of_trade.1.b
+		ai_chance = {factor = 20}
+		highlight = yes
+		trigger = {
+			owner = {
+				any_owned_province = {
+					is_core = PREV
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
+				}
+			}
+		}
+		add_center_of_trade_level = -1
+		add_base_manpower = -4
+		add_base_production = -4
+		add_base_tax = -4
+		owner = {
+			random_owned_province = {
+				limit = {
+					is_core = PREV
+					OR = {
+						province_has_center_of_trade_of_level = 2
+						province_has_center_of_trade_of_level = 3
+					}
+				}
+				if = {
+					limit = {
+						province_has_center_of_trade_of_level = 2
+					}
+					add_base_manpower = 2
+					add_base_production = 2
+					add_base_tax = 2
+					add_center_of_trade_level = 1
+				}
+				else =	{
+					limit = {
+						province_has_center_of_trade_of_level = 3
+					}
+					add_base_manpower = 4
+					add_base_production = 4
+					add_base_tax = 4
+				}
+			}
+		}
+	}
+	
+	option = { #Leave the City alone
+		name = grand_centers_of_trade.1.c
+		ai_chance = {factor = 70}
+		add_prestige = 10
+	}
+	
+}
+
+province_event = {
+	id = grand_centers_of_trade.2 #Growth of X
+	title = grand_centers_of_trade.2.t
+	desc = grand_centers_of_trade.2.d
+	picture = HOUSE_OF_TRADE_eventPicture
+	
+	
+	trigger = {
+		owner = {
+			NOT = {has_country_flag = growth_of_x_flag}
+			any_owned_province = {
+				is_core = PREV
+				NOT = {province_has_center_of_trade_of_level = 1}
+				NOT = {province_has_center_of_trade_of_level = 2}
+				NOT = {province_has_center_of_trade_of_level = 3}
+				has_river_estuary_trigger = yes
+				development = 35
+			}
+		}	
+	}
+	
+	mean_time_to_happen = {
+		months = 900
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = growth_of_x_flag
+			random_owned_province = {
+				limit = {
+					is_core = PREV
+					NOT = {province_has_center_of_trade_of_level = 1}
+					NOT = {province_has_center_of_trade_of_level = 2}
+					NOT = {province_has_center_of_trade_of_level = 3}
+					has_river_estuary_trigger = yes
+					development = 35
+				}
+				save_event_target_as = growing_cot_province
+			}
+		}
+	}
+	
+	option = {
+		name = grand_centers_of_trade.2.a
+		event_target:growing_cot_province = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_manpower = 1
+			add_base_production = 1
+		}
+	}
+}

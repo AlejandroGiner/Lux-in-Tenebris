@@ -1,0 +1,36 @@
+# - Popayan
+
+add_core = PAE
+owner = PAE
+controller = PAE
+culture = paezan
+is_city = yes
+religion = inti
+base_tax = 3
+base_production = 3
+base_manpower = 3
+discovered_by = south_american
+discovered_by = andean
+discovered_by = MGN
+discovered_by = TMA
+discovered_by = EMB
+capital = "Popayan"
+trade_goods = cocoa
+hre = no
+
+
+1525.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	is_city = yes
+	culture = castillian
+	religion = catholic
+}
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recognized

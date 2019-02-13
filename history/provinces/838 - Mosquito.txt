@@ -1,0 +1,29 @@
+#838 - Mosquito
+
+owner = MIS
+controller = MIS
+add_core = MIS
+culture = miskito
+religion = mesoamerican_religion
+capital = "Mosquito" 
+trade_goods = tropical_wood
+hre = no 
+base_tax = 3 
+base_production = 3
+base_manpower = 3 
+
+
+
+discovered_by = MAY
+discovered_by = mesoamerican
+
+1502.1.1 = { discovered_by = CAS } # Christopher Columbus. The Miskitos weren't affected too much by the Spanish conquest 
+1516.1.23 = { discovered_by = SPA }
+
+1740.1.1 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	religion = protestant
+	is_city = yes
+} # Treaty of Friendship & Alliance, British protectorate 

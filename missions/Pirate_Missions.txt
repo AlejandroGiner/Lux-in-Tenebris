@@ -115,8 +115,6 @@ pirate_1 = {
 							share = 25
 						}
 					}
-				}
-				OR = {
 					1293 = {
 						privateer_power = {
 							country = ROOT
@@ -188,18 +186,9 @@ pirate_2 = {
 		}
 
 		trigger = {
-			OR = {
 				capital_scope = {
 					development = 20
 				}
-				capital_scope = {
-					OR = {
-						has_building = cathedral
-						has_building = university
-						has_building = training_fields
-					}
-				}
-			}
 		}
 
 		effect = {
@@ -252,7 +241,7 @@ pirate_2 = {
 				area = east_cuba_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 
 		trigger = {
@@ -283,7 +272,7 @@ pirate_2 = {
 		provinces_to_highlight = {
 			region = carribeans_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-			has_discovered = yes
+			has_discovered = ROOT
 		}
 
 		trigger = {
@@ -584,28 +573,28 @@ pirate_5 = {
 		}
 
 		effect = {
-			madagascar_highlands_area = {
+			helodrano_antogila_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			betsimasaraka_area = {
+			antsiranana_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			sakalava_area = {
+			toamasina_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			southern_madagascar = {
+			boeny_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

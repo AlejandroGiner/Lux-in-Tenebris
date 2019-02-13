@@ -1,0 +1,19 @@
+government = monarchy
+add_government_reform = principality
+government_rank = 1
+technology_group = eastern
+religion = orthodox
+primary_culture = ruthenian
+historical_rival = MOS
+capital = 280	# Kiev
+fixed_capital = 280 # Cannot move capital away from this province & no power cost to move to it
+
+1443.1.1 = {
+	monarch = {
+		name = "Alexander Oleko"
+		culture = ruthenian
+		dip = 2
+		adm = 1
+		mil = 2
+	}
+}

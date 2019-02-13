@@ -11,7 +11,7 @@ country_event = {
 		NOT = { is_religion_enabled = protestant }
 		religion = catholic
 		is_defender_of_faith = no	
-		NOT = { government = papal_government }
+		NOT = { has_reform = papacy_reform }
 		reform_desire = 1.10			#BeyondTypus - More catholic tag means more reform desire. Increasing reform desire criteria from .95 to match.
 		capital_scope = {
 			continent = europe
@@ -110,7 +110,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 2.0
-			government = theocratic_government
+			government = theocracy
 		}
 		modifier = {
 			factor = 0.5
@@ -167,12 +167,19 @@ country_event = {
 				name = "religious_zeal_at_conv"
 				duration = 9000
 			}
-		}
-		capital_scope = {
-			change_religion = protestant
-			add_permanent_province_modifier = {
-				name = "religious_zeal_at_conv"
-				duration = 9000
+			if = {
+				limit = {
+					NOT = { is_capital = yes }
+				}
+				root = {
+					capital_scope = {
+						change_religion = protestant
+						add_permanent_province_modifier = {
+							name = "religious_zeal_at_conv"
+							duration = 9000
+						}
+					}
+				}
 			}
 		}
 		set_country_flag = "protestant_reformation" 

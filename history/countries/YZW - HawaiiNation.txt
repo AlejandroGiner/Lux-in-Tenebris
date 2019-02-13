@@ -1,17 +1,17 @@
-government = monarchy
-add_government_reform = despotic_monarchy			#Temp until after 1.26 when I will do a custom Polynesian gov type.
+government = tribal
+add_government_reform = tribal_kingdom
 government_rank = 1
 primary_culture = hawaiian
 religion = animism
-technology_group = north_american
-capital = 5029
+technology_group = oceanian
+capital = 1240
 
-1444.1.1 = {
+1422.1.1 = {
 	monarch = {
-		name = "Native Council"
-		adm = 4
-		dip = 4
-		mil = 4
-		regent = yes
+		name = "Keaweikekahialiiokamoku"
+		dynasty = "´Keawe"
+		adm = 3
+		dip = 3
+		mil = 3
 	}
 }

@@ -29,6 +29,8 @@ country_event = {
 					was_player = no
 					is_subject = no
 					is_neighbor_of = ROOT
+					NOT = { is_in_war = { attacker_leader = ARA } }
+					NOT = { is_in_war = { defender_leader = ARA } }
 				}
 				num_of_cities = 25
 			}
@@ -42,6 +44,8 @@ country_event = {
 					was_player = no
 					is_subject = no
 					is_neighbor_of = ROOT
+					NOT = { is_in_war = { attacker_leader = CAS } }
+					NOT = { is_in_war = { defender_leader = CAS } }
 				}
 				num_of_cities = 16
 			}
@@ -719,6 +723,10 @@ country_event = {
 			}
 			has_country_flag = sevilla_trade_center_flag
 		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
 	}
 	
 
@@ -2126,6 +2134,26 @@ country_event = {
 			}
 			change_culture = andalucian
 		}
+		223 = { 
+			add_center_of_trade_level = -1
+			add_base_tax = -2
+			add_base_production = -1
+			add_base_manpower = -8
+		}
+		222 = { 
+			add_base_tax = -1
+			add_base_manpower = -4  
+		}
+		4546 = { 
+			add_base_manpower = -6
+		}
+		226 = { 
+			add_base_tax = -1
+			add_base_manpower = -3 
+		}
+		3145 = { 
+			add_base_manpower = -4  
+		}
 		#Repeat of effect from earlier persecutions:
 		if = {
 			limit = { 5219 = { owner = { religion_group = muslim } } }
@@ -2165,6 +2193,22 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0
+		}
+		223 = { 
+			add_base_tax = -1
+			add_base_manpower = -5
+		}
+		222 = { 
+			add_base_manpower = -2
+		}
+		4546 = { 
+			add_base_manpower = -3
+		}
+		226 = { 
+			add_base_manpower = -2
+		}
+		3145 = { 
+			add_base_manpower = -2
 		}
 	}
 }
@@ -2669,8 +2713,13 @@ country_event = {
 				name = merino_wool
 				duration = -1
 			}
-			if = {
+		}
+		custom_tooltip = merino_wool_tooltip
+		hidden_effect = {
+			every_owned_province = {
 				limit = {
+					region = iberia_region
+					trade_goods = wool
 					has_estate = no
 				}
 				random_list = {

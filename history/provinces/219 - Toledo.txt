@@ -5,13 +5,14 @@
 owner = CAS		#Juan II of Castille
 controller = CAS
 add_core = CAS
+add_core = TLD
 culture = castillian
 religion = catholic
 hre = no
-base_tax = 7
-base_production = 7
+base_tax = 6
+base_production = 6
 trade_goods = iron 
-base_manpower = 5
+base_manpower = 3
 capital = "Toledo" 
 is_city = yes
 fort_15th = yes
@@ -22,6 +23,7 @@ center_of_trade = 1
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
+discovered_by = persian_btc
 discovered_by = ottoman
 
 1464.5.1 = { unrest = 3 } # Nobiliary uprising against King Enrique, Castilla goes into anarchy

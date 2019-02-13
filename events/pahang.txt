@@ -1,0 +1,54 @@
+namespace = pahang
+normal_or_historical_nations = yes
+
+#Muslim Malays - Assimiliation of Pahang
+#country_event = {
+#	id = pahang.1
+#	title = "pahang.1.t"
+#	desc = "pahang.1.d"
+#	picture = ADVISOR_eventPicture
+#	
+#	fire_only_once = yes
+#
+#	trigger = {
+#		OR = {
+#			AND = {
+#				religion_group = muslim
+#				culture_group = malay 
+#			}
+#			primary_culture = malayan
+#		}
+#		NOT = { exists = PAH }
+#		religion_group = muslim
+#		is_at_war = no
+#		any_owned_province = {
+#			culture = old_malay
+#			religion_group = muslim
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		months = 3
+#	}
+#	
+#	immediate = {
+#		hidden_effect = {
+#		}
+#	}
+#
+#	option = {		#Remove all traces of old Malay culture
+#		name = "pahang.1.a"
+#		every_owned_province = {
+#			limit = {
+#				culture = old_malay
+#				religion_group = muslim
+#			}
+#			change_culture = malayan
+#		}	
+#	}
+#	option = {		#We cannot erase the past
+#		name = "pahang.1.b"
+#		ai_chance = { factor = 0 }
+#		add_stability_or_adm_power = yes
+#	}
+#}

@@ -3,8 +3,8 @@
 owner = PAT
 controller = PAT
 culture = malayan
-religion = sunni
-capital = "Pattani"
+religion = buddhism
+capital = "Patani"
 trade_goods = tropical_wood
 hre = no
 base_tax = 6
@@ -13,11 +13,16 @@ base_manpower = 3
 is_city = yes
 add_core = PAT
 discovered_by = chinese
+discovered_by = japanese_btc
+discovered_by = korean_btc
+discovered_by = indochinese
+discovered_by = malay_group
 discovered_by = indian
 discovered_by = muslim
+discovered_by = persian_btc
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
+
+1458.1.1 = { religion = sunni }
 
 1516.1.1 = { discovered_by = POR } # Godinho de Eredia
 

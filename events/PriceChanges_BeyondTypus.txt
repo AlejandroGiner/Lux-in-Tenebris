@@ -13,7 +13,7 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		trade_goods = paper #Produces beer.
+		trade_goods = beer #Produces beer.
 		OR = {
 			owner = { #Should only occur for Bavaria for now, but will likely include all 4 Bavarian duchies later.
 				has_idea = bavarian_purity_law
@@ -50,9 +50,9 @@ province_event = {
 		}
 		add_base_production = 3
 		change_price = {
-			trade_goods = paper
+			trade_goods = beer
 			key = BT_reinheitsgebot
-			value = 0.1 #2.5 -> 2.75
+			value = 0.125 #2.0 -> 2.25
 			duration = -1
 		}
 	}
@@ -71,7 +71,7 @@ province_event = {
 	major = yes
 	
 	trigger = {
-		trade_goods = paper #Produces beer.
+		trade_goods = beer #Produces beer.
 		OR = {
 			owner = { #Should only occur for Bavaria for now, but will likely include all 4 Bavarian duchies later.
 				has_idea = bavarian_purity_law
@@ -117,9 +117,9 @@ province_event = {
 		#	duration = -1
 		#}
 		change_price = {
-			trade_goods = paper
+			trade_goods = beer
 			key = BT_lager_beer
-			value = 0.1 #2.75 -> 3
+			value = 0.125 #2.25 -> 2.5
 			duration = -1
 		}
 	}
@@ -149,8 +149,12 @@ province_event = {
 		OR = {
 			trade_goods = grain
 			trade_goods = sugar
+			trade_goods = maize
+			trade_goods = potatoes
+			trade_goods = fruit
+			trade_goods = legumes
 		}
-		development = 10
+		development = 15
 	}
 	
 	mean_time_to_happen = {
@@ -160,7 +164,7 @@ province_event = {
 	option = { #Ok.
 		name = "PriceChanges_BeyondTypus.EVTOPTA3"
 		ai_chance = { factor = 1 }
-		change_trade_goods = paper
+		change_trade_goods = beer
 		add_base_production = 2
 		if = {
 			limit = { NOT = { has_global_flag = BT_new_world_distilleries_happened } }
@@ -174,7 +178,7 @@ country_event = {
 	id = PriceChanges_BeyondTypus.4
 	title = "PriceChanges_BeyondTypus.EVTNAME4"
 	desc = "PriceChanges_BeyondTypus.EVTDESC4"
-	picture = CITY_VIEW_eventPicture
+	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
 
 	fire_only_once = yes
 	
@@ -207,11 +211,10 @@ country_event = {
 		50 = {
 			change_trade_goods = dyes
 			add_base_production = 3
-			#Not adding the province modifier atm, I like the idea, but Berlin could use a dev boost anyway and this wouldn't retroactively apply to saved games anyway. Might add this in 10.0 and even more likely when HRE is overhauled.
-			#add_province_modifier = {
-			#	name = "bt_prussian_blue"
-			#	duration = -1
-			#}
+			add_province_modifier = {
+				name = "bt_prussian_blue"
+				duration = -1
+			}
 		}
 		add_prestige = 10
 	}

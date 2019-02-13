@@ -1,0 +1,267 @@
+namespace = btc_ai_colony_helper
+
+#Note: Not going to bother with localization for an AI only event
+
+country_event = { #Colonial Nation clean-up
+	id = btc_ai_colony_helper.2
+	title = btc_ai_colony_helper.2.t
+	desc = btc_ai_colony_helper.2.d
+	picture = btc_ai_colony_helper.2.p
+
+	trigger = {
+		is_colonial_nation = yes
+		ai = yes
+		colonial_parent = {NOT = {same_continent = ROOT}}
+		capital_scope = {
+			OR = {
+				colonial_region = colonial_alaska
+				colonial_region = colonial_canada
+				colonial_region = colonial_eastern_america
+				colonial_region = colonial_louisiana
+				colonial_region = colonial_california
+				colonial_region = colonial_mexico
+				colonial_region = colonial_the_carribean
+				colonial_region = colonial_colombia
+				colonial_region = colonial_peru
+				colonial_region = colonial_la_plata
+				colonial_region = colonial_brazil
+				colonial_region = colonial_australia
+				colonial_region = colonial_cascadia
+				colonial_region = colonial_northwest_territories
+				colonial_region = colonial_hudson_bay
+				colonial_region = colonial_newfoundland
+				colonial_region = colonial_acadia
+				colonial_region = colonial_florida
+				colonial_region = colonial_cuba
+				colonial_region = colonial_hispaniola
+				colonial_region = colonial_bahamas
+				colonial_region = colonial_polynesia
+				colonial_region = colonial_cape
+				colonial_region = colonial_madagascar
+				colonial_region = colonial_greenland
+			}
+		}
+		any_owned_province = {
+			is_core = ROOT
+			OR = {
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_mexico } }
+					NOT = { colonial_region = colonial_mexico }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_alaska } }
+					NOT = { colonial_region = colonial_alaska }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_canada } }
+					NOT = { colonial_region = colonial_canada }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_eastern_america } }
+					NOT = { colonial_region = colonial_eastern_america }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_louisiana } }
+					NOT = { colonial_region = colonial_louisiana }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_california } }
+					NOT = { colonial_region = colonial_california }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_the_carribean } }
+					NOT = { colonial_region = colonial_the_carribean }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_colombia } }
+					NOT = { colonial_region = colonial_colombia }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_peru } }
+					NOT = { colonial_region = colonial_peru }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_la_plata } }
+					NOT = { colonial_region = colonial_la_plata }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_brazil } }
+					NOT = { colonial_region = colonial_brazil }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_australia } }
+					NOT = { colonial_region = colonial_australia }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_cascadia } }
+					NOT = { colonial_region = colonial_cascadia }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_northwest_territories } }
+					NOT = { colonial_region = colonial_northwest_territories }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_hudson_bay } }
+					NOT = { colonial_region = colonial_hudson_bay }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_newfoundland } }
+					NOT = { colonial_region = colonial_newfoundland }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_acadia } }
+					NOT = { colonial_region = colonial_acadia }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_florida } }
+					NOT = { colonial_region = colonial_florida }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_cuba } }
+					NOT = { colonial_region = colonial_cuba }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_hispaniola } }
+					NOT = { colonial_region = colonial_hispaniola }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_bahamas } }
+					NOT = { colonial_region = colonial_bahamas }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_polynesia } }
+					NOT = { colonial_region = colonial_polynesia }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_cape } }
+					NOT = { colonial_region = colonial_cape }
+				}
+				AND = {
+					owner = { capital_scope = { colonial_region = colonial_madagascar } }
+					NOT = { colonial_region = colonial_madagascar }
+				}
+			}
+		}
+	}
+
+	immediate = {
+    colonial_parent = {
+        save_event_target_as = colonial_parent_target
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = btc_ai_colony_helper.2.a
+		ai_chance = { factor = 100 }
+		every_owned_province = {
+			limit = {
+				is_core = ROOT
+				OR = {
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_mexico } }
+						NOT = { colonial_region = colonial_mexico }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_alaska } }
+						NOT = { colonial_region = colonial_alaska }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_canada } }
+						NOT = { colonial_region = colonial_canada }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_eastern_america } }
+						NOT = { colonial_region = colonial_eastern_america }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_louisiana } }
+						NOT = { colonial_region = colonial_louisiana }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_california } }
+						NOT = { colonial_region = colonial_california }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_the_carribean } }
+						NOT = { colonial_region = colonial_the_carribean }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_colombia } }
+						NOT = { colonial_region = colonial_colombia }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_peru } }
+						NOT = { colonial_region = colonial_peru }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_la_plata } }
+						NOT = { colonial_region = colonial_la_plata }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_brazil } }
+						NOT = { colonial_region = colonial_brazil }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_australia } }
+						NOT = { colonial_region = colonial_australia }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_cascadia } }
+						NOT = { colonial_region = colonial_cascadia }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_northwest_territories } }
+						NOT = { colonial_region = colonial_northwest_territories }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_hudson_bay } }
+						NOT = { colonial_region = colonial_hudson_bay }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_newfoundland } }
+						NOT = { colonial_region = colonial_newfoundland }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_acadia } }
+						NOT = { colonial_region = colonial_acadia }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_florida } }
+						NOT = { colonial_region = colonial_florida }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_cuba } }
+						NOT = { colonial_region = colonial_cuba }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_hispaniola } }
+						NOT = { colonial_region = colonial_hispaniola }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_bahamas } }
+						NOT = { colonial_region = colonial_bahamas }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_polynesia } }
+						NOT = { colonial_region = colonial_polynesia }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_cape } }
+						NOT = { colonial_region = colonial_cape }
+					}
+					AND = {
+						owner = { capital_scope = { colonial_region = colonial_madagascar } }
+						NOT = { colonial_region = colonial_madagascar }
+					}
+				}
+			}
+			cede_province = event_target:colonial_parent_target
+			add_core = event_target:colonial_parent_target
+			remove_core = ROOT
+		}
+	}
+}

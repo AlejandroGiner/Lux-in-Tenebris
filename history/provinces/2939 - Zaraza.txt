@@ -1,0 +1,46 @@
+# - Zaraza
+
+culture = mariche
+add_core = CWM
+owner = CWM
+controller = CWM
+discovered_by = andean
+is_city = yes
+religion = inti
+capital = "Zaraza"
+trade_goods = grain
+hre = no
+base_tax = 2 
+base_production = 1
+base_manpower = 1
+
+
+
+
+1498.1.1 = { discovered_by = CAS } # Christopher Columbus
+1516.1.23 = { discovered_by = SPA }
+
+1645.1.1 = {
+	owner = SPA 
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	capital = "San Miguel de la Nueva Tarragona del Batey"
+	is_city = yes
+	trade_goods = grain
+}
+1811.7.5 = {
+	owner = VNZ
+	controller = VNZ
+	add_core = VNZ
+} # Venezuela declared its independence
+1812.7.25 = { controller = SPA } # The revolutionary army is defeated
+1813.8.7 = { controller = VNZ } # The Second Republic of Venezuela is established
+1814.1.1 = { controller = SPA } # The end of the second republic
+1819.12.17 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+	remove_core = SPA
+} # The establishment of Gran Colombia

@@ -1,22 +1,32 @@
 #4404 - Minsin
 
-owner = MKA
-controller = MKA
+owner = MMA
+controller = MMA
 culture = kachin
 religion = animism
 capital = "Minsin"
-trade_goods = grain
+trade_goods = rice
 hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
+add_core = MMA
 add_core = MKA
 
 
 discovered_by = chinese
+discovered_by = japanese_btc
+discovered_by = korean_btc
+discovered_by = indochinese
+discovered_by = malay_group
 discovered_by = indian
 
+1449.1.1 = {
+	owner = MKA
+	controller = MKA
+        remove_core = MMA
+}
 
 1502.1.1 = {
 	controller = SST

@@ -1,0 +1,27 @@
+namespace = btc_misc
+
+
+country_event = {
+  id = btc_misc.1
+  title = "btc_misc.1.t"
+	desc = "btc_misc.1.d"
+	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
+
+  major = yes
+  fire_only_once = yes
+  trigger = {
+    151 = { NOT = { owned_by = BYZ } }
+    current_age = age_of_discovery
+    owns_or_non_sovereign_subject_of = 151
+  }
+
+  mean_time_to_happen = {
+    days = 1
+  }
+
+  option = {
+    name = "btc_misc.1.a"
+    add_prestige = 5
+  }
+
+}

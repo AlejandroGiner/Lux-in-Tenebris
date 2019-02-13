@@ -1373,11 +1373,19 @@ province_event = {
 	id = dutch_republic.28
 	title = "dutch_republic.28.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			owner = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.28.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			owner = {
+				NOT = { has_reform = dutch_republic }
+			}
+		}
 		desc = dutch_republic.28.db
 	}
 	picture = BORDER_TENSION_eventPicture
@@ -1464,11 +1472,19 @@ province_event = {
 	id = dutch_republic.30
 	title = "dutch_republic.30.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			owner = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.30.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			owner = {
+				NOT = { has_reform = dutch_republic }
+			}
+		}
 		desc = dutch_republic.30.db
 	}
 	picture = DEBATE_REPUBLICAN_eventPicture
@@ -1482,7 +1498,9 @@ province_event = {
 		}
 		OR = {
 			AND = {
-				NOT = { has_reform = dutch_republic }
+				NOT = {
+					owner = { has_reform = dutch_republic }
+				}
 				development = 15
 				is_core = owner
 			}
@@ -1507,7 +1525,9 @@ province_event = {
 
 	# Send someone to argue in favor of Orangists
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = { 
+			owner = { has_reform = dutch_republic } 
+			}
 		name = "dutch_republic.30.a"
 		owner = {
 			change_statists_vs_orangists = 0.15
@@ -1527,7 +1547,11 @@ province_event = {
 	
 	# Send someone to argue in favor of Monarchists
 	option = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				owner = { has_reform = dutch_republic }
+			}
+		}
 		name = "dutch_republic.30.c"
 		owner = {
 			change_statists_vs_orangists = 0.15

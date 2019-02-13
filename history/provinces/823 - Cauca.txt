@@ -1,0 +1,40 @@
+#823 - Cauca
+
+culture = paezan
+add_core = PAE
+owner = PAE
+controller = PAE
+discovered_by = andean
+discovered_by = MGN
+discovered_by = TMA
+discovered_by = EMB
+religion = inti
+capital = "Cauca"
+trade_goods = grain
+hre = no
+base_tax = 3
+base_production = 3
+base_manpower = 3
+is_city = yes
+extra_cost = 8
+center_of_trade = 1
+
+1525.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = grain
+} # Spanish conquest, Francisco Pizarro
+1536.1.1 = {
+	capital = "Cali"
+	is_city = yes
+} # Founded by Sebastian de Belalcazar
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recongnized

@@ -1,5 +1,7 @@
 ﻿l_english: 
  #Colonial regions and names
+ colonial_alaska: "Colonial Alaska"
+ short_colonial_alaska: "Alaska"
  colonial_the_carribean:0 "Colonial Lesser Antilles"
  short_colonial_the_carribean:0 "Lesser Antilles"
  COLONIAL_CALIFORNIA_New_Albion:0 "Columbia"
@@ -16,9 +18,9 @@
  wien:0 "Vienna"
  
  #European Areas
- naples_area:0 "Napoli"
- naples_area_name:0 "Napoli"
- naples_area_adj:0 "Napolitan"
+ naples_area:0 "Lazio-Campania"
+ naples_area_name:0 "Lazio-Campania"
+ naples_area_adj:0 "Lazio-Campania"
  subarctic_islands_area:0 "Northern Isles"
  subarctic_islands_area_name:0 "Northern Isles"
  subarctic_islands_area_adj:0 "Northern Islander"
@@ -395,6 +397,59 @@
  #Trade Nodes
  ohio:0 "Great Lakes"
  
+ #Trade Goods
+ grain:0 "Wheat"
+ grainDESC:0 "Wheat represents a series of cereal grain-producing plants that have been the backbone of the agricultural output of most societies for millennia. This includes not only the common wheat plant, but also related ones such as Rye, Spelt or even Barley."
+ tariffs_on_grain:0 "Tariffs on Wheat"
+ desc_tariffs_on_grain:0 "Our motherland has tightened their grip on our economy by introducing a special tariff on Wheat."
+ smuggling_of_grain:0 "Smuggling of Wheat"
+ desc_smuggling_of_grain:0 "To avoid the loss of income due to high tariffs, wheat merchants have turned to smuggling."
+ EVTNAME9500:0 "Wheat"
+ EVTOPTA9500:0 "You can never have too much wheat"
+ colonial_nation.EVTNAME100:0 "Tariffs on Wheat"
+ colonial_nation.EVTDESC100:0 "The wheat production in one of our colonies has come into focus. It seems that it generates quite a lot of money. Perhaps too much without being properly taxed. In the spirit of mercantilism, we should force them to trade their wheat through our ports instead. This will greatly benefit our own merchants and add a lot of income to the crown's coffers."
+ colonial_nation.EVTDESC101:0 "Bad news from the Old World! [From.GetName] has tightened their grip on our economy by introducing a new tariff on Wheat."
+ colonial_nation.EVTOPTA101:0 "Perhaps we should throw the wheat into the sea instead..."
+ colonial_nation.EVTNAME140:0 "Smuggling of Wheat"
+ colonial_nation.EVTDESC140:0 "The tariffs on wheat imposed on us by [Root.ColonialParent.GetName] are cutting deep into the profits of our merchants. They demand that we send a delegation to [Root.ColonialParent.Capital.GetCapitalName] to protest these taxes or they will turn to smuggling."
+ cloth:0 "Linen"
+ clothDESC:0 "Linen is a textile made from the fibers of the flax plant, a fiber and food crop cultivated in cooler regions of the world. Linen is laborious to manufacture, but the fiber is very strong, absorbent and dries faster than cotton. Garments made of linen are valued for their exceptional coolness and freshness in hot and humid weather. "
+ tariffs_on_cloth:0 "Tariffs on Linen"
+ desc_tariffs_on_cloth:0 "Our motherland has tightened their grip on our economy by introducing a special tariff on Linen."
+ EVTNAME9504:0 "Linen"
+ EVTDESC9504:0 "We have received reports from our colonial settlers in $PROVINCENAME$ that the area has perfect conditions for linen production."
+ colonial_nation.EVTNAME106:0 "Tariffs on Linen"
+ colonial_nation.EVTDESC106:0 "The linen production in one of our colonies has come into focus. It seems that it generates quite a lot of money. Perhaps too much without being properly taxed. In the spirit of mercantilism, we should force them to trade their linen through our ports instead. This will greatly benefit our own merchants and add a lot of income to the crown's coffers."
+ colonial_nation.EVTDESC107:0 "Bad news from the Old World! [From.GetName] has tightened their grip on our economy by introducing a new tariff on Linen."
+ colonial_nation.EVTOPTA107:0 "Perhaps we should throw the linen into the sea instead..."
+ colonial_nation.EVTNAME146:0 "Smuggling of Linen"
+ colonial_nation.EVTDESC146:0 "The tariffs on linen imposed on us by [Root.ColonialParent.GetName] are cutting deep into the profits of our merchants. They demand that we send a delegation to [Root.ColonialParent.Capital.GetCapitalName] to protest these taxes or they will turn to smuggling."
+ smuggling_of_cloth:0 "Smuggling of Linen"
+ desc_smuggling_of_cloth:0 "To avoid the loss of income due to high tariffs, linen merchants have turned to smuggling."
+ gold:0 "Precious Metals"
+ goldDESC:0 "Precious metals such as gold and silver were the basis of all formal currencies in Europe. The great gold and silver mines of Central and South America would end the great bullion crisis that had gripped Europe in the previous century. However unwise usage of this great wealth could lead to inflation and ruin."
+ GOLD_INCOME:0 "Mines Income"
+ INCOMEGOLD:0 "Mines"
+ PROV_PROD_GOLD:0 "From precious metals:"
+ INFLATION_DESC:0 "Inflation may come from relying too much on the income from precious metals mines (in comparison to other income) or from taking loans."
+ ND_GOLD_COST:0 "Precious Metals Provinces: $VALUE$"
+ GOLD_DEPLETE_TOO_LOW:0 "With a base production below $LEVEL|Y$, there is no risk of this mine depleting."
+ GOLD_DEPLETE_WARNING:1 "§RIncreasing the mine production of this province to§! §Y$PROD$§!§R will result in a§! §Y$CHANCE$%§!§R chance of the mine depleting each year, halving its production.§!\n\n"
+ GOLD_DEPLETE_CHANCE:0 "With a base production of $PROD|Y$ there is a §R$CHANCE$%§! chance of the mine depleting each year, halving its production."
+ IMPR_GOLD_IMCOME:0 " Monthly Mines Income: §G+$VAL$§!¤"
+ NO_GOLD_PRODUCING_PROVINCES:0 "We have no provinces that are producing precious metals."
+ GOLD_PRODUCING_PROVINCES:0 "The following provinces are producing precious metals: $LIST$"
+ MACRO_MANUFACTORY_IN_GOLD_PROVINCES:0 "Cannot construct Manufactory in precious metals provinces."
+ EVTNAME9509:0 "Precious Metals"
+ EVTDESC9509:0 "We have received reports from our colonial settlers in $PROVINCENAME$ that the area is very rich in precious metals. Gold and silver being the basis of all formal currencies this is truly a valuable find."
+ GOLDDEPLETED_TITLE:0 "Precious Metals Mine Depleted!"
+ GOLDDEPLETED_SETUP:0 "When a mine is depleted."
+ GOLDDEPLETED_1:0 "The precious metals mine in"
+ GOLDDEPLETED_LOG:0 "Precious metals mine depleted in $PROV$."
+ TREASURE_FLEET_TO_US_3:1 "from the rich precious metals mines of $FROM$."
+ INFLATION_TREASURE_FLEET:0 "This amount of resources has increased our inflation by §R$VAL$%§!."
+ all_gold_provinces_around_the_caribbean:0 "By completing this mission we will gain permanent claims on all precious metals provinces in and around the Caribbean"
+ 
  #Trade
  ivoryDESC:0 "Ivory, the bone of large animals like elephants or whales, was highly sought after for use in various manufactured goods such as cutlery, scrimshaw, small pieces of art, furniture, etc."
 
@@ -435,6 +490,7 @@
  BHT_ADJ:0 "Bohtani"
  TRV:0 "Treviso"
  TRV_ADJ:0 "Treviso"
+ KOR: "Joseon"
  
  CONFIRM_JOIN_TRADE_COMPANY_DESC:0 "Giving control of $PROVINCE|Y$ to $COMPANY|Y$ will greatly improve its value for building a trade empire but reduce its value as a source of troops and taxes."
  CONFIRM_JOIN_TRADE_COMPANY_DESC_NEW:0 "This will found a new trade company in $REGION|Y$. Giving control of $PROVINCE|Y$ to our new company will greatly improve its value for building a trade empire but reduce its value as a source of troops and taxes."
@@ -442,14 +498,6 @@
  CONFIRM_ALL_JOIN_TRADE_COMPANY_DESC:0 "Giving control of all your provinces in $NODE|Y$ to $COMPANY|Y$ will greatly improve their value for building a trade empire but reduce their value as a source of troops and taxes."
  CONFIRM_ALL_JOIN_TRADE_COMPANY_DESC_NEW:0 "This will found a new trade company in $REGION|Y$. Giving control of all your provinces in $NODE|Y$ to our new company will greatly improve its value for building a trade empire but reduce its value as a source of troops and taxes."
  CONFIRM_ALL_LEAVE_TRADE_COMPANY_DESC:0 "Remove all your provinces in $NODE|Y$ from $COMPANY|Y$, giving us direct control over their resources."
- 
- #Tooltip corrections for Dev Doubling
- obj_100_development_desc:0 "Reach a total of at least 250 development in your nation."
- obj_30_development_city_desc:0 "Own and control a core province with at least §Y50§! development."
- obj_large_subject_desc:0 "Have a subject with over 500 development."
- obj_huge_capital_desc:0 "At least 80 development in the capital."
- obj_30_development_city_tooltip:0 "Cored Province with §Y50§! development\n"
- eoc_nomadic_border_tooltip:0 "Total Development at least §Y500§!"
  
  #Idea Changes
  ire_abundant_harvests:0 "Abundant Harvests"

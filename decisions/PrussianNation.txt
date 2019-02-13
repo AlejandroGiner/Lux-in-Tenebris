@@ -47,7 +47,7 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { has_dlc = "Rights of Man" }
-				change_government = prussian_monarchy
+				add_government_reform = prussian_monarchy
 			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -108,7 +108,7 @@ country_decisions = {
 			NOT = { tag = PRU }
 			NOT = { tag = GER }
 			tag = TEU
-			government = monastic_order_government
+			has_reform = monastic_order_reform
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -146,7 +146,7 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { has_dlc = "Rights of Man" }
-				change_government = prussian_monarchy
+				add_government_reform = prussian_monarchy
 			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -212,7 +212,7 @@ country_decisions = {
 			OR = {
 				AND = {
 					tag = TEU
-					NOT = { government = monastic_order_government }
+					NOT = { has_reform = monastic_order_reform }
 				}
 				NOT = { tag = TEU }
 			}
@@ -247,7 +247,7 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { has_dlc = "Rights of Man" }
-				change_government = prussian_monarchy
+				add_government_reform = prussian_monarchy
 			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }

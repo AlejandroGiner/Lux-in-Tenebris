@@ -1,0 +1,40 @@
+# - Puna de Atacama
+
+add_core = KUN
+owner = KUN
+controller = KUN
+base_tax = 3 
+base_production = 3
+base_manpower = 3
+culture = kunza
+religion = inti
+is_city = yes
+
+capital = "Catarpe"
+trade_goods = wool
+hre = no
+
+discovered_by = south_american
+discovered_by = andean
+
+1485.1.1 = {
+	owner = INC
+	controller = INC
+	add_core = INC
+	religion = inti
+	is_city = yes
+}
+1537.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	capital = "San Pedro de Atacama"
+}
+1810.9.18 = {
+	owner = CHL
+	controller = CHL
+	add_core = CHL
+} # First National Government Junta

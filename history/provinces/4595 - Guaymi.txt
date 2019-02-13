@@ -1,0 +1,40 @@
+# No previous file for Guaymi
+
+owner = TMA
+controller = TMA
+add_core = TMA
+culture = talamanca
+religion = mesoamerican_religion
+capital = "Guaymi"
+trade_goods = grain
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+discovered_by = WAY
+discovered_by = TAY
+discovered_by = MCA
+discovered_by = PAE
+discovered_by = TIT
+discovered_by = CWM
+discovered_by = mesoamerican
+
+1502.1.1 = { discovered_by = CAS } # Christopher Columbus 
+1516.1.23 = { discovered_by = SPA }
+
+1569.11.1 = {
+	owner = SPA 
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+	trade_goods = naval_supplies
+	is_city = yes
+} # Founded 
+1810.7.20 = {
+	owner = COL
+	controller = COL
+	add_core = COL
+} # Colombia declares independence
+1819.8.7 = { remove_core = SPA } # Colombia's independence is recongnized

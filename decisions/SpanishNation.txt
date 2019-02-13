@@ -51,7 +51,21 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SPA
-			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						AND = {
+							has_dlc = "Golden Century" 
+							OR = {
+								tag = ARA
+								tag = CAT
+								tag = VAL
+							}
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -66,7 +80,6 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
-					NOT = { area = macaronesia_area }
 					NOT = { area = alentejo_area }
 					NOT = { area = beieras_area }
 				}
@@ -103,12 +116,12 @@ country_decisions = {
 				tag = ARA
 				AND = {
 					primary_culture = basque
-					num_of_cities = 21			#Giving Basque a break. At least 1/3 of Iberia's 63 provinces to see if Basque
+					num_of_cities = 37
 				}
 				AND = {
 					culture_group = iberian
 					NOT = { primary_culture = portugese }				#Portuguese go for Iberia tag
-					num_of_cities = 32			#At least 1/2 of Iberia's 63 provinces to see, if not CAS, ARA, or Basque
+					num_of_cities = 45
 				}
 			}
 		}
@@ -170,7 +183,17 @@ country_decisions = {
 				ROOT = { inherit = PREV }
 			}
 			change_tag = SPA
-			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = { 
+						AND = {
+							has_dlc = "Golden Century"
+							tag = ARA
+						}
+					}
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -185,7 +208,6 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
-					NOT = { area = macaronesia_area }
 					NOT = { area = alentejo_area }
 					NOT = { area = beieras_area }
 				}

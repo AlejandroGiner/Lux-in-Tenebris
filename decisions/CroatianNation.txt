@@ -1,0 +1,89 @@
+country_decisions = {
+	croatian_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_croatia_flag_btp }
+			NOT = { tag = CRO }
+			NOT = { tag = ILY }
+			primary_culture = croatian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 131			# Zagreb
+				province_id = 136			# Zadar
+				province_id = 137			# Ragusa
+				province_id = 152			# Varasd
+				province_id = 1767			# Slavonia
+				province_id = 1826			# Lika
+				province_id = 3190			# Pozega
+				province_id = 3191			# Rijeka
+				province_id = 3192			# Split
+				province_id = 3196			# Modrus
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = CRO }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 131			# Zagreb
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						province_id = 131			# Zagreb
+						province_id = 136			# Zadar
+						province_id = 137			# Ragusa
+						province_id = 152			# Varasd
+						province_id = 1767			# Slavonia
+						province_id = 1826			# Lika
+						province_id = 3190			# Pozega
+						province_id = 3191			# Rijeka
+						province_id = 3192			# Split
+						province_id = 3196			# Modrus
+					}
+				}
+				amount = 7			#At least 2/3 of Croatia's 10 provinces (approximate)
+			}
+			total_development = 60			#Normal requirement for rank 2 is 300 dev, so this is 80 percent discounted.
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = CRO
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			every_province = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					OR = {
+						area = croatia_area
+						area = east_adriatic_coast_area
+					}
+				}
+				add_permanent_claim = CRO
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_croatia_flag_btp
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

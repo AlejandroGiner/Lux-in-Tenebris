@@ -56,14 +56,19 @@ country_decisions = {
 		allow = {
 			advisor = theologian
 		}
-		effect = {	
+		effect = {
 			add_country_modifier = {
 				name = "the_advancement_of_true_religion_act"
 				duration = -1
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { full_idea_group = religious_ideas  }
+				NOT = { government = theocracy }
+			}
 		}
 	}
 	
@@ -93,11 +98,11 @@ country_decisions = {
 
 	declaration_of_indulgence = {
 		potential = {
-			NOT = { has_country_modifier = the_declaration_of_indulgence }
-			NOT = { has_country_modifier = the_test_act }
 			religion_group = christian
+			NOT = { has_country_modifier = the_declaration_of_indulgence }
 		}
 		allow = {
+			NOT = { has_country_modifier = the_test_act }
 			adm_tech = 10
 		}
 		effect = {	
@@ -135,6 +140,11 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { full_idea_group = religious_ideas  }
+				NOT = { government = theocracy }
+			}
 		}
 	}
 	
@@ -260,7 +270,6 @@ country_decisions = {
 	
 	test_act = {
 		potential = {
-			NOT = { has_country_modifier = the_declaration_of_indulgence }
 			NOT = { has_country_modifier = the_test_act }
 			OR = {
 				religion = protestant
@@ -269,6 +278,7 @@ country_decisions = {
 		}
 		allow = {
 			adm_tech = 10
+			NOT = { has_country_modifier = the_declaration_of_indulgence }
 		}
 		effect = {	
 			add_country_modifier = {
@@ -337,9 +347,9 @@ country_decisions = {
 	}
 	
 	# Muslim modifiers
-	sheikh_ul_islam = {
+	enforce_religion_muslim = {
 		potential = {
-			NOT = { has_ruler_modifier = the_sheikh_ul_islam }
+			NOT = { has_ruler_modifier = muslim_enforced_religion }
 			religion_group = muslim
 		}
 		allow = {
@@ -348,17 +358,12 @@ country_decisions = {
 		}
 		effect = {	
 			add_ruler_modifier = {
-				name = "the_sheikh_ul_islam"
+				name = "muslim_enforced_religion"
 				duration = -1
 			}
-			add_piety = 0.10
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = { 
-				NOT = { piety = -0.1 }
-				factor = 0
-			}			
+			factor = 1		
 		}
 	}
 	
@@ -366,10 +371,14 @@ country_decisions = {
 		potential = {
 			NOT = { has_ruler_modifier = khalifah }
 			religion = sunni
+			NOT = { tag = MAM } #Controls the Caliph already.
+			NOT = { government = republic }
+			ruler_religion = sunni
 		}
 		allow = {
 			mil = 3
 			has_regency = no
+			is_female = no
 		}
 		effect = {	
 			add_ruler_modifier = {
@@ -438,34 +447,34 @@ country_decisions = {
 		}
 	}
 	
-	jizya_tax = {
-		potential = {
-			NOT = { has_ruler_modifier = per_capita_tax }
-			religion_group = muslim
-			any_owned_province = {
-				has_owner_religion = no
-			}
-			NOT = { has_dlc = "The Cossacks" }
-		}
-		allow = {
-			adm = 3
-			has_regency = no
-		}
-		effect = {	
-			add_ruler_modifier = {
-				name = "per_capita_tax"
-				duration = -1
-			}
-			add_piety = -0.15
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				NOT = { piety = 0.01 }
-				factor = 0
-			}
-		}
-	}
+	#jizya_tax = {
+	#	potential = {
+	#		NOT = { has_ruler_modifier = per_capita_tax }
+	#		religion_group = muslim
+	#		any_owned_province = {
+	#			has_owner_religion = no
+	#		}
+	#		NOT = { has_dlc = "The Cossacks" }
+	#	}
+	#	allow = {
+	#		adm = 3
+	#		has_regency = no
+	#	}
+	#	effect = {	
+	#		add_ruler_modifier = {
+	#			name = "per_capita_tax"
+	#			duration = -1
+	#		}
+	#		add_piety = 0.15
+	#	}
+	#	ai_will_do = {
+	#		factor = 1
+	#		modifier = {
+	#			NOT = { piety = 0.01 }
+	#			factor = 0
+	#		}
+	#	}
+	#}
 	
 	monastic_education = {
 		potential = {
@@ -490,6 +499,77 @@ country_decisions = {
 			modifier = {
 				NOT = { treasury = 100 }
 				factor = 0
+			}
+		}
+	}
+	
+	adopt_wahabism = {
+		potential = {
+			has_dlc = "Cradle of Civilization"
+			religion = sunni
+			has_reform = tribal_federation
+			has_global_flag = wahabism_founded
+			NOT = {
+				religious_school = {
+					group = muslim
+					school = hanbali_school
+				}
+			}
+			ruler_religion = sunni
+		}
+		allow = {
+			piety = 1.0 #100 Legalism
+		}
+		effect = {
+			add_stability = -3
+			add_legitimacy = 30
+			set_religious_school = {
+				group = muslim
+				school = hanbali_school
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	
+	trade_propagation_convert_to_islam = {
+		potential = {
+			has_dlc = "Cradle of Civilization"
+			NOT = { religion_group = muslim }
+			capital_scope = {
+				religion_group = muslim
+				is_node_in_trade_company_region = yes
+			}
+		}
+		allow = {
+			legitimacy = 90
+			has_regency = no
+			is_free_or_tributary_trigger = yes
+			custom_trigger_tooltip = {
+				tooltip = the_dominant_religion_is_a_form_of_islam_tooltip
+				OR = {
+					dominant_religion = sunni
+					dominant_religion = shiite
+					dominant_religion = ibadi
+				}
+			}
+		}
+		effect = {
+			change_religion = capital
+			add_stability = 1
+			add_legitimacy = 10
+			clr_country_flag = sultan_titles_for_non_muslims
+			remove_country_modifier = islamic_titles
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_flag = sultan_titles_for_non_muslims
+				had_country_flag = { flag = sultan_titles_for_non_muslims days = 10950 } #After 30 years
+				NOT = { tag = ARK }
 			}
 		}
 	}
@@ -661,6 +741,7 @@ country_decisions = {
 	din_i_illahi = {
 		potential = {
 			NOT = { has_country_modifier = divine_faith }
+			NOT = { has_dlc = "Dharma" }
 			OR = {
 				AND = {
 					tag = MUG
@@ -802,7 +883,7 @@ country_decisions = {
 				factor = 0
 			}
 			modifier = { 
-				revolt_percentage = 5
+				revolt_percentage = 0.05
 				factor = 0
 			}
 			modifier = { 
@@ -835,7 +916,7 @@ country_decisions = {
 			}
 			modifier = {
 				OR = {
-					revolt_percentage = 5
+					revolt_percentage = 0.05
 					war_exhaustion = 10
 				}
 				factor = 0
@@ -868,7 +949,7 @@ country_decisions = {
 				factor = 0
 			}
 			modifier = {
-				revolt_percentage = 5
+				revolt_percentage = 0.05
 				factor = 0
 			}
 		}
@@ -1018,12 +1099,12 @@ country_decisions = {
 	
 	tengri_black_shamanism = {
 		potential = {
-			NOT = { has_country_modifier = yellow_shamanism_modifier }
 			NOT = { has_country_modifier = black_shamanism_modifier }
 			religion = tengri_pagan_reformed
 			NOT = { has_secondary_religion = yes }
 		}
 		allow = {
+			NOT = { has_country_modifier = yellow_shamanism_modifier }
 			ADM = 3
 		}
 		effect = {	
@@ -1587,7 +1668,7 @@ country_decisions = {
 		potential = {
 			religion_group = muslim
 			any_owned_province = {
-				religion_group = sikhism
+				religion = sikhism
 			}
 			is_free_or_tributary_trigger = yes
 		}
@@ -1598,6 +1679,12 @@ country_decisions = {
 			add_prestige = -100
 			add_stability = -2
 			change_religion = sikhism
+			if = {
+				limit = {
+					has_reform_level = 2
+				}
+				add_government_reform = khalsa_reform
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -1626,6 +1713,11 @@ country_decisions = {
 			stability = 2
 		}
 		effect = {
+			set_ruler_religion = catholic
+			if = {
+				limit = { has_heir = yes }
+				set_heir_religion = catholic
+			}
 			add_ruler_modifier = {
 				name = "christian_ruler"
 				duration = -1
@@ -1651,6 +1743,54 @@ country_decisions = {
 				factor = 0
 				NOT = { has_ruler_flag = christian_tutors }
 				NOT = { primary_culture = togoku }
+			}
+		}
+	}
+
+	conversion_of_convenience = {
+		potential = {
+			is_lesser_in_union = no
+			NOT = { ruler_religion = ROOT }
+			OR = {
+				has_regency = no
+				AND = {
+					NOT = { ruler_religion = ROOT }
+					has_heir = yes
+					NOT = { heir_religion = ROOT }
+				}
+			}
+			OR = {
+				ai = no
+				has_idea_group = religious_ideas
+			}
+		}
+		allow = {
+			stability = 1
+			capital_scope = {
+				has_owner_religion = yes
+			}
+		}
+		effect = {
+			add_stability = -2
+			add_legitimacy = 10
+			set_ruler_religion = ROOT
+			if = {
+				limit = {
+					has_heir = yes
+					NOT = { heir_religion = ROOT }
+				}
+				set_heir_religion = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_reform = daimyo
+					has_ruler_modifier = christian_ruler
+					has_country_flag = a_kirishitan_realm
+				}
 			}
 		}
 	}

@@ -62,7 +62,7 @@ dominican_order = {
         }
         modifier = {
             factor = 2.0
-            NOT { culture = ROOT }
+            NOT = { culture = ROOT }
         }
     }
 }
@@ -151,7 +151,7 @@ qadiri_order = {
         factor = 1
         modifier = {
             factor = 2.0
-            NOT { culture = ROOT }
+            NOT = { culture = ROOT }
         }
     }
 }

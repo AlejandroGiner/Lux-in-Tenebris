@@ -12,6 +12,7 @@ country_event = {
 		religion = catholic
 		NOT = { tag = PAP }
 		NOT = { tag = ROM }
+		NOT = { tag = RMA }
 		NOT = { exists = ITA }
 		NOT = { exists = ITL }
 		NOT = { has_country_flag = no_support }
@@ -76,14 +77,12 @@ country_event = {
 		118 = {
 			add_core = PAP
 			cede_province = PAP
-		}
-		if = {
-			limit = {
-				118 = {
+			if = {
+				limit = {
 					is_core = ROOT
 				}
+				remove_core = ROOT
 			}
-			remove_core = ROOT
 		}
 		add_prestige = 25
 	}
@@ -102,7 +101,7 @@ country_event = {
 		NOT = { exists = ITA }
 		NOT = { exists = ITL }
 		religion = catholic
-		government = theocratic_government
+		government = theocracy
 		NOT = { has_ruler_flag = refused_papacy }
 		is_at_war = no
 		NOT = { tag = TEU }
@@ -213,10 +212,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = unsupportive_cardinals }
-		OR = {
-			government = papal_government
-			government = regnum_dei
-		}
+		has_reform = papacy_reform
 		overextension_percentage = 0.25
 	}
 
@@ -291,7 +287,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_country_flag = cardinal_infiltrator }
-		government = papal_government
+		has_reform = papacy_reform
 		NOT = { adm = 1 }
 	}
 

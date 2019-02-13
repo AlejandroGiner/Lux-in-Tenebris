@@ -27,7 +27,7 @@ bt_triggered_modifier_a_big_family = {
 						is_subject_of_type = client_march
 					}					
 				}
-				amount = 3
+				amount = 2
 			}
 		}
 	}
@@ -39,7 +39,7 @@ bt_triggered_modifier_a_big_family = {
 ###########################################
 bt_triggered_modifier_hegemoniacle = {
 	potential = {
-		num_of_subjects = 3
+		num_of_subjects = 2
 	}
 	trigger = {
 		custom_trigger_tooltip = {
@@ -55,7 +55,35 @@ bt_triggered_modifier_hegemoniacle = {
 						is_subject_of_type = client_march
 					}				
 				}
-				amount = 5
+				amount = 4
+			}
+		}
+	}
+	diplomatic_upkeep = 1
+}
+
+###########################################
+# Vassal upkeep bonus III
+###########################################
+bt_triggered_modifier_decentralisation = {
+	potential = {
+		num_of_subjects = 4
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = btc_hegemoniacle_tooltip
+			calc_true_if = {
+				all_country = {
+					is_subject_of = ROOT
+					OR = {
+						is_subject_of_type = vassal
+						is_subject_of_type = march
+						is_subject_of_type = personal_union
+						is_subject_of_type = client_vassal
+						is_subject_of_type = client_march
+					}				
+				}
+				amount = 6
 			}
 		}
 	}

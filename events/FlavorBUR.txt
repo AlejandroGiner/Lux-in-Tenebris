@@ -1332,7 +1332,6 @@ province_event = {
 		OR = {
 			culture = dutch
 			culture = flemish
-			culture = frisian
 			is_core = NED
 		}
 		owner = {
@@ -1347,7 +1346,6 @@ province_event = {
 				OR = {
 					primary_culture = dutch
 					primary_culture = flemish
-					primary_culture = frisian
 				}
 			}
 		}
@@ -1437,7 +1435,6 @@ province_event = {
 		OR = {
 			culture = dutch
 			culture = flemish
-			culture = frisian
 			is_core = NED
 		}
 		owner = {
@@ -1452,7 +1449,6 @@ province_event = {
 				OR = {
 					primary_culture = dutch
 					primary_culture = flemish
-					primary_culture = frisian
 				}
 			}
 		}
@@ -1545,7 +1541,6 @@ country_event = {
 			OR = {
 				culture = dutch
 				culture = flemish
-				culture = frisian
 				is_core = NED
 			}
 		}
@@ -1556,7 +1551,6 @@ country_event = {
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
-				primary_culture = frisian
 			}
 		}
 	}
@@ -1573,17 +1567,12 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.75
-			NOT = { accepted_culture = frisian }
-		}
-		modifier = {
-			factor = 0.75
 			num_of_owned_provinces_with = {
 				value = 2
 				region = low_countries_region
 				OR = {
 					culture = dutch
 					culture = flemish
-					culture = frisian
 				}
 			}
 		}
@@ -1595,7 +1584,6 @@ country_event = {
 				OR = {
 					culture = dutch
 					culture = flemish
-					culture = frisian
 				}
 			}
 		}
@@ -1607,7 +1595,6 @@ country_event = {
 				OR = {
 					culture = dutch
 					culture = flemish
-					culture = frisian
 				}
 			}
 		}
@@ -1619,7 +1606,6 @@ country_event = {
 				OR = {
 					culture = dutch
 					culture = flemish
-					culture = frisian
 				}
 			}
 		}
@@ -1627,13 +1613,13 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+			set_global_flag = dutch_revolt
 			every_owned_province = {
 				limit = {
 					region = low_countries_region
 					OR = {
 						culture = dutch
 						culture = flemish
-						culture = frisian
 						is_core = NED
 					}
 					is_capital = no
@@ -1643,7 +1629,8 @@ country_event = {
 			}
 			release = NED
 			NED = {
-				change_government = dutch_republic
+				change_government = republic
+				add_government_reform = dutch_republic
 			}
 			every_owned_province = {
 				limit = {
@@ -1764,7 +1751,6 @@ country_event = {
 		OR = {
 			primary_culture = dutch
 			primary_culture = flemish
-			primary_culture = frisian
 		}
 		NOT = {
 			has_country_flag = state_joined_netherlands
@@ -1826,7 +1812,6 @@ province_event = {
 		OR = {
 			culture = dutch
 			culture = flemish
-			culture = frisian
 			is_core = NED
 		}
 		OR = {
@@ -1842,7 +1827,6 @@ province_event = {
 					OR = {
 						primary_culture = dutch
 						primary_culture = flemish
-						primary_culture = frisian
 					}
 				}
 			}
@@ -2125,6 +2109,12 @@ country_event = {
 				}
 				if = {
 					limit = {
+						has_states_general_mechanic = yes
+					}
+					change_statists_vs_orangists = 1
+				}
+				if = {
+					limit = {
 						has_dlc = "Rights of Man" 
 					}
 					hidden_effect = { add_ruler_personality = kind_hearted_personality }
@@ -2176,21 +2166,23 @@ country_event = {
 			if = {
 				limit = {
 					government = monarchy
-					NOT = { government = celestial_empire }
+					NOT = { has_reform = celestial_empire }
 				}
 				random = {
 					chance = 20
-					change_government = merchant_republic
+					change_government = republic
+					add_government_reform = merchants_reform
 				}
 			}
 			if = {
 				limit = {
 					government = monarchy
-					NOT = { government = celestial_empire }
+					NOT = { has_reform = celestial_empire }
 				}
 				random = {
 					chance = 20
-					change_government = administrative_republic
+					change_government = republic
+					set_legacy_government = administrative_republic
 				}
 			}
 		}

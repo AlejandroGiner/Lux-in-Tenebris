@@ -1,0 +1,30 @@
+# No previous file for Uluas
+
+owner = MIS
+controller = MIS
+add_core = MIS
+culture = miskito
+religion = mesoamerican_religion
+capital = "Uluas"
+trade_goods = grain
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+
+
+discovered_by = mesoamerican
+
+1530.1.1 = { discovered_by = SPA }
+
+1628.1.1 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	religion = catholic
+	culture = castillian
+	trade_goods = cocoa
+	is_city = yes
+ } #First permanent missions
+1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence
