@@ -9,7 +9,7 @@ country_decisions = {
 			OR = {
 				primary_culture = andalusi_culture
 				AND = {
-					culture_group = maghrebi
+					culture_group = berber_group
 					any_owned_province = { region = iberia_region }
 				}
 				AND = {
@@ -19,30 +19,24 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			
+
 			OR = {
 				area = lower_andalucia_area
 				area = upper_andalucia_area
+				area = baetica_area
 				AND = {
-					OR = {
-						province_id = 230			# Algarve
-						province_id = 229			# Beja
-					}
+					area = south_alentejo_area
 					OR = {
 						ROOT = { NOT = { owns_core_province = 1750 } }
-						ROOT = { NOT = { owns_core_province = 4547 } }
+						NOT = { btc_murcia_area = {type = all owned_by = ROOT} }
 					}
 				}
 				AND = {
 					OR = {
 						province_id = 1750			# Alicante
-						province_id = 4547			# Albacete
+						area = btc_murcia_area
 					}
-					OR = {
-						ROOT = { NOT = { owns_core_province = 230 } }
-						ROOT = { NOT = { owns_core_province = 229 } }
-					}
-					
+					NOT = { south_alentejo_area = {type = all owned_by = ROOT} }
 				}
 			}
 			OR = {
@@ -58,28 +52,26 @@ country_decisions = {
 			religion_group = muslim
 			lower_andalucia_area = {type = all owned_by = ROOT}
 			upper_andalucia_area = {type = all owned_by = ROOT}
+			baetica_area = {type = all owned_by = ROOT}
 			OR = {
-				AND = {
-					owns_core_province = 230			# Algarve
-					owns_core_province = 229			# Beja
-				}
+				south_alentejo_area = { type = all owned_by = ROOT}
 				AND = {
 					owns_core_province = 1750			# Alicante
-					owns_core_province = 4547			# Albacete
+					btc_murcia_area = { type = all owned_by = ROOT}
 				}
 			}
-			
-			
+
+
 		}
 		effect = {
 			225 = {	#Cordoba
 				move_capital_effect = yes
 			}
 			change_tag = ADU
-			btc_new_nation_effects = yes 
+			btc_new_nation_effects = yes
 			iberia_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ADU
@@ -94,8 +86,8 @@ country_decisions = {
 			set_country_flag = formed_andalusia_flag
 			hidden_effect = {
 				if = {
-					limit = { 
-						tag = MOR 
+					limit = {
+						tag = MOR
 						has_dlc = "Golden Century"
 					}
 					complete_mission = gra_overcome_internal_strife
@@ -103,61 +95,15 @@ country_decisions = {
 			}
 			hidden_effect = {
 				if = {
-					limit = { 
-						tag = MOR 
+					limit = {
+						tag = MOR
 						has_dlc = "Golden Century"
 					}
 					complete_mission = gra_friends_in_high_places
 				}
 			}
-			if = {
-				limit = {
-					mission_completed = gra_reconquer_sevilla
-					has_dlc = "Golden Century"
-				}
-				alentejo_area = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-				beieras_area = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			if = {
-				limit = {
-					mission_completed = gra_restore_trade_superiority
-					has_dlc = "Golden Century"
-				}
-				corsica_sardinia_area = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-				baleares_area = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
+
+
 			if = {
 				limit = {
 					mission_completed = gra_restore_faith_in_the_throne
@@ -166,7 +112,7 @@ country_decisions = {
 				algiers_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -175,7 +121,7 @@ country_decisions = {
 				hautes_plaines_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -184,7 +130,7 @@ country_decisions = {
 				oran_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -193,7 +139,7 @@ country_decisions = {
 				kabylia_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -202,7 +148,7 @@ country_decisions = {
 				tunisia_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -211,7 +157,7 @@ country_decisions = {
 				djerba_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -220,7 +166,7 @@ country_decisions = {
 				tripolitania_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -235,9 +181,7 @@ country_decisions = {
 				northern_morocco_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -246,9 +190,7 @@ country_decisions = {
 				marrekesh_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -257,9 +199,7 @@ country_decisions = {
 				western_morocco_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
