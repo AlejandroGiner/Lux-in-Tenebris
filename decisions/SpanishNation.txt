@@ -16,7 +16,7 @@ country_decisions = {
 				AND = {
 					culture_group = iberian
 					NOT = { primary_culture = portugese }				#Portuguese go for Iberia tag
-				} 
+				}
 				primary_culture = basque
 			}
 		}
@@ -43,11 +43,10 @@ country_decisions = {
 					is_core = ROOT
 					region = iberia_region
 				}
-				amount = 42			#At least 2/3 of Iberia's 63 provinces
+				amount = 60			#At least 2/3 of Iberia's 91 provinces
 			}
-			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-			iberia_region = { NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
+			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
 		}
 		effect = {
 			change_tag = SPA
@@ -78,10 +77,16 @@ country_decisions = {
 			add_prestige = 25
 			iberia_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
-					NOT = { area = alentejo_area }
-					NOT = { area = beieras_area }
+					NOT = {
+						OR = {
+							area = alentejo_area
+							area = beieras_area
+							area = south_alentejo_area
+							area = south_beieras_area
+						}
+					}
 				}
 				add_permanent_claim = SPA
 			}
@@ -156,12 +161,12 @@ country_decisions = {
 						country_or_vassal_holds = ROOT
 						is_core = owner
 					}
-					amount = 47			#At least 75 percent of Iberia's 63 provinces (Note Portugal has 14, so Castile or Aragon needs everything but Portugal and 2 others)
+					amount = 72			#At least 79% of Iberia's 91 provinces (Note Portugal has 16, so Castile or Aragon needs everything but Portugal and 3 others)
 				}
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-			iberia_region = { NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
+			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
 		}
 		effect = {
 			every_subject_country = {
@@ -185,7 +190,7 @@ country_decisions = {
 			change_tag = SPA
 			if = {
 				limit = {
-					NOT = { 
+					NOT = {
 						AND = {
 							has_dlc = "Golden Century"
 							tag = ARA
