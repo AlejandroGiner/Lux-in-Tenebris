@@ -27,14 +27,19 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
+				area = eastsicily_area
 				area = naples_area
 				area = apulia_area
 				area = calabria_area
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+			NOT = {
+				OR = {
+					province_id = 118
+					province_id = 3236
+					province_id = 3295
+				}
 			}
+			NOT = { owned_by = ROOT is_core = ROOT }
 		}
 		allow = {
 			NOT = { exists = TSI }
@@ -50,19 +55,36 @@ country_decisions = {
 			owns_core_province = 122 # Salento
 			owns_core_province = 2983 # Salerno
 			owns_core_province = 2984 # Cosenza
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					OR = {
-						area = sicily_area
-						area = naples_area
-						area = apulia_area
-						area = calabria_area
+			custom_trigger_tooltip = {
+				tooltip = two_sicilies_requirements_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+						OR = {
+							#western sicily
+							province_id = 7000
+							province_id = 7001
+							province_id = 7003
+							province_id = 3037
+							#eastern sicily
+							province_id = 7002
+							province_id = 7004
+							province_id = 126
+							#one province in lazio-campania
+							province_id = 3039
+							#apulia
+							province_id = 3286
+							province_id = 3283
+							province_id = 2985
+							#calabria_area
+							province_id = 1934
+							province_id = 3274
+							province_id = 123
+						}
 					}
+					amount = 11			#At least 2/3 of Southern Italy's provinces (approximate)
 				}
-				amount = 11			#At least 2/3 of Southern Italy's provinces (approximate)
 			}
-			total_development = 100			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted. Note base in Greater Armenia alone is about 84.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
@@ -80,42 +102,49 @@ country_decisions = {
 			add_prestige = 25
 			sicily_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			eastsicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TSI
 			}
 			naples_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TSI
 			}
 			apulia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TSI
 			}
 			calabria_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TSI
 			}
 			central_italy_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TSI
 			}
 			corsica_sardinia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = TSI
