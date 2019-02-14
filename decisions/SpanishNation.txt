@@ -54,7 +54,7 @@ country_decisions = {
 				limit = {
 					NOT = {
 						AND = {
-							has_dlc = "Golden Century" 
+							has_dlc = "Golden Century"
 							OR = {
 								tag = ARA
 								tag = CAT
@@ -75,26 +75,28 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			iberia_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = {
-						OR = {
-							area = alentejo_area
-							area = beieras_area
-							area = south_alentejo_area
-							area = south_beieras_area
+			hidden_effect = {
+				iberia_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = {
+							OR = {
+								area = alentejo_area
+								area = beieras_area
+								area = south_alentejo_area
+								area = south_beieras_area
+							}
 						}
 					}
+					add_permanent_claim = SPA
 				}
-				add_permanent_claim = SPA
 			}
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			custom_tooltip = spanish_unification_effect.tooltip
+			custom_tooltip = spanish_unification_effect_2.tooltip
 			set_country_flag = formed_spain_flag
 		}
 		ai_will_do = {
@@ -209,20 +211,28 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			iberia_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					NOT = { area = alentejo_area }
-					NOT = { area = beieras_area }
+			custom_tooltip = spanish_unification_effect_2.tooltip
+			hidden_effect = {
+				iberia_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = {
+							OR = {
+								area = alentejo_area
+								area = beieras_area
+								area = south_alentejo_area
+								area = south_beieras_area
+							}
+						}
+					}
+					add_permanent_claim = SPA
 				}
-				add_permanent_claim = SPA
 			}
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			custom_tooltip = spanish_unification_effect.tooltip
 			set_country_flag = formed_spain_flag
 		}
 		ai_will_do = {
