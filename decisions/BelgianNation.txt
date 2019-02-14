@@ -28,10 +28,7 @@ country_decisions = {
 				province_id = 3064 # Westhoek
 				province_id = 3065 # Lille
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			NOT = { owned_by = ROOT is_core = ROOT }
 		}
 		allow = {
 			NOT = { exists = BEL }
@@ -58,7 +55,6 @@ country_decisions = {
 				}
 				amount = 7			#At least 2/3 of Belgium's 11 provinces (approximate)
 			}
-			total_development = 60			#Normal requirement for rank 2 is 300 dev, so this is 80 percent discounted.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
