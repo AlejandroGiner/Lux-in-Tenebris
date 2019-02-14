@@ -24,26 +24,24 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			NOT = { exists = IRE }
-			hidden_trigger = {
-				NOT = { exists = ANI }			#Hidden because it shows up in UI as doubled
-			}
 			custom_trigger_tooltip = {
 				tooltip = three_quarters_of_ireland_tooltip
 				num_of_owned_provinces_with = {
 					value = 13
 					region = ireland_area
 					is_core = ROOT
+					owned_by = ROOT
 				}	#3/4 of Ireland's 17 provinces
 			}
 		}
 		effect = {
 			ireland_area = {
-				limit = { NOT = { owned_by = ROOT } }
+				limit = { NOT = { is_core = ROOT } }
 				add_permanent_claim = ANI
 			}
 			hidden_effect = {
 				ireland_area = {
-					limit = { owned_by = ROOT }
+					limit = { is_core = ROOT }
 					remove_core = ROOT
 					add_core = ANI
 				}

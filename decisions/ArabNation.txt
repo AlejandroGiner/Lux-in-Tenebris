@@ -1,7 +1,7 @@
 country_decisions = {
 	arab_nation = {
 		major = yes
-		potential = { 
+		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_arabia_flag }
 			NOT = { tag = ARB}
@@ -9,13 +9,13 @@ country_decisions = {
 			religion_group = muslim
 			culture_group = turko_semitic
 		}
-		
-		provinces_to_highlight = { 
+
+		provinces_to_highlight = {
 			region = arabia_region
 			is_city = yes
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+			NOT = {
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		allow = {
@@ -23,23 +23,26 @@ country_decisions = {
 			religion_group = muslim
 			btc_can_form_trigger = yes
 			btc_was_not_colonial_nation_trigger = yes
-			
-			num_of_owned_provinces_with = { 
-				value = 45
+
+			num_of_owned_provinces_with = {
+				value = 45	#70% of 64 colonized provinces in arabia
 				region = arabia_region
 				is_core = ROOT
+				owned_by = ROOT
 			}
 		}
 		effect = {
 			change_tag = ARB
-			btc_new_nation_effects = yes 
+			btc_new_nation_effects = yes
 			arabia_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 					is_city = yes
 				}
-				add_permanent_claim = ROOT 
+				add_permanent_claim = ROOT
 			}
 			set_country_flag = formed_arabia_flag
 		}
@@ -47,9 +50,9 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { capital_scope = { region = arabia_region } } 
+				NOT = { capital_scope = { region = arabia_region } }
 			}
 		}
-		ai_importance = 400 
+		ai_importance = 400
 	}
 }
