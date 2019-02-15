@@ -4,24 +4,12 @@ country_decisions = {
 		major = yes
 		potential = {
 			btc_potential_trigger = yes
-			NOT = { tag = PAP }
-			NOT = { tag = TSI }
-			NOT = { tag = ITA }
-			NOT = { tag = ITL }
-			NOT = { tag = SPA }
-			NOT = { tag = ARA }
-			NOT = { tag = CAS }
-			NOT = { tag = ENG }
-			NOT = { tag = GBR }
-			NOT = { tag = FRA }
-			owns = 125
-			owns = 121
-			owns = 1933
 			OR = {
 				tag = SIC
 				tag = NAP
 				tag = EBA
 				tag = JAI
+				tag = TAN
 				}
 		}
 		provinces_to_highlight = {
