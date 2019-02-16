@@ -10850,11 +10850,11 @@ ODA_ideas = {
 
 TKG_ideas = {
 	start = {
-		infantry_power = 0.1
+		infantry_power = 0.15
 		ae_impact = -0.1
 	}
 	bonus = {
-		development_cost = -0.1
+		development_cost = -0.2
 	}
 	trigger = {
 		tag = TKG
@@ -10863,25 +10863,26 @@ TKG_ideas = {
 	free = yes
 	
 	tkg_mikawa_bushi = {
-		land_morale = 0.1
+		land_morale = 0.15
 	}
 	tkg_strengthen_the_sekisho_network = {
-		spy_offence = 0.2
+		spy_offence = 0.25
 	}
 	tkg_hatamoto = {
 		discipline = 0.05
 	}
 	tkg_metsuke = {
-		stability_cost_modifier = -0.1
+		stability_cost_modifier = -0.2
 	}
 	tkg_matsudaira_branches = {
 		global_autonomy = -0.05
+		global_unrest = -1
 	}
 	tkg_toshogu = {
 		tolerance_own = 2
 	}
 	tkg_famine_policies = {
-		global_unrest = -1
+		global_trade_goods_size_modifier = 0.1
 	}
 }
 

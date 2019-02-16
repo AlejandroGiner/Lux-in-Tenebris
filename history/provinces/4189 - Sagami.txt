@@ -1,7 +1,7 @@
 #4189 - Sagami
 
-owner = ASK
-controller = ASK
+owner = OUE
+controller = OUE
 culture = togoku
 religion = shinto
 capital = "Kamakura"
@@ -12,6 +12,7 @@ base_manpower = 3
 base_production = 2
 is_city = yes
 add_core = ASK
+add_core = OUE
 discovered_by = chinese
 discovered_by = japanese_btc
 discovered_by = korean_btc
@@ -28,6 +29,7 @@ discovered_by = ANU
 	controller = HJO
 	add_core = HJO
 	remove_core = ASK
+	remove_core = OUE
 } # Hojo Soun took Izu
 1495.1.1 = {
 	fort_15th = yes
