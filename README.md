@@ -6,9 +6,9 @@ changelog
 
 -Madagascar has received a moderate overhaul with 20 new provinces.
 
--Italy has received a moderate overhaul with 20 new provinces and 24 new tags.
+-Italy has received a major overhaul with 26 new provinces and 26 new tags.
 
--Japan has received a major overhaul with 37 new provinces and 13 new tags each with their own national ideas plus 2 releasables from vanilla present in 1444.
+-Japan has received a major overhaul with 37 new provinces and 13 new tags each with their own national ideas.
 
 -South east Asia has received a major overhaul with +80 provinces, many cultures, missions, tags, 2 new technology groups, disaster, events and national ideas.
 
