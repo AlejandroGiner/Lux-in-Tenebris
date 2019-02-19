@@ -1122,24 +1122,44 @@ mecklenburg_area = { #3
 # South Eastern Europe 				   #
 ########################################
 
-macedonia_area = { #4 (Macedonia + Albania)
-	148 1853 3172
+macedonia_area = { #4 
+	148 1853 3172 5725 5083
 }
 
-morea_area = { #3 Central Greece
-	145 1773 3178 3179
+northern_macedonia_area = {
+	3001 3167 3183 5098 5099
 }
 
-northern_greece_area = { #Northern Greece
-	142 144 3175 3176
+morea_area = { 
+	145 1773 3178 3179 5087 5088 5089
 }
 
-thrace_area = { #3
-	149 151 3170 3171 5713 5714
+northern_greece_area = { #Epirus
+	142 144 3175 3176 5095
 }
 
-bulgaria_area = { #5
-	150 1765 2746 3165 3166
+thrace_area = { #5 (East Thrace)
+	151 3170 5713 5714 1764
+}
+
+upper_thrace_area = { #6
+	2750 3168 3169 5080 5062 5082
+}
+
+south_thrace_area = { #5
+	149 5720 5721 3171 5719
+}
+
+bulgaria_area = { #6
+	150 1765 2746 3166 5081 159
+}
+
+carpathian_ruthenia_area = {
+	162 1952 3146
+}
+
+lower_danube_area = {
+	3163 3164 5715 3165
 }
 
 wallachia_area = { #5
@@ -1198,6 +1218,18 @@ alfold_area = { #3
 transdanubia_area = { #3
 	color = { 171 92 22 }
 	135 153 1864 3051 4240 3151
+}
+
+eastern_mediterrenean_islands_area = { #Crete
+	163 3180 7106 7107
+}
+
+western_aegean_area = { #Hellas
+	146 3177 147 3174 5084 5085 
+}
+
+aegean_archipelago_area = { #4
+	164 320 2348 3173 3195 5086 3003
 }
 
 ########################################
@@ -1280,17 +1312,12 @@ ankara_area = { #3
 	326 329 5165 5137 5167
 }
 
-aegean_archipelago_area = { #4
-	164 320 2348 3173 3195
-}
-
-
 kastamonu_area = { #3
 	325 328 2299 5164 4313
 }
 
 karaman_area = { #3
-	  323 4307 324 4314
+	323 4307 324 4314
 }
 
 cukurova_area = { #3
@@ -1347,14 +1374,6 @@ shahrizor_area = {	#4
 al_jazira_area = { #5
 	color = { 92 200 92 }
 	411 2309 5293 5296
-}
-
-eastern_mediterrenean_islands_area = { #3
-	163 3180 7106 7107
-}
-
-western_aegean_area = { #2 - Western part of the Archipelago Eyalet (except the Greek Mainland)
-	146 3003 3177 147 3174
 }
 
 rakka_area = { #4
@@ -3979,14 +3998,6 @@ slavonia_area = {
 	1767 3190 4239
 }
 
-carpathian_ruthenia_area = {
-	162 1952 3146
-}
-
-lower_danube_area = {
-	3163 3164 5715 159
-}
-
 cornwall_area = {
 	233 4373
 }
@@ -4005,14 +4016,6 @@ nenets_area = {
 
 guelders_area = {
 	99 3058 4381 3060 3063
-}
-
-upper_thrace_area = {
-	1764 2750 3168 3169
-}
-
-northern_macedonia_area = {
-	3001 3167 3183
 }
 
 toropets_area = {
@@ -4754,9 +4757,6 @@ unused_area = {
 	5148 5292 5294 5291 3260 			#1.23 Armenia
 	5230 5234 5237 5253 5260 5254 5252 5257 5248 5247 5245 5236 5258 5242 5238 5259 5240 5506 			#1.23 Arabia
 	3161 3162 3218 3219 3222 3233 3235 3237 3158 			#Replaced in 1.27
-
-#BT deleted, placeholder, and reserved provinces
-	5062 5080 5081 5082 5083 5084 5085 5086 5087 5088 5089 5095 5098 5099 5114 5115 5122 5127 5128 5129 5580
 
 #BtP and BT provinces removed in 1.25 due to being replaced with new Paradox provinces.
 	3016
