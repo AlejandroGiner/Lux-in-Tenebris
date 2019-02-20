@@ -6,7 +6,7 @@ changelog
 
 -Madagascar has received a moderate overhaul with 20 new provinces.
 
--Italy has received a major overhaul with 29 new provinces and around 30 new tags.
+-Italy has received a major overhaul with 31 new provinces and around 30 new tags.
 
 -Japan has received a major overhaul with 37 new provinces and 13 new tags each with their own national ideas.
 

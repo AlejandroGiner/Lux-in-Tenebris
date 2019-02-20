@@ -1,0 +1,32 @@
+#5128 - Orvieto
+
+owner = PAP
+controller = PAP
+add_core = PAP
+add_core = ORV
+culture = umbrian
+religion = catholic
+capital = "Orvieto" #and Todi
+base_tax = 4
+base_production = 4
+base_manpower = 3
+trade_goods = glass #Orvieto ware majolica. Could also be wine, due to Orvieto wine 
+is_city = yes
+hre = no
+
+discovered_by = persian_btc
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+
+#Province history completed by - Nikicaga
+1750.1.1 = { add_core = ITA } 
+1809.4.10 = { controller = FRA } # Occupied by French troops
+1809.10.14 = { owner = FRA add_core = FRA } # Treaty of Schönbrunn
+1814.4.11 = {
+	owner = PAP
+	controller = PAP
+	remove_core = FRA
+} # Treaty of Fontainebleau, Napoleon abdicates unconditionally
