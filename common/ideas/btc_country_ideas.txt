@@ -2703,3 +2703,156 @@ crusader_ideas = {
         land_morale = 0.15
     }
 }
+
+TAO_ideas = {
+	start = {
+		movement_speed = 0.1
+		war_exhaustion = -0.1
+	}
+	
+	bonus = {
+		navy_tradition = 1
+	}
+	
+	trigger = {
+		tag = TAO
+	}
+	free = yes
+	kanoa = {
+		migration_cooldown = -0.2
+	}
+	caciques = {
+		monarch_admin_power = 1
+	}
+	batey = {
+		diplomatic_reputation = 1
+	}
+	bohiques = {
+		tolerance_own = 1
+	}
+	cohoba = {
+		global_unrest = -2
+	}
+	guanahatabey_assimilation = {
+		native_assimilation = 0.25
+	}
+	caribbean_alliance = {
+		manpower_recovery_speed = 0.1
+	}
+}
+
+YZW_ideas = {
+	start = {
+		naval_morale = 0.1
+		naval_forcelimit_modifier = 0.20
+	}
+
+	bonus = {
+		light_ship_cost = -0.20
+	}
+
+	trigger = {
+		tag = YZW
+	}
+	free = yes
+
+	hawaii_settlers = {
+		colonists = 1
+	}
+	great_mahele = {
+		stability_cost_modifier = -0.1
+	}
+	iolani_palace = {
+		prestige = 1
+	}
+	hawaiian_neutrality = {
+		diplomatic_upkeep = 1
+	}
+	edict_of_toleration = {
+		tolerance_heretic = 2
+	}
+	kamehameha_the_great = {
+		legitimacy = 1
+	}
+	kanawai_mamalahoe = {
+		global_unrest = -2
+	}
+}
+
+COR_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		global_unrest = -1
+	}
+	
+	bonus = {
+		global_autonomy = -0.025
+	}
+	
+	trigger = {
+		tag = COR
+	}
+	free = yes
+	
+	cor_mountain_in_the_sea = {
+		hostile_attrition = 1
+	}
+	cor_rebel_state = {
+		rebel_support_efficiency = 0.25
+	}
+	cor_national_defence_front = {
+		global_regiment_cost = -0.1
+		land_morale = 0.1
+	}
+	cor_independent_state = {
+		state_maintenance_modifier = -0.25
+	}
+	cor_corsican_culture = {
+		tolerance_own = 1
+	}
+	cor_corsican_diplomacy = {
+		diplomatic_reputation = 1
+		improve_relation_modifier = 0.1
+	}
+	cor_island_state = {
+		naval_forcelimit_modifier = 0.15
+	}
+}
+
+SAR_ideas = {
+	start = {
+		build_cost = -0.15
+		trade_steering = 0.15
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = SAR
+	}
+	free = yes
+
+	SAR_idea1 = {
+		defensiveness = 0.1
+	}
+	SAR_idea2 = {
+		global_spy_defence = 0.25
+	}
+	SAR_idea3 = {
+		enemy_core_creation = 0.5
+	}
+	SAR_idea4 = {
+		state_maintenance_modifier = -0.25
+	}
+	SAR_idea5 = {
+		hostile_attrition = 1
+	}
+	SAR_idea6 = {
+		diplomats = 1
+	}
+	SAR_idea7 = {
+		movement_speed = 0.15
+	}
+}
