@@ -2070,43 +2070,6 @@ wls_marches_ideas = {
     }
 }
 
-SAR_ideas = {
-    start = {
-		navy_tradition = 1
-		galley_power = 0.20
-    }
-	bonus = {
-		core_creation = -0.15
-	}
-	trigger = {
-		tag = SAR
-	}
-	free = yes
-	Languages_of_Sardinia = {
-		global_institution_spread = 0.10
-	}
-	Moti_rivoluzionari_sardi = {
-		enemy_core_creation = 0.25
-    }
-	Mines_of_Montevecchio = {
-		global_trade_goods_size_modifier = 0.10
-	}
-	Corsica_et_Sardinia = {
-		naval_forcelimit_modifier = 0.25
-	}
-	Unified_island = {
-		stability_cost_modifier = -0.10
-		global_autonomy = -0.05
-	}
-	Sardinian_navy = {
-		ship_recruit_speed = -0.1
-		naval_morale = 0.10
-	}
-	Sant_Efis = {
-		tolerance_own = 2
-	}
-}
-
 A7D_ideas = {
     start = {
         garrison_size = 0.20
@@ -2776,6 +2739,563 @@ YZW_ideas = {
 	}
 	kanawai_mamalahoe = {
 		global_unrest = -2
+	}
+}
+
+#Dynamo's ideas
+
+
+ABK_ideas = {
+	start = {
+		global_manpower_modifier = 0.10
+		infantry_power = 0.15
+	}
+
+	bonus = {
+		production_efficiency = 0.10
+	}
+
+	trigger = {
+		OR = {
+			tag = ABK
+			tag = ABZ
+		}
+	}
+	free = yes
+
+	ABK_idea1 = {
+		discipline = 0.025
+	}
+	ABK_idea2 = {
+		global_unrest = -1
+	}
+	ABK_idea3 = {
+		diplomatic_reputation = 1
+	}
+	ABK_idea4 = {
+		defensiveness = 0.15
+	}
+	ABK_idea5 = {
+		manpower_recovery_speed = 0.1
+	}
+	ABK_idea6 = {
+		global_ship_recruit_speed = -0.1
+		global_ship_cost = -0.05
+	}
+	ABK_idea7 = {
+		army_tradition = 0.5
+	}
+}
+
+ALA_ideas = {
+	start = {
+		tolerance_own = 1
+		army_tradition_decay = -0.01
+	}
+
+	bonus = {
+		cavalry_cost = -0.1
+	}
+
+	trigger = {
+		tag = ALA
+	}
+	free = yes
+
+	alani_migrations = {
+		leader_land_manuever = 1
+	}
+	alliance_makers_alans = {
+		diplomatic_upkeep = 2
+	}
+	gate_of_the_alans = {
+		defensiveness = 0.25
+	}
+	alani_mercenaries = {
+		mercenary_cost = -0.25
+	}
+	skilled_plunderers_alans = {
+		global_tax_modifier = 0.1
+	}
+	fierce_horsemen_alans = {
+		cavalry_power = 0.1
+	}
+	caucasus_mountains_alans = {
+		hostile_attrition = 1.0
+	}
+}
+
+UDI_ideas = {
+	start = {
+		development_cost = -0.1
+		stability_cost_modifier = -0.1
+	}
+
+	bonus = {
+		diplomatic_reputation = 1
+	}
+
+	trigger = {
+		tag = UDI
+	}
+	free = yes
+
+	UDI_idea1 = {
+		legitimacy = 1
+		prestige_decay = -0.01
+	}
+	UDI_idea2 = {
+		prestige = 1
+		land_morale = 0.1
+	}
+	UDI_idea3 = {
+		war_exhaustion = -0.02
+	}
+	UDI_idea4 = {
+		tolerance_own = 1
+		global_missionary_strength = 0.01
+	}
+	UDI_idea5 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	UDI_idea6 = {
+		global_manpower_modifier = 0.10
+		discipline = 0.025
+	}
+	UDI_idea7 = {
+		province_warscore_cost = -0.15
+	}
+}
+
+KCY_ideas = {
+	start = {
+		movement_speed = 0.10
+		free_leader_pool = 1
+	}
+
+	bonus = {
+		land_maintenance_modifier = -0.1
+	}
+
+	trigger = {
+		OR = {
+			tag = KCY
+			tag = BLK
+			tag = TUM
+		}
+	}
+	free = yes
+
+	KCY_idea1 = {
+		cavalry_power = 0.1
+	}
+	KCY_idea2 = {
+		land_attrition = -0.10
+	}
+	KCY_idea3 = {
+		build_cost = -0.1
+	}
+	KCY_idea4 = {
+		land_morale = 0.10
+	}
+	KCY_idea5 = {
+		global_autonomy = -0.025
+		production_efficiency = 0.10
+	}
+	KCY_idea6 = {
+		global_own_trade_power = 0.15
+	}
+	KCY_idea7 = {
+		tolerance_heathen = 1
+		tolerance_heretic = 1	
+	}
+}
+
+AVR_ideas = {
+	start = {
+		legitimacy = 1
+		cavalry_power = 0.1
+	}
+
+	bonus = {
+		army_tradition = 1
+	}
+
+	trigger = {
+		tag = AVR
+	}
+	free = yes
+
+	AVR_idea1 = {
+		land_attrition = -0.10
+	}
+	AVR_idea2 = {
+		stability_cost_modifier = -0.2
+	}
+	AVR_idea3 = {
+		defensiveness = 0.15
+	}
+	AVR_idea4 = {
+		enemy_core_creation = 0.5
+	}
+	AVR_idea5 = {
+		land_morale = 0.15
+	}
+	AVR_idea6 = {
+		discipline = 0.05
+	}
+	AVR_idea7 = {
+		prestige = 1
+		global_unrest = -1
+	}
+}
+
+DRB_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		garrison_size = 0.1
+	}
+
+	bonus = {
+		caravan_power = 0.2
+	}
+
+	trigger = {
+		tag = DRB
+	}
+	free = yes
+
+	DRB_idea1 = {
+		defensiveness = 0.25
+	}
+	DRB_idea2 = {
+		num_accepted_cultures = 2
+	}
+	DRB_idea3 = {
+		land_morale = 0.10
+	}
+	DRB_idea4 = {
+		leader_land_manuever = 1
+	}
+	DRB_idea5 = {
+		prestige = 1
+	}
+	DRB_idea6 = {
+		global_own_trade_power = 0.25
+	}
+	DRB_idea7 = {
+		fort_maintenance_modifier = -0.15
+	}
+}
+
+VAK_ideas = {
+	start = {
+		enemy_core_creation = 0.5
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		land_morale = 0.10
+	}
+
+	trigger = {
+		tag = VAK
+	}
+	free = yes
+
+	VAK_idea1 = {
+		land_attrition = -0.15
+	}
+	VAK_idea2 = {
+		movement_speed = 0.15
+		shock_damage = 0.10
+	}
+	VAK_idea3 = {
+		state_maintenance_modifier = -0.15
+		global_unrest = -1
+	}
+	VAK_idea4 = {
+		defensiveness = 0.15
+	}
+	VAK_idea5 = {
+		tolerance_own = 1
+	}
+	VAK_idea6 = {
+		production_efficiency = 0.10
+	}
+	VAK_idea7 = {
+		recover_army_morale_speed = 0.15
+	}
+}
+
+GAZ_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		fort_maintenance_modifier = -0.10
+	}
+
+	bonus = {
+		core_creation = -0.10
+	}
+
+	trigger = {
+		tag = GAZ
+	}
+	free = yes
+
+	GAZ_idea1 = {
+		stability_cost_modifier = -0.15
+	}
+	GAZ_idea2 = {
+		global_autonomy = -0.05
+	}
+	GAZ_idea3 = {
+		land_morale = 0.10
+	}
+	GAZ_idea4 = {
+		production_efficiency = 0.15
+	}
+	GAZ_idea5 = {
+		diplomatic_upkeep = 1
+	}
+	GAZ_idea6 = {
+		merchants = 1
+	}
+	GAZ_idea7 = {
+		artillery_cost = -0.1
+	}
+}
+
+KTG_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		fabricate_claims_cost = -0.25
+	}
+
+	bonus = {
+		trade_steering = 0.20
+	}
+
+	trigger = {
+		tag = KTG
+	}
+	free = yes
+
+	KTG_idea1 = {
+		state_maintenance_modifier = -0.15
+	}
+	KTG_idea2 = {
+		idea_cost = -0.1
+	}
+	KTG_idea3 = {
+		global_manpower_modifier = 0.1
+	}
+	KTG_idea4 = {
+		build_cost = -0.15
+	}
+	KTG_idea5 = {
+		discipline = 0.05
+	}
+	KTG_idea6 = {
+		global_own_trade_power = 0.1
+	}
+	KTG_idea7 = {
+		reinforce_speed = 0.15
+	}
+}
+
+LEK_ideas = {
+	start = {
+		production_efficiency = 0.1
+		hostile_attrition = 1.0
+	}
+
+	bonus = {
+		army_tradition_decay = -0.02
+	}
+
+	trigger = {
+		tag = LEK
+	}
+	free = yes
+
+	LEK_idea1 = {
+		land_attrition = -0.15
+	}
+	LEK_idea2 = {
+		global_unrest = -1
+	}
+	LEK_idea3 = {
+		global_manpower_modifier = 0.1
+	}
+	LEK_idea4 = {
+		advisor_pool = 1
+	}
+	LEK_idea5 = {
+		loot_amount = 0.20
+	}
+	LEK_idea6 = {
+		leader_land_manuever = 2
+	}
+	LEK_idea7 = {
+		land_morale = 0.10
+	}
+}
+
+LTE_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		land_morale = 0.1
+	}
+
+	bonus = {
+		global_manpower_modifier = 0.2
+	}
+
+	trigger = {
+		tag = LTE
+	}
+	free = yes
+
+	latinokratia = {
+		num_accepted_cultures = 1
+		prestige = 1
+	}
+	latin_patriarchate = {
+		papal_influence = 2
+		tolerance_own = 2
+		tolerance_heretic = 1
+	}
+	crown_of_thorns_latin_empire = {
+		global_unrest = -2
+	}
+	imperium_romaniae_latin_empire = {
+		legitimacy = 1
+	}
+	western_administration_principles_latin_empire = {
+		technology_cost = -0.10
+	}
+	venetian_merchants_and_mercenaries_latin_empire = {
+		mercenary_cost = -0.25
+	}
+	traditions_of_warfare_latin_empire = {
+		army_tradition = 1
+	}
+}
+
+GZR_ideas = {
+	start = {
+		trade_steering = 0.2
+		tolerance_heretic = 3
+	}
+
+	bonus = {
+		trade_efficiency = 0.2
+	}
+
+	trigger = {
+		tag = GZR
+	}
+	free = yes
+
+	GZR_idea1 = {
+		development_cost = -0.15
+	}
+	GZR_idea2 = {
+		defensiveness = 0.20
+	}
+	GZR_idea3 = {
+		improve_relation_modifier = 0.25
+	}
+	GZR_idea4 = {
+		naval_forcelimit_modifier = 0.25
+		galley_power = 0.15
+	}
+	GZR_idea5 = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.1
+	}
+	GZR_idea6 = {
+		republican_tradition = 0.5
+	}
+	GZR_idea7 = {
+		state_maintenance_modifier = -0.2
+	}
+}
+
+DAM_ideas = {
+	start = {
+		leader_land_manuever = 1
+		trade_steering = 0.15
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = DAM
+	}
+	free = yes
+
+	DAM_idea1 = {
+		legitimacy = 1
+	}
+	DAM_idea2 = {
+		caravan_power = 0.25
+	}
+	DAM_idea3 = {
+		province_warscore_cost = -0.1
+	}
+	DAM_idea4 = {
+		vassal_income = 0.25
+	}
+	DAM_idea5 = {
+		defensiveness = 0.10
+	}
+	DAM_idea6 = {
+		inflation_reduction = 0.1
+	}
+	DAM_idea7 = {
+		merchants = 1
+	}
+}
+
+ENA_ideas = {
+	start = {
+		global_regiment_cost = -0.1
+		global_unrest = -1
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = ENA
+	}
+	free = yes
+
+	ENA_idea1 = {
+		free_leader_pool = 1
+	}
+	ENA_idea2 = {
+		diplomatic_upkeep = 1
+	}
+	ENA_idea3 = {
+		state_maintenance_modifier = -0.15
+	}
+	ENA_idea4 = {
+		improve_relation_modifier = 0.15
+	}
+	ENA_idea5 = {
+		defensiveness = 0.15
+	}
+	ENA_idea6 = {
+		army_tradition = 0.75
+	}
+	ENA_idea7 = {
+		prestige = 1
 	}
 }
 
