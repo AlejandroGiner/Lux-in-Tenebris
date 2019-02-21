@@ -2,8 +2,8 @@
 #Region - Italy
 #Area - Emilia-Romagna
 
-owner = FER
-controller = FER
+owner = MOD
+controller = MOD
 culture = romagnan 
 religion = catholic 
 hre = yes 
@@ -14,7 +14,6 @@ base_manpower = 3
 capital = "Modena" 
 is_city = yes	# Estimated 
 add_core = MOD
-add_core = FER
 
 
 
@@ -24,7 +23,11 @@ discovered_by = muslim
 discovered_by = persian_btc
 discovered_by = ottoman
 
-
+1452.3.20 = {
+	owner = FER
+	controller = FER
+	add_core = FER
+}
 1495.1.1 = { hre = no }
 1597.10.28 = {
 	owner = MOD
