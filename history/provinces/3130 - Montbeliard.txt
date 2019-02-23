@@ -1,0 +1,27 @@
+# 3130 - Montbeliard
+
+owner = BUR
+controller = BUR
+capital = "Montbeliard"
+is_city = yes
+estate = estate_burghers
+culture = arpitan
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 3
+trade_goods = glass #Watchmaking
+base_manpower = 1
+add_core = BUR
+
+discovered_by = persian_btc
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+
+#Copy of Franche-Comté
+1444.1.1 = { owner = WU2 controller = WU2 add_core = WU2 remove_core = BUR } #Death of countess of Montbeliard
+1492.1.1 = { owner = WUR controller = WUR add_core = WUR remove_core = WU2 } #Reuniting of Wurttemberg
+1534.8.19 = { owner = FRA controller = FRA add_core = FRA remove_core = WUR } # Sold to France
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
