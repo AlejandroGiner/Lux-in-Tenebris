@@ -282,13 +282,21 @@ bahama_channel_area = {
 # France					 		   #
 ########################################
 
-brittany_area = { #4
+brittany_area = { #Upper Brittany
 	color = { 118  99  151 }
-	170 171 172 169 3068 4384
+	171 172 169 4384 3030
 }
 
-normandy_area = { #3
-	167 168 1879 3073 4385 3110
+lower_brittany_area = {
+	170 3068 3027 3029
+}
+
+normandy_area = { #East Normandy
+	167 1879 3073 3012
+}
+
+west_normandy_area = {
+	3025 3026 168 4385 3110
 }
 
 provence_area = { #3
@@ -338,11 +346,11 @@ lorraine_area = { #3
 }
 
 picardy_area = { #4
-	87 88 89
+	87 88 89 3023 3024
 }
 
 ile_de_france_area = { #3 (Champagne and Ile de France)
-	182 183 4388 5142 3012
+	182 183 4388 5142 
 }
 
 loire_area = { #4
@@ -379,7 +387,7 @@ wallonia_area = { #3
 }
 
 flanders_area = { #4	#TOTBTPCHANGES
-	90 1865 3064 3065
+	90 1865 3064 3065 3031
 }
 
 brabant_area = { #3
@@ -4682,7 +4690,7 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #HR's BtP provinces
-3029 3030 3031 3057 3059 3062
+3057 3059 3062
 3067 3072 3074 3076 3078 3080 3086 3091 3093 3094 3095 3096 3097 3098 3101 3102 3103 3105 3107 3116 3127
 3249 3252 3255 3257 3258
 3260 3272 3275 4153 4155 4169 4178 4347 4739 4740 4741 4742 4743 4744 4745 4746
