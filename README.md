@@ -127,32 +127,3 @@ changelog
  #10.\
  #11.
 
-
-To-do list:
- Replace all generic national ideas with unique ones.\
- Colonial empire decision and missions.\
- Flavor historical modifiers.\
- Fix terrain.txt.\
- Tweak China a lil bit more and fix localisation.\
- Finish implementing chieftains once it updates.\
- Do British Isles.\
- Finish France.\
- Overhaul Horn of Africa.\
- Overhaul Persia/Khorasan.\
- Add Persian and Japanese tech groupS. Maybe Korean.\
- Overhaul South America.\
- Implement IR's north america.\
- Implement Albert's ages, institutions and timeframe.\
- Add english minors.\
- Finish trade goods with price change events and other flavor.\
- Adapt missions to new provinces.\
- Add Jarilov.\
- Update SEA addon once it finishes its BT version.\
- Advisor events.\
- Some government types from IR.\
- Government type for Iroquois.\
- Split Turkish culture.\
- Finish granting new trade goods to the world.\
- Import generic missions from ME/MEIOU.\
- DYNAMOMO DO KOREA ALREADY.\
- Update flavorMOR.txt.
