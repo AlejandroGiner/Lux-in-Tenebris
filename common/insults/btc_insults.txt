@@ -41,7 +41,10 @@ insult_thames = {
 				tag = GBR
 			}
 		}
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = ENG
+		}
 	}
 }
 

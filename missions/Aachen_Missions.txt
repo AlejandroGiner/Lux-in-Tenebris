@@ -8,7 +8,7 @@ aachen_form_francia_mission = {
 	has_country_shield = yes
 	
 	aachen_make_francia = {
-		icon = me_mission_francia_flag
+		icon = mission_empire
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -38,7 +38,7 @@ francia_missions_1 = {
 		required_missions = { }
 		position = 1
 		trigger = {
-			stability = 2
+			stability = 3
 			NOT = { average_unrest = 1 }
 			religious_unity = 1
 		}
@@ -65,7 +65,7 @@ francia_missions_1 = {
 	francia_culture_2 = {
 		icon = mission_cannons_firing
 		required_missions = { francia_culture_1 }
-		position = 3
+		position = 2
 		provinces_to_highlight = {
 			owned_by = ROOT
 			NOT = { culture = frankish }
@@ -94,7 +94,7 @@ francia_missions_1 = {
 	francia_culture_3 = {
 		icon = mission_cannons_firing
 		required_missions = { francia_culture_2 }
-		position = 5
+		position = 3
 		provinces_to_highlight = {
 			culture = frankish
 			OR = {
