@@ -1,0 +1,144 @@
+insult_inquisition = {
+	trigger = {
+		FROM = { tag = SPA }
+		NOT = {	religion = catholic }
+	}
+}
+
+insult_zaporozhian = {
+    trigger = {
+        FROM = { tag = ZAZ }
+        tag = TUR
+    }
+}
+
+insult_byzantium = {
+	trigger = {
+		tag = BYZ
+	}
+}
+
+insult_armada = {
+	trigger = {
+		FROM = { tag = GBR }
+		OR = {
+			tag = SPA
+			tag = CAS
+		}
+	}
+}
+
+insult_navy_seal = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_thames = {
+	trigger = {
+		FROM = {
+			NOT = {
+				tag = GBR
+			}
+		}
+		tag = GBR
+	}
+}
+
+insult_pope = {
+    trigger = {
+        tag = PAP
+    }
+}
+
+insult_churchill = {
+    trigger = {
+        FROM = {
+			OR = {
+				tag = GBR
+				tag = ENG
+			}
+		}
+		tag = USA
+	}
+}
+
+insult_thought_disease = {
+	trigger = {
+		FROM = {
+			NOT = {
+				tag = GBR
+			}
+		}
+		OR = {
+			tag = GBR 
+			tag = ENG
+		}
+	}
+}
+
+insult_thatcher = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_reincarnation = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_gandhi = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_einstein = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_good_example = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_face = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_small_event = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_slur = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_piss = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_ignorance = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_sinai = {
+    trigger = {
+        tag = MAM
+    }
+}

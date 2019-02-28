@@ -1,0 +1,129 @@
+aachen_form_francia_mission = {
+	slot = 1
+	generic = yes
+	ai = yes
+	potential = {
+		tag = AAC
+	}
+	has_country_shield = yes
+	
+	aachen_make_francia = {
+		icon = me_mission_francia_flag
+		required_missions = { }
+		position = 1
+		trigger = {
+			hre_reform_level = 2
+			is_emperor = yes
+			imperial_influence = 25
+		}
+		effect = {
+			add_imperial_influence = -5
+			custom_tooltip = can_from_francia.tooltip
+			set_country_flag = can_form_francia
+		}
+	}
+}
+
+francia_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = FRX
+	}
+	has_country_shield = yes
+	
+	francia_culture_1 = {
+		icon = mission_cannons_firing
+		required_missions = { }
+		position = 1
+		trigger = {
+			stability = 2
+			NOT = { average_unrest = 1 }
+			religious_unity = 1
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						province_has_center_of_trade_of_level = 1
+						development = 25
+					}
+					is_state_core = ROOT
+				}
+				change_culture = frankish
+			}
+			custom_tooltip = only_cores_change.tooltip
+			add_country_modifier = {
+				name = "frankish_literature"
+				duration = 9125
+			}
+			change_primary_culture = frankish
+		}
+	}
+	
+	francia_culture_2 = {
+		icon = mission_cannons_firing
+		required_missions = { francia_culture_1 }
+		position = 3
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = { culture = frankish }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				culture = frankish
+			}
+			university = 10
+			stability = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "frankish_education"
+				duration = 9125
+			}
+			capital_scope = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+		}
+	}
+	
+	francia_culture_3 = {
+		icon = mission_cannons_firing
+		required_missions = { francia_culture_2 }
+		position = 5
+		provinces_to_highlight = {
+			culture = frankish
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { development = 30 }
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 60
+				culture = frankish
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				culture = frankish
+				development = 30
+			}
+			stability = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = "frankish_unity"
+				duration = 9125
+			}
+			capital_scope = {
+				add_base_manpower = 2
+				add_base_production = 2
+				add_base_tax = 2
+			}
+		}
+	}
+}

@@ -3378,3 +3378,46 @@ SAR_ideas = {
 		movement_speed = 0.15
 	}
 }
+
+FRX_ideas = {
+	start = {
+		legitimacy = 1.0
+		prestige = 1.0
+	}
+
+	bonus = {
+		prestige_decay = -0.01
+	}
+	
+	trigger = {
+		tag = FRX
+	}
+	free = yes
+	
+	FRX_idea_1 = {
+		administrative_efficiency = 0.05
+		yearly_corruption = -0.05
+	}
+	FRX_idea_2 = {
+		reinforce_cost_modifier = -0.25
+		land_morale = 0.15
+	}
+	FRX_idea_3 = {
+		movement_speed = 0.25
+		loot_amount = 0.25 
+	}
+	FRX_idea_4 = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.1
+	}
+	FRX_idea_5 = {
+		global_manpower_modifier = 0.10
+		production_efficiency = 0.1
+	}
+	FRX_idea_6 = {
+		stability_cost_modifier = -0.10
+	}
+	FRX_idea_7 = {
+		all_power_cost = -0.05
+	}
+}
