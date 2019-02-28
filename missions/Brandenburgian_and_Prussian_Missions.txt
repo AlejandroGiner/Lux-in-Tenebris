@@ -270,13 +270,6 @@ prussian_missions_slot_2 = {
 			
 			#Claims, to mirror further Polish partitions.
 			#2nd Partition provinces (Roughly, missing Plock)
-			kalisz_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_claim = ROOT
-			}
 			254 = {
 				if = {
 					limit = {

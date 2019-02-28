@@ -380,13 +380,6 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			yedisan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			crimea_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -409,7 +402,6 @@ lithuanian_missions_slot = {
 		provinces_to_highlight = {
 			OR = {
 				area = zaporizhia_area
-				area = yedisan_area
 				area = crimea_area
 				area = azov_area
 			}
@@ -419,10 +411,6 @@ lithuanian_missions_slot = {
 		}
 		trigger = {
 			zaporizhia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			yedisan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
