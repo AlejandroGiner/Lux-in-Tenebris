@@ -3,7 +3,7 @@ country_decisions = {
 #These are 'special' formation decisions for unique cases like the UK and the special Irish and Celtic tags from BtP.
 
 ############################################################################################
-################################### BtP Native tag desicions #################################### 
+################################### BtP Native tag decisions ####################################
 ############################################################################################
 	form_connacht = {
 		major = yes
@@ -18,8 +18,8 @@ country_decisions = {
 				}
 			}
 			OR = {
-				government = irish_clann
-				government = norman_lordship
+				has_reform = irish_clann_reform
+				has_reform = norman_lordship
 			}
 			any_owned_province = { area = connacht_area }
 		}
@@ -48,10 +48,10 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CNN
-			change_government = provincial_kingdom
+			#add_government_reform = provincial_kingdom
 			connacht_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = CNN
@@ -82,8 +82,8 @@ country_decisions = {
 				}
 			}
 			OR = {
-				government = irish_clann
-				government = norman_lordship
+				has_reform = irish_clann_reform
+				has_reform = norman_lordship
 			}
 			any_owned_province = { area = munster_area }
 		}
@@ -112,10 +112,10 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MNS
-			change_government = provincial_kingdom
+			#add_government_reform = provincial_kingdom
 			munster_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = MNS
@@ -146,8 +146,8 @@ country_decisions = {
 				}
 			}
 			OR = {
-				government = irish_clann
-				government = norman_lordship
+				has_reform = irish_clann_reform
+				has_reform = norman_lordship
 			}
 			any_owned_province = { area = leinster_area }
 		}
@@ -176,10 +176,10 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LEI
-			change_government = provincial_kingdom
+			#add_government_reform = provincial_kingdom
 			leinster_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = LEI
@@ -210,8 +210,8 @@ country_decisions = {
 				}
 			}
 			OR = {
-				government = irish_clann
-				government = norman_lordship
+				has_reform = irish_clann_reform
+				has_reform = norman_lordship
 			}
 			any_owned_province = { area = ulster_area }
 		}
@@ -240,10 +240,10 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ULS
-			change_government = provincial_kingdom
+			#add_government_reform = provincial_kingdom
 			ulster_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ULS
@@ -260,7 +260,7 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
+
 	celtic_nation = {
 		major = yes
 		potential = {
@@ -661,7 +661,7 @@ country_decisions = {
 	}
 
 ############################################################################################
-################################# BtP Anlgo-Irish tag desicions ################################## 
+################################# BtP Anglo-Irish tag desicions ##################################
 ############################################################################################
 	form_duchy_connacht = {
 		major = yes
@@ -881,7 +881,7 @@ country_decisions = {
 	}
 
 ############################################################################################
-################################## Driaocht's New Celtic Tags ################################### 
+################################## Driaocht's New Celtic Tags ###################################
 ############################################################################################
 
 	tir_na_ngael_nation = {
@@ -1006,7 +1006,7 @@ country_decisions = {
 		}
 		ai_importance = 400 #
 	}
-	
+
 	albion_nation = {
 		major = yes
 		potential = {
@@ -1079,12 +1079,11 @@ country_decisions = {
 	}
 
 ############################################################################################
-########################### Other Special or Quirky Formation Decisions ############################ 
+########################### Other Special or Quirky Formation Decisions ############################
 ############################################################################################
 	united_kingdom_nation = {
 		major = yes
 		potential = {
-			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_united_kingdom_flag }
 			NOT = { tag = UNK }
 			NOT = { tag = CEL }
@@ -1145,7 +1144,7 @@ country_decisions = {
 			total_development = 500			#Normal requirement for rank 3 is 1000 dev, so this is 50 percent discounted
 			prestige = 40			#Normal requirement for rank 3 is 75 prestige, so this is 50 percent discounted
 		}
-		effect = {		
+		effect = {
 			every_subject_country = {
 				limit = {
 					ai = yes
@@ -1183,14 +1182,14 @@ country_decisions = {
 			add_prestige = 50			#Doubled prestige due to special formation.
 			british_isles_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = UNK
 			}
 			ireland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = UNK
