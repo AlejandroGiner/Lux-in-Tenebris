@@ -14,16 +14,17 @@ country_decisions = {
         }
       }
       has_idea = quest_for_the_new_world
+      NOT = { government_rank = 3 }
     }
     allow = {
       total_development = 600
       government_rank = 2
       NOT = { government_rank = 3 }
       prestige = 75
-      #either 4 colonies, 2 of them having a least 10 cities
-      #either 2 colonies, 1 of them having Mexico area and 150-200 dev
-      #either 2 colonies, 1 of them having East yucatan and 130-150 dev
-      #either 2 colonies, 1 of them having Kuntisuyu and 140-180 dev
+      #either:4 colonial nations, 2 of them having a least 10 cities
+      #    or 2 colonial nations, 1 of them having Mexico area and 150-200 dev
+      #    or 2 colonial nations, 1 of them having East yucatan and 130-150 dev
+      #    or 2 colonial nations, 1 of them having Kuntisuyu and 140-180 dev
       OR = {
 
         AND = {
