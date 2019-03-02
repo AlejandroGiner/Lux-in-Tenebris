@@ -3459,3 +3459,117 @@ FRX_ideas = {
 		all_power_cost = -0.05
 	}
 }
+
+GOG_ideas = {
+	start = {
+		adm_tech_cost_modifier = -0.1
+		num_accepted_cultures = 1
+	}
+
+	bonus = {
+		diplomatic_reputation = 1
+	}
+
+	trigger = {
+		tag = GOG
+	}
+	free = yes
+
+	legacy_of_goguryeo = {
+		prestige = 1
+	}
+	jumong = {
+		legitimacy = 1
+	}
+	battle_hardened_veterans_goguryeo = {
+		land_morale = 0.1
+	}
+	foreign_affairs_goguryeo = {
+		diplomats = 1
+	}
+	mountain_fortresses_goguryeo = {
+		defensiveness = 0.25
+	}
+	outward_expansion_goguryeo = {
+		core_creation = -0.10
+	}
+	remembering_gwanggaeto = {
+		army_tradition = 1
+	}
+}
+
+BKJ_ideas = {
+	start = {
+        fire_damage_received = -0.1
+		legitimacy = 1
+	}
+
+	bonus = {
+		merc_maintenance_modifier = -0.15
+	}
+
+	trigger = {
+		tag = BKJ
+	}
+	free = yes
+
+	hundred_vassals_baekje = {
+		global_autonomy = -0.05
+	}
+	regional_sea_power_baekje = {
+		global_ship_cost = -0.1
+	}
+	diplomatic_missions_baekje = {
+		diplomatic_reputation = 1
+	}
+	chinese_influences_baekje = {
+		dip_tech_cost_modifier = -0.1
+	}
+	decendants_of_buyeo = {
+		development_cost = -0.1
+	}
+	han_river_baekje = {
+		global_tax_modifier = 0.10
+	}
+	eight_noble_clans = {
+		stability_cost_modifier = -0.1
+	}
+}
+
+SLL_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+        land_forcelimit_modifier = 0.10
+	}
+
+	bonus = {
+		diplomatic_reputation = 1
+	}
+
+	trigger = {
+		tag = SLL
+	}
+	free = yes
+
+	bone_rank_system = {
+		global_unrest = -1
+	}
+	hwarang = {
+		army_tradition = 1
+	}
+	geumseong = {
+		prestige = 1
+	}
+	cultural_heartland_of_korea_silla = {
+		global_trade_power = 0.2
+	}
+	hwabaek = {
+		adm_tech_cost_modifier = -0.1
+	}
+	tribal_origins_silla = {
+		manpower_recovery_speed = 0.20
+	}
+	bureaucratic_government_silla = {
+		development_cost = -0.1
+	}
+}
