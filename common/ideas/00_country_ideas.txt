@@ -1552,11 +1552,11 @@ OMA_ideas = {
 KOR_ideas = {
 	start = {
 		global_own_trade_power = 0.25
-		build_cost = -0.1
+		defensiveness = 0.20
 	}
 	
 	bonus = {
-		infantry_power = 0.1
+		land_morale = 0.1
 	}
 	
 	trigger = {
@@ -1564,26 +1564,28 @@ KOR_ideas = {
 	}
 	free = yes
 	
+	grand_code = {
+		global_unrest = -2
+	}
 	hanguel_alphabet = {
 		technology_cost = -0.05
 	}
-	grand_code = {
-		stability_cost_modifier = -0.10
-	}
 	hyanyak_system = {
-		production_efficiency = 0.10
+		global_trade_goods_size_modifier = 0.10
 	}
 	geobukseon = {
-		ship_durability = 0.05
+		ship_durability = 0.10
+		heavy_ship_power = 0.15
 	}
-	hopae_system = {
-		global_manpower_modifier = 0.10
+	battle_of_haengju = {
+		garrison_size = 0.1
+		fort_maintenance_modifier = -0.1
 	}
 	kyujanggak = {
 		idea_cost = -0.1
 	}
-	kor_economy_reform = {
-		global_tax_modifier = 0.10
+	hopae_system = {
+		global_manpower_modifier = 0.10
 	}
 	
 }

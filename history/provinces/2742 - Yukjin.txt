@@ -1,15 +1,15 @@
-#2742 - North Hamgyeong
+#2742 - Kwanbuk
 
 owner = KOR
 controller = KOR
 culture = korean
 religion = confucianism
-capital = "Yukjin"
+capital = "Rajin-Sonbong" #two small fishing villages in the area
 trade_goods = naval_supplies
 hre = no
 base_tax = 1 
 base_production = 1
-base_manpower = 1
+base_manpower = 2 # Joseon garrison
 is_city = yes
 add_core = KOR
 add_core = MJZ
@@ -20,6 +20,9 @@ discovered_by = indochinese
 discovered_by = malay_group
 discovered_by = nomad_group
 add_local_autonomy = 25
+
+extra_cost = 8
+center_of_trade = 1 #relevant port even today, but was not developed at the time, so fitting to be just a natural harbor
 
 1542.1.1 = { discovered_by = POR }
 1592.7.18 = { controller = ODA } # Japanese invasion - Battle of Haejungchang
