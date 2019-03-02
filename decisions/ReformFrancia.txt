@@ -18,7 +18,7 @@ country_decisions = {
 			NOT = { tag = GER }
 			NOT = { tag = PRU }
 			has_country_flag = can_form_francia
-			is_colonial_nation = no			
+			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
 				AND = {
@@ -44,9 +44,9 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			# hidden = {
+			hidden = {
 				has_country_flag = can_form_francia
-			# }
+			}
 			owns_core_province = 2957 #regensburg
 			owns_core_province = 1876 #frankfurt
 			owns_core_province = 1878 #aachen
@@ -178,7 +178,7 @@ country_decisions = {
 			modifier = {
 				factor = 0
 				is_part_of_hre = yes
-				is_elector = no	
+				is_elector = no
 			}
 		}
 	}
