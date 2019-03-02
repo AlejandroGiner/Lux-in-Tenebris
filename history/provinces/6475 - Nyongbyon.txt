@@ -1,16 +1,21 @@
 #6475 - Nyongbyon
 
+latent_trade_goods = {
+	coal
+}
+
 owner = KOR
 controller = KOR
 culture = korean
 religion = confucianism
 capital = "Nyongbyon"
-trade_goods = naval_supplies
+trade_goods = iron
 hre = no
 base_tax = 3
 base_production = 2
 base_manpower = 1
 is_city = yes
+add_core = GOG
 add_core = KOR
 discovered_by = chinese
 discovered_by = japanese_btc
