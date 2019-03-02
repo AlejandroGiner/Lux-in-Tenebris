@@ -1,0 +1,151 @@
+government = monarchy
+add_government_reform = daimyo
+government_rank = 1
+primary_culture = kyushuan
+religion = shinto
+technology_group = japanese_btc
+capital = 6470	# Tsushima
+
+1444.6.15 = { 
+	monarch = {
+		name = "Shigemoto"
+		dynasty = "So"
+		birth_date = 1419.1.1
+		death_date = 1468.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+		}
+	}
+	heir = {
+		name = "Kimori"
+		monarch_name = "Kimori"
+		dynasty = "So"
+		birth_date = 1444.1.1
+		death_date = 1512.1.1
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1468.6.9 = { 
+	monarch = {
+		name = "Kimori"
+		dynasty = "So"
+		birth_date = 1444.1.1
+		death_date = 1512.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	heir = {
+		name = "Yoshimori"
+		monarch_name = "Yoshimori"
+		dynasty = "So"
+		birth_date = 1468.1.1
+		death_date = 1520.1.1
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1523.8.25 = {
+	monarch = {
+		name = "Masamori"
+		dynasty = "So"
+		birth_date = 1509.1.1
+		death_date = 1573.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	government = sengoku_monarchy
+}
+
+1536.4.7 = { 
+	monarch = {
+		name = "Haruyasu"
+		dynasty = "So"
+		birth_date = 1475.1.1
+		death_date = 1563.3.22
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+	heir = {
+		name = "Yoshishige"
+		monarch_name = "Yoshishige"
+		dynasty = "So"
+		birth_date = 1532.1.1
+		death_date = 1589.1.1
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1554.3.1 = { 
+	monarch = {
+		name = "Yoshishige"
+		dynasty = "So"
+		birth_date = 1532.1.1
+		death_date = 1589.1.1
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1569.10.10 = {
+	heir = {
+		name = "Yoshitoshi"
+		monarch_name = "Yoshitoshi"
+		dynasty = "So"
+		birth_date = 1568.1.1
+		death_date = 1615.1.1
+		claim = 90
+		adm = 4
+		dip = 4
+		mil = 5
+	}
+}
+
+1600.9.13 = { 
+	monarch = {
+		name = "Yoshitoshi"
+		dynasty = "So"
+		birth_date = 1568.1.1
+		death_date = 1615.1.1
+		adm = 4
+		dip = 5
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = nautical_personality
+	add_ruler_personality = mercantile_personality
+	add_ruler_personality = cynical_personality
+	government = late_sengoku_monarchy
+}
+
+1615.1.1 = {
+	monarch = {
+		name = "Yoshitoshi"
+		dynasty = "So"
+		birth_date = 1568.1.1
+		death_date = 1615.1.1
+		adm = 4
+		dip = 5
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = nautical_personality
+	add_ruler_personality = mercantile_personality
+	add_ruler_personality = cynical_personality
+	add_ruler_personality = immortal_personality
+	government = daimyo_monarchy
+}
