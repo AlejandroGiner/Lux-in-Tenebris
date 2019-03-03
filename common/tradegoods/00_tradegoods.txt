@@ -2701,7 +2701,7 @@ beer = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 99 }	
+			NOT = { development = 99 }
 		}
 		modifier = {
 			factor = 2.0
@@ -2791,7 +2791,7 @@ rice = {
 			}
 		}
 		modifier = {
-			factor = 1.5 
+			factor = 1.5
 			continent = asia
 		}
 		modifier = {
@@ -2955,6 +2955,13 @@ maize = {
 				region = hudson_bay_region
 			}
 		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = newfoundland_area
+				area = avalon_area
+			}
+		}
 	}
 }
 
@@ -3034,14 +3041,21 @@ fruit = {
 			OR = {
 				has_terrain = woods
 				has_terrain = forest
-			}	
+			}
 		}
 		modifier = {
 			factor = 5
 			OR = {
 				has_climate = tropical
 				has_terrain = jungle
-				
+
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = newfoundland_area
+				area = avalon_area
 			}
 		}
 	}
@@ -3168,6 +3182,13 @@ marble = {
 				region = northeast_america_region
 				region = balkan_region
 				region = italy_region
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = newfoundland_area
+				area = avalon_area
 			}
 		}
 	}
@@ -3307,6 +3328,13 @@ legumes = {
 				region = canada_region
 				region = southeast_america_region
 				region = colombia_region
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = newfoundland_area
+				area = avalon_area
 			}
 		}
 	}
