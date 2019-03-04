@@ -1,20 +1,19 @@
 # - Ouarzazate
 
-owner = MOR
-controller = MOR
+owner = TFL
+controller = TFL
 culture = shilha
 religion = sunni
 capital = "Ouarzazate"
 trade_goods = wool
 hre = no
-base_tax = 2
+base_tax = 2 
 base_production = 1
-base_manpower = 1
+base_manpower = 1 
 is_city = yes
+add_core = TFL
 add_core = MOR
 add_core = SOS
-add_core = TFL
-
 
 
 discovered_by = western
@@ -23,10 +22,12 @@ discovered_by = persian_btc
 discovered_by = ottoman
 
 
-1444.1.1 = {
-	owner = SOS
-	controller = SOS
-	add_core = SOS
+1465.1.1 = { unrest = 5 } #Marinid Sultan killed by mob. Mohammed ibn Ali Amrani-Joutey (Idrisid) proclaims himself Sultan. Unrest in the entire country. 
+1472.1.1 = { owner = TFL controller = TFL unrest = 0 } #Wattasids take control over Fez, nominal ruler over much of Morocco.
+1549.1.1 = {
+	owner = MOR
+	controller = MOR
+	remove_core = TFL
 }	#Fall of Fez
 1603.8.1 = { unrest = 5 } #Death of al-Mansur, long period of instability follows
 1629.1.1 = {
