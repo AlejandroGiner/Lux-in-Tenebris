@@ -2,7 +2,7 @@ country_decisions = {
   good_colonial_borders = {
     potential = {
       calc_true_if = {
-        any_subject_country = {
+        all_subject_country = {
           is_colonial_nation = yes
           }
         amount = 2
