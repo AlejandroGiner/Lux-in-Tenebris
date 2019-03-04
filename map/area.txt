@@ -504,20 +504,28 @@ venetia_area = { #4
 	111 112 1774 3228 3013
 }
 
-lombardy_area = { #6
-	104 107 1862 3043 3047 3294
+lombardy_area = { #West Lombardy
+	104 3043 3095 3054
 }
 
-piedmont_area = { #6
-	103 1875 2979 2981 3044 3045
+east_lombardy_area = {
+	1862 107 3047 3294
 }
 
-tuscany_area = { #4
+piedmont_area = { #East Piedmont
+	2979 2981 3045 3067 3078 3086
+}
+
+west_piedmont_area = {
+	3080 103 3074 3076 1875 3044
+}
+
+tuscany_area = { #North Tuscany
 	115 116 2978 2980 5710
 }
 
 liguria_area = { #4
-	101 102 2992 3042 3011
+	101 102 2992 3042 3011 3072
 }
 
 corsica_sardinia_area = { #6
@@ -1114,7 +1122,7 @@ carniola_area = { #3
 
 switzerland_area = { #4
 	color = { 21 14 237 }
-	166 1869 1870 1873 3054
+	166 1869 1870 1873
 }
 
 romandie_area = { #3
@@ -4707,7 +4715,7 @@ true_north_atlantic_sea_area = {
 unused_area = {
 
 #working on rn BTC
-3067 3072 3074 3076 3078 3080 3086 3091 3093 3094 3095 3096 3097 3098 3101 3102 3103 3105 3107 3116 3127
+3096 3097 3098 3101 3102 3103 3105 3107 3116 3127
 #HR's BtP provinces
 3249 3252 3255 3257 3258
 3260 3272 3275 4153 4155 4169 4178 4347 4739 4740 4741 4742 4743 4744 4745 4746
