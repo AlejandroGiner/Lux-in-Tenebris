@@ -11,7 +11,10 @@ country_event = { #Colonial Nation clean-up
 	trigger = {
 		is_colonial_nation = yes
 		ai = yes
-		colonial_parent = {NOT = {same_continent = ROOT}}
+		colonial_parent = {
+			NOT = {same_continent = ROOT}
+			has_country_flag = good_colonial_borders_flag
+		}
 		capital_scope = {
 			OR = {
 				colonial_region = colonial_alaska
