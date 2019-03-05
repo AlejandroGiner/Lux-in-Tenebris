@@ -512,23 +512,31 @@ east_lombardy_area = {
 	1862 107 3047 3294
 }
 
-piedmont_area = { #East Piedmont
-	2979 2981 3045 3067 3078 3086 3249 5133
+piedmont_area = { #North Piedmont
+	2979 3045 3078 3086 3249
 }
 
-west_piedmont_area = {
-	3080 103 3074 3076 1875 3044
+btc_monferrat_area = {
+	5133 2981 3067 3074 
+}
+
+west_piedmont_area = { #South Piedmont
+	3080 103 3076 1875 3044
 }
 
 tuscany_area = { #North Tuscany
-	115 116 2978 2980 5710
+	115 116 2978 5710 7005
 }
 
-liguria_area = { #4
-	101 102 2992 3042 3011 3072
+lunigiana_area = {
+	5169 2980 3042
 }
 
-corsica_sardinia_area = { #6
+liguria_area = { #5
+	101 102 2992 3011 3072
+}
+
+corsica_sardinia_area = { #7
 	127 2986 5090 5091 3101 3102 3103
 }
 
@@ -536,7 +544,7 @@ corsica_area = {
 	3097 3098 5092 1247
 }
 
-sicily_area = { #5
+sicily_area = { #West sicily
 	125 3037 7000 7001 7003
 }
 
@@ -548,7 +556,7 @@ naples_area = { #Campania
 	121 2983 3039 5705 3127
 }
 
-calabria_area = { #4
+calabria_area = { #5
 	123 1934 2984 3274 3283
 }
 
@@ -556,9 +564,9 @@ apulia_area = { #5
 	122 1933 2985 3286 3269
 }
 
-emilia_romagna_area = { #3
+emilia_romagna_area = { #5
 	color = { 24 222 66 }
-	113 114 3041 5711
+	113 114 3041 5711 5136
 }
 
 emilia_area = {
@@ -571,7 +579,7 @@ central_italy_area = { #6
 }
 
 btc_marche_area = {
-	5580 2977 119 5712
+	5580 2977 119 5712 5153
 }
 
 abruzzo_area = {
@@ -583,7 +591,7 @@ verona_area = {
 }
 
 south_tuscany_area = {
-	117 3040 3232 7043 5709 7005
+	117 3040 3232 7043 5709
 }
 
 lazio_area = {
@@ -4817,7 +4825,6 @@ unused_area = {
 4681 5214 5215 5216 5217 5227 5308 5562 5564 5566 5568 5569 5570 5571 5828 5829 5831 5842
 
 #Provinces replaced by new Paradox provinces
-	5153 5136 5169 			#1.23 Anatolia
 	5183 5179 5182 5202 5159 5204 			#1.23 Levant
 	5262 5263 5265 5268 5269 5275 5270 5276 			#1.23 Egypt
 	5148 5292 5294 5291 3260 			#1.23 Armenia
