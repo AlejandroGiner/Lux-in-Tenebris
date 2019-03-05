@@ -513,7 +513,7 @@ east_lombardy_area = {
 }
 
 piedmont_area = { #East Piedmont
-	2979 2981 3045 3067 3078 3086
+	2979 2981 3045 3067 3078 3086 3249 5133
 }
 
 west_piedmont_area = {
@@ -529,7 +529,11 @@ liguria_area = { #4
 }
 
 corsica_sardinia_area = { #6
-	1247 5092 127 2986 5090 5091
+	127 2986 5090 5091 3101 3102 3103
+}
+
+corsica_area = {
+	3097 3098 5092 1247
 }
 
 sicily_area = { #5
@@ -540,8 +544,8 @@ eastsicily_area = { #5
 	124 2982 126 7002 7004
 }
 
-naples_area = { #6
-	121 2983 3039 5705  
+naples_area = { #Campania
+	121 2983 3039 5705 3127
 }
 
 calabria_area = { #4
@@ -558,7 +562,7 @@ emilia_romagna_area = { #3
 }
 
 emilia_area = {
-	105 106 109 7017
+	105 106 109 7017 5149
 }
 
 central_italy_area = { #6
@@ -583,7 +587,7 @@ south_tuscany_area = {
 }
 
 lazio_area = {
-	118 3236 3295 
+	118 3236 3295 3107 3116
 }
 ########################################
 # British Isles			 			   #
@@ -4713,11 +4717,8 @@ true_north_atlantic_sea_area = {
 #####Unused Area, placeholder to prevent crashes when testing, and to prevent error log entries#####
 ##################################################################################
 unused_area = {
-
-#working on rn BTC
-3096 3097 3098 3101 3102 3103 3105 3107 3116 3127
 #HR's BtP provinces
-3249 3252 3255 3257 3258
+3252 3255 3257 3258
 3260 3272 3275 4153 4155 4169 4178 4347 4739 4740 4741 4742 4743 4744 4745 4746
 4747 4748 4749 4750 4751 4752 4753 4754 4755
 
@@ -4816,8 +4817,7 @@ unused_area = {
 4681 5214 5215 5216 5217 5227 5308 5562 5564 5566 5568 5569 5570 5571 5828 5829 5831 5842
 
 #Provinces replaced by new Paradox provinces
-	#3008 3082 3125 3126 3129		#1.19
-	5133 5149 5166 5153 5136 5169 			#1.23 Anatolia
+	5153 5136 5169 			#1.23 Anatolia
 	5183 5179 5182 5202 5159 5204 			#1.23 Levant
 	5262 5263 5265 5268 5269 5275 5270 5276 			#1.23 Egypt
 	5148 5292 5294 5291 3260 			#1.23 Armenia

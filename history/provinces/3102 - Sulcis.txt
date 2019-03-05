@@ -1,0 +1,43 @@
+#3102 - Sulcis
+
+owner = SAR
+controller = SAR
+add_core = SAR
+add_core = ARR #Marianus IV the Great reconquers most of Sardinia for Arborea
+culture = sardinian
+religion = catholic
+capital = "Iglesias"
+base_tax = 1
+base_production = 1
+base_manpower = 1
+trade_goods = gold			#famous silver mines
+is_city = yes
+hre = no
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = persian_btc
+
+#Province history completed by - Draiocht being lazy
+1516.1.23 = {
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	remove_core = ARA
+} # Unification of Spain
+1713.4.12 = {
+	owner = HAB
+	controller = HAB
+	add_core = HAB
+	remove_core = SPA
+}
+1720.1.1 = {
+	owner = SPI
+	controller = SPI
+	add_core = SPI
+	remove_core = HAB
+} # Kingdom of Piedmont-Sardinia
+1796.1.1 = { controller = FRA } # French invasion
+1796.4.16 = { controller = SPI } # Peace between Sardinia and France
