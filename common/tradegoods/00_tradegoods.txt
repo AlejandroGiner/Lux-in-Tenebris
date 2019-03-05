@@ -6,7 +6,7 @@
 grain = {
 	color = { 0.96 0.93 0.58 }
 	modifier = {
-		land_forcelimit_modifier = 0.20
+		cav_to_inf_ratio = 0.1
 	}
 	province = {
 		land_forcelimit = 0.5
@@ -20,9 +20,6 @@ grain = {
 				has_terrain = glacier
 				has_terrain = coastline
 				has_climate = arctic
-			}
-			NOT = {
-				province_id = 5304	#North African Oasis with famous dates
 			}
 		}
 		modifier = {
@@ -1508,7 +1505,7 @@ slaves = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.9
 			region = south_africa_region
 		}
 		modifier = {
@@ -1763,10 +1760,10 @@ spices = {
 coffee = {
 	color = { 0.22 0.15 0.09 }
 	modifier = {
-		global_institution_spread = 0.05
+		global_autonomy = -0.05
 	}
 	province = {
-		local_institution_spread = 0.1
+		local_culture_conversion_cost = -0.1
 	}
 	chance = {
 		factor = 15
@@ -2189,7 +2186,7 @@ dyes = {
 tropical_wood = {
 	color = { 0.45 0.47 0.09 }
 	modifier = {
-		development_cost = -0.05
+		build_time = -0.1
 	}
 	province = {
 		local_build_cost = -0.2
@@ -2716,7 +2713,7 @@ books = {
 		innovativeness_gain = 0.2
 	}
 	province = {
-		local_autonomy = -0.05
+		local_institution_spread = 0.15
 	}
 	chance = {
 		factor = 1
@@ -2805,6 +2802,18 @@ rice = {
 			}
 			NOT = { has_global_flag = rice_traded }
 		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
 	}
 }
 
@@ -2854,6 +2863,12 @@ whales = {
 				province_id = 5591
 			}
 		}
+		modifier = {
+			factor = 0.35
+			NOT = {
+				has_winter = severe_winter
+			}
+		}
 	}
 }
 
@@ -2863,7 +2878,7 @@ potatoes = {
 		global_tax_modifier = 0.1
 	}
 	province = {
-		local_tax_modifier = 0.05
+		trade_goods_size_modifier = 0.15
 	}
 	chance = {
 		factor = 5
@@ -2962,6 +2977,18 @@ maize = {
 				area = avalon_area
 			}
 		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
 	}
 }
 
@@ -3007,6 +3034,18 @@ millet = {
 				region = guinea_region
 				region = central_africa_region
 			}
+		}
+		modifier = {
+			factor = 0
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
 		}
 	}
 }
@@ -3058,6 +3097,18 @@ fruit = {
 				area = avalon_area
 			}
 		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
 	}
 }
 
@@ -3089,7 +3140,7 @@ olives = {
 		local_monthly_devastation = -0.05
 	}
 	chance = {
-		factor = 1
+		factor = 3
 		modifier = {
 			factor = 0.0
 			is_sea = yes
@@ -3110,6 +3161,18 @@ olives = {
 		modifier = {
 			factor = 5
 			region = la_plata_region
+		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
 		}
 	}
 }
@@ -3152,6 +3215,13 @@ dates = {
 				region = malaya_region
 			}
 		}
+		modifier = {
+			factor = 0
+			has_winter = severe_winter
+			has_winter = normal_winter
+			has_winter = mild_winter
+			area = taiwan_area
+		}
 	}
 }
 
@@ -3161,7 +3231,9 @@ marble = {
 		prestige = 1.0
 	}
 	province = {
-		local_build_cost = -0.15
+		local_build_cost = -0.1
+		local_development_cost = -0.05
+		local_state_maintenance_modifier = -0.1
 	}
 	chance = {
 		factor = 1
@@ -3292,36 +3364,47 @@ amaranth = {
 				continent = oceania
 			}
 		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
+		}
 	}
 }
 
 legumes = {
 	color = { 129 136 57 }
 	modifier = {
-		land_maintenance_modifier = -0.05
+		infantry_cost = -0.05
 	}
 	province = {
-		local_manpower_modifier = 0.1
+		local_regiment_cost = -0.1
 	}
 	chance = {
-		factor = 4
+		factor = 2
 		modifier = {
 			factor = 0.0
 			is_sea = yes
 		}
 		modifier = {
-			factor = 9
+			factor = 8
 			OR  = {
 				region = guinea_region
 				region = central_africa_region
 				region = south_africa_region
 				region = brazil_region
-				region = colombia_region
 				region = mexico_region
 			}
 		}
 		modifier = {
-			factor = 6
+			factor = 7
 			OR  = {
 				region = northeast_america_region
 				region = great_lakes_region
@@ -3336,6 +3419,18 @@ legumes = {
 				area = newfoundland_area
 				area = avalon_area
 			}
+		}
+		modifier = {
+			factor = 0.35
+			has_winter = severe_winter
+		}
+		modifier = {
+			factor = 0.5
+			has_winter = normal_winter
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
 		}
 	}
 }
