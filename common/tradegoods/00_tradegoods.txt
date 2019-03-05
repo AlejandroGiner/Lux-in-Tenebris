@@ -2951,14 +2951,6 @@ maize = {
 			NOT = { has_global_flag = maize_traded }
 		}
 		modifier = {
-			factor = 1
-			OR  = {
-				region = california_region
-				region = cascadia_region
-				region = carribeans_region
-			}
-		}
-		modifier = {
 			factor = 3
 			OR  = {
 				region = mexico_region
