@@ -77,16 +77,16 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			add_prestige = 25
-			IF = {
+			if = {
 				limit = { NOT = { accepted_culture = cosmopolitan_french } }
 				add_accepted_culture = cosmopolitan_french
 			}
-			IF = {
+			if = {
 				limit = { NOT = { accepted_culture = burgundian } }
 				add_accepted_culture = burgundian
 			}
 			lower_rhineland_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -95,7 +95,7 @@ country_decisions = {
 				}
 			}
 			wallonia_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -104,7 +104,7 @@ country_decisions = {
 				}
 			}
 			flanders_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -113,7 +113,7 @@ country_decisions = {
 				}
 			}
 			netherlands_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -122,7 +122,7 @@ country_decisions = {
 				}
 			}
 			north_rhine_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -131,7 +131,7 @@ country_decisions = {
 				}
 			}
 			hesse_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -140,7 +140,7 @@ country_decisions = {
 				}
 			}
 			thuringia_area = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -149,7 +149,7 @@ country_decisions = {
 				}
 			}
 			82 = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -158,7 +158,7 @@ country_decisions = {
 				}
 			}
 			2972 = {
-				IF = {
+				if = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -166,7 +166,7 @@ country_decisions = {
 					add_permanent_claim = FRX
 				}
 			}
-			IF = {
+			if = {
 				limit = {
 					is_playing_custom_nation = no
 				}
