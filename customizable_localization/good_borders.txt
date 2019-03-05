@@ -1,0 +1,17 @@
+defined_text = {
+  name = GetIfGoodBorders
+  random = no
+  text = {
+    localisation_key = string_good_borders
+    trigger = {
+      has_country_flag = good_colonial_borders_flag
+    }
+  }
+
+  text = {
+    localisation_key = string_not_good_borders
+    trigger = {
+      always = yes
+    }
+  }
+}
