@@ -2,7 +2,6 @@
 
 owner = SAV
 controller = SAV
-add_core = SAV
 culture = piedmontese
 religion = catholic
 capital = "Mondovi"
@@ -12,6 +11,8 @@ base_manpower = 2
 trade_goods = legumes
 is_city = yes
 hre = yes
+add_core = MVI
+add_core = SAV
 
 discovered_by = western
 discovered_by = muslim
@@ -57,6 +58,8 @@ discovered_by = persian_btc
 	owner = MFA
 	controller = MFA
 	add_core = MFA
+	remove_core = NAP
+	remove_core = MLO
 } # Actual date unknown. No sources seem to want to share the exact date the Visconti got it from the Angevins, or when Montferrat took it from the Visconti.
 1396.1.1 = {
 	owner = SAV
