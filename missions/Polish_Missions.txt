@@ -934,36 +934,36 @@ polish_missions_slot_5 = {
 			owns_core_province = 260
 			owns_core_province = 2961
 			260 = {
-					development = 20
+				development = 20			
+				has_manufactory_trigger = yes
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 3
 				}
-			has_manufactory_trigger = yes
-			if = {
-				limit = {
-					has_dlc = "Dharma"
-				}
-				province_has_center_of_trade_of_level = 3
-			}
-			else = {
-				OR = {
-					has_building = trade_depot
-					has_building = stock_exchange
-				}
+				else = {
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}				
 			}
 			2961 = {
 				development = 20
-			}
-			has_manufactory_trigger = yes
-			if = {
-				limit = {
-					has_dlc = "Dharma"
+				has_manufactory_trigger = yes
+				if = {
+					limit = {
+						has_dlc = "Dharma"
+					}
+					province_has_center_of_trade_of_level = 2
 				}
-				province_has_center_of_trade_of_level = 2
-			}
-			else = {
-				OR = {
-					has_building = trade_depot
-					has_building = stock_exchange
-				}
+				else = {
+					OR = {
+						has_building = trade_depot
+						has_building = stock_exchange
+					}
+				}	
 			}
 		}
 		effect = {

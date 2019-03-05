@@ -1063,12 +1063,11 @@ andalusia_slot_3_missions_b = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
 				OR = {
-					colonial_region = colonial_the_carribean
-					colonial_region = colonial_cuba
-					colonial_region = colonial_hispaniola
-					colonial_region = colonial_bahamas
+					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_cuba = { has_discovered = ROOT }
+					colonial_hispaniola = { has_discovered = ROOT }
+					colonial_bahamas = { has_discovered = ROOT }
 				}
-				has_discovered = ROOT
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_west_africa

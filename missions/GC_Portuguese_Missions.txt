@@ -570,9 +570,7 @@ gc_por_2_c = {
 		position = 7
 
 		provinces_to_highlight = {
-			OR = {
-				area = lanka_area
-			}
+			area = lanka_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 

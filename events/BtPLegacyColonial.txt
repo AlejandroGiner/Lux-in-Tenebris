@@ -164,12 +164,10 @@ province_event = {
 			}
 			has_empty_adjacent_province = yes
 			any_empty_neighbor_province = {
-				AND = {
-					has_discovered = ROOT
-					OR = {
-						area = newfoundland_area
-						area = avalon_area
-					}
+				has_discovered = ROOT
+				OR = {
+					area = newfoundland_area
+					area = avalon_area
 				}
 			}
 		}
