@@ -1,0 +1,513 @@
+country_decisions = {
+	###################################################################################################
+################################			Morocco			 ##############################################
+###################################################################################################
+	moroccan_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_morocco_flag }
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = OTN }
+			OR = {
+				primary_culture = moroccan
+				AND = {
+					OR = {
+						culture_group = turko_semitic
+						culture_group = berber_group
+					}
+					any_owned_province = {
+						OR = {
+							area = northern_morocco_area
+							area = western_morocco_area
+							area = southern_morocco_area
+							area = marrekesh_area
+							area = sus_area
+							area = tafilalt_area
+							area = tagmudant_area
+						}
+					}
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_morocco_area
+				area = western_morocco_area
+				area = southern_morocco_area
+				area = marrekesh_area
+				area = sus_area
+				area = tafilalt_area
+				area = tagmudant_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = MOR }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 343 #Fez
+			owns_core_province = 344 #Marrekech
+			owns_core_province = 2467 #Meknes
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = northern_morocco_area
+						area = western_morocco_area
+						area = southern_morocco_area
+						area = marrekesh_area
+						area = sus_area
+						area = tafilalt_area
+						area = tagmudant_area
+					}
+				}
+				amount = 19			#At least 2/3 of Morocco's 28 provinces
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = MOR
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			tafilalt_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			sus_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			marrekesh_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			southern_morocco_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			northern_morocco_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			western_morocco_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			tagmudant_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = MOR
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					OR = {
+						has_reform = tribal_kingdom
+						has_reform = tribal_despotism
+						has_reform = tribal_federation
+						has_reform = tribal_democracy_legacy
+					}
+				}
+				add_government_reform = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_morocco_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	algiers_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_algiers_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			OR = {
+				primary_culture = algerian
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = algiers_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = hautes_plaines_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = ouled_nail_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = kabylia_area }
+				}
+				AND = {
+					primary_culture = berber
+					capital_scope = { area = north_saharan_area }
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					NOT = { exists = ALG }
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 338
+				province_id = 2461
+				AND = {
+                    province_id = 336
+                    ROOT = { NOT = { owns_core_province = 339 } }
+                }
+                AND = {
+                    province_id = 339
+                    ROOT = { NOT = { owns_core_province = 336 } }
+                }
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ALG }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 338 #Algiers
+			owns_core_province = 2461 #Dahra
+			OR = {
+				owns_core_province = 336 #Tlemcen
+				owns_core_province = 339 #Kabylia
+			}
+		}
+		effect = {
+			338 = {
+				move_capital_effect = yes
+			}
+			change_tag = ALG
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
+				set_government_rank = 2
+			}
+			change_primary_culture = algerian
+			algiers_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			north_saharan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			hautes_plaines_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			ouled_nail_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			kabylia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ALG
+			}
+			if = {
+				limit = {
+					is_tribal = yes	#Desert tribes settling down.
+				}
+				change_government = monarchy
+				set_legacy_government = despotic_monarchy
+			}
+			add_prestige = 25
+			set_country_flag = formed_algiers_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	tunisian_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_tunisia_flag }
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = OTN }
+			primary_culture = tunisian
+			any_owned_province = {
+				OR = {
+					area = tunisia_area
+					area = djerba_area
+					area = djerid_area
+					area = east_aures_area
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tunisia_area
+				area = djerba_area
+				area = djerid_area
+				area = east_aures_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = OTN }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 341 #Tunis
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = tunisia_area
+						area = djerba_area
+						area = djerid_area
+						area = east_aures_area
+					}
+				}
+				amount = 10			#At least 2/3 of Tunisia's 15 provinces
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = OTN
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			tunisia_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			djerba_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			djerid_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			east_aures_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = OTN
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = tribal_kingdom
+						has_reform = tribal_despotism
+						has_reform = tribal_federation
+						has_reform = tribal_democracy_legacy
+					}
+				}
+				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_tunisia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	tripoli_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_tripoli_flag }
+			NOT = { tag = MOR }
+			NOT = { tag = TUN }
+			NOT = { tag = TLC }
+			NOT = { tag = ALG }
+			NOT = { tag = TRP }
+			NOT = { tag = OTN }
+			OR = {
+				primary_culture = tunisian
+				AND = {
+					OR = {
+						culture_group = turko_semitic
+						culture_group = berber_group
+					}
+					OR = {
+						capital_scope = { area = tripolitania_area }
+						capital_scope = { area = fezzan_area }
+						capital_scope = { area = cyrenaica_area }
+						capital_scope = { area = nafusa_mountains_area }
+					}
+				}
+			}
+			any_owned_province = {
+				OR = {
+					area = tripolitania_area
+					area = fezzan_area
+					area = cyrenaica_area
+					area = nafusa_mountains_area
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tripolitania_area
+				area = fezzan_area
+				area = cyrenaica_area
+				area = nafusa_mountains_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TRP }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 354 #Tripoli
+			calc_true_if = {
+				all_owned_province = {
+					is_core = ROOT
+					OR = {
+						area = tripolitania_area
+						area = fezzan_area
+						area = cyrenaica_area
+						area = nafusa_mountains_area
+					}
+				}
+				amount = 13			#At least 2/3 of Libya's 19 provinces
+			}
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = TRP
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			tripolitania_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			fezzan_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			cyrenaica_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			nafusa_mountains_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = TRP
+			}
+			if = {
+				limit = {
+					OR = {
+						has_reform = tribal_kingdom
+						has_reform = tribal_despotism
+						has_reform = tribal_federation
+						has_reform = tribal_democracy_legacy
+					}
+				}
+				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_tripoli_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		#ai_importance = 400
+	}
+}
