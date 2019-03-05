@@ -205,7 +205,6 @@ grain = {
 				province_id = 4949		# Nlakapamux
 				#province_id = 5043		# Cocopah			#removed, may add through irrigation event
 				#province_id = 867		# Ivilluat			#removed, may add through irrigation event
-				province_id = 5304		# Tachi
 			}
 		}
 		modifier = {	#Nile River
@@ -219,6 +218,10 @@ grain = {
 		modifier = { #New Zealand grows a lot of food
 			factor = 2.0
 			region = new_zealand_region
+		}
+		modifier = {
+			factor = 0
+			province_id = 5304
 		}
 	}
 }
@@ -390,6 +393,10 @@ wool = {
 					NOT = { region = caucasia_region }
 				}
 			}
+		}
+		modifier = {
+			factor = 0
+			province_id = 5304
 		}
 		modifier = {
 			factor = 0
@@ -788,6 +795,10 @@ salt = {
 			NOT = { any_neighbor_province = { province_id = 1649 } } #Lake Victoria
 			NOT = { any_neighbor_province = { province_id = 1650 } } #Lake Tangyanika
 			NOT = { any_neighbor_province = { province_id = 1651 } } #Lake Malawi
+		}
+		modifier = {
+			factor = 0
+			province_id = 5304
 		}
 		modifier = {
 			factor = 2
@@ -1485,6 +1496,10 @@ slaves = {
 				NOT = { continent = africa }
 				province_id = 1174 #Namibia
 			}
+		}
+		modifier = {
+			factor = 0
+			province_id = 5304
 		}
 		modifier = {
 			factor = 0
@@ -2235,6 +2250,10 @@ livestock = {
 		modifier = {
 			factor = 0.0
 			is_sea = yes
+		}
+		modifier = {
+			factor = 0
+			province_id = 5304
 		}
 		modifier = {
 			factor = 0
@@ -3017,6 +3036,10 @@ millet = {
 			NOT = { has_global_flag = millet_traded }
 		}
 		modifier = {
+			factor = 0
+			province_id = 5304
+		}
+		modifier = {
 			factor = 3
 			OR  = {
 				region = south_africa_region
@@ -3249,6 +3272,10 @@ marble = {
 			}
 		}
 		modifier = {
+			factor = 0
+			province_id = 5304
+		}
+		modifier = {
 			factor = 5
 			OR  = {
 				region = northeast_america_region
@@ -3431,6 +3458,10 @@ legumes = {
 		modifier = {
 			factor = 1.5
 			has_terrain = farmlands
+		}
+		modifier = {
+			factor = 0
+			province_id = 5304
 		}
 	}
 }
