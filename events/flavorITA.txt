@@ -3,8 +3,8 @@ normal_or_historical_nations = yes
 
 country_event = {
   id =  flavor_ita.1
-  title = "flavor_ita.1.title"
-  desc =  "flavor_ita.1.desc"
+  title = "flavor_ita.1.t"
+  desc =  "flavor_ita.1.d"
   picture = COASTLINE_MAP_eventPicture
 
   fire_only_once = yes
@@ -26,19 +26,18 @@ country_event = {
 
   option = {  #adopt tuscan language
     name = flavor_ita.1.a
-    change_primary_culture = tuscan
     add_country_modifier = {
       name = btc_language_of_italy
       duration = 7300
     }
-    capital_scope = {
-      area = {
-        add_province_modifier = {
-          name = btc_italy_local_language_unrest
-          duration = 1825
-        }
+    every_owned_province = {
+      limit = { has_owner_culture = yes }
+      add_province_modifier = {
+        name = btc_italy_local_language_unrest
+        duration = 1825
       }
     }
+    change_primary_culture = tuscan
     ai_chance = { factor = 50 }
   }
 
