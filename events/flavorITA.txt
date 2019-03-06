@@ -31,14 +31,17 @@ country_event = {
       desc = btc_language_of_italy_desc
       duration = 7300
     }
-    every_owned_province = {
-      limit = { has_owner_culture = yes }
-      add_province_modifier = {
-        name = btc_italy_local_language_unrest
-        desc = btc_italy_local_language_unrest_desc
-        duration = 1825
+    hidden_effect = {
+      every_owned_province = {
+        limit = { has_owner_culture = yes }
+        add_province_modifier = {
+          name = btc_italy_local_language_unrest
+          desc = btc_italy_local_language_unrest_desc
+          duration = 1825
+        }
       }
     }
+    custom_tooltip = flavor_ita.1.a.tt
     change_primary_culture = tuscan
     ai_chance = { factor = 50 }
   }
