@@ -115,21 +115,21 @@ changelog
  ***
  Reasoning behind all terrain changes is to make terrain more meaningful and accurate without breaking the line between accuracy and game balance.\
  Mountains now represent much more important defensive lines but also are harder and more expensive to build forts on. Building modifiers added merely as a counter-balance to forts being more powerful now.\
- #1
+ ###### 1
  Reasoning is flavor and historical accuracy to represent local tribes.\
- #2
+ ###### 2
  Reasoning is being politically and geographically isolated from the rest of Africa making it not that important/profitable as Trade charter. Also to better represent 1.28 pirates.\
- #3
+ ###### 3
  Reasoning is to represent local port/harbor.\
- #4
+ ###### 4
  Reasoning is Beyond Typus moving most straits to a separate sub-addon. Readded some that felt important and few extras.\
- #5
+ ###### 5
  Reasoning is that Portuguese national ideas always felt underpowered, taking in context that despite never a major player, Portugal played an important role in modern era Europe and was a major colonizer.\
- #6
+ ###### 6
  Reasoning is several coptic culture and religion provinces were added in Beyond Typus to represent the christian minorities and, sometimes, majorities within the Sultanate. +3 tolerance of heathens resembles as well their not-too-harsh attitude towards them.\
- #7
+ ###### 7
  Reasoning is Beyond Typus "decentralisation" mechanic. Timurids already get bonus diplomatic relation slots with their vassals, making their tradition pointless. This fixes that while not forgetting Timurids unique dynasty flavor.\
- #8.\
- #9.\
- #10.\
- #11.
+ ###### 8.\
+ ###### 9.\
+ ###### 10.\
+ ###### 11.
