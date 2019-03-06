@@ -18,13 +18,13 @@ changelog
 
 - France has received a moderate overhaul with 4 new provinces, 2 new tags, 3 new cultures and many national ideas.
 
-- [] tags in America scattered around the continent.](#1)
+- [tags in America scattered around the continent.](#1)
 
-- New tags with their own technology group and national ideas in oceania.#1
+- [New tags with their own technology group and national ideas in oceania.](#1)
 
 - 4 new tags in Siberia.
 
-- Madagascar island is now its own region and colonial region.#2
+- [Madagascar island is now its own region and colonial region.](#2)
 
 - Hong Kong and Macau provinces now have straits to make it possible to blockade them like Venice.
 
@@ -46,7 +46,7 @@ changelog
 
 - Reshaped several sea tiles to make straits more visible.
 
-- Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.#4
+- [Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.](#4)
 
 - Readded Persia and Khorasan wastelands removed in BT 9.0.
 
@@ -64,11 +64,11 @@ changelog
 
 - Removed several governments reforms and types for Ireland and related from BT.
 
-- Portuguese 6th idea buffed to +20 settlers growth from +15. Portuguese 7th idea moved to traditions, giving now a total of +15% trade efficiency from +5%. Ambition of 20% global tariffs moved to 7th idea. New ambition gives +1 artillery fire.#5
+- [Portuguese 6th idea buffed to +20 settlers growth from +15. Portuguese 7th idea moved to traditions, giving now a total of +15% trade efficiency from +5%. Ambition of 20% global tariffs moved to 7th idea. New ambition gives +1 artillery fire.](#5)
 
 - Mamluks +25% trade steering tradition moved to 7th idea. Traditions now give +3 tolerance to heathens together with +10% cavalry combat ability.#6
 
-- Timurids +1 diplomatic upkeep tradition changed to +1 possible diplomatic policy.#7
+- [Timurids +1 diplomatic upkeep tradition changed to +1 possible diplomatic policy.](#7)
 
 - Added Hiemal
 
@@ -110,8 +110,8 @@ changelog
 - Marsh terrain type supply limit changed from 5 to 3.\
  Movement cost changed from 1.3 to 1.5.
 
-- Coastline terrain type nation designer cost changed from 0.85 to 0.9.\
- Allowed number of buildings +1. #3
+- [Coastline terrain type nation designer cost changed from 0.85 to 0.9.
+ Allowed number of buildings +1.](#3)
  ***
  Reasoning behind all terrain changes is to make terrain more meaningful and accurate without breaking the line between accuracy and game balance.\
  Mountains now represent much more important defensive lines but also are harder and more expensive to build forts on. Building modifiers added merely as a counter-balance to forts being more powerful now.\
