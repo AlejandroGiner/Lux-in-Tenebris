@@ -11,6 +11,9 @@ country_event = {
 	fire_only_once = yes	
 	
 	trigger = {
+		MMA = {
+			ai = yes
+		}
 		OR = {
 			AND = {
 				tag = MNG
@@ -34,18 +37,20 @@ country_event = {
 	option = {
 		name = "mma_fall.1.a" #We stand triumphant!
 		MMA = { release = MKA release = MYA }
-                2166 = { cede_province = ROOT }
-                MYA = { 
-					change_government = monarchy 
-					set_legacy_government = mandala_system_legacy
-					add_government_reform = mandala_reform					
+		2166 = { cede_province = ROOT }
+		hidden_effect = {
+			MYA = { 
+				change_government = monarchy 
+				set_legacy_government = mandala_system_legacy
+				add_government_reform = mandala_reform					
 					
-				}
-                MKA = { 
-					change_government = monarchy 
-					set_legacy_government = mandala_system_legacy
-					add_government_reform = mandala_reform
-				}
+			}
+			MKA = { 
+				change_government = monarchy 
+				set_legacy_government = mandala_system_legacy
+				add_government_reform = mandala_reform
+			}
+		}
 	}
 
 	option = {

@@ -799,6 +799,43 @@ malayan_ideas = {
 	}
 }
 
+degar_ideas = {
+	start = {
+		hostile_attrition = 2
+		enemy_core_creation = 0.25
+	}
+	
+	bonus = {
+		defensiveness = 0.15
+	}
+	
+	trigger = {
+		primary_culture = degar
+	}
+	free = yes
+	
+	degar_mountaineers = {
+		land_attrition = -0.15
+	}
+	degar_bamboo_architecture = {
+		build_cost = -0.10
+	}
+	degar_animist_traditions = {
+		tolerance_own = 1
+	}
+	degar_matrilineality = {
+		heir_chance = 0.50
+	}
+	degar_elephant_tamers = {
+		cavalry_cost = -0.1
+	}
+	degar_foreign_tribute = {
+		improve_relation_modifier = 0.3
+	}
+	degar_national_epics = {
+		prestige = 1
+	}
+}
 
 arabian_ideas = {
 	start = {

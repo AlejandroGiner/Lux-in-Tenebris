@@ -451,6 +451,45 @@ knights_templar_ideas = {
 
 #SEA Ideas (From Suvarnabhumi)
 
+SUL_ideas = {
+	start = {
+		naval_morale = 0.10
+		blockade_efficiency = 0.33
+	}
+	
+	bonus = {
+		capture_ship_chance = 0.15
+	}
+	
+	trigger = {
+		tag = SUL
+	}
+	free = yes
+	
+	SUL_three_kingdoms = {
+		prestige = 1
+	}
+	SUL_moro_piracy = {
+		may_perform_slave_raid = yes
+		privateer_efficiency = 0.25
+	}
+	SUL_slave_trade = {
+		production_efficiency = 0.1
+	}
+	SUL_modernized_weaponary = {
+		infantry_power = 0.1
+	}
+	SUL_straits_of_sulu = {
+		galley_power = 0.2
+	}
+	SUL_pearling_industry = {
+		global_trade_power = 0.1
+	}
+	SUL_chinese_junks = {
+		transport_cost = -0.2
+	}
+}
+
 MAJ_ideas = {
 	start = {
 		naval_forcelimit_modifier = 0.25

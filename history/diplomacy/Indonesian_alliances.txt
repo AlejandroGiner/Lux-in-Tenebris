@@ -40,6 +40,53 @@ royal_marriage = {
 	end_date = 1628.1.1
 }
 
+## Vassals in the Central Highlands
+
+#Jarai
+dependency = {
+	subject_type = "tributary_state"
+	first = CHA
+	second = JAR
+	start_date = 1290.1.1
+	end_date = 1472.1.1
+}
+
+#Rhade
+dependency = {
+	subject_type = "tributary_state"
+	first = CHA
+	second = RHD
+	start_date = 1290.1.1
+	end_date = 1472.1.1
+}
+
+#Koho
+dependency = {
+	subject_type = "tributary_state"
+	first = CHA
+	second = KOH
+	start_date = 1290.1.1
+	end_date = 1472.1.1
+}
+
+#Mnong
+dependency = {
+	subject_type = "tributary_state"
+	first = KHM
+	second = MNN
+	start_date = 1290.1.1
+	end_date = 1779.1.1
+}
+
+#Ma
+dependency = {
+	subject_type = "tributary_state"
+	first = KHM
+	second = DMA
+	start_date = 1290.1.1
+	end_date = 1779.1.1
+}
+
 ## Burmese Alliances
 
 # Vassalization of Siam
@@ -323,4 +370,56 @@ royal_marriage = {
 	second = CHA
 	start_date = 1400.1.1
 	end_date = 1472.1.1
+}
+
+## Bornean Alliances
+
+#Sarawak and Sukadana/Matan
+alliance = {
+	first = SKD
+	second = SWK
+	start_date = 1600.1.1
+	end_date = 1641.1.1
+}
+
+royal_marriage = {
+	first = SKD
+	second = SWK
+	start_date = 1630.1.1
+	end_date = 1641.1.1
+}
+
+#Sarawak and Sambas
+alliance = {
+	first = SMS
+	second = SWK
+	start_date = 1609.1.1
+	end_date = 1641.1.1
+}
+
+royal_marriage = {
+	first = SMS
+	second = SWK
+	start_date = 1610.1.1 #?
+	end_date = 1641.1.1
+}
+
+#Minangkabau vassals
+
+#Inderapura
+dependency = {
+	subject_type = "tributary_state"
+	first = PGR
+	second = IDP
+	start_date = 1347.1.1
+	end_date = 1525.1.1
+}
+
+#Jambi
+dependency = {
+	subject_type = "tributary_state"
+	first = PGR
+	second = JMB
+	start_date = 1347.1.1
+	end_date = 1460.1.1
 }
