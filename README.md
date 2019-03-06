@@ -18,7 +18,7 @@ changelog
 
 - France has received a moderate overhaul with 4 new provinces, 2 new tags, 3 new cultures and many national ideas.
 
-- New tags in America scattered around the continent.#1
+- [] tags in America scattered around the continent.](#1)
 
 - New tags with their own technology group and national ideas in oceania.#1
 
@@ -112,7 +112,7 @@ changelog
 
 - Coastline terrain type nation designer cost changed from 0.85 to 0.9.\
  Allowed number of buildings +1. #3
-
+ ***
  Reasoning behind all terrain changes is to make terrain more meaningful and accurate without breaking the line between accuracy and game balance.\
  Mountains now represent much more important defensive lines but also are harder and more expensive to build forts on. Building modifiers added merely as a counter-balance to forts being more powerful now.\
  #1.Reasoning is flavor and historical accuracy to represent local tribes.\
