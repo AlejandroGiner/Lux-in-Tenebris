@@ -18,16 +18,6 @@ insult_byzantium = {
 	}
 }
 
-insult_armada = {
-	trigger = {
-		FROM = { tag = GBR }
-		OR = {
-			tag = SPA
-			tag = CAS
-		}
-	}
-}
-
 insult_navy_seal = {
 	trigger = {
 		always = yes
