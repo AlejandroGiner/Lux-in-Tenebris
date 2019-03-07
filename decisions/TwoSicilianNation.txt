@@ -10,6 +10,7 @@ country_decisions = {
 				tag = EBA
 				tag = JAI
 				tag = TAN
+				tag = LEC
 				}
 		}
 		provinces_to_highlight = {
@@ -19,13 +20,7 @@ country_decisions = {
 				area = naples_area
 				area = apulia_area
 				area = calabria_area
-			}
-			NOT = {
-				OR = {
-					province_id = 118
-					province_id = 3236
-					province_id = 3295
-				}
+				area = abruzzo_area
 			}
 			NOT = { owned_by = ROOT is_core = ROOT }
 		}
@@ -49,28 +44,15 @@ country_decisions = {
 					all_owned_province = {
 						is_core = ROOT
 						OR = {
-							#western sicily
-							province_id = 7000
-							province_id = 7001
-							province_id = 7003
-							province_id = 3037
-							#eastern sicily
-							province_id = 7002
-							province_id = 7004
-							province_id = 126
-							#one province in lazio-campania
-							province_id = 3039
-							#apulia
-							province_id = 3286
-							province_id = 3283
-							province_id = 2985
-							#calabria_area
-							province_id = 1934
-							province_id = 3274
-							province_id = 123
+							area = naples_area
+							area = apulia_area
+							area = calabria_area
+							area = abruzzo_area
+							area = sicily_area
+							area = eastsicily_area
 						}
 					}
-					amount = 11			#At least 2/3 of Southern Italy's provinces (approximate)
+					amount = 20			#At least 2/3 of Southern Italy's 30 provinces
 				}
 			}
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
@@ -123,7 +105,7 @@ country_decisions = {
 				}
 				add_permanent_claim = TSI
 			}
-			central_italy_area = {
+			abruzzo_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -137,6 +119,13 @@ country_decisions = {
 				}
 				add_permanent_claim = TSI
 			}
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no
@@ -144,11 +133,10 @@ country_decisions = {
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
-			#set_country_flag = formed_armenia_flag
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
 }
