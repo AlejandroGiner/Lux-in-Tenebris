@@ -7,7 +7,7 @@ country_event = {
 	picture = COURT_eventPicture
 
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "btpIRE.EVTOPTA1"
 		ai_chance = {
@@ -39,7 +39,7 @@ country_event = {
 		}
 		ENG = { country_event = { id = btpIRE.2 } }
 	}
-	
+
 	option = {
 		name = "btpIRE.EVTOPTB1"
 		ai_chance = {
@@ -62,15 +62,15 @@ country_event = {
 			}	#Higher opinion of England makes acceptance more likely
 			modifier = {
 				factor = 1.5
-				army_strength = { who = ENG value = 2.0 }
+				NOT = { army_strength = { who = ENG value = 0.5 } }
 			}	#Does this condition even work???
 			modifier = {
 				factor = 2.0
-				army_strength = { who = ENG value = 4.0 }
+				NOT = { army_strength = { who = ENG value = 0.25 } }
 			}	#Does this condition even work???
 			modifier = {
 				factor = 2.5
-				army_strength = { who = ENG value = 8.0 }
+				NOT = { army_strength = { who = ENG value = 0.125 } }
 			}	#Does this condition even work???
 		}
 		ENG = {
@@ -85,9 +85,9 @@ country_event = {
 	title = "btpIRE.EVTNAME2"
 	desc = "btpIRE.EVTDESC2"
 	picture = COURT_eventPicture
-	
+
 	is_triggered_only = yes
-	
+
 	option = {
 		name = "btpIRE.EVTOPTA2"
 		ai_chance = {
@@ -111,15 +111,13 @@ country_event = {
 #			}
 #		}	#No longer must be Dublin, and no longer guarenteed
 #Draiocht - Maybe another event or decision, alongside this one, to represent the major religiously motivated rebellions later, of the sort that led to the foundation of the KoI under the England Throne. Another idea is to force other OPM in Ireland to join the war
-		ENG = {
-			declare_war_with_cb = {
-				who = FROM
-				casus_belli = cb_disloyal_vassal
-			}
+		declare_war_with_cb = {
+			who = FROM
+			casus_belli = cb_disloyal_vassal
 		}
 		hidden_effect = { remove_country_modifier = irish_fealty_negotiations_ongoing }
 	}
-	
+
 	option = {
 		name = "btpIRE.EVTOPTB2"
 		ai_chance = {
@@ -136,23 +134,23 @@ country_event = {
 	title = "btpIRE.EVTNAME3"
 	desc = "btpIRE.EVTDESC3"
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
+
 	trigger = {
 		tag = ANI
-		government = puppet_kingdom_of_ireland
+		has_reform = puppet_kingdom_reform
 		is_free_or_tributary_trigger = yes
 	}
 
 	mean_time_to_happen = {
 		days = 3
 	}
-	
+
 	option = {
 		name = "btpIRE.EVTOPTA3"
 		add_prestige = 10
 		if = {
 			limit = { has_dlc = "Res Publica" }
-			change_government = transitional_government_ireland
+			change_government = transitional_government_reform
 			hidden_effect = {
 				country_event = {
 					id = btpIRE.4
@@ -163,7 +161,7 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { has_dlc = "Res Publica" } }
-			change_government = anglo_irish_monarchy
+			change_government = anglo_irish_monarchy_reform
 			add_stability = -1
 		}
 	}
@@ -174,9 +172,9 @@ country_event = {
 	title = "btpIRE.EVTNAME4"
 	desc = "btpIRE.EVTDESC4"
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
+
 	is_triggered_only = yes
-	
+
 	option = {			#Status Quo Accendancy ruled
 		name = "btpIRE.EVTOPTA4"
 		ai_chance = {
@@ -191,8 +189,8 @@ country_event = {
 		}
 		clr_country_flag = independent_ireland_reorganisation_underway
 		if = {
-			limit = { NOT = { government = anglo_irish_monarchy } }
-			change_government = anglo_irish_monarchy
+			limit = { NOT = { has_reform = anglo_irish_monarchy_reform } }
+			change_government = anglo_irish_monarchy_reform
 		}
 	}
 	option = {			#Return to the High Kingship system
@@ -211,7 +209,7 @@ country_event = {
 		}
 		clr_country_flag = independent_ireland_reorganisation_underway
 		change_tag = IRE
-		change_government = high_kingship
+		change_government = tanistry_reform
 		change_primary_culture = irish
 		if = {
 			limit = { historical_friend_with = ENG }
