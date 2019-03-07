@@ -35,8 +35,6 @@ country_decisions = {
 			owns_core_province = 124 # Messina
 			owns_core_province = 2982 # Syracusae
 			owns_core_province = 1933 # Bari
-			owns_core_province = 122 # Salento
-			owns_core_province = 2983 # Salerno
 			owns_core_province = 2984 # Cosenza
 			custom_trigger_tooltip = {
 				tooltip = two_sicilies_requirements_tooltip
@@ -59,7 +57,6 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = TSI
-			#change_government = administrative_monarchy
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
