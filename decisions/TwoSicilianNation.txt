@@ -53,9 +53,135 @@ country_decisions = {
 					amount = 20			#At least 2/3 of Southern Italy's 30 provinces
 				}
 			}
+			adm_tech = 15
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
+			change_tag = TSI
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			sicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			eastsicily_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			naples_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			apulia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			calabria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			abruzzo_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			corsica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = TSI
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = TSI_ideas }
+				}
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+
+	two_sicilies_nation_diplomatically = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			OR = {
+				tag = SIC
+				tag = NAP
+			}
+		}
+		provinces_to_highlight = {
+			if = {
+				limit = { tag = NAP }
+				owned_by = SIC
+			}
+			if = {
+				limit = { tag = SIC }
+				owned_by = NAP
+			}
+		}
+		allow = {
+			adm_tech = 15
+			NOT = { exists = TSI }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			religion_group = christian
+			if = {
+				limit = { tag = NAP }
+				senior_union_with = SIC
+			}
+			if = {
+				limit = { tag = SIC }
+				senior_union_with = NAP
+			}
+		}
+		effect = {
+			if = {
+				limit = { tag = NAP }
+				inherit = SIC
+			}
+			if = {
+				limit = { tag = SIC }
+				inherit = NAP
+			}
 			change_tag = TSI
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
