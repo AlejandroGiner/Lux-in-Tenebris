@@ -15,7 +15,6 @@ country_event = {
 
 	trigger = {
 		tag = BYZ
-		NOT = { has_global_flag = orban_happened }
 	}
 
 	mean_time_to_happen = {
@@ -35,12 +34,7 @@ country_event = {
 		name = pitirr_btc_events.1.a
 		ai_chance = {
 			factor = 25
-			modifier = {
-				factor = 80
-				years_of_income = 1.5
-			}
 		}
-		set_country_flag = turned_down_orban
 		if = {
 			limit = {
 				exists = TUR
@@ -59,7 +53,6 @@ country_event = {
 				NOT = { years_of_income = 1.5 }
 			}
 		}
-		set_global_flag = orban_happened
 		add_years_of_income = -1.5
 		capital_scope = {
 			ROOT = {
@@ -77,20 +70,14 @@ country_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		NOT = { has_country_flag = turned_down_orban }
-	}
-
 	option = {		# Reject his proposal
 		name = pitirr_btc_events.2.a
 		ai_chance = { factor = 10 }
-		set_country_flag = turned_down_orban
 	}
 	option = {		# Hire Orban
 		name = pitirr_btc_events.2.b
 		ai_chance = { factor = 90 }
 		add_years_of_income = -0.25
-		set_global_flag = orban_happened
 		capital_scope = {
 			ROOT = {
 				bombard = PREV
