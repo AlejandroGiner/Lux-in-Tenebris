@@ -9624,7 +9624,10 @@ TTI_ideas = {
 	}
 
 	trigger = {
-		tag = TTI
+		OR = {
+			tag = TTI
+			tag = OTI
+		}
 	}
 	free = yes
 	
