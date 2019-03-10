@@ -1,0 +1,27 @@
+#4186 - Iyo
+
+owner = KNO
+controller = KNO
+culture = japanese
+religion = shinto
+capital = "Itajima"
+trade_goods = tea
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+is_city = yes
+add_core = KNO
+discovered_by = chinese
+discovered_by = japanese_btc
+discovered_by = korean_btc
+discovered_by = indochinese
+discovered_by = malay_group
+discovered_by = MCH
+discovered_by = KHA
+discovered_by = OIR
+discovered_by = QNG
+
+1586.1.1 = { add_core = MRI owner = MRI controller = MRI remove_core = KNO } # Fall of the Kono Clan
+1600.10.21 = { owner = TKG controller = TKG add_core = TKG remove_core = MRI }
+1614.12.18 = { add_core = DTE owner = DTE controller = DTE remove_core = TKG } # Date-Uwajima Clan
