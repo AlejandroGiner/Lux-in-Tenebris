@@ -1525,6 +1525,8 @@ slaves = {
 				area = west_africa_coast_area
 				area = gulf_of_guinea_area
 				area = benin_area
+				area = ivory_coast_area
+				area = guinea_coast_area
 			}
 		}
 		modifier = {
@@ -1592,13 +1594,6 @@ ivory = {
 				region = malaya_region
 				region = moluccas_region
 				region = indonesia_region
-			}
-		}
-		modifier = {	#High chance of ivory (whaling/scrimshaw)
-			factor = 4.0
-			OR = {
-				province_id = 5591
-				province_id = 5093
 			}
 		}
 	}
@@ -2898,6 +2893,15 @@ whales = {
 			factor = 0.35
 			NOT = {
 				has_winter = severe_winter
+			}
+		}
+		modifier = {
+			factor = 4.0
+			OR = {
+				province_id = 5591	#Jan Mayen
+				province_id = 5093	#Desolation Islands
+				province_id = 5125 #Crozet
+				province_id = 7015 #Marion
 			}
 		}
 	}
