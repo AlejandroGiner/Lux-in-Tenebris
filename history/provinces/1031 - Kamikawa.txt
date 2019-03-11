@@ -1,13 +1,9 @@
 #1031 - Kamikawa
 
-latent_trade_goods = {
-	coal
-}
-
 culture = ainu
 religion = animism
 capital = "Kamikawa"
-trade_goods = fish
+trade_goods = naval_supplies
 hre = no
 base_tax = 1 
 base_production = 1
@@ -71,7 +67,12 @@ discovered_by = MOG
 discovered_by = OSK
 discovered_by = KTK
 discovered_by = KYO
+discovered_by = TN1
+discovered_by = SAG
+discovered_by = KHR
+discovered_by = YSM
 discovered_by = OUE
+discovered_by = OTI
 
 1640.1.1 = { discovered_by = RUS } # Ivan Moskvitin
 
@@ -80,7 +81,6 @@ discovered_by = OUE
 	controller = TKG
 	culture = togoku
 	religion = shinto
-	trade_goods = fish
 } # Russian & Japanese attemps at colonization
 1704.1.1 = { add_core = TKG }
 1767.1.1 = { add_core = RUS }

@@ -7,9 +7,9 @@ latent_trade_goods = {
 owner = MYR
 controller = MYR
 add_core = MYR
-culture = ainu
+culture = nivkh
 religion = animism
-capital = "Sakhalin"
+capital = "Okha"
 trade_goods = fish
 hre = no
 base_tax = 1 
@@ -19,8 +19,6 @@ is_city = yes
 native_size = 5
 native_ferocity = 1
 native_hostileness = 1
-
-
 
 discovered_by = JAP
 discovered_by = AMA
@@ -74,7 +72,13 @@ discovered_by = MOG
 discovered_by = OSK
 discovered_by = KTK
 discovered_by = KYO
+discovered_by = TN1
+discovered_by = SAG
+discovered_by = KHR
+discovered_by = YSM
 discovered_by = OUE
+discovered_by = OTI
+
 
 1542.1.1 = { discovered_by = POR }
 
@@ -85,7 +89,6 @@ discovered_by = OUE
 	controller = TKG
 	culture = togoku
 	religion = shinto
-	trade_goods = fish
 } # Russian & Japanese attemps at colonization
 #1704.1.1 = { add_core = JAP }
 1767.1.1 = { add_core = RUS }

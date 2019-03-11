@@ -1,4 +1,8 @@
-#3310 - Hidaka
+#3255 - Kitami
+
+latent_trade_goods = {
+	coal
+}
 
 owner = ANU
 controller = ANU
@@ -6,14 +10,15 @@ add_core = ANU
 is_city = yes
 culture = ainu
 religion = animism
-capital = "Sisirimuka"
-trade_goods = fur
+capital = "Kitami"
+trade_goods = fish
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-
-
+native_size = 5
+native_ferocity = 1
+native_hostileness = 1
 
 discovered_by = JAP
 discovered_by = AMA
@@ -81,7 +86,6 @@ discovered_by = OTI
 	controller = TKG
 	culture = togoku
 	religion = shinto
-	trade_goods = fur
 } # Russian & Japanese attemps at colonization
 1704.1.1 = { add_core = TKG }
 1767.1.1 = { add_core = RUS }
