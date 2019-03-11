@@ -596,10 +596,64 @@ country_event = {
 			value = -0.75
 			duration = 730
 		}
+		change_price = {
+			trade_goods = beer
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = rice
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = millet
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = maize
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = amaranth
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = legumes
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = potatoes
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = fruit
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
+		change_price = {
+			trade_goods = olives
+			key = HUAYNAPUTINA
+			value = -0.75
+			duration = 730
+		}
 	}
 }
 
-# Coldest Period of the  Little Ice Age 
+# Coldest Period of the  Little Ice Age
 country_event = {
 	id = prices.11
 	title = prices.11.t
@@ -607,13 +661,12 @@ country_event = {
 	picture = TRADE_GOODS_FURS_FISH_AND_SALT_eventPicture
 
 	fire_only_once = yes
-	
+
 	major = yes
 
 	trigger = {
-		OR = {
-			owns = 371 #Iceland was hit badly by the Little Ice Age
-			owns = 370 #Iceland was hit badly by the Little Ice Age
+		iceland_area = {
+			owned_by = ROOT	#Iceland was hit badly by the Little Ice Age
 		}
 		is_year = 1650
 		not = { is_year = 1660 }
@@ -632,6 +685,54 @@ country_event = {
 			duration = 3650
 		}
 		change_price = {
+			trade_goods = rice #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = millet #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = legumes #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = amaranth #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = potatoes #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = fruit #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = maize #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = olives #Agriculture is having a hard time coping.
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
 			trade_goods = livestock #Agriculture is having a hard time coping.
 			key = LITTLE_ICE_AGE
 			value = -0.25
@@ -639,6 +740,12 @@ country_event = {
 		}
 		change_price = {
 			trade_goods = wine #Spoiled by the cold
+			key = LITTLE_ICE_AGE
+			value = -0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = beer #Spoiled by the cold
 			key = LITTLE_ICE_AGE
 			value = -0.25
 			duration = 3650
@@ -659,6 +766,18 @@ country_event = {
 			trade_goods = fur #Increased demand due to colder climate.
 			key = LITTLE_ICE_AGE
 			value = 0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = wool #Increased demand due to colder climate.
+			key = LITTLE_ICE_AGE
+			value = 0.25
+			duration = 3650
+		}
+		change_price = {
+			trade_goods = cloth #Increased demand due to colder climate.
+			key = LITTLE_ICE_AGE
+			value = 0.1
 			duration = 3650
 		}
 	}
@@ -1320,17 +1439,13 @@ country_event = {
 	picture = TRADEGOODS_eventPicture
 
 	fire_only_once = yes
-	
+
 	major = yes
 
 	trigger = {
 		capital_scope = { continent = europe }
 		dip_tech = 12
-		OR = {
-			current_age = age_of_reformation #Not before this
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
-		}
+		NOT = { current_age = age_of_discovery }
 		OR = {
 			1948 = { #Deccan
 				trade_share = {
@@ -1685,10 +1800,7 @@ country_event = {
 		}
 		add_innovativeness_small_effect = yes
 		event_target:bookmarket_here = {
-			if = {
-				limit = { NOT = { trade_goods = paper } }
-				change_trade_goods = paper
-			}
+			change_trade_goods = paper
 		}
 		change_price = {
 			trade_goods = paper
