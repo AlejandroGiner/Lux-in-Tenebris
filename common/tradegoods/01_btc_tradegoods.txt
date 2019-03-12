@@ -10,10 +10,6 @@ beer = {
 		factor = 1
 		modifier = {
 			factor = 0
-			area = newfoundland_area
-		}
-		modifier = {
-			factor = 0
 			NOT = { development = 99 }
 		}
 		modifier = {
@@ -33,10 +29,6 @@ books = {
 	}
 	chance = {
 		factor = 1
-		modifier = {
-			factor = 0
-			area = newfoundland_area
-		}
 		modifier = {
 			factor = 0
 			NOT = { development = 42 }	#Lower average dev in BT, so lowering from 18 to 12
@@ -77,11 +69,8 @@ rice = {
 		modifier = {
 			factor = 10
 			OR = {
-				region = north_china_region
-				region = south_china_region
-				region = xinan_region
-				region = japan_region
-				region = korea_region
+				superregion = china_superregion
+				superregion = far_east_superregion
 				region = manchuria_region
 			}
 		}
