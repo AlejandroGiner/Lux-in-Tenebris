@@ -1,0 +1,21 @@
+province_decisions = {
+  test_province_decision = {
+    major = yes
+    potential = {
+      province_id = 101 #GENUA HAHAHHAAHAHAHAHHAHA
+    }
+    allow = {
+      development = 50
+    }
+    effect = {
+      rename_capital = "GENUAAAAAAAAAAAAAAA"
+      change_province_name = "GENUAGENUAGENUAGENUAGENUA"
+      change_trade_goods = marble
+      change_religion = tengri
+    }
+    ai_will_do = {
+      factor = 1
+    }
+    ai_importance = 400
+  }
+}

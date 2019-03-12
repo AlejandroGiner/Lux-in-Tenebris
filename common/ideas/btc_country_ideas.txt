@@ -41,6 +41,43 @@ HNM_ideas = {
 	}
 }
 
+STM_ideas = {
+	start = {
+		naval_morale = 0.15
+		land_morale = 0.1
+	}
+	bonus = {
+		manpower_recovery_speed = 0.2
+	}
+	trigger = {
+		tag = STM
+	}
+	free = yes
+
+	awa_navy = {
+		leader_naval_shock = 1
+	}
+	tateyama_fisheries = {
+		trade_efficiency = 0.15
+	}
+	kurui_castle = {
+		defensiveness = 0.15
+		garrison_size = 0.15
+	}
+	kazusa_commanders = {
+		leader_land_shock = 1
+	}
+	unification_of_boso = {
+		core_creation = -0.1
+	}
+	resilient_clan = {
+		war_exhaustion_cost = -0.2
+	}
+	plains_of_fusa = {
+		global_tax_modifier = 0.15
+	}
+}
+
 YSM_ideas = {
 	start = {
 		trade_efficiency = 0.1
