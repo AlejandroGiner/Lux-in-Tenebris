@@ -3762,3 +3762,43 @@ SLL_ideas = {
 		development_cost = -0.1
 	}
 }
+
+SOC_ideas = {
+	start = {
+		tolerance_heathen = 3
+        merchants = 1
+	}
+
+	bonus = {
+		naval_forcelimit_modifier = 0.2
+	}
+
+	trigger = {
+		tag = SOC
+	}
+	free = yes
+
+    dragon_blood = {
+        manpower_recovery_speed = 0.2
+	}
+	pirate_refuge = {
+		light_ship_power = 0.1
+		privateer_efficiency = 0.15
+	}
+	poetry = {
+		prestige = 1
+	}
+	thomas_apostle = {
+		tolerance_own = 2
+	}
+	foreign_contacts = {
+		diplomatic_reputation = 1
+		envoy_travel_time = -0.25
+	}
+	natives_in_a_hostile_land = {
+		hostile_attrition = 1
+	}
+	frankinsence_myrrh = {
+		production_efficiency = 0.1
+	}
+}
