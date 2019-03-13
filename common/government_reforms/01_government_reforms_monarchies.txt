@@ -833,7 +833,7 @@ mughal_government = {
 roman_empire_reform = {
 	icon = "castle" #placeholder
 	allow_normal_conversion = no
-	legacy_equivalent = feudal_monarchy
+	legacy_equivalent = roman_empire_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 	lock_level_when_selected = yes
@@ -846,8 +846,9 @@ roman_empire_reform = {
 	}
 	modifiers = {
 	legitimacy = 1.00
-	global_autonomy = -0.2
+	min_autonomy = 0.2
 	max_states = 15
+	max_absolutism = 10
 	}
 	assimilation_cultures = {
 		altaic = {
