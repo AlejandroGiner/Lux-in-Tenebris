@@ -1,28 +1,44 @@
-BT-Classic
-BT 9, updated for EU4 1.28.\
+Beyond Typus Classic
+An expansion for Beyond Typus 9.0, updated for EU4 1.28.\
 changelog
 
-- Caucasus has received a major overhaul with 18 new provinces, cultures, tags and unique national ideas.
+On top of what Beyond Typus 9.0 had, the following regions have been modified or re-overhauled (compared with their state in vanilla):
 
-- Madagascar has received a moderate overhaul with 20 new provinces.
+- BT 11.0 Eastern Europe overhaul has been implemented and adjusted for BT Classic style.
 
-- Italy has received a major overhaul with 31 new provinces and around 30 new tags.
+- Caucasus region has received a major overhaul with 26 new provinces, 27 new tags, re-done cultures and unique national ideas.
 
-- Japan has received a major overhaul with 37 new provinces and 13 new tags each with their own national ideas.
+- Madagascar region has received a moderate overhaul with 20 new provinces.
 
-- South east Asia has received a major overhaul with +80 provinces, many cultures, missions, tags, 2 new technology groups, disaster, events and national ideas.
+- Britain and Ireland have received a major overhaul with 19 new provinces, 3 new tags and several new national ideas and formables. (WIP)
 
-- China superregion has received a major overhaul with 38 new provinces.
+- Italy region has received a major overhaul with 70 new provinces, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
 
-- Iberia has received a major overhaul with 23 new provinces, 15 new tags, 2 new cultures and many national ideas.
+- Japan region has received a major overhaul with 63 new provinces and 20 new tags each with their own national ideas.
 
-- France has received a moderate overhaul with 4 new provinces, 2 new tags, 3 new cultures and many national ideas.
+- Korea region has received a major overhaul with 27 new provinces and 6 new tags with their own national ideas.
 
-- [tags in America scattered around the continent.](#1)
+- Greece, Macedonia, Bulgaria and Wallachia zones have received a major overhaul with 56 new provinces and a new culture.
 
-- [New tags with their own technology group and national ideas in oceania.](#1)
+- Burma, Indochina, Siam, Malaya, Indonesia, Philippines and Moluccas regions have received a major overhaul with 174 new provinces, 42 new tags, many cultures, missions, disasters, events, national ideas and more.
+
+- Australia region has received a minor overhaul with 7 new provinces. (WIP)
+
+- China superregion has received a moderate overhaul with 38 new provinces. (WIP)
+
+- Iberia has received a major overhaul with 32 new provinces, 15 new tags, 2 new cultures and many national ideas.
+
+- France has received a major overhaul with 55 new provinces, 2 new tags, 3 new cultures and many national ideas. (WIP)
+
+- [30 new minor tags have been added around oceania and south america, with polynesian nations having their separate culture group.](#1)
 
 - 4 new tags in Siberia.
+
+- 10 new tags in Colombia and Central America.
+
+- Central America is now its own colonial region. (WIP)
+
+- Several tags from BT native start (12 november) in North America moved to the default start.
 
 - [Madagascar island is now its own region and colonial region.](#2)
 
@@ -32,7 +48,7 @@ changelog
 
 - General area adjusting to adapt new 1.28 vanilla changes to already existing Beyond Typus provinces.
 
-- Several 3 province areas named "South/north X" due to 5 province state limit in vanilla merged into a single 6 province state.
+- Several 3 province areas named "South/north (area)" due to 5 province state limit in vanilla merged into a single 6 province state.
 
 - "Aegean sea" sea tile cut in half, with the lower half being named "Sea of crete".
 
@@ -48,19 +64,23 @@ changelog
 
 - [Straits added in the lesser antilles, the bahamas, Gibraltar, Baleares, Canarias, Manhattan-Connecticut and Venezuela.](#4)
 
-- Readded Persia and Khorasan wastelands removed in BT 9.0.
+- Readded Persia and Khorasan wastelands removed in BT.
 
-- Expanded dynamic province naming for several cultures, including south east Asia, Andalusí and Castilian.
+- 6 new technology groups: Persian, Japanese, Korean, Malay, Indochinese and Polynesian.
 
-- New national ideas to several nations that previously used generic ideas.
+- Expanded dynamic province naming for several cultures, including south east Asia, Andalusí, Sicilian and Castilian.
+
+- New national ideas to dozens of nations that previously used generic ideas.
 
 - 13 new trade goods, including amaranth, rubber or fruit.
 
+- 2 or more price change events for each one of the aforementioned new trade goods. Adjusted old price change events to support the new trade goods.
+
 - Removed Lisbon and Tripoli trade nodes.
 
-- Tweaks on several provinces development around eastern europe.
+- Added Korea trade node.
 
-- Several Center of trade additions around the world.
+- Dozens Center of trade additions around the world.
 
 - Removed several governments reforms and types for Ireland and related from BT.
 
@@ -68,9 +88,13 @@ changelog
 
 - Mamluks +25% trade steering tradition moved to 7th idea. Traditions now give +3 tolerance to heathens together with +10% cavalry combat ability.#6
 
+- Tokugawa 1st idea buffed from 10% to 15% morale. 2nd idea buffed from 20% to 25% spy network construction. 4th idea buffed from -10% to -15% stability cost. 5th idea now gives an additional -1 unrest. 7th idea now gives +10% goods produced instead. Ambition buffed from -10% to -15% development cost.
+
 - [Timurids +1 diplomatic upkeep tradition changed to +1 possible diplomatic policy.](#7)
 
 - Added Hiemal
+
+- Adding Jarilov. (WIP)
 
 - Glacier terrain type supply limit changed from 2 to 0.\
  Local development cost changed from +50% to +100%.\
@@ -102,7 +126,8 @@ changelog
  Defence* changed from 2 to 3. \
  Local defensiveness changed from +25% to +35%. \
  Nation designer cost changed from 0.75 to 0.85. \
- Added +20% local building cost and +15% local building time.
+ Added +20% local building cost and +15% local building time. \
+ Added +2 maximum attrition for enemies.
 
 - Jungle terrain type supply limit changed from 5 to 3.\
  Movement cost changed from 1.5 to 2.0.
