@@ -1,0 +1,14 @@
+cb_war_of_two_romes = {
+	valid_for_subject = no
+	ai_peace_desire = -30
+
+	prerequisites = {
+		is_byz_or_hellenic_rome_trigger = yes
+		is_free_or_tributary_trigger = yes
+		has_country_flag = byz_challenged_hremperor #Flag set by mission.
+		hre_size = 1 #HRE has to NOT be disbanded.
+		FROM = { is_emperor = yes }
+	}
+
+	war_goal = byz_war_of_two_romes
+}

@@ -27,14 +27,13 @@ monarchy = {
 				english_monarchy
 				mandala_reform
 				revolutionary_empire_reform
-				roman_empire_reform ############
-				
 				#Added by Beyond Typus
 				irish_clann_reform
 				#provincial_kingdom_reform			#Cut for the moment. New Reform system makes HR's old tiers... difficult to intergrate.
 				norman_lordship_reform
 				anglo_irish_monarchy_reform
 				tanistry_reform
+				roman_empire_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -48,6 +47,7 @@ monarchy = {
 				khalsa_reform
 				deccani_society_reform
 				mughal_government
+				pronoiar_reform
 			}
 		}
 		bureaucracy = {
@@ -57,6 +57,7 @@ monarchy = {
 				sidhi_recruitment
 				mansabdari_reform
 				council_of_the_indies_reform
+				roman_bureaucracy_reform
 			}
 		}
 		growth_of_administration = {
@@ -68,6 +69,7 @@ monarchy = {
 				zabt_reform
 				permanent_marathas_council_reform
 				governmental_purbias_register_reform
+				theme_system_reform
 			}
 		}
 		deliberative_assembly = {
@@ -77,6 +79,7 @@ monarchy = {
 				aristocratic_court_reform
 				general_estates_reform
 				states_general_reform
+				basileus_protostrategos_reform
 			}
 		}
 		absolute_rule_vs_constitutional = {
@@ -125,6 +128,8 @@ monarchy = {
 		high_kingship_legacy
 		anglo_irish_monarchy_legacy
 		florence_republic_legacy
+		roman_autocracy_legacy
+		roman_empire_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -157,6 +162,8 @@ monarchy = {
 		#Added by Beyond Typus
 		tanistry_reform
 		anglo_irish_monarchy_reform
+		pronoiar_reform
+		basileus_protostrategos_reform
 	}
 
 	#Flavor

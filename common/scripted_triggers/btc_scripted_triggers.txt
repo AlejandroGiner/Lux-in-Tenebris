@@ -76,3 +76,17 @@ btc_was_never_end_game_tag_trigger = {	#Country Scope
 	NOT = { tag = SYN }
 	NOT = { tag = ADU }
 }
+
+estate_strategoi_province_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = estate_strategoi_province_trigger
+		OR = {
+			has_estate = estate_strategoi
+			NOT = {
+				any_province_in_state = {
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+}

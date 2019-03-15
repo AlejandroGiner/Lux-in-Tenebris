@@ -1,0 +1,81 @@
+mount_athos_modifier_muslim = {
+	potential = {
+		owner = {
+			religion_group = muslim
+		}
+	}
+
+	trigger = {
+		owner = {
+			religion_group = muslim
+		}
+		religion = orthodox
+	}
+	
+	tolerance_heathen = 1
+}
+
+mount_athos_modifier_orthodox = {
+	potential = {
+		owner = {
+			religion = orthodox
+		}
+	}
+
+	trigger = {
+		owner = {
+			religion = orthodox
+		}
+		religion = orthodox
+	}
+	
+	missionaries = 1
+}
+
+#Ecumenical Patriarch
+ecumenical_patriarch_modifier_muslim = {
+	potential = {
+		owner = {
+			religion_group = muslim
+		}
+	}
+
+	trigger = {
+		owner = {
+			religion_group = muslim
+		}
+		#Adjust this to require the event that Ottomans get.
+		religion = orthodox
+	}
+	
+	tolerance_heathen = 1
+}
+
+ecumenical_patriarch_modifier_orthodox = {
+	potential = {
+		owner = {
+			religion = orthodox
+		}
+	}
+
+	trigger = {
+		owner = {
+			religion = orthodox
+		}
+		religion = orthodox
+	}
+	
+	global_missionary_strength = 0.01
+}
+
+orthodox_religious_center = {
+	potential = {
+		religion = orthodox
+	}
+
+	trigger = {
+		religion = orthodox
+	}
+	
+	local_missionary_strength = -0.05
+}

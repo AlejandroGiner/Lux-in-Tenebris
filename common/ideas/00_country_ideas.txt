@@ -1345,14 +1345,14 @@ MLO_ideas = {
 }
 
 
-BYZ_ideas = {
+BYZ_ideas = { #New Byzantine ideas, from Byzantine Resurgence mod, by Dub.
 	start = {
-		advisor_cost = -0.10
-		tolerance_own = 3
+		legitimacy = 1
+		tolerance_own = 2
 	}
 	
 	bonus = {
-		prestige = 1
+		discipline = 0.05
 	}
 	
 	trigger = {
@@ -1360,27 +1360,29 @@ BYZ_ideas = {
 	}
 	free = yes
 	
-	regulations_for_mercenaries = {
-		merc_maintenance_modifier = -0.15
+	reinstitute_the_pronoia = { #I feel Byzantium needs a Russia vibe. Also, direct army quality does not make too much sense in their idea set, unless we're discussing Komnenos army. Even so, I'd argue that was because of capable warrior emperors, not good Byzantine units.
+		infantry_cost = -0.20
+	}
+	byzantine_renaissance = { #Replaced Ecumenical Patriarch with Byzantine Renaissance idea. Missionary strength is... iffy here. It also devalues every other bonus that Orthodox can get and is really not at all needed if you picked up Religious ideas. Instead, the patriarch is in the Constantinople province now.
+		technology_cost = -0.1 #The reason why this is 10% is because they cover the best of the East & the West. Colonialism is also extremely far away and ahistorically so for a resurgence Byzantium in terms of tech penalty. Considering France gets 10%, I think it's warranted.
+	}
+	bureau_of_barbarians = { #Adjusted from Renovatio Imperii's diplomatic relations +1 to 20% improve relations. The bureau of barbarians was used to do diplomacy well, which doesn't translate into diplo relations in my opinion.
+		improve_relation_modifier = 0.2
+	}
+	basilics_law = { #Brand new to sort of express the Empire's interesting legal system. I will admit this looks exactly like the Kanunnames of Ottomans, but I don't care!
+		core_creation = -0.2 #Ottoman level core creation cost. Considering Italian ideas, I think this is OK.
+	}
+	byz_formalize_succession_laws = { #Replaced autocrat_of_the_romans with a formalization of succession laws. I could return it to byz_admin_power, but I'm not sure how to localize it then.
+		stability_cost_modifier = -0.1
+		heir_chance = 0.25
 	}
 	repopulation_of_countryside = {
-		global_trade_goods_size_modifier = 0.05
-		global_manpower_modifier = 0.10
+		development_cost = -0.10 #Replacing the goods produced with dev cost. Supposedly it changes to goods produced automatically if not owning Common Sense.
+		culture_conversion_cost = -0.2 #Replacing the global manpower modifier, since Byzantium gets a lot of it anyway, with culture conversion cost. I feel this is more akin to repopulation.
 	}
-	byz_state_admin_reform = {
-		global_tax_modifier = 0.10
-	}
-	byz_admin_power = {
-		stability_cost_modifier = -0.1
-	}
-	merchant_class = {
-		global_trade_power = 0.1
-	}
-	new_imperial_army = {
-		discipline = 0.05
-	}
-	ecumenical_patriarch = {
-		global_missionary_strength = 0.03
+	byzantine_resurgence = { #New idea to replace Byzantine Merchant class. Byzantium wasn't exactly known for trading /too/ much.
+		prestige = 1
+		prestige_decay = -0.01
 	}
 }
 

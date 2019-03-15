@@ -30,3 +30,9 @@ frankish_unity = {
 	global_unrest = -2
 	land_morale = 0.15
 }
+
+#From Byzantine Resurgence by Dub
+
+byz_succession_crisis = { #Moved all modifiers to disaster instead, and adding heir chance malus
+    heir_chance = -1
+}

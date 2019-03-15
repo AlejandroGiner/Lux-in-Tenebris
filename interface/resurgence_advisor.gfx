@@ -1,0 +1,32 @@
+spriteTypes = {	
+	#Military General Strategoi advisor
+	spriteType = {
+		name = "GFX_advisor_military_general"
+		texturefile = "gfx//interface//advisors//military_general.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_military_general_female"
+		texturefile = "gfx//interface//advisors//military_general_female.dds"
+	}
+	
+	#Provincial Governor Strategoi advisor
+	spriteType = {
+		name = "GFX_advisor_provincial_governor"
+		texturefile = "gfx//interface//advisors//provincial_governor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_provincial_governor_female"
+		texturefile = "gfx//interface//advisors//provincial_governor_female.dds"
+	}
+	
+}
