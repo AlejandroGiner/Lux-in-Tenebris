@@ -1364,7 +1364,8 @@ BYZ_ideas = { #New Byzantine ideas, from Byzantine Resurgence mod, by Dub.
 		infantry_cost = -0.20
 	}
 	byzantine_renaissance = { #Replaced Ecumenical Patriarch with Byzantine Renaissance idea. Missionary strength is... iffy here. It also devalues every other bonus that Orthodox can get and is really not at all needed if you picked up Religious ideas. Instead, the patriarch is in the Constantinople province now.
-		technology_cost = -0.1 #The reason why this is 10% is because they cover the best of the East & the West. Colonialism is also extremely far away and ahistorically so for a resurgence Byzantium in terms of tech penalty. Considering France gets 10%, I think it's warranted.
+		technology_cost = -0.05 #The reason why this is 10% is because they cover the best of the East & the West. Colonialism is also extremely far away and ahistorically so for a resurgence Byzantium in terms of tech penalty. Considering France gets 10%, I think it's warranted.
+		idea_cost = -0.05
 	}
 	bureau_of_barbarians = { #Adjusted from Renovatio Imperii's diplomatic relations +1 to 20% improve relations. The bureau of barbarians was used to do diplomacy well, which doesn't translate into diplo relations in my opinion.
 		improve_relation_modifier = 0.2
@@ -1382,7 +1383,6 @@ BYZ_ideas = { #New Byzantine ideas, from Byzantine Resurgence mod, by Dub.
 	}
 	byzantine_resurgence = { #New idea to replace Byzantine Merchant class. Byzantium wasn't exactly known for trading /too/ much.
 		prestige = 1
-		prestige_decay = -0.01
 	}
 }
 
