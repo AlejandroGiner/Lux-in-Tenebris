@@ -43,12 +43,16 @@ pretender_rebels = {
 		#Byz_resurgence added: If the Military Coup disaster fires, adjust so there's plenty of chance for pretenders to rise.
 		modifier = {
 			factor = 20
-			has_disaster = estate_strategoi_disaster
+			owner = {
+				has_disaster = estate_strategoi_disaster
+			}
 		}
 		#Byz_resurgence added: If the Succession Crisis disaster fires, adjust so there's plenty of chance for pretenders to rise.
 		modifier = {
 			factor = 20
-			has_disaster = succession_crisis
+			owner = {
+				has_disaster = succession_crisis
+			}
 		}
 		modifier = {
 			factor = 0
