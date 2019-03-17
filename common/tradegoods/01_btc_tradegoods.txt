@@ -331,6 +331,10 @@ millet = {
 			province_id = 5304
 		}
 		modifier = {
+			factor = 1
+			region = horn_of_africa_region
+		}
+		modifier = {
 			factor = 3
 			OR  = {
 				region = south_africa_region
@@ -343,7 +347,6 @@ millet = {
 			OR  = {
 				region = niger_region
 				region = sahel_region
-				region = horn_of_africa_region
 				region = kongo_region
 				region = guinea_region
 				region = central_africa_region
@@ -761,6 +764,45 @@ legumes = {
 		modifier = {
 			factor = 0
 			province_id = 5304
+		}
+	}
+}
+
+teff = {
+	color = { 58 165 133 }
+	modifier = {
+		infantry_cost = -0.05
+	}
+	province = {
+		local_regiment_cost = -0.1
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				continent = africa
+				continent = asia
+				continent = north_america
+				continent = south_america
+				continent = oceania
+				continent = europe
+				region = ural_region
+			}
+			NOT = { region = horn_of_africa_region }
+			#NOT = { has_global_flag = teff_traded }
+		}
+		modifier = {
+			factor = 10
+			region = horn_of_africa_region
+		}
+		modifier = {
+			factor = 1.5
+			has_terrain = farmlands
 		}
 	}
 }
