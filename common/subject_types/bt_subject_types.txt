@@ -197,3 +197,75 @@ viceroyalty_bt = {
 	subject_opinion_modifier = in_union
 }
 
+#Basically a non-voluntary tributary, but who gives no tribute.... in other words, pretty much worthless. Papal States' goal will be to convert these to vassals via decision, or possibly an event or two.
+papal_subject_bt = {
+	#Note from tributary state entry - If similar subject added check if it needs to be added to these scripted triggers: is_subject_except_tributary_trigger, is_free_or_tributary_trigger . Thanks Paradox person!
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_theo_papal
+	diplomacy_overlord_sprite = GFX_diplomacy_theo_papal_from
+	diplomacy_subject_sprite = GFX_diplomacy_theo_papal_to
+
+	# Properties:
+	transfer_trade_power = no
+	joins_overlords_wars = no
+	can_have_subjects_of_other_types = yes
+	takes_diplo_slot = no
+	has_power_projection = yes
+	uses_military_focus = no
+	overlord_protects_external = yes
+	can_use_claims = no
+	share_rebel_popup = no
+	can_transfer_in_peace = no
+	can_set_mil_focus = no
+	
+	max_government_rank = 1
+	trust_on_start = 10
+
+	relative_power_class = 1
+
+	can_fight = {
+		independent_nations = yes
+		same_overlord = papal_holding_bt
+		other_overlord = all
+	}
+	can_rival = {
+		independent_nations = yes
+		same_overlord = papal_holding_bt
+		other_overlord = all
+	}
+	can_ally = {
+		independent_nations = yes
+		same_overlord = papal_holding_bt
+		other_overlord = all
+	}
+	can_marry = {
+		independent_nations = yes
+		same_overlord = papal_holding_bt
+		other_overlord = all
+	}
+	
+	# Subject Interactions
+	#Disabling
+	embargo_rivals = no
+	placate_rulers = no
+	knowledge_sharing = no
+	
+	#Enabling
+	support_loyalists = yes
+	place_relative_on_throne = yes
+	
+	# Modifiers
+	
+	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear #Ditto
+	modifier_subject = { modifier = subject_nation }
+	modifier_overlord = clear
+
+	overlord_opinion_modifier = bt_is_papal_subject
+	subject_opinion_modifier = bt_is_papal_subject
+}
+
+
+
