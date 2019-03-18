@@ -184,7 +184,7 @@ country_decisions = {
 						}
             AND = {
               tag = ENG
-              NOT = { sum_of_cities = 60 }
+              NOT = { num_of_cities = 60 }
             }
 					}
 				}
