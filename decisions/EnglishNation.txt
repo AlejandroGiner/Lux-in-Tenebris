@@ -11,7 +11,7 @@ country_decisions = {
         primary_culture = northumbrian
         primary_culture = english
       }
-			
+
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -32,7 +32,7 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
-			is_nomad = no			
+			is_nomad = no
 			NOT = { exists = ENG }
 			owns_core_province = 236		# London
 			owns_core_province = 237		# Oxfordshire
@@ -40,7 +40,7 @@ country_decisions = {
 			owns_core_province = 235		# Kent
 			owns_core_province = 238		# East Anglia
       owns_core_province = 239    # Gloucestershire
-      
+
       calc_true_if = {
         all_owned_province = {
           is_core = ROOT
@@ -48,7 +48,7 @@ country_decisions = {
         }
         amount = 17			#At least 1/2 of Britain's 33 provinces
       }
-      
+
 		}
 		effect = {
 			236 = { #London
@@ -63,15 +63,15 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-      
+
       england_province_group = {
-        limit = { 
-          NOT = { permanent_claim = ROOT }
+        limit = {
+          NOT = { is_permanent_claim = ROOT }
           NOT = { is_core = ROOT }
         }
         add_permanent_claim = ROOT
       }
-      
+
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -88,5 +88,5 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
+
 }
