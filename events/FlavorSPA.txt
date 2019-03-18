@@ -2086,26 +2086,20 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			has_country_flag = fate_of_granada_mission_flag
 			AND = {
-				NOT = { has_dlc = "Golden Century" }
-				OR = {
-					AND = {
-						tag = CAS
-						NOT = { exists = SPA }
-					}
-					tag = SPA
-				}
-				has_country_flag = alpujarras_revolt_happened
-				NOT = { has_country_flag = end_of_granada }
-				NOT = { exists = GRA }
-				owns = 223 #Granada
-				NOT = {
-					any_owned_province = {
-						is_core = GRA
-						controlled_by = REB
-					}
-				}
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+				tag = SPA
+		}
+		#has_country_flag = alpujarras_revolt_happened - this is true insanity that needs to be fixed later Alejandro Dynamo
+		NOT = { has_country_flag = end_of_granada }
+		NOT = { exists = GRA }
+		owns = 223 #Granada
+		NOT = {
+			any_owned_province = {
+			is_core = GRA
+			controlled_by = REB
 			}
 		}
 	}
@@ -2120,7 +2114,7 @@ country_event = {
 			factor = 1
 		}
 		set_country_flag = end_of_granada
-		add_stability = -2
+		add_stability = -1
 		every_owned_province = {
 			limit = {
 				is_core = GRA
