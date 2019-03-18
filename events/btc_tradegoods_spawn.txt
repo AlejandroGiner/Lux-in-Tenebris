@@ -1,0 +1,242 @@
+namespace = btc_tradegoods
+
+country_event = {
+  id = btc_tradegoods.1
+  title = btc_tradegoods.1.t
+  desc = btc_tradegoods.1.d
+  picture = 
+  
+  fire_only_once = yes
+  hidden = yes
+  
+  trigger = {
+    capital_scope = {
+      OR = {
+        region = france_region
+        region = low_countries_region
+        region = north_german_region
+        region = south_german_region
+        region = iberia_region
+        region = british_isles_region
+        region = ireland_area
+      }
+    }
+    has_global_flag = columbian_exchange_happened
+    OR = {
+      any_owned_province = {
+        OR = {
+          continent = north_america
+          continent = south_america
+          continent = new_world
+        }
+        trade_goods = potatoes
+      }
+      any_subject_country = {
+        any_owned_province = {
+          OR = {
+            continent = north_america
+            continent = south_america
+            continent = new_world
+          }
+          trade_goods = potatoes
+        }
+      }
+    }
+  }
+  
+  mean_time_to_happen = {
+    years = 20
+  }
+  
+  option = {
+    name = btc_tradegoods.1.a
+    ai_chance = { factor = 100 }
+    if = {
+      limit = {
+        3304 = {owned_by = CAS}
+        macaronesia_area = {owned_by = CAS}
+        CAS = {
+          OR = {
+            any_owned_province = {
+              OR = {
+                continent = north_america
+                continent = south_america
+                continent = new_world
+              }
+              trade_goods = potatoes
+            }
+            any_subject_country = {
+              any_owned_province = {
+                OR = {
+                  continent = north_america
+                  continent = south_america
+                  continent = new_world
+                }
+                trade_goods = potatoes
+              }
+            }
+          }
+        }
+      }
+      CAS = {
+        country_event = {
+          id = btc_tradegoods.2
+        }
+      }
+    }
+    else_if = {
+      limit = {
+        3304 = {owned_by = CAS}
+        macaronesia_area = {owned_by = CAS}
+        CAS = {
+          OR = {
+            any_owned_province = {
+              OR = {
+                continent = north_america
+                continent = south_america
+                continent = new_world
+              }
+              trade_goods = potatoes
+            }
+            any_subject_country = {
+              any_owned_province = {
+                OR = {
+                  continent = north_america
+                  continent = south_america
+                  continent = new_world
+                }
+                trade_goods = potatoes
+              }
+            }
+          }
+        }
+      }
+      SPA = {
+        country_event = {
+          id = btc_tradegoods.2
+        }
+      }
+    }
+    else = {
+      country_event = {
+        id = btc_tradegoods.2
+      }
+    }
+  }
+}
+
+country_event = {
+  id = btc_tradegoods.2
+  title = btc_tradegoods.2.t
+  desc = btc_tradegoods.2.d
+  picture =
+  
+  is_triggered_only = yes
+  
+  option = {
+    name = btc_tradegoods.2.a
+    ai_chance = { factor = 100 }
+    trigger = {
+      OR = { tag = CAS tag = SPA }
+      macaronesia_area = { owned_by = ROOT }
+      3304 = { owned_by = ROOT }
+    }
+    set_global_flag = potatoes_arrival
+    3304 = {
+      add_permanent_province_modifier = {
+        name = potato_port
+        duration = -1
+        desc = potato_port_tooltip
+      }
+      change_trade_goods = potatoes
+      add_base_production = 2
+    }
+    random_owned_province = {
+      limit = {
+        area = macaronesia_area
+      }
+      change_trade_goods = potatoes
+      add_base_production = 1
+      add_base_manpower = 1
+    }
+  }
+  option = {
+    name = btc_tradegoods.2.b
+    ai_chance = { factor = 100 }
+    trigger = {
+      NOT = {
+        OR = { tag = CAS tag = SPA }
+        macaronesia_area = { owned_by = ROOT }
+        3304 = { owned_by = ROOT }
+      }
+    }
+    random_owned_province = {
+      limit = {
+        has_port = yes
+        province_has_center_of_trade_of_level = 1
+        province_without_special_goods_produced_trigger = yes
+      }
+      add_permanent_province_modifier = {
+        name = potato_port
+        duration = -1
+        desc = potato_port_tooltip
+      }
+    }
+    random_owned_province = {
+      limit = {
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = grain
+          trade_goods = legumes
+          trade_goods = fish
+          trade_goods = livestock
+          trade_goods = wool
+          AND = {
+            NOT = {
+              OR = {
+                region = france_region
+                region = british_isles_region
+              }
+            }
+            trade_goods = linen
+          }
+          
+        }
+        OR = {
+          region = france_region
+          region = low_countries_region
+          region = north_german_region
+          region = south_german_region
+          region = iberia_region
+          region = british_isles_region
+          region = ireland_area
+        }
+      }
+      change_trade_goods = potatoes
+      add_base_production = 1
+      add_base_manpower = 1
+    }
+  }
+}
+
+province_event = {
+  id = btc_tradegoods.3
+  title = btc_tradegoods.3.t
+  desc = btc_tradegoods.3.d
+  picture =
+  
+  trigger = {
+    #has_global_flag = potatoes_arrival
+    always = no
+  }
+  
+  mean_time_to_happen = {
+  
+  }
+  
+  option = {
+    name = btc_tradegoods.3.a
+    ai_chance = { factor = 100 }
+    change_trade_goods = potatoes
+  }
+}
