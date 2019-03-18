@@ -212,7 +212,7 @@ tau_slot_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = north_laos_area
-				area = muang_phuan_area
+				area = kengcheng_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -223,7 +223,7 @@ tau_slot_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			muang_phuan_area = {
+			kengcheng_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -416,7 +416,7 @@ tau_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			muang_phuan_area = {
+			kengcheng_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}

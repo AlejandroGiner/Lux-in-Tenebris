@@ -109,6 +109,59 @@ shan_monarchy = {
 	}
 }
 
+lue_monarchy = {
+	rank = {
+		1 = MONG
+		2 = MONG
+		3 = GREAT_MONG
+	}
+
+	ruler_male = {
+		1 = MYOSA
+		2 = SAOPHA
+		3 = CHHATRAPATI
+	}
+
+	ruler_female = {
+		1 = MYOSA
+		2 = SAOPHA
+		3 = CHHATRAPATI
+	}
+
+	trigger = {
+                primary_culture = khun
+		government = monarchy
+	}
+}
+
+tai_monarchy = {
+	rank = {
+		1 = MONG
+		2 = MONG
+		3 = GREAT_MONG
+	}
+
+	ruler_male = {
+		1 = MYOSA
+		2 = SAOPHA
+		3 = CHHATRAPATI
+	}
+
+	ruler_female = {
+		1 = MYOSA
+		2 = SAOPHA
+		3 = CHHATRAPATI
+	}
+
+	trigger = {
+                primary_culture = tai
+		government = monarchy
+		NOT = {
+			tag = MPH
+		}
+	}
+}
+
 burman_monarchy = {
 	rank = {
 		1 = PRINCEDOM

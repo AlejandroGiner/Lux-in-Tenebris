@@ -1562,7 +1562,17 @@ shan_ideas = {
 	}
 
 	trigger = {
-		primary_culture = shan
+		NOT = {
+			tag = MMA
+			tag = MYA
+			tag = MKA
+			tag = MMT
+		}
+		OR = {
+			primary_culture = shan
+			primary_culture = khun
+			primary_culture = tai
+		}
 	}
 	free = yes
 
@@ -1727,7 +1737,13 @@ laotian_ideas = {
 	}
 
 	trigger = {
-		primary_culture = lao
+		NOT = {
+			tag = LXA
+		}
+		OR = {
+			primary_culture = lao
+			tag = MPH
+		}
 	}
 	free = yes
 

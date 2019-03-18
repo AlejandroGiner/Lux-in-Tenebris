@@ -1,20 +1,22 @@
 #4593 - Muang Xay
 
+latent_trade_goods = {
+	coal
+}
+
 owner = LXA
 controller = LXA
-culture = lao
+culture = khun
 religion = buddhism
 capital = "Muang Xay"
-trade_goods = livestock
+trade_goods = grain
 hre = no
 base_tax = 2 
-base_production = 2
+base_production = 1
 base_manpower = 1
 is_city = yes
 add_core = LXA
 add_core = LUA
-
-
 
 discovered_by = chinese
 discovered_by = japanese_btc
