@@ -2218,15 +2218,21 @@ country_event = {
 	option = {
 		name = prices.37.a
 		change_price = {
-			trade_goods = grain
+			trade_goods = maize
 			key = COLUMBIAN_EXCHANGE
-			value = -0.20
+			value = 0.25
 			duration = -1
 		}
 		change_price = {
 			trade_goods = livestock
 			key = COLUMBIAN_EXCHANGE
-			value = 0.25
+			value = 0.15
+			duration = -1
+		}
+		change_price = {
+			trade_goods = potatoes
+			key = COLUMBIAN_EXCHANGE
+			value = 0.20
 			duration = -1
 		}
 	}
