@@ -377,7 +377,7 @@ gc_spain_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = upper_andalucia_area
-				area = lower_andalucia_area
+				area = baetica_area
 			}
 			NOT = { culture = ROOT }
 		}
@@ -387,7 +387,7 @@ gc_spain_2 = {
 				type = all
 				culture = ROOT
 			}
-			lower_andalucia_area = {
+			baetica_area = {
 				type = all
 				culture = ROOT
 			}
@@ -714,10 +714,10 @@ gc_spain_3 = {
 		# free mission
 		
 		trigger = {
-			army_size_percentage = 1
-			navy_size_percentage = 1
+			army_size_percentage = 0.6
 			manpower_percentage = 0.6
 			num_of_generals = 1
+			stability = 1
 		}
 		
 		effect = {
@@ -725,7 +725,7 @@ gc_spain_3 = {
 				name = "spa_rb_morale"
 				duration = 5475
 			}
-			upper_andalucia_area = {
+			baetica_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -751,22 +751,20 @@ gc_spain_3 = {
 		completed_by = 1492.1.1
 		
 		provinces_to_highlight = {
-			area = upper_andalucia_area
+			area = baetica_area
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			upper_andalucia_area = {
+			baetica_area = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		
 		effect = {
-			set_country_flag = fate_of_granada_mission_flag
-			country_event = {
-				id = flavor_spa.8
-			}
+			add_prestige = 25
+			add_army_tradition = 10
 		}
 	}
 	gc_cas_spa_iberia_christian = {
@@ -1295,6 +1293,7 @@ gc_spain_4 = {
 				area = valencia_area
 				area = catalonia_area
 				area = aragon_area
+				area = barcelona_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1309,6 +1308,10 @@ gc_spain_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aragon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			barcelona_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1340,7 +1343,21 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				south_beieras_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -1353,6 +1370,13 @@ gc_spain_4 = {
 					NOT = { NAP = { is_subject_of = ROOT } }
 				}
 				sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				eastsicily_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -1383,6 +1407,12 @@ gc_spain_4 = {
 			}
 			else = {
 				sicily_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = NAP
+				}
+				eastsicily_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
@@ -1417,6 +1447,7 @@ gc_spain_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
+				area = eastsicily_area
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
@@ -1426,6 +1457,10 @@ gc_spain_4 = {
 		
 		trigger = {
 			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastsicily_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2011,7 +2046,9 @@ gc_spain_5_a = {
 		provinces_to_highlight = {
 			OR = {
 				area = beieras_area
+				area = south_beieras_area
 				area = alentejo_area
+				area = south_alentejo_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -2021,7 +2058,15 @@ gc_spain_5_a = {
 				type = all
 				owned_by = ROOT
 			}
+			south_beieras_area = {
+				type = all
+				owned_by = ROOT
+			}
 			alentejo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_alentejo_area = {
 				type = all
 				owned_by = ROOT
 			}

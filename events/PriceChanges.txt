@@ -2164,6 +2164,10 @@ country_event = {
 			}
 			OR = {
 				trade_goods = grain
+				trade_goods = fruit
+				trade_goods = amaranth
+				trade_goods = legumes
+				trade_goods = olives
 				trade_goods = livestock
 			}
 		}
@@ -2176,6 +2180,12 @@ country_event = {
 				}
 				OR = {
 					trade_goods = grain
+					trade_goods = fuit
+					trade_goods = maize
+					trade_goods = potatoes
+					trade_goods = amaranth
+					trade_goods = legumes
+					trade_goods = olives
 					trade_goods = livestock
 				}
 			}
@@ -2188,6 +2198,12 @@ country_event = {
 					}
 					OR = {
 						trade_goods = grain
+						trade_goods = fuit
+						trade_goods = maize
+						trade_goods = potatoes
+						trade_goods = amaranth
+						trade_goods = legumes
+						trade_goods = olives
 						trade_goods = livestock
 					}
 				}
@@ -2201,16 +2217,23 @@ country_event = {
 	
 	option = {
 		name = prices.37.a
+		set_global_flag = columbian_exchange_happened
 		change_price = {
-			trade_goods = grain
+			trade_goods = maize
 			key = COLUMBIAN_EXCHANGE
-			value = -0.20
+			value = 0.25
 			duration = -1
 		}
 		change_price = {
 			trade_goods = livestock
 			key = COLUMBIAN_EXCHANGE
-			value = 0.25
+			value = 0.15
+			duration = -1
+		}
+		change_price = {
+			trade_goods = potatoes
+			key = COLUMBIAN_EXCHANGE
+			value = 0.20
 			duration = -1
 		}
 	}

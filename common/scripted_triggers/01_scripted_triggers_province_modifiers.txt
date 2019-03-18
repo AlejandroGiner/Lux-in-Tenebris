@@ -86,6 +86,8 @@ has_river_estuary_trigger = {
 			has_province_modifier = limpopo_estuary_modifier
 			has_province_modifier = breede_estuary_modifier
 			has_province_modifier = tugela_estuary_modifier
+			
+			has_province_modifier = volta_estuary_modifier
 		}
 	}
 }
@@ -199,9 +201,21 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		has_latent_trade_goods = coal
 		
 		#Added special goods in BT
 		has_province_modifier = grand_banks_of_newfoundland
+		
+		#btc
+		has_latent_trade_goods = rubber
+		has_latent_trade_goods = oil
+		
+		has_province_modifier = bt_forests_of_cadore
+		has_province_modifier = btc_solnitsata_salt
+		has_province_modifier = btc_banaue_rice_terraces
+		has_province_modifier = btc_awjila_dates
+		has_province_modifier = btc_renaissance_marble_modifier
+		has_province_modifier = caspian_rice_fields
 	}
 }
 
@@ -229,6 +243,17 @@ province_without_special_goods_produced_trigger = {
 		
 			#Added special goods in BT
 			has_province_modifier = grand_banks_of_newfoundland
+			
+			#btc
+			has_latent_trade_goods = rubber
+			has_latent_trade_goods = oil
+			
+			has_province_modifier = bt_forests_of_cadore
+			has_province_modifier = btc_solnitsata_salt
+			has_province_modifier = btc_banaue_rice_terraces
+			has_province_modifier = btc_awjila_dates
+			has_province_modifier = btc_renaissance_marble_modifier
+			has_province_modifier = caspian_rice_fields
 		}
 	}
 }
