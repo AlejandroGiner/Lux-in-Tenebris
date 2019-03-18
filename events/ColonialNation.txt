@@ -5838,3 +5838,822 @@ country_event = {
 		add_tariff_value = 0.05
 	}
 }
+
+# Tariffs on Silk
+country_event = {
+	id = colonial_nation.212
+	title = "colonial_nation.EVTNAME212"
+	desc = "colonial_nation.EVTDESC212"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_silk }
+			had_country_flag = { flag = tariffs_on_silk days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = silk
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				silk = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				silk = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				silk = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = silk
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.213 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_silk
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_silk
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Silk
+country_event = {
+	id = colonial_nation.213
+	title = "colonial_nation.EVTNAME212"
+	desc = "colonial_nation.EVTDESC213"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA213"	# Perhaps we should throw the silk into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Dyes
+country_event = {
+	id = colonial_nation.214
+	title = "colonial_nation.EVTNAME214"
+	desc = "colonial_nation.EVTDESC214"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_dyes }
+			had_country_flag = { flag = tariffs_on_dyes days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = dyes
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				dyes = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				dyes = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				dyes = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = dyes
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.215 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_dyes
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_dyes
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Dyes
+country_event = {
+	id = colonial_nation.215
+	title = "colonial_nation.EVTNAME214"
+	desc = "colonial_nation.EVTDESC215"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA215"	# Perhaps we should throw the dyes into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Tropical Wood
+country_event = {
+	id = colonial_nation.216
+	title = "colonial_nation.EVTNAME216"
+	desc = "colonial_nation.EVTDESC216"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_tropical_wood }
+			had_country_flag = { flag = tariffs_on_tropical_wood days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = tropical_wood
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				tropical_wood = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				tropical_wood = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				tropical_wood = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = tropical_wood
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.217 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_tropical_wood
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_tropical_wood
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Tropical Wood
+country_event = {
+	id = colonial_nation.217
+	title = "colonial_nation.EVTNAME216"
+	desc = "colonial_nation.EVTDESC217"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA217"	# Perhaps we should throw the tropical wood into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Livestock
+country_event = {
+	id = colonial_nation.218
+	title = "colonial_nation.EVTNAME218"
+	desc = "colonial_nation.EVTDESC218"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_livestock }
+			had_country_flag = { flag = tariffs_on_livestock days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = livestock
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				livestock = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				livestock = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				livestock = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = livestock
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.219 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_livestock
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_livestock
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Livestock
+country_event = {
+	id = colonial_nation.219
+	title = "colonial_nation.EVTNAME218"
+	desc = "colonial_nation.EVTDESC219"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA219"	# Perhaps we should throw the livestock into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Incense
+country_event = {
+	id = colonial_nation.220
+	title = "colonial_nation.EVTNAME220"
+	desc = "colonial_nation.EVTDESC220"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_incense }
+			had_country_flag = { flag = tariffs_on_incense days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = incense
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				incense = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				incense = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				incense = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = incense
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.221 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_incense
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_incense
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Incense
+country_event = {
+	id = colonial_nation.221
+	title = "colonial_nation.EVTNAME220"
+	desc = "colonial_nation.EVTDESC221"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA221"	# Perhaps we should throw the incense into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Glass
+country_event = {
+	id = colonial_nation.222
+	title = "colonial_nation.EVTNAME222"
+	desc = "colonial_nation.EVTDESC222"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_glass }
+			had_country_flag = { flag = tariffs_on_glass days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = glass
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				glass = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				glass = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				glass = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = glass
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.223 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_glass
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_glass
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Glass
+country_event = {
+	id = colonial_nation.223
+	title = "colonial_nation.EVTNAME222"
+	desc = "colonial_nation.EVTDESC223"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA223"	# Perhaps we should throw the glass into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Paper
+country_event = {
+	id = colonial_nation.224
+	title = "colonial_nation.EVTNAME224"
+	desc = "colonial_nation.EVTDESC224"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_paper }
+			had_country_flag = { flag = tariffs_on_paper days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = paper
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				paper = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				paper = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				paper = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = paper
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.225 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_paper
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_paper
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Paper
+country_event = {
+	id = colonial_nation.225
+	title = "colonial_nation.EVTNAME224"
+	desc = "colonial_nation.EVTDESC225"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA225"	# Perhaps we should throw the paper into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Gems
+country_event = {
+	id = colonial_nation.226
+	title = "colonial_nation.EVTNAME226"
+	desc = "colonial_nation.EVTDESC226"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_gems }
+			had_country_flag = { flag = tariffs_on_gems days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = gems
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				gems = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				gems = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				gems = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = gems
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.227 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_gems
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_gems
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Gems
+country_event = {
+	id = colonial_nation.227
+	title = "colonial_nation.EVTNAME226"
+	desc = "colonial_nation.EVTDESC227"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA227"	# Perhaps we should throw the gems into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
+
+# Tariffs on Coal
+country_event = {
+	id = colonial_nation.228
+	title = "colonial_nation.EVTNAME228"
+	desc = "colonial_nation.EVTDESC228"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_coal }
+			had_country_flag = { flag = tariffs_on_coal days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = coal
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				coal = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				coal = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				coal = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = coal
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.229 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_coal
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_coal
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Coal
+country_event = {
+	id = colonial_nation.229
+	title = "colonial_nation.EVTNAME228"
+	desc = "colonial_nation.EVTDESC229"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA229"	# Perhaps we should throw the coal into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
