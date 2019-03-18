@@ -87,3 +87,14 @@ estate_strategoi_province_trigger = {
 		}
 	}
 }
+
+#If BYZ or ROM formed from BYZ
+is_byz_or_hellenic_rome_trigger = {
+	OR = {
+		tag = BYZ
+		AND = {
+			tag = ROM
+			culture_group = byzantine
+		}
+	}
+}

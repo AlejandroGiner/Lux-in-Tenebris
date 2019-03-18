@@ -210,20 +210,13 @@ tau_slot_1 = {
 		icon = mission_a_million_elephants
 		required_missions = { tau_conquer_lanna }
 		provinces_to_highlight = {
-			OR = {
 				area = north_laos_area
-				area = kengcheng_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			north_laos_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			kengcheng_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -410,13 +403,6 @@ tau_slot_2 = {
 				duration = 7300
 			}
 			north_laos_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			kengcheng_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
