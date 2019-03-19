@@ -233,8 +233,8 @@ province_event = {
       limit = {region = ireland_area}
       NOT = { 
         calc_true_if = {
-          ireland_area = {
-            type = all
+          all_province = {
+            region = ireland_area
             trade_goods = potatoes
           }
           amount = 10
@@ -245,8 +245,8 @@ province_event = {
       limit ={region = british_isles_region}
       NOT = {
         calc_true_if = {
-          british_isles_region = {
-            type = all
+          all_province = {
+            region = british_isles_region
             trade_goods = potatoes
           }
           amount = 10
@@ -257,8 +257,8 @@ province_event = {
       limit = {region = iberia_region}
       NOT = {
         calc_true_if = {
-          iberia_region = {
-            type = all
+          all_province = {
+            region = iberia_region
             trade_goods = potatoes
           }
           amount = 10
@@ -269,8 +269,8 @@ province_event = {
       limit = {region = france_region}
       NOT = {
         calc_true_if = {
-          france_region = {
-            type = all
+          all_province = {
+            region = france_region
             trade_goods = potatoes
           }
           amount = 10
@@ -281,8 +281,8 @@ province_event = {
       limit = {region = south_german_region}
       NOT = {
         calc_true_if = {
-          south_german_region = {
-            type = all
+          all_province = {
+            region = south_german_region
             trade_goods = potatoes
           }
           amount = 10
@@ -293,8 +293,8 @@ province_event = {
       limit = {region = north_german_region}
       NOT = {
         calc_true_if = {
-          north_german_region = {
-            type = all
+          all_province = {
+            region = north_german_region
             trade_goods = potatoes
           }
           amount = 10
@@ -305,8 +305,8 @@ province_event = {
       limit = {region = low_countries_region}
       NOT = {
         calc_true_if = {
-          low_countries_region = {
-            type = all
+          all_province = {
+            region = low_countries_region
             trade_goods = potatoes
           }
           amount = 10
