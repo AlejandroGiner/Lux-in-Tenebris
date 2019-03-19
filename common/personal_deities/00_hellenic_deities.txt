@@ -1,0 +1,133 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+hades =
+{
+	hostile_attrition = 1
+	siege_ability = 0.1
+	
+	allow = { religion = hellenic_pagan_reformed }
+	sprite = 13
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+zeus =
+{
+	shock_damage = 0.1
+	global_unrest = -1
+	
+	allow = { religion = hellenic_pagan_reformed }
+	sprite = 14
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_colonialist
+		}
+	}
+}
+
+demeter =
+{
+	core_creation = -0.1
+	global_trade_goods_size_modifier = 0.1
+	
+	allow = { religion = hellenic_pagan_reformed }
+	sprite = 15
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}		
+	}
+}
+
+poseidon =
+{
+	global_sailors_modifier = 0.10
+	sunk_ship_morale_hit_recieved = -0.2
+	
+	allow = { religion = hellenic_pagan_reformed }
+	sprite = 16
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { num_of_ports = 1 }
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}	
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}		
+	}
+}
+
+ares =
+{
+	war_exhaustion = -0.05
+	discipline = 0.05
+	
+	allow = { religion = hellenic_pagan_reformed }
+	sprite = 17
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}		
+	}
+}
+
+
+hermes =
+{
+	caravan_power = 0.2
+	trade_efficiency = 0.10
+	
+	allow = { religion = hellenic_pagan_reformed }
+	sprite = 18
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality =  ai_capitalist
+		}	
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}		
+	}
+}
