@@ -1,0 +1,16 @@
+is_apostolic_christian = {
+	custom_trigger_tooltip = {
+		tooltip = TOOLTIP_IS_APOSTOLIC
+		
+		OR = {
+			religion = catholic
+			religion = orthodox
+			religion = coptic
+			religion = protestant
+			religion = reformed
+			religion = anglican
+			religion = nestorian
+			religion = waldensian
+		}
+	}
+}

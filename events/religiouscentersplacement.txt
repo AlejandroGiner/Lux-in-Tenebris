@@ -1,0 +1,20 @@
+namespace = religiouscenters
+
+country_event = {
+	id = religiouscenters.1
+	is_triggered_only = yes
+	hidden = yes
+	
+	immediate = {
+		118 = { add_province_triggered_modifier = center_apostolic } #rome
+		358 = { add_province_triggered_modifier = center_apostolic } #alexandria
+		2313 = { add_province_triggered_modifier = center_apostolic } #antioch
+		379 = { add_province_triggered_modifier = center_abrahamic } #jerusalem
+		151 = { add_province_triggered_modifier = center_apostolic } #constantinople
+		419 = { add_province_triggered_modifier = center_oriental } #yerevan
+		410 = { add_province_triggered_modifier = center_nestorian } #ctesiphon
+		1227 = { add_province_triggered_modifier = center_oriental } #axum
+		280 = { add_province_triggered_modifier = center_eastern } #kiev
+		
+	}
+}
