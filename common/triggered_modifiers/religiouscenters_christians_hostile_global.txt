@@ -1,0 +1,33 @@
+christian_mecca = {
+	potential = {
+		normal_or_historical_nations = yes
+		is_apostolic_christian = yes
+	}
+	
+	trigger = {
+		385 = {
+			owner = {
+				is_apostolic_christian = yes
+			}
+		}
+	}
+	
+	global_missionary_strength = 0.005
+}
+
+christian_medina = {
+	potential = {
+		normal_or_historical_nations = yes
+		is_apostolic_christian = yes
+	}
+	
+	trigger = {
+		384 = {
+			owner = {
+				is_apostolic_christian = yes
+			}
+		}
+	}
+	
+	global_missionary_strength = 0.005
+}
