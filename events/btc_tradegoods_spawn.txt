@@ -226,12 +226,98 @@ province_event = {
   picture = FARMING_eventPicture
   
   trigger = {
-    #has_global_flag = potatoes_arrival
-    always = no
+    has_global_flag = potatoes_arrival
+    NOT = { trade_goods = potatoes }
+    province_without_special_goods_produced_trigger = yes
+    if = {
+      limit = {region = ireland_area}
+      NOT = { 
+        calc_true_if = {
+          ireland_area = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else_if = {
+      limit ={region = british_isles_region}
+      NOT = {
+        calc_true_if = {
+          british_isles_region = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else_if = {
+      limit = {region = iberia_region}
+      NOT = {
+        calc_true_if = {
+          iberia_region = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else_if = {
+      limit = {region = france_region}
+      NOT = {
+        calc_true_if = {
+          france_region = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else_if = {
+      limit = {region = south_german_region}
+      NOT = {
+        calc_true_if = {
+          south_german_region = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else_if = {
+      limit = {region = north_german_region}
+      NOT = {
+        calc_true_if = {
+          north_german_region = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else_if = {
+      limit = {region = low_countries_region}
+      NOT = {
+        calc_true_if = {
+          low_countries_region = {
+            type = all
+            trade_goods = potatoes
+          }
+          amount = 10
+        }
+      }
+    }
+    else = { always = no }
   }
   
   mean_time_to_happen = {
-  
+    years = 2
   }
   
   option = {
