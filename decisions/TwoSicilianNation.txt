@@ -148,13 +148,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			if = {
-				limit = { tag = NAP }
-				owned_by = SIC
-			}
-			if = {
-				limit = { tag = SIC }
+			NOT = { owned_by = ROOT}
+			OR = {
 				owned_by = NAP
+				owned_by = SIC
 			}
 		}
 		allow = {
