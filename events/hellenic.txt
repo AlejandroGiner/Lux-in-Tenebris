@@ -1,0 +1,755 @@
+########################################
+# Hellenic Deity Events
+#
+# written by Jan
+########################################
+
+namespace = hellenic_events
+
+# Hetairideia
+country_event = {
+	id = hellenic_events.101
+	title = "hellenic_events.101.t"
+	desc = "hellenic_events.101.d"
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_personal_deity = zeus
+		has_regency = no
+		years_of_income = 0.25
+		is_month = 8
+		NOT = { is_month = 9 }
+		NOT = { has_ruler_modifier = hellenic_festival }
+		NOT = { has_ruler_modifier = impious_believer }
+	}
+	
+	mean_time_to_happen = { days = 10 }
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_festival
+			duration = 1005
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.101.a"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = offer_to_zeus
+			duration = 1060
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.101.b"
+		trigger = {
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+			NOT = { has_ruler_modifier = improved_ability }
+		}
+		add_ruler_modifier = { name = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.0.a"
+		trigger = { 
+			NOT = { has_ruler_modifier = cynical_believer }
+			NOT = { has_ruler_modifier = improving_ability }
+		}
+		add_ruler_modifier = { 
+			name = cynical_believer
+			hidden = yes
+		}
+		add_prestige = -2
+	}
+	
+	option = {
+		name = "hellenic_events.0.b"
+		trigger = {
+			has_ruler_modifier = cynical_believer
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+		}
+		add_ruler_modifier = { name = impious_believer }
+		hidden_effect = { remove_country_modifier = cynical_believer }
+		add_prestige = -3
+	}
+}
+
+country_event = {
+	id = hellenic_events.102
+	title = "hellenic_events.102.t"
+	desc = "hellenic_events.102.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		has_ruler_modifier = improving_ability
+		has_personal_deity = zeus
+	}
+	
+	mean_time_to_happen = { months = 8 }
+	immediate = {
+		hidden_effect = { remove_country_modifier = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.102.a"
+		change_dip = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.102.b"
+		change_mil = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+}
+
+# Sacrifice to Hades
+country_event = {
+	id = hellenic_events.103
+	title = "hellenic_events.103.t"
+	desc = "hellenic_events.103.d"
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_personal_deity = hades
+		has_regency = no
+		years_of_income = 0.25
+		is_month = 2
+		NOT = { is_month = 3 }
+		NOT = { has_ruler_modifier = hellenic_festival }
+		NOT = { has_ruler_modifier = impious_believer }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_festival
+			duration = 1005
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.103.a"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = offer_to_hades
+			duration = 1060
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.103.b"
+		trigger = {
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+			NOT = { has_ruler_modifier = improved_ability }
+		}
+		add_ruler_modifier = { name = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.0.a"
+		trigger = { 
+			NOT = { has_ruler_modifier = cynical_believer }
+			NOT = { has_ruler_modifier = improving_ability }
+		}
+		add_ruler_modifier = {
+			name = cynical_believer
+			hidden = yes
+		}
+		add_prestige = -2
+	}
+	
+	option = {
+		name = "hellenic_events.0.b"
+		trigger = {
+			has_ruler_modifier = cynical_believer
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+		}
+		add_ruler_modifier = { name = impious_believer }
+		hidden_effect = { remove_country_modifier = cynical_believer }
+		add_prestige = -3
+	}
+}
+
+country_event = {
+	id = hellenic_events.104
+	title = "hellenic_events.104.t"
+	desc = "hellenic_events.104.d"
+	picture = DIPLOMACY_eventPicture
+	
+	trigger = {
+		has_ruler_modifier = improving_ability
+		has_personal_deity = hades
+	}
+	
+	mean_time_to_happen = { months = 8 }
+	immediate = {
+		hidden_effect = { remove_country_modifier = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.104.a"
+		change_dip = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.104.b"
+		change_adm = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+}
+
+# Sacrifice to Ares
+country_event = {
+	id = hellenic_events.105
+	title = "hellenic_events.105.t"
+	desc = "hellenic_events.105.d"
+	picture = LAND_MILITARY_eventPicture
+	
+	trigger = {
+		has_personal_deity = ares
+		has_regency = no
+		years_of_income = 0.25
+		is_month = 9
+		NOT = { is_month = 10 }
+		NOT = { has_ruler_modifier = hellenic_festival }
+		NOT = { has_ruler_modifier = impious_believer }
+	}
+	
+	mean_time_to_happen = { days = 16 }
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_festival
+			duration = 1005
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.105.a"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = offer_to_ares
+			duration = 1060
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.105.b"
+		trigger = {
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+			NOT = { has_ruler_modifier = improved_ability }
+		}
+		add_ruler_modifier = { name = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.0.a"
+		trigger = { 
+			NOT = { has_ruler_modifier = cynical_believer }
+			NOT = { has_ruler_modifier = improving_ability }
+		}
+		add_ruler_modifier = {
+			name = cynical_believer
+			hidden = yes
+		}
+		add_prestige = -2
+	}
+	
+	option = {
+		name = "hellenic_events.0.b"
+		trigger = {
+			has_ruler_modifier = cynical_believer
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+		}
+		add_ruler_modifier = { name = impious_believer }
+		hidden_effect = { remove_country_modifier = cynical_believer }
+		add_prestige = -3
+	}
+}
+
+country_event = {
+	id = hellenic_events.106
+	title = "hellenic_events.106.t"
+	desc = "hellenic_events.106.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		has_ruler_modifier = improving_ability
+		has_personal_deity = ares
+	}
+	
+	mean_time_to_happen = { months = 8 }
+	immediate = {
+		hidden_effect = { remove_country_modifier = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.106.a"
+		change_mil = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+}
+
+# Plynteria
+country_event = {
+	id = hellenic_events.107
+	title = "hellenic_events.107.t"
+	desc = "hellenic_events.107.d"
+	picture = CULTURE_eventPicture
+	
+	trigger = {
+		has_personal_deity = athena
+		has_regency = no
+		years_of_income = 0.25
+		is_month = 2
+		NOT = { is_month = 3 }
+		NOT = { has_ruler_modifier = hellenic_festival }
+		NOT = { has_ruler_modifier = impious_believer }
+	}
+	
+	mean_time_to_happen = { days = 16 }
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_festival
+			duration = 1005
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.107.a"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = offer_to_athena
+			duration = 1060
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.107.b"
+		trigger = {
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+			NOT = { has_ruler_modifier = improved_ability }
+		}
+		add_ruler_modifier = { name = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.0.a"
+		trigger = { 
+			NOT = { has_ruler_modifier = cynical_believer }
+			NOT = { has_ruler_modifier = improving_ability }
+		}
+		add_ruler_modifier = { 
+			name = cynical_believer
+			hidden = yes
+		}
+		add_prestige = -2
+	}
+	
+	option = {
+		name = "hellenic_events.0.b"
+		trigger = {
+			has_ruler_modifier = cynical_believer
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+		}
+		add_ruler_modifier = { name = impious_believer }
+		hidden_effect = { remove_country_modifier = cynical_believer }
+		add_prestige = -3
+	}
+}
+
+country_event = {
+	id = hellenic_events.108
+	title = "hellenic_events.108.t"
+	desc = "hellenic_events.108.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		has_ruler_modifier = improving_ability
+		has_personal_deity = athena
+	}
+	
+	mean_time_to_happen = { months = 8 }
+	immediate = {
+		hidden_effect = { remove_country_modifier = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.108.a"
+		change_adm = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.108.b"
+		change_mil = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+}
+
+# Hermaea
+country_event = {
+	id = hellenic_events.109
+	title = "hellenic_events.109.t"
+	desc = "hellenic_events.109.d"
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_personal_deity = hermes
+		has_regency = no
+		years_of_income = 0.25
+		is_month = 4
+		NOT = { is_month = 5 }
+		NOT = { has_ruler_modifier = hellenic_festival }
+		NOT = { has_ruler_modifier = impious_believer }
+	}
+	
+	mean_time_to_happen = { days = 12 }
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_festival
+			duration = 1005
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.109.a"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = offer_to_hermes
+			duration = 1060
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.109.b"
+		trigger = {
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+			NOT = { has_ruler_modifier = improved_ability }
+		}
+		add_ruler_modifier = { name = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.0.a"
+		trigger = { 
+			NOT = { has_ruler_modifier = cynical_believer }
+			NOT = { has_ruler_modifier = improving_ability }
+		}
+		add_ruler_modifier = {
+			name = cynical_believer
+			hidden = yes
+		}
+		add_prestige = -2
+	}
+	
+	option = {
+		name = "hellenic_events.0.b"
+		trigger = {
+			has_ruler_modifier = cynical_believer
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+		}
+		add_ruler_modifier = { name = impious_believer }
+		hidden_effect = { remove_country_modifier = cynical_believer }
+		add_prestige = -3
+	}
+}
+
+country_event = {
+	id = hellenic_events.110
+	title = "hellenic_events.110.t"
+	desc = "hellenic_events.110.d"
+	picture = DEBATE_REPUBLICAN_eventPicture
+	
+	trigger = {
+		has_ruler_modifier = improving_ability
+		has_personal_deity = hermes
+	}
+	
+	mean_time_to_happen = { months = 8 }
+	immediate = {
+		hidden_effect = { remove_country_modifier = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.110.a"
+		change_adm = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+}
+
+# Posidea
+country_event = {
+	id = hellenic_events.111
+	title = "hellenic_events.111.t"
+	desc = "hellenic_events.111.d"
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_personal_deity = poseidon
+		has_regency = no
+		years_of_income = 0.25
+		is_month = 3
+		NOT = { is_month = 4 }
+		NOT = { has_ruler_modifier = hellenic_festival }
+		NOT = { has_ruler_modifier = impious_believer }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_festival
+			duration = 1005
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.111.a"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = offer_to_poseidon
+			duration = 1060
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.111.b"
+		trigger = {
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+			NOT = { has_ruler_modifier = improved_ability }
+		}
+		add_ruler_modifier = { name = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.0.a"
+		trigger = { 
+			NOT = { has_ruler_modifier = cynical_believer }
+			NOT = { has_ruler_modifier = improving_ability }
+		}
+		add_ruler_modifier = {
+			name = cynical_believer
+			hidden = yes
+		}
+		add_prestige = -2
+	}
+	
+	option = {
+		name = "hellenic_events.0.b"
+		trigger = {
+			has_ruler_modifier = cynical_believer
+			NOT = { has_ruler_modifier = improving_ability }
+			NOT = { has_ruler_modifier = changed_deity_recently }
+		}
+		add_ruler_modifier = { name = impious_believer }
+		hidden_effect = { remove_country_modifier = cynical_believer }
+		add_prestige = -3
+	}
+}
+
+country_event = {
+	id = hellenic_events.112
+	title = "hellenic_events.112.t"
+	desc = "hellenic_events.112.d"
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	trigger = {
+		has_ruler_modifier = improving_ability
+		has_personal_deity = poseidon
+	}
+	
+	mean_time_to_happen = { months = 8 }
+	immediate = {
+		hidden_effect = { remove_country_modifier = improving_ability }
+	}
+	
+	option = {
+		name = "hellenic_events.112.a"
+		change_dip = 1
+		add_ruler_modifier = { name = improved_ability }
+	}
+}
+
+# Change patron deity
+country_event = {
+	id = hellenic_events.113
+	title = "hellenic_events.113.t"
+	desc = "hellenic_events.113.d"
+	picture = PRAYING_eventPicture
+	
+	trigger = {
+		culture_group = byzantine
+		has_ruler_modifier = impious_believer
+		NOT = { has_ruler_modifier = changed_deity_recently }
+		NOT = { has_ruler_modifier = hellenic_crisis }
+	}
+	
+	mean_time_to_happen = { days = 47}
+	immediate = {
+		add_ruler_modifier = {
+			name = hellenic_crisis
+			duration = 360
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.113.a"
+		remove_country_modifier = impious_believer
+		add_prestige = 5
+	}
+	
+	option = {
+		name = "hellenic_events.113.b"
+		trigger = {
+			NOT = { has_personal_deity = zeus }
+		}
+		change_personal_deity = zeus
+		remove_country_modifier = impious_believer
+		add_prestige = -10
+		add_ruler_modifier {
+			name = changed_deity_recently
+			duration = 1095
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.113.c"
+		trigger = {
+			NOT = { has_personal_deity = hades }
+		}
+		change_personal_deity = hades
+		remove_country_modifier = impious_believer
+		add_prestige = -10
+		add_ruler_modifier {
+			name = changed_deity_recently
+			duration = 1095
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.113.e"
+		trigger = {
+			NOT = { has_personal_deity = ares }
+		}
+		change_personal_deity = ares
+		remove_country_modifier = impious_believer
+		add_prestige = -10
+		add_ruler_modifier {
+			name = changed_deity_recently
+			duration = 1095
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.113.f"
+		trigger = {
+			NOT = { has_personal_deity = athena }
+		}
+		change_personal_deity = athena
+		remove_country_modifier = impious_believer
+		add_prestige = -10
+		add_ruler_modifier {
+			name = changed_deity_recently
+			duration = 1095
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.113.g"
+		trigger = {
+			NOT = { has_personal_deity = hermes }
+		}
+		change_personal_deity = hermes
+		remove_country_modifier = impious_believer
+		add_prestige = -10
+		add_ruler_modifier {
+			name = changed_deity_recently
+			duration = 1095
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.113.h"
+		trigger = {
+			NOT = { has_personal_deity = poseidon }
+		}
+		change_personal_deity = poseidon
+		remove_country_modifier = impious_believer
+		add_prestige = -10
+		add_ruler_modifier {
+			name = changed_deity_recently
+			duration = 1095
+			hidden = yes
+		}
+	}
+}
+
+# Pontifex Maximus
+country_event = {
+	id = hellenic_events.14
+	title = "hellenic_events.14.t"
+	desc = "hellenic_events.14.d"
+	picture = LIBERUM_VETO_eventPicture
+	
+	is_triggered_only = yes
+	immediate = {
+		custom_tooltip = pontifex_maximus_tt
+		add_ruler_modifier = {
+			name = pontifex_maximus_election
+			hidden = yes
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.14.a"
+		add_prestige = 5
+		add_dip_power = 25
+		add_years_of_income = -0.6
+		add_ruler_modifier = {
+			name = pontifex_maximus
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.14.b"
+		add_years_of_income = -0.3
+		add_ruler_modifier = {
+			name = pontifex_maximus
+			duration = -1
+		}
+	}
+	
+	option = {
+		name = "hellenic_events.14.c"
+		add_prestige = -5
+		add_ruler_modifier = {
+			name = pontifex_maximus
+			duration = -1
+		}
+	}
+}

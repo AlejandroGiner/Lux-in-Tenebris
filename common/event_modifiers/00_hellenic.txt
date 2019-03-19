@@ -1,0 +1,52 @@
+restored_hellenic_pantheon = {
+	global_missionary_strength = 0.03
+	tolerance_own = 2
+	tolerance_heathen = 2
+}
+
+offer_to_zeus = {
+	unjustified_demands = -0.10
+	global_missionary_strength = 0.01
+}
+offer_to_hades = {
+	manpower_recovery_speed = 0.25
+	global_missionary_strength = 0.01
+}
+offer_to_ares = {
+	land_morale = 0.10
+	global_missionary_strength = 0.01
+}
+offer_to_athena = {
+	idea_cost = -0.10
+	global_missionary_strength = 0.01
+}
+offer_to_hermes = {
+	merchants = 1
+	global_missionary_strength = 0.01
+}
+offer_to_poseidon = {
+	navy_tradition = 2
+	global_missionary_strength = 0.01
+}
+improving_ability = {
+	stability_cost_modifier = 0.10
+}
+improved_ability = {
+	prestige = 0.5
+}
+impious_believer = {
+	global_unrest = 2
+	legitimacy = -1
+}
+pontifex_maximus = {
+	global_missionary_strength = 0.02
+	stability_cost_modifier = -0.10
+}
+
+# Hidden modifiers
+hellenic_festival = {}
+changed_deity_recently = {}
+cynical_believer = {}
+hellenic_crisis = {}
+pontifex_maximus_election = {}
+
