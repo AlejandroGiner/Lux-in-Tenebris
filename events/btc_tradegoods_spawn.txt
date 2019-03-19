@@ -165,11 +165,14 @@ country_event = {
     ai_chance = { factor = 100 }
     trigger = {
       NOT = {
-        OR = { tag = CAS tag = SPA }
-        macaronesia_area = { owned_by = ROOT }
-        3304 = { owned_by = ROOT }
+        AND = {
+          OR = { tag = CAS tag = SPA }
+          macaronesia_area = { owned_by = ROOT }
+          3304 = { owned_by = ROOT }
+        }
       }
     }
+    set_global_flag = potatoes_arrival
     random_owned_province = {
       limit = {
         has_port = yes
