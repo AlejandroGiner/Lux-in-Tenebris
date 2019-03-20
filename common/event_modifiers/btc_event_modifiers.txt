@@ -10,6 +10,33 @@ primitive_navy = {
 	galley_cost = -0.4
 }
 
+corrupt_clergy = {
+	yearly_corruption = 0.1
+	state_maintenance_modifier = 0.25
+	tolerance_own = -1
+	global_missionary_strength = -0.01
+}
+
+improvised_drilling = {
+	land_maintenance_modifier = -0.05
+	infantry_power = 0.05
+	reinforce_speed = 0.1
+}
+
+army_insulted_by_neighbor = {
+	diplomatic_reputation = -1
+	land_morale = -0.05
+}
+
+influx_of_expensive_goods = {
+	global_trade_power = 0.15
+	global_trade_goods_size_modifier = 0.05
+}
+
+smuggling_operations = {
+	trade_efficiency = -0.15
+}
+
 btc_language_of_italy = {
 	improve_relation_modifier = 0.05
 	prestige = 1

@@ -684,6 +684,10 @@ christian = {
 		color = { 42 125 188 }
 		icon = 30
 
+		allowed_center_conversion = {
+			catholic
+		}
+
 		country = {
 			global_unrest = -1
 			tolerance_heretic = 2
@@ -698,6 +702,15 @@ christian = {
 		}
 		
 		heretic = { PAUPERES ULTRAMONTANI }
+		
+		will_get_center = { #Refered to even for initial CoR Spawn
+			#any_owned_province = {
+				#can_have_center_of_reformation_trigger = {
+					#RELIGION = waldensian
+				#}
+			#}
+			always = yes
+		}
 	}
 	
 	nestorian = {
