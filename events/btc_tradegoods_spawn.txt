@@ -165,11 +165,14 @@ country_event = {
     ai_chance = { factor = 100 }
     trigger = {
       NOT = {
-        OR = { tag = CAS tag = SPA }
-        macaronesia_area = { owned_by = ROOT }
-        3304 = { owned_by = ROOT }
+        AND = {
+          OR = { tag = CAS tag = SPA }
+          macaronesia_area = { owned_by = ROOT }
+          3304 = { owned_by = ROOT }
+        }
       }
     }
+    set_global_flag = potatoes_arrival
     random_owned_province = {
       limit = {
         has_port = yes
@@ -228,16 +231,24 @@ province_event = {
   trigger = {
     has_global_flag = potatoes_arrival
     NOT = { trade_goods = potatoes }
+    OR = {
+      trade_goods = fish
+      trade_goods = legumes
+      trade_goods = grain
+      trade_goods = wool
+      trade_goods = wine
+      trade_goods = livestock
+    }
     province_without_special_goods_produced_trigger = yes
     if = {
       limit = {region = ireland_area}
-      NOT = { 
+      NOT = {
         calc_true_if = {
           all_province = {
             region = ireland_area
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 5
         }
       }
     }
@@ -249,7 +260,7 @@ province_event = {
             region = british_isles_region
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 5
         }
       }
     }
@@ -261,7 +272,7 @@ province_event = {
             region = iberia_region
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 3
         }
       }
     }
@@ -273,7 +284,7 @@ province_event = {
             region = france_region
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 3
         }
       }
     }
@@ -285,7 +296,7 @@ province_event = {
             region = south_german_region
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 7
         }
       }
     }
@@ -297,7 +308,7 @@ province_event = {
             region = north_german_region
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 7
         }
       }
     }
@@ -309,7 +320,7 @@ province_event = {
             region = low_countries_region
             trade_goods = potatoes
           }
-          amount = 10
+          amount = 5
         }
       }
     }
@@ -317,7 +328,7 @@ province_event = {
   }
   
   mean_time_to_happen = {
-    years = 2
+    years = 1000
   }
   
   option = {

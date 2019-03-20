@@ -680,6 +680,26 @@ christian = {
 		}
 	}
 	
+	waldensian = {
+		color = { 0.4 0.4 0.7 }
+		icon = 30
+
+		country = {
+			global_unrest = -1
+			tolerance_heretic = 2
+		}
+		
+		country_as_secondary = {
+			tolerance_heretic = 1
+		}
+		
+		province = {
+			local_missionary_strength = -0.03 # particularly resilent in the face of centuries of persecution
+		}
+		
+		heretic = { PAUPERES ULTRAMONTANI }
+	}
+	
 	harmonized_modifier = harmonized_christian
 	
 	crusade_name = CRUSADE
