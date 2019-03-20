@@ -3803,3 +3803,76 @@ SOC_ideas = {
 		production_efficiency = 0.1
 	}
 }
+
+WSX_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.2
+		global_manpower_modifier = 0.15
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		tag = WSX
+	}
+	free = yes
+
+	english_unifiers = {
+		prestige = 1
+	}
+	wsx_mem_of_hegemony = {
+		fabricate_claims_cost = -0.25
+	}
+	wsx_english_law = {
+		stability_cost_modifier = -0.1
+	}
+	thames_protection = {
+		defensiveness = 0.2
+	}
+	wsx_stalwart_defenders = {
+		land_morale = 0.1
+	}
+	purbeck_marble = {
+		development_cost = -0.1
+	}
+	sheriffdoms = {
+		global_tax_modifier = 0.1
+	}
+}
+
+MEC_ideas = {
+	start = {
+		infantry_power = 0.1
+		global_tax_modifier = 0.1
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+	trigger = {
+		tag = MEC
+	}
+	free = yes
+
+	mec_german_ancestory = {
+		legitimacy = 1
+	}
+	mec_mem_of_hegemony = {
+		fabricate_claims_cost = -0.25
+	}
+	mec_burhs = {
+		defensiveness = 0.1
+		fort_maintenance_modifier = -0.25
+	}
+	tribal_hidage = {
+		state_maintenance_modifier = -0.15
+	}
+	offa_dyke = {
+		prestige_decay = -0.01
+	}
+	lichfield_cathedral = {
+		tolerance_own = 2
+	}
+	university_oxford = {
+		technology_cost = -0.05
+	}
+}
