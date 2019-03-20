@@ -51,6 +51,45 @@ btc_italy_local_language_unrest = {
 	local_unrest = 5
 }
 
+rebellious_people = {
+	local_unrest = 10
+}
+
+provincial_defense = {
+	local_defensiveness = 0.25
+}
+
+disrupted_pilgrimages = {
+	local_tax_modifier = -0.15
+	local_friendly_movement_speed = -0.2
+	local_unrest = 5
+}
+
+site_of_pilgrimages = {
+	local_tax_modifier = 0.25
+	local_friendly_movement_speed = 0.2
+	local_manpower_modifier = -0.5
+}
+
+waldensian_reconstruction = {
+	local_manpower_modifier = 0.25
+	trade_goods_size_modifier = 0.1
+	local_friendly_movement_speed = -0.25
+	local_hostile_movenent_speed = -0.25
+}
+
+waldensian_cooperating_to_rebuild = {
+	local_production_efficiency = -0.25
+}
+
+waldensian_landslides = {
+	local_tax_modifier = -0.5
+	local_production_efficiency = -0.5
+	local_manpower_modifier = -0.5
+	local_friendly_movement_speed = -0.5
+	local_hostile_movenent_speed = -0.5
+}
+
 potato_port = {
 	province_trade_power_modifier = 0.2
 	trade_value = 1.5

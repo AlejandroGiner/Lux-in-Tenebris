@@ -1,0 +1,527 @@
+namespace = waldensian_events
+
+province_event = {
+  id = waldensian_events.1
+  title = waldensian_events.1.t
+  desc = waldensian_events.1.d
+  picture = POPE_PREACHING_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = waldensian
+    owner = { religion = waldensian }
+  }
+  
+  option = {
+    name = waldensian_events.1.a
+    owner = {
+      add_adm_power = -50
+      add_estate_loyalty = {
+        estate = estate_church
+        loyalty = -10
+      }
+    }
+    area = {
+      limit = {
+        owned_by = FROM
+      }
+      add_province_modifier = {
+        name = rebellious_people
+        duration = 1825
+      }
+    }
+    random = {
+      chance = 50
+      spawn_rebels = {
+        type = anti_tax_rebels
+        size = 1
+      }
+    }
+  }
+  option = {
+    name = waldensian_events.1.b
+    add_corruption = 0.5
+    owner = {
+      add_country_modifier = {
+        name = corrupt_clergy
+        duration = 1825
+      }
+    }
+  }
+}
+
+province_event = {
+  id = waldensian_events.2
+  title = waldensian_events.2.t
+  desc = waldensian_events.2.d
+  picture = FORT_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    owner = { religion = waldensian }
+    has_terrain = mountain
+    is_prosperous = yes
+  }
+  
+  option = {
+    name = waldensian_events.2.a
+    area = {
+      limit = {
+        owned_by = FROM
+      }
+      add_province_modifier = {
+        name = provincial_defense
+        duration = 5475
+      }
+    }
+  }
+}
+
+province_event = {
+  id = waldensian_events.3
+  title = waldensian_events.3.t
+  desc = waldensian_events.3.d
+  picture = SIERRA_DE_LA_PLATA_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = waldensian
+    owner = { religion = waldensian }
+  }
+  
+  option = {
+    name = waldensian_events.3.a
+    owner = { add_prestige = -5 }
+    add_province_modifier = {
+      name = disrupted_pilgrimages
+      duration = 1825
+    }
+  }
+  option = {
+    name = waldensian_events.3.b
+    owner = {
+      add_estate_loyalty = {
+        estate = estate_church
+        loyalty = -5
+      }
+      add_yearly_manpower = -0.25
+    }
+    add_province_modifier = {
+      name = site_of_pilgrimages
+      duration = 5475
+    }
+  }
+}
+
+country_event = {
+  id = waldensian_events.4
+  title = waldensian_events.4.t
+  desc = waldensian_events.4.d
+  picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = waldensian
+    had_country_flag = {
+      flag = waldensian_nobles_outraged_flag
+      days = 7300
+    }
+  }
+  
+  immediate = {
+    set_country_flag = waldensian_nobles_outraged_flag
+  }
+  
+  option = {
+    name = waldensian_events.4.a
+    add_adm_power = 50
+    add_estate_loyalty = {
+      estate = estate_nobles
+      loyalty = -15
+    }
+    add_estate_influence_modifier = {
+      estate = estate_nobles
+      influence = -10
+      desc = outraged_nobles
+      duration = 7300
+    }
+    add_estate_loyalty = {
+      estate = estate_church
+      loyalty = 15
+    }
+    add_estate_influence_modifier = {
+      estate = estate_church
+      influence = 10
+      desc = listened_to_clergy
+      duration = 7300
+    }
+    random = {
+      chance = 50
+      random_owned_province = {
+        spawn_rebels = {
+          type = noble_rebels
+          size = 1
+        }
+      }
+    }
+  }
+  option = {
+    name = waldensian_events.4.b
+    add_years_of_income = 0.25
+    add_estate_loyalty = {
+      estate = estate_nobles
+      loyalty = 15
+    }
+    add_estate_influence_modifier = {
+      estate = estate_nobles
+      influence = 10
+      desc = listened_to_nobility
+      duration = 7300
+    }
+    add_estate_loyalty = {
+      estate = estate_church
+      loyalty = -15
+    }
+    add_estate_influence_modifier = {
+      estate = estate_church
+      influence = -10
+      desc = ostracized_clergy
+      duration = 7300
+    }
+    random = {
+      chance = 50
+      random_owned_province = {
+        spawn_rebels = {
+          type = waldensian_rebels
+          size = 1
+        }
+      }
+    }
+  }
+  option = {
+    name = waldensian_events.4.c
+    highlight = yes
+    trigger = {
+      ruler_has_personality = righteous_personality
+    }
+    add_years_of_income = 0.1
+    add_adm_power = 10
+  }
+}
+
+country_event = {
+  id = waldensian_events.5
+  title = waldensian_events.5.t
+  desc = waldensian_events.5.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = waldensian
+    any_neighbor_country = {
+      NOT = { religion = ROOT }
+      NOT = {
+        has_opinion = {
+          who = ROOT
+          value = 0
+        }
+      }
+    }
+  }
+  
+  immediate = {
+    hidden_effect = {
+      random_neighbor_country = {
+        limit = {
+          NOT = { religion = ROOT }
+          NOT = {
+            has_opinion = {
+              who = ROOT
+              value = 0
+            }
+          }
+        }
+        save_event_target_as = insult_country
+      }
+    }
+  }
+  
+  option = {
+    name = waldensian_events.5.a
+    add_casus_belli = {
+      target = event_target:insult_country
+      type = cb_insult
+      months = 12
+    }
+    add_years_of_income = -0.5
+    add_mil_power = -50
+    add_army_tradition = 5
+    add_country_modifier = {
+      name = improvised_drilling
+      duration = 3650
+    }
+  }
+  option = {
+    name = waldensian_events.5.b
+    add_casus_belli = {
+      target = event_target:insult_country
+      type = cb_insult
+      months = 12
+    }
+    add_prestige = -15
+    add_mil_power = 75
+    add_opinion = {
+      who = event_target:insult_country
+      modifier = insulted
+    }
+    add_country_modifier = {
+      name = army_insulted_by_neighbor
+      duration = 3650
+    }
+  }
+  option = {
+    name = waldensian_events.5.y
+    highlight = yes
+    trigger = {
+      ruler_has_personality = calm_personality
+    }
+    add_prestige = 5
+    add_mil_power = 50
+    reverse_add_opinion = {
+      who = event_target:insult_country
+      modifier = insulted
+    }
+  }
+  option = {
+    name = waldensian_events.5.z
+    highlight = yes
+    trigger = {
+      ruler_has_personality = babbling_buffoon_personality
+    }
+    add_prestige = -25
+  }
+}
+
+country_event = {
+  id = waldensian_events.6
+  title = waldensian_events.6.t
+  desc = waldensian_events.6.d
+  picture = FUR_TRADE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = waldensian
+    NOT = {
+      had_country_flag = {
+        flag = waldensian_merchant_proposal
+        days = 7300
+      }
+    }
+  }
+  immediate = {
+    set_country_flag = waldensian_merchant_proposal
+  }
+  option = {
+    name = waldensian_events.6.a
+    add_estate_loyalty = {
+      estate = estate_burghers
+      loyalty = 10
+    }
+    add_estate_influence_modifier = {
+      estate = estate_burghers
+      influence = 10
+      desc = influx_of_expensive_goods_influence
+      duration = 7300
+    }
+    random_list = {
+      50 = {
+        add_country_modifier = {
+          name = influx_of_expensive_goods
+          duration = 3650
+        }
+      }
+      50 = {
+        add_country_modifier = {
+          name = smuggling_operations
+          duration = 3650
+        }
+      }
+    }
+  }
+  option = {
+    name = waldensian_events.6.b
+    add_estate_loyalty = {
+      estate = estate_burghers
+      loyalty = -15
+    }
+    add_estate_influence_modifier = {
+      estate = estate_burghers
+      influence = -10
+      desc = opposed_trade_attempts
+      duration = 7300
+    }
+    add_prestige = 10
+  }
+  option = {
+    name = waldensian_events.6.c
+    highlight = yes
+    trigger = {
+      ruler_has_personality = entrepeneur_personality
+    }
+    add_estate_loyalty = {
+      estate = estate_burghers
+      loyalty = -5
+    }
+    add_country_modifier = {
+      name = influx_of_expensive_goods
+      duration = 7300
+    }
+  }
+}
+
+country_event = {
+  id = waldensian_events.7
+  title = waldensian_events.7.t
+  desc = waldensian_events.7.d
+  picture = RELIGIOUS_CONVERSION_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+  
+  }
+  
+  option = {
+    name = waldensian_events.7.a
+    add_prestige = 15
+    add_estate_loyalty = {
+      estate = estate_church
+      loyalty = 10
+    }
+    reverse_add_opinion = {
+      who = PAP
+      modifier = waldensian_pope_provoked
+    }
+    every_neighbor_country = {
+      limit = {
+        religion = catholic
+      }
+      add_opinion = { who = ROOT modifier = waldensian_neighbors_provoked }
+    }
+  }
+  option = {
+    name = waldensian_events.7.b
+    add_prestige = -5
+    add_estate_loyalty = {
+      estate = estate_church
+      loyalty = -10
+    }
+    reverse_add_opinion = {
+      who = PAP
+      modifier = waldensian_learned_their_place
+    }
+  }
+}
+
+country_event = {
+  id = waldensian_events.8
+  title = waldensian_events.8.t
+  desc = waldensian_events.8.d
+  picture = RELIGION_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    stability = 1
+  }
+  option = {
+    name = waldensian_events.8.a
+    add_yearly_manpower = 0.5
+    add_years_of_income = 0.2
+  }
+}
+
+country_event = {
+  id = waldensian_events.9
+  title = waldensian_events.9.t
+  desc = waldensian_events.9.d
+  picture = MERCHANTS_TALKING_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    stability = 2
+    is_at_war = no
+  }
+  
+  option = {
+    name = waldensian_events.9.a
+    add_years_of_income = 1
+    random_list = {
+      1 = {
+        add_adm_power = 50
+      }
+      1 = {
+        add_dip_power = 50
+      }
+      1 = {
+        add_mil_power = 50
+      }
+    }
+  }
+}
+
+province_event = {
+  id = waldensian_events.10
+  title = waldensian_events.10.t
+  desc = waldensian_events.10.d
+  picture = CITY_DEVELOPMENT_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { development = 10 }
+  }
+  
+  option = {
+    name = waldensian_events.10.a
+    owner = {
+      add_years_of_income = -0.2
+      add_adm_power = -15
+      add_prestige = 5
+    }
+    add_province_modifier = {
+      name = waldensian_reconstruction
+      duration = 1825
+    }
+  }
+  option = {
+    name = waldensian_events.10.b
+    area = {
+      limit = {
+        owned_by = FROM
+      }
+      add_province_modifier = {
+        name = waldensian_cooperating_to_rebuild
+        duration = 3650
+      }
+    }
+  }
+  option = {
+    name = waldensian_events.10.c
+    highlight = yes
+    trigger = {
+      ruler_has_personality = cruel_personality
+    }
+    add_province_modifier = {
+      name = waldensian_landslides
+      duration = 5475
+    }
+  }
+}
