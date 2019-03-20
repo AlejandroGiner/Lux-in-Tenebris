@@ -1,3 +1,5 @@
+
+
 ######################################################################
 # Waldensian rebels. Disgruntled fanatics.
 ######################################################################
@@ -6,11 +8,12 @@ waldensian_rebels = {
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
 	religion = waldensian
-	defection = religion			# Defects to countries of their religion
+	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
-	unit_transfer = yes
+	unit_transfer = no
 	gfx_type = culture_province
+	will_relocate = yes	
 	
 	resilient = no
 	reinforcing = yes
@@ -54,7 +57,7 @@ waldensian_rebels = {
 		}
 		modifier = {
 			factor = 5.0
-			owner = { has_country_flag = religious_turmoil }
+			owner = { has_disaster = religious_turmoil }
 		}		
 		modifier = {
 			factor = 2000
@@ -145,7 +148,10 @@ waldensian_rebels = {
 	
 	# Country scope
 	can_negotiate_trigger = {
-		religion_group = christian
+		OR = {
+			religion_group = christian
+			dominant_religion = waldensian
+		}
 	}
 	
 	# Country scope
@@ -189,6 +195,7 @@ waldensian_rebels = {
 			limit = {
 				religion_group = christian
 				NOT = { religion = waldensian }
+				dominant_religion = waldensian
 			}
 			change_religion = waldensian
 			force_converted = yes
