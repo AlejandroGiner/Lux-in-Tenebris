@@ -63,3 +63,43 @@ frankish_unity = {
 byz_succession_crisis = { #Moved all modifiers to disaster instead, and adding heir chance malus
     heir_chance = -1
 }
+
+#Waldensian Vows
+
+vow_of_peace_modifier = {
+	land_maintenance_modifier = 0.075
+	stability_cost_modifier = -0.1
+	diplomatic_reputation = 1
+	ae_impact = -0.1
+	improve_relation_modifier = 0.15
+}
+vow_of_charity_modifier = {
+	advisor_pool = -1
+	stability_cost_modifier = -0.1
+	land_attrition = -0.1
+	development_cost = -0.1
+	war_exhaustion = -0.02
+}
+vow_of_poverty_modifier = {
+	global_tax_modifier = -0.2
+	stability_cost_modifier = -0.2
+	tolerance_own = 1
+	global_unrest = -2
+	prestige = 1
+}
+vow_of_fidelity_modifier = {
+	diplomatic_upkeep = -1
+	stability_cost_modifier = -0.1
+	heir_chance = 0.5
+	legitimacy = 1
+	free_leader_pool = 1
+}
+vow_of_abstinence_modifier = {
+	stability_cost_modifier = -0.1
+	production_efficiency = 0.1
+	movement_speed = 0.1
+	envoy_travel_time = -0.25
+}
+vow_of_abstinence_alcohol_modifier = {
+	local_production_efficiency = -0.75
+}
