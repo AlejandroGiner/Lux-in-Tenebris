@@ -1,0 +1,204 @@
+country_decisions = {
+  vow_of_poverty = {
+    potential = {
+      religion = waldensian
+      NOT = { has_country_flag = vow_of_poverty_flag }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      set_country_flag = vow_of_poverty_flag
+      add_country_modifier = {
+        name = vow_of_poverty_modifier
+        duration = -1
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    ai_importance = 400
+  }
+  vow_of_abstinence = {
+    potential = {
+      religion = waldensian
+      NOT = { has_country_flag = vow_of_abstinence_flag }
+    }
+    allow = {
+      always = yes
+    }
+    effect = {
+      set_country_flag = vow_of_abstinence_flag
+      add_country_modifier = {
+        name = vow_of_abstinence_modifier
+        duration = -1
+      }
+      every_owned_province = {
+        limit = {
+          OR = {
+            trade_goods = beer
+            trade_goods = wine
+          }
+        }
+        add_province_modifier = {
+          name = vow_of_abstinence_alcohol_modifier
+          duration = -1
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    ai_importance = 400
+  }
+  vow_of_peace = {
+    potential = {
+      religion = waldensian
+      NOT = { has_country_flag = vow_of_peace_flag }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      set_country_flag = vow_of_peace_flag
+      add_country_modifier = {
+        name = vow_of_peace_modifier
+        duration = -1
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    ai_importance = 400
+  }
+  vow_of_fidelity = {
+    potential = {
+      religion = waldensian
+      NOT = { has_country_flag = vow_of_fidelity_flag }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      set_country_flag = vow_of_fidelity_flag
+      add_country_modifier = {
+        name = vow_of_fidelity_modifier
+        duration = -1
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    ai_importance = 400
+  }
+  vow_of_charity = {
+    potential = {
+      religion = waldensian
+      NOT = { has_country_flag = vow_of_charity_flag }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      set_country_flag = vow_of_charity_flag
+      add_country_modifier = {
+        name = vow_of_charity_modifier
+        duration = -1
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    ai_importance = 400
+  }
+  
+  remove_vow_of_poverty = {
+    potential = {
+      has_country_flag = vow_of_poverty_flag
+      had_country_flag = {
+        flag = vow_of_poverty_flag
+        days = 1825
+      }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      clr_country_flag = vow_of_poverty_flag
+      remove_country_modifier = vow_of_poverty_modifier
+    }
+  }
+  remove_vow_of_abstinence = {
+    potential = {
+      has_country_flag = vow_of_abstinence_flag
+      had_country_flag = {
+        flag = vow_of_abstinence_flag
+        days = 1825
+      }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      clr_country_flag = vow_of_abstinence_flag
+      remove_country_modifier = vow_of_abstinence_modifier
+      every_owned_province = {
+        limit = {
+          OR = {
+            trade_goods = beer
+            trade_goods = wine
+          }
+        }
+        remove_province_modifier = vow_of_abstinence_alcohol_modifier
+      }
+    }
+  }
+  remove_vow_of_peace = {
+    potential = {
+      has_country_flag = vow_of_peace_flag
+      had_country_flag = {
+        flag = vow_of_peace_flag
+        days = 1825
+      }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      clr_country_flag = vow_of_peace_flag
+      remove_country_modifier = vow_of_peace_modifier
+    }
+  }
+  remove_vow_of_fidelity = {
+    potential = {
+      has_country_flag = vow_of_fidelity_flag
+      had_country_flag = {
+        flag = vow_of_fidelity_flag
+        days = 1825
+      }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      clr_country_flag = vow_of_fidelity_flag
+      remove_country_modifier = vow_of_fidelity_modifier
+    }
+  }
+  remove_vow_of_charity = {
+    potential = {
+      has_country_flag = vow_of_charity_flag
+      had_country_flag = {
+        flag = vow_of_charity_flag
+        days = 1825
+        }
+    }
+    allow = {
+      is_at_war = no
+    }
+    effect = {
+      clr_country_flag = vow_of_charity_flag
+      remove_country_modifier = vow_of_charity_modifier
+    }
+  }
+}
