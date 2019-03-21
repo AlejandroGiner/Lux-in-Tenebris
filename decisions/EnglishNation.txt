@@ -19,14 +19,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 236		# London
-				province_id = 237		# Oxfordshire
-				province_id = 234		# Wessex
-				province_id = 235		# Kent
-				province_id = 238		# East Anglia
-        province_id = 239   # Gloucestershire
-			}
+			province_group = england_province_group
 			NOT = { owned_by = ROOT is_core = ROOT }
 		}
 		allow = {
@@ -46,7 +39,7 @@ country_decisions = {
           is_core = ROOT
           province_group = england_province_group
         }
-        amount = 17			#At least 1/2 of Britain's 33 provinces
+        amount = 22			#At least 1/2 of England's 44 provinces
       }
 
 		}

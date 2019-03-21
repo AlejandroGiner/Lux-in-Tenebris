@@ -394,7 +394,7 @@ country_event = {
   is_triggered_only = yes
   
   trigger = {
-  
+    religion = waldensian
   }
   
   option = {
@@ -438,6 +438,7 @@ country_event = {
   is_triggered_only = yes
   
   trigger = {
+    religion = waldensian
     stability = 1
   }
   option = {
@@ -456,6 +457,7 @@ country_event = {
   is_triggered_only = yes
   
   trigger = {
+    religion = waldensian
     stability = 2
     is_at_war = no
   }
@@ -486,6 +488,7 @@ province_event = {
   is_triggered_only = yes
   
   trigger = {
+    owner = { religion = waldensian }
     NOT = { development = 10 }
   }
   
