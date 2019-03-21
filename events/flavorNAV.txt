@@ -17,10 +17,10 @@ country_event = {
 	option = { # Relocate to Newfoundland
 		name = flavor_nav.1.a
 		trigger = {
-			owns = 2573
+			owns = 4974
 			NOT = { num_of_cities = 10 }
 		}
-		2573 = {
+		4974 = {
 			move_capital_effect = yes
 			rename_capital = Terranova
 			change_province_name = "Terranova"
@@ -43,7 +43,7 @@ country_event = {
 	}
 	option = { # Develop the town
 		name = flavor_nav.1.b
-		2573 = {
+		4974 = {
 			rename_capital = Terranova
 			change_province_name = "Terranova"
 			add_base_tax = 1
@@ -130,12 +130,18 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					area = catalonia_area
+					OR = {
+						area = barcelona_area
+						area = catalonia_area
+					}
 				}
 			}
 			every_owned_province = {
 				limit = {
-					area = catalonia_area
+					OR = {
+						area = barcelona_area
+						area = catalonia_area
+					}
 				}
 				add_local_autonomy = 25
 			}
@@ -154,12 +160,18 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					area = catalonia_area
+					OR = {
+						area = barcelona_area
+						area = catalonia_area
+					}
 				}
 			}
 			every_owned_province = {
 				limit = {
-					area = catalonia_area
+					OR = {
+						area = barcelona_area
+						area = catalonia_area
+					}
 				}
 				add_unrest = 10
 			}
