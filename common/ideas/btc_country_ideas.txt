@@ -3843,7 +3843,7 @@ WSX_ideas = {
 MEC_ideas = {
 	start = {
 		infantry_power = 0.1
-		global_tax_modifier = 0.1
+		diplomatic_upkeep = 1
 	}
 	bonus = {
 		naval_forcelimit_modifier = 0.25
@@ -3870,7 +3870,7 @@ MEC_ideas = {
 		prestige_decay = -0.01
 	}
 	lichfield_cathedral = {
-		tolerance_own = 2
+		global_tax_modifier = 0.1
 	}
 	university_oxford = {
 		technology_cost = -0.05
