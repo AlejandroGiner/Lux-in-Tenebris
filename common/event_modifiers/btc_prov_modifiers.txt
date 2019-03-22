@@ -75,7 +75,7 @@ waldensian_reconstruction = {
 	local_manpower_modifier = 0.25
 	trade_goods_size_modifier = 0.1
 	local_friendly_movement_speed = -0.25
-	local_hostile_movenent_speed = -0.25
+	local_hostile_movement_speed = -0.25
 }
 
 waldensian_cooperating_to_rebuild = {
@@ -87,7 +87,7 @@ waldensian_landslides = {
 	local_production_efficiency = -0.5
 	local_manpower_modifier = -0.5
 	local_friendly_movement_speed = -0.5
-	local_hostile_movenent_speed = -0.5
+	local_hostile_movement_speed = -0.5
 }
 
 potato_port = {
@@ -109,6 +109,14 @@ cas_segovia_alcazar = {
 	monthly_splendor = 1
 	local_defensiveness = 0.15
 	province_trade_power_modifier = 0.1
+}
+
+chesapeake_bay_modifier = {
+	province_trade_power_value = 5
+	naval_forcelimit = 1
+	local_development_cost = -0.05
+	local_sailors_modifier = 0.25
+	picture = "bay_icon"
 }
 
 #From Suvarnabhumi: The land of gold
