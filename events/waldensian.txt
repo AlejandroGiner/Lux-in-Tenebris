@@ -1,6 +1,6 @@
 namespace = waldensian_events
 
-province_event = {
+country_event = {
   id = waldensian_events.1
   title = waldensian_events.1.t
   desc = waldensian_events.1.d
@@ -10,48 +10,55 @@ province_event = {
   
   trigger = {
     religion = waldensian
-    owner = { religion = waldensian }
+    any_owned_province = {
+      religion = waldensian
+    }
+  }
+  
+  immediate = {
+    random_owned_province = {
+      limit = { religion = waldensian }
+      save_event_target_as = waldensian_province
+    }
   }
   
   option = {
     name = waldensian_events.1.a
-    owner = {
-      add_adm_power = -50
-      add_estate_loyalty = {
-        estate = estate_church
-        loyalty = -10
-      }
+    add_adm_power = -50
+    add_estate_loyalty = {
+      estate = estate_church
+      loyalty = -10
     }
-    area = {
-      limit = {
-        owned_by = FROM
+    event_target:waldensian_province = {
+      area = {
+        limit = {
+          owned_by = ROOT
+        }
+        add_province_modifier = {
+          name = rebellious_people
+          duration = 1825
+        }
       }
-      add_province_modifier = {
-        name = rebellious_people
-        duration = 1825
-      }
-    }
-    random = {
-      chance = 50
-      spawn_rebels = {
-        type = anti_tax_rebels
-        size = 1
+      random = {
+        chance = 50
+        spawn_rebels = {
+          type = anti_tax_rebels
+          size = 1
+        }
       }
     }
   }
   option = {
     name = waldensian_events.1.b
     add_corruption = 0.5
-    owner = {
-      add_country_modifier = {
-        name = corrupt_clergy
-        duration = 1825
-      }
+    add_country_modifier = {
+      name = corrupt_clergy
+      duration = 1825
     }
   }
 }
 
-province_event = {
+country_event = {
   id = waldensian_events.2
   title = waldensian_events.2.t
   desc = waldensian_events.2.d
@@ -60,26 +67,37 @@ province_event = {
   is_triggered_only = yes
   
   trigger = {
-    owner = { religion = waldensian }
-    has_terrain = mountain
-    is_prosperous = yes
+    religion = waldensian
+    any_owned_province = {
+      has_terrain = mountain
+      is_prosperous = yes
+    }
+  }
+  
+  immediate = {
+    random_owned_province = {
+      limit = { has_terrain = mountain is_prosperous = yes }
+      save_event_target_as = waldensian_province
+    }
   }
   
   option = {
     name = waldensian_events.2.a
-    area = {
-      limit = {
-        owned_by = FROM
-      }
-      add_province_modifier = {
-        name = provincial_defense
-        duration = 5475
+    event_target:waldensian_province = {
+      area = {
+        limit = {
+          owned_by = ROOT
+        }
+        add_province_modifier = {
+          name = provincial_defense
+          duration = 5475
+        }
       }
     }
   }
 }
 
-province_event = {
+country_event = {
   id = waldensian_events.3
   title = waldensian_events.3.t
   desc = waldensian_events.3.d
@@ -89,29 +107,40 @@ province_event = {
   
   trigger = {
     religion = waldensian
-    owner = { religion = waldensian }
+    any_owned_province = {
+      religion = waldensian
+    }
+  }
+  
+  immediate = {
+    random_owned_province = {
+      limit = { religion = waldensian }
+      save_event_target_as = waldensian_province
+    }
   }
   
   option = {
     name = waldensian_events.3.a
-    owner = { add_prestige = -5 }
-    add_province_modifier = {
-      name = disrupted_pilgrimages
-      duration = 1825
+    add_prestige = -5
+    event_target:waldensian_province = {
+      add_province_modifier = {
+        name = disrupted_pilgrimages
+        duration = 1825
+      }
     }
   }
   option = {
     name = waldensian_events.3.b
-    owner = {
-      add_estate_loyalty = {
-        estate = estate_church
-        loyalty = -5
-      }
-      add_yearly_manpower = -0.25
+    add_estate_loyalty = {
+      estate = estate_church
+      loyalty = -5
     }
-    add_province_modifier = {
-      name = site_of_pilgrimages
-      duration = 5475
+    add_yearly_manpower = -0.25
+    event_target:waldensian_province = {
+      add_province_modifier = {
+        name = site_of_pilgrimages
+        duration = 5475
+      }
     }
   }
 }
@@ -479,7 +508,7 @@ country_event = {
   }
 }
 
-province_event = {
+country_event = {
   id = waldensian_events.10
   title = waldensian_events.10.t
   desc = waldensian_events.10.d
@@ -488,33 +517,45 @@ province_event = {
   is_triggered_only = yes
   
   trigger = {
-    owner = { religion = waldensian }
-    NOT = { development = 10 }
+    religion = waldensian
+    any_owned_province = {
+      NOT = { development = 10 }
+    }
+  }
+  
+  immediate = {
+    random_owned_province = {
+      limit = { NOT = { development = 10 } }
+      save_event_target_as = waldensian_province
+    }
   }
   
   option = {
     name = waldensian_events.10.a
-    owner = {
-      add_years_of_income = -0.2
-      add_adm_power = -15
-      add_prestige = 5
-    }
-    add_province_modifier = {
-      name = waldensian_reconstruction
-      duration = 1825
+    add_years_of_income = -0.2
+    add_adm_power = -15
+    add_prestige = 5
+    event_target:waldensian_province = {
+      add_province_modifier = {
+        name = waldensian_reconstruction
+        duration = 1825
+      }
     }
   }
   option = {
     name = waldensian_events.10.b
-    area = {
-      limit = {
-        owned_by = FROM
-      }
-      add_province_modifier = {
-        name = waldensian_cooperating_to_rebuild
-        duration = 3650
+    event_target:waldensian_province = {
+      area = {
+        limit = {
+          owned_by = ROOT
+        }
+        add_province_modifier = {
+          name = waldensian_cooperating_to_rebuild
+          duration = 3650
+        }
       }
     }
+    
   }
   option = {
     name = waldensian_events.10.c
@@ -522,9 +563,11 @@ province_event = {
     trigger = {
       ruler_has_personality = cruel_personality
     }
-    add_province_modifier = {
-      name = waldensian_landslides
-      duration = 5475
+    event_target:waldensian_province = {
+      add_province_modifier = {
+        name = waldensian_landslides
+        duration = 5475
+      }
     }
   }
 }
