@@ -181,7 +181,6 @@
  PROV880:0 "Tewa"
  PROV881:0 "Natahéndé"
  PROV882:0 "Guulgahénde"            #Formerly Tahuundé
- PROV885:0 "Totorame"           #This is clearly Hispanified, need a native version
  PROV904:0 "Wahpéthunwan"
  PROV907:0 "Ihánkthunwan"
  PROV908:0 "Sisíthunwan"
@@ -729,212 +728,56 @@
  PROV4634:0 "Dilzhé'é"         #Formerly 5842
  PROV4649:0 "Mayo"         #Formerly 5062
  
- #Change Notes
- #1.19 Changes
- #3008 --> 4120
- #3011 --> 4118
- #3013 --> 4119
- #3017 --> 4110
- #3079 --> 4111
- #3082 --> 4112
- #3125 --> 4114
- #3126 --> 4113
- #3129 --> 4123
- #3131 --> 4124
- #3147 --> 4125
- #3149 --> 4126
- #3153 --> 4127
- #3155 --> 4128
- #3236 --> 4115
- #3269 --> 4116
- #3274 --> 4117
- #3283 --> 4122
- #3286 --> 4129
- #3107 --> 4150
- #3116 --> 4144
- #3127 --> Removed
- #3130 --> Removed
- #3132 --> 4142
- #3133 --> 4149
- #3136 --> 4141
- #3181 --> 4174
- #3182 --> 4175
- #3186 --> 4176
- #3189 --> 4173
- #3272 --> 4148
- #3275 --> 4147
- #1.21 Changes
- #3188 --> 4239 (Syrmia to Belgrade)
- #3150 --> 4240 (Fejér to Fejer)
- #3145 --> 4236 (Trencín to Trencin)
- #3144 --> 4237 (Olomouc to Olomouc)
- #3140 --> 4238 (Lehnice to Liegnitz)
- 
- #1.23 Changes
- #####Anatolia#####
- #5132 --> 4308 (Denizli to Denizli) -same thing
- #5160 --> 4309 (Aydin to Aydin) -same thing
- #5133 --> 4311 (Kutahya to Karahisar) -keeping BT version as is. IMHO it is better
- #5149 --> 4312 (Boli to Sultanonu) -keeping BT version as is. IMHO it is better
- #5166 --> 4313 (Cankiri to Kangiri) -same thing
- #5153 --> 4314 (Kochisar to Kirshehir) -keeping BT version as is. IMHO it is better
- #5136 --> 324 (Karaman to Karaman) -reorganising IDs based on vanilla changes
- #324 --> 4307 (Aksaray to Aksaray) -reorganising IDs based on vanilla changes
- #5169 --> 4315 (Gumushane to Tokat) -keeping BT version as is. IMHO it is better
- #
- #####Levant#####
- #5183 --> 4298 ('Aintab to Ayntab) -same thing
- #5179 --> 4297 (Wadi I Biqa to Homs) -Take another look at this. Homs/Hims is already in BT as 1849, which is vanilla Hama. Perhaps redo this to include both Hama, Homs, and the mountain province? <----------
- #5159 --> 4271 (Idlib to Suwayda) -Take another look at this. I might add Suwayda later, as it is a good idea if we wanted a Druze province. <----------
- #5182 --> 405 (Tadmor to Tadmor) -reorganising IDs based on vanilla changes
- #405 --> 407 (Ar-Raqqah to Ar-Raqqah) -reorganising IDs based on vanilla changes
- #5204 --> 4270 (Petra to Azraq) -Take another look at this. I might add Azraq later, as it is a good idea if it wouldn't make things too dense. <----------
- #5202 --> 4268 (Aqaba to Aqabah) -same thing
- #
- #####Egypt#####
- #5262 --> 4316 (El-Sharqia to Sharqiya) -same thing
- #5263 --> 4317 (Damanhur to Bahirya) -same thing
- #5265 --> 4318 (Atfihia to Atfih) -same thing
- #5268 --> 4320 (Girga to Girga) -same thing
- #5269 --> 4319 (Luxor to Isna) -same gist, but different capital... take another look at this but keeping old BT version for now. <----------
- #5275 -- > 4323 (Dakhla to Farafreh) -same gist, same difference.
- #5270 --> 4321 (Eastern Desert --> Eastern Desert) -same thing, note vanilla is now wasteland while BT remains colonisable. It is a borderland wasteland, but the Nubian desert is more wasteland-esque than this, and Paradox has it inhabited by Beja, so sticking with BT's setup.
- #5276 --> 4322 (Eastern Desert --> Eastern Desert) -same thing, note vanilla is now wasteland while BT remains colonisable. It is a borderland wasteland, but the Nubian desert is more wasteland-esque than this, and Paradox has it inhabited by Beja, so sticking with BT's setup.
- #
- #####Armenia#####
- #407 --> 2308 (Urfa to Urfa) -reorganising IDs based on vanilla changes
- #5295 --> 4292 (Mardin to Mardin) -same thing
- #2308 --> 5295 (Mardin to Cizre) -reorganising IDs based on vanilla changes
- #5148 --> 4310 (Kharput to Divrigi) -keeping BT version as is. IMHO it is better
- #5292 --> 4295 (Hesn Kayfa to Hisn Kayfa) -same thing
- #5294 --> 4296 (Siirt to Bitlis) -same gist, but different details. take another look at this but keeping old BT version for now. <----------
- #3255 --> 4304 (Khoy to Khoy) -same thing
- #5291 --> 4302 (Karakalisa to Bayazid) -I have no idea. Keeping Current for now, but look into this. <----------
- #3249 --> 4303 (Tao to Tao) -same thing
- #3252 --> 4301 (Gori to Kartli) -same gist, whatever is fine for now.
- #3259 --> 4305 (Sheki to Shaki) -same thing
- #3258 --> 4299 (Shamaki to Shamaki) -same thing
- #3257 --> 4340 (Talysh to Astara) -I have no idea. Keeping Current for now, but look into this. <----------
- #3260 --> 4306 (Lakia to Lakia) -same thing
- #
- #####Arabia#####
- #5230 --> 383 (Tabuk to Tabuk) -reorganising IDs based on vanilla changes
- #383 --> 4269 (Duba to Al Wajh) -I have no idea. Keeping Current for now, but look into this. <----------
- #5234 --> 4277 (Taif to Taif) -same thing
- #5237 --> 4278 (Al Qunfudhah to Qunfudhah) -same thing
- #5253 --> 4272 (Al Gawf to Al Jawf) -same thing
- #5260 --> 4273 (Al Ghazala to Al Kariatan) -I have no idea. Keeping Current for now, but look into this. <----------
- #5254 --> 4276 (Otaibah to Jabal Tubaiq)
- #5257 --> 4275 (Khurais to Al Yamamah) -This place is an absolute mess in both vanilla and BT. Whatever will have to do.
- #5248 --> 4286 (Al Fugaira to Ash Sharqiyah) -same gist I think, whatever is fine for now.
- #5247 --> 4285 (Al Ayn to Baraimi) -keeping BT version as is. Might bear some looking into eventually, but I'm tentatively thinking I prefer my version
- #5245 --> 4287 (Ibra to Ibra) -same thing
- #5236 --> 4282 (Qa'lat Bisah to Sahda) - Vanilla province moved a bit as vanilla Ahqaf already replaced in BT to be Sahda. In any case I'm happy enough with this for now.
- #5258 --> 4283 (Mirbat to Shihr) -Moving around the south coast and Yemen quite a bit so hard to make 1-to-1 comparisons, but I'll try to take another look at all of these as well. In the meantime, I think I prefer BT's setup.
- #5242 --> 4284 (Thamud to Al Ghaydah) -Moving around the south coast and Yemen quite a bit so hard to make 1-to-1 comparisons, but I'll try to take another look at all of these as well. In the meantime, I think I prefer BT's setup.
- #5238 --> 4279 (Al Hudaydah to Zabid) -I have no idea. Keeping Current for now, but look into this. <----------
- #5259 --> 4280 (Ta'izz to Taiz) -same thing
- #5240 --> 4281 (Dhamar to Damar) -same thing
- #
- #####Other#####
- #5506 --> 1329 (Red sea overhaul) -Vanilla now has BT's setup, so going vanilla. Note these are sea provinces <---
- #1329 --> 4333 (Red sea overhaul) -Vanilla now has BT's setup, so going vanilla. Note these are sea provinces <---
- #
- 
- #1.25 Changes
- #####Ireland#####
- #375 --> 4118
- #3004 --> 4380
- #3007 --> 4379
- #3010 --> 4377
- #3012 --> 375
- #4118 --> 4378
- 
- #####England#####
- #245 --> 4367
- #3022 --> 4368
- #3023 --> 245
- #3024 --> 4375
- #3025 --> 4372
- #3026 --> 4376
- #3027 --> 4370
- #3029 --> 4371
- #3030 --> 4374
- #3031 --> 4130
- #4130 --> 4373
-  
- #####Scotland#####
- #3016 --> 4365
- #3018 --> 4363
- #3020 --> 4362
- #3021 --> 4361
- #5099 --> 4364
-  
- #####France#####
- #169 --> 4384
- #3067 --> 169
- #3072 --> 4388
- #3074 --> 4385
- #3076 --> 4389
- #3078 --> 4386
- #3080 --> 4387
- #3086 --> 4391
- #3091 --> 4392
- #3093 --> 4390
- #4390 --> 185
- 
- #####HRE#####
- #3057 --> 4382
- #3059 --> 4381
- #3062 --> 4383
- 
- #1.27 Changes
- #####Poland, Lithuania, and Romania#####
- #2963 --> 4528
- #3158 --> 4529
- #3161 --> 4531
- #3162 --> 4532
- #3218 --> 2963
- #3219 --> 4526
- #3232 --> 4536 
- #3233 --> 4537
- #3235 --> 4545
- 
-
- #1.28 Changes
- ##### Iberia  #####
- # 3097 --> 4546
- # 3096 --> 4547
- # 3098 --> 4548
- # 3300 --> 4549
- # 3094 --> 4550
- # 3298 --> 4551
- # 3299 --> 4552
- # 3101 --> 4553
- # 3102 --> 4554
- # 3103 --> 4555
- # 3105 --> 4556
- # 3095 --> 4557
- # 5098 --> 4559
- # 5095 --> 4560
- 
- ##### North Africa  #####
- # 5319 --> 4562        (note 5319 is repurposed into Setif)
- # 5308 --> 4567
- 
- ##### Caribbean  #####
- # 5564 --> 4618
- # 5562 --> 4619
- # 5566 --> 4620
- # 5568 --> 4621
- # 5570 --> 4622
- # 5571 --> 4623
- # 5569 --> 4624
- 
- ##### California  #####
- # 5831 --> 4630
- # 5829 --> 4631
- # 5828 --> 4632
- # 5842 --> 4634
- # 5062 --> 4649
- 
+ #New NA from IR
+ PROV883:0 "Cuitoa"          #Formerly Lipan
+ PROV885:0 "Trementina"          #Formerly Comanche
+ PROV888:0 "Hikike"          #Formerly Atakapa
+ PROV894:0 "Nawidish"          #Formerly Caddo
+ PROV895:0 "Coligua"          #Formerly Arkansas
+ PROV897:0 "Arkansas"          #Formerly Quapaw
+ PROV918:0 "Okeena"          #Formerly Tennessee
+ PROV925:0 "Coweta"          #Formerly Tuskegee
+ PROV927:0 "Mocama"             #Formerly Timucua
+ PROV930:0 "Cusseta"          #Formerly Muscogee
+ PROV934:0 "Sequatchie"          #Formerly Shawnee
+ PROV935:0 "Tanasi"          #Formerly Cherokee
+ PROV950:0 "Powhatan"           #Formerly Chesapeake
+ PROV952:0 "Manahoac"           #Formerly Powhatan
+ PROV953:0 "Nacotchtank"               #Formerly Conoy
+ PROV957:0 "Màxkwunk"               #Formerly Delaware
+ PROV962:0 "Armewarmex"           #Formerly Unami
+ PROV968:0 "Massachussett"           #Formerly Massachussetts
+ PROV969:0 "Mettawee"                 #Formerly Pocumtuk
+ PROV970:0 "Piscataqua"                 #Formerly whatever it was
+ PROV2010:0 "Tunxis"          #Formerly Connecticut
+ PROV2013:0 "Pigwacket"          #Formerly Kennebec
+ PROV2497:0 "Puguahiane"          #Formerly Lipiyanes
+ PROV2498:0 "Julime"          #Formerly Jumao
+ PROV2499:0 "Perpepug"          #Formerly Coahuilteco
+ PROV2500:0 "Sana"          #Formerly Querecho
+ PROV2515:0 "Cahinnio"          #Formerly Satsukhdin
+ PROV2531:0 "Napissa"             #Formerly Napochi
+ PROV2538:0 "Altamaha"          #Formerly Yamassee
+ PROV2539:0 "Yamassee"          #Formerly Mocama
+ PROV2540:0 "Ogeechee"          #Formerly Coweta
+ PROV2546:0 "Dawhee"          #Formerly Chicora
+ PROV2547:0 "Machapunga"           #Formerly Roanoke
+ PROV2548:0 "Yesan"           #Formerly Tutelo
+ PROV2549:0 "Occaneechi"          #Formerly Moratok
+ PROV2552:0 "Cacapehon"               #Formerly Manahoac
+ PROV2553:0 "Conocoteague"               #Formerly Potomac
+ PROV2554:0 "Choptank"               #Formerly Nanticoke
+ PROV2558:0 "Wappinger"               #Formerly Espachomy
+ PROV2561:0 "Nauset"           #Formerly Wampanoag
+ PROV2563:0 "Missiassik"                 #Formerly Missaquoi
+ PROV2564:0 "Cowasuck"                 #Formerly Sokoki
+ PROV2665:0 "Ayish"          #Formerly Ais
+ PROV2666:0 "Cibola"          #Formerly Tuintsunde
+ PROV2667:0 "Yemé"          #Formerly Cacaxtes
+ PROV2668:0 "Cotoname"          #Formerly Borrado
+ PROV2669:0 "Nacogdoches"          #Formerly Hasinai
+ PROV4625:0 "Mayaca" #1.28 replacement
+ PROV4626:0 "Potano" #1.28 replacement
+ PROV4627:0 "Payaya" #1.28 replacement
+ PROV4628:0 "Jediondo" #1.28 replacement
+ PROV4629:0 "Caynaaya" #1.28 replacement
