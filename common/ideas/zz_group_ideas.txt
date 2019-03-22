@@ -2511,6 +2511,7 @@ polynesian_ideas = {
 	}
 
 	free = yes
+	
 	surfing = {
 		prestige = 1
 	}
@@ -2531,5 +2532,51 @@ polynesian_ideas = {
 	}
 	sea_gardens = {
 		development_cost = -0.1
+	}
+}
+
+heptarchy_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		land_morale = 0.1
+	}
+	bonus = {
+		naval_forcelimit_modifier = 0.25
+	}
+
+	trigger = {
+		OR = {
+			tag = EAN
+			tag = ESX
+			tag = KEN
+			tag = SSX
+		}
+	}
+
+	free = yes
+	
+	hep_christianity = {
+		global_tax_modifier = 0.1
+		papal_influence = 1
+        church_power_modifier = 0.2
+		monthly_fervor_increase = 0.5
+	}
+	hep_dream_of_hegemony = {
+		fabricate_claims_cost = 0.25
+	}
+	hep_settlement = {
+		development_cost = -0.1
+	}
+	hep_melting_pot = {
+		diplomatic_reputation = 1
+	}
+	hep_english_channel = {
+		stability_cost_modifier = -0.1
+	}
+	hep_danelaw = {
+		discipline = 0.05
+	}
+	hep_warrior_kings = {
+		legitimacy = 1
 	}
 }
