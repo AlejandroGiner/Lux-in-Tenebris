@@ -1,5 +1,6 @@
 namespace = btc_tradegoods
 
+#Hidden event that triggers potato arrival
 country_event = {
   id = btc_tradegoods.1
   title = btc_tradegoods.1.t
@@ -125,6 +126,7 @@ country_event = {
   }
 }
 
+#Visible event for potato arrival
 country_event = {
   id = btc_tradegoods.2
   title = btc_tradegoods.2.t
@@ -222,26 +224,53 @@ country_event = {
   }
 }
 
+#Visible event for potato spread
 province_event = {
   id = btc_tradegoods.3
   title = btc_tradegoods.3.t
   desc = btc_tradegoods.3.d
   picture = FARMING_eventPicture
   
+  is_triggered_only = yes
+  
+  mean_time_to_happen = {
+    years = 1000
+  }
+  
+  option = {
+    name = btc_tradegoods.3.a
+    ai_chance = { factor = 100 }
+    change_trade_goods = potatoes
+  }
+}
+
+#Hidden event that triggers potato spread
+province_event = {
+  id = btc_tradegoods.4
+  
+  hidden = yes
+  
   trigger = {
+    province_id = 4120 #Pitirr
     has_global_flag = potatoes_arrival
-    NOT = { trade_goods = potatoes }
-    OR = {
-      trade_goods = fish
-      trade_goods = legumes
-      trade_goods = grain
-      trade_goods = wool
-      trade_goods = wine
-      trade_goods = livestock
+    NOT = {
+      calc_true_if = {
+        all_province = {
+          continent = europe
+          trade_goods = potatoes
+        }
+        amount = 35
+      }
     }
-    province_without_special_goods_produced_trigger = yes
-    if = {
-      limit = {region = ireland_area}
+  }
+  
+  mean_time_to_happen = {
+    years = 5
+  }
+  
+  option = {
+    name = btc_tradegoods.4.a
+    trigger = {
       NOT = {
         calc_true_if = {
           all_province = {
@@ -252,8 +281,28 @@ province_event = {
         }
       }
     }
-    else_if = {
-      limit ={region = british_isles_region}
+    ai_chance = { factor = 100 }
+    random_province = {
+      limit = {
+        region = ireland_area
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
+        }
+      }
+      province_event = {
+        id = btc_tradegoods.3
+      }
+    }
+  }
+  option = {
+    name = btc_tradegoods.4.b
+    trigger = {
       NOT = {
         calc_true_if = {
           all_province = {
@@ -264,20 +313,28 @@ province_event = {
         }
       }
     }
-    else_if = {
-      limit = {region = iberia_region}
-      NOT = {
-        calc_true_if = {
-          all_province = {
-            region = iberia_region
-            trade_goods = potatoes
-          }
-          amount = 3
+    ai_chance = { factor = 100 }
+    random_province = {
+      limit = {
+        region = british_isles_region
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
         }
       }
+      province_event = {
+        id = btc_tradegoods.3
+      }
     }
-    else_if = {
-      limit = {region = france_region}
+  }
+  option = {
+    name = btc_tradegoods.4.c
+    trigger = {
       NOT = {
         calc_true_if = {
           all_province = {
@@ -288,32 +345,60 @@ province_event = {
         }
       }
     }
-    else_if = {
-      limit = {region = south_german_region}
+    ai_chance = { factor = 100 }
+    random_province = {
+      limit = {
+        region = france_region
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
+        }
+      }
+      province_event = {
+        id = btc_tradegoods.3
+      }
+    }
+  }
+  option = {
+    name = btc_tradegoods.4.d
+    trigger = {
       NOT = {
         calc_true_if = {
           all_province = {
-            region = south_german_region
+            region = iberia_region
             trade_goods = potatoes
           }
-          amount = 7
+          amount = 3
         }
       }
     }
-    else_if = {
-      limit = {region = north_german_region}
-      NOT = {
-        calc_true_if = {
-          all_province = {
-            region = north_german_region
-            trade_goods = potatoes
-          }
-          amount = 7
+    ai_chance = { factor = 100 }
+    random_province = {
+      limit = {
+        region = iberia_region
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
         }
       }
+      province_event = {
+        id = btc_tradegoods.3
+      }
     }
-    else_if = {
-      limit = {region = low_countries_region}
+  }
+  option = {
+    name = btc_tradegoods.4.e
+    trigger = {
       NOT = {
         calc_true_if = {
           all_province = {
@@ -324,16 +409,87 @@ province_event = {
         }
       }
     }
-    else = { always = no }
-  }
-  
-  mean_time_to_happen = {
-    years = 1000
-  }
-  
-  option = {
-    name = btc_tradegoods.3.a
     ai_chance = { factor = 100 }
-    change_trade_goods = potatoes
+    random_province = {
+      limit = {
+        region = low_countries_region
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
+        }
+      }
+      province_event = {
+        id = btc_tradegoods.3
+      }
+    }
+  }
+  option = {
+    name = btc_tradegoods.4.f
+    trigger = {
+      NOT = {
+        calc_true_if = {
+          all_province = {
+            region = north_german_region
+            trade_goods = potatoes
+          }
+          amount = 7
+        }
+      }
+    }
+    ai_chance = { factor = 100 }
+    random_province = {
+      limit = {
+        region = north_german_region
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
+        }
+      }
+      province_event = {
+        id = btc_tradegoods.3
+      }
+    }
+  }
+  option = {
+    name = btc_tradegoods.4.a
+    trigger = {
+      NOT = {
+        calc_true_if = {
+          all_province = {
+            region = south_german_region
+            trade_goods = potatoes
+          }
+          amount = 7
+        }
+      }
+    }
+    ai_chance = { factor = 100 }
+    random_province = {
+      limit = {
+        region = south_german_region
+        province_without_special_goods_produced_trigger = yes
+        OR = {
+          trade_goods = fish
+          trade_goods = legumes
+          trade_goods = grain
+          trade_goods = wool
+          trade_goods = wine
+          trade_goods = livestock
+        }
+      }
+      province_event = {
+        id = btc_tradegoods.3
+      }
+    }
   }
 }
