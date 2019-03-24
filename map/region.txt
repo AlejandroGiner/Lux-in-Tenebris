@@ -1424,7 +1424,15 @@ northeast_america_region = {
 		iroquoisia_area
 		south_iroquoisia_area
 		susquehanna_area
-		#maryland_area			#Cut in BT because I can't be bothered to overhaul with the new areas yet
+		#maine_area
+		#maryland_area
+		#BTARG
+		minisink_area
+		long_island_area
+		westsylvania_area
+		narragansett_bay_area
+		housatonic_river_area
+		adirondacks_area
 	}
 }
 
@@ -1433,31 +1441,73 @@ southeast_america_region =  {
 		chesapeake_area
 		great_valley_area
 		piedmont_north_america_area
-		american_georgia_area
+		american_georgia_area 
 		florida_area
 		carolinas_area
 		south_carolina_area
 		upper_american_georgia_area
 		north_florida_area
+		#BTARG vanilla moved
+		south_appalachia_area
+		#BTARG
+		wiregrass_area
+		#georgia_fall_line_area
+		#southeast_georgia_area
+		upper_chattahoochee_area
+		everglades_area
+		#big_bend_area
+		suncoast_area
+		#florida_uplands_area
+		atlantic_florida_area
+		georgia_sea_islands_area
+		#carolina_piedmont_area
+		#carolina_sandhills_area
+		grand_strand_area
+		#southern_blue_ridge_area
+		#brushies_area
+		inner_banks_area
+		tar_neuse_area
+		eastern_tennessee_area
+		delmarva_peninsula_area
+		virginia_tidewater_area
 	}
 	monsoon = {
 		00.06.01
 		00.11.30
 	}
 }
-
-mississippi_region = {
+mississippi_region = { #66
 	areas = {
 		lower_louisiana_area
+		west_florida_area
 		ozarks_area
 		upper_louisiana_area
 		alabama_area
 		kentucky_area
 		appalachia_area
-		south_appalachia_area
+		#south_appalachia_area
 		mississippi_area
 		choctaw_area
 		mississippi_plain_area
+		#BTARG
+		pine_belt_area
+		#mississippi_delta_area
+		chickasaw_area
+		#alabama_river_area
+		black_warrior_river_area
+		nickajack_area
+		florida_panhandle_area
+		#acadiana_area
+		#red_river_valley_area
+		northeast_louisiana_area
+		western_tennessee_area
+		middle_tennessee_area
+		#cumberland_plateau_area
+		arkansas_plains_area
+		ouachitas_area
+		lower_arkansas_river_area
+		big_thicket_area
+		piney_woods_area
 	}
 	monsoon = {
 		00.06.01
@@ -1479,6 +1529,7 @@ great_plains_region = {
 		yellowstone_area
 		upper_platte_area
 		bighorn_area
+		lower_plains_area
 	}
 }
 
@@ -1602,16 +1653,19 @@ mexico_region = {
 rio_grande_region = {
 	areas = {
 		rio_grande_area
+		upper_rio_grande_area
 		northeast_mexico_area
 		texas_area
 		coastal_prarie_area
 		pecos_area
 		llano_estacado_area
 		chihuahua_area
-		new_mexico_area			#Formerly in Great Plains region
-		lower_plains_area			#Formerly in Great Plains region
-		#BTADDITIONS
-		upper_rio_grande_area
+		upper_gila_area
+		new_mexico_area
+		#BTARG
+		edwards_plateau_area
+		cross_timbers_area
+		rio_grande_sur_area
 	}
 	monsoon = {
 		00.06.01
