@@ -1,14 +1,18 @@
 # No previous file for Mocama
 
-culture = creek
+owner = M4C
+controller = M4C
+add_core = M4C
+is_city = yes
+culture = mocama
 religion = totemism
-capital = "Mocama"
-trade_goods = unknown
+capital = "Tacatacuru"
+trade_goods = dyes
 hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
-native_size = 5
+native_size = 10
 native_ferocity = 1
 native_hostileness = 2
 
@@ -18,28 +22,53 @@ discovered_by = north_american
 
 1524.1.1 = { discovered_by = POR } # Diego Gomez
 1526.1.1 = { discovered_by = SPA } # Lucas Vásquez de Ayllón
+1562.1.1 = { discovered_by = FRA } # Jean Ribault
 
 1587.1.1 = {
 	owner = SPA
 	controller = SPA
 	add_core = SPA
-	culture = castillian
-	trade_goods = cotton
-	religion = catholic 
-} #San Pedro de Mocama mission
-1702.1.1 = {
-	owner = CRE
-	controller = CRE
-	add_core = CRE
-	remove_core = SPA
+	trade_goods = dyes
 	is_city = yes
-	culture = creek
-	religion = totemism 
+	#culture = castillian
+	religion = catholic 
+	capital = "San Pedro de Mocama"
+} #San Pedro de Mocama mission
+1684.1.1 = {
+	owner = XXX
+	controller = XXX
+	remove_core = SPA
+	remove_core = M4C
+	trade_goods = unknown
+	is_city=no
+	religion = totemism
+	capital = "Tacatacuru"
 } #Last Georgia missions abandoned. 
-1814.8.9 = {
+1739.1.1 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	culture = english
+	religion = protestant
+	is_city = yes
+	trade_goods = dyes
+#	remove_core = Y4M
+#	remove_core = L4C
+} #Treaty of Savannah 1739, find exact date
+1771.1.1 = {
+	base_tax = 1
+	base_production = 2
+	base_manpower = 2
+	capital = "Brunswick"
+} 
+1776.7.4 = {
 	owner = USA
 	controller = USA
 	add_core = USA
-	culture = american
-	religion = protestant 
-} #Treaty of Fort Jackson ending the Creek War
+	base_manpower = 1
+} # Independence day
+#I don't think GB took over Brunswick at any point, marching straight to Savannah & Augusta from E Florida but I'm not sure. Loyalists did flee to East Florida
+1782.11.1 = {
+	remove_core = GBR 
+	unrest = 0
+} # Preliminary articles of peace, the British recognized American independence

@@ -1,9 +1,13 @@
 #938 - Pamlico
 
-culture = powhatan
+owner = S5C
+controller = S5C
+add_core = S5C
+culture = croatan
 religion = totemism
-capital = "Pamlico"
-trade_goods = unknown
+capital = "Raudaquaquank"
+trade_goods = tobacco
+is_city = yes
 hre = no
 base_tax = 2
 base_production = 2
@@ -12,22 +16,45 @@ native_size = 10
 native_ferocity = 2
 native_hostileness = 8
 
-
-
 discovered_by = north_american
 
 1584.1.1 = { discovered_by = ENG } # Walter Raleigh
 1707.5.12 = { discovered_by = GBR } 
 
-1710.1.1 = {
+1650.1.1 = {
+	owner = XXX
+	controller = XXX
+	remove_core = S5C
+	trade_goods = unknown
+	is_city = no
+}#just a random date to represent algonquians fracturing
+1705.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	is_city = yes
+	trade_goods = tobacco
+	culture = occitain
+	religion = reformed
+	capital = "Bath"
+} # Settlement around New Bath
+1707.5.12 = {
+	discovered_by = GBR
 	owner = GBR
 	controller = GBR
 	add_core = GBR
-	is_city = yes
-	trade_goods = tobacco
+	remove_core = ENG
+} 
+1711.1.1 = {
+	unrest = 6
+}#Cary's Rebellion
+1711.8.1 = {
+	unrest = 0
+}
+1722.1.1 = {
 	culture = english
-	religion = protestant
-} # Settlement around New Bath
+	religion = anglican
+}
 1764.7.1 = {
 	culture = american
 	unrest = 6
