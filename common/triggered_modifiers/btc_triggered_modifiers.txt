@@ -1,0 +1,10 @@
+center_of_waldensian_worship = {
+  potential = {
+    NOT = { has_global_flag = false_waldo_flag }
+  }
+  trigger = {
+    203 = { owned_by = ROOT }
+    religion = waldensian
+  }
+  tolerance_own = 1
+}

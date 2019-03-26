@@ -37,6 +37,28 @@ smuggling_operations = {
 	trade_efficiency = -0.15
 }
 
+preachers_imprisoned = {
+	global_missionary_strength = -0.01
+}
+
+tarnished_dynasty_reputation = {
+	diplomatic_reputation = -1
+	legitimacy = -2
+	prestige_decay = 0.03
+}
+
+held_great_feast = {
+	global_unrest = -2
+	production_efficiency = 0.1
+	war_exhaustion = -0.02
+}
+
+false_waldo_buried = {
+	global_unrest = 4
+	prestige = -1
+	legitimacy = -1
+}
+
 btc_language_of_italy = {
 	improve_relation_modifier = 0.05
 	prestige = 1
