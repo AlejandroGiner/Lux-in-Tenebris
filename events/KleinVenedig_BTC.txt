@@ -129,21 +129,35 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			1868 = {
+				owner = {
+					save_event_target_as = augsburg_fuggers
+				}
+			}
+		}
+	}
+	
 	option = {
 		name = "kv_spain_country_reaction"
 		add_years_of_income = 1
-		random_owned_area = {
+		any_subject_country = {
 			limit = {
-				colonial_region = colonial colombia
-				OR = {
-					any_neighbor_province = {1515}
-					any_neighbor_province = {1517}
-					any_neighbor_province = {1519}
-					any_neighbor_province = {1520}
+				is_colonial_nation = yes
+				capital_scope = {
+					colonial_region = colonial_colombia
 				}
 			}
-		cede_province = 
-		
+    
+			random_owned_area = {
+				limit = {
+					has_port = yes 
+				}
+				remove_core = THIS
+				add_core = event_target:augsburg_fuggers
+				cede_province = event_target:augsburg_fuggers
+			}
 		}
 	}
 }
