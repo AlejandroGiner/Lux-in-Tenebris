@@ -1,34 +1,46 @@
 # No previous file for Napochi
 
-culture = chickasaw
+owner = A4B
+controller = A4B
+add_core = A4B
+is_city = yes
+culture = alibamu
 religion = totemism
-capital = "Napochi"
-trade_goods = unknown
+capital = "Apafalaya"
+trade_goods = maize
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+
 native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 
-
-
 discovered_by = north_american
 
-1540.1.1 = { discovered_by = SPA } # Hernando de Soto
+1541.1.1 = { discovered_by = SPA } # Hernando de Soto
 
-1650.1.1 = {
+1543.1.1 = {
+	owner = XXX
+	controller = XXX
+	is_city = no
+	trade_goods = unknown
+	remove_core = A4B
+}
+1650.1.1= {
+	add_core = CHI
 	owner = CHI
 	controller = CHI
-	add_core = CHI
-	trade_goods = cotton
+	culture = chickasaw
 	is_city = yes 
-} #Natives disruptiosn of the Beaver wars
-1786.1.10= {
+	trade_goods = fur
+}
+1816.10.24= {
 	owner = USA
 	controller = USA
 	add_core = USA
-	culture = american
-	religion = protestant 
-} #Treaty of Hopewell (with the Chickasaw), come under US authority
+	#low settlement pre TOT
+	#culture = american
+	#religion = protestant 
+}#treaty of chickasaw council house
