@@ -1,13 +1,18 @@
 #895 - Arkansas
 
-culture = osage
+add_core = K4R
+owner = K4R
+controller = K4R
+culture = koroa
 religion = totemism
-capital = "Arkansas"
-trade_goods = unknown
+capital = "Coligua"
+trade_goods = maize
 hre = no
 base_tax = 2
 base_production = 2
 base_manpower = 1
+is_city = yes
+
 native_size = 25
 native_ferocity = 2
 native_hostileness = 8
@@ -17,34 +22,34 @@ native_hostileness = 8
 discovered_by = north_american
 
 1541.1.1 = { discovered_by = SPA } # Hernando de Soto
-1673.1.1 = { discovered_by = FRA } # Jacques Marquette & Louis Jolliet
+1686.1.1 = { discovered_by = FRA } # generic inner-Arkansas exploration date. TBD
 
-1722.1.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
-	trade_goods = cotton
-	is_city = yes
-	religion = catholic
-	culture = cosmopolitan_french
-} # French settlement
-1762.1.1 = {
-	owner = SPA
-	controller = SPA
-	add_core = SPA
-	culture = castillian
-	remove_core = FRA
-} # Treaty of Fontainebleau, secretely ceded to Spain
-1800.10.1 = {
-	owner = FRA
-	controller = FRA
-	add_core = FRA
-	remove_core = SPA
-	culture = cosmopolitan_french
-} # Treaty of San Ildefonso
-1803.4.3 = {
+1620.1.1 = {
+	remove_core = K4R
+	owner = XXX
+	controller = XXX
+	is_city = no
+	trade_goods = unknown
+} # representing post-contact and epidemic shifts.
+
+1660.1.1 = {
+	culture = quapaw
+}
+1740.1.1 = {
+	culture = osage
+}
+1815.1.1 = {
 	owner = USA
 	controller = USA
 	add_core = USA
-	remove_core = FRA
-} # The Louisiana purchase
+	is_city=yes
+	trade_goods = grain
+	capital="Davidsonville"
+	religion = reformed
+}
+1819.1.1 = {
+	capital="Poke Bayou"
+}
+1821.1.1 = {
+	capital="Batesville"
+}
