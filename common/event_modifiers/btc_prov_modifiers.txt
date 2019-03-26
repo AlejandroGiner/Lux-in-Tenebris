@@ -90,6 +90,45 @@ waldensian_landslides = {
 	local_hostile_movement_speed = -0.5
 }
 
+renovated_churches = {
+	local_tax_modifier = 0.1
+	local_production_efficiency = 0.1
+	local_manpower_modifier = 0.1
+	local_unrest = -1
+}
+
+dilapidated_churches = {
+	local_tax_modifier = -0.1
+	local_production_efficiency = -0.1
+	local_manpower_modifier = -0.1
+	local_unrest = 2
+}
+
+large_scale_renovations = {
+	local_tax_modifier = 0.15
+	local_production_efficiency = 0.15
+	local_manpower_modifier = 0.15
+	local_unrest = -2
+}
+
+grateful_for_repairs = {
+	local_tax_modifier = 0.1
+	trade_goods_size_modifier = 0.15
+	local_unrest = -2
+}
+
+town_devastated = {
+	local_tax_modifier = -0.5
+	trade_goods_size_modifier = -0.5
+}
+
+reinforced_settlement = {
+	local_tax_modifier = 0.2
+	trade_goods_size_modifier = 0.25
+	local_defensiveness = 0.25
+	local_unrest = -2
+}
+
 potato_port = {
 	province_trade_power_modifier = 0.2
 	trade_value = 1.5
