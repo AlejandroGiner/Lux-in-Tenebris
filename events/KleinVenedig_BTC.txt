@@ -1,0 +1,162 @@
+namespace = klein_venedig
+
+#Start Event
+country_event = {
+	id = "klein_venedig.1"
+	title = "klein_venedig.1.t"
+	desc = "klein_venedig.1.d"
+	picture = ECONOMY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+			}
+		is_year = 1520
+		OR = {
+			any_country = { has_country_flag = sce_eventchain_flag }
+			NOT = { has_dlc = "El Dorado" }
+		}
+		num_of_loans = 1
+		any_subject_country = {
+			is_colonial_nation = yes
+			capital_scope = { colonial_region = colombia }
+		}
+		
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+		
+		modifier = {
+			factor = 0.8
+			NOT = {stability = 0}
+		}
+		
+		modifier = {
+			factor = 0.5
+			num_of_loans = 5
+		}
+		
+		modifier = {
+			factor = 0.5
+			num_of_loans = 10
+		}		
+	}
+	
+	option = {
+		name = "kv_buyer_request"
+		ai_chance = { factor = 90}
+		1868 = { owner = 
+					{ country_event = {
+						id = klein_venedig.2
+						days = 30
+						random = 15
+						tooltip = kv_buyer_request_tooltip
+					}			
+				}
+			}
+	}
+	
+	option = {
+		name = "kv_decline_buying"
+		ai_chance = { factor = 10}
+		add_stability = -2
+	}
+}
+
+#Augsburg Response
+country_event = {
+	id = "klein_venedig.2"
+	title = "klein.venedig.2.t"
+	desc = "klein_venedig.2.d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "kv_allow_purchase"
+		ai_chance = {factor = 60}
+		
+	}
+	
+	option = {
+		name = "kv_take_over_purchase"
+		ai_chance = {factor = 30}
+		
+		add_years_of_income = -1
+	}
+	
+	option = {
+		name = "kv_block_purchase"
+		ai_chance = { factor = 10}
+	}
+}
+
+#Spain Reactions
+country_event = {
+	id = "klein_venedig.3"
+	title = "klein.venedig.3.t"
+	desc = "klein_venedig.3.d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "kv_spain_family_reaction"
+		add_years_of_income = 1
+		1868 = { owner = {
+				add_country_modifier = {
+					name = welser_klein_venedig_modifier
+					duration = -1
+					desc = welser_klein_venedig_modifier_tooltip
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = "klein_venedig.4"
+	title = "klein.venedig.4.t"
+	desc = "klein_venedig.4.d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "kv_spain_country_reaction"
+		add_years_of_income = 1
+		random_owned_area = {
+			limit = {
+				colonial_region = colonial colombia
+				OR = {
+					any_neighbor_province = {1515}
+					any_neighbor_province = {1517}
+					any_neighbor_province = {1519}
+					any_neighbor_province = {1520}
+				}
+			}
+		cede_province = 
+		
+		}
+	}
+}
+
+country_event = {
+	id = "klein_venedig.5"
+	title = "klein.venedig.5.t"
+	desc = "klein_venedig.5.d"
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "kv_spain_negative_reaction"
+	}
+}			
