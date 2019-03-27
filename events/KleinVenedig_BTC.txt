@@ -82,6 +82,16 @@ country_event = {
 	option = {
 		name = "kv_allow_purchase"
 		ai_chance = {factor = 60}
+		FROM = {
+			{ country_event = {
+				id = klein_venedig.3
+					days = 30
+					random = 15
+					tooltip = kv_augsburg_response
+				}			
+			}
+
+		}
 		
 	}
 	
@@ -90,11 +100,32 @@ country_event = {
 		ai_chance = {factor = 30}
 		
 		add_years_of_income = -1
+		FROM = {
+			{ country_event = {
+				id = klein_venedig.4
+					days = 30
+					random = 15
+					tooltip = kv_augsburg_response
+				}			
+			}
+
+		}
 	}
 	
 	option = {
 		name = "kv_block_purchase"
 		ai_chance = { factor = 10}
+		
+		FROM = {
+			{ country_event = {
+				id = klein_venedig.5
+					days = 30
+					random = 15
+					tooltip = kv_augsburg_response
+				}			
+			}
+
+		}
 	}
 }
 
