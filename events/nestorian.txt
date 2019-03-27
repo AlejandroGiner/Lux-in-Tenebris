@@ -298,3 +298,104 @@ country_event = {
   }
 }
 
+#Restrictions on Trade
+country_event = {
+  id = nestorian_events.6
+  title = nestorian_events.6.t
+  desc = nestorian_events.6.d
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    any_neighbor_country = {
+      NOT = {
+        OR = {
+          religion_group = ROOT
+          alliance_with = ROOT
+          is_subject_of = ROOT
+        }
+      }
+      home_trade_node = {
+        trade_share = {
+          country = ROOT
+          share = 5
+        }
+      }
+    }
+  }
+  immediate = {
+    random_neighbor_country = {
+      limit = {
+        NOT = {
+          OR = {
+            religion_group = ROOT
+            alliance_with = ROOT
+            is_subject_of = ROOT
+          }
+        }
+        home_trade_node = {
+          trade_share = {
+            country = ROOT
+            share = 5
+          }
+        }
+      }
+      save_event_target_as = trade_neighbor
+      home_trade_node = { save_event_target_as = trade_province }
+    }
+  }
+  option = {
+    name = nestorian_events.6.a
+    add_dip_power = -75
+    reverse_add_opinion = {
+      who = event_target:trade_neighbor
+      modifier = refused_trade_restrictions
+    }
+    reverse_add_casus_belli = {
+      target = event_target:trade_neighbor
+      type = cb_insult
+      months = 12
+    }
+    add_estate_loyalty = {
+      estate = estate_burghers
+      loyalty = 10
+    }
+    add_estate_influence_modifier = {
+      estate = estate_burghers
+      influence = 10
+      desc = protected_foreign_trade
+    }
+  }
+  option = {
+    name = nestorian_events.6.b
+    add_opinion = {
+      who = event_target:trade_neighbor
+      modifier = imposed_trade_restrictions
+    }
+    add_casus_belli = {
+      who = event_target:trade_neighbor
+      type = cb_trade_war_triggered
+      months = 36
+    }
+    add_estate_loyalty = {
+      estate = estate_burghers
+      loyalty = -10
+    }
+    add_estate_influence_modifier = {
+      estate = estate_burghers
+      influence = -10
+      desc = foreign_trade_restricted
+    }
+  }
+  option = {
+    name = nestorian_events.6.z
+    highlight = yes
+    trigger = {
+      ruler_has_personality = secretive_personality
+    }
+    add_country_modifier = {
+      name = covert_traders
+      duration = 3650
+    }
+  }
+}
