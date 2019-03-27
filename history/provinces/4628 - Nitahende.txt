@@ -1,34 +1,32 @@
 # No previous file for Nitahende
 
-culture = mescalero
+add_core = J4M
+owner = J4M
+controller = J4M
+capital = "Jediondo"
+culture = jumano
 religion = totemism
-capital = "Nitahendé"
-trade_goods = grain
+trade_goods = livestock
+is_city = yes
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-native_size = 6
-native_ferocity = 2
+
+native_size = 10
+native_ferocity = 5
 native_hostileness = 8
-
-
 
 discovered_by = north_american
 
-1541.1.1 = { discovered_by = SPA }
-1682.1.1 = {
-	owner = SPA
-	controller = SPA
-	add_core = SPA
-	is_city = yes
-	trade_goods = grain
-	religion = catholic
-	culture = castillian 
-} #Isleta Mission
-1810.9.16 = {
-	owner = MEX
-	add_core = MEX
-	controller = SPA 
-} # Mexican War of Independence
+1590.1.1 = { discovered_by = SPA } # De Sosa
 
+1750.1.1 = {
+	owner = N4G
+	controller = N4G
+	add_core = N4G
+	remove_core = J4M
+	trade_goods = livestock
+	culture = mescalero
+	is_city = yes
+} #Great Plain tribes spread over vast territories

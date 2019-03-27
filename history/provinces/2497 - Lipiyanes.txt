@@ -1,27 +1,40 @@
 # No previous file for Lipiyanes
 
+add_core = N4G
+owner = N4G
+controller = N4G
+capital = "Tá'huú"
 culture = mescalero
 religion = totemism
-capital = "Lipiyanes"
-trade_goods = unknown
+trade_goods = livestock #Bison
+is_city = yes
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+
 native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 
-
-
 discovered_by = north_american
 
-1541.1.1 = { discovered_by = SPA }
+1590.1.1 = { discovered_by = SPA } # De Sosa
 
-1760.1.1 = {
-	owner = MSC
-	controller = MSC
-	add_core = MSC
-	trade_goods = grain
+1750.1.1 = {
+	owner = XXX
+	controller = XXX
+	remove_core = N4G
+	is_city = no
+	trade_goods = unknown
+}#generic date for Natages Mescalero moving south
+
+1790.1.1 = {
+	owner = COM
+	controller = COM
+	add_core = COM
+	remove_core = Y4D
+	trade_goods = livestock
+	culture = comanche
 	is_city = yes 
 } #Great Plain tribes spread over vast territories
