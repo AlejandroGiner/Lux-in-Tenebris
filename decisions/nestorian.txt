@@ -1,0 +1,17 @@
+country_decisions = {
+  prohibit_iconography = {
+    potential = {
+      religion = nestorian
+      NOT = { has_country_modifier = prohibited_iconography }
+    }
+    trigger = {
+      stability = 1
+    }
+    effect = {
+      add_country_modifier = {
+        name = prohibited_iconography
+        duration = -1
+      }
+    }
+  }
+}
