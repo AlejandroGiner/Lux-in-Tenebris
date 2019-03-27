@@ -5,7 +5,7 @@ country_event = {
 	id = "klein_venedig.1"
 	title = "klein_venedig.1.t"
 	desc = "klein_venedig.1.d"
-	picture = ECONOMY_eventPicture
+	picture = BANKRUPTCY_eventPicture
 	
 	fire_only_once = yes
 	
@@ -103,18 +103,24 @@ country_event = {
 	id = "klein_venedig.3"
 	title = "klein.venedig.3.t"
 	desc = "klein_venedig.3.d"
-	picture = DIPLOMACY_eventPicture
+	picture = MERCHANTS_TALKING_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
 		name = "kv_spain_family_reaction"
 		add_years_of_income = 1
+		random_owned_area = {
+            limit = {
+                has_port = yes 
+                }
+			set_local_autonomy = 50
+		}
 		1868 = { owner = {
 				add_country_modifier = {
-					name = welser_klein_venedig_modifier
+					name = btc_welser_klein_venedig_modifier
 					duration = -1
-					desc = welser_klein_venedig_modifier_tooltip
+					desc = btc_welser_klein_venedig_modifier_tooltip
 				}
 			}
 		}
@@ -166,11 +172,27 @@ country_event = {
 	id = "klein_venedig.5"
 	title = "klein.venedig.5.t"
 	desc = "klein_venedig.5.d"
-	picture = DIPLOMACY_eventPicture
+	picture = BANKRUPTCY_eventPicture
 	
 	is_triggered_only = yes
 	
+	immediate = {
+        hidden_effect = {
+            1868 = {
+                owner = {
+                    save_event_target_as = augsburg_fuggers
+                }
+            }
+        }
+    }
+	
 	option = {
 		name = "kv_spain_negative_reaction"
+		add_stability = -1
+		add_opinion = {
+			who = event_target:augsburg_fuggers
+			modifier = kv_denied_purchase
+		}
+		
 	}
 }			
