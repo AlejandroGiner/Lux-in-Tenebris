@@ -22,11 +22,13 @@ feudalism_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { OR = { 
-			has_reform = french_principality
-			has_reform = french_crown
-			has_reform = french_monarchy
-		} }
+		NOT = { 
+			OR = {
+				has_reform = french_principality
+				has_reform = french_crown
+				has_reform = french_monarchy
+			}
+		}
 	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = yes
@@ -40,11 +42,13 @@ autocracy_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
 	potential = {
-		NOT = { OR = {
-			has_reform = french_principality
-			has_reform = french_crown
-			has_reform = french_monarchy
-		} }
+		NOT = {
+			OR = {
+				has_reform = french_principality
+				has_reform = french_crown
+				has_reform = french_monarchy
+			}
+		}
 	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
