@@ -2782,6 +2782,147 @@ MUR_ideas = {
 	}
 }
 
+AUV_ideas = {
+	start = {
+		defensiveness = 0.15
+		war_exhaustion = -0.02
+	}
+	bonus = {
+		build_cost = -0.1
+	}
+	free = yes
+	trigger = {
+		tag = AUV
+	}
+	AUV_massif_central = {
+		hostile_attrition = 1
+	}
+	AUV_heart_of_southern_france = {
+		production_efficiency = 0.1
+	}
+	AUV_reform_succession_law = {
+		legitimacy = 1
+	}
+	AUV_auvergnat_identity = {
+		culture_conversion_cost = -0.15
+	}
+	AUV_blood_of_arverni = {
+		land_morale = 0.1
+	}
+	AUV_frankish_roots = {
+		prestige = 1
+	}
+	AUV_end_clermont_rivalry = {
+		stability_cost_modifier = -0.1
+	}
+}
+
+AMG_ideas = {
+	start = {
+		spy_offence = 0.2
+		fort_maintenance_modifier = -0.1
+	}
+	bonus = {
+		shock_damage = 0.1
+	}
+	trigger = {
+		tag = AMG
+	}
+	free = yes
+	AMG_political_manoeuvres = {
+		diplomats = 1
+	}
+	AMG_scattered_territories = {
+		global_autonomy = -0.05
+	}
+	AMG_shifting_alliances = {
+		diplomatic_upkeep = 1
+	}
+	AMG_armagnac_faction = {
+		merc_maintenance_modifier = -0.25
+	}
+	AMG_armagnac_brandy = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	AMG_powerful_dynasty = {
+		diplomatic_reputation = 1
+	}
+	AMG_archbishops_of_aquitaine = {
+		tolerance_own = 1
+		papal_influence = 0.5
+	}
+}
+
+FOI_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		advisor_cost = -0.2
+	}
+	bonus = {
+		global_tax_modifier = 0.1
+	}
+	free = yes
+	trigger = {
+		tag = FOI
+	}
+	FOI_neighbour_connections = {
+		improve_relation_modifier = 0.2
+	}
+	FOI_vassals_in_name = {
+		land_forcelimit_modifier = 0.1
+	}
+	FOI_provincial_lords = {
+		global_unrest = -1
+	}
+	FOI_chateau_foix = {
+		defensiveness = 0.2
+	}
+	FOI_dynastic_expansion = {
+		enemy_core_creation = 0.25
+	}
+	FOI_mediators_of_war = {
+		leader_land_shock = 1
+	}
+	FOI_navarrese_influence = {
+		idea_cost = -0.1
+	}
+}
+
+BOU_ideas = {
+	start = {
+		global_institution_spread = 0.1
+		global_trade_goods_size_modifier = 0.1
+	}
+	bonus = {
+		ae_impact = -0.1
+	}
+	free = yes
+	trigger = {
+		tag = BOU
+	}
+	BOU_castle_montlucon = {
+		defensiveness = 0.15
+	}
+	BOU_loyal_nation = {
+		global_tax_modifier = 0.1
+	}
+	BOU_bordering_cultures = {
+		num_accepted_cultures = 1
+	}
+	BOU_natural_borders = {
+		shock_damage_received = -0.1
+	}
+	BOU_dynastic_claims = {
+		fabricate_claims_cost = -0.25
+	}
+	BOU_cadet_houses_of_bourbon = {
+		heir_chance = 0.25
+	}
+	BOU_bourbon_kings = {
+		prestige = 1
+	}
+}
+
 SN7_ideas = {
 	start = {
 		naval_maintenance_modifier = -0.1
