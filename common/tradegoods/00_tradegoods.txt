@@ -508,7 +508,7 @@ cloth = {
 			NOT = { region = southeast_america_region }
 		}
 		modifier = { 
-			factor = 3
+			factor = 2
 			OR = {
 				region = canada_region
 				region = cascadia_region
@@ -517,7 +517,7 @@ cloth = {
 			}
 		}
 		modifier = { 
-			factor = 2
+			factor = 1
 			OR = {
 				region = alaska_region
 				region = hudson_bay_region
@@ -525,7 +525,7 @@ cloth = {
 			}
 		}
 		modifier = { 
-			factor = 1
+			factor = 0.5
 			OR = {
 				region = southeast_america_region
 			}
