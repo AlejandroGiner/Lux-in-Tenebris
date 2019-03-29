@@ -1,0 +1,76 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_papacy_action_strip"
+		texturefile = "gfx//interface//papacy_action_strip.dds"
+		noOfFrames = 8
+	}
+
+	spriteType = {
+		name = "GFX_invest_papacy_button"
+		texturefile = "gfx//interface//invest_papacy_button.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_more_dip_actions_icon"
+		texturefile = "gfx//interface//more_dip_actions_icon.dds"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_papacy_bg"
+		texturefile = "gfx//interface//vatican_bg.tga"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_great_powers_bg"
+		texturefile = "gfx//interface//great_powers_bg.dds"
+		loadType = "INGAME"
+	}	
+	
+	spriteType = {
+		name = "GFX_great_power_name_sort"
+		texturefile = "gfx//interface//great_power_name_sort.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_great_power_tech_cost_sort"
+		texturefile = "gfx//interface//great_power_tech_cost_sort.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_great_power_rating_sort"
+		texturefile = "gfx//interface//great_power_rating_sort.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_great_power_development_sort"
+		texturefile = "gfx//interface//great_power_development_sort.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_great_power_rank_sort"
+		texturefile = "gfx//interface//great_power_rank_sort.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_cardinal_banner"
+		texturefile = "gfx//interface//cardinal_banner.tga"
+		loadType = "INGAME"
+	}
+	
+
+	maskedShieldType = {
+		name = "GFX_crusade_target_shield"
+		textureFile1 = "gfx/interface/crusade_target_shield.dds"
+		textureFile2 = "gfx/interface/shield_medium_mask.tga"
+		effectFile = "gfx/FX/maskedflag.lua"
+		textureFile3 = "gfx//interface//client_state_symbols_medium.dds"
+		noOfFrames = 223
+		overlay_frames_per_row = 32
+		overlay_rows = 8
+	}
+
+}
