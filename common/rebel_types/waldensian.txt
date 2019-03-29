@@ -1,9 +1,9 @@
-
-
 ######################################################################
 # Waldensian rebels. Disgruntled fanatics.
 ######################################################################
 waldensian_rebels = {
+
+	color = { 230 175 175 }
 
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
@@ -102,6 +102,11 @@ waldensian_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = waldensian
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -125,23 +130,32 @@ waldensian_rebels = {
 		}
  	}
 	siege_won_effect = {
-		if = {
-			limit = {
-				religion = waldensian
+		custom_tooltip = religious_rebels_seige_effect_tooltip
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						religion = waldensian
+						is_reformation_center = yes
+						owner = { religion = waldensian }
+					}
+				}
+				add_province_modifier = {
+					name = "religious_violence"
+					duration = 730
+				}
 			}
-			add_province_modifier = {
-				name = "religious_violence"
-				duration = 730
-			}
-		}
-		if = {
-			limit = {
-				NOT = { religion = waldensian }
-			}
-			change_religion = waldensian
-			add_province_modifier = {
-				name = "forced_conversion"
-				duration = 730
+			if = {
+				limit = {
+					NOT = { religion = waldensian }
+					is_reformation_center = no
+					NOT = { owner = { religion = waldensian } }
+				}
+				change_religion = waldensian
+				add_province_modifier = {
+					name = "forced_conversion"
+					duration = 730
+				}
 			}
 		}
 	}
@@ -160,7 +174,7 @@ waldensian_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "generic_rebels_demand"
+	demands_description = "waldensian_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -182,23 +196,54 @@ waldensian_rebels = {
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = waldensian
 			}
 			add_country_modifier = {
-				name = "religious_intolerance"
+				name = "religious_intolerance_enforced"
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = waldensian }
 				dominant_religion = waldensian
 			}
 			change_religion = waldensian
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = waldensian }
+				NOT = { dominant_religion = waldensian }
+				religion_group = christian
+				NOT = { has_country_modifier = heretic_tolerance }
+			}
+			
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = waldensian
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
 		}
 	}
 }
