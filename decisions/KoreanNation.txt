@@ -1,0 +1,78 @@
+country_decisions = {
+	###################################################################################################
+################################			Korea			 ##############################################	
+	###################################################################################################
+	korean_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_korea_flag }
+			NOT = { tag = JAP }
+			NOT = { tag = MNG }
+			NOT = { tag = QNG }
+			NOT = { tag = YUA }
+			NOT = { tag = MCH }
+			primary_culture = korean
+			adm_tech = 20
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 735	# Hanseong
+				province_id = 6490	# Gonju
+				province_id = 6491	# Jeonju
+				province_id = 734	# Wonju
+				province_id = 4231	# Haeju
+				province_id = 1845	# Pyeongyang
+				province_id = 732	# Hamheung
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = KRE }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 735	# Hanseong
+			owns_core_province = 6490	# Gonju
+			owns_core_province = 6491	# Jeonju
+			owns_core_province = 734	# Wonju
+			owns_core_province = 4231	# Haeju
+			owns_core_province = 1845	# Pyeongyang
+			owns_core_province = 732	# Hamheung
+			prestige = 25
+			adm_tech = 20
+		}
+		effect = {
+			change_tag = KRE
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			korea_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KRE
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_korea_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+}
