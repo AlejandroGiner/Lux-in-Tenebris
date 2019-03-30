@@ -488,7 +488,11 @@ cloth = {
 	}
 	chance = {
 		factor = 10
-		modifier = { 
+		modifier = {
+			factor = 0.0
+			is_sea = yes
+		}
+		modifier = {
 			factor = 0
 			OR = {
 				continent = south_america
