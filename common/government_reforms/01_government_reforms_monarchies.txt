@@ -407,6 +407,24 @@ english_monarchy = {
 	}
 }
 
+archduchy_government = {
+	icon = "archduchy_austria"
+	allow_normal_conversion = no
+	potential = {
+		dynasty = "von Habsburg"
+		tag = HAB
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	legacy_equivalent = archduchy_government_legacy
+	modifiers = {
+		max_states = 2
+		legitimacy = 0.5
+		envoy_travel_time = -0.25
+	}
+}
+
 ottoman_government = {
 	lock_level_when_selected = yes
 	allow_normal_conversion = yes
