@@ -56,3 +56,17 @@ byz_war_of_two_romes = {
 	prov_desc = WAR_OF_TWO_ROMES_DESC
 	war_name = WAR_OF_TWO_ROMES_NAME
 }
+
+england_scotland_vassalize = {
+	type = take_capital
+	
+	badboy_factor = 0.85
+	prestige_factor = 1.70
+	peace_cost_factor = 0.35
+	
+	peace_options = {
+		po_become_vassal
+	}
+	
+	war_name = VASSAL_MISSION_WAR_NAME
+}

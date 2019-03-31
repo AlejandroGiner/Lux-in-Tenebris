@@ -12,3 +12,12 @@ cb_war_of_two_romes = {
 
 	war_goal = byz_war_of_two_romes
 }
+
+cb_vassalize_scotland = {
+	valid_for_subject = no
+
+	is_triggered_only = yes
+	months = 120
+
+	war_goal = england_scotland_vassalize
+}
