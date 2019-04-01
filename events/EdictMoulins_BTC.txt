@@ -1,0 +1,152 @@
+namespace = edict_moulins
+
+country_event = {
+	id = "edict_moulins.1"
+	title = "edict_moulins.1.t"
+	desc = "edict_moulins.1.d"
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		is_year = 1550
+		has_reform = french_crown
+		adm = 4
+	}
+	
+	mean_time_to_happen = {
+	months = 60
+	}
+	
+	option = {
+		name = "edict_moulins_yes"
+		ai_chance = { factor = 75}
+		
+		add_government_reform = french_monarchy
+		168 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+		199 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+		184 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2	
+			}
+		}
+		1879 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+		3084 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+		175 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+		190 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		5171 = {
+			spawn_rebels = {
+				type = noble_rebels
+				size = 1
+			}
+		}
+	}
+	
+	option = {
+		ai_chance = { factor = 25}
+	
+		france_region = {
+			every_subject_country = {
+				reduced_liberty_desire = 20
+			}
+		}
+		poitou_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		brittany_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		lower_brittany_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		normandy_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		west_normandy_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		massif_central_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		west_massif_central_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		loire_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		la_maine_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		toulouse_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		guyenne_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		pyrenees_area = {
+			every_owned_province = {
+				local_autonomy = 30
+			}
+		}
+		add_country_modifier = {
+			name =btc_keep_apanage_system
+			duration = 10
+			desc = btc_keep_apanage_system_tooltip
+		}
+		add_prestige = -10
+	}
+}
