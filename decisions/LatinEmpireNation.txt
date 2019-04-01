@@ -17,35 +17,16 @@ country_decisions = {
 				owns = 151
 				AND = {
 					ai = no
-					tag = KNI
-				}
-				AND = {
-					ai = no
-					tag = CYP
-				}
-				AND = {
-					ai = no
-					tag = NAX
-				}
-				AND = {
-					ai = no
-					tag = ATH
-				}
-				AND = {
-					ai = no
-					tag = ACH
-				}
-				AND = {
-					ai = no
-					tag = LES
-				}
-				AND = {
-					ai = no
-					tag = HAI
-				}
-				AND = {
-					ai = no
-					tag = FLA
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = NAX
+						tag = ATH
+						tag = ACH
+						tag = LES
+						tag = HAI
+						tag = FLA
+					}
 				}
 			}
 			OR = {
@@ -64,14 +45,18 @@ country_decisions = {
 			is_at_war = no
 			if = {								#non crusader state
 				limit = {
-					NOT = { tag = KNI }
-					NOT = { tag = CYP }
-					NOT = { tag = NAX }
-					NOT = { tag = ATH }
-					NOT = { tag = ACH }
-					NOT = { tag = LES }
-					NOT = { tag = HAI }
-					NOT = { tag = FLA }
+					NOT = {
+						OR = {
+							tag = KNI
+							tag = CYP
+							tag = NAX
+							tag = ATH
+							tag = ACH
+							tag = LES
+							tag = HAI
+							tag = FLA
+						}
+					}
 				}
 				thrace_area = {
 					type = all
@@ -116,15 +101,17 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						AND = {
-							NOT = { tag = KNI }
-							NOT = { tag = CYP }
-							NOT = { tag = NAX }
-							NOT = { tag = ATH }
-							NOT = { tag = ACH }
-							NOT = { tag = LES }
-							NOT = { tag = HAI }
-							NOT = { tag = FLA }
+						NOT = {
+							OR = {
+								tag = KNI
+								tag = CYP
+								tag = NAX
+								tag = ATH
+								tag = ACH
+								tag = LES
+								tag = HAI
+								tag = FLA
+							}
 						}
 						was_never_end_game_tag_trigger = no
 					}
@@ -132,7 +119,7 @@ country_decisions = {
 				release = LTE
 				LTE = { change_primary_culture = ROOT }
 			}
-			if = {
+			else_if = {
 				limit = {
 					OR = {
 						tag = KNI
