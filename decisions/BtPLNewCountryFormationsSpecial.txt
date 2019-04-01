@@ -9,6 +9,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = CNN }
+			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_connacht_flag_btp }
 			OR = {
 				primary_culture = irish
@@ -73,6 +74,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = MNS }
+			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_munster_flag_btp }
 			OR = {
 				primary_culture = irish
@@ -137,6 +139,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = LEI }
+			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_leinster_flag_btp }
 			OR = {
 				primary_culture = irish
@@ -201,6 +204,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { tag = ULS }
+			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_ulster_flag_btp }
 			OR = {
 				primary_culture = irish

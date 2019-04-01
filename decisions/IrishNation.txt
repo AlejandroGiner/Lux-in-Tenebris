@@ -1,13 +1,17 @@
 country_decisions = {
 	irish_nation = {
 		major = yes
-		potential = { 
+		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ireland_flag }
-			NOT = { tag = IRE }
-			NOT = { tag = SCO }
-			NOT = { tag = ANI }
-			NOT = { tag = TNA }
+			NOT = {
+				OR = {
+					tag = IRE
+					tag = SCO
+					tag = ANI
+					tag = TNA
+				}
+			}
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -17,7 +21,7 @@ country_decisions = {
 			}
 		}
 		
-		provinces_to_highlight = { 
+		provinces_to_highlight = {
 			region = ireland_area
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -29,7 +33,7 @@ country_decisions = {
 			btc_can_form_trigger = yes
 			btc_was_not_colonial_nation_trigger = yes
 			
-			num_of_owned_provinces_with = { 
+			num_of_owned_provinces_with = {
 				value = 10
 				region = ireland_area
 				is_core = ROOT
@@ -40,9 +44,12 @@ country_decisions = {
 			btc_new_nation_effects = yes 
 			ireland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-					is_city = yes
+					NOT = {
+						OR = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -52,7 +59,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { capital_scope = { region = ireland_area } } 
+				NOT = { capital_scope = { region = ireland_area } }
 			}
 		}
 		ai_importance = 400 
