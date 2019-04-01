@@ -2,14 +2,10 @@
 #Wakulla, Liberty & Franklin counties.
 #San Marcos to Spain
 
-owner = A4L
-controller = A4L
-add_core = A4L
-is_city = yes
 culture = apalachee
 religion = totemism
 capital = "Ivitachuco"
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1
@@ -18,9 +14,15 @@ native_size = 5
 native_ferocity = 1
 native_hostileness = 6
 
-
-
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = A4L
+	controller = A4L
+	add_core = A4L
+	is_city = yes
+	trade_goods = fish
+}
 
 1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast
 1663.1.1 = { discovered_by = ENG } # The British claimed the region north of the Gulf of Mexico

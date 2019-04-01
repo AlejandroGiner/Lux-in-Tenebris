@@ -1,13 +1,9 @@
 #923 - Pensacola
 
-owner = P4C
-controller = P4C
-add_core = P4C
 culture = pensacola
 religion = totemism
 capital = "Pensacola"
-trade_goods = cotton
-is_city = yes
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1
@@ -18,6 +14,14 @@ native_ferocity = 1
 native_hostileness = 6
 
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = P4C
+	controller = P4C
+	add_core = P4C
+	is_city = yes
+	trade_goods = cotton
+}
 
 1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast
 1663.1.1 = { discovered_by = ENG } # The British claimed the region north of the Gulf of Mexico

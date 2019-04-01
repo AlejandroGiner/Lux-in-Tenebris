@@ -1,13 +1,9 @@
 # No previous file for Mayaca
 
-owner = M4Y
-controller = M4Y
-add_core = M4Y
-is_city = yes
 culture = mayaca
 religion = totemism
 capital = "Anacape"
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
@@ -17,9 +13,15 @@ native_size = 6
 native_ferocity = 5
 native_hostileness = 5
 
-
-
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = M4Y
+	controller = M4Y
+	add_core = M4Y
+	is_city = yes
+	trade_goods = fish
+}
 
 1513.4.2 = { discovered_by = CAS } # Juan Ponce de Leon
 1516.1.23 = { discovered_by = SPA }

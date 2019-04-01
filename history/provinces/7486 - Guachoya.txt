@@ -1,25 +1,28 @@
 #Guachoya - Chicot County
 #Guachoya is taensa? They warred with Anilco. Very vague similarity to Taensas Conchayon town. One could fill in the blanks this way geographically
 
-add_core = T4S
-owner = T4S
-controller = T4S
 culture = taensa
 religion = totemism
 capital = "Guachoya"
-trade_goods = maize
-is_city = yes
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
+
 native_size = 11
 native_ferocity = 7
 native_hostileness = 9
 
-
-
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = T4S
+	controller = T4S
+	add_core = T4S
+	is_city = yes
+	trade_goods = maize
+}
 
 1542.1.1 = { discovered_by = SPA } # Hernando de Soto/Moscoso
 1673.1.1 = { discovered_by = FRA } #Marquette & Joliet

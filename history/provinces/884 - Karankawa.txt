@@ -4,14 +4,10 @@ latent_trade_goods = {
 	coal
 }
 
-owner = K4K
-controller = K4K
-add_core = K4K
 culture = karankawa
 religion = totemism
 capital = "Karankawa"
-is_city = yes
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1
@@ -26,11 +22,11 @@ discovered_by = north_american
 1428.1.1 = { discovered_by = AZT }
 
 1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
-	owner = 
-	controller = 
-	add_core = 
+	owner = K4K
+	controller = K4K
+	add_core = K4K
 	is_city = yes
-	trade_goods = 
+	trade_goods = fish
 }
 
 1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast

@@ -1,13 +1,9 @@
 # No previous file for Potano
 
-owner = P4T
-controller = P4T
-add_core = P4T
-is_city = yes
 culture = potano
 religion = totemism
 capital = "Potano"
-trade_goods = fish
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
@@ -18,6 +14,14 @@ native_ferocity = 1
 native_hostileness = 2
 
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = P4T
+	controller = P4T
+	add_core = P4T
+	is_city = yes
+	trade_goods = fish
+}
 
 1513.4.2 = { discovered_by = CAS } # Juan Ponce de Leon
 1516.1.23 = { discovered_by = SPA }

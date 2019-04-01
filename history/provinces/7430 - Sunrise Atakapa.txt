@@ -1,15 +1,9 @@
 #Hiyekiti Atakapa/Lake Charles Calcasieu Parish
 
-
-owner = A4T
-controller = A4T
-add_core = A4T
 culture = atakapa
-#language isolate
 religion = totemism
 capital = "Otse"
-trade_goods = fish
-is_city = yes
+trade_goods = unknown
 hre = no
 base_tax = 2
 base_production = 1
@@ -18,9 +12,15 @@ native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 
-
-
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = A4T
+	controller = A4T
+	add_core = A4T
+	is_city = yes
+	trade_goods = fish
+}
 
 1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast
 1690.1.1 = { discovered_by = FRA } # de tonti, maybe

@@ -1,23 +1,27 @@
 # No previous file for Hitchiti
 
-owner = H4I
-controller = H4I
-add_core = H4I
 culture = hitchiti
 religion = totemism
 capital = "Hitchidudshi"
-trade_goods = maize
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+
 native_size = 5
 native_ferocity = 1
 native_hostileness = 2
-is_city = yes
-
 
 discovered_by = north_american
+
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = H4I
+	controller = H4I
+	add_core = H4I
+	is_city = yes
+	trade_goods = maize
+}
 
 1540.1.1 = { discovered_by = SPA } # Hernando De Soto
 

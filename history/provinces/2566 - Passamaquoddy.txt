@@ -1,13 +1,9 @@
 # No previous file for Passamaquoddy
 
-add_core = P5S
-owner = P5S
-controller = P5S
 culture = abenaki
 religion = totemism
 capital = "Sebayik"
-trade_goods = fish
-is_city = yes 
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1
@@ -16,9 +12,15 @@ native_size = 10
 native_ferocity = 1
 native_hostileness = 3
 
-
 discovered_by = north_american
 
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = P5S
+	controller = P5S
+	add_core = P5S
+	is_city = yes
+	trade_goods = fish
+}
 
 1500.1.1 = { discovered_by = ENG } 		# John Cabot
 

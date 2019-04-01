@@ -1,29 +1,30 @@
 #Mohegan - Windham
 
-is_city = yes
-owner = M5G
-controller = M5G
-add_core = M5G
 culture = pequot
 religion = totemism
-capital = "Wanungatuck"#don't know which was most important
-trade_goods = maize
+capital = "Wanungatuck" #Don't know which was most important
+trade_goods = unknown
 hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1 
+
 native_size = 5
 native_ferocity = 1
 native_hostileness = 2
 
+discovered_by = north_american
 
-
+1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
+	owner = M5G
+	controller = M5G
+	add_core = M5G
+	is_city = yes
+	trade_goods = maize
+}
 
 1614.1.1 = { discovered_by = NED } # Adriaen Block
 1633.1.1 = { discovered_by = ENG }
-
-discovered_by = north_american
-
 
 1686.1.1 = {
 	owner = ENG
