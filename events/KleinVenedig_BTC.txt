@@ -2,9 +2,9 @@ namespace = klein_venedig
 
 #Start Event
 country_event = {
-	id = "klein_venedig.1"
-	title = "klein_venedig.1.t"
-	desc = "klein_venedig.1.d"
+	id = klein_venedig.1
+	title = klein_venedig.1.t
+	desc = klein_venedig.1.d
 	picture = BANKRUPTCY_eventPicture
 	
 	fire_only_once = yes
@@ -16,7 +16,7 @@ country_event = {
 				NOT = { exists = SPA }
 			}
 			tag = SPA
-			}
+		}
 		is_year = 1520
 		OR = {
 			any_country = { has_country_flag = sce_eventchain_flag }
@@ -25,9 +25,8 @@ country_event = {
 		num_of_loans = 1
 		any_subject_country = {
 			is_colonial_nation = yes
-			capital_scope = { colonial_region = colombia }
+			capital_scope = { colonial_region = colonial_colombia }
 		}
-		
 	}
 	
 	mean_time_to_happen = {
@@ -35,7 +34,7 @@ country_event = {
 		
 		modifier = {
 			factor = 0.8
-			NOT = {stability = 0}
+			NOT = { stability = 0 }
 		}
 		
 		modifier = {
@@ -50,104 +49,97 @@ country_event = {
 	}
 	
 	option = {
-		name = "kv_buyer_request"
-		ai_chance = { factor = 90}
-		1868 = { owner = 
-					{ country_event = {
+		name = kv_buyer_request
+		ai_chance = { factor = 90 }
+		1868 = {
+			owner = {
+				country_event = {
 						id = klein_venedig.2
 						days = 30
 						random = 15
 						tooltip = kv_buyer_request_tooltip
-					}			
-				}
+				}			
 			}
+		}
 	}
 	
 	option = {
-		name = "kv_decline_buying"
-		ai_chance = { factor = 10}
+		name = kv_decline_buying
+		ai_chance = { factor = 10 }
 		add_stability = -2
 	}
 }
 
 #Augsburg Response
 country_event = {
-	id = "klein_venedig.2"
-	title = "klein.venedig.2.t"
-	desc = "klein_venedig.2.d"
+	id = klein_venedig.2
+	title = klein.venedig.2.t
+	desc = klein_venedig.2.d
 	picture = DIPLOMACY_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "kv_allow_purchase"
-		ai_chance = {factor = 60}
+		name = kv_allow_purchase
+		ai_chance = { factor = 60 }
 		FROM = {
-			{ country_event = {
+			country_event = {
 				id = klein_venedig.3
 					days = 30
 					random = 15
 					tooltip = kv_augsburg_response
-				}			
 			}
-
 		}
-		
 	}
 	
 	option = {
-		name = "kv_take_over_purchase"
-		ai_chance = {factor = 30}
+		name = kv_take_over_purchase
+		ai_chance = { factor = 30 }
 		
 		add_years_of_income = -1
 		FROM = {
-			{ country_event = {
+			country_event = {
 				id = klein_venedig.4
-					days = 30
-					random = 15
-					tooltip = kv_augsburg_response
-				}			
+				days = 30
+				random = 15
+				tooltip = kv_augsburg_response
 			}
-
 		}
 	}
 	
 	option = {
-		name = "kv_block_purchase"
-		ai_chance = { factor = 10}
+		name = kv_block_purchase
+		ai_chance = { factor = 10 }
 		
 		FROM = {
-			{ country_event = {
+			country_event = {
 				id = klein_venedig.5
-					days = 30
-					random = 15
-					tooltip = kv_augsburg_response
-				}			
-			}
-
+				days = 30
+				random = 15
+				tooltip = kv_augsburg_response
+			}		
 		}
 	}
 }
 
 #Spain Reactions
 country_event = {
-	id = "klein_venedig.3"
-	title = "klein.venedig.3.t"
-	desc = "klein_venedig.3.d"
+	id = klein_venedig.3
+	title = klein.venedig.3.t
+	desc = klein_venedig.3.d
 	picture = MERCHANTS_TALKING_eventPicture
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "kv_spain_family_reaction"
+		name = kv_spain_family_reaction
 		add_years_of_income = 1
 		random_owned_area = {
-            limit = {
-                has_port = yes 
-                }
+    	limit = { has_port = yes }
 			set_local_autonomy = 50
 		}
-		1868 = { owner = {
+		1868 = {
+			owner = {
 				add_country_modifier = {
 					name = btc_welser_klein_venedig_modifier
 					duration = -1
@@ -159,71 +151,68 @@ country_event = {
 }
 
 country_event = {
-	id = "klein_venedig.4"
-	title = "klein.venedig.4.t"
-	desc = "klein_venedig.4.d"
+	id = klein_venedig.4
+	title = klein.venedig.4.t
+	desc = klein_venedig.4.d
 	picture = DIPLOMACY_eventPicture
 	
 	is_triggered_only = yes
 	
-    immediate = {
-        hidden_effect = {
-            1868 = {
-                owner = {
-                    save_event_target_as = augsburg_fuggers
-                }
-            }
+  immediate = {
+  	hidden_effect = {
+    	1868 = {
+      	owner = {
+        	save_event_target_as = augsburg_fuggers
         }
+      }
     }
+  }
     
-    option = {
-        add_years_of_income = 1
-		every_subject_country = {
-            limit = {
-                is_colonial_nation = yes
-                capital_scope = {
-                    colonial_region = colonial_colombia
-                }
-            }
-            
-            random_owned_area = {
-                limit = {
-                    has_port = yes 
-                }
-                remove_core = THIS
-                add_core = event_target:augsburg_fuggers
-                cede_province = event_target:augsburg_fuggers
-            }    
+  option = {
+  	add_years_of_income = 1
+		random_subject_country = {
+			limit = {
+      	is_colonial_nation = yes
+        capital_scope = {
+        	colonial_region = colonial_colombia
         }
+      }  
+      random_owned_area = {
+        limit = {
+          has_port = yes 
+        }
+        remove_core = THIS
+        add_core = event_target:augsburg_fuggers
+        cede_province = event_target:augsburg_fuggers
+      }    
     }
-    
+  }
 }
 
 country_event = {
-	id = "klein_venedig.5"
-	title = "klein.venedig.5.t"
-	desc = "klein_venedig.5.d"
+	id = klein_venedig.5
+	title = klein.venedig.5.t
+	desc = klein_venedig.5.d
 	picture = BANKRUPTCY_eventPicture
 	
 	is_triggered_only = yes
 	
 	immediate = {
-        hidden_effect = {
-            1868 = {
-                owner = {
-                    save_event_target_as = augsburg_fuggers
-                }
-            }
+  	hidden_effect = {
+    	1868 = {
+      	owner = {
+        	save_event_target_as = augsburg_fuggers
         }
+      }
     }
+  }
 	
 	option = {
-		name = "kv_spain_negative_reaction"
+		name = kv_spain_negative_reaction
 		add_stability = -1
 		add_opinion = {
 			who = event_target:augsburg_fuggers
 			modifier = kv_denied_purchase
 		}
-		
 	}
-}			
+}
