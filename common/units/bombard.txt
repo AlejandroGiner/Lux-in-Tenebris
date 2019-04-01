@@ -1,5 +1,5 @@
 #Orban's bombard, used for Byzantium & Ottoman Orban event chain (viktororban.txt, namespace: pitirr_btc_events)
-
+unit_type = ottoman
 type = artillery
 
 maneuver = 1
@@ -11,5 +11,5 @@ offensive_shock = 0
 defensive_shock = 0
 
 trigger = {
-	has_country_flag = fard_and_shidded
+	mil = 7
 }
