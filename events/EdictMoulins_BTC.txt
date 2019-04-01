@@ -1,9 +1,9 @@
 namespace = edict_moulins
 
 country_event = {
-	id = "edict_moulins.1"
-	title = "edict_moulins.1.t"
-	desc = "edict_moulins.1.d"
+	id = edict_moulins.1
+	title = dict_moulins.1.t
+	desc = edict_moulins.1.d
 	picture = REFORM_eventPicture
 	
 	fire_only_once = yes
@@ -20,8 +20,8 @@ country_event = {
 	}
 	
 	option = {
-		name = "edict_moulins_yes"
-		ai_chance = { factor = 75}
+		name = edict_moulins.a
+		ai_chance = { factor = 75 }
 		
 		add_government_reform = french_monarchy
 		168 = {
@@ -75,7 +75,8 @@ country_event = {
 	}
 	
 	option = {
-		ai_chance = { factor = 25}
+		name = edict_moulins.b
+		ai_chance = { factor = 25 }
 	
 		france_region = {
 			every_subject_country = {
