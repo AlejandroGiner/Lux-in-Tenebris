@@ -135,6 +135,12 @@ country_event = {
   
   is_triggered_only = yes
   
+  immediate = {
+    hidden_effect = {
+      set_global_flag = potatoes_arrival
+    }
+  }
+  
   option = {
     name = btc_tradegoods.2.a
     ai_chance = { factor = 100 }
@@ -143,7 +149,6 @@ country_event = {
       macaronesia_area = { owned_by = ROOT }
       3304 = { owned_by = ROOT }
     }
-    set_global_flag = potatoes_arrival
     3304 = {
       add_permanent_province_modifier = {
         name = potato_port
@@ -174,7 +179,6 @@ country_event = {
         }
       }
     }
-    set_global_flag = potatoes_arrival
     random_owned_province = {
       limit = {
         has_port = yes
