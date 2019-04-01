@@ -15,9 +15,11 @@ country_event = {
     }
   }
   immediate = {
-    random_owned_province = {
-      limit = { religion = nestorian }
-      save_event_target_as = nestorian_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { religion = nestorian }
+        save_event_target_as = nestorian_province
+      }
     }
   }
   option = {
@@ -46,6 +48,7 @@ country_event = {
   }
   option = {
     highlight = yes
+    required_personality = architectural_visionary_personality
     trigger = {
       ruler_has_personality = architectural_visionary_personality
     }
@@ -78,10 +81,13 @@ country_event = {
     }
   }
   immediate = {
-    random_owned_province = {
-      limit = { has_terrain = mountain }
-      save_event_target_as = mountain_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { has_terrain = mountain }
+        save_event_target_as = mountain_province
+      }
     }
+    
   }
   option = {
     name = nestorian_events.2.a
@@ -92,9 +98,92 @@ country_event = {
   }
   option = {
     name = nestorian_events.2.b
-    define_general = {
-      manuever = 4
+    custom_tooltip = nestorian_events.2.b.tt
+    hidden_effect = {
+      random_list = {
+        1 = {
+          define_general = {
+            shock = 1
+            fire = 2
+            manuever = 4
+            siege = 0
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 2
+            fire = 1
+            manuever = 4
+            siege = 0
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 1
+            fire = 1
+            manuever = 4
+            siege = 0
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 1
+            fire = 1
+            manuever = 5
+            siege = 0
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 2
+            fire = 1
+            manuever = 4
+            siege = 1
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 1
+            fire = 2
+            manuever = 5
+            siege = 1
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 1
+            fire = 2
+            manuever = 4
+            siege = 1
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 2
+            fire = 2
+            manuever = 4
+            siege = 1
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 0
+            fire = 1
+            manuever = 4
+            siege = 0
+          }
+        }
+        1 = {
+          define_general = {
+            shock = 1
+            fire = 0
+            manuever = 4
+            siege = 0
+          }
+        }
+      }
     }
+    
   }
 }
 
@@ -146,8 +235,9 @@ country_event = {
     }
   }
   option = {
-    name = nestorian_events.3.c
+    name = nestorian_events.3.x
     highlight = yes
+    required_personality = zealot_personality
     trigger = {
       ruler_has_personality = zealot_personality
     }
@@ -168,8 +258,9 @@ country_event = {
     }
   }
   option = {
-    name = nestorian_events.3.x
+    name = nestorian_events.3.y
     highlight = yes
+    required_personality = expansionist_personality
     trigger = {
       ruler_has_personality = expansionist_personality
     }
@@ -190,8 +281,9 @@ country_event = {
     }
   }
   option = {
-    name = nestorian_events.3.y
+    name = nestorian_events.3.z
     highlight = yes
+    required_personality = conqueror_personality
     trigger = {
       ruler_has_personality = conqueror_personality
     }
@@ -256,10 +348,13 @@ country_event = {
     }
   }
   immediate = {
-    random_owned_province = {
-      limit = { religion = nestorian }
-      save_event_target_as = nestorian_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { religion = nestorian }
+        save_event_target_as = nestorian_province
+      }
     }
+    
   }
   option = {
     name = nestorian_events.5.a
@@ -284,6 +379,7 @@ country_event = {
   option = {
     name = nestorian_events.5.c
     highlight = yes
+    required_personality = benevolent_personality
     trigger = {
       ruler_has_personality = benevolent_personality
     }
@@ -324,24 +420,25 @@ country_event = {
     }
   }
   immediate = {
-    random_neighbor_country = {
-      limit = {
-        NOT = {
-          OR = {
-            religion_group = ROOT
-            alliance_with = ROOT
-            is_subject_of = ROOT
+    hidden_effect = {
+      random_neighbor_country = {
+        limit = {
+          NOT = {
+            OR = {
+              religion_group = ROOT
+              alliance_with = ROOT
+              is_subject_of = ROOT
+            }
+          }
+          home_trade_node = {
+            trade_share = {
+              country = ROOT
+              share = 5
+            }
           }
         }
-        home_trade_node = {
-          trade_share = {
-            country = ROOT
-            share = 5
-          }
-        }
+        capital_scope = { save_event_target_as = trade_province }
       }
-      save_event_target_as = trade_neighbor
-      home_trade_node = { save_event_target_as = trade_province }
     }
   }
   option = {
@@ -388,7 +485,7 @@ country_event = {
     }
   }
   option = {
-    name = nestorian_events.6.z
+    name = nestorian_events.6.c
     highlight = yes
     trigger = {
       ruler_has_personality = secretive_personality

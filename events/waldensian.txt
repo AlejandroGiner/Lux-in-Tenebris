@@ -17,9 +17,11 @@ country_event = {
   }
   
   immediate = {
-    random_owned_province = {
-      limit = { religion = waldensian }
-      save_event_target_as = waldensian_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { religion = waldensian }
+        save_event_target_as = waldensian_province
+      }
     }
   }
   
@@ -77,9 +79,11 @@ country_event = {
   }
   
   immediate = {
-    random_owned_province = {
-      limit = { has_terrain = mountain is_prosperous = yes }
-      save_event_target_as = waldensian_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { has_terrain = mountain is_prosperous = yes }
+        save_event_target_as = waldensian_province
+      }
     }
   }
   
@@ -116,9 +120,11 @@ country_event = {
   }
   
   immediate = {
-    random_owned_province = {
-      limit = { religion = waldensian }
-      save_event_target_as = waldensian_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { religion = waldensian }
+        save_event_target_as = waldensian_province
+      }
     }
   }
   
@@ -159,9 +165,12 @@ country_event = {
   
   trigger = {
     religion = waldensian
-    had_country_flag = {
-      flag = waldensian_nobles_outraged_flag
-      days = 7300
+    OR = {
+      NOT = { has_country_flag = waldensian_nobles_outraged_flag }
+      had_country_flag = {
+        flag = waldensian_nobles_outraged_flag
+        days = 7300
+      }
     }
   }
   
@@ -238,6 +247,7 @@ country_event = {
   option = {
     name = waldensian_events.4.c
     highlight = yes
+    required_personality = righteous_personality
     trigger = {
       ruler_has_personality = righteous_personality
     }
@@ -321,6 +331,7 @@ country_event = {
   option = {
     name = waldensian_events.5.y
     highlight = yes
+    required_personality = calm_personality
     trigger = {
       ruler_has_personality = calm_personality
     }
@@ -334,6 +345,7 @@ country_event = {
   option = {
     name = waldensian_events.5.z
     highlight = yes
+    required_personality = babbling_buffoon_personality
     trigger = {
       ruler_has_personality = babbling_buffoon_personality
     }
@@ -352,7 +364,8 @@ country_event = {
   
   trigger = {
     religion = waldensian
-    NOT = {
+    OR = {
+      NOT = { has_country_flag = waldensian_merchant_proposal }
       had_country_flag = {
         flag = waldensian_merchant_proposal
         days = 7300
@@ -406,8 +419,9 @@ country_event = {
   option = {
     name = waldensian_events.6.c
     highlight = yes
+    required_personality = entrepreneur_personality
     trigger = {
-      ruler_has_personality = entrepeneur_personality
+      ruler_has_personality = entrepreneur_personality
     }
     add_estate_loyalty = {
       estate = estate_burghers
@@ -534,9 +548,11 @@ country_event = {
   }
   
   immediate = {
-    random_owned_province = {
-      limit = { NOT = { development = 10 } }
-      save_event_target_as = waldensian_province
+    hidden_effect = {
+      random_owned_province = {
+        limit = { NOT = { development = 10 } }
+        save_event_target_as = waldensian_province
+      }
     }
   }
   
@@ -570,6 +586,7 @@ country_event = {
   option = {
     name = waldensian_events.10.c
     highlight = yes
+    required_personality = cruel_personality
     trigger = {
       ruler_has_personality = cruel_personality
     }
@@ -605,6 +622,7 @@ country_event = {
   option = {
     name = waldensian_events.11.b
     highlight = yes
+    required_personality = zealot_personality
     trigger = {
       ruler_has_personality = zealot_personality
     }
