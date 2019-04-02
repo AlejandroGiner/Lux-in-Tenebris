@@ -24,7 +24,7 @@ hades =
 
 zeus =
 {
-	shock_damage = 0.1
+	shock_damage = 0.05
 	core_creation = -0.1
 	
 	allow = { religion = hellenic_pagan_reformed }
@@ -45,8 +45,8 @@ zeus =
 
 athena =
 {
-	technology_cost = -0.10
-	global_trade_goods_size_modifier = 0.1
+	technology_cost = -0.05
+	global_trade_goods_size_modifier = 0.05
 	
 	allow = { religion = hellenic_pagan_reformed }
 	sprite = 15
@@ -66,8 +66,8 @@ athena =
 
 poseidon =
 {
-	naval_morale = 0.2
-	global_naval_engagement_modifier = 0.1
+	naval_morale = 0.15
+	cavalry_power = 0.1
 	
 	allow = { religion = hellenic_pagan_reformed }
 	sprite = 16
@@ -91,7 +91,7 @@ poseidon =
 
 ares =
 {
-	war_exhaustion = -0.05
+	war_exhaustion = -0.03
 	discipline = 0.05
 	
 	allow = { religion = hellenic_pagan_reformed }
@@ -114,7 +114,7 @@ ares =
 hermes =
 {
 	trade_efficiency = 0.10
-	global_trade_power = 0.10
+	trade_steering = 0.10
 	
 	allow = { religion = hellenic_pagan_reformed }
 	sprite = 18

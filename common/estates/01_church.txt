@@ -1171,4 +1171,51 @@ estate_church =
 			factor = 0			
 		}	
 	}
+	interaction = {
+		name = "CHANGE_PERSONAL_DEITY"
+		icon = 27
+		
+		years_between_use = 20
+		
+		potential = {
+			NOT = { has_disaster = estate_nobility_disaster }
+			NOT = { has_disaster = estate_burghers_disaster }
+			has_dlc = "Wealth of Nations"
+			religion = hellenic_pagan_reformed
+		}
+		
+		trigger = {
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 40
+			}
+			estate_influence = {
+				estate = estate_church
+				influence = 40
+			}
+			OR = {
+				has_personal_deity = hades
+				has_personal_deity = zeus
+				has_personal_deity = athena
+				has_personal_deity = poseidon
+				has_personal_deity = ares
+				has_personal_deity = hermes
+			}
+		}
+		
+		effect = {
+			set_country_flag = hellenic_deity_interaction
+			country_event = { id = hellenic_events.1 }
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_SWITCHED_DEITY
+				influence = 5
+				duration = 7300
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }

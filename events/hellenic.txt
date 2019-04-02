@@ -6,6 +6,82 @@
 
 namespace = hellenic_events
 
+country_event = {
+	id = hellenic_events.1
+	title = "hellenic_events.1.t"
+	desc = "hellenic_events.1.d"
+	picture = PRAYING_eventPicture
+
+	trigger = {
+		religion = hellenic_pagan_reformed
+		has_dlc = "Wealth of Nations"
+		has_regency = no
+		OR = {
+			has_country_flag = hellenic_deity_interaction
+			AND = {
+				NOT = { has_personal_deity = hades }
+				NOT = { has_personal_deity = zeus }
+				NOT = { has_personal_deity = athena }
+				NOT = { has_personal_deity = poseidon }
+				NOT = { has_personal_deity = ares }
+				NOT = { has_personal_deity = hermes }
+			}
+		}
+	}
+
+	after = {
+		clr_country_flag = hellenic_deity_interaction
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	# Hades
+	option = {
+		name = "hellenic_events.1.a"
+		change_personal_deity = hades
+	}
+
+	# Ares
+	option = {
+		name = "hellenic_events.1.b"
+		change_personal_deity = ares
+	}
+
+	# Hermes
+	option = {
+		name = "hellenic_events.1.c"
+		change_personal_deity = hermes
+	}
+
+	# Poseidon
+	option = {
+		name = "hellenic_events.1.e"
+		change_personal_deity = poseidon
+	}
+
+	# Zeus
+	option = {
+		name = "hellenic_events.1.f"
+		change_personal_deity = zeus
+	}
+
+	# Athena
+	option = {
+		name = "hellenic_events.1.g"
+		change_personal_deity = athena
+	}
+
+	# Not ready
+	option = {
+		trigger = {
+			NOT = { has_country_flag = hellenic_deity_interaction }
+		}
+		name = "hellenic_events.1.h"
+	}
+}
+
 # Hetairideia
 country_event = {
 	id = hellenic_events.101
