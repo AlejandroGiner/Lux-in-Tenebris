@@ -24,46 +24,77 @@ country_event = {
 		ai_chance = { factor = 75 }
 		
 		add_government_reform = french_monarchy
-		168 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
+		
+		if = {
+			limit = { 168 = { owned_by = ROOT } }
+			168 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
 			}
 		}
-		199 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
+		if = {
+			limit = { 199 = { owned_by = ROOT } }
+			199 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
 			}
 		}
-		184 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2	
+		if = {
+			limit = { 184 = { owned_by = ROOT } }
+			184 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 2
+				}
 			}
 		}
-		1879 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
+		if = {
+			limit = { 1879 = { owned_by = ROOT } }
+			1879 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
 			}
 		}
-		3084 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
+		if = {
+			limit = { 3084 = { owned_by = ROOT } }
+			3084 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
 			}
 		}
-		175 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
+		if = {
+			limit = { 175 = { owned_by = ROOT } }
+			175 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
 			}
 		}
-		190 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
+		if = {
+			limit = { 190 = { owned_by = ROOT } }
+			190 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 2
+				}
+			}
+		}
+		if = {
+			limit = { 5171 = { owned_by = ROOT } }
+			5171 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
 			}
 		}
 		5171 = {
@@ -77,74 +108,64 @@ country_event = {
 	option = {
 		name = edict_moulins.b
 		ai_chance = { factor = 25 }
-	
-		france_region = {
-			every_subject_country = {
-				reduced_liberty_desire = 20
+
+		every_subject_country = {
+			limit = { capital_scope = { region = france_region } }
+			add_country_modifier = {
+				name = btc_apanages_ld
+				duration = 36500
 			}
 		}
 		poitou_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		brittany_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		lower_brittany_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		normandy_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		west_normandy_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		massif_central_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		west_massif_central_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		loire_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		la_maine_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		toulouse_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		guyenne_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		pyrenees_area = {
-			every_owned_province = {
-				local_autonomy = 30
-			}
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
 		}
 		add_country_modifier = {
-			name =btc_keep_apanage_system
+			name = btc_keep_apanage_system
 			duration = 10
 			desc = btc_keep_apanage_system_tooltip
 		}
