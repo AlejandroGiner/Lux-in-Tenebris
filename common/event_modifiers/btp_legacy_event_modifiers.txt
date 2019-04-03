@@ -121,12 +121,13 @@ bt_abolished_tanistry = {
 }
 
 btpl_oasis = {
-	picture = "btc_development_cost"
+	picture = "btc_oasis"
 	local_development_cost = -0.3
 	province_trade_power_modifier = 0.1
 }	#Note this is vanilla balanced, and adjusted by a copy of this file in my terrain addon.
 
 strait_of_hormuz_toll = {
+	picture = "btc_sound_toll"
 	province_trade_power_value = 10
 }
 
@@ -167,7 +168,7 @@ btpl_investing_in_antwerp = {
 }
 
 btpl_nile_river_in_arid_desert_province = {
-	picture = "btc_development_cost"
+	picture = "upper_nile"
 	supply_limit = 2.0
 	supply_limit_modifier = 0.25
 	local_development_cost = -0.4
