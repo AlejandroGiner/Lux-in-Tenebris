@@ -7,7 +7,6 @@ NDefines.NGame.SIZE_LIMIT_FOR_ISLANDS = 100000			-- from 25000      Changing thi
 NDefines.NGraphics.BORDER_WIDTH = 1			-- from 1p5
 
 NDefines.NFrontend.CAMERA_MIN_DIST_FOR_ROTATE = 400.0			-- from 800p0
-NDefines.NFrontend.CAMERA_MIN_HEIGHT = 40.0			-- from 50p0
 NDefines.NFrontend.CAMERA_MAX_HEIGHT = 3750.0			-- from 3000p0
 
 NDefines.NFrontend.CAMERA_LOOKAT_X = 2787.0
