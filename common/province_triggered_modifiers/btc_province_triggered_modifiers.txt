@@ -1,3 +1,16 @@
+frankfurt_imperial_seat = {
+	potential = {
+		owner = { is_part_of_hre = yes }
+	}
+
+	trigger = {
+		owner = { is_part_of_hre = yes }
+	}
+	
+	prestige = 0.5
+	imperial_authority = 0.05
+}
+
 mount_athos_modifier_muslim = {
 	potential = {
 		owner = {
