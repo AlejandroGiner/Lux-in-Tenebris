@@ -1,0 +1,22 @@
+#7598 - Pomeralia
+
+owner = TEU
+controller = TEU
+add_core = TEU
+capital = "Lauenburg in Pommern"
+culture = polish
+religion = catholic
+trade_goods = grain
+hre = no
+base_tax = 2
+base_production = 1
+base_manpower = 1
+is_city = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = persian_btc
+discovered_by = ottoman
+discovered_by = eastern
+
+1454.2.10 = { add_core = POL revolt = { type = revolutionary_rebels size = 0 } controller = REB } # Thirteen Years War
