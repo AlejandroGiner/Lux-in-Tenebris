@@ -41,14 +41,64 @@ country_decisions = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT}
-					NOT = { area = naples_area }
-					NOT = { area = calabria_area }
-					NOT = { area = apulia_area }
-					NOT = { area = sicily_area }
 				}
 				add_permanent_claim = ITA
 			}
-
+			if = {
+				limit = {
+					3049 = {
+					NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+			3049 = { add_permanent_claim = ROOT }
+	}
+			if = {
+				limit = {
+					130 = {
+					NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+			130 = { add_permanent_claim = ROOT }
+	}
+			if = {
+				limit = {
+					3191 = {
+					NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+			3191 = { add_permanent_claim = ROOT }
+	}
+			if = {
+				limit = {
+					3048 = {
+					NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+			3048 = { add_permanent_claim = ROOT }
+	}
+			if = {
+				limit = {
+					1769 = {
+					NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+		}
+			1769 = { add_permanent_claim = ROOT }
+	}
 			set_country_flag = formed_italy_flag
 		}
 		ai_will_do = {
