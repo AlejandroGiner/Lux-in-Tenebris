@@ -12,232 +12,167 @@ create_estate_advisor_effect = {
 			save_event_target_as = $EVENTTARGET$
 		}
 	}
-	if = {
-		limit = {
-			monthly_income = 25
-			has_saved_event_target = $EVENTTARGET$
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 80
+	trigger_switch = {
+		on_trigger = monthly_income
+		25 = {
+			if = {
+				limit = { has_saved_event_target = $EVENTTARGET$ }
+				if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 80
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 3
+						culture = event_target:$EVENTTARGET$
+						religion = event_target:$EVENTTARGET$
+						location = event_target:$EVENTTARGET$
+						cost_multiplier = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 60
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 3
+						culture = event_target:$EVENTTARGET$
+						religion = event_target:$EVENTTARGET$
+						location = event_target:$EVENTTARGET$
+						cost_multiplier = 0.75
+					}
+				}
+				else = {
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 3
+						culture = event_target:$EVENTTARGET$
+						religion = event_target:$EVENTTARGET$
+						location = event_target:$EVENTTARGET$
+					}
+				}
 			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 3
-			culture = event_target:$EVENTTARGET$
-			religion = event_target:$EVENTTARGET$
-			location = event_target:$EVENTTARGET$
-			cost_multiplier = 0.5
-		}
-	}
-	else_if = {
-		limit = {
-			monthly_income = 25
-			NOT = { has_saved_event_target = $EVENTTARGET$ }
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 80
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 3
-			cost_multiplier = 0.5
-		}
-	}
-	else_if = {
-		limit = {
-			monthly_income = 25
-			has_saved_event_target = $EVENTTARGET$
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 60
-			}
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 80
+			else = {
+				if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 80
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 3
+						cost_multiplier = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 60
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 3
+						cost_multiplier = 0.75
+					}
+				}
+				else = {
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 3
+					}
 				}
 			}
 		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 3
-			culture = event_target:$EVENTTARGET$
-			religion = event_target:$EVENTTARGET$
-			location = event_target:$EVENTTARGET$
-			cost_multiplier = 0.75
-		}
-	}
-	else_if = {
-		limit = {
-			monthly_income = 25
-			NOT = { has_saved_event_target = $EVENTTARGET$ }
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 60
-			}
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 80
+		0 = {
+			if = {
+				limit = { has_saved_event_target = $EVENTTARGET$ }
+				if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 80
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 2
+						culture = event_target:$EVENTTARGET$
+						religion = event_target:$EVENTTARGET$
+						location = event_target:$EVENTTARGET$
+						cost_multiplier = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 60
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 2
+						culture = event_target:$EVENTTARGET$
+						religion = event_target:$EVENTTARGET$
+						location = event_target:$EVENTTARGET$
+						cost_multiplier = 0.75
+					}
+				}
+				else = {
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 2
+						culture = event_target:$EVENTTARGET$
+						religion = event_target:$EVENTTARGET$
+						location = event_target:$EVENTTARGET$
+					}
 				}
 			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 3
-			cost_multiplier = 0.75
-		}
-	}
-	else_if = {
-		limit = {
-			monthly_income = 25
-			has_saved_event_target = $EVENTTARGET$
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 60
+			else = {
+				if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 80
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 2
+						cost_multiplier = 0.5
+					}
+				}
+				else_if = {
+					limit = {
+						estate_influence = {
+							estate = $ESTATE$
+							influence = 60
+						}
+					}
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 2
+						cost_multiplier = 0.75
+					}
+				}
+				else = {
+					define_advisor = {
+						type = $ADVISORTYPE$
+						skill = 2
+					}
 				}
 			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 3
-			culture = event_target:$EVENTTARGET$
-			religion = event_target:$EVENTTARGET$
-			location = event_target:$EVENTTARGET$
-		}
-	}
-	else_if = {
-		limit = {
-			monthly_income = 25
-			NOT = { has_saved_event_target = $EVENTTARGET$ }
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 60
-				}
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 3
-		}
-	}
-	else_if = {
-		limit = {
-			NOT = { monthly_income = 25 }
-			has_saved_event_target = $EVENTTARGET$
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 80
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 2
-			cost_multiplier = 0.5
-			culture = event_target:$EVENTTARGET$
-			religion = event_target:$EVENTTARGET$
-			location = event_target:$EVENTTARGET$
-			
-		}
-	}
-	else_if = {
-		limit = {
-			NOT = { monthly_income = 25 }
-			NOT = { has_saved_event_target = $EVENTTARGET$ }
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 80
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 2
-			cost_multiplier = 0.5
-		}
-	}
-	else_if = {
-		limit = {
-			NOT = { monthly_income = 25 }
-			has_saved_event_target = $EVENTTARGET$
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 60
-			}
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 80
-				}
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 2
-			cost_multiplier = 0.75
-			culture = event_target:$EVENTTARGET$
-			religion = event_target:$EVENTTARGET$
-			location = event_target:$EVENTTARGET$
-			
-		}
-	}
-	else_if = {
-		limit = {
-			NOT = { monthly_income = 25 }
-			NOT = { has_saved_event_target = $EVENTTARGET$ }
-			estate_influence = {
-				estate = $ESTATE$
-				influence = 60
-			}
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 80
-				}
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 2
-			cost_multiplier = 0.75
-		}
-	}
-	else_if = {
-		limit = {
-			NOT = { monthly_income = 25 }
-			has_saved_event_target = $EVENTTARGET$
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 60
-				}
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 2
-			culture = event_target:$EVENTTARGET$
-			religion = event_target:$EVENTTARGET$
-			location = event_target:$EVENTTARGET$
-		}
-	}
-	else_if = {
-		limit = {
-			NOT = { monthly_income = 25 }
-			NOT = { has_saved_event_target = $EVENTTARGET$ }
-			NOT = {
-				estate_influence = {
-					estate = $ESTATE$
-					influence = 60
-				}
-			}
-		}
-		define_advisor = {
-			type = $ADVISORTYPE$
-			skill = 2
 		}
 	}
 }
@@ -250,8 +185,4 @@ add_or_spawn_center_of_trade = {
 	else = {
 		center_of_trade = $LEVEL$
 	}
-}
-
-swap_ideas = { #Should really be this easy, i.e "swap_ideas = yes"
-	country_event = { id = ideagroups.1 } #Swap Ideas
 }
