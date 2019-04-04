@@ -71,8 +71,8 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						government = irish_clann
-						government = norman_lordship
+						has_reform = irish_clann
+						has_reform = norman_lordship
 					}
 				}
 				change_government = feudal_monarchy

@@ -665,7 +665,7 @@ country_decisions = {
 	}
 
 ############################################################################################
-################################# BtP Anglo-Irish tag desicions ##################################
+################################# BtP Anglo-Irish tag decisions ##################################
 ############################################################################################
 	form_duchy_connacht = {
 		major = yes
@@ -673,7 +673,7 @@ country_decisions = {
 			NOT = { tag = CNN }
 			NOT = { has_country_flag = formed_connacht_flag_btp }
 			primary_culture = anglo_irish
-			government = norman_lordship
+			has_reform = norman_lordship
 			any_owned_province = { area = connacht_area }
 		}
 		provinces_to_highlight = {
@@ -725,7 +725,7 @@ country_decisions = {
 			NOT = { tag = MNS }
 			NOT = { has_country_flag = formed_munster_flag_btp }
 			primary_culture = anglo_irish
-			government = norman_lordship
+			has_reform = norman_lordship
 			any_owned_province = { area = munster_area }
 		}
 		provinces_to_highlight = {
@@ -780,7 +780,7 @@ country_decisions = {
 			NOT = { tag = LEI }
 			NOT = { has_country_flag = formed_leinster_flag_btp }
 			primary_culture = anglo_irish
-			government = norman_lordship
+			has_reform = norman_lordship
 			any_owned_province = { area = leinster_area }
 		}
 		provinces_to_highlight = {
@@ -835,7 +835,7 @@ country_decisions = {
 			NOT = { tag = ULS }
 			NOT = { has_country_flag = formed_ulster_flag_btp }
 			primary_culture = anglo_irish
-			government = norman_lordship
+			has_reform = norman_lordship
 			any_owned_province = { area = ulster_area }
 		}
 		provinces_to_highlight = {
