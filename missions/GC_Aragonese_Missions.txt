@@ -535,15 +535,13 @@ gc_aragon_3 = {
 		effect = {
 			east_adriatic_coast_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			carniola_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
+					NOT = { is_permanent_claim = ROOT is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -551,7 +549,7 @@ gc_aragon_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -562,7 +560,7 @@ gc_aragon_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -675,7 +673,7 @@ gc_aragon_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -686,7 +684,7 @@ gc_aragon_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -697,7 +695,7 @@ gc_aragon_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -708,7 +706,7 @@ gc_aragon_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}

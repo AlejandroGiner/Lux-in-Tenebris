@@ -455,6 +455,7 @@ byz_economic_2_plus_military_bonus = {
 	has_country_shield = yes
 	
 	byz_restore_imperial_army = { #The Imperial Army
+		required_missions = {}
 		icon = mission_pf_soldier
 		position = 1 #4-1
 		#Copied from Recover Greece vanilla.
@@ -1194,7 +1195,7 @@ byz_resurges = {
 		provinces_to_highlight = {
 			if = {
 				limit = {
-					NOT = { accepted_culture = turkish }
+					NOT = { ROOT = { accepted_culture = turkish } }
 				}
 				region = anatolia_region
 			}

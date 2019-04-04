@@ -74,10 +74,10 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						government = tribal_kingdom
-						government = tribal_despotism
-						government = tribal_federation
-						government = tribal_democracy
+						has_reform = tribal_kingdom
+						has_reform = tribal_despotism
+						has_reform = tribal_federation
+						has_reform = tribal_democracy
 					}
 				}
 				change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
