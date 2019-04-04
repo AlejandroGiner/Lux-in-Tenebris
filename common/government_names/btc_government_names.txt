@@ -152,3 +152,27 @@ byz_subject_republic = { #Titles For vassal republics. Historically was a thing 
 		is_colonial_nation = no #To avoid colonial nations.
 	}
 }
+
+archbishop_government = {
+	rank = {
+		1 = ARCHBISHOPRIC
+		2 = KING_ARCHBISHOPRIC
+		3 = EMPEROR_ARCHBISHOPRIC
+	}
+
+	ruler_male = {
+		1 = ARCHBISHOP
+		2 = KING_ARCHBISHOP
+		3 = EMPEROR_ARCHBISHOP
+	}
+
+	ruler_female = { #not really of use because no archbishops were female
+		1 = ARCHBISHOP_fem
+		2 = ARCHBISHOP_fem
+		3 = ARCHBISHOP_fem
+	}
+
+	trigger = {
+		has_reform = archbishop_reform
+	}
+}
