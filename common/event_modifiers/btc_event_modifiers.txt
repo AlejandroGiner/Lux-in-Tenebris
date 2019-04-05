@@ -85,6 +85,39 @@ covert_traders = {
 	trade_efficiency = 0.05
 }
 
+released_hostile_captives = {
+	global_unrest = 2
+}
+
+european_activity = {
+	local_institution_spread = 0.5
+	local_production_efficiency = 0.15
+	province_trade_power_modifier = 0.1
+}
+
+europeans_at_court = {
+	technology_cost = -0.05
+	idea_cost = -0.1
+	diplomatic_reputation = 1
+}
+
+
+trusted_land_aristocracy = {
+	global_autonomy = -0.25
+}
+
+encroaching_land_aristocracy = {
+	global_autonomy = 0.5
+}
+
+uncooperative_nobles_1 = {
+	global_tax_modifier = -0.1
+}
+
+uncooperative_nobles_2 = {
+	manpower_recovery_speed = -0.1
+}
+
 prohibited_iconography = {
 	global_unrest = -0.5
 	tolerance_own = 0.5

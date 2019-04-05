@@ -23,6 +23,25 @@ imposed_trade_restrictions = {
   opinion = -50
   yearly_decay = 5
   years = 10
+}
+
+executed_captives = {
+  opinion = -50
+  yearly_decay = 2
+  years = 20
+}
+
+released_captives = {
+  opinion = 50
+  yearly_decay = 2
+  years = 20
+}
+
+gruesome_execution = {
+  opinion = -100
+  yearly_decay = 2
+  years = 20
+}
 
 fra_dynastic_rivalry = {
 	opinion = -100
