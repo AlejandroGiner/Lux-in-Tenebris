@@ -52,8 +52,8 @@ country_event = {
     trigger = {
       ruler_has_personality = architectural_visionary_personality
     }
-    name = nestorian_events.1.c
-    add_years_of_income = -0.3
+    name = nestorian_events.1.x
+    add_years_of_income = -0.35
     add_adm_power = -50
     event_target:nestorian_province = {
       area = {
@@ -405,11 +405,9 @@ country_event = {
   trigger = {
     any_neighbor_country = {
       NOT = {
-        OR = {
-          religion_group = ROOT
-          alliance_with = ROOT
-          is_subject_of = ROOT
-        }
+        religion_group = ROOT
+        alliance_with = ROOT
+        is_subject_of = ROOT
       }
       home_trade_node = {
         trade_share = {
@@ -424,11 +422,9 @@ country_event = {
       random_neighbor_country = {
         limit = {
           NOT = {
-            OR = {
-              religion_group = ROOT
-              alliance_with = ROOT
-              is_subject_of = ROOT
-            }
+            religion_group = ROOT
+            alliance_with = ROOT
+            is_subject_of = ROOT
           }
           home_trade_node = {
             trade_share = {
@@ -461,6 +457,7 @@ country_event = {
       estate = estate_burghers
       influence = 10
       desc = protected_foreign_trade
+      duration = 7300
     }
   }
   option = {
@@ -470,7 +467,7 @@ country_event = {
       modifier = imposed_trade_restrictions
     }
     add_casus_belli = {
-      who = event_target:trade_neighbor
+      target = event_target:trade_neighbor
       type = cb_trade_war_triggered
       months = 36
     }
@@ -482,17 +479,310 @@ country_event = {
       estate = estate_burghers
       influence = -10
       desc = foreign_trade_restricted
+      duration = 7300
     }
   }
   option = {
     name = nestorian_events.6.c
     highlight = yes
+    required_personality = secretive_personality
     trigger = {
       ruler_has_personality = secretive_personality
     }
     add_country_modifier = {
       name = covert_traders
       duration = 3650
+    }
+  }
+}
+
+#Redress
+country_event = {
+  id = nestorian_events.7
+  title = nestorian_events.7.t
+  desc = nestorian_events.7.d
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = nestorian
+    any_neighbor_country = {
+      NOT = {
+        religion_group = christian
+        alliance_with = ROOT
+        is_subject_of = ROOT
+        overlord_of = ROOT
+      }
+    }
+  }
+  
+  immediate = {
+    hidden_effect = {
+      random_neighbor_country = {
+        limit = {
+          NOT = {
+            religion_group = christian
+            alliance_with = ROOT
+            is_subject_of = ROOT
+            overlord_of = ROOT
+          }
+        }
+        save_event_target_as = neighbor_heathen
+      }
+    }
+  }
+  
+  option = {
+    name = nestorian_events.7.a
+    add_prestige = 5
+    add_legitimacy = 5
+    reverse_add_opinion = {
+      who = event_target:neighbor_heathen
+      modifier = executed_captives
+    }
+  }
+  option = {
+    name = nestorian_events.7.b
+    random_list = {
+      33 = {
+        add_years_of_income = 0.1
+      }
+      33 = {
+        add_years_of_income = 0.4
+      }
+      33 = {
+        add_years_of_income = 0.8
+      }
+    }
+  }
+  option = {
+    name = nestorian_events.7.c
+    reverse_add_opinion = {
+      who = event_target:neighbor_heathen
+      modifier = released_captives
+    }
+    random = {
+      chance = 50
+      random_owned_province = {
+        limit = { religion = nestorian }
+        spawn_rebels = {
+          type = nestorian_rebels
+          size = 2
+        }
+      }
+    }
+    add_country_modifier = {
+      name = released_hostile_captives
+      duration = 3650
+    }
+  }
+  option = {
+    name = nestorian_events.7.x
+    highlight = yes
+    required_personality = cruel_personality
+    trigger = {
+      ruler_has_personality = cruel_personality
+    }
+    reverse_add_opinion = {
+      who = event_target:neighbor_heathen
+      modifier = gruesome_execution
+    }
+    reverse_add_casus_belli = {
+      target = event_target:neighbor_heathen
+      type = cb_insult
+      months = 12
+    }
+    add_prestige = 10
+    add_legitimacy = 10
+  }
+  option = {
+    name = nestorian_events.7.y
+    highlight = yes
+    required_personality = fierce_negotiator_personality
+    trigger = {
+      ruler_has_personality = fierce_negotiator_personality
+    }
+    add_years_of_income = 1.2
+  }
+}
+
+#Preachers from the West
+country_event = {
+  id = nestorian_events.8
+  title = nestorian_events.8.t
+  desc = nestorian_events.8.d
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = nestorian
+    NOT = { current_age = age_of_discovery }
+    any_owned_province = {
+      religion = nestorian
+    }
+  }
+  
+  immediate = {
+    hidden_effect = {
+      random_owned_province = {
+        limit = { religion = nestorian }
+        save_event_target_as = nestorian_province
+      }
+    }
+  }
+  
+  option = {
+    name = nestorian_events.8.a
+    event_target:nestorian_province = {
+      add_country_modifier = {
+        name = european_activity
+        duration = 3650
+      }
+      random_list = {
+        33 = { add_base_tax = 1 }
+        33 = { add_base_production = 1 }
+        33 = { add_base_manpower = 1 }
+      }
+      random_list = {
+        75 = {  }#does this work
+        23 = {
+          change_religion = catholic
+          add_province_modifier = {
+            name = religious_zeal_at_conv
+            duration = 9000
+          }
+        }
+        2 = {
+          change_religion = protestant
+          add_province_modifier = {
+            name = religious_zeal_at_conv
+            duration = 9000
+          }
+        }
+      }
+    }
+  }
+  option = {
+    name = nestorian_events.8.b
+    reverse_add_opinion = {
+      who = PAP
+      modifier = turned_back_dignitaries
+    }
+    add_prestige = -5
+    add_country_modifier = {
+      name = narrowminded_modifier
+      duration = 3650
+    }
+  }
+  option = {
+    name = nestorian_events.8.x
+    highlight = yes
+    required_personality = well_advised_personality
+    trigger = {
+      ruler_has_personality = well_advised_personality
+    }
+    add_country_modifier = {
+      name = europeans_at_court
+      duration = 3650
+    }
+  }
+  option = {
+    name = nestorian_events.8.y
+    highlight = yes
+    required_personality = babbling_buffoon_personality
+    trigger = {
+      ruler_has_personality = babbling_buffoon_personality
+    }
+    every_known_country = {
+      limit = {
+        capital_scope = { continent = europe }
+        religion_group = christian
+        OR = {
+          luck = yes
+          tag = PAP
+          tag = IRE
+          tag = DAN
+          tag = POR
+          tag = BOH
+        }
+      }
+      add_opinion = {
+        who = ROOT
+        modifier = insulted
+      }
+    }
+  }
+}
+
+#Times of Change
+country_event = {
+  id = nestorian_events.9
+  title = nestorian_events.9.t
+  desc = nestorian_events.9.d
+
+  is_triggered_only = yes
+
+  trigger = {
+    religion = nestorian
+    num_of_owned_provinces_with = {
+      value = 10
+    }
+  }
+
+  option = {
+    name = nestorian_events.9.a
+    add_estate_loyalty = {
+      estate = estate_nobles
+      loyalty = 10
+    }
+    add_estate_influence_modifier = {
+      estate = estate_nobles
+      influence = 15
+      desc = encroaching_of_land_aristocracy
+    }
+  }
+  option = {
+    name = nestorian_events.9.b
+    add_estate_loyalty = {
+      estate = estate_nobles
+      loyalty = -10
+    }
+    add_estate_influence_modifier = {
+      estate = estate_nobles
+      influence = -15
+      desc = interfered_in_land_rights
+      duration = 7300
+    }
+    random_list = {
+      33 = {}
+      33 = {
+        add_country_modifier = {
+          name = uncooperative_nobles_1
+          duration = 5475
+        }
+      }
+      33 = {
+        add_country_modifier = {
+          name = uncooperative_nobles_2
+          duration = 5475
+        }
+      }
+    }
+  }
+  option = {
+    name = nestorian_events.9.x
+    highlight = yes
+    required_personality = lawgiver_personality
+    trigger = {
+      ruler_has_personality = lawgiver_personality
+    }
+    add_estate_loyalty = {
+      estate = estate_nobles
+      loyalty = -5
+    }
+    add_country_modifier = {
+      name = trusted_land_aristocracy
+      duration = 5475
     }
   }
 }
