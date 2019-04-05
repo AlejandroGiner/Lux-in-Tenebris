@@ -173,6 +173,9 @@ archbishop_government = {
 	}
 
 	trigger = {
-		has_reform = archbishop_reform
+		OR = {
+			has_reform = archbishop_reform
+			has_reform = archbishop_legacy
+		}
 	}
 }

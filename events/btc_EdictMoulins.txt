@@ -2,7 +2,7 @@ namespace = edict_moulins
 
 country_event = {
 	id = edict_moulins.1
-	title = dict_moulins.1.t
+	title = edict_moulins.1.t
 	desc = edict_moulins.1.d
 	picture = REFORM_eventPicture
 	
@@ -20,22 +20,25 @@ country_event = {
 	}
 	
 	option = {
-		name = edict_moulins.a
-		ai_chance = { factor = 75 }
+		name = edict_moulins.1.a
+		ai_chance = { factor = 90 }
 		
 		add_government_reform = french_monarchy
 		
-		if = {
-			limit = { 168 = { owned_by = ROOT } }
-			168 = {
-				spawn_rebels = {
-					type = noble_rebels
-					size = 1
-				}
+		every_subject_country = {
+			limit = {
+				capital_scope = { region = france_region }
 			}
+			ROOT = { inherit = PREV }
 		}
+		
+		add_country_modifier = {
+			name = btc_no_apanage_system
+			duration = 3650
+		}
+		
 		if = {
-			limit = { 199 = { owned_by = ROOT } }
+			limit = { owns_or_non_sovereign_subject_of = 199 }
 			199 = {
 				spawn_rebels = {
 					type = noble_rebels
@@ -44,16 +47,16 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { 184 = { owned_by = ROOT } }
+			limit = { owns_or_non_sovereign_subject_of = 184 }
 			184 = {
 				spawn_rebels = {
 					type = noble_rebels
-					size = 2
+					size = 1
 				}
 			}
 		}
 		if = {
-			limit = { 1879 = { owned_by = ROOT } }
+			limit = { owns_or_non_sovereign_subject_of = 1879 }
 			1879 = {
 				spawn_rebels = {
 					type = noble_rebels
@@ -62,16 +65,7 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { 3084 = { owned_by = ROOT } }
-			3084 = {
-				spawn_rebels = {
-					type = noble_rebels
-					size = 1
-				}
-			}
-		}
-		if = {
-			limit = { 175 = { owned_by = ROOT } }
+			limit = { owns_or_non_sovereign_subject_of = 175 }
 			175 = {
 				spawn_rebels = {
 					type = noble_rebels
@@ -80,34 +74,19 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { 190 = { owned_by = ROOT } }
+			limit = { owns_or_non_sovereign_subject_of = 190 }
 			190 = {
-				spawn_rebels = {
-					type = noble_rebels
-					size = 2
-				}
-			}
-		}
-		if = {
-			limit = { 5171 = { owned_by = ROOT } }
-			5171 = {
 				spawn_rebels = {
 					type = noble_rebels
 					size = 1
 				}
 			}
 		}
-		5171 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 1
-			}
-		}
 	}
 	
 	option = {
-		name = edict_moulins.b
-		ai_chance = { factor = 25 }
+		name = edict_moulins.1.b
+		ai_chance = { factor = 10 }
 
 		every_subject_country = {
 			limit = { capital_scope = { region = france_region } }
@@ -115,6 +94,10 @@ country_event = {
 				name = btc_apanages_ld
 				duration = 36500
 			}
+		}
+		add_country_modifier = {
+			name = btc_keep_apanage_system
+			duration = 3650
 		}
 		poitou_area = {
 			limit = { owned_by = ROOT }
@@ -163,11 +146,6 @@ country_event = {
 		pyrenees_area = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
-		}
-		add_country_modifier = {
-			name = btc_keep_apanage_system
-			duration = 10
-			desc = btc_keep_apanage_system_tooltip
 		}
 		add_prestige = -10
 	}

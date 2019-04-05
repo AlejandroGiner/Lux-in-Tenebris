@@ -128,20 +128,13 @@ archduchy_government_legacy = {
 }
 
 roman_empire_legacy = {
-	icon = "castle" #placeholder
+	icon = "roman_empire_reform"
 	allow_normal_conversion = no
 	legacy_government = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 	lock_level_when_selected = yes
 	monarchy = yes
-	potential = {
-		OR = {
-			has_reform = roman_empire_reform
-			have_had_reform = roman_empire_reform
-			tag = ROM
-		}
-	}
 	modifiers = {
 	legitimacy = 1.00
 	min_autonomy = 0.2
@@ -325,7 +318,7 @@ french_principality_legacy = {
 	legacy_government = yes
 	valid_for_new_country = no
 	valid_for_nation_designer = yes
-	nation_designer_cost = 10
+	nation_designer_cost = 20
 	nation_designer_trigger = {
 		OR = {
 			culture_group = french
@@ -346,7 +339,7 @@ french_crown_legacy = {
 	legacy_government = yes
 	valid_for_new_country = no
 	valid_for_nation_designer = yes
-	nation_designer_cost = 20
+	nation_designer_cost = 10
 	nation_designer_trigger = {
 		OR = {
 			culture_group = french
@@ -2677,17 +2670,6 @@ lithuanian_grand_duchy_legacy = {			#New in BT 10.0, this is a unique non Dharma
 }
 
 archbishop_legacy = {
-	potential = {
-	OR = {
-		tag = KOL
-		tag = SLZ
-		tag = TRI
-		tag = MAI
-		tag = MAG
-		tag = VER #Technically archbishop of Bremen but ingame functions the same purpose
-		tag = RIG
-		}
-	}
 
 	modifiers = {
 		prestige_per_development_from_conversion = 0.33
@@ -2695,6 +2677,7 @@ archbishop_legacy = {
 		diplomatic_reputation = 1
 		missionaries = 1
 	}
+	
 	valid_for_nation_designer = no
 	icon = "archbishop_icon"
 	allow_normal_conversion = yes

@@ -31,12 +31,32 @@ french_missions_north = {
 			4385 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
-			brittany_area = {
+			brittany_area = { #Upper Brittany
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+		}
+		effect = {
+			lower_brittany_area = { #Lower Brittany
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = BRI
+				}
+				add_casus_belli = {
+					target = BRI
+					type = cb_vassalize_mission
+				}
 			}
 		}
 	}

@@ -916,7 +916,7 @@ roman_autocracy_legacy = {
 }
 
 roman_empire_reform = {
-	icon = "castle" #placeholder
+	icon = "roman_empire_reform"
 	allow_normal_conversion = no
 	legacy_equivalent = roman_empire_legacy
 	valid_for_nation_designer = yes
@@ -931,7 +931,7 @@ roman_empire_reform = {
 	}
 	modifiers = {
 	legitimacy = 1.00
-	min_autonomy = 0.2
+	min_autonomy = 20
 	max_states = 15
 	max_absolutism = 10
 	}
@@ -1855,13 +1855,7 @@ french_principality = {
 	allow_normal_conversion = yes
 	icon = "french_principality"
 	potential = {
-		OR = {
-			culture_group = french
-			primary_culture = breton
-			primary_culture = occitain
-			primary_culture = provencal
-			primary_culture = gascon
-		}
+		has_reform = french_principality
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
@@ -1869,9 +1863,6 @@ french_principality = {
 		OR = {
 			culture_group = french
 			primary_culture = breton
-			primary_culture = occitain
-			primary_culture = provencal
-			primary_culture = gascon
 		}
 	}
 	legacy_equivalent = french_principality_legacy
@@ -1891,10 +1882,7 @@ french_crown = {
 	allow_normal_conversion = yes
 	icon = "french_crown"
 	potential = {
-		OR = {
-			culture_group = french
-			primary_culture = breton
-		}
+		has_reform = french_crown
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
@@ -1923,10 +1911,7 @@ french_monarchy = {
 	allow_normal_conversion = yes
 	icon = "french_absolutist"
 	potential = {
-		OR = {
-			culture_group = french
-			primary_culture = breton
-		}
+		has_reform = french_monarchy
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
