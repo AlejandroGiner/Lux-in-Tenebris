@@ -462,9 +462,9 @@ country_event = {
 
 #Papal vassal fix
 country_event = {
-	id = BtPLegacyItalianFlavour.17
-	title = "BtPLegacyItalianFlavour.EVTNAME17"
-	desc = "BtPLegacyItalianFlavour.EVTDESC17"
+	id = flavor_pap.17
+	title = flavor_pap.17.t
+	desc = flavor_pap.17.d
 	picture = CITY_VIEW_eventPicture
 
 	trigger = {
@@ -475,7 +475,7 @@ country_event = {
 	mean_time_to_happen = { days = 3 }
 	
 	option = {
-		name = "BtPLegacyItalianFlavour.EVTOPTA17"
+		name = flavor_pap.17.a
 		trigger = { any_subject_country = { tag = PAP } }
 		every_subject_country = {
 			limit = {
@@ -495,7 +495,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "BtPLegacyItalianFlavour.EVTOPTB17"
+		name = flavor_pap.17.b
 		trigger = { NOT = { any_subject_country = { tag = PAP } } }
 		every_subject_country = {
 			limit = { is_subject_of_type = papal_subject_bt }
