@@ -409,6 +409,7 @@ country_event = {
   is_triggered_only = yes
   
   trigger = {
+    religion = nestorian
     any_neighbor_country = {
       NOT = {
         religion_group = ROOT
