@@ -1,0 +1,41 @@
+#4742 - Tesinsko
+
+owner = TSK
+controller = TSK
+culture = schlesian
+religion = catholic
+hre = yes
+base_tax = 1
+base_production = 1
+capital = "Tešín" #Cesky Tešín - Teschen, Czeski Cieszyn
+is_city = yes
+trade_goods = grain
+base_manpower = 1
+add_core = TSK
+
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = persian_btc
+discovered_by = ottoman
+
+1523.1.1 = { religion = protestant }
+1618.1.1 = { unrest = 5 } # Religious struggles
+1648.1.1 = { unrest = 0 }
+1653.1.1 = {
+	owner = HAB
+	controller = HAB
+	add_core = HAB
+} # Annexed by the Habsburgs - Death of Elizabeth Lucretia who before that began a lengthy lawsuit on her heritage after the habsburg intention to seize the duchy after the death of Frederick William.
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
+
+#Ferdinand IV ruled Teschen until his death in 1654, whereafter the duchy fell back to Emperor Ferdinand III. His Habsburg successors continued the re-Catholicization policies. 
+#In 1722 Emperor Charles VI separated Teschen from the Bohemian Crown and granted the duchy to Duke Leopold of Lorraine, whose son Francis I was to marry Charles's daughter Maria Theresa. 
+#Leopold had unsuccessfully claimed his maternal grandmother's rights to the north Italian Duchy of Montferrat, which the Charles had taken and given to the Dukes of Savoy in 1708 as part of their alliance pact. 
+#Once Holy Roman Emperor, Francis had to face the attack by the Prussian king Frederick the Great, who after the 1742 Peace of Breslau took the bulk of Silesia, while Teschen remained with the Habsburg Monarchy. 
+#In 1766 Teschen passed to Francis' eldest surviving daughter, Archduchess Maria Christina and her husband Prince Albert of Saxony, who thus became known colloquially as the Duke of Saxe-Teschen. 

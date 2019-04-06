@@ -1,1 +1,40 @@
-#New 1.19 Paradox province removed by Draiocht
+#4178 - Jawor
+
+owner = SIL
+controller = SIL
+culture = german_schlesian
+religion = catholic
+capital = "Jawor"
+trade_goods = iron
+hre = yes
+base_tax = 1
+base_production = 1
+is_city = yes
+base_manpower = 1
+add_core = SIL
+
+discovered_by = KAZ
+discovered_by = CRI
+discovered_by = GOL
+discovered_by = AST
+discovered_by = QAS
+discovered_by = western
+discovered_by = eastern
+discovered_by = muslim
+discovered_by = persian_btc
+discovered_by = ottoman
+
+1523.1.1 = { religion = protestant }
+1618.1.1 = { unrest = 5 } # Religious struggles
+1648.1.1 = { unrest = 0 }
+1675.11.21 = {
+	owner = HAB
+	controller = HAB
+	add_core = HAB
+	add_claim = PRU
+} #Dynasty of Piast dies out and falls into habsburg/bohemian influence - Prussia raises claims 
+1694.1.1 = { unrest = 4 } # Religious oppositions
+1742.1.1 = { owner = PRU controller = PRU add_core = PRU } # Peace of Breslau, 1 st Silesian war against Austria
+1750.1.1 = { base_tax = 5 base_production = 5 base_manpower = 3 }
+1763.1.1 = { remove_core = HAB } # End of 3rd Silesian war
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
