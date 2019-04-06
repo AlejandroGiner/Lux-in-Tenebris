@@ -179,3 +179,25 @@ archbishop_government = {
 		}
 	}
 }
+
+edo_shogunate_government = {
+	rank = {
+		2 = SHOGUNATE
+		3 = SHOGUNATE
+	}
+
+	ruler_male = {
+		2 = SHOGUN
+		3 = SHOGUN
+	}
+	
+	ruler_female = {
+		2 = SHOGUNESS
+		3 = SHOGUNESS
+	}
+	
+	trigger = {
+		has_reform = edo_shogunate
+	}
+
+}

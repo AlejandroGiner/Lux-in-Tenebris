@@ -1996,7 +1996,7 @@ shogunate_legacy = {
 	nation_designer_cost = 50
 	nation_designer_trigger = {
 		culture_group = japanese_g
-		technology_group = chinese
+		technology_group = japanese_btc
 		capital_scope = { region = japan_region }
 		owns = 1020
 	}
@@ -2030,7 +2030,7 @@ indep_daimyo_legacy = {
 	nation_designer_cost = 0
 	nation_designer_trigger = {
 		culture_group = japanese_g
-		technology_group = chinese
+		technology_group = japanese_btc
 		capital_scope = { region = japan_region }
 	}
 
@@ -2687,5 +2687,75 @@ archbishop_legacy = {
 
 	custom_attributes = {
 		locked_government_type = yes
+	}
+}
+
+edo_shogunate_legacy = {
+	icon = "crown"
+	legacy_government = yes
+	allow_normal_conversion = no
+
+	valid_for_new_country = no
+	allow_convert = no
+
+	maintain_dynasty = yes
+
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
+
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = japanese_btc
+		capital_scope = { region = japan_region }
+		owns = 1020
+	}
+
+    fixed_rank = 3
+	monarchy = yes
+	modifiers = {
+		max_states = 6
+		diplomats = 2
+		envoy_travel_time = -0.40
+		max_absolutism = 10
+		vassal_income = 0.2
+		vassal_forcelimit_bonus = 1
+	}
+
+	ai = {
+		factor = 5
+	}
+}
+
+chrysanthemum_throne_legacy = {
+	icon = "crown"
+	legacy_government = yes
+	allow_normal_conversion = no
+
+	valid_for_new_country = no
+	allow_convert = no
+
+	maintain_dynasty = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = japanese_btc
+		capital_scope = { region = japan_region }
+		owns = 1020
+	}
+	fixed_rank = 3
+	monarchy = yes
+	modifiers = {
+		max_states = 6
+		land_morale = 0.1
+		global_manpower_modifier = 0.1
+		infantry_power = 0.1
+		max_absolutism = 10
+	}
+
+	ai = {
+		factor = 5
 	}
 }
