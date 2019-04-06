@@ -21,15 +21,6 @@ monarchy_mechanic = {
 feudalism_reform = {
 	icon = "castle"
 	allow_normal_conversion = yes
-	potential = {
-		NOT = { 
-			OR = {
-				has_reform = french_principality
-				has_reform = french_crown
-				has_reform = french_monarchy
-			}
-		}
-	}
 	legacy_equivalent = feudal_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -41,15 +32,6 @@ feudalism_reform = {
 autocracy_reform = {
 	icon = "crown"
 	allow_normal_conversion = yes
-	potential = {
-		NOT = {
-			OR = {
-				has_reform = french_principality
-				has_reform = french_crown
-				has_reform = french_monarchy
-			}
-		}
-	}
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -1860,7 +1842,7 @@ basileus_protostrategos_reform = {
 ## IR
 french_principality = {
 	lock_level_when_selected = yes
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	icon = "french_principality"
 	potential = {
 		has_reform = french_principality
@@ -1887,7 +1869,7 @@ french_principality = {
 
 french_crown = {
 	lock_level_when_selected = yes
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	icon = "french_crown"
 	potential = {
 		has_reform = french_crown
@@ -1916,7 +1898,7 @@ french_crown = {
 
 french_monarchy = {
 	lock_level_when_selected = yes
-	allow_normal_conversion = yes
+	allow_normal_conversion = no
 	icon = "french_absolutist"
 	potential = {
 		has_reform = french_monarchy
