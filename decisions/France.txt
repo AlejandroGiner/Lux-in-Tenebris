@@ -53,7 +53,7 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 	}
 
 
@@ -76,11 +76,19 @@ country_decisions = {
 		allow = {
 			religion = catholic
 			dominant_religion = catholic
-			NOT = { has_country_modifier = counter_reformation } 
-			OR = {
-				num_of_religion = { religion = protestant value = 3 }
-				num_of_religion = { religion = reformed value = 3 }
-			}	
+			NOT = { has_country_modifier = counter_reformation }
+			custom_trigger_tooltip = {
+				tooltip = edict_of_nantes_custom_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						OR = {
+							religion = protestant
+							religion = reformed
+						}
+					}
+					amount = 3
+				}
+			}
 		}
 		effect = {
 			set_country_flag = had_edict_de_nantes
@@ -119,7 +127,7 @@ country_decisions = {
 					NOT = { num_of_religion = { religion = reformed value = 1 } }
 				}
 				183 = { controlled_by = REB }
-			}	
+			}
 		}
 		effect = {
 			remove_country_modifier = edict_de_nantes
