@@ -54,7 +54,7 @@ province_event = {
 	option = {
 		name = btc_modding_test.3.a
 		low_countries_region = {
-			type = all
+			limit = { NOT = { owned_by = HOL } }
 			add_core = HOL
 			cede_province = HOL
 		}
@@ -62,7 +62,7 @@ province_event = {
 	option = {
 		name = btc_modding_test.3.b
 		france_region = {
-			type = all
+			limit = { NOT = { owned_by = FRA } }
 			add_core = FRA
 			cede_province = FRA
 		}
@@ -70,12 +70,12 @@ province_event = {
 	option = {
 		name = btc_modding_test.3.c
 		north_german_region = {
-			type = all
+			limit = { NOT = { owned_by = BRA } }
 			add_core = BRA
 			cede_province = BRA
 		}
 		south_german_region = {
-		type = all
+		limit = { NOT = { owned_by = HAB } }
 			add_core = HAB
 			cede_province = HAB
 		}
@@ -83,7 +83,7 @@ province_event = {
 	option = {
 		name = btc_modding_test.3.d
 		italy_region = {
-			type = all
+			limit = { NOT = { owned_by = MLO } }
 			add_core = MLO
 			cede_province = MLO
 		}
@@ -91,7 +91,7 @@ province_event = {
 	option = {
 		name = btc_modding_test.3.e
 		balkan_region = {
-			type = all
+			limit = { NOT = { owned_by = BYZ } }
 			add_core = BYZ
 			cede_province = BYZ
 		}
@@ -99,7 +99,7 @@ province_event = {
 	option = {
 		name = btc_modding_test.3.f
 		caucasia_region = {
-			type = all
+			limit = { NOT = { owned_by = GEO } }
 			add_core = GEO
 			cede_province = GEO
 		}
@@ -107,7 +107,7 @@ province_event = {
 	option = {
 		name = btc_modding_test.1.a
 		japan_region = {
-				type = all
+				limit = { NOT = { owned_by = ASK } }
 				add_core = ASK
 				cede_province = ASK
 			}
