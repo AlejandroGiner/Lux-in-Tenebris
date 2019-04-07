@@ -3,7 +3,7 @@
 namespace = btc_modding_test
 
 #integration of entire Japan_region f
-province_event = {
+country_event = {
 	id = btc_modding_test.1
 	title = btc_modding_test.1.t
 	desc = btc_modding_test.1.d
@@ -26,7 +26,7 @@ province_event = {
 }
 
 #Intented for testing dynamic localisation
-province_event = {
+country_event = {
 	id = btc_modding_test.2
 	title = btc_modding_test.2.t
 	desc = btc_modding_test.2.d
@@ -43,7 +43,7 @@ province_event = {
 }
 
 #More generic region integration
-province_event = {
+country_event = {
 	id = btc_modding_test.3
 	title = btc_modding_test.3.t
 	desc = btc_modding_test.3.desc
