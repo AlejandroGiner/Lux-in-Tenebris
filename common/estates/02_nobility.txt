@@ -261,6 +261,13 @@ estate_nobles =
 		loyalty = 5
 	}
 	loyalty_modifier = {
+		desc = EST_VAL_NOBLES_OF_THE_ROBE_LOY
+		trigger = {
+			has_idea = kutnohorian_deal
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
 		desc = EST_VAL_NOBLE_CONSORT
 		trigger = {
 			has_dlc = "Rights of Man"

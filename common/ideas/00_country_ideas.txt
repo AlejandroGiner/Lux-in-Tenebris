@@ -1609,17 +1609,18 @@ BOH_ideas = {
 	free = yes
 	
 	compacta_of_prague = {
-		tolerance_heretic = 3
+		tolerance_heretic = 4
 	}
 	boh_elective_monarchy = {
 		legitimacy = 1
 	}
 	wagenburg = {
-		infantry_power = 0.05
-		shock_damage_received = -0.05
+		shock_damage_received = -0.1
+		fire_damage = 0.05
 	}
 	letter_of_majesty = {
 		global_unrest = -1
+		idea_cost = -0.05
 	}
 	hussite_legacy = {
 		technology_cost = -0.1
