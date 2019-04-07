@@ -1,0 +1,145 @@
+#General cheat events only meant to be activated through console for testing purposes.
+
+namespace = btc_modding_test
+
+#integration of entire Japan_region f
+province_event = {
+	id = btc_modding_test.1
+	title = btc_modding_test.1.t
+	desc = btc_modding_test.1.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_modding_test.1.a
+		japan_region = {
+				type = all
+				add_core = ASK
+				cede_province = ASK
+			}
+		
+	}
+	option = {
+		name = btc_modding_test.1.b
+	}
+}
+
+#Intented for testing dynamic localisation
+province_event = {
+	id = btc_modding_test.2
+	title = btc_modding_test.2.t
+	desc = btc_modding_test.2.d
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_modding_test.2.a
+	}
+	option = {
+		name = btc_modding_test.2.b
+	}
+}
+
+#More generic region integration
+province_event = {
+	id = btc_modding_test.3
+	title = btc_modding_test.3.t
+	desc = btc_modding_test.3.desc
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_modding_test.3.a
+		low_countries_region = {
+			type = all
+			add_core = HOL
+			cede_province = HOL
+		}
+	}
+	option = {
+		name = btc_modding_test.3.b
+		france_region = {
+			type = all
+			add_core = FRA
+			cede_province = FRA
+		}
+	}
+	option = {
+		name = btc_modding_test.3.c
+		north_german_region = {
+			type = all
+			add_core = BRA
+			cede_province = BRA
+		}
+		south_german_region = {
+		type = all
+			add_core = HAB
+			cede_province = HAB
+		}
+	}
+	option = {
+		name = btc_modding_test.3.d
+		italy_region = {
+			type = all
+			add_core = MLO
+			cede_province = MLO
+		}
+	}
+	option = {
+		name = btc_modding_test.3.e
+		balkan_region = {
+			type = all
+			add_core = BYZ
+			cede_province = BYZ
+		}
+	}
+	option = {
+		name = btc_modding_test.3.f
+		caucasia_region = {
+			type = all
+			add_core = GEO
+			cede_province = GEO
+		}
+	}
+	option = {
+		name = btc_modding_test.1.a
+		japan_region = {
+				type = all
+				add_core = ASK
+				cede_province = ASK
+			}
+		
+	}
+	option = {
+		name = btc_modding_test.3.g
+	}
+}
+
+country_event = {
+	id = btc_modding_test.7
+	title = btc_modding_test.7.t
+	desc = btc_modding_test.7.desc
+	picture = BATTLE_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_modding_test.7.a
+		set_hre_religion_treaty = yes
+	}
+	option = {
+		name = btc_modding_test.7.b
+		set_hre_religion_treaty = no
+	}
+	option = {
+		name = btc_modding_test.7.c
+		set_hre_religion_locked = yes
+	}
+	option = {
+		name = btc_modding_test.7.d
+		set_hre_religion_locked = no
+	}
+}

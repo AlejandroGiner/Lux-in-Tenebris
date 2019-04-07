@@ -174,3 +174,35 @@
 
   #Edict of Nantes
   edict_of_nantes_custom_tooltip:0 "§YLutheran§! or §YCalvinist§! religion in at least §Y3§! provinces"
+  
+  #Modding test events
+  btc_modding_test.1.t: "Instant Japan Nation" 
+  btc_modding_test.1.d: "Single tag integrates japan region for testing. Temporary performance hit."
+  btc_modding_test.1.a: "Ashikaga integrates japan"
+  btc_modding_test.1.b: "Return."
+  
+  #btc_modding_test.2.t: "TestLoc" 
+  #btc_modding_test.2.d: "TestCustomLoc"
+  #btc_modding_test.2.a: "aaa" 
+  #btc_modding_test.2.b: "aaa"
+ 
+  btc_modding_test.2.t: "TestLoc" 
+  btc_modding_test.2.d: "TestCustomLoc"
+  btc_modding_test.2.a: "aaa" 
+  btc_modding_test.2.b: "aaa"
+  
+  btc_modding_test.3.t: "Instant Nations" 
+  btc_modding_test.3.desc: "Single tag integrates a region for testing. Temporary performance hit."
+  btc_modding_test.3.a: "Holland integrates low countries region"
+  btc_modding_test.3.b: "France integrates france region"
+  btc_modding_test.3.c: "Austria integrates south germany. Brandenburg integrates north germany"
+  btc_modding_test.3.d: "Milan integrates italy region"
+  btc_modding_test.3.e: "Byzantium integrates balkans region"
+  btc_modding_test.3.f: "Georgia integrates caucasus region"
+  btc_modding_test.3.g: "Return."
+ 
+  btc_modding_test.7.t: "HRE religion testing" 
+  btc_modding_test.7.desc: "Testing to see if I can remove the HRE religous peace lock"
+  btc_modding_test.7.a: "set_hre_religion_treaty = yes"
+  btc_modding_test.7.c: "set_hre_religion_locked = yes"
+  btc_modding_test.7.d: "set_hre_religion_locked = no"

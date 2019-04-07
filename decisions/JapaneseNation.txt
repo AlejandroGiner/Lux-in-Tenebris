@@ -248,18 +248,26 @@ country_decisions = {
 		}
 		
 		allow = {
-			treasury = 100
+			is_core = 5259
+			is_at_war = no
 		}
 		
 		effect = {
-			add_treasury = -100
+			add_years_of_income = -0.5
+			add_prestige = 20
 			5259 = {
 				move_capital_effect = yes
 				add_building = fort_15th
 				add_base_tax = 3
 				add_base_production = 3
 				add_base_manpower = 3
-				rename_capital = "Edo"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 0.6 }
 			}
 		}
 	}
@@ -272,17 +280,26 @@ country_decisions = {
 		}
 		
 		allow = {
-			treasury = 100
+			is_core = 5259
+			is_at_war = no
 		}
 		
 		effect = {
-			add_treasury = -100
+			add_years_of_income = -0.5
+			add_prestige = 20
 			5259 = {
 				move_capital_effect = yes
 				add_base_tax = 3
 				add_base_production = 3
 				add_base_manpower = 3
 				rename_capital = "Tokyo"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 0.6 }
 			}
 		}
 	}

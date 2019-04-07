@@ -1942,7 +1942,7 @@ edo_shogunate = {
 		owns = 1020
 	}
 	legacy_equivalent = edo_shogunate_legacy
-	fixed_rank = 3
+	fixed_rank = 2
 	maintain_dynasty = yes
 	allow_vassal_war = yes
 	allow_vassal_alliance = yes
@@ -1951,9 +1951,10 @@ edo_shogunate = {
 	modifiers = {
 		diplomats = 2
 		envoy_travel_time = -0.40
-		max_absolutism = 10
-		vassal_income = 0.2
+		monthly_splendor = 1
+		development_cost = -0.1
 		vassal_forcelimit_bonus = 1
+		max_absolutism = 10
 	}
 
 	custom_attributes = {
@@ -1962,7 +1963,7 @@ edo_shogunate = {
 }
 
 chrysanthemum_throne = {
-	icon = "chrysanthemum_throne"
+	icon = "chrysanthemum_throne_icon"
 	allow_normal_conversion = yes
 	potential = {
 		has_country_flag = edo_japan
@@ -1988,11 +1989,10 @@ chrysanthemum_throne = {
 	lock_level_when_selected = yes
 
 	modifiers = {
+		fire_damage_received = -0.1
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 		max_absolutism = 10
-		global_autonomy = -0.05
-		land_morale = 0.1
-		infantry_power = 0.1
-		global_manpower_modifier = 0.1
 	}
 
 	custom_attributes = {

@@ -2712,15 +2712,15 @@ edo_shogunate_legacy = {
 		owns = 1020
 	}
 
-    fixed_rank = 3
+    fixed_rank = 2
 	monarchy = yes
 	modifiers = {
-		max_states = 6
 		diplomats = 2
 		envoy_travel_time = -0.40
-		max_absolutism = 10
-		vassal_income = 0.2
+		monthly_splendor = 1
+		development_cost = -0.1
 		vassal_forcelimit_bonus = 1
+		max_absolutism = 10
 	}
 
 	ai = {
@@ -2729,7 +2729,7 @@ edo_shogunate_legacy = {
 }
 
 chrysanthemum_throne_legacy = {
-	icon = "crown"
+	icon = "chrysanthemum_throne_icon"
 	legacy_government = yes
 	allow_normal_conversion = no
 
@@ -2748,10 +2748,9 @@ chrysanthemum_throne_legacy = {
 	fixed_rank = 3
 	monarchy = yes
 	modifiers = {
-		max_states = 6
-		land_morale = 0.1
-		global_manpower_modifier = 0.1
-		infantry_power = 0.1
+		fire_damage_received = -0.1
+		global_manpower_modifier = 0.2
+		land_forcelimit_modifier = 0.2
 		max_absolutism = 10
 	}
 
