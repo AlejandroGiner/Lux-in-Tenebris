@@ -1,7 +1,7 @@
 ########################################
 # Flavor events for Holland/The Netherlands
 #
-# written by Sara Wendel-Örtqvist & Johan Andersson
+# written by Sara Wendel-Ã–rtqvist & Johan Andersson
 ########################################
 
 namespace = flavor_hol
@@ -17,7 +17,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = NED
+		OR = {
+			tag = NED
+			tag = HOL
+		}
 		is_year = 1495
 		NOT = {
 			is_year = 1536
@@ -75,9 +78,17 @@ country_event = {
 		add_adm_power = 100
 		if = {
 			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_small_effect = yes
+		}
+		if = {
+			limit = {
 				NOT = { advisor_exists = 895 }
 			}		
-		
+			
 			define_advisor = {
 				type = statesman
 				name = "Hugo Grotius"
@@ -116,6 +127,7 @@ country_event = {
 	option = {
 		name = "flavor_hol.EVTOPTOK"
 		add_adm_power = 100
+		add_reform_progress_small_effect = yes
 		if = {
 			limit = {
 				NOT = { advisor_exists = 905 }
@@ -186,8 +198,8 @@ country_event = {
 	
 	trigger = {
 		tag = NED
-		NOT = {	government = dutch_republic }
-		NOT = { government = celestial_empire }
+		NOT = {	has_reform = dutch_republic }
+		NOT = { has_reform = celestial_empire }
 	}
 	
 	mean_time_to_happen = {
@@ -197,18 +209,43 @@ country_event = {
 	option = {
 		name = "flavor_hol.EVTOPTA3502" #Confederacy with traces of Monarchism
 		ai_chance = { factor = 100 }
-		change_government = dutch_republic
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		if = {
+			limit = {
+				has_reform = parliamentary_reform
+			}
+			remove_government_reform = parliamentary_reform
+		}
+		add_government_reform = dutch_republic
 	}
 	option = {
 		name = "flavor_hol.EVTOPTB3502" #Confederacy on Republican Model
 		ai_chance = { factor = 0 }
-		
-		change_government = administrative_republic
+		trigger = { 
+			NOT = { government = republic } 
+			NOT = { has_dlc = "Dharma" }
+		}
+		if = {
+			limit = { NOT = { government = republic } }
+			change_government = republic
+		}
+		set_legacy_government = administrative_republic
 	}
 	option = {
 		name = "flavor_hol.EVTOPTC3502" #Centralized Monarchy
 		ai_chance = { factor = 0 }
-		change_government = administrative_monarchy
+		trigger = { 
+			NOT = { government = monarchy }
+			NOT = { has_dlc = "Dharma" }
+		}
+		if = {
+			limit = { NOT = { government = monarchy } }
+			change_government = monarchy
+		}
+		set_legacy_government = administrative_monarchy
 	}
 	option = {
 		name = "flavor_hol.EVTOPTD3502" #Keep current government
@@ -374,7 +411,7 @@ country_event = {
 		tag = NED
 		is_year = 1600
 		NOT = { is_year = 1700 }
-		government = dutch_republic
+		has_reform = dutch_republic
 	}
 	
 	mean_time_to_happen = {
@@ -383,13 +420,13 @@ country_event = {
 	
 	option = {
 		name = "flavor_hol.EVTOPTA3513" #Yes, we need Order!
-		add_republican_tradition = -0.2
+		add_republican_tradition = -20
 		add_stability_or_adm_power = yes
 		set_country_flag = ned_hereditary_stadtholder
 	}
 	option = {
 		name = "flavor_hol.EVTOPTB3513" #No, we need Freedom!
-		add_republican_tradition = 0.1
+		add_republican_tradition = 10
 	}
 }
 
@@ -408,7 +445,7 @@ country_event = {
 		revolution_target_exists = yes
 		OR = {
 			government = monarchy
-			government = dutch_republic
+			has_reform = dutch_republic
 		}
 		NOT = { stability = 3 }
 	}
@@ -448,6 +485,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_hol.EVTOPTA3713"
+		add_reform_progress_small_effect = yes
 		add_ruler_modifier = {
 			name = hol_de_witt
 		}
@@ -581,6 +619,7 @@ country_event = {
 	option = {
 		name = "flavor_hol.EVTOPTA3" #Found the Statenbijbel
 		add_years_of_income = -0.5
+		add_reform_progress_small_effect = yes
 		add_country_modifier = { 
 			name = hol_statenbijbel
 			duration = -1 
@@ -653,6 +692,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_hol.EVTOPTOK"
+		add_reform_progress_small_effect = yes
 		add_ruler_modifier = { name = hol_wilhelmus }
 	}
 }
@@ -728,6 +768,7 @@ country_event = {
 		add_dip_power = 100
 		add_prestige = 5
 		4383 = {
+			change_trade_goods = paper
 			add_province_modifier = {
 				name = "ned_house_of_elzevir"
 				duration = -1
@@ -1113,6 +1154,7 @@ country_event = {
 		OR = {
 			religion = protestant
 			religion = reformed
+			religion = anglican
 		}
 		OR = {
 			any_ally = { religion = catholic }
@@ -1120,11 +1162,12 @@ country_event = {
 		}
 		NED = {
 			is_subject = no
-			government = dutch_republic
+			has_reform = dutch_republic
 			num_of_cities = 6 #If too small this won't make much sense.
 			OR = {
 				religion = protestant
 				religion = reformed
+				religion = anglican
 			}
 			OR = {
 				AND = {
@@ -1346,7 +1389,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		government = shogunate
+		has_reform = shogunate
 		has_country_modifier = sakoku_law
 		has_country_flag = sakoku_law
 		exists = NED
