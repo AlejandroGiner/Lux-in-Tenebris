@@ -1060,18 +1060,6 @@ western_moldovia = {
 # Germany			 				   #
 ########################################
 
-silesia_area = { #3
-	263 3141 3142 4740 4741 4744 4742
-}
-
-bohemia_area = { #4
-	266 2968 2970 3143 3296 4743
-}
-
-erzgebirge_area = { #3
-	267 1771 2967
-}
-
 south_saxony_area = { #3
 	59 61 62 2965 4169
 }
@@ -1108,10 +1096,6 @@ thuringia_area = { #3	#TOTBTPCHANGES
 neumark_area = { #3
 	color = { 234 232 44 }
 	49 2969 7506 7518
-}
-
-lausitz_area = {
-	60 1763 4155 7600 4153 
 }
 
 mittelmark_area = { # 3
@@ -1198,6 +1182,38 @@ lower_saxony_area = { #4
 
 mecklenburg_area = { #3
 	46 2996 3217 45 7412 7593
+}
+
+########################################
+#             Czech Lands 			   #
+########################################
+
+lausitz_area = {
+	60 1763 4155 7600 4153 
+}
+
+silesia_area = { #3
+	263 3141 3142 4740 4741 4744 4742
+}
+
+bohemia_area = { #4
+	266 2970 3143 4743 4748 4750
+}
+
+budejovice_area = { 
+	4747 2968 3296 4746 
+}
+
+erzgebirge_area = { #3
+	267 1771 2967 4749
+}
+
+moravia_area = {
+	265 4237 3297 4745
+}
+
+lower_silesia_area = {
+	264 2966 4238 7599 4178 4347 4739
 }
 
 ########################################
@@ -4144,10 +4160,6 @@ southern_isles_area = { }
 # Europe    	                   #
 ########################################
 
-moravia_area = {
-	265 4237 3297
-}
-
 schleswig_area = {
 	13 3134 3135
 }
@@ -4162,10 +4174,6 @@ muenster_area = {
 
 slavonia_area = {
 	1767 3190 4239
-}
-
-lower_silesia_area = {
-	264 2966 4238 7599 4178 4347 4739
 }
 
 nenets_area = {
@@ -4807,8 +4815,7 @@ true_north_atlantic_sea_area = {
 unused_area = {
 #BTC working on 
 #HR's BtP provinces
-4745 4746
-4747 4748 4749 4750 4751 4752 4753 4754
+4751 4752 4753 4754
 
 #RNW Sea provinces
 3420 3421 3422 3423 3424 3425 3426 3427 3428 3429 3430 3431 3432 3433

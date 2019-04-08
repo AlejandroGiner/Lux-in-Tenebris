@@ -127,7 +127,6 @@ north_german_region = {
 		braunschweig_area
 		#BTADDITIONS
 		muenster_area
-		lausitz_area
 	}
 }
 
@@ -149,11 +148,18 @@ south_german_region = {
 		upper_rhineland_area
 		romandie_area
 		palatinate_area
-		#BTMovedFromNorthGermany
+	}
+}
+
+czech_lands_region = {
+	areas = {
+		moravia_area
+		budejovice_area
 		erzgebirge_area
 		bohemia_area
-		#BTADDITIONS
-		moravia_area
+		lausitz_area
+		lower_silesia_area
+		silesia_area
 	}
 }
 
@@ -291,13 +297,11 @@ poland_region = {
 		wielkopolska_area
 		malopolska_area
 		mazovia_area
-		silesia_area
 		central_poland_area
 		sandomierz_area			#added by Paradox in 1.27, same id so no change needed.
 		kuyavia_area			#Repurposing this into BT's old Kalisz area
 		podlasie_area			#moved from Ruthenia
 		#BTADDITIONS
-		lower_silesia_area
 		lublin_area
 	}
 }
