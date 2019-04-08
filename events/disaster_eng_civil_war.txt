@@ -197,14 +197,13 @@ country_event = {
 		has_country_flag = supports_parliamentarians
 		religion = catholic
 		NOT = { exists = SCO }
-		OR = {
-			any_owned_province = {
+		any_owned_province = {
+			religion = catholic
+			OR = {
 				area = highlands_area
-				religion = catholic
-			}
-			any_owned_province = {
 				area = lowlands_area
-				religion = catholic
+				area = scottish_marches_area
+				area = kingdom_of_the_isles_area
 			}
 		}
 	}
@@ -315,14 +314,13 @@ country_event = {
 		has_country_flag = supports_royalists
 		religion = catholic
 		NOT = { exists = SCO }
-		OR = {
-			any_owned_province = {
+		any_owned_province = {
+			religion = catholic
+			OR = {
 				area = highlands_area
-				religion = catholic
-			}
-			any_owned_province = {
 				area = lowlands_area
-				religion = catholic
+				area = scottish_marches_area
+				area = kingdom_of_the_isles_area
 			}
 		}
 	}
@@ -735,7 +733,7 @@ country_event = {
 			limit = { has_reform = english_monarchy }
 			add_government_reform = autocracy_reform
 			set_legacy_government = despotic_monarchy
-		}	
+		}			
 		clr_country_flag = supports_royalists
 		add_prestige = 50
 		add_absolutism = 10

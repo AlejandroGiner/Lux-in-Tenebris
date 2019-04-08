@@ -18,12 +18,12 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		owns = 266
 		is_year = 1446
@@ -144,12 +144,12 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		has_country_flag = boh_supported_hussites
 		NOT = { is_religion_enabled = protestant }
@@ -250,12 +250,12 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		is_year = 1465
 		has_country_modifier = boh_hussite_king
@@ -333,12 +333,12 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		owns = 266
 		is_year = 1493
@@ -365,12 +365,12 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		is_year = 1500
 		NOT = { ADM = 4 }
@@ -410,12 +410,12 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		is_year = 1599
 		owns = 266
@@ -505,12 +505,12 @@ country_event = {
 
 	trigger = {
 		OR = {
-			tag = BOH
 			AND = {
-				tag = GMV
+				tag = BOH
 				primary_culture = czech
-				NOT = { exists = BOH }
+				NOT = { exists = GMV }
 			}
+			tag = GMV
 		}
 		is_emperor = no
 		religion = catholic

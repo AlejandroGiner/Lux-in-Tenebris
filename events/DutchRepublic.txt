@@ -254,7 +254,7 @@ country_event = {
 		trigger = { NOT = { has_reform = dutch_republic } }
 		desc = dutch_republic.5.db
 	}
-	
+
 	picture = RELIGION_eventPicture
 
 	is_triggered_only = yes
@@ -930,6 +930,7 @@ country_event = {
 		trigger = { NOT = { has_reform = dutch_republic } }
 		desc = dutch_republic.20.db
 	}
+	
 	picture = ASSASSINATION_eventPicture
 
 	is_triggered_only = yes
@@ -1271,7 +1272,7 @@ country_event = {
 		name = "dutch_republic.25.b"
 		change_statists_vs_orangists = -0.1
 	}
-	
+
 	# The Prince of [Root.GetName] could lead us to victory in the future. (Non dutch)
 	option = {
 		trigger = { NOT = { has_reform = dutch_republic } }
@@ -1296,6 +1297,7 @@ province_event = {
 			has_province_modifier = river_estuary_modifier
 		}
 		owner = { has_states_general_mechanic = yes }
+		
 	}
 
 	mean_time_to_happen = {
@@ -1525,9 +1527,7 @@ province_event = {
 
 	# Send someone to argue in favor of Orangists
 	option = {
-		trigger = { 
-			owner = { has_reform = dutch_republic } 
-			}
+		trigger = { owner = { has_reform = dutch_republic } }
 		name = "dutch_republic.30.a"
 		owner = {
 			change_statists_vs_orangists = 0.15
@@ -1544,7 +1544,7 @@ province_event = {
 			}
 		}
 	}
-	
+
 	# Send someone to argue in favor of Monarchists
 	option = {
 		trigger = {
