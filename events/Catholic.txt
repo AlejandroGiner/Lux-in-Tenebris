@@ -83,7 +83,7 @@ country_event = {
 	option = {
 		name = catholic_flavor.2.a
 		add_prestige = 10
-		change_government = regnum_dei
+		#change_government = regnum_dei
 		if = {
 			limit = {
 				NOT = { government_rank = 3 }
