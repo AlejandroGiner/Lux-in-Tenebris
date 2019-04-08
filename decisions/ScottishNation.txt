@@ -75,7 +75,7 @@ country_decisions = {
 						has_reform = norman_lordship
 					}
 				}
-				change_government = feudal_monarchy
+				add_government_reform = feudalism_reform
 			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
