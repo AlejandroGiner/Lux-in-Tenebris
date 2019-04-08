@@ -57,6 +57,12 @@ country_event = {
 	option = {
 		name = flavor_mlc.2.a #Appoint Tun Perak
 		ai_chance = { factor = 90 }
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_country_modifier = {
 			name = mlc_tun_perak
 			duration = 3650
@@ -90,7 +96,10 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			any_owned_province = {
-				area = malaya_area
+				OR = {
+					area = malaya_area
+					area = malacca_area
+				}
 				has_discovered = POR
 			}
 		}
@@ -270,11 +279,7 @@ country_event = {
 			}
 
 		}
-		if = {
-			limit = { 
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			IBE = {
 				add_casus_belli = {
 					target = MLC
@@ -301,11 +306,7 @@ country_event = {
 				country_event = { id = flavor_mlc.8 }
 			}
 		}
-		if = {
-			limit = { 
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			IBE = {
 				add_casus_belli = {
 					target = MLC

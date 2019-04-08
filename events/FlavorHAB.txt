@@ -436,6 +436,12 @@ country_event = {
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_innovativeness_small_effect = yes
 	}
 }
@@ -465,6 +471,12 @@ country_event = {
 	
 	option = {			# An Excellent Minister!
 		name = "EXCELLENTMINISTER"
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
@@ -590,6 +602,12 @@ country_event = {
 		add_adm_power = 100
 		add_dip_power = 100
 		add_mil_power = 100
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_innovativeness_big_effect = yes
 	}
 	option = {		# No Change
@@ -622,6 +640,12 @@ country_event = {
 	option = {		# Create this new council
 		name = "flavor_hab.EVTOPTA3328"
 		add_stability = -1
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_country_modifier = {
 			name = reichshofrat
 			duration = -1
@@ -858,6 +882,12 @@ country_event = {
 	
 	option = {		# Reform
 		name = "flavor_hab.EVTOPTA3336"
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_country_modifier = {
 			name = reform_of_the_bureaucracy
 			duration = 7300
@@ -1192,6 +1222,7 @@ country_event = {
 	trigger = {
 		tag = HAB
 		has_heir = no
+		has_government_attribute = heir
 		is_free_or_tributary_trigger = yes
 		government = monarchy
 		NOT = { 
@@ -1305,8 +1336,8 @@ country_event = {
 				}
 				define_heir = {
 					dynasty = "von Habsburg"
-					culture = austrian
 					female = yes
+					culture = austrian
 					ADM = 5
 					DIP = 1
 					MIL = 1
@@ -1655,6 +1686,12 @@ country_event = {
 
 	option = {# Great!
 		name = flavor_hab.12.a
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_ruler_modifier = {
 			name = "hab_centralization_of_austria"
 		}
@@ -1779,6 +1816,12 @@ country_event = {
 
 	option = {# Such devotion! We have need of this man on the privy council.
 		name = flavor_hab.16.a
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_ruler_modifier = {
 			name = "hab_melchior_klesl"
 		}

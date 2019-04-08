@@ -156,6 +156,7 @@ province_event = {
 				}
 				hidden_effect = { add_ruler_personality = conqueror_personality }
 			}
+			adopt_reform_progress = ROOT
 		}
 	}
 }
@@ -277,11 +278,7 @@ country_event = {
 				add_opinion = { who = MAL modifier = trade_conflict }
 			}
 		}
-		if = {
-			limit = { 
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			IBE = {
 				add_opinion = { who = MAL modifier = trade_conflict }
 			}
@@ -330,6 +327,12 @@ country_event = {
 	option = {
 		name = flavor_mal.6.a	#Convert our people!
 		add_piety = 0.15
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_country_modifier = {
 			name = mal_islamisation_of_the_aristocracy
 			duration = -1

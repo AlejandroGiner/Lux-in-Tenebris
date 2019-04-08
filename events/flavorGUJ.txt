@@ -20,6 +20,7 @@ country_event = {
 		tag = GUJ
 		NOT = { is_year = 1475 }
 		capital = 2054 #Ahmedabad
+		NOT = { has_dlc = "Dharma" } #Integrated into Dharma Missions
 	}
 
 	mean_time_to_happen = {
@@ -58,6 +59,11 @@ country_event = {
 	trigger = {
 		tag = GUJ
 		owns_core_province = 2056
+		OR = {
+			NOT = { has_mission = dh_conquest_of_champaner }
+			mission_completed = dh_conquest_of_champaner
+			has_country_flag = champaner_dharma
+		}
 	}
 
 	mean_time_to_happen = {
@@ -68,15 +74,30 @@ country_event = {
 	option = { 
 		name = flavor_guj.2.a #Let construction begin
 		ai_chance = { factor = 90 }
-		set_country_flag = guj_construction_of_champaner
-		add_prestige = 5
-		add_country_modifier = {
-			name = guj_champaner_project
-			duration = -1
+		if = {
+			limit = { NOT = { has_dlc = "Dharma" } }
+			set_country_flag = guj_construction_of_champaner
+			2056 = {
+				add_province_modifier = {
+					name = guj_champaner_project
+					duration = -1
+				}
+			}
 		}
+		else = {
+			2056 = {
+				add_province_modifier = {
+					name = guj_champaner_project
+					duration = -1
+					desc = dh_conquest_of_champaner_custom_tooltip
+				}
+			}
+		}
+		add_prestige = 5
 	}
 	option = {
 		name = flavor_guj.2.b #We will not fund more vanity projects
+		trigger = { NOT = { has_dlc = "Dharma" } }
 		ai_chance = { factor = 10 }
 		
 	}
@@ -95,7 +116,13 @@ country_event = {
 
 	trigger = {
 		tag = GUJ
-		had_country_flag = { flag = guj_construction_of_champaner days = 3650 }
+		OR = {
+			AND = {
+				NOT = { has_dlc = "Dharma" }
+				had_country_flag = { flag = guj_construction_of_champaner days = 3650 }
+			}
+			has_country_flag = mahmudabad_completed
+		}
 		owns_core_province = 2056
 	}
 
@@ -104,17 +131,16 @@ country_event = {
 	}
 	
 	
-	option = { 
+	option = {
 		name = flavor_guj.3.a #Great!
 		add_prestige = 5
-		set_capital = 2056
 		2056 = {
 			add_province_modifier = {
 				name = guj_champaner
 				duration = -1
 			}
+			remove_province_modifier = guj_champaner_project
 		}
-		remove_country_modifier = guj_champaner_project
 	}
 }
 
@@ -141,7 +167,6 @@ country_event = {
 	option = { 
 		name = flavor_guj.4.a #All is lost.
 		add_prestige = -15
-		remove_country_modifier = guj_champaner_project
 	}
 }
 
@@ -167,7 +192,7 @@ country_event = {
 	option = {
 		name = flavor_guj.5.a #What a clear sighted man!
 		add_stability_or_adm_power = yes
-		add_piety = 0.25
+		add_piety = -0.25
 	}
 }
 
@@ -183,7 +208,13 @@ country_event = {
 	trigger = {
 		tag = GUJ
 		religion_group = muslim
-		NOT = { is_year = 1475 }
+		OR = {
+			AND = {
+				NOT = { has_dlc = "Dharma" }
+				NOT = { is_year = 1475 }
+			}
+			has_country_flag = merchant_of_gujarat
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -194,23 +225,24 @@ country_event = {
 		name = flavor_guj.6.a #Great to Hear.
 		ai_chance = { factor = 90 }
 		add_prestige = 5
-		add_piety = -0.15
 		add_country_modifier = {
 			name = guj_merchants_doing_well
-			duration = 1825
+			duration = 3650
 		}
+		add_estate_burghers_loyalty_effect = yes
+		reduce_estate_church_loyalty_effect = yes
 	}
 	
 	option = {
 		name = flavor_guj.6.b #Blasphemy!
 		ai_chance = { factor = 10 }
-		add_stability = -1
 		add_prestige = 5
-		add_piety = 0.15
 		add_country_modifier = {
 			name = guj_hardline_rel_policy
-			duration = 1825
+			duration = 3650
 		}
+		reduce_estate_burghers_loyalty_effect = yes
+		add_estate_church_loyalty_effect = yes
 	}
 }
 
@@ -245,6 +277,11 @@ country_event = {
 				owns_core_province = 2321
 			}
 		}
+		OR = {
+			POR = { any_owned_province = { superregion = india_superregion } }
+			AND = {
+				NOT = { exists = POR }
+				IBE = { any_owned_province = { superregion = india_superregion } }
 	}
 
 	mean_time_to_happen = {
@@ -282,11 +319,7 @@ country_event = {
 			limit = { exists = POR }
 			POR = { add_opinion = { who = TUR modifier = opinion_irritated } }
 		}
-		if = {
-			limit = { 
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			IBE = { add_opinion = { who = TUR modifier = opinion_irritated } }
 		}
 		add_years_of_income = -0.1

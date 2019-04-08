@@ -564,11 +564,7 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = { 
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			IBE = {
 				add_opinion = {
 					who = root

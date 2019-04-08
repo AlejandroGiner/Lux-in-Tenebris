@@ -72,11 +72,7 @@ country_event = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			reverse_add_opinion = {
 				who = IBE
 				modifier = missionaries_accepted
@@ -107,11 +103,7 @@ country_event = {
 				}		
 			}
 		}
-		if = {
-			limit = {
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			reverse_add_opinion = {
 				who = IBE
 				modifier = missionaries_rebuffed
@@ -147,7 +139,6 @@ country_event = {
 			}
 			add_reform_progress_small_effect = yes
 		}
-		
 		reverse_add_opinion = {
 			who = KON
 			modifier = missionaries_accepted
@@ -219,11 +210,7 @@ country_event = {
 				}		
 			}
 		}
-		if = {
-			limit = { 
-				NOT = { exists = POR }
-				exists = IBE
-			}
+		else = {
 			hidden_effect = {
 				IBE = {
 					country_event = { id = flavor_kon.5 days = 1 }
