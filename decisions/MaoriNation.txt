@@ -48,7 +48,7 @@ country_decisions = {
 			owns_core_province = 1106			# 
 		}
 		effect = {
-			2739 = {	#
+			2739 = {
 				move_capital_effect = yes
 			}
 			change_tag = MAO
@@ -64,7 +64,6 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 3650
 			}
-			set_capital = 2739 # 
 			if = {
 				limit = {
 					NOT = { primary_culture = maori }
@@ -73,14 +72,9 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					OR = {
-						has_reform = tribal_kingdom
-						has_reform = tribal_despotism
-						has_reform = tribal_federation
-						has_reform = tribal_democracy
-					}
+					government = tribal
 				}
-				change_government = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
+				change_government = monarchy #Desert tribes settling down, theocracies become monarchies.
 			}
 			add_permanent_claim = 2738
 			add_permanent_claim = 1109
