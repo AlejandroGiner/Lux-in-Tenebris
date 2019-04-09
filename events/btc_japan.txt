@@ -1,0 +1,79 @@
+namespace = btc_japan
+
+country_event = {
+    id = btc_japan.1
+    title = btc_japan.1.t
+    desc = btc_japan.1.d
+    #picture =
+
+    trigger = {
+        always = no #because unfinished
+        tag = ASK
+        is_year = 1460
+    }
+
+    mean_time_to_happen = {
+        years = 1
+    }
+
+    immediate = {
+        country_event = {
+            id = btc_japan.2
+        }
+        every_subject_country = {
+            country_event = {
+                id = btc_japan.3
+            }
+        }
+    }
+
+    option = {#Put Yoshimi in line of succession
+        name = btc_japan.1.a
+        define_heir = {
+            male = yes
+            dynasty = ROOT
+            name = "Yoshimi"
+            birth_date = 1439.3.3
+            claim = 80
+            no_consort_with_heir = yes #not sure if this applies
+        }
+    }
+
+    option = {#Be patient
+        name = btc_japan.1.b
+
+    }
+}
+
+#Birth of Child of Yoshimasa
+country_event = {
+    id = btc_japan.2
+    title = btc_japan.2.t
+    desc = btc_japan.2.d
+    #picture =
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_global_flag = birth_of_yoshihisa_flag
+    }
+
+    option = {
+        name = btc_japan.2.a
+    }
+}
+
+#Yamana Succession Dispute
+country_event = {
+    id = btc_japan.3
+    title = btc_japan.3.t
+    desc = btc_japan.3.d
+    #picture =
+
+    is_triggered_only = yes
+
+    option = {
+        name = btc_japan.3.a
+        
+    }
+}
