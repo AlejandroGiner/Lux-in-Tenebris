@@ -2949,4 +2949,47 @@ country_event = {
 		}
 	}
 }
+
+#BTC
+country_event = {
+	id = flavor_eng.2137
+	title = flavor_eng.2137.t
+	desc = flavor_eng.2137.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1444
+		NOT = {
+			is_year = 1472
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 167
+	}
+	
+	option = { #Invite him to court
+		name = flavor_eng.2137.a
+		define_advisor = {
+			type = commandant
+			culture = english
+			skill = 2
+			name = "Richard Neville"
+			discount = yes
+		}
+	}
+	option = { #Make him commander
+		name = flavor_eng.2137.b
+		define_general = {
+			name = "Richard Neville"
+			shock = 3
+			fire = 3
+			manuever = 3
+			siege = 0
+		}
+	}
+}
 	
