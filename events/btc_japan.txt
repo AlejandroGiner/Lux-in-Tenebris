@@ -17,14 +17,18 @@ country_event = {
     }
 
     immediate = {
+      hidden_effect = {
         country_event = {
-            id = btc_japan.2
+          id = btc_japan.2
+          days = 30
+          random = 700
         }
         every_subject_country = {
-            country_event = {
-                id = btc_japan.3
-            }
+          country_event = {
+            id = btc_japan.4
+          }
         }
+      }
     }
 
     option = {#Put Yoshimi in line of succession
@@ -55,7 +59,9 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
-        set_global_flag = birth_of_yoshihisa_flag
+        hidden_effect = {
+        
+        }
     }
 
     option = {
@@ -76,4 +82,18 @@ country_event = {
         name = btc_japan.3.a
         
     }
+}
+
+#Broadcast Event
+country_event = {
+  id = btc_japan.4
+  title = btc_japan.4.t
+  desc = btc_japan.4.d
+  #picture = 
+  
+  is_triggered_only = yes
+  
+  option = {
+    name = btc_japan.4.a
+  }
 }
