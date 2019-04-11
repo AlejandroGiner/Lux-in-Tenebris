@@ -166,6 +166,12 @@ country_event = {
       add_base_production = 1
       add_base_manpower = 1
     }
+    change_price = {
+      trade_goods = potatoes
+      key = btc_potatoes_spread
+      value = 0.333 #2.25 -> 3.0
+      duration = -1
+    }
   }
   option = {
     name = btc_tradegoods.2.b
