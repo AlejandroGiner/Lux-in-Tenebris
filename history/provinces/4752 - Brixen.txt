@@ -1,0 +1,49 @@
+#BT Italy reoverhaul
+
+owner = BRX
+controller = BRX
+add_core = BRX
+add_core = TIR
+add_core = STY
+culture = austrian
+religion = catholic
+capital = "Brixen"
+base_tax = 3
+base_production = 2
+base_manpower = 2
+trade_goods = marble
+is_city = yes
+hre = yes
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = persian_btc
+discovered_by = eastern
+
+
+#Province history completed by - Nikicaga & Draiocht
+#By circa 1430 very unclear if this is Austria, an Austrian fief, an Austrian apanage, or an independent HRE bishopric. 
+#Calling it independent because people love tags, and Austria has enough dev problems
+1803.1.1 = {	
+	owner = HAB
+	controller = HAB
+	add_core = HAB
+} # to the Habsburgs
+1805.12.26 = {	
+	owner = BAV
+	controller = BAV
+	add_core = BAV
+} # The Treaty of Pressburg
+1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved
+1809.10.14 = {
+	owner = ITA
+	controller = ITA
+	add_core = ITA
+	remove_core = BAV
+} # Incorporated into the Kingdom of Italy after the treaty of Schönbrunn
+1814.4.11 = {
+	owner = HAB
+	controller = HAB
+} # Treaty of Fontainebleau, Napoleon abdicates unconditionally
+
