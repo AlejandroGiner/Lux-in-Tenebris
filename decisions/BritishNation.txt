@@ -92,7 +92,7 @@ country_decisions = {
 					has_dlc = "Rule Britannia"
 				}
 				west_bengal_area = {
-					limit = { NOT = { is_permanent_claim = ROOT } }
+					limit = { NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = GBR
 				}
