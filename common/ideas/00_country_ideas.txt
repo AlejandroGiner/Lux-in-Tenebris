@@ -746,7 +746,12 @@ BAV_ideas = {
 	}
 	
 	trigger = {
+		OR = {
 		tag = BAV
+		tag = BV1
+		tag = BV2
+		tag = BV3 
+		}
 	}
 	free = yes
 	

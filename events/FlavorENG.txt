@@ -2973,6 +2973,9 @@ country_event = {
 	
 	option = { #Invite him to court
 		name = flavor_eng.2137.a
+		ai_chance = {
+			factor = 30
+		}
 		define_advisor = {
 			type = commandant
 			culture = english
@@ -2983,6 +2986,9 @@ country_event = {
 	}
 	option = { #Make him commander
 		name = flavor_eng.2137.b
+		ai_chance = {
+			factor = 70
+		}
 		define_general = {
 			name = "Richard Neville"
 			shock = 3
