@@ -110,3 +110,48 @@ province_event = {
     }
   }
 }
+#Increased Whaling in the Western Seas
+country_event = {
+  id = PriceChangesBTC.4
+  title = PriceChangesBTC.4.t
+  desc = PriceChangesBTC.4.d
+  #picture =
+  
+  fire_only_once = yes
+  major = yes
+  
+  trigger = {
+    capital_scope = { continent = europe }
+    OR = {
+      any_subject_country = {
+        is_colonial_nation = yes
+        whales = 2
+      }
+      calc_true_if = {
+        all_owned_province = {
+          OR = {
+            NOT = { continent = europe }
+            province_id = 5591
+          }
+          trade_goods = whales
+        }
+        amount = 2
+      }
+    }
+  }
+  
+  mean_time_to_happen = {
+    years = 5
+  }
+  
+  option = {
+    name = PriceChangesBTC.4.a
+    ai_chance = { factor = 1 }
+    change_price = {
+      trade_goods = whales
+      key = btc_increased_whaling
+      value = 0.25 #2.0 -> 2.5
+      duration = -1
+    }
+  }
+}
