@@ -943,10 +943,12 @@ country_decisions = {
 							area = lowlands_area
 							area = scottish_marches_area
 							area = highlands_area
-							area = kingdom_of_the_isles_area
+							province_id = 253
+							province_id = 4364
+							province_id = 5842
 						}
 					}
-					amount = 13			#3/4 of Scotland's 17 provinces
+					amount = 14			#3/4 of Scotland's 19 provinces
 				}
 			}
 			total_development = 200			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 80 percent discounted. Note base dev in 1444 Ireland and Scotland is around 180 total
