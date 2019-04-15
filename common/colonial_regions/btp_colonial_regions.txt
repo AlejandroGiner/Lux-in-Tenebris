@@ -34,14 +34,7 @@ colonial_greenland = {
 		name = "COLONIAL_GREENLAND_BTP_Groenland"
 	}
 	names = {
-		trigger = {
-			culture_group = germanic
-			NOT = {
-				primary_culture = dutch
-				tag = NED
-				tag = HOL
-			}
-		}
+		trigger = { culture_group = germanic }
 		name = "COLONIAL_GREENLAND_BTP_Gruenland"
 	}
 	names = {
