@@ -1,0 +1,19 @@
+declarewar = {
+  condition = {
+    potential = {
+    }
+    allow = {
+      always = yes
+    }
+  }
+  effect = {
+    #ROOT = attacker
+    #FROM = defender
+    ROOT = {
+      country_event = {
+        id = waldensian_events.100
+        random = 500
+      }
+    }
+  }
+}

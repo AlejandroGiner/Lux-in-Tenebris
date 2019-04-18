@@ -805,3 +805,26 @@ country_event = {
     set_global_flag = false_waldo_flag
   }
 }
+
+#Vow of Peace Broken
+country_event = {
+  id = waldensian_events.100
+  title = waldensian_events.100.t
+  desc = waldensian_events.100.d
+  #picture =
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = waldensian
+    has_country_modifier = vow_of_peace_modifier
+    is_in_war = {
+      attacker_leader = ROOT
+    }
+  }
+  
+  option = {
+    name = waldensian_events.100.a
+    add_stability = -3
+  }
+}
