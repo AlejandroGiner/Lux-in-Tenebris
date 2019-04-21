@@ -1,0 +1,206 @@
+########################################
+# Extra Flavor Events for Ayutthaya
+########################################
+
+namespace = ayutthaya
+normal_or_historical_nations = yes
+
+#Portuguese Envoys in Ayutthaya
+country_event = {
+	id = ayutthaya.1
+	title = "ayutthaya.1.t"
+	desc = "ayutthaya.1.d"
+	picture = DIPLOMACY_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AYU
+		east_indies_superregion = {
+			owned_by = POR
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = "ayutthaya.1.a" #Honor to our new friends!
+		POR = {
+			add_opinion = {
+				who = ROOT
+				modifier = signed_treaty
+			}
+                }
+		ROOT = {
+			add_opinion = {
+				who = POR
+				modifier = signed_treaty
+			}
+                }
+		add_country_modifier = {
+			name = ayu_portuguese_treaty
+			duration = -1
+		}
+	}
+	option = {
+		name = "ayutthaya.1.b" #They have no place in Malacca
+		POR = {
+			add_opinion = {
+				who = ROOT
+				modifier = rejected_treaty
+			}
+		}
+	}
+}
+
+#Return of the Uthong Clan
+country_event = {
+	id = ayutthaya.2
+	title = "ayutthaya.2.t"
+	desc = "ayutthaya.2.d"
+	picture = COURT_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AYU
+		has_regency = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 35
+	}
+	
+	option = {
+		name = "ayutthaya.2.a" #Uthong has finally been restored
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = yes
+		}
+		define_ruler = {
+			name = "Worawongasa"
+			dynasty = "Uthong"
+			claim = 30
+			adm = 2
+			dip = 1
+			mil = 3
+			male = yes
+			fixed = yes
+		}
+			hidden_effect = {
+				add_ruler_personality = martial_educator_personality
+                }
+	        define_consort = {
+		        name = "Si Sudachan"
+				dynasty = "Uthong"
+		        female = yes
+		        adm = 3
+		        dip = 3
+		        mil = 2
+			fixed = yes
+	        }
+		hidden_effect = {
+			add_consort_personality = secretive_personality
+                }
+		if = {
+			limit = {
+				any_owned_province = {
+					is_core = ROOT
+					is_capital = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_core = ROOT 
+					is_capital = yes
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 3
+					leader = "Maha Chakkraphat"
+					win = yes
+			         }
+			}
+		}
+	}
+
+	option = {
+		name = "ayutthaya.2.b" #Rally the clans, Uthong cannot rule!
+		if = {
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = yes
+		}
+		define_ruler = {
+			dynasty = "Suphannaphum"
+			name = "Maha Chakkraphat"
+			male = yes
+			adm = 2
+			dip = 1
+			mil = 2
+			fixed = yes
+		}
+		hidden_effect = {
+			add_consort_personality = strict_personality
+                }
+		if = {
+			limit = {
+				any_owned_province = {
+					is_core = ROOT
+					is_capital = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_core = ROOT 
+					is_capital = yes
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+					leader = "Worawongsa Uthong"
+					win = yes
+				}
+			}
+		}
+	}
+}
+
+#Christian Missions in Siam
+#country_event = {
+#	id = ayutthaya.3
+#	title = "ayutthaya.3.t"
+#	desc = "ayutthaya.3.d"
+#	picture = REFORM_eventPicture
+#	
+#	trigger = {
+#		tag = AYU
+#	}
+#	
+#	option = {
+#		name = "ayutthaya.3.a" #Allow their work
+#		event_target:poor_province = {
+#			if = {
+#				limit = {
+#					NOT = { religion = catholic }
+#				}
+#				change_religion = catholic
+#                               add_base_tax = 1
+#                               add_base_production = 1
+#		        }
+#			add_permanent_province_modifier = {
+#				name = "religious_zeal_at_conv"
+#				duration = 9000
+#			}
+#		}
+#	}
+#	option = {
+#		name = "flavor_ayu.EVTOPTB3" #Stop the missions
+#		add_stability_or_adm_power = yes
+#	}
+#}

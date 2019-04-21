@@ -1057,11 +1057,7 @@ sumatran_ideas = {
 
 	trigger = {
 		religion_group = muslim
-		OR = {
-			primary_culture = acehnese
-			primary_culture = sumatran
-			primary_culture = batak
-		}
+		primary_culture = batak
 	}
 	free = yes
 
@@ -2262,9 +2258,8 @@ luzon_ideas = {
 
 	trigger = {
 		OR = {
-			tag = PGS
-			tag = TDO
-			tag = MNA
+			primary_culture = filipino
+			primary_culture = ilocano
 		}
 	}
 

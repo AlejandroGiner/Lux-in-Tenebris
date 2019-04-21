@@ -103,9 +103,21 @@ shan_monarchy = {
 		3 = CHHATRAPATI
 	}
 
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
 	trigger = {
-		government = monarchy
 		primary_culture = shan
+		government = monarchy
 	}
 }
 
@@ -128,8 +140,20 @@ lue_monarchy = {
 		3 = CHHATRAPATI
 	}
 
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
 	trigger = {
-                primary_culture = khun
+		primary_culture = khun
 		government = monarchy
 	}
 }
@@ -153,8 +177,20 @@ tai_monarchy = {
 		3 = CHHATRAPATI
 	}
 
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
 	trigger = {
-                primary_culture = tai
+		primary_culture = tai
 		government = monarchy
 		NOT = {
 			tag = MPH
@@ -179,6 +215,30 @@ burman_monarchy = {
 		1 = PRINCESS
 		2 = KING
 		3 = CHHATRAPATI
+	}
+
+	consort_male = {
+		1 = CHIEF_PRINCE
+		2 = CHIEF_KING
+		3 = CHIEF_KING
+	}
+	
+	consort_female = {
+		1 = CHIEF_PRINCESS
+		2 = CHIEF_QUEEN
+		3 = CHIEF_QUEEN
+	}
+
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
 	}
 
 	trigger = {
@@ -231,6 +291,18 @@ khmer_monarchy = {
 		3 = CHHATRAPATI
 	}
 
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
 	trigger = {
 		government = monarchy
 		primary_culture = khmer
@@ -254,6 +326,18 @@ thai_monarchy = {
 		1 = PRINCESS
 		2 = KING
 		3 = CHAKKRAPHATNI
+	}
+
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
 	}
 
 	trigger = {
@@ -284,9 +368,53 @@ lao_monarchy = {
 		3 = CHAKKAPHATNI
 	}
 
+	heir_male = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
+	heir_female = {
+		1 = UPARAJA
+		2 = UPARAJA
+		3 = UPARAJA
+	}
+
 	trigger = {
 		government = monarchy
 		primary_culture = laotian
+	}
+}
+
+barangay_polity = {
+	rank = {
+		1 = BARANGAY
+		2 = GRAND_BARANGAY
+		3 = GREAT_BARANGAY
+	}
+
+	ruler_male = {
+		1 = DATU
+		2 = LAKAN
+		3 = GREAT_LAKAN
+	}
+
+	ruler_female = {
+		1 = DATU
+		2 = LAKAN
+		3 = GREAT_LAKAN_fem
+	}
+
+	trigger = {
+		OR = {
+			primary_culture = filipino
+			primary_culture = ilocano
+			primary_culture = visayan
+			primary_culture = danao
+			tag = DPT
+		}
+		NOT = { tag = SUL }
+		NOT = { tag = MGD }
 	}
 }
 
