@@ -138,7 +138,6 @@ south_german_region = {
 		tirol_area
 		austria_proper_area
 		inner_austria_area
-		carniola_area
 		switzerland_area
 		lower_bavaria_area
 		upper_bavaria_area
@@ -358,23 +357,29 @@ balkan_region = {
 		serbia_area
 		rascia_area
 		bulgaria_area
-		macedonia_area
-		northern_greece_area
-		morea_area
-		thrace_area
 		albania_area
-		eastern_mediterrenean_islands_area			#Cut in 1.23 vanilla, but keeping it in BT for now
-		aegean_archipelago_area			#Added in 1.23 and moved from Anatolia in BT
 		#BTADDITIONS
-		western_aegean_area			#Cut in 1.23 vanilla, but keeping it in BT for now
 		slavonia_area
 		upper_thrace_area
+		carniola_area
 		northern_macedonia_area
 		lower_danube_area
+	}
+}
+
+greece_region = {
+	areas = {
 		south_thrace_area
 		thessaly_area
 		south_morea_area
 		cyprus_area
+		western_aegean_area			#Cut in 1.23 vanilla, but keeping it in BT for now
+		eastern_mediterrenean_islands_area			#Cut in 1.23 vanilla, but keeping it in BT for now
+		aegean_archipelago_area			#Added in 1.23 and moved from Anatolia in BT
+		macedonia_area
+		northern_greece_area
+		morea_area
+		thrace_area
 	}
 }
 
