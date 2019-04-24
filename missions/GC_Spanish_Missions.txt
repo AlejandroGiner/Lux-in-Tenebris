@@ -1864,70 +1864,7 @@ gc_spain_4_d = {
 			}
 		}
 		effect = {
-			mindanao_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			west_mindanao_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			visayas_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			western_visayas_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			ibalong_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			palawan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			luzon_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			central_luzon_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			southern_luzon_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			sulu_area = {
+			philippines_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1941,60 +1878,13 @@ gc_spain_4_d = {
 		required_missions = { gc_cas_spa_discover_spice_islands }
 		
 		provinces_to_highlight = {
-			OR = {
-				area = mindanao_area
-				area = west_mindanao_area
-				area = visayas_area
-				area = western_visayas_area
-				area = ibalong_area
-				area = palawan_area
-				area = luzon_area
-				area = central_luzon_area
-				area = southern_luzon_area
-				area = sulu_area
-			}
+			region = philippines_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
-			sulu_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			southern_luzon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			central_luzon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			luzon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			west_mindanao_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			visayas_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			western_visayas_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			palawan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ibalong_area = {
+			philippines_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
