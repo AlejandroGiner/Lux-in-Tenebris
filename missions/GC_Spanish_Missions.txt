@@ -340,6 +340,9 @@ gc_spain_2 = {
 			210 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			3326 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			if = {
@@ -385,11 +388,24 @@ gc_spain_2 = {
 		trigger = {
 			upper_andalucia_area = {
 				type = all
-				culture = ROOT
+				OR = {
+					culture = ROOT
+					culture = andalucian
+				}
 			}
 			baetica_area = {
 				type = all
-				culture = ROOT
+				OR = {
+					culture = ROOT
+					culture = andalucian
+				}
+			}
+			lower_andalucia_area = {
+				type = all
+				OR = {
+					culture = ROOT
+					culture = andalucian
+				}
 			}
 		}
 		effect = {
@@ -457,11 +473,7 @@ gc_spain_2_b = {
 				tooltip = cas_spa_hispaniola.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					OR = {
-						area = dominica_area
-						area = central_hispaniola_area
-						area = west_hispaniola_area
-					}
+					colonial_region = colonial_hispaniola
 					is_city = yes
 				}
 			}
@@ -488,7 +500,7 @@ gc_spain_2_b = {
 				fire = 5
 				manuever = 6
 				siege = 1
-				name = "Hernán Cortés"
+				name = "Hernï¿½n Cortï¿½s"
 			}
 			490 = {
 				add_base_production = 3
@@ -743,6 +755,17 @@ gc_spain_3 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			3326 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	gc_cas_spa_reconquista_one = {
@@ -777,16 +800,12 @@ gc_spain_3 = {
 		provinces_to_highlight = {
 			region = iberia_region
 			NOT = { religion_group = ROOT }
-			NOT = { area = macaronesia_area }
 		}
 		
 		trigger = {
 			iberia_region = {
 				type = all
-				OR = {
-					religion_group = ROOT
-					area = macaronesia_area
-				}
+				religion_group = ROOT
 			}
 		}
 		
@@ -837,7 +856,7 @@ gc_spain_3 = {
 				}
 				add_claim = ROOT
 			}
-			algiers_area = {
+			tagmudant_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
@@ -903,143 +922,28 @@ gc_spain_3_b = {
 				manuever = 5
 				siege = 1
 			}
-			upper_peru = {
+			peru_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
+					owner = { primitives = yes }
 				}
 				add_permanent_claim = ROOT
 			}
-			potosi_area = {
+			upper_peru_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
+					owner = { primitives = yes }
 				}
 				add_permanent_claim = ROOT
 			}
-			antisuyu_area = {
+			colombia_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
+					owner = { primitives = yes }
 				}
-				add_permanent_claim = ROOT
-			}
-			kuntisuyu_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			huanuco_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			cajamarca_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			quito_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			794 = {
-				add_permanent_claim = ROOT
-			}
-			2837 = {
-				add_permanent_claim = ROOT
-			}
-			2823 = {
-				add_permanent_claim = ROOT
-			}
-			2826 = {
-				add_permanent_claim = ROOT
-			}
-			812 = {
-				add_permanent_claim = ROOT
-			}
-			2822 = {
-				add_permanent_claim = ROOT
-			}
-			2821 = {
-				add_permanent_claim = ROOT
-			}
-			guatemala_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			east_yucatan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			yucatan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			chiapas_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			oaxaca_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			
-			eastern_mexico_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			guerrero_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			michoacan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			2657 = {
-				add_permanent_claim = ROOT
-			}
-			2621 = {
-				add_permanent_claim = ROOT
-			}
-			854 = {
-				add_permanent_claim = ROOT
-			}
-			2642 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -1093,6 +997,13 @@ gc_spain_3_b = {
 		effect = {
 			add_treasury = 500
 			peru_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_peru_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1174,25 +1085,15 @@ gc_spain_3_b = {
 					}
 				}
 			}
-			795 = {
+			peru_region = {
+				limit = { trade_goods = gold }
 				add_province_modifier = {
 					name = "spa_rb_gold_rush"
 					duration = 5475
 				}
 			}
-			2946 = {
-				add_province_modifier = {
-					name = "spa_rb_gold_rush"
-					duration = 5475
-				}
-			}
-			2941 = {
-				add_province_modifier = {
-					name = "spa_rb_gold_rush"
-					duration = 5475
-				}
-			}
-			804 = {
+			upper_peru_region = {
+				limit = { trade_goods = gold }
 				add_province_modifier = {
 					name = "spa_rb_gold_rush"
 					duration = 5475
@@ -1296,6 +1197,7 @@ gc_spain_4 = {
 				area = barcelona_area
 			}
 			NOT = { owned_by = ROOT }
+			NOT = { province_id = 3320 }
 		}
 		
 		trigger = {
@@ -1305,7 +1207,10 @@ gc_spain_4 = {
 			}
 			catalonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					province_id = 3320
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 			aragon_area = {
 				type = all
@@ -1404,6 +1309,13 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				abruzzo_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			else = {
 				sicily_area = {
@@ -1436,6 +1348,12 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = NAP
 				}
+				abruzzo_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = NAP
+				}
 			}
 		}
 	}
@@ -1451,6 +1369,7 @@ gc_spain_4 = {
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
+				area = abruzzo_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1476,6 +1395,10 @@ gc_spain_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			abruzzo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		
 		effect = {
@@ -1490,7 +1413,21 @@ gc_spain_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			lombardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_lombardy_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1522,10 +1459,6 @@ gc_spain_4 = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
-					OR = {
-						province_id = 92
-						province_id = 1744
-					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1538,7 +1471,9 @@ gc_spain_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = tuscany_area
+				area = south_tuscany_area
 				area = lombardy_area
+				area = east_lombardy_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1548,7 +1483,15 @@ gc_spain_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			south_tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_lombardy_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1685,6 +1628,20 @@ gc_spain_4_b = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_yorkshire_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				northern_england_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				cornwall_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1707,6 +1664,8 @@ gc_spain_4_b = {
 				area = east_midlands_area
 				area = west_midlands_area
 				area = yorkshire_area
+				area = south_yorkshire_area
+				area = northern_england_area
 				area = cornwall_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1734,6 +1693,14 @@ gc_spain_4_b = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_england_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1918,6 +1885,20 @@ gc_spain_4_d = {
 				}
 				add_permanent_claim = ROOT
 			}
+			western_visayas_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ibalong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			palawan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1932,7 +1913,21 @@ gc_spain_4_d = {
 				}
 				add_permanent_claim = ROOT
 			}
+			central_luzon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			southern_luzon_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sulu_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1950,16 +1945,28 @@ gc_spain_4_d = {
 				area = mindanao_area
 				area = west_mindanao_area
 				area = visayas_area
+				area = western_visayas_area
+				area = ibalong_area
 				area = palawan_area
 				area = luzon_area
+				area = central_luzon_area
 				area = southern_luzon_area
+				area = sulu_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
+			sulu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			southern_luzon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_luzon_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1979,10 +1986,18 @@ gc_spain_4_d = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			western_visayas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			palawan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-			}			
+			}
+			ibalong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_army_tradition = 15
@@ -1993,6 +2008,12 @@ gc_spain_4_d = {
 				change_religion = ROOT
 			}
 			luzon_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				change_religion = ROOT
+			}
+			central_luzon_area = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -2105,8 +2126,7 @@ gc_spain_5_b = {
 				area = flanders_area
 				area = wallonia_area
 				area = luxemburg_liege_area
-				province_id = 92
-				province_id = 1744
+				area = brabant_area
 			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2130,11 +2150,8 @@ gc_spain_5_b = {
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
-			92 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				religion = ROOT
-			}
-			1744 = {
+			brabant_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
@@ -2162,7 +2179,6 @@ gc_spain_5_b = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
-						is_core = HAB
 					}
 					add_permanent_claim = ROOT
 				}
@@ -2202,12 +2218,6 @@ gc_spain_5_b = {
 				}
 				add_claim = ROOT
 			}
-			95 = {
-				add_claim = ROOT
-			}
-			3061 = {
-				add_claim = ROOT
-			}
 		}
 	}
 	gc_spa_austrian_union = {
@@ -2218,10 +2228,8 @@ gc_spain_5_b = {
 			OR = {
 				area = inner_austria_area
 				area = austria_proper_area
-				AND = {
-					area = tirol_area
-					is_core = HAB
-				}
+				area = tirol_area
+				is_core = HAB
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2237,10 +2245,7 @@ gc_spain_5_b = {
 			}
 			tirol_area = {
 				type = all
-				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
-					NOT = { is_core = HAB }
-				}
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
