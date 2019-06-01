@@ -5,6 +5,7 @@ country_decisions = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_transcaucasia_flag_btp }
 			NOT = { tag = MOU }
+			NOT = { tag = MCR }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = RUS }
@@ -13,12 +14,11 @@ country_decisions = {
 			NOT = { tag = TKY }
 			NOT = { tag = PER }
 			OR = { 
-				primary_culture = georgian
-				primary_culture = armenian
-				primary_culture = circassian
-				primary_culture = abkhaz
-				primary_culture = alan
-				primary_culture = lezgian
+				culture_group = caucasian
+				culture_group = hayer
+				culture_group = adyghe
+				culture_group = alanic
+				primary_culture = udi_culture
 			}
 		}
 		provinces_to_highlight = {
