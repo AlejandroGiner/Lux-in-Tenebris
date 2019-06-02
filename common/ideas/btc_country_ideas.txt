@@ -4017,3 +4017,41 @@ MEC_ideas = {
 		technology_cost = -0.05
 	}
 }
+
+SIR_ideas = {
+	start = {
+		core_creation = -0.15
+		idea_cost = -0.15
+	}
+
+	bonus = {
+		defensiveness = 0.15
+	}
+
+	trigger = {
+		tag = SIR
+	}
+	free = yes
+
+	SIR_idea1 = {
+		legitimacy = 1
+	}
+	SIR_idea2 = {
+		global_spy_defence = 0.1
+	}
+	SIR_idea3 = {
+		unjustified_demands = -0.25
+	}
+	SIR_idea4 = {
+		global_missionary_strength = 0.01
+	}
+	SIR_idea5 = {
+		production_efficiency = 0.2
+	}
+	SIR_idea6 = {
+		land_morale = 0.15
+	}
+	SIR_idea7 = {
+		diplomatic_reputation = 3
+	}
+}

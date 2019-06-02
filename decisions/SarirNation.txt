@@ -1,9 +1,9 @@
 country_decisions = {
-	mountaineer_nation = {
+	sarir_nation = {
 		major = yes
 		potential = {
 			btc_potential_trigger = yes
-			NOT = { has_country_flag = formed_mountaineers_flag_btp }
+			NOT = { has_country_flag = formed_sarir_flag_btp }
 			NOT = { tag = SIR }
 			NOT = { tag = MOU }
 			NOT = { tag = MCR }
@@ -17,7 +17,7 @@ country_decisions = {
 			NOT = { primary_culture = udi_culture }
 			OR = { 
 				culture_group = dagestani_group
-				primary_culture = caucasian_turkic
+				primary_culture = tat
 			}
 		}
 		provinces_to_highlight = {
@@ -35,10 +35,11 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = MCR }
-			adm_tech = 27
+			NOT = { exists = SIR }
+			adm_tech = 10
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
+			religion_group = christian
 			is_nomad = no
 			owns_core_province = 425 # Derbent
 			owns_core_province = 7023 # Kaitag
@@ -47,13 +48,13 @@ country_decisions = {
 			owns_core_province = 7025 # Vedeno
 		}
 		effect = {
-			change_tag = MCR
+			change_tag = SIR
 			remove_non_electors_emperors_from_empire_effect = yes
 			caucasia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = MCR
+				add_permanent_claim = SIR
 			}	
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -61,10 +62,10 @@ country_decisions = {
 			}
 			add_prestige = 25
 			#if = {
-			#	limit = { has_custom_ideas = no }
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
-			set_country_flag = formed_mountaineers_flag_btp
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_sarir_flag_btp
 		}
 		ai_will_do = {
 			factor = 1
