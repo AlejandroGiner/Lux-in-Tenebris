@@ -283,7 +283,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
+		else_if = {
 			limit = { culture_group = iberian }
 			define_explorer = {
 				name = "Juan Caboto"
@@ -293,15 +293,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					OR = {
-						culture_group = british
-						culture_group = iberian
-					}
-				}
-			}
+		else = {
 			define_explorer = {
 				name = "Zuan Chabotto"
 				fire = 2
@@ -372,7 +364,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
+		else_if = {
 			limit = { culture_group = iberian }
 			define_explorer = {
 				name = "Juan Caboto"
@@ -382,15 +374,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					OR = {
-						culture_group = british
-						culture_group = iberian
-					}
-				}
-			}
+		else = {
 			define_explorer = {
 				name = "Zuan Chabotto"
 				fire = 2
@@ -460,7 +444,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
+		else_if = {
 			limit = { culture_group = iberian }
 			define_explorer = {
 				name = "Juan Caboto"
@@ -470,15 +454,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					OR = {
-						culture_group = british
-						culture_group = iberian
-					}
-				}
-			}
+		else = {
 			define_explorer = {
 				name = "Zuan Chabotto"
 				fire = 2
@@ -553,25 +529,17 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
+		else_if = {
 			limit = { culture_group = iberian }
 			define_explorer = {
-				name = "Sebastián Caboto"
+				name = "Sebastiï¿½n Caboto"
 				fire = 5
 				shock = 2
 				manuever = 4
 				siege = 0
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					OR = {
-						culture_group = british
-						culture_group = iberian
-					}
-				}
-			}
+		else = {
 			define_explorer = {
 				name = "Sebastiano Chabotto"
 				fire = 5
@@ -640,25 +608,17 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
+		else_if = {
 			limit = { culture_group = iberian }
 			define_explorer = {
-				name = "Sebastián Caboto"
+				name = "Sebastiï¿½n Caboto"
 				fire = 5
 				shock = 2
 				manuever = 4
 				siege = 0
 			}
 		}
-		if = {
-			limit = {
-				NOT = {
-					OR = {
-						culture_group = british
-						culture_group = iberian
-					}
-				}
-			}
+		else = {
 			define_explorer = {
 				name = "Sebastiano Chabotto"
 				fire = 5
@@ -732,8 +692,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
-			limit = { NOT = { culture_group = french } }
+		else = {
 			define_explorer = {
 				name = "Jakez Karter"
 				fire = 2
@@ -802,8 +761,7 @@ country_event = {
 				siege = 0
 			}
 		}
-		if = {
-			limit = { NOT = { culture_group = french } }
+		else = {
 			define_explorer = {
 				name = "Jakez Karter"
 				fire = 2
