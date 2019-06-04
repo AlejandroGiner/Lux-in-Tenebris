@@ -326,8 +326,14 @@ gc_por_2 = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+			tag = POR
+			AND = {
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -437,8 +443,14 @@ gc_por_2_b = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+			tag = POR
+			AND = {
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
 	}
@@ -497,8 +509,14 @@ gc_por_2_c = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+			tag = POR
+			AND = {
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -627,8 +645,14 @@ gc_por_3 = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+ 			tag = POR
+ 			AND = {
+ 				tag = IBE
+ 				NOT = { exists = POR }
+ 			}
+ 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -706,8 +730,14 @@ gc_por_3_b = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+			tag = POR
+			AND = {
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 		is_random_new_world = no
 	}
@@ -761,8 +791,14 @@ gc_por_3_c = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+			tag = POR
+			AND = {
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1046,8 +1082,14 @@ gc_por_4 = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+ 			tag = POR
+ 			AND = {
+ 				tag = IBE
+ 				NOT = { exists = POR }
+ 			}
+ 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1418,8 +1460,14 @@ gc_por_5 = {
 		has_dlc = "Golden Century"
 	}
 	potential = {
-		 has_dlc = "Golden Century"
-		tag = POR
+		has_dlc = "Golden Century"
+		OR = {
+			tag = POR
+			AND = {
+				tag = IBE
+				NOT = { exists = POR }
+			}
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
