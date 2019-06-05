@@ -4055,3 +4055,42 @@ SIR_ideas = {
 		diplomatic_reputation = 3
 	}
 }
+
+YUG_ideas = {
+	start = {
+		infantry_power = 0.15
+		manpower_recovery_speed = 0.2
+	}
+
+	bonus = {
+		defensiveness = 0.15
+	}
+
+	trigger = {
+		tag = YUG
+	}
+	free = yes
+
+	YUG_idea1 = {
+		num_accepted_cultures = 2
+	}
+	YUG_idea2 = {
+		defensiveness = 0.15
+	}
+	YUG_idea3 = {
+		unjustified_demands = -0.25
+	}
+	YUG_idea4 = {
+		global_missionary_strength = 0.01
+	}
+	YUG_idea5 = {
+		production_efficiency = 0.1
+	}
+	YUG_idea6 = {
+		land_morale = 0.10
+	}
+	YUG_idea7 = {
+		diplomatic_reputation = 1
+	}
+}
+
