@@ -1,0 +1,74 @@
+country_decisions = {
+	yugoslav_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_yugoslavia_flag_btp }
+			NOT = { tag = YUG }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = RUS }
+			NOT = { tag = TUR }
+			NOT = { tag = TKY }
+			NOT = { tag = HAB }
+			culture_group = south_slavic
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 141 # Smederevo
+				province_id = 139 # Hum
+				province_id = 140 # Doboj
+				province_id = 1828 # Donji Krajii
+				province_id = 1827 # Raska
+				province_id = 1766 # Kosovo
+				province_id = 138 # Zeta
+				province_id = 129 # Krain
+				
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = YUG }
+			adm_tech = 20
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 141 # Smederevo
+			owns_core_province = 419 # Yerevan
+			owns_core_province = 140 # Doboj
+			owns_core_province = 1828 # Donji Krajii
+			owns_core_province = 1827 # Raska
+			owns_core_province = 1766 # Kosovo
+			owns_core_province = 138 # Zeta
+			owns_core_province = 129 # Krain
+		}
+		effect = {
+			change_tag = YUG
+			remove_non_electors_emperors_from_empire_effect = yes
+			balkan_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = YUG
+			}	
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_yugoslavia_flag_btp
+			set_government_rank = 2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
