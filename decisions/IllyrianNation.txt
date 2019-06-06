@@ -5,8 +5,7 @@ country_decisions = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_illyria_flag_btp }
 			NOT = { tag = ILY }
-			OR = {
-				culture_group = south_slavic
+			NOT = { tag = YUG }
 				culture_group = illyrian
 			}
 		}
