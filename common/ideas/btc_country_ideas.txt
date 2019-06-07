@@ -4094,3 +4094,42 @@ YUG_ideas = {
 	}
 }
 
+KRM_ideas = {
+	start = {
+		trade_steering = 0.15
+		garrison_size = 0.10
+	}
+
+	bonus = {
+		defensiveness = 0.15
+	}
+
+	trigger = {
+		tag = KRM
+	}
+	free = yes
+
+	KRM_idea1 = {
+		defensiveness = 0.15
+	}
+	KRM_idea2 = {
+		global_trade_power = 0.1
+	}
+	KRM_idea3 = {
+		production_efficiency = 0.15
+	}
+	KRM_idea4 = {
+		build_cost = -0.15
+	}
+	KRM_idea5 = {
+		hostile_attrition = 1
+	}
+	KRM_idea6 = {
+		land_forcelimit_modifier = 0.15
+	}
+	KRM_idea7 = {
+		war_exhaustion = -0.02
+	}
+}
+
+
