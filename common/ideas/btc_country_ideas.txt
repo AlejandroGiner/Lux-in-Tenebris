@@ -4113,7 +4113,7 @@ KRM_ideas = {
 		defensiveness = 0.15
 	}
 	KRM_idea2 = {
-		global_trade_power = 0.1
+		trade_efficiency = 0.15
 	}
 	KRM_idea3 = {
 		production_efficiency = 0.15
@@ -4132,4 +4132,40 @@ KRM_ideas = {
 	}
 }
 
+ISF_ideas = {
+	start = {
+		global_tax_modifier = 0.10
+		diplomatic_upkeep = 1
+	}
 
+	bonus = {
+		army_tradition = 1
+	}
+
+	trigger = {
+		tag = ISF
+	}
+	free = yes
+
+	ISF_idea1 = {
+		legitimacy = 1
+	}
+	ISF_idea2 = {
+		global_trade_power = 0.15
+	}
+	ISF_idea3 = {
+		development_cost = -0.1
+	}
+	ISF_idea4 = {
+		mil_tech_cost_modifier = -0.1
+	}
+	ISF_idea5 = {
+		num_accepted_cultures = 2
+	}
+	ISF_idea6 = {
+		possible_mercenaries = 0.25
+	}
+	ISF_idea7 = {
+		prestige = 1
+	}
+}
