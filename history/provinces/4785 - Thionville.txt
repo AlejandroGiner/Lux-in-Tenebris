@@ -1,0 +1,36 @@
+#4785 - Thionville
+
+owner = BUR
+controller = BUR
+culture = wallonian
+religion = catholic
+hre = yes
+base_tax = 2
+base_production = 3
+trade_goods = grain
+base_manpower = 1
+capital = "Thionville"
+is_city = yes
+add_core = BUR
+add_core = LUX
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = persian_btc
+
+1549.11.4 = { owner = BNL controller = BNL add_core = BNL remove_core = BUR } #Pragmatic Sanction which unifies the Low Lands as one inheritable country
+1559.5.12 = { unrest = 3 } # New bishoprics in the Lowlands create an outrage
+1565.1.1 = { unrest = 5 } # Letters of Segovia, Philip I orders the harsh persecution of Calvinists
+#1566.1.1 = { unrest = 5 religion = reformed }	#Beeldenstorm causes religious tension between Reformist Spanish Netherlands and 'protector of the Counter-Reformation' Philip II.
+1566.4.5 = { unrest = 3 } # 'Eedverbond der Edelen', Margaretha of Parma promises leniency
+1567.9.10 = { unrest = 4 } # Counts of Egmont & Hoorne arrested
+1568.6.5 = { unrest = 6 } # Counts of Egmont & Hoorne beheaded
+1569.1.1 = { unrest = 12 } # The Duke of Alba reforms the taxation system ('tiende penning')
+1570.1.1 = { unrest = 20 } # The Duke of Alba reforms the penal system, 'Blood Council' (Bloedraad) established
+1579.1.6 = { owner = SPA controller = SPA add_core = SPA religion = catholic unrest = 0 add_local_autonomy = 50 }	#Union of Arras signed in the south, giving direct Spanish control at the cost of higher autonomy. Under the Spanish, Catholicism regains dominance.
+
+1659.7.1 = { controller = FRA } # MarÈchal Turenne takes control of Luxembourg
+1659.10.28 = { owner = FRA } # Peace of the Pyrennees - France gains the fortresses of Stenay, Thionville and Montmedy.
+#post in french history
