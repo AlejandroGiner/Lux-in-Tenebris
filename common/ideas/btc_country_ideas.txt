@@ -2664,18 +2664,17 @@ VAL_ideas = {
 IBE_ideas = {
 	start = {
 		colonists = 1
-		discipline = 0.05
+		artillery_fire = 1
 	}
 	bonus = {
-		administrative_efficiency = 0.05
+		global_colonial_growth = 35
 	}	
 	trigger = {
 		tag = IBE
 	}
 	free = yes
 	iberian_global_empire = {
-		envoy_travel_time = -0.33
-		state_maintenance_modifier = -0.15
+		trade_range_modifier = 0.3
 	}
 	spirit_of_sailors = {
 		naval_forcelimit_modifier = 0.25
@@ -2685,19 +2684,18 @@ IBE_ideas = {
 		land_morale = 0.10
 	}
 	past_the_pillars_of_hercules = {
-		trade_efficiency = 0.1
-		trade_range_modifier = 0.25
+		trade_efficiency = 0.15
 	}
 	american_conversion = {
-		global_missionary_strength = 0.03
-		global_colonial_growth = 35
+		missionaries = 1
+		papal_influence = 1
 	}
 	masters_of_the_new_world = {
-		global_tariffs = 0.2
-		liberty_desire_from_subject_development = -0.05
+		global_tariffs = 0.15
 	}
 	iberian_enlightenment= {
 		technology_cost = -0.05
+		idea_cost = -0.05
 	}
 }
 
