@@ -1580,3 +1580,158 @@ zoroastrian_group = {
 	crusade_name = HOLY_WAR
 	
 }
+
+druze_group = {
+	flag_emblem_index_range = { 110 110 }
+	druze = {
+		color = { 0.0 0.9 0.4 }
+		icon = 33
+		province = {
+		}
+		country = {
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10 #patriotic sacrifice
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = { 
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10
+		}
+		heretic = { DRUZE_FUNDAMENTALIST }
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_druze_group
+	
+	crusade_name = HOLY_WAR
+	
+}
+
+yazdanism = {
+	flag_emblem_index_range = { 110 110 }
+	yazidi = {
+		color = { 0.2 0.2 0.7 }
+		icon = 34
+		province = {
+		}
+		country = {
+			tolerance_own = 3 # Preoccupation with religious purity
+			advisor_pool = 1 # Caste system
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		heretic = { YAZIDI_FUNDAMENTALIST }
+	}
+	
+	
+	yarsan = {
+		color = { 0.5 0.6 0.3 }
+		icon = 35
+		province = {
+		}
+		country = {
+			tolerance_own = 3 # Preoccupation with religious purity
+			advisor_pool = 1 # Caste system
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = {
+			tolerance_own = 2
+			advisor_pool = 1
+		}
+		heretic = { YARSAN_FUNDAMENTALIST }
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_yazdanism_group
+	
+	crusade_name = HOLY_WAR
+	
+}
+
+babism = {
+	flag_emblem_index_range = { 110 110 }
+	bahai = {
+		color = { 0.9 1.0 0.0 }
+		icon = 36
+		province = {
+		}
+		country = {
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10 #patriotic sacrifice
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = { 
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10
+		}
+		heretic = { BAHAI_FUNDAMENTALIST }
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_bahai_group
+	
+	crusade_name = HOLY_WAR
+	
+}
+
+sabian = {
+	flag_emblem_index_range = { 110 110 }
+	mandaean = {
+		color = { 0.5 0.7 0.2 }
+		icon = 37
+		province = {
+		}
+		country = {
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10 #patriotic sacrifice
+		}
+		province = {
+			local_missionary_strength = -0.03
+		}
+		country_as_secondary = { 
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10
+		}
+		heretic = { MANDAEAN_FUNDAMENTALIST }
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_sabian_group
+	
+	crusade_name = HOLY_WAR
+	
+}
+
+manichaeism = {
+	flag_emblem_index_range = { 110 110 }
+	manichaean = {
+		color = { 0.5 0 0.3 }
+		icon = 38
+		province = {
+		}
+		country = {
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10 #patriotic sacrifice
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = { 
+			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
+			land_morale = 0.10
+		}
+		heretic = { MANICHAEAN_FUNDAMENTALIST }
+	}
+	
+	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_manichaeism_group
+	
+	crusade_name = HOLY_WAR
+	
+}
