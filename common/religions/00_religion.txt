@@ -1636,15 +1636,15 @@ yazdanism = {
 		province = {
 		}
 		country = {
-			tolerance_own = 3 # Preoccupation with religious purity
-			advisor_pool = 1 # Caste system
+			religious_unity = 0.20 # Explicitly rejects class, caste and rank
+			global_unrest = -1 # Important use of popular dances and songs
 		}
 		province = {
 			local_missionary_strength = -0.02
 		}
 		country_as_secondary = {
-			tolerance_own = 2
-			advisor_pool = 1
+			religious_unity = 0.15
+			global_unrest = -1
 		}
 		heretic = { YARSAN_FUNDAMENTALIST }
 	}
@@ -1663,15 +1663,15 @@ babism = {
 		province = {
 		}
 		country = {
-			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
-			land_morale = 0.10 #patriotic sacrifice
+			core_creation = -0.15 #Entrenched themselves in several places of the world in spite of persecution, from the levant to the united states
+			global_missionary_strength = 0.02 #Active missionaries
 		}
 		province = {
 			local_missionary_strength = -0.02
 		}
 		country_as_secondary = { 
-			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
-			land_morale = 0.10
+			core_creation = -0.10
+			global_missionary_strength = 0.01
 		}
 		heretic = { BAHAI_FUNDAMENTALIST }
 	}
@@ -1690,15 +1690,15 @@ sabian = {
 		province = {
 		}
 		country = {
-			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
-			land_morale = 0.10 #patriotic sacrifice
+			production_efficiency = 0.15 #A small but productive people
+			global_spy_defence = 0.25 #Highly secretive society
 		}
 		province = {
 			local_missionary_strength = -0.03
 		}
 		country_as_secondary = { 
-			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
-			land_morale = 0.10
+			production_efficiency = 0.15
+			global_spy_defence = 0.15
 		}
 		heretic = { MANDAEAN_FUNDAMENTALIST }
 	}
@@ -1717,15 +1717,15 @@ manichaeism = {
 		province = {
 		}
 		country = {
-			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
-			land_morale = 0.10 #patriotic sacrifice
+			movement_speed = 0.15 #Adherents traveled all over Asia
+			trade_steering = 0.25 #patriotic sacrifice
 		}
 		province = {
 			local_missionary_strength = -0.02
 		}
 		country_as_secondary = { 
-			tolerance_heathen = 2 #Believed in the holiness of many religious figures from diverse religions
-			land_morale = 0.10
+			movement_speed = 0.15
+			trade_steering = 0.25
 		}
 		heretic = { MANICHAEAN_FUNDAMENTALIST }
 	}
