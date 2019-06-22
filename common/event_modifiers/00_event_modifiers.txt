@@ -8751,17 +8751,17 @@ overlord_military_mission = {
 
 # Religions
 harmonized_vajrayana = {
-	production_efficiency = 0.05
+	production_efficiency = 0.15
 	religion = yes
 }
 
 harmonized_buddhism = { #Theravada
-	advisor_cost = -0.05
+	advisor_cost = -0.10
 	religion = yes
 }
 
 harmonized_mahayana = {
-	idea_cost = -0.07
+	idea_cost = -0.15
 	religion = yes
 }
 
@@ -8777,32 +8777,112 @@ harmonized_pagan = {
 }
 
 harmonized_jewish_group = {
-	global_institution_spread = 0.15
+	global_institution_spread = 0.25
 	religion = yes
 }
 
 harmonized_zoroastrian_group = {
-	trade_efficiency = 0.1
+	trade_efficiency = 0.2
 	religion = yes
 }
 
 harmonized_dharmic = {
-	tolerance_own = 1
+	prestige = 1
 	religion = yes
 }
 
 harmonized_muslim = {
-	trade_efficiency = 0.05
+	province_warscore_cost = -0.15
 	religion = yes
 }
 
 harmonized_christian = {
-	stability_cost_modifier = -0.05
+	stability_cost_modifier = -0.2
 	religion = yes
 }
 
 harmonized_taoism = {
-	development_cost = -0.05
+	legitimacy = 1
+	religion = yes
+}
+
+harmonized_anglican = {
+	global_tax_modifier = 0.2
+	religion = yes
+}
+
+harmonized_protestant = {
+	discipline = 0.025
+	religion = yes
+}
+
+harmonized_reformed = {
+	global_trade_goods_size_modifier = 0.1
+	religion = yes
+}
+
+harmonized_orthodox = {
+	harsh_treatment_cost = -0.25
+	religion = yes
+}
+
+harmonized_coptic = {
+	core_creation = -0.15
+	religion = yes
+}
+
+harmonized_waldensian = {
+	improve_relation_modifier = 0.20
+	religion = yes
+}
+
+harmonized_nestorian = {
+	army_tradition = 1
+	religion = yes
+}
+
+harmonized_shiite = {
+	development_cost = -0.2
+	religion = yes
+}
+
+harmonized_ibadi = {
+	movement_speed = 0.2
+	religion = yes
+}
+
+harmonized_sikhism = {
+	land_morale = 0.1
+	religion = yes
+}
+
+harmonized_druze = {
+	diplomatic_upkeep = 2
+	religion = yes
+}
+
+harmonized_yazidi = {
+	defensiveness = 0.15
+	religion = yes
+}
+
+harmonized_yarsan = {
+	embracement_cost = -0.25
+	religion = yes
+}
+
+harmonized_bahai = {
+	global_colonial_growth = 15
+	religion = yes
+}
+
+harmonized_mandaean = {
+	diplomatic_reputation = 2
+	religion = yes
+}
+
+harmonized_manichaean = {
+	administrative_efficiency = 0.05
 	religion = yes
 }
 
