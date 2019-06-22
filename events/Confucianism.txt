@@ -990,4 +990,466 @@ country_event = {
 	}
 }
 
+#Anglicanism Harmonization
+country_event = {
+	id = confucian_events.23
+	title = "confucian_events.23.t"
+	desc = "confucian_events.23.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.23.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_anglican"
+				duration = -1
+			}
+		}
+	}
+}
 
+#Lutheranism Harmonization
+country_event = {
+	id = confucian_events.24
+	title = "confucian_events.24.t"
+	desc = "confucian_events.24.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.24.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_protestant"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Calvinism Harmonization
+country_event = {
+	id = confucian_events.25
+	title = "confucian_events.25.t"
+	desc = "confucian_events.25.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.25.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_reformed"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Eastern Orthodoxy Harmonization
+country_event = {
+	id = confucian_events.26
+	title = "confucian_events.26.t"
+	desc = "confucian_events.26.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.26.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_orthodox"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Oriental Orthodoxy Harmonization
+country_event = {
+	id = confucian_events.27
+	title = "confucian_events.27.t"
+	desc = "confucian_events.27.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.27.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_coptic"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Waldensianism Harmonization
+country_event = {
+	id = confucian_events.28
+	title = "confucian_events.28.t"
+	desc = "confucian_events.28.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.28.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_waldensian"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Nestorianism Harmonization
+country_event = {
+	id = confucian_events.29
+	title = "confucian_events.29.t"
+	desc = "confucian_events.29.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.29.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_nestorian"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Shia Islam Harmonization
+country_event = {
+	id = confucian_events.30
+	title = "confucian_events.30.t"
+	desc = "confucian_events.30.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.30.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_shiite"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Ibadi Islam Harmonization
+country_event = {
+	id = confucian_events.31
+	title = "confucian_events.31.t"
+	desc = "confucian_events.31.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.31.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_ibadi"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Sikhism Harmonization
+country_event = {
+	id = confucian_events.32
+	title = "confucian_events.32.t"
+	desc = "confucian_events.32.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.32.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_sikhism"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Druze Harmonization
+country_event = {
+	id = confucian_events.33
+	title = "confucian_events.33.t"
+	desc = "confucian_events.33.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.33.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_druze"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Yazidism Harmonization
+country_event = {
+	id = confucian_events.34
+	title = "confucian_events.34.t"
+	desc = "confucian_events.34.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.34.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_yazidi"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Yarsanism Harmonization
+country_event = {
+	id = confucian_events.35
+	title = "confucian_events.35.t"
+	desc = "confucian_events.35.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.35.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_yarsan"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Baha'i Harmonization
+country_event = {
+	id = confucian_events.36
+	title = "confucian_events.36.t"
+	desc = "confucian_events.36.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.36.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_bahai"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Mandaeism Harmonization
+country_event = {
+	id = confucian_events.37
+	title = "confucian_events.37.t"
+	desc = "confucian_events.37.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.37.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_mandaean"
+				duration = -1
+			}
+		}
+	}
+}
+
+#Manichaeism Harmonization
+country_event = {
+	id = confucian_events.38
+	title = "confucian_events.38.t"
+	desc = "confucian_events.38.d"
+	picture = NEO_CONFUCIANISM_INCIDENT_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = harmonization_shangdi_conflict
+			clr_country_flag = harmonization_han_kitab
+			clr_country_flag = harmonization_fate_of_advisor
+			clr_country_flag = harmonization_empowering_ceremonies
+		}
+	}
+	
+	option = {
+		name = "confucian_events.38.a"
+		tooltip = {
+			add_country_modifier = {
+				name = "harmonized_manichaean"
+				duration = -1
+			}
+		}
+	}
+}
