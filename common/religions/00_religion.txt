@@ -224,6 +224,9 @@ christian = {
 				}
 			}			
 		}
+		
+		harmonized_modifier = harmonized_christian # harmonized_catholic
+		
 	}
 
 	anglican = {
@@ -256,6 +259,9 @@ christian = {
 		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
 		
 		date = 1534.11.3 # act of supremacy
+		
+		harmonized_modifier = harmonized_anglican
+		
 	}
 	
 	protestant = {
@@ -393,6 +399,9 @@ christian = {
 		heretic = { PENTECOSTAL PURITAN CONGREGATIONALIST }
 		
 		date = 1517.10.31
+		
+		harmonized_modifier = harmonized_protestant
+		
 	}
 
 	reformed = {
@@ -511,6 +520,9 @@ christian = {
 		date = 1536.5.1
 		
 		fervor = yes
+		
+		harmonized_modifier = harmonized_reformed
+		
 	}
 
 	orthodox = {
@@ -645,6 +657,9 @@ christian = {
 				}
 			}
 		}
+		
+		harmonized_modifier = harmonized_orthodox
+		
 	}
 	
 	coptic = {
@@ -679,6 +694,9 @@ christian = {
 			promote_territorial_rights
 			will_of_the_martyrs
 		}
+		
+		harmonized_modifier = harmonized_coptic
+		
 	}
 	
 	waldensian = {
@@ -712,6 +730,9 @@ christian = {
 			#}
 			always = yes
 		}
+		
+		harmonized_modifier = harmonized_waldensian
+		
 	}
 	
 	nestorian = {
@@ -734,6 +755,9 @@ christian = {
 		misguided_heretic = yes		# Other christians hate them less
 		
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
+		
+		harmonized_modifier = harmonized_nestorian
+		
 	}
 	
 	hussite = {
@@ -760,9 +784,10 @@ christian = {
 		#misguided_heretic = yes
 		#GENERIC REFORMED MECHANIC FOR NOW
 		fervor = yes
+		
+		#harmonized_modifier = harmonized_hussite
+		
 	}
-	
-	harmonized_modifier = harmonized_christian
 	
 	crusade_name = CRUSADE
 }
@@ -1084,6 +1109,9 @@ muslim = {
 		heretic = { BEKTASHI AHMADI ZIKRI YAZIDI }
 		
 		uses_piety = yes				# Uses piety mechanics
+		
+		harmonized_modifier = harmonized_muslim #harmonized_sunni
+		
 	}
 
 	shiite = {
@@ -1104,6 +1132,8 @@ muslim = {
 		heretic = { DRUZE HURUFI ZAIDI }
 		
 		uses_piety = yes				# Uses piety mechanics
+		
+		harmonized_modifier = harmonized_shiite
 	}
 	
 	ibadi = {
@@ -1124,9 +1154,9 @@ muslim = {
 		heretic = { HARURI SUFRI NAJADAT AZRAQI }
 		
 		uses_piety = yes				# Uses piety mechanics
+		
+		harmonized_modifier = harmonized_shiite
 	}
-	
-	harmonized_modifier = harmonized_muslim
 	
 	crusade_name = JIHAD
 }
@@ -1317,6 +1347,9 @@ dharmic = {
 		}
 		
 		heretic = { BHAKTI }
+		
+		harmonized_modifier = harmonized_dharmic # harmonized_hinduism
+		
 	}
 
 	sikhism = {
@@ -1352,9 +1385,10 @@ dharmic = {
 		heretic = { MASANDIS }
 
 		date = 1499.01.01
+		
+		harmonized_dharmic = harmonized_sikhism
+		
 	}
-	
-	harmonized_modifier = harmonized_dharmic
 	
 	crusade_name = CRUSADE
 }
@@ -1618,7 +1652,7 @@ druze_group = {
 		heretic = { DRUZE_FUNDAMENTALIST }
 	}
 	
-	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_druze_group
+	harmonized_modifier = harmonized_druze
 	
 	crusade_name = HOLY_WAR
 	
@@ -1643,6 +1677,9 @@ yazdanism = {
 			advisor_pool = 1
 		}
 		heretic = { YAZIDI_FUNDAMENTALIST }
+		
+		harmonized_modifier = harmonized_yazidi
+		
 	}
 	
 	
@@ -1663,9 +1700,10 @@ yazdanism = {
 			global_unrest = -1
 		}
 		heretic = { YARSAN_FUNDAMENTALIST }
+		
+		harmonized_modifier = harmonized_yarsan
+		
 	}
-	
-	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_yazdanism_group
 	
 	crusade_name = HOLY_WAR
 	
@@ -1690,9 +1728,10 @@ babism = {
 			global_missionary_strength = 0.01
 		}
 		heretic = { BAHAI_FUNDAMENTALIST }
+		
+		harmonized_modifier = harmonized_bahai
+		
 	}
-	
-	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_bahai_group
 	
 	crusade_name = HOLY_WAR
 	
@@ -1717,9 +1756,10 @@ sabian = {
 			global_spy_defence = 0.15
 		}
 		heretic = { MANDAEAN_FUNDAMENTALIST }
+		
+		harmonized_modifier = harmonized_mandaean
+		
 	}
-	
-	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_sabian_group
 	
 	crusade_name = HOLY_WAR
 	
@@ -1744,9 +1784,10 @@ manichaeism = {
 			trade_steering = 0.25
 		}
 		heretic = { MANICHAEAN_FUNDAMENTALIST }
+		
+		harmonized_modifier = harmonized_manichaean
+		
 	}
-	
-	harmonized_modifier = harmonized_zoroastrian_group #harmonzied_manichaeism_group
 	
 	crusade_name = HOLY_WAR
 	
