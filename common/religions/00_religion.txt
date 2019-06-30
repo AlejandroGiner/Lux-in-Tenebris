@@ -223,9 +223,7 @@ christian = {
 					}
 				}
 			}			
-		}
-		
-		harmonized_modifier = harmonized_christian # harmonized_catholic
+		}# harmonized_catholic
 		
 	}
 
@@ -260,7 +258,7 @@ christian = {
 		
 		date = 1534.11.3 # act of supremacy
 		
-		harmonized_modifier = harmonized_anglican
+		#harmonized_modifier = harmonized_anglican
 		
 	}
 	
@@ -400,7 +398,7 @@ christian = {
 		
 		date = 1517.10.31
 		
-		harmonized_modifier = harmonized_protestant
+		#harmonized_modifier = harmonized_protestant
 		
 	}
 
@@ -521,7 +519,7 @@ christian = {
 		
 		fervor = yes
 		
-		harmonized_modifier = harmonized_reformed
+		#harmonized_modifier = harmonized_reformed
 		
 	}
 
@@ -658,7 +656,7 @@ christian = {
 			}
 		}
 		
-		harmonized_modifier = harmonized_orthodox
+		#harmonized_modifier = harmonized_orthodox
 		
 	}
 	
@@ -695,7 +693,7 @@ christian = {
 			will_of_the_martyrs
 		}
 		
-		harmonized_modifier = harmonized_coptic
+		#harmonized_modifier = harmonized_coptic
 		
 	}
 	
@@ -731,7 +729,7 @@ christian = {
 			always = yes
 		}
 		
-		harmonized_modifier = harmonized_waldensian
+		#harmonized_modifier = harmonized_waldensian
 		
 	}
 	
@@ -756,7 +754,7 @@ christian = {
 		
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
 		
-		harmonized_modifier = harmonized_nestorian
+		#harmonized_modifier = harmonized_nestorian
 		
 	}
 	
@@ -788,6 +786,8 @@ christian = {
 		#harmonized_modifier = harmonized_hussite
 		
 	}
+		
+	harmonized_modifier = harmonized_christian 
 	
 	crusade_name = CRUSADE
 }
@@ -1110,7 +1110,7 @@ muslim = {
 		
 		uses_piety = yes				# Uses piety mechanics
 		
-		harmonized_modifier = harmonized_muslim #harmonized_sunni
+		#harmonized_sunni
 		
 	}
 
@@ -1133,7 +1133,7 @@ muslim = {
 		
 		uses_piety = yes				# Uses piety mechanics
 		
-		harmonized_modifier = harmonized_shiite
+		#harmonized_modifier = harmonized_shiite
 	}
 	
 	ibadi = {
@@ -1155,8 +1155,10 @@ muslim = {
 		
 		uses_piety = yes				# Uses piety mechanics
 		
-		harmonized_modifier = harmonized_shiite
+		#harmonized_modifier = harmonized_shiite
 	}
+	
+	harmonized_modifier = harmonized_muslim
 	
 	crusade_name = JIHAD
 }
@@ -1348,7 +1350,7 @@ dharmic = {
 		
 		heretic = { BHAKTI }
 		
-		harmonized_modifier = harmonized_dharmic # harmonized_hinduism
+		 # harmonized_hinduism
 		
 	}
 
@@ -1386,9 +1388,9 @@ dharmic = {
 
 		date = 1499.01.01
 		
-		harmonized_dharmic = harmonized_sikhism
-		
 	}
+	
+	harmonized_modifier = harmonized_dharmic
 	
 	crusade_name = CRUSADE
 }
@@ -1678,7 +1680,7 @@ yazdanism = {
 		}
 		heretic = { YAZIDI_FUNDAMENTALIST }
 		
-		harmonized_modifier = harmonized_yazidi
+		#harmonized_modifier = harmonized_yazidi
 		
 	}
 	
@@ -1701,9 +1703,11 @@ yazdanism = {
 		}
 		heretic = { YARSAN_FUNDAMENTALIST }
 		
-		harmonized_modifier = harmonized_yarsan
+		#harmonized_modifier = harmonized_yarsan
 		
 	}
+		
+	harmonized_modifier = harmonized_yazidi
 	
 	crusade_name = HOLY_WAR
 	
@@ -1729,9 +1733,9 @@ babism = {
 		}
 		heretic = { BAHAI_FUNDAMENTALIST }
 		
-		harmonized_modifier = harmonized_bahai
-		
 	}
+		
+	harmonized_modifier = harmonized_bahai
 	
 	crusade_name = HOLY_WAR
 	
@@ -1757,9 +1761,9 @@ sabian = {
 		}
 		heretic = { MANDAEAN_FUNDAMENTALIST }
 		
-		harmonized_modifier = harmonized_mandaean
-		
 	}
+		
+	harmonized_modifier = harmonized_mandaean
 	
 	crusade_name = HOLY_WAR
 	
@@ -1785,9 +1789,9 @@ manichaeism = {
 		}
 		heretic = { MANICHAEAN_FUNDAMENTALIST }
 		
-		harmonized_modifier = harmonized_manichaean
-		
 	}
+		
+	harmonized_modifier = harmonized_manichaean
 	
 	crusade_name = HOLY_WAR
 	
