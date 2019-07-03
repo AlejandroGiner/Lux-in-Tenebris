@@ -1,0 +1,33 @@
+# This file is to be used for modifiers for the new missions featured in the mod.
+
+# Khemi
+
+sovereign_alexandria = {
+	legitimacy = 1
+	prestige = 1
+	tolerance_own = 1
+}
+
+coptic_independence = {
+	global_unrest = -1
+	improve_relation_modifier = 0.20
+	diplomatic_reputation = 1
+}
+
+loweregypt_secured = {
+	production_efficiency = 0.15
+	global_regiment_cost = -0.15
+	land_attrition = -0.1
+}
+
+cairo_liberation = {
+	state_maintenance_modifier = -0.25
+	global_autonomy = -0.05
+	years_of_nationalism = -5
+}
+
+supremacy_in_the_nile = {
+	movement_speed = 0.15
+	naval_maintenance_modifier = -0.05
+	naval_forcelimit_modifier = 0.1
+}

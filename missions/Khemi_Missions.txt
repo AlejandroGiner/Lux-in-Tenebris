@@ -1,0 +1,182 @@
+ ##################################################
+ ##### Dub's Mission Work - All credit to Dub for this #####
+ ##################################################
+#Updated vanilla missions to BT. Updates done by Dub.
+kem_restoration_of_egypt = {
+	slot = 1 #upper left column
+	generic = no #if a mission without generic = yes wants this slot then it overrides this.
+	ai = yes
+	potential = {
+		tag = KEM
+	}
+	has_country_shield = yes
+	
+	alexandrian_sovereignity = { #Alexandrian Sovereignity
+		icon = mission_coptic_cathedral
+		required_missions = {  } #None
+		trigger = {
+			owns = 358
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			province_id = 358
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "sovereign_alexandria"
+				duration = 5475
+			}
+			#Claims
+			custom_tooltip = consolidate_niledelta_claims
+			hidden_effect = {
+				delta_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	consolidate_niledelta = {
+		icon = mission_nile_delta
+		required_missions = { alexandrian_sovereignity }
+		position = 2
+		provinces_to_highlight = {
+			area = delta_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = "coptic_independence"
+				duration = 5475
+			}
+			#Claims
+			custom_tooltip = secure_lower_egypt_claims
+			hidden_effect = {
+				bahari_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	secure_lower_egypt = {
+		icon = mission_coptic_loweregypt
+		required_missions = { consolidate_niledelta }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 5264
+				province_id = 359
+				province_id = 4318
+				province_id = 5267
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			5264 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			359 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4318 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5267 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = "loweregypt_secured"
+				duration = 5475
+			}
+			#Claims
+			custom_tooltip = up_the_river_claims
+			hidden_effect = {
+				said_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	liberation_of_cairo = { #Alexandrian Sovereignity
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = { secure_lower_egypt }
+		position = 4
+		trigger = {
+			owns = 361
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			province_id = 361
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			add_dip_power = 50
+			add_adm_power = 50
+			add_mil_power = 50
+			add_core = 361
+			361 = {
+				change_culture = coptic_culture
+				change_religion = ROOT
+			}
+			add_country_modifier = {
+				name = "cairo_liberation"
+				duration = 5475
+			}
+		}
+	}
+	
+	up_the_river = {
+		icon = mission_uptheriver
+		required_missions = { liberation_of_cairo }
+		position = 5
+		provinces_to_highlight = {
+			area = said_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			said_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		effect = {
+			add_country_modifier = {
+				name = "supremacy_in_the_nile"
+				duration = 5475
+			}
+		}
+	}
+	
+}
