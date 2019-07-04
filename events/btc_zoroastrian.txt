@@ -1,0 +1,1764 @@
+country_event = { #26* - Royal Philanthropy (for the soul/for religious services for the soul/for the support of others)
+	
+	id = dg_zoroastrian.026
+	title = dg_zoroastrian.026.t
+	desc = dg_zoroastrian.026.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_country_flag = zoroastrian_philanthropy_closed }
+			custom_tooltip = dg_zoroastrian.026.d_religious
+		}
+		else = {
+			custom_tooltip = dg_zoroastrian.026.d_soul
+		}
+	}
+	
+	option = {
+		name = dg_zoroastrian.026.prayer #Spend it entirely on prayer
+		ai_chance = {
+			factor = 20
+			modifier = {
+				has_country_flag = zoroastrian_philanthropy_closed
+				factor = 2
+			}
+			modifier = {
+				NOT = { legitimacy = 80 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { legitimacy = 70 }
+				factor = 1.4
+			}
+		}
+		add_years_of_income = -0.08
+		if = {
+			limit = { has_country_flag = zoroastrian_philanthropy_closed }
+			add_legitimacy = 5
+		}
+		else = {
+			add_legitimacy = 10
+		}
+		clr_country_flag = zoroastrian_philanthropy_closed
+	}
+	option = {
+		name = dg_zoroastrian.026.embezzle #Divert some of the money to our coffers
+		ai_chance = {
+			factor = 10
+			modifier = {
+				NOT = { years_of_income = 0.08 }
+				factor = 2
+			}
+			modifier = {
+				num_of_loans = 1
+				factor = 1.4
+			}
+			modifier = {
+				num_of_loans = 3
+				factor = 1.4
+			}
+		}
+		if = {
+			limit = { has_country_flag = zoroastrian_philanthropy_closed }
+			add_legitimacy = -10
+		}
+		else = {
+			add_legitimacy = -5
+		}
+		clr_country_flag = zoroastrian_philanthropy_closed
+	}
+	option = {
+		name = dg_zoroastrian.026.charity #Establish a charitable foundation
+		#trigger = { NOT = { check_variable = { which = church_property value = 13 } } }
+		ai_chance = {
+			factor = 10
+			#modifier = {
+			#	check_variable = { which = church_property value = 10 }
+			#	factor = 0
+			#}
+			#modifier = {
+			#	check_variable = { which = church_property value = 8 }
+			#	factor = 0.5
+			#}
+		}
+		clr_country_flag = zoroastrian_philanthropy_closed
+		add_years_of_income = -0.08
+		add_patriarch_authority = 0.05
+		if = {
+			limit = { has_country_flag = zoroastrian_philanthropy_closed }
+			add_legitimacy = 5
+		}
+		else = {
+			add_legitimacy = 10
+		}
+		#hidden_effect = {
+		#	change_variable = { which = church_property value = 1 }
+		#}
+	}
+	option = {
+		name = dg_zoroastrian.026.temples #Build a fire temple
+		ai_chance = {
+			factor = 20
+			modifier = {
+				NOT = { legitimacy = 80 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { legitimacy = 70 }
+				factor = 1.4
+			}
+		}
+		add_years_of_income = -0.08
+		if = {
+			limit = { has_country_flag = zoroastrian_philanthropy_closed }
+			add_legitimacy = 5
+			add_prestige = 5
+		}
+		else = {
+			add_prestige = 10
+			add_legitimacy = 10
+		}
+		clr_country_flag = zoroastrian_philanthropy_closed
+	}
+	option = {
+		name = dg_zoroastrian.026.public #Spend it on public works
+		trigger = { NOT = { stability = 2 } }
+		ai_chance = {
+			factor = 10
+			modifier = {
+				NOT = { ADM = 2 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { ADM = 3 }
+				factor = 1.4
+			}
+		}
+		add_years_of_income = -0.08
+		add_adm_power = 25
+		if = {
+			limit = { has_country_flag = zoroastrian_philanthropy_closed }
+			add_prestige = -5
+		}
+		clr_country_flag = zoroastrian_philanthropy_closed
+	}
+	option = {
+		name = dg_zoroastrian.026.overturn #Overturn the will
+		ai_chance = {
+			factor = 10
+			modifier = {
+				NOT = { years_of_income = 0.08 }
+				factor = 2
+			}
+			modifier = {
+				num_of_loans = 1
+				factor = 1.4
+			}
+			modifier = {
+				num_of_loans = 3
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { legitimacy = 80 }
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { legitimacy = 70 }
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { prestige = 0 }
+				factor = 0.7
+			}
+		}
+		add_years_of_income = 0.08
+		add_prestige = -10
+		add_legitimacy = -10
+		clr_country_flag = zoroastrian_philanthropy_closed
+	}
+}
+
+#################
+# Random events # 40s and 50s
+#################
+
+country_event = { #41 - The Court of Mithra
+	
+	id = dg_zoroastrian.041
+	title = dg_zoroastrian.041.t
+	desc = dg_zoroastrian.041.d
+	picture = zoroastrian_priests
+	
+	trigger = {
+		religion = zoroastrian
+		NOT = { government = theocracy }
+		NOT = { has_country_flag = secular_courts }
+		NOT = { has_country_flag = patriarch_obedient }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = { has_advisor = yes }
+				random = { chance = 50 set_country_flag = dispute_advisor }
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = dispute_advisor }
+					num_of_merchants = 1
+				}
+				random = { chance = 30 set_country_flag = dispute_merchant }
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = dispute_advisor }
+					NOT = { has_country_flag = dispute_merchant }
+				}
+				set_country_flag = dispute_noble
+			}
+		}
+	}
+	
+	option = {
+		name = dg_zoroastrian.041.a #Overturn the ruling
+		ai_chance = {
+			factor = 75
+			modifier = {
+				NOT = { legitimacy = 100 }
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { legitimacy = 80 }
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { legitimacy = 60 }
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { legitimacy = 40 }
+				factor = 0
+			}
+		}
+		if = {
+			limit = { piety = 0.60 }
+			add_legitimacy = -5
+		}
+		else_if = {
+			limit = { piety = 0.20 }
+			add_legitimacy = -4
+		}
+		else_if = {
+			limit = { piety = -0.20 }
+			add_legitimacy = -3
+		}
+		else_if = {
+			limit = { piety = -0.60 }
+			add_legitimacy = -2
+		}
+		else = {
+			add_legitimacy = -1
+		}
+		clr_country_flag = dispute_merchant
+		clr_country_flag = dispute_noble
+		clr_country_flag = dispute_advisor
+	}
+	option = {
+		name = dg_zoroastrian.041.b #Allow the ruling to stand
+		ai_chance = {
+			factor = 25
+			modifier = {
+				piety = 0.60
+				factor = 1.4
+			}
+			modifier = {
+				piety = 0.20
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { piety = -0.20 }
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { piety = -0.60 }
+				factor = 0
+			}
+		}
+		if = {
+			limit = { has_country_flag = dispute_advisor }
+			remove_advisor = random
+		}
+		if = {
+			limit = { has_country_flag = dispute_merchant }
+			random_active_trade_node = {
+				limit = {
+					NOT = {
+						has_trade_modifier = {
+							who = ROOT
+							name = unhappy_merchant
+						}
+					}
+				}
+				add_trade_modifier = {
+					who = ROOT
+					duration = 500
+					power = -10
+					key = unhappy_merchant
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = dispute_noble }
+			random_owned_province = {
+				limit = { has_owner_culture = yes }
+        add_unrest = 2
+			}
+		}
+		if = {
+			limit = { piety = 0.60 }
+			add_prestige = -0.5
+		}
+		else_if = {
+			limit = { piety = 0.20 }
+			add_prestige = -1
+		}
+		else_if = {
+			limit = { piety = -0.20 }
+			add_prestige = -1.5
+		}
+		else_if = {
+			limit = { piety = -0.60 }
+			add_prestige = -2
+		}
+		else = {
+			add_prestige = -2.5
+		}
+		clr_country_flag = dispute_merchant
+		clr_country_flag = dispute_noble
+		clr_country_flag = dispute_advisor
+	}
+}
+
+province_event = { #42 - $PROVINCENAME$ becomes a center of pilgrimage
+	
+	id = dg_zoroastrian.042
+	title = dg_zoroastrian.042.t
+	desc = dg_zoroastrian.042.d
+	picture = zoroastrian_parsis
+	
+	is_triggered_only = yes #By maintenance event
+	
+	option = {
+		name = dg_zoroastrian.042.a #Pay a visit
+		ai_chance = { factor = 50 }
+		if = {
+			limit = { owner = { piety = 0.60 } }
+			owner = { add_prestige = 2 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 4000 }
+		}
+		else_if = {
+			limit = { owner = { piety = 0.20 } }
+			owner = { add_prestige = 1.5 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 2000 }
+		}
+		else_if = {
+			limit = { owner = { piety = -0.20 } }
+			owner = { add_prestige = 1 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 1000 }
+		}
+		else_if = {
+			limit = { owner = { piety = -0.60 } }
+			owner = { add_prestige = 0.5 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 500 }
+		}
+	}
+	option = {
+		name = dg_zoroastrian.042.b #Establish local infrastructure to support it
+		ai_chance = {
+			factor = 50
+			modifier = {
+				owner = { piety = 0.60 }
+				factor = 1.4
+			}
+			modifier = {
+				owner = { piety = 0.20 }
+				factor = 1.4
+			}
+			modifier = {
+				owner = { NOT = { piety = -0.20 } }
+				factor = 0.5
+			}
+			modifier = {
+				owner = { monthly_income = 10 }
+				factor = 1.4
+			}
+			modifier = {
+				owner = { monthly_income = 20 }
+				factor = 1.4
+			}
+			modifier = {
+				owner = { monthly_income = 40 }
+				factor = 1.4
+			}
+			modifier = {
+				owner = { monthly_income = 80 }
+				factor = 1.4
+			}
+			modifier = {
+				owner = { num_of_loans = 1 }
+				factor = 0.7
+			}
+			modifier = {
+				owner = { num_of_loans = 2 }
+				factor = 0.7
+			}
+			modifier = {
+				owner = { is_bankrupt = yes }
+				factor = 0.5
+			}
+		}
+		owner = { add_treasury = -10 }
+		if = {
+			limit = { owner = { piety = 0.60 } }
+			owner = { add_legitimacy = 4 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 16000 }
+		}
+		else_if = {
+			limit = { owner = { piety = 0.20 } }
+			owner = { add_legitimacy = 3 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 8000 }
+		}
+		else_if = {
+			limit = { owner = { piety = -0.20 } }
+			owner = { add_legitimacy = 2 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 4000 }
+		}
+		else_if = {
+			limit = { owner = { piety = -0.60 } }
+			owner = { add_legitimacy = 1 }
+			add_province_modifier = { name = zoroastrian_pilgrimage duration = 2000 }
+		}
+	}
+}
+
+country_event = { #43 - Prayer Controversy
+	
+	id = dg_zoroastrian.043
+	title = dg_zoroastrian.043.t
+	desc = dg_zoroastrian.043.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { has_country_flag = zoroastrian_priesthood_reestablished }
+			custom_tooltip = dg_zoroastrian.043.high_priest
+		}
+		else = {
+			custom_tooltip = dg_zoroastrian.043.priesthood
+		}
+		if = {
+			limit = { has_country_modifier = zoroastrian_female_priests }
+			custom_tooltip = dg_zoroastrian.043.d_women
+		}
+		else = {
+			custom_tooltip = dg_zoroastrian.043.d_men
+		}
+		set_ruler_flag = zoroastrian_sofre_controversy
+	}
+	
+	
+	option = {
+		name = dg_zoroastrian.043.support
+		ai_chance = {
+			factor = 25
+			modifier = {
+				has_country_modifier = zoroastrian_female_priests
+				factor = 2
+			}
+			modifier = {
+				piety = 0.20
+				factor = 1.4
+			}
+			modifier = {
+				piety = 0.60
+				factor = 1.4
+			}
+			modifier = {
+				has_country_flag = patriarch_obedient
+				factor = 1.4
+			}
+			modifier = {
+				is_female = yes
+				factor = 2
+			}
+		}
+		set_ruler_flag = zoroastrian_sofre_prayers
+		add_piety = 0.10
+		if = {
+			limit = { NOT = { has_country_flag = patriarch_obedient } }
+      if = {
+        limit = { DIP = 5 }
+      }
+			else_if = {
+				limit = { DIP = 4 }
+				random = {
+					chance = 20
+					dg_add_controversy = yes
+				}
+			}
+			else_if = {
+				limit = {	DIP = 3 }
+				random = {
+					chance = 40
+					dg_add_controversy = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 2 }
+				random = {
+					chance = 60
+					dg_add_controversy = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 1 }
+				random = {
+					chance = 80
+					dg_add_controversy = yes
+				}
+			}
+			else = {
+				dg_add_controversy = yes
+			}
+		}
+	}
+	option = {
+		name = dg_zoroastrian.043.compromise
+		ai_chance = {
+			factor = 50
+			modifier = {
+				DIP = 6
+				factor = 0.7
+			}
+			modifier = {
+				DIP = 5
+				factor = 0.7
+			}
+			modifier = {
+				DIP = 4
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { DIP = 3 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { DIP = 2 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { DIP = 1 }
+				factor = 1.4
+			}
+		}
+		custom_tooltip = dg_zoroastrian.043.compromise_explained
+		add_prestige = -1
+	}
+	option = {
+		name = dg_zoroastrian.043.oppose
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_female = yes
+				factor = 0.5
+			}
+			modifier = {
+				has_country_modifier = zoroastrian_female_priests
+				factor = 0.5
+			}
+			modifier = {
+				NOT = { piety = -0.20 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { piety = -0.60 }
+				factor = 1.4
+			}
+			modifier = {
+				has_country_flag = patriarch_hostile
+				factor = 2
+			}
+		}
+		set_ruler_flag = zoroastrian_old_prayers
+		add_piety = -0.10
+		if = {
+			limit = { NOT = { has_country_modifier = zoroastrian_female_priests } }
+      if = {
+        limit = { DIP = 5 }
+      }
+			else_if = {
+				limit = { DIP = 4 }
+				random = {
+					chance = 20
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 3 }
+				random = {
+					chance = 40
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 2 }
+				random = {
+					chance = 60
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 1 }
+				random = {
+					chance = 80
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else = {
+				dg_religious_scandal_mild = yes
+			}
+		}
+	}
+}
+
+country_event = { #44 - Sacrificial Controversy
+	
+	id = dg_zoroastrian.044
+	title = dg_zoroastrian.044.t
+	desc = dg_zoroastrian.044.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = { set_ruler_flag = zoroastrian_sacrificial_controversy }
+	
+	option = {
+		name = dg_zoroastrian.043.support
+		ai_chance = {
+			factor = 25
+			modifier = {
+				has_country_flag = zoroastrian_avestas_polytheism_included
+				factor = 2
+			}
+			modifier = {
+				piety = 0.20
+				factor = 1.4
+			}
+			modifier = {
+				piety = 0.60
+				factor = 1.4
+			}
+			modifier = {
+				has_country_flag = patriarch_obedient
+				factor = 1.4
+			}
+			modifier = {
+				is_female = yes
+				factor = 2
+			}
+		}
+		set_ruler_flag = zoroastrian_animal_sacrifices
+		add_piety = 0.10
+		if = {
+			limit = { NOT = { has_country_flag = patriarch_obedient } }
+      if = {
+        limit = { DIP = 5 }
+      }
+			else_if = {
+				limit = { DIP = 4 }
+				random = {
+					chance = 20
+					dg_add_controversy = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 3 }
+				random = {
+					chance = 40
+					dg_add_controversy = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 2 }
+				random = {
+					chance = 60
+					dg_add_controversy = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 1 }
+				random = {
+					chance = 80
+					dg_add_controversy = yes
+				}
+			}
+			else = {
+				dg_add_controversy = yes
+			}
+		}
+	}
+	option = {
+		name = dg_zoroastrian.043.compromise
+		ai_chance = {
+			factor = 50
+			modifier = {
+				DIP = 6
+				factor = 0.7
+			}
+			modifier = {
+				DIP = 5
+				factor = 0.7
+			}
+			modifier = {
+				DIP = 4
+				factor = 0.7
+			}
+			modifier = {
+				NOT = { DIP = 3 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { DIP = 2 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { DIP = 1 }
+				factor = 1.4
+			}
+		}
+		custom_tooltip = dg_zoroastrian.043.compromise_explained
+		add_prestige = -1
+	}
+	option = {
+		name = dg_zoroastrian.043.oppose
+		ai_chance = {
+			factor = 25
+			modifier = {
+				is_female = yes
+				factor = 0.5
+			}
+			modifier = {
+				has_country_flag = zoroastrian_avestas_polytheism_expurged
+				factor = 2
+			}
+			modifier = {
+				NOT = { piety = -0.20 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { piety = -0.60 }
+				factor = 1.4
+			}
+			modifier = {
+				has_country_flag = patriarch_hostile
+				factor = 2
+			}
+		}
+		set_ruler_flag = zoroastrian_sacrifices_banned
+		add_piety = -0.10
+		if = {
+			limit = { NOT = { has_country_flag = zoroastrian_avestas_polytheism_expurged } }
+      if = {
+        limit = { DIP = 5 }
+      }
+			else_if = {
+				limit = { DIP = 4 }
+				random = {
+					chance = 20
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 3 }
+				random = {
+					chance = 40
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 2 }
+				random = {
+					chance = 60
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else_if = {
+				limit = { DIP = 1 }
+				random = {
+					chance = 80
+					dg_religious_scandal_mild = yes
+				}
+			}
+			else = {
+				dg_religious_scandal_mild = yes
+			}
+		}
+	}
+}
+
+country_event = { #45 - Crimes against the Divine
+	
+	id = dg_zoroastrian.045
+	title = dg_zoroastrian.045.t
+	desc = dg_zoroastrian.045.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					num_of_generals = 2
+					NOT = { has_advisor = yes }
+				}
+			}
+			custom_tooltip = dg_zoroastrian.045.general
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						num_of_generals = 2
+						NOT = { has_advisor = yes }
+					}
+				}
+			}
+			custom_tooltip = dg_zoroastrian.045.advisor
+		}
+	}
+	
+	option = {
+		name = dg_zoroastrian.045.dismiss
+		ai_chance = { factor = 30 }
+		if = {
+			limit = {
+				OR = {
+					num_of_generals = 2
+					NOT = { has_advisor = yes }
+				}
+			}
+			kill_leader = { type = random }
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						num_of_generals = 2
+						NOT = { has_advisor = yes }
+					}
+				}
+			}
+			kill_advisor = random
+		}
+	}
+	option = {
+		name = dg_zoroastrian.045.defend
+		ai_chance = { factor = 40 }
+		if = {
+			limit = { monthly_income = 4.2 }
+			add_years_of_income = -0.10
+		}
+		else = {
+			add_treasury = -5
+		}
+		add_legitimacy = 10
+	}
+	option = {
+		name = dg_zoroastrian.045.ignore
+		ai_chance = {
+			factor = 30
+			modifier = {
+				NOT = { piety = -0.20 }
+				factor = 2
+			}
+			modifier = {
+				NOT = { piety = -0.60 }
+				factor = 2
+			}
+			modifier = {
+				piety = 0.20
+				factor = 0.7
+			}
+			modifier = {
+				piety = 0.60
+				factor = 0.7
+			}
+		}
+	}
+}
+
+country_event = { #46 - The Vices of Priests
+	
+	id = dg_zoroastrian.046
+	title = dg_zoroastrian.046.t
+	desc = dg_zoroastrian.046.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_country_flag = zoroastrian_priesthood_reestablished } }
+			custom_tooltip = dg_zoroastrian.046.d_no_patriarch
+		}
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = patriarch_corrupt
+					has_country_flag = patriarch_hostile
+				}
+			}
+			custom_tooltip = dg_zoroastrian.046.d_patriarch
+		}
+	}
+	
+	option = {
+		name = dg_zoroastrian.046.patriarch
+		trigger = {
+			has_country_flag = zoroastrian_priesthood_reestablished
+			NOT = { has_country_flag = patriarch_corrupt }
+			NOT = { has_country_flag = patriarch_hostile }
+			NOT = { has_country_modifier = unhappy_church_powerful }
+			NOT = { has_country_modifier = unhappy_church_strong }
+			NOT = { has_country_modifier = unhappy_church_moderate }
+			NOT = { has_country_modifier = unhappy_church_weak }
+			NOT = { has_country_modifier = unhappy_church_impotent }
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_country_flag = patriarch_controversial
+				factor = 0.5
+			}
+		}
+		add_dip_power = -5
+		if = {
+			limit = { has_country_flag = patriarch_controversial }
+			random = {
+				chance = 30
+				custom_tooltip = patriarch_becomes_hostile
+				clr_country_flag = patriarch_hostile
+				set_country_flag = patriarch_controversial
+				clr_country_flag = patriarch_zealous
+				clr_country_flag = patriarch_obedient
+				clr_country_flag = patriarch_theologian
+				clr_country_flag = patriarch_corrupt
+			}
+		}
+		else = {
+			random = {
+				chance = 10
+				custom_tooltip = patriarch_becomes_hostile
+				clr_country_flag = patriarch_hostile
+				set_country_flag = patriarch_controversial
+				clr_country_flag = patriarch_zealous
+				clr_country_flag = patriarch_obedient
+				clr_country_flag = patriarch_theologian
+				clr_country_flag = patriarch_corrupt
+			}
+		}
+	}
+	option = {
+		name = dg_zoroastrian.046.arrest
+		ai_chance = { factor = 25 }
+			add_country_modifier = { name = unhappy_church_moderate duration = 400 }
+	}
+	option = {
+		name = dg_zoroastrian.046.excuse
+		ai_chance = {
+			factor = 25
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 90 }
+				factor = 0.7
+			}
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 80 }
+				factor = 0.7
+			}
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 70 }
+				factor = 0.7
+			}
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 60 }
+				factor = 0.7
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 90 }
+				factor = 0.7
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 80 }
+				factor = 0.7
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 70 }
+				factor = 0.7
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 60 }
+				factor = 0.7
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 90 }
+				factor = 0.7
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 80 }
+				factor = 0.7
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 70 }
+				factor = 0.7
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 60 }
+				factor = 0.7
+			}
+		}
+		add_legitimacy = -5
+		random_owned_province = {
+			limit = {
+				OR = { is_capital = yes has_owner_religion = yes }
+				is_city = yes
+			}
+			add_province_modifier = { name = religious_scandal_province duration = 2000 }
+		}
+	}
+}
+
+country_event = { #47 - The Priestly Caste
+	
+	id = dg_zoroastrian.047
+	title = dg_zoroastrian.047.t
+	desc = dg_zoroastrian.047.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = dg_zoroastrian.047.accept
+		ai_chance = { factor = 20 }
+		add_country_modifier = { name = preacher_shortage duration = 5000 }
+	}
+	option = {
+		name = dg_zoroastrian.047.lower_standards
+		ai_chance = {
+			factor = 30
+		}
+		add_prestige = -5
+		add_country_modifier = { name = impious_priests duration = 5000 hidden = yes }
+	}
+	option = {
+		name = dg_zoroastrian.047.dastur
+		trigger = {
+			OR = {
+				has_country_modifier = caste_system_relaxed
+				has_country_modifier = caste_system_loose
+			}
+		}
+		ai_chance = { factor = 50 }
+		add_adm_power = -5
+	}
+}
+
+country_event = { #48 - Zoroastrian Sect emerges
+	
+	id = dg_zoroastrian.048
+	title = dg_zoroastrian.048.t
+	desc = dg_zoroastrian.048.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = { #Determines size and location of heresy, if any
+			random_owned_province = {
+				limit = { religion = zoroastrian }
+				set_province_flag = heresy_target
+			}
+			if = {
+				limit = { num_of_cities = 30 }
+				every_owned_province = {
+					limit = {
+						religion = zoroastrian
+						any_province = { owned_by = ROOT area = PREV }
+					}
+					set_province_flag = heresy_target
+				}
+			}
+			if = {
+				limit = { num_of_cities = 90 }
+				every_owned_province = {
+					limit = {
+						religion = zoroastrian
+						any_province = { owned_by = ROOT region = PREV }
+					}
+					set_province_flag = heresy_target
+				}
+			}
+			every_owned_province = {
+				limit = { has_province_flag = heresy_target }
+				if = {
+					limit = { has_owner_culture = yes }
+					owner = { change_variable = { which = affected_home_provinces value = 1 } }
+				}
+				owner = { change_variable = { which = affected_provinces value = 1 } }
+			}
+		}
+	}
+	
+	option = {
+		name = dg_zoroastrian.048.approve
+		ai_chance = {
+			factor = 50
+			modifier = {
+				government = theocracy
+				factor = 0
+			}
+		}
+		if = {
+			limit = { ADM = 6 }
+			random_list = {
+				10 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				90 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { ADM = 5 }
+			random_list = {
+				20 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				80 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { ADM = 4 }
+			random_list = {
+				30 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				70 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { ADM = 3 }
+			random_list = {
+				40 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				60 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { ADM = 2 }
+			random_list = {
+				50 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				50 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		else_if = {
+			limit = { ADM = 1 }
+			random_list = {
+				60 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				40 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		else = {
+			random_list = {
+				70 = { #Heresy emerges!
+					custom_tooltip = heretic_10
+					if = {
+						limit = { check_variable = { which = affected_home_provinces value = 1 } }
+						custom_tooltip = affected_province_count
+					}
+					else = {
+						custom_tooltip = affected_province_count_none
+					}
+					hidden_effect = {
+						every_owned_province = {
+							limit = { has_province_flag = heresy_target }
+							change_variable = { which = heretic value = 2 }
+							change_variable = { which = province_religion value = -2 }
+						}
+					}
+				}
+				30 = {
+					add_piety = 0.20
+					add_country_modifier = { name = religious_revival duration = 7300 }
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = zoroastrian_priesthood_reestablished
+				NOT = { has_country_flag = patriarch_hostile }
+			}
+			if = {
+				limit = { DIP = 4 NOT = { DIP = 5 } }
+				random = {
+					chance = 20
+					custom_tooltip = patriarch_hostile_explained
+					clr_country_flag = patriarch_zealous
+					clr_country_flag = patriarch_theologian
+					clr_country_flag = patriarch_obedient
+					clr_country_flag = patriarch_controversial
+					clr_country_flag = patriarch_corrupt
+					set_country_flag = patriarch_hostile
+				}
+			}
+			if = {
+				limit = { DIP = 3 NOT = { DIP = 4 } }
+				random = {
+					chance = 40
+					custom_tooltip = patriarch_hostile_explained
+					clr_country_flag = patriarch_zealous
+					clr_country_flag = patriarch_theologian
+					clr_country_flag = patriarch_obedient
+					clr_country_flag = patriarch_controversial
+					clr_country_flag = patriarch_corrupt
+					set_country_flag = patriarch_hostile
+				}
+			}
+			if = {
+				limit = { DIP = 2 NOT = { DIP = 3 } }
+				random = {
+					chance = 60
+					custom_tooltip = patriarch_hostile_explained
+					clr_country_flag = patriarch_zealous
+					clr_country_flag = patriarch_theologian
+					clr_country_flag = patriarch_obedient
+					clr_country_flag = patriarch_controversial
+					clr_country_flag = patriarch_corrupt
+					set_country_flag = patriarch_hostile
+				}
+			}
+			if = {
+				limit = { NOT = { DIP = 2 } }
+				random = {
+					chance = 80
+					custom_tooltip = patriarch_hostile_explained
+					clr_country_flag = patriarch_zealous
+					clr_country_flag = patriarch_theologian
+					clr_country_flag = patriarch_obedient
+					clr_country_flag = patriarch_controversial
+					clr_country_flag = patriarch_corrupt
+					set_country_flag = patriarch_hostile
+				}
+			}
+		}
+		every_owned_province = { clr_province_flag = heresy_target }
+	}
+	option = {
+		name = dg_zoroastrian.048.disapprove
+		ai_chance = {
+			factor = 50
+		}
+		add_adm_power = -10
+		dg_add_controversy = yes
+		every_owned_province = { clr_province_flag = heresy_target }
+	}
+	after = {
+		dg_patriarch_triggers = yes
+	}
+}
+
+country_event = { #49 - The [King]'s Dream (unfinished)
+	
+	id = dg_zoroastrian.049
+	title = dg_zoroastrian.049.t
+	desc = dg_zoroastrian.049.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_ruler_flag = zoroastrian_dreams_interpreted
+		if = {
+			limit = { has_country_flag = bad_dream }
+			custom_tooltip = dg_zoroastrian.049.bad_dream
+		}
+		if = {
+			limit = { has_country_flag = good_dream }
+			custom_tooltip = dg_zoroastrian.049.good_dream
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = good_dream }
+				NOT = { has_country_flag = bad_dream }
+			}
+			custom_tooltip = dg_zoroastrian.049.neutral_dream
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = good_dream }
+				NOT = { has_country_flag = bad_dream }
+				has_ruler_flag = zoroastrian_dreams
+			}
+			custom_tooltip = dg_zoroastrian.049.silly_dream
+		}
+	}
+	
+	option = {
+		name = dg_zoroastrian.049.public
+		trigger = { NOT = { has_country_flag = bad_dream } }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				NOT = { has_country_flag = good_dream }
+				factor = 0.5
+			}
+			modifier = {
+				NOT = { DIP = 3 }
+				factor = 0.5
+			}
+			modifier = {
+				DIP = 5
+				factor = 1.4
+			}
+			modifier = {
+				DIP = 4
+				factor = 1.4
+			}
+		}
+		add_dip_power = -10
+		if = {
+			limit = { has_country_flag = good_dream }
+			if = {
+				limit = { DIP = 5 }
+				add_legitimacy = 5
+				add_prestige = 5
+			}
+			else_if = {
+				limit = { DIP = 4 }
+				random = {
+					chance = 80
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else_if = {
+				limit = { DIP = 3 }
+				random = {
+					chance = 60
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else_if = {
+				limit = { DIP = 2 }
+				random = {
+					chance = 40
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else = {
+				random = {
+					chance = 20
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+		}
+		else = {
+			if = {
+				limit = { DIP = 5 }
+				random = {
+					chance = 50
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else_if = {
+				limit = { DIP = 4 }
+				random = {
+					chance = 40
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else_if = {
+				limit = { DIP = 3 }
+				random = {
+					chance = 30
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else_if = {
+				limit = { DIP = 2 }
+				random = {
+					chance = 20
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			else = {
+				random = {
+					chance = 10
+					add_legitimacy = 5
+					add_prestige = 5
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = good_dream }
+					NOT = { has_country_flag = bad_dream }
+				}
+				set_ruler_flag = zoroastrian_dreams
+			}
+			clr_country_flag = bad_dream
+			clr_country_flag = good_dream
+		}
+	}
+	option = {
+		name = dg_zoroastrian.049.private
+		ai_chance = {
+			factor = 25
+			modifier = {
+				has_country_flag = good_dream
+				factor = 0.25
+			}
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = good_dream }
+				NOT = { has_country_flag = bad_dream }
+			}
+			set_ruler_flag = zoroastrian_dreams
+		}
+		clr_country_flag = bad_dream
+		clr_country_flag = good_dream
+	}
+	option = {
+		name = dg_zoroastrian.049.repent
+		trigger = { NOT = { has_country_flag = good_dream } }
+		ai_chance = {
+			factor = 25
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = good_dream }
+				NOT = { has_country_flag = bad_dream }
+			}
+			set_ruler_flag = zoroastrian_dreams
+		}
+		set_ruler_flag = zoroastrian_purification_ritual
+		add_legitimacy = 10
+		add_prestige = -2
+		if = {
+			limit = { monthly_income = 6.7 }
+			add_years_of_income = -0.05
+		}
+		else = {
+			add_treasury = -4
+		}
+		clr_country_flag = bad_dream
+		clr_country_flag = good_dream
+	}
+	option = {
+		name = dg_zoroastrian.049.personal
+		trigger = { NOT = { has_country_flag = ruler_fanatical } }
+		ai_chance = { factor = 25 }
+		if = {
+			limit = {
+				NOT = { has_country_flag = good_dream }
+				NOT = { has_country_flag = bad_dream }
+			}
+			set_ruler_flag = zoroastrian_dreams
+		}
+		if = {
+			limit = { NOT = { has_country_flag = ruler_fanatical } }
+			add_piety = 0.10
+		}
+		if = {
+			limit = { has_country_flag = ruler_pious }
+			clr_country_flag = ruler_pious
+			set_country_flag = ruler_fanatical
+		}
+		if = {
+			limit = { has_country_flag = ruler_observant }
+			clr_country_flag = ruler_observant
+			set_country_flag = ruler_pious
+		}
+		if = {
+			limit = { has_country_flag = ruler_cynical }
+			clr_country_flag = ruler_cynical
+			set_country_flag = ruler_observant
+		}
+		if = {
+			limit = { has_country_flag = ruler_unbeliever }
+			clr_country_flag = ruler_unbeliever
+			set_country_flag = ruler_cynical
+		}
+		clr_country_flag = bad_dream
+		clr_country_flag = good_dream
+	}
+}
+
+country_event = { #50 - The Purification of [Ruler]
+	
+	id = dg_zoroastrian.050
+	title = dg_zoroastrian.050.t
+	desc = dg_zoroastrian.050.d
+	picture = zoroastrian_religion # pending better picture choice by David
+	
+	is_triggered_only = yes
+	
+	immediate = { set_ruler_flag = zoroastrian_purification_ritual }
+	
+	option = {
+		name = dg_zoroastrian.050.accept
+		ai_chance = {
+			factor = 50
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 90 }
+				factor = 1.4
+			}
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 80 }
+				factor = 1.4
+			}
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 70 }
+				factor = 1.4
+			}
+			modifier = {
+				government = monarchy
+				NOT = { legitimacy = 60 }
+				factor = 1.4
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 90 }
+				factor = 1.4
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 80 }
+				factor = 1.4
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 70 }
+				factor = 1.4
+			}
+			modifier = {
+				government = republic
+				NOT = { republican_tradition = 60 }
+				factor = 1.4
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 90 }
+				factor = 1.4
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 80 }
+				factor = 1.4
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 70 }
+				factor = 1.4
+			}
+			modifier = {
+				government = theocracy
+				NOT = { devotion = 60 }
+				factor = 1.4
+			}
+			modifier = {
+				has_country_flag = ruler_piety_fanatical
+				factor = 2
+			}
+			modifier = {
+				has_country_flag = ruler_piety_pious
+				factor = 1.4
+			}
+		}
+		add_legitimacy = 10
+		add_prestige = -2
+		if = {
+			limit = { monthly_income = 6.7 }
+			add_years_of_income = -0.05
+		}
+		else = {
+			add_treasury = -4
+		}
+	}
+	option = {
+		name = dg_zoroastrian.050.refuse
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_country_flag = ruler_piety_unbeliever
+				factor = 2
+			}
+			modifier = {
+				has_country_flag = ruler_piety_cynical
+				factor = 1.4
+			}
+			modifier = {
+				num_of_loans = 1
+				factor = 1.4
+			}
+			modifier = {
+				num_of_loans = 3
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { years_of_income = 0.02 }
+				factor = 1.4
+			}
+			modifier = {
+				NOT = { years_of_income = 0.08 }
+				factor = 1.4
+			}
+		}
+		add_prestige = 2
+	}
+}

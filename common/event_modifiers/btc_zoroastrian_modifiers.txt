@@ -1,0 +1,59 @@
+religious_scandal_province = {
+    local_unrest = 2
+    prestige = -0.1
+    local_missionary_strength = -0.03
+    picture = religious_scandal
+    religion = yes
+}
+
+unhappy_church_moderate = {
+    tolerance_own = -3
+    legitimacy = -1.2
+    devotion = -2.4
+    stability_cost_modifier = 0.075
+    global_missionary_strength = -0.015
+    religion = yes
+}
+
+zoroastrian_great_fire_warriors = {
+    tolerance_own = 0.1
+    land_morale = 0.05
+    local_tax_modifier = 0.10
+    province_trade_power_value = 0.5
+    religion = yes
+    picture = dg_zoroastrian_fire
+}
+
+zoroastrian_great_fire_priests = {
+    tolerance_own = 0.1
+    global_missionary_strength = 0.025
+    local_tax_modifier = 0.10
+    province_trade_power_value = 0.5
+    religion = yes
+    picture = dg_zoroastrian_fire
+}
+
+zoroastrian_great_fire_farmers = {
+    tolerance_own = 0.1
+    legitimacy = 0.1
+    devotion = 0.1
+    horde_unity = 0.1
+    republican_tradition = 0.1
+    local_tax_modifier = 0.10
+    province_trade_power_value = 0.5
+    religion = yes
+    picture = dg_zoroastrian_fire
+}
+
+zoroastrian_female_priests = {
+    female_advisor_chance = 0.1
+    global_missionary_strength = 0.001
+    religion = yes
+}
+
+zoroastrian_pilgrimage = {
+    local_tax_modifier = 0.10
+    province_trade_power_value = 0.5
+    prestige = 0.1
+    picture = hindu_pilgrimage
+}
