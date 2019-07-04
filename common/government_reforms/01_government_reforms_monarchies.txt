@@ -2037,9 +2037,24 @@ coptic_monarchy = {
 	allow_normal_conversion = yes
 	icon = "coptic_government_icon"
 	potential = {
-		tag = KEM
+		religion_group = christian
+		OR = {
+			AND = {
+				tag = KEM
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = coptic_monarchy
+			}
+		}
 	}
-	valid_for_nation_designer = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		culture_group = egyptian_group
+		owns = 358
+	}
 	legacy_equivalent = coptic_monarchy_legacy
 	modifiers = {
 		diplomatic_reputation = 1
