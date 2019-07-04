@@ -62,7 +62,7 @@ false_waldo_buried = {
 	prestige = -1
 	legitimacy = -1
 }
-
+#Nestorian
 way_of_the_land = {
 	movement_speed = 0.15
 }
@@ -105,6 +105,17 @@ europeans_at_court = {
 	diplomatic_reputation = 1
 }
 
+pleased_catholicos_patriarch = {
+	tolerance_own = 1
+	stability_cost_modifier = -0.1
+}
+
+upset_catholicos_patriarch = {
+	tolerance_own = -2
+	stability_cost_modifier = 0.1
+	global_unrest = 1
+	legitimacy = -1
+}
 
 trusted_land_aristocracy = {
 	global_autonomy = -0.25

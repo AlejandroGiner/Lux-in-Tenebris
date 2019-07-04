@@ -796,3 +796,48 @@ country_event = {
     }
   }
 }
+
+#Letter by the Catholicos-Patriarch
+country_event = {
+  id = nestorian_events.10
+  title = nestorian_events.10.t
+  desc = nestorian_events.10.d
+  picture = DECLARATION_INDEPENDENCE
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    religion = nestorian
+    NOT = { government = theocracy }
+  }
+  
+  option = {
+    name = nestorian_events.10.a
+    add_prestige = 5
+    add_country_modifier = {
+      name = pleased_catholicos_patriarch
+      duration = 1825
+    }
+    add_adm_power = -10
+    add_dip_power = -10
+    add_mil_power = -10
+    random_list = {
+      33 = { add_adm_power = -20 }
+      33 = { add_dip_power = -20 }
+      33 = { add_mil_power = -20 }
+    }
+  }
+  
+  option = {
+    name = nestorian_events.10.b
+    add_prestige = -10
+    add_country_modifier = {
+      name = upset_catholicos_patriarch
+      duration = 5475
+    }
+    random = {
+      chance = 5
+      add_stability = -1
+    }
+  }
+}
