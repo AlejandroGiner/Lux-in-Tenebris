@@ -2030,6 +2030,27 @@ chrysanthemum_throne = {
 	}
 }
 
+# Khemi
+
+coptic_monarchy = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "coptic_government_icon"
+	potential = {
+		tag = KEM
+	}
+	valid_for_nation_designer = no
+	legacy_equivalent = coptic_monarchy_legacy
+	modifiers = {
+		diplomatic_reputation = 1
+		tolerance_own = 1
+		production_efficiency = 0.05
+		prestige = 0.5
+		envoy_travel_time = -0.25
+		max_absolutism = 5
+	}
+}
+
 #Cut for the moment. New Reform system makes HR's old tiers... difficult to intergrate.
 #provincial_kingdom_reform = {
 #	icon = "castle"

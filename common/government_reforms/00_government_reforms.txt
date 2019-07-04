@@ -2758,3 +2758,22 @@ chrysanthemum_throne_legacy = {
 		factor = 5
 	}
 }
+
+coptic_monarchy_legacy = {
+	icon = "coptic_government_icon"
+	allow_normal_conversion = no
+	legacy_government = yes
+	valid_for_new_country = no
+	valid_for_nation_designer = no
+	monarchy = yes
+	modifiers = {
+		diplomatic_reputation = 1
+		tolerance_own = 1
+		production_efficiency = 0.05
+		prestige = 0.5
+		envoy_travel_time = -0.25
+		max_absolutism = 5
+	}
+
+	ai = { factor = 3 }
+}

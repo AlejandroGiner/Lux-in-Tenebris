@@ -27,6 +27,13 @@ kem_restoration_of_egypt = {
 				name = "sovereign_alexandria"
 				duration = 5475
 			}
+			add_core = 358
+			358 = {
+				move_capital_effect = yes
+				change_culture = coptic
+				change_religion = ROOT
+				rename_capital = Alexandria
+			}
 			#Claims
 			custom_tooltip = consolidate_niledelta_claims
 			hidden_effect = {
@@ -178,5 +185,49 @@ kem_restoration_of_egypt = {
 			}
 		}
 	}
+
+}
 	
+kem_development_of_egypt = {
+	slot = 5 #upper right column
+	generic = no #if a mission without generic = yes wants this slot then it overrides this.
+	ai = yes
+	potential = {
+		tag = KEM
+	}
+	has_country_shield = yes
+	
+	coptic_egyptian_trade = { 
+		icon = mission_coptic_trade
+		required_missions = {  } #None
+		trigger = {
+			358 = {
+			   is_strongest_trade_power = ROOT
+			}
+		}
+		provinces_to_highlight = {
+			province_id = 358
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		effect = {
+			add_country_modifier = {
+				name = "expanding_coptic_trade"
+				duration = 5475
+			}
+		}
+	}
+	
+	coptic_stability = { 
+		icon = mission_coptic_stability
+		required_missions = { coptic_egyptian_trade } 
+		position = 2
+		trigger = {
+			stability = 2
+		}
+		effect = {
+			add_stability = 1
+		}
+	}
+
+
 }
