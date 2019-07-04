@@ -102,6 +102,41 @@ grand_duchy_reform = {
 	}
 }
 
+coptic_monarchy_reform = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "coptic_government_icon"
+	potential = {
+		religion_group = christian
+		OR = {
+			AND = {
+				tag = KEM
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = coptic_monarchy_reform
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		culture_group = egyptian_group
+		religion_group = christian
+		owns = 358
+	}
+	legacy_equivalent = coptic_monarchy_reform_legacy
+	modifiers = {
+		diplomatic_reputation = 1
+		tolerance_own = 1
+		production_efficiency = 0.05
+		prestige = 0.5
+		envoy_travel_time = -0.25
+		max_absolutism = 5
+	}
+}
+
 indian_sultanate_reform = {
 	icon = "indian_sultanate"
 	allow_normal_conversion = yes
@@ -2031,40 +2066,6 @@ chrysanthemum_throne = {
 }
 
 # Khemi
-
-coptic_monarchy = {
-	lock_level_when_selected = yes
-	allow_normal_conversion = yes
-	icon = "coptic_government_icon"
-	potential = {
-		religion_group = christian
-		OR = {
-			AND = {
-				tag = KEM
-				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = coptic_monarchy
-			}
-		}
-	}
-	valid_for_nation_designer = yes
-	nation_designer_cost = 100
-	nation_designer_trigger = {
-		culture_group = egyptian_group
-		owns = 358
-	}
-	legacy_equivalent = coptic_monarchy_legacy
-	modifiers = {
-		diplomatic_reputation = 1
-		tolerance_own = 1
-		production_efficiency = 0.05
-		prestige = 0.5
-		envoy_travel_time = -0.25
-		max_absolutism = 5
-	}
-}
 
 #Cut for the moment. New Reform system makes HR's old tiers... difficult to intergrate.
 #provincial_kingdom_reform = {

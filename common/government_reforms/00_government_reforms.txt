@@ -2759,12 +2759,18 @@ chrysanthemum_throne_legacy = {
 	}
 }
 
-coptic_monarchy_legacy = {
+coptic_monarchy_reform_legacy = {
 	icon = "coptic_government_icon"
-	allow_normal_conversion = no
+	allow_normal_conversion = yes
 	legacy_government = yes
-	valid_for_new_country = no
-	valid_for_nation_designer = no
+	valid_for_new_country = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	nation_designer_trigger = {
+		culture_group = egyptian_group
+		religion_group = christian
+		owns = 358
+	}
 	monarchy = yes
 	modifiers = {
 		diplomatic_reputation = 1
