@@ -1093,16 +1093,10 @@ country_decisions = {
 			NOT = { has_country_flag = formed_united_kingdom_flag }
 			NOT = { tag = UNK }
 			NOT = { tag = CEL }
-			OR = {
-				tag = GBR
-				tag = TNA
-				tag = YYK
-			}
-			OR = {
-				culture_group = british
-				culture_group = gaelic
-				culture_group = brythonic
-			}
+			NOT = { tag = TNA }
+			NOT = { tag = YKK }
+			tag = GBR
+			culture_group = british
 			adm_tech = 10			#default 1531
 		}
 		provinces_to_highlight = {
