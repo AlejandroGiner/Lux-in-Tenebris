@@ -4167,3 +4167,44 @@ ISF_ideas = {
 		prestige = 1
 	}
 }
+
+KRE_ideas = {
+	start = {
+		development_cost = -0.15
+		defensiveness = 0.15
+	}
+	
+	bonus = {
+		land_morale = 0.1
+	}
+	
+	trigger = {
+		tag = KRE
+	}
+	free = yes
+	
+	KRE_idea1 = {
+		global_unrest = -2
+	}
+	KRE_idea2 = {
+		technology_cost = -0.05
+	}
+	KRE_idea3 = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	KRE_idea4 = {
+		ship_durability = 0.10
+		heavy_ship_power = 0.15
+	}
+	KRE_idea5 = {
+		garrison_size = 0.1
+		fort_maintenance_modifier = -0.1
+	}
+	KRE_idea6 = {
+		idea_cost = -0.1
+	}
+	KRE_idea7 = {
+		global_manpower_modifier = 0.10
+	}
+	
+}
