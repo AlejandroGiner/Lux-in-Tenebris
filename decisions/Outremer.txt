@@ -9,41 +9,15 @@ country_decisions = {
 			owns = 379
 			religion = catholic
 			OR = {
-				AND = {
-					ai = no
-					tag = KOJ
-				}
-				AND = {
-					ai = no
-					tag = CYP
-				}
-				AND = {
-					ai = no
-					tag = TPL
-				}
-				AND = {
-					ai = no
-					tag = ATC
-				}
-				AND = {
-					ai = no
-					tag = EDE
-				}
-				AND = {
-					ai = no
-					tag = DMU
-				}
-				AND = {
-					ai = no
-					tag = APO
-				}
-				AND = {
-					ai = no
-					tag = EME
-				}
-				AND = {
-					ai = no
-					tag = SIN
+				tag = KOJ
+				tag = CYP
+				tag = TPL
+				tag = ATC
+				tag = EDE
+				tag = DMU
+				tag = APO
+				tag = EME
+				tag = SIN
 				}
 		}
 		provinces_to_highlight = {
@@ -107,7 +81,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-	}
 }
 
 }
