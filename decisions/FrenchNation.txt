@@ -13,6 +13,7 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = LTE }
 			NOT = { tag = FRA }
+			NOT = { tag = OUT }
 			NOT = { tag = PAP }
 			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
 			OR = {
