@@ -3000,7 +3000,7 @@ free_city_ideas = {
 
 crusader_ideas = {
     start = {
-        tolerance_heretic = 3
+		naval_forcelimit_modifier = 0.2
         papal_influence = 2
     }
 
@@ -3009,7 +3009,15 @@ crusader_ideas = {
     }
 
     trigger = {
-            tag = CDA
+		OR = {
+            tag = TPL
+            tag = ATC
+            tag = EDE
+            tag = DMU
+            tag = APO
+            tag = SIN
+            tag = EME
+		}
     }
     free = yes
 
