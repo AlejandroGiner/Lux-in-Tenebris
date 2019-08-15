@@ -1,0 +1,113 @@
+country_decisions = {
+
+	outremer_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = formed_outremer }
+			NOT = { exists = OUT }
+			normal_or_historical_nations = yes
+			owns = 379
+			religion = catholic
+			OR = {
+				AND = {
+					ai = no
+					tag = KOJ
+				}
+				AND = {
+					ai = no
+					tag = CYP
+				}
+				AND = {
+					ai = no
+					tag = TPL
+				}
+				AND = {
+					ai = no
+					tag = ATC
+				}
+				AND = {
+					ai = no
+					tag = EDE
+				}
+				AND = {
+					ai = no
+					tag = DMU
+				}
+				AND = {
+					ai = no
+					tag = APO
+				}
+				AND = {
+					ai = no
+					tag = EME
+				}
+				AND = {
+					ai = no
+					tag = SIN
+				}
+		}
+		provinces_to_highlight = {
+			mashriq_region
+			NOT = { owned_by = ROOT }
+		}
+		allow = {
+			mashriq_region = {
+				type = all
+				owned_by = ROOT
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			custom_trigger_tooltip = {
+				tooltip = outremer_arabia_custom_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+							area = arabia_area
+					}
+					amount = 5			#At least 5 provinces in Arabia
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = outremer_mesopotamia_custom_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+							area = mesopotamia_area
+					}
+					amount = 5			#At least 5 provinces in Mesopotamia
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = outremer_egypt_custom_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+							area = egypt_area
+					}
+					amount = 5			#At least 5 provinces in Egypt
+				}
+			}
+	}
+		
+		effect = {
+			379 = {
+				move_capital_effect = yes
+			}
+			change_tag = OUT
+			set_government_rank = 3
+			add_prestige = 50
+			
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			set_country_flag = formed_outremer
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+}
