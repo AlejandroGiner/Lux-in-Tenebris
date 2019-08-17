@@ -803,13 +803,6 @@ spa_reconquista = {
 				}
 				add_claim = ROOT
 			}
-			algiers_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
 		}
 	}
 	

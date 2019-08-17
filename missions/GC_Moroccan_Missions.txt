@@ -603,13 +603,6 @@ gc_morocco_3 = {
 		}
 		
 		effect = {
-			algiers_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			oran_area= {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -661,7 +654,6 @@ gc_morocco_3 = {
 		required_missions = { gc_mor_ceuta }
 		provinces_to_highlight = {
 			OR = {
-				area = algiers_area
 				area = oran_area
 				area = hautes_plaines_area
 				area = tafilalt_area
@@ -675,10 +667,6 @@ gc_morocco_3 = {
 		}
 		
 		trigger = {
-			algiers_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
 			oran_area= {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
@@ -986,10 +974,7 @@ gc_morocco_4 = {
 				area = tunisia_area
 				area = djerba_area
 				area = tripolitania_area
-				area = west_aures_area
-				area = constantine_area
 				area = east_aures_area
-				area = kairouan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1007,19 +992,7 @@ gc_morocco_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			west_aures_area = {
-				type = all
-				owned_by = ROOT
-			}
-			constantine_area = {
-				type = all
-				owned_by = ROOT
-			}
 			east_aures_area = {
-				type = all
-				owned_by = ROOT
-			}
-			kairouan_area = {
 				type = all
 				owned_by = ROOT
 			}

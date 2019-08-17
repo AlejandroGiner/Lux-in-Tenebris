@@ -277,7 +277,6 @@ pru_conquer_pomerania_provinces = {
 connect_the_prussian_lands_provinces = {
 	OR = {
 		#BT moved to partition mission
-		#area = pomerelia_area
 		area = east_prussia_area
 		area = mittelmark_area
 	}
@@ -305,7 +304,6 @@ prussia_partitions_poland_provinces = {
 		area = west_prussia_area
 		area = wielkopolska_area
 		#BT additions
-		area = pomerelia_area
 	}
 	NOT = {
 		province_id = 254 #Wasn't part of 1st partition, but gets added as a claim.
@@ -439,7 +437,6 @@ conquer_egypt_provinces = {
 		area = said_area
 		area = vostani_area
 		area = al_wahat_area
-		area = gulf_of_arabia_area
 		#BT moved to Tripolitania
 		#area = cyrenaica_area
 		#BT additions
@@ -483,13 +480,9 @@ conquer_tunisia_provinces = {
 }
 subjugate_algiers_provinces = {
 	OR = {
-		area = west_aures_area
-		area = constantine_area
 		area = kabylia_area
 		area = oran_area
-		area = algiers_area
 		area = hautes_plaines_area
-		area = ouled_nail_area #Hopefully this is Sarahan Atlas
 	}
 	NOT = { 
 		province_id = 350
@@ -499,7 +492,6 @@ conquer_hedjaz_provinces = {
 	OR = {
 		area = mecca_area
 		area = tabuk_area
-		area = medina_area
 		#BT additions
 		area = tihama_al_yemen_area
 	}
@@ -519,10 +511,7 @@ conquer_mocha_provinces = {
 
 #Poland-Commonwealth
 conquer_warmia_provinces = { #Unchanged
-	OR = {
 		area = west_prussia_area
-		area = pomerelia_area
-	}
 }
 annex_mazovia_provinces = { #Unchanged
 	OR = {

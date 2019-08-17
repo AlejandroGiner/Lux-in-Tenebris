@@ -286,7 +286,6 @@ baltic_region = {
 		curonia_area
 		west_prussia_area
 		east_prussia_area
-		pomerelia_area
 		samogitia_area
 		trakai_area
 	}
@@ -395,7 +394,6 @@ carpathia_region = {
 		moldavia_area
 		#BTADDITIONS
 		carpathian_ruthenia_area
-		bukovina_area
 		western_moldovia
 		south_wallachia_area
 	}
@@ -404,7 +402,6 @@ carpathia_region = {
 egypt_region = {
 	areas = {
 		lower_nubia_area
-		gulf_of_arabia_area
 		al_wahat_area
 		delta_area
 		bahari_area
@@ -422,28 +419,21 @@ maghreb_region = {
 		tunisia_area
 		djerba_area
 		kabylia_area
-		algiers_area
 		hautes_plaines_area
 		north_saharan_area
 		tafilalt_area
 		sus_area
 		marrekesh_area
-		ouled_nail_area
 		#fez_area			#Removed by Draiocht, seemed to be removed by Paradox shortly thereafter as well, only ref I could find was in the tutorial
 		northern_morocco_area
-		southern_morocco_area
 		western_morocco_area
 		tripolitania_area			#Was in 8.0's Libya region
 		cyrenaica_area			#Was in 8.0's Libya region
 		#BTADDITIONS
 		tagmudant_area
-		djerid_area
 		east_aures_area
-		west_aures_area
-		constantine_area
 		oran_area
 		nafusa_mountains_area			#Was in 8.0's Libya region
-		kairouan_area
 		macaronesia_area
 	}
 }
@@ -531,7 +521,6 @@ caucasia_region = {
 arabia_region = {
 	areas = {
 		tabuk_area
-		medina_area				#Added by BT, then cut by BT before release, then added in 1.23 by Paradox as well, same ID. I'll go ahead and use it
 		mecca_area
 		asir_area			#BT formerly repurposed Sarat into Asir. As 1.23 added Asir, now using that.
 		tihama_al_yemen_area			#Added by BT, then added in 1.23 by Paradox as well, Paradox ID removed 'h' and add _al_yemen
@@ -988,8 +977,6 @@ burma_region = {
 		chindwin_area
 		#BTC
 		yawnghwe_area
-		mong_yang_area
-		rangoon_area
 		kengtung_area
 	}
 	monsoon = {
@@ -1222,10 +1209,7 @@ malaya_region = {	#Western Indonesia Malaya.
 		northern_malaya_area
 		johor_area
 		barisan_area
-		aru_area
 		palembang_area
-		bengkulu_area
-		kelantan_area
 		kedah_area
 		perak_area
 	}
@@ -1248,12 +1232,10 @@ moluccas_region = {
 		vogelkop_area
 		timor_area
 		south_sulawesi_area
-		ceram_area
 		spice_islands_area
 		#BTC
 		luwu_area
 		banggai_area
-		east_timor_area
 		flores_area
 	}
 	monsoon = {
@@ -1275,10 +1257,7 @@ philippines_region = {
 		visayas_area
 		palawan_area
 		#BTC
-		sulu_area
 		ibalong_area
-		western_visayas_area
-		central_luzon_area
 	}
 	monsoon = {
 		00.10.01
@@ -1301,15 +1280,10 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 		lesser_sunda_islands_area
 		indonesian_islands_area
 		#BTC
-		iban_area
 		dayak_area
 		kotawaringin_area
 		berau_area
-		yogyakarta_area
 		cirebon_area
-		sabah_area
-		kapuas_area
-		blambangan_area
 	}
 	monsoon = {
 		00.11.01
@@ -1343,7 +1317,6 @@ indo_china_region = {
 	areas = {
 		vietnam_area
 		south_laos_area
-		basac_area
 		north_laos_area
 		cambodia_area
 		eastern_cambodia_area
@@ -1353,12 +1326,8 @@ indo_china_region = {
 		cao_bac_area
 		central_highlands_area
 		#BTC
-		lang_son_area
 		sipsongchautai_area
-		xieng_khaeng_area
 		oudong_area
-		darlac_area
-		indrapura_area
 	}
 	monsoon = {
 		00.05.01
@@ -1370,15 +1339,12 @@ siam_region = { #BTC
 	areas = {
 		central_thai_area
 		northern_thai_area
-		nan_area
-		western_thai_area
 		tenasserim_area
 		north_tenasserim_area
 		sukhothai_area
 		khorat_area
 		inner_cambodia_area
 		suwannaphum_area
-		eastern_thai_area
 		phitsanulok_area
 		dangrek_area
 

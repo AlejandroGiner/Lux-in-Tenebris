@@ -24,7 +24,6 @@ country_decisions = {
 						OR = {
 							area = northern_morocco_area
 							area = western_morocco_area
-							area = southern_morocco_area
 							area = marrekesh_area
 							area = sus_area
 							area = tafilalt_area
@@ -38,7 +37,6 @@ country_decisions = {
 			OR = {
 				area = northern_morocco_area
 				area = western_morocco_area
-				area = southern_morocco_area
 				area = marrekesh_area
 				area = sus_area
 				area = tafilalt_area
@@ -64,7 +62,6 @@ country_decisions = {
 					OR = {
 						area = northern_morocco_area
 						area = western_morocco_area
-						area = southern_morocco_area
 						area = marrekesh_area
 						area = sus_area
 						area = tafilalt_area
@@ -96,10 +93,6 @@ country_decisions = {
 				add_permanent_claim = MOR
 			}
 			marrekesh_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = MOR
-			}
-			southern_morocco_area = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = MOR
 			}
@@ -163,13 +156,9 @@ country_decisions = {
 						culture_group = berber_group
 					}
 					OR = {
-						capital_scope = { area = algiers_area }
 						capital_scope = { area = hautes_plaines_area }
-						capital_scope = { area = ouled_nail_area }
 						capital_scope = { area = kabylia_area }
 						capital_scope = { area = north_saharan_area }
-						capital_scope = { area = west_aures_area }
-						capital_scope = { area = constantine_area }
 						capital_scope = { area = barbary_coast_area }
 					}
 				}
@@ -182,13 +171,9 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				area = algiers_area
 				area = hautes_plaines_area
-				area = ouled_nail_area
 				area = kabylia_area
 				area = north_saharan_area
-				area = west_aures_area
-				area = constantine_area
 				area = barbary_coast_area
 			}
 			NOT = { owned_by = ROOT is_core = ROOT }
@@ -203,13 +188,9 @@ country_decisions = {
 				all_owned_province = {
 					is_core = ROOT
 					OR = {
-						area = algiers_area
 						area = hautes_plaines_area
-						area = ouled_nail_area
 						area = kabylia_area
 						area = north_saharan_area
-						area = west_aures_area
-						area = constantine_area
 						area = barbary_coast_area
 					}
 				}
@@ -232,10 +213,6 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			algiers_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = ALG
-			}
 			north_saharan_area = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = ALG
@@ -244,19 +221,7 @@ country_decisions = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = ALG
 			}
-			ouled_nail_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = ALG
-			}
 			kabylia_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = ALG
-			}
-			west_aures_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = ALG
-			}
-			constantine_area = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = ALG
 			}
@@ -300,7 +265,6 @@ country_decisions = {
 				OR = {
 					area = tunisia_area
 					area = djerba_area
-					area = djerid_area
 					area = east_aures_area
 				}
 			}
@@ -309,7 +273,6 @@ country_decisions = {
 			OR = {
 				area = tunisia_area
 				area = djerba_area
-				area = djerid_area
 				area = east_aures_area
 			}
 			OR = {
@@ -329,7 +292,6 @@ country_decisions = {
 					OR = {
 						area = tunisia_area
 						area = djerba_area
-						area = djerid_area
 						area = east_aures_area
 					}
 				}
@@ -354,10 +316,6 @@ country_decisions = {
 				add_permanent_claim = OTN
 			}
 			djerba_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = OTN
-			}
-			djerid_area = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = OTN
 			}

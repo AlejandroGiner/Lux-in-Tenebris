@@ -109,15 +109,6 @@ country_decisions = {
 					mission_completed = gra_restore_faith_in_the_throne
 					has_dlc = "Golden Century"
 				}
-				algiers_area = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
 				hautes_plaines_area = {
 					limit = {
 						NOT = {

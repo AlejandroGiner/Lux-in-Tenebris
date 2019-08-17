@@ -224,7 +224,6 @@ byz_palestine_provinces = {
 }
 byz_lower_egypt_provinces = {
 	OR = { #What areas to encompass
-		area = gulf_of_arabia_area #Suez
 		area = delta_area #Nile Delta
 		area = bahari_area #Lower Egypt
 		area = al_wahat_area #al-Wahat
@@ -266,7 +265,6 @@ byz_arabia_provinces = {
 byz_mecca_medina_provinces = {
 	OR = { #What areas to encompass
 		area = tabuk_area #Tabuk
-		area = medina_area #Medina
 		area = mecca_area #Mecca
 		area = tihama_al_yemen_area #Tihamah
 	}
@@ -305,7 +303,6 @@ byz_africa_provinces = {
 	OR = { #What areas to encompass
 		area = tunisia_area #Tunisia
 		area = east_aures_area #Medjerda
-		area = kairouan_area #Kairouan
 		province_id = 2453 #Taparoura
 		province_id = 5312 #Takape
 		province_id = 352 #Kapsa
@@ -476,8 +473,6 @@ byz_albion_provinces = {
 #byz_africa_and_iberia chain
 byz_numidia_provinces = {
 	OR = { #What areas to encompass
-		area = west_aures_area #Shawia
-		area = constantine_area #Constantine
 		area = kabylia_area #Kabylia
 		province_id = 2458 #Zabi
 	}
@@ -485,7 +480,6 @@ byz_numidia_provinces = {
 byz_east_mauretania_provinces = {
 	OR = { #What areas to encompass
 		area = barbary_coast_area #Oran
-		area = algiers_area #Algeria
 		area = hautes_plaines_area #High Plains
 	}
 	NOT = { #What provinces to exclude

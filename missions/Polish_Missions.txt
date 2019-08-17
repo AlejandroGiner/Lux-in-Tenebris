@@ -16,7 +16,6 @@ polish_missions_main_slot = {
 		required_missions = { }
 		completed_by = 1466.10.19
 		provinces_to_highlight = {
-			area = pomerelia_area
 			province_id = 43
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -24,10 +23,6 @@ polish_missions_main_slot = {
 		}
 		trigger = {
 			OR = {
-				pomerelia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
 				43 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}

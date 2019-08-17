@@ -18,11 +18,9 @@ gc_tunis_1 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 350
-				area = ouled_nail_area
 				area = tripolitania_area
 				area = nafusa_mountains_area
 				area = fezzan_area
-				area = djerid_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -32,19 +30,11 @@ gc_tunis_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			ouled_nail_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			tripolitania_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			nafusa_mountains_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			djerid_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -338,13 +328,6 @@ gc_tunis_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			hautes_plaines_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -521,7 +504,6 @@ gc_tunis_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = oran_area
-				area = algiers_area
 				area = hautes_plaines_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -529,10 +511,6 @@ gc_tunis_4 = {
 		
 		trigger = {
 			oran_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			algiers_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -610,13 +588,6 @@ gc_tunis_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			southern_morocco_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			marrekesh_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -635,7 +606,6 @@ gc_tunis_4 = {
 				area = northern_morocco_area
 				area = western_morocco_area
 				area = marrekesh_area
-				area = southern_morocco_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -650,10 +620,6 @@ gc_tunis_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			marrekesh_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			southern_morocco_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

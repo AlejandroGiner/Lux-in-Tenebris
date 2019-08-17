@@ -1226,13 +1226,6 @@ gc_aragon_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			algiers_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -1241,10 +1234,7 @@ gc_aragon_5 = {
 		required_missions = { gc_ara_navy }
 
 		provinces_to_highlight = {
-			OR = {
-				area = oran_area
-				area = algiers_area
-			}
+			area = oran_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1252,10 +1242,6 @@ gc_aragon_5 = {
 
 		trigger = {
 			oran_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			algiers_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1279,21 +1265,7 @@ gc_aragon_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			constantine_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			east_aures_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			kairouan_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1310,9 +1282,7 @@ gc_aragon_5 = {
 			OR = {
 				area = kabylia_area
 				area = tunisia_area
-				area = constantine_area
 				area = east_aures_area
-				area = kairouan_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1328,15 +1298,7 @@ gc_aragon_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			constantine_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			east_aures_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kairouan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

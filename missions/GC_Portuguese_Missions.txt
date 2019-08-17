@@ -1520,13 +1520,6 @@ gc_por_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			southern_morocco_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
 		}
 	}
 
@@ -1558,15 +1551,6 @@ gc_por_5 = {
 				}
 			}
 			northern_morocco_area = {
-				limit = {
-					owned_by = ROOT
-				}
-				add_province_modifier = {
-					name = "buffer_zone_commerce"
-					duration = 5475
-				}
-			}
-			southern_morocco_area = {
 				limit = {
 					owned_by = ROOT
 				}
