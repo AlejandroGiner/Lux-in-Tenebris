@@ -387,7 +387,7 @@ DAN_ideas = {
 
 FRA_ideas = {
 	start = {
-		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
 		global_manpower_modifier = 0.20
 	}
 	
@@ -401,7 +401,7 @@ FRA_ideas = {
 	free = yes		#will be added at load.
 	
 	french_language_in_all_courts = {
-		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
 	}
 	elan = {
 		land_morale = 0.20
