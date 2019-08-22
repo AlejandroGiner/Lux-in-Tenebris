@@ -5,6 +5,8 @@ country_decisions = {
 		potential = {
 			NOT = { has_country_flag = formed_jerusalem }
 			NOT = { exists = KOJ }
+			NOT = { tag = OUT }
+			NOT = { tag = LTE }
 			normal_or_historical_nations = yes
 			OR = {
 				ai = no
