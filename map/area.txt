@@ -387,7 +387,7 @@ reims_area = {
 ########################################
 
 wallonia_area = { #3
-	91 1866 1743 4831 4832
+	91 1866 1743 4831 4832 4830
 }
 
 flanders_area = { #4	#TOTBTPCHANGES
@@ -404,6 +404,18 @@ netherlands_area = { #4
 
 frisia_area = {
 	100 1931 4382
+}
+
+luxemburg_liege_area = { #Liege/Limburg
+	93 1742 2974 4835 3063
+}
+
+luxembourg_area = {
+	4828 4829 3066 4785 94
+}
+
+guelders_area = {
+	99 3058 4381 3060 3062 4824 
 }
 
 ########################################
@@ -505,15 +517,15 @@ south_alentejo_area = {
 ########################################
 
 venetia_area = { #4
-	111 112 1774 3228 3013
+	 112 1774 3228 7018 7019 108  
+}
+
+friuli_area = {
+	130 3049 1769 3013 111
 }
 
 lombardy_area = { #West Lombardy
-	104 3043 3095 3054
-}
-
-east_lombardy_area = {
-	1862 107 3047 3294
+	104 3043 3095 1862 107 3047
 }
 
 piedmont_area = { #North Piedmont
@@ -590,8 +602,8 @@ abruzzo_area = {
 	120 3038 3234 5707 5708
 }
 
-verona_area = {
-	108 110 7018 7019
+btc_sudtirol_area = { #
+	110 3048 4752 1768  
 }
 
 south_tuscany_area = {
@@ -1056,16 +1068,20 @@ western_moldovia = {
 # Germany			 				   #
 ########################################
 
+schleswig_area = {
+	13 3134 3135
+}
+
 south_saxony_area = { #3
 	59 61 62 2965 4169 4773
 }
 
 upper_bavaria_area = {
-	65 76 2955 4751 4754 4759 4760 4761 4762 4763
+	65 2955 4754 4759 4763 64
 }
 
 lower_bavaria_area = { #4
-	64 1757 2956 2957 4764 4765 4766
+	1757 2956 2957 4764 4765 4766 4761 4762 
 }
 
 lower_swabia_area = { #3 (incl Ansbach/Schwabishe Hall)
@@ -1073,7 +1089,7 @@ lower_swabia_area = { #3 (incl Ansbach/Schwabishe Hall)
 }
 
 franconia_area = { #3
-	66 67 79 3212 4767 4768 4781
+	66 67 79 3212 4767 4768 4781 3208
 }
 
 upper_swabia_area = { #3
@@ -1091,7 +1107,7 @@ thuringia_area = { #3	#TOTBTPCHANGES
 
 neumark_area = { #3
 	color = { 234 232 44 }
-	49 2969 7506 7518
+	49 2969 7506 7518 2993
 }
 
 mittelmark_area = { # 3
@@ -1099,7 +1115,7 @@ mittelmark_area = { # 3
 }
 
 vorpommern_area = { #3
-	47 2993 2994 7440 7498
+	47 2994 7440 7498
 }
 
 hinter_pommern_area = { #3
@@ -1107,12 +1123,12 @@ hinter_pommern_area = { #3
 }
 
 tirol_area = { #3
-	73 1768 3048 3053 3017 4752 4753
+	73 3053 3017 4753 4751 76
 }
 
 austria_proper_area = { #3
 	color = { 213 40 40 }
-	133 134 1770 3052 6665 6666
+	133 134 1770 3052 6665 6666 4760
 }
 
 inner_austria_area = { #3
@@ -1121,47 +1137,64 @@ inner_austria_area = { #3
 
 carniola_area = { #3
 	color = { 46 217 110 }
-	129 130 1769 3049 6661 6662
+	129 6661 6662
 }
 
 switzerland_area = { #4
 	color = { 21 14 237 }
-	166 1869 1870 1873 4792 4793 4795 4796 4797 4798
+	166 4793 4796 4795 165 3055
+}
+
+zurich_area = {
+	4798 4797 1870 1869 
+}
+
+oderbund_area = {
+	3294 3054 4792 1873 
 }
 
 romandie_area = { #3
-	165 1867 1871 3055 3056 4794
+	1867 1871 3056 4794
 }
 
-upper_rhineland_area = { #4
-	72 74 75 1880 4799 4800 4801 4802 4803 4804 4805
+upper_rhineland_area = { #Baden
+	72 74 4799 4803 4804 4805
+}
+
+elsass_area = {
+	4801 4802 75 4800 4799 1880
 }
 
 palatinate_area = { #3
-	77 78 1761 3207 3208 4812 4813
+	77 78 1761 3207 4812 4813
 }
 
 north_rhine_area = { #3
-	84 85 2975 3199 3200 3201 4816 4820 4821
+	84 85 2975 4820 3197 1878
 }
 
 lower_rhineland_area = { #3
-	80 1760 1878 3197 3198
-}
-
-luxemburg_liege_area = { #3
-	93 94 1742 2974 3066 4785 4828 4829 4830 4835
+	80 4821 1760 80 3198 4816 83
 }
 
 westphalia_area = { #5
-	82 2972 3202 3203
+	82 86 4819 3292 3199 3200
+}
+
+paderborn_area = {
+	2972 3203 3202 4817 1762
+}
+
+muenster_area = {
+	56 2973 4825 4826 4834
 }
 
 hesse_area = { #4
-	81 83 1762 1876 3209 3210 4817 4818
+	81 1876 3209 3210 4818 3201
 }
 
 braunschweig_area = { #3
+	1758 57 3215 4777 4778
 }
 
 weser_area = { #3
@@ -1169,11 +1202,11 @@ weser_area = { #3
 }
 
 holstein_area = { #3
-	1775 1857 4141 3233 3235 3237
+	1775 4141 3233 3235 3237
 }
 
 lower_saxony_area = { #4
-	44 53 3215 57 1758 3272 3275 4777 4778
+	53 3272 3275 44 1857
 }
 
 mecklenburg_area = { #3
@@ -4044,16 +4077,8 @@ southern_isles_area = { }
 # Europe    	                   #
 ########################################
 
-schleswig_area = {
-	13 3134 3135
-}
-
 cyprus_area = {
 	321 5139 5145
-}
-
-muenster_area = {
-	56 86 2973 3292 4819 4825 4826 4834
 }
 
 slavonia_area = {
@@ -4062,10 +4087,6 @@ slavonia_area = {
 
 nenets_area = {
 	3285 2425 1072 4257 3284
-}
-
-guelders_area = {
-	99 3058 4381 3060 3062 3063 4824 
 }
 
 toropets_area = {

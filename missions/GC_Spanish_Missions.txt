@@ -1427,13 +1427,6 @@ gc_spain_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_lombardy_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			wallonia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1473,7 +1466,6 @@ gc_spain_4 = {
 				area = tuscany_area
 				area = south_tuscany_area
 				area = lombardy_area
-				area = east_lombardy_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1488,10 +1480,6 @@ gc_spain_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lombardy_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			east_lombardy_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
