@@ -6657,3 +6657,94 @@ country_event = {
 		add_tariff_value = 0.05
 	}
 }
+
+# Tariffs on Pearls
+country_event = {
+	id = colonial_nation.230
+	title = "colonial_nation.EVTNAME230"
+	desc = "colonial_nation.EVTDESC230"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			NOT = { has_country_flag = tariffs_on_pearls }
+			had_country_flag = { flag = tariffs_on_pearls days = 7300 }
+		}
+		any_subject_country = {
+			is_colonial_nation_of = ROOT
+			any_owned_province = {
+				trade_goods = pearls
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				pearls = 3
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				pearls = 5
+			}
+		}
+		modifier = {
+			factor = 1.25
+			any_subject_country = {
+				is_colonial_nation_of = ROOT
+				pearls = 7
+			}
+		}
+	}
+	
+	option = {
+		name = "colonial_nation.EVTOPTA100"	# Tax it!
+		random_country = {
+			limit = {
+				is_colonial_nation_of = ROOT
+				any_owned_province = {
+					trade_goods = pearls
+				}
+			}
+			tooltip = {
+				add_tariff_value = 0.05
+			}
+			hidden_effect = {
+				country_event = { id = colonial_nation.231 days = 1 }
+			}
+		}
+		set_country_flag = tariffs_on_pearls
+	}
+	option = {
+		name = "colonial_nation.EVTOPTB100"	# Better leave it be
+		set_country_flag = tariffs_on_pearls
+		random_list = {
+			33 = { add_adm_power = 10 }
+			33 = { add_dip_power = 10 }
+			33 = { add_mil_power = 10 }
+		}
+	}
+}
+
+# Tariffs on Pearls
+country_event = {
+	id = colonial_nation.231
+	title = "colonial_nation.EVTNAME230"
+	desc = "colonial_nation.EVTDESC231"
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "colonial_nation.EVTOPTA231"	# Perhaps we should throw the pearls back into the sea instead...
+		add_tariff_value = 0.05
+	}
+}
