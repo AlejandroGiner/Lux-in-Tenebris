@@ -228,13 +228,6 @@ hab_holy_roman_ambitions = {
 			}
 			
 			#BT added, historical third partition of Poland provinces. There's a bit missing that is part of province 269, but I can't do much about that.
-			sandomierz_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_claim = ROOT
-			}
 			3222 = {
 				if = {
 					limit = {

@@ -803,11 +803,11 @@ west_prussia_area = { #5
 }
 
 wielkopolska_area = { #5
-   254 2963 4526 4523
+   254 2963 4526 4523 4836 4837
 }
 
 malopolska_area = { #5
-	262 2960 2424 2959 7267
+	262 2960 2959 259 3220
 }
 
 red_ruthenia_area = { #4
@@ -831,19 +831,11 @@ podlasie_area = {
 }
 
 mazovia_area = { #4
-	256 257 7264 4525
-}
-
-central_poland_area = {
-	258 3220 4533
-}
-
-sandomierz_area = {			#Just converting BT Sandomierz area into new 1.27 area, same id so no changes needed.
-	259 3221 4527
+	256 257 7264 4525 4524
 }
 
 kuyavia_area = {			#converting in BT Kalisz area, and cutting the old BT Kalisz
-	255 1939 4524 4528
+	255 1939 4528 258 4533 4838
 }
 
 samogitia_area = { #4
@@ -993,11 +985,11 @@ saratov_area = {
 }
 
 lublin_area = {
-	260 4538 7266
+	260 4538 7266 3221 4527 
 }
 
 central_galicia_area = {
-	2961 4541 1940 7270
+	2961 4541 1940 7270 7267 2424
 }
 
 western_podolia_area = {
@@ -1132,12 +1124,12 @@ austria_proper_area = { #3
 }
 
 inner_austria_area = { #3
-	128 132 1863 3050 6660 6663 6664
+	128 132 1863 3050 6660 6664
 }
 
 carniola_area = { #3
 	color = { 46 217 110 }
-	129 6661 6662
+	129 6661 6662 3191 6663
 }
 
 switzerland_area = { #4
@@ -1335,11 +1327,11 @@ bosnia_area = { #4
 
 croatia_area = { #4
 	color = { 18 126 16 }
-	131 152 1826 3196 3191
+	131 152 1826 3196 5184 5189
 }
 
 east_adriatic_coast_area = { #3
-	136 137 3182 3184 3192
+	136 137 3182 3184 3192 5185 5186 5187 5188
 }
 
 alfold_area = { #3
@@ -4703,7 +4695,8 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #BTC working on 
-4836 4837 4838
+5190 5191 5192 5193 5194
+5195 5196 5197 5198 5199 5200 5201
 
 #RNW Sea provinces
 3420 3421 3422 3423 3424 3425 3426 3427 3428 3429 3430 3431 3432 3433
@@ -4802,10 +4795,7 @@ unused_area = {
 	5891 5892 5893 5894 5895 5896 5897 5898 5899 5900 5901 5902 5903 5904 5905 5906 5907 5908 5909 5910 5911 5912 5913 5914 5915
 	5916 5917 5918 5919
 	7006 7007 7008 7009
-
-#BtPLegacy Reserved for New Middle East
-	5184 5185 5186 5187 5188 5189 5190 5191 5192 5193 5194
-	5195 5196 5197 5198 5199 5200 5201
+	
 #Beyond Typus Open Provinces, being used in BT overhauls
 	7054 7055 7056 7057 7058 7059 7060 7061 7062 7063 7064 7066 7068 7069 7070 7071 7072 7073 7074 7075 7076 7077 7078 7080 7081
 	7082 7083 7084 7085 7086 7087 7088 7089 7090 7091 7092 7093 7094 7095 7096 7097 7098 7099 7100 7101 7102 7103 7104 7105 7108

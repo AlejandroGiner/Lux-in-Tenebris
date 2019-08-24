@@ -160,7 +160,6 @@ tr_muscovy_conquest = {
 				area = malopolska_area
 				area = red_ruthenia_area
 				area = mazovia_area
-				area = sandomierz_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -176,10 +175,6 @@ tr_muscovy_conquest = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			mazovia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			sandomierz_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -522,13 +517,6 @@ tr_russia_conquest_1 = {
 				add_permanent_claim = ROOT
 			}
 			mazovia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			sandomierz_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
