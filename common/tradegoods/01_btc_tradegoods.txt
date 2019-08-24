@@ -806,3 +806,45 @@ teff = {
 		}
 	}
 }
+
+pearls = {
+	color = { 136 101 137 }
+	modifier = {
+		diplomatic_reputation = 2
+	}
+	province = {
+		local_tax_modifier = 0.20
+	}
+	chance = {
+		factor = 3
+		modifier = {
+			factor = 0
+			NOT = { has_port = yes }
+		}
+		modifier = {
+			factor = 3
+			is_island = yes
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				area = lanka_area
+				region = malaya_region
+				region = moluccas_region
+				region = indonesia_region
+				region = philippines_region
+				region = mexico_region
+				region = rio_grande_region
+				region = carribeans_region
+				region = central_america_region
+				region = colombia_region
+			}
+		}
+		modifier = {
+			factor = 0.35
+			NOT = {
+				has_winter = severe_winter
+			}
+		}
+	}
+}
