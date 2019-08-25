@@ -1071,6 +1071,34 @@ colonial_cape = {
 # Madagascar
 colonial_madagascar = {
 	color = { 73 159 196 }
+	
+	tax_income = 0
+	native_size = 7
+	native_ferocity = 3
+	native_hostileness = 3
+
+	trade_goods = {
+		fish = 15
+		fruit = 25
+		ivory = 15
+		tropical_wood = 15
+		slaves = 10
+		millet = 8
+		dates = 0
+		grain = 5
+		legumes = 2
+		whales = 1
+		marble = 1
+		pearls = 1
+	}
+
+	culture = {
+		madagasque = 10
+	}
+
+	religion = {
+		shamanism = 10
+	}
 
 	provinces = {
 		1792 4023 4027 4026 4028 4029 4030 1193 1194 4022 4031 4032 4021 4024 4025 1100 1102
@@ -1079,6 +1107,139 @@ colonial_madagascar = {
 	# Generic
 	names = {
 		name = "COLONIAL_MADAGASCAR_Root_Culture_GetName_Madagascar"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+# Central America
+colonial_central_america = {
+	color = { 255 135 245 }
+
+	# Random New World
+	tax_income = 2
+	native_size = 8
+	native_ferocity = 3
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 2
+		grain = 8
+		salt = 5
+		wool = 7
+		fish = 5
+		sugar = 8
+		gold = 5
+		cocoa = 6
+		naval_supplies = 1
+	}
+	
+	culture = {
+		zapotek = 6
+		mayan = 7
+	}
+	
+	religion = {
+		mesoamerican_religion = 10
+	}
+	
+	provinces = {
+		838 4592 2660 4597 2663 836 4595 2664 835 2819 
+		846 845 843 842 841 840 839 837
+		2632 2633 2634 2635 2636 2637 2638 2640
+		2649 2650 2651 2652 2653 2661 2662
+		4585 4586 4587 4594 4589 4588 4590 4591 4593
+	}
+	
+	# Generic
+	names = {
+		name = "COLONIAL_CENTRAL_AMERICA_Root_Culture_GetName_Central_America"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+colonial_rio_grande = {
+	color = { 214 19 19 }
+
+	# Random New World
+	tax_income = 3
+	native_size = 8
+	native_ferocity = 2
+	native_hostileness = 5
+	
+	trade_goods = {
+		fur = 2
+		grain = 8
+		salt = 5
+		wool = 7
+		fish = 5
+		sugar = 8
+		gold = 5
+		cocoa = 6
+		naval_supplies = 1
+	}
+	
+	culture = {
+		pueblo = 2
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		7491 7493 7492 7494 7495 7496 4627 7499 7503 7502 7501 7500 7508 7509
+		7510 7511 7512 7513 7514 7516 7517 7515 7521 7519 7520 7497 7507 889
+		888 2665 2669 887 886 884 883 2500 2666 2499 2498 7505 4628 4629 5837
+		885 2497 7504 882 2496 5844 4631 4630 880 881 5830 5832 5826 5065 5066
+		2667 2668
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_RIO_GRANDE_Root_Culture_GetName_Rio_Grande"
+	}
+	names = {
+		name = "COLONIAL_REGION_New_Root_GetName"
+	}
+}
+
+colonial_great_lakes = {
+	color = { 235 226 221 }
+
+	# Random New World
+	tax_income = 3
+	native_size = 5
+	native_ferocity = 4
+	native_hostileness = 4
+	
+	trade_goods = {
+		fur = 4
+		grain = 4
+		salt = 2
+		wool = 3
+		maize = 4
+		fruit = 4
+		legumes = 3
+	}
+	
+	culture = {
+		illini = 2
+	}
+	
+	religion = {
+		totemism = 10
+	}
+	
+	provinces = {
+		948 947 2525 946 2524 2523 2519 942 943 944 2522 2521 910
+		945 915 914 911 912 913 2518 904 5621 2512 2517 908 5622
+	}
+	# Generic
+	names = {
+		name = "COLONIAL_GREAT_LAKES_Root_Culture_GetName_Great_Lakes"
 	}
 	names = {
 		name = "COLONIAL_REGION_New_Root_GetName"
