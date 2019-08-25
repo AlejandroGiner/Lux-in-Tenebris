@@ -1,16 +1,21 @@
 country_decisions = {
 
-	haiti_nation = {
+	upca_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
+			normal_or_historical_nations = yes
 			is_nomad = no
-			is_random_new_world = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
 			}
-			colonial_hispaniola = {
+			colonial_yucatan = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -21,31 +26,37 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 835	# Panama
+				province_id = 2663	# Nicoya
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow = {
 			adm_tech = 10
 			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_hispaniola
-				is_core = ROOT
-			}
-			NOT = { exists = HAT }
+			NOT = { exists = CAM }
+			owns_core_province = 835	# Panama
+			owns_core_province = 2663	# Nicoya
 		}
 		effect = {
-			change_tag = HAT
+			change_tag = CAM
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
+				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			colonial_hispaniola = {
+			colonial_yucatan = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HAT
+				add_permanent_claim = CAM
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

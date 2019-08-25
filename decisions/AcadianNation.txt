@@ -1,6 +1,6 @@
 country_decisions = {
-
-	haiti_nation = {
+	
+	acadia_nation = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = changed_from_colonial_nation }
@@ -10,7 +10,7 @@ country_decisions = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
 			}
-			colonial_hispaniola = {
+			colonial_acadia = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -27,13 +27,13 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
-				colonial_region = colonial_hispaniola
+				colonial_region = colonial_acadia
 				is_core = ROOT
 			}
-			NOT = { exists = HAT }
+			NOT = { exists = ACA }
 		}
 		effect = {
-			change_tag = HAT
+			change_tag = ACA
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
@@ -41,22 +41,25 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			colonial_hispaniola = {
+			colonial_acadia = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
-				add_permanent_claim = HAT
+				add_permanent_claim = ACA
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
 			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
 }
