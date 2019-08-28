@@ -286,10 +286,6 @@ trade_company_philippines = {
 		651 655 4356 #palawan_area
 		657 658 2698 4348 #luzon_area
 		656 2697 2699 4349 4350 #southern_luzon_area
-		1235 1995 1996 #west_micronesia_area
-		1992 #polynesia_area
-		1241 1991 1993 1994 #micronesia_area
-		1397 
 		#New SEA
 		4909 4910 4911 4912 4913 4914 4915 4916 5920 5921
 	}
@@ -311,7 +307,7 @@ trade_company_moluccas = {
 		2695 635 633 634 643 2713 2714 642 2715 641 2716 632 627 2691 631 2693 629 2692 
 		628 626 625 630 624 644 2723 4711 4712 4713 4714 4715 4716 4719 4720 4721 4722 
 		4723 4730 4731 4733 4734 4735 4904 4905 4906 4907 4908 4917 4918 4919 5922 5923 
-		5924 5925 5926 5927
+		5924 5925 5926 5927 2722 2721 1237 2720 2719
 	}
 
 	# Generic
@@ -404,5 +400,27 @@ trade_company_north_china = {
 	}
 	names = {
 		name = "TRADE_COMPANY_NORTH_CHINA_China_Trade_Company"
+	}
+}
+
+trade_company_oceania = {
+	color = { 38 57 113 }
+
+	provinces = {
+		1236 1238 1239 1986 1242
+		1996 1995 1993 1992
+		1994 1235 5028 1997
+		1990 5023 1243 1989
+		5024 1244 1241
+		1987 5025 5026 1988
+		1240 5817 5029 5818
+	}
+
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_OCEANIA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_OCEANIA_Pacific_Trade_Company"
 	}
 }
