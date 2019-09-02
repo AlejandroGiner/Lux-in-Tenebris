@@ -1,0 +1,158 @@
+### Silver Knight of Anor Londo's New National Ideas - Credits to all these ideas, even if edited, go to him and him alone.
+
+SYR_ideas = {
+	start = {
+		tolerance_heathen = 3
+		land_maintenance_modifier = -0.10
+	}
+	
+	bonus = {
+		war_exhaustion = -0.02
+	}
+	
+	trigger = {
+		tag = SYR
+	}
+	free = yes
+	
+	SYR_ancient_history = {
+		land_attrition = -0.10
+		global_institution_spread = 0.10
+	}
+	SYR_levantine_value = {
+		diplomatic_reputation = 1.00
+		prestige = 1
+	}
+	SYR_rashidun_umayyad_abbasid_caliphates = {
+		discipline = 0.05
+	}
+	SYR_crusader_memories = {
+		defensiveness = 0.10
+	}
+	SYR_internal_cohesion = {
+		global_unrest = -1	
+	}
+	SYR_ethnicities_in_and_around_syria = {
+		num_accepted_cultures = 2
+	}
+	SYR_syria_as_a_nation = {
+		land_forcelimit_modifier = 0.20	
+	}
+}
+
+IRQ_ideas = {
+	start = {
+		tolerance_heathen = 3
+		land_forcelimit_modifier = 0.25
+	}
+	
+	bonus = {
+		num_accepted_cultures = 1
+	}
+	
+	trigger = {
+		tag = IRQ
+	}
+	free = yes
+	
+	IRQ_defense_of_mesopotamia = {
+		land_morale = 0.10
+		production_efficiency = 0.15
+	}
+	IRQ_cradle_of_great_cities = {
+		prestige = 1
+	}
+	IRQ_fortify_iraqi_lands = {
+		defensiveness = 0.10
+		garrison_size = 0.20
+	}
+	IRQ_persian_influences = {
+		advisor_cost = -0.10
+	}
+	IRQ_trade_links_of_mesopotamia = {
+		trade_efficiency = 0.15
+	}
+	IRQ_establish_military_framework = {
+		army_tradition = 0.5
+	}
+	IRQ_behold_al_iraq = {
+		legitimacy = 1
+		republican_tradition = 0.5		
+	}
+}
+
+PLS_ideas = {
+	start = {
+		tolerance_heathen = 3
+		infantry_power = 0.1
+	}
+
+	bonus = {
+		discipline = 0.05
+	}
+
+	trigger = {
+		tag = PLS
+	}
+	free = yes		# will be added at load
+
+	PLS_independent_palestine = {
+		land_morale = 0.10
+	}
+	PLS_holy_land = {
+		global_unrest = -2
+	}
+	PLS_natural_beauty = {
+		movement_speed = 0.15
+	}
+	PLS_taxation_policies = {
+		global_tax_modifier = 0.2
+	}
+	PLS_dead_sea = {
+		missionaries = 1
+	}
+	PLS_trade_crossroads = {
+		global_trade_power = 0.15
+	}
+	PLS_defend_the_merchants = {
+		galley_power = 0.15
+	}
+}
+
+YZD_ideas = {
+	start = {
+		hostile_attrition = 1.0
+		tolerance_heathen = 3
+	}
+	
+	bonus = {
+		years_of_nationalism = -5
+	}
+	
+	trigger = {
+		tag = YZD
+	}
+	free = yes
+	
+	YZD_zoroastrian_legacy = {
+		global_unrest = -2
+	}
+	YZD_difficulties_of_yazd = {
+		shock_damage = 0.10
+	}
+	YZD_capital_of_the_muzaffarid_dynasty = {
+		defensiveness = 0.15
+	}
+	YZD_haven_in_persia = {
+		ae_impact = -0.10
+	}
+	YZD_silk_weaving_industry = {
+		production_efficiency = 0.10
+	}
+	YZD_sassanian_roots = {
+		legitimacy = 1
+	}
+	YZD_uniting_persia = {
+		discipline = 0.05	
+	}
+}
