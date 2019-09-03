@@ -196,3 +196,1396 @@ BAR_ideas = {
 		manpower_recovery_speed = 0.1
 	}
 }
+
+ADA_ideas = {
+	start = {
+		shock_damage = 0.10
+		land_maintenance_modifier = -0.10
+	}
+	
+	bonus = {
+		fire_damage = 0.1
+	}
+	
+	trigger = {
+		tag = ADA
+	}
+	free = yes
+	
+	founded_in_fire = {
+		land_morale = 0.10
+	}
+	the_eternal_rivalry = {
+		global_manpower_modifier = 0.15
+	}
+	lead_the_somali_people = {
+		legitimacy = 0.5
+		global_unrest = -1
+	}
+	futuh_al_habash = {
+		artillery_power = 0.10
+	}
+	control_the_afar_and_oromo = {
+		global_autonomy = -0.05
+	}
+	turning_to_trade = {
+		trade_steering = 0.25
+	}
+	ties_to_muslim_nations = {
+		diplomats = 1
+	}
+}
+
+
+HDY_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.20
+        cavalry_power = 0.10
+	}
+	
+	bonus = {
+		 manpower_recovery_speed = 0.15
+	}
+	
+	trigger = {
+		tag = HDY
+	}
+	free = yes
+	
+	horses_of_hadiya = {
+		cav_to_inf_ratio = 0.25
+		cavalry_cost = -0.10
+	}
+	iron_currency = {
+		inflation_reduction = 0.05
+	}
+	uphold_hadiya_fertility = { 
+		development_cost = -0.10
+	}
+	religious_wars_horn_of_africa = {
+		warscore_cost_vs_other_religion = -0.10
+	}
+	question_of_the_oromo = {
+		global_manpower_modifier = 0.20
+	}
+	adal_connections = {
+		diplomatic_upkeep = 1
+	}
+	royal_hadiya_military = {
+		army_tradition = 0.50
+	}
+}
+
+
+JJI_ideas = {
+	start = {
+		hostile_attrition = 1.0
+        defensiveness = 0.25
+	}
+	
+	bonus = {
+		 land_attrition = -0.25
+	}
+	
+	trigger = {
+		tag = JJI
+	}
+	free = yes
+	
+	horses_to_ethiopia = {
+		cavalry_cost = -0.15
+	}
+	the_mwa_clan = {
+		legitimacy = 1
+	}
+	janjiros_isolation = {
+		global_autonomy = -0.05
+	}
+	no_soldier_killed_in_action = { 
+		land_morale = 0.10
+	}
+	control_the_raging_rivers = {
+		movement_speed = 0.15
+	}
+	contacts_with_ethiopia = {
+		diplomatic_reputation = 1
+	}
+	the_three_mountains = {
+		war_exhaustion = -0.02
+	}
+}
+
+
+SOA_ideas = {
+	start = {
+		land_morale = 0.10
+		garrison_size = 0.20
+	}
+	
+	bonus = {
+		global_unrest = -2
+	}
+	
+	trigger = {
+		tag = SOA
+	}
+	free = yes
+	
+	aksumite_heritage = {
+		prestige_decay = -0.01
+	}
+	ifat_sultanate_ties = {
+		army_tradition_decay = -0.01
+	}
+	history_of_religious_conflict = { 
+		warscore_cost_vs_other_religion = -0.10
+		manpower_recovery_speed = 0.10
+	}
+	memory_of_the_makhzumi_dynasty = {
+		legitimacy = 1
+	}
+	tensions_with_the_oromo = {
+		global_spy_defence = 0.25
+	}
+	defense_over_offense = {
+		defensiveness = 0.10
+		hostile_attrition = 1.0
+	}
+	religious_deliberation = {
+		global_missionary_strength = 0.02
+	}
+}
+
+
+WLY_ideas = {
+	start = {
+		legitimacy = 1
+		defensiveness = 0.25
+	}
+	
+	bonus = {
+		hostile_attrition = 1.0
+	}
+	
+	trigger = {
+		tag = WLY
+	}
+	free = yes
+	
+	stability_of_welayta = {
+		global_unrest = -2
+	}
+	centuries_of_presence = {
+		diplomatic_reputation = 1
+	}
+	damot_lineage = { 
+		same_culture_advisor_cost = -0.20
+	}
+	oromo_tensions = {
+		discipline = 0.05
+	}
+	mitigate_ethnic_tensions = {
+		culture_conversion_cost = -0.20
+	}
+	welayta_survivability = {
+		land_attrition = -0.20
+	}
+	reform_the_kingdom = {
+		reform_progress_growth = 0.10
+		advisor_pool = 1
+	}
+}
+
+
+AST_ideas = {  #Astrakhan
+	start = {
+		cavalry_power = 0.20 
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		global_regiment_cost = -0.10
+	}
+	
+	trigger = {
+		tag = AST
+	}
+	free = yes
+	
+	against_the_golden_horde = {
+		core_creation = -0.25
+	}
+	intersection_of_trade_routes = {
+		trade_efficiency = 0.15
+	}
+	structured_feudal_ranks = { 
+		global_unrest = -1
+	}
+	a_volatile_region = {
+		land_morale = 0.10
+	}
+	placate_the_nogais = {
+        land_maintenance_modifier = -0.10
+	}
+	become_a_bastion_for_islam = {
+		tolerance_own = 1
+		manpower_recovery_speed = 0.10
+	}
+	succeed_the_old_khans = {
+		global_manpower_modifier = 0.25
+	}
+}
+
+QAS_ideas = {  #Qasim
+	start = {
+		cavalry_power = 0.10
+		cavalry_cost = -0.20
+	}
+	
+	bonus = {
+		infantry_power = 0.10
+	}
+	
+	trigger = {
+		tag = QAS
+	}
+	free = yes
+	
+	muscovite_influences = {
+		reform_progress_growth = 0.10
+		legitimacy = 0.5
+		horde_unity = 0.5
+	}
+	ryazan_memories = {
+		global_manpower_modifier = 0.20
+	}
+	avenues_for_expansion = { 
+		core_creation = -0.25
+	}
+	kazan_rivalry = {
+		army_tradition = 0.50
+	}
+	lands_of_a_buffer_state = {
+        global_spy_defence = 0.20
+		diplomatic_reputation = 1
+	}
+	reformed_administrative_leadership = {
+		advisor_cost = -0.10
+	}
+	defend_tatar_statehood = {
+		discipline = 0.05
+	}
+}
+
+
+BSH_ideas = {  #Bashkiria
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		tag = BSH
+	}
+	free = yes
+	
+	islam_of_the_bashkirs = {
+		core_creation = -0.25
+	}
+	divided_amongst_the_powers = {
+		core_creation = -0.25
+	}
+	rivalry_against_the_khalkhas = { 
+		years_of_nationalism = -5
+	}
+	cut_down_pretenders = {
+		harsh_treatment_cost = -0.25
+	}
+	influences_in_tibet = {
+        tolerance_own = 1
+		legitimacy = 0.5
+		horde_unity = 0.5
+	}
+	buying_new_weaponry = {
+		fire_damage = 0.10
+	}
+	take_the_throne_of_the_steppe = {
+		manpower_recovery_speed = 0.10
+	}
+}
+
+
+SHY_ideas = {
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+	
+	trigger = {
+		tag = SHY
+	}
+	free = yes
+	
+	reign_over_many_tribes = {
+		legitimacy = 1
+		horde_unity = 1
+	}
+	degrading_golden_horde_influence = {
+		core_creation = -0.25
+	}
+	contest_over_southern_lands = {
+		army_tradition = 0.50
+		land_morale = 0.05
+	}
+	settle_issues_with_tribes = {
+		free_adm_policy = 1
+	}
+	consolidate_shaybanid_domain = {
+		build_cost = -0.25
+	}
+	abulkharids = {
+		global_unrest = -1
+	}
+	ascend_from_nomadic_life = {
+		technology_cost = -0.075
+	}
+}
+
+
+KZH_ideas = {
+	start = {
+		cavalry_power = 0.20
+		tolerance_heathen = 3
+	}
+	
+	bonus = {
+		cavalry_cost = -0.15
+	}
+	
+	trigger = {
+		tag = KZH
+	}
+	free = yes
+	
+	janibek_and_kerei_khan = {
+		leader_land_shock = 1
+	}
+	fall_of_the_golden_horde = {
+		core_creation = -0.25
+	}
+	struggling_for_steppe_control = {
+		movement_speed = 0.10
+	}
+	rivals_to_our_east = {
+		years_of_nationalism = -5
+	}
+	cultures_of_the_steppe = {
+		global_manpower_modifier = 0.15
+	}
+	expanding_our_internal_domain = {
+		max_states = 5
+	}
+	modernize_our_tactics = {
+		leader_land_fire = 1	
+	}
+}
+
+
+OIR_ideas = {
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		max_states = 5
+	}
+	
+	trigger = {
+		tag = OIR
+	}
+	free = yes
+	
+	four_major_tribes = {
+		land_maintenance_modifier = -0.05
+	}
+	memory_of_temujin = {
+		core_creation = -0.25
+	}
+	ming_rivalry = {
+		manpower_recovery_speed = 0.10
+		land_forcelimit_modifier = 0.25
+	}
+	fall_of_the_yuan = {
+		legitimacy = 1
+		horde_unity = 1
+	}
+	past_the_great_wall = {
+		siege_ability = 0.15
+	}
+	religious_indifference = {
+		religious_unity = 0.20
+	}
+	unification_of_the_mongols = {
+		global_manpower_modifier = 0.10
+		army_tradition = 0.50
+	}
+}
+
+
+NOG_ideas = {
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		state_maintenance_modifier = -0.25
+	}
+	
+	trigger = {
+		tag = NOG
+	}
+	free = yes
+	
+	confederation_of_turkic_and_mongols = {
+		core_creation = -0.25
+	}
+	the_manghits = {
+		land_morale = 0.10
+	}
+	centralize_the_lesser_greater_nogay = {
+		global_manpower_modifier = 0.20
+	}
+	weak_religious_institutions = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	khanate_rivalries = {
+		shock_damage = 0.10
+	}
+	keep_nomadic_traditions = {
+		loot_amount = 0.25
+		movement_speed = 0.10
+	}
+	fluid_political_organization = {
+		legitimacy = 1
+		horde_unity = 1
+	}
+}
+
+
+SIB_ideas = {  #Sibir
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		colonists = 1
+	}
+	
+	trigger = {
+		tag = SIB
+	}
+	free = yes
+	
+	shaybanid_contestment = {
+		core_creation = -0.25
+	}
+	ostyak_and_sibirian_land = {
+		land_attrition = -0.10
+		hostile_attrition = 1.0
+	}
+	islam_and_shamanism = { 
+		religious_unity = 0.25
+	}
+	interconnected_mongol_dynasties = {
+		years_of_nationalism = -5
+	}
+	forest_fighting_methods = {
+		shock_damage_received = -0.10
+	}
+	cogent_relations_with_the_mirzas = {
+		manpower_recovery_speed = 0.10
+	}
+	assimilation_of_siberians = {
+		mercenary_cost = -0.15
+	}
+}
+
+
+CHG_ideas = {
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		land_maintenance_modifier = -0.10
+	}
+	
+	trigger = {
+		tag = CHG
+	}
+	free = yes
+	
+	picking_up_the_pieces = {
+		land_morale = 0.10
+	}
+	unification_of_central_asia = {
+		core_creation = -0.25
+	}
+	modernize_and_adapt = {
+		horde_unity = 1 #maybe add in horde unity if they want to stay a horde OR maybe they're adapting new firearms, so, more Fire Damage?
+		legitimacy = 1
+	}
+	quick_and_vicious_movement = {
+		movement_speed = 0.20
+	}
+	mediate_buddhust_islam_encounters = {
+		tolerance_heathen = 2
+		improve_relation_modifier = 0.20
+	}
+	silk_road_trade = {
+		merc_maintenance_modifier = -0.10
+		trade_efficiency = 0.05
+	}
+	reform_the_mongol_empire = {
+		discipline = 0.05
+	}
+}
+
+
+JIN_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		max_states = 5
+	}
+	
+	trigger = {
+		tag = JIN
+	}
+	free = yes
+	
+	winners_of_the_three_kingdoms = {
+		army_tradition_decay = -0.01
+		harsh_treatment_cost = -0.25
+	}
+	lodged_administrative_divisions = {
+		state_maintenance_modifier = -0.20
+	}
+	battle_against_former_qin = {
+		land_morale = 0.10
+	}
+	manipulation_of_taoism = {
+		stability_cost_modifier = -0.10
+	}
+	war_of_the_eight_princes = {
+		legitimacy = 1
+	}
+	the_five_barbarians = {
+		defensiveness = 0.10
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+SHU_ideas = {
+	start = {
+		advisor_pool = 1
+		free_leader_pool = 1
+	}
+	
+	bonus = {
+		war_exhaustion = -0.02
+	}
+	
+	trigger = {
+		tag = SHU
+	}
+	free = yes
+	
+	ancient_shu_state = {
+		prestige = 1.0
+		diplomatic_reputation = 1
+	}
+	shu_han = {
+		legitimacy = 1
+	}
+	three_kingdoms_period_shu = {
+		land_morale = 0.10
+	}
+	zhuge_liang = {
+		possible_policy = 1
+	}
+	defensive_position = {
+		fort_maintenance_modifier = -0.20
+	}
+	connections_through_trade = {
+		trade_efficiency = 0.10
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+WUU_ideas = {
+	start = {
+		advisor_pool = 1
+		free_leader_pool = 1
+	}
+	
+	bonus = {
+		colonists = 1
+	}
+	
+	trigger = {
+		tag = WUU
+	}
+	free = yes
+	
+	history_of_independence = {
+		core_creation = -0.10
+		army_tradition = 0.5
+	}
+	waters_of_wu = {
+		heavy_ship_power = 0.10
+	}
+	three_kingdoms_period = {
+		army_tradition_decay = -0.01 
+	}
+	promote_coastal_trade = {
+		trade_efficiency = 0.10
+	}
+	five_dynasties_ten_kingdoms_period = {
+		development_cost = -0.10
+	}
+	the_sun_dynasty = {
+		free_mil_policy = 1
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+CHC_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+	
+	trigger = {
+		tag = CHC
+	}
+	free = yes
+	
+	foundation_in_myths = {
+		prestige = 1.0
+		ae_impact = -0.10
+	}
+	control_over_central_china = {
+		development_cost = -0.10
+	}
+	the_spring_autumn_period = {
+		infantry_power = 0.10
+	}
+	take_on_gov_corruption = {
+		yearly_corruption = -0.05
+	}
+	qin_chu_rivalry = {
+		discipline = 0.05
+	}
+	stop_internal_decadence = {
+		free_adm_policy = 1
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+QIC_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = QIC
+	}
+	free = yes
+	
+	one_of_the_four_ancient_powers = {
+		core_creation = -0.10
+		ae_impact = -0.10
+	}
+	cultural_works_of_qi = {
+		num_accepted_cultures = 1
+	}
+	learn_from_the_northern_qi = {
+		global_unrest = -1
+	}
+	lessons_of_the_southern_qi = {
+		yearly_corruption = -0.05
+	}
+	reformation_of_military_ranks = {
+		army_tradition = 0.5
+	}
+	cultivate_a_cohesive_court = {
+		stability_cost_modifier = -0.10
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+CSH_ideas = {
+	start = {
+		province_warscore_cost = -0.10
+		land_morale = 0.10
+	}
+	
+	bonus = {
+		same_culture_advisor_cost = -0.20
+	}
+	
+	trigger = {
+		tag = CSH
+	}
+	free = yes
+	
+	great_shun = {
+		ae_impact = -0.10
+		global_manpower_modifier = 0.25
+	}
+	li_zicheng = {
+		discipline = 0.05
+	}
+	destroyer_of_the_ming = {
+		years_of_nationalism = -5
+	}
+	reform_the_land_taxes_and_grain = {
+		global_tax_modifier = 0.10
+	}
+	support_from_scholars_and_officials = {
+		global_unrest = -1
+	}
+	fight_for_authority = {
+		manpower_recovery_speed = 0.10
+	}
+	obedient_to_heaven = {
+		stability_cost_modifier = -0.20
+		yearly_harmony = 0.5
+		imperial_mandate = 0.1
+	}
+}
+
+
+CXI_ideas = {
+	start = {
+		loot_amount = 0.25
+		leader_land_shock = 1
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.15
+	}
+	
+	trigger = {
+		tag = CXI
+	}
+	free = yes
+	
+	proclaim_daxi = {
+		core_creation = -0.10
+		army_tradition = 0.5
+	}
+	zhang_xianzhong_yellow_tiger = {
+		land_morale = 0.10
+	}
+	outsmart_the_enemy = {
+		spy_offence = 0.20
+	}
+	strengthen_siege_equipment = {
+		siege_ability = 0.10
+	}
+	from_chengdu_to_xijing = {
+		years_of_nationalism = -5
+	}
+	cut_down_opposition = {
+		harsh_treatment_cost = -0.25
+	}
+	great_western_dynasty_ascendant = {
+		stability_cost_modifier = -0.10
+		land_maintenance_modifier = -0.10
+	}
+}
+
+
+NNG_ideas = {
+	start = {
+		heir_chance = 0.50
+		yearly_corruption = -0.05
+	}
+	
+	bonus = {
+		global_autonomy = -0.05
+	}
+	
+	trigger = {
+		tag = NNG
+	}
+	free = yes
+	
+	the_question_of_ming_succession = {
+		legitimacy = 1
+		global_unrest = -1
+	}
+	zhu_chenhao = {
+		same_culture_advisor_cost = -0.20
+	}
+	coercion_leads_to_deals = {
+		spy_offence = 0.20
+	}
+	claiming_or_making_the_throne = {
+		land_morale = 0.10
+	}
+	core_at_nanchang = {
+		development_cost = -0.10
+	}
+	widespread_support = {
+		manpower_recovery_speed = 0.10
+	}
+	behold_the_prince_of_ning = {
+		global_manpower_modifier = 0.20
+		yearly_harmony = 0.5
+		imperial_mandate = 0.1
+	}
+}
+
+
+TNG_ideas = {
+	start = {
+		global_institution_spread = 0.10
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		max_states = 5
+	}
+	
+	trigger = {
+		tag = TNG
+	}
+	free = yes
+	
+	golden_age_of_zhongguo = {
+		prestige = 1.0
+		land_morale = 0.10
+	}
+	centuries_of_warfare = {
+		army_tradition = 0.5
+	}
+	cultivate_the_3_departments_6_ministries = {
+		free_adm_policy = 1
+	}
+	claiming_tribute_and_subjects = {
+		reduced_liberty_desire = 10
+	}
+	building_upon_old_military_structures = {
+		mil_tech_cost_modifier  = -0.10
+	}
+	dominating_trade_sectors = {
+		global_trade_power = 0.15
+	}
+	reclaim_the_lost_glory = {
+		core_creation = -0.10
+		legitimacy = 1
+		republican_tradition = 0.5
+		imperial_mandate = 0.10
+	}
+}
+
+
+MIN_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		global_prov_trade_power_modifier = 0.10
+	}
+	
+	trigger = {
+		tag = MIN
+	}
+	free = yes
+	
+	minister_of_the_south = {
+		defensiveness = 0.15
+		navy_tradition = 1
+	}
+	maritime_investments = {
+		naval_morale = 0.10
+	}
+	discard_the_memory_of_the_yin_dynasty = {
+		global_manpower_modifier = 0.15
+	}
+	cultivate_the_min_domain = {
+		development_cost = -0.10
+	}
+	succeed_where_we_failed_southern_tang = {
+		infantry_power = 0.10
+	}
+	out_of_isolation = {
+		diplomatic_reputation = 1
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+YAN_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		advisor_cost = -0.15
+	}
+	
+	trigger = {
+		tag = YAN
+	}
+	free = yes
+	
+	an_lushan_rebellion = {
+		infantry_cost = -0.10
+		cavalry_cost = -0.10
+	}
+	merchant_class_insurgents = {
+		spy_offence = 0.20
+	}
+	prosperous_northern_roots = {
+		manpower_recovery_speed = 0.10
+	}
+	revise_succession_laws = {
+		legitimacy = 1
+		republican_tradition = 0.5
+	}
+	soldiers_from_many_regions = {
+		mercenary_cost = -0.10
+	}
+	rise_of_the_great_yan_dynasty = {
+		ae_impact = -0.10
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+LNG_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+	
+	trigger = {
+		tag = LNG
+	}
+	free = yes
+	
+	after_the_tang_dynasty = {
+		prestige = 1.0
+		province_warscore_cost = -0.05
+	}
+	ambition_for_luoyang_and_changan = {
+		core_creation = -0.10
+	}
+	from_kaifeng_outwards = {
+		legitimacy = 1.0
+		republican_tradition = 0.5
+	}
+	memories_of_the_southern_tang = {
+		free_mil_policy = 1
+	}
+	help_from_the_north = {
+		cavalry_power = 0.15
+	}
+	warranted_brutality = {
+		harsh_treatment_cost = -0.25
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+CGS_ideas = {
+	start = {
+		shock_damage_received = -0.10
+		defensiveness = 0.10
+	}
+	
+	bonus = {
+		development_cost = -0.10
+	}
+	
+	trigger = {
+		tag = CGS
+	}
+	free = yes
+	
+	original_people_of_guangxi = {
+		hostile_attrition = 1.0
+		land_attrition = -0.15
+	}
+	tenuous_chinese_authority = {
+		global_autonomy = -0.05
+	}
+	remember_the_nanzhao = {
+		global_manpower_modifier = 0.15
+	}
+	warrior_women_of_the_zhuang = {
+		manpower_recovery_speed = 0.10
+		female_advisor_chance = 0.25
+		may_recruit_female_generals = yes
+	}
+	rid_ourselves_of_tribal_complexes = {
+		stability_cost_modifier = -0.10
+	}
+	retain_and_refine_shogongism_moism = {
+		global_missionary_strength = 0.02
+	}
+	peace_for_the_zhuang_people = {
+		state_maintenance_modifier = -0.10
+		global_spy_defence = 0.20
+	}
+}
+
+
+QIN_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		core_creation = -0.20
+	}
+	
+	trigger = {
+		tag = QIN
+	}
+	free = yes
+	
+	foundations_from_the_zhou = {
+		prestige = 1.0
+		cavalry_cost = -0.10
+	}
+	shang_yang_promoting_legalism = {
+		discipline = 0.05
+	}
+	developments_of_the_qin_capital = {
+		development_cost = -0.10
+	}
+	ready_for_military_reforms = {
+		mil_tech_cost_modifier  = -0.10
+	}
+	strong_political_and_peasent_base = {
+		global_manpower_modifier = 0.15
+	}
+	grand_position_of_the_qin_dynasty = {
+		production_efficiency = 0.10
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+HUA_ideas = {
+	start = {
+		war_exhaustion = -0.02
+		production_efficiency = 0.10
+	}
+	
+	bonus = {
+		fort_maintenance_modifier = -0.20
+	}
+	
+	trigger = {
+		tag = HUA
+	}
+	free = yes
+	
+	migrations_of_the_hakka = {
+		movement_speed = 0.10
+		leader_land_manuever = 1
+	}
+	productive_potential_in_the_earth = {
+		production_efficiency = 0.10
+	}
+	distinct_chinese_identity = {
+		land_morale = 0.10
+	}
+	promote_the_dragon_deities = {
+		tolerance_own = 2
+	}
+	build_toulous = {
+		defensiveness = 0.20
+	}
+	carve_out_a_place_for_the_hakka = {
+		development_cost = -0.10
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+YUE_ideas = {
+	start = {
+		free_leader_pool = 1
+		advisor_pool = 1
+	}
+	
+	bonus = {
+		navy_tradition = 1
+	}
+	
+	trigger = {
+		tag = YUE
+	}
+	free = yes
+	
+	resisting_central_chinese_authority = {
+		hostile_attrition = 1.0
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	the_legacy_of_goujian_against_wu = {
+		army_tradition_decay = -0.01
+	}
+	keepers_of_the_southern_waters = {
+		light_ship_power = 0.15
+	}
+	connections_to_the_vietnamese = {
+		manpower_recovery_speed = 0.10
+	}
+	blending_han_and_yue_administrations_together = {
+		free_adm_policy = 1
+	}
+	the_great_nanyue_kingdom = {
+		legitimacy = 1
+	}
+	zhongguo = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+}
+
+
+MUL_ideas = {
+	start = {
+		army_tradition_decay = -0.01
+		merc_maintenance_modifier = -0.10
+	}
+	
+	bonus = {
+		trade_efficiency = 0.15
+	}
+	
+	trigger = {
+		tag = MUL
+	}
+	free = yes
+	
+	siege_after_siege_after_siege = {
+		siege_ability = 0.10
+		defensiveness = 0.10
+	}
+	the_prices_of_being_on_the_border = {
+		manpower_recovery_speed = 0.10
+	}
+	great_center_of_trade = { 
+		trade_steering = 0.10
+		caravan_power = 0.10
+	}
+	friends_of_the_baloch = {
+		mercenary_cost = -0.10
+	}
+	repulse_delhi_and_afghan_invasions = {
+		land_morale = 0.10
+	}
+	sufis_of_multan = {
+		religious_unity = 0.15
+		monthly_piety = -0.001
+	}
+	from_frontier_land_to_heart_land = {
+		global_autonomy = -0.05	
+	}
+}
+
+
+KSH_ideas = {
+	start = {
+		defensiveness = 0.20
+		diplomatic_upkeep = 1
+	}
+	
+	bonus = {
+		global_unrest = -2
+	}
+	
+	trigger = {
+		tag = KSH
+	}
+	free = yes
+	
+	confluence_between_three_religions = {
+		religious_unity = 0.25
+	}
+	kashmir_shaivisim_history = {
+		tolerance_heathen = 2
+	}
+	crossroads_of_nations_regions = {
+		trade_efficiency = 0.1
+		trade_range_modifier = 0.33
+	}
+	sikh_influences = {
+		idea_cost = -0.10
+	}
+	reclaim_kashmiri_lands = {
+		core_creation = -0.10
+	}
+	incorporate_surrounding_cultures = {
+		num_accepted_cultures = 1
+	}
+	defend_what_is_ours = {
+		global_garrison_growth = 0.10
+		garrison_size = 0.25
+	}
+}
+
+
+KMT_ideas = {
+    start = {
+        land_attrition = -0.15
+        infantry_cost = -0.10
+    }
+    
+    bonus = {
+        legitimacy = 1  
+    }
+    
+    trigger = {
+        tag = KMT
+    }
+    free = yes
+    
+    assamese_literary_influences = {
+        global_institution_spread = 0.10
+    }
+    the_threat_of_bengal = {
+        land_morale = 0.10
+    }
+    bhuyan_chiefs_as_allies = {
+        hostile_attrition = 1.0
+    }
+    settle_the_turbulent_times_after_the_pala = {
+        global_autonomy = -0.05
+    }
+    asserting_authority_over_the_bhuyan_chiefs = {
+        global_manpower_modifier = 0.20
+    }
+    utilize_fertility_of_the_land = {
+        production_efficiency = 0.15
+    }
+    overcome_the_sultanates = {
+        warscore_cost_vs_other_religion = -0.20
+    }
+}
+
+
+KAC_ideas = {
+    start = {
+        hostile_attrition = 1.0
+        movement_speed = 0.10
+    }
+    
+    bonus = {
+        defensiveness = 0.20 
+    }
+    
+    trigger = {
+        tag = KAC
+    }
+    free = yes
+    
+    the_land_of_jungle_kingdoms = {
+        fabricate_claims_cost = -0.25
+    }
+    war_goddess_kechai_khaiti = {
+        land_morale = 0.10
+    }
+    brahmin_influences = {
+		global_missionary_strength = 0.02
+    }
+    formalize_the_patra_and_bhandari_advisors = {
+        advisor_pool = 1
+    }
+    specialize_the_sephongs_tribes = {
+        state_maintenance_modifier = -0.20
+		global_spy_defence = 0.20
+    }
+    build_up_the_mel_mandap = {
+        same_culture_advisor_cost = -0.20
+    }
+    mastery_of_jungle_warfare = {
+        shock_damage = 0.10
+    }
+}
