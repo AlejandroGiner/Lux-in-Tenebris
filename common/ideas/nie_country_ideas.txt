@@ -156,3 +156,43 @@ YZD_ideas = {
 		discipline = 0.05	
 	}
 }
+
+BAR_ideas = {
+	start = {
+		build_cost = -0.20
+		defensiveness = 0.10
+	}
+	
+	bonus = {
+		same_culture_advisor_cost = -0.20
+	}
+	
+	trigger = {
+		tag = BAR
+	}
+	free = yes
+	
+	sophias_power = {
+		diplomatic_reputation = 1
+		spy_offence = 0.10
+	}
+	french_politics_over_german_politics = {
+		prestige_decay = -0.01
+	}
+	a_peer_of_france = {
+		ae_impact = -0.10
+	}
+	ties_to_lorraine = {
+		diplomatic_upkeep = 1
+	}
+	using_the_status_of_duchy = {
+		global_manpower_modifier = 0.20
+	}
+	fortify_the_lands_of_bar = {
+		garrison_size = 0.20
+	}
+	all_for_france = {
+		free_leader_pool = 1
+		manpower_recovery_speed = 0.1
+	}
+}
