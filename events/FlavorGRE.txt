@@ -24,17 +24,17 @@ country_event = {
 		any_owned_province = {
 			culture = greek
 			OR = {
-				south_thrace_area
-				thessaly_area
-				south_morea_area
-				cyprus_area
-				western_aegean_area
-				eastern_mediterrenean_islands_area
-				aegean_archipelago_area
-				macedonia_area
-				northern_greece_area
-				morea_area
-				thrace_area
+				area = south_thrace_area
+				area = thessaly_area
+				area = south_morea_area
+				area = cyprus_area
+				area = western_aegean_area
+				area = eastern_mediterrenean_islands_area
+				area = aegean_archipelago_area
+				area = macedonia_area
+				area = northern_greece_area
+				area = morea_area
+				area = thrace_area
 				
 			}
 		}

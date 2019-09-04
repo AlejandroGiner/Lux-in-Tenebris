@@ -460,7 +460,7 @@ colonial_acadia = {
 			OR = {
 				tag = NED
 				tag = HOL
-				primary_culture = dutch
+				culture_group = dutch_group
 			}
 		}
 		name = "COLONIAL_CANADA_Nova_Hollandia"
@@ -874,7 +874,7 @@ colonial_polynesia = {
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = dutch
+				culture_group = dutch_group
 				tag = NED
 				tag = HOL
 			}
@@ -971,7 +971,7 @@ colonial_cape = {
 	names = {
 		trigger = {
 			OR = {
-				primary_culture = dutch
+				culture_group = dutch_group
 				tag = NED
 				tag = HOL
 			}
@@ -1194,6 +1194,55 @@ colonial_rio_grande = {
 		885 2497 7504 882 2496 5844 4631 4630 880 881 5830 5832 5826 5065 5066
 		2667 2668
 	}
+	
+	# Specific
+	names = {
+		trigger = {
+				culture_group = british
+				NOT = { tag = USA }
+		}
+		name = "COLONIAL_RIO_GRANDE_Riverside"
+	}
+	names = {
+		trigger = {
+			tag = USA
+		}
+		name = "COLONIAL_RIO_GRANDE_Texas"
+	}
+	names = {
+		trigger = {
+			culture_group = iberian
+		}
+		name = "COLONIAL_RIO_GRANDE_Ribera"
+	}
+	names = {
+		trigger = {
+			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
+		}
+		name = "COLONIAL_RIO_GRANDE_Flodbred"
+	}
+	names = {
+		trigger = { culture_group = germanic }
+		name = "COLONIAL_RIO_GRANDE_Flussufer"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_RIO_GRANDE_Lungofiume"
+	}
+	names = {
+		trigger = { culture_group = french }
+		name = "COLONIAL_RIO_GRANDE_Riverie"
+	}
+	names = {
+		trigger = { culture_group = dutch_group }
+		name = "COLONIAL_RIO_GRANDE_Rivieroever"
+	}
+	names = {
+		trigger = { culture_group = gaelic }
+		name = "COLONIAL_RIO_GRANDE_Tir_na_Easanna"
+	}
+
+	
 	# Generic
 	names = {
 		name = "COLONIAL_RIO_GRANDE_Root_Culture_GetName_Rio_Grande"
