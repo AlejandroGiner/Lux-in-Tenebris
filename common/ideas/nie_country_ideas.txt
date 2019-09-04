@@ -357,6 +357,45 @@ SOA_ideas = {
 }
 
 
+ENA_ideas = {
+	start = {
+		inflation_reduction = 0.05
+		caravan_power = 0.25
+	}
+	
+	bonus = {
+		trade_efficiency = 0.10
+	}
+	
+	trigger = {
+		tag = ENA
+	}
+	free = yes
+	
+	against_damot = {
+		land_morale = 0.10
+	}
+	tribute_to_ethiopia = {
+		prestige = 1.0
+	}
+	the_mikretcho_council = { 
+		global_unrest = -2
+	}
+	gold_and_slave_trade = {
+		diplomatic_reputation = 1
+	}
+	keep_the_divine_kingship = {
+		legitimacy = 1
+	}
+	reforming_tribal_polities = {
+		global_manpower_modifier = 0.25
+	}
+	charting_an_independent_path = {
+		global_own_trade_power = 0.20
+	}
+}
+
+
 WLY_ideas = {
 	start = {
 		legitimacy = 1
