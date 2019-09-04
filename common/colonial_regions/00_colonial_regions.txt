@@ -58,14 +58,12 @@ colonial_alaska = {
 		name = "COLONIAL_ALASKA_BTP_Alasca"
 	}
 	names = {
-		trigger = {
-			OR = {
-				tag = SPA
-				tag = CAS
-				tag = ARA
-			}
-		}
+		trigger = { culture_group = iberian }
 		name = "COLONIAL_ALASKA_Pacifico_Norte"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_ALASKA_Italian"
 	}
 	names = {
 		trigger = { culture_group = east_asian }
@@ -180,12 +178,24 @@ colonial_canada = {
 		name = "COLONIAL_CANADA_BTP_Kanata"
 	}
 	names = {
+		trigger = { culture_group = iberian }
+		name = "COLONIAL_CANADA_Iberian"
+	}
+	names = {
+		trigger = { culture_group = dutch_group }
+		name = "COLONIAL_CANADA_BTP_Kanata"
+	}
+	names = {
 		trigger = { culture_group = byzantine }
 		name = "COLONIAL_CANADA_BTP_Kanadas"
 	}
 	names = {
 		trigger = { culture_group = gaelic }
 		name = "COLONIAL_CANADA_BTP_Ceanada"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_CANADA_Italian"
 	}
 	names = {
 		trigger = {
@@ -363,6 +373,30 @@ colonial_eastern_america = {
 	names = {
 		trigger = { culture_group = germanic }
 		name = "COLONIAL_EASTERN_AMERICA_BTP_Neudeutschland"
+	}
+	names = {
+		trigger = { culture_group = iberian }
+		name = "COLONIAL_EASTERN_AMERICA_Iberian"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_EASTERN_AMERICA_Italian"
+	}
+	names = {
+		trigger = { culture_group = dutch_group }
+		name = "COLONIAL_EASTERN_AMERICA_Dutch"
+	}
+	names = {
+		trigger = { primary_culture = danish }
+		name = "COLONIAL_EASTERN_AMERICA_Danish"
+	}
+	names = {
+		trigger = { primary_culture = swedish }
+		name = "COLONIAL_EASTERN_AMERICA_Swedish"
+	}
+	names = {
+		trigger = { primary_culture = norwegian }
+		name = "COLONIAL_EASTERN_AMERICA_Norwegian"
 	}
 	names = {
 		trigger = { culture_group = byzantine }

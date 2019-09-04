@@ -1210,9 +1210,7 @@ colonial_rio_grande = {
 		name = "COLONIAL_RIO_GRANDE_Texas"
 	}
 	names = {
-		trigger = {
-			culture_group = iberian
-		}
+		trigger = culture_group = { iberian }
 		name = "COLONIAL_RIO_GRANDE_Ribera"
 	}
 	names = {
@@ -1236,6 +1234,10 @@ colonial_rio_grande = {
 	names = {
 		trigger = { culture_group = dutch_group }
 		name = "COLONIAL_RIO_GRANDE_Rivieroever"
+	}
+	names = {
+		trigger = { culture_group = byzantine }
+		name = "COLONIAL_RIO_GRANDE_Akropotamia"
 	}
 	names = {
 		trigger = { culture_group = gaelic }
