@@ -15,7 +15,7 @@ country_decisions = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
 			}
-			colonial_yucatan = {
+			colonial_central_america = {
 				owned_by = ROOT
 			}
 			OR = {
@@ -52,7 +52,7 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			colonial_yucatan = {
+			colonial_central_america = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
