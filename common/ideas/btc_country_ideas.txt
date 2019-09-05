@@ -4295,3 +4295,45 @@ AFA_ideas = {
 	}
 	
 }
+
+HAR_ideas = {
+	start = {
+        land_forcelimit_modifier = 0.10
+		prestige_decay = -0.01	
+	}
+	
+	bonus = {
+		army_tradition = 0.5
+	}
+	
+	trigger = {
+		tag = HAR
+	}
+	free = yes
+	
+	HAR_idea1 = {
+		defensiveness = 0.15
+	}
+	HAR_idea2 = {
+		tolerance_own = 2
+	}
+	HAR_idea3 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	HAR_idea4 = {
+		global_spy_defence = 0.2
+	}
+	HAR_idea5 = {
+		province_warscore_cost = -0.1
+	}
+	HAR_idea6 = {
+		num_accepted_cultures = 1
+		culture_conversion_cost = -0.10
+	}
+	HAR_idea7 = {
+		global_trade_power = 0.15
+	}
+	
+}
+
+
