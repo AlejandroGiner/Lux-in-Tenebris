@@ -558,6 +558,46 @@ BSH_ideas = {  #Bashkiria
 }
 
 
+KLM_ideas = {  #Kalmyk
+	start = {
+		cavalry_power = 0.20 
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+	
+	trigger = {
+		tag = KLM
+	}
+	free = yes
+	
+	the_great_journey_westward = {
+		leader_land_manuever = 1
+	}
+	settle_and_conquer = {
+		core_creation = -0.25
+	}
+	between_russians_and_turks = { 
+		diplomatic_reputation = 1
+	}
+	the_great_code_of_the_nomads = {
+		free_adm_policy = 1
+	}
+	surrounding_military_influences = {
+        army_tradition = 0.5
+	}
+	experience_in_rough_terrain = {
+		land_attrition = -0.15
+	}
+	maintain_kalmyk_authority = {
+		legitimacy = 1.0
+		horde_unity = 1.0
+	}
+}
+
+
 SHY_ideas = {
 	start = {
 		cavalry_power = 0.20
