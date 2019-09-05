@@ -4255,3 +4255,43 @@ VOL_ideas = {
 	}
 	
 }
+
+AFA_ideas = {
+	start = {
+		loot_amount = 0.15
+		tolerance_own = 1
+	}
+	
+	bonus = {
+		free_leader_pool = 1
+	}
+	
+	trigger = {
+		tag = AFA
+	}
+	free = yes
+	
+	AFA_idea1 = {
+		hostile_attrition = 1
+	}
+	AFA_idea2 = {
+		global_autonomy = -0.025
+	}
+	AFA_idea3 = {
+		trade_efficiency = 0.10
+	}
+	AFA_idea4 = {
+		discipline = 0.025
+	}
+	AFA_idea5 = {
+		leader_naval_shock = 1
+		light_ship_cost = -0.2
+	}
+	AFA_idea6 = {
+		global_tax_modifier = 0.10
+	}
+	AFA_idea7 = {
+		build_cost = -0.1
+	}
+	
+}
