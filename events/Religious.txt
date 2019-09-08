@@ -2672,6 +2672,20 @@ country_event = {
 		add_stability = -4
 	}
 	option = {
+		name = "religious_events.18.h" #
+		ai_chance = { factor = 100 }
+		trigger = { any_owned_province = { religion = waldensian } }
+		change_religion = waldensian
+		add_stability = -4
+	}
+	option = {
+		name = "religious_events.18.i" #
+		ai_chance = { factor = 100 }
+		trigger = { any_owned_province = { religion = nestorian } }
+		change_religion = nestorian
+		add_stability = -4
+	}
+	option = {
 		name = "religious_events.18.f" #
 		ai_chance = { factor = 1 } #AI should pick this if the event somehow triggers despite none of the above being possible.
 	}
