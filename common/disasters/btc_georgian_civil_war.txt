@@ -1,0 +1,152 @@
+#Georgian Civil War
+
+georgian_civil_war = {
+  potential = {
+    tag = GEO
+    NOT = { has_country_flag = had_georgian_civil_war }
+    government = monarchy
+    is_free_or_tributary_trigger = yes
+    current_age = age_of_discovery
+    normal_or_historical_nations = yes
+  }
+  
+  can_start = {
+    is_year = 1450
+    NOT = { is_year = 1490 }
+    is_at_war = no
+    is_lesser_in_union = no
+    has_any_disaster = no
+    OR = {
+      NOT = { stability = 1 }
+      NOT = { legitimacy = 90 }
+      average_unrest = 4
+    }
+    NOT = { num_of_subjects = 3 }
+    calc_true_if = {
+      all_owned_province = {
+        OR = {
+          area = westgeorgia_area
+          area = eastgeorgia_area
+          area = southgeorgia_area
+        }
+      }
+      amount = 8 #half of them
+    }
+  }
+  
+  can_stop = {
+    OR = {
+      has_any_disaster = yes
+      NOT = { government = monarchy }
+      is_lesser_in_union = yes
+      is_year = 1490
+      num_of_subjects = 3
+      AND = {
+        stability = 2
+        legitimacy = 95
+        prestige = 0
+        NOT = { average_unrest = 1 }
+      }
+      NOT = {
+        calc_true_if = {
+          all_owned_province = {
+            OR = {
+              area = westgeorgia_area
+              area = eastgeorgia_area
+              area = southgeorgia_area
+            }
+          }
+          amount = 8 #half of them
+        }
+      }
+    }
+  }
+  
+  progress = {
+    modifier = {
+      factor = 50
+      NOT = { stability = 2 }
+    }
+    modifier = {
+      factor = 2.5
+      NOT = { legitimacy = 95 }
+    }
+    modifier = {
+      factor = 2.5
+      ruler_has_personality = cruel_personality
+    }
+    modifier = {
+      factor = 2.5
+      ruler_has_personality = malevolent_personality
+    }
+    modifier = {
+      factor = 2.5
+      ruler_has_personality = craven_personality
+    }
+    modifier = {
+      factor = 2.5
+      ruler_has_personality = drunkard_personality
+    }
+    modifier = {
+      factor = 2.5
+      ruler_has_personality = greedy_personality
+    }
+    modifier = {
+      factor = 2.5
+      NOT = { prestige = 0 }
+    }
+  }
+  
+  can_end = {
+    has_country_flag = mingrelian_rebels_happened
+    has_country_flag = imereti_rebels_happened
+    has_country_flag = guria_rebels_happened
+    has_country_flag = kakheti_rebels_happened
+    has_country_flag = kartli_rebels_happened
+    has_country_flag = svaneti_rebels_happened
+    has_country_flag = samtskhe_rebels_happened
+    has_country_flag = abkhazian_rebels_happened
+    NOT = {
+      OR = {
+        war_with = MGL
+        war_with = IME
+        war_with = GUR
+        war_with = KAH
+        war_with = KRT
+        war_with = SVN
+        war_with = SME
+        war_with = ABK
+      }
+    }
+  }
+  
+  modifier = {
+    global_unrest = 6
+    global_tax_modifier = -0.1
+    diplomatic_reputation = -1
+    stability_cost_modifier = 0.25
+    global_trade_power = -0.1
+    legitimacy = -2
+    land_morale = -0.1
+  }
+  
+  on_start = btc_georgian_civil_war.1
+  on_end = btc_georgian_civil_war.2
+  
+  on_monthly = {
+    events = {
+      btc_georgian_civil_war.11
+    }
+    random_events = {
+      1000 = 0
+      100 = btc_georgian_civil_war.3
+      100 = btc_georgian_civil_war.4
+      100 = btc_georgian_civil_war.5
+      100 = btc_georgian_civil_war.6
+      100 = btc_georgian_civil_war.7
+      100 = btc_georgian_civil_war.8
+      100 = btc_georgian_civil_war.9
+      100 = btc_georgian_civil_war.10
+    }
+  }
+}

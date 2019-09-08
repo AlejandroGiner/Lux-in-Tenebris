@@ -1,0 +1,640 @@
+namespace = btc_georgian_civil_war
+
+#Disaster start
+country_event = {
+  id =  btc_georgian_civil_war.1
+  title = btc_georgian_civil_war.1.t
+  desc = btc_georgian_civil_war.1.d
+  picture = SIEGE_eventPicture
+  
+  major = yes
+  is_triggered_only = yes
+  
+  immediate = {
+    if = {
+      limit = { exists = MGL }
+      set_country_flag = mingrelian_rebels_happened
+    }
+    if = {
+      limit = { exists = IME }
+      set_country_flag = imereti_rebels_happened
+    }
+    if = {
+      limit = { exists = GUR }
+      set_country_flag = guria_rebels_happened
+    }
+    if = {
+      limit = { exists = KAH }
+      set_country_flag = kakheti_rebels_happened
+    }
+    if = {
+      limit = { exists = KRT }
+      set_country_flag = kartli_rebels_happened
+    }
+    if = {
+      limit = { exists = SVN }
+      set_country_flag = svaneti_rebels_happened
+    }
+    if = {
+      limit = { exists = SME }
+      set_country_flag = samtskhe_rebels_happened
+    }
+    if = {
+      limit = { exists = ABK }
+      set_country_flag = abkhazian_rebels_happened
+    }
+  }
+  option = {
+    name = btc_georgian_civil_war.1.a
+    add_stability = -2
+    add_legitimacy = -50
+    add_prestige = -25
+  }
+}
+
+#End of civil war
+country_event = {
+  id =  btc_georgian_civil_war.2
+  title = btc_georgian_civil_war.2.t
+  desc = btc_georgian_civil_war.2.d
+  picture = WOUNDED_SOLDIERS_eventPicture
+  
+  is_triggered_only = yes
+  
+  option = {
+    name = btc_georgian_civil_war.2.a
+    add_stability = 2
+    add_adm_power = 100
+    add_dip_power = 100
+    add_mil_power = 100
+  }
+}
+
+#Mingrelia rises up
+country_event = {
+  id =  btc_georgian_civil_war.3
+  title = btc_georgian_civil_war.3.t
+  desc = btc_georgian_civil_war.3.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = mingrelian_rebels_happened }
+    NOT = { exists = MGL }
+    owns = 462
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = mingrelian_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.3.a
+    release = MGL
+    MGL = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Imereti rises up
+country_event = {
+  id =  btc_georgian_civil_war.4
+  title = btc_georgian_civil_war.4.t
+  desc = btc_georgian_civil_war.4.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = imereti_rebels_happened }
+    NOT = { exists = IME }
+    owns = 422
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = imereti_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.4.a
+    release = IME
+    IME = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Guria rises up
+country_event = {
+  id =  btc_georgian_civil_war.5
+  title = btc_georgian_civil_war.5.t
+  desc = btc_georgian_civil_war.5.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = guria_rebels_happened }
+    NOT = { exists = GUR }
+    owns = 2196
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = guria_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.5.a
+    release = GUR
+    GUR = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Kakheti rises up
+country_event = {
+  id =  btc_georgian_civil_war.6
+  title = btc_georgian_civil_war.6.t
+  desc = btc_georgian_civil_war.6.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = kakheti_rebels_happened }
+    NOT = { exists = KAH }
+    owns = 2203
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = kakheti_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.6.a
+    release = KAH
+    KAH = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Kartli rises up
+country_event = {
+  id =  btc_georgian_civil_war.7
+  title = btc_georgian_civil_war.7.t
+  desc = btc_georgian_civil_war.7.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = kartli_rebels_happened }
+    NOT = { exists = KRT }
+    owns = 4301
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = kartli_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.7.a
+    release = KRT
+    KRT = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Svaneti rises up
+country_event = {
+  id =  btc_georgian_civil_war.8
+  title = btc_georgian_civil_war.8.t
+  desc = btc_georgian_civil_war.8.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = svaneti_rebels_happened }
+    NOT = { exists = SVN }
+    owns = 7302
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = svaneti_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.8.a
+    release = SVN
+    SVN = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Samtskhe rises up
+country_event = {
+  id =  btc_georgian_civil_war.9
+  title = btc_georgian_civil_war.9.t
+  desc = btc_georgian_civil_war.9.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = samtskhe_rebels_happened }
+    NOT = { exists = SME }
+    owns = 2204
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = samtskhe_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.9.a
+    release = SME
+    SME = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Abkhazia rises up
+country_event = {
+  id =  btc_georgian_civil_war.10
+  title = btc_georgian_civil_war.10.t
+  desc = btc_georgian_civil_war.10.d
+  picture = BATTLE_eventPicture
+  
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = { has_country_flag = abkhazian_rebels_happened }
+    NOT = { exists = ABK }
+    owns = 1856
+    OR = {
+      NOT = { has_country_flag = georgian_rebels }
+      had_country_flag = {
+        flag = georgian_rebels
+        days = 365
+      }
+      is_year = 1494
+    }
+  }
+  
+  immediate = {
+    set_country_flag = abkhazian_rebels_happened
+    set_country_flag = georgian_rebels
+  }
+  
+  option = {  #Strike them down!
+    name = btc_georgian_civil_war.10.a
+    release = ABK
+    ABK = {
+      declare_war_with_cb = {
+        who = GEO
+        casus_belli = cb_independence_war
+      }
+      add_stability = 3
+      add_treasury = 500
+      add_army_tradition = 30
+      add_manpower = 16
+      capital_scope = {
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        infantry = PREV
+        cavalry = PREV
+      }
+      define_general = {
+        shock = 3
+        fire = 3
+        manuever = 2
+        siege = 1
+      }
+    }
+  }
+}
+
+#Hidden event to check if georgian minors have been released
+country_event = {
+  id =  btc_georgian_civil_war.11
+  title = btc_georgian_civil_war.11.t
+  desc = btc_georgian_civil_war.11.d
+  picture = BATTLE_eventPicture
+  
+  hidden = yes
+  is_triggered_only = yes
+  
+  trigger = {
+    NOT = {
+      AND = {
+        has_country_flag = mingrelian_rebels_happened
+        has_country_flag = imereti_rebels_happened
+        has_country_flag = guria_rebels_happened
+        has_country_flag = kakheti_rebels_happened
+        has_country_flag = kartli_rebels_happened
+        has_country_flag = svaneti_rebels_happened
+        has_country_flag = samtskhe_rebels_happened
+        has_country_flag = abkhazian_rebels_happened
+      }
+    }
+  }
+  
+  immediate = {
+    if = {
+      limit = {
+        NOT = { has_country_flag = mingrelian_rebels_happened }
+        exists = MGL
+      }
+      set_country_flag = mingrelian_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = imereti_rebels_happened }
+        exists = IME
+      }
+      set_country_flag = imereti_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = guria_rebels_happened }
+        exists = GUR
+      }
+      set_country_flag = guria_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = kakheti_rebels_happened }
+        exists = KAH
+      }
+      set_country_flag = kakheti_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = kartli_rebels_happened }
+        exists = KRT
+      }
+      set_country_flag = kartli_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = svaneti_rebels_happened }
+        exists = SVN
+      }
+      set_country_flag = svaneti_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = samtskhe_rebels_happened }
+        exists = SME
+      }
+      set_country_flag = samtskhe_rebels_happened
+    }
+    if = {
+      limit = {
+        NOT = { has_country_flag = abkhazian_rebels_happened }
+        exists = ABK
+      }
+      set_country_flag = abkhazian_rebels_happened
+    }
+  }
+  
+  option = {
+    
+  }
+}
