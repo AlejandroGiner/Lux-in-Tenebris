@@ -579,56 +579,80 @@ country_event = {
     if = {
       limit = {
         NOT = { has_country_flag = mingrelian_rebels_happened }
-        exists = MGL
+        OR = {
+          exists = MGL
+          NOT = { owns = 462 }
+        }
       }
       set_country_flag = mingrelian_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = imereti_rebels_happened }
-        exists = IME
+        OR = {
+          exists = IME
+          NOT = { owns = 422 }
+        }
       }
       set_country_flag = imereti_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = guria_rebels_happened }
-        exists = GUR
+        OR = {
+          exists = GUR
+          NOT = { owns = 2196 }
+        }
       }
       set_country_flag = guria_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = kakheti_rebels_happened }
-        exists = KAH
+        OR = {
+          exists = KAH
+          NOT = { owns = 2203 }
+        }
       }
       set_country_flag = kakheti_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = kartli_rebels_happened }
-        exists = KRT
+        OR = {
+          exists = KRT
+          NOT = { owns = 4301 }
+        }
       }
       set_country_flag = kartli_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = svaneti_rebels_happened }
-        exists = SVN
+        OR = {
+          exists = SVN
+          NOT = { owns = 7302 }
+        }
       }
       set_country_flag = svaneti_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = samtskhe_rebels_happened }
-        exists = SME
+        OR = {
+          exists = SME
+          NOT = { owns = 2204 }
+        }
       }
       set_country_flag = samtskhe_rebels_happened
     }
     if = {
       limit = {
         NOT = { has_country_flag = abkhazian_rebels_happened }
-        exists = ABK
+        OR = {
+          exists = ABK
+          NOT = { owns = 1856 }
+        }
       }
       set_country_flag = abkhazian_rebels_happened
     }
