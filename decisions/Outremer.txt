@@ -21,7 +21,7 @@ country_decisions = {
 				}
 		}
 		provinces_to_highlight = {
-			area = mashriq_region
+			region = mashriq_region
 			NOT = { owned_by = ROOT }
 		}
 		allow = {
@@ -37,7 +37,7 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-							area = arabia_area
+							region = arabia_region
 					}
 					amount = 5			#At least 5 provinces in Arabia
 				}
@@ -47,7 +47,7 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-							area = mesopotamia_area
+							region = mesopotamia_region
 					}
 					amount = 5			#At least 5 provinces in Mesopotamia
 				}
@@ -57,12 +57,12 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-							area = egypt_area
+							region = egypt_region
 					}
 					amount = 5			#At least 5 provinces in Egypt
 				}
 			}
-	}
+		}
 		
 		effect = {
 			379 = {
@@ -81,6 +81,5 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-}
-
+	}
 }
