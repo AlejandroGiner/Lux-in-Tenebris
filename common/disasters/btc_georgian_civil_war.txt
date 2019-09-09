@@ -64,7 +64,7 @@ georgian_civil_war = {
   
   progress = {
     modifier = {
-      factor = 50
+      factor = 2.5
       NOT = { stability = 2 }
     }
     modifier = {
@@ -98,14 +98,17 @@ georgian_civil_war = {
   }
   
   can_end = {
-    has_country_flag = mingrelian_rebels_happened
-    has_country_flag = imereti_rebels_happened
-    has_country_flag = guria_rebels_happened
-    has_country_flag = kakheti_rebels_happened
-    has_country_flag = kartli_rebels_happened
-    has_country_flag = svaneti_rebels_happened
-    has_country_flag = samtskhe_rebels_happened
-    has_country_flag = abkhazian_rebels_happened
+    custom_trigger_tooltip = {
+      tooltip = GEORGIAN_END_CIVIL_WAR_TOOLTIP
+      has_country_flag = mingrelian_rebels_happened
+      has_country_flag = imereti_rebels_happened
+      has_country_flag = guria_rebels_happened
+      has_country_flag = kakheti_rebels_happened
+      has_country_flag = kartli_rebels_happened
+      has_country_flag = svaneti_rebels_happened
+      has_country_flag = samtskhe_rebels_happened
+      has_country_flag = abkhazian_rebels_happened
+    }
     NOT = {
       OR = {
         war_with = MGL
