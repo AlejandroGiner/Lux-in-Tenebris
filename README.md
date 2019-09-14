@@ -16,7 +16,7 @@ On top of what Beyond Typus 9.0 had, the following regions have been overhauled 
 
 - Greece has received a province number increase of 229% from 17 to 56 , a dev increase of 76% from 188 to 331, new Byzantine ideas and a new culture.
 
-- Caucasus has received a province number increase of 86% from 29 to 54, a dev increase of 60% from 206 to 331, 27 new tags, re-done cultures and unique national ideas.
+- Caucasus has received a province number increase of 86% from 29 to 54, a dev increase of 60% from 206 to 331, 28 new tags, re-done cultures and unique national ideas.
 
 - Burma has received a province number increase of 47% from 32 to 47 and a dev increase of 24% from 262 to 326.
 
