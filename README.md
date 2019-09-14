@@ -2,33 +2,45 @@ Beyond Typus Classic
 An expansion for Beyond Typus 9.0, updated for EU4 1.28.\
 changelog
 
-On top of what Beyond Typus 9.0 had, the following regions have been modified or re-overhauled (compared with their state in vanilla):
+On top of what Beyond Typus 9.0 had, the following regions have been overhauled or re-overhauled following this mod's design philosophy (compared with their state in vanilla):
 
 - BT 11.0 Eastern Europe overhaul has been implemented and adjusted for BT Classic style.
 
-- Caucasus region has received a major overhaul with 26 new provinces, 27 new tags, re-done cultures and unique national ideas.
+- Britain has received 32 new provinces, an increase of 76% from 42 to 74. Dev increased by 18.5%, from 308 to 365, 6 new tags, several new national ideas and formables.
 
-- Madagascar region has received a moderate overhaul with 20 new provinces.
+- Italy has received 75 new provinces, an increase of 170% from 44 to 119. Dev increased by 65%, from 656 to 1118, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
 
-- Britain and Ireland have received a major overhaul with 19 new provinces, 3 new tags and several new national ideas and formables. (WIP)
+- Iberia has received 34 new provinces, an increase of 57% from 59 to 93. Dev increased by 20%, from 545 to 653, 15 new tags, 2 new cultures and many national ideas.
 
-- Italy region has received a major overhaul with 70 new provinces, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
+- France has received 66 new provinces, an increase of 115% from 57 to 123. Dev increased by 36%, from 763 to 1038, 2 new tags, 3 new cultures and many national ideas.
 
-- Japan region has received a major overhaul with 63 new provinces and 20 new tags each with their own national ideas.
+- Greece has received 39 new provinces, an increase of 229% from 17 to 56. Dev increased by 76%, from 188 to 331, new Byzantine ideas and a new culture.
 
-- Korea region has received a major overhaul with 27 new provinces and 6 new tags with their own national ideas.
+- Caucasus has received 25 new provinces, an increase of 86% from 29 to 54. Dev increased by 60%, from 206 to 331, 28 new tags, re-done cultures and unique national ideas.
 
-- Greece, Macedonia, Bulgaria and Wallachia zones have received a major overhaul with 56 new provinces and a new culture.
+- Burma has received 15 new provinces, an increase of 47% from 32 to 47. Dev increased by 24%, from 262 to 326.
 
-- Burma, Indochina, Siam, Malaya, Indonesia, Philippines and Moluccas regions have received a major overhaul with 174 new provinces, 42 new tags, many cultures, missions, disasters, events, national ideas and more.
+- Indochina (inc. Siam) has received 57 new provinces, an increase of 119% from 48 to 105. Dev increased by 66%, from 459 to 763.
 
-- Australia region has received a minor overhaul with 7 new provinces. (WIP)
+- Malaya has received 33 new provinces, an increase of 100% from 33 to 66. Dev increased by 55%, from 270 to 418.
 
-- China superregion has received a moderate overhaul with 38 new provinces. (WIP)
+- Indonesia has received 30 new provinces, an increase of 88% from 34 to 64. Dev increased by 63%, from 297 to 484.
 
-- Iberia has received a major overhaul with 32 new provinces, 15 new tags, 2 new cultures and many national ideas.
+- Philippines has received 10 new provinces, an increase of 43% from 23 to 33. Dev increased by 18%, from 158 to 186.
 
-- France has received a major overhaul with 55 new provinces, 2 new tags, 3 new cultures and many national ideas. (WIP)
+- Moluccas has received 20 new provinces, an increase of 66% from 30 to 50. Dev increased by 55%, from 215 to 334.
+
+- All 6 south-east asian regions previously mentioned have received a major overhaul with 42 new tags, many cultures, missions, disasters, events, national ideas and more.
+
+- Ming has received 41 new provinces, an increase of 37%, from 111 to 152. Dev increased by 27%, from 1101 to 1401. (WIP)
+
+- Japan has received 63 new provinces, an increase of 134% from 47 to 110. Dev increased by 113%, from 368 to 786 and 20 new tags each with their own national ideas.
+
+- Korea has received 27 new provinces, an increase of 135% from 20 to 47. Dev increased by 108%, from 130 to 271 and 6 new tags with their own national ideas.
+
+- Madagascar has received 15 new provinces, an increase of 79% from 19 to 34. Dev increased by 51%, from 110 to 166 and 9 new tags.
+
+- Australia has received 7 new provinces. (WIP)
 
 - [30 new minor tags have been added around oceania and south america, with polynesian nations having their separate culture group.](#1)
 
