@@ -1198,23 +1198,18 @@ upper_peru_region = {
 	}
 }
 
-malaya_region = {	#Western Indonesia Malaya.
+malaya_region = {	#Malayan Peninsula.
 	areas = {
-		north_sumatra_area
-		central_sumatra_area
-		south_sumatra_area
-		indian_ocean_islands_area
 		malaya_area
 		malacca_area
-		batak_area
-		minangkabau_area
 		#BTC
 		northern_malaya_area
 		johor_area
-		barisan_area
-		palembang_area
 		kedah_area
 		perak_area
+		tenasserim_area
+		indonesian_islands_area
+		indian_ocean_islands_area
 	}
 	monsoon = {
 		00.10.01
@@ -1231,15 +1226,11 @@ moluccas_region = {
 	areas = {
 		molluca_area
 		sulawesi_area
-		papua_area
-		vogelkop_area
-		timor_area
 		south_sulawesi_area
 		spice_islands_area
 		#BTC
 		luwu_area
 		banggai_area
-		flores_area
 	}
 	monsoon = {
 		00.10.01
@@ -1272,21 +1263,14 @@ philippines_region = {
 	}
 }
 
-indonesia_region = { #Eastern Indonesian/Malayan Islands.
+indonesia_region = { #Borneo
 	areas = {
 		kutai_area
 		brunei_area
 		kalimantan_area
-		east_java_area
-		central_java_area
-		west_java_area
-		lesser_sunda_islands_area
-		indonesian_islands_area
-		#BTC
 		dayak_area
 		kotawaringin_area
 		berau_area
-		cirebon_area
 	}
 	monsoon = {
 		00.11.01
@@ -1298,6 +1282,60 @@ indonesia_region = { #Eastern Indonesian/Malayan Islands.
 	}
 }
 
+java_region = { 
+	areas = {
+		east_java_area
+		central_java_area
+		west_java_area
+		cirebon_area
+		lesser_sunda_islands_area
+		flores_area
+		timor_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
+}
+
+sumatra_region = { 
+	areas = {
+		north_sumatra_area
+		central_sumatra_area
+		south_sumatra_area
+		batak_area
+		minangkabau_area
+		barisan_area
+		palembang_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
+}
+
+papua_region = { 
+	areas = {
+		papua_area
+		vogelkop_area
+	}
+	monsoon = {
+		00.11.01
+		00.12.30
+	}
+	monsoon = {
+		00.01.01
+		00.03.30
+	}
+}
 
 oceanea_region = {
 	areas = {
@@ -1342,7 +1380,6 @@ siam_region = { #BTC
 	areas = {
 		central_thai_area
 		northern_thai_area
-		tenasserim_area
 		north_tenasserim_area
 		sukhothai_area
 		khorat_area
