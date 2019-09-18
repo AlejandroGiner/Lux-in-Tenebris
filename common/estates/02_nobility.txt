@@ -326,6 +326,13 @@ estate_nobles =
 		}
 		loyalty = 10
 	}
+	loyalty_modifier = {
+		desc = EST_KOR_FACTIONAL_UPHEAVAL
+		trigger = {
+			has_country_modifier = kor_factional_upheaval
+		}
+		loyalty = -10
+	}
 	#BR added loyalty modifiers from reforms
 	loyalty_modifier = {
 		desc = EST_VAL_PRONOIAR
@@ -426,6 +433,13 @@ estate_nobles =
 		desc = estate_bushi
 		trigger = {
 			culture_group = japanese_g
+		}
+	}
+	custom_name = {
+		desc = estate_yangban_administrators
+		trigger = {
+			tag = KOR
+			religion = confucianism
 		}
 	}
 	#Byz_Resurgence added: Byzantines call their landed nobility Dynatoi.

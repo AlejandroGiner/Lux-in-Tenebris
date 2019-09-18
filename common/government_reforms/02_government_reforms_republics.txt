@@ -431,6 +431,7 @@ veche_republic = {
 	modifiers = {
 		merchants = 1
 		max_states = 1
+		max_absolutism = -50
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -856,7 +857,12 @@ lottery_reform = {
 		is_colonial_nation = no
 	}
 	trigger = {
-		NOT = { has_reform = venice_merchants_reform }
+		NOT = {
+			OR = {
+				has_reform = venice_merchants_reform 
+				has_reform = dutch_republic
+			}
+		}
 	}
 	modifiers = {
 		yearly_corruption = -0.1

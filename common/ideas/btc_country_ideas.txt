@@ -188,44 +188,6 @@ TN1_ideas = {
 	}
 }
 
-SOO_ideas = {
-	start = {
-		global_trade_goods_size_modifier = 0.15
-		light_ship_power = 0.2
-	}
-	bonus = {
-		light_ship_cost = -0.2
-	}
-	trigger = {
-		tag = SOO
-	}
-	free = yes
-
-	asian_mediators = {
-		envoy_travel_time = -0.25
-		diplomatic_reputation = 1
-	}
-	wako_pirates = {
-		privateer_efficiency = 0.35
-	}
-	agreements_with_korea = {
-		global_prov_trade_power_modifier = 0.25
-	}
-	police_the_sea = {
-		naval_morale = 0.1
-		sailor_maintenance_modifer = -0.1
-	}
-	tribute_missions = {
-		trade_efficiency = 0.2
-	}
-	tactful_conversions = {
-		tolerance_heathen = 2
-	}
-	naval_auxiliaries = {
-		naval_forcelimit_modifier = 0.25
-	}
-}
-
 ASO_ideas = {
 	start = {
 		tolerance_own = 2
@@ -1485,7 +1447,7 @@ HBN_ideas = {
         infantry_power = 0.1
     }
     HBN_Immediacy = {
-        republican_tradition = 0.25
+        republican_tradition = 0.3
     }
     HBN_Engineers = {
         build_cost = -0.15
@@ -1658,7 +1620,7 @@ CMB_ideas = {
     }
     CMB_idea_6 = {
         global_unrest = -1
-        republican_tradition = 0.35
+        republican_tradition = 0.3
     }
     CMB_idea_7 = {
         global_trade_power = 0.1
@@ -1930,7 +1892,7 @@ MEM_ideas = {
         global_manpower_modifier = 0.1
     }
     mem_twelve_articles = {
-        republican_tradition = 0.25
+        republican_tradition = 0.3
         global_unrest = -1
     }
     mem_swe_garrison = {
@@ -1965,7 +1927,7 @@ RVA_ideas = {
          diplomatic_reputation = 1
     }
     Republican_History = {
-         republican_tradition = 0.25
+         republican_tradition = 0.3
     }
     Great_Ravensburger_Trading_Society = {
          trade_efficiency = 0.1
@@ -2082,7 +2044,7 @@ ULM_ideas = {
 	}
 
 	ULM_constitution = {
-		republican_tradition = 0.25
+		republican_tradition = 0.3
 	}
 
 	ULM_church = {
@@ -2175,7 +2137,7 @@ FRN_ideas = {
         global_institution_spread = 0.1
     }
     Frankfurt_Republicanism = {
-        republican_tradition = 0.5
+        republican_tradition = 0.3
     }
     Frankfurt_Churches = {
         build_cost = -0.15
@@ -2217,7 +2179,7 @@ MAN_ideas = {
 		trade_efficiency = 0.1
 	}
 	MAN_idea_7 = {
-		republican_tradition = 0.25
+		republican_tradition = 0.3
 		legitimacy = 0.40
 	}
 }
@@ -2331,7 +2293,7 @@ A7D_ideas = {
     Mountainside_Churches = {
         devotion = 0.5           #Andorra will be a theocracy
 		legitimacy = 0.20
-		republican_tradition = 0.15
+		republican_tradition = 0.3
         religious_unity = 0.25
     }
     Pont_de_la_Margineda = {
@@ -2962,7 +2924,7 @@ SN7_ideas = {
 
 free_city_ideas = {
 	start = {
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 		diplomatic_reputation = 1
 	}
 	bonus = {
@@ -3593,7 +3555,7 @@ GZR_ideas = {
 		cavalry_cost = -0.1
 	}
 	GZR_idea6 = {
-		republican_tradition = 0.5
+		republican_tradition = 0.3
 	}
 	GZR_idea7 = {
 		state_maintenance_modifier = -0.2

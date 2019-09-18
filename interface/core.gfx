@@ -42,6 +42,91 @@ spriteTypes = {
 		
 	}
 	spriteType = {
+		name = "login_logout"
+		texturefile = "gfx//interface//button_login_logout.dds"
+		noOfFrames = 1
+	}
+	spriteType = {
+		name = "GFX_button_60_29"
+		texturefile = "gfx/interface/buttons/button_60_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_60_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_60_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 20.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_standard_button_142_34_button"
+		texturefile = "gfx/interface/buttons/button_142_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_142_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_142_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 40.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_button_150_24"
+		texturefile = "gfx/interface/buttons/button_150_24_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_150_24_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_268_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 100.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_close"
+		texturefile = "gfx/interface/buttons/close_button.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/close_button_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/close_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_socialview_icon"
+		texturefile = "gfx/interface/icons/pi_icon.dds"
+	}
+	spriteType = {
 		name = "homepage"
 		texturefile = "gfx//interface//icon_homepage.dds"
 		noOfFrames = 1

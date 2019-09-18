@@ -1,7 +1,30 @@
 country_decisions = {
 	###################################################################################################
-################################			Prussia (Kingdom, id est, BRA)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+################################			Prussia (Kingdom, id est, BRA)			 ##########################
 ###################################################################################################
+
+	institute_prussian_monarchy = {
+		major = yes
+		potential = {
+			NOT = { has_dlc = "Dharma" }
+			normal_or_historical_nations = yes
+			tag = PRU
+			government = monarchy
+			NOT = { has_reform = prussian_monarchy_legacy }
+		}
+
+		allow = {
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+
+		effect = {
+			add_government_reform = prussian_monarchy
+		}
+	}
+
 	form_kingdom_of_prussia = {
 		major = yes
 		potential = {
@@ -57,6 +80,12 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
+			if = {
+				limit = {
+					has_reform = states_general_reform
+				}
+				remove_government_reform = states_general_reform
+			}
 			add_prestige = 25
 			change_primary_culture = prussian
 			PRU = {
@@ -98,7 +127,7 @@ country_decisions = {
 	}
 
 ###################################################################################################
-################################			Prussia (id est, TEU)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+################################			Prussia (id est, TEU)			 ###########################
 ###################################################################################################
 	prussian_nation = {
 		major = yes
@@ -157,6 +186,12 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			if = {
+				limit = {
+					has_reform = states_general_reform
+				}
+				remove_government_reform = states_general_reform
+			}
 			change_primary_culture = prussian
 			every_neighbor_country = {
 				limit = { government = monarchy }
@@ -194,7 +229,7 @@ country_decisions = {
 	}
 
 ###################################################################################################
-################################			Prussia (general, id est, Non BRA, non monastic TEU)			 ##############################################			#So.... about 3 more lines of code could merge these 3 decisions, whats up with that?
+################################			Prussia (general, id est, Non BRA, non monastic TEU)	################
 ###################################################################################################
 	prussian_nation_general = {
 		major = yes
@@ -256,6 +291,12 @@ country_decisions = {
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
+			}
+			if = {
+				limit = {
+					has_reform = states_general_reform
+				}
+				remove_government_reform = states_general_reform
 			}
 			add_prestige = 25
 			change_primary_culture = prussian

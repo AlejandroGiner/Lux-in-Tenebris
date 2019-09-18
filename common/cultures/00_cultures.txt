@@ -4061,7 +4061,7 @@ altaic = {
 		}
 	}
 	chahar = {
-		primary = CHH
+		primary = KRC
 		male_names = {
 			Agbarjin Adai Altan Arigaba Arugtai Ayurparibhadra Bodi Bek Bahamu Bars Buyan Biligtü Dayan 
 			Delbeg Ejei Elbeg Engke Güyük Gün Gulichi Irinchibal Jorightu Kublai Köke Ligdan Markörgis Möngke 
@@ -7552,7 +7552,26 @@ penutian = {
 east_asian = {	# Chinese Group
 	graphical_culture = asiangfx
 
-	# Mandarin speakers, in game localization "Guanhua":
+	manchu_new = {
+		country = { has_banners = 1}
+		province = { local_has_banners = 1}
+		primary = MCH
+		dynasty_names = {
+			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
+			Heseri Guwalgiya Tunggiya Hata Hoifa Yeren Udige
+		}
+		male_names = {
+			"Bukuri Yongson" "Sibeoci Fiyanggu" "Dudu Mengtemu" "Huang Taiji" "Hiowan Yei" "In Jen" "Hung Li" "Yong Yan"
+			"Min Ning" Cungsan Tolo Fuman Giocangga Taksi Nurhachi Dorgon Hooge Fulin Fanca Hoogle Yinzhi Yinreng 
+			Yinti Daisan Abatai Ajige Dodo Yinxiang Yinsi Yintang Hongshi Hongzhou Yongqi Akjan Ayan Baohu Chengjun 
+			Dorgide Eje Encehen Fisin Fulu Ganyong Ganzhan Hurong Jabsan Jakdan Leli Liyi Lung Mergen Muduri Mujin Oori 
+			Radi Talman Wehe Yelu Yongyi Zhanhung Zhenghu Zhengrong Zhongcheng Zhongchun Zhongho Zhonghu Zhonghung 
+			Zongqian Zhongxian Zhongyong Zhongyu
+		}
+		female_names = {
+			Fen Jian Wen Hejing Hejia Hexiao Zhuangjing 
+		}
+	}
 	chihan = {	#Zhili
 		primary = YAN
 		male_names = {
@@ -7934,25 +7953,27 @@ korean_g = {
 	korean = {
 		primary = KOR
 		dynasty_names = { 
-			Yi Wang Kim Shin Song Pak Chae Gang Jeong Jang Yun Han Hong Yu Ki
+			Yi Wang Kim Pak Shin Song Chae Gang Jeong Jang Yun Han Hong Yu Ki Choi Ga Gye Go Na Noh Woo Do Du Ban Ma Min Mun
+			Seo Son Sim An Yang O Jeon Cho Jin Ha Hong Heo Kwak Lim Won Kwon Hwang Bae Seok Bang Dae Gyeong Nam Sung Baek
 		}
 		male_names = {
-			In Se Ye Seong Yonsan Jung Myeon Seon Gwanghae Hyo Hyeon Suk Gyeong Yeong Jeong Dan Mun Tae Imhae Uian 
-			Bokseong Geumwon Yeongyang Yeongchang Yuenrueng Sado Munhyo Bongseong Deokheung Sinseong Uichang Jeongwon 
-			Hyesun Hyejeong Hyohye Uihye Hyosun Gyeonghyeon Insun Jeongsin Jeonghye Jeongsuk Jeong-an Jeonghyu 
-			Jeongmyeong Hwan Do Ik Mok Si I Guem Sun Rip Il Dong Gwai Sang Ji U Gyu Dae Gu 
-		}
+			Hongwi Yu Gwang Hyeol Yung Yeok Ho Hwan Yeon Hon Jong Sun Yun Geum San Gong Byeon Myeongbok Ha-eung Un Gu Seon Hyeon
+			Cho Yeong Bu Haeng Hwon Kang Ji Rip Jae-u Seong-ryong Yakyong Jongmu Se-young Hong-rip Deokgi Munsu Hee-woon Busik
+			Jiwon Gwangjo Sukju Hongdo Yong-bok Jong-un Chung-hee Yeong-sil Yun-ui Myung-shin Chae-ho Chwa-jin Honghi Byong-hi
+			Hwang Jae-sang Yu-sin Wonjong Jong-seo Jangchun Museon Sung-gyeom Seungman Sun-sin Chang-ho Dae-seung Jae-suk
+			Dae-yong Eok-gi Si-min Gam-chan Chung-heon U Tong-jeon In-seon Gwanghyeon Gyun Yul Wi Im Geon Jun Mok Il Tak
+ 		}
 		female_names = {
-			Ae-jung Areum Bit-na Bo-young Bora Chae-won Chae-young Chun-hwa Chun-ja Da-hee Do-hee Eun-ah Eun-bi 
-			Eun-byul Eun-chae Eun-ha Eun-hee Eun-hye Eun-ji Eun-jin Eun-ju Eun-jung Eun-kyung Eun-mi Eun-sook Eun-suh 
+			Ae-jung Areum Bit-na Bo-young Bora Chae-won Chae-young Cho-hee Chun-hwa Chun-ja Da-hee Da-hyun Do-hee Eun-ah 
+			Eun-bi Eun-byul Eun-chae Eun-ha Eun-hee Eun-hye Eun-ji Eun-jin Eun-ju Eun-jung Eun-kyung Eun-mi Eun-sook Eun-suh 
 			Eun-young Ga-in Ga-young Gyuri Ha-eun Hana Hye-bin Hye-in Hye-ja Hye-jin Hye-jung Hye-kyung Hye-mi Hye-rim 
-			Hye-su Hye-won Hyo-joo Hyo-rin Hyun-a Hyun-kyung Hyun-mi Hyun-sook In-hye In-sook Ja-kyung Jae-eun Jang-mi 
-			Jeong-ja Ji-ae Ji-eun Ji-hye Ji-yeon Ji-young Jina Jung-ah Jung-sook Jung-soon Kyung-ah Kyung-hee Kyung-hwa 
-			Kyung-ja Kyung-ok Kyung-sook Mi-hee Mi-ja Mi-jung Mi-kyung Mi-ran Mi-sook Mi-yeon Mi-young Min-hee Min-ji 
-			Min-jung Min-seo Mina Myung-hwa Myung-ok Myung-sook Myung-soon Na-young Nana Nari Nuri Sang-mi Se-bin 
-			Seo-hyeon Seo-yeon Seo-yun Seol-hee Seon-ok Seong-ja Seung-ah Shin-hye Si-yeon So-hyun So-won So-yi 
+			Hye-su Hye-won Hyo-joo Hyo-rin Hyun-a Hyun-kyung Hyun-mi Hyun-sook In-hye In-sook In-sun Ja-kyung Jae-eun 
+			Jang-geum Jang-mi Jeong-ja Ji-ae Ji-eun Ji-hye Ji-yeon Ji-young Jina Jin-yi Jung-ah Jung-sook Jung-soon Kyung-ah Kyung-hee 
+			Kyung-hwa Kyung-ja Kyung-ok Kyung-sook Mi-hee Mi-ja Mi-jung Mi-kyung Mi-ran Mi-sook Mi-yeon Mi-young Min-hee 
+			Min-ji Min-jung Min-seo Mina Myung-hwa Myung-ok Myung-sook Myung-soon Na-young Nana Nari Noo-ri Sang-mi  
+			Se-bin Seo-hyeon Seo-yeon Seo-yun Seol-hee Seon-ok Seong-ja Seung-ah Shin-hye Si-yeon So-hee So-hyun So-won So-yi 
 			So-young Soo-ah Soo-hee Sook-ja Soon-hee Soon-ja Sora Su-mi Sun-hee Sun-hwa Sun-mi Sun-ok Sung-mi Sung-sook 
-			Ye-eun Ye-ji Ye-jin Ye-rin Ye-seo Ye-won Yeo-jin Yeon-hee Yi-kyung Yoo-kyung Yoon-hee Yoon-sook Young-ae 
+			Ye-eun Ye-ji Ye-jin Ye-rin Ye-seo Ye-won Yeo-jin Yeon-hee Yi-kyung Yoo-kyung Yoo-na Yoon-hee Yoon-sook Young-ae 
 			Young-hee Young-ja Young-mi Young-sook Yu-ri Yumi
 		}
 	}
@@ -10337,6 +10358,21 @@ sudanese = {
 evenks = {
 	graphical_culture = inuitgfx
 
+	evenk = {
+		graphical_culture = inuitgfx
+		primary = SOL
+		dynasty_names = {
+			Badarhan Tabangut 
+		}
+		male_names = {
+			Aiaan Atch-ytagyn Giv-ynkeev Nute-nli Gyrgol-gyrgyn Tanat Darkhan Dokhsun Duolan Dygyn Dulustaan Kyytymei 
+			Kencheeri Keskil Manchaary Michil Modun Nurgun Nuolan Sulustaan Tolluman Timir Tygyn Tuskul Uolan Ergis 
+			Erchim Erkin Yrgel Kharyskhan
+		}
+		female_names = {
+			Naryiaana Aiyyna Kydaana Tuskulaana Khaarchaana Temülen Börte Mandukhai Samar Zaufishan 
+		}
+	}
 	yakut = {
 		primary = YKT
 		dynasty_names = {

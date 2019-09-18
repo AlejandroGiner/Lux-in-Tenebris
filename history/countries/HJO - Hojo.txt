@@ -6,25 +6,29 @@ religion = shinto
 technology_group = japanese_btc
 capital = 3317	# Izu
 
-1444.1.1 = {
+1490.1.1 = {
 	monarch = {
-		name = "Soun" # 1453 - 1519 
+		name = "Soun" # 1456 - 1519 
 		dynasty = "Hojo"
-		birth_date = 1420.1.1
-		death_date = 1489.9.18
+		birth_date = 1456.1.1
+#		death_date = 1519.9.8
 		adm = 5
 		dip = 4
 		mil = 5
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+	add_ruler_personality = midas_touched_personality
+	add_ruler_personality = tactical_genius_personality
 }
 
-1444.1.1 = {
+1490.1.1 = {
 	heir = {
 		name = "Ujitsuna"
 		monarch_name = "Ujitsuna"
 		dynasty = "Hojo"
-		birth_date = 1443.1.1
-		death_date = 1502.8.10
+		birth_date = 1487.1.1
+		death_date = 1541.8.10
 		claim = 90
 		adm = 5
 		dip = 4
@@ -37,11 +41,15 @@ capital = 3317	# Izu
 		name = "Ujitsuna"
 		dynasty = "Hojo"
 		birth_date = 1487.1.1
-		death_date = 1541.8.10
+#		death_date = 1541.8.10
 		adm = 5
 		dip = 4
 		mil = 4
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = well_advised_personality
+	add_ruler_personality = entrepreneur_personality
+	add_ruler_personality = just_personality
 }
 
 1519.9.18 = {
@@ -63,11 +71,15 @@ capital = 3317	# Izu
 		name = "Ujiyasu"
 		dynasty = "Hojo"
 		birth_date = 1515.1.1
-		death_date = 1571.10.21
+#		death_date = 1571.10.21
 		adm = 5
 		dip = 5
 		mil = 5
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = just_personality
+	add_ruler_personality = midas_touched_personality
+	add_ruler_personality = inspiring_leader_personality
 }
 
 1541.4.15 = {
@@ -89,11 +101,14 @@ capital = 3317	# Izu
 		name = "Ujimasa"
 		dynasty = "Hojo"
 		birth_date = 1538.1.1
-		death_date = 1590.8.10
+#		death_date = 1590.8.10
 		adm = 4
 		dip = 3
 		mil = 3
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = well_connected_personality
+	add_ruler_personality = lawgiver_personality
 }
 
 1571.10.21 = {

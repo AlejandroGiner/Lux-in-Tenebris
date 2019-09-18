@@ -188,11 +188,23 @@ gc_spain_1_b = {
 		}
 		
 		trigger = {
-			484 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				OR = {
-					has_building = workshop
-					has_building = counting_house
+			if = {
+				limit = {
+					has_dlc = "Rights of Man"
+							
+								  
+				}
+				484 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						has_building = workshop
+						has_building = counting_house
+					}
+				}
+			}
+			else = {
+				484 = {
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
@@ -200,7 +212,7 @@ gc_spain_1_b = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value =  5
 					OR = {
-						area = west_cuba_area
+						area = cuba_area
 						area = east_cuba_area
 					}
 				}
@@ -462,18 +474,32 @@ gc_spain_2_b = {
 		}
 		
 		trigger = {
-			490 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				OR = {
-					has_building = temple
-					has_building = cathedral
+			if = {
+				limit = {
+					has_dlc = "Rights of Man"
+				}
+				490 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+				
+				}
+			}
+			else = {
+				490 = {
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = cas_spa_hispaniola.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					colonial_region = colonial_hispaniola
+					OR = {
+						area = hispaniola_area
+						area = dominica_area
+					}
 					is_city = yes
 				}
 			}

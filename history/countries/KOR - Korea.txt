@@ -61,6 +61,22 @@ capital = 735	# Hanseong
 		adm = 6
 		dip = 5
 		mil = 5
+		birth_date = 1397.5.7
+		death_date = 1450.5.18
+	}
+}
+
+1418.1.1 = {
+	queen = {
+		country_of_origin = KOR
+		name = "Soheon"
+		dynasty = "Sim"
+		birth_date = 1395.10.12
+		death_date = 1446.4.19
+		female = yes
+		adm = 4
+		dip = 3
+		mil = 3
 	}
 }
 
@@ -78,6 +94,21 @@ capital = 735	# Hanseong
 	}
 }
 
+1420.1.1 = {
+	clear_scripted_personalities = yes
+	add_ruler_personality = careful_personality
+	add_ruler_personality = well_advised_personality #hall of worthies
+}
+
+1444.10.29 = { #stop them conquering early
+	add_truce_with = MJZ
+	add_heir_personality = craven_personality
+	add_opinion = {
+		who = MJZ
+		modifier = opinion_KOR_supported_war_for_north
+	}
+}
+
 1450.5.18 = {
 	monarch = {
 		name = "Hyang" #Munjong
@@ -85,7 +116,10 @@ capital = 735	# Hanseong
 		adm = 2
 		dip = 1
 		mil = 1
+		birth_date = 1414.11.15
+		death_date = 1452.6.1
 	}
+	clear_scripted_personalities = yes
 }
 
 1450.5.18 = {
@@ -109,6 +143,8 @@ capital = 735	# Hanseong
 		adm = 3
 		dip = 1
 		mil = 4
+		birth_date = 1441.1.1
+		death_date = 1457.1.1
 	}
 }
 
@@ -133,6 +169,8 @@ capital = 735	# Hanseong
 		adm = 1
 		dip = 1
 		mil = 1
+		birth_date = 1417.1.1
+		death_date = 1468.1.1
 	}
 }
 
@@ -157,6 +195,8 @@ capital = 735	# Hanseong
 		adm = 2
 		dip = 1
 		mil = 2
+		birth_date = 1450.1.1
+		death_date = 1469.1.10
 	}
 }
 
@@ -181,6 +221,8 @@ capital = 735	# Hanseong
 		adm = 3
 		dip = 3
 		mil = 2
+		birth_date = 1457.1.1
+		death_date = 1494.1.1
 	}
 }
 
@@ -205,6 +247,8 @@ capital = 735	# Hanseong
 		adm = 0
 		dip = 0
 		mil = 0
+		birth_date = 1476.1.1
+		death_date = 1506.1.1
 	}
 }
 
@@ -229,6 +273,8 @@ capital = 735	# Hanseong
 		adm = 1
 		dip = 1
 		mil = 1
+		birth_date = 1488.1.1
+		death_date = 1544.12.5
 	}
 }
 
@@ -253,6 +299,8 @@ capital = 735	# Hanseong
 		adm = 2
 		dip = 1
 		mil = 1
+		birth_date = 1515.1.1
+		death_date = 1545.8.18
 	}
 }
 
@@ -277,6 +325,8 @@ capital = 735	# Hanseong
 		adm = 2
 		dip = 1
 		mil = 2
+		birth_date = 1534.1.1
+		death_date = 1567.8.13
 	}
 }
 
@@ -301,6 +351,8 @@ capital = 735	# Hanseong
 		adm = 2
 		dip = 1
 		mil = 0
+		birth_date = 1552.1.1
+		death_date = 1608.3.7
 	}
 }
 
@@ -327,6 +379,8 @@ capital = 735	# Hanseong
 		adm = 1
 		dip = 4
 		mil = 2
+		birth_date = 1574.1.1
+		death_date = 1641.1.1
 	}
 }
 
@@ -375,6 +429,8 @@ capital = 735	# Hanseong
 		adm = 3
 		dip = 0
 		mil = 2
+		birth_date = 1619.1.1
+		death_date = 1659.6.24
 	}
 }
 
@@ -399,6 +455,8 @@ capital = 735	# Hanseong
 		adm = 1
 		dip = 0
 		mil = 2
+		birth_date = 1641.1.1
+		death_date = 1674.9.19
 	}
 }
 
@@ -423,6 +481,8 @@ capital = 735	# Hanseong
 		adm = 3
 		dip = 0
 		mil = 2
+		birth_date = 1661.8.15
+		death_date = 1720.7.13
 	}
 }
 
@@ -447,6 +507,8 @@ capital = 735	# Hanseong
 		adm = 1
 		dip = 0
 		mil = 1
+		birth_date = 1688.1.1
+		death_date = 1724.10.7
 	}
 }
 
@@ -471,6 +533,8 @@ capital = 735	# Hanseong
 		adm = 4
 		dip = 2
 		mil = 2
+		birth_date = 1694.9.13
+		death_date = 1776.3.5
 	}
 }
 
@@ -496,6 +560,8 @@ capital = 735	# Hanseong
 		adm = 1
 		dip = 0
 		mil = 1
+		birth_date = 1752.9.22
+		death_date = 1800.6.28
 	}
 }
 
@@ -521,5 +587,7 @@ capital = 735	# Hanseong
 		adm = 2
 		dip = 0
 		mil = 1
+		birth_date = 1790.1.1
+		death_date = 1834.1.1
 	}
 }

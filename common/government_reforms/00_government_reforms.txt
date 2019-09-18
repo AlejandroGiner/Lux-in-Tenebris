@@ -776,16 +776,6 @@ war_against_the_world_government = {
 		has_dlc = "Golden Century"
 	}
 	
-	nation_designer_trigger = {
-		capital_scope = {
-			has_port = yes
-			OR = {
-				province_is_on_an_island = yes
-				region = maghreb_region
-			}
-		}
-	}
-	
 	factions_frame = 9
 	factions = {
 		pr_buccaneers
@@ -1854,6 +1844,14 @@ prussian_monarchy_legacy = {
 	legacy_government = yes
 	valid_for_new_country = no
 	allow_convert = no
+	
+	potential = {
+		OR = {
+			is_playing_custom_nation = yes
+			religion = protestant
+			religion = reformed
+		}
+	}
 
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
@@ -2211,6 +2209,7 @@ veche_republic_legacy = {
 	modifiers = {
 		max_states = 3
 		merchants = 1
+		max_absolutism = -50
 	}
 
 	conditional = {
