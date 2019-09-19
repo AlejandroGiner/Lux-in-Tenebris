@@ -1,0 +1,18 @@
+version="1.0"
+tags={
+	"Expansion"
+	"Events"
+	"Graphics"
+	"Missions And Decisions"
+	"National Ideas)"
+	"New Nations"
+	"Technologies"
+	"Trade"
+	"Religion"
+	"Military"
+	"Fixes"
+	"Balance"
+	"Historical"
+	"Map"
+}
+name="Beyond Typus Classic dev"

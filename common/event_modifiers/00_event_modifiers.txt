@@ -10609,3 +10609,31 @@ taqiyya_event_timer = {}
 muslim_playing_court_event_timer = {}
 
 converted_natives_colony_timer = {}
+
+had_pretty_colonial_borders_timer = {}
+
+repaired_great_wall = {
+	local_defensiveness = 0.15
+}
+
+oir_captured_mng_emperor = {
+	siege_ability = 0.25
+	land_morale = 0.2
+}
+
+mng_militry_incompetence = {
+	land_morale = -0.1
+	discipline = -0.05
+}
+
+warriors_do_not_read_books = {
+	adm_tech_cost_modifier = 0.1
+	dip_tech_cost_modifier = 0.1
+}
+
+
+#EoC Rebalance
+
+new_mandate_holder = {
+	imperial_mandate = 0.05
+}
