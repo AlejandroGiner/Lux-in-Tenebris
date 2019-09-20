@@ -1085,6 +1085,46 @@ sumatran_ideas = {
 	}
 }
 
+evenk_ideas = {
+	start = {
+		hostile_attrition = 1
+		province_warscore_cost = -0.1
+	}
+	
+	bonus = {
+		trade_efficiency = 0.1
+	}
+	
+	trigger = {
+		primary_culture = evenk
+	}
+	free = yes
+	
+	evenk_family_brigades = {
+		land_attrition = -0.1
+		movement_speed = 0.05
+	}
+	evenk_reindeer_herds = {
+		trade_range_modifier = 0.15
+	}
+	event_self_sufficiency = {
+		years_of_nationalism = -5
+	}
+	evenk_siberian_resources = {
+		build_cost = -0.1
+	}
+	evenk_mongolian_deel = {
+		possible_mercenaries = 0.25
+		merc_maintenance_modifier = -0.1
+	}
+	evenk_love_of_the_forest = {
+		leader_land_manuever = 2
+	}
+	evenk_new_ways_to_hunt = {
+		fire_damage = 0.1
+	}
+}
+
 siberian_ideas = {
 	start = {
 		unjustified_demands = -0.25
