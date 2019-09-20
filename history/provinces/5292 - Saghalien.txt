@@ -4,18 +4,15 @@ latent_trade_goods = {
 	oil
 }
 
-owner = MYR
-controller = MYR
-add_core = MYR
 culture = ainu
 religion = animism
-capital = "Saghalien"
-trade_goods = fish
+capital = "Sakhalin"
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = yes
+#is_city = yes
 native_size = 5
 native_ferocity = 1
 native_hostileness = 1
@@ -82,4 +79,17 @@ discovered_by = STM
 
 1542.1.1 = { discovered_by = POR }
 1640.1.1 = { discovered_by = RUS } # Ivan Moskvitin
+1787.1.1 = { discovered_by = FRA } # Jean-Francois de La Pérouse
+
+1636.5.15 = { add_core = TKG }
+1640.1.1 = { discovered_by = RUS } # Ivan Moskvitin
+1679.1.1 = {
+	owner = TKG
+	controller = TKG
+	culture = togoku
+	religion = shinto
+	trade_goods = fish
+} # Russian & Japanese attemps at colonization
+#1704.1.1 = { add_core = JAP }
+1767.1.1 = { add_core = RUS }
 1787.1.1 = { discovered_by = FRA } # Jean-Francois de La Pérouse
