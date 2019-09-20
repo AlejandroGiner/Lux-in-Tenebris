@@ -518,43 +518,41 @@ QAS_ideas = {  #Qasim
 
 
 BSH_ideas = {  #Bashkiria
-	start = {
-		cavalry_power = 0.20
-		cavalry_cost = -0.15
-	}
-	
-	bonus = {
-		leader_land_fire = 1
-	}
-	
-	trigger = {
-		tag = BSH
-	}
-	free = yes
-	
-	islam_of_the_bashkirs = {
-		core_creation = -0.25
-	}
-	divided_amongst_the_powers = {
-		core_creation = -0.25
-	}
-	rivalry_against_the_khalkhas = { 
-		years_of_nationalism = -5
-	}
-	cut_down_pretenders = {
-		harsh_treatment_cost = -0.25
-	}
-	influences_in_tibet = {
-        tolerance_own = 1
-		legitimacy = 0.5
-		horde_unity = 0.5
-	}
-	buying_new_weaponry = {
-		fire_damage = 0.10
-	}
-	take_the_throne_of_the_steppe = {
-		manpower_recovery_speed = 0.10
-	}
+    start = {
+        cavalry_power = 0.20 
+        cavalry_cost = -0.15
+    }
+    
+    bonus = {
+        leader_land_shock = 1
+    }
+    
+    trigger = {
+        tag = KLM
+    }
+    free = yes
+    
+    from_the_tiele = {
+        prestige_decay = -0.01
+    }
+    sunni_horde_conquest = {
+        core_creation = -0.25
+    }
+    holders_for_centuries = { 
+        army_tradition_decay = -0.01
+    }
+    turkic_language_intelligibility = {
+        num_accepted_cultures = 1
+    }
+    bashkir_military_tradition = {
+        free_mil_policy = 1
+    }
+    traditional_steppe_warfare = {
+        shock_damage = 0.10
+    }
+    a_formal_bashkir_military = {
+        land_forcelimit_modifier = 0.25
+    }
 }
 
 
@@ -678,48 +676,6 @@ KZH_ideas = {
 }
 
 
-OIR_ideas = {
-	start = {
-		cavalry_power = 0.20
-		cavalry_cost = -0.15
-	}
-	
-	bonus = {
-		max_states = 5
-	}
-	
-	trigger = {
-		tag = OIR
-	}
-	free = yes
-	
-	four_major_tribes = {
-		land_maintenance_modifier = -0.05
-	}
-	memory_of_temujin = {
-		core_creation = -0.25
-	}
-	ming_rivalry = {
-		manpower_recovery_speed = 0.10
-		land_forcelimit_modifier = 0.25
-	}
-	fall_of_the_yuan = {
-		legitimacy = 1
-		horde_unity = 1
-	}
-	past_the_great_wall = {
-		siege_ability = 0.15
-	}
-	religious_indifference = {
-		religious_unity = 0.20
-	}
-	unification_of_the_mongols = {
-		global_manpower_modifier = 0.10
-		army_tradition = 0.50
-	}
-}
-
-
 NOG_ideas = {
 	start = {
 		cavalry_power = 0.20
@@ -798,48 +754,6 @@ SIB_ideas = {  #Sibir
 	}
 	assimilation_of_siberians = {
 		mercenary_cost = -0.15
-	}
-}
-
-
-CHG_ideas = {
-	start = {
-		cavalry_power = 0.20
-		cavalry_cost = -0.15
-	}
-	
-	bonus = {
-		land_maintenance_modifier = -0.10
-	}
-	
-	trigger = {
-		tag = CHG
-	}
-	free = yes
-	
-	picking_up_the_pieces = {
-		land_morale = 0.10
-	}
-	unification_of_central_asia = {
-		core_creation = -0.25
-	}
-	modernize_and_adapt = {
-		horde_unity = 1 #maybe add in horde unity if they want to stay a horde OR maybe they're adapting new firearms, so, more Fire Damage?
-		legitimacy = 1
-	}
-	quick_and_vicious_movement = {
-		movement_speed = 0.20
-	}
-	mediate_buddhust_islam_encounters = {
-		tolerance_heathen = 2
-		improve_relation_modifier = 0.20
-	}
-	silk_road_trade = {
-		merc_maintenance_modifier = -0.10
-		trade_efficiency = 0.05
-	}
-	reform_the_mongol_empire = {
-		discipline = 0.05
 	}
 }
 
