@@ -4298,4 +4298,41 @@ HAR_ideas = {
 	
 }
 
-
+FOE_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.25
+		envoy_travel_time = -0.1
+	}
+	
+	bonus = {
+		army_tradition = 0.5
+	}
+	
+	trigger = {
+		tag = FOE
+	}
+	free = yes
+	
+	FOE_idea1 = {
+		tolerance_own = 1
+	}
+	FOE_idea2 = {
+		light_ship_cost = -0.20
+	}
+	FOE_idea3 = {
+		global_unrest = -1
+	}
+	FOE_idea4 = {
+		production_efficiency = 0.1
+	}
+	FOE_idea5 = {
+		global_trade_power = 0.15
+	}
+	FOE_idea6 = {
+		diplomatic_reputation = 1
+	}
+	FOE_idea7 = {
+		global_colonial_growth = 15
+	}
+	
+}
