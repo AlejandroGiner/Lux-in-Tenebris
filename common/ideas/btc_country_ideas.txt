@@ -4336,3 +4336,50 @@ FOE_ideas = {
 	}
 	
 }
+
+EGY_ideas = {
+	start = {
+		trade_steering = 0.25
+		trade_range_modifier = 0.10
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.20
+	}
+	
+	trigger = {
+		tag = EGY
+	}
+
+	free = yes
+
+	EGY_idea1 = {
+		tolerance_heathen = 3
+	}
+
+	EGY_idea2 = {
+		discipline = 0.05
+		fire_damage = 0.1
+	}
+	
+	EGY_idea3 = {
+		global_trade_power = 0.10
+	}
+
+	EGY_idea4 = {
+		prestige = 1
+	}
+
+	EGY_idea5 = {
+		leader_land_manuever = 1
+		movement_speed = 0.10
+	}
+
+	EGY_idea6 = {
+		build_cost = -0.25
+	}
+
+	EGY_idea7 = {
+		core_creation = -0.15
+	}
+}
