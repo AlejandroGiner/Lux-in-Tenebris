@@ -2968,21 +2968,17 @@ east_sanyodo_area = {
 ########################################
 
 kamchatka_area = { #4
-	1034 1035 1038 2440
-}
-
-magadan_area = { #3
-	1040 1041 1044
+	1034 1035 1038 2440 1041
 }
 
 kolyma_area = { #4
 
-	1036 1037 1039 2439
+	1036 1037 1039 2439 1040
 }
 
 okhotsk_area = { #4
 
-	1043 1047 1052 2103
+	1043 1047 1052 1044
 }
 
 yakutia_area = { #5
@@ -3002,15 +2998,15 @@ tunguska_area = { #5
 }
 
 central_siberia_area = { #4
-	1064 1067 1069 1070
+	1064 1067 1068 1070 2430
 }
 
 kara_area = { #4
-	1073 2430 2445
+	1069 1072 1073 2445 4691
 }
 
 ob_area = { #5
-	480 1068 2428 2429 2433
+	480 2428 2429 2433
 }
 
 irkutsk_area = { #5
@@ -3022,7 +3018,7 @@ perm_area = { #4
 }
 
 balchasj_area = { #4
-	477 478 2355 2360
+	477 478 2355 2360 4685
 }
 
 kazakhstan_area = { #5
@@ -3035,11 +3031,15 @@ syr_darya_area = { #4
 }
 
 yrtesh_area = { #5
-	479 1071 2354 2357 2434
+	1071 2434 4687 4688 4689
 }
 
 ishim_area = { #4
-	1074 1075 1076 2369
+	1074 1075 1076 2369 4692
+}
+
+aqmola_area = { #5
+	479 2354 2357 4686 4690
 }
 
 ########################################
@@ -3047,68 +3047,88 @@ ishim_area = { #4
 ########################################
 
 heilongjiang_area = { #3 (West Heilongjiang)
-	724 725 4218
+	724 1053 2102 4664
 }
 
 east_heilongjiang_area = { #4
-	1049 1053 2102 2104
+	1049 2104 4662 4659 2103
 }
 
 central_heilongjiang_area = {#4
-	727 728 2185 4200
+	727 728 2185 4200 4660
+}
+
+cicigar_area = {
+	4218 725 4665
 }
 
 ilan_hala_area = { #5 (North Jilin Area)
-	1033 1048 1050 4214 4216 5292
+	1048 1050 4214 4216 4215
+}
+
+sakhalin_area = { #2
+	1033 4658 5292
 }
 
 central_jilin_area = { #5
-	729 731 2105 4215 4217
+	729 731 2105 4217 4663
 }
 
 ningguta_area = { #5
-	1850 2106 2107 2108 2186
+	2107 2108 4654 4661 4653
+}
+
+furdan_area = {
+	1850 2106 2186 4655 4656
 }
 
 jilin_area = { #4 (South Jilin Area)
-	730 2110 2188 4201
+	730 2110 2188 4201 2111
 }
 
 liaoning_area = { #5
-	704 726 2111 2112 2113 4652
+	704 726 2112 2113 4652
 }
 
 ordos_area = { #4 (Western Inner Mongolia)
-	701 709 2191 4223
+	701 709 2191 4223 4676
 }
 
 eastern_mongolia = { #5
-	722 2109 2187 4202 4203
+	2109 2187 4202 4674
+}
+
+chahar_area = {
+	722 4203 4675 4672 2115
 }
 
 inner_mongolia_area = { #5
-	702 723 2114 2115 2747
+	702 2114 2747 4671 4670
 }
 
 outer_mongolia_area = { #5
-	717 721 2116 4219 4220
+	717 721 2116 4220
+}
+
+xilin_gol_area = {
+	4219 4673 723 4666 4667
 }
 
 altai_sayan_area = { #3
 	color = { 203 84 84 }
-	718 2117 4222
+	718 2117 4222 4680 4682
 }
 
 tannu_uriankhai_area = {#3
-	716 1065 1066
+	716 1065 1066 4679
 }
 
 central_mongolia_area = { #3
-	720 2193 4221
+	720 2193 4221 4669 4677
 }
 
 uliastai_area = {#3
-	719 2189 2190
+	719 2189 2190 4668 4678
 }
 
 jetysuu_area = { #5
@@ -3125,7 +3145,7 @@ tarim_basin_area = { #3 #The rest of the Seven Cities
 }
 
 shanshan_area = { #3
-	710 711 2123
+	710 711 2123 4693
 }
 
 turpan_kumul_area = { #4
@@ -3134,7 +3154,7 @@ turpan_kumul_area = { #4
 
 zungaria_area = { #4
 	color = { 65 220 28 }
-	713 715 2120 4208
+	713 715 2120 4208 4683
 }
 
 amdo_area = { #4
@@ -3146,7 +3166,7 @@ tsang_area = { #5
 }
 
 north_zungaria = { #3
-	714 2118 2119
+	714 2118 2119 4681 4684
 }
 
 kham_area = { #5
@@ -4054,6 +4074,8 @@ gujarat_area = { }
 central_doab_area = { }
 
 nepalese_area = { }
+
+magadan_area = { }
 #Removed by Beyond Typus (May readd as adapted, renamed, areas when I have the time)
 
 basque_country = { }
