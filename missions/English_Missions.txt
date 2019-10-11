@@ -19,9 +19,9 @@ eng_british_conquest = {
 		completed_by = 1450.1.1
 
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
-			num_of_generals = 1
+			army_size_percentage = 0.75
+			manpower_percentage = 0.5
+			num_of_generals = 2
 		}
 
 		effect = {
@@ -52,6 +52,69 @@ eng_british_conquest = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_wales_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+eng_british_conquest_wales = {
+
+	slot = 1
+	generic = no
+	ai = yes
+
+	potential = {
+		OR = {
+			tag = ENG
+			tag = GBR
+		}
+	}
+
+	has_country_shield = yes
+
+	wales_hold = {
+		icon = mission_wales_hold
+		required_missions = { eng_mighty_army }
+		position = 2
+		completed_by = 1535.1.1
+
+		provinces_to_highlight = {
+			OR = {
+				area = wales_area
+				area = east_wales_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		trigger = {
+			wales_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_wales_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+
+		effect = {
+			add_country_modifier = {
+				name = "eng_held_wales"
+				duration = 5475
 			}
 			lowlands_area = {
 				limit = {
@@ -91,6 +154,7 @@ eng_british_conquest = {
 				}
 			}
 		}
+
 	}
 }
 
@@ -190,8 +254,8 @@ eng_british_conquest_scotland = {
 
 	conquer_scotland = {
 		icon = mission_build_up_to_force_limit
-		required_missions = {	eng_mighty_army }
-		position = 4
+		required_missions = {	wales_hold }
+		position = 3
 		completed_by = 1603.1.1
 
 		provinces_to_highlight = {
