@@ -3575,12 +3575,12 @@ potosi_area = { #4
 #New Northeast America
  
 #Altered vanilla
-west_florida_area = { 921 922 2530 7419 7427 }
+west_florida_area = { 922 2530 7419 7427 923 }
 choctaw_area = { 920 7466 7414 7417 7421 }
-ozarks_area = { 899 2509 7488 }
+#ozarks_area = { }
 kentucky_area = { 940 941 2526 }
 upper_louisiana_area = { 900 902 2513 905 }
-lower_plains_area = { 890 891 }
+lower_plains_area = { 890 891 2509 7488 899 }
 llano_estacado_area = { 885 2497 7504 882 2496 5844 }
 texas_area = { 887 4627 7499 7512 7516 }
 coastal_prarie_area = {	884 888 7493 7510 7515 }
@@ -3588,25 +3588,25 @@ rio_grande_area = { 7497 7507 7508 7509 2499 }
 south_appalachia_area = { 7408 7464 7465 7453 2544 936 }
 south_carolina_area = { 7449 7450 7451 7452 7460 2545 }
 carolinas_area = { 933 2541 7454 7463 7462 7461 }
-american_georgia_area = { 2538 7405 7446 }
+american_georgia_area = { 2538 7405 7446 2539 7445 929 }
 upper_american_georgia_area = { 2540 7406 7436 7437 }
-florida_area = { 4626 7413 7438 7441 }
-north_florida_area = { 928 2534 7411 }
+florida_area = { 4626 7413 7438 7441 927 4625 7410 }
+north_florida_area = { 928 2534 7411 2533 7442 }
 mississippi_area = { 2528 7467 7416 7443 }
 alabama_area = { 924 7400 7422 7424 }
-lower_louisiana_area = { 893 7402 7404 7429 7430 7533 }
+lower_louisiana_area = { 893 7402 7404 7429 7430 921 }
 chesapeake_area = { 953 7524 7526 7527 7538 7539 }
 appalachia_area = { 951 7532 2551 7542 7543 7544 7545 }#relook
 great_valley_area = { 2011 2548 2552 2553 7530 7540 }
-piedmont_north_america_area = { 2549 7457 949 7528 7529 7531 }
+piedmont_north_america_area = { 2549 949 7528 7529 7531 }
 delaware_valley_area = { 956 962 7560 7561 } #Lenapehoking
-hudson_valley_area = { 963 965 2558 2639 7577 7578 }
+hudson_valley_area = { 2560 2639 7563 965 }
 pecos_area = { 2498 7505 4628 4629 }
 susquehanna_area = { 955 2557 7547 7548 7549 7551 7552 }
 south_iroquoisia_area = { 958 959 7574 7575 7576 7570 7571 }
-iroquoisia_area = { 960 961 7567 7568 7572 7573 }
-massachusetts_bay_area = { 968 970 2013 2561 7588 }
-connecticut_valley_area = { 966 2010 2560 7583 7585 7587 }
+iroquoisia_area = { 960 961 7567 7568 7573 }
+massachusetts_bay_area = { 968 970 2013 2561 }
+connecticut_valley_area = { 967 966 2010 7585 7587 }
 great_woods_area = { 969 2563 2564 2562 7590 7591 }
 maine_area = { 971 2566 5052 2565 7592 }
 
@@ -3618,35 +3618,35 @@ black_warrior_river_area = { 2531 7470 7472 }
 nickajack_area = { 931 7423 7431 2527 }
 wiregrass_area = { 2537 7401 7433 7434 7435 }
 upper_chattahoochee_area = { 925 930 7407 7432 }
-everglades_area = { 2536 7409 7439 }
-suncoast_area = { 2535 7410 7444 }
-atlantic_florida_area = { 926 927 4625 }
-florida_panhandle_area = { 923 2533 7442 }
+everglades_area = { 2536 7409 7439 926 2535 7444 }
+#suncoast_area = { }
+#atlantic_florida_area = { }
+#florida_panhandle_area = { }
 northeast_louisiana_area = { 7428 7403 7425 7426 2515 7486 }
-georgia_sea_islands_area = { 929 932 2539 2542 7445 7447 }
-grand_strand_area = { 7448 2543 2546 }
+#georgia_sea_islands_area = { }
+grand_strand_area = { 7448 2543 2546 932 2542 7447 }
 #brushies_area = { }
 inner_banks_area = { 7455 7456 938 2547 7473 }
-tar_neuse_area = { 937 7458 7459 } #This needs work.
+tar_neuse_area = { 937 7458 7459 7457 } #This needs work.
 western_tennessee_area = { 7481 7479 918 939 }
 middle_tennessee_area = { 7478 7480 934 }
 eastern_tennessee_area = { 7474 7475 7476 7477 935 }
 #cumberland_plateau_area = { }
 arkansas_plains_area = { 895 7485 7487 2514 }
-ouachitas_area = { 7482 896 892 }
-lower_arkansas_river_area = { 897 7483 7484 }
+#ouachitas_area = { }
+lower_arkansas_river_area = { 897 7483 7484 7482 896 892 }
 piney_woods_area = {  2014 7489 894 7490 7495 7494 2669 7496 }
 big_thicket_area = { 7491 7492 7513 2516 2665 7517 }
 cross_timbers_area = { 7514 7501 7500 886 7511 7502 7503 }
 edwards_plateau_area = { 2500 883 2666 }
 #trans_pecos_area = { } #1.28 replaced by vanilla pecos_area
 delmarva_peninsula_area = { 957 2554 7534 7535 7537 }
-virginia_tidewater_area = { 950 952 2550 7525 7541 }
+virginia_tidewater_area = { 950 952 2550 7525 }
 minisink_area = { 2023 7559 7546 7565 }
-long_island_area = { 7563 }
+#long_island_area = { }
 westsylvania_area = { 954 2555 2556 7553 7554 7555 7556 }
-narragansett_bay_area = { 967 7580 }
-housatonic_river_area = { 7584 7586 }
+#narragansett_bay_area = { }
+housatonic_river_area = { 7586 963 2558 7577 7578  }
 adirondacks_area = { 964 2559 7566 7569 }
 
 #Changes to mexico
@@ -3655,7 +3655,7 @@ adirondacks_area = { 964 2559 7566 7569 }
 northeast_mexico_area = { 858 861 2614 2619 4606 7522 }
 
 #new
-rio_grande_sur_area = { 2668 2667 7519 7520 7521 }
+rio_grande_sur_area = { 2668 2667 7520 7521 }
 
 ohio_country_area = { #4
     946 947 948 2525
@@ -4719,7 +4719,7 @@ unused_area = {
 #BTC working on 
 5209 5299 5305 6470 3356
 #BTC deleted
-7523 7536 7557 7558 7562 7564 7581 7582 7589
+7519 7523 7533 7536 7541 7557 7558 7562 7564 7572 7580 7581 7582 7583 7584 7588 7589
 #RNW Sea provinces
 3420 3421 3422 3423 3424 3425 3426 3427 3428 3429 3430 3431 3432 3433
 3434 3435 3436 3437 3438 3439 3440 3441 3442 3443 3444 3445 3446 3447 3448 3449 3450 3451 3452 3453 3454 3455 3456 3457 3458
