@@ -103,11 +103,31 @@ eng_british_conquest_wales = {
 		trigger = {
 			wales_area = {
 				type = all
-				owned_by = ROOT
+				OR = {
+					owned_by = ROOT
+					owner = {
+						is_subject_of = ROOT
+						NOT = { liberty_desire = 25 }
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
 			}
 			east_wales_area = {
 				type = all
-				owned_by = ROOT
+				OR = {
+					owned_by = ROOT
+					owner = {
+						is_subject_of = ROOT
+						NOT = { liberty_desire = 25 }
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
 			}
 		}
 
