@@ -4429,3 +4429,50 @@ HAI_ideas = {
 		fort_maintenance_modifier = -0.15
 	}
 }
+
+JIM_ideas = {
+	start = {
+		loot_amount = 0.20
+		war_exhaustion = -0.03
+	}
+	
+	bonus = {
+		global_manpower_modifier = 0.20
+	}
+	
+	trigger = {
+		tag = JIM
+	}
+
+	free = yes
+
+	JIM_idea1 = {
+		movement_speed = 0.15
+		land_morale = 0.05
+	}
+
+	JIM_idea2 = {
+		global_unrest = -1
+	}
+	
+	JIM_idea3 = {
+		discipline = 0.025
+	}
+
+	JIM_idea4 = {
+		army_tradition = 0.5
+		production_efficiency = 0.1
+	}
+
+	JIM_idea5 = {
+		shock_damage_received = -0.2
+	}
+
+	JIM_idea6 = {
+		reduced_liberty_desire_on_same_continent = 15
+	}
+
+	JIM_idea7 = {
+		core_creation = -0.10
+	}
+}
