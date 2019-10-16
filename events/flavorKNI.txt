@@ -223,6 +223,7 @@ country_event = {
 	trigger = {
 		owns = 126	# Malta
 		NOT = { tag = SIC }
+		NOT = { tag = TSI }
 		NOT = { tag = ITA }
 		NOT = { tag = JAI }
 		num_of_cities = 2
