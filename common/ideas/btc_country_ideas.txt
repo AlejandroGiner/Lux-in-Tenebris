@@ -4476,3 +4476,49 @@ JIM_ideas = {
 		core_creation = -0.10
 	}
 }
+
+JSC_ideas = {
+	start = {
+        cav_to_inf_ratio = 0.25
+		mercenary_discipline = 0.025
+	}
+	
+	bonus = {
+		tolerance_own = 1
+	}
+	
+	trigger = {
+		tag = JSC
+	}
+
+	free = yes
+
+	JSC_idea1 = {
+		cavalry_power = 0.15
+		cavalry_cost = -0.15
+	}
+
+	JSC_idea2 = {
+		improve_relation_modifier = 0.15
+	}
+	
+	JSC_idea3 = {
+		num_accepted_cultures = 1
+	}
+
+	JSC_idea4 = {
+		possible_condottieri = 0.50
+	}
+
+	JSC_idea5 = {
+		envoy_travel_time = -0.25
+	}
+
+	JSC_idea6 = {
+		administrative_efficiency = 0.05
+	}
+
+	JSC_idea7 = {
+		fire_damage = 0.1
+	}
+}
