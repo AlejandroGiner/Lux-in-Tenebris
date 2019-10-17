@@ -162,6 +162,22 @@ chesapeake_bay_modifier = {
 	picture = "bay_icon"
 }
 
+btc_amazon_mouth = {
+	naval_forcelimit = 2
+	province_trade_power_modifier = 0.2
+	local_development_cost = -0.10
+	picture = "amazon_mouth_icon"
+}
+
+btc_amazonas_modifier = {
+	local_development_cost = 0.15
+	local_build_cost = 0.15
+	local_friendly_movement_speed = 0.25
+	trade_goods_size = 0.5
+	province_trade_power_value = 3
+	picture = "amazonas_icon"
+}
+
 #From Suvarnabhumi: The land of gold
 mlc_sound_toll = {
 	province_trade_power_value = 20
