@@ -8,13 +8,12 @@ add_core = DAN
 culture = danish
 religion = catholic
 hre = no
-base_tax = 4
+base_tax = 3
 base_production = 3
 trade_goods = beer
-base_manpower = 3
+base_manpower = 2
 capital = "Ribe"			#Oldest city in Scandinavia, much richer in the EU4 period than now
 is_city = yes
-fort_15th = yes
 
 discovered_by = western
 discovered_by = muslim
@@ -34,7 +33,3 @@ discovered_by = eastern
 }
 1644.1.25 = { controller = SWE } # Torstenssons War- Captured by Lennart Torstensson
 1645.8.13 = { controller = DAN } # The Peace of Brömsebro
-1650.1.1 = {
-	fort_15th = no
-	fort_17th = yes
-}

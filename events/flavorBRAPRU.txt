@@ -576,8 +576,11 @@ country_event = {
 			7506 = {
 				cede_province = BRA
 			}
+			7794 = {
+				cede_province = BRA
+			}
 		}
-		add_treasury = 120
+		add_treasury = 150
 		FROM = {
 			country_event = { id = flavor_brapru.17 }
 			add_opinion = {
@@ -620,8 +623,13 @@ country_event = {
 				add_core = BRA
 				remove_core = TEU
 			}
+			7794 = {
+				cede_province = BRA
+				add_core = BRA
+				remove_core = TEU
+			}
 		}
-		add_treasury = -120
+		add_treasury = -150
 		FROM = {
 			add_opinion = {
 				who = ROOT

@@ -6,13 +6,12 @@ add_core = DAN
 culture = danish
 religion = catholic
 hre = no
-base_tax = 3
-base_production = 3
+base_tax = 1
+base_production = 1
 trade_goods = grain
-base_manpower = 3
-capital = "Vejle"			#Changed from vanilla Kolding. IMO Vejle was a better capital
+base_manpower = 2
+capital = "Kolding"
 is_city = yes
-fort_15th = yes
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
@@ -31,7 +30,3 @@ discovered_by = ottoman
 }
 1644.1.25 = { controller = SWE } # Torstenssons War- Captured by Lennart Torstensson
 1645.8.13 = { controller = DAN } # The Peace of Brömsebro
-1650.1.1 = {
-	fort_15th = no
-	fort_17th = yes
-}

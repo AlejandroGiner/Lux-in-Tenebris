@@ -10,7 +10,7 @@ religion = catholic
 hre = yes
 base_tax = 3
 base_production = 3
-trade_goods = fish
+trade_goods = beer
 base_manpower = 1
 capital = "Stralsund"
 is_city = yes
@@ -24,6 +24,12 @@ discovered_by = eastern
 extra_cost = 8
 center_of_trade = 1
 
+1295.1.1 = {
+	owner = WLG
+	controller = WLG
+	add_core = WLG
+	remove_core = POM
+}	#Barnim II of Pomerania dies, killed by the husband of a woman he seduced. Pomerania fractures.
 1529.1.1 = { add_core = BRA }
 1534.1.1 = { religion = protestant  }
 1630.1.1 = { base_tax = 4 } # Devastating population losses in Thirty Years War

@@ -8,9 +8,9 @@ add_core = POM
 culture = pommeranian
 religion = catholic
 hre = yes
-base_tax = 3
-base_production = 3
-trade_goods = fish
+base_tax = 2
+base_production = 2
+trade_goods = gems
 base_manpower = 2
 capital = "Stolp"
 is_city = yes
@@ -21,6 +21,12 @@ discovered_by = persian_btc
 discovered_by = ottoman
 discovered_by = eastern
 
+1295.1.1 = {
+	owner = STP
+	controller = STP
+	add_core = STP
+	remove_core = POM
+}	#Barnim II of Pomerania dies, killed by the husband of a woman he seduced. Pomerania fractures.
 1534.1.1 = { religion = protestant }
 1648.10.24 = { 
 	owner = BRA
