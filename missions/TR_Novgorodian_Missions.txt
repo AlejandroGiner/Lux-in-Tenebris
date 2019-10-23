@@ -127,7 +127,7 @@ tr_novgorod_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = vologda_area
-				area = beloozero_area
+				#area = beloozero_area
 				area = moscow_area
 				area = suzdal_area
 				area = vladimir_area
@@ -143,10 +143,10 @@ tr_novgorod_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			beloozero_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#beloozero_area = {
+				#type = all
+				#country_or_non_sovereign_subject_holds = ROOT
+			#}
 			moscow_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT

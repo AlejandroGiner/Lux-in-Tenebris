@@ -222,13 +222,13 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			beloozero_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
+			#beloozero_area = {
+				#limit = {
+					#NOT = { is_permanent_claim = ROOT	}
+					#NOT = { is_core = ROOT	}
+				#}
+				#add_permanent_claim = ROOT
+			#}
 			pomor_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -320,7 +320,7 @@ tr_russia_conquest_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = novgorod_area
-				area = beloozero_area
+				#area = beloozero_area
 				area = pomor_area
 				area = north_karelia
 				area = arkhangelsk_area
@@ -339,10 +339,10 @@ tr_russia_conquest_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			beloozero_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			#beloozero_area = {
+				#type = all
+				#country_or_non_sovereign_subject_holds = ROOT
+			#}
 			pomor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
