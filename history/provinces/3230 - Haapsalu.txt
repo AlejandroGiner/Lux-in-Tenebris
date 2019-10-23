@@ -8,13 +8,13 @@ add_core = OSL
 add_core = EST
 culture = estonian
 religion = catholic
-hre = no
+capital = "Haapsalu"			#DE Hapsal
 base_tax = 2
 base_production = 1
-trade_goods = fish
 base_manpower = 1
-capital = "Hapsal"
+trade_goods = naval_supplies
 is_city = yes
+hre = no
 
 discovered_by = KAZ
 discovered_by = CRI
@@ -24,17 +24,6 @@ discovered_by = QAS
 discovered_by = western
 discovered_by = eastern
 
-
-1444.11.16 = { #BeyondTypus batch edit shortcut no vassal start date begin
-	owner = LIV
-	controller = LIV
-	add_core = LIV
-}
-1444.11.18 = { #BeyondTypus batch edit shortcut no vassal start date end
-	owner = OSL
-	controller = OSL
-	remove_core = LIV
-}
 1560.5.20 = {
 	owner = DAN
 	controller = DAN

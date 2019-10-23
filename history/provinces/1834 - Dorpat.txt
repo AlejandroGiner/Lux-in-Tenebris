@@ -5,13 +5,12 @@
 owner = DRP
 controller = DRP
 add_core = DRP
-add_core = EST
-culture = estonian
+culture = prussian
 religion = catholic
 hre = no
-base_tax = 4
-base_production = 4
-trade_goods = grain
+base_tax = 3
+base_production = 3
+trade_goods = cloth
 base_manpower = 2
 capital = "Dorpat"
 is_city = yes
@@ -24,6 +23,8 @@ discovered_by = QAS
 discovered_by = western
 discovered_by = eastern
 
+extra_cost = 8
+center_of_trade = 1
 
 1444.11.16 = { #BeyondTypus batch edit shortcut no vassal start date begin
 	owner = LIV
