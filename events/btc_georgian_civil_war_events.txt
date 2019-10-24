@@ -11,6 +11,7 @@ country_event = {
   is_triggered_only = yes
   
   immediate = {
+    set_country_flag = had_georgian_civil_war
     if = {
       limit = { exists = MGL }
       set_country_flag = mingrelian_rebels_happened
