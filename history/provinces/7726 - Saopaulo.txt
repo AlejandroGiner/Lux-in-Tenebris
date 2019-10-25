@@ -1,0 +1,30 @@
+# 7726 - São Paulo
+
+culture = tupinamba
+discovered_by = south_american
+religion = animism
+capital = "São Paulo"
+trade_goods = unknown
+hre = no
+base_tax = 3
+base_production = 4
+base_manpower = 2
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 2
+
+extra_cost = 8
+center_of_trade = 1
+
+1500.4.23 = { discovered_by = POR } # Amerigo Vespucci
+1532.1.1 = {
+	owner = POR
+	controller = POR
+	add_core = POR
+	is_city = yes
+	culture = portugese
+	religion = catholic
+	trade_goods = slaves
+} # Portugese settlement
+1577.1.1 = { discovered_by = ENG } # Drake
