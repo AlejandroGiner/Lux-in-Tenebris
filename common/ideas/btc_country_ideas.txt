@@ -4522,3 +4522,49 @@ JSC_ideas = {
 		fire_damage = 0.1
 	}
 }
+
+CNL_ideas = {
+	start = {
+        infantry_cost = -0.20
+        fire_damage_received = -0.10
+	}
+	
+	bonus = {
+		global_garrison_growth = 0.10
+	}
+	
+	trigger = {
+		tag = CNL
+	}
+
+	free = yes
+
+	CNL_idea1 = {
+		global_unrest = -1
+	}
+
+	CNL_idea2 = {
+        defensiveness = 0.15
+	}
+	
+	CNL_idea3 = {
+		state_maintenance_modifier = -0.20
+	}
+
+	CNL_idea4 = {
+		core_creation = -0.10
+	}
+
+	CNL_idea5 = {
+		tolerance_heretic = 1
+		tolerance_own = 1
+	}
+
+	CNL_idea6 = {
+		global_ship_cost = -0.15
+	}
+
+	CNL_idea7 = {
+		army_tradition = 1
+	}
+}
