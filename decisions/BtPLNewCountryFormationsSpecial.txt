@@ -1091,10 +1091,6 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_united_kingdom_flag }
-			NOT = { tag = UNK }
-			NOT = { tag = CEL }
-			NOT = { tag = TNA }
-			NOT = { tag = YKK }
 			tag = GBR
 			culture_group = british
 			adm_tech = 10			#default 1531
@@ -1162,7 +1158,7 @@ country_decisions = {
 								tag = IRE
 								tag = SCO
 							}
-							NOT = { num_of_cities = 24 }
+							#NOT = { num_of_cities = 24 }
 						}
 					}
 				}
@@ -1205,10 +1201,6 @@ country_decisions = {
 					tag = YYK
 				}
 			}	#The BT Celtic tags will go for HR's Celtic nation from BtP by default
-			modifier = {
-				factor = 0
-				NOT = { is_year = 1800 }
-			}	#More or less historical formation date for the AI
 		}
 		ai_importance = 200 #
 		do_not_integrate = IRE
