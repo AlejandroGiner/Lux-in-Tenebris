@@ -1,0 +1,32 @@
+# 7684 - Comodoro 
+
+latent_trade_goods = {
+	oil
+}
+
+culture = patagonian
+religion = animism
+capital = "Comodoro Rivadavia"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+native_size = 25
+native_ferocity = 1
+native_hostileness = 2
+
+extra_cost = 8
+center_of_trade = 1
+
+1520.1.1 = { discovered_by = SPA } # Ferdinand Magellan
+1816.7.9 = {
+	owner = LAP
+	controller = LAP
+	add_core = LAP
+	is_city = yes
+	trade_goods = fish
+	culture = castillian
+	religion = catholic
+} # Incorporated into Argentina
