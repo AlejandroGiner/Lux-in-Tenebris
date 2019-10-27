@@ -291,3 +291,37 @@ country_event = {
 		country_event = { id = ideagroups.1 } #Swap Ideas
 	}
 }
+
+country_event = {
+	id = btpIRE.5
+	title = btpIRE.5.t
+	desc = btpIRE.5.d
+	#picture = 
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		ANI = { is_subject_of = ROOT is_subject_of_type = viceroyalty_bt }
+		ireland_area = {
+			owned_by = ROOT
+		}
+	}
+	
+	option = {
+		name = btpIRE.5.a
+		ireland_area = {
+			limit = { owned_by = ROOT }
+			cede_province = ANI
+			if = {
+				limit = { is_core = ROOT }
+				add_core = ANI
+				remove_core = ROOT
+			}
+			if = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = ANI
+				remove_claim = ROOT
+			}
+		}
+	}
+}
