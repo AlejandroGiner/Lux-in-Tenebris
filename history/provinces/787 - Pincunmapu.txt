@@ -1,19 +1,18 @@
-#787 - Picunmapu
+#787 - Valparaíso
 
 culture = mapuche
 discovered_by = south_american
 religion = animism
-capital = "Picunmapu"
+capital = "Valparaíso"
 trade_goods = unknown
 hre = no
 base_tax = 2
 base_production = 1
 base_manpower = 1
-native_size = 20
-native_ferocity = 2
-native_hostileness = 9	
-extra_cost = 8
-center_of_trade = 1
+
+native_size = 35
+native_ferocity = 5
+native_hostileness = 10
 
 1489.1.1 = {
 	owner = INC
@@ -26,7 +25,6 @@ center_of_trade = 1
 	owner = SPA
 	controller = SPA
 	add_core = SPA
-	capital = "Santiago"
 	trade_goods = grain
 	culture = castillian
 	religion = catholic
