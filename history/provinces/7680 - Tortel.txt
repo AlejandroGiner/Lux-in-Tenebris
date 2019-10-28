@@ -1,8 +1,12 @@
-# - Aysen
+# 7680 - Tortel
+
+latent_trade_goods = {
+	coal
+}
 
 culture = patagonian
 religion = animism
-capital = "Puerto Aysen"
+capital = "Tortel"
 trade_goods = unknown
 hre = no
 base_tax = 1 
@@ -14,8 +18,7 @@ native_ferocity = 2
 native_hostileness = 9
 
 1520.1.1 = { discovered_by = SPA } # Discovered by Ferdinand Magellan
-1776.1.1 = {
-	owner = SPA
+1776.1.1 = {	owner = SPA
 	controller = SPA
 	add_core = SPA
 	culture = castillian
