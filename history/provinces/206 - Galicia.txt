@@ -13,13 +13,15 @@ add_core = GAL
 culture = galician
 religion = catholic
 hre = no
-base_tax = 4
-base_production = 3
+base_tax = 2
+base_production = 2
 trade_goods = whales
-base_manpower = 3
+base_manpower = 1
 capital = "A Corunha" 
 is_city = yes
-estate = estate_church # Santiago de Compostela pilgrimage
+
+extra_cost = 8
+center_of_trade = 1
 
 discovered_by = western
 discovered_by = muslim

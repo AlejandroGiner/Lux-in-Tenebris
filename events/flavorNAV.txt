@@ -130,18 +130,12 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					OR = {
-						area = barcelona_area
 						area = catalonia_area
-					}
 				}
 			}
 			every_owned_province = {
 				limit = {
-					OR = {
-						area = barcelona_area
 						area = catalonia_area
-					}
 				}
 				add_local_autonomy = 25
 			}
@@ -160,18 +154,12 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					OR = {
-						area = barcelona_area
 						area = catalonia_area
-					}
 				}
 			}
 			every_owned_province = {
 				limit = {
-					OR = {
-						area = barcelona_area
 						area = catalonia_area
-					}
 				}
 				add_unrest = 10
 			}

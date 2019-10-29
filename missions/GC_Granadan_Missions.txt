@@ -521,15 +521,6 @@ granada_slot_2_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			madrid_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 			extremadura_area = {
 				limit = {
 					NOT = {

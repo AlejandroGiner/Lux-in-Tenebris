@@ -681,21 +681,7 @@ spa_reconquista = {
 				}
 				add_permanent_claim = ROOT
 			}
-			south_beieras_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			alentejo_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			south_alentejo_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -717,13 +703,6 @@ spa_reconquista = {
 				add_permanent_claim = ROOT
 			}
 			valencia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			barcelona_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -744,7 +723,6 @@ spa_reconquista = {
 				area = valencia_area
 				area = catalonia_area
 				area = aragon_area
-				area = barcelona_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -759,10 +737,6 @@ spa_reconquista = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aragon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			barcelona_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -830,9 +804,7 @@ spa_reconquista_por = {
 		provinces_to_highlight = {
 			OR = {
 				area = beieras_area
-				area = south_beieras_area
 				area = alentejo_area
-				area = south_alentejo_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -842,15 +814,7 @@ spa_reconquista_por = {
 				type = all
 				owned_by = ROOT
 			}
-			south_beieras_area = {
-				type = all
-				owned_by = ROOT
-			}
 			alentejo_area = {
-				type = all
-				owned_by = ROOT
-			}
-			south_alentejo_area = {
 				type = all
 				owned_by = ROOT
 			}

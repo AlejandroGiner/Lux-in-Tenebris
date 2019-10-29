@@ -199,10 +199,18 @@ por_sacres = {
 	province_trade_power_modifier = 0.1
 }
 
+cas_compostela_cathedral = {
+	picture = "compostela_icon"
+	monthly_splendor = 1
+	local_institution_spread = 0.3
+	province_trade_power_modifier = 0.25
+	local_missionary_strength = -0.02
+}
+
 cas_segovia_alcazar = {
 	picture = "segovia_alcazar"
-	monthly_splendor = 1
-	local_defensiveness = 0.15
+	monthly_splendor = 0.5
+	local_defensiveness = 0.2
 	province_trade_power_modifier = 0.1
 }
 
