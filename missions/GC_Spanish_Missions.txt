@@ -1623,13 +1623,6 @@ gc_spain_4_b = {
 					}
 					add_permanent_claim = ROOT
 				}
-				south_yorkshire_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
 				northern_england_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1659,7 +1652,6 @@ gc_spain_4_b = {
 				area = east_midlands_area
 				area = west_midlands_area
 				area = yorkshire_area
-				area = south_yorkshire_area
 				area = northern_england_area
 				area = cornwall_area
 			}
@@ -1688,10 +1680,6 @@ gc_spain_4_b = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			yorkshire_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			south_yorkshire_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
