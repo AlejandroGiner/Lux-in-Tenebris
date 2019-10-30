@@ -159,7 +159,6 @@ country_decisions = {
 						capital_scope = { area = hautes_plaines_area }
 						capital_scope = { area = kabylia_area }
 						capital_scope = { area = north_saharan_area }
-						capital_scope = { area = barbary_coast_area }
 					}
 				}
 			}
@@ -174,7 +173,6 @@ country_decisions = {
 				area = hautes_plaines_area
 				area = kabylia_area
 				area = north_saharan_area
-				area = barbary_coast_area
 			}
 			NOT = { owned_by = ROOT is_core = ROOT }
 		}
@@ -191,7 +189,6 @@ country_decisions = {
 						area = hautes_plaines_area
 						area = kabylia_area
 						area = north_saharan_area
-						area = barbary_coast_area
 					}
 				}
 				amount = 19			#At least 2/3 of Algeria's 28 provinces
@@ -222,10 +219,6 @@ country_decisions = {
 				add_permanent_claim = ALG
 			}
 			kabylia_area = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_permanent_claim = ALG
-			}
-			barbary_coast_area = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = ALG
 			}

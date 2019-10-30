@@ -15,19 +15,12 @@ majapahit_missions_1 = {
 		icon = mission_unite_home_region
 		required_missions = {  }
 		provinces_to_highlight = {
-			OR = {
-				area = yogyakarta_area
 				area = central_java_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			yogyakarta_area = {
-				type = all
-				owned_by = ROOT
-			}
 			central_java_area = {
 				type = all
 				owned_by = ROOT
@@ -142,7 +135,6 @@ maj_missions_2 = {
 			OR = {
 				area = west_java_area
 				area = cirebon_area
-				area = yogyakarta_area
 				area = east_java_area
 				area = central_java_area
 			}
@@ -152,10 +144,6 @@ maj_missions_2 = {
 		}
 		trigger = {
 			east_java_area = {
-                                type = all
-				religion = ROOT
-			}
-			yogyakarta_area = {
                                 type = all
 				religion = ROOT
 			}

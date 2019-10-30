@@ -73,13 +73,6 @@ cambodian_missions_1 = {
 			}
 		}
 		effect = {
-			basac_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			suwannaphum_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -94,33 +87,19 @@ cambodian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_thai_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	khm_end_siam = {
 		icon = mission_conquer_siam
 		required_missions = { khm_conquer_the_siamese_heartland }
 		provinces_to_highlight = {
-			OR = {
 				area = sukhothai_area
-				area = western_thai_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			sukhothai_area = {
-				type = all
-				owned_by = ROOT
-			}
-			western_thai_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -149,20 +128,13 @@ cambodian_missions_2 = {
 		required_missions = { khm_conquer_the_siamese_heartland }
 		position = 6
 		provinces_to_highlight = {
-			OR = {
 				area = suwannaphum_area
-				area = basac_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			suwannaphum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			basac_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

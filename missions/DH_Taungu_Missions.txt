@@ -49,13 +49,6 @@ tau_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			mong_yang_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			chindwin_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -75,7 +68,6 @@ tau_slot_1 = {
 				area = yawnghwe_area
 				area = karenni_area
 				area = chindwin_area
-				area = mong_yang_area
 				area = kachin_area
 			}
 			OR = {
@@ -117,16 +109,6 @@ tau_slot_1 = {
 				}
 			}
 			chindwin_area = {
-				type = all
-				owned_by = ROOT
-				NOT = {
-					local_autonomy = 30
-				}
-				NOT = {
-					unrest = 1
-				}
-			}
-			mong_yang_area = {
 				type = all
 				owned_by = ROOT
 				NOT = {
@@ -227,13 +209,6 @@ tau_slot_1 = {
 				duration = 7300
 			}
 			south_laos_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			basac_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -359,13 +334,6 @@ tau_slot_2 = {
 		}
 		effect = {
 			set_government_rank = 3
-			nan_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			northern_thai_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -379,20 +347,13 @@ tau_slot_2 = {
 		icon = mission_a_million_rice_fields
 		required_missions = { tau_universal_ruler }
 		provinces_to_highlight = {
-			OR = {
 				area = northern_thai_area
-				area = nan_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_thai_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			nan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

@@ -129,13 +129,6 @@ country_decisions = {
 				}
 				add_permanent_claim = KME
 			}
-			basac_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = KME
-			}
 			add_prestige = 25
 			set_country_flag = formed_khmer_empire_flag
 			add_country_modifier = {

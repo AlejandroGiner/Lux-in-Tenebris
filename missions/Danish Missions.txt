@@ -49,13 +49,6 @@ danish_missions_kalmar = {
 						}
 					}
 				}
-				svealand_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = ROOT
-				}
 				norrland_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -95,7 +88,6 @@ danish_missions_kalmar = {
 		required_missions = { denmark_norway_integration }
 		provinces_to_highlight = {
 			OR = {
-				area = svealand_area
 				area = norrland_area
 				area = gotaland_area
 				area = vastra_gotaland_area
@@ -106,10 +98,6 @@ danish_missions_kalmar = {
 			}
 		}
 		trigger = {
-			svealand_area = {
-				type = all
-				owned_by = ROOT
-			}
 			norrland_area = {
 				type = all
 				owned_by = ROOT

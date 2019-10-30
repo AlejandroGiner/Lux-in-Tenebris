@@ -25,7 +25,7 @@ country_decisions = {
 				area = upper_andalucia_area
 				area = baetica_area
 				AND = {
-					area = south_alentejo_area
+					area = alentejo_area
 					OR = {
 						ROOT = { NOT = { owns_core_province = 1750 } }
 						NOT = { btc_murcia_area = {type = all owned_by = ROOT} }
@@ -36,7 +36,7 @@ country_decisions = {
 						province_id = 1750			# Alicante
 						area = btc_murcia_area
 					}
-					NOT = { south_alentejo_area = {type = all owned_by = ROOT} }
+					NOT = { alentejo_area = {type = all owned_by = ROOT} }
 				}
 			}
 			OR = {
@@ -54,7 +54,7 @@ country_decisions = {
 			upper_andalucia_area = {type = all owned_by = ROOT}
 			baetica_area = {type = all owned_by = ROOT}
 			OR = {
-				south_alentejo_area = { type = all owned_by = ROOT}
+				alentejo_area = { type = all owned_by = ROOT}
 				AND = {
 					owns_core_province = 1750			# Alicante
 					btc_murcia_area = { type = all owned_by = ROOT}

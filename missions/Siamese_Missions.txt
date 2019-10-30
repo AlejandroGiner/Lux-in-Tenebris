@@ -49,13 +49,6 @@ siamese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			nan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -65,20 +58,13 @@ siamese_missions_1 = {
 		position = 5
 		completed_by = 1605.1.1
 		provinces_to_highlight = {
-			OR = {
 				area = northern_thai_area
-				area = nan_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_thai_area = {
-				type = all
-				owned_by = ROOT
-			}
-			nan_area = {
 				type = all
 				owned_by = ROOT
 			}
