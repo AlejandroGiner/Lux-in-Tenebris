@@ -308,7 +308,7 @@ guyenne_area = { #Aquitaine
 }
 
 pyrenees_area = { #Gascony
-	173 175 176 3083 3328 4783
+	173 175 176 3083 3328 4783 7643
 }
 
 languedoc_area = { #3
@@ -493,34 +493,26 @@ friuli_area = {
 }
 
 lombardy_area = { #West Lombardy
-	104 3043 3095 1862 107 3047
+	104 3043 3095 1862 107 3047 3054 3294
 }
 
-piedmont_area = { #North Piedmont
-	2979 3045 3078 3086 3249
+piedmont_area = { #East Piedmont
+	3086 3249 2979 2981 5133 3067 3074
 }
 
-btc_monferrat_area = {
-	5133 2981 3067 3074 
-}
-
-west_piedmont_area = { #South Piedmont
-	3080 103 3076 1875 3044
+west_piedmont_area = { #West Piedmont
+	3045 3078 103 3080 3044 3076 1875
 }
 
 tuscany_area = { #North Tuscany
-	115 116 2978 5710 7005
-}
-
-lunigiana_area = {
-	5169 2980 3042
+	115 116 2978 5710 7005 2980
 }
 
 liguria_area = { #5
-	101 102 2992 3011 3072
+	101 102 2992 3011 3072 3042
 }
 
-corsica_sardinia_area = { #7
+corsica_sardinia_area = { #Sardinia
 	127 2986 5090 5091 3101 3102 3103
 }
 
@@ -554,7 +546,7 @@ emilia_romagna_area = { #5
 }
 
 emilia_area = {
-	105 106 109 7017 5149
+	105 106 109 7017 5149 5169 
 }
 
 central_italy_area = { #6
@@ -818,7 +810,7 @@ east_dniepr_area = { #5 Left bank Ukraine
 }
 
 chernigov_area = {
-	289 7237 7248 7250
+	289 7237 7248 7250 1945 3246
 }
 
 sloboda_ukraine_area = {	 #4
@@ -834,11 +826,11 @@ azov_area = { #5
 }
 
 crimea_area = { #5
-	285 2410 3244 3245 7190
+	285 2410 3244 3245 7190 284 7191 7192 7193
 }
 
 white_ruthenia_area = { #3
-	4115 7235 7236
+	4115 7235 7236 4544 7231 7241
 }
 
 minsk_area = {
@@ -848,11 +840,11 @@ minsk_area = {
 #Opolye
 
 ryazan_area = { #4
-	301 4255 5669 5679
+	301 4255 5669 5679 5668 2408 1778
 }
 
 moscow_area = { #6
-	295 3290 4251 5659 5651 5665
+	295 3290 4251 5659 5651 5665 4252 3277 5683
 }
 
 vladimir_area = {			#Repurposed into a south of the Svir for BT
@@ -872,7 +864,7 @@ suzdal_area = { #3
 }
 
 oka_area = {			#Specifically East oka in BT
-	300 4116 5666 5667
+	300 4116 5666 5667 5682 3268 
 }
 
 smolensk_area = { #3
@@ -888,7 +880,7 @@ pskov_area = { #3
 }
 
 vologda_area = {
-	314 4262 1755
+	314 4262 1755 1957 4263
 }
 
 #beloozero_area = { }
@@ -908,24 +900,19 @@ valdai_area = {
 #rzhev_area = { }
 
 vyatka_area = {
-	1079 1972 3281 4263 1957
+	1964 4129 1079 1972 3281
 }
 
 pechora_area = {
 	5674 5675 5677 5678
 }
 
-vychegda_area = {
-	1964 4129 5676
-}
-
-
 astrakhan_area = {
 	464 2417 3264
 }
 
 lower_don_area = {
-	288 466 1971 3265
+	288 466 1971 3265 2409
 }
 
 kazan_area = { #7
@@ -984,12 +971,8 @@ western_podolia_area = {
 	281 3239 7208 7254 7272
 }
 
-eastern_severia = {
-	298 3267 4543 5670
-}
-
-western_severia = {
-	1945 3246 7249 7252
+eastern_severia = { #Severia
+	298 3267 4543 5670 7249 7252
 }
 
 eastern_volhynia_area = {
@@ -998,10 +981,6 @@ eastern_volhynia_area = {
 
 western_zaporizhia_area = {
 	3243 7196 7198 7199 7251
-}
-
-northern_crimea_area = {
-	284 7191 7192 7193
 }
 
 lower_dnieper_area = {
@@ -1016,16 +995,8 @@ cherkasy_area = {
 	1944 3242 7239 7259
 }
 
-mazur_area = {
-	4544 7231 7241
-}
-
-mstislavl_area = {
-	4246 7238 7229
-}
-
 vitebsk_area = {
-	292 771 7217 7222 7227
+	292 771 7217 7222 7227 7229
 }
 
 polotsk_area = {
@@ -1126,11 +1097,7 @@ switzerland_area = { #4
 }
 
 zurich_area = {
-	4798 4797 1870 1869 
-}
-
-oderbund_area = {
-	3294 3054 4792 1873 
+	4798 4797 1870 1869 4792 1873 
 }
 
 romandie_area = { #3
@@ -1237,12 +1204,8 @@ northern_macedonia_area = {
 	3001 3167 3183 5098 5099
 }
 
-morea_area = { #North Peloponnese
-	1773 3178 5089 5114
-}
-
-south_morea_area = { #South Peloponnese
-	145 5088 5087 3179
+morea_area = { #Peloponnese
+	1773 3178 5089 5114 145 5088 5087 3179
 }
 
 northern_greece_area = { #Epirus
@@ -1274,11 +1237,7 @@ lower_danube_area = {
 }
 
 wallachia_area = { #5
-	161 2998 5718 5717 4532
-}
-
-south_wallachia_area = { #4
-	160 4531 3160 5716
+	161 2998 5718 5717 4532 160 4531 3160 5716
 }
 
 moldavia_area = { #5
@@ -3056,7 +3015,7 @@ irkutsk_area = { #5
 }
 
 perm_area = { #4
-	305 1077 1962 1963
+	305 1077 1962 1963 5676
 }
 
 balchasj_area = { #4
@@ -4166,31 +4125,19 @@ cyprus_area = {
 }
 
 bryansk_area = {
-	297 3270 4244 5685
+	297 3270 4244 5685 4246 7238
 }
 
 west_oka_area = {
-	5662 5663 5664 5680
-}
-
-upper_don_area = {
-	2408 3268 5668
+	5662 5663 5664 5680 5681 296 
 }
 
 middle_don_area = {
-	299 467 2409 3291 3266 5671
-}
-
-murom_area = {
-	3279 1778 1754
-}
-
-northern_upper_oka_area = {
-	296 3277 4252 5681 5682 5683
+	299 467 3291 3266 5671
 }
 
 nizhny_novgorod_area = {
-	306 3278 4254
+	306 3278 4254 3279 1754
 }
 
 ########################################
@@ -4756,7 +4703,7 @@ true_north_atlantic_sea_area = {
 unused_area = {
 #BTC working on 
 7601 7602 7603 7604 7605 7606 7607 7608 7609 7610 7611 7612 7613 7614 7615 7616 7617 7618 7619 7620 7621 7622 7623 7624 7625 
-7626 7627 7628 7629 7630 7631 7632 7633 7634 7635 7636 7637 7638 7639 7640 7641 7642 7643
+7626 7627 7628 7629 7630 7631 7632 7633 7634 7635 7636 7637 7638 7639 7640 7641 7642
 #RNW Sea provinces
 3420 3421 3422 3423 3424 3425 3426 3427 3428 3429 3430 3431 3432 3433
 3434 3435 3436 3437 3438 3439 3440 3441 3442 3443 3444 3445 3446 3447 3448 3449 3450 3451 3452 3453 3454 3455 3456 3457 3458
