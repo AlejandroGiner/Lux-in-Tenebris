@@ -1,0 +1,34 @@
+# 7626 - Amacha
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+culture = kunza
+religion = inti
+capital = "Amacha"
+trade_goods = unknown
+hre = no
+
+discovered_by = andean
+
+1485.1.1 = {
+	owner = INC
+	controller = INC
+	add_core = INC
+	religion = inti
+	is_city = yes
+	trade_goods = amaranth
+}
+1537.1.1 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	culture = castillian
+	religion = catholic
+}
+1810.9.18 = {
+	owner = CHL
+	controller = CHL
+	add_core = CHL
+} # First National Government Junta
