@@ -630,6 +630,439 @@ dutch_group = {
 		}
 	}
 }
+
+
+gaelic	= {
+	graphical_culture = westerngfx
+	
+	irish = {
+		primary = IRE
+		dynasty_names = { 
+			"O'Donnell" "O'Neill" "O'Connor" "O'Brien" MacLochlainn MacMurrough MacWilliam
+			MacNamara "O'Reilly"  "FitzGerald" Kelly
+			# CKII
+			"Meic Bráenáin" "MacMorrough Kavanagh" "Dál gCais" "Ua Fáeláin" "Shannon"
+			"FitzPatrick" "O Ruairc" "O'More" "O' Conchobair" "MacDermot" "O' Cellaigh"
+			"Mac Sweeney" "O'Doherty" "Burke" "O' Cathail" "O'Clery" "Mac Egan" "O' Fergail"
+			"O'Flaherty" "O' Gallchobhair" "Cotter" "O' Faoláin" "MacIntyre" "O'Queely"
+			"Corcu Loígde"
+		}
+		male_names = {
+			Turlough Donal Muireadhach Conchobhar Feidlimidh Cathaoir Muchadh Áed Fonnchadh Brian Criomhthann Art Cathal 
+			Gearóid Muiris Tadhg Seán Niall Einrí Conn Eoghan Aonghus Comhghall Maeleachlain Diarmaid Flann Aerdghal 
+			Bearach Caoímhin Donnabhain Eíhmhín Fearghal Iarfhlaith Lorccán Mathúin Naomhán Oisín Pádraig Ríagáin Somhairle
+			Abbán Abél Abel Adomnán Áed Áedgen Áeducán Áedán Áengus 
+			Affiath Ailbe Ailbrend Ailbrenn Ailchú Aildobur Ailgel Áilgenán Ailgus Ailill Ailpín 
+			Ainbchellach Áindle Ainftech Enfidaig Ainmere Airechtach Airfhindán Airfhindán Airfhinnán 
+			Airleid Airmedach Amalgaid Amlaíb Anfudán Anlón Anmchaid Ánrothán Ardgal Ardgar Art 
+			Artbran Artgal Artgus Artucán Artúr Assiucc Augaire Augustín Aurthuile 
+			Báethgalach Báethíne Báetán Béoáed Barrfhind Beccán Berrach Bhátair Blathmacc Bran 
+			Brandub Brangen Bressal Brian Brian Briccéne Briccíne Broccán Bruatur Bruide Brénaind 
+			Brénainn Bróen Búaidbéo Caicher Cailech Cailte Cairbre Cairell Caisséne Caissín 
+			Canann Canannán Cathal Cathalán Cathassach Cathbad Cathmáel Cathmál Cathnio 
+			Cathub Causantín Caílte Caínchomrac Caíndelbán Ceithernach Cellach Cellachán 
+			Cennétig Cenn-Fáelad Cennlachán Cerball Cernach Cernachán Cian Ciarán Cilléne 
+			Cináed Cobthach Coirpre Colcu Colmán Columb Comgán 
+			Conaing Conall Conall Conallán Conamail Conán Conan Conchenn Conchobar Condla Condla Congal 
+			Congalach Congus Conlang Conmac Conmacc Conmáel Conmál Conn Conn Connla Conrí Constans 
+			Constantius Constantín Corbb Corbán Corccán Corcrán Cormac Coscrach Coílboth 
+			Crimthann Crundmáel Crundmáel Cruinnmáel Crundmáel Críchán Crónán Cuilén Cuindles Cuircthe 
+			Cummascach Cáemán Cóelbad Cóelub Cóemán Cú-Allaid Cú-Bretan Cú-Caech Cú-Cen Cú-Cen-Máthair 
+			Cú-Cúaráin Cú-Gamna Cú-Roí Cúanu Cúldub Cúán Cúánán Dabíd Daigre Dalbach Dallán Daniél 
+			Dathal Dathgus Demmán Diarmait Dermid Doedgus Domangart Domnall Donn Donnchad 
+			Donncuan Donndubán Donngal Donnucán  Doélgus Drost Drust Dub-dá-Lethe 
+			Dubcenn Dubgenn Dubh Dubhghall Dubhglais Dubthach Dubáed Dubán Duiblesc 
+			Duibne Dunáed Dálach Dícuill Díglach Dímmae Dímmasach Dímmán Dínertach Dúnacán Dúnadach 
+			Dúngal Dúngalach Dúnlang Éamonn Echmarcach Échtgal Échtgus Echuid 
+			Éicnech Éicnechán Eláir Énna Énri Éochad Eochaid Eochaid Eochu Eochucán Éogan 
+			Ercaid Ercáed Ercán Éremón Érennach Ernán Eterscél Eógan Eóganán Fachtna 
+			Fairchellach Fallaman Farannán Faílbe Fearghus Fechtnach Fedach Fearchar 
+			Fedelmid Feirgil Felic Fer-Fugaill Feradach Feradach Ferdomnach Fergal 
+			Fianchú Findbarr Fingen Finguine Finn Finn Finnacán Finnbarr Finnchú Finnlagh Findlay 
+			Finnsnechtae Fintan Flaithbertach Flaithem Flaithemán Flaithgus Flaithrí Flann Flannacán 
+			Flannchad Flannán Fogartach Folachtach Forannán Forbassach Fothad Fothud Fuacarta Fubthad 
+			Fuirechtach Fursu Fáelcar Fáelchad Fáelchú Fáeldobur Fáelgus Fáelán Fáelbe Fíachnae Fíadchú 
+			Fíngin Fínsnechta Fócarta Gabrán Garalt Garbith Gilla-Íosa Gilla-Brígte Gilbert Gilla-Coluim 
+			Gilla-Comgáin Gilla-Críst Gilchrist Gilla-na-Náem Gilla-Pátraic Gilpatrick Gilla-Ruad Gilroy 
+			Glaisiuc Glaschu Glún-Iairn Gormacán Gormgus Gormán Guaire Gáethán Gáethíne 
+			Gósacht Iacob Iarlaithe Imchad Indrechtach Ioseph Íomhar Labraid Lachtnae 
+			Lachtnán Lachtnéne Laidcenn Laidgenn Laidíne Laisrén Lennán Lennon Lethlobur Liam 
+			Lochlann Loingsech Lonán Lorcán Lugh Leon Lugaid Lugáed Láegaire Lóchéne Lóchíne Lóeguire 
+			Mac-Laisre Mainchíne Maine Manchán Martan Mathgamain Matudán Minchán Mo-Chonna Mo-Lua 
+			Móenach Máel-Anfaid Liber Fiachnae Erc Dúnchad Cillíne Caissíne Bran
+			Morand Morann Mugrón Muirchertach Muirecán Muiredach Murdoch Muirgius Murchad Murchú 
+			Máel-Bresail Máel-Brígte Máel-Cein Máel-Cianáin Máel-Ciaráin Máel-Coluim Malcolm Máel-Corgis 
+			Máel-Dubh Máel-Dúin Máel-Fothartaig Máel-Fábaill Máel-Íosa Malise Máel-Máedóc 
+			Máel-Martain Máel-Mórda Máel-Muire Malmure Máel-Míchíl Máel-Petair Máel-Pátraic Máel-Ruanaid 
+			Máel-Sechnaill Máel-Tólai Máelán Máenach Máthair Múadán Nadarchu Nannid Natfraech Natfraich 
+			Natsluaig Nechtan Niall Niallgus Niallán Nuadu Odrán Óengus Óenucán 
+			Oissíne Olcán Ólchobar Onchú Orthanach Pátraic Petair Pilib Pól 
+			Proinsias Rechtabra Riacán Riaguil Robartach Rogallach Rogellach Ruah Roy 
+			Ruarcc Rumann Ráthach Rígán Ríán Ródán Rónchú Rónán Rúadacán Rúadán Scandal 
+			Scandlán Scellán Scolaige Séaghdha Séafra Séamas Seán Sechnassach 
+			Selbach Senchán Seoán Sinach Siothrún Godfrey Slébíne Snedgus Sogan Somhairle Somerled 
+			Suibne Sáerbrethach Sárán Séigíne Sétna Sétnae Tadg Tadg Taithlech Talorc Talore 
+			Talorcán Temnén Tigernach Tigernán Tipraite Tomaltach Tomás Thomas Torccán Trenchad Trengus 
+			Tressach Tuathalán Tuireann Taran Tálán Tóla Túathal Tuathal Ualgarg Ualan Ualtar 
+			Úamnachán Uargal Uargalach Uargus Uilliam Ultán Ruaidrí Philip Oisséne
+		}
+		female_names = {
+			Saraid Órfhlaith Fedelma
+			Ablach Áedammair Affraic Euphemia Aíbinn Aibilín Aileann Áine Agnes Anlaith Aróc
+			Barrdub Ben-Laigen Ben-Míde Ben-Muman Ben-Ulad Brigit Bé-Fáil Bébinn Cacht 
+			Caillech-Fhinnéin Cainnech Caisséne Caitilín Caíntigern Caírech Cathán Catríona 
+			Catherine Cellach Ciar Cnes Coblaith Cobflaith Conchenn Condál Crínóch 
+			Crístina Christina Cumman Deirdre Der-bForgaill Derbáil Derborgaill
+			Der-Ilei Derilla Der-Lugdach Dianaim Doriend Dub-Dil Dub-Essa Dub-Lemna Dubchoblaig Dubgilla 
+			Dúinsech Dúnlaith Echrad Éibhleann Eithne Ellbríg Emer Étaín 
+			Faílenn Fedelm Finneacht Flann Forbflaith Fíne Garb 
+			Gelgéis Gerróc Gnathnad Gormlaith Gormflaith Gráinne Imag Íte Lann 
+			Lasairfíona Lathir Lerben Lerthan Lígach Mauda Muadhnait 
+			Muirenn Murron Muirgel Muirne Morna Máel-Mide Máel-Muire Malmure Máire Máiread 
+			Máirgred Margaret Mór Mor Mór-Muman Nárbflaith Nuala Finnguala Órlaith Órnat Róis Ros Sadb 
+			Samthann Scáthach Sébdann Selblaith Seonaid Sinech Siobán Sisuile Sláíne Slaine 
+			Sorcha Suaibsech Sáerlaith Sétach Síthmaith Tailefhlaith Tailltiu Temair Tuathflaith Tómnat 
+			Uallach Uasal Úna Una Éua
+		}
+	}
+	highland_scottish = {
+		primary = HSC
+
+		male_names = {
+			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
+			Bhaltair Boisil Brian Benneit Beathan Boisil Brus Bruadar Breacan Bearnard Bhaltair
+			Cresdean Calum Conan Conal Cormac Cailean
+			Domhnall Donnchadh Dughall Daibhidh Diarmid Dolan Daniel Deorsa Dughlas
+			Eoghan Eobhann Eideard Eachann Eoin Eosaph Eanruig Ellair
+			Fearchar Faolan Fearghas Fionn Filib Frangan Friseal Fionnlagh
+			Gillebríghde Gillechreosd Gillecallum Gilleasp Gilleandrais Garbhan Goiridh Griogair
+			Hamish Harailt Horas
+			Iain Iacob Iosag Iomhar Iosaph Iona
+			Lucais Labhrainn
+			Maoilios Murchadh Martain Mascual Marcus Mata Mecheil Morgan Mungan Murchadh
+			Neacal Niall Niallghas
+			Oilbhreis Oisean
+			Padraig Pol Peadar
+			Raibeart Ruadh Ruaraidh Raghnall Ruiseart
+			Seumas Seoras Somhairle Seleas Samuel Sachairi Steaphan
+			Thomais Tadhg Toibaid
+			Uilleam Uisdean 
+		}
+		female_names = {
+			Anna
+			Beathag Baraball Bearnas Beitiris Bhioctoria Brighde
+			Catreona Ceit Coinneach Claimha
+			Deirdre Deoiridh Diorbhail
+			Ealasaid Cibhlin Eubh
+			Floraidh Floireans Fionnaghal Frangag Fionnghuala
+			Gormal Gormlaith Giorsal
+			Iseabail 
+			Liusaidh Leagsaidh Leitis Lucrais Leosa
+			Mairead Marsail Marta Milread Moibeal Moire Mor Mairi
+			Nansaidh
+			Olibhia Oighrig
+			Peanaidh
+			Rut Raonaid Rebeca
+			Seonag Sorcha Sene Siusan Seleas
+			Tearlag Teasag
+			Una
+		}
+		dynasty_names = {
+			Arasgain
+			Bochanan Beitean Brus
+			Caimbeul Cinneide Caimbeulach Comyn Cochran
+			Donohoe Dernly
+			Gordan Grannd Guinne
+			Haig
+			Lamont
+			MacCongáil MacDhiarmaid Moireach MacPharlain MacLeoid MacDhomhnaill MacDhonnachaidh Munro MacNab
+			Ncill
+			Rothach Ros
+			Stiubhart Singlear Sutherlarach
+		}
+	}
+	#BtPLegacy Culture
+	gallgaidheil = {
+		graphical_culture = westerngfx
+		primary = LOI
+		male_names = {
+			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
+			Bhaltair Boisil Brian Benneit Beathan Boisil Brus Bruadar Breacan Bearnard Bhaltair
+			Cresdean Calum Conan Conal Cormac Cailean
+			Domhnall Donnchadh Dughall Daibhidh Diarmid Dolan Daniel Deorsa Dughlas
+			Eoghan Eobhann Eideard Eachann Eoin Eosaph Eanruig Ellair
+			Fearchar Faolan Fearghas Fionn Filib Frangan Friseal Fionnlagh
+			Gillebríghde Gillechreosd Gillecallum Gilleasp Gilleandrais Garbhan Goiridh Griogair
+			Hamish Harailt Horas
+			Iain Iacob Iosag Iomhar Iosaph Iona
+			Lucais Labhrainn
+			Maoilios Murchadh Martain Mascual Marcus Mata Mecheil Morgan Mungan Murchadh
+			Neacal Niall Niallghas
+			Oilbhreis Oisean
+			Padraig Pol Peadar
+			Raibeart Ruadh Ruaraidh Raghnall Ruiseart
+			Seumas Seoras Somhairle Seleas Samuel Sachairi Steaphan
+			Thomais Tadhg Toibaid
+			Uilleam Uisdean 
+		}
+		female_names = {
+			Anna
+			Beathag Baraball Bearnas Beitiris Bhioctoria Brighde
+			Catreona Ceit Coinneach Claimha
+			Deirdre Deoiridh Diorbhail
+			Ealasaid Cibhlin Eubh
+			Floraidh Floireans Fionnaghal Frangag Fionnghuala
+			Gormal Gormlaith Giorsal
+			Iseabail 
+			Liusaidh Leagsaidh Leitis Lucrais Leosa
+			Mairead Marsail Marta Milread Moibeal Moire Mor Mairi
+			Nansaidh
+			Olibhia Oighrig
+			Peanaidh
+			Rut Raonaid Rebeca
+			Seonag Sorcha Sene Siusan Seleas
+			Tearlag Teasag
+			Una
+		}
+		dynasty_names = {
+			Arasgain
+			Bochanan Beitean Brus
+			Caimbeul Cinneide Caimbeulach Comyn Cochran
+			Donohoe Dernly
+			Gordan Grannd Guinne
+			Haig
+			Lamont
+			MacCongáil MacDhiarmaid Moireach MacPharlain MacLeoid MacDhomhnaill MacDhonnachaidh Munro MacNab
+			Ncill
+			Rothach Ros
+			Stiubhart Singlear Sutherlarach
+		}
+	}
+}
+
+british	= {
+	graphical_culture = westerngfx
+
+	english = {
+		primary = ENG
+		dynasty_names = { 
+			Plantagenet Lancaster York Tudor Dudley Mowbray Beaufort Neville Percy Howard Seymour Holland 
+			Talbot Stanley Courtenay "de la Pole" "de Vere" Stafford Grey Mortimer "le Despenser" "de Camoys"
+			"Oglethorpe" Hyde
+			# CKII
+			"Turberville" "Butler" "Montagu" "Beauchamp" "Raleigh" "Stratford"
+		}
+		male_names = {
+			Henry Edward Charles James William Richard Philip Henry Frederick Arthur Charles James Edgar Thomas Edmund 
+			George John Jacob Humphrey Robert Stephen Adam Alexander Albert Alfred Ambrose Andrew Anthony Archibald 
+			Benjamin Christopher Daniel David Ernest Francis Geoffrey Guy Horatio Hugh Isaac Jeremy Jonathan Joseph 
+			Lawrence Matthew Nehemiah Oliver Samuel Sydney
+
+			Adam Alan Albert Alexander Alfred Andrew Anselm Arnold Arthur Aubrey Christopher David 		
+			Edmund Edward Eric Erik Eustace Fulk Folke Geoffrey George Gerald Gilbert Godfrey Gregory Guy 
+			Henry Hugh Humphrey Jocelyn John Jordan Laurence Lionel Mark Marcus Martin Matthew Maurice 
+			Michael Nicholas Paul Peter Philip Ralph Randolph Reginald Richard Robert Roger Simon Stephen 
+			Theobald Thomas Waleran Walter William Jacob Ambrose Anthony Archibald Benjamin Daniel Ernest 
+			Francis Horatio Isaac Jeremy Jonathan Joseph Lawrence Nehemiah Oliver Samuel Sydney 
+		}
+		female_names = {
+			Jane Adela Adelaide Alice Amice Anne Anna Aveline Avelina Beatrice Blanche Catherine Cecilia 
+			Constance Edith Ela Eleanor Elizabeth Emma Hawise Isabel Isabella Elisabeth Joan Joanna 
+			Juliana Mahaut Margaret Mary Maria Maud Matilda Philippa Sybilla Sibylla
+		}
+	}
+	american = {
+		primary = USA
+		male_names = {
+			Abraham Aaron Alexander Atticus August Andrew Anthony Angus Allen Asa Alvin Albert Ambrose Arthur
+			Buford Benjamin Benedict Bernard Bartholomew Brigham Braxton Barnabas
+			Cyrus Charles Cyril Christopher Casey Clarence Clark Calvin Chester
+			David Donald Daniel Duncan
+			Elihu Elias Eric Ebenezer Elbridge Eugene Eustace Ernest Edmund Ephraim Earl Ezra Emory
+			Francis Frederick Ferdinand
+			George Gregory Gideon Gerald Grover Gouveneur Gordon
+			Humphrey Howard Hector Harold Horatio Henry
+			Isaac Israel Ian Irving
+			Joseph Jeffrey Jubal John Jebediah James Jacob Julius Julian Justin Josiah Joshua
+			Leonard Louis Lawrence Leland Luke Lionel Lorenzo Lamont Lyman
+			Moses Michael Mark Martin Milton Merriweather
+			Nathaniel Noah Nehemiah Nicholas
+			Oliver Obadiah Orville Owen
+			Philip Peter Paul Patrick
+			Rutherford Robert Richard Ronald Reuchlin Rufus Rhett
+			Samuel Stephen Sampson Sylvester
+			Theodore Thomas Timothy
+			Upton Ulysses
+			Victor Vincent
+			William Walter Winfield Wilbur Wallace Walker
+			Zachary
+		}
+		female_names = {
+			Anne Amanda Ada April Amphyllis Abigail Alice Adell Amelia Antoinette Arabella Alma Agnes Agatha
+			Barbara Brigit Blanche Bertha Belle
+			Caroline Charlotte Christine Catharine Clementine Clara Constance Claudia Carrie Cora
+			Dolley Dorothy Deborah Daisy Doris
+			Edith Evangeline Elizabeth Esther Emily Emma Ernestine Ethel
+			Flora Frances Florence
+			Gladys Gloria Grace Gertrude
+			Heather Hannah Hermina Harriet Helen Hortense Hope
+			Ida Isabella
+			Joan Jane Julia Josephine
+			Laura Lucy Lydia Lillie Lena
+			Michelle Mary Marta Muriel Mildred Margaret Mercy Mathilda Marion Madeline Marilla Mabel
+			Nancy Noami Nell
+			Olympia
+			Prudence Patricia Pauline Patience Pamela Phoebe Paula
+			Rachel Rebecca Rhoda Rosalie Ruth Rosa
+			Scarlett Sarah Sally Sylvia Susanna Sybil Susa Sophia
+			Tabitha Theodora
+			Victoria Virginia Verina Valeria
+			Winifred
+			Zerelda
+		}
+		dynasty_names = {
+			Austin Anderson Adams Armstrong Astor Albright Averill Ayers Arnold Armistead
+			Boone Bannister Brown Buchanan Bacon Bryant Barclay Butler Brooks Bowie Bagge Berlin Baird Baker
+			Banks Banning Bailey Booth Barnum Barlett Bates Boyle Buell Burnside Burr
+			Coolidge Chamberlain Crockett Cooper Carpenter Coles Coffey Clemens Cleveland Cass Curley Choate
+			Custis Curtiss Clinch Cranston Call Canby Crawford Corbin
+			Davis Daniels Dolan Durant Dewitt Dent Drake Dilworth
+			Early Evans Eppes
+			Findlay Franklin Ford Farragut Featherstone Fitzgerald Firefly Fox Fillmore
+			Garrett Gurney Grant Gibson Garfield Gage Gallatin Gorslin
+			Harding Hayes Hamilton Hughes Hart Harrison Hannegan Hill Hicks Holly Hammer Harney Halleck
+			Hancock Hawkins Harris
+			Jackson Jefferson Jones Jennings Johnson Jessup Jay Joslyn
+			Kirkpatrick Key Kent Kearney
+			Lee Lincoln Langley Lovelace London Larned Lewis
+			Monroe Madison McKinley Meade Morganson McNeely Miller McClellan Mulhouse May Malone McCarthy
+			McGivney MacGregor Morris Mason McCauley
+			Owens "O'Hara" Oswald "O'Neill"
+			Peck Peterson Peel Poole Pierce Pickett Palmer Payne Penn Parton Parker
+			Rogers Richardson Roberts Reed Rice Ratliffe Randolph Revere Ross
+			Scott Stevens Smith Sanders "St. Paul" "St. Germaine" Simmons "St. Vincent" Stuart Sewall Sousa
+			Sullivan Sherman Sheridan Stuyvesant Short Shaftoe
+			Taft Thompson Tweed Taylor Todd Temple Trump Twiggs Totten Tuttle Twigden
+			Vane
+			Washington Wayne Wilson Wood Williams Whitney Waldron Wolfe Wright Wyatt Worsam Wilkes Wythe
+			Waterhouse
+			Young Yelverton
+		}
+	}
+	scottish = {
+		primary = SCO
+		dynasty_names = { 
+			Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
+			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
+			Fraser "Aois-dàna" Dishington Burnett "Bowes-Lyon" "Lockhart" "Corbet"
+			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
+			Buchanan Menzies Moffat Malcolm 
+			#CK2
+			"Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
+		}
+		male_names = {
+			James Robert Henry Alexander Arthur Walter John Charles Malcolm Donald David Duncan Andrea 
+			Alan Ailpein Archibald Barclay Beathan Bruce Cameron Cináed Conall Douglas Duff Edan Evander 
+			Fraser Garry Glen Ian Keir Kennedy Lennox Logan Micheil Mungo Munroe Scott Wallace Adam 
+			Alpin Alwin Alastair Andrew Angus Arran Aulay Olaf Brian Brice Cailean Calum Carbrey Colban 
+			Kolbein Colin Nicholas Conan Constantine Dermid Dugald Edgar Edward Edwin Eric Ivar Ewan 
+			Eugene Farquhar Fergus Fingal Finn Findlay Frang Francis Gavin Gilbride Gilbert Gilchrist 
+			Gillespie Gilpatrick Gilroy Giric Glenn Godfrey Gregor Gregory Hamish Hector Hugh Iain 
+			Indulf Jacob Kenneth Kentigern Lachlan Roland Laurence Lennon Lulach Macbeth Magnus Maldoven 
+			Maldred Malise Malmure Maoilios Marcas Marcus Matad Matthew Michael Morgan Muir Mungo 
+			Murdoch Murray Neil Nigel Ninian Oscar Patrick Paul Peter Philip Radulf Ralph Ranald 
+			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
+			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
+			Waldeve Waltheof William
+		}
+		female_names = {
+			Mary Ada Affraic Agnes Aileen Alice Anna Annabella Aufrica Euphemia Barabal Barbara Beileag 
+			Beitris Beathoc Beatrice Bride Brigit Catriona Catherine Cecilia Deirdre Derilla Dervorgilla 
+			Donada Donella Edith Edna Effie Eilionoir Eimhir Emer Eithne Ela Eleanor Elspeth Euna Eva 
+			Fenella Fingola Flora Forflissa Galiena Glenna Gormelia Gormflaith Gruoch Helen Innes Iona 
+			Isabel Isla Isobel Jean Julia Juliana Kenna Kentigerna Kirstin Christina Lillias Elisabeth 
+			Lorna Malmure Maisie Malina Mariota Martha Marthoc Marjory Mary Maud Matilda Maura Maria 
+			Mirren Morag Mor Morna Moyna Mona Muriel Murron Nuala Finnguala Orabilia Peigi Margaret 
+			Rhonda Rodina Ronalda Ragnhild Ros Saundra Alexandra Sheena Shona Joan Sholto Slaine Sorcha 
+			Una
+		}
+	}
+	#Beyond the Pale Culture
+	northumbrian = {
+		graphical_culture = westerngfx
+		primary = NOL
+		dynasty_names = { 
+			Dudley Mowbray  Percy Howard Seymour Holland 
+			Talbot Stanley Courtenay "de la Pole" "de Vere" Stafford Grey Mortimer "le Despenser" "de Camoys"
+			"Oglethorpe" Hyde
+			# CKII
+			"Turberville" "Butler" "Montagu" "Beauchamp" "Raleigh" "Stratford"
+		}
+		male_names = {
+			Henry Edward Charles James William Richard Philip Henry Frederick Arthur Charles James Edgar Thomas Edmund 
+			George John Jacob Humphrey Robert Stephen Adam Alexander Albert Alfred Ambrose Andrew Anthony Archibald 
+			Benjamin Christopher Daniel David Ernest Francis Geoffrey Guy Horatio Hugh Isaac Jeremy Jonathan Joseph 
+			Lawrence Matthew Nehemiah Oliver Samuel Sydney Ellis Duncan Sampson Turstan Edulf Edwyn Hereward
+
+			Adam Alan Albert Alexander Alfred Andrew Anselm Arnold Arthur Aubrey Christopher David 		
+			Edmund Edward Eric Erik Eustace Fulk Folke Geoffrey George Gerald Gilbert Godfrey Gregory Guy 
+			Henry Hugh Humphrey Jocelyn John Jordan Laurence Lionel Mark Marcus Martin Matthew Maurice 
+			Michael Nicholas Paul Peter Philip Ralph Randolph Reginald Richard Robert Roger Simon Stephen 
+			Theobald Thomas Waleran Walter William Jacob Ambrose Anthony Archibald Benjamin Daniel Ernest 
+			Francis Horatio Isaac Jeremy Jonathan Joseph Lawrence Nehemiah Oliver Samuel Sydney 
+		}
+		female_names = {
+			Agnes Alice Cristina Matild Emma Margery Aline Eve Hawis Catherine Cecily 
+			Beatrix Mabil Ramett Alienor Amabil Emma Hawise Isabel Isold Elisabeth Joan Idony 
+			Custance Mahaut Margaret Mary Denis Maud Matilda Gillian Milisent
+		}
+	}
+	#Beyond the Pale Culture
+	anglo_irish = {
+		graphical_culture = westerngfx
+		primary = ANI
+		dynasty_names = {
+			Butler Fitzgerald Sanford Sweetman Fitzanthony Grant Rockett Grace
+			Cantwell Fitzrobert Comerford Forrestall "de la Freyne" Flood Alyward
+			Toler Marshall Purcell Rochford Howlin Shortall "d'Earley" Gore Raggett
+			Fitznorman Troy Laffan "St. John" Tobin Wall Roche Eustace Grennan
+			Fleming Morris Burke Archer Hackett Plunkett Walsh "le Poer" Keating
+			"de Braose" Lindsay Montague Bermingham Prendergast Forrestal Everard 
+			"O'Brian" "MacCarthy" "O'Shea" Fitzstephen Sutton Esmonde Brown Rossiter 
+			Wadding Hearns Whitty Hore Harper "le Denne" Fitzhenry Leigh Colclough 
+			Devereux Sinnott Talbot Merris Carew Dalton Howell Hayes French Codd 
+			Lambert Stafford "de Villiers" Redmond Stokes Cheevers Condon Barry Supple 
+			Nugent Galway Hodnett Nagle Downing Hyde Terry Synan Lombard Stapleton 
+			"de Cogan" Barrett Fant Maunsell Baggott "de Lacey" Daly Gunning Finniter
+			Hewson Courtenay Fitzmaurice Cantillon Hussey Ferriter
+			Bunyan Mulvihill Boyle "Mac Sheehy" Cotter "O'Hanley" "O'Casey" 
+			"O'Donovan" "O'Mahony" "O'Hynes" Coppinger MacSweeney Blake Dillon 
+			Halloran Jennings Coyne MacDonnell McPhilbin McEvilly McMorris McCostello 
+			Jordan Phillips MacWilliam Athy Bodkin Browne "d'Arcy" Deane Ffont Ffrench 
+			Joyce Kirwan Lynch Martin Skerritt Bigod "le Gros" Hartpole Riddlesford
+			"de Vesey" "de Clare" "de Bigarz" Costello Reynell Sherlock "de Taghmon" 
+			Tuite Lowe "de Ginkel" Mortimer Haynes Bellew "de Verdon" Taaffe Bagnall 
+			"de Gray" Rushe "de Courcey" Nesbitt Mitchell Sely Audley Mandeville Savage
+			Archbold "de Loundres" Lawless Brabazon Power Harold Loftus Fitzwilliam
+			Barnewall Taylor Locke Bathe Barber Aylmer Hereford
+			Connell Tyrrell "St. Lawrence" Russell Fitzrory Luttrell "de la Salle" Cornwalsh
+			"de Geneville" "d'Exetor" Bomford Dowdall Cussack White "St. Leger" Townley 
+			Netterville Wogan Warren Bellingham Aston Clinton Dromgoole Gernon Babe
+		}	#Draiocht copy-pasted from leader names pulled from countries. Written based on historical family holdings in the 16th century
+		male_names = {
+			Arthur Bartley Bertie Bert Darcy Hugh William Piers Raymond John Thomas
+			Aaron Abel Alwin Angus Augustine Walter Bran Kenneth Clemens Clement Nicholas Constantine
+			David Donald Duncan Douglas Eric Eugene Jacob Malcolm Nigel Oscar Peter Ernest
+			Paul Francis Roy Roderick Shaw Godfrey William Philip George Robert Jonathan Edmund Oliver
+			Gerald Richard Wentworth Lettice Edward Augustus Henry
+		}
+		female_names = {
+			Alice Elizabeth Darcy Joan Eva Agnes Margaret Muriel Catherine Christina Eleanor Martha
+			Maria Matilda Mary
+		}
+	}
+}
+
 scandinavian = { #Nordic
 	graphical_culture = westerngfx
 
@@ -866,437 +1299,6 @@ scandinavian = { #Nordic
 			# CKII
 			"Skanke" "Bolt" "Giske" "Brockenhuus" "Adelswärd" "Kane" "Blixen" "Løvendal" "Balke"
 			"Vedel" "Bjelke" "Galle" "Griis"
-		}
-	}
-}
-
-british	= {
-	graphical_culture = westerngfx
-
-	english = {
-		primary = ENG
-		dynasty_names = { 
-			Plantagenet Lancaster York Tudor Dudley Mowbray Beaufort Neville Percy Howard Seymour Holland 
-			Talbot Stanley Courtenay "de la Pole" "de Vere" Stafford Grey Mortimer "le Despenser" "de Camoys"
-			"Oglethorpe" Hyde
-			# CKII
-			"Turberville" "Butler" "Montagu" "Beauchamp" "Raleigh" "Stratford"
-		}
-		male_names = {
-			Henry Edward Charles James William Richard Philip Henry Frederick Arthur Charles James Edgar Thomas Edmund 
-			George John Jacob Humphrey Robert Stephen Adam Alexander Albert Alfred Ambrose Andrew Anthony Archibald 
-			Benjamin Christopher Daniel David Ernest Francis Geoffrey Guy Horatio Hugh Isaac Jeremy Jonathan Joseph 
-			Lawrence Matthew Nehemiah Oliver Samuel Sydney
-
-			Adam Alan Albert Alexander Alfred Andrew Anselm Arnold Arthur Aubrey Christopher David 		
-			Edmund Edward Eric Erik Eustace Fulk Folke Geoffrey George Gerald Gilbert Godfrey Gregory Guy 
-			Henry Hugh Humphrey Jocelyn John Jordan Laurence Lionel Mark Marcus Martin Matthew Maurice 
-			Michael Nicholas Paul Peter Philip Ralph Randolph Reginald Richard Robert Roger Simon Stephen 
-			Theobald Thomas Waleran Walter William Jacob Ambrose Anthony Archibald Benjamin Daniel Ernest 
-			Francis Horatio Isaac Jeremy Jonathan Joseph Lawrence Nehemiah Oliver Samuel Sydney 
-		}
-		female_names = {
-			Jane Adela Adelaide Alice Amice Anne Anna Aveline Avelina Beatrice Blanche Catherine Cecilia 
-			Constance Edith Ela Eleanor Elizabeth Emma Hawise Isabel Isabella Elisabeth Joan Joanna 
-			Juliana Mahaut Margaret Mary Maria Maud Matilda Philippa Sybilla Sibylla
-		}
-	}
-	american = {
-		primary = USA
-		male_names = {
-			Abraham Aaron Alexander Atticus August Andrew Anthony Angus Allen Asa Alvin Albert Ambrose Arthur
-			Buford Benjamin Benedict Bernard Bartholomew Brigham Braxton Barnabas
-			Cyrus Charles Cyril Christopher Casey Clarence Clark Calvin Chester
-			David Donald Daniel Duncan
-			Elihu Elias Eric Ebenezer Elbridge Eugene Eustace Ernest Edmund Ephraim Earl Ezra Emory
-			Francis Frederick Ferdinand
-			George Gregory Gideon Gerald Grover Gouveneur Gordon
-			Humphrey Howard Hector Harold Horatio Henry
-			Isaac Israel Ian Irving
-			Joseph Jeffrey Jubal John Jebediah James Jacob Julius Julian Justin Josiah Joshua
-			Leonard Louis Lawrence Leland Luke Lionel Lorenzo Lamont Lyman
-			Moses Michael Mark Martin Milton Merriweather
-			Nathaniel Noah Nehemiah Nicholas
-			Oliver Obadiah Orville Owen
-			Philip Peter Paul Patrick
-			Rutherford Robert Richard Ronald Reuchlin Rufus Rhett
-			Samuel Stephen Sampson Sylvester
-			Theodore Thomas Timothy
-			Upton Ulysses
-			Victor Vincent
-			William Walter Winfield Wilbur Wallace Walker
-			Zachary
-		}
-		female_names = {
-			Anne Amanda Ada April Amphyllis Abigail Alice Adell Amelia Antoinette Arabella Alma Agnes Agatha
-			Barbara Brigit Blanche Bertha Belle
-			Caroline Charlotte Christine Catharine Clementine Clara Constance Claudia Carrie Cora
-			Dolley Dorothy Deborah Daisy Doris
-			Edith Evangeline Elizabeth Esther Emily Emma Ernestine Ethel
-			Flora Frances Florence
-			Gladys Gloria Grace Gertrude
-			Heather Hannah Hermina Harriet Helen Hortense Hope
-			Ida Isabella
-			Joan Jane Julia Josephine
-			Laura Lucy Lydia Lillie Lena
-			Michelle Mary Marta Muriel Mildred Margaret Mercy Mathilda Marion Madeline Marilla Mabel
-			Nancy Noami Nell
-			Olympia
-			Prudence Patricia Pauline Patience Pamela Phoebe Paula
-			Rachel Rebecca Rhoda Rosalie Ruth Rosa
-			Scarlett Sarah Sally Sylvia Susanna Sybil Susa Sophia
-			Tabitha Theodora
-			Victoria Virginia Verina Valeria
-			Winifred
-			Zerelda
-		}
-		dynasty_names = {
-			Austin Anderson Adams Armstrong Astor Albright Averill Ayers Arnold Armistead
-			Boone Bannister Brown Buchanan Bacon Bryant Barclay Butler Brooks Bowie Bagge Berlin Baird Baker
-			Banks Banning Bailey Booth Barnum Barlett Bates Boyle Buell Burnside Burr
-			Coolidge Chamberlain Crockett Cooper Carpenter Coles Coffey Clemens Cleveland Cass Curley Choate
-			Custis Curtiss Clinch Cranston Call Canby Crawford Corbin
-			Davis Daniels Dolan Durant Dewitt Dent Drake Dilworth
-			Early Evans Eppes
-			Findlay Franklin Ford Farragut Featherstone Fitzgerald Firefly Fox Fillmore
-			Garrett Gurney Grant Gibson Garfield Gage Gallatin Gorslin
-			Harding Hayes Hamilton Hughes Hart Harrison Hannegan Hill Hicks Holly Hammer Harney Halleck
-			Hancock Hawkins Harris
-			Jackson Jefferson Jones Jennings Johnson Jessup Jay Joslyn
-			Kirkpatrick Key Kent Kearney
-			Lee Lincoln Langley Lovelace London Larned Lewis
-			Monroe Madison McKinley Meade Morganson McNeely Miller McClellan Mulhouse May Malone McCarthy
-			McGivney MacGregor Morris Mason McCauley
-			Owens "O'Hara" Oswald "O'Neill"
-			Peck Peterson Peel Poole Pierce Pickett Palmer Payne Penn Parton Parker
-			Rogers Richardson Roberts Reed Rice Ratliffe Randolph Revere Ross
-			Scott Stevens Smith Sanders "St. Paul" "St. Germaine" Simmons "St. Vincent" Stuart Sewall Sousa
-			Sullivan Sherman Sheridan Stuyvesant Short Shaftoe
-			Taft Thompson Tweed Taylor Todd Temple Trump Twiggs Totten Tuttle Twigden
-			Vane
-			Washington Wayne Wilson Wood Williams Whitney Waldron Wolfe Wright Wyatt Worsam Wilkes Wythe
-			Waterhouse
-			Young Yelverton
-		}
-	}
-	scottish = {
-		primary = SCO
-		dynasty_names = { 
-			Stuart Stewart Campbell Lennox Murray Graham Gordon Erskine Leslie
-			Scott Douglas Hamilton Lindsay Ker Hay Sinclair Dunbar Kennedy
-			Fraser "Aois-dàna" Dishington Burnett "Bowes-Lyon" "Lockhart" "Corbet"
-			Mackintosh Dingwall Melville Corrie Aberach Cunningham Donald
-			Buchanan Menzies Moffat Malcolm 
-			#CK2
-			"Cameron" "Forbes" "Arbuthnot" "Cockburn" "Adam" Wallace "Abernethy"
-		}
-		male_names = {
-			James Robert Henry Alexander Arthur Walter John Charles Malcolm Donald David Duncan Andrea 
-			Alan Ailpein Archibald Barclay Beathan Bruce Cameron Cináed Conall Douglas Duff Edan Evander 
-			Fraser Garry Glen Ian Keir Kennedy Lennox Logan Micheil Mungo Munroe Scott Wallace Adam 
-			Alpin Alwin Alastair Andrew Angus Arran Aulay Olaf Brian Brice Cailean Calum Carbrey Colban 
-			Kolbein Colin Nicholas Conan Constantine Dermid Dugald Edgar Edward Edwin Eric Ivar Ewan 
-			Eugene Farquhar Fergus Fingal Finn Findlay Frang Francis Gavin Gilbride Gilbert Gilchrist 
-			Gillespie Gilpatrick Gilroy Giric Glenn Godfrey Gregor Gregory Hamish Hector Hugh Iain 
-			Indulf Jacob Kenneth Kentigern Lachlan Roland Laurence Lennon Lulach Macbeth Magnus Maldoven 
-			Maldred Malise Malmure Maoilios Marcas Marcus Matad Matthew Michael Morgan Muir Mungo 
-			Murdoch Murray Neil Nigel Ninian Oscar Patrick Paul Peter Philip Radulf Ralph Ranald 
-			Reginald Richard Ronald Ragnvald Rory Roderick Ross Roy Shaw Simon Somerled Stephan Stephen 
-			Sweeny Tadhg Tadg Talore Thomas Torquil Torkel Uhtred Uisdean Eysteinn Walan Valentin 
-			Waldeve Waltheof William
-		}
-		female_names = {
-			Mary Ada Affraic Agnes Aileen Alice Anna Annabella Aufrica Euphemia Barabal Barbara Beileag 
-			Beitris Beathoc Beatrice Bride Brigit Catriona Catherine Cecilia Deirdre Derilla Dervorgilla 
-			Donada Donella Edith Edna Effie Eilionoir Eimhir Emer Eithne Ela Eleanor Elspeth Euna Eva 
-			Fenella Fingola Flora Forflissa Galiena Glenna Gormelia Gormflaith Gruoch Helen Innes Iona 
-			Isabel Isla Isobel Jean Julia Juliana Kenna Kentigerna Kirstin Christina Lillias Elisabeth 
-			Lorna Malmure Maisie Malina Mariota Martha Marthoc Marjory Mary Maud Matilda Maura Maria 
-			Mirren Morag Mor Morna Moyna Mona Muriel Murron Nuala Finnguala Orabilia Peigi Margaret 
-			Rhonda Rodina Ronalda Ragnhild Ros Saundra Alexandra Sheena Shona Joan Sholto Slaine Sorcha 
-			Una
-		}
-	}
-	#Beyond the Pale Culture
-	northumbrian = {
-		graphical_culture = westerngfx
-		primary = NOL
-		dynasty_names = { 
-			Dudley Mowbray  Percy Howard Seymour Holland 
-			Talbot Stanley Courtenay "de la Pole" "de Vere" Stafford Grey Mortimer "le Despenser" "de Camoys"
-			"Oglethorpe" Hyde
-			# CKII
-			"Turberville" "Butler" "Montagu" "Beauchamp" "Raleigh" "Stratford"
-		}
-		male_names = {
-			Henry Edward Charles James William Richard Philip Henry Frederick Arthur Charles James Edgar Thomas Edmund 
-			George John Jacob Humphrey Robert Stephen Adam Alexander Albert Alfred Ambrose Andrew Anthony Archibald 
-			Benjamin Christopher Daniel David Ernest Francis Geoffrey Guy Horatio Hugh Isaac Jeremy Jonathan Joseph 
-			Lawrence Matthew Nehemiah Oliver Samuel Sydney Ellis Duncan Sampson Turstan Edulf Edwyn Hereward
-
-			Adam Alan Albert Alexander Alfred Andrew Anselm Arnold Arthur Aubrey Christopher David 		
-			Edmund Edward Eric Erik Eustace Fulk Folke Geoffrey George Gerald Gilbert Godfrey Gregory Guy 
-			Henry Hugh Humphrey Jocelyn John Jordan Laurence Lionel Mark Marcus Martin Matthew Maurice 
-			Michael Nicholas Paul Peter Philip Ralph Randolph Reginald Richard Robert Roger Simon Stephen 
-			Theobald Thomas Waleran Walter William Jacob Ambrose Anthony Archibald Benjamin Daniel Ernest 
-			Francis Horatio Isaac Jeremy Jonathan Joseph Lawrence Nehemiah Oliver Samuel Sydney 
-		}
-		female_names = {
-			Agnes Alice Cristina Matild Emma Margery Aline Eve Hawis Catherine Cecily 
-			Beatrix Mabil Ramett Alienor Amabil Emma Hawise Isabel Isold Elisabeth Joan Idony 
-			Custance Mahaut Margaret Mary Denis Maud Matilda Gillian Milisent
-		}
-	}
-	#Beyond the Pale Culture
-	anglo_irish = {
-		graphical_culture = westerngfx
-		primary = ANI
-		dynasty_names = {
-			Butler Fitzgerald Sanford Sweetman Fitzanthony Grant Rockett Grace
-			Cantwell Fitzrobert Comerford Forrestall "de la Freyne" Flood Alyward
-			Toler Marshall Purcell Rochford Howlin Shortall "d'Earley" Gore Raggett
-			Fitznorman Troy Laffan "St. John" Tobin Wall Roche Eustace Grennan
-			Fleming Morris Burke Archer Hackett Plunkett Walsh "le Poer" Keating
-			"de Braose" Lindsay Montague Bermingham Prendergast Forrestal Everard 
-			"O'Brian" "MacCarthy" "O'Shea" Fitzstephen Sutton Esmonde Brown Rossiter 
-			Wadding Hearns Whitty Hore Harper "le Denne" Fitzhenry Leigh Colclough 
-			Devereux Sinnott Talbot Merris Carew Dalton Howell Hayes French Codd 
-			Lambert Stafford "de Villiers" Redmond Stokes Cheevers Condon Barry Supple 
-			Nugent Galway Hodnett Nagle Downing Hyde Terry Synan Lombard Stapleton 
-			"de Cogan" Barrett Fant Maunsell Baggott "de Lacey" Daly Gunning Finniter
-			Hewson Courtenay Fitzmaurice Cantillon Hussey Ferriter
-			Bunyan Mulvihill Boyle "Mac Sheehy" Cotter "O'Hanley" "O'Casey" 
-			"O'Donovan" "O'Mahony" "O'Hynes" Coppinger MacSweeney Blake Dillon 
-			Halloran Jennings Coyne MacDonnell McPhilbin McEvilly McMorris McCostello 
-			Jordan Phillips MacWilliam Athy Bodkin Browne "d'Arcy" Deane Ffont Ffrench 
-			Joyce Kirwan Lynch Martin Skerritt Bigod "le Gros" Hartpole Riddlesford
-			"de Vesey" "de Clare" "de Bigarz" Costello Reynell Sherlock "de Taghmon" 
-			Tuite Lowe "de Ginkel" Mortimer Haynes Bellew "de Verdon" Taaffe Bagnall 
-			"de Gray" Rushe "de Courcey" Nesbitt Mitchell Sely Audley Mandeville Savage
-			Archbold "de Loundres" Lawless Brabazon Power Harold Loftus Fitzwilliam
-			Barnewall Taylor Locke Bathe Barber Aylmer Hereford
-			Connell Tyrrell "St. Lawrence" Russell Fitzrory Luttrell "de la Salle" Cornwalsh
-			"de Geneville" "d'Exetor" Bomford Dowdall Cussack White "St. Leger" Townley 
-			Netterville Wogan Warren Bellingham Aston Clinton Dromgoole Gernon Babe
-		}	#Draiocht copy-pasted from leader names pulled from countries. Written based on historical family holdings in the 16th century
-		male_names = {
-			Arthur Bartley Bertie Bert Darcy Hugh William Piers Raymond John Thomas
-			Aaron Abel Alwin Angus Augustine Walter Bran Kenneth Clemens Clement Nicholas Constantine
-			David Donald Duncan Douglas Eric Eugene Jacob Malcolm Nigel Oscar Peter Ernest
-			Paul Francis Roy Roderick Shaw Godfrey William Philip George Robert Jonathan Edmund Oliver
-			Gerald Richard Wentworth Lettice Edward Augustus Henry
-		}
-		female_names = {
-			Alice Elizabeth Darcy Joan Eva Agnes Margaret Muriel Catherine Christina Eleanor Martha
-			Maria Matilda Mary
-		}
-	}
-}
-
-gaelic	= {
-	graphical_culture = westerngfx
-	
-	irish = {
-		primary = IRE
-		dynasty_names = { 
-			"O'Donnell" "O'Neill" "O'Connor" "O'Brien" MacLochlainn MacMurrough MacWilliam
-			MacNamara "O'Reilly"  "FitzGerald" Kelly
-			# CKII
-			"Meic Bráenáin" "MacMorrough Kavanagh" "Dál gCais" "Ua Fáeláin" "Shannon"
-			"FitzPatrick" "O Ruairc" "O'More" "O' Conchobair" "MacDermot" "O' Cellaigh"
-			"Mac Sweeney" "O'Doherty" "Burke" "O' Cathail" "O'Clery" "Mac Egan" "O' Fergail"
-			"O'Flaherty" "O' Gallchobhair" "Cotter" "O' Faoláin" "MacIntyre" "O'Queely"
-			"Corcu Loígde"
-		}
-		male_names = {
-			Turlough Donal Muireadhach Conchobhar Feidlimidh Cathaoir Muchadh Áed Fonnchadh Brian Criomhthann Art Cathal 
-			Gearóid Muiris Tadhg Seán Niall Einrí Conn Eoghan Aonghus Comhghall Maeleachlain Diarmaid Flann Aerdghal 
-			Bearach Caoímhin Donnabhain Eíhmhín Fearghal Iarfhlaith Lorccán Mathúin Naomhán Oisín Pádraig Ríagáin Somhairle
-			Abbán Abél Abel Adomnán Áed Áedgen Áeducán Áedán Áengus 
-			Affiath Ailbe Ailbrend Ailbrenn Ailchú Aildobur Ailgel Áilgenán Ailgus Ailill Ailpín 
-			Ainbchellach Áindle Ainftech Enfidaig Ainmere Airechtach Airfhindán Airfhindán Airfhinnán 
-			Airleid Airmedach Amalgaid Amlaíb Anfudán Anlón Anmchaid Ánrothán Ardgal Ardgar Art 
-			Artbran Artgal Artgus Artucán Artúr Assiucc Augaire Augustín Aurthuile 
-			Báethgalach Báethíne Báetán Béoáed Barrfhind Beccán Berrach Bhátair Blathmacc Bran 
-			Brandub Brangen Bressal Brian Brian Briccéne Briccíne Broccán Bruatur Bruide Brénaind 
-			Brénainn Bróen Búaidbéo Caicher Cailech Cailte Cairbre Cairell Caisséne Caissín 
-			Canann Canannán Cathal Cathalán Cathassach Cathbad Cathmáel Cathmál Cathnio 
-			Cathub Causantín Caílte Caínchomrac Caíndelbán Ceithernach Cellach Cellachán 
-			Cennétig Cenn-Fáelad Cennlachán Cerball Cernach Cernachán Cian Ciarán Cilléne 
-			Cináed Cobthach Coirpre Colcu Colmán Columb Comgán 
-			Conaing Conall Conall Conallán Conamail Conán Conan Conchenn Conchobar Condla Condla Congal 
-			Congalach Congus Conlang Conmac Conmacc Conmáel Conmál Conn Conn Connla Conrí Constans 
-			Constantius Constantín Corbb Corbán Corccán Corcrán Cormac Coscrach Coílboth 
-			Crimthann Crundmáel Crundmáel Cruinnmáel Crundmáel Críchán Crónán Cuilén Cuindles Cuircthe 
-			Cummascach Cáemán Cóelbad Cóelub Cóemán Cú-Allaid Cú-Bretan Cú-Caech Cú-Cen Cú-Cen-Máthair 
-			Cú-Cúaráin Cú-Gamna Cú-Roí Cúanu Cúldub Cúán Cúánán Dabíd Daigre Dalbach Dallán Daniél 
-			Dathal Dathgus Demmán Diarmait Dermid Doedgus Domangart Domnall Donn Donnchad 
-			Donncuan Donndubán Donngal Donnucán  Doélgus Drost Drust Dub-dá-Lethe 
-			Dubcenn Dubgenn Dubh Dubhghall Dubhglais Dubthach Dubáed Dubán Duiblesc 
-			Duibne Dunáed Dálach Dícuill Díglach Dímmae Dímmasach Dímmán Dínertach Dúnacán Dúnadach 
-			Dúngal Dúngalach Dúnlang Éamonn Echmarcach Échtgal Échtgus Echuid 
-			Éicnech Éicnechán Eláir Énna Énri Éochad Eochaid Eochaid Eochu Eochucán Éogan 
-			Ercaid Ercáed Ercán Éremón Érennach Ernán Eterscél Eógan Eóganán Fachtna 
-			Fairchellach Fallaman Farannán Faílbe Fearghus Fechtnach Fedach Fearchar 
-			Fedelmid Feirgil Felic Fer-Fugaill Feradach Feradach Ferdomnach Fergal 
-			Fianchú Findbarr Fingen Finguine Finn Finn Finnacán Finnbarr Finnchú Finnlagh Findlay 
-			Finnsnechtae Fintan Flaithbertach Flaithem Flaithemán Flaithgus Flaithrí Flann Flannacán 
-			Flannchad Flannán Fogartach Folachtach Forannán Forbassach Fothad Fothud Fuacarta Fubthad 
-			Fuirechtach Fursu Fáelcar Fáelchad Fáelchú Fáeldobur Fáelgus Fáelán Fáelbe Fíachnae Fíadchú 
-			Fíngin Fínsnechta Fócarta Gabrán Garalt Garbith Gilla-Íosa Gilla-Brígte Gilbert Gilla-Coluim 
-			Gilla-Comgáin Gilla-Críst Gilchrist Gilla-na-Náem Gilla-Pátraic Gilpatrick Gilla-Ruad Gilroy 
-			Glaisiuc Glaschu Glún-Iairn Gormacán Gormgus Gormán Guaire Gáethán Gáethíne 
-			Gósacht Iacob Iarlaithe Imchad Indrechtach Ioseph Íomhar Labraid Lachtnae 
-			Lachtnán Lachtnéne Laidcenn Laidgenn Laidíne Laisrén Lennán Lennon Lethlobur Liam 
-			Lochlann Loingsech Lonán Lorcán Lugh Leon Lugaid Lugáed Láegaire Lóchéne Lóchíne Lóeguire 
-			Mac-Laisre Mainchíne Maine Manchán Martan Mathgamain Matudán Minchán Mo-Chonna Mo-Lua 
-			Móenach Máel-Anfaid Liber Fiachnae Erc Dúnchad Cillíne Caissíne Bran
-			Morand Morann Mugrón Muirchertach Muirecán Muiredach Murdoch Muirgius Murchad Murchú 
-			Máel-Bresail Máel-Brígte Máel-Cein Máel-Cianáin Máel-Ciaráin Máel-Coluim Malcolm Máel-Corgis 
-			Máel-Dubh Máel-Dúin Máel-Fothartaig Máel-Fábaill Máel-Íosa Malise Máel-Máedóc 
-			Máel-Martain Máel-Mórda Máel-Muire Malmure Máel-Míchíl Máel-Petair Máel-Pátraic Máel-Ruanaid 
-			Máel-Sechnaill Máel-Tólai Máelán Máenach Máthair Múadán Nadarchu Nannid Natfraech Natfraich 
-			Natsluaig Nechtan Niall Niallgus Niallán Nuadu Odrán Óengus Óenucán 
-			Oissíne Olcán Ólchobar Onchú Orthanach Pátraic Petair Pilib Pól 
-			Proinsias Rechtabra Riacán Riaguil Robartach Rogallach Rogellach Ruah Roy 
-			Ruarcc Rumann Ráthach Rígán Ríán Ródán Rónchú Rónán Rúadacán Rúadán Scandal 
-			Scandlán Scellán Scolaige Séaghdha Séafra Séamas Seán Sechnassach 
-			Selbach Senchán Seoán Sinach Siothrún Godfrey Slébíne Snedgus Sogan Somhairle Somerled 
-			Suibne Sáerbrethach Sárán Séigíne Sétna Sétnae Tadg Tadg Taithlech Talorc Talore 
-			Talorcán Temnén Tigernach Tigernán Tipraite Tomaltach Tomás Thomas Torccán Trenchad Trengus 
-			Tressach Tuathalán Tuireann Taran Tálán Tóla Túathal Tuathal Ualgarg Ualan Ualtar 
-			Úamnachán Uargal Uargalach Uargus Uilliam Ultán Ruaidrí Philip Oisséne
-		}
-		female_names = {
-			Saraid Órfhlaith Fedelma
-			Ablach Áedammair Affraic Euphemia Aíbinn Aibilín Aileann Áine Agnes Anlaith Aróc
-			Barrdub Ben-Laigen Ben-Míde Ben-Muman Ben-Ulad Brigit Bé-Fáil Bébinn Cacht 
-			Caillech-Fhinnéin Cainnech Caisséne Caitilín Caíntigern Caírech Cathán Catríona 
-			Catherine Cellach Ciar Cnes Coblaith Cobflaith Conchenn Condál Crínóch 
-			Crístina Christina Cumman Deirdre Der-bForgaill Derbáil Derborgaill
-			Der-Ilei Derilla Der-Lugdach Dianaim Doriend Dub-Dil Dub-Essa Dub-Lemna Dubchoblaig Dubgilla 
-			Dúinsech Dúnlaith Echrad Éibhleann Eithne Ellbríg Emer Étaín 
-			Faílenn Fedelm Finneacht Flann Forbflaith Fíne Garb 
-			Gelgéis Gerróc Gnathnad Gormlaith Gormflaith Gráinne Imag Íte Lann 
-			Lasairfíona Lathir Lerben Lerthan Lígach Mauda Muadhnait 
-			Muirenn Murron Muirgel Muirne Morna Máel-Mide Máel-Muire Malmure Máire Máiread 
-			Máirgred Margaret Mór Mor Mór-Muman Nárbflaith Nuala Finnguala Órlaith Órnat Róis Ros Sadb 
-			Samthann Scáthach Sébdann Selblaith Seonaid Sinech Siobán Sisuile Sláíne Slaine 
-			Sorcha Suaibsech Sáerlaith Sétach Síthmaith Tailefhlaith Tailltiu Temair Tuathflaith Tómnat 
-			Uallach Uasal Úna Una Éua
-		}
-	}
-	highland_scottish = {
-		primary = HSC
-
-		male_names = {
-			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
-			Bhaltair Boisil Brian Benneit Beathan Boisil Brus Bruadar Breacan Bearnard Bhaltair
-			Cresdean Calum Conan Conal Cormac Cailean
-			Domhnall Donnchadh Dughall Daibhidh Diarmid Dolan Daniel Deorsa Dughlas
-			Eoghan Eobhann Eideard Eachann Eoin Eosaph Eanruig Ellair
-			Fearchar Faolan Fearghas Fionn Filib Frangan Friseal Fionnlagh
-			Gillebríghde Gillechreosd Gillecallum Gilleasp Gilleandrais Garbhan Goiridh Griogair
-			Hamish Harailt Horas
-			Iain Iacob Iosag Iomhar Iosaph Iona
-			Lucais Labhrainn
-			Maoilios Murchadh Martain Mascual Marcus Mata Mecheil Morgan Mungan Murchadh
-			Neacal Niall Niallghas
-			Oilbhreis Oisean
-			Padraig Pol Peadar
-			Raibeart Ruadh Ruaraidh Raghnall Ruiseart
-			Seumas Seoras Somhairle Seleas Samuel Sachairi Steaphan
-			Thomais Tadhg Toibaid
-			Uilleam Uisdean 
-		}
-		female_names = {
-			Anna
-			Beathag Baraball Bearnas Beitiris Bhioctoria Brighde
-			Catreona Ceit Coinneach Claimha
-			Deirdre Deoiridh Diorbhail
-			Ealasaid Cibhlin Eubh
-			Floraidh Floireans Fionnaghal Frangag Fionnghuala
-			Gormal Gormlaith Giorsal
-			Iseabail 
-			Liusaidh Leagsaidh Leitis Lucrais Leosa
-			Mairead Marsail Marta Milread Moibeal Moire Mor Mairi
-			Nansaidh
-			Olibhia Oighrig
-			Peanaidh
-			Rut Raonaid Rebeca
-			Seonag Sorcha Sene Siusan Seleas
-			Tearlag Teasag
-			Una
-		}
-		dynasty_names = {
-			Arasgain
-			Bochanan Beitean Brus
-			Caimbeul Cinneide Caimbeulach Comyn Cochran
-			Donohoe Dernly
-			Gordan Grannd Guinne
-			Haig
-			Lamont
-			MacCongáil MacDhiarmaid Moireach MacPharlain MacLeoid MacDhomhnaill MacDhonnachaidh Munro MacNab
-			Ncill
-			Rothach Ros
-			Stiubhart Singlear Sutherlarach
-		}
-	}
-	#BtPLegacy Culture
-	gallgaidheil = {
-		graphical_culture = westerngfx
-		primary = LOI
-		male_names = {
-			Aonghas Alasdair Ailbeart Adhamh Ailean Anndra Arailt Artair Aaron Amhlaidh Ailpein
-			Bhaltair Boisil Brian Benneit Beathan Boisil Brus Bruadar Breacan Bearnard Bhaltair
-			Cresdean Calum Conan Conal Cormac Cailean
-			Domhnall Donnchadh Dughall Daibhidh Diarmid Dolan Daniel Deorsa Dughlas
-			Eoghan Eobhann Eideard Eachann Eoin Eosaph Eanruig Ellair
-			Fearchar Faolan Fearghas Fionn Filib Frangan Friseal Fionnlagh
-			Gillebríghde Gillechreosd Gillecallum Gilleasp Gilleandrais Garbhan Goiridh Griogair
-			Hamish Harailt Horas
-			Iain Iacob Iosag Iomhar Iosaph Iona
-			Lucais Labhrainn
-			Maoilios Murchadh Martain Mascual Marcus Mata Mecheil Morgan Mungan Murchadh
-			Neacal Niall Niallghas
-			Oilbhreis Oisean
-			Padraig Pol Peadar
-			Raibeart Ruadh Ruaraidh Raghnall Ruiseart
-			Seumas Seoras Somhairle Seleas Samuel Sachairi Steaphan
-			Thomais Tadhg Toibaid
-			Uilleam Uisdean 
-		}
-		female_names = {
-			Anna
-			Beathag Baraball Bearnas Beitiris Bhioctoria Brighde
-			Catreona Ceit Coinneach Claimha
-			Deirdre Deoiridh Diorbhail
-			Ealasaid Cibhlin Eubh
-			Floraidh Floireans Fionnaghal Frangag Fionnghuala
-			Gormal Gormlaith Giorsal
-			Iseabail 
-			Liusaidh Leagsaidh Leitis Lucrais Leosa
-			Mairead Marsail Marta Milread Moibeal Moire Mor Mairi
-			Nansaidh
-			Olibhia Oighrig
-			Peanaidh
-			Rut Raonaid Rebeca
-			Seonag Sorcha Sene Siusan Seleas
-			Tearlag Teasag
-			Una
-		}
-		dynasty_names = {
-			Arasgain
-			Bochanan Beitean Brus
-			Caimbeul Cinneide Caimbeulach Comyn Cochran
-			Donohoe Dernly
-			Gordan Grannd Guinne
-			Haig
-			Lamont
-			MacCongáil MacDhiarmaid Moireach MacPharlain MacLeoid MacDhomhnaill MacDhonnachaidh Munro MacNab
-			Ncill
-			Rothach Ros
-			Stiubhart Singlear Sutherlarach
 		}
 	}
 }
@@ -2173,194 +2175,61 @@ baltic	= {
 	}
 }
 
-brythonic = {
-	graphical_culture = westerngfx
+
+
+adyghe = { # Circassians - names are swapped to mantain vanilla consistency in provinces.
+	graphical_culture = easterngfx
 	
-	welsh = {
-		graphical_culture = westerngfx
-		primary = WLS
-		dynasty_names = { 
-			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
-			#CK2
-			"Morgannwg" "Caradoc" "Mostyn" "Gorfynydd" Denbigh "Gwynn" "Gwarthaf" "Môn" "Penfro"
-			"Aberteifi" "Gethin" "Gruffudd" "Carmarthen" "Mynyw" "Anwyl of Tywyn" "Fane"
-			"of Bristol" "Evans" "Owen" "Lloyd" 
-		}
+	circassian = { # These are the Adyghe, the twelve tribes of the Circassians.
+		primary = CIR
 		male_names = {
-			Owain Dafydd Gruffydd Llewelyn Rhodri Maredudd Cynan Cadwaladr Iago Idwal Maelgwyn Einion Iorwerth Trahaearn 
-			Aeron Aled Aneirin Arvel Berwyn Brynmor Cadfael Cadoc Cadwgawn Celyn Cledwyn Colwyn Dai Dilwyn Emyr Gawain 
-			Glynn Gwyn Heddwyn Heilyn Hywel Rhian Tristan Tudor Urien Vaughan
-			Adda Adgar Edgar Adran Adrian Aeddan Alan Aldwr Aldroenus Algwyn Alisander Alexander Alured 
-			Alfred Alwyn Anarawd Andreas Andrew Aneurin Anlaff Olaf Anllech Annwn Antoninus Argad Arcadius 
-			Arod Arthen Artemius Arthfael Arthfoddw Arthbodus Arthwr Arthur Arthws Arthwys Artorius Asa 
-			Asaph Awst August Bangar Bedwyr Beli Berthgwyn Berhtwine Berthwallt Berthoald Bleddyn Bledrig 
-			Bleiddud Branwaladr Bride Briog Brochfael Brogmaglus Brwt Brutus Brwyn Brychan Brân Bran Cadell 
-			Cadeyrn Cadfael Cadfan Cadog Cadw Cadwal Cadwaladr Cadwallon Cadwared Cadwared Cadwgan Cadwr 
-			Cadwr Cai Gaius Caid Cain Caradog Caradog Casnar Caswallon Cawdaf Cedig Caedicius Cedwyn Ceneu 
-			Ceredig Caratacus Clydog Louis Coel Corentin Cuhelyn Custennin Constantine Cwlfyn Culmin Cwrig 
-			Cyriacus Cydifor Cydrych Cynan Conan Cynddelw Cyndyddan Cynddylan Cyndeyrn Kentigern Cynfael 
-			Cynfarch Cynfawr Cynfeddw Cynfelyn Cynfran Cynfyn Cyngar Cyngen Cynwallon Cynwared Cynwrig 
-			Cynwyd Cynyr Cysteint Constans Dafydd Deheuwant Deiniol Daniel Dewi David Dogfael Drystan 
-			Tristan Dumnagual Dwyfan Damian Dyfnarth Donyarth Dyfnwal Donald Dyfnwallon Dynod Donatus Dywel 
-			Edern Eternus Ednyfed Ednywain Edryd Ailred Edwyn Edwin Edylfred Aethelfred Einion Elfin Alwin 
-			Elidyr Elis Elisedd Elud Elystan Alstan Emrys Ambrosius Enfidaig Erb Urban Erclwf Heracles Eudaf 
-			Octavius Ewyas Ffernfael Ffilip Philip Ffriog Friog Ffwdwr Fragan Ffransis Fransis Fychan Fyrsil 
-			Gamon Garmon German Geraint Gerontius Gerallt Gerald Glwyddien Glywys Claudius Godwyn Godwin 
-			Goronwy Gronw Gruffydd Ruffinus Grygor Gregory Guret Gwalchmai Gavin Gwen Gwenwynwyn Gwerstan 
-			Werestan Gwerthefyr Vortimer Gwerthern Vortigern Gwydol Vitalis Gwydolin Vitalinus Gwyn Finn 
-			Gwidyr Gwilym William Gwrfawr Gwrfoddw Gwrgant Fergus Gwrgeneu Gwrgi Gwriad Viriathius Harri 
-			Henry Herewallt Hereweald Huw Hugh Hywel Iago Jacob Ivor Idnerth Idwal Idwallon Iestyn Justin 
-			Ieuan John Ifor Ivar Io Ioan Iolo Iorwerth Ithel Lles Lucius Llew Leon Llyr Llywarch Llywelyn 
-			Macsen Maximos Madog Matad Mael Maelcwn Malcolm Maelgwn Melgwn Maenyrch March Marcus Maredudd 
-			Murdoch Math Matthew Mawgan Meilyr Meirchion Marcianus Meiriadog Meriadoc Meirion Marianus 
-			Merfyn Meurig Maurice Mihangel Michael Morfarch Morgan Morien Morgen Morydd Mwyn Mungo Myrddin 
-			Martin Neithon Nathan Nowy Nynniaw Oswallt Oswald Owain Eugene Oucydd Eochaid Padern Padrig 
-			Patrick Pandoff Pasgen Pascentius Padarn Paternus Pawl Paul Pedr Peter Peredyr Publig Pyr 
-			Rheinallt Reginald Rhicert Richard Rhigeneu Ricenus Rhirid Rhiwal Riwal Rhiwallon Rhobert Robert 
-			Rhodri Rhufon Roman Rhun Rucenus Rhydderch Roderick Rhydog Rhys Riaged Riacet Richwin Sandde 
-			Sanctus Sawyl Samuel Seferus Severin Seisyll Cecil Selyf Solomon Senyllt Serigi Sergius Sieffre 
-			Godfrey Sion Sior George Siwauna Steffen Stephen Stinian Justinanius Sulien Julian Taliesin 
-			Telesinus Tegonwy Tegwyd Tadg Teilo Teithfalch Teudebur Tewdos Theodosius Tewdrig Theodoric 
-			Tewdwr Theodore Tomos Thomas Trahaearn Tudur Tudwal Tuathal Tudwallon Tydy Tyfoedd Tysilio Urien 
-			Urbgenius Uthyr Victor Ynyr Honorius Ysfael Llewelyn Maelgwyn Aeron Aled Aneirin Arvel Berwyn 
-			Brynmor Cadoc Cadwgawn Celyn Cledwyn Colwyn Dai Dilwyn Emyr Gawain Glynn Heddwyn Heilyn Rhian 
-			Tudor Vaughan 
+			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran Tornik 
+			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat 			
+			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
+			
+			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
+			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
+			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
+			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek Iansokh 
+			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
+			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
+			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
 		}
 		female_names = {
-			Elain 
-			Addiena Aelwyd Aeronwen Aeronwy Afrella Abrelda Alys Alice Angharad Annes Anna Annest Annwyl 
-			Anowed Arddyn Arianrhod Blodwen Bronwen Catrin Catherine Ceindrych Cagintria Ceridwen Cerie 
-			Cerys Cicely Cecilia Clarisant Creirwy Cristin Christina Danhadlwen Delyth Denis Denise Dwynwen 
-			Dwywai Dyddgu Efa Eva Effros Euphrasia Efrddyl Efyrddyl Aurelia Eiliwedd Elaine Elen Helen Eleri 
-			Hilaria Elinion Elinor Eleanor Ellyn Enid Essyllt Hersilia Euronwy Ffelis Ffion Fflur Flora 
-			Ffraid Brigit Glynys Gwen Gwenasedd Gwenfrewi Winifred Gwenhwyfach Gwenhwyfar Gwenllian Gwenwyn 
-			Gwerfyl Gwladys Claudia Haer Hawys Hawise Heledd Hellawes Heulwen Hunydd Hywela Ilud Isabel 
-			Elizabeth Llear Clara Llecci Lleigy Lleuca Lucia Lowry Mabyn Maches Madrun Matrona Maelrys Mair 
-			Maria Mali Mallt Marared Marchell Marcella Margred Margaret Marwenna Mawd Matilda Melisant 
-			Melisende Morganna Morien Murron Myfanwy Nest Nesta Agnes Newlyna Neulenna Non Nonna Olwen 
-			Onbrawst Owena Eugenia Prawst Ragnell Ragnhild Rhiaindrech Rioantdrec Rhiainfelt Regina Rhiannon 
-			Rhonwen Sannant Sara Sarah Senena Sibyl Sibylla Sioned Siwan Siân Joan Susanna Susana Tangwystl 
-			Tancostyla Tegla Thecla Ysbail Ystradwel
+			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
+			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa  
 		}
-	}
-	breton = {
-		graphical_culture = westerngfx
-		primary = BRI
-		dynasty_names = { 
-			#New by Draiocht, using the country, historical dynasties with more than 2 dukes, Gwened, and a handful of other important or common patronyms, will try to add more at some point
-			Breizh Monforzh "de Dreux" Kerne Penteur Roazhon Naoned Gwened Tangi Karter Roc'han
-			#Most of these are not even remotely Breton, removing
-			#Rohan Penteur Leon Roazhon Poutrecoet Naoned "Leon" "de Dinan" "de Vitré" "de Cornouaille" 
-			#"de Rohan" "de Porhoët" "of Brittany" "de Châteaubriant" "de Nantes" "Leon" "Guennec" "Pensec" 
-			#"de Vannes" "de Bretagne"  "Sant Nazar" "Tanguy"  "Hennebont" "Gwened" "de Rennes" "de Rieux"
-		}
-		male_names = {
-			#Draiocht few new names from historical figures
-			Arzhur Pêr Fransez Hoel Konan Jafrez Eozen
-			#Vanilla
-			François Jean Artur Pierre Henri Charles Gilles Richard Corentin Deniel Dinan Erwan Gaël Gwenaël Gwenneg 
-			Gwilherm Iouennic Loïc Maeldan Mikael Olier Padrig Paol Patern Pier Primel Roparzh Servan Similien Sklaer 
-			Sulio Uuinmael Venec Visant Vonig Vougay Winifrid Yann
-			Adoyre Adrien Adrian Aedan Hugh Agustin August Alan Alar Alaric Aldrien Aldroenus Alfrond Alor 
-			Alured Alfred Alwen Alwin Anaoc Anaubritou Anaugen Anauguethen Anauguoret Anauhocar Andreas 
-			Andrew Aniud Anton Antoninus Argantbri Argantmoet Arnalt Arnold Arthel Arthguiu Arthmael 
-			Arthueu Arthuiu Artorius Arthur Austol Baldoen Baldwin Bastian Sebastian Beli Beltram Bertrand 
-			Benabic Berenger Berengar Bernead Bernard Berthgualt Berthoald Bledric Bledrig Bledros Bleidcum 
-			Bletcu Blethin Bleddyn Blethiut Bleiddud Bodan Bran Brangualart Branwaladr Branhucar Branoc 
-			Brenci Brendan Breselconan Breselcoucant Breselgar Breseloc Breselueu Brethoc Brient Brian 
-			Brigualt Brioc Briog Brithael Brochuael Brogmaglus Bronmael Budguoret Budhoiarn Budic Benedict 
-			Budoc Buhedoc Butgual Cadan Cadaouen Cadarvan Cadiou Cadoc Cadog Cador Cadwr Cadou Cadw 
-			Cantgueithen Caradec Caratacus Caradoc Caradog Carantoc Catgualart Cadwaladr Catuallon Cadwallon 
-			Catguethen Catguoret Cadwared Catgutic Cathno Catnimed Catuod Caurantin Corentin Ceneu Cenguethen 
-			Cenmarhoc Cenmin Cenmonoc Cingur Cinhoedl Clemen Clement Clodouan Clotwoïon Comoere Conan Concen 
-			Cyngen Condeleu Cynddelw Condidan Cyndyddan Congar Cyngar Conmael Cynfael Conmonoc Conogan 
-			Conredeu Conuallon Cynwallon Conmarch Cynfarch Convelin Cynfelyn Conwoïon Corguethen Courantgern 
-			Courantmonoc Culmin Custent Constans Custentin Constantine Dauid Deniel Daniel Denis Deroch 
-			Derrien Deui David Deurhoiarn Domnoret Domuel Dywel Donual Donald Donuallon Dyfnwallon Drogon 
-			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispoë Erouan Yves 
-			Estienne Etgual Eudon Otto Euhocar Euhoiarn Eusebi Eusebius Even Eugene Evrard Everard Farinmael
-			Ffernfael Ferant Ferdinand Fracan Fragan Framual Fransaz Francis Frioc Friog Garmon German 
-			Geofroi Geralt Gerald Gereint Gerontius Gestin Justin Gilbert Godefroi Godfrey Goennoc Gouesnon 
-			Goulwen Gouremor Gwrfawr Gourmaelon Gralon Gratcant Gregor Gregory Grifiud Ruffinus Guallon 
-			Gualter Walter Gudual Guecon Guenerdon Guenhael Guentanet Guentiern Gui Guy Guiharan Guihomarch 
-			Guihomart Guilherm William Guincalon Guincum Guinhael Guinhoiarn Guinoc Guinol Winaloe Guithrit 
-			Guitol Vitalis Guobrian Guocon Guoedanau Guoedatoe Guoednou Guoethoiarn Guoletec Guorbili 
-			Guordotal Guoretan Guorethoiarn Guorhoiarn Gurbodu Gurcant Gurcencor Gurceneu Gwrgeneu Gurci 
-			Gwrgi Gurcon Gurdilic Gurgen Gurguaret Gurguist Gurguistl Fergus Gurheter Guriant Viriathius 
-			Gurlouen Gurmael Gurmaeloc Gurmhaelon Gurthcid Gurthiern Vortigern Guruant Guerech Gueroc 
-			Guethenan Guethencar Guethencor Guethenwoïon Guethenhoiarn Guethenoc Haelcomarch Haelguethen 
-			Haelguoret Haelhoiarn Haeloc Haeloubri Herori Haermael Hammelin Hamelin Hamon Harscoit Hedyn 
-			Heranal Herri Henry Hesdren Hincomhal Hinguethen Hocar Hoconan Honfroi Hoël Hywel Huiarnal 
-			Huiarnbili Huiarnviu Harvey Hunfroi Humphrey Iacob Jacob Iarcun Iarnbud Iarncant Iarncar 
-			Iarndetguid Iarnegon Jarnegon Iarnuallon Iarnuocon Iarnhitin Iedechael Iehan John Ilcarthon Ildut 
-			Iliud Inisian Iocilin Joscelin Iodoc Ionas Jonas Iosep Joseph Iudcum Iuduallon Idwallon 
-			Ithel Iudicael Judicael Iudnerth Idnerth Iudnimet Ednyfed Iustoc Iudoc Iudual Idwal Iumael 
-			Iunceneu Iunuocon Iunmonoc Jord George Leucum Loi Lorens Laurence Louenan Loumarch Llywarch 
-			Louïs Iudhael Louis Maelcon Maelgwn Maeldoï Maelhuedoc Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
-			Marthin Martin Matheudoï Mathias Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
-			Meldroc Meriadoc Mermin Merfyn Meugan Mawgan Meven Michel Michael Morcant Morgan Morcondeleu 
-			Morgen Morguethen Morhaetho Mormarch Morfarch Morvan Mortiern Neven Nicolas Nicholas 
-			Nodhoiarn Nominoë Nougui Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
-			Pasquitan Patern Paternus Petroc Phelippe Phillip Piran Prigent Primael Primarhoc Putrael 
-			Peter Ralf Raoul Ralph Renan Resmen Riacet Ribald Ricart Richard Riceneu Ricenus Richwin 
-			Riualtr Rihouen Rinduran Rioc Riol Riwal Riuallon Rhiwallon Rodric Roderick Roenualloc 
-			Roenuolou Roenhoiarn Rolland Roland Ronan Roparth Robert Roucen Rucenus Rumon Roman Ryd 
-			Salomon Solomon Samson Samuel Stefen Stephen Sulgen Julian Sulhoiarn Sulmonoc Sultiern Talan 
-			Talhoiarn Tanci Tanet Tanhoiarn Telent Terithien Tethion Teudric Theodoric Teudur Theodore 
-			Tibault Theobald Tiernan Tiernmael Tiernoc Tiernualloc Tiernuallon Treveur Tristan Tuduallon 
-			Tudwallon Tudur Tugdual Tuathal Ungust Urbcen Urbgenius Urbien Urban Urblon Urvod Uther 
-			Vincenne Vincent Victor Salenn Roenuallon Ridoredh Pêr Pascueten Nodethael Mordred Marcus
-		}
-		female_names = {
-			#Draiocht new names from historical figures
-			Konstanza Klaoda
-			#Vanilla
-			Aanor Abrelda Adela Adelaïda Adelaide Adelindis Adeltrudis Aedoc Aeluit Aelwyd Agnes Alana 
-			Alis Anne Claudine Alice Anaguistl Anaudat Anaudrec Anauhouguel Anauprost Andrea Anna Aourcen Aouregan Aourell 
-			Aouren Argantan Argantdrec Arganteila Arganteilin Argantguistl Arganthael Argantlon 
-			Artaca Avandrec Avenie Beladora Beladore Berchet Brigid Berengaria Bernegarda Berta 
-			Bertha Bertissa Bleutuen Blodwen Brendana Bronuen Bronwen Buriana Canna Cateline Catherine 
-			Catguistl Cecilia Ceindrec Cagintria Ceinguled Cleirui Creirwy Condeleu Constansa Constance 
-			Cristen Christina Dengel Deniela Denise Diuset Dreanau Drebiu Dreguoreth Drelouguen 
-			Drilego Duihon Elara Eleina Elaine Elena Helen Elesbed Elizabeth Elisaued Elizabeth Elwen 
-			Emma Endellion Ennoguent Enoguen Enora Eonnecte Joan Erouana Yvonne Ewsannec Fuandrec Gaela 
-			Geberga Geberga Glades Claudia Gloiucen Gloiumed Guelet Guenbrith Guencen Guencenedl Guencor 
-			Guenguerthlon Guenguistl Guenguiu Guenmon Guenna Guenneret Guennguar Gueruel Gwerfyl 
-			Guillemecte Williamette Gwenn Gwen Halbiu Hawis Hawise Herannuen Hodierne Igerna Ignoguen 
-			Ildegarda Hildegarde Iofa Iouenna Joan Isabelle Elizabeth Iseult Hersilia Iudhent Iudlouguen 
-			Iudprost Janed Joan Judhael Judith Languoret Leonore Eleanor Leueer Leuhemel Leuoc Louhelic 
-			Luncen Maben Magdalene Magdalena Marguarite Margaret Mari Maria Medguistl Meduil Melita 
-			Milian Mona Mona Morganne Morganna Morguetel Moruen Murron Moruith Morvana Neulenna Neulenna 
-			Nodguoret Nodiunet Nolwenne Nonne Nonna Oncenedl Oncum Onguen Ordguydel Ourcen Ourdilic 
-			Proscen Prosguetel Prostlon Rannoeu Riguistl Rimoet Rioanon Rioanon Rhiannon Rioantcen 
-			Rioantdrec Rioantdrec Rioantel Rioantguellt Regina Roenhael Roinoc Ronana Rozenn Rum Rumun 
-			Stefania Stephania Steren Sulcar Sulcen Sulgubri Sulgwen Sulleisoc Sulmed Susanne Susanna 
-			Tandrec Tanetbiu Tanetlowen Tanguistl Tancostyla Tedvil Tephaine Thomine Tibourge Tiburge 
-			Trifine Tristana Uriell Seva Perenn Meonre Ilcum Guigoëdon Drichglur Berthildis Argantmoet
-		}
-	}
-	cornish = {
-		graphical_culture = westerngfx
-		primary = CRN
 		dynasty_names = {
-			Kernew "of Cornwall" Penrose Trevelyan Bolitho Kernow Nance Nancarrow Chegwin Nancekivell Chenoweth
-			Menhenick Teague Trelawny Trewin Tremayne
+			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
+			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
 		}
+	}
+	abkhaz = { # Abasgi - An ethnic group very closely related to Circassians, but not part of the twelve tribes
+		primary = ABK
 		male_names = {
-			Arthek Arthyen Austol Benesek Branok Brioc Cadan Cador Carantok Casek Casworon Clemo Clesek Corentyn
-			Costentyn De Day Edern Enyon Gerens Gerren Goron Gryffyn Gwalather Hedrek Hedrok Jago Jory Jowan Kenal
-			Keneder Kenver Kitto Locryn Lowen Madern Massen Meryasek Peran Perran Piran Pasco Pascow Rewan Ruan Ruman
-			Santo Treeve Treave
+			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran Tornik 
+			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat 			
+			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
+			
+			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
+			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
+			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
+			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek Iansokh 
+			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
+			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
+			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
 		}
 		female_names = {
-			Beaten Bennath Berlewen Bersaba Beryan Bryluen Caja Chesten Conwenna Delen Demelza Derowen Derwa
-			Doryty Ebrel Elestren Elowen Emblyn Endelyn Eseld Ewella Glanna Gwennol Hedra Ia Jenifry Jenifer
-			Jowanet Kelynen Kensa Kerensa Keresen Kerezen Kerra Lamorna Lowdy Lowena Mabyn Melder Melwyn Melyonen
-			Melyonen Meliora Merouda Morwenna Nessa Pasca Peswera Rosen Rosenwyn Senara Sowenna Splanna Steren Talwyn
-			Tamsyn Tegen Tregereth Tressa Trueth Wenna Ysella
+			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
+			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa  
+		}
+		dynasty_names = {
+			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
+			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
 		}
 	}
 }
+
 
 caucasian = { # Kartvelian
 	graphical_culture = easterngfx
@@ -2583,55 +2452,191 @@ hayer = { # Armenians
 	}
 }
 
-adyghe = { # Circassians - names are swapped to mantain vanilla consistency in provinces.
-	graphical_culture = easterngfx
+brythonic = {
+	graphical_culture = westerngfx
 	
-	circassian = { # These are the Adyghe, the twelve tribes of the Circassians.
-		primary = CIR
+	welsh = {
+		graphical_culture = westerngfx
+		primary = WLS
+		dynasty_names = { 
+			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
+			#CK2
+			"Morgannwg" "Caradoc" "Mostyn" "Gorfynydd" Denbigh "Gwynn" "Gwarthaf" "Môn" "Penfro"
+			"Aberteifi" "Gethin" "Gruffudd" "Carmarthen" "Mynyw" "Anwyl of Tywyn" "Fane"
+			"of Bristol" "Evans" "Owen" "Lloyd" 
+		}
 		male_names = {
-			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran Tornik 
-			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat 			
-			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
-			
-			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
-			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
-			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
-			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek Iansokh 
-			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
-			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
-			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
+			Owain Dafydd Gruffydd Llewelyn Rhodri Maredudd Cynan Cadwaladr Iago Idwal Maelgwyn Einion Iorwerth Trahaearn 
+			Aeron Aled Aneirin Arvel Berwyn Brynmor Cadfael Cadoc Cadwgawn Celyn Cledwyn Colwyn Dai Dilwyn Emyr Gawain 
+			Glynn Gwyn Heddwyn Heilyn Hywel Rhian Tristan Tudor Urien Vaughan
+			Adda Adgar Edgar Adran Adrian Aeddan Alan Aldwr Aldroenus Algwyn Alisander Alexander Alured 
+			Alfred Alwyn Anarawd Andreas Andrew Aneurin Anlaff Olaf Anllech Annwn Antoninus Argad Arcadius 
+			Arod Arthen Artemius Arthfael Arthfoddw Arthbodus Arthwr Arthur Arthws Arthwys Artorius Asa 
+			Asaph Awst August Bangar Bedwyr Beli Berthgwyn Berhtwine Berthwallt Berthoald Bleddyn Bledrig 
+			Bleiddud Branwaladr Bride Briog Brochfael Brogmaglus Brwt Brutus Brwyn Brychan Brân Bran Cadell 
+			Cadeyrn Cadfael Cadfan Cadog Cadw Cadwal Cadwaladr Cadwallon Cadwared Cadwared Cadwgan Cadwr 
+			Cadwr Cai Gaius Caid Cain Caradog Caradog Casnar Caswallon Cawdaf Cedig Caedicius Cedwyn Ceneu 
+			Ceredig Caratacus Clydog Louis Coel Corentin Cuhelyn Custennin Constantine Cwlfyn Culmin Cwrig 
+			Cyriacus Cydifor Cydrych Cynan Conan Cynddelw Cyndyddan Cynddylan Cyndeyrn Kentigern Cynfael 
+			Cynfarch Cynfawr Cynfeddw Cynfelyn Cynfran Cynfyn Cyngar Cyngen Cynwallon Cynwared Cynwrig 
+			Cynwyd Cynyr Cysteint Constans Dafydd Deheuwant Deiniol Daniel Dewi David Dogfael Drystan 
+			Tristan Dumnagual Dwyfan Damian Dyfnarth Donyarth Dyfnwal Donald Dyfnwallon Dynod Donatus Dywel 
+			Edern Eternus Ednyfed Ednywain Edryd Ailred Edwyn Edwin Edylfred Aethelfred Einion Elfin Alwin 
+			Elidyr Elis Elisedd Elud Elystan Alstan Emrys Ambrosius Enfidaig Erb Urban Erclwf Heracles Eudaf 
+			Octavius Ewyas Ffernfael Ffilip Philip Ffriog Friog Ffwdwr Fragan Ffransis Fransis Fychan Fyrsil 
+			Gamon Garmon German Geraint Gerontius Gerallt Gerald Glwyddien Glywys Claudius Godwyn Godwin 
+			Goronwy Gronw Gruffydd Ruffinus Grygor Gregory Guret Gwalchmai Gavin Gwen Gwenwynwyn Gwerstan 
+			Werestan Gwerthefyr Vortimer Gwerthern Vortigern Gwydol Vitalis Gwydolin Vitalinus Gwyn Finn 
+			Gwidyr Gwilym William Gwrfawr Gwrfoddw Gwrgant Fergus Gwrgeneu Gwrgi Gwriad Viriathius Harri 
+			Henry Herewallt Hereweald Huw Hugh Hywel Iago Jacob Ivor Idnerth Idwal Idwallon Iestyn Justin 
+			Ieuan John Ifor Ivar Io Ioan Iolo Iorwerth Ithel Lles Lucius Llew Leon Llyr Llywarch Llywelyn 
+			Macsen Maximos Madog Matad Mael Maelcwn Malcolm Maelgwn Melgwn Maenyrch March Marcus Maredudd 
+			Murdoch Math Matthew Mawgan Meilyr Meirchion Marcianus Meiriadog Meriadoc Meirion Marianus 
+			Merfyn Meurig Maurice Mihangel Michael Morfarch Morgan Morien Morgen Morydd Mwyn Mungo Myrddin 
+			Martin Neithon Nathan Nowy Nynniaw Oswallt Oswald Owain Eugene Oucydd Eochaid Padern Padrig 
+			Patrick Pandoff Pasgen Pascentius Padarn Paternus Pawl Paul Pedr Peter Peredyr Publig Pyr 
+			Rheinallt Reginald Rhicert Richard Rhigeneu Ricenus Rhirid Rhiwal Riwal Rhiwallon Rhobert Robert 
+			Rhodri Rhufon Roman Rhun Rucenus Rhydderch Roderick Rhydog Rhys Riaged Riacet Richwin Sandde 
+			Sanctus Sawyl Samuel Seferus Severin Seisyll Cecil Selyf Solomon Senyllt Serigi Sergius Sieffre 
+			Godfrey Sion Sior George Siwauna Steffen Stephen Stinian Justinanius Sulien Julian Taliesin 
+			Telesinus Tegonwy Tegwyd Tadg Teilo Teithfalch Teudebur Tewdos Theodosius Tewdrig Theodoric 
+			Tewdwr Theodore Tomos Thomas Trahaearn Tudur Tudwal Tuathal Tudwallon Tydy Tyfoedd Tysilio Urien 
+			Urbgenius Uthyr Victor Ynyr Honorius Ysfael Llewelyn Maelgwyn Aeron Aled Aneirin Arvel Berwyn 
+			Brynmor Cadoc Cadwgawn Celyn Cledwyn Colwyn Dai Dilwyn Emyr Gawain Glynn Heddwyn Heilyn Rhian 
+			Tudor Vaughan 
 		}
 		female_names = {
-			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
-			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa  
-		}
-		dynasty_names = {
-			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
-			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
+			Elain 
+			Addiena Aelwyd Aeronwen Aeronwy Afrella Abrelda Alys Alice Angharad Annes Anna Annest Annwyl 
+			Anowed Arddyn Arianrhod Blodwen Bronwen Catrin Catherine Ceindrych Cagintria Ceridwen Cerie 
+			Cerys Cicely Cecilia Clarisant Creirwy Cristin Christina Danhadlwen Delyth Denis Denise Dwynwen 
+			Dwywai Dyddgu Efa Eva Effros Euphrasia Efrddyl Efyrddyl Aurelia Eiliwedd Elaine Elen Helen Eleri 
+			Hilaria Elinion Elinor Eleanor Ellyn Enid Essyllt Hersilia Euronwy Ffelis Ffion Fflur Flora 
+			Ffraid Brigit Glynys Gwen Gwenasedd Gwenfrewi Winifred Gwenhwyfach Gwenhwyfar Gwenllian Gwenwyn 
+			Gwerfyl Gwladys Claudia Haer Hawys Hawise Heledd Hellawes Heulwen Hunydd Hywela Ilud Isabel 
+			Elizabeth Llear Clara Llecci Lleigy Lleuca Lucia Lowry Mabyn Maches Madrun Matrona Maelrys Mair 
+			Maria Mali Mallt Marared Marchell Marcella Margred Margaret Marwenna Mawd Matilda Melisant 
+			Melisende Morganna Morien Murron Myfanwy Nest Nesta Agnes Newlyna Neulenna Non Nonna Olwen 
+			Onbrawst Owena Eugenia Prawst Ragnell Ragnhild Rhiaindrech Rioantdrec Rhiainfelt Regina Rhiannon 
+			Rhonwen Sannant Sara Sarah Senena Sibyl Sibylla Sioned Siwan Siân Joan Susanna Susana Tangwystl 
+			Tancostyla Tegla Thecla Ysbail Ystradwel
 		}
 	}
-	abkhaz = { # Abasgi - An ethnic group very closely related to Circassians, but not part of the twelve tribes
-		primary = ABK
+	breton = {
+		graphical_culture = westerngfx
+		primary = BRI
+		dynasty_names = { 
+			#New by Draiocht, using the country, historical dynasties with more than 2 dukes, Gwened, and a handful of other important or common patronyms, will try to add more at some point
+			Breizh Monforzh "de Dreux" Kerne Penteur Roazhon Naoned Gwened Tangi Karter Roc'han
+			#Most of these are not even remotely Breton, removing
+			#Rohan Penteur Leon Roazhon Poutrecoet Naoned "Leon" "de Dinan" "de Vitré" "de Cornouaille" 
+			#"de Rohan" "de Porhoët" "of Brittany" "de Châteaubriant" "de Nantes" "Leon" "Guennec" "Pensec" 
+			#"de Vannes" "de Bretagne"  "Sant Nazar" "Tanguy"  "Hennebont" "Gwened" "de Rennes" "de Rieux"
+		}
 		male_names = {
-			Petrezok Verzacht Belzebuk Parsabok Smbat Stepanos Stephen Tachat Taniel Daniel Tatoul Tigran Tornik 
-			Tornik Tovmas Thomas Thoros Theodore Trdat Vache Vachagan Vagharshak Vahag Vahan Vahram Vakhtank Varazdat 			
-			Vartan Vassak Vesd Vrtanes Zakare Zarmihr
-			
-			Bougatchik Tanachouk Sibok Atsymtchouk Toutaryk Ezgbold Koudadik Kavklytch Kanoukov 
-			Temriouk Tazriout Tchiourak Baachik Machik Boulgairouk Namstriouk Chopchouk 
-			Mait Kanboulat Koudenet Khoudenet Otchikan Damaniouk Domaniouk Isbouldoug Anzarouk 
-			Chimgalei Kanglytchev Bitemriouk Cholokh Tachbsaroukov Papchouk Oslonbek Iansokh 
-			Kaitouk Nastriouk Nartchov Pchimakha Iansokh Ademir Kazanalp Boudatcheis Sountchelei 
-			Olegouk Khotokiouki Ildar Tchapolov Saltankoul Saouslan Tazryt Okhlov Moudar 
-			Kounmourza Kanchov Slanbek inarmas Klytch Sataltanmagnout Kazy
+			#Draiocht few new names from historical figures
+			Arzhur Pêr Fransez Hoel Konan Jafrez Eozen
+			#Vanilla
+			François Jean Artur Pierre Henri Charles Gilles Richard Corentin Deniel Dinan Erwan Gaël Gwenaël Gwenneg 
+			Gwilherm Iouennic Loïc Maeldan Mikael Olier Padrig Paol Patern Pier Primel Roparzh Servan Similien Sklaer 
+			Sulio Uuinmael Venec Visant Vonig Vougay Winifrid Yann
+			Adoyre Adrien Adrian Aedan Hugh Agustin August Alan Alar Alaric Aldrien Aldroenus Alfrond Alor 
+			Alured Alfred Alwen Alwin Anaoc Anaubritou Anaugen Anauguethen Anauguoret Anauhocar Andreas 
+			Andrew Aniud Anton Antoninus Argantbri Argantmoet Arnalt Arnold Arthel Arthguiu Arthmael 
+			Arthueu Arthuiu Artorius Arthur Austol Baldoen Baldwin Bastian Sebastian Beli Beltram Bertrand 
+			Benabic Berenger Berengar Bernead Bernard Berthgualt Berthoald Bledric Bledrig Bledros Bleidcum 
+			Bletcu Blethin Bleddyn Blethiut Bleiddud Bodan Bran Brangualart Branwaladr Branhucar Branoc 
+			Brenci Brendan Breselconan Breselcoucant Breselgar Breseloc Breselueu Brethoc Brient Brian 
+			Brigualt Brioc Briog Brithael Brochuael Brogmaglus Bronmael Budguoret Budhoiarn Budic Benedict 
+			Budoc Buhedoc Butgual Cadan Cadaouen Cadarvan Cadiou Cadoc Cadog Cador Cadwr Cadou Cadw 
+			Cantgueithen Caradec Caratacus Caradoc Caradog Carantoc Catgualart Cadwaladr Catuallon Cadwallon 
+			Catguethen Catguoret Cadwared Catgutic Cathno Catnimed Catuod Caurantin Corentin Ceneu Cenguethen 
+			Cenmarhoc Cenmin Cenmonoc Cingur Cinhoedl Clemen Clement Clodouan Clotwoïon Comoere Conan Concen 
+			Cyngen Condeleu Cynddelw Condidan Cyndyddan Congar Cyngar Conmael Cynfael Conmonoc Conogan 
+			Conredeu Conuallon Cynwallon Conmarch Cynfarch Convelin Cynfelyn Conwoïon Corguethen Courantgern 
+			Courantmonoc Culmin Custent Constans Custentin Constantine Dauid Deniel Daniel Denis Deroch 
+			Derrien Deui David Deurhoiarn Domnoret Domuel Dywel Donual Donald Donuallon Dyfnwallon Drogon 
+			Drogo Duenerth Dumnarth Donyarth Edern Eternus Edouart Edward Eguen Eon Erispoë Erouan Yves 
+			Estienne Etgual Eudon Otto Euhocar Euhoiarn Eusebi Eusebius Even Eugene Evrard Everard Farinmael
+			Ffernfael Ferant Ferdinand Fracan Fragan Framual Fransaz Francis Frioc Friog Garmon German 
+			Geofroi Geralt Gerald Gereint Gerontius Gestin Justin Gilbert Godefroi Godfrey Goennoc Gouesnon 
+			Goulwen Gouremor Gwrfawr Gourmaelon Gralon Gratcant Gregor Gregory Grifiud Ruffinus Guallon 
+			Gualter Walter Gudual Guecon Guenerdon Guenhael Guentanet Guentiern Gui Guy Guiharan Guihomarch 
+			Guihomart Guilherm William Guincalon Guincum Guinhael Guinhoiarn Guinoc Guinol Winaloe Guithrit 
+			Guitol Vitalis Guobrian Guocon Guoedanau Guoedatoe Guoednou Guoethoiarn Guoletec Guorbili 
+			Guordotal Guoretan Guorethoiarn Guorhoiarn Gurbodu Gurcant Gurcencor Gurceneu Gwrgeneu Gurci 
+			Gwrgi Gurcon Gurdilic Gurgen Gurguaret Gurguist Gurguistl Fergus Gurheter Guriant Viriathius 
+			Gurlouen Gurmael Gurmaeloc Gurmhaelon Gurthcid Gurthiern Vortigern Guruant Guerech Gueroc 
+			Guethenan Guethencar Guethencor Guethenwoïon Guethenhoiarn Guethenoc Haelcomarch Haelguethen 
+			Haelguoret Haelhoiarn Haeloc Haeloubri Herori Haermael Hammelin Hamelin Hamon Harscoit Hedyn 
+			Heranal Herri Henry Hesdren Hincomhal Hinguethen Hocar Hoconan Honfroi Hoël Hywel Huiarnal 
+			Huiarnbili Huiarnviu Harvey Hunfroi Humphrey Iacob Jacob Iarcun Iarnbud Iarncant Iarncar 
+			Iarndetguid Iarnegon Jarnegon Iarnuallon Iarnuocon Iarnhitin Iedechael Iehan John Ilcarthon Ildut 
+			Iliud Inisian Iocilin Joscelin Iodoc Ionas Jonas Iosep Joseph Iudcum Iuduallon Idwallon 
+			Ithel Iudicael Judicael Iudnerth Idnerth Iudnimet Ednyfed Iustoc Iudoc Iudual Idwal Iumael 
+			Iunceneu Iunuocon Iunmonoc Jord George Leucum Loi Lorens Laurence Louenan Loumarch Llywarch 
+			Louïs Iudhael Louis Maelcon Maelgwn Maeldoï Maelhuedoc Maeloc Maelscoet Maelscuet Maenceneu Maenci March 
+			Marthin Martin Matheudoï Mathias Matthew Matoc Matad Matuid Maugan Mauric Maurice Medrod 
+			Meldroc Meriadoc Mermin Merfyn Meugan Mawgan Meven Michel Michael Morcant Morgan Morcondeleu 
+			Morgen Morguethen Morhaetho Mormarch Morfarch Morvan Mortiern Neven Nicolas Nicholas 
+			Nodhoiarn Nominoë Nougui Nowy Oliuer Oliver Oswallt Oswald Padric Patrick Paol Paul 
+			Pasquitan Patern Paternus Petroc Phelippe Phillip Piran Prigent Primael Primarhoc Putrael 
+			Peter Ralf Raoul Ralph Renan Resmen Riacet Ribald Ricart Richard Riceneu Ricenus Richwin 
+			Riualtr Rihouen Rinduran Rioc Riol Riwal Riuallon Rhiwallon Rodric Roderick Roenualloc 
+			Roenuolou Roenhoiarn Rolland Roland Ronan Roparth Robert Roucen Rucenus Rumon Roman Ryd 
+			Salomon Solomon Samson Samuel Stefen Stephen Sulgen Julian Sulhoiarn Sulmonoc Sultiern Talan 
+			Talhoiarn Tanci Tanet Tanhoiarn Telent Terithien Tethion Teudric Theodoric Teudur Theodore 
+			Tibault Theobald Tiernan Tiernmael Tiernoc Tiernualloc Tiernuallon Treveur Tristan Tuduallon 
+			Tudwallon Tudur Tugdual Tuathal Ungust Urbcen Urbgenius Urbien Urban Urblon Urvod Uther 
+			Vincenne Vincent Victor Salenn Roenuallon Ridoredh Pêr Pascueten Nodethael Mordred Marcus
 		}
 		female_names = {
-			Zuliyzhan Susane Babishe Zmroukhd Adrine Elsapet Sarine Khazbiika Kheeda Kurbiika Laila Laliita Lamaara Liiza Looli 
-			Lulii Maali Maaret Madiina Makka Maliika Malkan Marjam Marzhan Milaana Nurbiika Nurishat Nuura Peet'mat Qoqa  
+			#Draiocht new names from historical figures
+			Konstanza Klaoda
+			#Vanilla
+			Aanor Abrelda Adela Adelaïda Adelaide Adelindis Adeltrudis Aedoc Aeluit Aelwyd Agnes Alana 
+			Alis Anne Claudine Alice Anaguistl Anaudat Anaudrec Anauhouguel Anauprost Andrea Anna Aourcen Aouregan Aourell 
+			Aouren Argantan Argantdrec Arganteila Arganteilin Argantguistl Arganthael Argantlon 
+			Artaca Avandrec Avenie Beladora Beladore Berchet Brigid Berengaria Bernegarda Berta 
+			Bertha Bertissa Bleutuen Blodwen Brendana Bronuen Bronwen Buriana Canna Cateline Catherine 
+			Catguistl Cecilia Ceindrec Cagintria Ceinguled Cleirui Creirwy Condeleu Constansa Constance 
+			Cristen Christina Dengel Deniela Denise Diuset Dreanau Drebiu Dreguoreth Drelouguen 
+			Drilego Duihon Elara Eleina Elaine Elena Helen Elesbed Elizabeth Elisaued Elizabeth Elwen 
+			Emma Endellion Ennoguent Enoguen Enora Eonnecte Joan Erouana Yvonne Ewsannec Fuandrec Gaela 
+			Geberga Geberga Glades Claudia Gloiucen Gloiumed Guelet Guenbrith Guencen Guencenedl Guencor 
+			Guenguerthlon Guenguistl Guenguiu Guenmon Guenna Guenneret Guennguar Gueruel Gwerfyl 
+			Guillemecte Williamette Gwenn Gwen Halbiu Hawis Hawise Herannuen Hodierne Igerna Ignoguen 
+			Ildegarda Hildegarde Iofa Iouenna Joan Isabelle Elizabeth Iseult Hersilia Iudhent Iudlouguen 
+			Iudprost Janed Joan Judhael Judith Languoret Leonore Eleanor Leueer Leuhemel Leuoc Louhelic 
+			Luncen Maben Magdalene Magdalena Marguarite Margaret Mari Maria Medguistl Meduil Melita 
+			Milian Mona Mona Morganne Morganna Morguetel Moruen Murron Moruith Morvana Neulenna Neulenna 
+			Nodguoret Nodiunet Nolwenne Nonne Nonna Oncenedl Oncum Onguen Ordguydel Ourcen Ourdilic 
+			Proscen Prosguetel Prostlon Rannoeu Riguistl Rimoet Rioanon Rioanon Rhiannon Rioantcen 
+			Rioantdrec Rioantdrec Rioantel Rioantguellt Regina Roenhael Roinoc Ronana Rozenn Rum Rumun 
+			Stefania Stephania Steren Sulcar Sulcen Sulgubri Sulgwen Sulleisoc Sulmed Susanne Susanna 
+			Tandrec Tanetbiu Tanetlowen Tanguistl Tancostyla Tedvil Tephaine Thomine Tibourge Tiburge 
+			Trifine Tristana Uriell Seva Perenn Meonre Ilcum Guigoëdon Drichglur Berthildis Argantmoet
 		}
+	}
+	cornish = {
+		graphical_culture = westerngfx
+		primary = CRN
 		dynasty_names = {
-			Guaye Adamiy Abzakh Zhaney Mamkhegh Mokhosh Natukhai Temirgoy
-			Hatuqwai Khegaik Khetuk Cöbein Shapsug Beslenei Ubykh Tazryt Okhlov
+			Kernew "of Cornwall" Penrose Trevelyan Bolitho Kernow Nance Nancarrow Chegwin Nancekivell Chenoweth
+			Menhenick Teague Trelawny Trewin Tremayne
+		}
+		male_names = {
+			Arthek Arthyen Austol Benesek Branok Brioc Cadan Cador Carantok Casek Casworon Clemo Clesek Corentyn
+			Costentyn De Day Edern Enyon Gerens Gerren Goron Gryffyn Gwalather Hedrek Hedrok Jago Jory Jowan Kenal
+			Keneder Kenver Kitto Locryn Lowen Madern Massen Meryasek Peran Perran Piran Pasco Pascow Rewan Ruan Ruman
+			Santo Treeve Treave
+		}
+		female_names = {
+			Beaten Bennath Berlewen Bersaba Beryan Bryluen Caja Chesten Conwenna Delen Demelza Derowen Derwa
+			Doryty Ebrel Elestren Elowen Emblyn Endelyn Eseld Ewella Glanna Gwennol Hedra Ia Jenifry Jenifer
+			Jowanet Kelynen Kensa Kerensa Keresen Kerezen Kerra Lamorna Lowdy Lowena Mabyn Melder Melwyn Melyonen
+			Melyonen Meliora Merouda Morwenna Nessa Pasca Peswera Rosen Rosenwyn Senara Sowenna Splanna Steren Talwyn
+			Tamsyn Tegen Tregereth Tressa Trueth Wenna Ysella
 		}
 	}
 }
@@ -12809,21 +12814,31 @@ arawakan_g = {
 	}
 }
 
-dorset = {
-	graphical_culture = northamericagfx
+savannas_group = {
+	graphical_culture = africangfx
 
-	tuniit = {
-		primary = YZE
-		male_names = {
-			Nauja Nirliq Nuniq Nuvuk Oki Pamiuq Patuktuq Pauloosie Petuwaq Pimniq Piqqaluyungmik Pittiulak Pukajaak Qajak 
-			Qammutiq Qamut Qannik Qaumaniq Qausiqtuk Qimmiabruk Qimmiq Qulitalik Sauri Sighna  Siluk Sivoy Sivuugun 
-			Taktuq Taliriktug Tikaani Tiqriganiannig Tukkuyummavungga Tulimak Tulimaq Tulugaq Tungajuaq Tupiq Tuuq Ugalik 
-			Ujurak Ukiuk Unnuk Usuiituk
-		}
-		female_names = {
-			Ahnah Akna Chena Corazon Desna Kaskae Kaya Kirima Koko Malina Adlartok Akiak Anana Anernerk Annakpok Aput 
-			Ataciare Atka Aukaneck Biisaiyowaq Buniq Chulyin Cikup Cupun Hey Iluak Iluq Imnek Ipiktok Iqniq Kakrayok 
-		}
+	azande = {
+		#primary = XXX
+	}
+	banda_culture = {
+		#primary = XXX
+	}
+	baya_culture = {
+		#primary = XXX
+	}
+	ngbandi = {
+		#primary = XXX
+	}
+	dynasty_names = { 
+		Lukeni Loanga Kalumbwe Kikondja Imbangala Kasanje Shila Kazembe Lunda Kuba
+	}
+	male_names = {
+		Garcia Álvaro Pedro Afonso Ntinu Nkuwu Henrique António Bernardo José Ambrósio Aleixo André Daniel Diogo 
+		Nicolau Nzinga Nkuwa Sebastião Ilunga Sanza Kumwimba Kasongo Kekenya Kaumbo Miketo Nday Mwine Maloba 
+		Kitamba Cibind Nawej Munying Kateng Cakasekene Cikombe Kalong Mutand Mbala Mukaz Mpemba
+	}
+	female_names = {
+		Jetta Vandana Zody 
 	}
 }
 
@@ -12873,31 +12888,21 @@ wakashan_group = {
 	}
 }
 
-savannas_group = {
-	graphical_culture = africangfx
+dorset = {
+	graphical_culture = northamericagfx
 
-	azande = {
-		#primary = XXX
-	}
-	banda_culture = {
-		#primary = XXX
-	}
-	baya_culture = {
-		#primary = XXX
-	}
-	ngbandi = {
-		#primary = XXX
-	}
-	dynasty_names = { 
-		Lukeni Loanga Kalumbwe Kikondja Imbangala Kasanje Shila Kazembe Lunda Kuba
-	}
-	male_names = {
-		Garcia Álvaro Pedro Afonso Ntinu Nkuwu Henrique António Bernardo José Ambrósio Aleixo André Daniel Diogo 
-		Nicolau Nzinga Nkuwa Sebastião Ilunga Sanza Kumwimba Kasongo Kekenya Kaumbo Miketo Nday Mwine Maloba 
-		Kitamba Cibind Nawej Munying Kateng Cakasekene Cikombe Kalong Mutand Mbala Mukaz Mpemba
-	}
-	female_names = {
-		Jetta Vandana Zody 
+	tuniit = {
+		primary = YZE
+		male_names = {
+			Nauja Nirliq Nuniq Nuvuk Oki Pamiuq Patuktuq Pauloosie Petuwaq Pimniq Piqqaluyungmik Pittiulak Pukajaak Qajak 
+			Qammutiq Qamut Qannik Qaumaniq Qausiqtuk Qimmiabruk Qimmiq Qulitalik Sauri Sighna  Siluk Sivoy Sivuugun 
+			Taktuq Taliriktug Tikaani Tiqriganiannig Tukkuyummavungga Tulimak Tulimaq Tulugaq Tungajuaq Tupiq Tuuq Ugalik 
+			Ujurak Ukiuk Unnuk Usuiituk
+		}
+		female_names = {
+			Ahnah Akna Chena Corazon Desna Kaskae Kaya Kirima Koko Malina Adlartok Akiak Anana Anernerk Annakpok Aput 
+			Ataciare Atka Aukaneck Biisaiyowaq Buniq Chulyin Cikup Cupun Hey Iluak Iluq Imnek Ipiktok Iqniq Kakrayok 
+		}
 	}
 }
 

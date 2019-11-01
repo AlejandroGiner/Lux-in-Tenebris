@@ -689,7 +689,6 @@ kongo_region = {
 	areas = {
 		coastal_kongo
 		kongo_area
-		angola_namibia_area
 		matamba_area
 		lower_kasai
 		kasai_area
@@ -742,11 +741,7 @@ south_africa_region = {
 		bechuanaland_area
 		makgadikgadi_area
 		kalahari_area
-		zambezi_area
-		okavango_area
 		namaqualand_area
-		damaraland_area
-		ovambo_area
 		skeleton_coast_land_area
 		subantarctic_islands_area
 	}
@@ -1996,6 +1991,16 @@ chile_region = {
 		southern_chile_area
 		central_chile_area
 		northern_chile_area
+	}
+}
+
+angola_region = {
+	areas = {
+		angola_namibia_area
+		zambezi_area
+		okavango_area
+		damaraland_area
+		ovambo_area
 	}
 }
 
