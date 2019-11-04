@@ -2587,12 +2587,12 @@ TUS_ideas = {
 
 USA_ideas = {
 	start = {
-		merchants = 1
-		religious_unity = 0.2
+		no_religion_penalty = yes
+		land_morale = 0.2
 	}
 	
 	bonus = {
-		republican_tradition = 0.3
+		republican_tradition = 0.5
 	}
 	
 	trigger = {
@@ -2600,26 +2600,30 @@ USA_ideas = {
 	}
 	free = yes
 	
-	freedom_of_religion = {
-		no_religion_penalty = yes
-	}
 	usa_bill_of_rights = {
 		global_unrest = -2
 	}
-	empire_of_liberty = {
-		colonists = 1
+	empire_of_liberty = { #Manifest destiny
+		colonists = 2
 	}
-	lessons_of_valley_forge = {
-		land_morale = 0.10
+	american_innovation = {
+		idea_cost = -0.05
+		innovativeness_gain = 0.5
 	}
 	workshop_of_the_world = {
 		global_trade_goods_size_modifier = 0.15
+		development_cost = -0.05
 	}
-	shining_city_on_a_hill = {
-		prestige = 1
+	shining_city_on_a_hill = { #Empire of liberty
+		unjustified_demands = -0.3
+		improve_relation_modifier = 0.3
 	}
-	indian_removal = {
-		cb_on_primitives = yes
+	immigration_usa = {
+		colonist_placement_chance = 0.15
+	}
+	indian_removal = { #Trail of tears
+		harsh_treatment_cost = -0.15
+		culture_conversion_cost = -0.3
  	}
 }
 
