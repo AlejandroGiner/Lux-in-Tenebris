@@ -1,0 +1,31 @@
+
+culture = arawak
+religion = animism
+capital = "Vieques"
+trade_goods = unknown 
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 35
+native_ferocity = 5
+native_hostileness = 8
+
+1493.11.19 = { discovered_by = CAS } # Christopher Columbus
+1508.8.8 = {
+	owner = CAS
+	controller = CAS
+	add_core = CAS
+	is_city = yes
+	culture = castillian
+	religion = catholic
+	trade_goods = sugar
+}
+1516.1.23 = {
+	discovered_by = SPA
+	owner = SPA
+	controller = SPA
+	add_core = SPA
+	remove_core = CAS
+}

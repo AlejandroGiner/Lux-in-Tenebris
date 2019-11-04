@@ -1,0 +1,40 @@
+#7624 - Barbuda
+
+culture = east_taino
+religion = animism
+capital = "Wa'omoni"
+trade_goods = unknown 
+hre = no
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
+
+1493.1.1 = { discovered_by = CAS } # Christopher Columbus
+1516.1.23 = { discovered_by = SPA }
+1666.1.1 = {
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+	capital = "Barbuda"
+	religion = catholic
+	culture = castillian 
+	is_city = yes
+	trade_goods = sugar 
+} # Spanish, French and English colonies, generic capital
+1666.1.1 = {
+	capital = "Codrington"
+	religion = anglican
+	culture = english 
+} # Leased to Codrington brothers
+1707.5.12 = {
+	discovered_by = GBR
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	remove_core = ENG
+}
+1741.1.1 = { unrest = 10 } # Slave uprising
