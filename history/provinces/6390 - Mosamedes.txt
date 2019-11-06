@@ -1,0 +1,26 @@
+#6390 - Mosamedes
+
+culture = herero
+religion = shamanism #Fetishism
+capital = "Mosamedes"
+trade_goods = unknown
+hre = no
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+native_size = 50
+native_ferocity = 1
+native_hostileness = 7
+discovered_by = KON
+discovered_by = NDO
+discovered_by = LOA
+discovered_by = sub_saharan
+
+1488.1.1 = { discovered_by = POR } # Bartolomeu Dias
+1616.1.1 = { discovered_by = NED } # Dirk Hartog
+1785.1.1 = {	
+	owner = POR
+	controller = POR
+	add_core = POR
+	is_city = yes
+} 
