@@ -1417,23 +1417,20 @@ northeast_america_region = {
 		delaware_valley_area
 		iroquoisia_area
 		susquehanna_area
-		#maine_area
-		#maryland_area
 		#BTARG
 		minisink_area
-		#long_island_area
 		westsylvania_area
-		#narragansett_bay_area
-		adirondacks_area
 		maine_area
+		chesapeake_area
+		appalachia_area
+		great_valley_area
+		piedmont_north_america_area
+		virginia_tidewater_area
 	}
 }
 
 southeast_america_region =  {
 	areas = {
-		chesapeake_area
-		great_valley_area
-		piedmont_north_america_area
 		american_georgia_area 
 		florida_area
 		carolinas_area
@@ -1444,25 +1441,11 @@ southeast_america_region =  {
 		south_appalachia_area
 		#BTARG
 		wiregrass_area
-		#georgia_fall_line_area
-		#southeast_georgia_area
 		upper_chattahoochee_area
 		everglades_area
-		#big_bend_area
-		#suncoast_area
-		#florida_uplands_area
-		#atlantic_florida_area
-		#georgia_sea_islands_area
-		#carolina_piedmont_area
-		#carolina_sandhills_area
 		grand_strand_area
-		#southern_blue_ridge_area
-		#brushies_area
 		inner_banks_area
 		eastern_tennessee_area
-		delmarva_peninsula_area
-		virginia_tidewater_area
-		appalachia_area
 	}
 	monsoon = {
 		00.06.01
@@ -1473,30 +1456,21 @@ mississippi_region = { #66
 	areas = {
 		lower_louisiana_area
 		west_florida_area
-		#ozarks_area
 		upper_louisiana_area
 		alabama_area
 		kentucky_area
-		#south_appalachia_area
 		mississippi_area
 		choctaw_area
 		mississippi_plain_area
 		#BTARG
 		pine_belt_area
-		#mississippi_delta_area
 		chickasaw_area
-		#alabama_river_area
 		black_warrior_river_area
 		nickajack_area
-		#florida_panhandle_area
-		#acadiana_area
-		#red_river_valley_area
 		northeast_louisiana_area
 		western_tennessee_area
 		middle_tennessee_area
-		#cumberland_plateau_area
 		arkansas_plains_area
-		#ouachitas_area
 		lower_arkansas_river_area
 		big_thicket_area
 		piney_woods_area
@@ -1543,7 +1517,6 @@ california_region = {
 		san_francisco_bay_area
 		lower_colorado_river_area
 		upper_colorado_area
-		#mogollon_rim_area			#Repurposing 1.28's apacheria_area into this.
 		painted_desert_area
 		upper_gila_area
 		mogollon_rim_area
@@ -1592,7 +1565,6 @@ hudson_bay_region = {
 		east_prairies_area
 		#GREENLAND
 		greenland_area
-		east_greenland_area
 	}
 }
 

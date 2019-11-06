@@ -1545,13 +1545,6 @@ gbr_rb_northern_colonial = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_greenland_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -1560,10 +1553,7 @@ gbr_rb_northern_colonial = {
 		required_missions = { eng_rb_take_shetland_and_faro_isles }
 
 		provinces_to_highlight = {
-			OR = {
 				area = greenland_area
-				area = east_greenland_area
-			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -1578,18 +1568,10 @@ gbr_rb_northern_colonial = {
 				greenland_area = {
 					has_discovered = ROOT
 				}
-				east_greenland_area = {
-					has_discovered = ROOT
-				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_greenland
 				greenland_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-					is_city = yes
-				}
-				east_greenland_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 					is_city = yes
