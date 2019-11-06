@@ -163,13 +163,6 @@ nav_missions_1_b = {
 				}
 				add_permanent_claim = ROOT
 			}
-			avalon_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	nav_newfoundland_labrador = {
@@ -182,7 +175,6 @@ nav_missions_1_b = {
 						area = newfoundland_area
 						area = labrador_area
 						area = cote_nord_area
-						area = avalon_area
 					}
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -208,10 +200,6 @@ nav_missions_1_b = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			cote_nord_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			avalon_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

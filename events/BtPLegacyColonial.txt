@@ -165,10 +165,7 @@ province_event = {
 			has_empty_adjacent_province = yes
 			any_empty_neighbor_province = {
 				has_discovered = ROOT
-				OR = {
 					area = newfoundland_area
-					area = avalon_area
-				}
 			}
 		}
 		required_personality = expansionist_personality

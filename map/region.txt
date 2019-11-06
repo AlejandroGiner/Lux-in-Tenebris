@@ -1385,19 +1385,13 @@ canada_region = {
 		newfoundland_area
 		labrador_area
 		cote_nord_area
-		notre_dame_mountains_area
 		lower_canada_area
 		upper_canada_area
 		laurentian_area
 		huronia_area
 		upper_ontario_area
-		maine_area
 		#BTADDITIONS
 		grand_river_area
-		upper_saint_john_river_area
-		lower_grand_river_area
-		avalon_area
-		maritime_islands_area
 	}
 }
 
@@ -1411,18 +1405,17 @@ great_lakes_region = {
 		wisconsin_area
 		#BT Moved from Great Plains region
 		dakota_area
+		red_river_area
 	}
 }
 
 northeast_america_region = {
 	areas = {
 		great_woods_area
-		massachusetts_bay_area
 		connecticut_valley_area
 		hudson_valley_area
 		delaware_valley_area
 		iroquoisia_area
-		south_iroquoisia_area
 		susquehanna_area
 		#maine_area
 		#maryland_area
@@ -1431,8 +1424,8 @@ northeast_america_region = {
 		#long_island_area
 		westsylvania_area
 		#narragansett_bay_area
-		housatonic_river_area
 		adirondacks_area
+		maine_area
 	}
 }
 
@@ -1466,10 +1459,10 @@ southeast_america_region =  {
 		#southern_blue_ridge_area
 		#brushies_area
 		inner_banks_area
-		tar_neuse_area
 		eastern_tennessee_area
 		delmarva_peninsula_area
 		virginia_tidewater_area
+		appalachia_area
 	}
 	monsoon = {
 		00.06.01
@@ -1484,7 +1477,6 @@ mississippi_region = { #66
 		upper_louisiana_area
 		alabama_area
 		kentucky_area
-		appalachia_area
 		#south_appalachia_area
 		mississippi_area
 		choctaw_area
@@ -1525,7 +1517,6 @@ great_plains_region = {
 		southern_rockies
 		lakota_area
 		west_dakota_area
-		upper_missouri_area
 		yellowstone_area
 		upper_platte_area
 		bighorn_area
@@ -1538,7 +1529,6 @@ california_region = {
 		california_area
 		baja_california_area
 		arizona_area
-		colorado_plateau_area
 		central_valley_area
 		#New in 1.28
 		northern_california_area			#Note BT's old northern_california_area renamed to lost_cost_area to avoid conflict.
@@ -1547,22 +1537,17 @@ california_region = {
 		sierra_nevada_area
 		mojave_area
 		utah_area
-		sonora_y_sinaloa_area			#Cut in 1.28 vanilla, but kept in BT as part of an upper-lower Sonora split.
 		southern_colorado_plateau_area
 		great_basin_area
 		sacramento_valley_area
-		lake_cahuilla_area
 		san_francisco_bay_area
 		lower_colorado_river_area
 		upper_colorado_area
 		#mogollon_rim_area			#Repurposing 1.28's apacheria_area into this.
 		painted_desert_area
 		upper_gila_area
-		central_valley_delta_area
-		southern_lower_california_area
 		mogollon_rim_area
 		lost_cost_area			#Formerly northern_california_area, changed in 1.28 to avoid conflict with 1.28's area with the same name.
-		eel_river_area
 	}
 }
 
@@ -1577,33 +1562,22 @@ cascadia_region = {
 		straits_of_georgia_area
 		east_alaska_area
 		#BTADDITIONS
-		queen_charlotte_sound_area
 		northern_cascades_area
 		southern_cascades_area
 		northern_rocky_mountains_area
 		vancouver_island_area
-		olympic_peninsula_area
 		columbia_plateau_area
-		upper_columbia_river_area
 		palouse_area
 		cariboo_area
-		kootenays_area
 		central_rockies_area
-		willamette_valley_area
-		okanogan_area
 		klamath_area
-		siskiyou_area
 		blue_mountains_area
-		bitterroot_mountain_area
-		high_desert_area
 	}
 }
 
 hudson_bay_region = {
 	areas = {
 		james_bay_area
-		hudson_bay_area
-		red_river_area
 		saskatchewan_area
 		prairies_area
 		inner_ontario_area
@@ -1613,12 +1587,8 @@ hudson_bay_region = {
 		kativik_area
 		manitoba_area
 		churchill_area
-		abitibi_area
-		upper_james_bay_area
 		nunavut_area
-		ungava_area
 		assiniboia_area
-		rocky_mountain_foothills_area
 		east_prairies_area
 		#GREENLAND
 		greenland_area
@@ -1724,9 +1694,7 @@ alaska_region = {
 		lower_yukon_area
 		upper_yukon_area
 		northern_alaska_area
-		beaufort_coast_area
 		southern_alaska_area
-		copper_river_valley_area
 	}
 }
 
@@ -1737,11 +1705,7 @@ northwest_territories_region = {
 		sahtu_area
 		deh_cho_area
 		klondike_area
-		arctic_coast_area
-		athabasca_area
 		stikine_area
-		the_barrens_area
-		omenica_area
 	}
 }
 

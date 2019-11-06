@@ -110,7 +110,6 @@ grain = {
 			OR = {
 				area = northern_rocky_mountains_area
 				area = interior_plateau_area
-				area = queen_charlotte_sound_area
 				area = hecate_strait_area
 			}
 		}
@@ -125,14 +124,9 @@ grain = {
 			factor = 0.0
 			OR = {
 				area = newfoundland_area
-				area = avalon_area
 				province_id = 982			#Cape Breton
 				province_id = 983			#PEI
 			}
-		}
-		modifier = { #Grain very rare in Athabaska
-			factor = 0.25
-			area = athabasca_area
 		}
 		modifier = { #No grain in Alaska
 			factor = 0.0
@@ -143,16 +137,11 @@ grain = {
 			OR = {
 				area = james_bay_area
 				area = upper_ontario_area
-				area = huronia_area
 				area = grand_river_area
-				area = lower_grand_river_area
 				area = laurentian_area
 				area = inner_ontario_area
 				area = manitoba_area
-				area = notre_dame_mountains_area
-				area = abitibi_area
 				area = stikine_area
-				area = upper_james_bay_area
 				AND = {
 					region = canada_region
 					OR = {
@@ -166,16 +155,12 @@ grain = {
 			factor = 0.0
 			region = northwest_territories_region
 			NOT = {
-				OR = {
-					area = athabasca_area
 					area = peace_river_area
-				}
 			}
 		}
 		modifier = { #Rich Land
 			factor = 6.0
 			OR = {
-				area = central_hispaniola_area
 				area = west_hispaniola_area
 				area = dominica_area
 			}
@@ -577,11 +562,13 @@ fish = {
 			}
 		}
 		modifier = { #Really want Avalon to have fish
-			factor = 30.0
+			factor = 50.0
 			OR = {
-				area = avalon_area
 				province_id = 5019			#St Pierre et Miquelon
 				province_id = 4974			#Grand Banks
+				province_id = 5058
+				province_id = 5059 
+				province_id = 5013
 			}
 		}
 		modifier = {
@@ -600,7 +587,6 @@ fish = {
 			OR = {
 				area = salish_sea_area
 				area = hecate_strait_area
-				area = queen_charlotte_sound_area
 				area = alaska_area
 				area = alaskan_coast_area
 			}
@@ -765,7 +751,6 @@ fur = {
 			OR = {
 				area = lower_acadia_area
 				area = maine_area
-				area = notre_dame_mountains_area
 			}
 		}
 		modifier = { #Trying to discourage fur in Acadia only when province isnt hilly, hills should still have fur
@@ -794,9 +779,11 @@ fur = {
 		modifier = { #Really want Avalon to have fish
 			factor = 0.0
 			OR = {
-				area = avalon_area
 				province_id = 5019			#St Pierre et Miquelon
 				province_id = 4974			#Grand Banks
+				province_id = 5058
+				province_id = 5059 
+				province_id = 5013
 			}
 		}
 		modifier = { #These provinces should have fur or at least a very good chance of fur
@@ -888,7 +875,7 @@ salt = {
 			factor = 3.0
 			OR = {
 				area = mojave_area
-				area = high_desert_area
+				area = great_basin_area
 				area = utah_area
 			}
 		}
@@ -981,10 +968,7 @@ naval_supplies = {
 		}
 		modifier = { #Fantastic wood in the rainforests of the Pacific Coast
 			factor = 4.0
-			OR = {
-				area = queen_charlotte_sound_area
 				area = hecate_strait_area
-			}
 		}
 		modifier = { #very good wood in the Cascade ranges and Rockies
 			factor = 1.5
@@ -1000,10 +984,7 @@ naval_supplies = {
 		}
 		modifier = { #Historical lumber trade of the Ottawa River   -x3 to overcome penalties
 			factor = 9.0
-			OR = {
 				area = grand_river_area
-				area = lower_grand_river_area
-			}
 		}
 		modifier = { #Too cold and dark for good lumber in far north
 			factor = 0.5
@@ -1030,10 +1011,10 @@ naval_supplies = {
 		modifier = { #Extreme north has no suitable trees or supplies
 			factor = 0.0
 			OR = {
-				area = arctic_coast_area
 				area = northern_alaska_area
-				area = the_barrens_area
 				province_id = 4999		# Hudson Bay islands
+				province_id = 5075
+				province_id = 4976
 			}
 		}
 		modifier = { #Newfoundland doesnt have enough trees for lumber production
@@ -1049,9 +1030,11 @@ naval_supplies = {
 		modifier = { #Really want Avalon to have fish
 			factor = 0.0
 			OR = {
-				area = avalon_area
 				province_id = 5019			#St Pierre et Miquelon
 				province_id = 4974			#Grand Banks
+				province_id = 5058
+				province_id = 5059 
+				province_id = 5013
 			}
 		}
 		modifier = { #Naval Supplies very likely
@@ -1108,7 +1091,6 @@ copper = {
 			NOT = { region = east_siberia_region }
 			NOT = { region = central_africa_region }
 			NOT = { area = arizona_area }
-			NOT = { area = colorado_plateau_area }
 			NOT = { area = southern_colorado_plateau_area }
 			NOT = { area = utah_area }
 			NOT = { area = northern_rocky_mountains_area }
@@ -1177,7 +1159,6 @@ copper = {
 		modifier = { #Copper still pretty rare elsewhere
 			factor = 0.5
 			OR = {
-				area = colorado_plateau_area
 				area = southern_colorado_plateau_area
 				area = northern_rocky_mountains_area
 				area = columbia_river_area
@@ -1248,7 +1229,6 @@ gold = {
 			NOT = { region = alaska_region }
 			NOT = { region = northwest_territories_region }
 			NOT = { region = new_zealand_region }
-			NOT = { area = central_hispaniola_area }
 			NOT = { area = west_hispaniola_area }
 			NOT = { area = dominica_area }
 		}
@@ -1329,14 +1309,12 @@ gold = {
 				area = mexico_area
 				area = jalisco_area
 				area = gran_chichimeca_area
-				area = high_desert_area
 				area = stikine_area
 			}
 		}
 		modifier = {	#Gold is common here
-			factor = 2.5
+			factor = 3
 			OR = {
-				area = central_hispaniola_area			#Hispaniola has been described as 'one immense gold field', though ironically, the Spanish didn't find many of the deposits in the colonial period, and instead travelled further inland in search of often poorer gold mines
 				area = west_hispaniola_area
 				area = dominica_area
 				area = sierra_nevada_area
@@ -1353,7 +1331,6 @@ gold = {
 				area = california_area			#Gold rarer in coastal California
 				area = baja_california_area
 				area = central_valley_area
-				area = sonora_y_sinaloa_area
 			}
 		}
 		modifier = {	#Gold is rarer here
@@ -1514,9 +1491,11 @@ iron = {
 		modifier = { #Really want Avalon to have fish
 			factor = 0.0
 			OR = {
-				area = avalon_area
 				province_id = 5019			#St Pierre et Miquelon
 				province_id = 4974			#Grand Banks
+				province_id = 5058
+				province_id = 5059 
+				province_id = 5013
 			}
 		}
 		modifier = { #Fix Iron was too common in some areas
@@ -2037,7 +2016,6 @@ tobacco = {
 			NOT = { region = la_plata_region }
 			NOT = { region = northeast_america_region }
 			NOT = { region = southeast_america_region }
-			NOT = { area = huronia_area }			#BT New
 			NOT = { area = upper_canada_area }			#BT New
 			NOT = { area = lower_canada_area }			#BT New
 			NOT = { region = brazil_region }
@@ -2067,9 +2045,7 @@ tobacco = {
 		modifier = {
 			factor = 0
 			has_winter = severe_winter
-			NOT = { area = huronia_area }
 			NOT = { area = lower_canada_area }
-			NOT = { area = upper_canada_area }
 		}
 		modifier = {
 			factor = 2.5
@@ -2081,7 +2057,7 @@ tobacco = {
 		modifier = {
 			factor = 4.0
 			OR = {
-				area = huronia_area			#Tobacco people
+				area = upper_canada_area			#Tobacco people
 				area = west_cuba_area
 				province_id = 5581
 			}
@@ -2293,9 +2269,11 @@ livestock = {
 		modifier = {
 			factor = 0
 			OR = {
-				area = avalon_area
 				province_id = 5019			#St Pierre et Miquelon
 				province_id = 4974			#Grand Banks
+				province_id = 5058
+				province_id = 5059 
+				province_id = 5013
 			}
 		}
 		modifier = {
@@ -2348,7 +2326,6 @@ livestock = {
 				region = northwest_territories_region
 				region = alaska_region
 				area = hecate_strait_area
-				area = queen_charlotte_sound_area
 			}
 		}
 		modifier = {
@@ -2407,10 +2384,7 @@ incense = {
 		factor = 20
 		modifier = {
 			factor = 0
-			OR = {
 				area = newfoundland_area
-				area = avalon_area
-			}
 		}
 		modifier = {
 			factor = 0
@@ -2457,10 +2431,7 @@ glass = {
 		factor = 5
 		modifier = {
 			factor = 0
-			OR = {
 				area = newfoundland_area
-				area = avalon_area
-			}
 		}
 		modifier = {
 			factor = 0
@@ -2510,10 +2481,7 @@ gems = {
 		factor = 4			#reduced from 5, gems were a bit too common
 		modifier = {
 			factor = 0
-			OR = {
 				area = newfoundland_area
-				area = avalon_area
-			}
 		}
 		modifier = {
 			factor = 0
