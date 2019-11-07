@@ -2,15 +2,17 @@ Beyond Typus Classic
 An expansion for Beyond Typus 9.0, updated for EU4 1.28.\
 changelog
 
-On top of what Beyond Typus 9.0 had, the following regions have been overhauled or re-overhauled following this mod's design philosophy (compared with their state in vanilla):
+On top of what Beyond Typus 9.0 had, the following regions have been overhauled or re-overhauled from their BT state following this mod's design philosophy (compared with their state in vanilla):
 
-- BT 11.0 Eastern Europe overhaul has been implemented and adjusted for BT Classic style.
+- Scandinavia has received 36 new provinces, an increase of 64% from 56 to 92. Dev increased by 20%, from 325 to 390.
 
-- Britain has received 32 new provinces, an increase of 76% from 42 to 74. Dev increased by 18.5%, from 308 to 365, 6 new tags, several new national ideas and formables.
+- Britain has received 36 new provinces, an increase of 86% from 42 to 78. Dev increased by 23%, from 308 to 379, 6 new tags, several new national ideas and formables.
 
-- Italy has received 75 new provinces, an increase of 170% from 44 to 119. Dev increased by 65%, from 656 to 1118, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
+- Low Countries has received 22 new provinces, an increase of 110% from 20 to 42. Dev increased by 45%, from 283 to 410.
 
-- Iberia has received 34 new provinces, an increase of 57% from 59 to 93. Dev increased by 20%, from 545 to 653, 15 new tags, 2 new cultures and many national ideas.
+- Italy has received 77 new provinces, an increase of 175% from 44 to 121. Dev increased by 66%, from 676 to 1126, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
+
+- Iberia has received 42 new provinces, an increase of 71% from 59 to 101. Dev increased by 25%, from 545 to 680, 15 new tags, 2 new cultures and many national ideas.
 
 - France has received 66 new provinces, an increase of 115% from 57 to 123. Dev increased by 36%, from 763 to 1038, 2 new tags, 3 new cultures and many national ideas.
 
