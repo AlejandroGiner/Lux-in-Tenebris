@@ -15,10 +15,7 @@ cambodian_missions_1 = {
 		icon = mission_unite_home_region
 		required_missions = {  }
 		provinces_to_highlight = {
-			OR = {
 				area = inner_cambodia_area
-				area = khorat_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -28,19 +25,9 @@ cambodian_missions_1 = {
 				type = all
 				owned_by = ROOT
 			}
-			khorat_area = {
-				type = all
-				owned_by = ROOT
-			}
 		}
 		effect = {
 			inner_cambodia_area = {
-				limit = {
-					is_core = ROOT
-				}
-				change_culture = ROOT
-			}
-			khorat_area = {
 				limit = {
 					is_core = ROOT
 				}
@@ -128,13 +115,13 @@ cambodian_missions_2 = {
 		required_missions = { khm_conquer_the_siamese_heartland }
 		position = 6
 		provinces_to_highlight = {
-				area = suwannaphum_area
+				area = khorat_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			suwannaphum_area = {
+			khorat_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

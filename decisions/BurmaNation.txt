@@ -92,13 +92,6 @@ country_decisions = {
 				}
 				add_permanent_claim = BRM
 			}
-			koshanpye_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = BRM
-			}
 			assam_area = {
 				limit = {
 					NOT = { is_core = ROOT }

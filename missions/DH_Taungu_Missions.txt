@@ -19,7 +19,6 @@ tau_slot_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = shan_hill_area
-				area = karenni_area
 				area = yawnghwe_area
 			}
 			NOT = {
@@ -28,10 +27,6 @@ tau_slot_1 = {
 		}
 		trigger = {
 			shan_hill_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			karenni_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -49,13 +44,6 @@ tau_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			chindwin_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	tau_pacify_shan = {
@@ -66,8 +54,6 @@ tau_slot_1 = {
 			OR = {
 				area = shan_hill_area
 				area = yawnghwe_area
-				area = karenni_area
-				area = chindwin_area
 				area = kachin_area
 			}
 			OR = {
@@ -89,26 +75,6 @@ tau_slot_1 = {
 				}
 			}
 			yawnghwe_area = {
-				type = all
-				owned_by = ROOT
-				NOT = {
-					local_autonomy = 30
-				}
-				NOT = {
-					unrest = 1
-				}
-			}
-			karenni_area = {
-				type = all
-				owned_by = ROOT
-				NOT = {
-					local_autonomy = 30
-				}
-				NOT = {
-					unrest = 1
-				}
-			}
-			chindwin_area = {
 				type = all
 				owned_by = ROOT
 				NOT = {
@@ -215,13 +181,6 @@ tau_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			suwannaphum_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }
@@ -270,13 +229,6 @@ tau_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 			shan_hill_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			karenni_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}

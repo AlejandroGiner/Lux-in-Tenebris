@@ -30,12 +30,6 @@ siamese_missions_1 = {
 				}
 				change_culture = ROOT
 			}
-			inner_cambodia_area = {
-				limit = {
-					is_core = ROOT
-				}
-				change_culture = ROOT
-			}
 			khorat_area = {
 				limit = {
 					is_core = ROOT
@@ -70,21 +64,7 @@ siamese_missions_1 = {
 			}
 		}
 		effect = {
-			inner_cambodia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			cambodia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			eastern_cambodia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -105,25 +85,12 @@ siamese_missions_1 = {
 		required_missions = { ayu_subjugate_lan_na }
 		completed_by = 1779.1.1
 		provinces_to_highlight = {
-			OR = {
-				area = inner_cambodia_area
 				area = cambodia_area
-                                area = eastern_cambodia_area
-			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		trigger = {
-			inner_cambodia_area = {
-				type = all
-				owned_by = ROOT
-			}
 			cambodia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			eastern_cambodia_area = {
 				type = all
 				owned_by = ROOT
 			}
