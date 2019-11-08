@@ -115,6 +115,15 @@ country_event = {
 	}
 	option = {
 		name = btc_modding_test.3.g
+		oceanea_region = {
+				limit = { NOT = { owned_by = YZW } }
+				add_core = YZW
+				cede_province = YZW
+			}
+		
+	}
+	option = {
+		name = btc_modding_test.3.h
 	}
 }
 
