@@ -1744,7 +1744,7 @@ ZND_ideas = {
 
 LES_ideas = {
     start = {
-        naval_maintenance_modifier = -0.25
+        tolerance_heretic = 4
         trade_efficiency = 0.15
     }
 
@@ -1759,17 +1759,17 @@ LES_ideas = {
     free = yes
 
     LES_idea_1 = {
-        navy_tradition = 1
+        navy_tradition = 0.25
+		naval_maintenance_modifier = -0.2
     }
     LES_idea_2 = {
         idea_cost = -0.1
     }
     LES_idea_3 = {
-        tolerance_heretic = 2
         num_accepted_cultures = 2
     }
     LES_idea_4 = {
-        province_warscore_cost = -0.25
+        province_warscore_cost = -0.2
     }
     LES_idea_5 = {
         prestige = 1

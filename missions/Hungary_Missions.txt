@@ -377,13 +377,6 @@ hun_ottoman_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-			northern_macedonia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			bulgaria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -407,19 +400,12 @@ hun_ottoman_group = {
 		position = 6
 
 		provinces_to_highlight = {
-			OR = {
 				area = macedonia_area
-				area = northern_macedonia_area
-			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			macedonia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_macedonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

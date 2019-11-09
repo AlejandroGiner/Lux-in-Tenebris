@@ -52,8 +52,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 1268;1258;canal;1775;-1;-1;-1;-1;kiel_canal
 1548;1515;canal;835;-1;-1;-1;-1;panama_canal
 1328;1316;canal;363;-1;-1;-1;-1;suez_canal
-2348;318;sea;5493;-1;-1;-1;-1;Chios-Sugla
-3173;2296;sea;1319;-1;-1;-1;-1;Lesbos-�anakkale
+2348;318;sea;5478;-1;-1;-1;-1;Chios-Sugla
+3173;2296;sea;5478;-1;-1;-1;-1;Lesbos-Canakkale
 3245;2447;sea;1323;-1;-1;-1;-1;Kerch-Mapa
 536;2100;sea;1340;-1;-1;-1;-1;Madurai-Vanni
 2803;502;sea;1522;-1;-1;-1;-1;Orinoco Delta-Trinidad
@@ -79,9 +79,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 4351;4352;sea;1397;-1;-1;-1;-1;Buglas-Cebu
 142;5115;sea;1311;-1;-1;-1;-1;Ergiri-Corfu
 656;4350;sea;1395;-1;-1;-1;-1;Manilla-Mindoro
-3175;3176;sea;1312;-1;-1;-1;-1;Aetolia-Cephalonia
+3175;7613;sea;1312;-1;-1;-1;-1;Aetolia-Lefkas
+3176;7613;sea;1312;-1;-1;-1;-1;Cephalonia-Lefkas
+3176;7614;sea;1312;-1;-1;-1;-1;Cephalonia-Zakynthos
 5085;3178;sea;1312;-1;-1;-1;-1;Boeotia-Achaea
-5720;3195;sea;1319;-1;-1;-1;-1;Ainos-Lemnos
+7610;3195;sea;1319;-1;-1;-1;-1;Imbros-Lemnos
 7200;7193;sea;1323;3176;1771;3175;1764;Kyzyl Yar-Ichki
 3230;35;sea;1926;-1;-1;-1;-1;Hiiumaa-�sel
 3231;35;sea;1256;-1;-1;-1;-1;Haapsalu-�sel
@@ -114,7 +116,7 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 282;7194;sea;1322;-1;-1;-1;-1;Ochakiv-Kinburn
 112;1774;sea;1308;-1;-1;-1;-1;Venice-Treviso
 111;112;sea;1308;-1;-1;-1;-1;Friuli-Venice
-3173;5131;sea;1319;3052;1643;3056;1643;Lesbos-Ayvalik
+3173;5131;sea;5478;3052;1643;3056;1643;Lesbos-Ayvalik
 741;502;sea;1522;-1;-1;-1;-1;Cumana-Trinidad
 741;5579;sea;1520;-1;-1;-1;-1;Cumana-Waikeri
 2022;5728;sea;1559;-1;-1;-1;-1;Haida-Taan
@@ -217,8 +219,8 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 1820;4187;sea;1390;-1;-1;-1;-1;Awa-Kii
 3314;5247;sea;1390;-1;-1;-1;-1;Sanuki-Bitchu
 3257;3260;sea;4225;-1;-1;-1;-1;Nemuro-Chishima
-4309;5291;sea;5493;-1;-1;-1;-1;Samo-Aydin
-320;5230;sea;5493;-1;-1;-1;-1;Rhodes-Lango
+4309;5291;sea;5478;-1;-1;-1;-1;Samo-Aydin
+320;5230;sea;5478;-1;-1;-1;-1;Rhodes-Lango
 5234;5237;sea;5493;-1;-1;-1;-1;Andro-Paro
 164;5237;sea;5493;-1;-1;-1;-1;Naxos-Paro
 164;5234;sea;5493;-1;-1;-1;-1;Andro-Naxos
@@ -248,4 +250,11 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment
 7788;7597;sea;1257;-1;-1;-1;-1;Usedom-Kammin
 7788;7498;sea;1257;-1;-1;-1;-1;Usedom-Wolgast
 2873;7678;sea;1541;-1;-1;-1;-1;Chiloe-Castro
+7608;5725;sea;1319;-1;-1;-1;-1;Thasos-Kavala
+7609;7610;sea;1319;-1;-1;-1;-1;Samothraki-Imbros
+7610;5719;sea;1319;-1;-1;-1;-1;Imbros-Rodosçuk
+7612;5230;sea;5478;-1;-1;-1;-1;Ikaria-Kos
+7615;145;sea;5504;-1;-1;-1;-1;Kythira-Lakonia
+7611;320;sea;5478;-1;-1;-1;-1;Karpathos-Rhodes
+;;sea;;-1;-1;-1;-1;
 -1;-1;;-1;-1;-1;-1;-1;-1;
