@@ -5,7 +5,7 @@ controller = TUR
 culture = serbian
 religion = orthodox
 capital = "Skopje"
-trade_goods = iron
+trade_goods = gold
 hre = no
 base_tax = 2
 base_production = 3 #Many productive Mines. Main Source of Ottoman Silver in 1444.
@@ -14,6 +14,9 @@ is_city = yes
 add_core = TUR
 add_core = BUL
 add_core = SER
+
+extra_cost = 8
+center_of_trade = 1
 
 discovered_by = KAZ
 discovered_by = CRI

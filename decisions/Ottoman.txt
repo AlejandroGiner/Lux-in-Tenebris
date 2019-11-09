@@ -24,7 +24,6 @@ country_decisions = {
 			owns = 149		# Edirne
 			owns = 316		# Bithnyia
 			owns = 317		# Bursa
-			owns = 1764		# Burgas			
 		}
 		effect = {
 			set_country_flag = relocated_capital_constantinople
@@ -41,9 +40,9 @@ country_decisions = {
 					has_global_flag = constantinople_restored
 				}
 				151 = {
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 1
+					add_base_tax = 3
+					add_base_production = 3
+					add_base_manpower = 2
 				}
 			}	#Added another if, in case the Greeks have partially restored the capital, but then Ottomans take it. relocated_capital_constantinople flag will prevent spamming of this, meaning no doubling up of dev bonus. Keep this above the limit below, not below it, or double bonus happens when taking the decision (oops again =p)
 			if = {
@@ -51,13 +50,27 @@ country_decisions = {
 					NOT = { has_global_flag = constantinople_restored }
 				}
 				151 = {
-					add_base_tax = 4
-					add_base_production = 4
-					add_base_manpower = 2
+					add_base_tax = 5
+					add_base_production = 5
+					add_base_manpower = 3
+					remove_province_modifier = theodosian_walls #Walls in poor state get destroyed during the siege, if they're destroyed they resist
 				}
 				set_global_flag = constantinople_restored
 			}
 			set_government_rank = 3
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+					151 = {
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+					}
+				}
+				151 = {
+					add_center_of_trade_level = 2
+				}
+			}
 			anatolia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
