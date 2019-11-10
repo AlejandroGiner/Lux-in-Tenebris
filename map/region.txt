@@ -341,19 +341,15 @@ balkan_region = {
 		bosnia_area
 		serbia_area
 		rascia_area
-		bulgaria_area
 		albania_area
 		#BTADDITIONS
 		slavonia_area
-		upper_thrace_area
-		lower_danube_area
 	}
 }
 
-greece_region = {
+greece_region = { #Rumelia
 	areas = {
 		thessaly_area
-		cyprus_area
 		western_aegean_area			#Cut in 1.23 vanilla, but keeping it in BT for now
 		eastern_mediterrenean_islands_area			#Cut in 1.23 vanilla, but keeping it in BT for now
 		aegean_archipelago_area			#Added in 1.23 and moved from Anatolia in BT
@@ -362,6 +358,9 @@ greece_region = {
 		morea_area
 		thrace_area
 		northern_aegean_islands_area
+		upper_thrace_area
+		lower_danube_area
+		bulgaria_area
 	}
 }
 
@@ -419,7 +418,7 @@ maghreb_region = {
 	}
 }
 
-mashriq_region = {
+mashriq_region = { #Levant
 	areas = {
 		syria_area
 		palestine_area
@@ -428,6 +427,7 @@ mashriq_region = {
 		trans_jordan_area
 		#BTADDITIONS
 		tripoli_area
+		cyprus_area
 	}
 }
 
