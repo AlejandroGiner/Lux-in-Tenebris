@@ -1,32 +1,3 @@
-center_abrahamic = {
-	potential = {
-		normal_or_historical_nations = yes
-	}
-	
-	
-	trigger = {
-		owner = {
-			OR = {
-				religion_group = christian
-				religion_group = muslim
-				religion_group = jewish_group
-			}
-		}
-	}
-	
-	prestige = 0.5
-	missionaries = 1
-	tolerance_own = 1
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
-}
 
 center_apostolic = {
 	potential = {
