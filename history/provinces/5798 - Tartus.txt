@@ -1,0 +1,37 @@
+
+owner = MAM
+controller = MAM
+add_core = MAM
+culture = maronite
+religion = druze				#As far as I can tell, during this period realigion was really split 25-25-25-25 ER orthodox, Sunni, Shia or Druze, and Marionite Catholic... going with druze, for now
+capital = "Tartus" 
+trade_goods = marble # Surrounded by limestone and basalt
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+is_city = yes
+estate = estate_dhimmi
+add_core = LEB
+add_core = SYR
+
+extra_cost = 8
+center_of_trade = 1
+
+discovered_by = muslim
+discovered_by = persian_btc
+discovered_by = ottoman
+discovered_by = eastern
+discovered_by = western
+discovered_by = nomad_group
+discovered_by = indian
+discovered_by = east_african
+
+1475.1.1 = {
+	religion = sunni
+} # Islam controled the city and upper class, and quickly became the majority religion, if it wasnt already in the 15th century
+1516.8.24 = {
+	owner = TUR
+	controller = TUR
+	add_core = TUR
+} # Part of the Ottoman Empire
