@@ -2235,7 +2235,6 @@ caucasian = { # Kartvelian
 	graphical_culture = easterngfx
 	
 	georgian = {
-		graphical_culture = greekgfx
 		primary = GEO
 		dynasty_names = {
 			Bagrationi Mukhrani
@@ -2270,7 +2269,6 @@ caucasian = { # Kartvelian
 		}
 	}
 	mingrelian = {
-		graphical_culture = greekgfx
 		primary = MGL
 		dynasty_names = {
 			Bagrationi Mukhrani
@@ -2305,7 +2303,6 @@ caucasian = { # Kartvelian
 		}
 	}
 	svan = {
-		graphical_culture = greekgfx
 		primary = SVN
 		dynasty_names = {
 			Bagrationi Mukhrani
@@ -2384,7 +2381,6 @@ hayer = { # Armenians
 	graphical_culture = easterngfx
 	
 	armenian = {
-		graphical_culture = greekgfx
 		primary = ARM
 		dynasty_names = { 
 			Bagratuni Rubenid Pahlavuni
@@ -9350,6 +9346,10 @@ byzantine = {
 			"of Gothia"
 		}
 	}
+	cretan_culture = {
+		primary = CRT
+	}
+	
 	#BtPLegacy Culture
 	cappadocian = {
 		graphical_culture = easterngfx
