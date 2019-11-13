@@ -18,6 +18,7 @@ sco_rb_adm_missions = {
 			OR = {
 				province_id = 253
 				province_id = 4364
+				province_id = 5842
 			}
 			NOT = {
 				owned_by = ROOT
@@ -26,12 +27,14 @@ sco_rb_adm_missions = {
 		trigger = {
 			owns_core_province = 253
 			owns_core_province = 4364
+			owns_core_province = 5842
 		}
 		effect = {
 			highlands_area = {
 				limit = {
 					owned_by = SCO
 				}
+				add_base_tax = 1
 				add_base_manpower = 1
 			}
 		}
@@ -41,7 +44,7 @@ sco_rb_adm_missions = {
 		icon = mission_rb_the_bank_of_scotland
 		required_missions = { sco_highlands_mission }
 		trigger = {
-			treasury = 1000
+			treasury = 1300
 			NOT = {
 				num_of_loans = 1
 			}
@@ -75,7 +78,7 @@ sco_rb_adm_missions = {
 		icon = mission_rb_the_education_acts
 		required_missions = { sco_religious_unity }
 		trigger = {
-			university = 3
+			university = 5
 		}
 		effect = {
 			add_country_modifier = {
@@ -110,6 +113,9 @@ sco_rb_adm_missions = {
 		trigger = {
 			has_institution = enlightenment
 			owns_core_province = 249
+			owns_core_province = 250
+			owns_core_province = 248
+			owns_core_province = 3019
 			calc_true_if = {
 				all_owned_province = {
 					OR = {
@@ -123,7 +129,7 @@ sco_rb_adm_missions = {
 						has_building = furnace
 					}
 				}
-				amount = 10
+				amount = 20
 			}
 		}
 		effect = {
@@ -132,13 +138,32 @@ sco_rb_adm_missions = {
 				duration = 7300
 			}
 			249 = {
-				add_base_tax = 6
-				add_base_manpower = 2
+				add_base_tax = 1
 				add_base_production = 2
+				add_base_manpower = 1
 				add_province_modifier = {
 					name = "central_belt_coal" # goods produced
 					duration = 7300
 				}
+			}
+			250 = {
+				add_base_tax = 1
+				add_base_production = 2
+				add_base_manpower = 1
+				add_province_modifier = {
+					name = "central_belt_coal" # goods produced
+					duration = 7300
+				}
+			}
+			248 = {
+				add_base_tax = 4
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			3019 = {
+				add_base_tax = 4
+				add_base_production = 2
+				add_base_manpower = 2
 			}
 		}
 	}
@@ -186,24 +211,6 @@ sco_rb_conquest_missions = {
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
-			}
-			highlands_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			1978 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 			369 = {
 				if = {
@@ -440,24 +447,9 @@ sco_rb_conquest_missions_2 = {
 			}
 		}
 		effect = {
-			munster_area = {
+			ireland_region = {
 				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			connacht_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			leinster_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -469,25 +461,13 @@ sco_rb_conquest_missions_2 = {
 		required_missions = { sco_into_ireland }
 		position = 4
 		provinces_to_highlight = {
-			OR = {
-				area = munster_area
-				area = connacht_area
-				area = leinster_area
-			}
+			region = ireland_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			munster_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			connacht_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			leinster_area = {
+			ireland_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -531,9 +511,9 @@ sco_rb_colonial = {
 			}
 			num_of_owned_provinces_with = {
 				has_building = marketplace
-				value = 2
+				value = 3
 			}
-			num_of_light_ship = 10
+			num_of_light_ship = 15
 		}
 		effect = {
 			add_country_modifier = {
@@ -589,24 +569,19 @@ sco_rb_colonial_2 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				area = highlands_area
 				area = kingdom_of_the_isles_area
-				province_id = 1978
+				province_id = 369
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			highlands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			kingdom_of_the_isles_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1978 = {
+			369 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -678,12 +653,7 @@ sco_rb_colonial_2 = {
 		required_missions = { sco_north_sea }
 		position = 4
 		provinces_to_highlight = {
-			OR = {
-				colonial_region = colonial_acadia
-				colonial_region = colonial_canada
-				colonial_region = colonial_newfoundland
-				colonial_region = colonial_hudson_bay
-			}
+			colonial_region = colonial_acadia
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -694,12 +664,7 @@ sco_rb_colonial_2 = {
 				tooltip = sco_nova_scotia.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 5
-					OR = {
-						colonial_region = colonial_acadia
-						colonial_region = colonial_canada
-						colonial_region = colonial_newfoundland
-						colonial_region = colonial_hudson_bay
-					}
+					colonial_region = colonial_acadia
 				}
 			}
 		}
