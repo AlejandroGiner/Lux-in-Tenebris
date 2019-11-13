@@ -15,7 +15,7 @@ country_decisions = {
 				primary_culture = irish
 				AND = {
 					culture_group = gaelic
-					any_owned_province = { region = ireland_area }
+					any_owned_province = { region = ireland_region }
 				}
 			}
 			OR = {
@@ -80,7 +80,7 @@ country_decisions = {
 				primary_culture = irish
 				AND = {
 					culture_group = gaelic
-					any_owned_province = { region = ireland_area }
+					any_owned_province = { region = ireland_region }
 				}
 			}
 			OR = {
@@ -145,7 +145,7 @@ country_decisions = {
 				primary_culture = irish
 				AND = {
 					culture_group = gaelic
-					any_owned_province = { region = ireland_area }
+					any_owned_province = { region = ireland_region }
 				}
 			}
 			OR = {
@@ -210,7 +210,7 @@ country_decisions = {
 				primary_culture = irish
 				AND = {
 					culture_group = gaelic
-					any_owned_province = { region = ireland_area }
+					any_owned_province = { region = ireland_region }
 				}
 			}
 			OR = {
@@ -285,7 +285,7 @@ country_decisions = {
 						is_core = ROOT
 						OR = {
 							region = british_isles_region
-							region = ireland_area
+							region = ireland_region
 						}
 					}
 					amount = 44			#44 of Britain and Ireland's 66 provinces
@@ -294,7 +294,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = ireland_area
+				region = ireland_region
 				area = highlands_area
 				area = lowlands_area
 				area = scottish_marches_area
@@ -319,7 +319,7 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						region = ireland_area
+						region = ireland_region
 					}
 					amount = 9			#At least half of Ireland
 				}
@@ -383,7 +383,7 @@ country_decisions = {
 			}
 			custom_tooltip = permanent_claim_on_all_celtic_lands_tooltip			#Cleaning things up with two custom tooltips, and hiding the various claims
 			hidden_effect = {
-				ireland_area = {
+				ireland_region = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
@@ -905,7 +905,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				region = ireland_area
+				region = ireland_region
 				area = lowlands_area
 				area = scottish_marches_area
 				area = highlands_area
@@ -929,7 +929,7 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						region = ireland_area
+						region = ireland_region
 					}
 					amount = 13			#3/4 of Ireland's 17 provinces
 				}
@@ -957,7 +957,7 @@ country_decisions = {
 		effect = {
 			change_tag = TNA
 			remove_non_electors_emperors_from_empire_effect = yes
-			ireland_area = {
+			ireland_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -1098,7 +1098,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				region = british_isles_region
-				region = ireland_area
+				region = ireland_region
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -1130,7 +1130,7 @@ country_decisions = {
 				tooltip = hegemony_over_ireland_tooltip
 				calc_true_if = {
 					all_province = {
-						region = ireland_area
+						region = ireland_region
 						country_or_vassal_holds = ROOT
 						is_core = owner
 					}
@@ -1147,7 +1147,7 @@ country_decisions = {
 					capital_scope = {
 						OR = {
 							region = british_isles_region
-							region = ireland_area
+							region = ireland_region
 						}
 					}
 					OR = {
@@ -1183,7 +1183,7 @@ country_decisions = {
 				}
 				add_permanent_claim = UNK
 			}
-			ireland_area = {
+			ireland_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }

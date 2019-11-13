@@ -1739,7 +1739,7 @@ irish_clann_reform = {
 	allow_normal_conversion = no
 	potential = {
 		culture_group = gaelic
-		capital_scope = { region = ireland_area }
+		capital_scope = { region = ireland_region }
 		NOT = { government_rank = 2 }
 	}
 	lock_level_when_selected = yes
@@ -1764,7 +1764,7 @@ norman_lordship_reform = {
 	allow_normal_conversion = no
 	potential = {
 		NOT = { culture_group = gaelic }
-		capital_scope = { region = ireland_area }
+		capital_scope = { region = ireland_region }
 		NOT = { government_rank = 2 }
 	}
 	lock_level_when_selected = yes
@@ -1773,7 +1773,7 @@ norman_lordship_reform = {
 	nation_designer_cost = 20
 	nation_designer_trigger = {
 		NOT = { culture_group = gaelic }
-		capital_scope = { region = ireland_area }
+		capital_scope = { region = ireland_region }
 	}
 	#fixed_rank = 1
 	modifiers = {
@@ -1788,7 +1788,7 @@ anglo_irish_monarchy_reform = {
 	icon = "british_queen"
 	allow_normal_conversion = no
 	potential = {
-		capital_scope = { region = ireland_area }
+		capital_scope = { region = ireland_region }
 		has_reform = anglo_irish_monarchy_reform
 	}
 	lock_level_when_selected = yes

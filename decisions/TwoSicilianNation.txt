@@ -16,7 +16,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = eastsicily_area
+				area = east_sicily_area
 				area = naples_area
 				area = apulia_area
 				area = calabria_area
@@ -47,7 +47,7 @@ country_decisions = {
 							area = calabria_area
 							area = abruzzo_area
 							area = sicily_area
-							area = eastsicily_area
+							area = east_sicily_area
 						}
 					}
 					amount = 20			#At least 2/3 of Southern Italy's 30 provinces
@@ -75,7 +75,7 @@ country_decisions = {
 				}
 				add_permanent_claim = TSI
 			}
-			eastsicily_area = {
+			east_sicily_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -197,7 +197,7 @@ country_decisions = {
 				}
 				add_permanent_claim = TSI
 			}
-			eastsicily_area = {
+			east_sicily_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }

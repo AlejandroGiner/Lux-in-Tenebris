@@ -127,7 +127,7 @@ province_event = {
 			primary_culture = irish
 			religion = catholic
 		}
-		region = ireland_area
+		region = ireland_region
 		has_province_modifier = religious_zeal_at_conv
 		NOT = { has_province_modifier = reformation_takes_hold_in_ireland }
 	}
@@ -190,7 +190,7 @@ province_event = {
 				religion = reformed
 			}
 		}
-		region = ireland_area
+		region = ireland_region
 		has_province_modifier = religious_zeal_at_conv
 		NOT = { has_province_modifier = reformation_takes_hold_in_ireland }
 	}

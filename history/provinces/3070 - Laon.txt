@@ -2,8 +2,8 @@
 #Region - France
 #Area - Seine
 
-owner = FRA
-controller = FRA
+owner = RHM
+controller = RHM
 capital = "Laon"
 is_city = yes
 culture = cosmopolitan_french
@@ -14,7 +14,7 @@ base_production = 3
 trade_goods = apiculture
 base_manpower = 2
 add_core = CHP
-add_core = FRA
+add_core = RHM
 
 discovered_by = western
 discovered_by = muslim
@@ -22,8 +22,6 @@ discovered_by = persian_btc
 discovered_by = ottoman
 discovered_by = eastern
 
-1420.5.12 = { owner = ENG controller = ENG add_core = ENG } # Treaty of Troyes, ceded to the English
-1429.1.1 = { owner = FRA controller = FRA remove_core = ENG } # Retaken by the French
 1466.2.10 = { add_core = BUR } # Treaty of Conflans, Champagne is promised to Charles the Bold as dowry
 1477.1.5 = { remove_core = BUR } # Charles the Bold dies
 1562.3.1 = { unrest = 7 } # Massacre at Wassy, the fuse is put in the French powder keg

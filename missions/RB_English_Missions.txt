@@ -11,6 +11,7 @@ eng_british_naval_conq = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -36,8 +37,8 @@ eng_british_naval_conq = {
 		}
 
 		trigger = {
-			num_of_total_ports = 40
-			navy_size_percentage = 0.9
+			num_of_total_ports = 50
+			navy_size_percentage = 0.8
 		}
 
 		effect = {
@@ -48,6 +49,9 @@ eng_british_naval_conq = {
 				siege = 2
 			}
 			226 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -65,6 +69,7 @@ eng_rb_gibraltar = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -79,7 +84,7 @@ eng_rb_gibraltar = {
 
 		provinces_to_highlight = {
 			province_id = 226
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		ai_weight = {
@@ -97,7 +102,7 @@ eng_rb_gibraltar = {
 
 		trigger = {
 			226 = {
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -107,12 +112,20 @@ eng_rb_gibraltar = {
 				duration = 5475
 			}
 			4559 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			corsica_sardinia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -131,6 +144,7 @@ eng_rb_islands_med = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -145,6 +159,7 @@ eng_rb_islands_med = {
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
+				area = corsica_area
 				province_id = 4559
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -155,6 +170,10 @@ eng_rb_islands_med = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -219,8 +238,13 @@ eng_rb_islands_med = {
 			add_dip_power = 100
 			sicily_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			east_sicily_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_claim = ROOT
 			}
@@ -239,6 +263,7 @@ eng_rb_egypt = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -268,8 +293,13 @@ eng_rb_egypt = {
 		effect = {
 			bahari_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			2315 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -282,13 +312,19 @@ eng_rb_egypt = {
 		position = 5
 
 		provinces_to_highlight = {
-			area = bahari_area
+			OR = {
+				area = bahari_area
+				province_id = 2315
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			bahari_area = {
 				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2315 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -308,17 +344,11 @@ eng_rb_egypt = {
 			5272 = {
 				add_claim = ROOT
 			}
-			2326 = {
-				add_claim = ROOT
-			}
-			357 = {
-				add_claim = ROOT
-			}
-			356 = {
-				add_claim = ROOT
-			}
-			5274 = {
-				add_claim = ROOT
+			cyrenaica_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -335,6 +365,7 @@ eng_rb_stability = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -425,6 +456,7 @@ eng_rb_burgundy = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -491,7 +523,10 @@ gbr_rb_canada_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -549,7 +584,10 @@ eng_rb_colonial_empire_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -585,7 +623,10 @@ eng_rb_trade_value_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -628,6 +669,7 @@ eng_rb_buildings_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -720,61 +762,116 @@ eng_rb_buildings_group = {
 						has_building = furnace
 					}
 				}
-				amount = 20
+				amount = 30
 			}
 			1861 = {
 				owned_by = ROOT
 			}
-			241 = {
+			4130 = {
+				owned_by = ROOT
+			}
+			5214 = {
+				owned_by = ROOT
+			}
+			5215 = {
 				owned_by = ROOT
 			}
 			4375 = {
 				owned_by = ROOT
 			}
-			246 = {
+			244 = {
+				owned_by = ROOT
+			}
+			245 = {
 				owned_by = ROOT
 			}
 			4368 = {
+				owned_by = ROOT
+			}
+			5562 = {
+				owned_by = ROOT
+			}
+			246 = {
 				owned_by = ROOT
 			}
 		}
 
 		effect = {
 			1861 = {
-				add_base_production = 3
-				add_base_manpower = 3
+				add_base_production = 2
+				add_base_manpower = 2
 				add_province_modifier = {
 					name = "eng_rb_coal_produced_mod"
 					duration = -1
 				}
 			}
-			241 = {
-				add_base_production = 3
-				add_base_manpower = 3
+			4130 = {
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = "eng_rb_coal_produced_mod"
+					duration = -1
+				}
+			}
+			5214 = {
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = "eng_rb_coal_produced_mod"
+					duration = -1
+				}
+			}
+			5215 = {
+				add_base_production = 2
+				add_base_manpower = 2
 				add_province_modifier = {
 					name = "eng_rb_coal_produced_mod"
 					duration = -1
 				}
 			}
 			4375 = {
-				add_base_production = 3
-				add_base_manpower = 3
+				add_base_production = 2
+				add_base_manpower = 2
 				add_province_modifier = {
 					name = "eng_rb_coal_produced_mod"
 					duration = -1
 				}
 			}
-			246 = {
-				add_base_production = 3
-				add_base_manpower = 3
+			244 = {
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = "eng_rb_coal_produced_mod"
+					duration = -1
+				}
+			}
+			245 = {
+				add_base_production = 2
+				add_base_manpower = 2
 				add_province_modifier = {
 					name = "eng_rb_coal_produced_mod"
 					duration = -1
 				}
 			}
 			4368 = {
-				add_base_production = 3
-				add_base_manpower = 3
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = "eng_rb_coal_produced_mod"
+					duration = -1
+				}
+			}
+			5562 = {
+				add_base_production = 2
+				add_base_manpower = 2
+				add_province_modifier = {
+					name = "eng_rb_coal_produced_mod"
+					duration = -1
+				}
+			}
+			246 = {
+				add_base_production = 2
+				add_base_manpower = 2
 				add_province_modifier = {
 					name = "eng_rb_coal_produced_mod"
 					duration = -1
@@ -791,9 +888,15 @@ eng_rb_buildings_group = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1861
-				province_id = 241
+				province_id = 244
+				province_id = 245
 				province_id = 4375
 				province_id = 246
+				province_id = 5562
+				province_id = 4368
+				province_id = 5214
+				province_id = 5215
+				province_id = 4130
 			}
 		}
 
@@ -802,7 +905,27 @@ eng_rb_buildings_group = {
 				owned_by = ROOT
 				has_building = furnace
 			}
-			241 = {
+			244 = {
+				owned_by = ROOT
+				has_building = furnace
+			}
+			245 = {
+				owned_by = ROOT
+				has_building = furnace
+			}
+			5562 = {
+				owned_by = ROOT
+				has_building = furnace
+			}
+			5214 = {
+				owned_by = ROOT
+				has_building = furnace
+			}
+			5215 = {
+				owned_by = ROOT
+				has_building = furnace
+			}
+			4130 = {
 				owned_by = ROOT
 				has_building = furnace
 			}
@@ -821,10 +944,11 @@ eng_rb_buildings_group = {
 		}
 
 		effect = {
-			capital_scope = {
-				add_base_tax = 3
-				add_base_production = 3
-				add_base_manpower = 3
+			236 = {
+				change_province_name = "London"
+				add_base_tax = 4
+				add_base_production = 4
+				add_base_manpower = 4
 			}
 		}
 	}
@@ -841,6 +965,7 @@ eng_rb_conquest_europe = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -854,6 +979,8 @@ eng_rb_conquest_europe = {
 
 		provinces_to_highlight = {
 			area = brittany_area
+			province_id = 3026
+			province_id = 4782
 			NOT = { owned_by = ROOT }
 		}
 
@@ -877,6 +1004,12 @@ eng_rb_conquest_europe = {
 				type = all
 				owned_by = ROOT
 			}
+			3026 = {
+				owned_by = ROOT
+			}
+			4782 = {
+				owned_by = ROOT
+			}
 		}
 
 		effect = {
@@ -895,6 +1028,13 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
+			guyenne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			poitou_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -902,34 +1042,23 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
-			4388 = {
+			west_massif_central_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			4389			= {
-				add_permanent_claim = ROOT
-			}
-			199 = {
+			4389 = {
 				add_permanent_claim = ROOT
 			}
 			178 = {
 				add_permanent_claim = ROOT
 			}
-			194 = {
-				add_permanent_claim = ROOT
-			}
-			195 = {
-				add_permanent_claim = ROOT
-			}
-			3087 = {
-				add_permanent_claim = ROOT
-			}
-			4387 = {
-				add_permanent_claim = ROOT
-			}
-			3109 = {
-				add_permanent_claim = ROOT
-			}
 			3075 = {
+				add_permanent_claim = ROOT
+			}
+			5172 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -943,18 +1072,14 @@ eng_rb_conquest_europe = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = pyrenees_area
+				area = pyrenees_area #Gascony
 				area = poitou_area
-				province_id = 4388
+				area = guyenne_area #Aquitaine
+				area = west_massif_central_area
 				province_id = 4389
-				province_id = 199
 				province_id = 178
-				province_id = 194
-				province_id = 195
-				province_id = 3087
-				province_id = 4387
-				province_id = 3109
 				province_id = 3075
+				province_id = 5172
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -968,34 +1093,24 @@ eng_rb_conquest_europe = {
 				type = all
 				owned_by = ROOT
 			}
-			4388 = {
+			guyenne_area = {
+				type = all
 				owned_by = ROOT
 			}
-			4389			= {
+			west_massif_central_area = {
+				type = all
 				owned_by = ROOT
 			}
-			199 = {
+			4389 = {
 				owned_by = ROOT
 			}
 			178 = {
 				owned_by = ROOT
 			}
-			194 = {
-				owned_by = ROOT
-			}
-			195 = {
-				owned_by = ROOT
-			}
-			3087 = {
-				owned_by = ROOT
-			}
-			4387 = {
-				owned_by = ROOT
-			}
-			3109 = {
-				owned_by = ROOT
-			}
 			3075 = {
+				owned_by = ROOT
+			}
+			5172 = {
 				owned_by = ROOT
 			}
 		}
@@ -1024,12 +1139,33 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
+			franche_comte_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			loire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			massif_central_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			champagne_area = {
 				limit = {
 					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1043,7 +1179,10 @@ gbr_rb_empire_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1126,6 +1265,7 @@ gbr_rb_spice_islands_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
@@ -1178,6 +1318,27 @@ gbr_rb_spice_islands_group = {
 				}
 				add_claim = ROOT
 			}
+			4900 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			637 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			2703 = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
 			if = {
 				limit = {
 					tag = GBR
@@ -1209,7 +1370,10 @@ gbr_rb_indian_group = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1243,9 +1407,15 @@ gbr_rb_indian_group = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-
 		effect = {
 			golconda_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			maidan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1400,7 +1570,10 @@ gbr_rb_india_princes = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -1496,7 +1669,10 @@ gbr_rb_northern_colonial = {
 		has_dlc = "Rule Britannia"
 	}
 	potential = {
-		tag = GBR
+		OR = {
+			tag = GBR
+			tag = UNK
+		}
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -1702,6 +1878,7 @@ eng_rb_thirteen_colonies_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		is_random_new_world = no
 		has_dlc = "Rule Britannia"
@@ -1768,6 +1945,7 @@ eng_rb_trade_in_home_cot_group = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		has_dlc = "Rule Britannia"
 		NOT = { map_setup = map_setup_random }

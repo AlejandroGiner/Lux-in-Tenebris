@@ -852,7 +852,7 @@ spa_reconquista_por = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastsicily_area = {
+			east_sicily_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -884,7 +884,7 @@ spa_reconquista_por = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = eastsicily_area
+				area = east_sicily_area
 				area = calabria_area
 				area = apulia_area
 			}
@@ -896,7 +896,7 @@ spa_reconquista_por = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			eastsicily_area = {
+			east_sicily_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

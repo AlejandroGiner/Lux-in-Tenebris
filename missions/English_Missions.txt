@@ -8,6 +8,7 @@ eng_british_conquest = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 	has_country_shield = yes
@@ -25,38 +26,15 @@ eng_british_conquest = {
 		}
 
 		effect = {
-			munster_area = {
+			ireland_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			connacht_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			ulster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			leinster_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			wales_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -74,6 +52,7 @@ eng_british_conquest_wales = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 
@@ -86,7 +65,7 @@ eng_british_conquest_wales = {
 		completed_by = 1535.1.1
 
 		provinces_to_highlight = {
-				area = wales_area
+			area = wales_area
 			NOT = { owned_by = ROOT }
 		}
 
@@ -97,7 +76,7 @@ eng_british_conquest_wales = {
 					owned_by = ROOT
 					owner = {
 						is_subject_of = ROOT
-						NOT = { liberty_desire = 25 }
+						NOT = { liberty_desire = 30 }
 						has_opinion = {
 							who = ROOT
 							value = 150
@@ -114,29 +93,25 @@ eng_british_conquest_wales = {
 			}
 			lowlands_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			scottish_marches_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			highlands_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			kingdom_of_the_isles_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -164,6 +139,7 @@ eng_british_conquest_ire = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 
@@ -176,54 +152,19 @@ eng_british_conquest_ire = {
 		completed_by = 1603.1.1
 
 		provinces_to_highlight = {
-			OR = {
-				area = munster_area
-				area = connacht_area
-				area = ulster_area
-				area = leinster_area
-			}
-			NOT = { owned_by = ROOT }
+			region = ireland_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			munster_area = {
+			ireland_region = {
 				type = all
-				owned_by = ROOT
-			}
-			connacht_area = {
-				type = all
-				owned_by = ROOT
-			}
-			ulster_area = {
-				type = all
-				owned_by = ROOT
-			}
-			leinster_area = {
-				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		effect = {
-			munster_area = {
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
-			connacht_area = {
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
-			ulster_area = {
-				add_province_modifier = {
-					name = "eng_irish_revolts"
-					duration = 5475
-				}
-			}
-			leinster_area = {
+			ireland_region = {
 				add_province_modifier = {
 					name = "eng_irish_revolts"
 					duration = 5475
@@ -244,6 +185,7 @@ eng_british_conquest_scotland = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 	has_country_shield = yes
@@ -251,7 +193,7 @@ eng_british_conquest_scotland = {
 	conquer_scotland = {
 		icon = mission_build_up_to_force_limit
 		required_missions = {	wales_hold }
-		position = 3
+		position = 4
 		completed_by = 1603.1.1
 
 		provinces_to_highlight = {
@@ -304,8 +246,7 @@ eng_british_conquest_scotland = {
 				}
 				iceland_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_claim = ROOT
 				}
@@ -325,6 +266,7 @@ eng_french_conquest = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 	has_country_shield = yes
@@ -358,6 +300,13 @@ eng_french_conquest = {
 
 		effect = {
 			ile_de_france_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4782 = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -436,8 +385,13 @@ eng_french_conquest = {
 				}
 				brittany_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				lower_brittany_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -456,14 +410,23 @@ eng_french_conquest = {
 		}
 
 		trigger = {
-			ile_de_france_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					exists = FRA
+				}
+				FRA = {
+					is_subject_of = ROOT
+				}
+				else = {
+					ile_de_france_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
-
 		effect = {
-			add_prestige = 25
+			add_legitimacy = 15
 			add_country_modifier = {
 				name = "eng_french_recovery"
 				duration = 5475
@@ -482,6 +445,7 @@ eng_exploration_americas = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		is_random_new_world = no
 	}
@@ -593,6 +557,7 @@ eng_chesapeake_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		is_random_new_world = no
 		NOT = {
@@ -645,6 +610,7 @@ eng_indian_ocean_exploration = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 	}
 	has_country_shield = yes
@@ -731,6 +697,7 @@ eng_indian_cot_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		NOT = {
 			has_dlc = "Rule Britannia"
@@ -789,6 +756,7 @@ eng_british_cot_dominance = {
 		OR = {
 			tag = ENG
 			tag = GBR
+			tag = UNK
 		}
 		NOT = {
 			has_dlc = "Rule Britannia"

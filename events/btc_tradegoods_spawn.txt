@@ -19,7 +19,7 @@ country_event = {
         region = south_german_region
         region = iberia_region
         region = british_isles_region
-        region = ireland_area
+        region = ireland_region
       }
     }
     has_global_flag = columbian_exchange_happened
@@ -225,7 +225,7 @@ country_event = {
           region = south_german_region
           region = iberia_region
           region = british_isles_region
-          region = ireland_area
+          region = ireland_region
         }
       }
       change_trade_goods = potatoes
@@ -283,7 +283,7 @@ province_event = {
       NOT = {
         calc_true_if = {
           all_province = {
-            region = ireland_area
+            region = ireland_region
             trade_goods = potatoes
           }
           amount = 5
@@ -293,7 +293,7 @@ province_event = {
     ai_chance = { factor = 100 }
     random_province = {
       limit = {
-        region = ireland_area
+        region = ireland_region
         province_without_special_goods_produced_trigger = yes
         OR = {
           trade_goods = fish
@@ -522,7 +522,7 @@ country_event = {
         region = south_german_region
         region = iberia_region
         region = british_isles_region
-        region = ireland_area
+        region = ireland_region
         region = italy_region
       }
     }
@@ -670,7 +670,7 @@ country_event = {
           region = south_german_region
           region = iberia_region
           region = british_isles_region
-          region = ireland_area
+          region = ireland_region
         }
       }
       change_trade_goods = maize
@@ -734,7 +734,7 @@ province_event = {
       NOT = {
         calc_true_if = {
           all_province = {
-            region = ireland_area
+            region = ireland_region
             trade_goods = maize
           }
           amount = 1
@@ -744,7 +744,7 @@ province_event = {
     ai_chance = { factor = 100 }
     random_province = {
       limit = {
-        region = ireland_area
+        region = ireland_region
         province_without_special_goods_produced_trigger = yes
         OR = {
           trade_goods = fish

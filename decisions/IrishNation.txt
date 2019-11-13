@@ -16,13 +16,13 @@ country_decisions = {
 				primary_culture = irish
 				AND = {
 					culture_group = gaelic
-					any_owned_province = { region = ireland_area }
+					any_owned_province = { region = ireland_region }
 				}
 			}
 		}
 		
 		provinces_to_highlight = {
-			region = ireland_area
+			region = ireland_region
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -35,14 +35,14 @@ country_decisions = {
 			
 			num_of_owned_provinces_with = {
 				value = 10
-				region = ireland_area
+				region = ireland_region
 				is_core = ROOT
 			}
 		}
 		effect = {
 			change_tag = IRE
 			btc_new_nation_effects = yes 
-			ireland_area = {
+			ireland_region = {
 				limit = {
 					NOT = {
 						OR = {
@@ -59,7 +59,7 @@ country_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { capital_scope = { region = ireland_area } }
+				NOT = { capital_scope = { region = ireland_region } }
 			}
 		}
 		ai_importance = 400 

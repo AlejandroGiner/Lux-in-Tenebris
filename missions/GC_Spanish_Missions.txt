@@ -1287,7 +1287,7 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				eastsicily_area = {
+				east_sicily_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -1330,7 +1330,7 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = NAP
 				}
-				eastsicily_area = {
+				east_sicily_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
@@ -1371,7 +1371,7 @@ gc_spain_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = eastsicily_area
+				area = east_sicily_area
 				area = calabria_area
 				area = apulia_area
 				area = naples_area
@@ -1385,7 +1385,7 @@ gc_spain_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			eastsicily_area = {
+			east_sicily_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -384,7 +384,7 @@ sco_rb_conquest_missions = {
 		provinces_to_highlight = {
 			OR = {
 				region = british_isles_region
-				region = ireland_area
+				region = ireland_region
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -395,7 +395,7 @@ sco_rb_conquest_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			ireland_area = {
+			ireland_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

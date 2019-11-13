@@ -69,11 +69,11 @@ country_decisions = {
       NOT = { culture_group = gaelic }			#Gaels will try to form TnG
       num_of_owned_provinces_with = {
         value = 9
-        region = ireland_area
+        region = ireland_region
       }	#over half of Ireland to see
     }
     provinces_to_highlight = {
-      region = ireland_area
+      region = ireland_region
       owned_by = ROOT
     }
     allow = {
@@ -85,25 +85,25 @@ country_decisions = {
         tooltip = three_quarters_of_ireland_tooltip
         num_of_owned_provinces_with = {
           value = 13
-          region = ireland_area
+          region = ireland_region
           is_core = ROOT
           owned_by = ROOT
         }	#3/4 of Ireland's 17 provinces
       }
     }
     effect = {
-      ireland_area = {
+      ireland_region = {
         limit = { NOT = { is_core = ROOT } }
         add_permanent_claim = ANI
       }
       hidden_effect = {
-        ireland_area = {
+        ireland_region = {
           limit = { is_core = ROOT }
           remove_core = ROOT
           add_core = ANI
         }
       }
-      ireland_area = {
+      ireland_region = {
         limit = { owned_by = ROOT }
         cede_province = ANI
       }
