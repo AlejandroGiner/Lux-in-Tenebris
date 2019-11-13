@@ -255,26 +255,18 @@ gc_por_1_b = {
 		required_missions = { gc_por_wine_monopolies }
 
 		provinces_to_highlight = {
-			province_id = 1293
+			province_id = 224
 		}
 
 		trigger = {
 			OR = {
 				num_of_merchants = 8
-				AND = {
 					224 = {
 						trade_share = {
 							country = ROOT
-							share = 30
+							share = 70
 						}
 					}
-					227 = {
-						trade_share = {
-							country = ROOT
-							share = 80
-						}
-					}
-				}
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
@@ -346,8 +338,10 @@ gc_por_2 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_west_africa
-				west_africa_coast_area = {
-					has_discovered = ROOT
+				OR = {
+					has_discovered = 1096
+					has_discovered = 1112
+					has_discovered = 1113
 				}
 			}
 			num_of_colonists = 1
@@ -816,7 +810,7 @@ gc_por_3_c = {
 				}
 			}
 			light_ship_fraction = 0.25
-			navy_size_percentage = 1
+			navy_size_percentage = 0.9
 		}
 
 		effect = {
@@ -1102,13 +1096,6 @@ gc_por_4 = {
 		}
 		effect = {
 			add_navy_tradition = 20
-			leon_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			lower_andalucia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1236,7 +1223,7 @@ gc_por_4 = {
 					has_discovered = ROOT
 				}
 				2030 = {
-					has_discovered = POR
+					has_discovered = ROOT
 				}
 			}
 		}
@@ -1399,7 +1386,7 @@ gc_por_4 = {
 			OR = {
 				province_id = 1376
 				AND = {
-					province_id = 4182
+					province_id = 3313
 					NOT = { owned_by = ROOT }
 					owner = { NOT = { vassal_of = ROOT } }
 				}
@@ -1413,7 +1400,7 @@ gc_por_4 = {
 					share = 15
 				}
 			}
-			4182 = {
+			3313 = {
 				OR = {
 					country_or_non_sovereign_subject_holds = ROOT
 					owner = {
@@ -1431,14 +1418,14 @@ gc_por_4 = {
 			hidden_effect = {
 				if = {
 					limit = {
-						4182 = {
+						3313 = {
 							NOT = { country_or_non_sovereign_subject_holds = ROOT }
 							owner = {
 								is_subject = no
 							}
 						}
 					}
-					4182 = {
+					3313 = {
 						owner = {
 							country_event = { id = more_flavor_por.3 }
 						}
@@ -1477,22 +1464,18 @@ gc_por_5 = {
 		completed_by = 1470.1.1
 
 		trigger = {
-			navy_size_percentage = 1
+			navy_size_percentage = 0.95
 		}
 
 		effect = {
 			add_dip_power = 50
 			add_navy_tradition = 15
-			334 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			northern_morocco_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1602,16 +1585,8 @@ gc_por_5 = {
 		required_missions = { gc_por_conquers_hormuz }
 
 		provinces_to_highlight = {
-			OR = {
-				AND = {
-					area = mascat_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				AND = {
-					province_id = 400
-					NOT = { owned_by = ROOT }
-				}
-			}
+			area = mascat_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -1619,7 +1594,6 @@ gc_por_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			400 = { owned_by = ROOT }
 		}
 		effect = {
 			if = {

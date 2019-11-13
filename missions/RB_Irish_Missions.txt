@@ -7,24 +7,10 @@ ire_conquest_1 = {
 	}
 	potential = {
 		has_dlc = "Rule Britannia"
+		capital_scope = { region = ireland_region }
 		OR = {
-			tag = ANR
-			tag = TRY
-			tag = TYR
-			tag = MTH
-			tag = SLN
-			tag = FLY
-			tag = KID
-			tag = MYO
-			tag = THO
-			tag = ORD
-			tag = WEX
-			tag = DMS
-			tag = MCM
-			tag = LAI
-			tag = GLW
-			tag = CLN
-			tag = IRE
+			primary_culture = irish
+			primary_culture = anglo_irish
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -98,24 +84,10 @@ ire_conquest_main = {
 	}
 	potential = {
 		has_dlc = "Rule Britannia"
+		capital_scope = { region = ireland_region }
 		OR = {
-			tag = ANR
-			tag = TRY
-			tag = TYR
-			tag = MTH
-			tag = SLN
-			tag = FLY
-			tag = KID
-			tag = MYO
-			tag = THO
-			tag = ORD
-			tag = WEX
-			tag = DMS
-			tag = MCM
-			tag = LAI
-			tag = GLW
-			tag = CLN
-			tag = IRE
+			primary_culture = irish
+			primary_culture = anglo_irish
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -385,24 +357,10 @@ ire_conquest_2 = {
 	}
 	potential = {
 		has_dlc = "Rule Britannia"
+		capital_scope = { region = ireland_region }
 		OR = {
-			tag = ANR
-			tag = TRY
-			tag = TYR
-			tag = MTH
-			tag = SLN
-			tag = FLY
-			tag = KID
-			tag = MYO
-			tag = THO
-			tag = ORD
-			tag = WEX
-			tag = DMS
-			tag = MCM
-			tag = LAI
-			tag = GLW
-			tag = CLN
-			tag = IRE
+			primary_culture = irish
+			primary_culture = anglo_irish
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -585,24 +543,10 @@ ire_conquest_4 = {
 	}
 	potential = {
 		has_dlc = "Rule Britannia"
+		capital_scope = { region = ireland_region }
 		OR = {
-			tag = ANR
-			tag = TRY
-			tag = TYR
-			tag = MTH
-			tag = SLN
-			tag = FLY
-			tag = KID
-			tag = MYO
-			tag = THO
-			tag = ORD
-			tag = WEX
-			tag = DMS
-			tag = MCM
-			tag = LAI
-			tag = GLW
-			tag = CLN
-			tag = IRE
+			primary_culture = irish
+			primary_culture = anglo_irish
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -677,24 +621,10 @@ ire_colonial_missions = {
 	potential = {
 		has_dlc = "Rule Britannia"
 		is_random_new_world = no
+		capital_scope = { region = ireland_region }
 		OR = {
-			tag = ANR
-			tag = TRY
-			tag = TYR
-			tag = MTH
-			tag = SLN
-			tag = FLY
-			tag = KID
-			tag = MYO
-			tag = THO
-			tag = ORD
-			tag = WEX
-			tag = DMS
-			tag = MCM
-			tag = LAI
-			tag = GLW
-			tag = CLN
-			tag = IRE
+			primary_culture = irish
+			primary_culture = anglo_irish
 		}
 		NOT = { map_setup = map_setup_random }
 	}
