@@ -45,7 +45,6 @@ gc_spain_1 = {
 						OR = {
 							continent = north_america
 							continent = south_america
-							continent = new_world
 						}
 					}
 				}
@@ -67,19 +66,6 @@ gc_spain_1 = {
 		# free mission
 		
 		trigger = {
-			if = {
-				limit = {
-					is_random_new_world = yes
-				}
-				custom_trigger_tooltip = {
-					tooltip = cas_carib_rnw
-					any_province = {
-						continent = new_world
-						has_discovered = ROOT
-					}
-				}
-			}
-			else = {
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
 					OR = {
@@ -89,7 +75,6 @@ gc_spain_1 = {
 					colonial_bahamas = { has_discovered = ROOT }
 					}
 				}
-			}
 		}
 		
 		effect = {
@@ -769,27 +754,12 @@ gc_spain_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			210 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			basque_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-			}
-			3326 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -831,6 +801,10 @@ gc_spain_3 = {
 			iberia_region = {
 				type = all
 				religion_group = ROOT
+			}
+			baetica_area = {
+				type = all
+				culture_group = iberian
 			}
 		}
 		

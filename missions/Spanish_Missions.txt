@@ -20,20 +20,10 @@ spa_colonial_group = {
 		completed_by = 1492.1.1
 		
 		trigger = {
-			if = {
-				limit = {
-					is_random_new_world = yes
-				}
-				custom_trigger_tooltip = {
-					tooltip = miss_discover_caribbean
-					colonial_the_carribean = {
-						has_discovered = ROOT
-					}
-				}
-				else = {
-					490 = {
-						has_discovered = ROOT
-					}
+			custom_trigger_tooltip = {
+				tooltip = miss_discover_caribbean
+				colonial_the_carribean = {
+					has_discovered = ROOT
 				}
 			}
 		}
@@ -634,8 +624,8 @@ spa_reconquista = {
 		completed_by = 1445.1.1
 		
 		trigger = {
-			army_size_percentage = 0.6
-			manpower_percentage = 0.6
+			army_size_percentage = 0.75
+			manpower_percentage = 0.5
 			num_of_generals = 1
 			stability = 1
 		}
@@ -645,7 +635,14 @@ spa_reconquista = {
 				name = "spa_rb_morale"
 				duration = 5475
 			}
-			upper_andalucia_area = {
+			baetica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			basque_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
