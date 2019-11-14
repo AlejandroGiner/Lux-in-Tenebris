@@ -1,24 +1,19 @@
-#116 - Firenze
+#5878 - Montevarchi
 #Region - Italy
-#Area - Tuscan
+#Area - Tuscany
 
 owner = LAN
 controller = LAN
 culture = tuscan 
 religion = catholic 
 hre = yes 
-base_tax = 11
-base_production = 10
-trade_goods = wine
-base_manpower = 6
-fort_15th = yes
-capital = "Firenze" 
+base_tax = 3
+base_production = 4
+trade_goods = silk
+base_manpower = 2
+capital = "Montevarchi" 
 is_city = yes 
- # Founded 1321
 add_core = LAN
-
-extra_cost = 16
-center_of_trade = 2
 
 discovered_by = western
 discovered_by = eastern
@@ -35,14 +30,12 @@ discovered_by = ottoman
 	add_core = TUS
 	remove_core = LAN
 }
-1583.1.1 = { fort_15th = no fort_16th = yes }
-1648.1.1 = { fort_16th = no fort_17th = yes }
 1750.1.1 = { add_core = ITA } 
 1801.2.9 = {
 	owner = FRA
 	controller = FRA
 	add_core = FRA
-} # The Treaty of Lun�ville
+} # The Treaty of Lunaville
 1801.3.21 = {
 	owner = ETR
 	controller = ETR
