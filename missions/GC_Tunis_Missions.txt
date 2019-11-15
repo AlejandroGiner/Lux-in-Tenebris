@@ -805,7 +805,7 @@ gc_tunis_5 = {
 		required_missions = { gc_tun_privateer }
 		
 		provinces_to_highlight = {
-			province_id = 4566
+			province_id = 2454
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = {
@@ -816,7 +816,7 @@ gc_tunis_5 = {
 		}
 		
 		trigger = {
-			4566 = {
+			2454 = {
 				owned_by = ROOT
 				has_building = cathedral
 				has_building = university
