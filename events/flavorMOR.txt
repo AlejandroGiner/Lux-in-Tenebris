@@ -309,6 +309,15 @@ country_event = {
 				1127 = {
 					is_empty = yes
 				}
+				5223 = {
+					is_empty = yes
+				}
+				5222 = {
+					is_empty = yes
+				}
+				5221 = {
+					is_empty = yes
+				}
 				NOT = { owns = 1128 }
 			}
 			has_country_flag = mor_sudanese_expedition
@@ -337,6 +346,18 @@ country_event = {
 		name = flavor_mor.9.a #Let us cross the Sahara!
 		ai_chance = { factor = 1 }
 		1127 = {
+			add_core = MOR
+			cede_province = MOR
+		}
+		5223 = {
+			add_core = MOR
+			cede_province = MOR
+		}
+		5222 = {
+			add_core = MOR
+			cede_province = MOR
+		}
+		5221 = {
 			add_core = MOR
 			cede_province = MOR
 		}

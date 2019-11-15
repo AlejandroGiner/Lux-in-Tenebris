@@ -24,41 +24,31 @@ gc_morocco_1 = {
 				province_id = 2467
 			}
 			NOT = {
-				OR = {
 					has_building = temple
 					development = 15
-				}
 			}
 		}
 		
 		trigger = {
 			343 = {
 				owned_by = ROOT
-				OR = {
-					has_building = temple
-					development = 15
-				}
+				has_building = temple
+				development = 15
 			}
 			344 = {
 				owned_by = ROOT
-				OR = {
-					has_building = temple
-					development = 15
-				}
+				has_building = temple
+				development = 15
 			}
 			2467 = {
 				owned_by = ROOT
-				OR = {
-					has_building = temple
-					development = 15
-				}
+				has_building = temple
+				development = 15
 			}
 			4563 = {
 				owned_by = ROOT
-				OR = {
-					has_building = temple
-					development = 15
-				}
+				has_building = temple
+				development = 15
 			}
 		}
 		
@@ -75,12 +65,12 @@ gc_morocco_1 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2466
-				province_id = 1110
+				province_id = 345
 			}
 		}
 		
 		trigger = {
-			1110 = {
+			345 = {
 				is_strongest_trade_power = ROOT
 			}
 			if = {
@@ -88,10 +78,8 @@ gc_morocco_1 = {
 					has_dlc = "Dharma"
 				}
 				2466 = {
-					OR = {
-						province_has_center_of_trade_of_level = 2
-						has_building = marketplace
-					}
+					province_has_center_of_trade_of_level = 2
+					has_building = marketplace
 				}
 			}
 			else = {
@@ -103,7 +91,7 @@ gc_morocco_1 = {
 		effect = {
 			if = {
 				limit = {
-					1127 = {
+					5223 = {
 						is_empty = yes
 						any_neighbor_province = {
 							owned_by = ROOT
@@ -298,13 +286,6 @@ gc_morocco_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			futa_jallon_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}			
 		}
 	}
 	gc_mor_mali = {
@@ -319,7 +300,6 @@ gc_morocco_1 = {
 				area = kong_area
 				area = manding_area
 				area = baghena_area
-				area = futa_jallon_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -351,15 +331,18 @@ gc_morocco_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			futa_jallon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
 		}
 		
 		effect = {
 			add_treasury = 1000
 			atacora_oueme_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_volta_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -391,6 +374,7 @@ gc_morocco_1 = {
 				area = atacora_oueme_area
 				area = lower_niger_area
 				area = benin_area
+				area = lower_volta_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -399,6 +383,10 @@ gc_morocco_1 = {
 		
 		trigger = {
 			atacora_oueme_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lower_volta_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -441,11 +429,11 @@ gc_morocco_2 = {
 		position = 2
 		
 		provinces_to_highlight = {
-			province_id = 1293
+			province_id = 224
 		}
 		
 		trigger = {
-			1293 = {
+			224 = {
 				privateer_power = {
 					country = ROOT
 					share = 25
@@ -603,24 +591,27 @@ gc_morocco_3 = {
 		}
 		
 		effect = {
-			oran_area= {
+			oran_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tagmudant_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			hautes_plaines_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			tafilalt_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -639,7 +630,7 @@ gc_morocco_3 = {
 				}
 			}
 			else = {
-				upper_andalucia_area = {
+				baetica_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
@@ -658,8 +649,6 @@ gc_morocco_3 = {
 				area = hautes_plaines_area
 				area = tafilalt_area
 				area = tagmudant_area
-				province_id = 5318
-				
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -683,9 +672,6 @@ gc_morocco_3 = {
 				type = all 
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			5318 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
 		}
 		
 		effect = {
@@ -700,7 +686,7 @@ gc_morocco_3 = {
 		required_missions = { gc_mor_algiers gc_mor_privateer }
 		
 		provinces_to_highlight = {
-			province_id = 1297
+			province_id = 1298
 		}
 		
 		trigger = {
@@ -715,10 +701,18 @@ gc_morocco_3 = {
 				any_subject_country = {
 					has_reform = pirate_republic_reform
 				}
-				1297 = {
-					privateer_power = {
-						country = ROOT
-						share = 25
+				AND = {
+					1298 = {
+						privateer_power = {
+							country = ROOT
+							share = 20
+						}
+					}
+					1295 = {
+						privateer_power = {
+							country = ROOT
+							share = 40
+						}
 					}
 				}
 			}
@@ -744,6 +738,13 @@ gc_morocco_3 = {
 				add_permanent_claim = ROOT
 			}
 			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_aures_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -872,14 +873,14 @@ gc_morocco_4 = {
 		position = 2
 		
 		provinces_to_highlight = {
-			area = upper_andalucia_area
+			area = baetica_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
 		trigger = {
-			upper_andalucia_area = {
+			baetica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -888,43 +889,45 @@ gc_morocco_4 = {
 		effect = {
 			lower_andalucia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_andalucia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			221 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-			}
-			4547 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 			218 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
+				add_permanent_claim = ROOT
+			}
+			7651 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			7653 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			3082 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -935,9 +938,12 @@ gc_morocco_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = lower_andalucia_area
+				area = upper_andalucia_area
 				province_id = 221
-				province_id = 4547
+				province_id = 7651
 				province_id = 218
+				province_id = 7653
+				province_id = 3082
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -947,10 +953,23 @@ gc_morocco_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			221 = {
+			upper_andalucia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4547 = {
+			7653 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3082 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7651 = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			221 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			218 = {

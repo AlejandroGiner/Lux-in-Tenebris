@@ -17,16 +17,21 @@ gc_tunis_1 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 350
 				area = tripolitania_area
 				area = nafusa_mountains_area
 				area = fezzan_area
+				area = north_saharan_area
+				area = djerba_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			fezzan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			djerba_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -38,7 +43,8 @@ gc_tunis_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			350 = {
+			north_saharan_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -240,7 +246,7 @@ gc_tunis_2 = {
 					AND = {
 						controlled_by = ROOT
 						NOT = { owned_by = ROOT }
-						devastation = 25
+						devastation = 35
 					}
 				}
 			}
@@ -248,6 +254,12 @@ gc_tunis_2 = {
 		effect = {
 			add_treasury = 500
 			add_yearly_sailors = 5
+			220 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+				add_claim = ROOT
+			}
 		}
 	}	
 	gc_tun_valencia = {
@@ -265,7 +277,7 @@ gc_tunis_2 = {
 					AND = {
 						controlled_by = ROOT
 						NOT = { owned_by = ROOT }
-						devastation = 25
+						devastation = 35
 					}
 				}
 			}
@@ -297,41 +309,54 @@ gc_tunis_3 = {
 		
 		trigger = {
 			naval_forcelimit = 20
-			num_of_light_ship = 5
+			num_of_light_ship = 8
 		}
 		effect = {
 			sicily_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_sicily_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			5318 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			corsica_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			corsica_sardinia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			baleares_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			oran_area= {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			hautes_plaines_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				}
 				add_permanent_claim = ROOT
 			}
@@ -346,6 +371,8 @@ gc_tunis_3 = {
 				area = sicily_area
 				area = corsica_sardinia_area
 				area = baleares_area
+				area = corsica_area
+				area = east_sicily_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -363,44 +390,43 @@ gc_tunis_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			east_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = "tun_med_conquest"
 				duration = 7300
 			}
-			163 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			aegean_archipelago_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				}
+				add_permanent_claim = ROOT
 			}
-			320 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			eastern_mediterrenean_islands_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				}
+				add_permanent_claim = ROOT
 			}
-			321 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			cyprus_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				}
+				add_permanent_claim = ROOT
+			}
+			101 = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+				add_claim = ROOT
 			}
 		}
 	}
@@ -410,21 +436,23 @@ gc_tunis_3 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 163
+				area = cyprus_area
 				province_id = 320
-				province_id = 321
+				area = eastern_mediterrenean_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			163 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			320 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			321 = {
+			cyprus_area = {
+				type = ALL
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				type = ALL
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -434,15 +462,10 @@ gc_tunis_3 = {
 				duration = 7300
 			}
 			112 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
 				}
+				add_claim = ROOT
 			}
 		}
 	}
@@ -458,7 +481,7 @@ gc_tunis_3 = {
 					AND = {
 						controlled_by = ROOT
 						NOT = { owned_by = ROOT }
-						devastation = 25
+						devastation = 35
 					}
 				}
 			}
@@ -471,7 +494,7 @@ gc_tunis_3 = {
 					AND = {
 						controlled_by = ROOT
 						NOT = { owned_by = ROOT }
-						devastation = 25
+						devastation = 35
 					}
 				}
 			}			
@@ -533,7 +556,7 @@ gc_tunis_4 = {
 		
 		provinces_to_highlight = {	
 			OR = {
-				province_id = 1297
+				province_id = 1298
 				AND = {
 					province_id = 338
 					NOT = {
@@ -555,7 +578,7 @@ gc_tunis_4 = {
 					has_building = grand_shipyard
 				}
 			}
-			1297 = {
+			1298 = {
 				privateer_power = {
 					country = ROOT
 					share = 25
@@ -786,10 +809,7 @@ gc_tunis_5 = {
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = {
-					OR = {
-						has_building = temple
-						has_building = cathedral
-					}
+					has_building = cathedral
 				}
 				NOT = { has_building = university }
 			}
@@ -798,14 +818,11 @@ gc_tunis_5 = {
 		trigger = {
 			4566 = {
 				owned_by = ROOT
-				OR = {
-					has_building = temple
-					has_building = cathedral
-				}
+				has_building = cathedral
 				has_building = university
 			}
 			religious_unity = 1
-			num_accepted_cultures = 3
+			num_accepted_cultures = 4
 		}
 		effect = {
 			add_prestige = 20
