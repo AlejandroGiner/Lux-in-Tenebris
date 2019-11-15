@@ -78,13 +78,6 @@ gc_spain_1 = {
 		}
 		
 		effect = {
-			if = {
-				limit = {
-					owns_core_province = 224
-				}
-				set_country_flag = sevilla_trade_center_flag
-				country_event = { id = flavor_spa.3153 }
-			}
 			add_country_modifier = {
 				name = "spa_hispaniola_discovered"
 				duration = 5475
@@ -156,6 +149,13 @@ gc_spain_1_b = {
 				name = "the_unknown_frontier"
 				duration = 5475
 			}
+			if = {
+				limit = {
+					owns_core_province = 224
+				}
+				set_country_flag = sevilla_trade_center_flag
+				country_event = { id = flavor_spa.3153 }
+			}	
 		}
 	}
 	gc_cas_spa_havana = {
@@ -641,19 +641,16 @@ gc_spain_2_b = {
 					}
 				}
 			}
-			north_florida_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
+			custom_tooltip = spain_florida_claims_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						colonial_region = colonial_florida
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-			}
-			florida_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -1203,11 +1200,14 @@ gc_spain_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			catalonia_area = {
-				type = all
-				OR = {
-					province_id = 3320
-					country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = reconquista_three_cat_tooltip
+				catalonia_area = {
+					type = all
+					OR = {
+						province_id = 3320
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 			aragon_area = {
@@ -1254,21 +1254,7 @@ gc_spain_4 = {
 				limit = {
 					NOT = { NAP = { is_subject_of = ROOT } }
 				}
-				sicily_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				east_sicily_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				calabria_area = {
+				naples_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -1282,7 +1268,7 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				naples_area = {
+				calabria_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -1298,19 +1284,7 @@ gc_spain_4 = {
 				}
 			}
 			else = {
-				sicily_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-					add_permanent_claim = NAP
-				}
-				east_sicily_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
-					add_permanent_claim = NAP
-				}
-				calabria_area = {
+				naples_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
@@ -1322,7 +1296,7 @@ gc_spain_4 = {
 					}
 					add_permanent_claim = NAP
 				}
-				naples_area = {
+				calabria_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
@@ -1333,6 +1307,79 @@ gc_spain_4 = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_permanent_claim = NAP
+				}
+			}
+			if = {
+				limit = {
+					NOT = { SIC = { is_subject_of = ROOT } }
+				}
+				sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				east_sicily_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				sicily_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = SIC
+				}
+				east_sicily_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = SIC
+				}
+			}
+			if = {
+				limit = {
+					NOT = { COR = { is_subject_of = ROOT } }
+				}
+				corsica_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				corsica_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = COR
+				}
+			}
+			if = {
+				limit = {
+					NOT = { SAR = { is_subject_of = ROOT } }
+				}
+				corsica_sardinia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			else = {
+				corsica_sardinia_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = SAR
 				}
 			}
 		}
@@ -1350,6 +1397,7 @@ gc_spain_4 = {
 				area = apulia_area
 				area = naples_area
 				area = abruzzo_area
+				area = corsica_sardinia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1376,6 +1424,10 @@ gc_spain_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			abruzzo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_sardinia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1827,6 +1879,13 @@ gc_spain_4_d = {
 				}
 				add_permanent_claim = ROOT
 			}
+			palawan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_cas_spa_conquer_philippines = {
@@ -1847,13 +1906,7 @@ gc_spain_4_d = {
 		}
 		effect = {
 			add_army_tradition = 15
-			southern_luzon_area = {
-				limit = {
-					owned_by = ROOT
-				}
-				change_religion = ROOT
-			}
-			luzon_area = {
+			philippines_region = {
 				limit = {
 					owned_by = ROOT
 				}
@@ -1898,7 +1951,7 @@ gc_spain_5_a = {
 	has_country_shield = yes
 	
 	gc_cas_spa_reconquista_two = {
-		icon = mission_cannons_firing
+		icon = mission_union_with_portugal
 		required_missions = { gc_cas_spa_reconquista_three }
 		position = 2
 		
@@ -1913,19 +1966,29 @@ gc_spain_5_a = {
 		}
 		
 		trigger = {
-			beieras_area = {
-				type = all
-				owned_by = ROOT
-			}
-			alentejo_area = {
-				type = all
-				owned_by = ROOT
+			if = {
+				limit = {
+					exists = POR
+				}
+				POR = {
+					is_subject_of = ROOT
+				}
+				else = {
+					alentejo_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					beieras_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		
 		effect = {
-			add_prestige = 25
-			add_adm_power = 100
+			add_legitimacy = 20
+			add_dip_power = 100
 		}
 	}
 }
@@ -2026,6 +2089,13 @@ gc_spain_5_b = {
 					}
 					add_permanent_claim = ROOT
 				}
+				carniola_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			netherlands_area = {
 				limit = {
@@ -2065,17 +2135,27 @@ gc_spain_5_b = {
 		}
 		
 		trigger = {
-			inner_austria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			austria_proper_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			tirol_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					exists = HAB
+				}
+				HAB = {
+					is_subject_of = ROOT
+				}
+				else = {
+					tirol_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					austria_proper_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					inner_austria_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
@@ -2106,10 +2186,10 @@ gc_spain_5_b = {
 				limit = {
 					is_emperor = yes
 				}
-				add_imperial_influence = 50
+				add_imperial_influence = 55
 			}
 			else = {
-				add_prestige = 50
+				add_legitimacy = 30
 			}
 		}
 	}

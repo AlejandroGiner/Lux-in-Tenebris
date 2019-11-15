@@ -90,7 +90,7 @@ country_event = {
 	}
 	option = {
 		name = btc_modding_test.3.e
-		balkan_region = {
+		greece_region_btc = {
 			limit = { NOT = { owned_by = BYZ } }
 			add_core = BYZ
 			cede_province = BYZ
@@ -105,25 +105,158 @@ country_event = {
 		}
 	}
 	option = {
-		name = btc_modding_test.1.a
+		name = btc_modding_test.3.g
 		japan_region = {
 				limit = { NOT = { owned_by = ASK } }
 				add_core = ASK
 				cede_province = ASK
 			}
-		
 	}
 	option = {
-		name = btc_modding_test.3.g
+		name = btc_modding_test.3.h
 		oceanea_region = {
 				limit = { NOT = { owned_by = YZW } }
 				add_core = YZW
 				cede_province = YZW
 			}
-		
 	}
 	option = {
-		name = btc_modding_test.3.h
+		name = btc_modding_test.3.i
+		mexico_region = {
+				limit = { NOT = { owned_by = AZT } }
+				add_core = AZT
+				cede_province = AZT
+			}
+	}
+	option = {
+		name = btc_modding_test.3.j
+		balkan_region = {
+				limit = { NOT = { owned_by = BOS } }
+				add_core = BOS
+				cede_province = BOS
+			}
+	}
+	option = {
+		name = btc_modding_test.3.k
+		northeast_america_region = {
+			limit = { NOT = { owned_by = IRO } }
+			add_core = IRO
+			cede_province = IRO
+		}
+		southeast_america_region = {
+		limit = { NOT = { owned_by = U4C } }
+			add_core = U4C
+			cede_province = U4C
+		}
+	}
+	option = {
+		name = btc_modding_test.3.l
+		russia_region = {
+				limit = { NOT = { owned_by = TVE } }
+				add_core = TVE
+				cede_province = TVE
+			}
+	}
+	option = {
+		name = btc_modding_test.3.m
+		ireland_region = {
+				limit = { NOT = { owned_by = MNS } }
+				add_core = MNS
+				cede_province = MNS
+			}
+	}
+	option = {
+		name = btc_modding_test.3.n
+		deccan_region = {
+			limit = { NOT = { owned_by = DLH } }
+			add_core = DLH
+			cede_province = DLH
+		}
+		coromandel_region = {
+		limit = { NOT = { owned_by = DLH } }
+			add_core = DLH
+			cede_province = DLH
+		}
+		west_india_region = {
+		limit = { NOT = { owned_by = DLH } }
+			add_core = DLH
+			cede_province = DLH
+		}
+		hindusthan_region = {
+		limit = { NOT = { owned_by = DLH } }
+			add_core = DLH
+			cede_province = DLH
+		}
+		bengal_region = {
+		limit = { NOT = { owned_by = DLH } }
+			add_core = DLH
+			cede_province = DLH
+		}
+	}
+	option = {
+		name = btc_modding_test.3.u
+		persia_region = {
+				limit = { NOT = { owned_by = FRS } }
+				add_core = FRS
+				cede_province = FRS
+		}
+		khorasan_region = {
+				limit = { NOT = { owned_by = FRS } }
+				add_core = FRS
+				cede_province = FRS
+		}
+	}
+	option = {
+		name = btc_modding_test.3.v
+		arabia_region = {
+				limit = { NOT = { owned_by = HED } }
+				add_core = HED
+				cede_province = HED
+		}
+	}
+	option = {
+		name = btc_modding_test.3.x
+		sumatra_region = {
+				limit = { NOT = { owned_by = BNJ } }
+				add_core = BNJ
+				cede_province = BNJ
+		}
+		malaya_region = {
+				limit = { NOT = { owned_by = BNJ } }
+				add_core = BNJ
+				cede_province = BNJ
+		}
+		moluccas_region = {
+				limit = { NOT = { owned_by = BNJ } }
+				add_core = BNJ
+				cede_province = BNJ
+		}
+		philippines_region = {
+				limit = { NOT = { owned_by = BNJ } }
+				add_core = BNJ
+				cede_province = BNJ
+		}
+		java_region = {
+				limit = { NOT = { owned_by = BNJ } }
+				add_core = BNJ
+				cede_province = BNJ
+		}
+		indonesia_region = {
+				limit = { NOT = { owned_by = BNJ } }
+				add_core = BNJ
+				cede_province = BNJ
+		}
+	}
+	option = {
+		name = btc_modding_test.3.y
+		horn_of_africa_region = {
+				limit = { NOT = { owned_by = JJI } }
+				add_core = JJI
+				cede_province = JJI
+			}
+	}
+	option = {
+		name = btc_modding_test.3.z
 	}
 }
 
