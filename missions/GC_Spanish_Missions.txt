@@ -1962,7 +1962,7 @@ gc_spain_5_a = {
 				area = beieras_area
 				area = alentejo_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {

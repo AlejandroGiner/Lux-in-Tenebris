@@ -28,7 +28,8 @@ gc_aragon_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1297
+				province_id = 1298
+				province_id = 1295
 				AND = {
 					OR = {
 						province_id = 213
@@ -42,10 +43,16 @@ gc_aragon_1 = {
 			}
 		}
 		trigger = {
-			1297 = {
+			1298 = {
 				trade_share = {
 					country = ROOT
-					share = 33
+					share = 20
+				}
+			}
+			1295 = {
+				trade_share = {
+					country = ROOT
+					share = 65
 				}
 			}
 			213 = {
@@ -74,6 +81,13 @@ gc_aragon_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			corsica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_valencian_silk = {
@@ -92,13 +106,13 @@ gc_aragon_1 = {
 				220 = {
 					OR = {
 						province_has_center_of_trade_of_level = 3
-						development = 20
+						development = 25
 					}
 				}
 			}
 			else = {
 				220 = {
-						development = 20
+						development = 25
 					}
 				}
 		}
@@ -120,15 +134,11 @@ gc_aragon_1 = {
 			custom_trigger_tooltip = {
 				tooltip = ara_manufactories_tooltip
 				num_of_owned_provinces_with = {
-					value = 10
+					value = 15
 					has_manufactory_trigger = yes
 				}
 			}
 			OR = {
-				production_leader = {
-					trade_goods = wine
-					value = yes
-				}
 				production_leader = {
 					trade_goods = glass
 					value = yes
@@ -150,8 +160,8 @@ gc_aragon_1 = {
 		icon = mission_golden_century
 		required_missions = { gc_ara_industry gc_ara_banking }
 		trigger = {
-			prestige = 80
-			share_of_starting_income = 10
+			prestige = 95
+			share_of_starting_income = 15
 		}
 		effect = {
 			add_country_modifier = {
@@ -195,6 +205,7 @@ gc_aragon_2 = {
 			OR = {
 				area = corsica_sardinia_area
 				area = liguria_area
+				area = corsica_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -210,6 +221,10 @@ gc_aragon_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			corsica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			if = {
 				limit = {
 					has_dlc = "Dharma"
@@ -217,18 +232,25 @@ gc_aragon_2 = {
 				101 = {
 					OR = {
 						province_has_center_of_trade_of_level = 3
-						development = 30
+						development = 35
 					}
 				}
 			}
 			else = {
 					101 = {
-						development = 30
+						development = 35
 					}
 			}
 		}
 		effect = {
 			venetia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			friuli_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -242,7 +264,21 @@ gc_aragon_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_piedmont_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -320,6 +356,7 @@ gc_aragon_2 = {
 				area = basque_area
 				area = leon_area
 				area = extremadura_area
+				area = btc_murcia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -346,9 +383,13 @@ gc_aragon_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			btc_murcia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			add_legitimacy = 20
+			add_prestige = 20
 			if = {
 				limit = {
 					exists = POR
@@ -402,6 +443,13 @@ gc_aragon_2 = {
 				}
 				add_claim = ROOT
 			}
+			baetica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 	gc_ara_portugal = {
@@ -419,18 +467,28 @@ gc_aragon_2 = {
 		}
 
 		trigger = {
-			alentejo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			beieras_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					exists = POR
+				}
+				POR = {
+					is_subject_of = ROOT
+				}
+				else = {
+					alentejo_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					beieras_area = {
+						type = ALL
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
 			add_dip_power = 100
-			add_prestige = 20
+			add_legitimacy = 20
 		}
 	}
 
@@ -468,6 +526,7 @@ gc_aragon_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = venetia_area
+				area = friuli_area
 				province_id = 1308
 			}
 			NOT = {
@@ -477,6 +536,10 @@ gc_aragon_3 = {
 
 		trigger = {
 			venetia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			friuli_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -535,40 +598,27 @@ gc_aragon_3 = {
 		effect = {
 			east_adriatic_coast_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT is_core = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			carniola_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT is_core = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			3196 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
+			croatia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			1826 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 			}
 		}
+	}
 	gc_ara_navarra = {
 		icon = mission_have_two_subjects
 		required_missions = {  }
@@ -577,15 +627,32 @@ gc_aragon_3 = {
 		# free mission
 
 		provinces_to_highlight = {
-			province_id = 210
+			OR = { 
+				province_id = 210
+				province_id = 3326
+				is_core = NAV
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		trigger = {
-			210 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					exists = NAV
+				}
+				NAV = {
+					is_subject_of = ROOT
+				}
+				else = {
+					210 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					3326 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
@@ -594,6 +661,13 @@ gc_aragon_3 = {
 				duration = 7300
 			}
 			provence_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			btc_murcia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -669,49 +743,19 @@ gc_aragon_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			198 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			pyrenees_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			4112 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			dauphine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
-			}
-			3081 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			194 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -722,10 +766,8 @@ gc_aragon_3 = {
 			OR = {
 				area = savoy_dauphine_area
 				area = languedoc_area
-				province_id = 194
-				province_id = 3081
-				province_id = 198
-				province_id = 4112
+				area = pyrenees_area
+				area = dauphine_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -742,16 +784,12 @@ gc_aragon_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			194 = {
+			pyrenees_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3081 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			198 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4112 = {
+			dauphine_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -807,7 +845,10 @@ gc_aragon_4 = {
 			OR = {
 				area = calabria_area
 				area = apulia_area
-				area = naples_area
+				province_id = 121 
+				province_id = 3039
+				province_id = 3127 
+				province_id = 2983
 			}
 			NOT = {
 				owned_by = ROOT
@@ -822,9 +863,15 @@ gc_aragon_4 = {
 				type = all
 				owned_by = ROOT
 			}
-			naples_area = {
-				type = all
-				owned_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = integrate_naples_benevento_tooltip
+				naples_area = {
+					type = all
+					OR = {
+						province_id = 5705
+						owned_by = ROOT
+					}
+				}
 			}
 		}
 		effect = {
@@ -861,6 +908,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			thessaly_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_athens = {
@@ -875,6 +929,7 @@ gc_aragon_4 = {
 				area = northern_greece_area
 				area = eastern_mediterrenean_islands_area
 				area = western_aegean_area
+				area = thessaly_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -897,6 +952,10 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			thessaly_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -904,6 +963,20 @@ gc_aragon_4 = {
 				duration = 7300
 			}
 			albania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_aegean_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			aegean_archipelago_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1051,7 +1124,7 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kastamonu_area = {
+			caria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1079,12 +1152,6 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			2304 = {
-				add_permanent_claim = ROOT
-			}
-			1846 = {
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	gc_ara_mare_nostrum = {
@@ -1096,17 +1163,19 @@ gc_aragon_4 = {
 				area = hudavendigar_area
 				area = aydin_area
 				area = cukurova_area
-				area = kastamonu_area
+				area = tripoli_area
 				area = pamphylia_area
 				area = karasi_area
 				area = cyprus_area
 				area = east_adriatic_coast_area
+				area = croatia_area
+				area = caria_area
+				area = aleppo_area
+				area = palestine_area
+				province_id = 364
+				area = aegean_archipelago_area
+				area = northern_aegean_islands_area
 				area = carniola_area
-				area = bahari_area
-				province_id = 1826
-				province_id = 3196
-				province_id = 2304
-				province_id = 1846
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1123,7 +1192,7 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kastamonu_area = {
+			tripoli_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1147,27 +1216,37 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			bahari_area = {
+			364 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			palestine_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1826 = {
+			aleppo_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3196 = {
+			caria_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2304 = {
+			croatia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1846 = {
+			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_aegean_islands_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_mercantilism = 10
-			add_navy_tradition = 25
-			add_prestige = 50
+			add_mercantilism = 25
+			add_navy_tradition = 50
 		}
 	}
 }
@@ -1214,6 +1293,13 @@ gc_aragon_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			2465 = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -1253,7 +1339,7 @@ gc_aragon_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_aures_area = {
+			djerba_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1270,7 +1356,7 @@ gc_aragon_5 = {
 			OR = {
 				area = kabylia_area
 				area = tunisia_area
-				area = east_aures_area
+				area = djerba_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1286,7 +1372,7 @@ gc_aragon_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			east_aures_area = {
+			djerba_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1303,22 +1389,24 @@ gc_aragon_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			tripolitania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cyrenaica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			2325 = {
 				add_permanent_claim = ROOT
 			}
 			5272 = {
-				add_permanent_claim = ROOT
-			}
-			2326 = {
-				add_permanent_claim = ROOT
-			}
-			357 = {
-				add_permanent_claim = ROOT
-			}
-			356 = {
-				add_permanent_claim = ROOT
-			}
-			5274 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -1332,10 +1420,8 @@ gc_aragon_5 = {
 				area = delta_area
 				province_id = 2325
 				province_id = 5272
-				province_id = 2326
-				province_id = 357
-				province_id = 356
-				province_id = 5274
+				area = cyrenaica_area
+				area = tripolitania_area
 			}
 			OR = {
 				NOT = {
@@ -1353,22 +1439,18 @@ gc_aragon_5 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			cyrenaica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			2325 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			5272 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2326 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			357 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			356 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5274 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
