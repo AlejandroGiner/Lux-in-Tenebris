@@ -39,8 +39,13 @@ granada_development_missions = {
 		effect = {
 			capital_scope = {
 				add_base_tax = 2
-				add_base_manpower = 4
+				add_base_manpower = 2
 			}
+			4546 = { add_base_manpower = 1 }
+			4771 = { add_base_manpower = 1 }
+			226 = { add_base_manpower = 1 }
+			222 = { add_base_manpower = 1 }
+			3145 = { add_base_manpower = 1 }
 		}
 	}
 
@@ -114,8 +119,8 @@ andalusia_slot_1_missions = {
 			225 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				OR = {
-					development = 15
-					has_building = temple
+					development = 30
+					has_building = cathedral
 				}
 			}
 			lower_andalucia_area = {
@@ -134,6 +139,7 @@ andalusia_slot_1_missions = {
 			custom_tooltip = alandalus_returns_tooltip
 			225 = {
 				add_province_triggered_modifier = alandalus_returns
+				change_culture = andalusi_culture
 			}
 		}
 	}
@@ -421,8 +427,13 @@ granada_slot_2_missions = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = btc_murcia_area
-				area = valencia_area
+				province_id = 7653 
+				province_id = 4547
+				province_id = 3082
+				province_id = 221
+				province_id = 1750
+				province_id = 3300
+				province_id = 220
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -430,26 +441,43 @@ granada_slot_2_missions = {
 		}
 
 		trigger = {
-			btc_murcia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
+			custom_trigger_tooltip = {
+				tooltip = conquer_murcia_gra_tooltip
+				btc_murcia_area = {
+					type = all
+					OR = {
+						province_id = 3079
+						province_id = 2751
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
-			valencia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
+			custom_trigger_tooltip = {
+				tooltip = conquer_valencia_gra_tooltip
+				valencia_area = {
+					type = all
+					OR = {
+						province_id = 4550
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 
 		effect = {
 			btc_murcia_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				add_province_modifier = {
 					name = gra_rebuilding_mosques
 					duration = 7300
 				}
 			}
 			valencia_area = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				add_province_modifier = {
 					name = gra_rebuilding_mosques
 					duration = 7300
@@ -641,46 +669,14 @@ adu_slot_2_missions = {
 		position = 6
 
 		provinces_to_highlight = {
-			OR = {
-				area = galicia_area
-				area = leon_area
-				area = basque_area
-				area = catalonia_area
-				area = alentejo_area
-				area = beieras_area
-			}
+			region = iberia_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		trigger = {
-			galicia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			leon_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			basque_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			catalonia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			alentejo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			beieras_area = {
+			iberia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
@@ -753,6 +749,15 @@ adu_slot_2_missions = {
 				add_claim = ROOT
 			}
 			piedmont_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			west_piedmont_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -938,6 +943,7 @@ granada_slot_3_missions = {
 					name = gra_reconvert_giralda
 					duration = -1
 				}
+				change_culture = andalusi_culture
 			}
 			if = {
 				limit = {
@@ -1065,8 +1071,10 @@ andalusia_slot_3_missions_b = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_west_africa
-				west_africa_coast_area = {
-					has_discovered = ROOT
+				OR = {
+					has_discovered = 1096
+					has_discovered = 1112
+					has_discovered = 1113
 				}
 			}
 		}
@@ -1272,6 +1280,15 @@ andalusia_slot_4_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 
 	}
@@ -1282,7 +1299,10 @@ andalusia_slot_4_missions = {
 		position = 4
 
 		provinces_to_highlight = {
-			area = sicily_area
+			OR = {
+				area = sicily_area
+				area = east_sicily_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1290,6 +1310,11 @@ andalusia_slot_4_missions = {
 
 		trigger = {
 			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+			east_sicily_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
@@ -1509,31 +1534,14 @@ andalusia_slot_4_missions_c = {
 		position = 8
 
 		provinces_to_highlight = {
-			OR = {
-				area = iraq_arabi_area
-				area = basra_area
-				area = khuzestan_area
-				area = luristan_area
-			}
+			region = mesopotamia_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		trigger = {
-			iraq_arabi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			basra_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			khuzestan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			luristan_area = {
+			mesopotamia_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1559,34 +1567,7 @@ andalusia_slot_4_missions_c = {
 					add_center_of_trade_level = 1
 				}
 			}
-			persian_gulf_coast = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			farsistan_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			kerman_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			mogostan_area = {
+			arabia_region = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -1902,31 +1883,25 @@ andalusia_slot_5_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			if = {
-				limit = {
-					5272 = {
-						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-				}
-				5272 = {
-					add_permanent_claim = ROOT
-				}
-			}
-			if = {
-				limit = {
-				2325 = {
-						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-					}
-				}
-				2325 = {
-					add_permanent_claim = ROOT
-				}
-			}
 			syrian_desert_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			al_wahat_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			said_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -1946,16 +1921,12 @@ andalusia_slot_5_missions = {
 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2326
-				province_id = 357
-				province_id = 356
-				province_id = 5274
-				province_id = 5272
-				province_id = 2325
 				area = delta_area
 				area = bahari_area
 				area = vostani_area
 				area = syrian_desert_area
+				area = said_area
+				area = al_wahat_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1963,10 +1934,6 @@ andalusia_slot_5_missions = {
 		}
 
 		trigger = {
-			cyrenaica_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			delta_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1983,22 +1950,12 @@ andalusia_slot_5_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2326 = {
+			said_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			357 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			356 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5274 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5272 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2325 = {
+			al_wahat_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -2007,43 +1964,7 @@ andalusia_slot_5_missions = {
 			country_event = {
 				id = flavor_gra.3
 			}
-			said_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			palestine_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			syria_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			aleppo_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			al_jazira_area = {
+			mashriq_region = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -2079,15 +2000,6 @@ andalusia_slot_5_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			trans_jordan_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
 		}
 	}
 
@@ -2097,44 +2009,17 @@ andalusia_slot_5_missions = {
 		position = 7
 
 		provinces_to_highlight = {
-			OR = {
-				area = palestine_area
-				area = syria_area
-				area = aleppo_area
-				area = al_jazira_area
-				area = trans_jordan_area
-			}
+			region = mashriq_region
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
 		trigger = {
-			palestine_area = {
+			mashriq_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
-			}
-			syria_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			aleppo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			al_jazira_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-			}
-			trans_jordan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-				is_core = ROOT
-
 			}
 		}
 
@@ -2148,7 +2033,7 @@ andalusia_slot_5_missions = {
 					duration = -1
 				}
 			}
-			syrian_desert_area = {
+			mesopotamia_region = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -2156,24 +2041,6 @@ andalusia_slot_5_missions = {
 					}
 				}
 				add_claim = ROOT
-			}
-			iraq_arabi_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			basra_area = {
-				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
 			}
 			khuzestan_area = {
 				limit = {
@@ -2243,6 +2110,8 @@ andalusia_slot_5_missions = {
 				area = tabriz_area
 				area = azerbaijan_area
 				area = armenia_area
+				area = luristan_area
+				area = khuzestan_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -2266,6 +2135,14 @@ andalusia_slot_5_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			luristan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khuzestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 
 		effect = {
@@ -2274,7 +2151,16 @@ andalusia_slot_5_missions = {
 				name = "adu_greater_than_alexander"
 				duration = 7300
 			}
-			iraq_e_ajam_area = {
+			persia_region = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			khorasan_region = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -2283,7 +2169,7 @@ andalusia_slot_5_missions = {
 				}
 				add_claim = ROOT
 			}
-			isfahan_area = {
+			southgeorgia_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -2301,7 +2187,7 @@ andalusia_slot_5_missions = {
 				}
 				add_claim = ROOT
 			}
-			tabarestan_area = {
+			dagestan_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -2310,7 +2196,25 @@ andalusia_slot_5_missions = {
 				}
 				add_claim = ROOT
 			}
-			kartli_kakheti_area = {
+			sheki_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			sindh_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			cyprus_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -2321,5 +2225,85 @@ andalusia_slot_5_missions = {
 			}
 		}
 
+	}
+	adu_umayyad_final = {
+		icon = mission_mosque
+		required_missions = { adu_persian_conquest adu_down_tigris }
+		position = 9
+
+		provinces_to_highlight = {
+			OR = {
+				region = persia_region
+				region = khorasan_region
+				region = arabia_region
+				area = sindh_area
+				area = cukurova_area
+				area = sheki_area
+				area = dagestan_area
+				area = shirvan_area
+				area = southgeorgia_area
+				area = cyprus_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+
+		trigger = {
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			khorasan_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			arabia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sindh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sheki_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			dagestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shirvan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southgeorgia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cyprus_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			if = {
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				government_rank	= 3
+				else = {
+					total_development = 1000
+				}
+			}
+			has_country_modifier = unified_islam
+		}
+
+		effect = {
+			add_legitimacy = 100
+			add_country_modifier = {
+				name = "adu_umayyad_modifier"
+				duration = 36500 # 100 years
+			}
+		}
 	}
 }

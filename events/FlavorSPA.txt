@@ -2128,26 +2128,6 @@ country_event = {
 			}
 			change_culture = andalucian
 		}
-		223 = { 
-			add_center_of_trade_level = -1
-			add_base_tax = -2
-			add_base_production = -1
-			add_base_manpower = -8
-		}
-		222 = { 
-			add_base_tax = -1
-			add_base_manpower = -4  
-		}
-		4546 = { 
-			add_base_manpower = -6
-		}
-		226 = { 
-			add_base_tax = -1
-			add_base_manpower = -3 
-		}
-		3145 = { 
-			add_base_manpower = -4  
-		}
 		#Repeat of effect from earlier persecutions:
 		if = {
 			limit = { 5219 = { owner = { religion_group = muslim } } }
@@ -2187,22 +2167,6 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 0
-		}
-		223 = { 
-			add_base_tax = -1
-			add_base_manpower = -5
-		}
-		222 = { 
-			add_base_manpower = -2
-		}
-		4546 = { 
-			add_base_manpower = -3
-		}
-		226 = { 
-			add_base_manpower = -2
-		}
-		3145 = { 
-			add_base_manpower = -2
 		}
 	}
 }

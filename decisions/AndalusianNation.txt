@@ -28,13 +28,17 @@ country_decisions = {
 					area = alentejo_area
 					OR = {
 						ROOT = { NOT = { owns_core_province = 1750 } }
-						NOT = { btc_murcia_area = {type = all owned_by = ROOT} }
+						ROOT = { NOT = { owns_core_province = 7653 } }
+						ROOT = { NOT = { owns_core_province = 221 } }
+						ROOT = { NOT = { owns_core_province = 3082 } }
 					}
 				}
 				AND = {
 					OR = {
 						province_id = 1750			# Alicante
-						area = btc_murcia_area
+						province_id = 7653
+						province_id = 221
+						province_id = 3082
 					}
 					NOT = { alentejo_area = {type = all owned_by = ROOT} }
 				}
@@ -57,7 +61,9 @@ country_decisions = {
 				alentejo_area = { type = all owned_by = ROOT}
 				AND = {
 					owns_core_province = 1750			# Alicante
-					btc_murcia_area = { type = all owned_by = ROOT}
+					owns_core_province = 7653
+					owns_core_province = 221
+					owns_core_province = 3082
 				}
 			}
 
@@ -66,16 +72,12 @@ country_decisions = {
 		effect = {
 			225 = {	#Cordoba
 				move_capital_effect = yes
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 			}
 			change_tag = ADU
 			btc_new_nation_effects = yes
-			iberia_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ADU
-			}
 			if = {
 				limit = {
 					culture_group = turko_semitic
