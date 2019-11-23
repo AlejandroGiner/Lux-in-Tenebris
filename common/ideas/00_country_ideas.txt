@@ -4255,7 +4255,10 @@ BOS_ideas = {
 	}
 	
 	trigger = {
-		tag = BOS
+		OR = {
+			tag = BOS
+			tag = DSS
+		}
 	}
 	free = yes
 	
