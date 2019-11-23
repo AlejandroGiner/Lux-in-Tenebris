@@ -220,13 +220,6 @@ consolidate_expand_russia_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			laponia_area = {
-				limit = {
-					NOT = { owned_by = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			bothnia_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -264,7 +257,6 @@ consolidate_expand_russia_missions = {
 			OR = {
 				area = finland_area
 				area = bothnia_area
-				area = laponia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -276,10 +268,6 @@ consolidate_expand_russia_missions = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			bothnia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			laponia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

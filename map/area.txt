@@ -636,19 +636,15 @@ finland_area = { #8
 }
 
 bothnia_area = { #3
-	19 4113 4114 4152 7801 7802 315
-}
-
-laponia_area = { #3
-	1777 5649 5650 
+	19 4113 4114 4152 7801 7802
 }
 
 karelia_area = { #5 (White Karelia)
-	1776 4124 7736 7735 5648
+	1776 7736 7735 5648 1777 5649 5650 
 }
 
 ladoga_area = { #5 (Ladoga Karelia)
-	30 32 7750 309 5647
+	30 32 7750 309 5647 4124 
 }
 
 north_karelia_area = { #4			#Repurposed into Ingria for BT and BT adds the missing area marker
@@ -656,7 +652,7 @@ north_karelia_area = { #4			#Repurposed into Ingria for BT and BT adds the missi
 }
 
 northern_norway = { #3
-	10 20 21 3119 7789 7796
+	10 20 21 3119 7789 7796 315
 }
 
 eastern_norway = { #3
@@ -794,7 +790,7 @@ minsk_area = {
 #Opolye
 
 ryazan_area = { #4
-	301 4255 5669 5679 5668 2408 1778
+	301 4255 5669 5679 5668 2408 
 }
 
 moscow_area = { #6
@@ -837,10 +833,8 @@ vologda_area = {
 	314 4262 1755 1957 4263
 }
 
-#beloozero_area = { }
-
 nenets_area = {
-	3285 2425 1072 4257 3284
+	3285 2425 5674 5675 5678 5677
 }
 
 toropets_area = {
@@ -855,10 +849,6 @@ valdai_area = {
 
 vyatka_area = {
 	1964 4129 1079 1972 3281
-}
-
-pechora_area = {
-	5674 5675 5677 5678
 }
 
 astrakhan_area = {
@@ -890,11 +880,11 @@ ural_area = { #7
 }
 
 pomor_area = { #4
-	313 1955 4122 4256 4259 5673
+	1955 4122 4256 4259 5673 3284
 }
 
 arkhangelsk_area = {			#Repurposed into Onega for BT
-	3282 1958 4258 5652
+	3282 1958 4258 5652 313 4257
 }
 
 bashkiria_area = { #5
@@ -1374,11 +1364,7 @@ aleppo_area = { #4
 }
 
 syria_area = { #3
-	381 382 1849 405 4297 5813 5847
-}
-
-trans_jordan_area = { #3
-	380 5203 4270 
+	381 382 1849 405 4297 5813 5847 380
 }
 
 palestine_area = { #4
@@ -1445,7 +1431,7 @@ nafud_area = { #5
 }
 
 tabuk_area = { #3
-	4269 2327 383 5231
+	4269 2327 383 5231 4270
 }
 
 mecca_area = { #5
@@ -1500,7 +1486,7 @@ mascat_area = {
 #Repurposed to Sinai
 syrian_desert_area = { #3
 	#color = { 219 30 57 }
-	364 365 5181 4268
+	364 365 5181 4268 5203
 }
 
 ########################################
@@ -2938,7 +2924,7 @@ irkutsk_area = { #5
 }
 
 perm_area = { #4
-	305 1077 1962 1963 5676
+	305 1077 1962 1963 5676 
 }
 
 balchasj_area = { #4
@@ -4161,7 +4147,7 @@ middle_don_area = {
 }
 
 nizhny_novgorod_area = {
-	306 3278 4254 3279 1754
+	306 3278 4254 3279 1754 1778
 }
 
 ########################################

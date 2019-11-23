@@ -583,13 +583,6 @@ tr_novgorod_4 = {
 					duration = -1
 				}
 			}
-			laponia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			perm_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -605,7 +598,7 @@ tr_novgorod_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = perm_area
-				area = laponia_area
+
 				province_id = 1652
 			}
 			OR = {
@@ -620,10 +613,6 @@ tr_novgorod_4 = {
 				is_strongest_trade_power = ROOT
 			}
 			perm_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			laponia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -341,13 +341,6 @@ swedish_missions_baltic = {
 				add_claim = ROOT
 			}
 			#BT added Kola lappland - The natural border of the three lakes was something the Swedes would've wanted had they beaten back Russia.
-			laponia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_claim = ROOT
-			}
 			weser_area = { #Represents Sweden's Bremen-Verden dominion
 				limit = {
 					NOT = { is_core = ROOT }
