@@ -20,7 +20,7 @@ country_decisions = {
 				province_id = 3165	# Varna
 				province_id = 3169	# Boruy
 				province_id = 2750	# Plovdiv
-				province_id = 3166	# Pleven
+				province_id = 2746	# Vidin
 				province_id = 1765	# Sofia
 			}
 			OR = {
@@ -37,7 +37,7 @@ country_decisions = {
 			owns_core_province = 3165	# Varna
 			owns_core_province = 3169	# Boruy
 			owns_core_province = 2750	# Plovdiv
-			owns_core_province = 3166	# Pleven
+			owns_core_province = 2746	# Vidin
 			owns_core_province = 1765	# Sofia
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
@@ -53,8 +53,17 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
+			150 = {	#Tarnovo
+				move_capital_effect = yes
+			}
 			add_prestige = 25
-			bulgaria_area = {
+			bulgaria_area = { #Western bulgaria
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = BUL
+			}
+			eastern_bulgaria_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

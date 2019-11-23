@@ -4,7 +4,7 @@ owner = MON
 controller = MON
 culture = serbian
 religion = orthodox
-capital = "Cetinje"
+capital = "Podgorica"
 trade_goods = livestock
 hre = no
 base_tax = 2
@@ -13,6 +13,9 @@ base_manpower = 1
 fort_15th = yes
 is_city = yes
 add_core = MON
+
+extra_cost = 8
+center_of_trade = 1
 
 discovered_by = KAZ
 discovered_by = CRI
@@ -26,7 +29,6 @@ discovered_by = persian_btc
 discovered_by = ottoman
 
 1478.1.1 = { add_core = TUR } # Conquered Zabljak, but never fully conquered Zeta
-1482.1.1 = { capital = "Cetinje" }
 1499.1.1 = { owner = TUR controller = TUR }
 1515.1.1 = { owner = MON controller = MON remove_core = TUR } # Prince-bishops of Cetinje
 1709.1.1 = { unrest = 5 } # Montenegro's Muslim converts were massacred at Vladika Danilo's order
