@@ -1,7 +1,7 @@
 #7612 - Ikaria
 
-owner = KNI 		# Knights of St. John Hospitaler of Jerusalem
-controller = KNI
+owner = GEN
+controller = GEN
 culture = greek
 religion = orthodox
 capital = "Evdilos"
@@ -11,7 +11,7 @@ base_tax = 1
 base_production = 2
 base_manpower = 1
 is_city = yes
-add_core = KNI
+add_core = GEN
 add_core = BYZ
 
 discovered_by = KAZ
@@ -28,5 +28,5 @@ discovered_by = western
 1521.12.21 = {	owner = TUR
 	controller = TUR
 	add_core = TUR
-	remove_core = KNI
+	remove_core = GEN
 } # Part of the Ottoman Empire

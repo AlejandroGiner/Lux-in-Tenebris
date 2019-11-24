@@ -1,18 +1,25 @@
 country_decisions = {
-###################################################################################################
-################################			Netherlands			 ##############################################			#Note needs work
-###################################################################################################
+
 	netherlands_nation = {
 		major = yes
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_netherlands_flag }
+			NOT = { tag = PAP }
 			NOT = { tag = NED }
+			NOT = { tag = HLR }
 			NOT = { tag = BEL }
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
 				tag = BUR
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
 			}
 		}
 		provinces_to_highlight = {
