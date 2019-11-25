@@ -22,14 +22,16 @@ country_decisions = {
 		allow = {
 			NOT = { exists = ITA }
 			is_nomad = no
-			btc_can_form_trigger = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
 			btc_was_not_colonial_nation_trigger = yes
 			owns_core_province = 101	# Genoa
 			owns_core_province = 104	# Milan
 			owns_core_province = 112	# Venice
 			owns_core_province = 116	# Florence
+			adm_tech = 20
 			num_of_owned_provinces_with = {
-				value = 30
+				value = 35
 				region = italy_region
 				is_core = ROOT
 			}
@@ -47,58 +49,58 @@ country_decisions = {
 			if = {
 				limit = {
 					3049 = {
-					NOT = {
-					is_permanent_claim = ROOT
-					is_core = ROOT
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
 				}
+				3049 = { add_permanent_claim = ROOT }
 			}
-		}
-			3049 = { add_permanent_claim = ROOT }
-	}
 			if = {
 				limit = {
 					130 = {
-					NOT = {
-					is_permanent_claim = ROOT
-					is_core = ROOT
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
 				}
+				130 = { add_permanent_claim = ROOT }
 			}
-		}
-			130 = { add_permanent_claim = ROOT }
-	}
 			if = {
 				limit = {
 					3191 = {
-					NOT = {
-					is_permanent_claim = ROOT
-					is_core = ROOT
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
 				}
+				3191 = { add_permanent_claim = ROOT }
 			}
-		}
-			3191 = { add_permanent_claim = ROOT }
-	}
 			if = {
 				limit = {
 					3048 = {
-					NOT = {
-					is_permanent_claim = ROOT
-					is_core = ROOT
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
 				}
+				3048 = { add_permanent_claim = ROOT }
 			}
-		}
-			3048 = { add_permanent_claim = ROOT }
-	}
 			if = {
 				limit = {
 					1769 = {
-					NOT = {
-					is_permanent_claim = ROOT
-					is_core = ROOT
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
 				}
+				1769 = { add_permanent_claim = ROOT }
 			}
-		}
-			1769 = { add_permanent_claim = ROOT }
-	}
 			set_country_flag = formed_italy_flag
 		}
 		ai_will_do = {

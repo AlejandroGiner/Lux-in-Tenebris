@@ -718,7 +718,10 @@ german_ideas = {
 	}
 
 	trigger = {
-		culture_group = germanic
+		OR = {
+			culture_group = germanic
+			tag = HDL
+		}
 	}
 	free = yes        #will be added at load.
 

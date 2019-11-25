@@ -1,5 +1,5 @@
 government = republic
-add_government_reform = oligarchy_reform
+add_government_reform = florentine_republic_btc
 government_rank = 1
 mercantilism = 25
 primary_culture = tuscan
@@ -27,6 +27,17 @@ add_army_professionalism = 0.05
 		dip = 5
 		mil = 5
 	}
+	queen = {
+        country_of_origin = LAN
+        name = "Contessina"
+        dynasty = "Bardi"
+        birth_date = 1390.6.15
+        death_date = 1473.10.15
+        female = yes
+        adm = 4
+        dip = 5
+        mil = 3
+    }
 }
 
 1464.8.3 = {

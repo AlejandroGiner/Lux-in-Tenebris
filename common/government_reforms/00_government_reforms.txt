@@ -372,7 +372,7 @@ french_monarchy_legacy = {
 	}
 	monarchy = yes
 	modifiers = {
-		yearly_absolutism = 0.1
+		yearly_absolutism = 0.5
 		max_absolutism = 10
 		global_manpower_modifier = 0.15
 	}
@@ -2349,7 +2349,7 @@ tsardom_legacy = {
 	modifiers = {
 		max_states = 16
 		global_manpower_modifier = 0.20
-		yearly_absolutism = 0.1
+		yearly_absolutism = 0.5
 		global_autonomy = -0.05
 	}
 
@@ -2551,23 +2551,41 @@ anglo_irish_monarchy_legacy = {			#BT changes this to a cross between an adminis
 ### Italian Governments ###
 
 florence_republic_legacy = {
-	icon = "politician"
+	icon = "florentine_republic_btc"
 	legacy_government = yes
 	allow_normal_conversion = no
-	valid_for_new_country = no
-	allow_convert = no
+	fixed_rank = 1
 	valid_for_nation_designer = yes
 	nation_designer_cost = 30
-	nation_designer_trigger = { capital_scope = { region = italy_region } }
+	nation_designer_trigger = {
+		capital_scope = { region = italy_region }
+		primary_culture = tuscan
+	}
 	monarchy = yes
 	modifiers = {
-		merc_maintenance_modifier = -0.25
-		prestige = 1
+		merc_maintenance_modifier = -0.1
+		build_cost = -0.1
 		max_absolutism = -30
 	}
-	conditional = {
-		allow = { has_dlc = "Common Sense" }
-		has_parliament = yes
+	ai = { factor = 1 }
+}
+
+tuscan_duchy_legacy = {
+	icon = "florentine_republic_btc"
+	legacy_government = yes
+	allow_normal_conversion = no
+	fixed_rank = 1
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	nation_designer_trigger = {
+		capital_scope = { region = italy_region }
+		primary_culture = tuscan
+	}
+	monarchy = yes
+	modifiers = {
+		merc_maintenance_modifier = -0.1
+		build_cost = -0.1
+		max_states = 3
 	}
 	ai = { factor = 1 }
 }

@@ -21,11 +21,8 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2978	# Arezzo
-				province_id = 116	# Firenze
-				province_id = 115	# Pisa
-				province_id = 117	# Siena
-				province_id = 2980	# Lucca
+				area = tuscany_area
+				area = south_tuscany_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -37,24 +34,28 @@ country_decisions = {
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			owns_core_province = 116	# Firenze
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					OR = {
-						province_id = 2978	# Arezzo
-						province_id = 116	# Firenze
-						province_id = 115	# Pisa
-						province_id = 117	# Siena
-						province_id = 2980	# Lucca
-					}
-				}
-				amount = 4			#At least 4 of Tuscany's 5 provinces (approximate)
+			adm_tech = 10
+			tuscany_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_tuscany_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {
 			change_tag = TUS
 			remove_non_electors_emperors_from_empire_effect = yes
+			TUS = {
+				if = {
+					limit = {
+						NOT = { government = monarchy }
+					}
+					change_government = monarchy
+				}
+				add_government_reform = tuscan_duchy_btc
+			}
 			every_province = {
 				limit = {
 					NOT = { owned_by = ROOT }

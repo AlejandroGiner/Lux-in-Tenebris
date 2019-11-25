@@ -22,6 +22,11 @@ oligarchy_reform = {
 	legacy_equivalent = oligarchic_republic
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		NOT = {
+				has_reform = florentine_republic_btc 
+		}
+	}
 	modifiers = {
 		global_tax_modifier = 0.05
 		max_absolutism = -40
@@ -695,6 +700,42 @@ dutch_republic = {
 	duration = 4
 }
 
+florentine_republic_btc = {
+	icon = "florentine_republic_btc"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = LAN
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = florentine_republic_btc
+			}
+		}
+	}
+	legacy_equivalent = florence_republic_legacy
+	valid_for_nation_designer = yes
+	nation_designer_trigger = {
+		capital_scope = { region = italy_region }
+		primary_culture = tuscan
+	}
+	nation_designer_cost = 30
+	royal_marriage = yes
+	queen = yes
+	fixed_rank = 1
+	custom_attributes = {
+		enables_nepotism = yes
+	}
+	modifiers = {
+		build_cost = -0.1
+		merc_maintenance_modifier = -0.1
+		max_absolutism = -30
+	}
+	duration = 4
+}
 
 cossacks_reform = {
 	icon = "horde_riding"
@@ -759,6 +800,7 @@ nepotism_reform = {
 	potential = {
 		NOT = {
 			has_reform = pirate_republic_reform
+			has_reform = florentine_republic_btc
 		}
 	}
 	modifiers = {
