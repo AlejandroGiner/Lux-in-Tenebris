@@ -1,0 +1,36 @@
+#Region - France
+#Area - Normandy
+
+owner = JER
+controller = JER 
+capital = "Castle Cornet"
+is_city = yes
+culture = normand
+religion = catholic
+hre = no
+base_tax = 1 
+base_production = 1
+trade_goods = fish
+base_manpower = 1
+add_core = JER
+add_core = NRM
+
+discovered_by = western
+discovered_by = muslim
+discovered_by = persian_btc
+discovered_by = ottoman
+discovered_by = eastern
+
+1444.11.16 = { #BeyondTypus batch edit shortcut no vassal start date begin
+	owner = ENG
+	controller = ENG
+	add_core = ENG
+}
+1444.11.18 = { #BeyondTypus batch edit shortcut no vassal start date end
+	owner = JER
+	controller = JER
+	remove_core = ENG
+}
+1461.1.1 = { controller = FRA } # Occupied by the French during the War of the Roses, with Lancastrian permission
+1468.1.1 = { controller = ENG } # Yorkist take the island back
+#1483 Papal Bull orders the islands neutral in war and allowed to trade with both sides, repected until 1689.
