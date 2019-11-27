@@ -1293,12 +1293,14 @@ gc_aragon_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			2465 = {
+			if = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT	}
+					2465 = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				2465 = { add_permanent_claim = ROOT }
 			}
 		}
 	}

@@ -48,11 +48,13 @@ eng_british_naval_conq = {
 				manuever = 4
 				siege = 2
 			}
-			226 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					226 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				226 = { add_permanent_claim = ROOT }
 			}
 		}
 	}
@@ -111,11 +113,13 @@ eng_rb_gibraltar = {
 				name = "eng_rb_gibraltar_mod"
 				duration = 5475
 			}
-			4559 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					4559 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				4559 = { add_permanent_claim = ROOT }
 			}
 			corsica_sardinia_area = {
 				limit = {
@@ -297,11 +301,13 @@ eng_rb_egypt = {
 				}
 				add_permanent_claim = ROOT
 			}
-			2315 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					2315 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				2315 = { add_permanent_claim = ROOT }
 			}
 		}
 	}
@@ -1318,26 +1324,32 @@ gbr_rb_spice_islands_group = {
 				}
 				add_claim = ROOT
 			}
-			4900 = {
+			if = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					637 = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
 				}
-				add_claim = ROOT
+				637 = { add_claim = ROOT }
 			}
-			637 = {
+			if = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					4900 = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
 				}
-				add_claim = ROOT
+				4900 = { add_claim = ROOT }
 			}
-			2703 = {
+			if = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_claim = ROOT }
+					2703 = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
 				}
-				add_claim = ROOT
+				2703 = { add_claim = ROOT }
 			}
 			if = {
 				limit = {

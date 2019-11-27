@@ -329,13 +329,6 @@ tau_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			western_thai_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			sukhothai_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -465,7 +458,6 @@ tau_slot_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = central_thai_area
-				area = western_thai_area
 				area = sukhothai_area
 			}
 			NOT = {
@@ -474,10 +466,6 @@ tau_slot_3 = {
 		}
 		trigger = {
 			central_thai_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			western_thai_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

@@ -899,35 +899,45 @@ gc_morocco_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			221 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					221 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				221 = { add_permanent_claim = ROOT }
 			}
-			218 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					218 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				218 = { add_permanent_claim = ROOT }
 			}
-			7651 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					7651 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				7651 = { add_permanent_claim = ROOT }
 			}
-			7653 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					7653 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				7653 = { add_permanent_claim = ROOT }
 			}
-			3082 = {
+			if = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					3082 = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
 				}
-				add_permanent_claim = ROOT
+				3082 = { add_permanent_claim = ROOT }
 			}
 		}
 	}
@@ -958,15 +968,12 @@ gc_morocco_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			7653 = {
-				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			3082 = {
-				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			7651 = {
-				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			221 = {

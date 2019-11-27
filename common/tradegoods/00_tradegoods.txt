@@ -1095,7 +1095,6 @@ copper = {
 			NOT = { area = utah_area }
 			NOT = { area = northern_rocky_mountains_area }
 			NOT = { area = upper_louisiana_area }
-			NOT = { area = ozarks_area }
 			NOT = { area = labrador_area }
 			NOT = { area = cote_nord_area }
 			NOT = { area = laurentian_area }
@@ -1183,10 +1182,7 @@ copper = {
 		}
 		modifier = { #Copper very rare in the east
 			factor = 0.25
-			OR = {
-				area = upper_louisiana_area
-				area = ozarks_area
-			}
+			area = upper_louisiana_area
 		}
 	}
 }
