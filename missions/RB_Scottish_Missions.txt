@@ -278,6 +278,13 @@ sco_rb_conquest_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			five_boroughs_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			east_midlands_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -300,6 +307,7 @@ sco_rb_conquest_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = yorkshire_area
+				area = five_boroughs_area
 				area = east_midlands_area
 				area = west_midlands_area
 			}
@@ -309,6 +317,10 @@ sco_rb_conquest_missions = {
 		}
 		trigger = {
 			yorkshire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			five_boroughs_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

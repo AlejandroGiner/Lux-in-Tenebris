@@ -1491,7 +1491,7 @@ berber_group = {
 }
 
 aquitanian = {
-	graphical_culture = westerngfx
+	graphical_culture = latingfx
 	basque = {
 		primary = NAV
 		dynasty_names = {
@@ -2667,7 +2667,7 @@ alanic = { # Only survivors of this ancient group are the Ossetians and the Jasz
 }
 
 dagestani_group = { # A quite varied group of cultures, not all of which are necessarily closely related. More might be added in the future.
-	graphical_culture = easterngfx
+	graphical_culture = mongolgfx
 
 	dagestani = { # These are now the Laks
 		primary = GAZ
@@ -3227,7 +3227,7 @@ maghrebi = {
 }
 
 latin = {
-	graphical_culture = westerngfx
+	graphical_culture = latingfx
 
 	lombard = {
 		primary = MLO
@@ -3362,7 +3362,7 @@ latin = {
 }
 	
 iranian	= {
-	graphical_culture = muslimgfx
+	graphical_culture = persiangfx
 	persian = {
 		primary = PER
 		male_names = { 
@@ -3686,7 +3686,7 @@ iranian	= {
 }
 
 altaic = { #Altaic Turks
-	graphical_culture = muslimgfx
+	graphical_culture = mongolgfx
 
 	uzbehk = {
 		primary = SHY
@@ -3823,7 +3823,7 @@ altaic = { #Altaic Turks
 }
 
 mongolian = {
-	graphical_culture = asiangfx
+	graphical_culture = mongolgfx
 
 	mongol = {
 		primary = KHA
@@ -5679,7 +5679,7 @@ iroquoian = {
 }
 
 iberian	= {
-	graphical_culture = westerngfx
+	graphical_culture = latingfx
 
 	castillian = {
 		primary = CAS
@@ -6804,7 +6804,7 @@ apachean = {			#Note this is turned into a Pueblo group in BT, mixing multiple d
 
 
 tartar	= {
-	graphical_culture = muslimgfx
+	graphical_culture = mongolgfx
 	astrakhani = {
 		primary = AST
 		dynasty_names = {
@@ -7898,7 +7898,7 @@ malay = {
 }
 
 southeastasian_group = { 
-	graphical_culture = asiangfx
+	graphical_culture = thaigfx
 
 	central_thai = {
 		primary = AYU
@@ -8040,7 +8040,7 @@ southeastasian_group = {
 }
 
 burman = {
-	graphical_culture = asiangfx
+	graphical_culture = thaigfx
 
 	burmese = {
 		primary = TAU
@@ -9332,7 +9332,7 @@ east_slavic = {
 }
 
 byzantine = {
-	graphical_culture = easterngfx
+	graphical_culture = greekgfx
 	
 	greek = {
 		primary = GRE
@@ -10101,10 +10101,9 @@ sudanese = {
 }
 
 evenks = {
-	graphical_culture = inuitgfx
+	graphical_culture = mongolgfx
 
 	evenk = {
-		graphical_culture = inuitgfx
 		primary = SOL
 		dynasty_names = {
 			Badarhan Tabangut 
@@ -10216,7 +10215,7 @@ evenks = {
 
 
 kamchatkan_g = {
-	graphical_culture = inuitgfx
+	graphical_culture = mongolgfx
 	
 	ainu = {
 		primary = ANU
@@ -11337,7 +11336,7 @@ siouan = {
 }
 
 turkish_g = {
-	graphical_culture = muslimgfx
+	graphical_culture = turkishgfx
 
 	turkish = {
 		primary = TKY

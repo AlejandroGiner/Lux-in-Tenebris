@@ -2503,8 +2503,8 @@ JAE_ideas = {
 
 MLA_ideas = {
     start = {
-		garrison_size = 0.1
-		trade_steering = 0.1
+		garrison_size = 0.15
+		trade_steering = 0.15
     }
 
     bonus = {
@@ -2523,19 +2523,19 @@ MLA_ideas = {
 		free_leader_pool = 1
     }
     Mediterranean_Buffer_State = {
-		improve_relation_modifier = 0.2
+		improve_relation_modifier = 0.25
     }
     Resistance_of_Privateering = {
 		galley_power = 0.15
     }
     Bellver_Castle = {
-		defensiveness = 0.1                  #also fort cost reduction?
+		defensiveness = 0.15
     }
     Abraham_Cresques = {
-		range = 0.1			#maybe increase to 0.2
+		range = 0.2
     }
     Fortified_Churches = {
-		hostile_attrition = 0.5		#maybe increase to 1
+		hostile_attrition = 1
     }
 }
 
