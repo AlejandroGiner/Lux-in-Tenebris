@@ -1,55 +1,30 @@
 ﻿l_english:
 
 #Merging all original non-province BtP localisation files into one file. Was getting too confusing and translations were becoming disorganised.
-##############################
-#btp_areas_regions_l_english
-##############################
- leinster_area:0 "Leinster"
- leinster_area_name:0 "Leinster"
- leinster_area_adj:0 "Leinster"
- ulster_area:0 "Ulster"
- ulster_area_name:0 "Ulster"
- ulster_area_adj:0 "Ulster"
- munster_area:0 "Munster"
- munster_area_name:0 "Munster"
- munster_area_adj:0 "Munster"
- connacht_area:0 "Connacht"
- connacht_area_name:0 "Connacht"
- connacht_area_adj:0 "Connacht"
- 
- 
  ##############################
  #btp_bookmarks_l_english
  ##############################
+ 
  BTP_BOOKMARK:0 "Beyond the Pale"
  BTP_BOOKMARK_DESC:0 "Over 270 years have passed since the Norman invasion and conquest of Ireland. The English Kings, distracted by their designs on France, have allowed their authority in Ireland to collapse to a small strip of coastline centred on Dublin, the Pale. Beyond the Pale, Gaelic Irish clanns and Hiberno-Norman lords vie for power."
- 
  
  ##############################
  #btp_colonialregions_l_english
  ##############################
+ 
  colonial_greenland:0 "Colonial Greenland"
  COLONIAL_GREENLAND_Greenland:0 "Greenland"
  COLONIAL_GREENLAND_Greenland_ADJ:0 "Greenlandic"
  
- 
  ##############################
  #btp_countries_l_english
  ##############################
- #IOM:0 "Mann"          #Defunct, added in 1.25 to vanilla
- #IOM_ADJ:0 "Manx"
  CEL:0 "Tír na gCeilteach"           #Was TnCeltigh in BtP, but that was quite the grammatical eyesore. I talked to HR about this and he said it was to make the name more accessible to people who don't speak Irish, but screw them =p! I'm going for the proper (standard fir1 gi. sonrach) spelling. Note this is a made up 18th century word from English anyway, so other than basic grammar, I'm not too worried about spelling here.
  CEL_ADJ:0 "Celtic"
- #TYC:0 "Tyrconnell"         #Defunct, added in 1.25 to vanilla
- #TYC_ADJ:0 "Tyrconnell"
  ANR:0 "Antrim"
  ANR_ADJ:0 "Antrim"
  LAI:0 "Laigin"
  LAI_ADJ:0 "Laigin"
- #URM:0 "Ormond"         #Defunct, added in 1.25 to vanilla
- #URM_ADJ:0 "Ormond"
- #DSM:0 "Deas Mhumain"         #Defunct, added in 1.25 to vanilla
- #DSM_ADJ:0 "Deas Mhumain"
  THO:0 "Thomond"
  THO_ADJ:0 "Thomond"
  GLW:0 "Galway"
@@ -86,8 +61,6 @@
  IBE_ADJ:0 "Iberian"
  BEL:0 "Belgium"
  BEL_ADJ:0 "Belgian"
- #ILE:0 "The Isles"         #Defunct, added in 1.25 to vanilla
- #ILE_ADJ:0 "Albannach"
  BSL:0 "Basel"
  BSL_ADJ:0 "Basler"
  ZND:0 "Sieben Zenden"
@@ -200,12 +173,12 @@
  RSA_ADJ:0 "South African"
  CLI:0 "Hlai"
  CLI_ADJ:0 "Hlai"
-
  
  ##############################
  #btp_cultures_l_english
  ##############################
- anglo_irish:0 "Hiberno-Norman"     #Changed back to Hiberno-Norman from BT's Old English
+ 
+ anglo_irish:0 "Old English"
  aquitanian:0 "Aquitanian"
  arpitan:0 "Arpitan"
  bosnian:0 "Bosnian"
@@ -228,6 +201,7 @@
  ##############################
  #btp_events_l_english
  ##############################
+ 
  btpIRE.EVTNAME1:0 "England Demands Fealty!"
  btpIRE.EVTDESC1:0 "It seems our growth has not gone unnoticed by the English monarch. Their representative, the Lord Lieutenant of Ireland, has arrived in our court demanding we travel to England to bend the knee, citing the outrageous Laudabiliter issued by their pet pope Adrian IV. We could declare the legitimacy of our independent rule in Ireland, which might bring swift and terrible war to Ireland. If we wish to avoid war, we could accept their demands for now and bide our time for a more opportune moment."           #Changed from BtP, adjusted wording
  btpIRE.EVTOPTA1:0 "Declare independence"
@@ -244,10 +218,10 @@
  btpSCO.EVTDESC3:0 "The Gaelic Scots of $PROVINCENAME$, tolerated as they were under the Kingdom of Scotland, have begun to see that their differences with their Lallan brothers are not so great after all. Whether Highlander or Lowlander, a Scotsman is a Scotsman."
  btpSCO.EVTOPTA3:0 "We have no choice but to accept this"
  
- 
  ##############################
  #btp_government_names_l_english
  ##############################
+ 
  ALDERMAN:0 "Master Alderman"
  ALDERWOMAN:0 "Master Alderwoman"
  COUNTYPALATINE:0 "County Palatine"
@@ -262,6 +236,7 @@
  PREFERATABTP:0 "Preferata"
  
 #Irish Names, few adjustments & translation notes added, in case anyone is interested
+
  CLANN:0 "Clann"            #Literally 'family', though often extended in meaning to include an entire kinship group
  RI:0 "Rí"            #Literally 'King'
  BANRION:0 "Banríon"            #Literally 'Queen'
@@ -270,7 +245,9 @@
  BANRIONRUIR:0 "Banríon Ruireach"            #Literally something like 'Queen of Kingkings'... doesn't translate well. Note 'Banrion Cúige' might be a more literal option here, but leaving it for now.
  ARDRI:0 "Ardrí"            #Literally 'High King'
  ARDBANRION:0 "Ardbhanríon"            #Literally 'High Queen'
+ 
  #New 1.18 government system additions by Driaocht ainmneacha as gaeilge
+ 
  FEARNABANRION:0 "Fear Céile na Banríona"            #Literally 'the man spouse of the queen'
  BANANRI:0 "Bean an Rí"            #Literally 'the woman of the king'
  TANAISTE:0 "Tánaiste"            #Doesn't translate, unique Irish concept, but basically the heir elect
@@ -278,11 +255,11 @@
  FEARNAARDBANRION:0 "Fear Céile na hArdbhanríona"            #Literally 'the man spouse of the high queen'
  BANANARDRI:0 "Bean an Ardrí"            #Literally 'the Woman of the High King'
  
- 
  ##############################
  #btp_governments_l_english
  ##############################
  #Few changes by Draiocht here, to standardise Irish spelling, correct a few minor historical oversights, and generally just be pendantic.
+ 
  irish_clann_legacy:0 "Clann"
  irish_clann_legacy_ruler:0 "Rí"
  irish_clann_legacy_ruler_female:0 "Banríon"
@@ -314,10 +291,10 @@
  IRE_parliament_name:0 "Oireachtas"           #Was 'Ardfheis' in BtP, but I'm (Driaocht) changing it to the more historical (and actually modern as well) word generally accepted to mean 'assembly', and used for modern Ireland's parliament as well as (possibly) for a group of noble advisors to the High King.
  CEL_parliament_name:0 "Oireachtas"           #Was 'Ardfheis' in BtP, but I'm (Driaocht) changing it to the more historical (and actually modern as well) word generally accepted to mean 'assembly', and used for modern Ireland's parliament as well as (possibly) for a group of noble advisors to the High King.
  
- 
  ##############################
  #btp_modifers_l_english
  ##############################
+ 
  mersey_estuary_modifier:0 "Mersey Estuary"
  desc_mersey_estuary_modifier:0 "Controlling the important river estuary of the Mersey strengthens our hold of the trade in the region."
  clyde_estuary_modifier:0 "Clyde Estuary"
@@ -329,17 +306,17 @@
  btp_dano_scottish_wedding:0 "Dano-Scottish Wedding"
  desc_btp_dano_scottish_wedding:0 "Denmark and Scotland have resolved the Hebrides dispute and sealed it with a royal marriage."
  
- 
  ##############################
  #btp_opinions_l_english
  ##############################
+ 
  btp_opinion_accepted_proposal:0 "Margaret of Denmark"
  btp_opinion_rejected_proposal:0 "Spurned Margaret of Denmark"
- 
  
  ##############################
  #btp_tradenodes_l_english
  ##############################
+ 
  irish_sea:0 "Irish Sea"
  napoli:0 "Napoli"
  barcelona:0 "Valencia"
