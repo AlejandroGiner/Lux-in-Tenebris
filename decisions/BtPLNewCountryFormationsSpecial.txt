@@ -30,8 +30,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = connacht_area
-			area = east_connacht_area
+			OR = {
+				area = connacht_area
+				area = east_connacht_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -110,8 +112,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = munster_area
-			area = east_munster_area
+			OR = {
+				area = munster_area
+				area = east_munster_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -190,8 +194,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = leinster_area
-			area = east_leinster_area
+			OR = {
+				area = leinster_area
+				area = east_leinster_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -270,8 +276,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = ulster_area
-			area = east_ulster_area
+			OR = {	
+				area = ulster_area
+				area = east_ulster_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -729,8 +737,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = connacht_area
-			area = east_connacht_area
+			OR = {
+				area = connacht_area
+				area = east_connacht_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -863,8 +873,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = leinster_area
-			area = east_leinster_area
+			OR = {
+				area = leinster_area
+				area = east_leinster_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -933,7 +945,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = ulster_area
+			OR = {
+				area = ulster_area
+				area = east_ulster_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }

@@ -35,15 +35,7 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 177	# Maine
-				province_id = 179	# Blois
-				province_id = 182	# Vermandois
-				province_id = 183	# Île-de-France
-				province_id = 184	# Orléannais
-				province_id = 185	# Othe
-				province_id = 186	# Champagne
-			}
+			region = france_region
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -54,13 +46,20 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no			
 			NOT = { exists = FRA }
-			owns_core_province = 177	# Maine
-			owns_core_province = 179	# Blois
-			owns_core_province = 182	# Vermandois
-			owns_core_province = 183	# Île-de-France
-			owns_core_province = 184	# Orléannais
-			owns_core_province = 185	# Othe
-			owns_core_province = 186	# Champagne		
+			owns_core_province = 183			# Paris
+			owns_core_province = 186			# Rheims, coronation site
+			owns_core_province = 203			# Lyon
+			owns_core_province = 4389			# Tours
+			custom_trigger_tooltip = {
+			tooltip = half_of_france_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+						region = france_region
+					}
+					amount = 63			#At least half of France's 125 provinces
+				}
+			}
 		}
 		effect = {
 			183 = { #Paris
