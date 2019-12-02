@@ -2449,9 +2449,9 @@ norman_lordship_legacy = {
 	monarchy = yes
 	fixed_rank = 1
 	modifiers = {
-		production_efficiency = 0.05
-		global_tax_modifier = 0.05
-		diplomatic_upkeep = -1
+		production_efficiency = 0.1
+		global_tax_modifier = 0.1
+		diplomatic_reputation = -2
 		max_absolutism = 10
 	}
 	ai = { factor = 1 }

@@ -22,10 +22,16 @@ country_decisions = {
 				has_reform = irish_clann_reform
 				has_reform = norman_lordship_reform
 			}
-			any_owned_province = { area = connacht_area }
+			any_owned_province = {
+				OR = {
+					area = connacht_area
+					area = east_connacht_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = connacht_area
+			area = east_connacht_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -41,16 +47,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = connacht_area
+						OR = {
+							area = connacht_area
+							area = east_connacht_area
+						}
 					}
-					amount = 2			#of 3
+					amount = 5			#of 9
 				}
 			}
 		}
 		effect = {
 			change_tag = CNN
-			#add_government_reform = provincial_kingdom
 			connacht_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = CNN
+			}
+			east_connacht_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -59,7 +74,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_connacht_flag_btp
@@ -67,7 +82,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
 
 	form_munster = {
@@ -87,10 +102,16 @@ country_decisions = {
 				has_reform = irish_clann_reform
 				has_reform = norman_lordship_reform
 			}
-			any_owned_province = { area = munster_area }
+			any_owned_province = {
+				OR = {
+					area = munster_area
+					area = east_munster_area
+				}		
+			}
 		}
 		provinces_to_highlight = {
 			area = munster_area
+			area = east_munster_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -106,16 +127,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = munster_area
+						OR = {
+							area = munster_area
+							area = east_munster_area
+						}
 					}
-					amount = 4			#of 5
+					amount = 9			#of 13
 				}
 			}
 		}
 		effect = {
 			change_tag = MNS
-			#add_government_reform = provincial_kingdom
 			munster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = MNS
+			}
+			east_munster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -124,7 +154,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_munster_flag_btp
@@ -152,10 +182,16 @@ country_decisions = {
 				has_reform = irish_clann_reform
 				has_reform = norman_lordship_reform
 			}
-			any_owned_province = { area = leinster_area }
+			any_owned_province = {
+				OR = {
+					area = leinster_area
+					area = east_leinster_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = leinster_area
+			area = east_leinster_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -171,16 +207,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = leinster_area
+						OR = {
+							area = leinster_area
+							area = east_leinster_area
+						}
 					}
-					amount = 3			#of 4
+					amount = 6			#of 10
 				}
 			}
 		}
 		effect = {
 			change_tag = LEI
-			#add_government_reform = provincial_kingdom
 			leinster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = LEI
+			}
+			east_leinster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -189,7 +234,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_leinster_flag_btp
@@ -217,10 +262,16 @@ country_decisions = {
 				has_reform = irish_clann_reform
 				has_reform = norman_lordship_reform
 			}
-			any_owned_province = { area = ulster_area }
+			any_owned_province = {
+				OR = {
+					area = ulster_area
+					area = east_ulster_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = ulster_area
+			area = east_ulster_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -236,16 +287,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = ulster_area
+						OR = {
+							area = ulster_area
+							area = east_ulster_area
+						}
 					}
-					amount = 4			#of 5
+					amount = 9			#of 12
 				}
 			}
 		}
 		effect = {
 			change_tag = ULS
-			#add_government_reform = provincial_kingdom
 			ulster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ULS
+			}
+			east_ulster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -254,7 +314,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_ulster_flag_btp
@@ -288,7 +348,7 @@ country_decisions = {
 							region = ireland_region
 						}
 					}
-					amount = 44			#44 of Britain and Ireland's 66 provinces
+					amount = 84			#84 of Britain and Ireland's 127 provinces
 				}
 			}
 		}
@@ -302,6 +362,7 @@ country_decisions = {
 				area = wales_area
 				area = cornwall_area
 				area = brittany_area
+				area = lower_brittany_area
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -321,7 +382,7 @@ country_decisions = {
 						is_core = ROOT
 						region = ireland_region
 					}
-					amount = 9			#At least half of Ireland
+					amount = 22			#At least half of Ireland
 				}
 			}
 			custom_trigger_tooltip = {
@@ -336,7 +397,7 @@ country_decisions = {
 							area = kingdom_of_the_isles_area
 						}
 					}
-					amount = 9			#At least half of Scotland
+					amount = 11			#At least half of Scotland
 				}
 			}
 			owns_core_province = 4365			#Owns the Isle of Man
@@ -347,7 +408,7 @@ country_decisions = {
 						is_core = ROOT
 						area = wales_area
 					}
-					amount = 3			#At least half of Wales
+					amount = 5			#At least half of Wales
 				}
 			}
 			custom_trigger_tooltip = {
@@ -357,7 +418,7 @@ country_decisions = {
 						is_core = ROOT
 						area = cornwall_area
 					}
-					amount = 1			#At least half of Cornwall
+					amount = 2			#At least half of Cornwall
 				}
 			}
 			custom_trigger_tooltip = {
@@ -365,12 +426,15 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = brittany_area
+						OR = {
+							area = lower_brittany_area
+							area = brittany_area
+						}
 					}
-					amount = 3			#At least half of Brittany
+					amount = 5			#At least half of Brittany
 				}
 			}
-			num_of_cities = 40			#Additonally, must have at least 14 more provinces than the minimum, located anywhere. That is roughly all of any 3 of the 4 major Celtic countries, or minimum above plus about half of England. Ireland - 17, Scotland - 17, Wales - 6, Brittany - 6, Cornwall - 2, Mann - 1, England - 24
+			num_of_cities = 69			#Additonally, must have at least 24 more provinces than the minimum, located anywhere. That is roughly all of any 3 of the 4 major Celtic countries, or minimum above plus about half of England. Ireland - 44, Scotland - 21, Wales - 10, Brittany - 11, Cornwall - 4, Mann - 1, England - 48
 			total_development = 300			#Special discount. Normal requirement for rank 3 is 1000 dev, so this is 70 percent discounted. Note base dev in 1444 of all Celtic countries is around 254 (and England is another 181).
 			prestige = 40			#Normal requirement for rank 3 is 75 prestige.
 			}
@@ -412,6 +476,10 @@ country_decisions = {
 					add_permanent_claim = CEL
 				}
 				brittany_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
+				lower_brittany_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
@@ -470,10 +538,6 @@ country_decisions = {
 					limit = { primary_culture = gallgaidheil }
 					change_primary_culture = celtic_highland_scottish_culture
 				}
-				#every_country = {
-				#	limit = { primary_culture = manx }
-				#	change_primary_culture = celtic_manx_culture
-				#}
 				every_country = {
 					limit = { primary_culture = welsh }
 					change_primary_culture = celtic_welsh_culture
@@ -504,11 +568,6 @@ country_decisions = {
 					remove_accepted_culture = gallgaidheil
 					add_accepted_culture = celtic_highland_scottish_culture
 				}
-				#every_country = {
-				#	limit = { accepted_culture = manx }
-				#	remove_accepted_culture = manx
-				#	add_accepted_culture = celtic_manx_culture
-				#}
 				every_country = {
 					limit = { accepted_culture = welsh }
 					remove_accepted_culture = welsh
@@ -539,10 +598,6 @@ country_decisions = {
 					limit = { culture = gallgaidheil }
 					change_culture = celtic_highland_scottish_culture
 				}
-				#every_province = {
-				#	limit = { culture = manx }
-				#	change_culture = celtic_manx_culture
-				#}
 				every_province = {
 					limit = { culture = welsh }
 					change_culture = celtic_welsh_culture
@@ -570,10 +625,6 @@ country_decisions = {
 					limit = { ruler_culture = gallgaidheil }
 					set_ruler_culture = celtic_highland_scottish_culture
 				}
-				#every_country = {
-				#	limit = { ruler_culture = manx }
-				#	set_ruler_culture = celtic_manx_culture
-				#}
 				every_country = {
 					limit = { ruler_culture = welsh }
 					set_ruler_culture = celtic_welsh_culture
@@ -601,10 +652,6 @@ country_decisions = {
 					limit = { heir_culture = gallgaidheil }
 					set_heir_culture = celtic_highland_scottish_culture
 				}
-				#every_country = {
-				#	limit = { heir_culture = manx }
-				#	set_heir_culture = celtic_manx_culture
-				#}
 				every_country = {
 					limit = { heir_culture = welsh }
 					set_heir_culture = celtic_welsh_culture
@@ -632,10 +679,6 @@ country_decisions = {
 					limit = { consort_culture = gallgaidheil }
 					set_consort_culture = celtic_highland_scottish_culture
 				}
-				#every_country = {
-				#	limit = { consort_culture = manx }
-				#	set_consort_culture = celtic_manx_culture
-				#}
 				every_country = {
 					limit = { consort_culture = welsh }
 					set_consort_culture = celtic_welsh_culture
@@ -678,10 +721,16 @@ country_decisions = {
 			NOT = { has_country_flag = formed_connacht_flag_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
-			any_owned_province = { area = connacht_area }
+			any_owned_province = {
+				OR = {
+					area = connacht_area
+					area = east_connacht_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = connacht_area
+			area = east_connacht_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -697,22 +746,28 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = connacht_area
+						OR = {
+							area = connacht_area
+							area = east_connacht_area
+						}
 					}
-					amount = 2			#of 3
+					amount = 5			#of 9
 				}
 			}
 		}
 		effect = {
 			change_tag = CNN
-			add_government_reform = norman_duchy
 			connacht_area = {
+				limit = { NOT = { owned_by = CNN } }
+				add_permanent_claim = CNN
+			}
+			east_connacht_area = {
 				limit = { NOT = { owned_by = CNN } }
 				add_permanent_claim = CNN
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_connacht_flag_btp
@@ -730,10 +785,16 @@ country_decisions = {
 			NOT = { has_country_flag = formed_munster_flag_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
-			any_owned_province = { area = munster_area }
+			any_owned_province = {
+				OR = {
+					area = munster_area
+					area = east_munster_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = munster_area
+			area = east_munster_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -749,16 +810,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = munster_area
+						OR = {
+							area = munster_area
+							area = east_munster_area
+						}
 					}
-					amount = 4			#of 5
+					amount = 9			#of 13
 				}
 			}
 		}
 		effect = {
 			change_tag = MNS
-			add_government_reform = norman_duchy
 			munster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = MNS
+			}
+			east_munster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -767,7 +837,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_munster_flag_btp
@@ -785,10 +855,16 @@ country_decisions = {
 			NOT = { has_country_flag = formed_leinster_flag_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
-			any_owned_province = { area = leinster_area }
+			any_owned_province = {
+				OR = {
+					area = leinster_area
+					area = east_leinster_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = leinster_area
+			area = east_leinster_area
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -804,16 +880,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = leinster_area
+						OR = {
+							area = leinster_area
+							area = east_leinster_area
+						}
 					}
-					amount = 3			#of 4
+					amount = 6			#of 10
 				}
 			}
 		}
 		effect = {
 			change_tag = LEI
-			add_government_reform = norman_duchy
 			leinster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = LEI
+			}
+			east_leinster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -822,7 +907,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_leinster_flag_btp
@@ -830,7 +915,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400 
 	}
 
 	form_duchy_ulster = {
@@ -840,7 +925,12 @@ country_decisions = {
 			NOT = { has_country_flag = formed_ulster_flag_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
-			any_owned_province = { area = ulster_area }
+			any_owned_province = {
+				OR = {
+					area = ulster_area
+					area = east_ulster_area
+				}
+			}
 		}
 		provinces_to_highlight = {
 			area = ulster_area
@@ -859,16 +949,25 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = ulster_area
+						OR = {
+							area = ulster_area
+							area = east_ulster_area
+						}
 					}
-					amount = 4			#of 5
+					amount = 9			#of 12
 				}
 			}
 		}
 		effect = {
 			change_tag = ULS
-			add_government_reform = norman_duchy
 			ulster_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ULS
+			}
+			east_ulster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 					NOT = { is_core = ROOT }
@@ -877,7 +976,7 @@ country_decisions = {
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
-				duration = 7300
+				duration = 3650
 			}
 			add_prestige = 10
 			set_country_flag = formed_ulster_flag_btp
@@ -904,7 +1003,7 @@ country_decisions = {
 				tag = IRE
 				tag = ANI
 				tag = SCO
-				num_of_cities = 17			#At least 1/2 of Ireland and Scotland's 34 provinces to see, if not IRE, ANI, or SCO
+				num_of_cities = 33			#At least 1/2 of Ireland and Scotland's 65 provinces to see, if not IRE, ANI, or SCO
 			}	#Don't want to be able to see this too early. First goal should be forming provincial kingdoms and then Ireland or overthrowing Scotland.
 		}
 		provinces_to_highlight = {
@@ -935,7 +1034,7 @@ country_decisions = {
 						is_core = ROOT
 						region = ireland_region
 					}
-					amount = 13			#3/4 of Ireland's 17 provinces
+					amount = 33			#3/4 of Ireland's 44 provinces
 				}
 			}
 			custom_trigger_tooltip = {
@@ -952,10 +1051,10 @@ country_decisions = {
 							province_id = 5842
 						}
 					}
-					amount = 14			#3/4 of Scotland's 19 provinces
+					amount = 16			#3/4 of Scotland's 21 provinces
 				}
 			}
-			total_development = 200			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 80 percent discounted. Note base dev in 1444 Ireland and Scotland is around 180 total
+			total_development = 300			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 70 percent discounted. Note base dev in 1444 Ireland and Scotland is around 180 total
 			prestige = 25			#Special discount. Normal requirement for rank 2 is 75 prestige, so this is 2/3rds discounted
 			}
 		effect = {
@@ -1014,7 +1113,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
 
 	albion_nation = {
@@ -1028,7 +1127,7 @@ country_decisions = {
 			OR = {
 				tag = WLS
 				tag = CRN
-				num_of_cities = 12			#We want to prevent any alt history OPMs from seeing this too early
+				num_of_cities = 15			#We want to prevent any alt history OPMs from seeing this too early
 			}
 			capital_scope = { region = british_isles_region }
 		}
@@ -1054,10 +1153,10 @@ country_decisions = {
 						is_core = ROOT
 						region = british_isles_region
 					}
-					amount = 37			#3/4 of Britain's 49 provinces
+					amount = 62			#3/4 of Britain's 83 provinces
 				}
 			}
-			total_development = 250			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 75 percent discounted. Note base dev in 1444 for southern Britain is around 210, plus 54 more in Brittany.
+			total_development = 350			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 65 percent discounted. Note base dev in 1444 for southern Britain is around 293, plus 83 more in Brittany.
 			prestige = 25			#Special discount. Normal requirement for rank 2 is 75 prestige, so this is 2/3rds discounted
 		}
 		effect = {
@@ -1085,7 +1184,7 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
 
 ############################################################################################
@@ -1114,7 +1213,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			adm_tech = 20			#default 1661
+			adm_tech = 23			#1700
 			owns_or_vassal_of = 236		# London
 			owns_or_vassal_of = 241		# Glamorgan
 			owns_or_vassal_of = 248		# Lothian
@@ -1127,7 +1226,7 @@ country_decisions = {
 						country_or_vassal_holds = ROOT
 						is_core = owner
 					}
-					amount = 45			#At least 90 percent of Britain's 50 provinces
+					amount = 75			#At least 90 percent of Britain's 83 provinces
 				}
 			}
 			custom_trigger_tooltip = {
@@ -1138,11 +1237,11 @@ country_decisions = {
 						country_or_vassal_holds = ROOT
 						is_core = owner
 					}
-					amount = 16			#At least 90 percent of Ireland's 17 provinces
+					amount = 40			#At least 90 percent of Ireland's 44 provinces
 				}
 			}
-			total_development = 500			#Normal requirement for rank 3 is 1000 dev, so this is 50 percent discounted
-			prestige = 40			#Normal requirement for rank 3 is 75 prestige, so this is 50 percent discounted
+			total_development = 600			#Normal requirement for rank 3 is 1000 dev, so this is 40 percent discounted
+			prestige = 45			#Normal requirement for rank 3 is 75 prestige, so this is 40 percent discounted
 		}
 		effect = {
 			every_subject_country = {
@@ -1162,7 +1261,6 @@ country_decisions = {
 								tag = IRE
 								tag = SCO
 							}
-							#NOT = { num_of_cities = 24 }
 						}
 					}
 				}

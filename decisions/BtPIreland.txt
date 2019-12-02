@@ -68,7 +68,7 @@ country_decisions = {
       capital_scope = { region = british_isles_region }			#This will include England, Scotland, and Great Britain, but also dynamically any alt history powers in the British Isles. For non British polities history is out the window enough that this option shouldn't really be available, as it isn't for any other area.
       NOT = { culture_group = gaelic }			#Gaels will try to form TnG
       num_of_owned_provinces_with = {
-        value = 9
+        value = 25
         region = ireland_region
       }	#over half of Ireland to see
     }
@@ -84,11 +84,11 @@ country_decisions = {
       custom_trigger_tooltip = {
         tooltip = three_quarters_of_ireland_tooltip
         num_of_owned_provinces_with = {
-          value = 13
+          value = 33
           region = ireland_region
           is_core = ROOT
           owned_by = ROOT
-        }	#3/4 of Ireland's 17 provinces
+        }	#3/4 of Ireland's 44 provinces
       }
     }
     effect = {
@@ -133,7 +133,7 @@ country_decisions = {
       factor = 1
       modifier = {
         factor = 0
-        NOT = { total_development = 300 }			#tag will not do if the new country (95 dev with 1444 values + Dublin decision) would have over 50 percent the dev of the remaining country. Note this is based on 1444 values, because there is no way to calculate dynamically.
+        NOT = { total_development = 350 }			#tag will not do if the new country (197 dev with 1444 values + Dublin decision) would have over 50 percent the dev of the remaining country. Note this is based on 1444 values, because there is no way to calculate dynamically.
       }	#Also note England's base dev in 181, plus 28 in Wales and Cornwall, and 90 in Ireland so this will almost always be a yes even if England loses all French holdings and doesn't build up dev
       modifier = {
         factor = 0
@@ -178,7 +178,7 @@ country_decisions = {
 		potential = {
 			NOT = { exists = ANI }
 			NOT = { exists = IRE }
-			is_year = 1600
+			is_year = 1595		#So players can plan a bit ahead
 			OR = {
 				has_reform = norman_lordship_reform
 				has_reform = irish_clann_reform
