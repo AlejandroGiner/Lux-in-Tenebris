@@ -48,28 +48,6 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					3049 = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				3049 = { add_permanent_claim = ROOT }
-			}
-			if = {
-				limit = {
-					130 = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				130 = { add_permanent_claim = ROOT }
-			}
-			if = {
-				limit = {
 					3191 = {
 						NOT = {
 							is_permanent_claim = ROOT
@@ -78,28 +56,6 @@ country_decisions = {
 					}
 				}
 				3191 = { add_permanent_claim = ROOT }
-			}
-			if = {
-				limit = {
-					3048 = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				3048 = { add_permanent_claim = ROOT }
-			}
-			if = {
-				limit = {
-					1769 = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-				}
-				1769 = { add_permanent_claim = ROOT }
 			}
 			set_country_flag = formed_italy_flag
 		}
