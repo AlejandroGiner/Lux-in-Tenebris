@@ -554,7 +554,6 @@ ai_nation = {
 	diplomats = 1 							# ai has to reserve a diplomat for short term action so it gets an extra to put it on equal footing with player
 	free_leader_pool = 1					# ai needs to have enough pool for 1 general & 1 admiral
 	sailors_recovery_speed = 0.25
-	native_uprising_chance = -0.18
 	army_tradition_decay = -0.02
 	navy_tradition_decay = -0.02
 }
@@ -781,7 +780,7 @@ negative_piety = {	#As of 1.23 Mysticism
 defender_of_faith = {
 	land_morale = 0.05
 	naval_morale = 0.05
-	#technology_cost = 0.05
+	technology_cost = 0.05
 	war_exhaustion = -0.025					#quicker recovery
 	papal_influence = 1
 	prestige = 1							#1% extra prestige yearly
@@ -1022,7 +1021,7 @@ curia_controller = {
 	advisor_cost = -0.2
 	free_leader_pool = 1
 	ae_impact = -0.2
-	#technology_cost = -0.05
+	technology_cost = -0.05
 }
 
 religious_unity = {
@@ -1113,7 +1112,7 @@ absolutism = {
 	administrative_efficiency = 0.4
 	discipline = 0.05
 	core_decay_on_your_own = -0.5
-	global_unrest = 8
+	global_unrest = 5
 }
 
 low_army_professionalism = {
@@ -1389,7 +1388,7 @@ invasion_nation = {
 ########################################
 
 native_policy_coexist = {
-	native_uprising_chance = -0.9
+	native_uprising_chance = -1.0
 }
 
 native_policy_trade = {
