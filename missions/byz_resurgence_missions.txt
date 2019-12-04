@@ -84,9 +84,9 @@ byz_silk_road = {
 			OR = {
 				province_id = 1308
 				province_id = 1298
-				province_id = 137
+				province_id = 5493
 				province_id = 121
-				province_id = 341
+				province_id = 5224
 				province_id = 358
 				province_id = 1295
 			}
@@ -99,18 +99,15 @@ byz_silk_road = {
 			1298 = { #Genoa
 				is_strongest_trade_power = ROOT
 			}
-			137 = { #Ragusa
+			5493 = { #Aegean
 				is_strongest_trade_power = ROOT
 			}
-			121 = { #Naples
+			121 = { #Napoli
 				is_strongest_trade_power = ROOT
 			}
-			341 = { #Tunis
+			5224 = { #Tunis
 				is_strongest_trade_power = ROOT
 			}
-			# 354 = { #Tripoli
-				# is_strongest_trade_power = ROOT
-			# }
 			358 = { #Alexandria
 				is_strongest_trade_power = ROOT
 			}
@@ -132,23 +129,33 @@ byz_silk_road = {
 		icon = mission_empire
 		required_missions = {}
 		provinces_to_highlight = {
-			the_pentarchy_provinces = yes
+			OR = {
+				province_id = 2313
+				province_id = 379
+				province_id = 358
+				province_id = 118
+			}
 			OR = {
 				NOT = { religion = ROOT }
 				NOT = { owned_by = ROOT }
 			}
 		}
 		trigger = {
-			religion = orthodox
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=the_pentarchy_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			2313 = {
+				owned_by = ROOT 
+				religion = ROOT
 			}
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=highlighted_provinces_converted_to_religion 
-				PROVINCES=the_pentarchy_provinces
-				OWNER_TYPE=religion
+			379 = {
+				owned_by = ROOT 
+				religion = ROOT
+			}
+			358 = {
+				owned_by = ROOT 
+				religion = ROOT
+			}
+			118 = {
+				owned_by = ROOT 
+				religion = ROOT
 			}
 		}
 		effect = {
