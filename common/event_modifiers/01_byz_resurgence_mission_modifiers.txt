@@ -7,6 +7,10 @@ byz_last_stand = {
 	garrison_size = 0.1
 }
 
+byz_resettle_gallipoli = {
+	local_development_cost = -0.15
+}
+
 byz_resettlement_act = {
 	local_development_cost = -0.1
 }
@@ -23,7 +27,7 @@ byz_city_of_cities = {
 
 byz_co_capital = {
 	local_development_cost = -0.2
-	local_autonomy = -0.1
+	local_autonomy = -0.05
 	local_tax_modifier = 0.15
 }
 
@@ -203,8 +207,7 @@ byz_empire_restored = {
 }
 
 byz_united_orthodox = {
-	legitimacy = 0.5
-	tolerance_own = 0.5
+	legitimacy = 1
 }
 
 byz_persian_ambition = {
@@ -241,6 +244,12 @@ byz_defeated_persians = {
 byz_greater_than_alexander = {
 	legitimacy = 1
 	prestige = 1
+}
+
+#Trebizond
+trebizond_resurgent = {
+	legitimacy = 1
+	ae_impact = -0.05
 }
 
 #Theme capital

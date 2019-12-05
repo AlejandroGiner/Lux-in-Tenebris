@@ -3,7 +3,7 @@
  #These two are technically not necessary because the strings have been integrated into BT proper.
  country_holds_or_non_sovereign_subject_holds_highlighted:0 "The highlighted provinces are owned by §Y[Root.GetName]§! or one of its non-Tributary subjects."
  country_holds_highlighted:0 "The highlighted provinces are owned by §Y[Root.GetName]§!."
- highlighted_provinces_converted_to_religion:0 "The highlighted provinces are owned by §Y[Root.GetName]§! while following the §Y[Root.Religion.GetName]§! faith."
+ highlighted_provinces_converted_to_religion:0 "The highlighted provinces are following the §Y[Root.Religion.GetName]§! faith."
  
  #Custom triggers (Don't seem to work properly. Oh well)
  does_tag_have_less_than_provided_dev_trigger_tooltip:0 "§Y$TAG$§! exists and has less than §Y$DEV$§! development."
@@ -29,7 +29,7 @@
  byz_restore_imperial_army_title:0 "The Imperial Army"
  byz_restore_imperial_army_desc:0 "The Empire has ever since its founding relied on a powerful army to protect its lands, subjugate neighbours and pacify revolts. As the Empire has dwindled over the centuries, so too has the army. We shall reverse this trend and build an army that will rival the Imperial Legions of old!"
  byz_east_oriental_schism_title:0 "East Oriental Schism"
- byz_east_oriental_schism_desc:0 "The Orthodox church used to united, but as early as the 450s, the Patriarchs of Antioch and Alexandria seceded in a schism that separated the Orthodox faith into Eastern and Oriental Orthodoxy. Now following their seats in Armenia, the Levant and Egypt, if we bring them back in our fold there is still hope for unification, letting us declare the Ecumenical Patriarch of Constantinople to be the true leader of the Church."
+ byz_east_oriental_schism_desc:0 "The Christian church used to be a single united entity, but already as early as the 450s, the Patriarchs of Antioch and Alexandria seceded in a schism that separated the Orthodox faith into Eastern and Oriental Orthodoxy. Now following their seats in Armenia, the Levant and Egypt, if we bring them back in our fold there is still hope for unification, letting us declare the Ecumenical Patriarch of Constantinople to be the true leader of the Church."
  
  #Byz Resurges mission chain
  byz_turn_the_tide_title:0 "Turn the Tide"
@@ -47,14 +47,14 @@
  byz_reconquer_west_anatolia_desc:0 "As the Turk has now been pushed out of Greece, there is no denying that we need to focus on the other side of the Sea of Marmara: While we may control one side of the Bospor, regaining Scutarium & Nicomedia on the other side would allow Constantinople some breathing room, thus securing its prosperity. The strait of Gallipoli that once was wrestled from us after the dastardly earthquake needs to be retaken as well, to secure our newly regained holdings. Let us show the Turk that the Romans will not be subjugated!"
  byz_reclaim_anatolia_claims:0 "Grants permanent claims on the provinces required for the mission §YAnatolian Reclamation§!"
  byz_reclaim_anatolia_title:0 "Anatolian Reclamation"
- byz_reclaim_anatolia_desc:0 "We have pushed back the Turk from Greece and we crossed the Sea of Marmara and took back what was ours only centuries ago. Now that we have resurged, it is finally time we eliminate the Turk and retake our main recruitment grounds that is Anatolia and unify what was fractured in the events of the Fourth Crusade!"
+ byz_reclaim_anatolia_desc:0 "We pushed back the Turk from Greece, crossed the Sea of Marmara and took back what was ours only centuries ago. Now that we have resurged, it is finally time we eliminate the Turk, retaking our main recruitment grounds that is Anatolia and unifying what was fractured in the events of the Fourth Crusade!"
  reclaim_anatolia_tooltip:0 "§YEvery province in West Anatolia§! gets '§YResettlement Act§!' for §Y50 years§!, giving the following effects: \nDevelopment Cost: §G-20.0%§!"
  byz_no_turkish_country:0 "No country with §YTurkish§! as primary culture exists"
  byz_turkic_question_title:0 "The Turkic Question"
  byz_turkic_question_desc:0 "Now that we have restored [Root.GetAdjective] rule to Anatolia, the question now lies on what we do with the populace. Centuries of rule by Turks have lead to the region becoming desolate and what people still remain have either immigrated from the Eastern Steppes or have embraced the language and culture of their conquerors. The lands of Anatolia have seen much and it'll take a lot of work to get them back to where they were in the glory times, but in order to even begin our restoration, we need to decide what to do with the turkic part of our populace - do we accept it and allow them to serve in our armies as true Romans like we did with the Armenians, or do we demand that they embrace Greek or be persecuted?"
  turkic_question_tooltip_1:0 "If §Y[Root.GetName]§! integrates §YTurkish§! culture:"
  turkic_question_tooltip_2:0 "Else:"
- byz_owns_all_turkish_provinces_tooltip:0 "§Y[Root.GetName]§! owns all provinces of §YTurkish§! culture."
+ byz_owns_all_turkish_provinces_tooltip:0 "One of the following must be true:\n   §Y[Root.GetName]§! owns all §YTurkish§! culture provinces and §YTurkish§! is an accepted culture.\n   No §YTurkish§! provinces in §YAnatolia§!."
  byz_anatolian_restoration_title:0 "Anatolian Restoration"
  byz_anatolian_restoration_desc:0 "Now that we have fully integrated Anatolia into our Empire, the only thing left is its restoration to its glorious times. We need to put great resources towards restoring it. Only then can it once more serve as our primary recruitment grounds."
  
@@ -272,10 +272,46 @@
  byz_dismantle_hre_title:0 "The False Emperors"
  byz_dismantle_hre_desc:0 "Once upon a time, the Frankish king Charles invaded Lombardy while they were busy fighting our glorious resistance in Italy and reached Rome. There, the schismatic Pope claimed him the true emperor of Rome. Of course, this was but a false claim: Everyone knows that we and our great [GetBasileusHimHer] is the true [Root.GetAutokratorHimHer] of the Romans. By formally dismantling this horrible feudal mess that is the... whatever that thing is, we will show the unbelievers that those false emperors have no legitimate claim to our ancestors."
  
+ #Trebizonder missions
+ tre_reclaim_pontus_title:0 "Consolidate Pontus"
+ tre_reclaim_pontus_desc:0 "During the past century, our country has shrunk to what it is today, while the Turks have consolidated into one entity. During the Treaty of Gallipoli however, the [TUR.GetAdjective] [TUR.Monarch.GetTitle] lost control over parts of Anatolia to rebelling Beyliks. We must take this opportunity to seize these lands from them, starting with the Beylik in Pontus. If we don't act quickly, we might be on the receiving end of their muskets instead."
+ tre_expand_pontus_title:0 "Expand Pontus"
+ tre_expand_pontus_desc:0 "With the beylik of Pontus subjugated, we shall continue our crusade and move to reclaim the city of Sinope!"
+ tre_expand_pontus_claims:0 "Grants permanent claims on the provinces required for the mission §YExpand Pontus§!"
+ tre_reconquer_west_anatolia_title:0 "Recover West Anatolia"
+ tre_reconquer_west_anatolia_desc:0 "With the nearby beyliks subjugated, it is high time we march towards the Osmanoglus and retake the Anatolian coast, putting us closer to our true capital that is Constantinople. Let us inspire our armies to reclaim our homelands!"
+ tre_reconquer_west_anatolia_claims:0 "Grants permanent claims on the provinces required for the mission §YRecover West Anatolia§!"
+ tre_reclaim_anatolia_title:0 "Reclaim Anatolia"
+ tre_reclaim_anatolia_desc:0 "With the Turkish capital claimed, little can stand in our way. We must reclaim our Anatolian heartland in the name of God and restore our recruitment grounds!"
+ tre_reclaim_anatolia_claims:0 "Grants permanent claims on the provinces required for the mission §YReclaim Anatolia§!"
+ 
+ tre_conquer_lesser_armenia_title:0 "Conquer Lesser Armenia"
+ tre_conquer_lesser_armenia_desc:0 "The Armenians have in the past served loyally in our armies and their lands have proved a vital chokepoint through which our Anatolian heartland has stayed safe from enemy incursion. To rebuild our Empire and ensure its survival, these lands must belong to us, and noone else!"
+ tre_conquer_lesser_armenia_claims:0 "Grants permanent claims on the provinces required for the mission §YConquer Lesser Armenia§!"
+ 
+ tre_integrate_theodoro_title:0 "Integrate Theodoro"
+ tre_integrate_theodoro_desc:0 "The pretender princes of the Gabras dynasty have set up shop in the principality of Theodoro. Through strategic marriages, they have now sworn fealty to us. If we are to reclaim the Chersonese, bringing them closer to us should be our first priority."
+ tre_reclaim_chersonese_title:0 "Reclaim the Chersonese"
+ tre_reclaim_chersonese_desc:0 "With the Gabrades having resigned their sovereignity, we can finally reclaim the Chersonesus and bring it back under Pontic rule!"
+ tre_reclaim_chersonese_claims:0 "Grants permanent claims on the provinces required for the mission §YReclaim the Chersonese§!"
+ tre_northern_allies_title:0 "Northern Allies"
+ tre_northern_allies_desc:0 "With the Chersonesus reclaimed, we now have regained access to the northern Orthodox nations again. This unlocks brand new alliance possibilities, especially as the Northern Rus are consolidating into one nation. In a world where our populace at times prefer the Muslims over other Christian denominations due to past events, we must look northwards in order to ensure a long-lasting alliance."
+ 
+ tre_marry_into_palaiologos_title:0 "Palaiologan Intermarriage"
+ tre_marry_into_palaiologos_desc:0 "The pretenders of the Palaiologos dynasty were the ones that took back Constantinople from the Latins, however during the past century they've mismanaged not only their economy, but also their lands, having lost most of Anatolia to the Turk whom they now find themselves surrounded by. Our last chance to regain the city before it falls into enemy hands once again will be to intermarry with the Palaiologoi, thus giving us a valid claim to their rump state."
+ tre_reclaim_byzantine_throne_title:0 "Reclaim Constantinople"
+ tre_reclaim_byzantine_throne_desc:0 "With our families now intertwined once again, we can now push our claim to our ancient capital and reunite the Empire, this time under Komnenoi rule!"
+ tre_reclaim_byzantine_throne_claim:0 "Grants permanent claims on the provinces required for the mission §YReclaim Constantinople§!"
+ tre_restore_byzantine_empire_title:0 "Restore the Empire"
+ tre_restore_byzantine_empire_desc:0 "With Constantinople now under our rule, we must move towards reclaiming the Greek lands that rightfully belong to the Empire."
+ tre_restore_byzantine_empire_claims:0 "Grants permanent claims on the provinces required for the mission §YRestore the Empire§!"
  
  #Mission modifiers
  byz_last_stand:0 "Last Stand"
  desc_byz_last_stand:0 ""
+ byz_resettle_gallipoli:0 "Resettle Gallipoli"
+ desc_byz_resettle_gallipoli:0 ""
+ 
  byz_light_in_the_darkness:0 "Light in the Darkness"
  desc_byz_light_in_the_darkness:0 ""
  byz_silk_road:0 "Silk Road"
@@ -379,6 +415,10 @@
  desc_byz_defeated_persians:0 ""
  byz_greater_than_alexander:0 "Greater than Alexander"
  desc_byz_greater_than_alexander:0 ""
+ 
+ #Trebizonder
+ trebizond_resurgent:0 "Resurgent Trebizond"
+ trebizond_resurgent_desc:0 ""
  
  #Not really mission modifiers, should be moved.
  built_third_temple:0 "Built Third Temple"
