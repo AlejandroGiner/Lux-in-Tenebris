@@ -134,6 +134,7 @@ byz_silk_road = {
 				province_id = 379
 				province_id = 358
 				province_id = 118
+				province_id = 151
 			}
 			OR = {
 				NOT = { religion = ROOT }
@@ -154,6 +155,10 @@ byz_silk_road = {
 				religion = ROOT
 			}
 			118 = {
+				owned_by = ROOT 
+				religion = ROOT
+			}
+			151 = {
 				owned_by = ROOT 
 				religion = ROOT
 			}
@@ -267,7 +272,7 @@ byz_resurging_diplomacy = {
 				name = "byz_light_in_the_darkness"
 				duration = 5475
 			}
-			add_dip_power = 100
+			add_dip_power = 50
 		}
 	}
 
@@ -310,7 +315,7 @@ byz_resurging_diplomacy = {
 			286 = {
 				add_claim = ROOT
 			}
-			add_dip_power = 100
+			add_dip_power = 50
 		}
 	}
 
@@ -342,9 +347,9 @@ byz_resurging_diplomacy = {
 		effect = {
 			add_country_modifier = {
 				name = "byz_united_orthodox"
-				duration = -1
+				duration = 10950
 			}
-			add_patriarch_authority = 0.2
+			add_patriarch_authority = 0.1
 		}
 	}
 }
@@ -375,23 +380,23 @@ byz_economic_1 = {
 		}
 		
 		trigger = {
-			treasury = 1500
+			treasury = 2000
 			NOT = { num_of_loans = 1 }
 		}
 		
 		effect = {
 			add_country_modifier = {
 				name = "byz_refilled_imperial_treasury"
-				duration = 7300
+				duration = 1825
 			}
 			define_advisor = {
 				type = treasurer
-				skill = 3
+				skill = 2
 				discount = yes
 			}
 			define_advisor = {
 				type = master_of_mint
-				skill = 3
+				skill = 2
 				discount = yes
 			}
 		}
@@ -415,15 +420,10 @@ byz_economic_1 = {
 		
 		trigger = {
 			151 = {
-				development = 75
-				#has_building = temple
-				#has_building = workshop
-				#has_building = courthouse
-				#has_building = marketplace
-				#has_building = barracks
-				#has_building = regimental_camp
-				#has_building = dock
-				#has_building = shipyard
+				development = 35
+				has_building = temple
+				has_building = workshop
+				has_building = marketplace
 			}
 		}
 		
@@ -439,7 +439,6 @@ byz_economic_1 = {
 				}
 			}
 			add_prestige = 35
-			add_legitimacy = 35
 			add_splendor = 50
 		}
 	}
@@ -485,13 +484,12 @@ byz_economic_2_plus_military_bonus = {
 		effect = {
 			if = {
 				limit = { has_dlc = "Cradle of Civilization" }
-				add_army_professionalism = 0.1
+				add_army_professionalism = 0.15
 			}
 			else = {
 				add_army_tradition = 25
-				add_mil_power = 100
 			}
-			add_legitimacy = 20
+			add_mil_power = 100
 		}
 	}
 	
@@ -513,7 +511,9 @@ byz_economic_2_plus_military_bonus = {
 		
 		trigger = {
 			148 = {
-				development = 30
+				development = 20
+				has_building = temple
+				has_building = workshop
 			}
 		}
 		
@@ -524,7 +524,7 @@ byz_economic_2_plus_military_bonus = {
 					duration = -1
 				}
 			}
-			add_legitimacy = 20
+			add_prestige = 20
 			add_splendor = 50
 		}
 	}
@@ -533,23 +533,38 @@ byz_economic_2_plus_military_bonus = {
 		icon = mission_empire
 		required_missions = {}
 		provinces_to_highlight = {
-			byz_east_oriental_schism_provinces = yes
+			OR = {
+				province_id = 419
+				province_id = 5154 
+				province_id = 1234
+				province_id = 2313
+				province_id = 358
+			}
 			OR = {
 				NOT = { religion = ROOT }
 				NOT = { owned_by = ROOT }
 			}
 		}
 		trigger = {
-			religion = orthodox
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_east_oriental_schism_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			419 = {
+				owned_by = ROOT 
+				religion = ROOT
 			}
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=highlighted_provinces_converted_to_religion 
-				PROVINCES=byz_east_oriental_schism_provinces
-				OWNER_TYPE=religion
+			5154 = {
+				owned_by = ROOT 
+				religion = ROOT
+			}
+			1234 = {
+				owned_by = ROOT 
+				religion = ROOT
+			}
+			2313 = {
+				owned_by = ROOT 
+				religion = ROOT
+			}
+			358 = {
+				owned_by = ROOT 
+				religion = ROOT
 			}
 		}
 		effect = {
@@ -596,11 +611,11 @@ byz_economic_2_plus_military_bonus = {
 				}
 				if = {
 					limit = {
-						379 = {
+						1234 = {
 							NOT = { has_province_modifier = orthodox_religious_center }
 						}
 					}
-					379 = { 
+					1234 = { 
 						add_province_triggered_modifier = orthodox_religious_center
 					}
 				}
@@ -615,7 +630,7 @@ byz_economic_2_plus_military_bonus = {
 					}
 				}
 			}
-			add_prestige = 20
+			add_patriarch_authority = 0.05
 			if = {
 				limit = {
 					NOT = {
@@ -663,8 +678,12 @@ byz_resurges = {
 					NOT = {
 						any_province = {
 							OR = {
-								byz_deny_ottoman_access_provinces = yes
-								byz_reconquer_ottoman_greece_provinces = yes
+								area = morea_area
+								area = northern_greece_area
+								area = western_aegean_area
+								area = thessaly_area
+								area = thrace_area
+								area = macedonia_area
 							}
 							owned_by = TUR
 						}
@@ -676,28 +695,7 @@ byz_resurges = {
 		effect = {
 			add_country_modifier = {
 				name = "byz_last_stand"
-				duration = 3650
-			}
-			
-			#Claims
-			if = {
-				limit = {
-					any_province = {
-						byz_deny_ottoman_access_provinces = yes
-						NOT = { is_core = ROOT }
-					}
-				}
-				custom_tooltip = byz_deny_ottoman_access_claims
-				hidden_effect = {
-					every_province = {
-						limit = {
-							byz_deny_ottoman_access_provinces = yes
-							NOT = { is_core = ROOT }
-							NOT = { owned_by = ROOT }
-						}
-						add_core = ROOT
-					}
-				}
+				duration = 1825
 			}
 		}
 	}
@@ -715,24 +713,27 @@ byz_resurges = {
 		}
 		
 		provinces_to_highlight = {
-			byz_deny_ottoman_access_provinces = yes
+			area = thrace_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			OR = {
-				has_fulfiled_province_requirement_for_mission_trigger = {
-					TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-					PROVINCES=byz_deny_ottoman_access_provinces
-					OWNER_TYPE=country_or_non_sovereign_subject_holds
+				thrace_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT	
 				}
 				custom_trigger_tooltip = {
 					tooltip = byz_turn_the_tide_tooltip
 					NOT = {
 						any_province = {
 							OR = {
-								byz_deny_ottoman_access_provinces = yes
-								byz_reconquer_ottoman_greece_provinces = yes
+								area = morea_area
+								area = northern_greece_area
+								area = western_aegean_area
+								area = thessaly_area
+								area = thrace_area
+								area = macedonia_area
 							}
 							owned_by = TUR
 						}
@@ -742,39 +743,17 @@ byz_resurges = {
 		}
 		
 		effect = {
-			7135 = { #Gallipoli
+			5719 = { #Gallipoli
 				change_religion = ROOT
 				change_culture = ROOT
-				add_base_tax = 2
-				add_base_production = 2
+				add_base_tax = 1
+				add_base_production = 1
 				add_base_manpower = 1
 				add_province_modifier = {
 					name = "byz_resettle_gallipoli"
-					duration = 5475
+					duration = 3650
 				}
 			}
-			
-			#Claims
-			if = {
-				limit = {
-					any_province = {
-						byz_reconquer_west_anatolia_provinces = yes
-						NOT = { is_core = ROOT }
-					}
-				}
-				custom_tooltip = byz_reconquer_ottoman_greece_claims
-				hidden_effect = {
-					every_province = {
-						limit = {
-							byz_reconquer_ottoman_greece_provinces = yes
-							NOT = { is_core = ROOT }
-							NOT = { owned_by = ROOT }
-						}
-						add_core = ROOT
-					}
-				}
-			}
-			
 			#Misc
 			custom_tooltip = byz_reconquer_ottoman_greece_nationalism
 			hidden_effect = {
@@ -783,7 +762,7 @@ byz_resurges = {
 						region = balkan_region
 						owned_by = TUR
 					}
-					add_nationalism = 20
+					add_nationalism = 10
 				}
 			}
 		}
@@ -802,24 +781,45 @@ byz_resurges = {
 		}
 		
 		provinces_to_highlight = {
-			byz_reconquer_ottoman_greece_provinces = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR = {
+				area = morea_area
+				area = northern_greece_area
+				area = western_aegean_area
+				area = thessaly_area
+				area = macedonia_area
+			}
+			owned_by = TUR
 		}
 		
 		trigger = {
 			OR = {
-				has_fulfiled_province_requirement_for_mission_trigger = {
-					TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-					PROVINCES=byz_reconquer_ottoman_greece_provinces
-					OWNER_TYPE=country_or_non_sovereign_subject_holds
+				AND = {
+					macedonia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
+					thessaly_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
+					144 = {
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
+					1853 = {
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
 				}
 				custom_trigger_tooltip = {
 					tooltip = byz_turn_the_tide_tooltip
 					NOT = {
 						any_province = {
 							OR = {
-								byz_deny_ottoman_access_provinces = yes
-								byz_reconquer_ottoman_greece_provinces = yes
+								area = morea_area
+								area = northern_greece_area
+								area = western_aegean_area
+								area = thessaly_area
+								area = thrace_area
+								area = macedonia_area
 							}
 							owned_by = TUR
 						}
@@ -833,56 +833,53 @@ byz_resurges = {
 				name = "byzantium_resurgent"
 				duration = 5475
 			}
-			
-			#Claims
-			if = {
-				limit = {
-					any_province = {
-						byz_reconquer_west_anatolia_provinces = yes
-						NOT = { is_core = ROOT }
-					}
-				}
-				custom_tooltip = byz_reconquer_west_anatolia_claims
-				hidden_effect = {
-					every_province = {
-						limit = {
-							byz_reconquer_west_anatolia_provinces = yes
-							NOT = { is_core = ROOT }
-							NOT = { owned_by = ROOT }
-						}
-						add_permanent_claim = ROOT
-					}
-				}
-			}
-			custom_tooltip = byz_safeguard_balkan_border_claims
+
+			custom_tooltip = byz_reconquer_west_anatolia_claims
 			hidden_effect = {
-				every_province = {
+				hudavendigar_area = {
 					limit = {
-						byz_safeguard_balkan_border_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				karasi_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				aydin_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
-			
-			if = {
-				limit = {
-					any_province = {
-						byz_no_latins_in_greece_provinces = yes
-						NOT = { is_core = ROOT }
+			custom_tooltip = byz_safeguard_balkan_border_claims
+			hidden_effect = {
+				upper_thrace_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
 					}
+					add_permanent_claim = ROOT
 				}
-				custom_tooltip = byz_no_latins_in_greece_claims
-				hidden_effect = {
-					every_province = {
-						limit = {
-							byz_no_latins_in_greece_provinces = yes
-							NOT = { is_core = ROOT }
-							NOT = { owned_by = ROOT }
-						}
-						add_core = ROOT
+				north_macedonia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
 					}
+					add_permanent_claim = ROOT
+				}
+				5894 = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -901,23 +898,34 @@ byz_resurges = {
 		}
 		
 		provinces_to_highlight = {
-			byz_reconquer_west_anatolia_provinces = yes
+			OR = {
+				area = hudavendigar_area
+				area = karasi_area
+				area = aydin_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_reconquer_west_anatolia_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			hudavendigar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			karasi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
-		effect = {			
+		effect = {
 			#Dev bonuses
 			316 = { #Nicomedia
-				add_base_tax = 3
-				add_base_manpower = 3
+				add_base_tax = 2
+				add_base_manpower = 2
 				if = {
 					limit = {
 						has_global_flag = byz_byzantine_silk_restored
@@ -926,14 +934,14 @@ byz_resurges = {
 				}
 			}
 			5157 = { #Nicaea
-				add_base_tax = 3
-				add_base_production = 3
+				add_base_tax = 1
+				add_base_production = 1
 				if = {
 					limit = {
 						has_global_flag = byz_favored_glassmakers
 					}
-					add_base_production = 2
-					add_or_spawn_center_of_trade = { LEVEL = 2 }
+					add_base_production = 1
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
 				}
 			}
 			random_owned_province = { #RandProv 1
@@ -969,15 +977,11 @@ byz_resurges = {
 				}
 			}
 			
-			#Misc
-			create_general = { tradition = 80 }
-			
 			#Claims
 			custom_tooltip = byz_reclaim_anatolia_claims
 			hidden_effect = {
-				every_province = {
+				anatolia_region = {
 					limit = {
-						byz_reclaim_anatolia_provinces = yes
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
 					}
@@ -989,7 +993,7 @@ byz_resurges = {
 				limit = {
 					does_tag_exist_and_have_less_than_provided_dev_trigger = {
 						TAG=TRE
-						DEV=200
+						DEV=100
 					}
 				}
 				add_casus_belli = {
@@ -1002,7 +1006,7 @@ byz_resurges = {
 				limit = {
 					does_tag_exist_and_have_less_than_provided_dev_trigger = {
 						TAG=EPI
-						DEV=200
+						DEV=100
 					}
 				}
 				add_casus_belli = {
@@ -1015,7 +1019,7 @@ byz_resurges = {
 				limit = {
 					does_tag_exist_and_have_less_than_provided_dev_trigger = {
 						TAG=CAP
-						DEV=200
+						DEV=100
 					}
 				}
 				add_casus_belli = {
@@ -1040,15 +1044,14 @@ byz_resurges = {
 		}
 		
 		provinces_to_highlight = {
-			byz_reclaim_anatolia_provinces = yes
+			region = anatolia_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_reclaim_anatolia_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			anatolia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			custom_trigger_tooltip = {
 				tooltip = byz_no_turkish_country
@@ -1058,7 +1061,6 @@ byz_resurges = {
 					}
 				}
 			}
-			
 			NOT = { exists = TRE }
 			NOT = { exists = EPI }
 			NOT = { exists = CAP }
@@ -1079,12 +1081,8 @@ byz_resurges = {
 			
 			#Dev bonuses
 			326 = { #Ancyra
-				add_base_tax = 3
-				add_base_manpower = 3
-			}
-			151 = { #Constantinople
-				add_base_tax = 3
-				add_base_production = 3
+				add_base_tax = 2
+				add_base_manpower = 2
 			}
 			random_owned_province = { #RandProv 1
 				limit = {
@@ -1185,7 +1183,7 @@ byz_resurges = {
 					}
 					add_province_modifier = {
 						name = "byz_resettlement_act"
-						duration = 18250
+						duration = 9.125
 					}
 				}
 			}
@@ -1215,23 +1213,23 @@ byz_resurges = {
 		}
 		
 		trigger = {
-			OR = {
-				AND = {
-					custom_trigger_tooltip = {
-						tooltip = byz_owns_all_turkish_provinces_tooltip
+			custom_trigger_tooltip = {
+				tooltip = byz_owns_all_turkish_provinces_tooltip
+				OR = {
+					AND = {
 						NOT = {
 							any_province = {
 								culture = turkish
 								NOT = { owned_by = ROOT }
 							}
 						}
-					}
 					accepted_culture = turkish
-				}
-				NOT = {
-					any_province = {
-						region = anatolia_region
-						culture = turkish
+					}
+					NOT = {
+						any_province = {
+							region = anatolia_region
+							culture = turkish
+						}
 					}
 				}
 			}
@@ -1303,7 +1301,13 @@ byz_resurges = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						byz_armenia_minor_provinces = yes
+						OR = {
+							area = erzurum_area
+							area = mardin_area
+							area = north_kurdistan_area
+							province_id = 4298
+							province_id = 4303
+						}
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
 					}
