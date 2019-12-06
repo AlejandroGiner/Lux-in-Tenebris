@@ -24,22 +24,6 @@ dependency = {
 	end_date = 1500.1.1
 }
 
-# Pahang, removed to allow the historical annexation of Pahang
-#dependency = { 
-#	subject_type = "tributary_state"
-#	first = AYU
-#	second = PAH
-#	start_date = 1430.1.1
-#	end_date = 1470.1.1
-#}
-
-vassal = {
-	first = AYU
-	second = PAT
-	start_date = 1636.1.1
-	end_date = 1902.1.1
-}
-
 # Kedah
 dependency = {
 	subject_type = "tributary_state"
@@ -47,47 +31,6 @@ dependency = {
 	second = KED
 	start_date = 1430.1.1
 	end_date = 1632.1.1
-}
-
-vassal = {
-	first = AYU
-	second = KED
-	start_date = 1636.1.1
-	end_date = 1902.1.1
-}
-
-# Kelantan
-dependency = {
-	subject_type = "tributary_state"
-	first = AYU
-	second = KEL
-	start_date = 1467.1.1
-	end_date = 1490.1.1
-}
-
-#Malaccan puppet in Kelantan
-vassal = {
-	first = MLC
-	second = KEL
-	start_date = 1499.1.1
-	end_date = 1528.1.1
-}
-
-# Patani and Kelantan
-union = {
-	first = PAT
-	second = KEL
-	start_date = 1721.1.1
-	end_date = 1902.1.1
-}
-
-# Khmer
-
-vassal = {
-	first = AYU
-	second = KHM
-	start_date = 1779.1.1
-	end_date = 1828.1.1
 }
 
 #Jaffna

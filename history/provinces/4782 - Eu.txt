@@ -1,10 +1,8 @@
-# 4782 - Eu
 
-owner = FRA
-controller = FRA
+owner = NEV
+controller = NEV
 capital = "Eu" #Aumale
 is_city = yes
-estate = estate_nobles
 culture = normand
 religion = catholic
 hre = no
@@ -12,32 +10,12 @@ base_tax = 1
 base_production = 2
 trade_goods = grain
 base_manpower = 1
-add_core = PIC
 add_core = FRA
-fort_15th = yes
+add_core = NEV
+add_core = NRM
 
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
 discovered_by = eastern
 discovered_by = persian_btc
-
-1465.1.1 = {
-	owner = NEV
-	controller = NEV
-	add_core = NEV
-	remove_core = FRA
-} # Picardy is given to John II, Count of Nevers
-#1513.8.16 = { controller = ENG } # Henry VIII defeats La Palice at Guinnegate and sacks Therouanne
-#1514.5.5 = { controller = NEV } # Henry VIII concludes a seperate peace with France
-1539.1.1 = { owner = FRA controller = FRA add_core = FRA remove_core = NEV }
-1544.7.5 = { controller = ENG } # English forces take hold of parts of Picardie in the Anglo-French War (1542-1546)
-1546.8.1 = { controller = FRA } # Peace is concluded, back to status quo
-1588.12.1 = { unrest = 5 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
-1594.1.1 = { unrest = 0 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
-1628.1.1 = { unrest = 3 }
-1630.1.1 = { unrest = 0 }
-1638.1.1 = { unrest = 3 }
-1640.1.1 = { unrest = 0 }
-1642.1.1 = { unrest = 3 }
-1644.1.1 = { unrest = 0 }

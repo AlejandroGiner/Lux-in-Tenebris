@@ -7,33 +7,7 @@ march = {
 	first = ENG
 	second = KOI
 	start_date = 1444.1.1
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-# England-Isle of Man
-march = {
-	first = ENG
-	second = KOI
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1707.5.12
-}
-
-# GB-Isle of Man
-march = {
-	first = GBR
-	second = KOI
-	start_date = 1707.5.12
-	end_date = 1765.5.10			#Isle of Man Purchase Act 1765
-}
-
-# Scotland-The Isles removed. Added in vanilla 1.25 along with the new Isles tag
-
-# England-Durham
-vassal = {
-	first = ENG
-	second = DUR
-	start_date = 1444.11.13   #BeyondTypus batch edit shortcut more vassal start date begin
-	end_date = 1444.11.15   #BeyondTypus batch edit shortcut more vassal start date begin
 }
 
 # Swiss Alliances
@@ -42,13 +16,6 @@ vassal = {
 	first = SWI
 	second = BSL
 	start_date = 1444.1.1
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = SWI
-	second = BSL
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1501.6.9
 }
 
@@ -56,13 +23,6 @@ vassal = {
 	first = SWI
 	second = ZND
 	start_date = 1444.1.1
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = SWI
-	second = ZND
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1529.3.12
 }
 
@@ -72,28 +32,7 @@ vassal = {
 	first = BUR
 	second = CMB
 	start_date = 1444.1.1
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = BUR
-	second = CMB
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1477.1.5
-}
-
-vassal = {
-	first = HAB
-	second = CMB
-	start_date = 1477.1.5
-	end_date = 1516.1.23
-}
-
-vassal = {
-	first = SPA
-	second = CMB
-	start_date = 1516.1.23
-	end_date = 1677.4.19
 }
 
 #Denmark-Iceland
@@ -102,13 +41,6 @@ vassal = {
 	first = DAN
 	second = ICE
 	start_date = 1444.1.1
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = DAN
-	second = ICE
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1536.1.1
 }
 
@@ -118,13 +50,6 @@ vassal = {
 	first = BYZ
 	second = LES
 	start_date = 1444.1.1
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = BYZ
-	second = LES
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1453.5.29
 }
 
@@ -150,13 +75,6 @@ vassal = {
 	first = LIV
 	second = KUR
 	start_date = 1435.12.4
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = LIV
-	second = KUR
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1560.5.20
 }
 
@@ -164,13 +82,6 @@ vassal = {
 	first = LIV
 	second = OSL
 	start_date = 1435.12.4
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = LIV
-	second = OSL
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1560.5.20
 }
 
@@ -178,13 +89,6 @@ vassal = {
 	first = LIV
 	second = DRP
 	start_date = 1435.12.4
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = LIV
-	second = DRP
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1558.7.18
 }
 
@@ -192,13 +96,6 @@ vassal = {
 	first = LIV
 	second = RIG
 	start_date = 1435.12.4
-	end_date = 1444.11.16   #BeyondTypus batch edit shortcut no vassal start date begin
-}
-
-vassal = {
-	first = LIV
-	second = RIG
-	start_date = 1444.11.18   #BeyondTypus batch edit shortcut no vassal start date end
 	end_date = 1561.1.1
 }
 
@@ -233,7 +130,7 @@ dependency = {
 	first = PAP
 	second = ANC
 	start_date = 1436.1.1 
-	end_date = 1444.11.13 #BeyondTypus batch edit shortcut the second shattering begins
+	end_date = 1444.11.13 
 }
 
 dependency = {
@@ -251,7 +148,7 @@ dependency = {
 	subject_type = "papal_subject_bt"
 	first = PAP
 	second = MTS
-	start_date = 1444.1.1 #BeyondTypus batch edit shortcut first performance start ends
+	start_date = 1444.1.1 
 	end_date = 1444.11.13
 }
 
@@ -259,7 +156,7 @@ dependency = {
 	subject_type = "papal_subject_bt"
 	first = PAP
 	second = FNZ
-	start_date = 1444.1.1 #BeyondTypus batch edit shortcut first performance start ends
+	start_date = 1444.1.1 
 	end_date = 1444.11.13
 }
 
@@ -267,7 +164,7 @@ dependency = {
 	subject_type = "papal_subject_bt"
 	first = PAP
 	second = BLG
-	start_date = 1444.1.1 #BeyondTypus batch edit shortcut first performance start ends
+	start_date = 1444.1.1
 	end_date = 1444.11.13
 }
 
@@ -275,7 +172,7 @@ dependency = {
 	subject_type = "papal_subject_bt"
 	first = PAP
 	second = MNO
-	start_date = 1444.1.1 #BeyondTypus batch edit shortcut first performance start ends
+	start_date = 1444.1.1 
 	end_date = 1444.11.13
 }
 

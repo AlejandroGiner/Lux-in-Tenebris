@@ -759,7 +759,7 @@ byz_resurges = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						region = balkan_region
+						region = greece_region_btc
 						owned_by = TUR
 					}
 					add_nationalism = 10
@@ -1335,20 +1335,19 @@ byz_resurges = {
 		}
 		
 		trigger = {
-			calc_true_if = {
-				all_province = {
-					region = anatolia_region
-					num_of_times_improved = 5
+			custom_trigger_tooltip = {
+				tooltip = byz_developed_turkish_provinces_tooltip
+				calc_true_if = {
+					all_province = {
+						region = anatolia_region
+						num_of_times_improved = 5
+					}
+					amount = 35
 				}
-				amount = 20
 			}
 		}
 		
 		effect = {
-			#Removed because too OP.
-			#add_adm_power = 200
-			#add_dip_power = 200
-			#add_mil_power = 200
 			add_splendor = 200
 			anatolia_region = {
 				add_province_modifier = {
@@ -4668,7 +4667,7 @@ byz_far_east_2 = {
 		
 		effect = {
 			custom_tooltip = persian_silk_tooltip
-			balkan_region = {
+			greece_region_btc = {
 				limit = {
 					trade_goods = silk
 				}

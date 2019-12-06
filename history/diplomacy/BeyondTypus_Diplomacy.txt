@@ -5,7 +5,7 @@ alliance = {
 	first = OJI
 	second = OTT
 	start_date = 796.1.1
-	end_date = 1836.1.1
+	end_date = 1815.1.1
 }
 
 alliance = {
@@ -86,6 +86,20 @@ dependency = {
 	end_date = 1444.12.12
 }
 
+guarantee = {
+	first = BUR
+	second = T0A
+	start_date = 1444.1.1
+	end_date = 1477.1.5
+}
+
+guarantee = {
+	first = FRA
+	second = T0A
+	start_date = 1444.1.1
+	end_date = 1513.1.1			#Occupied by English, who later restored it to direct French authority.
+}
+
 vassal = {
 	first = TEU
 	second = SM1
@@ -111,13 +125,6 @@ march = {
 	first = GEN
 	second = GZR
 	start_date = 1444.1.1
-	end_date = 1444.11.13 #BeyondTypus batch edit shortcut the second shattering begins
-}	#Gazaria
-
-march = {
-	first = GEN
-	second = GZR
-	start_date = 1444.11.18 #BeyondTypus batch edit shortcut second performance start ends
 	end_date = 1475.1.1 #Ottoman conquest
 }	#Gazaria
 
@@ -125,13 +132,6 @@ march = {
 	first = VEN
 	second = CDA
 	start_date = 1444.1.1
-	end_date = 1444.11.13 #BeyondTypus batch edit shortcut the second shattering begins
-}	#Candia
-
-march = {
-	first = VEN
-	second = CDA
-	start_date = 1444.11.18 #BeyondTypus batch edit shortcut second performance start ends
 	end_date = 1669.1.1 #Ottoman conquest
 }	#Candia
 
@@ -196,6 +196,27 @@ union = {
 	second = BAR
 	start_date = 1444.1.1
 	end_date = 1445.1.1
+}
+
+union = {
+	first = BUR
+	second = LUX
+	start_date = 1444.1.1
+	end_date = 1477.1.1
+}
+
+union = {
+	first = BUR
+	second = PIC
+	start_date = 1444.1.1
+	end_date = 1477.1.1
+}
+
+union = {
+	first = BUR
+	second = HAI
+	start_date = 1444.1.1
+	end_date = 1477.1.1
 }
 
 union = {

@@ -7,13 +7,13 @@ controller = FLA
 add_core = FLA
 is_city = yes
 capital = "Rijsel"
-culture = wallonian
+culture = flemish
 religion = catholic
 hre = no
-base_tax = 5
+base_tax = 6
 base_production = 5
 trade_goods = cloth
-base_manpower = 2
+base_manpower = 3
 fort_15th = yes
 
 discovered_by = western
@@ -22,6 +22,8 @@ discovered_by = persian_btc
 discovered_by = ottoman
 discovered_by = eastern
 
+extra_cost = 8
+center_of_trade = 1
 
 #New history by Draiocht
 1477.1.5 = { owner = HAB controller = HAB add_core = HAB }	#from vanilla. Mary of Burgundy, an heiress, passes all Burgundian holdings in the Low Countries to the Habsburgs
