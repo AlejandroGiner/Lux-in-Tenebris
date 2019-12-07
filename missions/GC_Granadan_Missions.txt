@@ -697,6 +697,15 @@ adu_slot_2_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_languedoc_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 			provence_area = {
 				limit = {
 					NOT = {
@@ -718,6 +727,7 @@ adu_slot_2_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = languedoc_area
+				area = east_languedoc_area
 				area = provence_area
 			}
 			NOT = {
@@ -727,6 +737,11 @@ adu_slot_2_missions = {
 
 		trigger = {
 			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+			east_languedoc_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT

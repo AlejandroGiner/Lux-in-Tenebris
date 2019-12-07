@@ -262,7 +262,7 @@ west_normandy_area = { #Lower Normandy
 }
 
 provence_area = { #3
-	201 202 2991 3090 3331
+	201 202 2991 3090 3331 5540 5539
 }
 
 guyenne_area = { #Aquitaine
@@ -273,8 +273,12 @@ pyrenees_area = { #Gascony
 	173 175 176 3083 3328 4783 7643
 }
 
-languedoc_area = { #3
-	200 2753 3085 4391 3223 3084 5132 196
+languedoc_area = { # West
+	2753 3084 5132 196 5542 5543 
+}
+
+east_languedoc_area = {
+	4391 3085 3223 5541 200
 }
 
 bourgogne_area = { #4
@@ -286,9 +290,9 @@ franche_comte_area = {
 	3130 3132 3133 3092 193 5536 5537 5538
 }
 
-massif_central_area = { #4
+massif_central_area = { # East
 	color = { 26 26 217 }
-	190 199 3088 3020 3021
+	190 199 3088 3020 3021 5544
 }
 
 west_massif_central_area = {
@@ -4596,7 +4600,7 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #BTC working on 
-5539 5540 5541 5542 5543 5544 5545 5546 5547 5548 5549 5550 5551 
+5545 5546 5547 5548 5549 5550 5551 
 5552 5553 5554 5555 5556 5557 5558 5559 5560 5561 5573
 
 #RNW Sea provinces

@@ -743,6 +743,13 @@ gc_aragon_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_languedoc_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			pyrenees_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -766,6 +773,7 @@ gc_aragon_3 = {
 			OR = {
 				area = savoy_dauphine_area
 				area = languedoc_area
+				area = east_languedoc_area
 				area = pyrenees_area
 				area = dauphine_area
 			}
@@ -781,6 +789,10 @@ gc_aragon_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_languedoc_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
