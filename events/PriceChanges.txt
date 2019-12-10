@@ -2557,6 +2557,12 @@ country_event = {
 			value = 0.35
 			duration = -1
 		}
+		change_price = {
+			trade_goods = apiculture
+			key = SELECTIVE_BREEDING
+			value = 0.15
+			duration = -1
+		}
 		random_owned_province = {
 			limit = {
 				enlightenment = 100

@@ -1091,7 +1091,7 @@ country_event = { #14 The Purchase of Chios - Byzantine Proposal
 		}
 		custom_tooltip = chios_purchase_effects_if_signs_treaty
 		tooltip = {
-			add_years_of_income = -0.25
+			add_years_of_income = -0.4
 			capital_scope = {
 				add_trade_modifier = {
 					who = GEN
@@ -1137,7 +1137,7 @@ country_event = { #14 The Purchase of Chios - Byzantine Proposal
 		}
 		required_personality = charismatic_negotiator_personality
 		
-		add_years_of_income = -0.35
+		add_years_of_income = -0.6
 		capital_scope = {
 			add_trade_modifier = {
 				who = GEN
@@ -1289,7 +1289,7 @@ country_event = { #16 The Genoese Accept our Offer!
 		name = "resurgent_BYZ.16.a"
 		ai_chance = { factor = 1 }
 			
-		add_years_of_income = -0.25
+		add_years_of_income = -0.4
 		tooltip = {
 			GEN = {
 				add_opinion = {

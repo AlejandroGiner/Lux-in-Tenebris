@@ -95,7 +95,7 @@ byz_balkan_hegemony = {
 }
 
 byz_orthodox_slavs = {
-	tolerance_own = 2
+	tolerance_own = 1
 }
 
 byz_armenian_ambition = {
@@ -119,8 +119,8 @@ byz_greater_greece_greek = {
 }
 
 byz_caucasus_mountain_border = {
-	defensiveness = 0.1
-	land_morale = 0.05
+	garrison_size = 0.15
+	global_garrison_growth = 0.15
 }
 
 byz_pope_subjugated = {
@@ -139,7 +139,8 @@ byz_flowing_spice = {
 }
 
 byz_indian_trade_company = {
-	trade_goods_size_modifier = 0.1
+	trade_goods_size_modifier = 0.05
+	trade_company_investment_cost = -0.1
 }
 
 byz_patriarch_blessing = {
