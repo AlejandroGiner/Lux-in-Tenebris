@@ -4041,17 +4041,39 @@ panama_area = {
     835 2664 2819 4595
 }
 
-east_cuba_area = { #3
-	486 2654 2655 2656 5572 3322
+lucayan_area = { #2
+	482 5574 5575 7016 5576 5577 483 481
+}
+
+#Caribbean
+
+west_cuba_area = { 
+   484 4624 4622 3321 5550 5551
+}
+
+east_cuba_area = { #South
+	486 2654 2655 5572 5548 5549
+}
+
+central_cuba_area = {
+	485 4623 3322 5546 2656 5547
+}
+
+west_hispaniola_area = { #4
+    488 489 4618 4619 5563 5565
+}
+
+dominica_area = { #5
+   490 4620 4621 2658 2659 5567
 }
 
 greater_antilles_area = { #4
 	color = { 234 25 64 }
-    487 492 5584 493 7622 7621
+    487 492 5584 493 7622 7621 5545
 }
 
-lucayan_area = { #2
-	482 5574 5575 7016 5576 5577 483 481
+leeward_antilles_area = {
+   491 5578 5579 502 5581
 }
 
 leeward_islands_area = {
@@ -4537,24 +4559,6 @@ bighorn_area = {
 	2504 2506 5846 5613 5845
 }
 
-#Caribbean
-
-west_cuba_area = {
-   484 485 4624 4622 4623 3321
-}
-
-west_hispaniola_area = { #4
-    488 489 4618 4619 5563 5565
-}
-
-dominica_area = { #5
-   490 4620 4621 2658 2659 5567
-}
-
-leeward_antilles_area = {
-   491 5578 5579 502 5581
-}
-
 ##########################
 #Beyond Typus Sea Provinces
 ##########################
@@ -4600,7 +4604,6 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #BTC working on 
-5545 5546 5547 5548 5549 5550 5551 
 5552 5553 5554 5555 5556 5557 5558 5559 5560 5561 5573
 
 #RNW Sea provinces
