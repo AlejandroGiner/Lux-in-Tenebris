@@ -110,8 +110,7 @@ capital = 210	# Pamplona
 	}
 }
 
-1512.9.1 = { capital = 176 government = monarchy
-add_government_reform = autocracy_reform } # Bearn/Foix 
+1512.9.1 = { capital = 176 } # Bearn/Foix 
   
 1517.1.1 = {
 	monarch = {
@@ -166,8 +165,6 @@ add_government_reform = autocracy_reform } # Bearn/Foix
 	}
 }
 
-1560.1.1 = { religion = reformed set_legacy_government = administrative_monarchy }
-
 1562.1.1 = { leader = {	name = "Louis I de Condé"	type = general	fire = 2	shock = 3	manuever = 4	siege = 3	death_date = 1569.1.1 } }
 
 1572.6.9 = {
@@ -181,6 +178,3 @@ add_government_reform = autocracy_reform } # Bearn/Foix
 		leader = { 	name = "Enrique III"		type = general	fire = 4	shock = 4	manuever = 2	siege = 0 }
 	}
 }
-
-1661.3.9 = { government = monarchy
-add_government_reform = autocracy_reform }
