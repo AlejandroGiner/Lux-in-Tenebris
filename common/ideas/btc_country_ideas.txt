@@ -3612,44 +3612,46 @@ LEK_ideas = {
 }
 
 LTE_ideas = {
-	start = {
-		global_tax_modifier = 0.10
-		land_morale = 0.1
-	}
+    start = {
+        tolerance_own = 3
+        papal_influence = 2
+    }
 
-	bonus = {
-		global_manpower_modifier = 0.2
-	}
+    bonus = {
+        legitimacy = 1
+    }
 
-	trigger = {
-		tag = LTE
-	}
-	free = yes
+    trigger = {
+        tag = LTE
+    }
+    free = yes
 
-	latinokratia = {
-		num_accepted_cultures = 1
-		prestige = 1
-	}
-	latin_patriarchate = {
-		papal_influence = 2
-		tolerance_own = 2
-		tolerance_heretic = 1
-	}
-	crown_of_thorns_latin_empire = {
-		global_unrest = -2
-	}
-	imperium_romaniae_latin_empire = {
-		legitimacy = 1
-	}
-	western_administration_principles_latin_empire = {
-		technology_cost = -0.10
-	}
-	venetian_merchants_and_mercenaries_latin_empire = {
-		mercenary_cost = -0.25
-	}
-	traditions_of_warfare_latin_empire = {
-		army_tradition = 1
-	}
+    lte_adapt_greek_administrators = {
+        global_tax_modifier = 0.1
+    }
+    latinokratia = {
+        num_accepted_cultures = 1
+        technology_cost = -0.05
+    }
+    lte_induct_knightly_orders = {
+        land_morale = 0.1
+        vassal_forcelimit_bonus = 1
+    }
+    venetian_merchants_and_mercenaries_latin_empire = {
+        merc_maintenance_modifier = -0.15
+        mercenary_discipline = 0.1
+    }
+    lte_bastion_of_christendom = {
+        fort_maintenance_modifier = -0.25
+        rival_border_fort_maintenance = -0.75
+    }
+    traditions_of_warfare_latin_empire = {
+        army_tradition = 0.25
+        army_tradition_decay = -0.01
+    }
+    lte_eternal_crusade = {
+        extra_manpower_at_religious_war = yes
+    }
 }
 
 GZR_ideas = {
@@ -5047,5 +5049,45 @@ AMZ_ideas = {
 	}
 	AMZ_idea7 = {
 		light_ship_power = 0.1
+	}
+}
+
+CUB_ideas = {
+	start = {
+		global_tax_modifier = 0.15
+		improve_relation_modifier = 0.1
+	}
+
+	bonus = {
+        global_trade_power = 0.1
+	}
+
+	trigger = {
+		tag = CUB
+	}
+	free = yes		# will be added at load
+
+	CUB_idea1 = {
+		land_morale = 0.15
+	}
+	CUB_idea2 = {
+		stability_cost_modifier = -0.1
+	}
+	CUB_idea3 = {
+		naval_forcelimit_modifier = 0.2
+	}
+	CUB_idea4 = {
+		diplomatic_reputation = 1
+	}
+	CUB_idea5 = {
+		galley_power = 0.15
+		privateer_efficiency = 0.25
+	}
+	CUB_idea6 = {
+		global_trade_goods_size_modifier = 0.1
+		development_cost = -0.1
+	}
+	CUB_idea7 = {
+		num_accepted_cultures = 1
 	}
 }
