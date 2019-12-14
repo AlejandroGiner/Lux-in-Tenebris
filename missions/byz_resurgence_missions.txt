@@ -1,4 +1,4 @@
-#Written by Dub
+#Designed by Dub, adapted by Helena
 
 #Once more, a complete rewrite from the original!
 
@@ -61,7 +61,7 @@ byz_silk_road = {
 				name = "byz_silk_road"
 				duration = -1
 			}
-			add_mercantilism = 2
+			add_mercantilism = 5
 		}
 	}
 	
@@ -6025,7 +6025,35 @@ byz_far_east = {
 			#Claims
 			custom_tooltip = byz_conquer_arachosia_paropamisadae_claims
 			hidden_effect = { #Arachosia & Paropamisadae
-				576 = {
+				2229 = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				ghor_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				kabulistan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				balkh_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				577 = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -6048,15 +6076,34 @@ byz_far_east = {
 		}
 		
 		provinces_to_highlight = {
-			byz_conquer_arachosia_paropamisadae_provinces = yes
+			OR = {
+				area = ghor_area
+				area = kabulistan_area
+				area = balkh_area
+				province_id = 577
+				province_id = 2229
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_conquer_arachosia_paropamisadae_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			ghor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			kabulistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			balkh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			577 = {
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			2229 = {
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
@@ -6069,11 +6116,38 @@ byz_far_east = {
 			#Claims
 			custom_tooltip = byz_conquer_indus_claims
 			hidden_effect = { #Indus
-				every_province = {
+				2068 = {
 					limit = {
-						byz_conquer_indus_provinces = yes
+						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sindh_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				multan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				lahore_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sind_sagar_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -6094,15 +6168,35 @@ byz_far_east = {
 		}
 		
 		provinces_to_highlight = {
-			byz_conquer_indus_provinces = yes
+			OR = {
+				area = sind_sagar_area
+				area = lahore_area
+				arae = multan_area
+				arae = sindh_area
+				province_id = 2068
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_conquer_indus_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			sind_sagar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lahore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			multan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			sindh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			2068 = {
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
@@ -6140,15 +6234,21 @@ byz_far_east_2 = {
 		}
 		
 		provinces_to_highlight = {
-			byz_conquer_hyrcania_provinces = yes
+			OR = {
+				area = mazandaran_area
+				area = tabarestan_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_conquer_hyrcania_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			mazandaran_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			tabarestan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
@@ -6176,11 +6276,24 @@ byz_far_east_2 = {
 			#Claims
 			custom_tooltip = byz_conquer_parthia_claims
 			hidden_effect = { #Parthia
-				every_province = {
+				birjand_area = {
 					limit = {
-						byz_conquer_parthia_provinces = yes
+						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				mashhad_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				427 = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -6200,15 +6313,25 @@ byz_far_east_2 = {
 		}
 		
 		provinces_to_highlight = {
-			byz_conquer_parthia_provinces = yes
+			OR = {
+				area = mashhad_area
+				area = birjand_area
+				province_id = 427
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_conquer_parthia_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			mashhad_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			birjand_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			427 = {
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
@@ -6221,11 +6344,18 @@ byz_far_east_2 = {
 			#Claims
 			custom_tooltip = byz_conquer_aria_drangiana_claims
 			hidden_effect = { #Carmania & Gedrosia
-				every_province = {
+				herat_area = {
 					limit = {
-						byz_conquer_aria_drangiana_provinces = yes
+						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sistan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { province_id = 2229 }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -6245,15 +6375,29 @@ byz_far_east_2 = {
 		}
 		
 		provinces_to_highlight = {
-			byz_conquer_aria_drangiana_provinces = yes
+			OR = {
+				area = herat_area
+				province_id = 435
+				province_id = 2230
+				province_id = 2224
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_conquer_aria_drangiana_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			herat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			custom_trigger_tooltip = {
+				tooltip = conquer_sistan_byz_tooltip
+				sistan_area = {
+					type = all
+					OR = {
+						province_id = 2229
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		
@@ -6266,11 +6410,31 @@ byz_far_east_2 = {
 			#Claims
 			custom_tooltip = byz_conquer_bactria_claims
 			hidden_effect = { #Bactria & Sogdiana
-				every_province = {
+				termez_area = {
 					limit = {
-						byz_conquer_bactria_provinces = yes
+						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				transoxiana_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				merv_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				ferghana_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -6291,15 +6455,31 @@ byz_far_east_2 = {
 		}
 		
 		provinces_to_highlight = {
-			byz_conquer_bactria_provinces = yes
+			OR = {
+				area = termez_area
+				area = transoxiana_area
+				area = merv_area
+				area = ferghana_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			has_fulfiled_province_requirement_for_mission_trigger = {
-				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
-				PROVINCES=byz_conquer_bactria_provinces
-				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			termez_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			merv_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			ferghana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
@@ -6310,5 +6490,4 @@ byz_far_east_2 = {
 			}
 		}
 	}
-	
 }
