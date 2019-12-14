@@ -1,85 +1,5 @@
 ﻿l_english:
- 
- #Scripted Triggers#
- ###################
- province_has_no_religious_center_modifier:0 "Province is not a religious center."
- 
- #Triggered Modifiers#
- #####################
- br_byz_subject_controlled_rome:0 "The Conquest of Rome"
- desc_br_byz_subject_controlled_rome:1 "The ancient city of Rome, the seat of the head of the Catholic church, is a fine target for conquest."
- br_byz_subject_controlled_jerusalem:0 "The Conquest of Jerusalem"
- desc_br_byz_subject_controlled_jerusalem:0 "We are in control of the Holy City of Jerusalem, held sacred by Muslims, Jews and Christians alike."
- br_byz_subject_controlled_mecca:0 "The Conquest of Mecca"
- desc_br_byz_subject_controlled_mecca:0 "We have conquered the holy city of Mecca, the sacred site of Islam, in the name of Christ."
- #Estates#
- #########
- 
- #Dynatoi 
- estate_dynatoi:0 "Dynatoi"
- EST_VAL_ESTABLISHED_PRONOIAR:0 "Pronoiar reform: §Y$VAL$%§!"
- EST_VAL_PRONOIAR:0 "Pronoiar reform: $VAL|Y$"
- 
- 
- #Syntechnioi
- estate_syntekhnioi:0 "Syntechnioi"
- 
- #Klerikoi
- estate_klerikoi:0 "Klerikoi"
- #Strategoi have been moved to a separate localisation file due to their extreme scope.
- #Same with Exarches.
- #Knightly Orders are in LatinEmpire.
- #Maybe I'll end up with a separate estates localisation file.
- 
- #Ideas#
- #######
- 
- #Byzantium
- #The dirty way of adjusting byzantine ideas without toying with 00_country_ideas.txt:
- new_BYZ_ideas:0 "Byzantine Ideas"
- new_BYZ_ideas_start:0 "Byzantine Traditions"
- new_BYZ_ideas_bonus:0 "Byzantine Ambition"
- #Ottoman adjustment
- new_TUR_ideas:0 "Ottoman Ideas"
- new_TUR_ideas_start:0 "Ottoman Traditions"
- new_TUR_ideas_bonus:0 "Ottoman Ambition"
- 
- 
- #New Byzantine Resurgence ideas:
- reinstitute_the_pronoia:0 "Reinstitution of the Pronoia"
- reinstitute_the_pronoia_desc:0 "The Pronoia was a system of small taxable land grants that allowed for the recruitment of self-supporting armies used by the Palaiologos dynasty. Inherited from the Komnenos, it only became hereditary under the Palaiologos. As the Empire continued to lose more land to the Ottomans, the Pronoiar would similarily diminish. Re-establishing it will once again allow for self-supporting units from which we can draw our Imperial Army."
- byzantine_renaissance:0 "Byzantine Renaissance"
- byzantine_renaissance_desc:0 "Not only have the past centuries harbored a vast number of freethinkers in our lands - with Constantinople and therefore our Empire placed at the border between the West and the East, we have historically been able to adapt the best of both sides, resulting in peak innovation that in the current age will only lead to good."
- basilics_law:0 "Basilics"
- basilics_law_desc:0 "The code of laws that is said to have influenced almost every single country's laws to date is Justinian's Code. Based on this code, Leo the Wise and his brothers in the 10th century created the Basilics, correcting its contradictions and translated it into Greek, setting a new standard for what is Roman Law, at least in the Empire."
- byz_formalize_succession_laws:0 "Formalization of Succesion Laws"
- byz_formalize_succession_laws_desc:0 "The succession of the Emperor and Autocrat of the Romans has ever since the founding of Rome been based off the ideals of the Republic - Every successor is elected co-emperor and backed by the Senate, at least in name. This has in more than one occasion resulted in numerous pretenders claiming the throne for themselves. Considering the Palaiologoi have managed to held the throne ever since the reconquest of Constantinople in 1261, it would only be fitting that we are the ones who establish clear succession laws, as we rise once more from the ashes."
- byzantine_resurgence:0 "The Purple Phoenix"
- byzantine_resurgence_desc:0 "We have through our hardships and endeavors managed to rise from the ashes. Clad in the most royal purple, we are determined to reclaim our legacy as the ancestors of Western Civilization. Our Imperial banner shall wave in the wind as we strike down our foes with righteous might. Let it be known that this is the dawn of a new age. An age of restoration. An age of triumph and resurgence. An age that will forever go down in history as the rebirth of the Purple Phoenix."
- #From Renovatio Imperii
- bureau_of_barbarians:0 "Reestablish the Bureau of Barbarians"
- bureau_of_barbarians_desc:0 "The Bureau of Barbarians was an office designed to facilitate relations between the Byzantine Empire and her neighbors. By reestablishing this office, we can regain our diplomatic capabilities needed to strengthen the Empire."
- 
- #Latin Empire
- LTE_ideas:0 "Latin Ideas"
- LTE_ideas_start:0 "Latin Traditions"
- LTE_ideas_bonus:0 "Latin Ambition"
- lte_adapt_greek_administrators:0 "Adapt Greek Administrators"
- lte_adapt_greek_administrators_desc:0 "Upon the establishment of the First Latin Empire, Emperor Baldwin I dissolved the Greek Empire's existing bureaucracy for a lack of trust in the greek administrators. While all in good faith, it wrecked havoc upon the economy and civil services. Let us make sure we do not make the same mistake as our predecessors and incorperate the local system instead."
- lte_the_city_of_cities:0 "The City of Cities"
- lte_the_city_of_cities_desc:0 "Constantinople has historically been a great city. While the first Empire certainly was responsible for a great deal of its demise, we shall make sure this does not happen again, and that we rebuild the city to its former glory. Only then can we be seen as the True Roman Empire."
- lte_invite_italian_merchants:0 "Invite Italian Merchants"
- lte_invite_italian_merchants_desc:0 "The Italians have been renowned for their manuevering around the art of trading, one area we must admit that we are lacking in. If we invite them to settle in the City of Cities that is Constantinople then, maybe we can utilize their skills for the betterment of our Empire."
- lte_induct_knightly_orders:0 "Induct Knightly Orders"
- lte_induct_knightly_orders_desc:0 "Religion is a prime reason for warring; a soldier who belives his bloody deeds are ordained by God is relieved of guilt. As the Empire has been restored, many of the knightly orders have become centered around us. By introducing them into our army we shall bolster the zeal of our forces."
- lte_bastion_of_christendom:0 "Bastion of Christendom"
- lte_bastion_of_christendom_desc:0 "Little credit has been given by us westeners how much the Greek Empire held up against the infidels from the Orient, protecting Europe. As they are now out of the picture however, it is our duty to take their place and thus proclaim ourselves the Bastion of Christendom!"
- lte_reform_east_latin_rites:0 "Reform East Latin Rites"
- lte_reform_east_latin_rites_desc:0 "The churches of the East have always held their own traditions and theological peculiarities divided between the various patriarchs and metropoli. By reforming them into a uniform organization, we will be able to better lead people to the one True Church."
- lte_eternal_crusade:0 "Eternal Crusade"
- lte_eternal_crusade_desc:0 "If our Empire is to survive this time around and not fall to its enemies, we cannot depend solely on the support of the Pope and Italy. As proven once, without men to fight for our cause, we are doomed. Therefore we must declare these lands be to rid of the impure, to inspire our men to put their faith into God, and that we zealously march onwards to the Holy Land and beyond."
- 
- 
+
  #Decisions#
  ###########
  byz_move_capital_to_rome_title:0 "Move capital to Rome"
@@ -109,13 +29,7 @@
  
  convert_to_orthodox_title:0 "Convert to Orthodox"
  convert_to_orthodox_desc:0 "The Orthodox christians have shown their authority and mended the wound that had our faith split off from theirs. At this point, our church heads are no more and our religion is seen as a mere heresy to theirs. It might be in our best interest to peacefully convert in order to maintain the legitimacy of our faith."
- 
- #Latin Empire
- restore_latin_empire_title:0 "Restore the Latin Empire"
- restore_latin_empire_desc:0 "There was a time when Latins ruled over Constantinople. While by many this state has been regarded as doomed from the beginning of its formation, its effects still linger here in the East. If we work towards reforming this Empire and bringing Catholicism to the City of the World's Desire, we may proclaim ourselves a true successor state of Rome."
- LTE:0 "Latin Empire"
- LTE_ADJ:0 "Latin"
- 
+
  #From Renovatio Imperii:
  reform_varangian_guard_title:0 "Reform the Varangian Guard"
  reform_varangian_guard_desc:0 "The Varangian Guard was an elite military unit of the Imperial Army who served as the personal bodyguards of the Emperor. The Varangian Guard consisted of mercenaries from the Scandinavian and Russian regions, as well as Englishmen in later eras, who were all known for their trememdous fighting power. If we can reform this mercenary unit, we will have a core of dedicated soldiers capable of destroying the enemy on the battlefield, as well as protecting our Emperor from political intrigues in Constantinople. Incidentally, it is also a good way for mercenaries to earn Byzantine citizenship, and bind them closer to the Empire."

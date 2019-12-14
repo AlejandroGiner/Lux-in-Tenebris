@@ -3580,7 +3580,7 @@ LEK_ideas = {
 	}
 
 	bonus = {
-		army_tradition_decay = -0.02
+		army_tradition_decay = -0.01
 	}
 
 	trigger = {
@@ -3595,10 +3595,10 @@ LEK_ideas = {
 		global_unrest = -1
 	}
 	LEK_idea3 = {
-		global_manpower_modifier = 0.1
+		global_manpower_modifier = 0.15
 	}
 	LEK_idea4 = {
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	LEK_idea5 = {
 		loot_amount = 0.20
@@ -3612,46 +3612,46 @@ LEK_ideas = {
 }
 
 LTE_ideas = {
-    start = {
-        tolerance_own = 3
-        papal_influence = 2
-    }
+	start = {
+		tolerance_own = 3
+		papal_influence = 2
+	}
 
-    bonus = {
-        legitimacy = 1
-    }
+	bonus = {
+		legitimacy = 1
+	}
 
-    trigger = {
-        tag = LTE
-    }
-    free = yes
+	trigger = {
+		tag = LTE
+	}
+	free = yes
 
-    lte_adapt_greek_administrators = {
-        global_tax_modifier = 0.1
-    }
-    latinokratia = {
-        num_accepted_cultures = 1
-        technology_cost = -0.05
-    }
-    lte_induct_knightly_orders = {
-        land_morale = 0.1
-        vassal_forcelimit_bonus = 1
-    }
-    venetian_merchants_and_mercenaries_latin_empire = {
-        merc_maintenance_modifier = -0.15
-        mercenary_discipline = 0.1
-    }
-    lte_bastion_of_christendom = {
-        fort_maintenance_modifier = -0.25
-        rival_border_fort_maintenance = -0.75
-    }
-    traditions_of_warfare_latin_empire = {
-        army_tradition = 0.25
-        army_tradition_decay = -0.01
-    }
-    lte_eternal_crusade = {
-        extra_manpower_at_religious_war = yes
-    }
+	lte_adapt_greek_administrators = {
+		global_tax_modifier = 0.1
+	}
+	latinokratia = {
+		num_accepted_cultures = 1
+		technology_cost = -0.05
+	}
+	lte_induct_knightly_orders = {
+		land_morale = 0.1
+		vassal_forcelimit_bonus = 1
+	}
+	venetian_merchants_and_mercenaries_latin_empire = {
+		merc_maintenance_modifier = -0.15
+		mercenary_discipline = 0.1
+	}
+	lte_bastion_of_christendom = {
+		fort_maintenance_modifier = -0.25
+		rival_border_fort_maintenance = -0.75
+	}
+	traditions_of_warfare_latin_empire = {
+		army_tradition = 0.25
+		army_tradition_decay = -0.01
+	}
+	lte_eternal_crusade = {
+		extra_manpower_at_religious_war = yes
+	}
 }
 
 GZR_ideas = {
@@ -3670,17 +3670,17 @@ GZR_ideas = {
 	free = yes
 
 	GZR_idea1 = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	GZR_idea2 = {
-		defensiveness = 0.20
+		defensiveness = 0.15
 	}
 	GZR_idea3 = {
 		improve_relation_modifier = 0.25
 	}
 	GZR_idea4 = {
 		naval_forcelimit_modifier = 0.25
-		galley_power = 0.15
+		galley_power = 0.2
 	}
 	GZR_idea5 = {
 		cavalry_power = 0.15
