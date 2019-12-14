@@ -319,7 +319,7 @@ picardy_area = { #4
 	87 88 89 3023 3024 5529 5534
 }
 
-ile_de_france_area = { #3 (Champagne and Ile de France)
+ile_de_france_area = { #3
 	182 183 4388 5142 3012 185 3010
 }
 
@@ -340,11 +340,11 @@ champagne_area = {
 # Low Countries				 		   #
 ########################################
 
-wallonia_area = { #3
+wallonia_area = { #Hainaut
 	91 1743 4831 4832 5531
 }
 
-flanders_area = { #4	#TOTBTPCHANGES
+flanders_area = { #8
 	90 1865 3064 3065 3031 7596 5498 5505
 }
 
@@ -1077,7 +1077,7 @@ romandie_area = { #West Switzerland
 }
 
 upper_rhineland_area = { #Baden
-	72 74 4799 4803 4804 4805
+	72 74 4803 4804 4805
 }
 
 elsass_area = {
@@ -4137,8 +4137,6 @@ eastern_ireland_area = { }
 western_ireland_area = { }
 
 seine_area = { }
-
-#brabant_area = { }			#Cut in 1.25, but kept in BT for the moment
 
 north_karelia = { }	#Appears to be a vanilla bug? This should resolve its error log for now, anyway. Fix later
 
