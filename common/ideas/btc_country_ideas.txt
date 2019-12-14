@@ -3412,6 +3412,51 @@ DRB_ideas = {
 	}
 }
 
+SHE_ideas = {
+	start = {
+		global_manpower_modifier = 0.15
+		leader_land_shock = 1
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		tag = SHE
+	}
+
+	free = yes
+
+	SHE_idea1 = {
+		global_unrest = -1
+	}
+
+	SHE_idea2 = {
+		tolerance_own = 1
+	}
+	
+	SHE_idea3 = {
+		global_trade_power = 0.10
+	}
+
+	SHE_idea4 = {
+		production_efficiency = 0.15
+	}
+
+	SHE_idea5 = {
+		build_cost = -0.2
+	}
+
+	SHE_idea6 = {
+		improve_relation_modifier = 0.15
+	}
+
+	SHE_idea7 = {
+		prestige = 1
+	}
+}
+
 VAK_ideas = {
 	start = {
 		enemy_core_creation = 0.5
@@ -4654,47 +4699,353 @@ CNL_ideas = {
 	}
 }
 
-SHE_ideas = {
+HAT_ideas = {
 	start = {
-		global_manpower_modifier = 0.15
-		leader_land_shock = 1
+		naval_morale = 0.10
+		global_ship_cost = -0.1
 	}
-	
+
+	bonus = {
+		navy_tradition = 0.5
+	}
+
+	trigger = {
+		tag = HAT
+	}
+	free = yes		# will be added at load
+
+	unified_caribbean = {
+		num_accepted_cultures = 1
+	}
+	colonial_rule_haiti = {
+		hostile_attrition = 1
+	}
+	nation_of_slaves_haiti = {
+		global_unrest = -1
+	}
+	queen_of_the_caribbean = {
+		global_trade_power = 0.2
+	}
+	timber_industry_haiti = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	taino_traditions_haiti = {
+		global_manpower_modifier = 0.2
+	}
+	harsh_lands_haiti = {
+		global_tax_modifier = 0.1
+	}
+}
+
+LAP_ideas = {
+	start = {
+		global_unrest = -1
+		global_garrison_growth = 0.25
+	}
+
 	bonus = {
 		land_morale = 0.15
 	}
-	
+
 	trigger = {
-		tag = SHE
+		tag = LAP
+	}
+	free = yes		# will be added at load
+
+	revolutionary_spirit = {
+		republican_tradition = 0.5
+	}
+	fertile_pampas = {
+		global_tax_modifier = 0.1
+	}
+	rio_de_la_plata = {
+		global_trade_power = 0.2
+	}
+	patagonian_pecuary = {
+		land_forcelimit_modifier = 0.20
+	}
+	criollo_horses = {
+		cavalry_power = 0.10
+	}
+	silver_reserves = {
+		diplomatic_reputation = 3
+	}
+	argentinian_cultural_heritage = {
+		prestige = 1
+	}
+}
+
+CHL_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		infantry_power = 0.15
 	}
 
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	trigger = {
+		tag = CHL
+	}
+	free = yes		# will be added at load
+
+	nationalistic_traditions = {
+		enemy_core_creation = 0.5
+	}
+	cordillera_de_los_andes = {
+		hostile_attrition = 1
+	}
+	ancient_populations = {
+		technology_cost = -0.1
+	}
+	corralero_breed = {
+		cavalry_cost = -0.1
+	}
+	stability_chile = {
+		stability_cost_modifier = -0.1
+	}
+	copper_mining_chile = {
+		global_tax_modifier = 0.1
+	}
+	maritime_hegemony = {
+		naval_forcelimit_modifier = 0.25
+	}
+}
+
+COL_ideas = {
+	start = {
+		land_attrition = -0.15
+		cavalry_power = 0.15
+	}
+
+	bonus = {
+		free_leader_pool = 1
+	}
+
+	trigger = {
+		tag = COL
+	}
+	free = yes		# will be added at load
+
+	COL_idea1 = {
+		prestige = 1
+	}
+	COL_idea2 = {
+		unjustified_demands = -0.25
+		core_creation = -0.15
+	}
+	COL_idea3 = {
+		administrative_efficiency = 0.05
+	}
+	COL_idea4 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	COL_idea5 = {
+        leader_land_manuever = 1
+	}
+	COL_idea6 = {
+		global_trade_power = 0.2
+	}
+	COL_idea7 = {
+		reduced_liberty_desire = 10
+	}
+}
+
+VNZ_ideas = {
+	start = {
+		infantry_cost = -0.1
+		tolerance_own = 2
+	}
+
+	bonus = {
+		global_manpower_modifier = 0.15
+	}
+
+	trigger = {
+		tag = VNZ
+	}
 	free = yes
 
-	SHE_idea1 = {
-		global_unrest = -1
+	orinoco_trade = {
+		trade_steering = 0.20
+	}
+	battle_of_carabobo = {
+		leader_land_fire = 1
+	}
+	oil_venezuela = {
+		global_trade_power = 0.2
+	}
+	angel_falls = {
+		prestige = 1
+	}
+	yellow_blue_and_red = {
+		war_exhaustion_cost = -0.1
+	}
+	the_welser_family = {
+		inflation_reduction = 0.1
+	}
+	legacy_of_gran_colombia_venezuela = {
+		core_creation = -0.15
+	}
+}
+
+PEU_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.1
 	}
 
-	SHE_idea2 = {
-		tolerance_own = 1
-	}
-	
-	SHE_idea3 = {
-		global_trade_power = 0.10
+	bonus = {
+		stability_cost_modifier = -0.1
 	}
 
-	SHE_idea4 = {
+	trigger = {
+		tag = PEU
+	}
+	free = yes		# will be added at load
+
+	machu_picchu = {
+		global_tax_modifier = 0.1
+	}
+	ceviche_tradition = {
+		manpower_recovery_speed = 0.20
+	}
+	inti_raymi = {
+		tolerance_heathen = 2
+	}
+	guano = {
+		global_manpower_modifier = 0.2
+	}
+	walls_of_lima = {
+		defensiveness = 0.25
+	}
+	the_llama_peru = {
 		production_efficiency = 0.15
 	}
+	m_p_peru = {
+		global_unrest = -1
+	}
+}
 
-	SHE_idea5 = {
-		build_cost = -0.2
+PRG_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.15
+		num_accepted_cultures = 1
 	}
 
-	SHE_idea6 = {
-		global_ship_cost = -0.15
+	bonus = {
+		core_creation = -0.1
 	}
 
-	SHE_idea7 = {
+	trigger = {
+		tag = PRG
+	}
+	free = yes		# will be added at load
+
+	PRG_idea1 = {
+		land_morale = 0.2
+	}
+	PRG_idea2 = {
+		tolerance_own = 2
+	}
+	PRG_idea3 = {
+		development_cost = -0.2
+	}
+	PRG_idea4 = {
+        inflation_reduction = 0.1
+	}
+	PRG_idea5 = {
+		defensiveness = 0.2
+		garrison_size = 0.15
+	}
+	PRG_idea6 = {
+		hostile_attrition = 1
+	}
+	PRG_idea7 = {
+		global_manpower_modifier = 0.15
+	}
+}
+
+GYA_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	trigger = {
+		tag = GYA
+	}
+	free = yes		#will be added at load.
+	
+	embracing_native_roots_guyana = {
+		leader_land_manuever = 1
+	}
+	
+	anti_colonialism_guyana = {
+		land_morale = 0.1
+	}
+	
+	sugar_and_tobacco_production_guyana = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	the_moyne_commission = {
+		republican_tradition = 0.5
+	}
+	
+	afro_guyanese_military_tradition = {
+		army_tradition = 0.25
+		navy_tradition = 0.25
+	}
+	
+	multicultural_art_guyana = {
 		prestige = 1
+	}
+	
+	border_disputes_guyana = {
+		ae_impact = -0.1
+	}
+}
+
+AMZ_ideas = {
+	start = {
+		trade_steering = 0.15
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		prestige_decay = -0.02
+	}
+
+	trigger = {
+		tag = AMZ
+	}
+	free = yes		# will be added at load
+
+	AMZ_idea1 = {
+		production_efficiency = 0.2
+	}
+	AMZ_idea2 = {
+        movement_speed = 0.1
+	}
+	AMZ_idea3 = {
+		build_cost = -0.15
+		development_cost = -0.15
+	}
+	AMZ_idea4 = {
+        shock_damage = 0.15
+	}
+	AMZ_idea5 = {
+		trade_efficiency = 0.15
+	}
+	AMZ_idea6 = {
+		improve_relation_modifier = 0.15
+	}
+	AMZ_idea7 = {
+		light_ship_power = 0.1
 	}
 }
