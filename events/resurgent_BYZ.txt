@@ -83,7 +83,7 @@ country_event = { #2 The Genoese Merchants
 		}
 		any_province = {
 			OR = {
-				region = balkan_region
+				region = greece_region_btc
 				region = anatolia_region
 				area = erzurum_area
 				area = crimea_area
@@ -122,7 +122,7 @@ country_event = { #2 The Genoese Merchants
 			limit = {
 				owned_by = GEN
 				OR = {
-					region = balkan_region
+					region = greece_region_btc
 					region = anatolia_region
 					area = erzurum_area
 					area = crimea_area
@@ -308,16 +308,10 @@ province_event = { #5 The Restoration of Constantinopolitan Manufactories
 			}
 			add_institution_embracement = {
 				which = renaissance
-				value = 100
+				value = 35
 			}
 		}
-		change_trade_goods = glass
-		change_price = {
-			trade_goods = glass
-			key = byz_byzantine_glass
-			value = 0.15
-			duration = -1
-		}
+		add_base_production = 2
 		
 	}
 	option = {	#Let's reintroduce the Byzantine Silk!
@@ -333,17 +327,11 @@ province_event = { #5 The Restoration of Constantinopolitan Manufactories
 			}
 			add_institution_embracement = {
 				which = renaissance
-				value = 100
+				value = 35
 			}
 			
 		}
 		change_trade_goods = silk
-		change_price = {
-			trade_goods = silk
-			key = byz_byzantine_silk
-			value = 0.1
-			duration = -1
-		}
 		#To allow the re-establishment of Tyrian Purple production event in Colophon, which lies in the Smyrna province.
 		set_global_flag = byz_byzantine_silk_restored
 	}
@@ -394,12 +382,12 @@ country_event = { #6 Rebuilding the Great Palace
 		name = "resurgent_BYZ.6.a"
 		ai_chance = { factor = 75 }
 		
-		add_years_of_income = -1.0
-		add_prestige = 20
-		add_legitimacy = 20
+		add_years_of_income = -2
+		add_prestige = 10
+		add_splendor = 50
 		151 = {
-			add_base_tax = 2
-			add_base_production = 2
+			add_base_tax = 1
+			add_base_production = 1
 			add_province_modifier = {
 				name = "byz_rebuilt_great_palace"
 				duration = -1
@@ -508,7 +496,7 @@ province_event = { #8 Reestablishing the Tyrian Purple
 	}
 
 	mean_time_to_happen = {
-		years = 5
+		years = 10
 	}
 	
 	option = {	#Settle the land to bring back the Tyrian Purple!
@@ -517,38 +505,14 @@ province_event = { #8 Reestablishing the Tyrian Purple
 		
 		owner = {
 			add_years_of_income = -1
-			add_adm_power = -100
-			add_dip_power = -100
+			add_adm_power = -50
+			add_dip_power = -50 #Dip and adm cost reduced since no price change
 		}
-		add_base_tax = 4
-		add_base_production = 4
+		add_base_tax = 2
+		add_base_production = 2
 		add_or_spawn_center_of_trade = { LEVEL = 1 } #Change level of center of trade
 		change_culture = greek
-		if = {
-			limit = {
-				NOT = {
-					renaissance = 100
-				}
-			}
-			add_institution_embracement = {
-				which = renaissance
-				value = 100
-			}
-			
-		}
 		change_trade_goods = dyes
-		change_price = {
-			trade_goods = dyes
-			key = byz_tyrian_purple
-			value = 0.25
-			duration = -1
-		}
-		change_price = { #Silk is good with Tyrian Purple!
-			trade_goods = silk
-			key = byz_tyrian_purple
-			value = 0.1
-			duration = -1
-		}
 		#To allow the expansion of the Tyrian Purple industry event to occur.
 		set_global_flag = byz_tyrian_purple_restored
 	}
@@ -584,18 +548,18 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 	}
 
 	mean_time_to_happen = {
-		years = 5
+		years = 10
 	}
 	
 	option = {	#Expand the Tyrian Purple industry!
 		name = "resurgent_BYZ.9.a"
 		ai_chance = { factor = 25 }
-		add_years_of_income = -1
-		add_adm_power = -100
-		add_dip_power = -100
+		add_years_of_income = -1.5
+		add_adm_power = -75
+		add_dip_power = -75
 		1855 = { #Tyros
-			add_base_tax = 3
-			add_base_production = 3
+			add_base_tax = 1
+			add_base_production = 2
 			add_or_spawn_center_of_trade = { LEVEL = 1 } #Change level of center of trade
 			change_trade_goods = dyes
 		}
@@ -645,7 +609,7 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 					trade_goods = cloth
 					OR = {
 						region = anatolia_region
-						region = balkan_region
+						region = greece_region_btc
 						region = mashriq_region
 					}
 				}
@@ -709,7 +673,7 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 					trade_goods = cloth
 					OR = {
 						region = anatolia_region
-						region = balkan_region
+						region = greece_region_btc
 						region = mashriq_region
 					}
 				}
@@ -741,8 +705,8 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 		add_adm_power = -50
 		add_dip_power = -50
 		1855 = { #Tyros
-			add_base_tax = 3
-			add_base_production = 3
+			add_base_tax = 1
+			add_base_production = 2
 			add_or_spawn_center_of_trade = { LEVEL = 1 }
 			change_trade_goods = dyes
 		}
@@ -761,8 +725,8 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 		add_adm_power = -50
 		add_dip_power = -50
 		1855 = { #Tyros
-			add_base_tax = 3
-			add_base_production = 3
+			add_base_tax = 1
+			add_base_production = 2
 			add_or_spawn_center_of_trade = { LEVEL = 1 }
 			change_trade_goods = dyes
 		}
@@ -809,23 +773,9 @@ country_event = { #10 The Depletion of the Murex snails
 					region = mashriq_region
 				}
 			}
-			add_base_tax = -1
-			add_base_production = -2
+			add_base_production = -1
 			change_trade_goods = unknown
 		}
-		change_price = {
-			trade_goods = dyes
-			key = byz_tyrian_purple_depleted
-			value = -0.25
-			duration = -1
-		}
-		change_price = { #Silk is dependent on tyrian purple.
-			trade_goods = silk
-			key = byz_tyrian_purple_depleted
-			value = -0.1
-			duration = -1
-		}
-		
 	}
 }
 
@@ -909,8 +859,8 @@ country_event = { #11 City of the World's Desire
 			factor = 20
 		}
 		
-		add_prestige = -20
-		add_legitimacy = -10
+		add_prestige = -10
+		add_legitimacy = -5
 	}
 }
 
@@ -941,7 +891,7 @@ country_event = { #12 Growth of Constantinople
 			ADM = 5
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.7
 			ADM = 6
 		}
 	}
@@ -997,7 +947,7 @@ country_event = { #13 The Hippodrome of Constantinople
 			ADM = 5
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.7
 			ADM = 6
 		}
 		modifier = {
@@ -1015,7 +965,7 @@ country_event = { #13 The Hippodrome of Constantinople
 
 	option = {	#Chariot races shall return to Constantinople once more!
 		name = "resurgent_BYZ.13.a"
-		ai_chance = { factor = 75 }
+		ai_chance = { factor = 85 }
 		
 		add_years_of_income = -1.0
 		add_prestige = 10
@@ -1044,7 +994,7 @@ country_event = { #13 The Hippodrome of Constantinople
 	}
 	option = {	#This is a waste of our precious time and resources.
 		name = "resurgent_BYZ.13.b"
-		ai_chance = { factor = 25 }
+		ai_chance = { factor = 15 }
 		
 		add_prestige = -5
 	}
@@ -1409,7 +1359,7 @@ country_event = { #19 The Fall of Constantinople?
 	
 	option = {	#Offer our assistance
 		name = "resurgent_BYZ.19.a"
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 80 }
 		
 		BYZ = {
 			country_event = {
@@ -1430,7 +1380,7 @@ country_event = { #19 The Fall of Constantinople?
 	
 	option = {	#Do not
 		name = "resurgent_BYZ.19.b"
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 20 }
 	}
 }
 
@@ -1565,10 +1515,6 @@ country_event = { #22 The Turks have been repelled!
 		name = "resurgent_BYZ.22.a"
 		ai_chance = { factor = 1 }
 		
-		# hidden_effect = {
-			# kill_leader = "Giovanni Guistiniani"
-		# }
-		
 		3195 = {
 			remove_core = BYZ
 			add_core = GEN
@@ -1647,7 +1593,7 @@ country_event = { #23 The Purchase of Amastris - Trebizonder Proposal
 		name = "resurgent_BYZ.14.b"
 		ai_chance = { factor = 66 }
 		
-		add_mercantilism = 1
+		add_mercantilism = 5
 		GEN = {
 			add_opinion = {
 				who = TRE
@@ -1874,45 +1820,6 @@ country_event = { #26 The Genoese Decline our Offer...
 	}
 }
 
-#Scrapped because of:
-#1. There's no surefire way to detect if a foreign dynasty is on the throne. The problem is that leaders draw from the country file, but pretenders draw from the culture list.
-#Thus, the options are basically:
-#	i. Go through every possible Greek dynasty (There's hundreds of them because of CKII integration)
-#	ii. Use Byzantine leader names but risk Greek pretenders not being recognised.
-#	iii. Use pretender names from the Succession Crisis, risking certain leader names as well as Greek pretenders.
-#The first option is the surefire way, but takes an insane amount of trigger logic, which, well, I'd like to avoid at all costs.
-#2. Even if this happens, no other nation has anything like this, well, except the Habsburgs, and that's only one dynasty. I suppose that would be evidence enough, but... meh.
-#3. This would severely weaken Byzantium, as it would effectively re-run the Succession Crisis. Which doesn't have to be a bad thing I guess...
-#In the end, this needs a bit more contemplating.
-# country_event = { #27 False dynasty on the throne.
-	# id = resurgent_BYZ.27
-	# title = "resurgent_BYZ.27.t"
-	# desc = "resurgent_BYZ.27.d"
-	# picture = GOOD_WITH_MONARCH_eventPicture
-	
-	# trigger = {
-		# is_byz_or_hellenic_rome_trigger = yes
-		# is_subject = no
-		# NOT = {
-			# dynasty = "Palaiologos"
-			# dynasty = "Komnenos"
-			# dynasty = "Laskaris"
-			# dynasty = "Komnenodoukas"
-			# dynasty = "Doukas"
-			# dynasty = "Angelos Philanthropenos"
-			# dynasty = "Angelos"
-			# dynasty = "Philanthropenos"
-			# dynasty = "Kantakouzenos"
-			# dynasty = "Gabras"
-		# }
-	# }
-	
-	# mean_time_to_happen = {
-		# months = 600 #50 years MTTH, shouldn't happen *too* often.
-	# }
-# }
-
-
 country_event = { #32 The city of Ailia and the Jews
 	id = resurgent_BYZ.32
 	title = "resurgent_BYZ.32.t" 
@@ -1963,6 +1870,7 @@ country_event = { #32 The city of Ailia and the Jews
 		name = "resurgent_BYZ.32.b" #Lift the ban and build a Third Temple
 		379 = {
 			change_religion = jewish
+			change_culture = mizrahi
 			add_province_modifier = {
 				name = "built_third_temple"
 				duration = -1
@@ -1972,7 +1880,7 @@ country_event = { #32 The city of Ailia and the Jews
 				duration = -1
 			}
 			add_base_tax = 2
-			add_base_production = 2
+			add_base_production = 1
 			change_province_name = "Hierosolyma"
 		}
 		add_years_of_income = -2.50
@@ -2001,10 +1909,6 @@ country_event = { #32 The city of Ailia and the Jews
 				has_idea_group = religious_ideas
 			}
 		}
-		
-		
-		
-		
 	}
 }
 
@@ -2021,7 +1925,7 @@ province_event = { #36 The Theme capital [ROOT.GetName] attracts the countryside
 			is_byz_or_hellenic_rome_trigger = yes
 			any_owned_province = {
 				NOT = { has_estate = estate_strategoi }
-				development = 10
+				development = 7
 				NOT = { has_province_modifier = byz_katepano_rule }
 				NOT = { province_has_center_of_trade_of_level = 2 }
 				NOT = { province_has_center_of_trade_of_level = 3 }
@@ -2036,7 +1940,7 @@ province_event = { #36 The Theme capital [ROOT.GetName] attracts the countryside
 				random_owned_province = {
 					limit = {
 						NOT = { has_estate = estate_strategoi }
-						development = 10
+						development = 7
 						NOT = { has_province_modifier = byz_katepano_rule }
 						NOT = { province_has_center_of_trade_of_level = 2 }
 						NOT = { province_has_center_of_trade_of_level = 3 }
@@ -2143,7 +2047,7 @@ country_event = { #37 The Rediscovery of Greek Fire
 	}
 	
 	mean_time_to_happen = {
-		years = 400 #Adjusted from 200 due to it firing wayy too often, I feel.
+		years = 400
 		modifier = {
 			factor = 0.75
 			AND = {

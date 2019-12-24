@@ -101,16 +101,6 @@ country_event = {
 				army_strength = { who = FROM value = 1.0 }
 			}	#England rethinks it when facing matched armies
 		}
-#Draiocht- I like the concept here, of encouraging a growing Irish rebellion, more serious than just one OPM, but it application it is too buggy right now. Dublin did historically break from England once or twice in favour of local rebellions, but practically guarenteed to be fully ceded to another OPM is too much
-#		random = {
-#			chance = 50
-#			random_province = {
-#				limit = { AND = { region = ireland_region owned_by = ENG } }
-#				cede_province = FROM
-#				add_core = FROM
-#			}
-#		}	#No longer must be Dublin, and no longer guarenteed
-#Draiocht - Maybe another event or decision, alongside this one, to represent the major religiously motivated rebellions later, of the sort that led to the foundation of the KoI under the England Throne. Another idea is to force other OPM in Ireland to join the war
 		declare_war_with_cb = {
 			who = FROM
 			casus_belli = cb_disloyal_vassal
@@ -292,36 +282,3 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = btpIRE.5
-	title = btpIRE.5.t
-	desc = btpIRE.5.d
-	#picture = 
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		ANI = { is_subject_of = ROOT is_subject_of_type = viceroyalty_bt }
-		ireland_region = {
-			owned_by = ROOT
-		}
-	}
-	
-	option = {
-		name = btpIRE.5.a
-		ireland_region = {
-			limit = { owned_by = ROOT }
-			cede_province = ANI
-			if = {
-				limit = { is_core = ROOT }
-				add_core = ANI
-				remove_core = ROOT
-			}
-			if = {
-				limit = { NOT = { is_core = ROOT } }
-				add_permanent_claim = ANI
-				remove_claim = ROOT
-			}
-		}
-	}
-}

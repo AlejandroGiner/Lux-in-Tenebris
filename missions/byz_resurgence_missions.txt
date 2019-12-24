@@ -872,11 +872,15 @@ byz_resurges = {
 					add_permanent_claim = ROOT
 				}
 				5894 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -2927,46 +2931,70 @@ byz_armenia_into_mesopotamia = {
 					add_permanent_claim = ROOT
 				}
 				2314 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				2310 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				406 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				415 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				4293 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				4294 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -3448,7 +3476,7 @@ byz_crusade_1_plus_egypt = {
 		}
 		
 		effect = {
-		
+			
 			2313 = {
 				add_base_tax = 2
 				add_base_production = 1
@@ -3482,11 +3510,15 @@ byz_crusade_1_plus_egypt = {
 					add_permanent_claim = ROOT
 				}
 				2315 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -3560,39 +3592,59 @@ byz_crusade_1_plus_egypt = {
 					add_permanent_claim = ROOT
 				}
 				1233 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				4323 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				5278 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				1234 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				4322 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 			custom_tooltip = byz_cyrenaica_claims
@@ -3876,11 +3928,15 @@ byz_cyrenaica_tripolitania = {
 					add_permanent_claim = ROOT
 				}
 				5309 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				djerba_area = {
 					limit = {
@@ -4015,11 +4071,15 @@ byz_exarches = {
 			custom_tooltip = byz_conquer_media_claims
 			hidden_effect = { #Media
 				2211 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				luristan_area = {
 					limit = {
@@ -4521,18 +4581,26 @@ byz_false_emperors = {
 					add_permanent_claim = ROOT
 				}
 				4752 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				3048 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -4668,16 +4736,25 @@ byz_iberia = {
 			custom_tooltip = byz_lusitania_claims
 			hidden_effect = { #Lusitania
 				alentejo_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT	
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 				extremadura_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT	
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 				beieras_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT	
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 			}
 			custom_tooltip = byz_karchidonia_claims
@@ -4697,25 +4774,37 @@ byz_iberia = {
 					add_permanent_claim = ROOT
 				}
 				3300 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				1750 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				7652 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -4915,18 +5004,26 @@ byz_iberia_3 = {
 			custom_tooltip = byz_tarraconia_claims
 			hidden_effect = { #Tarraconia
 				220 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				4550 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				catalonia_area = {
 					limit = {
@@ -5474,18 +5571,26 @@ byz_galatia = {
 					add_permanent_claim = ROOT
 				}
 				3110 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				5915 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -5628,39 +5733,59 @@ byz_galatia = {
 					add_permanent_claim = ROOT
 				}
 				5497 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				3060 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				5494 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				5496 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				96 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -5735,7 +5860,7 @@ byz_galatia = {
 						province_id = 77
 						province_id = 3207
 						country_or_non_sovereign_subject_holds = ROOT
-					}
+					} 
 				}
 			}
 			custom_trigger_tooltip = {
@@ -5797,7 +5922,7 @@ byz_far_east = {
 		ai_priority = {
 			factor = 5
 		}
-		media
+		
 		provinces_to_highlight = {
 			OR = {
 				area = luristan_area
@@ -5943,18 +6068,26 @@ byz_far_east = {
 					add_permanent_claim = ROOT
 				}
 				4327 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				431 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				makran_area = {
 					limit = {
@@ -5964,11 +6097,15 @@ byz_far_east = {
 					add_permanent_claim = ROOT
 				}
 				576 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -6026,11 +6163,15 @@ byz_far_east = {
 			custom_tooltip = byz_conquer_arachosia_paropamisadae_claims
 			hidden_effect = { #Arachosia & Paropamisadae
 				2229 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				ghor_area = {
 					limit = {
@@ -6054,11 +6195,15 @@ byz_far_east = {
 					add_permanent_claim = ROOT
 				}
 				577 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -6117,11 +6262,15 @@ byz_far_east = {
 			custom_tooltip = byz_conquer_indus_claims
 			hidden_effect = { #Indus
 				2068 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 				sindh_area = {
 					limit = {
@@ -6171,8 +6320,8 @@ byz_far_east = {
 			OR = {
 				area = sind_sagar_area
 				area = lahore_area
-				arae = multan_area
-				arae = sindh_area
+				area = multan_area
+				area = sindh_area
 				province_id = 2068
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -6291,11 +6440,15 @@ byz_far_east_2 = {
 					add_permanent_claim = ROOT
 				}
 				427 = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+					if = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
 				}
 			}
 		}

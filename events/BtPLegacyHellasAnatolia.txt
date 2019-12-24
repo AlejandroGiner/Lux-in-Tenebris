@@ -13,11 +13,11 @@ province_event = {
 	
 	trigger = {
 		province_id = 151
-		religion = orthodox
+		religion = ROOT
 		culture = greek
 		owner = {
 			tag = BYZ
-			religion = orthodox
+			religion = ROOT
 			owns = 149			#Edirne
 			owns = 316			#Kocaeli
 			owns = 3170			#Kirkkilise
@@ -40,8 +40,9 @@ province_event = {
 
 	option = { # Huzzah
 		name = "BtPLegacyHellasAnatolia.EVTOPTA1"
-		add_legitimacy = 10
-		add_prestige = 10
+		add_legitimacy = 5
+		add_prestige = 5
+		add_splendor = 30
 		if = {
 			limit = {
 				NOT = { has_global_flag = constantinople_restored }
@@ -49,7 +50,7 @@ province_event = {
 			151 = {
 				add_base_tax = 2
 				add_base_production = 2
-				add_base_manpower = 1
+				add_base_manpower = 3
 			}
 			set_global_flag = constantinople_restored
 		}

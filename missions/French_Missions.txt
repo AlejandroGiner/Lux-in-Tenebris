@@ -48,8 +48,6 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
-		}
-		effect = {
 			lower_brittany_area = { #Lower Brittany
 				limit = {
 					NOT = { is_core = ROOT }
@@ -57,8 +55,6 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
-		}
-		effect = {
 			if = {
 				limit = {
 					exists = BRI
