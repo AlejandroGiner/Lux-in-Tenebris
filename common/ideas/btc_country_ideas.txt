@@ -5091,3 +5091,43 @@ CUB_ideas = {
 		num_accepted_cultures = 1
 	}
 }
+
+
+
+TNV_ideas = {
+	start = {
+		defensiveness = 0.2
+        fire_damage_received = -0.1
+	}
+
+	bonus = {
+		prestige_decay = -0.01
+	}
+
+	trigger = {
+		tag = TNV
+	}
+	free = yes		# will be added at load
+
+	TNV_idea1 = {
+		legitimacy = 1
+	}
+	TNV_idea2 = {
+		fort_maintenance_modifier = -0.1
+	}
+	TNV_idea3 = {
+        global_institution_spread = 0.1
+	}
+	TNV_idea4 = {
+		production_efficiency = 0.1
+	}
+	TNV_idea5 = {
+		prestige = 1
+	}
+	TNV_idea6 = {
+		land_morale = 0.1
+	}
+	TNV_idea7 = {
+		province_warscore_cost = -0.1
+	}
+}
