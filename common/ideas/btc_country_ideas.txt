@@ -1680,7 +1680,7 @@ NSA_ideas = {
     }
     free = yes
     NSA_idea_1 = {
-        rebel_support_efficiency = 1.0
+        rebel_support_efficiency = 0.25
         diplomatic_upkeep = 1
     }
     NSA_idea_2 = {
@@ -5092,8 +5092,6 @@ CUB_ideas = {
 	}
 }
 
-
-
 TNV_ideas = {
 	start = {
 		defensiveness = 0.2
@@ -5129,5 +5127,43 @@ TNV_ideas = {
 	}
 	TNV_idea7 = {
 		province_warscore_cost = -0.1
+	}
+}
+
+BDN_ideas = {
+	start = {
+		heir_chance = 0.5
+		leader_land_shock = 1
+	}
+
+	bonus = {
+        diplomats = 1
+	}
+
+	trigger = {
+		tag = BDN
+	}
+	free = yes		# will be added at load
+
+	BDN_idea1 = {
+        prestige = 1
+	}
+	BDN_idea2 = {
+		defensiveness = 0.15
+	}
+	BDN_idea3 = {
+        movement_speed = 0.1
+	}
+	BDN_idea4 = {
+		rebel_support_efficiency = 0.25
+	}
+	BDN_idea5 = {
+		shock_damage_received = -0.1
+	}
+	BDN_idea6 = {
+		tolerance_own = 1
+	}
+	BDN_idea7 = {
+        army_tradition_from_battle = 0.5
 	}
 }
