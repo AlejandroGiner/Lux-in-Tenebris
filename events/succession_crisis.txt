@@ -99,14 +99,7 @@ country_event = {
             has_regency = no
             has_heir = no
         }
-        define_ruler = {
-            name = "(Interregnum)"
-            adm = 0
-            dip = 0
-            mil = 0
-            fixed = yes
-            regency = yes
-        }
+		create_interregnum_effect = yes
         add_legitimacy = -100
     }
 }
@@ -118,11 +111,7 @@ country_event = {
     desc = succession_crisis.35.d
     picture = CONQUEST_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
+    trigger = { 
 		OR = { #Overhauled to allow for the event even though Theodoro does not exist, much like Montferrat works.
 			owns = 2410 #Theodoro/Doros/Cherson/Whatever
 			FEO = {
@@ -130,7 +119,6 @@ country_event = {
 				has_regency = no
 			}
 		}
-        #NOT = { num_of_rebel_armies = 1 }
     }
     
     is_triggered_only = yes
@@ -148,7 +136,7 @@ country_event = {
             limit = {
                 FEO = {
                     exists = yes
-                    dynasty = "of Gothia"
+                    dynasty = "Gabras"
                 }
             }
             random_owned_province = {
@@ -158,7 +146,7 @@ country_event = {
                 spawn_rebels = {
                     type = pretender_rebels
                     size = 2
-                    leader = "Alexander of Gothia"
+                    leader = "Alexander Gabras"
                     friend = FEO
                 }
             }
@@ -193,18 +181,10 @@ country_event = {
 			limit = {
 				FEO = {
 					exists = yes
-                    dynasty = "of Gothia"
+                    dynasty = "Gabras"
 				}
 			}
-			define_ruler = {
-				name = "(Interregnum)"
-				adm = 0
-				dip = 0
-				mil = 0
-				fixed = yes
-				regency = yes
-			}
-			kill_heir = yes
+			create_interregnum_effect = yes
 			set_country_flag = accepted_goth
 			country_event = { id = succession_crisis.45 }
 		}
@@ -215,7 +195,7 @@ country_event = {
 				dip = 1
 				mil = 1
 				claim = 50
-				dynasty = "of Gothia"
+				dynasty = "Gabras"
 			}			
 		}
         set_country_flag = accepted_pretender
@@ -338,19 +318,14 @@ country_event = {
     desc = succession_crisis.38.d
     picture = CONQUEST_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
-		OR = { #Overhauled to allow for the event even though Theodoro does not exist, much like Montferrat works.
+    trigger = { 
+		OR = { 
 			owns = 330
 			TRE = {
 				exists = yes
 				has_regency = no
 			}
 		}
-        #NOT = { num_of_rebel_armies = 1 }
     }
     
     is_triggered_only = yes
@@ -429,15 +404,7 @@ country_event = {
                     dynasty = "Komnenos"
 				}
 			}
-			define_ruler = {
-				name = "(Interregnum)"
-				adm = 0
-				dip = 0
-				mil = 0
-				fixed = yes
-				regency = yes
-			}
-			kill_heir = yes
+			create_interregnum_effect = yes
 			set_country_flag = accepted_tre
 			country_event = { id = succession_crisis.45 }
 		}
@@ -463,11 +430,7 @@ country_event = {
     desc = succession_crisis.39.d
     picture = CONQUEST_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
+    trigger = { 
         OR = {
             SAV = {
                 exists = yes
@@ -478,7 +441,6 @@ country_event = {
                 has_regency = no
             }
         }
-        #NOT = { num_of_rebel_armies = 1 }
     }
     
     is_triggered_only = yes
@@ -544,15 +506,7 @@ country_event = {
                     dynasty = "Palaiologos"
                 }
             }
-            define_ruler = {
-                name = "(Interregnum)"
-                adm = 0
-                dip = 0
-                mil = 0
-                fixed = yes
-                regency = yes
-            }
-            kill_heir = yes
+			create_interregnum_effect = yes
             set_country_flag = accepted_pal
             country_event = { id = succession_crisis.45 }
         }
@@ -578,13 +532,8 @@ country_event = {
     desc = succession_crisis.41.d
     picture = CIVIL_WAR_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
+    trigger = { 
         owns = 147
-        #NOT = { num_of_rebel_armies = 1 }
     }
     
     fire_only_once = yes
@@ -650,13 +599,8 @@ country_event = {
     desc = succession_crisis.42.d
     picture = CIVIL_WAR_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
+    trigger = { 
         owns = 145
-        #NOT = { num_of_rebel_armies = 1 }
     }
 	
     fire_only_once = yes
@@ -721,13 +665,8 @@ country_event = {
     desc = succession_crisis.43.d
     picture = CIVIL_WAR_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
+    trigger = { 
         owns = 144
-        #NOT = { num_of_rebel_armies = 1 }
     }
     
     fire_only_once = yes
@@ -792,13 +731,8 @@ country_event = {
     desc = succession_crisis.44.d
     picture = CIVIL_WAR_eventPicture
     
-    trigger = { #Commented some trigger requirements due to them either being present already as part of disaster trigger or me not thinking they make sense.
-        #tag = BYZ
-        #has_country_flag = had_byz_succ_crisis
-        #NOT = { stability = 2 }
-        #government = monarchy
+    trigger = { 
         owns = 5157 #I think this is meant to be Nicaea. Since that is represented in BT, I'll change it to that.
-        #NOT = { num_of_rebel_armies = 1 }
     }
     
     fire_only_once = yes
@@ -888,13 +822,6 @@ country_event = {
             create_union = MFA
             clr_country_flag = accepted_pal
         }
-		#Commented out because it made no sense that a PU would end it, but not other options.
-        # if = {
-            # limit = {
-                # has_country_modifier = byz_succession_crisis
-            # }
-            # remove_country_modifier = byz_succession_crisis
-        # }
     }
 }
 
