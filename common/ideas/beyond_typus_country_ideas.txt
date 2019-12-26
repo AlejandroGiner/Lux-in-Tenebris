@@ -728,3 +728,59 @@ LUS_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 }
+
+exarchate_ideas = {
+	start = {
+		trade_steering = 0.10
+		leader_naval_manuever = 1
+	}
+	
+	bonus = { #Sailors, sailors, SAILORS!
+		global_sailors_modifier = 0.5
+	}
+	
+	trigger = {
+		OR = {
+			tag = KCD #Karchidon
+			tag = HSP #Hesperia
+			tag = GLT #Galatia
+			tag = PSI #Persis
+			tag = ABN #Albion
+			tag = RVN #Ravenna
+			tag = ATC #Anatolia/Antioch
+			tag = AEG #Aegyptus/Alexandria
+		}
+	}
+	free = yes
+	
+	protector_of_the_emperor = {
+		land_morale = 0.1
+		legitimacy = 1
+	}
+	
+	byz_incorporate_far_lands = {
+		core_creation = -0.10
+		state_maintenance_modifier = -0.25
+	}
+	
+	byz_ruler_of_barbarians = {
+		religious_unity = 0.5
+		missionaries = 1
+	}
+	
+	byz_exarchate_governor = {
+		diplomatic_reputation = 1
+	}
+	
+	the_exarchs_standing_army = {
+		global_manpower_modifier = 0.25
+	}
+	
+	byz_spread_the_word = {
+		global_missionary_strength = 0.02
+	}
+	
+	byz_exarch_themata = {
+		land_maintenance_modifier = -0.1
+	}
+}

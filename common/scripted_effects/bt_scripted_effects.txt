@@ -684,3 +684,73 @@ bt_tanistry_heir_female = {
 		}
 	}
 }
+
+establish_vassal_byz_effect = {
+	if = {
+		limit = {
+			owns = $CAPITAL$
+		}
+		$CAPITAL$ = {
+			if = {
+				limit = {
+					is_core = ROOT
+				}
+				remove_core = ROOT
+			}
+			add_core = $TAG$
+			change_culture = $CULTURE$
+		}
+		release = $TAG$
+		$TAG$ = {
+			set_government_rank = 2
+			change_government = monarchy
+			define_ruler = {
+				dynasty = ROOT
+				claim = 100
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			$CAPITAL$ = {
+				owner = {
+					is_subject_of = ROOT
+					is_lesser_in_union = no
+				}
+			}
+		}
+		$CAPITAL$ = {
+			change_culture = $CULTURE$
+			owner = {
+				change_tag = $TAG$
+				change_primary_culture = $CULTURE$
+				set_government_rank = 2
+				change_government = monarchy
+				swap_ideas = yes
+			}
+		}
+	}
+	create_subject = {
+		subject_type = byz_exarch
+		subject = $TAG$
+	}
+	$TAG$ = {
+		if = {
+			limit = {
+				has_dlc = "Dharma"
+			}
+			add_government_reform = exarchate_reform
+		}
+		else = {
+			set_legacy_government = exarchate_legacy
+		}
+	}
+	hidden_effect = {
+		every_province = {
+			limit = {
+				$PROVINCES$ = yes
+			}
+			add_permanent_claim = $TAG$
+		}
+	}
+}

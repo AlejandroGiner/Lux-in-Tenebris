@@ -57,7 +57,6 @@
  exarchate_ideas:0 "Exarchate Ideas"
  exarchate_ideas_start:0 "Exarchate Traditions"
  exarchate_ideas_bonus:0 "Exarchate Ambition"
- 
  protector_of_the_emperor:0 "Protector of the Emperor"
  protector_of_the_emperor_desc:0 "The Emperor has designated us as the protector of the Emperor's interests in this area. This prestigious mandate leaves no question of our legitimacy and right to rule."
  byz_incorporate_far_lands:0 "Incorporate Far Lands"
@@ -81,29 +80,20 @@
  #Exarchate countries & their cultures
  KCD:0 "Karchidon"
  KCD_ADJ:0 "Karchidoniac"
- karchidoniac:0 "Karchidoniac"
  HSP:0 "Hesperia"
  HSP_ADJ:0 "Hesperic"
- hesperic:0 "Hesperic"
  GLT:0 "Galatia"
  GLT_ADJ:0 "Galatian"
- galatian:0 "Galatian"
  PSI:0 "Persis"
  PSI_ADJ:0 "Persic"
- persic:0 "Persic"
  ABN:0 "Albion"
  ABN_ADJ:0 "Albian"
- albian:0 "Albian"
- #Used to be Anatolia
  ATL:0 "Antioch"
  ATL_ADJ:0 "Antiochene"
- #Anatolian looks... weird.
- anatolian:0 "Antiochene"
  RVN:0 "Ravenna"
  RVN_ADJ:0 "Ravennan"
  AEG:0 "Alexandria"
  AEG_ADJ:0 "Alexandrian"
- alexandrian:0 "Alexandrian"
  
  BYZ_NO_EXARCH_IN_REGION:0 "An Exarch has been established in the region, whose supreme authority disallows us to fully integrate this area as a state."
  
@@ -154,32 +144,7 @@
  establish_exarch_of_anatolia_desc:0 "As our eurocentric policies have set our sights on the West with the moving of the Imperial capital to Italy, the lands in the East are no longer as close to our seat of administration. As such, establishing an Exarch of the Orient, Anatolia in Greek tongue, could prove beneficial as to allow efficient governance."
  establish_exarch_of_aegyptus_title:0 "Establish the Exarch of Egypt"
  establish_exarch_of_aegyptus_desc:0 "Considering our seat of administration has been moved to Italy, the region of Egypt has moved further away from our capital. While the region historically has been very easy to hold onto, since the rise of the Arabs and the muslims, the region has become increasingly violent. This move thus necessitates us establishing an Exarch in the region if we wish the region to be governed effectively."
- 
- ai_cede_lands_karchidon_title:0 "Grant Karchidoniac Lands"
- ai_cede_lands_karchidon_desc:0 "This decision allows you to automatically grant Karchidon any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_hesperia_title:0 "Grant Hesperic Lands"
- ai_cede_lands_hesperia_desc:0 "This decision allows you to automatically grant Hesperia any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_galatia_title:0 "Grant Galatian Lands"
- ai_cede_lands_galatia_desc:0 "This decision allows you to automatically grant Galatia any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_albion_title:0 "Grant Albian Lands"
- ai_cede_lands_albion_desc:0 "This decision allows you to automatically grant Albion any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_persis_title:0 "Grant Persic Lands"
- ai_cede_lands_persis_desc:0 "This decision allows you to automatically grant Persis any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_ravenna_title:0 "Grant Ravennan Lands"
- ai_cede_lands_ravenna_desc:0 "This decision allows you to automatically grant Ravenna any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_anatolia_title:0 "Grant Antiochene Lands"
- ai_cede_lands_anatolia_desc:0 "This decision allows you to automatically grant Antioch any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- ai_cede_lands_aegyptus_title:0 "Grant Alexandrian Lands"
- ai_cede_lands_aegyptus_desc:0 "This decision allows you to automatically grant Alexandria any provinces intended to be given to them by the mod author. If you do not like the borders this makes, please either refrain from using this decision and grant lands through subject interactions instead, or modify the scripted trigger in the mod files that determines what lands should be part of the Exarch."
- 
- #Creole events
- culture_creoles.1.t:0 "The Greek language is settling in [Root.GetName]"
- culture_creoles.1.d:0 "Years of stable rule over the indigenous population in [Root.GetName] has resulted in assimilation. They now speak our language!"
- culture_creoles.1.a:0 "Great!"
- culture_creoles.2.t:0 "The people in [Root.GetName] are resisting our rule!"
- culture_creoles.2.d:0 "Recent events in [Root.GetName] has resulted in great opposition against our assimilation attempts. They wish to secede from our rule."
- culture_creoles.2.a:0 "We'll show them."
- 
+
  #Exarch events
  exarches_estate_events.1.t:0 "Shattered [Root.GetExarchesName]"
  exarches_estate_events.1.d:0 "Our high mercantilism has gotten the [Root.GetExarchesName] to start worrying about their own supply of goods from foreign lands. A diplomat came to our court the other day and asked us to adjust our policies as to allow the import of goods otherwise inaccessible to them. Accepting will most definitely improve relations between us."

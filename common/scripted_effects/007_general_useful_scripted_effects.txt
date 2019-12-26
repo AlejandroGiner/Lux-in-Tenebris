@@ -3,6 +3,14 @@
 #$ADVISORTYPE$: Advisor type to use
 #$ESTATE$: Estate to check influence for
 #$EVENTTARGET$: Event target string used for a random province granted to the $ESTATE$
+
+swap_ideas = { #Should really be this easy, i.e "swap_ideas = yes"
+	if = {
+		limit = { has_custom_ideas = no }
+		country_event = { id = ideagroups.1 } #Swap Ideas
+	}
+}
+
 create_estate_advisor_effect = {
 	hidden_effect = {
 		random_owned_province = {

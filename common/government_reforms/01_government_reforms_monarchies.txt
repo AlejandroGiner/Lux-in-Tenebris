@@ -1838,6 +1838,44 @@ anglo_irish_monarchy_reform = {
 }
 
 #Byzantine reforms from Byzantine Resurgence
+exarchate_reform = {
+	icon = "exarchate"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	legacy_equivalent = exarchate_legacy
+	valid_for_nation_designer = no
+	potential = {
+		OR = {
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		is_subject = yes
+	}
+	trigger = {
+		OR = {
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		is_subject = yes
+	}
+	modifiers = {
+		culture_conversion_cost = -0.6
+		#New idea: Exarchates should just convert cultures, not accept them.
+		num_accepted_cultures = -6
+	}
+}
 pronoiar_reform = {
 	icon = "basileus"
 	allow_normal_conversion = yes

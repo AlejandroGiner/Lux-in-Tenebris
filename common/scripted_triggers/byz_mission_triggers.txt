@@ -77,3 +77,30 @@ byz_reclaim_anatolia_provinces = { #Any Anatolian province not part of West Anat
 	region = anatolia_region
 	NOT = { byz_reconquer_west_anatolia_provinces = yes }
 }
+
+#Exarches
+#Exarch regions: Uses the above provinces triggers
+byz_exarch_karchidon_provinces = {
+	area = tunisia_area
+}
+byz_exarch_hesperia_provinces = {
+	area = extremadura_area
+}
+byz_exarch_galatia_provinces = { 
+	area = guyenne_area
+}
+byz_exarch_albion_provinces = { 
+	area = home_counties_area
+}
+byz_exarch_persis_provinces = {
+	area = farsistan_area
+}
+byz_exarch_ravenna_provinces = {
+	area = emilia_romagna_area
+}
+byz_exarch_aegyptus_provinces = {
+	area = delta_area
+}
+byz_exarch_anatolia_provinces = {
+	area = aleppo_area
+}

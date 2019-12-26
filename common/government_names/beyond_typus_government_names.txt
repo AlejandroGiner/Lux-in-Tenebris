@@ -1,6 +1,53 @@
 # For specific government types
 # Will pick the first valid one it finds in list
 
+exarch_monarchy = { #Titles for Exarchates
+	#Apparently there is such a thing as kingdom and empire vassals - You just need to release them from your own lands!
+	rank = {
+		1 = EXARCHATE
+		2 = EXARCHATE
+		3 = EXARCHATE
+	}
+
+	ruler_male = {
+		1 = EXARCH
+		2 = EXARCH
+		3 = EXARCH
+	}
+
+	ruler_female = {
+		1 = EXARCHISSA
+		2 = EXARCHISSA
+		3 = EXARCHISSA
+	}
+	
+	consort_male = {
+		1 = EXARCH
+		2 = EXARCH
+		3 = EXARCH
+	}
+
+	consort_female = {
+		1 = EXARCHISSA
+		2 = EXARCHISSA
+		3 = EXARCHISSA
+	}
+
+	trigger = {
+		government = monarchy
+		OR = {
+			is_subject_of = BYZ
+			AND = {
+				is_subject_of = ROM
+				ROM = {
+					culture_group = byzantine
+				}
+			}
+		}
+		is_subject_of_type = byz_exarch
+	}
+}
+
 gov_puppet_kingdom_of_ireland = {
 	rank = {
 		2 = KINGDOM

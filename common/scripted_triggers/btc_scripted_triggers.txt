@@ -26,6 +26,23 @@ btc_can_form_trigger = {
 	adm_tech = 10
 }
 
+is_apostolic_christian = {
+	custom_trigger_tooltip = {
+		tooltip = TOOLTIP_IS_APOSTOLIC
+		
+		OR = {
+			religion = catholic
+			religion = orthodox
+			religion = coptic
+			religion = protestant
+			religion = reformed
+			religion = anglican
+			religion = nestorian
+			religion = waldensian
+		}
+	}
+}
+
 btc_was_never_end_game_tag_trigger = {	#Country Scope
 	NOT = {
 		OR = {
@@ -83,12 +100,67 @@ btc_was_never_end_game_tag_trigger = {	#Country Scope
 
 estate_strategoi_province_trigger = {
 	custom_trigger_tooltip = {
-		tooltip = ESTATE_STRATEGOI_PROVINCE_TRIGGER_TOOLTIP
-		NOT = {
-			any_province_in_state = {
-				has_estate = estate_strategoi
+		tooltip = estate_strategoi_province_trigger
+		OR = {
+			has_estate = estate_strategoi
+			NOT = {
+				any_province_in_state = {
+					has_estate = estate_strategoi
+				}
 			}
 		}
+	}
+}
+	
+estate_exarches_province_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = estate_exarches_province_trigger
+		OR = {
+			has_estate = estate_exarches
+			NOT = {
+				any_province = { #Cannot have any province in region that has exarch estate
+					region = PREV
+					OR = {
+						has_estate = estate_exarches
+						AND = {
+							is_capital = yes
+							owned_by = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+exarches_territory_modifier_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = exarches_territory_modifier_trigger
+		owner = {
+			has_estate = estate_exarches
+		}
+		any_province = {
+			region = PREV
+			has_estate = estate_exarches
+		}
+	}
+}
+
+is_exarch_tag_and_exarch_of_root_trigger = {
+	custom_trigger_tooltip = { 
+		tooltip = any_exarch_tag_under_root_exists_trigger
+		OR = { #I wonder if this is even necessary to check for.
+			tag = KCD
+			tag = HSP
+			tag = GLT
+			tag = ATL
+			tag = PSI
+			tag = RVN
+			tag = ABN
+			tag = AEG
+		}
+		is_subject_of_type = byz_exarch
+		is_subject_of = ROOT
 	}
 }
 
