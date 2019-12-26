@@ -1879,7 +1879,7 @@ roman_bureaucracy_reform = {
 	}
 	
 	modifiers = {
-		global_tax_modifier = 0.10
+		global_tax_modifier = 0.05
 		global_trade_goods_size_modifier = 0.05
 	}
 	
@@ -1912,6 +1912,9 @@ theme_system_reform = {
 		#Enables Strategoi estate
 		#-10% Nobility influence
 	}
+	custom_attributes = {
+		enables_strategoi_estate = yes
+	}
 }
 
 basileus_protostrategos_reform = {
@@ -1931,12 +1934,16 @@ basileus_protostrategos_reform = {
 			has_reform = theme_system_reform
 			full_idea_group = quality_ideas
 		}
+		is_monarch_leader = yes
 	}
 	
 	modifiers = {
 		monarch_military_power = 2
 		war_exhaustion = -0.03
 		reserves_organisation = 0.1
+	}
+	custom_attributes = {
+		forces_ruler_general = yes
 		#Forced the ruler to become a general upon ascending to the throne
 	}
 }

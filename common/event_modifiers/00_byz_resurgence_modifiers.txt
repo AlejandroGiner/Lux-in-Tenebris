@@ -130,22 +130,14 @@ byz_favourite_candidate_chariot_race = {
 }
 
 #Modifiers stemming from Byzantium Events incorporation
-orbans_cannons = {
-	siege_ability = 0.2
-	artillery_cost = -0.1
-}
 
-ceremonial_theodosian_walls = { #Halved the bonus here because it was just a little too powerful.
-	prestige = 0.5 
-	legitimacy = 0.5
+ceremonial_theodosian_walls = { 
+	prestige = 0.25
 }
-
 integrated_palaiologan_renaissance = {
-	idea_cost = -0.05
+	technology_cost = -0.05
+	idea_cost = -0.1
     global_institution_spread = 0.2
-}
-integrated_theodosian_walls = {
-	local_defensiveness = 0.3
 }
 integrated_hexamilion_wall = {
 	local_defensiveness = 0.2

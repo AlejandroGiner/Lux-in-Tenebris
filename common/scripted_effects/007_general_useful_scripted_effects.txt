@@ -186,3 +186,23 @@ add_or_spawn_center_of_trade = {
 		center_of_trade = $LEVEL$
 	}
 }
+
+create_interregnum_effect = {
+	hidden_effect = {
+		every_country = {
+			limit = {
+				marriage_with = ROOT
+			}
+			break_marriage = ROOT
+		}
+		kill_heir = yes
+	}
+	define_ruler = {
+		name = "(Interregnum)"
+		adm = 0
+		dip = 0
+		mil = 0
+		fixed = yes
+		regency = yes
+	}
+}

@@ -10,18 +10,12 @@ estate_strategoi =
 	# Giving territory affects power this much compared to base
 	territory_power_modifier = 0.667 #Should in theory yield 1%/1%.	
 
-	#Removed to match 1.26 Estates
-	# wanted_territory_modifier = {
-		# desc = EST_VAL_HAS_THEME_SYSTEM
-		# trigger = {
-			# has_country_modifier = br_theme_system
-		# }	
-		# value = 5		
-	# }
-	
 	# If true, country will get estate
-	trigger = {
-			has_reform = theme_system_reform
+	trigger = {	
+		OR = {
+			has_country_modifier = br_theme_system
+			has_government_attribute = enables_strategoi_estate
+		}
 	}
 	
 	# If true, province can be granted to estate
@@ -544,6 +538,14 @@ estate_strategoi =
 			}
 		}
 		influence = -20
+	}
+	#Established Exarch System
+	influence_modifier = {	
+		desc = EST_VAL_ESTABLISHED_EXARCH_SYSTEM
+		trigger = {
+			has_country_modifier = the_exarch_system
+		}
+		influence = -10
 	}
 	
 	

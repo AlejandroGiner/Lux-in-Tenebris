@@ -511,6 +511,29 @@ on_monarch_death = {
 		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
 		flavor_nav.4 # Navarra succession event
 	}
+	if = {
+		limit = {
+			tag = BYZ
+		}
+		BYZ = {
+			country_event = { id = integrated_byz_events.16 } #The Rebellion of Demetrios Palaiologos
+		}
+	}
+	if = { #Making the ruler a general if you've got the Basileus Protostrategos reform.
+		limit = {
+			has_government_attribute = forces_ruler_general
+			is_monarch_leader = no
+		}
+		if = {
+			limit = {
+				is_female = yes
+			}
+			convert_female_ruler_to_general = yes
+		}
+		else = {
+			convert_ruler_to_general = yes
+		}
+	}
 }
 
 # country
@@ -2595,6 +2618,29 @@ on_five_year_pulse_2 = {
 		100 = rajputs_estate_events.10
 		100 = rajputs_estate_events.11
 		1000 = 0
+		
+		#BR
+		# Strategoi
+		100 = strategoi_estate_events.1
+		100 = strategoi_estate_events.2
+		100 = strategoi_estate_events.3
+		100 = strategoi_estate_events.4 #Bonus
+		100 = strategoi_estate_events.5
+		100 = strategoi_estate_events.6
+		100 = strategoi_estate_events.7
+		100 = strategoi_estate_events.8
+		100 = strategoi_estate_events.9
+		100 = strategoi_estate_events.10 
+		100 = strategoi_estate_events.11 
+		400 = strategoi_estate_events.12 #Demands
+		100 = strategoi_estate_events.13
+		100 = strategoi_estate_events.14 
+		
+		# Exarches
+		50 = exarches_estate_events.1
+		50 = exarches_estate_events.2
+		50 = exarches_estate_events.3
+		100 = exarches_estate_events.4
 	}
 }
 
@@ -2996,6 +3042,153 @@ on_revoke_estate_land = {
 			size = 1
 		}
 		province_event = { id = marathas_estate_events.1 }
+	}
+
+	#BR
+	#Changing themes is not something you do just like that, assuming the themes are influential enough.
+	if = {
+		limit = {
+			has_estate = estate_strategoi
+			owner = {
+				#Either 50 strategoi influence and not loyal, or them being pissed during revocation.
+				OR = {
+					AND = {
+						estate_influence = {
+							estate = estate_strategoi
+							influence = 50
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_strategoi
+								loyalty = 60
+							}
+						}
+					}
+					NOT = { #Disloyal
+						estate_loyalty = {
+							estate = estate_strategoi
+							loyalty = 40
+						}
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 2
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					#If the strategoi also have 75 influence and not loyal during revocation:
+					AND = {
+						estate_influence = {
+							estate = estate_strategoi
+							influence = 75
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_strategoi
+								loyalty = 60
+							}
+						}
+					}
+					
+				}
+			}
+			owner = {
+				every_owned_province = {
+					limit = {
+						has_estate = estate_strategoi
+					}
+					random = {
+						chance = 20
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 1
+						}
+					}
+					
+				}
+			}
+		}
+		
+		
+		province_event = { id = strategoi_estate_events.42 }
+	}
+
+	#Exarches trigger is similar to the Strategoi.
+	if = {
+		limit = {
+			has_estate = estate_exarches
+			owner = {
+				#Either 50 strategoi influence and not loyal, or them being pissed during revocation.
+				OR = {
+					AND = {
+						estate_influence = {
+							estate = estate_exarches
+							influence = 50
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_exarches
+								loyalty = 60
+							}
+						}
+					}
+					NOT = { #Disloyal
+						estate_loyalty = {
+							estate = estate_exarches
+							loyalty = 40
+						}
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 2
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					#If the strategoi also have 75 influence and not loyal during revocation:
+					AND = {
+						estate_influence = {
+							estate = estate_exarches
+							influence = 75
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_exarches
+								loyalty = 60
+							}
+						}
+					}
+					
+				}
+			}
+			owner = {
+				every_owned_province = {
+					limit = {
+						has_estate = estate_exarches
+					}
+					random = {
+						chance = 20
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 1
+						}
+					}
+					
+				}
+			}
+		}
+		
+		
+		province_event = { id = exarches_estate_events.42 }
 	}
 }
 
