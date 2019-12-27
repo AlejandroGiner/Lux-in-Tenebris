@@ -5208,3 +5208,41 @@ DRJ_ideas = {
 		improve_relation_modifier = 0.15
 	}
 }
+
+VBZ_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		enemy_core_creation = 0.25
+	}
+
+	bonus = {
+		army_tradition_decay = -0.01
+	}
+
+	trigger = {
+		tag = VBZ
+	}
+	free = yes		# will be added at load
+
+	VBZ_idea1 = {
+		global_autonomy = -0.025
+	}
+	VBZ_idea2 = {
+		num_accepted_cultures = 1
+	}
+	VBZ_idea3 = {
+		land_maintenance_modifier = -0.15
+	}
+	VBZ_idea4 = {
+		inflation_reduction = 0.1
+	}
+	VBZ_idea5 = {
+		fabricate_claims_cost = -0.25
+	}
+	VBZ_idea6 = {
+		mercenary_cost = -0.15
+	}
+	VBZ_idea7 = {
+		diplomatic_upkeep = 1
+	}
+}
