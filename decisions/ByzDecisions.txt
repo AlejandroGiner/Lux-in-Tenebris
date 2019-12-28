@@ -164,6 +164,136 @@ country_decisions = {
 		}
 	}
 	
+	establish_march_of_alania = {
+		potential = {
+			is_byz_or_hellenic_rome_trigger = yes
+			OR = { #Any province bordering Alania from the Caucasus
+				owns = 2195
+				owns = 1856
+				owns = 462
+				owns = 422
+				owns = 4301
+				owns = 2203
+				owns = 4305
+				owns = 4299
+				owns = 7031
+				owns = 7032
+				owns = 3259
+				owns = 7021
+			}
+			if = {
+				limit = { has_dlc = "Dharma" }
+				has_reform = theme_system_reform
+			}
+			else = {
+				has_country_modifier = br_theme_system
+			}
+			NOT = { has_country_flag = established_march_alania }
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			NOT = { exists = ALA }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = circassia_area
+				area = dagestan_area
+				area = astrakhan_area
+				area = azov_area
+			}
+			NOT = { province_id = 286 }
+			NOT = { province_id = 2413 }
+			NOT = { province_id = 2447 } 
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			is_at_war = no
+			OR = {
+				adm = 5
+				mil = 3
+				army_reformer = 2
+			}
+			2201 = {
+				owner = {
+					OR = {
+						tag = ROOT
+						AND = {
+							is_subject_of = ROOT
+							NOT = { is_subject_of_type = tributary_state }
+							is_lesser_in_union = no
+						}
+					}
+				}
+			}
+			stability = 2
+			mil_power = 100
+		}
+		effect = {
+			add_prestige = 10
+			add_mil_power = -100
+			if = { #If Alania is owned by Byzantium
+				limit = {
+					owns = 2201
+				}
+				2201 = {
+					if = {
+						limit = {
+							is_core = ROOT
+						}
+						remove_core = ROOT
+					}
+					add_core = ALA
+					change_culture = alan
+				}
+				release = ALA
+				hidden_effect = { #Because this caused issues with government names???
+					ALA = {
+						change_government = monarchy
+					}
+				}
+				
+			}
+			if = { #If owned by a subject instead
+				limit = {
+					2201 = {
+						owner = {
+							is_subject_of = ROOT
+							is_lesser_in_union = no
+						}
+					}
+				}
+				2201 = {
+					change_culture = alan
+					owner = {
+						change_tag = ALA
+						change_primary_culture = alan
+						swap_ideas = yes
+					}
+				}
+			}
+			#Claims
+			circassia_area = { add_permanent_claim = ALA }
+			dagestan_area = { add_permanent_claim = ALA }
+			astrakhan_area = { add_permanent_claim = ALA }
+			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 province_id = 2447 } } add_permanent_claim = ALA }
+			#Marshy March
+			create_march = ALA
+			set_country_flag = established_march_alania
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					mil_power = 200
+				} #To not point-starve, should an AI somehow get this far
+			}
+		}
+		
+	}
+	
 	#Exarches galore!
 	establish_exarch_of_karchidon = {
 		potential = {

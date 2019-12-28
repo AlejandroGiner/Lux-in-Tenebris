@@ -584,6 +584,7 @@ positive_stability = {
 	yearly_corruption = -0.02
 	global_institution_spread = 0.05
 	yearly_harmony = 0.25
+	logothete_general_influence = 0.033
 }
 privateering = {
 	pr_captains_influence = 0.1
@@ -598,6 +599,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	monthly_militarized_society = -0.05
+	logothete_general_influence = -0.1
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -674,6 +676,7 @@ bankruptcy = {
 
 war = {
 	rr_girondists_influence = 0.15
+	logothete_military_influence = 0.1
 }
 
 peace = {
@@ -683,6 +686,7 @@ peace = {
 	global_institution_spread = 0.1
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
+	logothete_military_influence = -0.1
 }
 
 unconditional_surrender = {
@@ -703,6 +707,8 @@ war_exhaustion = {
 	temples_influence = -0.05
 	mr_aristocrats_influence = -0.05
 	rr_girondists_influence = -0.05
+	logothete_military = -0.05
+	logothete_postal_influence = 0.05
 	rr_royalists_influence = 0.05
 	manpower_recovery_speed = -0.01
 	sailors_recovery_speed = -0.01
@@ -750,6 +756,7 @@ army_tradition = {
 	temples_influence = 0.1
 	mr_aristocrats_influence = 0.1
 	rr_girondists_influence = 0.1
+	logothete_military_influence = 0.1
 	monthly_militarized_society = 0.1
 }
 
@@ -891,6 +898,7 @@ corruption = {
 	min_autonomy = 50
 	global_unrest = -20
 	imperial_mandate = -1
+	logothete_general_influence = 1
 }
 
 root_out_corruption = {
@@ -954,9 +962,10 @@ over_extension = {
 	diplomatic_reputation = -2
 	improve_relation_modifier = -0.5
 	global_unrest = 5
-	bureaucrats_influence = 0.5
-	mr_guilds_influence = 0.5
+	bureaucrats_influence = -0.5
+	mr_guilds_influence = -0.5
 	yearly_corruption = 0.5
+	logothete_general_influence = -0.25
 }
 
 territory_very_easy_difficulty = { # Penalties for territories on very easy difficulty

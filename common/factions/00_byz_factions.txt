@@ -3,20 +3,20 @@
 ########################################
 # Empire Factions
 ########################################
-logothete_military =
+
+logothete_general =
 {
-	monarch_power = MIL
+	monarch_power = ADM
 	always = yes
 
 	modifier = 
 	{
-		free_leader_pool = 2
-		leader_cost = -0.15
-		global_trade_goods_size_modifier = -0.1
-		ae_impact = 0.05
+		advisor_cost = -0.05
+		global_tax_modifier = 0.1
+		yearly_corruption = 0.1
+		state_maintenance_modifier = 0.1
 	}
 }
-
 
 logothete_postal =
 {
@@ -32,17 +32,16 @@ logothete_postal =
 	}
 }
 
-logothete_general =
+logothete_military =
 {
-	monarch_power = ADM
+	monarch_power = MIL
 	always = yes
 
 	modifier = 
 	{
-		advisor_cost = -0.05
-		global_tax_modifier = 0.1
-		yearly_corruption = 0.1
-		state_maintenance_modifier = 0.15
+		free_leader_pool = 2
+		war_exhaustion = -0.03
+		global_trade_goods_size_modifier = -0.1
+		ae_impact = 0.1
 	}
 }
-
