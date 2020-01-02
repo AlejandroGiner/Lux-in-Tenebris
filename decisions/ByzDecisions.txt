@@ -199,6 +199,9 @@ country_decisions = {
 				area = dagestan_area
 				area = astrakhan_area
 				area = azov_area
+				area = alania_area
+				area = avaria_area
+				area = kabardia_area
 			}
 			NOT = { province_id = 286 }
 			NOT = { province_id = 2413 }
@@ -245,7 +248,6 @@ country_decisions = {
 						remove_core = ROOT
 					}
 					add_core = ALA
-					change_culture = alan
 				}
 				release = ALA
 				hidden_effect = { #Because this caused issues with government names???
@@ -265,10 +267,8 @@ country_decisions = {
 					}
 				}
 				2201 = {
-					change_culture = alan
 					owner = {
 						change_tag = ALA
-						change_primary_culture = alan
 						swap_ideas = yes
 					}
 				}
@@ -277,7 +277,11 @@ country_decisions = {
 			circassia_area = { add_permanent_claim = ALA }
 			dagestan_area = { add_permanent_claim = ALA }
 			astrakhan_area = { add_permanent_claim = ALA }
-			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 province_id = 2447 } } add_permanent_claim = ALA }
+			alania_area = { add_permanent_claim = ALA }
+			avaria_area = { add_permanent_claim = ALA }
+			kabardia_area = { add_permanent_claim = ALA }
+			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 } } add_permanent_claim = ALA }
+			circassia_area = { limit = { NOT = { province_id = 2447 } } add_permanent_claim = ALA }
 			#Marshy March
 			create_march = ALA
 			set_country_flag = established_march_alania

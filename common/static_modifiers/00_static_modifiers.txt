@@ -599,7 +599,7 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	monthly_militarized_society = -0.05
-	logothete_general_influence = -0.1
+	logothete_general_influence = 0.1
 }
 
 positive_mandate = {	# 100% strength at 100 mandate, 0% at 50 mandate
@@ -677,6 +677,7 @@ bankruptcy = {
 war = {
 	rr_girondists_influence = 0.15
 	logothete_military_influence = 0.1
+	logothete_postal_influence = -0.05
 }
 
 peace = {
@@ -687,6 +688,7 @@ peace = {
 	rr_girondists_influence = -0.1
 	pr_smugglers_influence = 0.1
 	logothete_military_influence = -0.1
+	logothete_postal_influence = 0.1
 }
 
 unconditional_surrender = {
@@ -697,6 +699,7 @@ unconditional_surrender = {
 
 call_for_peace = {
 	war_exhaustion = 0.008
+	logothete_postal_influence = 0.005
 }
 
 war_exhaustion = {
