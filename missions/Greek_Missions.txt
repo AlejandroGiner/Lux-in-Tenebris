@@ -1,0 +1,191 @@
+ ##################################################
+ ##### Dub's Mission Work - All credit to Dub for this #####
+ ##################################################
+#Updated vanilla missions to BT. Updates done by Dub.
+gre_rebirth_of_hellas = {
+	slot = 1 #upper left column
+	generic = no #if a mission without generic = yes wants this slot then it overrides this.
+	ai = yes
+	potential = {
+		tag = GRE
+	}
+	has_country_shield = yes
+	
+	greece_liberation_of_hellas = {
+		icon = mission_parthenon
+		required_missions = {  } #None
+		trigger = {
+			western_aegean_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			area = western_aegean_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "independent_hellas"
+				duration = 5475
+			}
+			add_core = 146
+			146 = {
+				move_capital_effect = yes
+				rename_capital = Athens
+			}
+			#Claims
+			custom_tooltip = greece_control_peloponnese_claims
+			hidden_effect = {
+				morea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	greece_control_peloponnese = {
+		icon = mission_peloponnese
+		required_missions = { greece_liberation_of_hellas }
+		position = 2
+		provinces_to_highlight = {
+			area = morea_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		effect = {
+			#Claims
+			custom_tooltip = greece_advance_north_claims
+			hidden_effect = {
+				thessaly_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+					}
+				northern_greece_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+					}
+			}
+		}
+	}
+	
+	greece_advance_north = {
+		icon = mission_land_of_churches
+		required_missions = { greece_control_peloponnese }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = morea_area
+				area = western_aegean_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			thessaly_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_greece_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		effect = {
+			#Claims
+			custom_tooltip = greece_reclaim_macedonia_claims
+			hidden_effect = {
+				said_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	greece_reclaim_macedonia = { #Alexandrian Sovereignity
+		icon = mission_thessaloniki
+		required_missions = { greece_advance_north }
+		position = 4
+		trigger = {
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		provinces_to_highlight = {
+			area = macedonia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			#Claims
+			custom_tooltip = greece_control_peloponnese_claims
+			hidden_effect = {
+				thrace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
+	greece_into_thrace = {
+		icon = mission_greek_eagle
+		required_missions = { greece_reclaim_macedonia }
+		position = 5
+		provinces_to_highlight = {
+			area = thrace_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			is_subject = no
+		}
+		effect = {
+			add_dip_power = 50
+			add_adm_power = 50
+			add_mil_power = 50
+			add_core = 151
+			151 = {
+				change_culture = greek
+				change_religion = ROOT
+				rename_capital = Konstantinoupolis 
+			}
+		}
+	}
+
+}
+	
