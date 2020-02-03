@@ -20,10 +20,7 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
+				num_of_cities = 3	
 			}
 		}
 		provinces_to_highlight = {
@@ -54,7 +51,10 @@ country_decisions = {
 			}
 			colonial_central_america = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = CAM
 			}
@@ -69,5 +69,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-
 }

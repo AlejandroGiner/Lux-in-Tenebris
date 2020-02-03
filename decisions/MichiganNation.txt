@@ -15,10 +15,7 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
+				num_of_cities = 3	
 			}
 		}
 		allow = {
@@ -36,14 +33,15 @@ country_decisions = {
 			change_tag = MIH
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
+				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
 			colonial_great_lakes = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = MIH
 			}

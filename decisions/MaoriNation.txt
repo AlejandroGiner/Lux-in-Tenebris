@@ -13,10 +13,7 @@ country_decisions = {
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 			primary_culture = maori		
 		}
@@ -51,9 +48,7 @@ country_decisions = {
 			change_tag = MAO
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
+				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
 			add_prestige = 25
