@@ -19,7 +19,6 @@ btc_was_not_colonial_nation_trigger = {
 	}
 }
 
-
 btc_can_form_trigger = {
 	is_free_or_tributary_trigger = yes
 	is_at_war = no
@@ -29,7 +28,6 @@ btc_can_form_trigger = {
 is_apostolic_christian = {
 	custom_trigger_tooltip = {
 		tooltip = TOOLTIP_IS_APOSTOLIC
-		
 		OR = {
 			religion = catholic
 			religion = orthodox
@@ -95,7 +93,6 @@ btc_was_never_end_game_tag_trigger = {	#Country Scope
 			tag = ADU 
 		}
 	}
-	
 }
 
 estate_strategoi_province_trigger = {
@@ -111,7 +108,7 @@ estate_strategoi_province_trigger = {
 		}
 	}
 }
-	
+
 estate_exarches_province_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = estate_exarches_province_trigger
