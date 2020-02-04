@@ -1,20 +1,18 @@
 country_decisions = {
   btc_colonial_empire_rank = {
     potential = {
-      NOT = {
-        OR = {
-          tag = CAS
-          tag = SPA
-          tag = FRA
-          tag = POR
-          tag = IBE
-          tag = ENG
-          tag = GBR
-          tag = NED
-        }
+      NOT = { government_rank = 3 }
+      NOT = { #Countries with missions for empire rank
+        tag = CAS
+        tag = SPA
+        tag = FRA
+        tag = POR
+        tag = IBE
+        tag = ENG
+        tag = GBR
+        tag = NED
       }
       has_idea = quest_for_the_new_world
-      NOT = { government_rank = 3 }
     }
     allow = {
       total_development = 600

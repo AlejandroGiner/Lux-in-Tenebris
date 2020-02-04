@@ -58,25 +58,19 @@ country_decisions = {
 			add_prestige = 10
 			westphalia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = WES
 			}
 			lower_saxony_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = WES
-			}
-			every_province = {
-				limit = {
-					OR = {
-						province_id = 52
-						province_id = 81
-						province_id = 1762
-						province_id = 2964
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
 					}
-					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = WES
 			}
@@ -88,11 +82,6 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				is_part_of_hre = yes
-				is_elector = no	
-			}
 		}
 		ai_importance = 400 #
 	}

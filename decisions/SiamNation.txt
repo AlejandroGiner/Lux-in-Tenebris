@@ -13,27 +13,18 @@ country_decisions = {
 			OR = {
 				primary_culture = central_thai
 				primary_culture = northern_thai
-                                primary_culture = lao
+      	primary_culture = lao
 				primary_culture = shan
 			}
 			OR = {
 				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 4
-				}
-				AND = {
-					ai = yes
-					is_year = 1700
-				}
+				num_of_cities = 4
+				is_year = 1700
 			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 		}
 		provinces_to_highlight = {
@@ -63,9 +54,9 @@ country_decisions = {
 		}
 		effect = {
 			4656 = {
-			        add_base_tax = 3
-                                add_base_production = 3
-                                add_base_manpower = 2
+				add_base_tax = 3
+	    	add_base_production = 3
+      	add_base_manpower = 2
 				move_capital_effect = yes
 			}
 			change_tag = SIA
@@ -77,43 +68,55 @@ country_decisions = {
 			}
 			siam_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = SIA
 			}
 			cambodia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = SIA
 			}
 			mekong_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = SIA
 			}
 			north_laos_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = SIA
 			}
 			south_laos_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = SIA
 			}
 			yawnghwe_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = SIA
 			}

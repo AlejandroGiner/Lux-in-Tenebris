@@ -9,13 +9,12 @@ country_decisions = {
 			religion_group = muslim
 			culture_group = turko_semitic
 		}
-
 		provinces_to_highlight = {
 			region = arabia_region
 			is_city = yes
-			NOT = {
-				owned_by = ROOT
-				is_core = ROOT
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		allow = {
@@ -23,7 +22,6 @@ country_decisions = {
 			religion_group = muslim
 			btc_can_form_trigger = yes
 			btc_was_not_colonial_nation_trigger = yes
-
 			num_of_owned_provinces_with = {
 				value = 45	#70% of 64 colonized provinces in arabia
 				region = arabia_region
@@ -37,7 +35,7 @@ country_decisions = {
 			arabia_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						is_permanent_claim = ROOT
 						is_core = ROOT
 					}
 					is_city = yes

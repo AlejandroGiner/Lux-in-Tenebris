@@ -60,19 +60,28 @@ country_decisions = {
 			add_prestige = 25
 			bulgaria_area = { #Western bulgaria
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = BUL
 			}
 			eastern_bulgaria_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = BUL
 			}
 			upper_thrace_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = BUL
 			}

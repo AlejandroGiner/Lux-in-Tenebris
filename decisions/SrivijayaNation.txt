@@ -15,15 +15,12 @@ country_decisions = {
 			OR = {
 				primary_culture = sumatran
 				primary_culture = malayan
-                                primary_culture = musi
+        primary_culture = musi
 			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 		}
 		provinces_to_highlight = {
@@ -55,8 +52,8 @@ country_decisions = {
 		effect = {
 			622 = {
 				add_base_tax = 3
-                                add_base_production = 3
-                                add_base_manpower = 2
+        add_base_production = 3
+        add_base_manpower = 2
 				move_capital_effect = yes
 			}
 			change_tag = SVJ
@@ -67,29 +64,37 @@ country_decisions = {
 			}
 			malaya_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = SVJ
 			}
 			west_java_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = SVJ
 			}
 			cirebon_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = SVJ
 			}
 			central_java_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = SVJ
 			}
@@ -99,11 +104,10 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-                }
+    }
 		ai_will_do = {
 			factor = 1
 		}
 		ai_importance = 400
 	}
-
 }

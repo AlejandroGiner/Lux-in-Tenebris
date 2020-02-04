@@ -7,12 +7,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = mardin_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -48,12 +46,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = iraq_arabi_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -89,12 +85,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = shahrizor_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -133,12 +127,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = khuzestan_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -174,12 +166,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = herat_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -214,12 +204,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = merv_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -254,12 +242,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = transoxiana_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -294,12 +280,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = dagestan_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -335,12 +319,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = malabar_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {
@@ -376,12 +358,10 @@ country_decisions = {
     
     provinces_to_highlight = {
       area = shaanxi_area
-      NOT = {
-        AND = {
-          owned_by = ROOT
-          is_core = ROOT
-        }
-      }
+      OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
     }
     
     allow = {

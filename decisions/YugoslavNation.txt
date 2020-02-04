@@ -24,7 +24,6 @@ country_decisions = {
 				province_id = 1766 # Kosovo
 				province_id = 138 # Zeta
 				province_id = 131 # Zagrev
-				
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -65,7 +64,10 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_yugoslavia_flag_btp
-			set_government_rank = 2
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
 		}
 		ai_will_do = {
 			factor = 1

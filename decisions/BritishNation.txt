@@ -20,7 +20,10 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			region = british_isles_region
-			NOT = { owned_by = ROOT is_core = ROOT }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
       adm_tech = 10
@@ -73,7 +76,10 @@ country_decisions = {
 			}
 			british_isles_region = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = GBR
 			}
@@ -126,9 +132,6 @@ country_decisions = {
 					num_of_cities = 28			#At least 1/2 of Britain's 56 provinces to see, if not ENG or SCO
 				}
 			}
-
-      # ai=yes => vassals must have less provinces
-      # ai=no OR vassals must have less provinces
       OR = {
         ai = no
         AND = {
@@ -143,7 +146,10 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			region = british_isles_region
-			NOT = { owned_by = ROOT is_core = ROOT }
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
     	adm_tech = 10
@@ -213,7 +219,12 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			british_isles_region = {
-				limit = { NOT = { owned_by = ROOT is_core = ROOT } }
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
 				add_permanent_claim = GBR
 			}
 			add_prestige = 25
