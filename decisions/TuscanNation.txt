@@ -56,12 +56,18 @@ country_decisions = {
 				}
 				add_government_reform = tuscan_duchy_btc
 			}
-			every_province = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					culture = tuscan
+			custom_tooltip = btc_form_tuscany_tooltip
+			hidden_effect = {
+				italy_region = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+						culture = tuscan
+					}
+					add_permanent_claim = TUS
 				}
-				add_permanent_claim = TUS
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
