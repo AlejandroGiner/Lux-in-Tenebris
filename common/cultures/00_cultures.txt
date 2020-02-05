@@ -75,6 +75,9 @@ germanic = {
 			"Gniewosz"
 		}
 	}
+	saksesch = {
+		primary = KIL
+	}
 	prussian = {
 		primary = PRU
 		male_names = {
@@ -2016,44 +2019,47 @@ carpathian = {
 	graphical_culture = easterngfx
 	hungarian = {
 		primary = HUN
-		dynasty_names = {
-			Báthory Hunyadi Szapolyai Rákóczy Bocskai Bethlen Almásy Andrássy Batthyány Csáky Dessewffy
-			Erdody Eszterházy Festetics Hajdú Károlyi Kun Magyary Perényi Rónai Széchenyi Szepessy 
-			Thököly Tisza Zrínyi Teleki
-			Majláth Dóczy Dobó Koháry Orczy Frankopan Garay Mikes Szécsi Imreffy Nádasdy Rhédey
-			
-			#CK2
-			Zrinski Hadik Both "Rákóczi" Forgách Cseszneky Derencsényi Décsey Révay Esterházy
-			Kállay Kemény Thurzó Zichy
-		}
-		male_names = {
-			Ulászló László Lajos Albert János Mátyás Zsigmond András Károly István Béla Anasztáz Barnabás 
-			Boldizsár Dávid Dömötör Edvárd Ernö Ferenc Gábor György Izsák Jenö József Kálmán Kázmér Lörinc 
-			Miklós Oszkár Ottó Patrik Péter Simon Tamás Vencel
-			Ábel Ádárn Ágoston Álmos Árpád Õdön Otto Alajos Ambrus András Andrew Antal Attila Bálint 
-			Albert Balázs Benedek Benedict Bernát Bernard Bertók Bertalan Boldizsár Bonuslo
-			Borisz Boris Csák Csaba Csongor Dénes Dömötör Dezsõ Domoszló Donát Elek Elemér Endre Ernõ 
-			Philip Ferenc Francis Frigyes Gábor Gábriel Gabriel Gáspár Caspar Géza Gazsi
-			Gellért Gergely György George Gyula Imre István Stephen Izsák Jákob Jacob János John József 
-			Joseph Jenõ Kálmán Károly Charles Konrád Konrad Kornél Kristóf László Lázár Lõrinc Lajos 
-			Lampert Levente Lukács Márk Marcus Márton Martin Máté Mátyás Matthew Móric Mózes Mihály 
-			Michael Louis Fulöp Béla
-			Miklós Nándor Orbán Oszkár Pál Paul Péter Peter Sámuel Samuel Sándor Alexander Salamon 
-			Szilveszter Silvester Tádor Tacsony Tamás Thomas Tibor Tivadar Vazul Vencel Vaclav Vilmos 
-			Zoltán Zsigmond Sigmund Zsolt Saul Soma
-		}
-		female_names = {
-			Ágnes Agnes Éva Eva Adelaida Adelaide Agáta Agatha Amália Amelia Angyalka Anikó Aranka 
-			Bertha Borbála Csilla Csillag Czenzi Dorottya Dorothy Edit Edith Emõke Emese Erika Erzsébet 
-			Elisabeth Eszter Berta Anna
-			Etel Euphemia Euphemia Gizella Gisela Györgyi Georgia Hajnal Hedwig Hedwig Ibolya Ildikó 
-			Irén Irene Jácinta Józsa Júlia Juliana Jolán Judith Judith Kamilla Camilla Katalin 
-			Kinga Klára Clara Catherine Illona
-			Konstancia Constance Krisztina Christina Kunigunda Kunigunde Luca Mária Maria Márta Martha 
-			Magdolna Magdalena Margaréta Margaret Margit Matild Matilda Natália Natalia Odola Orsolya 
-			Panni Piroska Rózsa Rosa Sára Sarah Sarolt Zsuzsa Zsanett
-			Skolasztika Sophia Sophia Tundér Terezia Teresa Viola Viola Virág Zoltána Zsófia Sophia
-		}
+	}
+	szekely = {
+		primary = SZK
+	}
+	dynasty_names = {
+		Báthory Hunyadi Szapolyai Rákóczy Bocskai Bethlen Almásy Andrássy Batthyány Csáky Dessewffy
+		Erdody Eszterházy Festetics Hajdú Károlyi Kun Magyary Perényi Rónai Széchenyi Szepessy 
+		Thököly Tisza Zrínyi Teleki
+		Majláth Dóczy Dobó Koháry Orczy Frankopan Garay Mikes Szécsi Imreffy Nádasdy Rhédey
+		
+		#CK2
+		Zrinski Hadik Both "Rákóczi" Forgách Cseszneky Derencsényi Décsey Révay Esterházy
+		Kállay Kemény Thurzó Zichy
+	}
+	male_names = {
+		Ulászló László Lajos Albert János Mátyás Zsigmond András Károly István Béla Anasztáz Barnabás 
+		Boldizsár Dávid Dömötör Edvárd Ernö Ferenc Gábor György Izsák Jenö József Kálmán Kázmér Lörinc 
+		Miklós Oszkár Ottó Patrik Péter Simon Tamás Vencel
+		Ábel Ádárn Ágoston Álmos Árpád Õdön Otto Alajos Ambrus András Andrew Antal Attila Bálint 
+		Albert Balázs Benedek Benedict Bernát Bernard Bertók Bertalan Boldizsár Bonuslo
+		Borisz Boris Csák Csaba Csongor Dénes Dömötör Dezsõ Domoszló Donát Elek Elemér Endre Ernõ 
+		Philip Ferenc Francis Frigyes Gábor Gábriel Gabriel Gáspár Caspar Géza Gazsi
+		Gellért Gergely György George Gyula Imre István Stephen Izsák Jákob Jacob János John József 
+		Joseph Jenõ Kálmán Károly Charles Konrád Konrad Kornél Kristóf László Lázár Lõrinc Lajos 
+		Lampert Levente Lukács Márk Marcus Márton Martin Máté Mátyás Matthew Móric Mózes Mihály 
+		Michael Louis Fulöp Béla
+		Miklós Nándor Orbán Oszkár Pál Paul Péter Peter Sámuel Samuel Sándor Alexander Salamon 
+		Szilveszter Silvester Tádor Tacsony Tamás Thomas Tibor Tivadar Vazul Vencel Vaclav Vilmos 
+		Zoltán Zsigmond Sigmund Zsolt Saul Soma
+	}
+	female_names = {
+		Ágnes Agnes Éva Eva Adelaida Adelaide Agáta Agatha Amália Amelia Angyalka Anikó Aranka 
+		Bertha Borbála Csilla Csillag Czenzi Dorottya Dorothy Edit Edith Emõke Emese Erika Erzsébet 
+		Elisabeth Eszter Berta Anna
+		Etel Euphemia Euphemia Gizella Gisela Györgyi Georgia Hajnal Hedwig Hedwig Ibolya Ildikó 
+		Irén Irene Jácinta Józsa Júlia Juliana Jolán Judith Judith Kamilla Camilla Katalin 
+		Kinga Klára Clara Catherine Illona
+		Konstancia Constance Krisztina Christina Kunigunda Kunigunde Luca Mária Maria Márta Martha 
+		Magdolna Magdalena Margaréta Margaret Margit Matild Matilda Natália Natalia Odola Orsolya 
+		Panni Piroska Rózsa Rosa Sára Sarah Sarolt Zsuzsa Zsanett
+		Skolasztika Sophia Sophia Tundér Terezia Teresa Viola Viola Virág Zoltána Zsófia Sophia
 	}
 }
 
