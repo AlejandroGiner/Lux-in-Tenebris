@@ -13,7 +13,7 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 53	# Lüneburg
+				province_id = 53	# Lï¿½neburg
 				province_id = 54	# Stade
 				province_id = 1758	# Hannover
 				province_id = 2971	# Hoya
@@ -32,7 +32,7 @@ country_decisions = {
 				is_elector = yes
 			}
 			capital_scope = { province_id = 1758 }
-			owns_core_province = 53	# Lüneburg
+			owns_core_province = 53	# Lï¿½neburg
 			owns_core_province = 54	# Stade
 			owns_core_province = 1758	# Hannover
 			owns_core_province = 2971	# Hoya
@@ -42,7 +42,10 @@ country_decisions = {
 			btc_new_nation_effects = yes 
 			every_province = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 					OR = {
 						#province_id = 53 # Luneburg
 						#province_id = 54 # Stade
@@ -67,6 +70,6 @@ country_decisions = {
 				is_elector = no	
 			}
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
 }

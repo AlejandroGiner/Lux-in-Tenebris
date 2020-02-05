@@ -9,17 +9,15 @@ country_decisions = {
 			OR = {
 				primary_culture = andalusi_culture
 				AND = {
-					culture_group = berber_group
 					any_owned_province = { region = iberia_region }
-				}
-				AND = {
-					culture_group = turko_semitic
-					any_owned_province = { region = iberia_region }
+					OR = {
+						culture_group = berber_group
+						culture_group = turko_semitic
+					}
 				}
 			}
 		}
 		provinces_to_highlight = {
-
 			OR = {
 				area = lower_andalucia_area
 				area = upper_andalucia_area
@@ -89,23 +87,13 @@ country_decisions = {
 			hidden_effect = {
 				if = {
 					limit = {
-						tag = MOR
+						was_tag = MOR
 						has_dlc = "Golden Century"
 					}
 					complete_mission = gra_overcome_internal_strife
-				}
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						tag = MOR
-						has_dlc = "Golden Century"
-					}
 					complete_mission = gra_friends_in_high_places
 				}
 			}
-
-
 			if = {
 				limit = {
 					mission_completed = gra_restore_faith_in_the_throne
@@ -218,6 +206,6 @@ country_decisions = {
 				NOT = { capital_scope = { region = iberia_region } }			#Capital not in Iberia
 			}
 		}
-		ai_importance = 400 #
+		ai_importance = 400
 	}
 }

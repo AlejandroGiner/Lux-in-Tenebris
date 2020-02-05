@@ -28,10 +28,7 @@ country_decisions = {
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 		}
 		provinces_to_highlight = {
@@ -69,14 +66,15 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
+				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
 			france_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = FRA
 			}
@@ -88,13 +86,6 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					OR = {
-						ai = no
-						AND = {
-							ai = yes
-							has_idea_group = default_ideas
-						}
-					}
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
@@ -104,5 +95,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 }

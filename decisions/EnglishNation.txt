@@ -18,17 +18,12 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
+			province_group = england_province_group
+			NOT = { area = cornwall_area }
 			OR = {
-				area = east_midlands_area
-				area = northern_england_area
-				area = east_anglia_area
-				area = wessex_area
-				area = home_counties_area
-				area = yorkshire_area
-				area = five_boroughs_area
-				area = west_midlands_area
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
-			NOT = { owned_by = ROOT is_core = ROOT }
 		}
 		allow = {
 			is_at_war = no
@@ -42,16 +37,8 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						OR = {
-							area = east_midlands_area
-							area = northern_england_area
-							area = east_anglia_area
-							area = wessex_area
-							area = home_counties_area
-							area = yorkshire_area
-							area = five_boroughs_area
-							area = west_midlands_area
-						}
+						province_group = england_province_group
+						NOT = { area = cornwall_area }
 					}
 					amount = 32			#2/3 of England's 48 provinces
 				}
@@ -65,66 +52,21 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
+				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			northern_england_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+			custom_tooltip = england_permaclaims_tooltip
+			hidden_effect = {
+				england_province_group = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT 
+							is_core = ROOT
+							area = cornwall_area
+						}
+					}
+					add_permanent_claim = ENG
 				}
-				add_permanent_claim = ENG
-			}
-			east_midlands_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
-			}
-			east_anglia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
-			}
-			wessex_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
-			}
-			home_counties_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
-			}
-			yorkshire_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
-			}
-			west_midlands_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
-			}
-			five_boroughs_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
-				}
-				add_permanent_claim = ENG
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
