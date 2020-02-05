@@ -15,10 +15,7 @@ country_decisions = {
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 			OR = {
 				ai = no
@@ -68,19 +65,50 @@ country_decisions = {
 			change_tag = MSA
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 3 }
-				}
+				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3
 			}
-			every_province ={
+			malaya_region = {
 				limit = {
-					OR = {
-						region = malaya_region
-						region = moluccas_region
-						region = indonesia_region
-                                                area = tenasserim_area
-                                                area = north_tenasserim_area
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = MSA
+			}
+			moluccas_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = MSA
+			}
+			indonesia_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = MSA
+			}
+			tenasserim_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = MSA
+			}
+			north_tenasserim_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
 					}
 				}
 				add_permanent_claim = MSA
@@ -100,5 +128,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-
 }

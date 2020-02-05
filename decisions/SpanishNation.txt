@@ -147,7 +147,7 @@ country_decisions = {
 				limit = { government = monarchy }
 				legitimacy = 100
 			}
-			adm_tech = 10			#Diplo tech requirement
+			adm_tech = 10
 			owns_or_vassal_of = 208	# Leon
 			owns_or_vassal_of = 214	# Zaragoza
 			owns_or_vassal_of = 215	# Castilla La Vieja
@@ -213,13 +213,11 @@ country_decisions = {
 			hidden_effect = {
 				iberia_region = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
 						NOT = {
-							OR = {
-								area = alentejo_area
-								area = beieras_area
-							}
+							is_permanent_claim = ROOT
+							is_core = ROOT
+							area = alentejo_area
+							area = beieras_area
 						}
 					}
 					add_permanent_claim = SPA
