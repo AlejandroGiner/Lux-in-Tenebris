@@ -130,24 +130,22 @@ country_decisions = {
 			prestige = 75
 			dip = 3
 			adm = 3
-			OR = {
-				AND = {
-					tag = SAR
-					owns_core_province = 127			# Sardinia
-					senior_union_with = SAV
-					SAV = {
-						owns_core_province = 103		# Piedmont
-						NOT = { num_of_cities = 16 } #Original 6+5
-					}
+			if = {
+				limit = { tag = SAR }
+				owns_core_province = 127			# Sardinia
+				senior_union_with = SAV
+				SAV = {
+					owns_core_province = 103		# Piedmont
+					NOT = { num_of_cities = 16 } #Original 6+5
 				}
-				AND = {
-					tag = SAV
-					owns_core_province = 103			# Piedmont
-					senior_union_with = SAR
-					SAR = {
-						owns_core_province = 127		# Sardinia
-						NOT = { num_of_cities = 7 } #Original 2 + 5
-					}
+			}
+			else_if = {
+				limit = { tag = SAV }
+				owns_core_province = 103			# Piedmont
+				senior_union_with = SAR
+				SAR = {
+					owns_core_province = 127		# Sardinia
+					NOT = { num_of_cities = 7 } #Original 2 + 5
 				}
 			}
 		}
@@ -159,18 +157,6 @@ country_decisions = {
 			if = {
 				limit = { tag = SAR }
 				inherit = SAV
-			}
-			if = {
-				limit = {
-					is_part_of_hre = yes
-					is_elector = no
-				}
-				every_owned_province = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					set_in_empire = no
-				}
 			}
 			change_tag = SPI
 			remove_non_electors_emperors_from_empire_effect = yes
