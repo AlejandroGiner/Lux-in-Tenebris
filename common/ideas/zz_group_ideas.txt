@@ -287,7 +287,303 @@ rajput_ideas = {
 	}
 }
 
+SCO_Ideas = {
+	start = {
+		leader_land_shock = 1
+		land_forcelimit_modifier = 0.33
+	}
+	
+	bonus = {
+		land_maintenance_modifier = -0.05
+	}
+	
+	trigger = {
+		primary_culture = scottish
+		NOT = {
+			tag = CEL
+			tag = TNA
+		}
+	}
+	free = yes
+	
+	break_the_black_douglas = {
+		global_unrest = -1
+	}
+	modernised_royal_scots_navy = {
+		global_ship_cost = -0.1
+	}
+	reign_in_the_clans = {
+		global_manpower_modifier = 0.2
+	}
+	comets = {
+		stability_cost_modifier = -0.10
+	}
+	royal_revenue = {
+		global_tax_modifier = 0.1
+	}
+	basilikon_doron = {
+		legitimacy = 1
+	}
+	act_of_revocation = {
+		ae_impact = -0.15
+	}
+}
 
+SWI_ideas = {
+	start = {
+		global_manpower_modifier = 0.1
+		infantry_power = 0.1
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		OR = {
+			tag = SWI
+			tag = GRL
+			primary_culture = swiss
+		}
+	}
+	free = yes  #will be triggered at load
+	
+	the_swiss_confederation = {
+		stability_cost_modifier = -0.1
+	}
+	swiss_mercenaries = {
+		merc_maintenance_modifier = -0.15
+	}
+	alpine_defensiveness = {
+		fort_maintenance_modifier = -0.2
+	}
+	oasis_of_peace_and_prosperity = {
+		development_cost = -0.1
+	}
+	swiss_tolerance = {
+		tolerance_heretic = 2
+	}
+	haven_for_refugees = {
+		prestige = 1
+	}
+	clockwork = {
+		production_efficiency = 0.1
+	}
+}
+
+javan_ideas = {
+	start = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	
+	bonus = {
+		naval_maintenance_modifier = -0.1
+	}
+	
+	trigger = {
+		NOT = { tag = MAJ }
+		NOT = { tag = SUN }
+		NOT = { tag = MSA }
+		OR = {
+			primary_culture = javanese
+			primary_culture = sundanese
+		}
+	}
+	free = yes
+	
+	kejawen = {
+		religious_unity = 0.20
+	}
+	indianization = {
+		global_institution_spread = 0.1
+	}
+	dharmasastra = {
+		global_missionary_strength = 0.02
+	}
+	pan_asian_trade = {
+		merchants = 1
+		trade_steering = 0.10
+	}
+	bi_yearly_harvest = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	javanese_migration = {
+		global_colonial_growth = 25
+	}
+	jawanisasi = {
+		culture_conversion_cost = -0.15
+	}
+}
+
+SIL_ideas = {
+	start = {
+		prestige = 1
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+	 	global_tax_modifier = 0.10
+	}
+
+	trigger = {
+		OR = {
+		tag = SIL
+		primary_culture = schlesian
+		primary_culture = german_schlesian
+		}
+	}
+	free = yes
+
+	under_the_infuence = {
+		improve_relation_modifier = 0.15
+	}
+	silesian_duchies = {
+		stability_cost_modifier = -0.10
+	}
+	german_settlers = {
+		build_cost = -0.1
+		development_cost = -0.1
+	}
+	raubritter = {
+		trade_steering = 0.10
+	}
+	via_regia = {
+		trade_efficiency = 0.1
+	}
+	hanseatic_ties = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	black_gold = {
+		production_efficiency = 0.1
+	}
+}
+
+irish_ideas = {
+	start = {
+		army_tradition = 0.5
+		global_unrest = -1
+	}
+	
+	bonus = {
+		land_morale = 0.15
+	}
+	
+	trigger = {
+		OR = {
+			tag = IRE
+			primary_culture = irish
+		}
+	}
+	free = yes
+	
+	irish_endurance = {
+		war_exhaustion = -0.02
+	}
+	the_clanns = {
+		same_culture_advisor_cost = -0.2
+		republican_tradition = 0.3
+	}
+	more_than_irish = {
+		culture_conversion_cost = -0.2
+	}
+	loyal_catholics = {
+		papal_influence = 1
+		global_heretic_missionary_strength = 0.02
+	}
+	ire_abundant_harvests = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	unconquerable_ireland = {
+		manpower_recovery_speed = 0.20
+ 	}
+	ire_gallowglasses = {
+		discipline = 0.05
+	}
+}
+
+KUT_ideas = {
+	start = {
+		trade_efficiency = 0.1
+		hostile_attrition = 1
+	}
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	
+	trigger = {
+		OR = {
+			primary_culture = bornean
+			primary_culture = banjarese
+			primary_culture = kutainese
+		}
+	}
+	free = yes
+	
+	kut_earliest_indic_state = {
+		trade_efficiency = 0.1
+	}
+	kut_muslim_trading_communities = {
+		tolerance_heathen = 2
+	}
+	kut_riches_of_borneo = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	kut_anti_piracy_measures = {
+		defensiveness = 0.1
+	}
+	kut_encourage_immigration = {
+		global_manpower_modifier = 0.15
+	}
+	kut_consolidation_of_kutai = {
+		global_autonomy = -0.05
+	}
+	kut_subdue_the_inlands = {
+		global_unrest = -1
+	}
+}
+
+DAI_ideas = {
+	start = {
+		defensiveness = 0.25
+		enemy_core_creation = 0.25
+	}
+	
+	bonus = {
+		land_morale = 0.10
+	}
+	
+	trigger = {
+		OR = {
+			tag = DAI
+			primary_culture = vietnamese
+		}
+	}
+	free = yes		#will be added at load.
+	
+	the_great_proclamation = {
+		infantry_power = 0.1
+	}
+	confucian_revival = {
+		prestige = 1
+	}
+	nam_tien = {
+		culture_conversion_cost = -0.25
+	}
+	village_militia = {
+		global_manpower_modifier = 0.25
+	}
+	don_dien = {
+		core_creation = -0.10
+	}
+	thuan_thien = {
+		legitimacy = 1   
+	}
+	literary_reform = {
+		technology_cost = -0.05
+	}
+}
 
 telugu_ideas = { #Telugu Ideas
 	start = {
@@ -771,7 +1067,6 @@ malayan_ideas = {
 			primary_culture = kutainese
 			primary_culture = butonese
 			primary_culture = nusa_tenggara
-			primary_culture = bugis
 			primary_culture = acehnese
 			primary_culture = bornean
 		}
@@ -1864,8 +2159,7 @@ sulawesi_ideas = {
 	trigger = {
 		OR = {
 			primary_culture = sulawesi
-                        primary_culture = bugis
-                        primary_culture = butonese
+			primary_culture = butonese
 		}
 	}
 	free = yes
