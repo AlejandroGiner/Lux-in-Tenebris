@@ -120,10 +120,7 @@ country_decisions = {
 				}
 				add_government_reform = despotic_monarchy #Desert tribes settling down, theocracies become monarchies.
 			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 			set_country_flag = formed_morocco_flag
 		}
 		ai_will_do = {
@@ -231,10 +228,7 @@ country_decisions = {
 			}
 			add_prestige = 25
 			set_country_flag = formed_algiers_flag
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -328,10 +322,7 @@ country_decisions = {
 				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
 			}
 			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 			set_country_flag = formed_tunisia_flag
 		}
 		ai_will_do = {
@@ -447,10 +438,7 @@ country_decisions = {
 				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
 			}
 			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 			set_country_flag = formed_tripoli_flag
 		}
 		ai_will_do = {

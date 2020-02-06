@@ -16,22 +16,13 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 4
-				}
-				AND = {
-					ai = yes
-					is_year = 1700
-				}
+				num_of_cities = 4
+				is_year = 1700
 			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 		}
 		provinces_to_highlight = {
@@ -39,7 +30,7 @@ country_decisions = {
 				province_id = 613
 				province_id = 2373
 				province_id = 1022
-                                province_id = 607
+      	province_id = 607
 				province_id = 605
 			}
 			OR = {
@@ -57,15 +48,19 @@ country_decisions = {
 			owns_core_province = 2373
 			owns_core_province = 1022
 			owns_core_province = 607
-			owns_core_province = 605
+			mekong_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 		effect = {
 			mekong_area = {
 				add_base_tax = 2
-                                add_base_production = 2
-                                add_base_manpower = 2
+        add_base_production = 2
+        add_base_manpower = 2
 				change_culture = ROOT
-                                change_religion = ROOT
+        change_religion = ROOT
 			}
 			change_tag = VTM
 			remove_non_electors_emperors_from_empire_effect = yes
@@ -75,43 +70,55 @@ country_decisions = {
 			}
 			vietnam_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = VTM
 			}
 			red_river_delta_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = VTM
 			}
 			cao_bac_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = VTM
 			}
 			sipsongchautai_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = VTM
 			}
 			mekong_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = VTM
 			}
 			cambodia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = VTM
 			}
@@ -121,7 +128,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-                }
+    }
 		ai_will_do = {
 			factor = 1
 		}

@@ -134,10 +134,7 @@ country_decisions = {
 					was_never_end_game_tag_trigger = yes
 				}
 				change_tag = LTE
-				if = {
-					limit = { has_custom_ideas = no }
-					country_event = { id = ideagroups.1 } #Swap Ideas
-				}
+				swap_ideas = yes
 			}
 			if = {
 				limit = { tag = KNI }

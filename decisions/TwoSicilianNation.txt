@@ -153,13 +153,7 @@ country_decisions = {
 				}
 				add_permanent_claim = TSI
 			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = TSI_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 		}
 		ai_will_do = {
 			factor = 1
@@ -293,13 +287,7 @@ country_decisions = {
 				}
 				add_permanent_claim = TSI
 			}
-			if = {
-				limit = {
-					has_custom_ideas = no
-					NOT = { has_idea_group = TSI_ideas }
-				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 		}
 		ai_will_do = {
 			factor = 1
