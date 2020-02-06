@@ -98,10 +98,7 @@ country_decisions = {
 				change_government = monarchy
 				set_legacy_government = despotic_monarchy
 			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
 			set_country_flag = formed_iceland_flag
 		}
 		ai_will_do = {

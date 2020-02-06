@@ -46,10 +46,7 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no always = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
+			swap_ideas = yes
       set_country_flag = formed_piedmont_flag
     }
     ai_will_do = {
