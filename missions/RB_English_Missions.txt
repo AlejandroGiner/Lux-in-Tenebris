@@ -1055,16 +1055,11 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
-			4389 = {
-				add_permanent_claim = ROOT
-			}
-			178 = {
-				add_permanent_claim = ROOT
-			}
-			3075 = {
-				add_permanent_claim = ROOT
-			}
-			5172 = {
+			anjou_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -1082,10 +1077,7 @@ eng_rb_conquest_europe = {
 				area = poitou_area
 				area = guyenne_area #Aquitaine
 				area = west_massif_central_area
-				province_id = 4389
-				province_id = 178
-				province_id = 3075
-				province_id = 5172
+				area = anjou_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1107,16 +1099,8 @@ eng_rb_conquest_europe = {
 				type = all
 				owned_by = ROOT
 			}
-			4389 = {
-				owned_by = ROOT
-			}
-			178 = {
-				owned_by = ROOT
-			}
-			3075 = {
-				owned_by = ROOT
-			}
-			5172 = {
+			anjou_area = {
+				type = all
 				owned_by = ROOT
 			}
 		}
@@ -1167,6 +1151,13 @@ eng_rb_conquest_europe = {
 				add_permanent_claim = ROOT
 			}
 			champagne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_champagne_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

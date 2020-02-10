@@ -326,6 +326,13 @@ nav_missions_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				anjou_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				ile_de_france_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -344,6 +351,7 @@ nav_missions_2 = {
 				area = poitou_area
 				area = loire_area
 				area = ile_de_france_area
+				area = anjou_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -358,10 +366,14 @@ nav_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			anjou_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			ile_de_france_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-			}		
+			}
 		}
 		effect = {
 			add_adm_power = 100

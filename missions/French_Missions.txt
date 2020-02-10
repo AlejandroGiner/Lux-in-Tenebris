@@ -98,6 +98,13 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_champagne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			# individual provinces of picardy because calais is its own mission
 			89 = {
 				if = {
@@ -164,6 +171,7 @@ french_missions_north = {
 		provinces_to_highlight = {
 			OR = {
 				area = champagne_area
+				area = south_champagne_area
 				province_id = 89
 				province_id = 88
 				province_id = 1743
@@ -176,6 +184,10 @@ french_missions_north = {
 		}
 		trigger = {
 			champagne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_champagne_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -740,6 +752,12 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
+			anjou_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	conquer_provence = {
@@ -751,6 +769,7 @@ france_expand_south = {
 			OR = {
 				area = provence_area
 				area = loire_area
+				area = anjou_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -762,6 +781,10 @@ france_expand_south = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			loire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			anjou_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

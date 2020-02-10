@@ -5319,6 +5319,13 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				anjou_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				ile_de_france_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5386,6 +5393,7 @@ byz_galatia = {
 				area = bourgogne_area
 				area = ile_de_france_area
 				area = loire_area
+				area = anjou_area
 				province_id = 3025
 				province_id = 168
 				province_id = 3026
@@ -5416,6 +5424,10 @@ byz_galatia = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			loire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			anjou_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5470,6 +5482,13 @@ byz_galatia = {
 					add_permanent_claim = ROOT
 				}
 				champagne_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				south_champagne_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5615,6 +5634,7 @@ byz_galatia = {
 				area = flanders_area
 				area = franche_comte_area
 				area = champagne_area
+				area = south_champagne_area
 				area = picardy_area
 				area = luxembourg_area
 			}
@@ -5643,6 +5663,10 @@ byz_galatia = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			champagne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_champagne_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
