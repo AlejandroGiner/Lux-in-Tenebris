@@ -2,11 +2,15 @@ tr_russia_religious_missions = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -47,8 +51,12 @@ tr_russia_exclusive_church = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		tag = RUS
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -98,8 +106,12 @@ tr_muscovy_conquest = {
 	slot = 1
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		tag = RUS
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -187,11 +199,15 @@ tr_russia_conquest_1 = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -575,8 +591,12 @@ tr_russia_exclusive_1 = {
 	slot = 2
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		tag = RUS
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -714,11 +734,15 @@ tr_russia_conquest_2 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -764,8 +788,12 @@ tr_russia_exclusive_2 = {
 	slot = 3
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		tag = RUS
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -894,11 +922,15 @@ tr_russia_conquest_3 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1194,8 +1226,12 @@ tr_russia_exclusive_3 = {
 	slot = 4
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		tag = RUS
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1288,11 +1324,15 @@ tr_siberia_missions = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
+		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
