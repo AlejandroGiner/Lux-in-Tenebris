@@ -272,16 +272,6 @@ pru_duchy_of_cleves_provinces = {
 		province_id = 3200 #Mark
 	}
 }
-prussia_partitions_poland_provinces = {
-	OR = { #Cheating a little bit - technically Danzig wasn't taken in the 1st partition, but that's fine for now I suppose.
-		area = west_prussia_area
-		area = wielkopolska_area
-		#BT additions
-	}
-	NOT = {
-		province_id = 254 #Wasn't part of 1st partition, but gets added as a claim.
-	}
-}
 
 #Lithuania
 defeat_the_livonian_order_provinces = { #Unchanged, though it creates errors in the log.
@@ -308,13 +298,8 @@ vassalize_the_teutonic_order_provinces = { #Unchanged
 }
 vassalize_lithuania_provinces = {
 	OR = {
-		#BT removed, doesn't even exist in BT.
-		#area = minsk_area
 		area = west_dniepr_area
 		area = pripyat_area
-		#BT removed - no way Smolensk could be considered an integral part of Lithuania since Muscovy's conquest in 1510. It should however be granted as permanent claims after mission completion.
-		#area = smolensk_area
-		#BT additions
 		area = samogitia_area
 		area = lithuania_area
 		area = mazovia_area
@@ -326,7 +311,6 @@ vassalize_lithuania_provinces = {
 conquer_silesia_provinces = {
 	OR = {
 		area = silesia_area
-		#BT additions
 		area = lower_silesia_area
 	}
 }
