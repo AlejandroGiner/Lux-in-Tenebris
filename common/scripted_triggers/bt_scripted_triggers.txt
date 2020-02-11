@@ -197,14 +197,12 @@ subjugate_bohemia_provinces = {
 	OR = {
 		area = bohemia_area
 		area = erzgebirge_area
-		#BT additions
 		area = moravia_area
 	}
 }
 recover_silesia_provinces = {
 	OR = {
 		area = silesia_area
-		#BT additions
 		area = lower_silesia_area
 	}
 }
@@ -213,26 +211,24 @@ partition_poland_provinces = {
 		area = slovakia_area
 		area = malopolska_area
 		area = red_ruthenia_area
-		#BT additions
-		province_id = 2959 #Tarnau, for proper 2nd partition border.
-		province_id = 3156 #Bukowina
-	}
-	NOT = {
-		province_id = 3220 #Chestochowa was never part of the Habsburg domains.
-		province_id = 3222 #Kulm in order to get proper 2nd partition border.
+		area = felvidek_area
+		area = central_galicia_area
 	}
 }
 austrian_hungary_provinces = {
 	OR = {
 		area = slovakia_area
 		area = transdanubia_area
+		area = southern_transdanubia_area
+		area = western_transdanubia_area
+		area = felvidek_area
 		area = alfold_area
-		#BT additions
+		area = southern_alfold_area
 		area = carpathian_ruthenia_area
-		province_id = 1954
 	}
 	NOT = {
 		province_id = 1952 #To give to Transylvania region
+		province_id = 3443 #To give to Transylvania region
 	}
 }
 austrian_croatia_provinces = {
@@ -243,29 +239,26 @@ austrian_croatia_provinces = {
 		area = slavonia_area
 	}
 	NOT = {
-		province_id = 3182 #Scutari was never part of the Habsburg domain
+		province_id = 3184 #Only part of Habsburg domain in 19th century
 	}
 }
 conquer_transylvania_provinces = {
 	OR = {
 		area = southern_transylvania_area
 		area = transylvania_area
-		#BT additions
+		area = szeklerland_area
+		area = crisana_area
+		area = banat_area
 		province_id = 1952
-	}
-	NOT = {
-		province_id = 1954 #Given to Austrian Hungary
+		province_id = 3443
 	}
 }
 austrian_italian_ambition_provinces = {
 	OR = {
 		area = venetia_area
-		#BT additions
+		area = friuli_area
 		area = lombardy_area
 		province_id = 109 #Was part of Habsburg Lombardo-Venetia
-	}
-	NOT = {
-		province_id = 3043 #Makes for ugly borders if this is included, though Austria will get a claim to it due to past claims to the region.
 	}
 }
 

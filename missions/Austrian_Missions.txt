@@ -1,7 +1,4 @@
- ##################################################
- ##### Dub's Mission Work - All credit to Dub for this #####
- ##################################################
-#Updated vanilla missions to BT. Updates done by Dub.
+
 hab_holy_roman_ambitions = {
 	slot = 1 #upper left column
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
@@ -73,18 +70,10 @@ hab_holy_roman_ambitions = {
 		completed_by = 1526.8.30
 		
 		ai_weight = {
-			factor = 3
-			modifier = {
-				factor = 0
-				bohemia_area = {
-					owner = {
-						alliance_with = ROOT
-					}
-				}
-			}
+			factor = 5
 		}
 		ai_priority = {
-			factor = 2
+			factor = 5
 		}
 		
 		provinces_to_highlight = {
@@ -129,12 +118,14 @@ hab_holy_roman_ambitions = {
 		required_missions = { subjugate_bohemia }
 		position = 5
 		completed_by = 1620.11.8
+		
 		ai_weight = {
-			factor = 2
+			factor = 5
 		}
 		ai_priority = {
-			factor = 1.5
+			factor = 5
 		}
+		
 		trigger = {
 			has_fulfiled_province_requirement_for_mission_trigger = {
 				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
@@ -181,35 +172,14 @@ hab_holy_roman_ambitions = {
 		icon = mission_conquer_5_states
 		completed_by = 1772.8.5
 		required_missions = { recover_silesia }
+		
 		ai_weight = {
-			factor = 0.5
-			modifier = {
-				factor = 0
-				malopolska_area = {
-					owner = {
-						alliance_with = ROOT
-					}
-				}
-			}
-			modifier = {
-				factor = 2
-				slovakia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				malopolska_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				red_ruthenia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
+			factor = 5
 		}
+		ai_priority = {
+			factor = 5
+		}
+		
 		provinces_to_highlight = {
 			partition_poland_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -225,17 +195,6 @@ hab_holy_roman_ambitions = {
 			add_country_modifier = {
 				name = "austrian_empire"
 				duration = 7300
-			}
-			
-			#BT added, historical third partition of Poland provinces. There's a bit missing that is part of province 269, but I can't do much about that.
-			3222 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = ROOT
-				}
 			}
 		}
 	}
@@ -261,10 +220,10 @@ hab_protect_the_balkans = {
 					exists = HUN
 				}
 				total_development = HUN
-				total_development = 200
+				total_development = 250
 			}
 			else = {
-				total_development = 200
+				total_development = 250
 			}
 		}
 		effect = {
@@ -304,22 +263,10 @@ hab_protect_the_balkans = {
 		position = 3
 		completed_by = 1490.1.1
 		ai_weight = {
-			factor = 3
-			modifier = {
-				factor = 2
-				slovakia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				transdanubia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
+			factor = 5
 		}
 		ai_priority = {
-			factor = 2
+			factor = 5
 		}
 		
 		provinces_to_highlight = {
@@ -360,20 +307,12 @@ hab_protect_the_balkans = {
 		completed_by = 1526.8.30
 		
 		ai_weight = {
-			factor = 1
-			modifier = {
-				factor = 2
-				east_adriatic_coast_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				croatia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
+			factor = 5
 		}
+		ai_priority = {
+			factor = 5
+		}
+		
 		provinces_to_highlight = {
 			austrian_croatia_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -415,24 +354,14 @@ hab_protect_the_balkans = {
 		icon = mission_european_church
 		required_missions = { austrian_croatia }
 		completed_by = 1699.1.26
+		
 		ai_weight = {
-			factor = 2
-			modifier = {
-				factor = 2
-				southern_transylvania_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				transylvania_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
+			factor = 5
 		}
 		ai_priority = {
-			factor = 2
+			factor = 5
 		}
+		
 		provinces_to_highlight = {
 			conquer_transylvania_provinces = yes
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -445,33 +374,19 @@ hab_protect_the_balkans = {
 			}
 		}
 		effect = {
-			serbia_area = { #Adjusted to historical Austrian Serbia
+			serbia_area = {
 				limit = {
-					NOT = { province_id = 3000 } #Nis
-					NOT = { province_id = 3185 } #Rasina
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_claim = ROOT
 			}
-			#Historical Austrian Wallachia
-			3162 = { #Mehedinti
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = ROOT
+			wallachia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
-			}
-			160 = { #Craiova
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = ROOT
-				}
+				add_claim = ROOT
 			}
 		}
 	}
@@ -494,20 +409,7 @@ hab_italian_ambitions = {
 		completed_by = 1797.10.17
 		
 		ai_weight = {
-			factor = 3
-			modifier = {
-				factor = 0.5
-				venetia_area = {
-					is_part_of_hre = yes
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-			}
-			modifier = {
-				factor = 2
-				venetia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
+			factor = 5
 		}
 		ai_priority = {
 			factor = 5
@@ -535,39 +437,26 @@ hab_italian_ambitions = {
 			}
 			
 			#BT added, historical Austrian claims to italian holdings
-			tuscany_area = { #Adjusted to exclude Lucca which was never under Habsburg
+			tuscany_area = {
 				limit = {
-					NOT = { province_id = 2980 } #Lucca
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_claim = ROOT
 			}
-			emilia_area = { #Adjusted to exclude Lucca which was never under Habsburg
+			south_tuscany_area = {
 				limit = {
-					NOT = { province_id = 2980 } #Lucca
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
 				}
 				add_claim = ROOT
 			}
-			3042 = { #Massa
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = ROOT
+			emilia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
-			}
-			3043 = { #Parma
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
-					}
-					add_claim = ROOT
-				}
+				add_claim = ROOT
 			}
 			2979 = { #Novara
 				if = {
