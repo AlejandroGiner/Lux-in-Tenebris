@@ -73,6 +73,20 @@ tr_novgorod_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			beloozero_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			galich_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			moscow_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -120,6 +134,8 @@ tr_novgorod_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = vologda_area
+				area = beloozero_area
+				area = galich_area
 				area = moscow_area
 				area = suzdal_area
 				area = vladimir_area
@@ -132,6 +148,14 @@ tr_novgorod_1 = {
 		}
 		trigger = {
 			vologda_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			beloozero_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			galich_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -273,8 +297,10 @@ tr_novgorod_2 = {
 				province_id = 274
 				province_id = 1960
 				owner = {
-					dynasty = "Rurikovich"
-					culture_group = east_slavic
+					AND = {
+						dynasty = "Rurikovich"
+						culture_group = east_slavic
+					}
 				}
 			}
 			NOT = {
@@ -284,10 +310,12 @@ tr_novgorod_2 = {
 		trigger = {
 			NOT = {
 				any_country = {
-					dynasty = "Rurikovich"
-					culture_group = east_slavic
-					NOT = {
-						is_subject_of = ROOT
+					AND = {
+						dynasty = "Rurikovich"
+						culture_group = east_slavic
+						NOT = {
+							is_subject_of = ROOT
+						}
 					}
 				}
 			}
@@ -583,6 +611,13 @@ tr_novgorod_4 = {
 					duration = -1
 				}
 			}
+			laponia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			perm_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -598,7 +633,7 @@ tr_novgorod_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = perm_area
-
+				area = laponia_area
 				province_id = 1652
 			}
 			OR = {
@@ -613,6 +648,10 @@ tr_novgorod_4 = {
 				is_strongest_trade_power = ROOT
 			}
 			perm_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			laponia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

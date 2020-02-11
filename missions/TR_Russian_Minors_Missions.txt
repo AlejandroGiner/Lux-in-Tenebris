@@ -283,13 +283,13 @@ tr_russian_minors_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#beloozero_area = {
-				#limit = {
-					#NOT = { is_core = ROOT }
-					#NOT = { is_permanent_claim = ROOT }
-				#}
-				#add_permanent_claim = ROOT
-			#}
+			beloozero_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			pomor_area = {
 				limit = {
 					NOT = { is_core = ROOT }

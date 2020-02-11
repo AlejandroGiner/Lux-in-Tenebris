@@ -2,15 +2,11 @@ tr_russia_religious_missions = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -51,12 +47,8 @@ tr_russia_exclusive_church = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		tag = RUS
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -106,12 +98,8 @@ tr_muscovy_conquest = {
 	slot = 1
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		tag = RUS
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -160,6 +148,7 @@ tr_muscovy_conquest = {
 				area = malopolska_area
 				area = red_ruthenia_area
 				area = mazovia_area
+				area = sandomierz_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -175,6 +164,10 @@ tr_muscovy_conquest = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			mazovia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sandomierz_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -194,15 +187,11 @@ tr_russia_conquest_1 = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -222,13 +211,13 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			#beloozero_area = {
-				#limit = {
-					#NOT = { is_permanent_claim = ROOT	}
-					#NOT = { is_core = ROOT	}
-				#}
-				#add_permanent_claim = ROOT
-			#}
+			beloozero_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			pomor_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -320,7 +309,7 @@ tr_russia_conquest_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = novgorod_area
-				#area = beloozero_area
+				area = beloozero_area
 				area = pomor_area
 				area = north_karelia
 				area = arkhangelsk_area
@@ -339,10 +328,10 @@ tr_russia_conquest_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			#beloozero_area = {
-				#type = all
-				#country_or_non_sovereign_subject_holds = ROOT
-			#}
+			beloozero_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			pomor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -391,15 +380,49 @@ tr_russia_conquest_1 = {
 		required_missions = { tr_subjugate_novgorod }
 		completed_by = 1776.1.1
 		provinces_to_highlight = {
-			region = russia_region
+			OR = {
+				province_id = 294
+				province_id = 308
+				province_id = 300
+				province_id = 1778
+				province_id = 4147
+				province_id = 312
+				province_id = 301
+				province_id = 4116
+				province_id = 274
+			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		trigger = {
-			russia_region = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+			# integrate minors
+			294 = {
+				owned_by = ROOT
+			}
+			308 = {
+				owned_by = ROOT
+			}
+			300 = {
+				owned_by = ROOT
+			}
+			1778 = {
+				owned_by = ROOT
+			}
+			4147 = {
+				owned_by = ROOT
+			}
+			312 = {
+				owned_by = ROOT
+			}
+			301 = {
+				owned_by = ROOT
+			}
+			4116 = {
+				owned_by = ROOT
+			}
+			274 = {
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -435,6 +458,13 @@ tr_russia_conquest_1 = {
 				add_permanent_claim = ROOT
 			}
 			finland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			laponia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -516,6 +546,13 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sandomierz_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			wallachia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -538,12 +575,8 @@ tr_russia_exclusive_1 = {
 	slot = 2
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		tag = RUS
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -681,15 +714,11 @@ tr_russia_conquest_2 = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -702,6 +731,7 @@ tr_russia_conquest_2 = {
 			OR = {
 				area = finland_area
 				area = bothnia_area
+				area = laponia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -713,6 +743,10 @@ tr_russia_conquest_2 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			bothnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			laponia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -730,12 +764,8 @@ tr_russia_exclusive_2 = {
 	slot = 3
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		tag = RUS
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -746,9 +776,10 @@ tr_russia_exclusive_2 = {
 		position = 7
 		provinces_to_highlight = {
 			OR = {
-				area = ningguta_area
+				area = furdan_area
 				area = ilan_hala_area
 				area = central_jilin_area
+				area = sakhalin_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -760,7 +791,7 @@ tr_russia_exclusive_2 = {
 			730 = {
 				is_strongest_trade_power = ROOT
 			}
-			ningguta_area = {
+			furdan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -772,10 +803,13 @@ tr_russia_exclusive_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			sakhalin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			2106 = {
-				change_province_name = "Vladivostok"
 				rename_capital = "Vladivostok"
 				change_religion = ROOT
 				change_culture = ROOT
@@ -840,7 +874,7 @@ tr_russia_exclusive_2 = {
 			if = {
 				limit = {
 					OR = {
-						has_reform = revolutionary_empire
+						has_reform = revolutionary_empire_reform
 						has_reform = revolutionary_republic_reform
 					}
 				}		
@@ -860,15 +894,11 @@ tr_russia_conquest_3 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1164,12 +1194,8 @@ tr_russia_exclusive_3 = {
 	slot = 4
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		tag = RUS
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1262,15 +1288,11 @@ tr_siberia_missions = {
 	slot = 5
 	generic = no
 	ai = yes
-	potential_on_load = {
-		has_dlc = "Third Rome"
-	}
 	potential = {
 		OR = {
 			tag = MOS
 			tag = RUS
 		}
-		has_dlc = "Third Rome"
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -1552,7 +1574,7 @@ tr_siberia_missions = {
 					duration = -1
 				}
 			}
-			ningguta_area = {
+			furdan_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -1567,6 +1589,13 @@ tr_siberia_missions = {
 				add_permanent_claim = ROOT
 			}
 			central_jilin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			sakhalin_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
