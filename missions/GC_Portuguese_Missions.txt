@@ -41,7 +41,7 @@ gc_por_1 = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_brazil
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 1
+					value = 5
 					colonial_region = colonial_brazil
 					is_city = yes
 				}
@@ -381,7 +381,7 @@ gc_por_2 = {
 
 		effect = {
 			create_explorer = 60
-			add_dip_power = 60
+			add_dip_power = 50
 		}
 	}
 	gc_por_colonise_central_africa = {

@@ -263,27 +263,7 @@ austrian_italian_ambition_provinces = {
 }
 
 #Brandenburg-Prussia
-pru_conquer_pomerania_provinces = {
-	area = hinter_pommern_area
-	#BT removed, vorpommern_area as it wasn't historically owned by Prussia until 1815.
-}
-connect_the_prussian_lands_provinces = {
-	OR = {
-		#BT moved to partition mission
-		area = east_prussia_area
-		area = mittelmark_area
-	}
-}
-pru_conquer_silesia_provinces = {
-	OR = {
-		area = silesia_area
-		#BT additions
-		area = lower_silesia_area
-	}
-	NOT = {
-		province_id = 3142 #Because Brandenburg never conquered it.
-	}
-}
+
 pru_duchy_of_cleves_provinces = {
 	OR = { #This was difficult to designate.
 		province_id = 3197 #Julich

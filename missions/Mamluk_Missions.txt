@@ -189,6 +189,28 @@ mam_north_missions = {
 					add_permanent_claim = ROOT
 				}
 			}
+			2303= {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7601 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 			5147 = {
 				if = {
 					limit = {
@@ -214,8 +236,6 @@ mam_north_missions = {
 					NOT = { 
 						owned_by = ROOT	
 						is_core = ROOT
-						province_id = 2301
-						province_id = 5158
 					}
 				}
 				add_permanent_claim = ROOT
@@ -237,13 +257,20 @@ mam_north_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
-				area = karaman_area
 				area = cukurova_area
 				province_id = 2302
 				province_id = 5147
 				province_id = 332
 				province_id = 2303
-				province_id = 4298
+				province_id = 7601
+				province_id = 5146
+				province_id = 5150
+				province_id = 4314
+				province_id = 323
+				province_id = 4307
+				province_id = 5811
+				province_id = 324
+				province_id = 5848
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -254,15 +281,29 @@ mam_north_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			karaman_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = mam_conquer_karaman_area_tooltip
+				karaman_area = {
+					type = all
+					OR = {
+						province_id = 5864
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = mam_conquer_dulkadir_area_tooltip
+				dulkadir_area = {
+					type = all
+					OR = {
+						province_id = 2301
+						province_id = 5158
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 			cukurova_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			332 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			2302 = {
@@ -274,11 +315,6 @@ mam_north_missions = {
 			2303 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4298 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			
-
 		}
 		effect = {
 			add_country_modifier = {
@@ -303,7 +339,7 @@ mam_north_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			dulkadir_area = {
+			pamphylia_area = {
 				limit = {
 					NOT = { 
 						owned_by = ROOT	
@@ -312,7 +348,7 @@ mam_north_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			pamphylia_area = {
+			caria_area = {
 				limit = {
 					NOT = { 
 						owned_by = ROOT	

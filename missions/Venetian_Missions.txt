@@ -29,7 +29,7 @@ venice_missions_1 = {
 		}
 		effect = {
 			add_dip_power = 100
-			add_mercantilism = 2
+			add_mercantilism = 5
 			285 = {
 				if = {
 					limit = {
@@ -42,6 +42,39 @@ venice_missions_1 = {
 				}
 			}
 			286 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			7190 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2299 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3245 = {
 				if = {
 					limit = {
 						NOT = {
@@ -73,6 +106,9 @@ venice_missions_1 = {
 				province_id = 285
 				province_id = 286
 				province_id = 2447
+				province_id = 7190
+				province_id = 2299
+				province_id = 3245
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -80,6 +116,15 @@ venice_missions_1 = {
 		}
 		trigger = {
 			285 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			7190 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3245 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2299 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			286 = {
@@ -90,7 +135,7 @@ venice_missions_1 = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			1320 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -118,7 +163,7 @@ venice_missions_2 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 137
+				province_id = 5493
 				province_id = 1308
 			}
 			NOT = {
@@ -126,10 +171,10 @@ venice_missions_2 = {
 			}
 		}
 		trigger = {
-			137 = {
+			5493 = {
 				trade_share = {
 					country = ROOT
-					share = 25
+					share = 30
 				}
 			}
 			1308 = {
@@ -140,40 +185,14 @@ venice_missions_2 = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			add_dip_power = 100
-			321 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			cyprus_area = { 
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
-			}
-			5139 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			5145 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -181,19 +200,16 @@ venice_missions_2 = {
 		icon = mission_invade_island
 		required_missions = { monopolize_adriatic_cot }
 		provinces_to_highlight = {
-			OR = {
-				province_id = 321
-				province_id = 5139
-				province_id = 5145
-			}
+			area = cyprus_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			321 = { country_or_non_sovereign_subject_holds = ROOT }
-			5139 = { country_or_non_sovereign_subject_holds = ROOT }
-			5145 = { country_or_non_sovereign_subject_holds = ROOT }
+			cyprus_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
