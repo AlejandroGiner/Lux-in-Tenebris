@@ -11,48 +11,19 @@ hun_north_group = {
 		icon = mission_alliances
 		required_missions = {  }
 		position = 1
-
-		trigger = {
-			if = {
-				limit = {
-					exists = POL
-					has_dlc = "Res Publica"
-					POL = {
-						has_reform = elective_monarchy
-					}
-				}
-				OR = {
-					dynasty = POL
-					OR = {
-						AND = {
-							is_rival = POL
-							army_size = POL
-							has_spy_network_in = {
-								who = POL
-								value = 50
-							}
-						}
-						AND = {
-							POL = {
-								is_rival = ROOT
-							}
-							army_size = POL
-							has_spy_network_in = {
-								who = POL
-								value = 50
-							}
-						}
-					}
-				}
-				else = {
-					OR = {
-						alliance_with = POL
+			trigger = {
+				custom_trigger_tooltip = {
+				tooltip = hungary_poland_mission_alliance_tooltip
+				if = {
+					limit = {
+						exists = POL
+						has_dlc = "Res Publica"
 						POL = {
-							has_opinion = {
-								who = ROOT
-								value = 190
-							}
+							has_reform = elective_monarchy
 						}
+					}
+					OR = {
+						dynasty = POL
 						OR = {
 							AND = {
 								is_rival = POL
@@ -70,6 +41,41 @@ hun_north_group = {
 								has_spy_network_in = {
 									who = POL
 									value = 50
+								}
+							}
+						}
+					}
+					else = {
+						OR = {
+							OR = {
+								AND = {
+									alliance_with = POL
+									POL = {
+										has_opinion = {
+											who = ROOT
+											value = 160
+										}
+									}
+								}
+							}
+							OR = {
+								AND = {
+									is_rival = POL
+									army_size = POL
+									has_spy_network_in = {
+										who = POL
+										value = 50
+									}
+								}
+								AND = {
+									POL = {
+										is_rival = ROOT
+									}
+									army_size = POL
+									has_spy_network_in = {
+										who = POL
+										value = 50
+									}
 								}
 							}
 						}
@@ -99,7 +105,20 @@ hun_north_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-			1756 = { add_permanent_claim = ROOT }
+			western_moldovia = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_wallachia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 
@@ -115,6 +134,10 @@ hun_north_group = {
 
 		trigger = {
 			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_wallachia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -136,13 +159,6 @@ hun_north_group = {
 				add_permanent_claim = ROOT
 			}
 			bosnia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			croatia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -192,7 +208,6 @@ hun_north_group = {
 			}
 		}
 	}
-
 }
 
 hun_south_group = {
@@ -221,7 +236,10 @@ hun_south_group = {
 			moldavia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-			1756 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+			western_moldovia = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -232,7 +250,7 @@ hun_south_group = {
 					duration = 10950
 				}
 			}
-			1756 = {
+			western_moldovia = {
 				add_province_modifier = {
 					name = "hun_moldavia_mod"
 					duration = 10950
@@ -259,21 +277,11 @@ hun_south_group = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			croatia_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 
 		effect = {
 			add_dip_power = 100
 			bosnia_area = {
-				add_province_modifier = {
-					name = "hun_moldavia_mod"
-					duration = 10950
-				}
-			}
-			croatia_area = {
 				add_province_modifier = {
 					name = "hun_moldavia_mod"
 					duration = 10950
@@ -290,8 +298,8 @@ hun_south_group = {
 		provinces_to_highlight = {
 			OR = {
 				area = bulgaria_area
-				province_id = 3163
-				province_id = 3164
+				area = eastern_bulgaria_area
+				area = lower_danube_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -301,8 +309,14 @@ hun_south_group = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3163 = { country_or_non_sovereign_subject_holds = ROOT }
-			3164 = { country_or_non_sovereign_subject_holds = ROOT }
+			eastern_bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_danube_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 
 		effect = {
@@ -377,7 +391,21 @@ hun_ottoman_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_macedonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			bulgaria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_bulgaria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -400,12 +428,19 @@ hun_ottoman_group = {
 		position = 6
 
 		provinces_to_highlight = {
+			OR = {
 				area = macedonia_area
+				area = north_macedonia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_macedonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -459,6 +494,13 @@ hun_ottoman_group = {
 				add_claim = ROOT
 			}
 			morea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			thessaly_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
