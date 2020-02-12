@@ -599,9 +599,7 @@ tur_conquest_of_middle_east = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						OR = {
-							region = mashriq_region
-						}
+						region = mashriq_region
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
 					}
