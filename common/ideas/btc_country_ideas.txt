@@ -2517,7 +2517,7 @@ MLA_ideas = {
     free = yes        #will be added at load.
 
     Mayonnaise = {
-		trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.1
     }
     Crusader_History = {
 		free_leader_pool = 1
@@ -2601,7 +2601,7 @@ EXT_ideas = {
         global_own_trade_power = 0.15
     }
     Canadas_reales = {
-        trade_goods_size_modifier = 0.1
+        global_trade_goods_size_modifier = 0.1
     }
     Extremenian_conquistadores = {
         leader_land_manuever = 2
@@ -2610,7 +2610,7 @@ EXT_ideas = {
 		army_tradition_decay = -0.01
     }
     Migration_to_the_new_world = {
-        Global_colonial_growth = 20
+        global_colonial_growth = 20
     }
     Virgen_de_Guadalupe = {
         tolerance_own = 1
@@ -2976,12 +2976,14 @@ SN7_ideas = {
 	trigger = {
 		tag = SN7
 	}
+	
 	free = yes
+	
 	cantabrian_squadron = {
 		heavy_ship_power = 0.1
 	}
 	pyrenean_garrison = {
-		garrison_growth = 0.1
+		global_garrison_growth = 0.15
 	}
 	cantabric_merchant_fleet = {
 		global_ship_trade_power = 0.15
