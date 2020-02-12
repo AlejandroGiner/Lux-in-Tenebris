@@ -1266,9 +1266,7 @@ global_trade = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_center_of_trade_spread
-				OR = {
-					province_has_center_of_trade_of_level = 3
-				}
+				province_has_center_of_trade_of_level = 3
 			}
 		}
 		modifier = {
@@ -1282,9 +1280,7 @@ global_trade = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = tooltip_center_of_trade_spread
-				OR = {
-					province_has_center_of_trade_of_level = 2
-				}
+				province_has_center_of_trade_of_level = 2
 			}
 		}
 		modifier = {

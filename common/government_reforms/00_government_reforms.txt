@@ -259,7 +259,7 @@ roman_empire_legacy = {
 		tartar = {
 			cavalry_cost = -0.15
 		}
-		thai = {
+		southeastasian_group = {
 			development_cost = -0.05
 		}
 		tibetan_group = {
@@ -295,7 +295,7 @@ roman_empire_legacy = {
 		dacian = {
 			harsh_treatment_cost = -0.10
 		}
-		egyptian = {
+		egyptian_group = {
 			tolerance_heathen = 0.5
 		}
 		saharan_group = {
@@ -2429,7 +2429,7 @@ irish_clann_legacy = {
 		max_absolutism = -10
 	}
 	conditional = {
-		heir = no
+        allow = { heir = no }
 	}
 	ai = { factor = 1 }
 }

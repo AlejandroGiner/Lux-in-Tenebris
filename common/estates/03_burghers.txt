@@ -34,11 +34,9 @@ estate_burghers =
 			development = 10
 			province_trade_power = 5
 			hidden_trigger = {
-				AND = {
-					owned_by = KOR
-					culture = korean
-					owner = { has_country_modifier = kor_factional_upheaval }
-				}
+                owned_by = KOR
+                culture = korean
+                owner = { has_country_modifier = kor_factional_upheaval }
 			}
 		}
 	}

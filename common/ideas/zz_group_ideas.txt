@@ -677,8 +677,8 @@ bengali_ideas = {
 	trigger = {
 		OR = {
 			primary_culture = bengali
-			TAG = KMT
-			TAG = KAC
+			tag = KMT
+			tag = KAC
 		}
 	}
     free = yes       #will be added at load.
@@ -1233,9 +1233,9 @@ native_ideas = {
 		government = native
 		NOT = { primary_culture = tupinamba }
 		NOT = { primary_culture = guajiro }
-		NOT = { TAG = SAL }
-		NOT = { TAG = HDA }
-		NOT = { TAG = CNK }
+		NOT = { tag = SAL }
+		NOT = { tag = HDA }
+		NOT = { tag = CNK }
 	}
 	free = yes
 
@@ -1808,9 +1808,9 @@ pacific_northwest_ideas = {
 
 	trigger = {
 		OR = {
-			TAG = SAL
-			TAG = HDA
-			TAG = CNK
+			tag = SAL
+			tag = HDA
+			tag = CNK
 		}
 	}
 
