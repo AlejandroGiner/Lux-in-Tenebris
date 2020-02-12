@@ -5,7 +5,9 @@ country_decisions = {
     potential = {
       btc_potential_trigger = yes
       NOT = { has_country_flag = formed_piedmont_flag }
+      NOT = { tag = PIE }
       NOT = { tag = SAV }
+      NOT = { tag = SPI }
       primary_culture = piedmontese
     }
     provinces_to_highlight = {
