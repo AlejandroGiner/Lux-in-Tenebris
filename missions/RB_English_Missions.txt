@@ -984,9 +984,11 @@ eng_rb_conquest_europe = {
 		position = 4
 
 		provinces_to_highlight = {
-			area = brittany_area
-			province_id = 3026
-			province_id = 4782
+            OR = {
+                area = brittany_area
+                province_id = 3026
+                province_id = 4782
+            }
 			NOT = { owned_by = ROOT }
 		}
 
