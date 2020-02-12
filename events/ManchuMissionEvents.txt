@@ -278,18 +278,6 @@ country_event = {
 			}
 		}
 		custom_tooltip = unite_mongol_culture_tt
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					OR = {
-						culture = chahar
-						culture = khalkha
-						culture = oirats
-					}
-				}
-				change_culture = mongol
-			}
-		}
 	}
 	option = { # reorganize the tribes
 		name = "mch_missions.7.b"
