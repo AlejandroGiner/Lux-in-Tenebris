@@ -800,8 +800,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = munster_area
-			area = east_munster_area
+            OR = {
+                area = munster_area
+                area = east_munster_area
+            }
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -1264,13 +1266,9 @@ country_decisions = {
 					}
 					OR = {
 						NOT = { num_of_cities = 12 }
-						AND = {
-							OR = {
-								tag = ANI
-								tag = IRE
-								tag = SCO
-							}
-						}
+                        tag = ANI
+                        tag = IRE
+                        tag = SCO
 					}
 				}
 				ROOT = { inherit = PREV }
@@ -1326,9 +1324,9 @@ country_decisions = {
 			BAV = { exists = no }
 			is_nomad = no
 			OR = {
-				TAG = BV1
-				TAG = BV2
-				TAG = BV3
+				tag = BV1
+				tag = BV2
+				tag = BV3
 			}
 		}
 		allow = {
