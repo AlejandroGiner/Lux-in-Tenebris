@@ -261,7 +261,6 @@ papal_subject_bt = {
 	modifier_overlord = clear #We don't want to duplicate the ones inherited from vassal
 	modifier_subject = clear #Ditto
 	modifier_subject = { modifier = subject_nation }
-	modifier_overlord = clear
 
 	overlord_opinion_modifier = bt_is_papal_subject
 	subject_opinion_modifier = bt_is_papal_subject
