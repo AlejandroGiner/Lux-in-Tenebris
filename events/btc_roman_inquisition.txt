@@ -1,0 +1,238 @@
+#Roman Inquisition events
+#Implementation by Alejandro
+
+namespace = btc_roman_inquisition
+
+#Start of roman inquisition
+country_event = {
+  id = btc_roman_inquisition.1
+  title = btc_roman_inquisition.1.t
+  desc = btc_roman_inquisition.1.d
+  picture = COPTIC_MONASTERY_eventPicture
+  
+  major = yes
+  fire_only_once = yes
+  
+  trigger = {
+    tag = PAP
+    current_age = age_of_reformation
+    italy_region = {
+      OR = {
+        religion = protestant
+        religion = reformed
+      }
+    }
+  }
+  
+  mean_time_to_happen = {
+    months = 9
+  }
+  
+  immediate = {
+    hidden_effect = {
+      set_country_flag = btc_roman_inquisition_flag
+    }
+  }
+  
+  option = {
+    name = btc_roman_inquisition.1.a
+    custom_tooltip = btc_roman_inquisition_start_tooltip
+    capital_scope = {
+        area = {
+            limit = { owned_by = ROOT religion = catholic }
+            add_province_modifier = {
+                name = btc_roman_inquisition_modifier
+                duration = -1
+            }
+        }
+    }
+  }
+  
+}
+
+#Ask pope for help with heretics
+country_event = {
+  id = btc_roman_inquisition.2
+  title = btc_roman_inquisition.2.t
+  desc = btc_roman_inquisition.2.d
+  picture = COPTIC_MONASTERY_eventPicture
+  
+  trigger = {
+    exists = PAP
+    NOT = { tag = PAP }
+    PAP = { has_country_flag = btc_roman_inquisition_flag }
+    capital_scope = { region = italy_region }
+    reverse_has_opinion = {
+      who = PAP
+      value = 75
+    }
+    religion = catholic
+    any_owned_province = {
+      region = italy_region
+      OR = {
+        religion = protestant
+        religion = reformed
+      }
+    }
+  }
+  
+  mean_time_to_happen = {
+    years = 1
+  }
+  
+  option = {  #Ask for help
+    name = btc_roman_inquisition.2.a
+    add_adm_power = -50
+    add_years_of_income = -0.1
+    random_owned_province = {
+      limit = {
+        OR = {
+          religion = protestant
+          religion = reformed
+        }
+        had_province_flag = {
+          flag = received_inquisition_help_flag
+          days = 9125
+        }
+      }
+      remove_province_modifier = religious_zeal_at_conv
+      add_province_modifier = {
+        name = btc_roman_inquisition_help
+        duration = 1825
+      }
+      hidden_effect = {
+        set_province_flag = received_inquisition_help_flag
+      }
+    }
+  }
+  
+  option = { #Dont
+    name = btc_roman_inquisition.2.b
+  }
+  
+}
+
+#Pope gets reward for helping
+country_event = {
+  id = btc_roman_inquisition.3
+  title = btc_roman_inquisition.3.t
+  desc = btc_roman_inquisition.3.d
+  picture = COPTIC_MONASTERY_eventPicture
+  
+  is_triggered_only = yes
+  
+  option = {
+    name = btc_roman_inquisition.3.a
+    add_adm_power = 50
+    add_years_of_income = 0.1
+  }
+}
+
+#Inquisition is established in catholic provinces
+country_event = {
+    id = btc_roman_inquisition.4
+    title = btc_roman_inquisition.4.t
+    desc = btc_roman_inquisition.4.d
+    picture = COPTIC_MONASTERY_eventPicture
+    
+    trigger = {
+      tag = PAP
+      has_country_flag = btc_roman_inquisition_flag
+      any_owned_province = {
+        NOT = { has_province_modifier = btc_roman_inquisition_modifier }
+        religion = catholic
+        region = italy_region
+      }
+    }
+    
+    mean_time_to_happen = {
+        years = 1
+    }
+    
+    immediate = {
+        hidden_effect = {
+            random_owned_province = {
+                limit = {
+                    NOT = { has_province_modifier = btc_roman_inquisition_modifier }
+                    religion = catholic
+                    region = italy_region
+                }
+                save_event_target_as = inquisition_province
+            }
+        }
+    }
+    
+    option = {
+        name = btc_roman_inquisition.4.a
+        event_target:inquisition_province = {
+            area = {
+                limit = {
+                    religion = catholic
+                    owned_by = ROOT
+                    NOT = { has_province_modifier = btc_roman_inquisition_modifier }
+                }
+                add_province_modifier = {
+                    name = btc_roman_inquisition_modifier
+                    duration = -1
+                }
+            }
+        }
+    }
+}
+
+#Inquisition prosecutes protestants
+country_event = {
+  id = btc_roman_inquisition.5
+  title = btc_roman_inquisition.5.t
+  desc = btc_roman_inquisition.5.d
+  picture = COPTIC_MONASTERY_eventPicture
+  
+  trigger = {
+    tag = PAP
+    has_country_flag = btc_roman_inquisition_flag
+    any_owned_province = {
+      OR = {
+        religion = protestant
+        religion = reformed
+        religion = waldensian
+        religion = anglican
+      }
+      region = italy_region
+      NOT = { has_province_modifier = btc_roman_inquisition_help }
+    }
+  }
+  
+  mean_time_to_happen = {
+    years = 1
+  }
+  
+  immediate = {
+    hidden_effect = {
+      random_owned_province = {
+        limit = {
+          OR = {
+            religion = protestant
+            religion = reformed
+            religion = waldensian
+            religion = anglican
+          }
+          region = italy_region
+          NOT = { has_province_modifier = btc_roman_inquisition_help }
+        }
+        save_event_target_as = inquisition_province
+      }
+    }
+  }
+  
+  option = {
+    name = btc_roman_inquisition.5.a
+    event_target:inquisition_province = {
+      remove_province_modifier = religious_zeal_at_conv
+      add_province_modifier = {
+        name = btc_roman_inquisition_help
+        duration = 1825
+      }
+    }
+  }
+    
+}

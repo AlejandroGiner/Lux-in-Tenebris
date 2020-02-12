@@ -203,6 +203,30 @@
   #Edict of Nantes
   edict_of_nantes_custom_tooltip:0 "§YLutheran§! or §YCalvinist§! religion in at least §Y3§! provinces"
   
+  #Roman Inquisition
+  btc_roman_inquisition_modifier: "Roman Inquisition"
+  desc_btc_roman_inquisition_modifier: ""
+  btc_roman_inquisition_help: ""
+  desc_btc_roman_inquisition_help: ""
+  
+  btc_roman_inquisition.1.t: "The Roman Inquisition"
+  btc_roman_inquisition.1.d: "The rapid spread of Protestantism in Europe has not gone unnoticed by the Holy See. Determined to stop the spread of such heretical beliefs in Italy, Pope [PAP.Monarch.GetName] has decreed the establishment of the Supreme Sacred Congregation of the Roman and Universal Inquisition, in order to shield Catholicism in the peninsula, echoing the Medieval Inquisitions of ages past that put down the Cathars and Waldensians. As several attempts to convince European monarchs of the dangers of these new heretical beliefs have failed, the Church believes this new bureaucratic, rather than military, approach will be effective in outright preventing the spread of such ideas in the Papal States. Already many people have been questioned and imprisoned over Protestantism, sorcery, immorality, blasphemy, Judaizing and witchcraft, and many books deemed heretical have been censored and destroyed. While this office will certainly hinder any attempts of Protestant theologians to spread their ideas to Italy it remains to be seen if this will result in any meaningful contributions to stopping the spread of the Reformation in Europe as a whole."
+  btc_roman_inquisition.1.a: "Deus Vult!"
+  btc_roman_inquisition_start_tooltip: "§GThe Roman Inquisition is established.§!"
+
+  btc_roman_inquisition.2.t: ""
+  btc_roman_inquisition.2.d: ""
+  btc_roman_inquisition.2.a: ""
+  btc_roman_inquisition.2.b: ""
+      
+  btc_roman_inquisition.3.t: "The Inquisition sends foreign aid"
+  btc_roman_inquisition.3.d: "desc"
+  btc_roman_inquisition.3.a: "option"
+      
+  btc_roman_inquisition.4.t: "The Roman Inquisition expands to [event_target:inquisition_province.GetAreaName]"
+  btc_roman_inquisition.4.d: "desc"
+  btc_roman_inquisition.4.a: "option"
+  
   #Modding test events
   btc_modding_test.1.t: "Instant Japan Nation" 
   btc_modding_test.1.d: "Single tag integrates japan region for testing. Temporary performance hit."
