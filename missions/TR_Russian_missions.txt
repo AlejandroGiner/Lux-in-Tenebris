@@ -1567,10 +1567,12 @@ tr_siberia_missions = {
 				}
 			}
 			1972 = {
-				limit = { owned_by = ROOT }
-				add_province_modifier = {
-					name = "convert_the_steppes"
-					duration = 5475
+				if = {
+					limit = { owned_by = ROOT }
+					add_province_modifier = {
+						name = "convert_the_steppes"
+						duration = 5475
+					}
 				}
 			}
 			ural_region = {
