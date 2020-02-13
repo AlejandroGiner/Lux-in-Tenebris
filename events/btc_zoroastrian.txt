@@ -652,11 +652,7 @@ country_event = { #46 - The Vices of Priests
 			has_country_flag = zoroastrian_priesthood_reestablished
 			NOT = { has_country_flag = patriarch_corrupt }
 			NOT = { has_country_flag = patriarch_hostile }
-			NOT = { has_country_modifier = unhappy_church_powerful }
-			NOT = { has_country_modifier = unhappy_church_strong }
 			NOT = { has_country_modifier = unhappy_church_moderate }
-			NOT = { has_country_modifier = unhappy_church_weak }
-			NOT = { has_country_modifier = unhappy_church_impotent }
 		}
 		ai_chance = {
 			factor = 50
@@ -793,16 +789,9 @@ country_event = { #47 - The Priestly Caste
 			factor = 30
 		}
 		add_prestige = -5
-		add_country_modifier = { name = impious_priests duration = 5000 hidden = yes }
 	}
 	option = {
 		name = dg_zoroastrian.047.dastur
-		trigger = {
-			OR = {
-				has_country_modifier = caste_system_relaxed
-				has_country_modifier = caste_system_loose
-			}
-		}
 		ai_chance = { factor = 50 }
 		add_adm_power = -5
 	}
@@ -1090,9 +1079,6 @@ country_event = { #48 - Zoroastrian Sect emerges
 		}
 		add_adm_power = -10
 		every_owned_province = { clr_province_flag = heresy_target }
-	}
-	after = {
-		dg_patriarch_triggers = yes
 	}
 }
 
