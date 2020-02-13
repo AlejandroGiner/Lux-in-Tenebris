@@ -2429,7 +2429,7 @@ irish_clann_legacy = {
 		max_absolutism = -10
 	}
 	conditional = {
-        allow = { heir = no }
+        allow = { has_heir = no }
 	}
 	ai = { factor = 1 }
 }

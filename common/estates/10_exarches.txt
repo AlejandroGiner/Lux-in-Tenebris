@@ -30,7 +30,24 @@ estate_exarches =
 	
 	# If true, province can be granted to estate
 	province_trigger = {
-		estate_exarches_province_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = estate_exarches_tooltip
+			OR = {
+				has_estate = estate_exarches
+				NOT = {
+					any_province = { #Cannot have any province in region that has exarch estate
+						region = PREV
+						OR = {
+							has_estate = estate_exarches
+							AND = {
+								is_capital = yes
+								owned_by = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
 	}	
 	
 	# Min autonomy in estate provinces

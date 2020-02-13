@@ -20,7 +20,17 @@ estate_strategoi =
 	
 	# If true, province can be granted to estate
 	province_trigger = {
-		estate_strategoi_province_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = estate_strategoi_tooltip
+			OR = {
+				has_estate = estate_strategoi
+				NOT = {
+					any_province_in_state = {
+						has_estate = estate_strategoi
+					}
+				}
+			}
+		}
 	}
 	
 	# Min autonomy in estate provinces

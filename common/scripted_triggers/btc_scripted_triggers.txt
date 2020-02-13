@@ -92,41 +92,6 @@ btc_was_never_end_game_tag_trigger = {	#Country Scope
 	}
 }
 
-estate_strategoi_province_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = estate_strategoi_province_trigger
-		OR = {
-			has_estate = estate_strategoi
-			NOT = {
-				any_province_in_state = {
-					has_estate = estate_strategoi
-				}
-			}
-		}
-	}
-}
-
-estate_exarches_province_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = estate_exarches_province_trigger
-		OR = {
-			has_estate = estate_exarches
-			NOT = {
-				any_province = { #Cannot have any province in region that has exarch estate
-					region = PREV
-					OR = {
-						has_estate = estate_exarches
-						AND = {
-							is_capital = yes
-							owned_by = ROOT
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 exarches_territory_modifier_trigger = {
 	custom_trigger_tooltip = {
 		tooltip = exarches_territory_modifier_trigger
