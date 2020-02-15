@@ -29,8 +29,13 @@ bur_conquest = {
 		effect = {
 			lorraine_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			verdun_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -44,27 +49,33 @@ bur_conquest = {
 		
 		provinces_to_highlight = {
 			area = lorraine_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			lorraine_area = {
 				type = all
-				owned_by = ROOT
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
 		effect = {
-			93 = {
+			luxemburg_liege_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			1878 = {
+			luxembourg_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			2974 = {
-				add_permanent_claim = ROOT
-			}
-			1742 = {
+			wallonia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -78,9 +89,10 @@ bur_conquest = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 93
-				province_id = 1878
+				province_id = 5531
 				province_id = 2974
-				province_id = 1742
+				province_id = 4835
+				area = luxembourg_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -89,13 +101,17 @@ bur_conquest = {
 			93 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1878 = {
+			5531 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			2974 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1742 = {
+			4835 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			luxembourg_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -113,6 +129,13 @@ bur_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
+			guelders_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -122,12 +145,19 @@ bur_conquest = {
 		position = 5
 		
 		provinces_to_highlight = {
-			area = frisia_area
+			OR = {
+				area = guelders_area
+				area = frisia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			frisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guelders_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -178,14 +208,23 @@ bur_arles = {
 		}
 		
 		effect = {
-			romandie_area = {
+			1871 = {
+				add_permanent_claim = ROOT
+			}
+			3056 = {
+				add_permanent_claim = ROOT
+			}
+			1867 = {
+				add_permanent_claim = ROOT
+			}
+			4794 = {
+				add_permanent_claim = ROOT
+			}
+			savoy_dauphine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = ROOT
-			}
-			205 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -198,18 +237,30 @@ bur_arles = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = romandie_area
-				province_id = 205
+				province_id = 1871
+				province_id = 3056
+				province_id = 1867
+				province_id = 4794
+				area = savoy_dauphine_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			romandie_area = {
-				type = all
+			1871 = {
 				owned_by = ROOT
 			}
-			205 = {
+			3056 = {
+				owned_by = ROOT
+			}
+			1867 = {
+				owned_by = ROOT
+			}
+			4794 = {
+				owned_by = ROOT
+			}
+			savoy_dauphine_area = {
+				type = all
 				owned_by = ROOT
 			}
 		}
@@ -222,19 +273,24 @@ bur_arles = {
 				}
 				add_permanent_claim = ROOT
 			}
+			west_piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			dauphine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			102 = {
 				add_permanent_claim = ROOT
 			}
-			1875 = {
-				add_permanent_claim = ROOT
-			}
-			103 = {
-				add_permanent_claim = ROOT
-			}
-			203 = {
-				add_permanent_claim = ROOT
-			}
-			204 = {
+			3045 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -248,11 +304,10 @@ bur_arles = {
 		provinces_to_highlight = {
 			OR = {
 				area = provence_area
+				area = west_piedmont_area
+				area = dauphine_area
 				province_id = 102
-				province_id = 1875
-				province_id = 103
-				province_id = 203
-				province_id = 204
+				province_id = 3045
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -262,19 +317,18 @@ bur_arles = {
 				type = all
 				owned_by = ROOT
 			}
+			west_piedmont_area = {
+				type = all
+				owned_by = ROOT
+			}
+			dauphine_area = {
+				type = all
+				owned_by = ROOT
+			}
 			102 = {
 				owned_by = ROOT
 			}
-			1875 = {
-				owned_by = ROOT
-			}
-			103 = {
-				owned_by = ROOT
-			}
-			203 = {
-				owned_by = ROOT
-			}
-			204 = {
+			3045 = {
 				owned_by = ROOT
 			}
 		}

@@ -14,7 +14,6 @@ ara_conquest = {
 		NOT = { 
 			OR = {
 				#BT removed, not necessary for Beyond Typus as Turkish is not part of the Arabic group.
-				#primary_culture = turkish 
 				tag = RAS
 				tag = ADE
 				#BT added, to allow for tags that can form Yemen to get Yemen formation missions instead
@@ -45,9 +44,10 @@ ara_conquest = {
 		effect = {
 			mecca_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
 				name = "gen_eur_defender"
@@ -94,7 +94,7 @@ ara_conquest = {
 					trade_goods = coffee
 				}
 				production_leader = {
-					trade_goods = cloth
+					trade_goods = dates
 				}
 				production_leader = {
 					trade_goods = incense

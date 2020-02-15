@@ -56,13 +56,13 @@ defeat_black_sheep_provinces = {
 		area = al_jazira_area
 		#BT additions:
 		area = mardin_area
+		area = armenia_area
 		province_id = 420 #Da Ganja!
 		province_id = 2314
 		province_id = 2306
 	}
-	NOT = { #Exclusion of some Georgian provinces
-		province_id = 2204
-		province_id = 3253
+	NOT = {
+		province_id = 2202
 	}
 }
 conquer_the_caucasus_akk_provinces = {
@@ -72,7 +72,7 @@ conquer_the_caucasus_akk_provinces = {
 		area = eastgeorgia_area
 		area = sheki_area
 		area = shirvan_area
-		area = armenia_area
+		province_id = 2202
 	}
 }
 conquer_iraq_akk_provinces = { #Unchanged
@@ -89,6 +89,7 @@ invade_persia_akk_1_provinces = { #So vanilla has split the claims for the next 
 		area = tabarestan_area
 		area = iraq_e_ajam_area
 		area = isfahan_area
+		area = mazandaran_area
 	}
 }
 invade_persia_akk_2_provinces = { #So vanilla has split the claims for the next mission between its two prerequisite missions. That's why this is split.
