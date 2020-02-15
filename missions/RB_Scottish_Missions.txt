@@ -19,6 +19,7 @@ sco_rb_adm_missions = {
 				province_id = 253
 				province_id = 4364
 				province_id = 5842
+				province_id = 5451
 			}
 			NOT = {
 				owned_by = ROOT
@@ -28,6 +29,7 @@ sco_rb_adm_missions = {
 			owns_core_province = 253
 			owns_core_province = 4364
 			owns_core_province = 5842
+			owns_core_province = 5451
 		}
 		effect = {
 			highlands_area = {
@@ -231,6 +233,13 @@ sco_rb_conquest_missions = {
 				add_permanent_claim = ROOT
 			}
 			ulster_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_ulster_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}

@@ -73,6 +73,13 @@ sco_free_missions = {
 				}
 				add_claim = ROOT
 			}
+			east_ulster_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 }
