@@ -22,6 +22,9 @@ japanse_missions_sea = {
 				province_id = 1847
 				province_id = 1852
 				province_id = 1031
+				province_id = 3310
+				province_id = 3257
+				province_id = 3255
 			}
 			OR = {
 				NOT = {
@@ -34,6 +37,18 @@ japanse_missions_sea = {
 		}
 		trigger = {
 			4193 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
+			3310 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
+			3257 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				religion = ROOT
+			}
+			3255 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				religion = ROOT
 			}
@@ -65,8 +80,16 @@ japanse_missions_sea = {
 					1032 = {
 						is_empty = yes
 					}
+					3260 = {
+						is_empty = yes
+					}
 				}
 				1032 = {
+					cede_province = ROOT
+					change_culture = ROOT
+					change_religion = ROOT
+				}
+				3260 = {
 					cede_province = ROOT
 					change_culture = ROOT
 					change_religion = ROOT
@@ -76,8 +99,22 @@ japanse_missions_sea = {
 				1032 = {
 					add_permanent_claim = ROOT
 				}
+				3260 = {
+					add_permanent_claim = ROOT
+				}
 			}
 			1033 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			5292 = {
 				if = {
 					limit = {
 						NOT = {
@@ -98,6 +135,7 @@ japanse_missions_sea = {
 			OR = {
 				province_id = 1032
 				province_id = 1033
+				province_id = 5292
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -106,6 +144,7 @@ japanse_missions_sea = {
 		trigger = {
 			owns_core_province = 1032
 			owns_core_province = 1033
+			owns_core_province = 5292
 			num_of_colonists = 1
 		}
 		effect = {
@@ -207,7 +246,8 @@ japanse_missions_china = {
 		provinces_to_highlight = {
 			OR = {
 				area = south_korea_area
-				area = eastern_korea_area
+				area = left_gyeongsang_area
+				area = left_chungcheong_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -222,13 +262,17 @@ japanse_missions_china = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			eastern_korea_area = {
+			left_gyeongsang_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			left_chungcheong_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			add_adm_power = 100
+			add_adm_power = 75
 			ningguta_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -250,21 +294,7 @@ japanse_missions_china = {
 				}
 				add_permanent_claim = ROOT
 			}
-			pyongan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			hamgyeong_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			western_korea_area = {
+			korea_region = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -305,7 +335,7 @@ japanse_missions_china = {
 			}
 		}
 		effect = {
-			add_mil_power = 100
+			add_mil_power = 75
 			add_country_modifier = {
 				name = "military_victory"
 				duration = 7300
@@ -386,9 +416,9 @@ japanse_missions_china = {
 				add_prestige = 20
 				add_stability_or_adm_power = yes
 			}
-			add_adm_power = 100
-			add_dip_power = 100
-			add_mil_power = 100
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
 			if = {
 				limit = {
 					has_dlc = "Mandate of Heaven"
@@ -399,7 +429,7 @@ japanse_missions_china = {
 						capital_scope = {
 							OR = {
 								area = vietnam_area
-								area = cambodia_area
+								area = mekong_area
 								area = central_thai_area
 								area = red_river_delta_area
 							}
@@ -420,7 +450,7 @@ japanse_missions_china = {
 						capital_scope = {
 							OR = {
 								area = vietnam_area
-								area = cambodia_area
+								area = mekong_area
 								area = central_thai_area
 								area = red_river_delta_area
 							}
@@ -525,7 +555,7 @@ japanse_missions_the_empire = {
 			}
 		}
 		effect = {
-			add_prestige = 50
+			add_prestige = 35
 			south_korea_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -533,7 +563,14 @@ japanse_missions_the_empire = {
 				}
 				add_permanent_claim = ROOT
 			}
-			eastern_korea_area = {
+			left_chungcheong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			left_gyeongsang_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -548,7 +585,7 @@ japanse_missions_the_empire = {
 		required_missions = { JAP_establish_political_supremacy unite_japan_mission }
 		position = 4
 		provinces_to_highlight = {
-			province_id = 1015
+			area = ryukyu_area
 			NOT = {
 				AND = {
 					country_or_non_sovereign_subject_holds = ROOT
@@ -557,13 +594,16 @@ japanse_missions_the_empire = {
 			}
 		}
 		trigger = {
-			owns_core_province = 1015
+			ryukyu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 		}
 		effect = {
 			# province modifier in okinawa. 3 mountains.
 			add_country_modifier = {
 				name = "jap_three_mountains"
-				duration = 7300
+				duration = 3650
 			}
 			taiwan_area = {
 				limit = {
@@ -606,25 +646,21 @@ japanse_missions_the_empire = {
 				}
 				add_claim = ROOT
 			}
-			1240 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
+			south_zhejiang_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 				}
+				add_claim = ROOT
+			}
+			northern_polynesia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
 			}
 			1994 = {
-				if = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			1997 = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -641,9 +677,8 @@ japanse_missions_the_empire = {
 		required_missions = { jap_colonize_taiwan }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1240 # Hawaii
+				area = northern_polynesia_area # Hawaii
 				province_id = 1994 # Wake Island
-				province_id = 1997 # Midway
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
@@ -661,9 +696,13 @@ japanse_missions_the_empire = {
 				}
 			}
 			else = {
-				owns_core_province = 1240
-				owns_core_province = 1994
-				owns_core_province = 1997
+				northern_polynesia_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				1994 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
@@ -763,9 +802,14 @@ japanse_missions_domestic = {
 				area = sanindo_area
 				area = shikoku_area
 				area = northern_kyushu
-				province_id = 4181
-				province_id = 4180
-				province_id = 1012
+				area = east_hokuriku_area
+				area = kyushu_area
+				area = btc_south_kyushu_area
+				area = central_kyushu_area
+				area = south_kinai_area
+				area = south_thohoku_area
+				area = central_thohoku_area
+				area = east_sanyodo_area
 			}
 			NOT = {
 				owned_by = ROOT
@@ -773,71 +817,24 @@ japanse_missions_domestic = {
 		}
 		trigger = {
 			tag = JAP
-			hokuriku_area = {
-				type = all
-				owned_by = ROOT
-			}
-			kanto_area = {
-				type = all
-				owned_by = ROOT
-			}
-			eastern_kanto_area = {
-				type = all
-				owned_by = ROOT
-			}
-			chubu_area = {
-				type = all
-				owned_by = ROOT
-			}
-			eastern_chubu_area = {
-				type = all
-				owned_by = ROOT
-			}
-			kinai_area = {
-				type = all
-				owned_by = ROOT
-			}
-			thohoku_area = {
-				type = all
-				owned_by = ROOT
-			}
-			saigoku_area = {
-				type = all
-				owned_by = ROOT
-			}
-			sanindo_area = {
-				type = all
-				owned_by = ROOT
-			}
-			shikoku_area = {
-				type = all
-				owned_by = ROOT
-			}
-			northern_kyushu = {
-				type = all
-				owned_by = ROOT
-			}
-			4181 = {
-				owned_by = ROOT
-			}
-			4180 = {
-				owned_by = ROOT
-			}
-			1012 = {
-				owned_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = unite_japan_btc_tooltip
+				japan_region = {
+					type = all
+					OR = {
+						area = ryukyu_area
+						area = hokkaido_area
+						owned_by = ROOT
+					}
+				}
 			}
 		}
 		effect = {
-			1015 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			ryukyu_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -847,7 +844,7 @@ japanse_missions_domestic = {
 		
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 15
+				value = 30
 				OR = {
 					has_building = temple
 					has_building = cathedral
@@ -874,7 +871,7 @@ japanse_missions_domestic = {
 		
 		trigger = {
 			stability = 3
-			legitimacy_equivalent = 80
+			legitimacy_equivalent = 100
 		}
 		effect = {
 			add_country_modifier = {
@@ -891,7 +888,7 @@ japanse_missions_domestic = {
 		
 		trigger = {
 			religious_unity = 1
-			absolutism = 50
+			absolutism = 65
 			if = {
 				limit = { has_dlc = "Mandate of Heaven" }
 				custom_trigger_tooltip = {
@@ -1031,7 +1028,7 @@ japanse_missions_economic = {
 		required_missions = { JAP_balance_the_four_divisions }
 		
 		trigger = {
-			 share_of_starting_income = 2.0
+			 share_of_starting_income = 10.0
 		}
 		effect = {
 			add_country_modifier = {
@@ -1045,7 +1042,7 @@ japanse_missions_economic = {
 		required_missions = { JAP_issue_new_erizeni_rei }
 		
 		trigger = {
-			treasury = 2000
+			treasury = 2500
 		}
 		effect = {
 			add_country_modifier = {
@@ -1080,7 +1077,7 @@ japanse_missions_economic = {
 			custom_trigger_tooltip = {
 				tooltip = JAP_build_a_factroy
 				num_of_owned_provinces_with = {
-					value = 12
+					value = 20
 					has_manufactory_trigger = yes
 				}
 			}
@@ -1121,8 +1118,19 @@ japanse_missions_economic = {
 					}
 				}
 				AND = {
-					province_id = 4233
-					4233 = {
+					province_id = 735
+					735 = {
+						NOT = {
+							trade_share = {
+								country = ROOT
+								share = 85
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 1816
+					1816 = {
 						NOT = {
 							trade_share = {
 								country = ROOT
@@ -1159,16 +1167,22 @@ japanse_missions_economic = {
 			1376 = {
 				trade_share = {
 					country = ROOT
+					share = 90
+				}
+			}
+			735 = {
+				trade_share = {
+					country = ROOT
 					share = 85
 				}
 			}
-			OR = {
-				4233 = { # Beijing
-					trade_share = {
-						country = ROOT
-						share = 75
-					}
+			1816 = {
+				trade_share = {
+					country = ROOT
+					share = 75
 				}
+			}
+			OR = {
 				1371 = { # Canton
 					trade_share = {
 						country = ROOT

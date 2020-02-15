@@ -361,10 +361,12 @@ brabant_area = { #3
 }
 
 netherlands_area = { #4
+	color = { 219 30 57 }
 	96 97 98 4383 4833 5494 5496
 }
 
 frisia_area = {
+	color = { 19 30 57 }
 	100 1931 4382 7791 3058 5469
 }
 
@@ -397,6 +399,7 @@ valencia_area = { #3
 }
 
 lower_andalucia_area = { #4
+	color = { 219 30 57 }
 	224 1749 4548 3153 4770
 }
 
@@ -487,6 +490,7 @@ south_tuscany_area = {
 }
 
 liguria_area = { #5
+	color = { 219 30 57 }
 	101 102 2992 3011 3072 
 }
 
@@ -752,6 +756,7 @@ red_ruthenia_area = { #4
 }
 
 podolia_volhynia_area = { #4
+	color = { 219 30 57 }
 	1943 3241 4540 7206 7209 7197
 }
 
@@ -962,6 +967,7 @@ lower_dnieper_area = {
 }
 
 pryazovia_area = {
+	color = { 219 30 57 }
 	2412 7200 7201 7203
 }
 
@@ -1006,6 +1012,7 @@ upper_bavaria_area = {
 }
 
 lower_bavaria_area = { #4
+	color = { 219 30 57 }
 	2956 4764 4765 4761 4762 64
 }
 
@@ -1018,6 +1025,7 @@ west_swabia_area = {
 }
 
 franconia_area = { #3
+	color = { 219 30 57 }
 	4815 79 4781 3211 3208 66
 }
 
@@ -1060,7 +1068,7 @@ tirol_area = { #3
 }
 
 austria_proper_area = { #3
-	color = { 213 40 40 }
+	color = { 13 40 40 }
 	133 134 1770 3052 6665 6666 4760
 }
 
@@ -1151,6 +1159,7 @@ silesia_area = { #3
 }
 
 bohemia_area = { #4
+	color = { 19 30 57 }
 	266 2970 3143 4743 4748 4750 4747 3296 
 }
 
@@ -1179,6 +1188,7 @@ macedonia_area = { #4
 }
 
 morea_area = { #Peloponnese
+	color = { 219 30 57 }
 	1773 3178 5089 5114 145 5088 5087 3179
 }
 
@@ -1522,6 +1532,7 @@ mahra_area = { #3
 }
 
 yamamah_area = {
+	color = { 219 30 57 }
 	392 2335 2336 2337 4274
 }
 
@@ -1539,7 +1550,7 @@ mascat_area = {
 
 #Repurposed to Sinai
 syrian_desert_area = { #3
-	#color = { 219 30 57 }
+	color = { 219 30 57 }
 	364 365 5181 4268 5203
 }
 
@@ -2222,7 +2233,7 @@ arys_area = { #3
 }
 
 kyzylkum_area = { #3
-	455 1970 2363
+	455 1970 2363 2352
 }
 
 transoxiana_area = { #6
@@ -2273,6 +2284,7 @@ balkh_area = { #3
 }
 
 kerman_area = { #4
+	color = { 219 30 57 }
 	432 2220 2234 4345
 }
 
@@ -2301,6 +2313,7 @@ isfahan_area = { #3
 }
 
 tabriz_area = { #4 Central Azerbaijan
+	color = { 219 30 57 }
 	416 2206 2207 4304 424
 }
 
@@ -2358,6 +2371,7 @@ naga_hills_area = { #3
 }
 
 east_bengal_area = { #5
+	color = { 219 30 57 }
 	564 2039 4474 4475 4478
 }
 
@@ -2825,15 +2839,16 @@ south_korea_area = { #4 (Jeolla)
 	737 2741 4228 6492 6493 6494
 }
 
-left_chungcheong_area = { #4
+left_chungcheong_area = { #Chungcheong
 	1013 4229 6490 6491
 }
 
-left_gyeongsang_area = { #4
+left_gyeongsang_area = { #Gyeongsang
 	736 2745 4227 6495 6496 6497
 }
 
 left_hwanghae_area = { #4
+	color = { 219 30 57 }
 	733 4231 6482 6483 6484 6485
 }
 
@@ -2850,6 +2865,7 @@ hokuriku_area = { #5 (West Hokuriku)
 }
 
 east_hokuriku_area = {
+	color = { 219 30 57 }
 	5694 1024 5693 3306 5270 5275
 }
 
@@ -2946,6 +2962,7 @@ okhotsk_area = { #4
 }
 
 yakutia_area = { #5
+	color = { 144 0 32 }
 	1045 1051 1054 2435 2437
 }
 
@@ -2958,6 +2975,7 @@ buryatia_area = { #5
 }
 
 tunguska_area = { #5
+	color = { 44 110 32 }
 	1059 1061 2431 2432 2436
 }
 
@@ -2991,7 +3009,7 @@ kazakhstan_area = { #5
 
 syr_darya_area = { #4
 
-	456 1969 2352 2361
+	456 1969 2361
 }
 
 yrtesh_area = { #5
@@ -3003,6 +3021,7 @@ ishim_area = { #4
 }
 
 aqmola_area = { #5
+	color = { 44 110 132 }
 	479 2354 2357 4686 4690
 }
 
@@ -3035,6 +3054,7 @@ sakhalin_area = { #2
 }
 
 central_jilin_area = { # (South Ilin Hala)
+	color = { 219 30 57 }
 	729 731 2105 4217 4663
 }
 
@@ -3218,6 +3238,7 @@ yun_gui_area = { #6 (Yun-Gui Hinterland)
 }
 
 yun_gui_borderland_area = { #5
+	color = { 219 30 57 }
 	661 2165 3342 3350 2166 5936 660
 }
 
@@ -3234,6 +3255,7 @@ chuanbei_area = { #6
 }
 
 huguang_area = { #6 (Hubei)
+	color = { 219 30 57 }
 	681 682 2171 2172 4197 3358
 }
 
@@ -3278,6 +3300,7 @@ rio_grande_do_sol_area = { #5
 }
 
 santa_catarina_area = {
+	color = { 144 0 132 }
 	7714 5305 2887 7713 7712
 }
 
@@ -3294,6 +3317,7 @@ goias_area = { #5
 }
 
 pontal_area = { #3
+	color = { 144 0 32 }
 	2909 2910 2911 7572 2928
 }
 
@@ -3457,6 +3481,7 @@ maracaibo_area = { #3
 }
 
 eastern_llanos = { #5
+	color = { 144 0 32 }
 	2805 2809 2939 4615
 }
 
@@ -3481,6 +3506,7 @@ cordillera_occidental_area = { #5
 }
 
 popayan_area = { #4
+	color = { 144 0 32 }
 	823 2818 4604 826 4596
 }
 
@@ -3567,6 +3593,7 @@ potosi_area = { #4
  
 #Altered vanilla
 west_florida_area = { 
+	color = { 144 0 32 }
 	922 2530 7419 7427 923 
 }
 
@@ -3611,6 +3638,7 @@ south_carolina_area = {
 }
 
 carolinas_area = { 
+	color = { 144 0 32 }
 	933 2541 7454 7463 7462 7461 
 }
 
@@ -3643,6 +3671,7 @@ lower_louisiana_area = {
 }
 
 chesapeake_area = { 
+	color = { 144 0 32 }
 	953 7538 7539 2550 952 2554 2553 7528
 }
 
@@ -3683,6 +3712,7 @@ connecticut_valley_area = {
 }
 
 great_woods_area = { 
+	color = { 144 0 32 }
 	969 2563 2564 2562 7590 7591 970 2559
 }
 
@@ -3756,6 +3786,7 @@ piney_woods_area = {
 }
 
 big_thicket_area = { 
+	color = { 144 110 32 }
 	7491 7492 7513 2516 2665 7517 
 }
 
@@ -3948,6 +3979,7 @@ inner_ontario_area = { #5
 }
 
 red_river_area = {
+	color = { 44 110 32 }
     2016 2511 5625 5626
 }
 
@@ -3956,6 +3988,7 @@ assiniboia_area = { #3
 }
 
 saskatchewan_area = {
+	color = { 144 0 32 }
     2017 2597 5636 5637 5787
 }
 
@@ -3976,6 +4009,7 @@ sonora_area = { #5
 }
 
 jalisco_area = {
+	color = { 144 0 132 }
 	2617 2621 2657 4576 854 5020
 }
 
@@ -3984,6 +4018,7 @@ nayarit_area = { #4
 }
 
 michoacan_area = {
+	color = { 144 0 32 }
 	2622 2623 2624 4573 4574
 }
 
