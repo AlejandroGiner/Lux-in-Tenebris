@@ -1395,7 +1395,10 @@ gc_spain_4 = {
 				area = east_sicily_area
 				area = calabria_area
 				area = apulia_area
-				area = naples_area
+				province_id = 3127
+				province_id = 3039
+				province_id = 121
+				province_id = 2983
 				area = abruzzo_area
 				area = corsica_sardinia_area
 			}
@@ -1419,9 +1422,15 @@ gc_spain_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			naples_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = integrate_naples_benevento_tooltip
+				naples_area = {
+					type = all
+					OR = {
+						province_id = 5705
+						owned_by = ROOT
+					}
+				}
 			}
 			abruzzo_area = {
 				type = all

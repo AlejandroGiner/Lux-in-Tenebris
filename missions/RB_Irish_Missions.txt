@@ -19,7 +19,14 @@ ire_conquest_1 = {
 		icon = mission_rb_conquer_ulster
 		required_missions = { }
 		provinces_to_highlight = {
-			area = ulster_area
+			OR = {
+				area = ulster_area
+				province_id = 372
+				province_id = 5439
+				province_id = 4121
+				province_id = 3005
+				province_id = 5438
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -28,6 +35,16 @@ ire_conquest_1 = {
 			ulster_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = east_ulster_no_ulster_tooltip
+				east_ulster_area = {
+					type = all
+					OR = {
+						province_id = 3006
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
@@ -38,27 +55,19 @@ ire_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			3009 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			east_connacht_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			4120 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			leinster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			374 = {
 				if = {
@@ -97,13 +106,20 @@ ire_conquest_main = {
 		icon = mission_rb_conquer_munster
 		required_missions = { }
 		provinces_to_highlight = {
-			area = munster_area
+			OR = {
+				area = east_munster_area
+				area = munster_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			munster_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_munster_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -116,27 +132,19 @@ ire_conquest_main = {
 				}
 				add_permanent_claim = ROOT
 			}
-			3009 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			east_connacht_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			4120 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			leinster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			374 = {
 				if = {
@@ -159,36 +167,58 @@ ire_conquest_main = {
 			OR = {
 				area = ulster_area
 				area = connacht_area
+				area = east_connacht_area
 				area = munster_area
-				province_id = 3009
-				province_id = 4120
+				area = east_munster_area
+				area = leinster_area
 				province_id = 374
+				province_id = 372
+				province_id = 5439
+				province_id = 4121
+				province_id = 3005
+				province_id = 5438
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			munster_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			connacht_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ulster_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			3009 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4120 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			374 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = unite_clans_trigger_tooltip
+				munster_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				east_munster_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				connacht_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				east_connacht_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				ulster_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				east_ulster_area = {
+					type = all
+					OR = {
+						province_id = 3006
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				leinster_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				374 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		effect = {
@@ -196,13 +226,24 @@ ire_conquest_main = {
 				name = "high_king_of_ireland"
 				duration = 7300
 			}
-			373 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
+			custom_tooltip = irl_conquer_pale_tooltip
+			hidden_effect = {
+				3006 = {
+					if = {
+						limit = {
+							NOT = {
+								is_permanent_claim = ROOT
+								is_core = ROOT
+							}
 						}
+						add_permanent_claim = ROOT
+					}
+				}
+				leinster_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						NOT = { province_id = 374	}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -213,13 +254,20 @@ ire_conquest_main = {
 		icon = mission_rb_beyond_the_pale
 		required_missions = { unite_the_clans_ire }
 		provinces_to_highlight = {
-			province_id = 373
+			OR = {
+				province_id = 3006
+				area = east_leinster_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			373 = {
+			3006 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_leinster_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -370,13 +418,20 @@ ire_conquest_2 = {
 		icon = mission_rb_conquer_connacth
 		required_missions = { }
 		provinces_to_highlight = {
-			area = connacht_area
+			OR = {
+				area = connacht_area
+				area = east_connacht_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			connacht_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_connacht_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -389,12 +444,30 @@ ire_conquest_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_munster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			ulster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
+			}
+			custom_tooltip = east_ulster_no_ulster_claim_tooltip
+			hidden_effect = {
+				east_ulster_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { province_id = 3006 }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -564,8 +637,7 @@ ire_conquest_4 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 3009
-				province_id = 4120
+				area = leinster_area
 				province_id = 374
 			}
 			NOT = {
@@ -573,10 +645,8 @@ ire_conquest_4 = {
 			}
 		}
 		trigger = {
-			3009 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4120 = {
+			leinster_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			374 = {
@@ -591,7 +661,21 @@ ire_conquest_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_munster_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			connacht_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_connacht_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
