@@ -3,7 +3,12 @@ bavarian_missions_main = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = BAV
+		OR = {
+			tag = BAV
+			tag = BV3
+			tag = BV2
+			tag = BV1
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes

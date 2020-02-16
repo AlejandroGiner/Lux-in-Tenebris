@@ -12,10 +12,10 @@ genoa_missions_africa = {
 		icon = mission_dominate_home_trade_node
 		required_missions = { }
 		provinces_to_highlight = {
-			province_id = 1297
+			province_id = 1298
 		}
 		trigger = {
-			1297 = {
+			1298 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -50,6 +50,13 @@ genoa_missions_africa = {
 		}
 		effect = {
 			add_mercantilism = 2
+			tunisia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 	
