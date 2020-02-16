@@ -69,6 +69,13 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_bulgaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	rmn_impale_the_sultan = {
@@ -115,7 +122,21 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_macedonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_thrace_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -132,14 +153,22 @@ romanian_missions_1 = {
 					}
 					add_claim = ROOT
 				}
-			}
-			balkan_region = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-					owned_by = TUR
+				greece_region_btc = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						owned_by = TUR
+					}
+					add_claim = ROOT
 				}
-				add_claim = ROOT
+				balkan_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						owned_by = TUR
+					}
+					add_claim = ROOT
+				}
 			}
 		}
 	}
@@ -151,15 +180,18 @@ romanian_missions_1 = {
 				AND = {
                     OR = {
                         area = bulgaria_area
+						area = eastern_bulgaria_area
                         area = macedonia_area
+						area = north_macedonia_area
                         area = thrace_area
+						area = upper_thrace_area
                     }
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 				AND = {
-					region = balkan_region
+					region = greece_region_btc
 					owned_by = TUR
 				}
 			}
@@ -169,7 +201,15 @@ romanian_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			north_macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -177,7 +217,11 @@ romanian_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			balkan_region = {
+			eastern_bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			greece_region_btc = {
 				type = all
 				NOT = {
 					owned_by = TUR
@@ -201,6 +245,20 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			thessaly_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			western_aegean_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	rmn_heir_of_rome = {
@@ -210,6 +268,8 @@ romanian_missions_1 = {
 			OR = {
 				area = northern_greece_area
 				area = morea_area
+				area = western_aegean_area
+				area = thessaly_area
 				owned_by = BYZ
 			}
 			NOT = {
@@ -221,6 +281,14 @@ romanian_missions_1 = {
 				exists = BYZ
 			}
 			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_aegean_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			thessaly_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -261,6 +329,8 @@ romanian_missions_5 = {
 			OR = {
 				area = wallachia_area
 				area = moldavia_area
+				area = western_moldovia
+				area = eastern_wallachia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -269,6 +339,14 @@ romanian_missions_5 = {
 		trigger = {
 			is_subject = no
 			wallachia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_wallachia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			western_moldovia = {
 				type = all
 				owned_by = ROOT
 			}
@@ -286,13 +364,14 @@ romanian_missions_5 = {
 	}
 	found_bucharest = {
 		icon = mission_eastern_european_city
-		required_missions = { unite_the_voivodes }
+		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 3160
 		}
 		trigger = {
 			3160 = {
 				owned_by = ROOT
+				development = 6
 				NOT = { devastation = 1 }
 				NOT = { unrest = 1 }
 				OR = {
@@ -332,6 +411,13 @@ romanian_missions_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			szeklerland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	rmn_conquer_transylvania = {
@@ -341,6 +427,7 @@ romanian_missions_5 = {
 			OR = {
 				area = transylvania_area
 				area = southern_transylvania_area
+				area = szeklerland_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -352,6 +439,10 @@ romanian_missions_5 = {
 				owned_by = ROOT
 			}
 			southern_transylvania_area = {
+				type = all
+				owned_by = ROOT
+			}
+			szeklerland_area = {
 				type = all
 				owned_by = ROOT
 			}

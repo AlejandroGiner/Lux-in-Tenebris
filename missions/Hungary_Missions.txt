@@ -128,7 +128,10 @@ hun_north_group = {
 		position = 3
 
 		provinces_to_highlight = {
-			area = wallachia_area
+			OR = {
+				area = eastern_wallachia_area
+				area = wallachia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
@@ -227,7 +230,7 @@ hun_south_group = {
 		provinces_to_highlight = {
 			OR = {
 				area = moldavia_area
-				province_id = 1756
+				area = western_moldovia
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}

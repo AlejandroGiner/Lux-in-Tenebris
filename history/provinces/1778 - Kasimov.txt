@@ -14,6 +14,7 @@ base_manpower = 2
 capital = "Novy Nizovoy"
 is_city = yes
 add_core = MOS
+add_core = QAS
 
 discovered_by = ottoman
 discovered_by = eastern
@@ -21,12 +22,10 @@ discovered_by = nomad_group
 discovered_by = western
 
 1446.1.1 = {
-	add_core = QAS
 	capital = "Kasimov"
 	culture = mishary
 	religion = sunni
 }
-
 1452.1.1 = { owner = QAS controller = QAS } # The Qasim Khanate
 1598.1.7 = { unrest = 5 base_manpower = 3 } # "Time of troubles", peasantry brought into serfdom
 1613.3.3 = { unrest = 0 } # Order returned, Romanov dynasty

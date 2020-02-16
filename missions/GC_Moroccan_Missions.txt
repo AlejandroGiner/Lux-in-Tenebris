@@ -819,7 +819,9 @@ gc_morocco_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = kingdom_of_the_isles_area
-				area = subarctic_islands_area
+				province_id = 1979
+				province_id = 1978
+				province_id = 369
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -837,9 +839,15 @@ gc_morocco_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			subarctic_islands_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = mor_mission_jan_mayen_tooltip
+				subarctic_islands_area = {
+					type = all
+					OR = {
+						province_id = 5591
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		
