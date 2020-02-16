@@ -25,18 +25,12 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3
-				}
+				num_of_cities = 3
 			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
+				ai = no
 			}
 		}
 		provinces_to_highlight = {
@@ -121,25 +115,36 @@ country_decisions = {
 			add_government_reform = tsardom
 			russia_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = RUS
-			}
-			crimea_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = RUS
-			}
-			ural_region = {
-				limit = {
 					NOT = {
+						is_permanent_claim = ROOT
 						owned_by = ROOT
 					}
-					is_empty = no
 				}
 				add_permanent_claim = RUS
 			}
+			if = {
+				limit = { NOT = { was_tag = MOS } }
+				crimea_region = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							owned_by = ROOT
+						}
+					}
+					add_permanent_claim = RUS
+				}
+				ural_region = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							owned_by = ROOT
+						}
+						is_empty = no
+					}
+					add_permanent_claim = RUS
+				}
+			}
+			
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
