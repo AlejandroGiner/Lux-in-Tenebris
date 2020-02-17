@@ -222,6 +222,13 @@ pirate_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			central_cuba_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			east_cuba_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -239,6 +246,7 @@ pirate_2 = {
 			OR = {
 				area = west_cuba_area
 				area = east_cuba_area
+				area = central_cuba_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
@@ -246,6 +254,10 @@ pirate_2 = {
 
 		trigger = {
 			west_cuba_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_cuba_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
