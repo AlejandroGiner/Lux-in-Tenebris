@@ -71,9 +71,15 @@ oman_conquest_group = {
 		}
 		
 		trigger = {
-			dhofar_area = {
-				type = all
-				owned_by = ROOT
+			custom_trigger_tooltip = {
+				tooltip = conquer_mascat_oman_tooltip
+				dhofar_area = {
+					type = all
+					OR = {
+						province_id = 5244
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		

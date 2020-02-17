@@ -22,10 +22,7 @@ ha_sunset_group = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = munster_area
-				area = leinster_area
-				area = connacht_area
-				area = ulster_area
+				region = ireland_region
 			}
 			NOT = { owned_by = ROOT }
 			has_discovered = ROOT
@@ -42,7 +39,15 @@ ha_sunset_group = {
 						owned_by = ROOT
 						#has_port = yes
 					}
+					east_munster_area = {
+						owned_by = ROOT
+						#has_port = yes
+					}
 					leinster_area = {
+						owned_by = ROOT
+						#has_port = yes
+					}
+					east_leinster_area = {
 						owned_by = ROOT
 						#has_port = yes
 					}
@@ -50,7 +55,15 @@ ha_sunset_group = {
 						owned_by = ROOT
 						#has_port = yes
 					}
+					east_connacht_area = {
+						owned_by = ROOT
+						#has_port = yes
+					}
 					ulster_area = {
+						owned_by = ROOT
+						#has_port = yes
+					}
+					east_ulster_area = {
 						owned_by = ROOT
 						#has_port = yes
 					}
@@ -67,6 +80,13 @@ ha_sunset_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ireland_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -76,7 +96,10 @@ ha_sunset_group = {
 		position = 7
 		
 		provinces_to_highlight = {
-			region = british_isles_region
+			OR = {
+				region = ireland_region
+				region = british_isles_region
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
@@ -86,13 +109,24 @@ ha_sunset_group = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			ireland_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		
 		effect = {
 			add_treasury = 500
-			add_adm_power = 60
-			add_dip_power = 60
-			add_mil_power = 60
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			scandinavia_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -170,9 +204,16 @@ ha_sunset_group_two = {
 		
 		effect = {
 			add_treasury = 500
-			add_adm_power = 60
-			add_dip_power = 60
-			add_mil_power = 60
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			low_countries_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -250,54 +291,76 @@ ha_sunset_group_three = {
 		
 		effect = {
 			add_treasury = 500
-			add_adm_power = 60
-			add_dip_power = 60
-			add_mil_power = 60
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			italy_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
 
-#ha_sunset_group_europe = {
-#	slot = 3
-#	generic = no
-#	ai = yes
-#	potential = {
-#		technology_group = high_american
-#	}
-#	has_country_shield = yes
-#	
-#	ha_conquer_europe = {
-#		icon = mission_empire
-#		required_missions = {
-#			ha_conquer_ireland
-#			ha_conquer_france
-#			ha_conquer_spain
-#		}
-#		position = 8
-#		
-#		trigger = {
-#			custom_trigger_tooltip = {
-#				tooltip = "ha_conquer_europe.tooltip"
-#				NOT = { hre_size = 1 }
-#				NOT = { exists = HLR }
-#			}
-#		}
-#		
-#		effect = {
-#			north_german_region = {
-#				limit = {
-#					NOT = { is_core = ROOT }
-#					NOT = { owned_by = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
-#			south_german_region = {
-#				limit = {
-#					NOT = { is_core = ROOT }
-#					NOT = { owned_by = ROOT }
-#				}
-#				add_permanent_claim = ROOT
-#			}
-#		}
-#	}
-#}
+ha_sunset_group_europe = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		technology_group = high_american
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+			}
+		}
+		NOT = { has_reform = pirate_republic_reform }
+	}
+	has_country_shield = yes
+	
+	ha_conquer_europe = {
+		icon = mission_empire
+		required_missions = {
+			ha_conquer_ireland
+			ha_conquer_france
+			ha_conquer_spain
+		}
+		position = 8
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = "ha_conquer_europe.tooltip"
+				NOT = { hre_size = 1 }
+				NOT = { exists = HLR }
+			}
+		}
+		
+		effect = {
+			north_german_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_german_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			czech_lands_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

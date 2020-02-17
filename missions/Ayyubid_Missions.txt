@@ -14,7 +14,7 @@ hsn_conquest_group = {
 		position = 1
 		
 		trigger = {
-			army_size_percentage = 1
+			army_size_percentage = 0.9
 			manpower_percentage = 0.8
 			num_of_generals = 1
 		}
@@ -25,6 +25,13 @@ hsn_conquest_group = {
 				duration = 5475
 			}
 			al_jazira_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mardin_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -54,6 +61,13 @@ hsn_conquest_group = {
 		effect = {
 			add_prestige = 15
 			aleppo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			rakka_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }

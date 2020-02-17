@@ -3,9 +3,21 @@ berber_3 = {
 	generic = yes
 	ai = yes
 	potential = {
-		culture_group = maghrebi
-		capital_scope = {
-			region = maghreb_region
+		OR = {
+			AND = {
+				culture_group = maghrebi
+				capital_scope = {
+					region = maghreb_region
+				}
+			}
+			#Arabic tags
+			tag = FZA
+			tag = ZAB
+			tag = TGT
+			tag = DBD
+			tag = TFL
+			tag = MRK
+			tag = BSM
 		}
 		NOT = { map_setup = map_setup_random }
 		OR = {
