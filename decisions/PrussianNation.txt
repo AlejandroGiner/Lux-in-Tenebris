@@ -30,13 +30,11 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
-			NOT = { tag = PRU }
-			NOT = { tag = GER }
 			tag = BRA
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41	# Kï¿½nigsberg
 				AND = {
 					province_id = 43	# Danzig
 					ROOT = { NOT = { owns_core_province = 2995 } }
@@ -56,7 +54,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
@@ -101,13 +99,19 @@ country_decisions = {
 			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
 			west_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
 			east_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
@@ -134,14 +138,12 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
-			NOT = { tag = PRU }
-			NOT = { tag = GER }
 			tag = TEU
 			has_reform = monastic_order_reform
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41	# Kï¿½nigsberg
 				AND = {
 					province_id = 43	# Danzig
 					ROOT = { NOT = { owns_core_province = 2995 } }
@@ -161,7 +163,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
@@ -251,12 +253,12 @@ country_decisions = {
 				}
 				NOT = { tag = TEU }
 			}
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			num_of_cities = 12			#If not one of the normal candidates, needs 12 provinces plus Koenigsberg to see
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41	# Kï¿½nigsberg
 				province_id = 43	# Danzig
 				province_id = 2995	# Stolp
 			}
@@ -270,7 +272,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# Königsberg
+			owns_core_province = 41			# Kï¿½nigsberg
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
 			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
