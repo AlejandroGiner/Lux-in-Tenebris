@@ -9,6 +9,9 @@ declarewar = {
   effect = {
     #ROOT = attacker
     #FROM = defender
+    FROM = {
+      save_global_event_target_as = vow_of_peace_defender
+    }
     ROOT = {
       country_event = {
         id = waldensian_events.100

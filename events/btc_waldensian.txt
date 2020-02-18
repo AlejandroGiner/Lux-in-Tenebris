@@ -826,9 +826,12 @@ country_event = {
       attacker_leader = ROOT
     }
   }
-  
+
   option = {
     name = waldensian_events.100.a
     add_stability = -3
+    hidden_effect = {
+      clear_global_event_target = vow_of_peace_defender
+    }
   }
 }
