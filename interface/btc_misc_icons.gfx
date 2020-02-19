@@ -1,33 +1,81 @@
 spriteTypes = {
-
 	spriteType = {
 		name = "GFX_disaster_majapahit_civil_war"
 		texturefile = "gfx//interface//disasters//majapahit_civil_war.dds"
 		noOfFrames = 3
 		loadType = "INGAME"
 	}
-	
 	spriteType = {
 		name = "schism_of_1552_eventPicture"
 		texturefile = "gfx/event_pictures/schism_of_1552_eventPicture.dds"
 		allwaystransparent = yes
 	}
-	
 	spriteType = {
 		name = "GFX_disaster_georgian_civil_war"
 		texturefile = "gfx//interface//disasters//georgian_civil_war.dds"
 		noOfFrames = 3
 		loadType = "INGAME"
 	}
-	
 	spriteType = {
 		name = "SEATRESTORED_eventPicture"
 		texturefile = "gfx/event_pictures/SEATRESTORED_eventPicture.dds"
 		allwaystransparent = yes
 	}
-	
 	spriteType = {
 		name = "mission_adu_umayyad_final"
 		texturefile = "gfx//interface//missions//dlc_missions//gc//andalus//mission_adu_umayyad_final.dds"
+	}
+	#BT Mission icons, credit to Dub
+	spriteType = {
+		name = "mission_mine"
+		texturefile = "gfx//interface//missions//mission_mine.dds"
+	}
+	spriteType = {
+		name = "mission_breitenfeld"
+		texturefile = "gfx//interface//missions//mission_breitenfeld.dds"
+	}
+	spriteType = {
+		name = "mission_hre_shield"
+		texturefile = "gfx//interface//missions//mission_hre_shield.dds"
+	}
+	spriteType = {
+		name = "mission_sca_shield"
+		texturefile = "gfx//interface//missions//mission_sca_shield.dds"
+	}
+	spriteType = {
+		name = "mission_pru_shield"
+		texturefile = "gfx//interface//missions//mission_pru_shield.dds"
+	}
+	spriteType = {
+		name = "mission_kur_shield"
+		texturefile = "gfx//interface//missions//mission_kur_shield.dds"
+	}
+	spriteType = {
+		name = "mission_helsingor"
+		texturefile = "gfx//interface//missions//mission_helsingor.dds"
+	}
+	spriteType = {
+		name = "mission_enforce_danelaw"
+		texturefile = "gfx//interface//missions//mission_enforce_danelaw.dds"
+	}
+	spriteType = {
+		name = "mission_norwegian_fjords"
+		texturefile = "gfx//interface//missions//mission_norwegian_fjords.dds"
+	}	
+	spriteType = {
+		name = "mission_acadian_beach"
+		texturefile = "gfx//interface//missions//mission_acadian_beach.dds"
+	}
+	spriteType = {
+		name = "mission_harald_hardrade"
+		texturefile = "gfx//interface//missions//mission_harald_hardrade.dds"
+	}
+	spriteType = {
+		name = "mission_serbian_highlands"
+		texturefile = "gfx//interface//missions//mission_serbian_highlands.dds"
+	}
+	spriteType = {
+		name = "mission_serbian_empire"
+		texturefile = "gfx//interface//missions//mission_serbian_empire.dds"
 	}
 }

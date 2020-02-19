@@ -108,3 +108,47 @@ bt_spanish_colonial_enthusiasm = {
 bt_daring_navigator = {
 	range = 0.5
 }
+
+##################################################################################################
+##################################################################################################
+##################################################################################################
+# Dub's work
+##################################################################################################
+##################################################################################################
+##################################################################################################
+#Scandinavia flavour stuff
+
+swe_settled_finland = {
+	local_manpower_modifier = 0.20
+}
+swe_imperial_influence = {
+	spy_offence = 0.20
+	diplomatic_reputation = 1
+}
+swe_conquered_prussia = {
+	discipline = 0.03
+}
+swe_golden_age = {
+	all_power_cost = -0.05
+}
+dan_curtailed_hansa = {
+	legitimacy = 0.5
+	trade_efficiency = 0.1
+}
+dan_dominance_asserted = {
+	global_trade_power = 0.2
+}
+dan_sound_toll_strengthened = {
+	trade_efficiency = 0.05
+}
+nor_markland_timber = {
+	local_development_cost = -1			 #Meant to work with glacial + arctic modifiers, hence the size.
+}
+nor_haakons_legacy = {
+	legitimacy = 1
+	ae_impact = -0.1
+}
+nor_harder_than_hardrade = {
+	global_autonomy = -0.05
+	prestige = 1
+}

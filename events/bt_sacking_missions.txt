@@ -1,0 +1,52 @@
+namespace = bt_sacking_events
+normal_or_historical_nations = yes
+
+#Sack of Lubeck
+country_event = {
+	id = bt_sacking_events.1
+	title = bt_sacking_events.1.t
+	desc = bt_sacking_events.1.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bt_sacking_events.1.a
+		45 = {
+			add_loot_from_rich_province_general_effect = {
+				LOOTER = owner #DAN
+			}
+			add_base_tax = -2
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+}
+country_event = { #Sack of Copenhagen
+	id = bt_sacking_events.2
+	title = bt_sacking_events.2.t
+	desc = bt_sacking_events.2.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bt_sacking_events.2.a
+		12 = {
+			add_loot_from_rich_province_general_effect = {
+				LOOTER = owner #SWE
+			}
+			add_base_tax = -2
+			add_base_production = -1
+			add_base_manpower = -1
+		}
+		capital_scope = {
+			add_base_tax = 1
+			add_base_production = 1
+		}
+	}
+}

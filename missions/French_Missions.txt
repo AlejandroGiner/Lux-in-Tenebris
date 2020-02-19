@@ -822,6 +822,8 @@ france_expand_south = {
 				province_id = 3092
 				province_id = 193
 				province_id = 3133
+				province_id = 5536
+				province_id = 5538
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -839,6 +841,7 @@ france_expand_south = {
 					OR = {
 						province_id = 3132
 						province_id = 3130
+						province_id = 5537
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}

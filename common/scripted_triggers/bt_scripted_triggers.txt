@@ -302,21 +302,121 @@ vassalize_norway_swe_provinces = { #Unchanged
 		area = western_norway
 	}
 }
-control_latvia_provinces = { #Represents Swedish Livonia+Estonia+Ingria in vanilla, so does that here too.
+swe_turns_have_tabled_provinces = {
 	OR = {
-		area = estonia_ingria_area
-		#BT adjusted to include Ingria plus all of Livonia instead of some stray provinces due to the extra provinces in BT.
-		area = north_karelia_area #Apparently this is the Ingria of BT.
-		area = livonia_area
-	}
-	NOT = {
-		province_id = 273 #Not part of historical Swedish Livonia/Estonia/Ingria.
+		area = denmark_area
+		area = jutland_area
+		area = schleswig_area
 	}
 }
+
+swe_expand_finland_provinces = { #Kexholm County + Ingria
+	OR = {
+		area = west_karelia_area #Apparently this is the Ingria of BT.
+		area = north_karelia_area 
+	}
+}
+control_estonia_provinces = { #Swedish Estonia
+    area = estonia_ingria_area
+    NOT = { province_id = 35 } #Ösel was actually part of Swedish Livonia, ceded in 1645 as part of the treaty of Brömsebro, together with Jämtland & Gotland (+Halland).
+    NOT = { province_id = 3230 } #Also part of Livonia
+}
+
+control_latvia_provinces = { #Now adjusted to only include Swedish Livonia
+    OR = {
+        area = livonia_area
+        area = north_livonia_area
+        province_id = 35 #Ösel
+        province_id = 3230 #Sontack
+    }
+    NOT = {
+        province_id = 273 #Not part of historical Swedish Livonia/Estonia/Ingria.
+    }
+}
 swedish_pommerania_provinces = {
-	OR = { #I don't know where this favoritism comes from - Sweden had no claim on Mecklenburg nor the whole of Pomerania. Hence this is heavily adjusted. Wismar is granted as a claim but not required.
-		province_id = 47 #Stralsund
-		province_id = 2994 #Greifswald
-		province_id = 1858 #Stettin. The province itself was technically split between Sweden & Brandenburg, but Sweden took Stettin.
+	OR = {
+		area = vorpommern_area
+		province_id = 1858 #Stettin
+		province_id = 2996 #Wismar
+		province_id = 7597 #Kammin
+	}
+}
+swe_bremen_verden_provinces = {
+	OR = {
+		province_id = 54 #Stade (Verden)
+		province_id = 1874 #Bremen
+	}
+}
+
+swedish_prussia_provinces = {
+	OR = {
+		area = east_prussia_area
+		province_id = 7778
+		province_id = 2958
+		#province_id = xxxx add Marienwerder in the future
+	}
+}
+
+dan_slesvig_holstein_inheritance_provinces = {
+	OR = {
+		area = schleswig_area
+		area = holstein_area
+	}
+	NOT = {
+		province_id = 4141 #Dithmarschen
+		province_id = 3233 #Pinneburg
+	}
+}
+denmark_sweden_integration_provinces = {
+	OR = {
+		area = ostra_svealand_area
+		area = norrland_area
+		area = gotaland_area
+		area = vastra_gotaland_area
+	}
+}
+denmark_iceland_integration_provinces = {
+	area = iceland_area
+}
+
+danish_curonia_provinces = {
+	area = curonia_area
+}
+
+dan_enforce_danelaw_provinces = {
+	OR = {
+		area = northern_england_area
+		area = east_midlands_area
+		area = wessex_area
+		area = east_anglia_area
+		area = west_midlands_area
+		area = home_counties_area
+		area = yorkshire_area
+		area = five_boroughs_area
+	}
+}
+
+nor_reverse_kalmar_union_provinces = {
+	OR = {
+		swe_turns_have_tabled_provinces = yes
+		area = skaneland_area
+	}
+}
+nor_conquer_the_isles_provinces = {
+	area = kingdom_of_the_isles_area
+}
+nor_conquer_scotland_provinces = {
+	OR = {
+		area = lowlands_area
+		area = scottish_marches_area
+		area = highlands_area
+	}
+}
+nor_conquer_ireland_provinces = {
+	OR = {
+		area = leinster_area
+		area = ulster_area
+		area = munster_area
+		area = connacht_area
 	}
 }
