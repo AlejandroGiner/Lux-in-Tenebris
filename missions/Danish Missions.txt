@@ -1075,10 +1075,12 @@ bt_north_sea_empire = {
 			num_of_galley = 50
 			num_of_transport = 20
 			all_country = {
-				limit = {
-					capital_scope = { region = british_isles_region }
+				if = {
+					limit = {
+						capital_scope = { region = british_isles_region }
+					}
+					ROOT = { navy_size = PREV }
 				}
-				ROOT = { navy_size = PREV }
 			}
 		}
 		effect = {
