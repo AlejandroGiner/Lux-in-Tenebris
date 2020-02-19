@@ -130,8 +130,10 @@ danish_missions_kalmar = {
 			}
 			scandinavia_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_claim = ROOT
+						owned_by = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
@@ -202,7 +204,7 @@ bt_danish_trade_2 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -213,7 +215,7 @@ bt_danish_trade_2 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -224,7 +226,7 @@ bt_danish_trade_2 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -261,8 +263,10 @@ bt_danish_trade_2 = {
 			west_prussia_area = { #Danziger domain
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
 					}
 				}
 				add_claim = ROOT
@@ -270,8 +274,10 @@ bt_danish_trade_2 = {
 			livonia_area = { #Rigan domain
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
 					}
 				}
 				add_claim = ROOT
@@ -279,8 +285,10 @@ bt_danish_trade_2 = {
 			north_livonia_area = { #Rigan domain
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
 					}
 				}
 				add_claim = ROOT
@@ -288,8 +296,10 @@ bt_danish_trade_2 = {
 			north_karelia_area = { #Nevan domain
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
 					}
 				}
 				add_claim = ROOT
@@ -352,6 +362,7 @@ bt_danish_colonialism = {
 		position = 4
 		provinces_to_highlight = {
 			colonial_region = colonial_greenland
+			has_discovered = ROOT
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -385,6 +396,7 @@ bt_danish_colonialism = {
 				province_id = 3330
 				province_id = 3334
 			}
+			has_discovered = ROOT
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -414,6 +426,7 @@ bt_danish_colonialism = {
 		required_missions = { danish_gold_coast }
 		provinces_to_highlight = {
 			province_id = 5584
+			has_discovered = ROOT
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -444,7 +457,7 @@ bt_danish_colonialism = {
 				
 			}
 			else = {
-				12 = { #Copenhagen
+				capital_scope = { #Copenhagen?
 					add_base_tax = 1
 					add_base_production = 1
 				}
@@ -481,7 +494,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -492,7 +505,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -548,7 +561,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -559,7 +572,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -570,7 +583,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -581,7 +594,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -592,7 +605,7 @@ bt_danish_trade = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
@@ -702,23 +715,30 @@ bt_danish_internal_missions = {
 		}
 		effect = {
 			12 = { #Christiania district of Copenhagen
-				add_base_tax = 2
-				add_base_production = 2
-				add_or_spawn_center_of_trade = { LEVEL = 1 }
+				if = {
+					limit = { owned_by = ROOT }
+					add_base_tax = 2
+					add_base_production = 2
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
+				}
 			}
 			17 = {
-				rename_capital = "Christiania"
-				add_or_spawn_center_of_trade = { LEVEL = 1 }
+				if = {
+					limit = { owned_by = ROOT }
+					rename_capital = "Christiania"
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
+				}
 			}
 			7782 = {
-				rename_capital = "Christiansand"
-				add_or_spawn_center_of_trade = { LEVEL = 1 }
-			}
-			if = { #Christiansted
-				limit = {
-					owns = 4165 #Gønge
+				if = {
+					limit = { owned_by = ROOT }
+					rename_capital = "Christiansand"
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
 				}
-				4165 = {
+			}
+			4165 = { #Christiansted
+				if = {
+					limit = { owned_by = ROOT }
 					rename_capital = "Christiansted"
 					add_base_tax = 1
 					add_base_production = 1
@@ -746,6 +766,7 @@ bt_danish_colonialism_2 = {
 				province_id = 4477 #Frederiksnagore
 				province_id = 574 #Frederiksøerne
 			}
+			has_discovered = ROOT
 			NOT = {
 				owned_by = ROOT
 			}
@@ -788,9 +809,11 @@ bt_danish_resist_prussia = {
 			}
 		}
 		trigger = {
+			owns_or_non_sovereign_subject_of = 13
 			13 = { #Slesvig
 				fort_level = 4
 			}
+			owns_or_non_sovereign_subject_of = 3135
 			3135 = { #Husum/Nordfrisland
 				fort_level = 4
 			}
@@ -814,8 +837,10 @@ bt_danish_resist_prussia = {
 				every_province = {
 					limit = {
 						swedish_pommerania_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -846,8 +871,10 @@ bt_danish_resist_prussia = {
 			}
 			hinter_pommern_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -856,7 +883,7 @@ bt_danish_resist_prussia = {
 					46 = { 
 						NOT = {
 							is_core = ROOT
-							owned_by = ROOT 
+							is_permanent_claim = ROOT 
 						}
 					}
 				}
@@ -884,8 +911,10 @@ bt_danish_resist_prussia = {
 					every_province = {
 						limit = {
 							swedish_prussia_provinces = yes
-							NOT = { is_core = ROOT }
-							NOT = { owned_by = ROOT }
+							NOT = {
+								is_core = ROOT
+								is_permanent_claim = ROOT
+							}
 						}
 						add_permanent_claim = ROOT
 					}
@@ -917,8 +946,10 @@ bt_danish_resist_prussia = {
 			}
 			west_prussia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -1003,8 +1034,10 @@ danish_missions_baltic = {
 		effect = {
 			estonia_ingria_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
@@ -1013,8 +1046,10 @@ danish_missions_baltic = {
 				every_province = {
 					limit = {
 						danish_curonia_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -1041,8 +1076,10 @@ danish_missions_baltic = {
 		effect = {
 			samogitia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
@@ -1067,8 +1104,7 @@ bt_north_sea_empire = {
 		position = 5
 		required_missions = {  }
 		provinces_to_highlight = {
-			owned_by = ROOT
-			is_capital = yes
+			is_capital_of = ROOT
 		}
 		trigger = {
 			num_of_heavy_ship = 15
@@ -1089,8 +1125,10 @@ bt_north_sea_empire = {
 				every_province = {
 					limit = {
 						dan_enforce_danelaw_provinces = yes
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_core = ROOT
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -1117,29 +1155,37 @@ bt_north_sea_empire = {
 			set_government_rank = 3 #I like the idea of a Danish Empire.
 			lowlands_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
 			scottish_marches_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
 			highlands_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
 			kingdom_of_the_isles_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
 				}
 				add_claim = ROOT
 			}
