@@ -11,9 +11,16 @@
 ###########################################
 bt_triggered_modifier_a_big_family = {
 	potential = {
-		num_of_subjects = 1
+		any_country = {
+			is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+		}
 		NOT = {
-			num_of_subjects = 4
+			calc_true_if = {
+				all_country = {
+					is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+				}
+				amount = 4
+			}
 		}
 	}
 	trigger = {
@@ -21,14 +28,7 @@ bt_triggered_modifier_a_big_family = {
 			tooltip = bt_bunch_o_vassals_tooltip
 			calc_true_if = {
 				all_country = {
-					is_subject_of = ROOT
-					OR = {
-						is_subject_of_type = vassal
-						is_subject_of_type = march
-						is_subject_of_type = personal_union
-						is_subject_of_type = client_vassal
-						is_subject_of_type = client_march
-					}					
+					is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
 				}
 				amount = 2
 			}
@@ -42,24 +42,27 @@ bt_triggered_modifier_a_big_family = {
 ###########################################
 bt_triggered_modifier_hegemoniacle = {
 	potential = {
-		num_of_subjects = 2
+		calc_true_if = {
+			all_country = {
+				is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+			}
+			amount = 2
+		}
 		NOT = {
-			num_of_subjects = 6
+			calc_true_if = {
+				all_country = {
+					is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+				}
+				amount = 6
+			}
 		}
 	}
 	trigger = {
 		custom_trigger_tooltip = {
 			tooltip = bt_really_a_bunch_o_vassals_tooltip
 			calc_true_if = {
-					all_country = {
-					is_subject_of = ROOT
-					OR = {
-						is_subject_of_type = vassal
-						is_subject_of_type = march
-						is_subject_of_type = personal_union
-						is_subject_of_type = client_vassal
-						is_subject_of_type = client_march
-					}				
+				all_country = {
+					is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
 				}
 				amount = 4
 			}
@@ -73,21 +76,19 @@ bt_triggered_modifier_hegemoniacle = {
 ###########################################
 bt_triggered_modifier_decentralisation = {
 	potential = {
-		num_of_subjects = 4
+		calc_true_if = {
+			all_country = {
+				is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+			}
+			amount = 4
+		}
 	}
 	trigger = {
 		custom_trigger_tooltip = {
 			tooltip = btc_hegemoniacle_tooltip
 			calc_true_if = {
 				all_country = {
-					is_subject_of = ROOT
-					OR = {
-						is_subject_of_type = vassal
-						is_subject_of_type = march
-						is_subject_of_type = personal_union
-						is_subject_of_type = client_vassal
-						is_subject_of_type = client_march
-					}				
+					is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
 				}
 				amount = 6
 			}

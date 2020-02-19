@@ -118,7 +118,16 @@ is_byz_or_hellenic_rome_trigger = {
 	}
 }
 
-is_non_sovereign_subject = {
-	is_subject = yes
-	NOT = { is_subject_of_type = tributary_state }
+is_subject_of_eligible_for_upkeep_bonus = {
+	is_subject_of = $overlord$
+	OR = {
+		is_subject_of_type = vassal
+		is_subject_of_type = march
+		is_subject_of_type = personal_union
+		is_subject_of_type = client_vassal
+		is_subject_of_type = client_march
+		is_subject_of_type = viceroyalty_bt
+		is_subject_of_type = byz_exarch
+	}
 }
+
