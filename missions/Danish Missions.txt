@@ -1067,7 +1067,8 @@ bt_north_sea_empire = {
 		position = 5
 		required_missions = {  }
 		provinces_to_highlight = {
-			is_capital_of = ROOT
+			owned_by = ROOT
+			is_capital = yes
 		}
 		trigger = {
 			num_of_heavy_ship = 15
