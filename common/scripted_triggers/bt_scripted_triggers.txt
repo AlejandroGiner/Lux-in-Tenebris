@@ -439,10 +439,5 @@ nor_conquer_scotland_provinces = {
 	}
 }
 nor_conquer_ireland_provinces = {
-	OR = {
-		area = leinster_area
-		area = ulster_area
-		area = munster_area
-		area = connacht_area
-	}
+	region = ireland_region
 }
