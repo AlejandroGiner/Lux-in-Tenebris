@@ -117,3 +117,8 @@ is_byz_or_hellenic_rome_trigger = {
 		}
 	}
 }
+
+is_non_sovereign_subject = {
+	is_subject = yes
+	NOT = { is_subject_of_type = tributary_state }
+}
