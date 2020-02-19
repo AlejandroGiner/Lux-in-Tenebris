@@ -294,6 +294,9 @@ control_scania_provinces = { #Unchanged
 		area = gotaland_area
 		area = skaneland_area
 	}
+	NOT = {
+		province_id = 1981 #Bornholm
+	}
 }
 vassalize_norway_swe_provinces = { #Unchanged
 	OR = {
@@ -312,14 +315,17 @@ swe_turns_have_tabled_provinces = {
 
 swe_expand_finland_provinces = { #Kexholm County + Ingria
 	OR = {
-		area = west_karelia_area #Apparently this is the Ingria of BT.
-		area = north_karelia_area 
+		area = ladoga_area
+		area = north_karelia_area
 	}
+	NOT = { province_id = 309 }
+	NOT = { province_id = 5647 }
+	NOT = { province_id = 7746 }
 }
 control_estonia_provinces = { #Swedish Estonia
     area = estonia_ingria_area
     NOT = { province_id = 35 } #Ösel was actually part of Swedish Livonia, ceded in 1645 as part of the treaty of Brömsebro, together with Jämtland & Gotland (+Halland).
-    NOT = { province_id = 3230 } #Also part of Livonia
+    NOT = { province_id = 7763 } #Also part of Livonia
 }
 
 control_latvia_provinces = { #Now adjusted to only include Swedish Livonia
@@ -327,11 +333,30 @@ control_latvia_provinces = { #Now adjusted to only include Swedish Livonia
         area = livonia_area
         area = north_livonia_area
         province_id = 35 #Ösel
-        province_id = 3230 #Sontack
+        province_id = 7763 #Sontack
     }
-    NOT = {
-        province_id = 273 #Not part of historical Swedish Livonia/Estonia/Ingria.
-    }
+}
+swe_subjugate_lithuania_provinces = {
+	OR = {
+		area = samogitia_area
+		area = trakai_area
+		area = lithuania_area
+		area = smolensk_area
+		area = vitebsk_area
+		area = white_ruthenia_area
+		area = bryansk_area
+		province_id = 5660
+		area = polotsk_area
+		area = minsk_area
+		area = novogrudok_area
+		area = pripyat_area
+		province_id = 1937
+		province_id = 277
+	}
+	NOT = {
+		province_id = 4245
+		province_id = 297
+	}
 }
 swedish_pommerania_provinces = {
 	OR = {
@@ -345,9 +370,10 @@ swe_bremen_verden_provinces = {
 	OR = {
 		province_id = 54 #Stade (Verden)
 		province_id = 1874 #Bremen
+		province_id = 4823
+		province_id = 4822
 	}
 }
-
 swedish_prussia_provinces = {
 	OR = {
 		area = east_prussia_area
