@@ -1,1 +1,697 @@
-#
+#Brand new Norwegian missions by Dub
+
+bt_norwegian_scandinavia = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+	}
+	has_country_shield = yes
+
+	nor_win_independence = {
+		icon = mission_monarch_in_throne_room
+		required_missions = { }
+		trigger = {
+			is_subject = no
+			owns_core_province = 17
+			is_at_war = no
+		}
+		effect = {
+			#Copied from Austria's missions, adjusted to become a vassalization.
+			if = {
+				limit = {
+					exists = SWE
+					is_subject = no
+					SWE = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = SWE
+				}
+			}
+			else = {
+				#Claims
+				custom_tooltip = nor_king_of_sweden_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							denmark_sweden_integration_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			custom_tooltip = nor_retake_iceland_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						denmark_iceland_integration_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	nor_king_of_sweden = {
+		icon = mission_have_two_subjects
+		required_missions = { nor_win_independence }
+		provinces_to_highlight = {
+			denmark_sweden_integration_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=denmark_sweden_integration_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			#Copied from Austria's missions, adjusted to become a vassalization.
+			if = {
+				limit = {
+					exists = DAN
+					is_subject = no
+					DAN = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = DAN
+				}
+			}
+			else = {
+				#Claims
+				custom_tooltip = nor_reverse_kalmar_union_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							swe_turns_have_tabled_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+	nor_reverse_kalmar_union = {
+		icon = mission_sca_shield
+		required_missions = { nor_king_of_sweden }
+		provinces_to_highlight = {
+			nor_reverse_kalmar_union_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=nor_reverse_kalmar_union_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "united_scandinavia"
+				duration = 5475
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+}
+
+bt_norwegian_internal_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+	}
+	has_country_shield = yes
+	#First two copied over from Danish Missions.txt
+	nor_found_kongsberg_silver_mine = {
+		icon = mission_mine
+		position = 4
+		required_missions = { }
+		provinces_to_highlight = {
+			province_id = 3117 #Buskerud
+		}
+		trigger = {
+			owns = 3117
+			custom_trigger_tooltip = {
+				tooltip = dan_mission_kongsberg_mine_tooltip
+				3117 = { #Kongsberg lies west of Drammen in Buskerud
+					base_production = 5
+					has_building = workshop
+				}
+			}
+		}
+		effect = {
+			3117 = {
+				change_trade_goods = gold #Developer's note: Should be silver once added into the game.
+			}
+		}
+	}
+	nor_found_roros_copper_mine = {
+		icon = mission_have_manufactories
+		required_missions = { nor_found_kongsberg_silver_mine }
+		provinces_to_highlight = {
+			province_id = 20 #Trøndelag
+		}
+		trigger = {
+			owns = 20
+			custom_trigger_tooltip = {
+				tooltip = dan_mission_roros_mine_tooltip
+				20 = {
+					base_production = 5
+					has_building = workshop
+				}
+			}
+		}
+		effect = {
+			20 = {
+				change_trade_goods = copper
+			}
+		}
+	}
+	nor_kaupstadar_of_norway = {
+		icon = mission_early_game_buildings
+		required_missions = { nor_found_roros_copper_mine }
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = northern_norway
+				area = eastern_norway
+				area = western_norway
+			}
+		}
+		
+		trigger = {
+			17 = { development = 10 }
+			23 = { development = 10 }
+			20 = { development = 15 } #NB: Will already have 8 production as part of earlier mission, so buffing this a bit.
+			24 = { development = 10 }
+			22 = { development = 8 }
+			4144 = { development = 10 }
+			4143 = { development = 8 }
+			development_in_provinces = { #71 dev in the above provinces. Drammen has at least 9 dev because of silver mine mission. 16 other provinces is 40 dev. This totals at 111 dev. Hence, 140 dev seems justifiable. 
+				value = 140
+				OR = {
+					area = northern_norway
+					area = eastern_norway
+					area = western_norway
+				}
+			}
+		}
+		effect = { #Buffed bonuses here.
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				add_splendor = 200
+			}
+			17 = { #Oslo
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+				add_or_spawn_center_of_trade = { LEVEL = 1 }
+			}
+			23 = { #Bergen
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_or_spawn_center_of_trade = { LEVEL = 1 }
+			}
+			20 = { #Trondheim
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_or_spawn_center_of_trade = { LEVEL = 1 } #This at least spawns a center of trade in a location without one. Really ought to have one in BT though.
+			}
+		}
+	}
+}
+
+bt_norwegian_colonialism = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+	}
+	has_country_shield = yes
+	
+	nor_retake_iceland = {
+		icon = mission_invade_island
+		required_missions = { nor_win_independence }
+		position = 2
+		provinces_to_highlight = {
+			denmark_iceland_integration_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=denmark_iceland_integration_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			#Alt-hist names, two brothers of a certain Erik.
+			define_explorer = {
+				name = "Þorsteinn Eiríksson"
+				fire = 3
+				shock = 3
+				manuever = 4
+				siege = 0
+			}
+			define_conquistador = {
+				name = "Þorvaldr Eiríksson"
+				fire = 3
+				shock = 3
+				manuever = 3
+				siege = 0
+			}
+		}
+	}
+	nor_colonize_greenland = {
+		icon = mission_colonial
+		required_missions = { nor_retake_iceland }
+		position = 4
+		provinces_to_highlight = {
+			colonial_region = colonial_greenland
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = dan_miss_colonize_iceland
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 3
+					colonial_region = colonial_greenland
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "the_unknown_frontier"
+				duration = 5475
+			}
+		}
+	}
+	nor_colonize_markland = {
+		icon = mission_settlers_north_america
+		position = 5
+		required_missions = { nor_colonize_greenland }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 997
+				province_id = 2575
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				owns_or_non_sovereign_subject_of = 997 #Raudrvik
+				owns_or_non_sovereign_subject_of = 2575 #Gasvik
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 5475
+			}
+			if = { #Markland Timber in Raudrvik
+				limit = {
+					owns_or_non_sovereign_subject_of = 997
+				}
+				997 = { change_trade_goods = naval_supplies } 
+			}
+			else = { #Markland Timber in Gasvik
+				2575 = { change_trade_goods = naval_supplies }
+			}
+			colonial_greenland = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_province_modifier = {
+					name = "nor_markland_timber"
+					duration = 18250 #50yr
+				}
+			}
+		}
+	}
+	nor_colonize_vinland = {
+		icon = mission_norwegian_fjords
+		required_missions = { nor_colonize_markland }
+		provinces_to_highlight = {
+			colonial_region = colonial_newfoundland
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = nor_miss_colonize_vinland
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_newfoundland
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					owns = 23 #Bergen
+				}
+				23 = {
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
+					add_base_tax = 2
+					add_base_production = 2
+				}
+			}
+			else_if = {
+				limit = {
+					owns = 20 #Trondheim
+				}
+				20 = {
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
+					add_base_tax = 2
+					add_base_production = 1
+				}
+				
+			}
+			else_if = {
+				limit = {
+					owns = 24 #Stavanger
+				}
+				24 = {
+					add_or_spawn_center_of_trade = { LEVEL = 1 }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				
+			}
+			else = {
+				17 = { #Oslo/Akershus
+					add_base_tax = 1
+					add_base_production = 1
+				}
+			}
+		}
+	}
+}
+
+bt_norwegian_colonialism_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+	}
+	has_country_shield = yes
+		
+	nor_colonize_helluland = {
+		icon = mission_establish_high_seas_navy
+		position = 6 #Past Generic missions
+		required_missions = { nor_colonize_markland }
+		provinces_to_highlight = {
+			province_id = 4998 
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns_or_non_sovereign_subject_of = 4998 #Vestri Obygdir
+		}
+		effect = {
+			4998 = { #Adding a small buff to the region to help Norway control the trade here without being forced to enter Hudson Bay.
+				add_or_spawn_center_of_trade = { LEVEL = 1 }
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 5475
+			}
+		}
+	}
+}
+
+bt_norwegian_colonialism_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+	}
+	has_country_shield = yes
+	
+	nor_colonize_greater_ireland = {
+		icon = mission_acadian_beach
+		position = 6 #Past generic missions
+		required_missions = { nor_conquer_ireland }
+		provinces_to_highlight = {
+			colonial_region = colonial_acadia
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = nor_miss_colonize_acadia
+				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+					value = 5
+					colonial_region = colonial_acadia
+					is_city = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "colonial_enthusiasm"
+				duration = 5475
+			}
+		}
+	}
+}
+
+bt_norwegian_british_isles = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = NOR
+	}
+	has_country_shield = yes
+	
+	nor_control_orkney = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 369
+				province_id = 1978
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			is_subject = no
+			is_at_war = no
+			owns_core_province = 369
+			owns_core_province = 1978
+		}
+		effect = {
+			#Claims
+			custom_tooltip = nor_conquer_the_isles_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						nor_conquer_the_isles_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	nor_conquer_the_isles = {
+		icon = mission_sea_battles
+		required_missions = { nor_control_orkney }
+		provinces_to_highlight = {
+			nor_conquer_the_isles_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=nor_conquer_the_isles_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "nor_haakons_legacy"
+				duration = 5475
+			}
+			#Claims
+			custom_tooltip = nor_conquer_scotland_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						nor_conquer_scotland_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	nor_conquer_scotland = {
+		icon = mission_cannons_firing
+		required_missions = { nor_conquer_the_isles }
+		provinces_to_highlight = {
+			nor_conquer_scotland_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=nor_conquer_scotland_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}
+		effect = {
+			#Claims
+			custom_tooltip = nor_conquer_ireland_claims
+			hidden_effect = {
+				every_province = {
+					limit = {
+						nor_conquer_ireland_provinces = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+		
+	}
+	nor_conquer_ireland = {
+		icon = mission_unite_home_region
+		position = 5
+		required_missions = { nor_conquer_scotland }
+		provinces_to_highlight = {
+			nor_conquer_ireland_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=nor_conquer_ireland_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}		
+		effect = {
+			#Copied from Austria's missions, adjusted to become a vassalization.
+			if = { #If Great Britain has formed, you miss out on your chance of PUing England.
+				limit = {
+					exists = ENG
+					is_subject = no
+					ENG = {
+						is_subject = no
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = ENG
+				}
+			}
+			else = {
+				#Claims
+				custom_tooltip = nor_conquer_england_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							dan_enforce_danelaw_provinces = yes
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+		
+	}
+	nor_conquer_england = {
+		icon = mission_harald_hardrade
+		required_missions = { nor_conquer_ireland }
+		provinces_to_highlight = {
+			dan_enforce_danelaw_provinces = yes
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			has_fulfiled_province_requirement_for_mission_trigger = {
+				TOOLTIP=country_holds_or_non_sovereign_subject_holds_highlighted 
+				PROVINCES=dan_enforce_danelaw_provinces
+				OWNER_TYPE=country_or_non_sovereign_subject_holds
+			}
+		}		
+		effect = {
+			add_country_modifier = {
+				name = "nor_harder_than_hardrade"
+				duration = -1
+			}
+			change_adm = 1
+			if = {
+				limit = {
+					NOT = { government_rank = 3 }
+					NOT = { is_part_of_hre = yes } #We don't want this elevation happening if you're part of the HRE.
+				}
+				set_government_rank = 3
+			}
+		}
+		
+	}
+}
