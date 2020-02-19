@@ -1,43 +1,4 @@
 ﻿l_english:
-  #Centers of Christendom
-  center_apostolic:0 "Center of Christendom"
-  center_western:0 "Center of Western Christianity"
-  center_eastern:0 "Center of Eastern Christianity"
-  center_oriental:0 "Center of Oriental Christianity"
-  center_nestorian:0 "Center of Nestorian Christianity"
-  center_waldensian:0 "Center of Waldensian Christianity"
-  
-  allcenterschristian:0 "Christian Hegemony"
-  allcenterscommunion:0 "Apostolic Hegemony"
-  desc_allcenterschristian:0 "With all major centers of Christendom once again under control of the faithful, Christians in our country rejoice and there remains little doubt about the legitimacy of Christian rule."
-  desc_allcenterscommunion:0 "Our church has proven triumphant as the One, Holy, Catholic, Apostolic Church."
-  
-  
-  christian_medina:0 "Christian control of Medina"
-  christian_mecca:0 "Christian control of Mecca"
-  desc_christian_medina:0 "Christendom has not only prevailed against its biggest threat, we have even brought war back to their holy places. The world looks in awe at this resurgence of the true faith."
-  desc_christian_mecca:0 "With the most important center of Islam under Christian control, Christendom seems to be well on its way to global dominance."
-  lost_medina:0 "Heathens control Medina"
-  lost_mecca:0 "Heathens control Mecca"
-  desc_lost_medina:0 "Unable to even protect our most holy places, we have a very hard time convincing anyone to join our religion."
-  desc_lost_mecca:0 "With our most holy place under infidel rule, people are not inclined to convert to Islam."
-
-  christian_rome:0 "Christian Rome"
-  christian_constantinople:0 "Christian Constantinople"
-  christian_alexandria:0 "Christian Alexandria"
-  christian_antioch:0 "Christian Antioch"
-  christian_jerusalem:0 "Christian Jerusalem" 
-  communion_rome:0 "Apostolic Rome"
-  communion_constantinople:0 "Apostolic Constantinople"
-  communion_alexandria:0 "Apostolic Alexandria"
-  communion_antioch:0 "Apostolic Antioch"
-  communion_jerusalem:0 "Apostolic Jerusalem"
-  communion_axum:0 "Apostolic Axum"
-  communion_yerevan:0 "Apostolic Echmiadzin"
-  communion_ctesiphon:0 "Apostolic Ctesiphon"
-  
-  TOOLTIP_IS_APOSTOLIC:0 "Is Apostolic Christian"
-  
   #Hussite
   hussite:0 "Hussite"
   hussite_religion_desc:0 "The Hussites were a pre-Protestant Christian movement that followed the teachings of Czech reformer Jan Hus, who became the best known representative of the Bohemian Reformation, a movement in the late medieval and early modern Kingdom and Crown of Bohemia striving for a reform of the Roman Catholic Church.\n\nThis movement had a significant impact on the historical development of Central Europe and is considered one of the most important religious, social, intellectual and political movements of the early modern period, producing the first national church separate from Roman authority, the first apocalyptic religious movement of the early modern period, and the first pacifist Protestant church."
@@ -73,7 +34,6 @@
   ares_desc: "Ares is the Greek god of war. He is one of the Twelve Olympians, and the son of Zeus and Hera"
   hermes_desc: "Hermes is considered a god of transitions and boundaries"
   
-  
   improving_ability: "Focus on Religion"
   desc_improving_ability: "The ruler is busy contemplating religious matters, and has little time dealing with mundane affairs."
   improved_ability: "Divine Inspiration"
@@ -95,7 +55,6 @@
   pontifex_maximus: "Pontifex Maximus"
   desc_pontifex_maximus: "Hail to the Pontifex Maximus!"
   
-  
   offer_to_zeus: "Zeus Pleased"
   desc_offer_to_zeus: "Priests tell that Zeus is pleased, this will surely promote a prosperous future."
   offer_to_hades: "Hades Pleased"
@@ -108,7 +67,6 @@
   desc_offer_to_hermes: "Priests tell that Hermes is pleased, this will surely promote a prosperous future."
   offer_to_poseidon: "Poseidon Pleased"
   desc_offer_to_poseidon: "Priests tell that Poseidon is pleased, this will surely promote a prosperous future."
-  
   
   hellenic_events.1.t:0 "Olympians"
   hellenic_events.1.d:0 "The [Root.Monarch.GetTitle] of [Root.GetName] has not sought out a god to follow. The people will not only need guidance in mundane matters, but also know that their leader shows spiritual devotion and seeks religious wisdom. [Root.Monarch.GetName]'s soul stands at a crossroads. The faith and philosophy [Root.Monarch.GetSheHe] chooses will guide [Root.Monarch.GetHerHis] insights and legacy as a [Root.Monarch.GetTitle] and shape the fate of [Root.GetName]. Who do you follow?"
@@ -442,6 +400,15 @@
   pleased_catholicos_patriarch: "Pleased the Catholicos-Patriarch"
   upset_catholicos_patriarch: "Upset the Catholicos-Patriarch"
   
+  #Nestorian Schism of 1552
+  btc_schismof1552.1.t:0 "The Schism of 1552"
+  btc_schismof1552.1.d:0 "The Church of the East is at a crossroads. The regin of the current Patriarch has become extensively unpopular, attracting an increasingly large number of detractors: he is now accused of nepotism, concubinage, selling clerical posts and living intemperately. As he is unwilling to address these complaints, his authority is now being openly questioned. Rebels from several districts have defied his rule and appointed a local monk, a pious man, as the new Patriarch of the Church. The situation, however, is now further complicated by the presence of Franciscan missionaries in the East. They have convinced the rebel monk to convert to Catholicism, and has he made his way to Rome to present his case, he was recognised as "Patriarch of Mosul" by pope [PAP.Monarch.GetName] in the bull Divina Disponente Clementia, and received the pallium from the pope's hands at a secret consistory in the Vatican. Now back in the Levant, the newly appointed Patriarch has given birth to the Chaldean Catholic Church, and as the new organization has begun expanding its influence in the region, the situation is only expected to become more tense..."
+  btc_schismof1552.1.a:0 "Times are changing."
+  
+  btc_schismof1552.2.t:0 "Chaldean Church now controls [Root.GetName]"
+  btc_schismof1552.2.d:0 "[Root.GetName], once a stronghold for the Church of the East, has now been placed under the effective control of the Chaldean Catholic Church, which answers only to the Pope in Rome. This has caused considerable friction in the province as followers of the two confessions are branding the opposing faction as traitors and infidels. While this overall does not jeopardize our control over the area, the effect of these grievances are surely to be felt at the local level."
+  btc_schismof1552.2.a:0 "I see."
+  
   #Nestorian seats
   seat_of_nisibis_title: "Re-establish the Seat of Nisibis"
   seat_of_ctesiphon_title: "Re-establish the Seat of Nisibis"
@@ -488,8 +455,6 @@
   btc_nestorian_seat_8: "Re-established the Seat of Mukar"
   btc_nestorian_seat_9: "Re-established the Seat of Angamaly"
   btc_nestorian_seat_10: "Re-established the Seat of Xi'an"
-  
-  
   
   #Druze
   druze_group: "Muwahhidun"
@@ -612,10 +577,7 @@
   confucian_events.10.t:0 "Harmonization of Vajrayana Buddhism"
   confucian_events.10.d:0 "Those of our subjects that are ardent followers of the great and mysterious Lamas have increasingly come to realize how useful an ideology the teachings of Confucius are. Where they once used the traditions of the Vajrayana way to judge the world they are now incorporating the same classics that we have. Vajrayana monks and nobles are now part of our government both at the very top and at the very bottom and their somewhat wild and Tantric traditions appears to have been tamed by our reason and learning."
   confucian_events.10.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
-  
-  
-  
-  
+
   confucian_events.22.t:0 "Harmonization of Taoism"
   confucian_events.22.d:0 "Taoism is a philosophy that has a long history in China and has had clashes with the ideas of Confucius, but nonetheless the two schools consistently influenced one another over the centuries. What happened in our nation is but the latest step in such a tradition, as the common followers of folk Taoist practices as well as Taoist scholars have found newfound respect for the more orthodox ideas expressed in Confucianism."
   confucian_events.22.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'" 
@@ -683,15 +645,4 @@
   confucian_events.38.t:0 "Harmonization of Manichaeism"
   confucian_events.38.d:0 "The philosophies of Mani were once widespread throughout all of Asia, but fortune was not kind to the Manichaeans, as they almost wholly disappeared. Nonetheless, some of them continued to practice their beliefs in isolated places and we have not only been granted access to their temples, but even discovered a lot of previously thought lost scriptures by Mani himself. This gives us an unprecedented understanding of the work of a brilliant tradition that, much like Confucianism, sought to unite the people under the banner of stability. Now, this knowledge is ours to utilize, much to the delight of the remaining Manichaeans, who will surely grow in number in our courts and bureaucracy."
   confucian_events.38.a:0 "'Submit the people of virtue, assimilate the people with enlightenment.'"
-  
-  #Nestorian Schism of 1552
-  btc_schismof1552.1.t:0 "The Schism of 1552"
-  btc_schismof1552.1.d:0 "The Church of the East is at a crossroads. The regin of the current Patriarch has become extensively unpopular, attracting an increasingly large number of detractors: he is now accused of nepotism, concubinage, selling clerical posts and living intemperately. As he is unwilling to address these complaints, his authority is now being openly questioned. Rebels from several districts have defied his rule and appointed a local monk, a pious man, as the new Patriarch of the Church. The situation, however, is now further complicated by the presence of Franciscan missionaries in the East. They have convinced the rebel monk to convert to Catholicism, and has he made his way to Rome to present his case, he was recognised as "Patriarch of Mosul" by pope [PAP.Monarch.GetName] in the bull Divina Disponente Clementia, and received the pallium from the pope's hands at a secret consistory in the Vatican. Now back in the Levant, the newly appointed Patriarch has given birth to the Chaldean Catholic Church, and as the new organization has begun expanding its influence in the region, the situation is only expected to become more tense..."
-  btc_schismof1552.1.a:0 "Times are changing."
-  
-  btc_schismof1552.2.t:0 "Chaldean Church now controls [Root.GetName]"
-  btc_schismof1552.2.d:0 "[Root.GetName], once a stronghold for the Church of the East, has now been placed under the effective control of the Chaldean Catholic Church, which answers only to the Pope in Rome. This has caused considerable friction in the province as followers of the two confessions are branding the opposing faction as traitors and infidels. While this overall does not jeopardize our control over the area, the effect of these grievances are surely to be felt at the local level."
-  btc_schismof1552.2.a:0 "I see."
-  
-  
-  
+ 
