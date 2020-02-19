@@ -24,7 +24,6 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
-			#kill_ruler = yes
 			SWE = {
 				define_ruler = {
 					name = "Karl Knutsson"
@@ -57,7 +56,6 @@ country_event = {
 	option = {
 		ai_chance = { factor = 95 }
 		name = BtPLegacyScandinavianFlavour.1.a
-		#break_union = SWE
 		tooltip = {
 			SWE = {
 				define_ruler = {
@@ -80,7 +78,6 @@ country_event = {
 	option = {
 		ai_chance = { factor = 5 }
 		name = BtPLegacyScandinavianFlavour.1.b
-		#break_union = SWE
 		tooltip = {
 			SWE = {
 				define_ruler = {
@@ -127,11 +124,8 @@ country_event = {
 	option = {
 		ai_chance = { factor = 95 }
 		name = BtPLegacyScandinavianFlavour.2.a
-		# DAN = {
-			# break_union = NOR
-		# }
 		create_union = NOR
-		1 = {
+		capital_scope = {
 			spawn_rebels = {
 				type = noble_rebels
 				size = 2
@@ -140,19 +134,25 @@ country_event = {
 			}
 		}
 		4 = {
-			spawn_rebels = {
-				type = noble_rebels
-				size = 2
-				leader = "Nils Jönsson Oxenstierna" #Statesman and co-regent of Sweden, lived 1390-1450s
-				friend = DAN
+			if = {
+				limit = { owned_by = ROOT }
+				spawn_rebels = {
+					type = noble_rebels
+					size = 2
+					leader = "Nils Jï¿½nsson Oxenstierna" #Statesman and co-regent of Sweden, lived 1390-1450s
+					friend = DAN
+				}
 			}
 		}
 		3123 = {
-			spawn_rebels = {
-				type = catholic_rebels
-				size = 3
-				leader = "Jöns Bengtsson Oxenstierna" #Archbishop of Uppsala, lived 1417-1467, even rebelled in 1457, responsible together with Erik Axelsson Tott to put Christian back on the Swedish throne.
-				friend = DAN
+			if = {
+				limit = { owned_by = ROOT }
+				spawn_rebels = {
+					type = catholic_rebels
+					size = 3
+					leader = "Jï¿½ns Bengtsson Oxenstierna" #Archbishop of Uppsala, lived 1417-1467, even rebelled in 1457, responsible together with Erik Axelsson Tott to put Christian back on the Swedish throne.
+					friend = DAN
+				}
 			}
 		}
 		random_owned_province = {
@@ -196,10 +196,8 @@ country_event = {
 			has_ruler = "Karl Knutsson"
 			dynasty = "Bonde"
 		}
-		NOR = {
-			junior_union_with = DAN
-			ai = no
-		}
+		junior_union_with = DAN
+		ai = no
 		has_global_flag = bt_kalmar_union_power_struggle_pt_I
 	}
 	
@@ -208,14 +206,10 @@ country_event = {
 	}
 	
 	option = {
-		ai_chance = { factor = 33 }
 		name = BtPLegacyScandinavianFlavour.3.a
-		# DAN = {
-			# break_union = NOR
-		# }
 		SWE = {
 			create_union = NOR
-			1 = {
+			capital_scope = {
 				spawn_rebels = {
 					type = noble_rebels
 					size = 2
@@ -224,19 +218,25 @@ country_event = {
 				}
 			}
 			4 = {
-				spawn_rebels = {
-					type = noble_rebels
-					size = 2
-					leader = "Nils Jönsson Oxenstierna" #Statesman and co-regent of Sweden, lived 1390-1450s
-					friend = DAN
+				if = {
+					limit = { owned_by = SWE }
+					spawn_rebels = {
+						type = noble_rebels
+						size = 2
+						leader = "Nils Jï¿½nsson Oxenstierna" #Statesman and co-regent of Sweden, lived 1390-1450s
+						friend = DAN
+					}
 				}
 			}
 			3123 = {
-				spawn_rebels = {
-					type = catholic_rebels
-					size = 3
-					leader = "Jöns Bengtsson Oxenstierna" #Archbishop of Uppsala, lived 1417-1467, even rebelled in 1457, responsible together with Erik Axelsson Tott to put Christian back on the Swedish throne.
-					friend = DAN
+				if = {
+					limit = { owned_by = SWE }
+					spawn_rebels = {
+						type = catholic_rebels
+						size = 3
+						leader = "Jï¿½ns Bengtsson Oxenstierna" #Archbishop of Uppsala, lived 1417-1467, even rebelled in 1457, responsible together with Erik Axelsson Tott to put Christian back on the Swedish throne.
+						friend = DAN
+					}
 				}
 			}
 			random_owned_province = {
@@ -257,17 +257,12 @@ country_event = {
 	}
 	
 	option = {
-		ai_chance = { factor = 33 }
 		name = BtPLegacyScandinavianFlavour.3.b
 		custom_tooltip = "BtPLegacyScandinavianFlavour.2.b_tooltip"
 	}
 	
 	option = { #Note to self: There's currently a vanilla event that adds Sigurd Jonsson as an advisor. This advisor should be removed, but I couldn't figure out how to remove said advisor by checking for it.
-		ai_chance = { factor = 33 }
 		name = BtPLegacyScandinavianFlavour.3.c
-		# DAN = {
-			# break_union = NOR
-		# }
 		define_ruler = {
 			name = "Sigurd Jonsson"
 			dynasty = "Sverre"
@@ -317,7 +312,6 @@ country_event = {
 	}
 	
 	option = {
-		ai_chance = { factor = 1 }
 		name = BtPLegacyScandinavianFlavour.4.a
 		
 		every_owned_province = {
@@ -349,30 +343,14 @@ country_event = {
 	title = BtPLegacyScandinavianFlavour.2.t
 	desc = BtPLegacyScandinavianFlavour.2.d
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
-	fire_only_once = yes
 
 	is_triggered_only = yes
 	
-	trigger = {
-		tag = SWE
-		war_with = DAN
-		has_ruler = "Karl Knutsson"
-		dynasty = "Bonde"
-		NOR = {
-			junior_union_with = DAN
-			ai = yes
-		}
-		has_global_flag = bt_kalmar_union_power_struggle_pt_I
-	}
-	
 	option = {
-		ai_chance = { factor = 33 }
 		name = BtPLegacyScandinavianFlavour.5.a
-		
 		tooltip = {
 			create_union = NOR
-			1 = {
+			capital_scope = {
 				spawn_rebels = {
 					type = noble_rebels
 					size = 2
@@ -381,19 +359,25 @@ country_event = {
 				}
 			}
 			4 = {
-				spawn_rebels = {
-					type = noble_rebels
-					size = 2
-					leader = "Nils Jönsson Oxenstierna" #Statesman and co-regent of Sweden, lived 1390-1450s
-					friend = DAN
+				if = {
+					limit = { owned_by = SWE }
+					spawn_rebels = {
+						type = noble_rebels
+						size = 2
+						leader = "Nils Jï¿½nsson Oxenstierna" #Statesman and co-regent of Sweden, lived 1390-1450s
+						friend = DAN
+					}
 				}
 			}
 			3123 = {
-				spawn_rebels = {
-					type = catholic_rebels
-					size = 3
-					leader = "Jöns Bengtsson Oxenstierna" #Archbishop of Uppsala, lived 1417-1467, even rebelled in 1457, responsible together with Erik Axelsson Tott to put Christian back on the Swedish throne.
-					friend = DAN
+				if = {
+					limit = { owned_by = SWE }
+					spawn_rebels = {
+						type = catholic_rebels
+						size = 3
+						leader = "Jï¿½ns Bengtsson Oxenstierna" #Archbishop of Uppsala, lived 1417-1467, even rebelled in 1457, responsible together with Erik Axelsson Tott to put Christian back on the Swedish throne.
+						friend = DAN
+					}
 				}
 			}
 			random_owned_province = {
