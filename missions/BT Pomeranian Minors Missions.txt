@@ -1,0 +1,202 @@
+pom_recon_wlg = {
+	slot = 1
+	#generic = yes
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = STP #Stolp
+			tag = STT #Stettin
+		}
+	}
+	has_country_shield = yes
+		
+	pom_gen_recon_wlg = {
+		icon = mission_invade_island
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			owned_by = WLG
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			NOT = { exists = WLG }
+			owns = 2994 #Wolgast
+		}
+		
+		effect = {
+			add_mil_power = 50
+			add_adm_power = 50
+			add_prestige = 10
+			#Claims
+			if = {
+				limit = {
+					NOT = { tag = STT }
+				}
+				custom_tooltip = pom_gen_recon_stt_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							owned_by = STT
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = STP }
+				}
+				custom_tooltip = pom_gen_recon_stp_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							owned_by = STP
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+pom_recon_stt = {
+	slot = 1
+	#generic = yes
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = STP #Stolp
+			tag = WLG #Wolgast
+		}
+	}
+	has_country_shield = yes
+		
+	pom_gen_recon_stt = {
+		icon = mission_hanseatic_city
+		required_missions = { }
+		
+		provinces_to_highlight = {
+			owned_by = STT
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			NOT = { exists = STT }
+			owns = 1858 #Stettin
+		}
+		
+		effect = {
+			add_mil_power = 50
+			add_adm_power = 50
+			add_prestige = 10
+			#Claims
+			if = {
+				limit = {
+					NOT = { tag = WLG }
+				}
+				custom_tooltip = pom_gen_recon_wlg_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							owned_by = WLG
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = STP }
+				}
+				custom_tooltip = pom_gen_recon_stp_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							owned_by = STP
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+pom_recon_stp = {
+	slot = 1
+	#generic = yes
+	ai = yes
+	
+	potential = {
+		OR = {
+			tag = STT #Stettin
+			tag = WLG #Wolgast
+		}
+	}
+	has_country_shield = yes
+		
+	pom_gen_recon_stp = {
+		icon = mission_assemble_an_army
+		required_missions = { }
+		position = 2
+		
+		provinces_to_highlight = {
+			owned_by = STP
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			NOT = { exists = STP }
+			owns = 2995 #Stolp
+		}
+		
+		effect = {
+			add_mil_power = 50
+			add_adm_power = 50
+			add_prestige = 10
+			#Claims
+			if = {
+				limit = {
+					NOT = { tag = WLG }
+				}
+				custom_tooltip = pom_gen_recon_wlg_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							owned_by = WLG
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = { tag = STT }
+				}
+				custom_tooltip = pom_gen_recon_stt_claims
+				hidden_effect = {
+					every_province = {
+						limit = {
+							owned_by = STT
+							NOT = { is_core = ROOT }
+							NOT = { owned_by = ROOT }
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}
