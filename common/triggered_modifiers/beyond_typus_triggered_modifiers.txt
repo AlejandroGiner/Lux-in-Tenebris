@@ -60,12 +60,12 @@ bt_triggered_modifier_hegemoniacle = {
 	trigger = {
 		custom_trigger_tooltip = {
 			tooltip = bt_really_a_bunch_o_vassals_tooltip
-			calc_true_if = {
-				all_country = {
-					is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+				calc_true_if = {
+					all_country = {
+						is_subject_of_eligible_for_upkeep_bonus = { overlord = ROOT }
+					}
+					amount = 4
 				}
-				amount = 4
-			}
 		}
 	}
 	diplomatic_upkeep = 2
