@@ -535,6 +535,7 @@ has_manufactory_trigger = { #Province Scope
 					trade_goods = naval_supplies
 					trade_goods = fish
 					trade_goods = salt
+					trade_good = whales
 				}
 			}
 			has_building = wharf
@@ -544,6 +545,7 @@ has_manufactory_trigger = { #Province Scope
 				OR = {
 					trade_goods = copper
 					trade_goods = iron
+					trade_goods = marble
 				}
 			}
 			has_building = weapons
@@ -577,6 +579,13 @@ has_manufactory_trigger = { #Province Scope
 					trade_goods = grain
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = beer
+					trade_goods = rice
+					trade_goods = potatoes
+					trade_goods = maize
+					trade_goods = millet
+					trade_goods = amaranth
+					trade_goods = legumes
 				}
 			}
 			has_building = farm_estate
@@ -589,6 +598,7 @@ has_manufactory_trigger = { #Province Scope
 					trade_goods = tropical_wood
 					trade_goods = glass
 					trade_goods = chinaware
+					trade_goods = books
 				}
 			}
 			has_building = mills
