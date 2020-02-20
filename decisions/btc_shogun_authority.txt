@@ -1,0 +1,22 @@
+country_decisions = {
+  see_shogun_authority = {
+    potential = {
+      capital_scope = { region = japan_region }
+    }
+    allow = {
+      ai = no
+    }
+    effect = {
+      1020 = {
+        change_variable = {
+          which = shogun_authority_var
+          value = 1
+        }
+      }
+    }
+    ai_will_do = {
+      factor = 0
+    }
+    ai_importance = 400
+  }
+}

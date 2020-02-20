@@ -1,0 +1,29 @@
+namespace = btc_shogun_authority
+
+country_event = {
+  	id = btc_shogun_authority.1
+  	title = btc_shogun_authority.1.t
+  	desc = btc_shogun_authority.1.d
+  	picture = BANKRUPTCY_eventPicture
+    
+    is_triggered_only = yes
+    
+    trigger = {
+      tag = ASK
+    }
+    
+    immediate = {
+      hidden_effect = {
+        1020 = {
+          set_variable = {
+            which = shogun_authority_var
+            value = 50
+          }
+        }
+      }
+    }
+    
+    option = {
+      name = btc_shogun_authority.1.a
+    }
+}

@@ -1,0 +1,14 @@
+shogun_authority_modifier_%N% = {
+  potential = {
+    capital_scope = { region = japan_region }
+    1020 = {
+      check_variable = { which = shogun_authority_var value = %VALUE% }
+      NOT = { check_variable = { which = shogun_authority_var value = %VALUE+1% } }
+    }
+  }
+  trigger = {
+    1020 = { check_variable = { which = shogun_authority_var value = %VALUE% } }
+  }
+  legitimacy = %-2to1%
+  prestige = %-2to1%
+}
