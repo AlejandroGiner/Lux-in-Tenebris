@@ -282,6 +282,14 @@ tr_russia_conquest_1 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				vladimir_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						NOT = { province_id = 4261 }
+					}
+					add_permanent_claim = ROOT
+				}
 				4129 = {
 					if = {
 						limit = {
@@ -357,6 +365,7 @@ tr_russia_conquest_1 = {
 				province_id = 5647
 				area = karelia_area
 				area = valdai_area
+				area = vladimir_area
 				province_id = 4148
 				province_id = 311
 				province_id = 5645
@@ -375,6 +384,10 @@ tr_russia_conquest_1 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 				pomor_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				vladimir_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}

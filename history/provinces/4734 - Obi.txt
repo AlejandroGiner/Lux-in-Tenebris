@@ -1,19 +1,17 @@
-#4629 - Obi
+#4734 - Obi
 
+owner = OBI
+controller = OBI
+add_core = OBI
 culture = moluccan
 religion = animism
 capital = "Obira"
-trade_goods = unknown
+trade_goods = spices
+is_city = yes
 hre = no
 base_tax = 2 
 base_production = 2
-base_manpower = 1
-native_size = 5
-native_ferocity = 1
-native_hostileness = 1
-
-
-
+base_manpower = 2
 discovered_by = chinese
 discovered_by = japanese_btc
 discovered_by = korean_btc
@@ -27,6 +25,4 @@ discovered_by = malay_group
 	controller = NED
 	culture = dutch
 	religion = reformed
-	is_city = yes
-	trade_goods = spices
 } # Loosely controlled by the Dutch
