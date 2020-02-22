@@ -15,7 +15,7 @@ lithuanian_missions_1 = {
 			region = ruthenia_region
 			NOT = {
 				OR = {
-					development = 10
+					development = 12
 					has_building = temple
 					has_building = cathedral
 				}
@@ -27,11 +27,11 @@ lithuanian_missions_1 = {
 				num_of_owned_provinces_with = {
 					region = ruthenia_region
 					OR = {
-						development = 10
+						development = 12
 						has_building = temple
 						has_building = cathedral
 					}
-					value = 10
+					value = 20
 				}
 			}
 		}
@@ -115,7 +115,7 @@ lithuanian_missions_1 = {
 					}
 				}
 				280 = {
-					development = 20
+					development = 25
 				}
 			}
 			else = {
@@ -148,7 +148,7 @@ lithuanian_missions_1 = {
 				limit = {
 					NOT = {
 						280 = {
-							development = 20
+							development = 25
 						}
 					}
 				}
@@ -188,7 +188,7 @@ lithuanian_missions_1 = {
 					has_building = workshop
 				}
 			}
-			textile = 5
+			textile = 10
 		}
 		effect = {
 			if = {
@@ -279,7 +279,7 @@ lithuanian_missions_2 = {
 			262 = {
 				has_building = university
 			}
-			university = 5
+			university = 10
 			has_institution = printing_press
 		}
 		effect = {
@@ -394,6 +394,27 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sloboda_ukraine_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_dnieper_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			pryazovia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	lit_conquer_crimea = {
@@ -404,6 +425,9 @@ lithuanian_missions_slot = {
 				area = zaporizhia_area
 				area = crimea_area
 				area = azov_area
+				area = sloboda_ukraine_area
+				area = lower_dnieper_area
+				area = pryazovia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -411,6 +435,18 @@ lithuanian_missions_slot = {
 		}
 		trigger = {
 			zaporizhia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			sloboda_ukraine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lower_dnieper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			pryazovia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -486,6 +522,20 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_livonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			latgallia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			curonia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -505,6 +555,8 @@ lithuanian_missions_slot = {
 				area = livonia_area
 				area = estonia_ingria_area
 				area = curonia_area
+				area = latgallia_area
+				area = north_livonia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -512,6 +564,14 @@ lithuanian_missions_slot = {
 		}
 		trigger = {
 			livonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			latgallia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			north_livonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -524,7 +584,7 @@ lithuanian_missions_slot = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
-		effect = {		
+		effect = {
 			add_country_modifier = {
 				name = "baltic_ambition_new"
 				duration = 7300
@@ -610,7 +670,7 @@ lithuanian_missions_slot = {
 						alliance_with = ROOT
 						is_subject_of = ROOT
 					}
-					total_development = 150
+					total_development = 180
 				}
 			}
 		}
@@ -664,7 +724,7 @@ lithuanian_missions_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
-				vladimir_area = {
+				west_oka_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -695,7 +755,7 @@ lithuanian_missions_slot = {
 			OR = {
 				area = moscow_area
 				area = oka_area
-				area = vladimir_area
+				area = west_oka_area
 				area = suzdal_area
 				area = ryazan_area
 			}
@@ -712,7 +772,7 @@ lithuanian_missions_slot = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}			
-			vladimir_area = {
+			west_oka_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
