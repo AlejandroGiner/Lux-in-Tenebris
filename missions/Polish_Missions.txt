@@ -77,13 +77,6 @@ polish_missions_main_slot = {
 					add_permanent_claim = ROOT
 				}
 			}
-			kuyavia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 
@@ -93,10 +86,7 @@ polish_missions_main_slot = {
 		completed_by = 1466.10.19
 		position = 3
 		provinces_to_highlight = {
-			OR = {
-				area = west_prussia_area
-				area = kuyavia_area
-			}
+			area = west_prussia_area
 			NOT = {
 				AND = {
 					owned_by = ROOT
@@ -108,11 +98,6 @@ polish_missions_main_slot = {
 			west_prussia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-			}
-			kuyavia_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
 			}
 		}
 		effect = {
@@ -171,6 +156,20 @@ polish_missions_main_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_bulgaria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_danube_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = poland_varna_tt
 			hidden_effect = {
 				carpathia_region = {
@@ -182,6 +181,14 @@ polish_missions_main_slot = {
 					add_claim = ROOT
 				}
 				balkan_region = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						owned_by = TUR
+					}
+					add_claim = ROOT
+				}
+				greece_region_btc = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
@@ -236,7 +243,7 @@ plc_missions_1 = {
 					has_building = grand_shipyard
 				}
 			}
-			naval_forcelimit = 20
+			naval_forcelimit = 30
 			navy_size_percentage = 0.5
 		}
 		effect = {
@@ -308,7 +315,11 @@ polish_missions_branch_slot = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					area = bulgaria_area
+					OR = {
+						area = eastern_bulgaria_area
+						area = lower_danube_area
+						area = bulgaria_area
+					}
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -317,17 +328,32 @@ polish_missions_branch_slot = {
 					OR = {
 						region = carpathia_region
 						region = balkan_region
+						region = greece_region_btc
 					}
 					owned_by = TUR
 				}
 			}
 		}
 		trigger = {
+			lower_danube_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			bulgaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			carpathia_region = {
+				type = all
+				NOT = {
+					owned_by = TUR
+				}
+			}
+			greece_region_btc = {
 				type = all
 				NOT = {
 					owned_by = TUR
@@ -482,6 +508,10 @@ polish_missions_slot_3 = {
 				area = west_dniepr_area
 				area = pripyat_area
 				area = volhynia_area
+				area = eastern_volhynia_area
+				area = podlasie_area
+				area = trakai_area
+				area = novogrudok_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -489,6 +519,22 @@ polish_missions_slot_3 = {
 		}
 		trigger = {
 			samogitia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_volhynia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			podlasie_area = {
+				type = all
+				owned_by = ROOT
+			}
+			trakai_area = {
+				type = all
+				owned_by = ROOT
+			}
+			novogrudok_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -564,6 +610,34 @@ polish_missions_slot_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				felvidek_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				southern_alfold_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				western_transdanubia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				southern_transdanubia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -576,11 +650,31 @@ polish_missions_slot_3 = {
 				area = transdanubia_area
 				area = alfold_area
 				area = carpathian_ruthenia_area
+				area = southern_alfold_area
+				area = western_transdanubia_area
+				area = southern_transdanubia_area
+				area = felvidek_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_alfold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			felvidek_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -762,14 +856,12 @@ polish_missions_slot_4 = {
 		}
 		effect = {
 			west_dniepr_area = {
-				# dev cost
 				add_province_modifier = {
 					name = "restored_ruthenia"
 					duration = -1
 				}
 			}
 			east_dniepr_area = {
-				# dev cost
 				add_province_modifier = {
 					name = "restored_ruthenia"
 					duration = -1
@@ -806,7 +898,7 @@ polish_missions_slot_5 = {
 			}
 		}
 		trigger = {
-			total_development = 600
+			total_development = 800
 			custom_trigger_tooltip = {
 				tooltip = break_the_rus_mission_tooltip
 				NOT = {
@@ -884,7 +976,7 @@ polish_missions_slot_5 = {
 				culture = polish
 				religion = jewish
 				skill = 3
-				cost_multiplier = 0.25
+				cost_multiplier = 0.40
 			}
 			add_country_modifier = {
 				name = "pol_thriving_jewish_community"
@@ -962,8 +1054,16 @@ polish_missions_slot_5 = {
 			}
 		}
 		effect = {
-			# goods produced and local trade power
-			red_ruthenia_area = {
+			central_galicia_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "invested_in_eastern_poland"
+					duration = 7300
+				}
+			}
+			lublin_area = {
 				limit = {
 					owned_by = ROOT
 				}
