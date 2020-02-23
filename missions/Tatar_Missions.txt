@@ -660,14 +660,7 @@ tatar_missions_2 = {
 			}
 		}
 		effect = {
-			zaporizhia_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			sloboda_ukraine_area = {
+			crimea_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -675,13 +668,6 @@ tatar_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			west_dniepr_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			east_dniepr_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -705,6 +691,7 @@ tatar_missions_2 = {
 				area = zaporizhia_area
 				area = sloboda_ukraine_area
 				area = west_dniepr_area
+				area = western_zaporizhia_area
 				area = east_dniepr_area
 				area = podolia_volhynia_area
 			}
@@ -718,6 +705,10 @@ tatar_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			sloboda_ukraine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			western_zaporizhia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -792,7 +783,7 @@ tatar_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			vladimir_area = {
+			nizhny_novgorod_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -811,7 +802,7 @@ tatar_missions_2 = {
 				area = suzdal_area
 				area = tver_area
 				area = yaroslavl_area
-				area = vladimir_area
+				area = nizhny_novgorod_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -838,7 +829,7 @@ tatar_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			vladimir_area = {
+			nizhny_novgorod_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

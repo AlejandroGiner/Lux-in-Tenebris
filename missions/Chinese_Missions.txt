@@ -18,13 +18,8 @@ chinese_missions_1 = {
 			}
 		}
 		trigger = {
-			2154 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2155 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			738 = {
+			taiwan_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -83,6 +78,13 @@ chinese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cao_bac_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			korea_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -99,6 +101,7 @@ chinese_missions_1 = {
 			OR = {
 				area = red_river_delta_area
 				area = vietnam_area
+				area = cao_bac_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -106,6 +109,10 @@ chinese_missions_1 = {
 		}
 		trigger = {
 			red_river_delta_area = {
+				type = all
+				owned_by = ROOT
+			}
+			cao_bac_area = {
 				type = all
 				owned_by = ROOT
 			}

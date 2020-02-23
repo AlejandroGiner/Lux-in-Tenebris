@@ -21,18 +21,21 @@ african_missions = {
 		icon = mission_african_soldier
 		required_missions = { }
 		trigger = {
-			OR = {
-				AND = {
-					production_leader = {
-						trade_goods = slaves
+			custom_trigger_tooltip = {
+				tooltip = africa_slave_trigger_tooltip
+				OR = {
+					AND = {
+						production_leader = {
+							trade_goods = slaves
+						}
+						slaves = 4
 					}
-					slaves = 4
-				}
-				AND = {
-					has_country_modifier = the_abolish_slavery_act
-					NOT = {
-						any_neighbor_country = {
-							slaves = 1
+					AND = {
+						has_country_modifier = the_abolish_slavery_act
+						NOT = {
+							any_neighbor_country = {
+								slaves = 1
+							}
 						}
 					}
 				}

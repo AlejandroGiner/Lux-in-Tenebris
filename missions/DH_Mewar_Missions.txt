@@ -344,7 +344,6 @@ mer_delhi = {
 		}
 		effect = {
 			country_event  = { id = mer_mission_events.1 }
-			tooltip = { add_prestige = 20 }
 			522 = {
 				add_loot_from_rich_province_general_effect = {
 					LOOTER = ROOT
@@ -595,12 +594,12 @@ mer_fortify_rajputana_tree = {
 		required_missions = { mer_fortify_rajputana }
 		provinces_to_highlight = {
 			province_id = 2058
-			NOT = { development = 11 }
+			NOT = { development = 15 }
 		}
 		trigger = {
 			owns = 2058
 			2058 = {
-				development = 11
+				development = 15
 				NOT = { num_free_building_slots = 1 }
 			}
 		}
@@ -741,7 +740,7 @@ mer_indus = {
 		icon = mission_conquer_sindh_mer
 		required_missions = { mer_unite_rajputana }
 		provinces_to_highlight = {
-				area = sindh_area
+			area = sindh_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
 		}
 		trigger = {
@@ -752,7 +751,7 @@ mer_indus = {
 		}
 		effect = {
 			add_prestige = 15
-			504 = {
+			1337 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
@@ -974,7 +973,7 @@ mer_army_tree = {
 				loyalty = 70
 			}
 			barracks = 5
-			livestock = 5
+			livestock = 1
 		}
 		effect = {
 			add_country_modifier = {

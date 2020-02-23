@@ -190,7 +190,7 @@ guj_maritime_conquest = {
 					}
 					NOT = { owned_by = ROOT }
 				}
-				province_id = 504
+				province_id = 1337
 			}
 		}
 
@@ -200,7 +200,7 @@ guj_maritime_conquest = {
 			owns = 504
 			owns = 2231
 			owns = 2999
-			504 = {
+			1337 = {
 				trade_share = {
 					country = ROOT
 					share = 85
@@ -716,7 +716,7 @@ guj_mercantile = {
 		effect = {
 			add_dip_power = 50
 			add_estate_jains_loyalty_effect = yes
-			504 = {
+			1337 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
@@ -799,9 +799,6 @@ guj_mercantile = {
 			}
 		}
 		effect = {
-			add_permanent_claim = 833
-			add_permanent_claim = 1177
-			add_permanent_claim = 1179
 			lower_zambezi_area = {
 				limit = {
 					NOT = {
@@ -817,6 +814,13 @@ guj_mercantile = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
 					}
+				}
+				add_permanent_claim = ROOT
+			}
+			cape_of_good_hope_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -837,18 +841,15 @@ guj_mercantile = {
 		}
 
 		provinces_to_highlight = {
-			OR = {
-				province_id = 833
-				province_id = 1177
-				province_id = 1179
-			}
-			NOT = { owned_by = ROOT }
+			area = cape_of_good_hope_area
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
-			owns = 833
-			owns = 1177
-			owns = 1179
+			cape_of_good_hope_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT	
+					}
 		}
 		effect = {
 			1177 = {
@@ -932,7 +933,7 @@ guj_mercantile_and_industry = {
 		}
 		effect = {
 			add_estate_jains_loyalty_effect = yes
-			504 = {
+			1337 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
@@ -1012,7 +1013,7 @@ guj_mercantile_and_industry = {
 				add_base_production = 2
 				add_base_manpower = 2
 			}
-			4346 = {
+			1337 = {
 				add_trade_modifier = {
 					who = root
 					duration = 10950

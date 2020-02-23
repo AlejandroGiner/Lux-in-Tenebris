@@ -165,27 +165,19 @@ tib_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			2125 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			jetysuu_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			461 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			arys_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -200,8 +192,8 @@ tib_slot_2 = {
 				area = ferghana_area
 				area = turpan_kumul_area
 				area = zungaria_area
-				province_id = 2125
-				province_id = 461
+				area = jetysuu_area
+				area = arys_area
 			}
 			OR = {
 				NOT = {
@@ -236,16 +228,18 @@ tib_slot_2 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 				religion = ROOT
 			}
+			jetysuu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			arys_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			zungaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 				religion = ROOT
-			}
-			2125 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			461 = {
-				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -316,9 +310,10 @@ tib_slot_3 = {
 				area = west_gansu_area
 				area = yun_gui_borderland_area
 				province_id = 2748
+				province_id = 3354
+				province_id = 2167
 				province_id = 675
 				province_id = 662
-				province_id = 663
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -545,35 +540,6 @@ tib_slot_4 = {
 		effect = {
 			set_country_flag = dalai_lama_flag
 			country_event = { id = flavor_tib.1 }
-			yun_gui_borderland_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
-			2748 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			675 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
 			662 = {
 				if = {
 					limit = {
@@ -585,16 +551,12 @@ tib_slot_4 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			663 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			nepal_area = {
 				limit = {
@@ -616,6 +578,18 @@ tib_slot_4 = {
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
+			}
+			custom_tooltip = tib_chinese_frontier_claim_tooltip
+			hidden_effect = {
+				chuannan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+						NOT = { province_id = 4213 }
+						NOT = { province_id = 2168 }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}

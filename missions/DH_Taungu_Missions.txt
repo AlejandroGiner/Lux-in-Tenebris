@@ -44,6 +44,13 @@ tau_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			kengtung_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	tau_pacify_shan = {
@@ -181,6 +188,13 @@ tau_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			khorat_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -229,6 +243,20 @@ tau_slot_2 = {
 				add_permanent_claim = ROOT
 			}
 			shan_hill_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			yawnghwe_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_burma_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -493,13 +521,6 @@ tau_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			khorat_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 }
@@ -559,17 +580,6 @@ tau_slot_4 = {
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
-			}
-			568 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 		}
 	}

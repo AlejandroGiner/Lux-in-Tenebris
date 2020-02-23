@@ -762,6 +762,20 @@ bng_slot_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			kengtung_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			yawnghwe_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	bng_conquer_china = {

@@ -155,14 +155,14 @@ hin_slot_2 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1334
-				province_id = 4346
+				province_id = 1337
 			}
 		}
 		trigger = {
 			1334 = {
 				is_strongest_trade_power = ROOT
 			}
-			4346 = {
+			1337 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -184,6 +184,13 @@ hin_slot_2 = {
 			}
 			trading_bonus = {
 				trade_goods = spices
+				value = yes
+			}
+			production_leader = {
+				trade_goods = legumes
+			}
+			trading_bonus = {
+				trade_goods = legumes
 				value = yes
 			}
 			production_leader = {
@@ -406,19 +413,26 @@ hin_slot_4 = {
 		required_missions = { hin_burma }
 		position = 3
 		provinces_to_highlight = {
-			region = indo_china_region
+			OR = {
+				region = siam_region
+				region = indo_china_region
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
+			siam_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			indo_china_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		effect = {
-			add_army_tradition = 33
+			add_army_tradition = 35
 		}
 	}
 }
@@ -500,6 +514,20 @@ hin_slot_5 = {
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
+			}
+			siam_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			malaya_region = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
 			}
 		}
 	}

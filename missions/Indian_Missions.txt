@@ -1578,14 +1578,14 @@ gen_north_india_4 = {
 		required_missions = { gen_north_india_powerful_subject }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 504
+				province_id = 1337
 				province_id = 1343
 			}
 		}
 		
 		trigger = {
 			OR = {
-				504 = {
+				1337 = {
 					is_strongest_trade_power = ROOT
 				}
 				1343 = {

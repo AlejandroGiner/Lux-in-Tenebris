@@ -74,7 +74,7 @@ mongol_missions_1 = {
 				num_of_owned_provinces_with = {
 					region = north_china_region
 					is_core = ROOT
-					value = 20
+					value = 30
 				}
 			}
 		}
@@ -121,7 +121,7 @@ mongol_missions_1 = {
 						region = xinan_region
 						region = south_china_region
 					}
-					value = 40
+					value = 55
 				}
 			}
 		}
@@ -170,6 +170,13 @@ mongol_missions_1 = {
 				duration = 7300
 			}
 			kinai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_kinai_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -404,6 +411,13 @@ mongol_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			mesopotamia_region = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			mashriq_region = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -430,8 +444,9 @@ mongol_missions_2 = {
 					OR = {
 						region = anatolia_region
 						region = mashriq_region
+						region = mesopotamia_region
 					}
-					value = 40
+					value = 70
 				}
 			}
 		}
@@ -505,7 +520,7 @@ mongol_missions_3 = {
 				tooltip = mongol_tatars_tt
 				num_of_owned_provinces_with = {
 					region = crimea_region
-					value = 15
+					value = 20
 				}
 			}
 		}
@@ -652,7 +667,7 @@ mongol_missions_4 = {
 						region = ruthenia_region
 						region = russia_region
 					}
-					value = 30
+					value = 60
 				}
 			}
 			280 = { owned_by = ROOT }
