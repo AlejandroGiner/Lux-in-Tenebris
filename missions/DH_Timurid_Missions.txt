@@ -23,8 +23,8 @@ dh_tim_india = {
 		required_missions = { }
 		
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
+			army_size_percentage = 0.9
+			manpower_percentage = 0.5
 			num_of_generals = 1
 		}
 		
@@ -68,16 +68,17 @@ dh_tim_india = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sind_sagar_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			506 = {
 				add_permanent_claim = ROOT
 			}
-			2078 = {
-				add_permanent_claim = ROOT
-			}
-			510 = {
-				add_permanent_claim = ROOT
-			}
-			2075 = {
+			4509 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -391,6 +392,7 @@ dh_tim_india = {
 				name = "mug_fall_of_delhi"
 				duration = 9125 #25 years
 			}
+			524 = { add_permanent_claim = ROOT }
 			add_treasury = 500
 			add_prestige = 20
 		}

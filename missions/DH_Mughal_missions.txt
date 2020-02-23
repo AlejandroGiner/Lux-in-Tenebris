@@ -366,19 +366,29 @@ mug_towards_china = {
 			}
 			yun_gui_borderland_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			yun_gui_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kengtung_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			yawnghwe_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -396,10 +406,14 @@ mug_towards_china = {
 				area = yun_gui_borderland_area
 				area = yun_gui_area
 				area = vietnam_area
+				area = sipsongchautai_area
+				area = cao_bac_area
+				area = red_river_delta_area
 				area = guangxi_area
+				area = east_guangxi_area
 				area = west_guangdong_area
 				area = guangdong_area
-				area = red_river_delta_area
+				area = hainan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -413,6 +427,18 @@ mug_towards_china = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cao_bac_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sipsongchautai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_guangxi_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -432,6 +458,10 @@ mug_towards_china = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			hainan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -441,7 +471,6 @@ mug_towards_china = {
 		}
 	}
 }
-
 mug_land_assesement = {
 	slot = 2
 	generic = no
@@ -641,28 +670,29 @@ mug_ganges_branch = {
 			add_dip_power = 100
 			arakan_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			lower_burma_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			central_burma_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tripura_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -676,11 +706,16 @@ mug_ganges_branch = {
 				area = arakan_area
 				area = lower_burma_area
 				area = central_burma_area
+				area = tripura_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			arakan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripura_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -702,66 +737,24 @@ mug_ganges_branch = {
 					key = mug_lower_burma
 				}
 			}
-			tenasserim_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			north_tenasserim_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			central_thai_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			northern_thai_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 			north_laos_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			south_laos_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			khorat_area = {
+			siam_region = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -772,30 +765,14 @@ mug_ganges_branch = {
 		required_missions = { mug_lower_burma_campaign }
 		provinces_to_highlight = {
 			OR = {
-				area = tenasserim_area
-				area = north_tenasserim_area
-				area = central_thai_area
-				area = northern_thai_area
 				area = north_laos_area
 				area = south_laos_area
-				area = khorat_area
+				region = siam_region
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			tenasserim_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			north_tenasserim_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			central_thai_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			northern_thai_area = {
+			siam_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -804,10 +781,6 @@ mug_ganges_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			south_laos_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			khorat_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -820,67 +793,73 @@ mug_ganges_branch = {
 					duration = -1
 				}
 			}
-			malacca_area = {
+			malaya_region = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			malaya_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			
 			vietnam_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cao_bac_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sipsongchautai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			red_river_delta_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			guangxi_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_guangxi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			west_guangdong_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			guangdong_area = {
 				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hainan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -890,18 +869,11 @@ mug_ganges_branch = {
 		icon = mission_malayan_viceroyalty
 		required_missions = { mug_subah_of_ayuddhya }
 		provinces_to_highlight = {
-			OR = {
-				area = malaya_area
-				area = malacca_area
-			}
+			region = malaya_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			malacca_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			malaya_area = {
+			malaya_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

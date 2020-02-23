@@ -212,12 +212,9 @@ manchu_missions_1_b = {
 			}
 		}
 		trigger = {
-			calc_true_if = {
-				north_china_region = {
-					type = all
-					controlled_by = ROOT
-				}
-				amount = 25
+			num_of_owned_provinces_with = {
+				region = north_china_region
+				value = 25
 			}
 		}
 		effect = {
@@ -234,7 +231,7 @@ manchu_missions_1_b = {
 				region = south_china_region
 				region = xinan_region
 			}
-			development = 25
+			development = 20
 			OR = {
 				NOT = { controlled_by = ROOT }
 				NOT = { devastation = 30 }
@@ -250,7 +247,7 @@ manchu_missions_1_b = {
 							region = south_china_region
 							region = xinan_region
 						}
-						development = 25
+						development = 20
 					}
 				}
 				custom_trigger_tooltip = {
@@ -263,7 +260,7 @@ manchu_missions_1_b = {
 							region = xinan_region
 						}
 						controlled_by = ROOT
-						development = 25
+						development = 20
 						devastation = 20
 					}
 				}
@@ -277,7 +274,7 @@ manchu_missions_1_b = {
 							region = xinan_region
 						}
 						owned_by = ROOT
-						development = 25
+						development = 20
 					}
 				}
 			}			
@@ -296,7 +293,7 @@ manchu_missions_1_b = {
 						region = south_china_region
 						region = xinan_region
 					}
-					development = 25
+					development = 20
 				}
 				add_base_tax = -2
 				add_base_manpower = -2
@@ -423,11 +420,16 @@ manchu_missions_1_b = {
 			OR = {
 				area = vietnam_area
 				area = red_river_delta_area
+				area = cao_bac_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cao_bac_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -832,12 +834,15 @@ manchu_missions_2_b = {
 		}
 		trigger = {
 			is_at_war = no
-			num_of_owned_provinces_with = {
-				OR = {
-					region = south_china_region
-					region = xinan_region
+			custom_trigger_tooltip = {
+				tooltip = "qing_invade_south_china_tooltip"
+				num_of_owned_provinces_with = {
+					OR = {
+						region = xinan_region
+						region = south_china_region
+					}
+					value = 35
 				}
-				value = 20
 			}
 			if = {
 				limit = {

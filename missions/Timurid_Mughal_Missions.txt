@@ -283,8 +283,8 @@ tim_reconquest_khorasan = {
 		required_missions = { }
 		
 		trigger = {
-			army_size_percentage = 1
-			manpower_percentage = 0.6
+			army_size_percentage = 0.9
+			manpower_percentage = 0.5
 			num_of_generals = 1
 		}
 		
@@ -328,16 +328,17 @@ tim_reconquest_khorasan = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sind_sagar_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			506 = {
 				add_permanent_claim = ROOT
 			}
-			2078 = {
-				add_permanent_claim = ROOT
-			}
-			510 = {
-				add_permanent_claim = ROOT
-			}
-			2075 = {
+			4509 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -482,16 +483,18 @@ tim_reconquest_transoxiana = {
 				}
 				add_permanent_claim = ROOT
 			}
-			458 = {
+			ferghana_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			1967 = {
-				add_permanent_claim = ROOT
-			}
-			457 = {
-				add_permanent_claim = ROOT
-			}
-			2356 = {
+			arys_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
