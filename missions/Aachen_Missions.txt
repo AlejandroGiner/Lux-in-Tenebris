@@ -34,7 +34,7 @@ francia_missions_1 = {
 	has_country_shield = yes
 	
 	francia_culture_1 = {
-		icon = mission_cannons_firing
+		icon = mission_constantinople
 		required_missions = { }
 		position = 1
 		trigger = {
@@ -63,7 +63,7 @@ francia_missions_1 = {
 	}
 	
 	francia_culture_2 = {
-		icon = mission_cannons_firing
+		icon = mission_rb_renovate_oxbridge
 		required_missions = { francia_culture_1 }
 		position = 2
 		provinces_to_highlight = {
@@ -92,7 +92,7 @@ francia_missions_1 = {
 	}
 	
 	francia_culture_3 = {
-		icon = mission_cannons_firing
+		icon = mission_empire
 		required_missions = { francia_culture_2 }
 		position = 3
 		provinces_to_highlight = {

@@ -103,10 +103,10 @@ mlw_slot_1 = {
 		icon = mission_dominate_gujarati_trade
 		required_missions = { mlw_conquer_gujarat }
 		provinces_to_highlight = {
-			province_id = 504
+			province_id = 1337
 		}
 		trigger = {
-			504 = {
+			1337 = {
 				has_most_province_trade_power = ROOT
 				is_strongest_trade_power = ROOT
 			}

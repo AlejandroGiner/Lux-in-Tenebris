@@ -316,71 +316,19 @@ ori_missions_west = {
 				}
 				add_permanent_claim = ROOT
 			}
-			561 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			west_bengal_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			2039 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			east_bengal_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
-			}
-			4475 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			564 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			4474 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			4477 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -487,34 +435,20 @@ ori_bengal_missions = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				province_id = 561
-				province_id = 2039
-				province_id = 4475
-				province_id = 564
-				province_id = 4474
-				province_id = 4477
+				area = east_bengal_area
+				area = west_bengal_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			561 = {
+			east_bengal_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			2039 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4475 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			564 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4474 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4477 = {
+			west_bengal_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -547,13 +481,6 @@ ori_bengal_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_bengal_area = {
-				limit = {
-					NOT = { is_permanent_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_permanent_claim = ROOT
-			}
 			north_bengal_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -561,14 +488,14 @@ ori_bengal_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_bengal_area = {
+			arakan_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
-			arakan_area = {
+			tripura_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -581,13 +508,20 @@ ori_bengal_missions = {
 		icon = mission_conquer_arakan
 		required_missions = { ori_bengal_trade }
 		provinces_to_highlight = {
-			area = arakan_area
+			OR = {
+				area = tripura_area
+				area = arakan_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			arakan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripura_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -34,6 +34,17 @@ ori_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
+			4419 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	
@@ -56,9 +67,7 @@ ori_conquest = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			4419 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			4419 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		effect = {
@@ -70,13 +79,25 @@ ori_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
-			539 = {
+			golconda_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			540 = {
+			south_carnatic_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			2026 = {
+			tanjore_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -88,12 +109,19 @@ ori_conquest = {
 		position = 6
 		
 		provinces_to_highlight = {
-			area = telingana_area
+			OR = {
+				area = telingana_area
+				area = golconda_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			telingana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			golconda_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -127,21 +155,19 @@ ori_conquest_two = {
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 539
-				province_id = 540
-				province_id = 2026
+				area = south_carnatic_area
+				area = tanjore_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			539 = {
+			south_carnatic_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			540 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2026 = {
+			tanjore_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}

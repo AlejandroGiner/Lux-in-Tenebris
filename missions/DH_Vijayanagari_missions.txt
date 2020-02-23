@@ -359,10 +359,10 @@ vij_south_conquest = {
 		icon = mission_dominate_trade_in_aden
 		required_missions = { vij_aden_conquest }
 		provinces_to_highlight = {
-			province_id = 4346
+			province_id = 1331
 		}
 		trigger = {
-			4346 = {
+			1331 = {
 				is_strongest_trade_power = ROOT
 			}
 		}

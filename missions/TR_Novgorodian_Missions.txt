@@ -33,54 +33,14 @@ tr_novgorod_1 = {
 			owns = 4129
 		}
 		effect = {
-			4249 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			294 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			4248 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			vologda_area = {
+			tver_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			beloozero_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			galich_area = {
+			valdai_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -101,13 +61,6 @@ tr_novgorod_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			vladimir_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			yaroslavl_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -115,16 +68,12 @@ tr_novgorod_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			1752 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			nizhny_novgorod_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -133,33 +82,32 @@ tr_novgorod_1 = {
 		required_missions = { nov_recover_cores }
 		provinces_to_highlight = {
 			OR = {
-				area = vologda_area
-				area = beloozero_area
-				area = galich_area
-				area = moscow_area
+				province_id = 3290
+				province_id = 5651
+				province_id = 5659
+				province_id = 295
+				province_id = 4252
+				province_id = 3277
+				province_id = 5683
+				province_id = 5665
+				province_id = 312
+				province_id = 1753
+				province_id = 5655
+				province_id = 308
 				area = suzdal_area
-				area = vladimir_area
-				area = yaroslavl_area
-				province_id = 1752
+				area = nizhny_novgorod_area
+				area = valdai_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			vologda_area = {
+			nizhny_novgorod_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			beloozero_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			galich_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			moscow_area = {
+			valdai_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -167,16 +115,26 @@ tr_novgorod_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			vladimir_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = defeat_muscovy_nov_yaroslav_tooltip
+				yaroslavl_area = {
+					type = all
+					OR = {
+						province_id = 4117
+						province_id = 4250
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
-			yaroslavl_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1752 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = defeat_muscovy_nov_tooltip
+				moscow_area = {
+					type = all
+					OR = {
+						province_id = 4251
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 		}
 		effect = {
@@ -191,6 +149,13 @@ tr_novgorod_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			west_oka_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			ryazan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -198,7 +163,14 @@ tr_novgorod_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			2408 = {
+			vologda_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			4264 = {
 				if = {
 					limit = {
 						NOT = {
@@ -236,21 +208,17 @@ tr_novgorod_2 = {
 				province_id = 4249
 				province_id = 294
 				province_id = 4248
+				province_id = 5657
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			4249 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			294 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4248 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			4249 = { country_or_non_sovereign_subject_holds = ROOT }
+			5657 = { country_or_non_sovereign_subject_holds = ROOT }
+			294 = { country_or_non_sovereign_subject_holds = ROOT }
+			4248 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			tver_area = {
@@ -262,27 +230,12 @@ tr_novgorod_2 = {
 					duration = 7300
 				}
 			}
-			274 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			pskov_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-			}
-			1960 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -291,11 +244,22 @@ tr_novgorod_2 = {
 		required_missions = { nov_conquer_tver nov_defeat_mos  }
 		provinces_to_highlight = {
 			OR = {
-				area = oka_area
-				area = ryazan_area
-				province_id = 2408
-				province_id = 274
-				province_id = 1960
+				province_id = 3268
+				province_id = 300
+				province_id = 5682
+				province_id = 301
+				province_id = 4255
+				area = pskov_area
+				area = vologda_area
+				area = yaroslavl_area
+				area = tver_area
+				province_id = 296
+				province_id = 5663
+				province_id = 4251
+				province_id = 5669
+				province_id = 5668
+				province_id = 5679
+				province_id = 4264
 				owner = {
                     dynasty = "Rurikovich"
                     culture_group = east_slavic
@@ -306,31 +270,53 @@ tr_novgorod_2 = {
 			}
 		}
 		trigger = {
-			NOT = {
-				any_country = {
-                    dynasty = "Rurikovich"
-                    culture_group = east_slavic
-                    NOT = {
-                        is_subject_of = ROOT
-                    }
+			custom_trigger_tooltip = {
+				tooltip = defeat_rurikovich_nov_alt_tooltip
+				NOT = {
+					any_country = {
+						dynasty = "Rurikovich"
+						culture_group = east_slavic
+						NOT = {
+							OR = {
+								is_subject_of = ROOT
+								is_subject_of = LIT
+							}
+						}
+					}
 				}
 			}
-			oka_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			ryazan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2408 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			274 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1960 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			custom_trigger_tooltip = {
+				tooltip = defeat_rurikovich_nov_tooltip
+				ryazan_area = {
+					type = all
+					OR = {
+						province_id = 2408
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				pskov_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				tver_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				yaroslavl_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				vologda_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				4264 = { country_or_non_sovereign_subject_holds = ROOT }
+				4251 = { country_or_non_sovereign_subject_holds = ROOT }
+				5663 = { country_or_non_sovereign_subject_holds = ROOT }
+				296 = { country_or_non_sovereign_subject_holds = ROOT }
+				3268 = { country_or_non_sovereign_subject_holds = ROOT }
+				300 = { country_or_non_sovereign_subject_holds = ROOT }
+				5682 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
 		effect = {
@@ -584,11 +570,11 @@ tr_novgorod_4 = {
 		icon = mission_found_arkhangelsk
 		required_missions = {  }
 		provinces_to_highlight = {
-			province_id = 1955
+			province_id = 313
 		}
 		trigger = {
-			owns = 1955
-			1955 = {
+			owns = 313
+			313 = {
 				OR = {
 					has_building = marketplace
 					has_building = dock
@@ -596,25 +582,27 @@ tr_novgorod_4 = {
 			}
 		}
 		effect = {
-			1955 = {
+			313 = {
 				change_province_name = "Arkhangelsk"
 				rename_capital = "Arkhangelsk"
 				add_base_tax = 2
 				add_base_production = 2
 				add_base_manpower = 2
+				add_or_spawn_center_of_trade = { LEVEL = 2 }
 				add_province_modifier = {
 					name = "arkhangelsk_modifier"
 					duration = -1
 				}
 			}
-			laponia_area = {
+			1955 = { add_center_of_trade_level = -1 }
+			perm_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			perm_area = {
+			vyatka_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -629,7 +617,7 @@ tr_novgorod_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = perm_area
-				area = laponia_area
+				area = vyatka_area
 				province_id = 1652
 			}
 			OR = {
@@ -647,7 +635,7 @@ tr_novgorod_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			laponia_area = {
+			vyatka_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

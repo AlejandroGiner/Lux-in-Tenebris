@@ -41,7 +41,7 @@ per_western_branch = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-				area = azerbaijan_area
+				area = kerman_area
 				area = iraq_e_ajam_area
 				area = isfahan_area
 				area = farsistan_area
@@ -49,7 +49,7 @@ per_western_branch = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			azerbaijan_area = { #Must still have this
+			kerman_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -102,52 +102,6 @@ per_western_branch = {
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
-			}
-			tooltip = {
-				if = {
-					limit = {
-						NOT = { government_rank = 3 }
-					}
-					set_government_rank = 3
-				}
-				416 = { #Tabriz
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 1
-				}
-				429 = { #Isfahan
-					add_base_tax = 3
-					add_base_production = 3
-					add_base_manpower = 1
-				}
-				2215 = { #Qazvin
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 1
-				}
-				2218 = { #Shiraz
-					add_base_tax = 2
-					add_base_production = 2
-				}
-				428 = { #Teheran
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				433 = { #Yazd
-					add_base_tax = 1
-					add_base_production = 1
-				}
-				2213 = { #Qom
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				2212 = { #Zanjan
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
 			}
 		}
 	}
@@ -264,6 +218,13 @@ per_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sistan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			balkh_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -281,11 +242,16 @@ per_east = {
 				area = ghor_area
 				area = kabulistan_area
 				area = balkh_area
+				area = sistan_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			ghor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sistan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -311,6 +277,13 @@ per_east = {
 				add_claim = ROOT
 			}
 			multan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			sind_sagar_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_claim = ROOT }
