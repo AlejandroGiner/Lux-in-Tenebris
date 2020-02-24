@@ -313,7 +313,7 @@ amazonas_node={
 	}
 	members={
 		1802 1803 2909 2910 2911 2929 2930 2931 2933 2934 2935 2889 2937 2938 2804 2811 742 743 744 2810 747 748 749 2890 2923 2924 2925 2926 2927 
-		2928 745 746 2936 2815 2812 834 4617 4614 7519 7523 7533 7536 7541 7557 7558 7562 7564 7572 7581 7582
+		2928 745 746 2936 2815 2812 834 4617 4614 7519 7523 7533 7536 7541 7557 7558 7562 7564 7572 7581 7582 3472 3473 3474 3475
 	}
 }
 california={
@@ -493,23 +493,6 @@ james_bay={	#Note this trade node is abosolutely massive, but most of it is gene
 		1104 1105 2574 2575 3111 3112 3113 4998 5007 5014 5015 5588 5589 5590 5592 5593 5595 5596 1804			#Possible Larador Sea node
 	}
 }
-#Was a nice idea, but the in game reality didn't work for me, so cutting it.
-#labrador_sea={	#New trade node, copying Neprut's idea in SE but adapting it to BT. Note this is essentially a whaling node, but between arctic climate and no CoTs, it will be pathetic. But it will distance Hudson Bay and Europe, encourage trade through Saint Lawrence node, stop protecting trade in the Hudson bay from causing ships to circle Greenland, and shrink the Hudson Bay node slightly... all desirable effects. The only downside is it may make the potential Norse Sea colonisers (England, Norway, Denmark, Scotland, Iceland) less likely to try to colonise the Hudson Bay early, which happened historically. Perhaps an event can fix this.
-#	location=1483
-#	color={ 10 91 35 }
-#	outgoing={
-#		name="north_sea"
-#		path={
-#			1924 1481 1477 1476 1299 1281 1975 
-#		}
-#		control={
-#			1802.000000 2073.000000 1875.000000 2051.000000 1908.000000 2049.000000 1957.000000 2029.000000 2079.000000 2073.000000 2248.000000 2096.000000 2295.000000 2114.000000 2343.000000 2105.000000 2449.000000 2120.000000 2526.000000 2068.000000 2585.000000 2048.000000 2633.000000 2057.000000 
-#		}
-#	}
-#	members={
-#		1104 1105 1483 2574 2575 3111 3112 3113 4998 5007 5014 5015 5588 5589 5590 5592 5593 5595 5596 1804
-#	}
-#}
 ohio={
 	location=948
 	color={ 129 214 238 }

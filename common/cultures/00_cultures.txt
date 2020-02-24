@@ -7495,28 +7495,31 @@ east_asian = {	# Chinese Group
 je = {
 	graphical_culture = northamericagfx
 	botocudo = {
-		primary = TUA
-		dynasty_names = {
-			Aimoré Prajé Takrukrak Krekmún Ituêto Futikrak Gueren Gutucrac Mekmek Minhagiran Nakrehê Naknyanúk
-		}
-		male_names = {
-			Jandui Raoni Janduwy Caracara Kerioukeiou Karupoto
-		}
-		female_names = {
-			Bartira Potira Porasy Jougousa Azelene
-		}
 	}
 	ge = {
 		primary = GEE
-		dynasty_names = {
-			Xavante Karaja Xerénte Xakriabá Acroá Bororo
-		}
-		male_names = {
-			Jandui Raoni Janduwy Caracara Kerioukeiou Karupoto
-		}
-		female_names = {
-			Bartira Potira Porasy Jougousa Azelene
-		}
+	}
+	mebongokre = {
+	}
+	tremembe = {
+	}
+	aimore = {
+	}
+	goitaca = {
+		primary = TUA
+	}
+	xakriaba = {
+	}
+	
+	dynasty_names = {
+		Aimoré Prajé Takrukrak Krekmún Ituêto Futikrak Gueren Gutucrac Mekmek Minhagiran Nakrehê Naknyanúk
+		Xavante Karaja Xerénte Xakriabá Acroá Bororo
+	}
+	male_names = {
+		Jandui Raoni Janduwy Caracara Kerioukeiou Karupoto
+	}
+	female_names = {
+		Bartira Potira Porasy Jougousa Azelene
 	}
 }
 
@@ -8279,16 +8282,21 @@ je_tupi = { # Tupi
 	graphical_culture = northamericagfx
 	
 	tupinamba = {
+		primary = TPA
+	}
+	potiguara = {
+		primary = PTG
+	}
+	tabajara = {
+	}
+	kaete = {
+	}
+	tupiniquim = {
 		primary = TPQ
-		dynasty_names = {
-			Piratininga Tabajara Temiminó Tamoio Tabajara Caeté Tupinaé Temiminó Tupina Aricobé
-		}
-		male_names = {
-			Tibiriçá Piquerobi Caiubi Ramalho Italo Arah Pirijá Arata Toruí Mbicy
-		}
-		female_names = {
-			Bartira Potira Porasy Jougousa Azelene
-		}
+	}
+	temimino = {
+	}
+	tamoio = {
 	}
 	guarani = {
 		primary = GUA
@@ -8303,6 +8311,15 @@ je_tupi = { # Tupi
 		female_names = {
 			Bartira Potira Porasy Jougousa Azelene
 		}
+	}
+	dynasty_names = {
+		Piratininga Tabajara Temiminó Tamoio Tabajara Caeté Tupinaé Temiminó Tupina Aricobé
+	}
+	male_names = {
+		Tibiriçá Piquerobi Caiubi Ramalho Italo Arah Pirijá Arata Toruí Mbicy
+	}
+	female_names = {
+		Bartira Potira Porasy Jougousa Azelene
 	}
 }
 
