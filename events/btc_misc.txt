@@ -25,3 +25,34 @@ country_event = {
   }
 
 }
+
+#Aalst printer
+province_event = {
+  id = btc_misc.2
+  title = "btc_misc.2.t"
+  desc = "btc_misc.2.d"
+  picture = PRINTING_PRESS_eventPicture
+
+  fire_only_once = yes
+ 
+  trigger = {
+    province_id = 7596
+    is_state = yes
+    renaissance = 100
+    owner = { has_institution = renaissance }
+	is_year = 1470
+	NOT = { devastation = 1 }
+  }
+
+  mean_time_to_happen = {
+    years = 10
+  }
+
+  option = {
+    name = "btc_misc.2.a"
+    ai_chance = { factor = 1 }
+	owner = { add_prestige = 5 }
+    add_base_production = 1
+	change_trade_goods = paper
+  }
+}

@@ -207,15 +207,12 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		
 		has_latent_trade_goods = coal
-		
-		#Added special goods in BT
-		has_province_modifier = grand_banks_of_newfoundland
-		
-		#btc
 		has_latent_trade_goods = rubber
 		has_latent_trade_goods = oil
 		
+		has_province_modifier = grand_banks_of_newfoundland
 		has_province_modifier = bt_forests_of_cadore
 		has_province_modifier = btc_solnitsata_salt
 		has_province_modifier = btc_banaue_rice_terraces
@@ -231,6 +228,7 @@ province_with_special_goods_produced_trigger = {
 		has_province_modifier = bt_mercury_of_almaden
 		has_province_modifier = btc_pearling_trail
 		has_province_modifier = steyr_arms
+		has_province_modifier = hallein_salt_mine
 	}
 }
 
@@ -253,15 +251,12 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
-		has_latent_trade_goods = coal
-	
-		#Added special goods in BT
-		has_province_modifier = grand_banks_of_newfoundland
 		
-		#btc
+		has_latent_trade_goods = coal
 		has_latent_trade_goods = rubber
 		has_latent_trade_goods = oil
 		
+		has_province_modifier = grand_banks_of_newfoundland
 		has_province_modifier = bt_forests_of_cadore
 		has_province_modifier = btc_solnitsata_salt
 		has_province_modifier = btc_banaue_rice_terraces
@@ -277,6 +272,7 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = bt_mercury_of_almaden
 		has_province_modifier = btc_pearling_trail
 		has_province_modifier = steyr_arms
+		has_province_modifier = hallein_salt_mine
 	}
 }
 
