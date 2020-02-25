@@ -102,6 +102,55 @@ tr_russia_exclusive_church = {
 	}
 }
 
+muscovy_found_arkhangelsk_btc = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Third Rome"
+	}
+	potential = {
+		tag = RUS
+		has_dlc = "Third Rome"
+		NOT = { was_tag = NOV } #No repeated mission
+		NOT = { has_global_flag = arkhangelsk_founded } #In case Novgorod founds it and then someone else forms Russia
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	mos_arkhangelsk_btc = {
+		icon = mission_found_arkhangelsk
+		required_missions = {  }
+		provinces_to_highlight = {
+			province_id = 313
+		}
+		trigger = {
+			owns = 313
+			313 = {
+				OR = {
+					has_building = marketplace
+					has_building = dock
+				}
+			}
+		}
+		effect = {
+			313 = {
+				change_province_name = "Arkhangelsk"
+				rename_capital = "Arkhangelsk"
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				add_or_spawn_center_of_trade = { LEVEL = 2 }
+				add_province_modifier = {
+					name = "arkhangelsk_modifier"
+					duration = -1
+				}
+			}
+			1955 = { add_center_of_trade_level = -1 }
+		}
+	}
+}
+
 tr_muscovy_conquest = {
 	slot = 1
 	generic = no
