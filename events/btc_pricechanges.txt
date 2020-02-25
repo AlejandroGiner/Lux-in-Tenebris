@@ -155,3 +155,51 @@ country_event = {
     }
   }
 }
+
+#Invention of the movable comb hive
+country_event = {
+	id = PriceChangesBTC.5
+	title = PriceChangesBTC.5.t
+	desc = PriceChangesBTC.5.d
+	picture = ENLIGHTENMENT_eventPicture
+
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		OR = {
+			capital_scope = { continent = europe }
+			tag = USA
+		}
+		apiculture = 1
+		is_year = 1750
+		has_institution = enlightenment
+		any_owned_province = {
+			enlightenment = 100
+			trade_goods = apiculture
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+	}
+  
+	option = {
+		name = PriceChangesBTC.5.a
+		ai_chance = { factor = 1 }
+		add_innovativeness_big_effect = yes
+		change_price = {
+		  trade_goods = apiculture
+		  key = btc_movable_hive
+		  value = 0.2 #3.0 ··> 3.5
+		  duration = -1
+		}
+		random_owned_province = {
+			limit = {
+				enlightenment = 100
+				trade_goods = apiculture
+			}
+			add_base_production = 2
+		}
+	}
+}
