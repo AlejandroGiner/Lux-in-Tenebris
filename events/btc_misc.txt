@@ -197,9 +197,9 @@ country_event = {
 					limit = {
 						sieged_by = ROOT
 						fort_level = 1
-						trade_goods = Apiculture
+						trade_goods = apiculture
 					}
-					save_event_target_as = bee_province
+					save_global_event_target_as = bee_province
 				}
 			}
 		}
@@ -207,10 +207,19 @@ country_event = {
   
 	option = {
 		name = btc_misc.5.a
-		change_siege = -2
-		kill_units = {
-			who = ROOT
-			amount = 1
+		event_target:bee_province = {
+			change_siege = -2
+			kill_units = {
+				who = ROOT
+				amount = 1
+			}
+		}
+		hidden_effect = {
+			event_target:bee_defender = {
+				country_event = {
+					id = btc_misc.7
+				}
+			}
 		}
 	}
 }
@@ -254,9 +263,9 @@ country_event = {
 					limit = {
 						sieged_by = ROOT
 						fort_level = 1
-						trade_goods = Apiculture
+						trade_goods = apiculture
 					}
-					save_event_target_as = bee_province
+					save_global_event_target_as = bee_province
 				}
 			}
 		}
@@ -264,10 +273,19 @@ country_event = {
   
 	option = {
 		name = btc_misc.6.a
-		change_siege = 1
-		add_province_modifier = {
-			name = btc_bees_help_siege
-			duration = 365
+		event_target:bee_province = {
+			change_siege = 1
+			add_province_modifier = {
+				name = btc_bees_help_siege
+				duration = 365
+			}
+		}
+		hidden_effect = {
+			event_target:bee_defender = {
+				country_event = {
+					id = btc_misc.8
+				}
+			}
 		}
 	}
 }
@@ -283,10 +301,12 @@ country_event = {
 	option = {
 		name = btc_misc.6.a
 		tooltip = {
-			change_siege = -2
-			kill_units = {
-				who = ROOT
-				amount = 1
+			event_target:bee_province = {
+				change_siege = -2
+				kill_units = {
+					who = FROM
+					amount = 1
+				}
 			}
 		}
 	}
@@ -303,10 +323,12 @@ country_event = {
 	option = {
 		name = btc_misc.5.a
 		tooltip = {
-			change_siege = 1
-			add_province_modifier = {
-				name = btc_bees_help_siege
-				duration = 365
+			event_target:bee_province = {
+				change_siege = 1
+				add_province_modifier = {
+					name = btc_bees_help_siege
+					duration = 365
+				}
 			}
 		}
 	}

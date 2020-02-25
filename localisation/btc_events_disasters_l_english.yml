@@ -154,15 +154,15 @@
 
   #Bee sieges
   btc_misc.5.t:0 "A Stingy Surprise"
-  btc_misc.5.d:0 "My $MONARCHTITLE$, dire news come from the siege in [event_target:bee_province.GetName]. When our troops ransacked the villages around the city, they didn't come to realize that this region is an important beekeeping centre. This may sound crazy, my liege, but while our siege engineers were working to open the gates, what seemed to be beehives full of bees possesed by the devil itself started to fall from the walls.\n\nApparently the dirty [event_target:bee_defender.GetAdjective] gathered as many beehives as they could before fleeing and are now throwing them like rocks to our nearby troops, causing them to run in disarray."
+  btc_misc.5.d:0 "My $MONARCHTITLE$, dire news come from the siege in [bee_province.GetName]. When our troops ransacked the villages around the city, they didn't come to realize that this region is an important beekeeping centre. This may sound crazy, my liege, but while our siege engineers were working to open the gates, what seemed to be beehives full of bees possesed by the devil itself started to fall from the walls.\n\nApparently the dirty [bee_defender.GetAdjective] gathered as many beehives as they could before fleeing and are now throwing them like rocks to our nearby troops, causing them to run in disarray."
   btc_misc.5.a:0 "This can't bee!"
   
-  btc_misc.6.d:0 "My $MONARCHTITLE$, good news come from the siege in [event_target:bee_province.GetName]. When our troops ransacked the villages around the city, they realized that this region is an important beekeeping centre. This may sound crazy, my liege, but some of our siege engineers came with what could be a brilliant idea; use the abandoned beehives in the siege.\n\nThey claim that when used properly in a catapult, the launched beehives can demoralize the [event_target:bee_defender.GetAdjective] cowards and even cause them to run in disarray. And our engineers would also save in siege materials, of course! You just need to give the order."
-  btc_misc.6.a:0 "Hive them hell!"
+  btc_misc.6.d:0 "My $MONARCHTITLE$, good news come from the siege in [bee_province.GetName]. When our troops ransacked the villages around the city, they realized that this region is an important beekeeping centre. This may sound crazy, my liege, but some of our siege engineers came with what could be a brilliant idea; use the abandoned beehives in the siege.\n\nThey claim that when used properly in a catapult, the launched beehives can demoralize the [bee_defender.GetAdjective] cowards and even cause them to run in disarray. And our engineers would also save in siege materials, of course! You just need to give the order."
+  btc_misc.6.a:0 "Beeautiful."
   
-  btc_misc.7.d:0 "My $MONARCHTITLE$, good news come from the siege in [event_target:bee_province.GetName]. As your liege already knows, [event_target:bee_province.GetName] is an important beekeping centre, and some brave soldiers of the garrison came with the crazy but clever idea of gathering as many beehives as they could before retreating behind the city gates.\n\nWhen the dirty [From.GetAdjective] troops approached the city walls, our soldiers started throwing beehives like rocks, which caused the [From.GetAdjective] to run in disarray.\n\nWhile this won't stop all of our enemy's efforts to take [event_target:bee_province.GetName], this insane but effective strategy has slowed them down."
+  btc_misc.7.d:0 "My $MONARCHTITLE$, good news come from the siege in [bee_province.GetName]. As your liege already knows, [bee_province.GetName] is an important beekeping centre, and some brave soldiers of the garrison came with the crazy but clever idea of gathering as many beehives as they could before retreating behind the city gates.\n\nWhen the dirty [From.GetAdjective] troops approached the city walls, our soldiers started throwing beehives like rocks, which caused the [From.GetAdjective] to run in disarray.\n\nWhile this won't stop all of our enemy's efforts to take [bee_province.GetName], this insane but effective strategy has slowed them down."
   
-  btc_misc.8.d:0 "My $MONARCHTITLE$, dire news come from the siege in [event_target:bee_province.GetName]. When the [From.GetAdjective] troops ransacked the villages around [event_target:bee_province.GetName], they realized that the region is an important beekeeping centre. This may sound crazy, my liege, but apparently their siege engineers came with the crazy and devilish idea of using the abandoned beehives in the siege.\n\nThe news bearer explains that suddenly one day they sighted weird shaped stones being launched from the [From.GetAdjective] catapults and, before they could react, dozens of beehives full of bees possesed by the devil itself started causing disarray and panic within our troops."
+  btc_misc.8.d:0 "My $MONARCHTITLE$, dire news come from the siege in [bee_province.GetName]. When the [From.GetAdjective] troops ransacked the villages around [bee_province.GetName], they realized that the region is an important beekeeping centre. This may sound crazy, my liege, but apparently their siege engineers came with the crazy and devilish idea of using the abandoned beehives in the siege.\n\nThe news bearer explains that suddenly one day they sighted weird shaped stones being launched from the [From.GetAdjective] catapults and, before they could react, dozens of beehives full of bees possesed by the devil itself started causing disarray and panic within our troops."
   
   #Orban events
   pitirr_btc_events.1.t: "Orban's offer"
@@ -262,7 +262,7 @@
   btc_roman_inquisition.3.d: "desc"
   btc_roman_inquisition.3.a: "option"
       
-  btc_roman_inquisition.4.t: "The Roman Inquisition expands to [event_target:inquisition_province.GetAreaName]"
+  btc_roman_inquisition.4.t: "The Roman Inquisition expands to [inquisition_province.GetAreaName]"
   btc_roman_inquisition.4.d: "desc"
   btc_roman_inquisition.4.a: "option"
   
