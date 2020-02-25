@@ -1,7 +1,7 @@
 btc_potential_trigger = {
 	#New btc checklist for nation forming
 	normal_or_historical_nations = yes
-	btc_was_never_end_game_tag_trigger = yes
+	was_never_end_game_tag_trigger = yes
 	OR = {
 		ai = no
 		is_playing_custom_nation = no
@@ -20,60 +20,6 @@ btc_can_form_trigger = {
 	is_free_or_tributary_trigger = yes
 	is_at_war = no
 	adm_tech = 10
-}
-
-btc_was_never_end_game_tag_trigger = {	#Country Scope
-	NOT = {
-		OR = {
-			was_tag = MUG 
-			was_tag = TUR 
-			was_tag = BYZ 
-			was_tag = ROM 
-			was_tag = HLR 
-			was_tag = RUM 
-			was_tag = QNG 
-			was_tag = RUS 
-			was_tag = PLC 
-			was_tag = JAP 
-			was_tag = YUA 
-			was_tag = HIN 
-			was_tag = BHA 
-			was_tag = ARB 
-			was_tag = PAP 
-			was_tag = SPA 
-			was_tag = GBR 
-			was_tag = ITA 
-			was_tag = GER 
-			was_tag = MNG 
-			was_tag = MGE 
-			was_tag = SYN 
-			was_tag = ADU 
-			
-			tag = MUG 
-			tag = TUR 
-			tag = BYZ 
-			tag = ROM 
-			tag = HLR 
-			tag = RUM 
-			tag = QNG 
-			tag = RUS 
-			tag = PLC 
-			tag = JAP 
-			tag = YUA 
-			tag = HIN 
-			tag = BHA 
-			tag = ARB 
-			tag = PAP 
-			tag = SPA 
-			tag = GBR 
-			tag = ITA 
-			tag = GER 
-			tag = MNG 
-			tag = MGE 
-			tag = SYN 
-			tag = ADU 
-		}
-	}
 }
 
 exarches_territory_modifier_trigger = {
