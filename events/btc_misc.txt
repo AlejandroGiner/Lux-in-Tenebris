@@ -2,27 +2,27 @@ namespace = btc_misc
 
 #Conquest of Constantinople
 country_event = {
-  id = btc_misc.1
-  title = "btc_misc.1.t"
+	id = btc_misc.1
+	title = "btc_misc.1.t"
 	desc = "btc_misc.1.d"
 	picture = NOT_DISCIPLINED_SOLDIERS_eventPicture
 
-  major = yes
-  fire_only_once = yes
-  trigger = {
-    151 = { NOT = { owned_by = BYZ } }
-    current_age = age_of_discovery
-    owns_or_non_sovereign_subject_of = 151
-  }
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		151 = { NOT = { owned_by = BYZ } }
+		current_age = age_of_discovery
+		owns_or_non_sovereign_subject_of = 151
+	}
 
-  mean_time_to_happen = {
-    days = 1
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
 
-  option = {
-    name = "btc_misc.1.a"
-    add_prestige = 5
-  }
+	option = {
+		name = "btc_misc.1.a"
+		add_prestige = 5
+	}
 }
 
 #Richard Neville England
@@ -76,33 +76,33 @@ country_event = {
 
 #Aalst printer
 province_event = {
-  id = btc_misc.3
-  title = "btc_misc.3.t"
-  desc = "btc_misc.3.d"
-  picture = PRINTING_PRESS_eventPicture
+	id = btc_misc.3
+	title = "btc_misc.3.t"
+	desc = "btc_misc.3.d"
+	picture = PRINTING_PRESS_eventPicture
 
-  fire_only_once = yes
+	fire_only_once = yes
  
-  trigger = {
-    province_id = 7596
-    is_state = yes
-    renaissance = 100
-    owner = { has_institution = renaissance }
-	is_year = 1470
-	NOT = { devastation = 1 }
-  }
+	trigger = {
+		province_id = 7596
+		is_state = yes
+		renaissance = 100
+		owner = { has_institution = renaissance }
+		is_year = 1470
+		NOT = { devastation = 1 }
+	}
 
-  mean_time_to_happen = {
-    years = 10
-  }
+	mean_time_to_happen = {
+		years = 10
+	}
 
-  option = {
-	name = "btc_misc.3.a"
-	ai_chance = { factor = 1 }
-	owner = { add_prestige = 5 }
-	add_base_production = 1
-	change_trade_goods = paper
-  }
+	option = {
+		name = "btc_misc.3.a"
+		ai_chance = { factor = 1 }
+		owner = { add_prestige = 5 }
+		add_base_production = 1
+		change_trade_goods = paper
+	}
 }
 
 #Barbarossa Ottomans
@@ -158,44 +158,45 @@ country_event = {
 	}
 }
 
+#Bee siege
 province_event = {
-  id = btc_misc.5
-  title = btc_misc.5.t
-  desc = btc_misc.5.d
-  picture = PRINTING_PRESS_eventPicture #placeholder
+	id = btc_misc.5
+	title = btc_misc.5.t
+	desc = btc_misc.5.d
+	picture = PRINTING_PRESS_eventPicture #placeholder
   
-  trigger = {
-    trade_goods = apiculture
-    fort_level = 1
-    owner = {
-      any_known_country = {
-        war_with = PREV
-        ROOT = { sieged_by = PREV }
-      }
-    }
-  }
+	trigger = {
+		trade_goods = apiculture
+		fort_level = 1
+		owner = {
+			any_known_country = {
+				war_with = PREV
+				ROOT = { sieged_by = PREV }
+			}
+		}
+	}
   
-  mean_time_to_happen = {
-    years = 50
-  }
+	mean_time_to_happen = {
+		years = 50
+	}
+
+	immediate = {
+		hidden_effect = {
+			owner = {
+				random_known_country = {
+					limit = { war_with = PREV ROOT = { sieged_by = PREV } }
+					save_event_target_as = bee_attacker
+				}
+			}
+		}
+	}
   
-  immediate = {
-    hidden_effect = {
-      owner = {
-        random_known_country = {
-          limit = { war_with = PREV ROOT = { sieged_by = PREV } }
-          save_event_target_as = bee_attacker
-        }
-      }
-    }
-  }
-  
-  option = {
-    name = btc_misc.5.a
-    change_siege = -2
-    kill_units = {
-      who = event_target:bee_attacker
-      amount = 1
-    }
-  }
+	option = {
+		name = btc_misc.5.a
+		change_siege = -2
+		kill_units = {
+			who = event_target:bee_attacker
+			amount = 1
+		}
+	}
 }
