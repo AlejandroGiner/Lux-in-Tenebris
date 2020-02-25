@@ -154,20 +154,15 @@
 
   #Bee sieges
   btc_misc.5.t:0 "A Stingy Surprise"
-  btc_misc.5.d:0 "My $MONARCHTITLE$, dire news come from the siege in [Root.GetName]. When our troops ransacked the villages around the city, they didn't come to realize that this region is an important beekeeping centre. This may sound crazy, my liege, but while our siege engineers were working to open the gates, what seemed to be beehives full of bees possesed by the devil itself started to fall from the walls.\n\nApparently the dirty <enemy adjective> gathered as many beehives as they could before fleeing and are now throwing them like rocks to our nearby troops, causing them to run in disarray."
+  btc_misc.5.d:0 "My $MONARCHTITLE$, dire news come from the siege in [event_target:bee_province.GetName]. When our troops ransacked the villages around the city, they didn't come to realize that this region is an important beekeeping centre. This may sound crazy, my liege, but while our siege engineers were working to open the gates, what seemed to be beehives full of bees possesed by the devil itself started to fall from the walls.\n\nApparently the dirty [event_target:bee_defender.GetAdjective] gathered as many beehives as they could before fleeing and are now throwing them like rocks to our nearby troops, causing them to run in disarray."
   btc_misc.5.a:0 "This can't bee!"
   
-  btc_misc.6.t:0 "A Stingy Surprise"
-  btc_misc.6.d:0 "My $MONARCHTITLE$, good news come from the siege in [Root.GetName]. When our troops ransacked the villages around the city, they realized that this region is an important beekeeping centre. This may sound crazy, my liege, but some of our siege engineers came with what could be a brilliant idea; use the abandoned beehives in the siege.\n\nThey claim that when used properly in a catapult, the launched beehives can demoralize the <enemy adjective> cowards and even cause them to run in disarray. And our engineers would also save in siege materials, of course! You just need to give the order."
+  btc_misc.6.d:0 "My $MONARCHTITLE$, good news come from the siege in [event_target:bee_province.GetName]. When our troops ransacked the villages around the city, they realized that this region is an important beekeeping centre. This may sound crazy, my liege, but some of our siege engineers came with what could be a brilliant idea; use the abandoned beehives in the siege.\n\nThey claim that when used properly in a catapult, the launched beehives can demoralize the [event_target:bee_defender.GetAdjective] cowards and even cause them to run in disarray. And our engineers would also save in siege materials, of course! You just need to give the order."
   btc_misc.6.a:0 "Hive them hell!"
   
-  btc_misc.7.t:0 "A Stingy Surprise"
-  btc_misc.7.d:0 "My $MONARCHTITLE$, good news come from the siege in [Root.GetName]. As your liege already knows, [Root.GetName] is an important beekeping centre, and some brave soldiers of the garrison came with the crazy but clever idea of gathering as many beehives as they could before retreating behind the city gates.\n\nWhen the dirty <country adjective> troops approached the city walls, our soldiers started throwing beehives like rocks, which caused the <country adjective> to run in disarray.\n\nWhile this won't stop all of our enemy's efforts to take [Root.GetName], this insane but effective strategy has slowed them down."
-  btc_misc.7.a:0 "Hive them hell!"
+  btc_misc.7.d:0 "My $MONARCHTITLE$, good news come from the siege in [event_target:bee_province.GetName]. As your liege already knows, [event_target:bee_province.GetName] is an important beekeping centre, and some brave soldiers of the garrison came with the crazy but clever idea of gathering as many beehives as they could before retreating behind the city gates.\n\nWhen the dirty [From.GetAdjective] troops approached the city walls, our soldiers started throwing beehives like rocks, which caused the [From.GetAdjective] to run in disarray.\n\nWhile this won't stop all of our enemy's efforts to take [event_target:bee_province.GetName], this insane but effective strategy has slowed them down."
   
-  btc_misc.8.t:0 "A Stingy Surprise"
-  btc_misc.8.d:0 "My $MONARCHTITLE$, dire news come from the siege in [Root.GetName]. When the <enemy adjective> troops ransacked the villages around [Root.GetName], they realized that the region is an important beekeeping centre. This may sound crazy, my liege, but apparently their siege engineers came with the crazy and devilish idea of using the abandoned beehives in the siege.\n\nThe news bearer explains that suddenly one day they sighted weird shaped stones being launched from the <enemy adjective> catapults and, before they could react, dozens of beehives full of bees possesed by the devil itself started causing disarray and panic within our troops."
-  btc_misc.8.a:0 "This can't bee!"
+  btc_misc.8.d:0 "My $MONARCHTITLE$, dire news come from the siege in [event_target:bee_province.GetName]. When the [From.GetAdjective] troops ransacked the villages around [event_target:bee_province.GetName], they realized that the region is an important beekeeping centre. This may sound crazy, my liege, but apparently their siege engineers came with the crazy and devilish idea of using the abandoned beehives in the siege.\n\nThe news bearer explains that suddenly one day they sighted weird shaped stones being launched from the [From.GetAdjective] catapults and, before they could react, dozens of beehives full of bees possesed by the devil itself started causing disarray and panic within our troops."
   
   #Orban events
   pitirr_btc_events.1.t: "Orban's offer"
@@ -214,18 +209,29 @@
   flavor_kor.EVTDESC12:0 "Sericulture was encouraged from the early days of the Joseon dynasty, with the publication of a “Commentary on Sericulture” in the fourth year of King Sejo’s reign. In this period, patterns of Chinese characters were often used, as well as patterns of clouds and flowers. These were designed not solely for their aesthetic appeal, but from Confucian ideals, and a pragmatic wish to encourage good fortune. Wool rugs and carpets were also produced in quantity for export to Japan, and pattern dyed “chintz” also became popular during the Joseon dynasty. Originating in India, it became fashionable in China and Korea, where it was known as hua-po."
   
   #Klein Venedig
+  
   klein_venedig.1.t:0 "Spanish Debt"
-  klein_venedig.1.d:0 "Our dumb king racked up the debt and we should be prepared to sell colonies for money xd"
-  klein_venedig.1.a:0 "sounds good lmao"
-  klein_venedig.1.b:0 "nah who needs money"
+  klein_venedig.1.d:0 "With the onset of the Reformation and multiple wars that have seen our country get involved in, the financial situation for the Spanish crown has become quite dire indeed. Fortunately we still have many friends in Europe, people we know we can rely on: among them is the Welser banking family of the Free Imperial City of Augsburg, who have lent us large sums on very favorable terms. As our economic situation still hasn't fully stabilized however, we may want to consider alternative ways of paying them back. As the exploration of the New World continues, we could grant them some land in the area of Venezuela that is currently under exploration. This area is suspected of containing gold mines which would be very valuable if discovered, and granting the Welsers rights over the colony would in essence make them look for the gold for us, and open up lucrative trade opportunities and potentially establish even better relations between ourselves and the Empire. Should things turn out not to be beneficiary for us, we can always remind them of who really owns the New World..."
+  klein_venedig.1.a:0 "Grant the Welsers rights over Klein-Venedig."
+  klein_venedig.1.b:0 "Nevermind."
+  
   klein_venedig.2.t:0 "A Request from Spain"
-  klein_venedig.2.d:0 "requesting funds from Welser family for colonial rights in colombia, perhaps we should take over instead"
+  klein_venedig.2.d:0 "[From.Monarch.GetTitle] [From.Monarch.GetName] of [From.GetName], who has greatly benefited from the loans generously provided by us, claims to be facing economic difficulties and instead of paying us outright has come up with an interesting proposition. [From.Monarch.GetSheHeCap] is willing to grant us rights over the lands of Venezuela in the New World, lands known to be filled with gold mines in the interior. Although we are completely unfamiliar with the New World, this is an opportunity to obtain untold riches that we ought to consider, especially because the area is rumored to contain the legendary El Dorado, the City of Gold. The contract [From.Monarch.GetName] is proposing obligates us to conquer the country at our own expenses, search for El Dorado in [From.Monarch.GetName]'s name, enlist only Spanish and Imperial troops, fit out two expeditions of four vessels, and build two cities and three forts within two years after taking possession. What shall we do?"
+  klein_venedig.2.a:0 "Let the family handle it."
+  klein_venedig.2.b:0 "Take over the loan ourselves."
+  klein_venedig.2.c:0 "We find this to be too risky and unpredictable."
+  
   klein_venedig.3.t:0 "Welser Family Acquires Ownership"
-  klein_venedig.3.d:0 "posess rights to operate there but we still own it"
-  klein_venedig.4.t:0 "<owner of augsburg> Takes Over Purchase"
+  klein_venedig.3.d:0 "Negotiations between [Root.GetName] and the Wesler banking family resulted in 1527 in the foundation of Klein-Venedig, a German colony in Venezuela tasked with exploring the interior for gold mines and most notably the legendary city of El Dorado, all in the name of [Root.Monarch.GetName]. This venture is beneficial to both parties involved as the Spanish Crown faces multiple expenses and finds it convenient to contract the exploration to its allies in the Empire. Time will tell whether the endeavour will be successful and if the contract will hold, for the Weslers may fall out of [Root.Monarch.GetName]'s favor at any moment."
+  klein_venedig.3.a:0 "Great!"
+  
+  klein_venedig.4.t:0 "[From.GetName] Takes Over Purchase"
   klein_venedig.4.d:0 "no choice but to concede the land entirely, question sovereignty"
-  klein_venedig.5.t:0 "<owner of augsburg> blocks request"
+  klein_venedig.4.a:0 ""
+  
+  klein_venedig.5.t:0 "[From.GetName] blocks request"
   klein_venedig.5.d:0 "the cholos smh xd"
+  klein_venedig.5.a:0 ""
   
   #Edict of Moulins
   edict_moulins.1.t:0 "The Edict of Moulins"

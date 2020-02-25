@@ -158,20 +158,21 @@ country_event = {
 	}
 }
 
-#Bee siege
-province_event = {
+#Siege defended with bees
+#ROOT = attacker
+country_event = {
 	id = btc_misc.5
 	title = btc_misc.5.t
 	desc = btc_misc.5.d
 	picture = SIEGE_eventPicture #placeholder
   
 	trigger = {
-		trade_goods = apiculture
-		fort_level = 1
-		owner = {
-			any_known_country = {
-				war_with = PREV
-				ROOT = { sieged_by = PREV }
+		any_known_country = {
+			war_with = ROOT
+			any_owned_province = {
+				sieged_by = ROOT
+				fort_level = 1
+				trade_goods = apiculture
 			}
 		}
 	}
@@ -182,10 +183,23 @@ province_event = {
 
 	immediate = {
 		hidden_effect = {
-			owner = {
-				random_known_country = {
-					limit = { war_with = PREV ROOT = { sieged_by = PREV } }
-					save_event_target_as = bee_attacker
+			random_known_country = {
+				limit = {
+					war_with = ROOT
+					any_owned_province = {
+						sieged_by = ROOT
+						fort_level = 1
+						trade_goods = apiculture
+					}
+				}
+				save_event_target_as = bee_defender
+				random_owned_province = {
+					limit = {
+						sieged_by = ROOT
+						fort_level = 1
+						trade_goods = Apiculture
+					}
+					save_event_target_as = bee_province
 				}
 			}
 		}
@@ -195,8 +209,105 @@ province_event = {
 		name = btc_misc.5.a
 		change_siege = -2
 		kill_units = {
-			who = event_target:bee_attacker
+			who = ROOT
 			amount = 1
+		}
+	}
+}
+
+#Siege attacked with bees
+#ROOT = attacker
+country_event = {
+	id = btc_misc.6
+	title = btc_misc.5.t
+	desc = btc_misc.6.d
+	picture = SIEGE_eventPicture #placeholder
+  
+	trigger = {
+		any_known_country = {
+			war_with = ROOT
+			any_owned_province = {
+				sieged_by = ROOT
+				fort_level = 1
+				trade_goods = apiculture
+			}
+		}
+	}
+  
+	mean_time_to_happen = {
+		years = 50
+	}
+
+	immediate = {
+		hidden_effect = {
+			random_known_country = {
+				limit = {
+					war_with = ROOT
+					any_owned_province = {
+						sieged_by = ROOT
+						fort_level = 1
+						trade_goods = apiculture
+					}
+				}
+				save_event_target_as = bee_defender
+				random_owned_province = {
+					limit = {
+						sieged_by = ROOT
+						fort_level = 1
+						trade_goods = Apiculture
+					}
+					save_event_target_as = bee_province
+				}
+			}
+		}
+	}
+  
+	option = {
+		name = btc_misc.6.a
+		change_siege = 1
+		add_province_modifier = {
+			name = btc_bees_help_siege
+			duration = 365
+		}
+	}
+}
+
+country_event = {
+	id = btc_misc.7
+	title = btc_misc.5.t
+	desc = btc_misc.7.d
+	picture = SIEGE_eventPicture #placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_misc.6.a
+		tooltip = {
+			change_siege = -2
+			kill_units = {
+				who = ROOT
+				amount = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btc_misc.8
+	title = btc_misc.5.t
+	desc = btc_misc.8.d
+	picture = SIEGE_eventPicture #placeholder
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_misc.5.a
+		tooltip = {
+			change_siege = 1
+			add_province_modifier = {
+				name = btc_bees_help_siege
+				duration = 365
+			}
 		}
 	}
 }
