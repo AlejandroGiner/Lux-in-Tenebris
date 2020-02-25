@@ -157,3 +157,45 @@ country_event = {
 		}
 	}
 }
+
+province_event = {
+  id = btc_misc.5
+  title = btc_misc.5.t
+  desc = btc_misc.5.d
+  picture = PRINTING_PRESS_eventPicture #placeholder
+  
+  trigger = {
+    trade_goods = apiculture
+    fort_level = 1
+    owner = {
+      any_known_country = {
+        war_with = PREV
+        ROOT = { sieged_by = PREV }
+      }
+    }
+  }
+  
+  mean_time_to_happen = {
+    years = 50
+  }
+  
+  immediate = {
+    hidden_effect = {
+      owner = {
+        random_known_country = {
+          limit = { war_with = PREV ROOT = { sieged_by = PREV } }
+          save_event_target_as = bee_attacker
+        }
+      }
+    }
+  }
+  
+  option = {
+    name = btc_misc.5.a
+    change_siege = -2
+    kill_units = {
+      who = event_target:bee_attacker
+      amount = 1
+    }
+  }
+}
