@@ -23,14 +23,62 @@ country_event = {
     name = "btc_misc.1.a"
     add_prestige = 5
   }
+}
 
+#Richard Neville England
+country_event = {
+	id = btc_misc.2
+	title = btc_misc.2.t
+	desc = btc_misc.2.d
+	picture = DIPLOMACY_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		is_year = 1444
+		NOT = {
+			is_year = 1472
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 167
+	}
+	
+	option = { #Invite him to court
+		name = btc_misc.2.a
+		ai_chance = {
+			factor = 30
+		}
+		define_advisor = {
+			type = commandant
+			culture = english
+			skill = 2
+			name = "Richard Neville"
+			discount = yes
+		}
+	}
+	option = { #Make him commander
+		name = btc_misc.2.b
+		ai_chance = {
+			factor = 70
+		}
+		define_general = {
+			name = "Richard Neville"
+			shock = 3
+			fire = 3
+			manuever = 3
+			siege = 0
+		}
+	}
 }
 
 #Aalst printer
 province_event = {
-  id = btc_misc.2
-  title = "btc_misc.2.t"
-  desc = "btc_misc.2.d"
+  id = btc_misc.3
+  title = "btc_misc.3.t"
+  desc = "btc_misc.3.d"
   picture = PRINTING_PRESS_eventPicture
 
   fire_only_once = yes
@@ -49,10 +97,63 @@ province_event = {
   }
 
   option = {
-	name = "btc_misc.2.a"
+	name = "btc_misc.3.a"
 	ai_chance = { factor = 1 }
 	owner = { add_prestige = 5 }
 	add_base_production = 1
 	change_trade_goods = paper
   }
+}
+
+#Barbarossa Ottomans
+country_event = {
+	id = btc_misc.4
+	title = btc_misc.4.t
+	desc = btc_misc.4.d
+	picture = BARBARY_PIRATES_eventPicture
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_year = 1500
+		NOT = {
+			is_year = 1550
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 5
+	}
+	
+	option = { #Invite him to court
+		name = btc_misc.4.a
+		ai_chance = {
+			factor = 10
+		}
+		define_advisor = {
+			type = naval_reformer
+			culture = turkish
+			skill = 3
+			name = "Hayreddin Barbarossa"
+			discount = yes
+		}
+	}
+	option = { #Make him Grand Admiral
+		name = btc_misc.4.b
+		ai_chance = {
+			factor = 90
+		}
+		add_country_modifier = {
+			name = btc_barbarossa_supremacy
+			duration = 7300
+		}
+		define_admiral = {
+			name = "Hayreddin Barbarossa"
+			shock = 4
+			fire = 4
+			manuever = 4
+			siege = 2
+		}
+	}
 }
