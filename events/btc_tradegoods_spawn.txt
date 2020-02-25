@@ -989,3 +989,41 @@ province_event = {
     }
   }
 }
+
+#Macael Marble
+province_event = {
+	id = btc_tradegoods.8
+	title = btc_tradegoods.8.t
+	desc = btc_tradegoods.8.d
+	picture = CITY_DEVELOPMENT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		province_id = 3145
+		is_state = yes
+		renaissance = 100
+		owner = { 
+			has_institution = renaissance
+			OR = {
+				tag = CAS
+				tag = ARA
+				tag = SPA
+				tag = GRA
+			}
+		}
+		NOT = { devastation = 1 }
+		has_global_flag = massa_marble
+	}
+
+	mean_time_to_happen = {
+		years = 20
+	}
+  
+	option = {
+		name = btc_tradegoods.8.a
+		owner = { add_prestige = 5 }
+		add_base_production = 1
+		change_trade_goods = marble
+	}
+}

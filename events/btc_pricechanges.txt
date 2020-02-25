@@ -54,7 +54,8 @@ province_event = {
   trigger = {
     trade_goods = marble
     is_year = 1550
-    province_id = 3042 #carrara
+    has_global_flag = massa_marble
+	province_id = 3042 #carrara
   }
 
   mean_time_to_happen = {
@@ -93,6 +94,7 @@ province_event = {
     trade_goods = marble
     current_age = age_of_absolutism
     region = italy_region
+	has_global_flag = carrara_marble
   }
 
   mean_time_to_happen = {
@@ -108,6 +110,7 @@ province_event = {
       value = -0.3333 #4.5 -> 3.5 (base is 3.0)
       duration = -1
     }
+	owner = { add_prestige = -5 }
   }
 }
 #Increased Whaling in the Western Seas
@@ -153,6 +156,7 @@ country_event = {
       value = 0.25 #2.0 -> 2.5
       duration = -1
     }
+	add_prestige = 5
   }
 }
 
