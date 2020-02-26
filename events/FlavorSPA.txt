@@ -1401,6 +1401,7 @@ country_event = {
 ########################################
 
 # Miguel de Cervantes
+# Rewritten by Helena. I can't believe Paradox made Cervantes a minor event with so little text. Why Johan why :c
 country_event = {
 	id = flavor_spa.1100
 	title = "flavor_spa.EVTNAME1100"
@@ -1411,18 +1412,24 @@ country_event = {
 	
 	trigger = {
 		tag = SPA
-		is_year = 1577
-		NOT = { is_year = 1616 }
+		is_year = 1575
+		NOT = { is_year = 1620 }
 	}
 
 	mean_time_to_happen = {
-		months = 100
+		months = 90
 	}
 	
 	option = {		# Excellent
 		name = "EXCELLENT"
-		add_dip_power = 50
-		
+		add_prestige = 15
+		define_advisor = {
+			type = statesman
+			name = "Miguel de Cervantes"
+			culture = andalucian
+			discount = yes
+			skill = 3
+		}
 	}
 }
 
