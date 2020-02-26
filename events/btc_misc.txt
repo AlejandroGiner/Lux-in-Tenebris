@@ -574,3 +574,94 @@ country_event = {
 		add_prestige = -10
 	}
 }
+
+#Miguel Serveto
+country_event = {
+	id = btc_misc.12
+	title = btc_misc.12.t
+	desc = btc_misc.12.d
+	picture = ENLIGHTENMENT_eventPicture
+
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			culture_group = iberian
+			culture_group = french
+		}
+		religion = catholic
+		current_age = age_of_reformation
+		is_year = 1520
+		NOT = {
+			is_year = 1560
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 5
+	}
+	
+	option = { #Condemn him
+		name = btc_misc.12.a
+		add_papal_influence = 10
+		add_prestige = 5
+		PAP = { add_opinion = { who = ROOT modifier = opinion_loyal_to_pope } }
+	}
+	option = { #Burn him at the stake
+		name = btc_misc.12.b
+		trigger = {
+			OR = {
+				ruler_has_personality = cruel_personality
+				ruler_has_personality = zealot_personality
+				ruler_has_personality = malevolent_personality
+			}
+		}
+		highlight = yes
+		required_personality = cruel_personality
+		required_personality = zealot_personality
+		required_personality = malevolent_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_papal_influence = 30
+		add_prestige = 15
+		PAP = { add_opinion = { who = ROOT modifier = opinion_loyal_to_pope } }
+		add_country_modifier = {
+			name = "suppress_free_thinkers"
+			duration = 1825
+		}
+	}
+	option = { #Is it really *that* bad?
+		name = btc_misc.12.c
+		trigger = {
+			OR = {
+				ruler_has_personality = sinner_personality
+				ruler_has_personality = benevolent_personality
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = tolerant_personality
+				ruler_has_personality = scholar_personality
+			}
+		}
+		highlight = yes
+		required_personality = sinner_personality
+		required_personality = benevolent_personality
+		required_personality = free_thinker_personality
+		required_personality = tolerant_personality
+		required_personality = scholar_personality
+		ai_chance = {
+			factor = 100
+		}
+		add_papal_influence = -10
+		add_prestige = 5
+		PAP = { add_opinion = { who = ROOT modifier = opinion_pope_religious_tolerance } }
+		define_advisor = {
+			type = theologian
+			culture = aragonese
+			religion = protestant
+			skill = 3
+			name = "Miguel Serveto"
+			discount = yes
+		}
+	}
+}
