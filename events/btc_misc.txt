@@ -333,3 +333,244 @@ country_event = {
 		}
 	}
 }
+
+#Orban engineer (?-1453) event chain for Byzantium and Ottomans, written by Pitirr. He first proposes his services to Byzantine emperor, but AI will rarely accept
+#because price to hire is high. If declined, similar event happens to the Ottomans, who will always accept, no matter the funds.
+#Gives an arty stack to respective country and some bonus to sieging, since such superguns weren't common and should have the special feeling of having bigass cannon
+#based on Cristopher columbus event chain from flavor_por and flavor_spa
+
+country_event = {
+	id = btc_misc.9
+	title = btc_misc.9.t
+	desc = btc_misc.9.d
+	picture = WESTERNISATION_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BYZ
+		NOT = { is_year = 1475 }
+	}
+
+	mean_time_to_happen = {
+		months = 96 # 1452
+		modifier = {
+			factor = 0.8
+			is_at_war = no
+		}
+		modifier = {
+			factor = 0.7
+			has_idea_group = defensive_ideas
+		}
+		modifier = {
+			factor = 0.5
+			years_of_income = 1
+		}
+	}
+
+	option = {		# Hire orban
+		name = btc_misc.9.a
+		ai_chance = {
+			factor = 75 # will have 75% chance to pick only if it has 1.5 of its yearly income in treasury
+			modifier = {
+				factor = 0
+				NOT = { years_of_income = 1.5 }
+			}
+		}
+		add_years_of_income = -1.5
+		capital_scope = {
+			ROOT = {
+				bombard = PREV
+			}
+		}
+	}
+	
+	option = {		# Reject his proposal
+		name = btc_misc.9.b
+		ai_chance = {
+			factor = 25
+		}
+		if = {
+			limit = {
+				exists = TUR
+			}
+			TUR = {
+				country_event = { id = btc_misc.10 days = 15 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btc_misc.10
+	title = btc_misc.10.t
+	desc = btc_misc.10.d
+	picture = WESTERNISATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {		# Hire Orban
+		name = btc_misc.10.a
+		ai_chance = { factor = 90 }
+		add_years_of_income = -0.25
+		capital_scope = {
+			ROOT = {
+				bombard = PREV
+				}
+		}
+	}
+	
+	option = {		# Reject his proposal
+		name = btc_misc.10.b
+		ai_chance = { factor = 10 }
+	}
+}
+
+#Edict of Moulins
+country_event = {
+	id = btc_misc.11
+	title = btc_misc.11.t
+	desc = btc_misc.11.d
+	picture = REFORM_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		tag = FRA
+		is_year = 1550
+		has_reform = french_crown
+		adm = 4
+	}
+	
+	mean_time_to_happen = {
+		months = 60
+	}
+	
+	option = {
+		name = btc_misc.11.a
+		ai_chance = { factor = 90 }
+		
+		add_government_reform = french_monarchy
+		
+		every_subject_country = {
+			limit = {
+				capital_scope = { region = france_region }
+			}
+			ROOT = { inherit = PREV }
+		}
+		
+		add_country_modifier = {
+			name = btc_no_apanage_system
+			duration = 3650
+		}
+		
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 199 }
+			199 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 184 }
+			184 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 1879 }
+			1879 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 175 }
+			175 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 190 }
+			190 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = btc_misc.11.b
+		ai_chance = { factor = 10 }
+
+		every_subject_country = {
+			limit = { capital_scope = { region = france_region } }
+			add_country_modifier = {
+				name = btc_apanages_ld
+				duration = 36500
+			}
+		}
+		add_country_modifier = {
+			name = btc_keep_apanage_system
+			duration = 3650
+		}
+		poitou_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		brittany_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		lower_brittany_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		normandy_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		west_normandy_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		massif_central_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		west_massif_central_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		loire_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		anjou_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		guyenne_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		pyrenees_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		add_prestige = -10
+	}
+}
