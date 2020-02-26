@@ -578,7 +578,13 @@ country_event = {
 	fire_only_once = yes	
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 
 		is_year = 1500
 		NOT = { is_year = 1600 }
@@ -671,7 +677,13 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 
 		europe = {
 			country_or_vassal_holds = ROOT
@@ -751,7 +763,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1500
 		NOT = { is_year = 1600 }
 	}
@@ -863,7 +881,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		religion = catholic
 		NOT = { primary_culture = andalusi_culture }
 		NOT = { exists = GRA }
@@ -993,7 +1017,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1617
 		NOT = { is_year = 1645 }
 	}
@@ -1014,9 +1044,9 @@ country_event = {
 			}
 			add_reform_progress_small_effect = yes
 		}
-		add_adm_power = 100
-		add_dip_power = 100
-		add_mil_power = 100
+		add_adm_power = 50
+		add_dip_power = 50
+		add_mil_power = 50
 		define_advisor = {
 			type = statesman
 			name = "Conde-Duque Olivares"
@@ -1037,7 +1067,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		marriage_with = POR
 		is_subject = no
 		POR = {
@@ -1082,7 +1118,13 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1590
 		is_bankrupt = yes
 	}
@@ -1107,7 +1149,13 @@ country_event = {
 
 	fire_only_once = yes
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		num_of_cities = 4
 		iberia_region = {
 			owned_by = ROOT
@@ -1141,7 +1189,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 
 		num_of_cities = 10
 		
@@ -1190,7 +1244,13 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 
 		num_of_cities = 10
 		
@@ -1239,14 +1299,18 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 
 		num_of_cities = 10
 		
 		is_year = 1600
 		NOT = { is_year = 1700 }
-
-
 		any_owned_province = {
 			region = italy_region
 		}
@@ -1290,7 +1354,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1694
 		NOT = { is_year = 1752 }
 	}
@@ -1331,7 +1401,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1758
 		NOT = { is_year = 1808 }
 	}
@@ -1370,7 +1446,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1800
 		NOT = { has_reform = parliamentary_reform }
 		NOT = { has_reform = celestial_empire }
@@ -1384,6 +1466,12 @@ country_event = {
 	option = {		# Follow the Cortes
 		name = "flavor_spa.EVTOPTA3095"
 		ai_chance = { factor = 75 }
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_medium_effect = yes
+		}
 		add_government_reform = parliamentary_reform
 		set_legacy_government = constitutional_monarchy
 	}
@@ -1411,7 +1499,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1575
 		NOT = { is_year = 1620 }
 	}
@@ -1442,7 +1536,13 @@ country_event = {
 	
 	fire_only_once = yes
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1578
 		NOT = { is_year = 1611 }
 	}
@@ -1476,7 +1576,10 @@ country_event = {
 	
 	
 	trigger = {
-		tag = SPA
+		OR = {
+			tag = CAS
+			tag = SPA
+		}
 		exists = FRA
 		is_year = 1490
 		NOT = { is_year = 1590 }
@@ -1890,6 +1993,12 @@ country_event = {
 		add_ruler_modifier = {
 			name = "castilian_grammar"
 		}
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 	}
 	option = {		# We must respect the many cultures of Spain
 		name = "flavor_spa.5.b"
@@ -1963,6 +2072,12 @@ country_event = {
 			add_base_production = 4
 			add_base_manpower = 2
 		}	#Draiocht lowered 1444 dev in Madrid, this increases it back to a Euro Capital level
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 	}
 	option = {		# X remains a fine capital.
 		name = "flavor_spa.6.b"
@@ -2244,6 +2359,12 @@ country_event = {
 				has_country_modifier = counter_reformation
 			}
 		}
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+		}
 		add_country_modifier = {
 			name = "spanish_bible_translation"
 			duration = 7200
@@ -2361,6 +2482,12 @@ country_event = {
 				who = ROOT
 				modifier = "spa_colonial_reforms"
 			}
+		}
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
 		}
 	}
 	option = {		# Let us not rock the boat.
