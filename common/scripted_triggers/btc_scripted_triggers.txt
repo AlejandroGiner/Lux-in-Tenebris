@@ -78,24 +78,50 @@ is_subject_of_eligible_for_upkeep_bonus = {
 }
 
 this_or_colony_has_goods = {
-	    OR = {
-	      any_owned_province = {
-	        OR = {
-	          continent = north_america
-	          continent = south_america
-	          continent = new_world
-	        }
-	        trade_goods = $GOODS$
-	      }
-	      any_subject_country = {
-	        any_owned_province = {
-	          OR = {
-	            continent = north_america
-	            continent = south_america
-	            continent = new_world
-	          }
-	          trade_goods = $GOODS$
-	        }
-	      }
-	    }
+	OR = {
+		any_owned_province = {
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+			}
+			trade_goods = $GOODS$
+		}
+		any_subject_country = {
+			any_owned_province = {
+				OR = {
+					continent = north_america
+					continent = south_america
+					continent = new_world
+				}
+				trade_goods = $GOODS$
+			}
+		}
+	}
+}
+
+province_eligible_for_potato_spawn = {
+	OR = {
+		trade_goods = grain
+		trade_goods = legumes
+		trade_goods = fish
+		trade_goods = livestock
+		trade_goods = wool
+		AND = {
+			trade_goods = cloth
+			NOT = {
+				region = france_region
+				region = british_isles_region
+			}
+		}
+	}
+	OR = {
+		region = france_region
+		region = low_countries_region
+		region = north_german_region
+		region = south_german_region
+		region = iberia_region
+		region = british_isles_region
+		region = ireland_region
+	}
 }

@@ -17,13 +17,13 @@ defined_text = {
 
 defined_text = {
 	name = potato_arrival_customloc
+	random = no
 	
 	text = {
 		localisation_key = btc_tradegoods.2.a
 		trigger = {
 			OR = { tag = CAS tag = SPA }
 			macaronesia_area = { owned_by = ROOT }
-	        3304 = { owned_by = ROOT }
 		}
 	}
 	
