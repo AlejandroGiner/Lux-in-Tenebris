@@ -77,3 +77,25 @@ is_subject_of_eligible_for_upkeep_bonus = {
 	}
 }
 
+this_or_colony_has_goods = {
+	    OR = {
+	      any_owned_province = {
+	        OR = {
+	          continent = north_america
+	          continent = south_america
+	          continent = new_world
+	        }
+	        trade_goods = $GOODS$
+	      }
+	      any_subject_country = {
+	        any_owned_province = {
+	          OR = {
+	            continent = north_america
+	            continent = south_america
+	            continent = new_world
+	          }
+	          trade_goods = $GOODS$
+	        }
+	      }
+	    }
+}
