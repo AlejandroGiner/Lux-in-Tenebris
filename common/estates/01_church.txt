@@ -99,6 +99,13 @@ estate_church =
 		influence = 10
 	}
 	influence_modifier = {
+		desc = EST_VAL_IBERIAN_CORTES
+		trigger = {
+			has_reform = iberian_cortes
+		}
+		influence = 10
+	}
+	influence_modifier = {
 		desc = EST_VAL_PAPACY
 		trigger = {
 			tag = PAP

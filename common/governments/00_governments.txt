@@ -41,6 +41,7 @@ monarchy = {
 				edo_shogunate
 				coptic_monarchy_reform
 				tuscan_duchy_btc
+				iberian_cortes
 			}
 		}
 		hereditary_vs_nobility = {
@@ -141,6 +142,7 @@ monarchy = {
 		coptic_monarchy_reform_legacy
 		archduchy_government_legacy
 		tuscan_duchy_legacy
+		iberian_cortes_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -184,6 +186,15 @@ monarchy = {
 		indep_daimyo
 		states_general_reform
 		parliamentary_reform
+	}
+	
+	#Cortes
+	exclusive_reforms = {
+		royal_decree_reform
+		iberian_cortes
+		states_general_reform
+		parliamentary_reform
+		political_absolutism_reform
 	}
 
 	color = { 179 25 25 }

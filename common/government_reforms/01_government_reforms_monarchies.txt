@@ -430,58 +430,6 @@ english_monarchy = {
 	}
 }
 
-archduchy_government = {
-	icon = "archduchy_austria"
-	allow_normal_conversion = no
-	potential = {
-		dynasty = "von Habsburg"
-		tag = HAB
-	}
-	fixed_rank = 1
-	lock_level_when_selected = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 10
-	legacy_equivalent = archduchy_government_legacy
-	modifiers = {
-		max_states = 3
-		legitimacy = 0.5
-		envoy_travel_time = -0.25
-		max_absolutism = 5
-	}
-}
-
-tuscan_duchy_btc = {
-	icon = "florentine_republic_btc"
-	allow_normal_conversion = no
-	lock_level_when_selected = yes
-	potential = {
-		OR = {
-			AND = {
-				tag = TUS
-				dynasty = "de' Medici"
-				NOT = { map_setup = map_setup_random }
-			}
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = tuscan_duchy_btc
-			}
-		}
-	}
-	legacy_equivalent = tuscan_duchy_legacy
-	valid_for_nation_designer = yes
-	nation_designer_trigger = {
-		capital_scope = { region = italy_region }
-		primary_culture = tuscan
-	}
-	nation_designer_cost = 20
-	fixed_rank = 1
-	modifiers = {
-		build_cost = -0.1
-		merc_maintenance_modifier = -0.1
-		max_states = 3
-	}
-}
-
 ottoman_government = {
 	lock_level_when_selected = yes
 	allow_normal_conversion = yes
@@ -2064,7 +2012,89 @@ french_monarchy = {
 	}
 }
 
-#Japan BTC
+#BTC
+
+archduchy_government = {
+	icon = "archduchy_austria"
+	allow_normal_conversion = no
+	potential = {
+		dynasty = "von Habsburg"
+		tag = HAB
+	}
+	fixed_rank = 1
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	legacy_equivalent = archduchy_government_legacy
+	modifiers = {
+		max_states = 3
+		legitimacy = 0.5
+		envoy_travel_time = -0.25
+		max_absolutism = 5
+	}
+}
+
+tuscan_duchy_btc = {
+	icon = "florentine_republic_btc"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = TUS
+				dynasty = "de' Medici"
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = tuscan_duchy_btc
+			}
+		}
+	}
+	legacy_equivalent = tuscan_duchy_legacy
+	valid_for_nation_designer = yes
+	nation_designer_trigger = {
+		capital_scope = { region = italy_region }
+		primary_culture = tuscan
+	}
+	nation_designer_cost = 20
+	fixed_rank = 1
+	modifiers = {
+		build_cost = -0.1
+		merc_maintenance_modifier = -0.1
+		max_states = 3
+	}
+}
+
+iberian_cortes = {
+	icon = "parliament_hall"
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		OR = {
+			has_reform = iberian_cortes
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = iberian_cortes
+			}
+		}
+	}
+	legacy_equivalent = iberian_cortes_legacy
+	valid_for_nation_designer = yes
+	nation_designer_trigger = {
+		capital_scope = { region = iberia_region }
+		OR = {
+			culture_group = iberian
+			primary_culture = basque
+		}
+	}
+	nation_designer_cost = 5
+	modifiers = {
+		global_unrest = -1
+		global_autonomy = 0.05
+		min_autonomy = 20
+	}
+}
 
 edo_shogunate = {
 	icon = "shogunate"

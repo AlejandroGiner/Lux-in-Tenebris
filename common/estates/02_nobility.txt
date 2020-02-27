@@ -152,6 +152,13 @@ estate_nobles =
 		influence = -10
 	}
 	influence_modifier = {
+		desc = EST_VAL_IBERIAN_CORTES
+		trigger = {
+			has_reform = iberian_cortes
+		}
+		influence = 10
+	}
+	influence_modifier = {
 		desc = EST_VAL_BLACK_ARMY
 		trigger = {
 			has_country_modifier = hun_black_army

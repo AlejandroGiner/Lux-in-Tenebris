@@ -125,3 +125,41 @@ province_eligible_for_potato_spawn = {
 		region = ireland_region
 	}
 }
+
+#Important cities with cortes and the regions their vote represented, on top of city itself
+castile_important_cortes_provinces = {
+	OR = {
+		province_id = 208  # León - Ponferrada (3126), Oviedo (207) and Guijón (3125)
+		province_id = 215  # Valladolid - just Valladolid
+		province_id = 216  # Salamanca - in-game area of Salamanca
+		province_id = 217  # Madrid - just Madrid
+		province_id = 219  # Toledo - Talavera (3149), Puertollano (3150), Ciudad Real (2754) and Albacete (4547)
+		province_id = 221  # Murcia - Cartagena (7653), Huéscar (7652) and Hellín (3082)
+		province_id = 223  # Granada - in-game area of Granada except Gibraltar
+		province_id = 224  # Sevilla - in-game area of Lower Guadalquivir plus Gibraltar (226)
+		province_id = 225  # Córdoba - Lucena (3155)
+		province_id = 1746 # Burgos - Cantabria (1745) and Enare (4151)
+		province_id = 1748 # Jaén - Úbeda (3144)
+		province_id = 2751 # Cuenca - Requena (3468) and Molina de Aragón (3079)
+		province_id = 2755 # Soria - Rioja (2989)
+		province_id = 3299 # Palencia - actually Toro, but not represented, just Palencia
+		province_id = 4549 # Guadalajara - just Guadalajara
+		province_id = 4551 # Ávila - just Ávila
+		province_id = 4552 # Segovia - just Segovia
+		province_id = 4553 # Zamora - in-game area of Galicia
+	}
+}
+
+valencia_important_cortes_provinces = {
+	area = valencia_area
+	NOT = { province_id = 3468 } # Requena is part of Castile
+}
+
+aragon_important_cortes_provinces = {
+	area = aragon_area
+}
+
+catalonia_important_cortes_provinces = {
+	area = catalonia_area
+	NOT = { province_id = 3320 } # Andorra
+}

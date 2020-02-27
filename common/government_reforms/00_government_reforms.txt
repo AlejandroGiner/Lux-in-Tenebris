@@ -2593,6 +2593,25 @@ tuscan_duchy_legacy = {
 	ai = { factor = 1 }
 }
 
+iberian_cortes_legacy = {
+	icon = "parliament_hall"
+	legacy_government = yes
+	allow_normal_conversion = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	nation_designer_trigger = {
+		capital_scope = { region = iberia_region }
+		culture_group = iberian
+	}
+	monarchy = yes
+	modifiers = {
+		global_unrest = -1
+		global_autonomy = 0.05
+		min_autonomy = 20
+	}
+	ai = { factor = 1 }
+}
+
 regnum_dei_legacy = {
 	icon = "pope"
 	legacy_government = yes
