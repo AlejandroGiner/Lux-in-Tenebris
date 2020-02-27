@@ -1,6 +1,6 @@
 namespace = btc_japan
 
-country_event = {
+country_event = { #Worried About Succession
     id = btc_japan.1
     title = btc_japan.1.t
     desc = btc_japan.1.d
@@ -23,11 +23,6 @@ country_event = {
           days = 30
           random = 700
         }
-        every_subject_country = {
-          country_event = {
-            id = btc_japan.4
-          }
-        }
       }
     }
 
@@ -40,12 +35,17 @@ country_event = {
             birth_date = 1439.3.3
             claim = 80
             no_consort_with_heir = yes #not sure if this applies
-        }
+		}
+	   	increase_shogun_authority_scripted_effect = {
+			VALUE = 10
+		}
     }
 
     option = {#Be patient
         name = btc_japan.1.b
-
+		increase_shogun_authority_scripted_effect = {
+			VALUE = -10
+		}
     }
 }
 
@@ -60,16 +60,31 @@ country_event = {
 
     immediate = {
         hidden_effect = {
-        
+			every_subject_country = {
+				country_event = {
+					id = btc_japan.3
+				}
+			}
+		AND = {
+			technology_group = japanese_btc
+			culture_group = japanese
+			capital_scope = {
+				region = japan_region
+			}
+			religion = shinto
+		}
+		country_event = {
+			id = btc_japan.4
+			days = 30
         }
+      }
     }
-
     option = {
         name = btc_japan.2.a
     }
 }
 
-#Yamana Succession Dispute
+#Subjects Hear About Yoshihisa
 country_event = {
     id = btc_japan.3
     title = btc_japan.3.t
@@ -79,21 +94,46 @@ country_event = {
     is_triggered_only = yes
 
     option = {
+		trigger = {
+			NOT = {
+				tag = YMN
+			}
+		}
         name = btc_japan.3.a
         
     }
+	tag = YMN
+		option = {
+			name = btc_japan.3.b
+
+		}
 }
 
-#Broadcast Event
+#Tensions rising between hosokawa and yamana about too much stuff
 country_event = {
-  id = btc_japan.4
-  title = btc_japan.4.t
-  desc = btc_japan.4.d
-  picture = SIEGE_eventPicture
+	id = btc_japan.4
+	title = btc_japan.4.t
+	desc = btc_japan.4.d
+	picture = SIEGE_eventPicture
   
-  is_triggered_only = yes
+	is_triggered_only = yes
   
-  option = {
-    name = btc_japan.4.a
-  }
+	option = {
+		trigger = {
+			NOT = {
+				tag = YMN
+				tag = HSK
+			}
+		}
+		name = btc_japan.4.a
+	}
+	option = {
+		trigger = {
+			OR = {
+				tag = YMN
+				tag = HSK
+			}
+		}
+		name = btc_japan.4.b
+	}
 }
