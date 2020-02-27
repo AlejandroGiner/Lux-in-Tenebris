@@ -5,13 +5,7 @@ increase_shogun_authority_scripted_effect = {
       limit = { check_variable = { which = shogun_authority_var value = 100 } }
       set_variable = { which = shogun_authority_var value = 100 }
     }
-  }
-}
-
-decrease_shogun_authority_scripted_effect = {
-  1020 = {
-    subtract_variable = { which = shogun_authority_var value = $VALUE$ }
-    if = {
+	else_if = {
       limit = { NOT = { check_variable = { which = shogun_authority_var value = 0 } } }
       set_variable = { which = shogun_authority_var value = 0 }
     }
