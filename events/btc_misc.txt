@@ -56,7 +56,7 @@ country_event = {
 			culture = english
 			skill = 2
 			name = "Richard Neville"
-			discount = yes
+			cost_multiplier = 0.6
 		}
 	}
 	option = { #Make him commander
@@ -136,7 +136,7 @@ country_event = {
 			culture = turkish
 			skill = 3
 			name = "Hayreddin Barbarossa"
-			discount = yes
+			cost_multiplier = 0.75
 		}
 	}
 	option = { #Make him Grand Admiral
@@ -661,7 +661,7 @@ country_event = {
 			religion = protestant
 			skill = 3
 			name = "Miguel Serveto"
-			discount = yes
+			cost_multiplier = 0.7
 		}
 	}
 }
@@ -677,7 +677,10 @@ country_event = {
 	
 	trigger = {
 		OR = {
-			tag = CAS
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
 			tag = SPA
 		}
 		current_age = age_of_absolutism
@@ -690,12 +693,78 @@ country_event = {
 	option = {		# Excellent
 		name = "EXCELLENT"
 		add_prestige = 10
-		define_advisor = {
-			type = artist
-			name = "Diego Velázquez"
-			culture = andalucian
-			discount = yes
-			skill = 3
+		if = {
+			limit = { owns = 217 }
+			define_advisor = {
+				type = artist
+				name = "Diego Velázquez"
+				culture = andalucian
+				discount = yes
+				skill = 5
+				cost_multiplier = 0.6
+				location = 217
+			}
+		}
+		else = {
+			define_advisor = {
+				type = artist
+				name = "Diego Velázquez"
+				culture = andalucian
+				discount = yes
+				skill = 5
+				cost_multiplier = 0.6
+			}
+		}
+	}
+}
+
+#Bartolomé Esteban Murillo
+country_event = {
+	id = btc_misc.14
+	title = "btc_misc.14.t"
+	desc = "btc_misc.14.d"
+	picture = PAINTER_ARTIST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1620
+		NOT = { is_year = 1690 }
+	}
+
+	mean_time_to_happen = {
+		years = 15
+	}
+	
+	option = {		# Excellent
+		name = "EXCELLENT"
+		add_prestige = 5
+		if = {
+			limit = { owns = 224 }
+			define_advisor = {
+				type = artist
+				name = "Bartolomé Murillo"
+				culture = andalucian
+				skill = 2
+				cost_multiplier = 0.7
+				location = 224
+			}
+		}
+		else = {
+			define_advisor = {
+				type = artist
+				name = "Bartolomé Murillo"
+				culture = andalucian
+				skill = 2
+				cost_multiplier = 0.7
+			}
 		}
 	}
 }

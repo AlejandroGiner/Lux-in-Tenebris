@@ -1517,12 +1517,25 @@ country_event = {
 	option = {		# Excellent
 		name = "EXCELLENT"
 		add_prestige = 15
-		define_advisor = {
-			type = statesman
-			name = "Miguel de Cervantes"
-			culture = andalucian
-			discount = yes
-			skill = 3
+		if = {
+			limit = { owns = 224 }
+			define_advisor = {
+				type = statesman
+				name = "Miguel de Cervantes"
+				culture = andalucian
+				discount = yes
+				skill = 3
+				location = 224
+			}
+		}
+		else = {
+			define_advisor = {
+				type = statesman
+				name = "Miguel de Cervantes"
+				culture = andalucian
+				discount = yes
+				skill = 3
+			}
 		}
 	}
 }
