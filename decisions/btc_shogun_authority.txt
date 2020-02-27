@@ -7,12 +7,9 @@ country_decisions = {
       ai = no
     }
     effect = {
-      1020 = {
-        change_variable = {
-          which = shogun_authority_var
-          value = 1
-        }
-      }
+      increase_shogun_authority_scripted_effect = {
+	  	VALUE = 1
+	  }
     }
     ai_will_do = {
       factor = 0

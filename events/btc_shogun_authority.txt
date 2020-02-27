@@ -19,6 +19,9 @@ country_event = {
             which = shogun_authority_var
             value = 50
           }
+		  province_event = {
+		  	id = btc_shogun_authority.2
+		  }
         }
       }
     }
@@ -26,4 +29,111 @@ country_event = {
     option = {
       name = btc_shogun_authority.1.a
     }
+}
+
+province_event = {
+	id = btc_shogun_authority.2
+	title = btc_shogun_authority.1.t
+  	desc = btc_shogun_authority.1.d
+	picture = BANKRUPTCY_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		always = yes
+		#TODO add triggers for when shogun authority stops being a thing
+	}
+	
+	immediate = {
+		province_event = {
+			id = btc_shogun_authority.2
+			days = 30
+		}
+		every_country = {
+			limit = { is_subject_of_type = daimyo_vassal }
+			1020 = {
+				PREV = { set_variable = { which = shogun_authority_var which = PREV } }
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 64 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_6
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -64 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_6
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 32 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_5
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -32 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_5
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 16 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_4
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -16 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_4
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 8 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_3
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -8 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_3
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 4 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_2
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -4 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_2
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 2 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_1
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -2 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_1
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 1 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_daimyo_0
+					duration = -1
+				}
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_daimyo_0
+			}
+		}
+	}
+	
+	option = {
+		name = btc_shogun_authority.2.a
+	}
 }
