@@ -39,18 +39,18 @@ country_event = {
 		is_year = 1444
 		NOT = {
 			is_year = 1472
+			has_country_flag = war_of_the_roses_ended
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 167
-	}
+	mean_time_to_happen = { months = 167 }
 	
 	option = { #Invite him to court
 		name = btc_misc.2.a
 		ai_chance = {
 			factor = 30
 		}
+		add_years_of_income = -0.2
 		define_advisor = {
 			type = commandant
 			culture = english
@@ -62,8 +62,9 @@ country_event = {
 	option = { #Make him commander
 		name = btc_misc.2.b
 		ai_chance = {
-			factor = 70
+			factor = 60
 		}
+		add_years_of_income = -0.3
 		define_general = {
 			name = "Richard Neville"
 			shock = 3
@@ -71,6 +72,14 @@ country_event = {
 			manuever = 3
 			siege = 0
 		}
+	}
+	option = { #Wave him away
+		name = btc_misc.2.c
+		ai_chance = {
+			factor = 10
+		}
+		add_prestige = -5
+		add_legitimacy = -5
 	}
 }
 
@@ -92,15 +101,33 @@ province_event = {
 		NOT = { devastation = 1 }
 	}
 
-	mean_time_to_happen = {
-		years = 10
-	}
+	mean_time_to_happen = { years = 10 }
 
 	option = {
 		name = "btc_misc.3.a"
 		ai_chance = { factor = 1 }
 		owner = { add_prestige = 5 }
+		add_innovativeness_small_effect = yes
 		add_base_production = 1
+		change_trade_goods = paper
+	}
+	option = {
+		name = "btc_misc.3.b"
+		ai_chance = { factor = 100 }
+		trigger = {
+			OR = {
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = entrepreneur_personality
+			}
+		}
+		highlight = yes
+		required_personality = entrepreneur_personality
+		required_personality = free_thinker_personality
+		required_personality = scholar_personality
+		owner = { add_prestige = 10 }
+		add_innovativeness_big_effect = yes
+		add_base_production = 3
 		change_trade_goods = paper
 	}
 }
@@ -122,15 +149,11 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		years = 5
-	}
+	mean_time_to_happen = { years = 5 }
 	
 	option = { #Invite him to court
 		name = btc_misc.4.a
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 10 }
 		define_advisor = {
 			type = naval_reformer
 			culture = turkish
@@ -141,13 +164,12 @@ country_event = {
 	}
 	option = { #Make him Grand Admiral
 		name = btc_misc.4.b
-		ai_chance = {
-			factor = 90
-		}
+		ai_chance = { factor = 90 }
 		add_country_modifier = {
 			name = btc_barbarossa_supremacy
 			duration = 7300
 		}
+		years_of_income = -0.2
 		define_admiral = {
 			name = "Hayreddin Barbarossa"
 			shock = 4
@@ -177,9 +199,7 @@ country_event = {
 		}
 	}
   
-	mean_time_to_happen = {
-		years = 50
-	}
+	mean_time_to_happen = { years = 50 }
 
 	immediate = {
 		hidden_effect = {
@@ -243,9 +263,7 @@ country_event = {
 		}
 	}
   
-	mean_time_to_happen = {
-		years = 50
-	}
+	mean_time_to_happen = { years = 50 }
 
 	immediate = {
 		hidden_effect = {
@@ -443,23 +461,20 @@ country_event = {
 		adm = 4
 	}
 	
-	mean_time_to_happen = {
-		months = 60
-	}
+	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = btc_misc.11.a
 		ai_chance = { factor = 90 }
 		
+		add_reform_progress_medium_effect = yes
 		add_government_reform = french_monarchy
-		
 		every_subject_country = {
 			limit = {
 				capital_scope = { region = france_region }
 			}
 			ROOT = { inherit = PREV }
 		}
-		
 		add_country_modifier = {
 			name = btc_no_apanage_system
 			duration = 3650
@@ -598,12 +613,11 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = {
-		years = 5
-	}
+	mean_time_to_happen = { years = 5 }
 	
 	option = { #Condemn him
 		name = btc_misc.12.a
+		add_reform_desire  = 0.01
 		add_papal_influence = 10
 		add_prestige = 5
 		PAP = { add_opinion = { who = ROOT modifier = opinion_loyal_to_pope } }
@@ -621,9 +635,9 @@ country_event = {
 		required_personality = cruel_personality
 		required_personality = zealot_personality
 		required_personality = malevolent_personality
-		ai_chance = {
-			factor = 100
-		}
+		ai_chance = { factor = 100 }
+		
+		add_reform_desire  = 0.03
 		add_papal_influence = 30
 		add_prestige = 15
 		PAP = { add_opinion = { who = ROOT modifier = opinion_loyal_to_pope } }
@@ -632,7 +646,7 @@ country_event = {
 			duration = 1825
 		}
 	}
-	option = { #Is it really *that* bad?
+	option = { #Is it really that bad?
 		name = btc_misc.12.c
 		trigger = {
 			OR = {
@@ -644,16 +658,19 @@ country_event = {
 			}
 		}
 		highlight = yes
+		
 		required_personality = sinner_personality
 		required_personality = benevolent_personality
 		required_personality = free_thinker_personality
 		required_personality = tolerant_personality
 		required_personality = scholar_personality
-		ai_chance = {
-			factor = 100
-		}
+		
+		ai_chance = { factor = 100 }
+		
+		add_reform_desire  = -0.05
 		add_papal_influence = -10
 		add_prestige = 5
+		add_innovativeness_big_effect = yes
 		PAP = { add_opinion = { who = ROOT modifier = opinion_pope_religious_tolerance } }
 		define_advisor = {
 			type = theologian
@@ -686,13 +703,12 @@ country_event = {
 		current_age = age_of_absolutism
 	}
 
-	mean_time_to_happen = {
-		years = 15
-	}
+	mean_time_to_happen = { years = 15 }
 	
 	option = {		# Excellent
-		name = "EXCELLENT"
+		name = btc_misc.13.a
 		add_prestige = 10
+		years_of_income = -0.2
 		if = {
 			limit = { owns = 217 }
 			define_advisor = {
@@ -739,13 +755,12 @@ country_event = {
 		NOT = { is_year = 1690 }
 	}
 
-	mean_time_to_happen = {
-		years = 15
-	}
+	mean_time_to_happen = { years = 15 }
 	
-	option = {		# Excellent
-		name = "EXCELLENT"
-		add_prestige = 5
+	option = {	#Hire him
+		name = btc_misc.14.a
+		years_of_income = -0.25
+		ai_chance = { factor = 50 }
 		if = {
 			limit = { owns = 224 }
 			define_advisor = {
@@ -765,6 +780,83 @@ country_event = {
 				skill = 2
 				cost_multiplier = 0.7
 			}
+		}
+	}
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 5
+		ai_chance = { factor = 50 }
+	}
+}
+
+#Antonio de Nebrija
+country_event = {
+	id = btc_misc.15
+	title = "btc_misc.15.t"
+	desc = "btc_misc.15.d"
+	picture = UNIVERSITY_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1450
+		NOT = { is_year = 1525 }
+	}
+
+	mean_time_to_happen = { years = 30 }
+	
+		option = {		# Excellent
+		name = "EXCELLENT"
+		ai_chance = { factor = 1 }
+		add_prestige = 5
+		add_innovativeness_small_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_small_effect = yes
+		}
+	}
+	option = {	#Hire him
+		name = btc_misc.15.a
+		trigger = {
+			OR = {
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = scholar_personality
+			}
+		}
+		highlight = yes
+		required_personality = free_thinker_personality
+		required_personality = scholar_personality
+		ai_chance = { factor = 100 }
+		
+		years_of_income = -0.35
+		add_prestige = 5
+		add_innovativeness_big_effect = yes
+		if = {
+			limit = {
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
+			}
+			add_reform_progress_medium_effect = yes
+		}
+		define_advisor = {
+			type = natural_scientist
+			name = "Antonio de Nebrija"
+			culture = castillian
+			skill = 2
+			cost_multiplier = 0.75
 		}
 	}
 }
