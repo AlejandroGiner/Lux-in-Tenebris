@@ -50,7 +50,6 @@ country_event = {
 		ai_chance = {
 			factor = 30
 		}
-		add_years_of_income = -0.1
 		define_advisor = {
 			type = commandant
 			culture = english
@@ -65,6 +64,7 @@ country_event = {
 			factor = 60
 		}
 		add_years_of_income = -0.15
+		add_mil_power = 15
 		define_general = {
 			name = "Richard Neville"
 			shock = 3
@@ -107,6 +107,7 @@ province_event = {
 		name = "btc_misc.3.a"
 		ai_chance = { factor = 1 }
 		owner = { add_prestige = 5 }
+		add_splendor = 50
 		add_innovativeness_small_effect = yes
 		add_base_production = 1
 		change_trade_goods = paper
@@ -126,6 +127,7 @@ province_event = {
 		required_personality = free_thinker_personality
 		required_personality = scholar_personality
 		owner = { add_prestige = 10 }
+		add_splendor = 75
 		add_innovativeness_big_effect = yes
 		add_base_production = 3
 		change_trade_goods = paper
@@ -165,17 +167,18 @@ country_event = {
 	option = { #Make him Grand Admiral
 		name = btc_misc.4.b
 		ai_chance = { factor = 90 }
-		add_country_modifier = {
-			name = btc_barbarossa_supremacy
-			duration = 7300
-		}
 		years_of_income = -0.15
+		add_mil_power = 15
 		define_admiral = {
 			name = "Hayreddin Barbarossa"
 			shock = 4
 			fire = 4
 			manuever = 4
 			siege = 2
+		}
+		add_country_modifier = {
+			name = btc_barbarossa_supremacy
+			duration = 7300
 		}
 	}
 }
@@ -671,6 +674,7 @@ country_event = {
 		add_reform_desire  = -0.05
 		add_papal_influence = -10
 		add_prestige = 5
+		add_splendor = 50
 		add_innovativeness_big_effect = yes
 		PAP = { add_opinion = { who = ROOT modifier = opinion_pope_religious_tolerance } }
 		define_advisor = {
@@ -708,8 +712,9 @@ country_event = {
 	
 	option = {		# Excellent
 		name = btc_misc.13.a
-		add_prestige = 10
 		years_of_income = -0.2
+		add_prestige = 10
+		add_splendor = 50
 		if = {
 			limit = { owns = 217 }
 			define_advisor = {
@@ -762,6 +767,7 @@ country_event = {
 		name = btc_misc.14.a
 		years_of_income = -0.15
 		ai_chance = { factor = 50 }
+		add_splendor = 50
 		if = {
 			limit = { owns = 224 }
 			define_advisor = {
@@ -786,6 +792,7 @@ country_event = {
 	option = {
 		name = "EXCELLENT"
 		add_prestige = 5
+		add_splendor = 50
 		ai_chance = { factor = 50 }
 	}
 }
@@ -812,9 +819,9 @@ country_event = {
 		NOT = { is_year = 1525 }
 	}
 
-	mean_time_to_happen = { years = 30 }
+	mean_time_to_happen = { years = 25 }
 	
-		option = {		# Excellent
+	option = {		# Excellent
 		name = "EXCELLENT"
 		ai_chance = { factor = 1 }
 		add_prestige = 5
@@ -827,6 +834,7 @@ country_event = {
 			}
 			add_reform_progress_small_effect = yes
 		}
+		set_country_flag = nebrija_happened
 	}
 	option = {	#Hire him
 		name = btc_misc.15.a
@@ -840,6 +848,7 @@ country_event = {
 		required_personality = free_thinker_personality
 		required_personality = scholar_personality
 		ai_chance = { factor = 100 }
+		set_country_flag = nebrija_happened
 		
 		years_of_income = -0.3
 		add_prestige = 5
@@ -892,6 +901,7 @@ country_event = {
 		ai_chance = {
 			factor = 79
 		}
+		add_mil_power = 15
 		define_general = {
 			name = "Jorgue Manrique"
 			shock = 3
@@ -918,6 +928,7 @@ country_event = {
 		ai_chance = {
 			factor = 20
 		}
+		add_splendor = 50
 		define_advisor = {
 			type = philosopher
 			culture = andalucian
