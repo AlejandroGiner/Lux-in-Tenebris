@@ -59,6 +59,7 @@ province_event = {
 				add_country_modifier = {
 					name = shogun_authority_modifier_daimyo_6
 					duration = -1
+					hidden = yes
 				}
 				change_variable = { which = shogun_authority_var value = -64 }
 			}
@@ -129,6 +130,88 @@ province_event = {
 			}
 			else = {
 				remove_country_modifier = shogun_authority_modifier_daimyo_0
+			}
+		}
+		
+		owner = {	#TODO determine who is shogun, maybe global event target. Look at events/Japan.txt
+			1020 = {
+				PREV = { set_variable = { which = shogun_authority_var which = PREV } }
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 64 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_6
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -64 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_6
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 32 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_5
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -32 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_5
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 16 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_4
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -16 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_4
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 8 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_3
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -8 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_3
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 4 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_2
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -4 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_2
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 2 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_1
+					duration = -1
+				}
+				change_variable = { which = shogun_authority_var value = -2 }
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_1
+			}
+			if = {
+				limit = { check_variable = { which = shogun_authority_var value = 1 } }
+				add_country_modifier = {
+					name = shogun_authority_modifier_shogun_0
+					duration = -1
+				}
+			}
+			else = {
+				remove_country_modifier = shogun_authority_modifier_shogun_0
 			}
 		}
 	}
