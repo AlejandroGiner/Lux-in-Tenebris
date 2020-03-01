@@ -821,6 +821,8 @@ country_event = {
 
 	mean_time_to_happen = { years = 25 }
 	
+	immediate = { set_country_flag = nebrija_happened }
+	
 	option = {		# Excellent
 		name = "EXCELLENT"
 		ai_chance = { factor = 1 }
@@ -834,7 +836,6 @@ country_event = {
 			}
 			add_reform_progress_small_effect = yes
 		}
-		set_country_flag = nebrija_happened
 	}
 	option = {	#Hire him
 		name = btc_misc.15.a
@@ -848,7 +849,6 @@ country_event = {
 		required_personality = free_thinker_personality
 		required_personality = scholar_personality
 		ai_chance = { factor = 100 }
-		set_country_flag = nebrija_happened
 		
 		years_of_income = -0.3
 		add_prestige = 5
