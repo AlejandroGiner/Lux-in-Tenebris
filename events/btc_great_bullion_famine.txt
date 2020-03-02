@@ -91,6 +91,10 @@ country_event = {
 		
 	}
 	
+	mean_time_to_happen = {
+		years = 10
+	}
+	
 	immediate = {
 		hidden_effect = {
 			set_global_flag = great_bullion_famine_ended
@@ -105,6 +109,6 @@ country_event = {
 	}
 	
 	option = {
-		
+		name = bullion.100.a
 	}
 }
