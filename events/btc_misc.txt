@@ -1,6 +1,6 @@
 namespace = btc_misc
 
-#Conquest of Constantinople
+#Conquest of Constantinople, coded, written, and designed by Dynamo
 country_event = {
 	id = btc_misc.1
 	title = "btc_misc.1.t"
@@ -25,7 +25,7 @@ country_event = {
 	}
 }
 
-#Richard Neville England
+#Richard Neville England, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.2
 	title = btc_misc.2.t
@@ -83,7 +83,7 @@ country_event = {
 	}
 }
 
-#Aalst printer
+#Aalst printer, coded, written, and designed by Helena
 province_event = {
 	id = btc_misc.3
 	title = "btc_misc.3.t"
@@ -134,7 +134,7 @@ province_event = {
 	}
 }
 
-#Barbarossa Ottomans
+#Barbarossa Ottomans, coded, written, and designed by Helena
 country_event = {
 	id = btc_misc.4
 	title = btc_misc.4.t
@@ -183,7 +183,7 @@ country_event = {
 	}
 }
 
-#Siege defended with bees
+#Bee siege events, coded by Alejandro, written and designed by Helena
 #ROOT = attacker
 country_event = {
 	id = btc_misc.5
@@ -247,8 +247,6 @@ country_event = {
 	}
 }
 
-#Siege attacked with bees
-#ROOT = attacker
 country_event = {
 	id = btc_misc.6
 	title = btc_misc.5.t
@@ -355,11 +353,7 @@ country_event = {
 	}
 }
 
-#Orban engineer (?-1453) event chain for Byzantium and Ottomans, written by Pitirr. He first proposes his services to Byzantine emperor, but AI will rarely accept
-#because price to hire is high. If declined, similar event happens to the Ottomans, who will always accept, no matter the funds.
-#Gives an arty stack to respective country and some bonus to sieging, since such superguns weren't common and should have the special feeling of having bigass cannon
-#based on Cristopher columbus event chain from flavor_por and flavor_spa
-
+#Orban events, coded and written by Pitirr, designed by Helena
 country_event = {
 	id = btc_misc.9
 	title = btc_misc.9.t
@@ -448,7 +442,7 @@ country_event = {
 	}
 }
 
-#Edict of Moulins
+#Edict of Moulins, coded by Animetids, written and designed by Helena
 country_event = {
 	id = btc_misc.11
 	title = btc_misc.11.t
@@ -594,7 +588,7 @@ country_event = {
 	}
 }
 
-#Miguel Serveto
+#Miguel Serveto, coded, written, and designed by Helena
 country_event = {
 	id = btc_misc.12
 	title = btc_misc.12.t
@@ -688,7 +682,7 @@ country_event = {
 	}
 }
 
-#Diego Velázquez
+#Diego Velázquez, coded, written, and designed by Helena
 country_event = {
 	id = btc_misc.13
 	title = "btc_misc.13.t"
@@ -740,7 +734,7 @@ country_event = {
 	}
 }
 
-#Bartolomé Esteban Murillo
+#Bartolomé Esteban Murillo, coded, written, and designed by Helena
 country_event = {
 	id = btc_misc.14
 	title = "btc_misc.14.t"
@@ -797,7 +791,7 @@ country_event = {
 	}
 }
 
-#Antonio de Nebrija
+#Antonio de Nebrija, coded, written, and designed by Helena
 country_event = {
 	id = btc_misc.15
 	title = "btc_misc.15.t"
@@ -871,7 +865,7 @@ country_event = {
 	}
 }
 
-#Jorgue Manrique
+#Jorgue Manrique, coded, written, and designed by Helena
 country_event = {
 	id = btc_misc.16
 	title = btc_misc.16.t
@@ -935,6 +929,94 @@ country_event = {
 			skill = 3
 			name = "Jorgue Manrique"
 			cost_multiplier = 0.5
+		}
+	}
+}
+
+#Luis de Góngora, coded, written, and designed by Helena
+country_event = {
+	id = btc_misc.17
+	title = "btc_misc.17.t"
+	desc = "btc_misc.17.d"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1560
+		NOT = { is_year = 1630 }
+	}
+
+	mean_time_to_happen = { years = 25 }
+
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 5
+		add_splendor = 50
+	}
+	
+	option = {
+		name = btc_misc.17.a
+		years_of_income = -0.2
+		add_prestige = 5
+		add_splendor = 50
+		define_advisor = {
+			type = philosopher
+			culture = andalucian
+			skill = 3
+			name = "Luis de Góngora"
+			cost_multiplier = 0.7
+		}
+	}
+}
+
+#Francisco de Quevedo, coded, written, and designed by Helena
+country_event = {
+	id = btc_misc.18
+	title = "btc_misc.18.t"
+	desc = "btc_misc.18.d"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1580
+		NOT = { is_year = 1650 }
+	}
+
+	mean_time_to_happen = { years = 25 }
+	
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 5
+		add_splendor = 50
+	}
+	
+	option = {
+		name = btc_misc.18.a
+		years_of_income = -0.2
+		add_prestige = 5
+		add_splendor = 50
+		define_advisor = {
+			type = philosopher
+			culture = castillian
+			skill = 3
+			name = "Francisco de Quevedo"
+			cost_multiplier = 0.7
 		}
 	}
 }

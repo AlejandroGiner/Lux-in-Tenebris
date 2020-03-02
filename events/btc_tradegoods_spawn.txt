@@ -1,9 +1,6 @@
-#Events that spawn new world crops in the old world
-#For now, potatoes and maize
-#Implementation by Alejandro
-
 namespace = btc_tradegoods
 
+#Potato spread events, coded by Alejandro, written by Dynamo and designed by Helena
 #Potato arrival event
 country_event = {
   id = btc_tradegoods.1
@@ -119,7 +116,6 @@ country_event = {
 	}
   }
 }
-
 
 #Visible event for potato spread
 province_event = {
@@ -339,6 +335,7 @@ province_event = {
   }
 }
 
+#Maize spread events, coded by Alejandro, written by Dynamo and designed by Helena
 #Maize arrival event
 country_event = {
   id = btc_tradegoods.5
@@ -671,7 +668,7 @@ province_event = {
   }
 }
 
-#Macael Marble
+#Macael Marble, coded, written and designed by Helena
 province_event = {
 	id = btc_tradegoods.9
 	title = btc_tradegoods.9.t
