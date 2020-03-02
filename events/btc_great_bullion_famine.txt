@@ -1,0 +1,110 @@
+#Great Bullion Famine events
+#By Helena and Alejandro
+
+namespace = bullion
+
+country_event = {
+	id = bullion.0
+	title = bullion.0.t
+	desc = bullion.0.d
+	picture = OVEREXTENSION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		capital_scope = {
+			superregion = europe_superregion
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = { tag = ROOT }
+					OR = {
+						tag = MAM
+						tag = TUR
+						AND = {
+							religion_group = christian
+							capital_scope = {
+								continent = europe
+							}
+						}
+					}
+				}
+				country_event = { id = bullion.0 }
+			}
+		}
+	}
+	
+	option = {
+		name = bullion.0.a
+		trigger = {
+			OR = {
+				tag = MAM
+				tag = TUR
+			}
+		}
+		add_country_modifier = {
+			name = east_west_profit_trade
+			duration = -1
+		}
+	}
+	option = {
+		name = bullion.0.b
+		trigger = {
+			NOT = {
+				tag = MAM
+				tag = TUR
+			}
+		}
+		add_country_modifier = {
+			name = east_west_deficit_trade
+			duration = -1
+		}
+		
+		if = {
+			limit = { capital_scope = { superregion = europe_superregion } }
+			add_country_modifier = {
+				name = great_bullion_famine_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bullion.100
+	title = bullion.100.t
+	desc = bullion.100.d
+	picture = DEATH_OF_HEIR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		is_year = 1520
+		
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = great_bullion_famine_ended
+			every_country = {
+				limit = {
+					has_country_modifier = great_bullion_famine_modifier
+				}
+				remove_country_modifier = great_bullion_famine_modifier
+				add_inflation = -5
+			}
+		}
+	}
+	
+	option = {
+		
+	}
+}
