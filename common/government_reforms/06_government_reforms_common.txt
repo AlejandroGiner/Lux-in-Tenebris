@@ -70,6 +70,32 @@ council_of_the_indies_reform = {
 		}
 	}
 	modifiers = {
+		global_tariffs = 0.1
+		envoy_travel_time = -0.25
+	}
+}
+
+# for England
+
+penal_transportation_reform = {
+	icon = "merchant_ship"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = british
+		capital_scope = {
+			region = british_isles_region
+		}
+	}
+	trigger = {
+		num_of_colonists = 1
+		culture_group = british
+		capital_scope = {
+			region = british_isles_region
+		}
+		NOT = { TAG = SCO }
+	}
+	modifiers = {
 		expel_minorities_cost = -0.3
+		global_unrest = -1
 	}
 }
