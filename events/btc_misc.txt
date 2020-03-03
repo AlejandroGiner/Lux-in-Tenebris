@@ -167,7 +167,7 @@ country_event = {
 	option = { #Make him Grand Admiral
 		name = btc_misc.4.b
 		ai_chance = { factor = 90 }
-		years_of_income = -0.15
+		add_years_of_income = -0.15
 		add_mil_power = 15
 		define_admiral = {
 			name = "Hayreddin Barbarossa"
@@ -706,7 +706,7 @@ country_event = {
 	
 	option = {		# Excellent
 		name = btc_misc.13.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 10
 		add_splendor = 50
 		if = {
@@ -759,7 +759,7 @@ country_event = {
 	
 	option = {	#Hire him
 		name = btc_misc.14.a
-		years_of_income = -0.15
+		add_years_of_income = -0.15
 		ai_chance = { factor = 50 }
 		add_splendor = 50
 		if = {
@@ -844,7 +844,7 @@ country_event = {
 		required_personality = scholar_personality
 		ai_chance = { factor = 100 }
 		
-		years_of_income = -0.3
+		add_years_of_income = -0.3
 		add_prestige = 5
 		add_innovativeness_big_effect = yes
 		if = {
@@ -964,7 +964,7 @@ country_event = {
 	
 	option = {
 		name = btc_misc.17.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 5
 		add_splendor = 50
 		define_advisor = {
@@ -1008,7 +1008,7 @@ country_event = {
 	
 	option = {
 		name = btc_misc.18.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 5
 		add_splendor = 50
 		define_advisor = {
@@ -1053,7 +1053,7 @@ country_event = {
 	
 	option = {
 		name = btc_misc.19.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 5
 		add_papal_influence = 10
 		add_splendor = 25

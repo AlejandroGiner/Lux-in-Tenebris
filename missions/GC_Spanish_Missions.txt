@@ -1380,39 +1380,6 @@ gc_spain_4 = {
 		effect = {
 			if = {
 				limit = {
-					exists = POR
-					is_subject = no
-					government = monarchy
-					religion_group = christian
-					POR = {
-						is_subject = no
-						government = monarchy
-					}
-				}
-				add_casus_belli = {
-					type = cb_restore_personal_union
-					months = 300
-					target = POR
-				}
-			}
-			else = {
-				alentejo_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				beieras_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			if = {
-				limit = {
 					NOT = { NAP = { is_subject_of = ROOT } }
 				}
 				naples_area = {
@@ -2098,9 +2065,83 @@ gc_spain_5_a = {
 	}
 	has_country_shield = yes
 	
+	btc_cas_spa_iberian_hegemony = {
+		icon = mission_empire
+		required_missions = { }
+		position = 1
+		
+		# free mission
+		
+		provinces_to_highlight = {
+			OR = {
+				area = beieras_area
+				area = alentejo_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			total_development = 750
+			tag = SPA
+#			variable_arithmetic_trigger = {
+#				custom_tooltip = more_colonies_than_portugal_tooltip
+#				export_to_variable = {
+#					variable_name = POR_cn_count
+#					value = trigger_value:colony
+#					who = POR
+#				}
+#				export_to_variable = {
+#					variable_name = SPA_cn_count
+#					value = trigger_value:colony 
+#					who = ROOT
+#				}
+#				check_variable = {
+#					which = SPA_cn_count
+#					which = POR_cn_count
+#				}
+#			}
+		}
+		
+		effect = {
+			if = {
+				limit = {
+					exists = POR
+					is_subject = no
+					government = monarchy
+					religion_group = christian
+					POR = {
+						is_subject = no
+						government = monarchy
+					}
+				}
+				add_casus_belli = {
+					type = cb_restore_personal_union
+					months = 300
+					target = POR
+				}
+			}
+			else = {
+				alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	
 	gc_cas_spa_reconquista_two = {
 		icon = mission_union_with_portugal
-		required_missions = { gc_cas_spa_reconquista_three }
+		required_missions = { btc_cas_spa_iberian_hegemony }
 		position = 2
 		
 		# free mission
