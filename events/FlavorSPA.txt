@@ -429,7 +429,8 @@ country_event = {
 
 	option = {		# Now so have we!
 		name = "flavor_spa.EVTOPTA1005"
-		add_prestige = 50
+		add_prestige = 35
+		add_splendor = 100
 		add_innovativeness_small_effect = yes
 	}
 }
@@ -529,7 +530,7 @@ country_event = {
 			shock = 2
 			manuever = 5
 		}
-		add_mil_power = 50
+		add_dip_power = 50
 	}
 
 }
@@ -626,6 +627,7 @@ country_event = {
 
 
 # Casa de Contratación
+# This seems to be the Council of Indies? idk what Paradox wanted to do here, but the modifier description is definitely not Casa de Contratacion.
 country_event = {
 	id = flavor_spa.1003
 	title = "flavor_spa.EVTNAME1003"
@@ -709,8 +711,9 @@ country_event = {
 
 	option = {		# We truly rule the world!
 		name = "flavor_spa.EVTOPTA1004"
-		add_prestige = 25
-		add_legitimacy = 25
+		add_prestige = 15
+		add_legitimacy = 15
+		add_splendor = 50
 		add_papal_influence = 100
 	}
 }
@@ -867,6 +870,7 @@ country_event = {
 	option = {		# Do we ever learn from history?
 		name = "flavor_spa.EVTOPTA3158"
 		add_legitimacy = -5
+		add_prestige = -5
 	}
 }
 
@@ -1042,7 +1046,7 @@ country_event = {
 			limit = {
 				NOT = { has_completed_all_reforms_trigger = yes }
 			}
-			add_reform_progress_small_effect = yes
+			add_reform_progress_medium_effect = yes
 		}
 		add_adm_power = 50
 		add_dip_power = 50
@@ -1136,6 +1140,7 @@ country_event = {
 	option = {		# Do we ever learn from history?
 		name = "flavor_spa.EVTOPT3164"
 		add_prestige = -5
+		add_legitimacy = -5
 	}
 }
 
@@ -1361,8 +1366,8 @@ country_event = {
 			}
 			tag = SPA
 		}
-		is_year = 1694
-		NOT = { is_year = 1752 }
+		is_year = 1690
+		NOT = { is_year = 1760 }
 	}
 
 	mean_time_to_happen = {
@@ -1408,8 +1413,8 @@ country_event = {
 			}
 			tag = SPA
 		}
-		is_year = 1758
-		NOT = { is_year = 1808 }
+		is_year = 1750
+		NOT = { is_year = 1810 }
 	}
 
 	mean_time_to_happen = {
@@ -1517,6 +1522,8 @@ country_event = {
 	option = {		# Excellent
 		name = "EXCELLENT"
 		add_prestige = 15
+		add_splendor = 50
+		add_years_of_income = -0.15
 		if = {
 			limit = { owns = 224 }
 			define_advisor = {
@@ -1571,6 +1578,7 @@ country_event = {
 	option = {		# Excellent
 		name = "EXCELLENT"
 		add_prestige = 25
+		add_splendor = 50
 	}
 }
 
@@ -1986,16 +1994,20 @@ country_event = {
 	
 	fire_only_once = yes
 	
-	
 	trigger = {
-		tag = SPA
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
 		is_year = 1490
-		num_of_cities = 25
+		num_of_cities = 45
+		has_country_flag = nebrija_happened
 	}
 	
-	mean_time_to_happen = {
-		months = 150
-	}
+	mean_time_to_happen = { months = 150 }
 	
 
 	option = {		# Promote the use of Castilian Language in government
@@ -2040,7 +2052,7 @@ country_event = {
 		owns_core_province = 215 #Valladolid
 		owns_core_province = 219 #Toledo
 		NOT = { capital = 217 } #Madrid
-		num_of_cities = 25
+		num_of_cities = 45
 		government = monarchy
 		is_year = 1520
 		NOT = { is_year = 1580 }

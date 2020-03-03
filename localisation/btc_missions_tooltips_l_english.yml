@@ -40,6 +40,7 @@
  conquer_valencia_gra_tooltip:0 "All provinces in the §YValencia§! area except §Y[4550.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_murcia_gra_tooltip:0 "All provinces in the §YCuenca§! area except §Y[3079.GetName]§! and §YCuenca§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  integrate_naples_benevento_tooltip:0 "All provinces in the §YCampania§! area except §Y[5705.GetName]§!:\n   Owned by §Y[Root.GetName]§!"
+ italian_ambition_benevento_tooltip:0 "All provinces in the §YCampania§! area except §Y[5705.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  spain_florida_claims_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on §YColonial Florida§!."
  eng_rb_colonial_empire_title: "The Sun Never Sets"
  kor_manchu_borderlands_tooltip:0 "Own at least §Y10§! provinces in the following areas:\n\n   §YNingguta§! area\n   §YSouth Jilin§! area\n   §YLiaoning§! area\n   §YFurdan§! area"
@@ -87,6 +88,10 @@
  tib_chinese_frontier_claim_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on all of §YChuannan§! area except §Y[4213.GetName]§! and §Y[2168.GetName]§!."
  africa_slave_trigger_tooltip:0 "One of the following must be true:\n   §Y[Root.GetName]§! is the leader producer of §YSlaves§! while controlling at least §Y4§! slave producing provinces\n   Has §Yabolished slavery§! and doesn't neighbour any country producing §YSlaves§!"
  qing_invade_south_china_tooltip:0 "§Y[Root.GetName]§! owns at least §Y35§! provinces in the §YXinan§! and §YSouth China§! regions."
+ more_colonies_than_portugal_tooltip:0 "§Y[Root.GetName]§! has more §YColonial subjects§! than §Y[POR.GetName]§!"
+ own_or_ally_spain_tooltip:0 "§Y[Root.GetName]§! owns, is the overlord of, or is allied with the owner of:\n      §Y[118.GetName]§!\n      §Y[101.GetName]§!\n      §Y[106.GetName]§!\n      §Y[116.GetName]§!\n      §Y[3045.GetName]§!\n      §Y[4803.GetName]§!"
+ spanish_road_modifier_tooltip:0 "Every province required for this mission that is owned by §Y[Root.GetName]§! or its non-Tributary Subjects will receive the §YSpanish Road§! modifier until the end of the game giving the following effects:\nFriendly Movement Speed: §G+50%§!\nSupply Limit Modifier: §G+40%§!\nAttrition for Enemies: §G+2.00§!"
+ own_spanish_road_tooltip:0 "All highlighted provinces are owned by §Y[Root.GetName]§!"
  #Opinions
  fra_dynastic_rivalry:0 "Tensions between families"
  signed_treaty:0 "Signed Treaty"
@@ -101,6 +106,17 @@
  adu_umayyad_modifier:0 "New Islamic Golden Age"
  mos_arkhangelsk_btc_title:0 "Found Arkhangelsk"
  mos_arkhangelsk_btc_desc:0 "It would be easy to forget that the White Sea is a navigable and potentially profitable trading route, at least for those months that the sea is not frozen over. We should found a new city on its shore, Arkhangelsk, so we can begin exploring the potential of this region."
+ 
+ #Spain
+ btc_cas_spa_iberian_hegemony:0 "Iberian Hegemony"
+ btc_cas_spa_iberian_hegemony_title:0 "Iberian Hegemony"
+ btc_cas_spa_iberian_hegemony_desc:0 "We may be called [Root.GetName], but ever since the time of our ancestors everyone knows this region as 'Spains', plural. We must secure ourselves as THE regional power if we are to be taken seriously, and that means moving our ambitions towards our lesser neighbour.. Portugal"
+ btc_cas_spa_spanish_road_mission:0 "Spanish Road"
+ btc_cas_spa_spanish_road_mission_title:0 "Spanish Road"
+ btc_cas_spa_spanish_road_mission_desc:0 "As our empire expands in Europe, communication with some of our far away lands in Italy and Netherlands grows difficult and the risk of revolts is a constant threat. While travel by boat is the fastest way to ship troops, the sea is filled with corsairs, pirates, the English Royal Navy, or worse. If we are to keep these lands loyal to the Crown, we must secure land supply lines between our territories."
+ btc_cas_spa_spanish_road_mission_2:0 "Expand Spanish Road"
+ btc_cas_spa_spanish_road_mission_2_title:0 "Expand Spanish Road"
+ btc_cas_spa_spanish_road_mission_2_desc:0 "While our supply lines are working as intended, the route still depends on the willingness of some of our allies to allow our troops to march through their borders. If we want to secure a permanent, solid supply line we must size the land for ourselves."
  
  #England
  wales_hold:0 "Our Hold on Wales"

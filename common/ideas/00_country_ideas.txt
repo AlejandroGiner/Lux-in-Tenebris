@@ -247,22 +247,24 @@ SPA_ideas = {
 		idea_claim_colonies = yes
 		colonists = 1
 	}
-	gold_fleet = {
-		naval_forcelimit_modifier = 0.25
+	tercios_btc = {
+		army_tradition_decay = -0.01
+		drill_gain_modifier = 0.5
+	}
+	spanish_emigration_btc = {
+		colonist_placement_chance = 0.1
+	}
+	evangelization_america_btc = {
+		missionaries = 1
+		global_missionary_strength = 0.01
 	}
 	spanish_armada = {
 		heavy_ship_power = 0.1
-		leader_naval_manuever = 1
+		naval_forcelimit_modifier = 0.15
 	}
-	spa_casa_de_contracion = {
-		envoy_travel_time = -0.33
-		global_tariffs = 0.15
-	}
-	spa_cortes = { 
-		possible_dip_policy = 1
-	}
-	siglo_de_oro = {
-		prestige = 1
+	universal_monarchy_btc = {
+		diplomatic_reputation = 1
+		max_states = 3
 	}
 }
 

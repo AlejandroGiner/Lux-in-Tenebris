@@ -43,7 +43,7 @@ country_decisions = {
 					is_core = ROOT
 					region = iberia_region
 				}
-				amount = 60			#At least 2/3 of Iberia's 91 provinces
+				amount = 68			#At least 2/3 of Iberia's 102 provinces
 			}
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
