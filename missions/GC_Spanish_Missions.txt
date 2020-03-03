@@ -806,7 +806,12 @@ gc_spain_2_b = {
 		#completed_by = 1521.1.1
 		
 		provinces_to_highlight = {
-			region = southeast_america_region
+			OR = {
+				area = west_florida_area
+				area = florida_area
+				area = north_florida_area
+				area = everglades_area
+			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = { fort_level = 3 }
@@ -819,7 +824,12 @@ gc_spain_2_b = {
 				tooltip = cas_spa_florida_forts.tooltip
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 					value = 3
-					region = southeast_america_region
+					OR = {
+						area = west_florida_area
+						area = florida_area
+						area = north_florida_area
+						area = everglades_area
+					}
 					fort_level = 3
 				}
 			}
@@ -836,7 +846,12 @@ gc_spain_2_b = {
 								is_subject_of = ROOT
 							}
 						}
-						region = southeast_america_region
+						OR = {
+							area = west_florida_area
+							area = florida_area
+							area = north_florida_area
+							area = everglades_area
+						}
 						fort_level = 3
 					}
 					add_province_modifier = {
@@ -910,12 +925,12 @@ gc_spain_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			custom_trigger_tooltip = {
-				tooltip = integrate_naples_benevento_tooltip
+				tooltip = italian_ambition_benevento_tooltip
 				naples_area = {
 					type = all
 					OR = {
 						province_id = 5705
-						owned_by = ROOT
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 			}
@@ -1020,7 +1035,261 @@ gc_spain_3 = {
 			}
 		}
 	}
+}
 
+btc_spain_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Golden Century"
+	}
+	potential = {
+		has_dlc = "Golden Century"
+		tag = SPA
+		NOT = { primary_culture = aragonese }
+		NOT = { primary_culture = catalan }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	btc_cas_spa_spanish_road_mission = {
+		icon = mission_landsknecht_soldier
+		required_missions = { gc_cas_spa_italian_ambition_2 gc_spa_spanish_netherlands }
+		position = 4
+		
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 92
+						province_id = 94
+						province_id = 3132
+						province_id = 104
+					}
+					OR = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = { fort_level = 4 }
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 118
+						province_id = 101
+						province_id = 116
+						province_id = 106
+						province_id = 3045
+						province_id = 4803
+					}
+					NOT = { owner = { OR = { tag = ROOT alliance_with = ROOT } } }
+				}
+			}
+		}
+		
+		trigger = {
+			92 = {country_or_non_sovereign_subject_holds = ROOT fort_level = 4 }
+			94 = {country_or_non_sovereign_subject_holds = ROOT fort_level = 4 }
+			3132 = {country_or_non_sovereign_subject_holds = ROOT fort_level = 4 }
+			104 = {country_or_non_sovereign_subject_holds = ROOT fort_level = 4 }
+			custom_trigger_tooltip = {
+				tooltip = own_or_ally_spain_tooltip
+				118 = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { alliance_with = ROOT }
+					}
+				}
+				101 = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { alliance_with = ROOT }
+					}
+				}
+				116 = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { alliance_with = ROOT }
+					}
+				}
+				106 = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { alliance_with = ROOT }
+					}
+				}
+				3045 = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { alliance_with = ROOT }
+					}
+				}
+				4803 = {
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { alliance_with = ROOT }
+					}
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			custom_tooltip = spanish_road_modifier_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						OR = {
+							#Main Spanish cities
+							province_id = 92
+							province_id = 94
+							province_id = 3132
+							province_id = 104
+							#Important stops in the Road
+							province_id = 118
+							province_id = 101
+							province_id = 116
+							province_id = 106
+							province_id = 3045
+							province_id = 4803
+						}
+					}
+					add_province_modifier = {
+						name = "spanish_road_bonus"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	btc_cas_spa_spanish_road_mission_2 = {
+		icon = mission_assemble_an_army
+		required_missions = { btc_cas_spa_spanish_road_mission }
+		position = 5
+		
+		provinces_to_highlight = {
+			OR = {
+				#Important stops in the Road
+				province_id = 101
+				province_id = 116
+				province_id = 106
+				province_id = 3045
+				province_id = 4803
+				#Towns part of the road
+				province_id = 3295
+				province_id = 5128
+				province_id = 2978
+				province_id = 5878
+				province_id = 3041
+				province_id = 109
+				province_id = 5133
+				province_id = 3043
+				province_id = 2979
+				province_id = 3249
+				province_id = 3189
+				province_id = 3056
+				province_id = 3133
+				province_id = 193
+				province_id = 3092
+				province_id = 187
+				province_id = 4786
+				province_id = 4785
+				province_id = 5538
+				province_id = 3130
+				province_id = 1880
+				province_id = 4804
+				province_id = 4801
+				province_id = 4802
+				province_id = 3198
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = own_spanish_road_tooltip
+				101 = { country_or_non_sovereign_subject_holds = ROOT }
+				116 = { country_or_non_sovereign_subject_holds = ROOT }
+				106 = { country_or_non_sovereign_subject_holds = ROOT }
+				3045 = { country_or_non_sovereign_subject_holds = ROOT }
+				4803 = { country_or_non_sovereign_subject_holds = ROOT }
+				3295 = { country_or_non_sovereign_subject_holds = ROOT }
+				5128 = { country_or_non_sovereign_subject_holds = ROOT }
+				2978 = { country_or_non_sovereign_subject_holds = ROOT }
+				5878 = { country_or_non_sovereign_subject_holds = ROOT }
+				3041 = { country_or_non_sovereign_subject_holds = ROOT }
+				1862 = { country_or_non_sovereign_subject_holds = ROOT }
+				109 = { country_or_non_sovereign_subject_holds = ROOT }
+				5133 = { country_or_non_sovereign_subject_holds = ROOT }
+				3043 = { country_or_non_sovereign_subject_holds = ROOT }
+				2979 = { country_or_non_sovereign_subject_holds = ROOT }
+				3249 = { country_or_non_sovereign_subject_holds = ROOT }
+				3189 = { country_or_non_sovereign_subject_holds = ROOT }
+				3056 = { country_or_non_sovereign_subject_holds = ROOT }
+				3133 = { country_or_non_sovereign_subject_holds = ROOT }
+				193 = { country_or_non_sovereign_subject_holds = ROOT }
+				3092 = { country_or_non_sovereign_subject_holds = ROOT }
+				187 = { country_or_non_sovereign_subject_holds = ROOT }
+				4786 = { country_or_non_sovereign_subject_holds = ROOT }
+				4785 = { country_or_non_sovereign_subject_holds = ROOT }
+				5538 = { country_or_non_sovereign_subject_holds = ROOT }
+				3130 = { country_or_non_sovereign_subject_holds = ROOT }
+				1880 = { country_or_non_sovereign_subject_holds = ROOT }
+				4804 = { country_or_non_sovereign_subject_holds = ROOT }
+				4801 = { country_or_non_sovereign_subject_holds = ROOT }
+				4802 = { country_or_non_sovereign_subject_holds = ROOT }
+				3198 = { country_or_non_sovereign_subject_holds = ROOT }
+			}
+		}
+		effect = {
+			add_mil_power = 100
+			custom_tooltip = spanish_road_modifier_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						country_or_non_sovereign_subject_holds = ROOT
+						OR = {
+							#Important stops in the Road
+							province_id = 101
+							province_id = 116
+							province_id = 106
+							province_id = 3045
+							province_id = 4803
+							#Towns part of the road
+							province_id = 3295
+							province_id = 5128
+							province_id = 2978
+							province_id = 5878
+							province_id = 3041
+							province_id = 109
+							province_id = 5133
+							province_id = 3043
+							province_id = 2979
+							province_id = 3249
+							province_id = 3189
+							province_id = 3056
+							province_id = 3133
+							province_id = 193
+							province_id = 3092
+							province_id = 187
+							province_id = 4786
+							province_id = 4785
+							province_id = 5538
+							province_id = 3130
+							province_id = 1880
+							province_id = 4804
+							province_id = 4801
+							province_id = 4802
+							province_id = 3198
+						}
+					}
+					add_province_modifier = {
+						name = "spanish_road_bonus"
+						duration = -1
+					}
+				}
+			}
+		}
+	}
 }
 
 gc_spain_3_b = {
@@ -1512,6 +1781,23 @@ gc_spain_4 = {
 			}
 		}
 	}
+}
+
+gc_spain_4_b = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential_on_load = {
+		has_dlc = "Golden Century"
+	}
+	potential = {
+		has_dlc = "Golden Century"
+		tag = SPA
+		NOT = { primary_culture = aragonese }
+		NOT = { primary_culture = catalan }
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
 	
 	gc_spa_spanish_netherlands = {
 		icon = mission_spanish_netherlands
@@ -1624,23 +1910,6 @@ gc_spain_4 = {
 			}
 		}
 	}
-}
-
-gc_spain_4_b = {
-	slot = 4
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Golden Century"
-	}
-	potential = {
-		has_dlc = "Golden Century"
-		tag = SPA
-		NOT = { primary_culture = aragonese }
-		NOT = { primary_culture = catalan }
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
 	
 	gc_spa_spanish_armada = {
 		icon = mission_spanish_armada
