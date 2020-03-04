@@ -1,11 +1,3 @@
-great_bullion_famine_modifier = {
-	inflation_reduction = -0.1
-}
-
-east_west_deficit_trade = {
-	trade_efficiency = -0.1
-}
-
 east_west_deficit_trade_eased = {
 	trade_efficiency = -0.075
 }
@@ -24,4 +16,13 @@ east_west_profit_trade = {
 
 east_trade_lost = {
 	trade_efficiency = -0.2
+}
+
+sicily_sold_wheat = {
+	local_unrest = 5
+	trade_goods_size_modifier = -0.9
+}
+
+sicily_didnt_sell_wheat = {
+	local_unrest = -2
 }

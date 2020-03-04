@@ -169,6 +169,8 @@ country_event = {
 	desc = "flavor_eng.EVTDESC9104"
 	picture = DIPLOMACY_eventPicture
 	
+	fire_only_once = yes
+	
 	trigger = {
 		NOT = { is_year = 1500 }
 		NOT = { has_global_flag = eng_had_end_of_hundred_years_war }
@@ -205,6 +207,18 @@ country_event = {
 					FRA = { NOT = { has_country_flag = had_end_of_HYW_france } }
 				}
 				FRA = { country_event = { id = flavor_fra.9104 days = 1 } }
+			}
+			every_country = {
+				limit = {
+					capital_scope = {
+						superregion = europe_superregion
+					}
+					NOT = {
+						tag = MAM
+						tag = TUR
+					}
+				}
+				country_event = { id = bullion.1 days = 15 random = 15 }
 			}
 		}
 	}
@@ -651,7 +665,7 @@ country_event = {
 	}
 }
 
-# Bloody Mary and King Felipé of England
+# Bloody Mary and King Felipï¿½ of England
 country_event = {
 	id = flavor_eng.9114
 	title = "flavor_eng.EVTNAME9114"

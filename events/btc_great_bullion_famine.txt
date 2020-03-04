@@ -3,6 +3,7 @@
 
 namespace = bullion
 
+#Start of the Great Bullion Famine
 country_event = {
 	id = bullion.0
 	title = bullion.0.t
@@ -25,7 +26,6 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					NOT = { tag = ROOT }
 					OR = {
 						tag = MAM
 						tag = TUR
@@ -36,6 +36,7 @@ country_event = {
 							}
 						}
 					}
+					NOT = { tag = ROOT }
 				}
 				country_event = { id = bullion.0 }
 			}
@@ -67,17 +68,113 @@ country_event = {
 			name = east_west_deficit_trade
 			duration = -1
 		}
-		
-		if = {
-			limit = { capital_scope = { superregion = europe_superregion } }
-			add_country_modifier = {
-				name = great_bullion_famine_modifier
-				duration = -1
+	}
+}
+
+#End of Hundred Years War alleviates the famine
+country_event = {
+	id = bullion.1
+	title = bullion.1.t
+	desc = bullion.1.d
+	picture = OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = bullion.1.a
+		add_inflation = -1
+	}
+}
+
+#North African Gold
+country_event = {
+	id = bullion.2
+	title = bullion.2.t
+	desc = bullion.2.d
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_global_flag = great_bullion_famine_ended }
+		is_year = 1450
+		owns = 125
+		capital_scope = {
+			superregion = europe_superregion
+		}
+		NOT = {
+			tag = MAM
+			tag = TUR
+		}
+	}
+	
+	option = {
+		name = bullion.2.a
+		ai_chance = { factor = 8 }
+		add_years_of_income = 1
+		add_inflation = 2
+		sicily_area = = {
+			limit = { owned_by = ROOT }
+			add_province_modifier = {
+				name = sicily_sold_wheat
+				duration = 1095
 			}
+		}
+		east_sicily_area = {
+			limit = { owned_by = ROOT }
+			add_province_modifier = {
+				name = sicily_sold_wheat
+				duration = 1095
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					superregion = europe_superregion
+				}
+				NOT = {
+					tag = MAM
+					tag = TUR
+				}
+			}
+			add_inflation = -1
+		}
+	}
+	
+	option = {
+		name = bullion.2.b
+		ai_chance = { factor = 2 }
+		add_inflation = 5
+		sicily_area = = {
+			limit = { owned_by = ROOT }
+			add_province_modifier = {
+				name = sicily_didnt_sell_wheat
+				duration = 1095
+			}
+		}
+		east_sicily_area = {
+			limit = { owned_by = ROOT }
+			add_province_modifier = {
+				name = sicily_didnt_sell_wheat
+				duration = 1095
+			}
+		}
+		every_country = {
+			limit = {
+				capital_scope = {
+					superregion = europe_superregion
+				}
+				NOT = {
+					tag = MAM
+					tag = TUR
+				}
+			}
+			add_inflation = 3
 		}
 	}
 }
 
+#End of the Great Bullion Famine
 country_event = {
 	id = bullion.100
 	title = bullion.100.t
@@ -100,9 +197,14 @@ country_event = {
 			set_global_flag = great_bullion_famine_ended
 			every_country = {
 				limit = {
-					has_country_modifier = great_bullion_famine_modifier
+					capital_scope = {
+						superregion = europe_superregion
+					}
+					NOT = {
+						tag = MAM
+						tag = TUR
+					}
 				}
-				remove_country_modifier = great_bullion_famine_modifier
 				add_inflation = -5
 			}
 		}
