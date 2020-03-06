@@ -3610,11 +3610,11 @@ potosi_area = { #4
 #Altered vanilla
 west_florida_area = { 
 	color = { 144 0 32 }
-	922 2530 7419 7427 923 
+	922 2530 7419 7427 923 2533 7442
 }
 
 choctaw_area = { 
-	920 7466 7414 7417 7421 
+	920 7466 7414 7417 7469 7418 
 }
 
 kentucky_area = { 
@@ -3649,13 +3649,13 @@ south_appalachia_area = {
 	7408 7464 7465 7453 2544 936 
 }
 
-south_carolina_area = { 
-	7449 7450 7451 7452 7460 2545 
+south_carolina_area = { #Midlands
+	7449 7451 7452 2541 7454 933 7450
 }
 
 carolinas_area = { 
 	color = { 144 0 32 }
-	933 2541 7454 7463 7462 7461 
+	7463 7462 7461 2545 7460 7459
 }
 
 american_georgia_area = { 
@@ -3663,23 +3663,23 @@ american_georgia_area = {
 }
 
 upper_american_georgia_area = { 
-	2540 7406 7436 7437 
+	2540 7406 7436 7437 7407
 }
 
 florida_area = { 
-	4626 7413 7438 7441 927 4625 7410 
+	2536 7409 7439 926 2535 7444 7410 7441
 }
 
 north_florida_area = { 
-	928 2534 7411 2533 7442
+	928 2534 7411 4626 7413 7438 927 4625
 }
 
 mississippi_area = { 
-	2528 7467 7416 7443 
+	2528 7467 7416 7443 7415 919 7468
 }
 
 alabama_area = { 
-	924 7400 7422 7424 
+	924 7424 2531 7472 7420 7421 2532
 }
 
 lower_louisiana_area = { 
@@ -3688,19 +3688,15 @@ lower_louisiana_area = {
 
 chesapeake_area = { 
 	color = { 144 0 32 }
-	953 7538 7539 2550 952 2553 7528
+	953 7538 7539 2550 952 2553 7528 7527
 }
 
 appalachia_area = { 
-	951 7532 2551 7542 7543 7544 7545 
+	951 2551 7542 7543 7544 7545 
 }
 
 great_valley_area = { 
-	2011 2548 2552 7530 7540 
-}
-
-piedmont_north_america_area = { 
-	2549 949 7529 7531 
+	2011 2548 2552 7530 7540 7531
 }
 
 delaware_valley_area = { 
@@ -3745,36 +3741,16 @@ maine_area = {
 }
 
 #New NA from IR
-pine_belt_area = { 
-	2529 2532 7469 7418 7420 
-}
-
-chickasaw_area = { 
-	919 7468 7471 7415 
-}
-
-black_warrior_river_area = { 
-	2531 7470 7472 
-}
-
-nickajack_area = { 
-	931 7423 7431 2527 
-}
-
 wiregrass_area = { 
 	2537 7401 7433 7434 7435 
 }
 
 upper_chattahoochee_area = { 
-	925 930 7407 7432 
-}
-
-everglades_area = { 
-	2536 7409 7439 926 2535 7444 
+	925 930 7432 931 7400 7422
 }
 
 northeast_louisiana_area = { 
-	7428 7403 7425 7426 2515 7486 
+	7428 7403 7425 7426 2515 7486 2529
 }
 
 grand_strand_area = { 
@@ -3782,19 +3758,19 @@ grand_strand_area = {
 }
 
 inner_banks_area = { 
-	7456 938 937 7458 7459 7457 7455 2547
+	7456 938 937 7458 2547 7457 7455
 }
 
 western_tennessee_area = { 
-	7481 7479 918 939 
+	7479 918 939 7478 7480 7481
 }
 
 middle_tennessee_area = { 
-	7478 7480 934 
+	7431 7423 7471 2527 7470 934
 }
 
 eastern_tennessee_area = { 
-	7474 7475 7476 7477 935 
+	7474 7475 7476 7477 935 7532
 }
 
 arkansas_plains_area = { 
@@ -3823,7 +3799,7 @@ edwards_plateau_area = {
 }
 
 virginia_tidewater_area = { 
-	950 7525 7526 7524 7527
+	950 7525 7526 7524 949 7529 2549
 }
 
 minisink_area = { 
