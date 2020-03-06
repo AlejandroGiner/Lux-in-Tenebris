@@ -5287,7 +5287,7 @@ SZK_ideas = {
 		hostile_attrition = 1.0
 	}
 	SZK_idea2 = {
-        shock_damage = 0.15
+		shock_damage = 0.15
 	}
 	SZK_idea3 = {
 		state_maintenance_modifier = -0.25
@@ -5302,6 +5302,44 @@ SZK_ideas = {
 		administrative_efficiency = 0.05
 	}
 	SZK_idea7 = {
-        recover_army_morale_speed = 0.2
+		recover_army_morale_speed = 0.2
+	}
+}
+
+KYL_ideas = {
+	start = {
+		technology_cost = -0.05
+		caravan_power = 0.2
+	}
+
+	bonus = {
+		infantry_cost = -0.15
+	}
+
+	trigger = {
+		tag = KYL
+	}
+	free = yes		# will be added at load
+
+	KYL_idea1 = {
+		development_cost = -0.15
+	}
+	KYL_idea2 = {
+		production_efficiency = 0.15
+	}
+	KYL_idea3 = {
+		fort_maintenance_modifier = -0.2
+	}
+	KYL_idea4 = {
+		global_trade_power = 0.1
+	}
+	KYL_idea5 = {
+		religious_unity = 0.25
+	}
+	KYL_idea6 = {
+		infantry_power = 0.15
+	}
+	KYL_idea7 = {
+		prestige = 1
 	}
 }
