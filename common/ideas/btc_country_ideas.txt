@@ -4631,7 +4631,7 @@ JIM_ideas = {
 
 JSC_ideas = {
 	start = {
-        cav_to_inf_ratio = 0.2
+		cav_to_inf_ratio = 0.2
 		mercenary_discipline = 0.1
 	}
 	
@@ -4672,6 +4672,44 @@ JSC_ideas = {
 
 	JSC_idea7 = {
 		fire_damage = 0.1
+	}
+}
+
+KUS_ideas = {
+	start = {
+		cavalry_power = 0.15
+		cavalry_flanking = 0.5
+	}
+
+	bonus = {
+		stability_cost_modifier = -0.2
+	}
+
+	trigger = {
+		tag = KUS
+	}
+	free = yes		# will be added at load
+
+	KUS_idea1 = {
+		cav_to_inf_ratio = 0.2
+	}
+	KUS_idea2 = {
+		army_tradition = 1
+	}
+	KUS_idea3 = {
+		production_efficiency = 0.15
+	}
+	KUS_idea4 = {
+		diplomatic_reputation = 1
+	}
+	KUS_idea5 = {
+		war_exhaustion = -0.02
+	}
+	KUS_idea6 = {
+		development_cost = -0.15
+	}
+	KUS_idea7 = {
+		discipline = 0.05
 	}
 }
 
