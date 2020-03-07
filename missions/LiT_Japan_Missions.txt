@@ -1,0 +1,239 @@
+ja_daimyo_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+	ja_daimyo_fort_cap = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #1-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			CAPITAL
+		}
+		
+		trigger = {
+			capital_scope = {
+				fort_level = 3
+			}
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+}
+ja_daimyo_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+	ja_daimyo_rice = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #2-1
+		required_missions = {}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			any_owned_province = {
+				trade_goods = rice
+			}
+		}
+		
+		trigger = {
+			stability = 1
+			is_at_war = no
+			any_owned_province = {
+				trade_goods = rice
+				base_production = 5
+			}
+		#1 stab, at peace, 5 prod rice province
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+		ja_daimyo_joukamachi = {
+		icon = mission_dominate_home_trade_node
+		position = 2 #2-2
+		required_missions = {ja_daimyo_rice ja_daimyo_fort_cap}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		number_of_owned_provinces_with = {
+			development = 15
+			fort_level = 2
+		}
+		#At least 10 provinces: 15 dev and a level 2 fort or higher
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+	
+}
+ja_daimyo_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+ja_daimyo_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+	ja_daimyo_pirates = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #4-1
+		required_missions = { }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			num_of_light_ship = 10
+			is_incident_happened = incident_wokou
+		#10 ships protecting from pirates in japan node, wokou incident
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+	ja_daimyo_divine_wind = {
+		icon = mission_dominate_home_trade_node
+		position = 2 #4-2
+		required_missions = {ja_daimyo_pirates}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			num_of_heavy_ship = 5
+			navy_size_percentage = .9
+		#5 heavies, 90% naval FL
+		}
+		
+		effect = {
+		
+		}
+	}
+
+}
+ja_daimyo_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+		ja_daimyo_bushido = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #5-1
+		required_missions = { }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			army_tradition = 25
+			OR = {
+				mil = 3
+				#<list mil advisors> = 2
+			}
+		#Has at least 25% army tradition, Ruler has at least military skill 3 or level 2 mil advisor
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+	ja_daimyo_ashigaru = {
+		icon = mission_dominate_home_trade_node
+		position = 2 #5-2
+		required_missions = {ja_daimyo_bushido}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			mil_tech = 5
+			land_forcelimit = 15
+			army_size_percentage = .9
+			manpower_percentage = .6
+		#Has mil tech 5, Forcelimit at least 15, 90% FL, Manpower at least 60%
+		}
+		
+		effect = {
+		
+		}
+	}
+}
