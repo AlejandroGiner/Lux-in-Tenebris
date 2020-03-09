@@ -306,6 +306,12 @@ byz_resurging_diplomacy = {
 				}
 				add_permanent_claim = ROOT
 			}
+			crimea_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			2447 = {
 				add_permanent_claim = ROOT
 			}

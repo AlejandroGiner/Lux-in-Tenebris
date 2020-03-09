@@ -642,6 +642,7 @@ tatar_missions_2 = {
 			OR = {
 				area = azov_area
 				area = crimea_area
+				area = crimea_coast_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -655,6 +656,10 @@ tatar_missions_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_coast_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

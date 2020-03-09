@@ -61,10 +61,10 @@ country_decisions = {
 						area = southgeorgia_area
 						area = eastgeorgia_area
 						area = armenia_area
-						area = alania_area
+						area = kabardia_area
 					}
 				}
-				amount = 25			
+				amount = 30
 			}
 		}
 		effect = {
@@ -84,10 +84,6 @@ country_decisions = {
 				duration = 3650
 			}
 			add_prestige = 25
-			#if = {
-			#	limit = { has_custom_ideas = no }
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
 			set_country_flag = formed_transcaucasia_flag_btp
 			set_government_rank = 3
 		}

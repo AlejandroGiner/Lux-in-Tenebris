@@ -387,6 +387,13 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			crimea_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			azov_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -424,6 +431,7 @@ lithuanian_missions_slot = {
 			OR = {
 				area = zaporizhia_area
 				area = crimea_area
+				area = crimea_coast_area
 				area = azov_area
 				area = sloboda_ukraine_area
 				area = lower_dnieper_area
@@ -451,6 +459,10 @@ lithuanian_missions_slot = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			crimea_coast_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

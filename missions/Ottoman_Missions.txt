@@ -748,6 +748,12 @@ tur_black_sea = {
 				}
 				add_permanent_claim = ROOT
 			}
+			crimea_coast_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	take_kaffa = {
@@ -755,11 +761,18 @@ tur_black_sea = {
 		required_missions = { conquer_trebizond }
 		completed_by = 1475.5.1
 		provinces_to_highlight = {
-			area = crimea_area
+			OR = {
+				area = crimea_coast_area
+				area = crimea_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			crimea_coast_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
