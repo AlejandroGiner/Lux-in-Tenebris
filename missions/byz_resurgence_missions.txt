@@ -4465,6 +4465,13 @@ byz_iberia_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				cantabrian_range = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -4483,6 +4490,7 @@ byz_iberia_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = galicia_area
+				area = cantabrian_range
 				area = leon_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4494,6 +4502,10 @@ byz_iberia_2 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cantabrian_range = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -4772,6 +4784,13 @@ byz_iberia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				new_castile_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				btc_murcia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -4801,17 +4820,6 @@ byz_iberia = {
 						add_permanent_claim = ROOT
 					}
 				}
-				7652 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
-				}
 			}
 		}
 	}
@@ -4831,7 +4839,7 @@ byz_iberia = {
 			OR = {
 				area = btc_murcia_area
 				area = toledo_area
-				province_id = 7652
+				area = new_castile_area
 				province_id = 1750
 				province_id = 3300
 			}
@@ -4843,11 +4851,12 @@ byz_iberia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			btc_murcia_area = {
+			new_castile_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			7652 = {
+			btc_murcia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			1750 = {

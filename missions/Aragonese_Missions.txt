@@ -42,6 +42,13 @@ aragonese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			new_castile_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			basque_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -50,6 +57,13 @@ aragonese_missions_1 = {
 				add_permanent_claim = ROOT
 			}
 			leon_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cantabrian_range = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -74,6 +88,8 @@ aragonese_missions_1 = {
 				area = toledo_area
 				area = basque_area
 				area = leon_area
+				area = new_castile_area
+				area = cantabrian_range
 				area = extremadura_area
 			}
 			NOT = {
@@ -89,11 +105,19 @@ aragonese_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			new_castile_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			basque_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cantabrian_range = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

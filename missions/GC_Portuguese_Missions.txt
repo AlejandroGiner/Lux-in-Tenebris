@@ -712,6 +712,13 @@ gc_por_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cantabrian_range = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -1119,6 +1126,7 @@ gc_por_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = leon_area
+				area = cantabrian_range
 				area = lower_andalucia_area
 				area = galicia_area
 				area = extremadura_area
@@ -1128,6 +1136,10 @@ gc_por_4 = {
 
 		trigger = {
 			leon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cantabrian_range = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
