@@ -5381,3 +5381,84 @@ KYL_ideas = {
 		prestige = 1
 	}
 }
+
+VDN_ideas = {
+	start = {
+		global_tax_modifier = 0.15
+		prestige_decay = -0.01
+	}
+
+	bonus = {
+		global_autonomy = -0.05
+	}
+
+	trigger = {
+		tag = VDN
+	}
+	free = yes		# will be added at load
+
+	VDN_idea1 = {
+		diplomatic_reputation = 1
+	}
+	VDN_idea2 = {
+		tolerance_own = 2
+	}
+	VDN_idea3 = {
+		global_trade_power = 0.15
+	}
+	VDN_idea4 = {
+		prestige = 1
+	}
+	VDN_idea5 = {
+		development_cost = -0.1
+	}
+	VDN_idea6 = {
+		improve_relation_modifier = 0.15
+	}
+	VDN_idea7 = {
+        defensiveness = 0.15
+	}
+}
+
+MTZ_ideas = {
+	start = {
+		prestige = 1
+		idea_cost = -0.15
+	}
+
+	bonus = {
+		development_cost = -0.15
+	}
+
+	trigger = {
+		tag = MTZ
+	}
+	free = yes		# will be added at load
+
+	MTZ_idea1 = {
+		legitimacy = 1
+		republican_tradition = 0.5
+		devotion = 0.5
+	}
+	MTZ_idea2 = {
+		imperial_authority = 0.1
+	}
+	MTZ_idea3 = {
+		religious_unity = 0.50
+		tolerance_own = 1
+	}
+	MTZ_idea4 = {
+		inflation_reduction = 0.15
+		interest = -1
+	}
+	MTZ_idea5 = {
+		technology_cost = -0.1
+		advisor_cost = -0.15
+	}
+	MTZ_idea6 = {
+		fort_maintenance_modifier = -0.2
+	}
+	MTZ_idea7 = {
+		build_cost = -0.15
+	}
+}

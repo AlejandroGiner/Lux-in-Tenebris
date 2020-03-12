@@ -11618,7 +11618,10 @@ FLA_ideas = {
 	}
 	
 	trigger = {
-		tag = FLA
+		OR = {
+			tag = FLA
+			tag = T0A
+		}
 	}
 	free = yes
 	

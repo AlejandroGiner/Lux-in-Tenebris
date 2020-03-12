@@ -191,9 +191,8 @@ BAR_ideas = {
 	fortify_the_lands_of_bar = {
 		garrison_size = 0.20
 	}
-	all_for_france = {
-		free_leader_pool = 1
-		manpower_recovery_speed = 0.1
+	BAR_regional_trade = {
+		caravan_power = 0.25
 	}
 }
 
@@ -1538,4 +1537,85 @@ KAC_ideas = {
     mastery_of_jungle_warfare = {
         shock_damage = 0.10
     }
+}
+
+LIV_ideas = {
+	start = {
+		land_morale = 0.10
+		global_missionary_strength = 0.02
+	}
+	
+	bonus = {
+		army_tradition = 1.00
+	}
+	
+	trigger = {
+		tag = LIV
+	}
+	free = yes
+	
+	legacy_of_livonian_brothers_sword = {
+		devotion = 1
+		legitimacy = 1.0
+		republican_tradition = 0.5
+	}
+	reverse_the_decline = {
+		yearly_corruption = -0.05
+	}
+	riga_and_catholic_ties = {
+		diplomatic_reputation = 1.00
+	}
+	bastion_against_the_orthodox = {
+		papal_influence = 2
+		defensiveness = 0.10
+	}
+	baltic_trade_ties = {
+		trade_efficiency = 0.1
+	}
+	playing_off_major_powers = {
+		diplomatic_upkeep = 1
+	}
+	cultivate_the_livonian_order = {
+		discipline = 0.05
+	}
+}
+
+PIC_ideas = {
+	start = {
+		global_prov_trade_power_modifier = 0.10
+		mercenary_cost = -0.10
+	}
+	
+	bonus = {
+		same_culture_advisor_cost = -0.20
+	}
+	
+	trigger = {
+		tag = PIC
+	}
+	free = yes
+	
+	at_the_confluence_of_three = {
+		diplomatic_reputation = 1
+		navy_tradition = 1
+	}
+	legacy_of_the_jaquerie_peasant_revolt = {
+		infantry_cost = -0.10
+	}
+	port_of_calais = {
+		trade_efficiency = 0.10
+	}
+	burgundian_ties = {
+		diplomatic_upkeep = 1
+	}
+	promote_the_picard_language = {
+		global_unrest = -1
+	}
+	naval_ambitions = {
+		naval_morale = 0.15
+	}
+	all_for_france = {
+		free_leader_pool = 1
+		manpower_recovery_speed = 0.1
+	}
 }
