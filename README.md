@@ -26,7 +26,7 @@ Europe:
 
 (Finished) - Greece has received 50 new provinces, an increase of 294% from 17 to 67. Dev increased by 84%, from 188 to 346 and a new culture.
 
-(Finished) - Caucasus has received 25 new provinces, an increase of 86% from 29 to 54. Dev increased by 60%, from 206 to 331, 28 new tags, re-done cultures and unique national ideas.
+(Finished) - Caucasus has received 41 new provinces, an increase of 141% from 29 to 70. Dev increased by 76%, from 206 to 363, 28 new tags, re-done cultures and unique national ideas.
 
 (Finished) - Ruthenia has received 58 new provinces, an increase of 153% from 38 to 96. Dev increased by 60%, from 208 to 333. 
 
@@ -42,7 +42,7 @@ Europe:
 
 (Finished) - Carpathia has received 68 new provinces, an increase of 219% from 31 to 99. Dev increased by 91%, from 246 to 470.
 
-(Planned) - Pontic Steppe has received 27 new provinces, an increase of 117% from 23 to 50. Dev increased by 16%, from 199 to 232.
+(Planned) - Pontic Steppe has received 45 new provinces, an increase of 196% from 23 to 68. Dev increased by 47%, from 199 to 293.
 
 (Planned) - Urals has received 11 new provinces, an increase of 30% from 36 to 47. Dev decreased by 1%, from 254 to 250.
 
@@ -84,9 +84,9 @@ Asia:
 
 (Planned) - Mesopotamia has received  new provinces, an increase of % from  to . Dev increased by %, from  to .
 
-(Planned) - Levant has received 11 new provinces, an increase of 58% from 19 to 30. Dev increased by 2%, from 163 to 167.
+(Likely Finished) - Levant has received 11 new provinces, an increase of 58% from 19 to 30. Dev increased by 2%, from 163 to 167.
 
-(Planned) - Persia has received 5 new provinces, an increase of 10% from 52 to 57. Dev increased by 6%, from 368 to 389.
+(WIP) - Persia has received 6 new provinces, an increase of 11% from 52 to 58. Dev increased by 7%, from 368 to 395.
 
 (Planned) - Khorasan has received  new provinces, an increase of % from  to . Dev increased by %, from  to .
 
@@ -152,7 +152,7 @@ Africa:
 
 (Finished) - South Africa has received 70 new provinces, an increase of 467% from 15 to 85. Dev increased by 258%, from 74 to 265.
 
-(Likely Finished) - Maghreb has received 38 new provinces, an increase of 59% from 64 to 102. Dev increased by 25%, from 406 to 507.
+(Likely Finished) - Maghreb has received 38 new provinces, an increase of 59% from 64 to 102. Dev increased by 25%, from 406 to 509.
 
 (Likely Finished) - Sahel has received 8 new provinces, an increase of 18% from 45 to 53. Dev increased by 12%, from 222 to 248.
 
