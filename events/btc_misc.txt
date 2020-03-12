@@ -1170,23 +1170,31 @@ country_event = {
 	trigger = {
 		tag = MLO
 		has_reform = ambrosian_republic
+		NOT = { exists = CMO }
 	}
 	
 	mean_time_to_happen = {
 		years = 1
 	}
 	
-	immediate = {
-		3095 = {
-			cede_province = CMO
-		}
-	}
-	
 	option = {
 		name = btc_misc.23.a
-		tooltip = {
-			3095 = { cede_province = CMO }
+		hidden_effect = {
 			release = CMO
+			add_truce_with = CMO
+			add_opinion = {
+				who = CMO
+				modifier = broke_free_from_us
+			}
+			reverse_add_opinion = {
+				who = CMO
+				modifier = previous_oppressor
+			}
+			CMO = {
+				change_government = republic
+			}
 		}
+		custom_tooltip = btc_misc.23.tt
+		
 	}
 }
