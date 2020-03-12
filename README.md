@@ -10,19 +10,19 @@ Europe:
 
 (Finished) - Baltic has received 39 new provinces, an increase of 144% from 27 to 66. Dev increased by 37%, from 215 to 294.
 
-(Finished) - Britain has received 41 new provinces, an increase of 98% from 42 to 83. Dev increased by 28%, from 308 to 394, 6 new tags, several new national ideas and formables.
+(Finished) - Britain has received 41 new provinces, an increase of 98% from 42 to 83. Dev increased by 27%, from 308 to 391, 6 new tags, several new national ideas and formables.
 
-(Finished) - South Germany has received 60 new provinces, an increase of 158% from 38 to 98. Dev increased by 80%, from 454 to 819.
+(Finished) - South Germany has received 60 new provinces, an increase of 158% from 38 to 98. Dev increased by 79%, from 454 to 816.
 
 (Finished) - North Germany has received 54 new provinces, an increase of 110% from 49 to 103. Dev increased by 66%, from 469 to 778.
 
 (Finished) - Czechia has received 24 new provinces, an increase of 171% from 14 to 38. Dev increased by 45%, from 147 to 214.
 
-(Finished) - Italy has received 79 new provinces, an increase of 180% from 44 to 123. Dev increased by 65%, from 676 to 1119, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
+(Finished) - Italy has received 79 new provinces, an increase of 180% from 44 to 123. Dev increased by 65%, from 676 to 1117, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
 
-(Finished) - Iberia has received 43 new provinces, an increase of 73% from 59 to 102. Dev increased by 17%, from 545 to 659, 15 new tags, 2 new cultures and many national ideas.
+(Finished) - Iberia has received 50 new provinces, an increase of 85% from 59 to 109. Dev increased by 26%, from 545 to 688, 15 new tags, 2 new cultures and many national ideas.
 
-(Finished) - France has received 93 new provinces, an increase of 163% from 57 to 150. Dev increased by 51%, from 763 to 1151, 2 new tags, 3 new cultures and many national ideas.
+(Finished) - France has received 93 new provinces, an increase of 163% from 57 to 150. Dev increased by 51%, from 763 to 1152, 2 new tags, 3 new cultures and many national ideas.
 
 (Finished) - Greece has received 50 new provinces, an increase of 294% from 17 to 67. Dev increased by 84%, from 188 to 346 and a new culture.
 
@@ -34,7 +34,7 @@ Europe:
 
 (Finished) - Low Countries has received 30 new provinces, an increase of 150% from 20 to 50. Dev increased by 52%, from 283 to 431.
 
-(Likely Finished) - Poland has received 10 new provinces, an increase of 43% from 23 to 33. Dev decreased by 16%, from 191 to 160.
+(Likely Finished) - Poland has received 10 new provinces, an increase of 43% from 23 to 33. Dev decreased by 10%, from 191 to 172.
 
 (Finished) - Balkans has received 56 new provinces, an increase of 200% from 28 to 84. Dev increased by 69%, from 230 to 388.
 
