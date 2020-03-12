@@ -96,6 +96,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = PER
+			hidden_effect = { add_historical_rival = TUR }
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
