@@ -581,17 +581,31 @@ tur_conquest_of_middle_east = {
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			erzurum_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			mardin_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			north_kurdistan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			calc_true_if = {
+				all_province = {
+					OR = {
+			          area = erzurum_area
+			          area = mardin_area
+			          area = north_kurdistan_area
+			        }
+					OR = {
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = {
+							capital_scope = {
+								OR = {
+									area = erzurum_area
+			  			          	area = mardin_area
+			  			          	area = north_kurdistan_area
+								}
+							}
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+				}
+				amount = 14 #75% of provinces
 			}
 		}
 		effect = {
