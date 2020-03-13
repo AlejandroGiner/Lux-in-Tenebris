@@ -540,11 +540,12 @@ categories =  {
 		color = { 215 216 234 }
 		sound_type = sea
 
-		supply_limit = 4
+		supply_limit = 6
 		movement_cost = 1.0
-		local_development_cost = 0.15
+		local_development_cost = 0.2
 		allowed_num_of_buildings = 1
-		nation_designer_cost_multiplier = 0.95
+		local_sailors = 50
+		nation_designer_cost_multiplier = 0.9
 		
 		terrain_override = {
 			3095

@@ -4465,7 +4465,7 @@ byz_iberia_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				cantabrian_range = {
+				cantabrian_range_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -4490,7 +4490,7 @@ byz_iberia_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = galicia_area
-				area = cantabrian_range
+				area = cantabrian_range_area
 				area = leon_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -4505,7 +4505,7 @@ byz_iberia_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			cantabrian_range = {
+			cantabrian_range_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

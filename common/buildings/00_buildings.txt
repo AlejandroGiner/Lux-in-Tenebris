@@ -105,7 +105,10 @@ shipyard = {
 	cost = 100
 	time = 12
 	trigger = {
-		has_port = yes
+		OR = {
+			has_port = yes
+			has_terrain = lakes
+		}
 	}
 	modifier = {
 		naval_forcelimit = 2
@@ -122,6 +125,10 @@ shipyard = {
 		modifier = {
 			factor = 1.1
 			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.3
+			has_terrain = lakes
 		}
 	}
 }
@@ -186,7 +193,10 @@ dock = {
 	cost = 100
 	time = 12
 	trigger = {
-		has_port = yes
+		OR = {
+			has_port = yes
+			has_terrain = lakes
+		}
 	}
 	modifier = {
 		local_sailors_modifier = 0.5
@@ -194,6 +204,10 @@ dock = {
 	
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.3
+			has_terrain = lakes
+		}
 	}
 }
 
@@ -363,7 +377,10 @@ grand_shipyard = {
 	make_obsolete = shipyard
 	
 	trigger = {
-		has_port = yes
+		OR = {
+			has_port = yes
+			has_terrain = lakes
+		}
 	}
 	modifier = {
 		naval_forcelimit = 4
@@ -380,6 +397,10 @@ grand_shipyard = {
 		modifier = {
 			factor = 1.1
 			local_autonomy = 50
+		}
+		modifier = {
+			factor = 0.3
+			has_terrain = lakes
 		}
 	}
 }
@@ -528,7 +549,10 @@ drydock = {
 	make_obsolete = dock
 	
 	trigger = {
-		has_port = yes
+		OR = {
+			has_port = yes
+			has_terrain = lakes
+		}
 	}
 	
 	modifier = {
@@ -537,6 +561,10 @@ drydock = {
 	
 	ai_will_do = {
 		factor = 1
+		modifier = {
+			factor = 0.3
+			has_terrain = lakes
+		}
 	}
 }
 

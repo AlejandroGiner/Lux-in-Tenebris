@@ -356,7 +356,7 @@ gc_aragon_2 = {
 				area = new_castile_area
 				area = basque_area
 				area = leon_area
-				area = cantabrian_range
+				area = cantabrian_range_area
 				area = extremadura_area
 				area = btc_murcia_area
 			}
@@ -385,7 +385,7 @@ gc_aragon_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			cantabrian_range = {
+			cantabrian_range_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -719,7 +719,7 @@ gc_aragon_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			cantabrian_range = {
+			cantabrian_range_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
