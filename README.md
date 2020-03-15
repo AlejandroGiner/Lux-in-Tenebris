@@ -1,5 +1,5 @@
-Beyond Typus Classic
-An expansion for Beyond Typus 9.0, updated for EU4 1.28.\
+Lux in Tenebris
+An EU4 expansion mod, updated for EU4 1.29.\
 changelog
 
 On top of what Beyond Typus 9.0 had, the following regions have been overhauled or re-overhauled from their BT state following this mod's design philosophy (compared with their state in vanilla):
@@ -42,9 +42,9 @@ Europe:
 
 (Finished) - Carpathia has received 68 new provinces, an increase of 219% from 31 to 99. Dev increased by 91%, from 246 to 470.
 
-(Planned) - Pontic Steppe has received 45 new provinces, an increase of 196% from 23 to 68. Dev increased by 47%, from 199 to 293.
+(Finished) - Pontic Steppe has received 45 new provinces, an increase of 196% from 23 to 68. Dev increased by 47%, from 199 to 293.
 
-(Planned) - Urals has received 11 new provinces, an increase of 30% from 36 to 47. Dev decreased by 1%, from 254 to 250.
+(WIP) - Urals has received 11 new provinces, an increase of 30% from 36 to 47. Dev decreased by 1%, from 254 to 250.
 
 
 
