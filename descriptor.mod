@@ -1,4 +1,5 @@
 name="Lux in Tenebris 1.0"
+version="1.0"
 path="mod/LuxinTenebris.zip"
 tags={
 	"Expansion"
