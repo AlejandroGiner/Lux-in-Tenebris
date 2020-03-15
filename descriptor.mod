@@ -1,6 +1,5 @@
 name="Lux in Tenebris 1.0"
-path="mod/enhancedtypus.zip"
-replace_path="map/random"
+path="mod/LuxinTenebris.zip"
 tags={
 	"Expansion"
 	"Events"
