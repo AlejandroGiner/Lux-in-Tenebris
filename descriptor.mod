@@ -1,4 +1,6 @@
-version="1.0"
+name="Lux in Tenebris 1.0"
+path="mod/enhancedtypus.zip"
+replace_path="map/random"
 tags={
 	"Expansion"
 	"Events"
@@ -15,4 +17,5 @@ tags={
 	"Historical"
 	"Map"
 }
-name="Beyond Typus Classic dev"
+picture="Thumbnail.png"
+supported_version="1.29.*.*"
