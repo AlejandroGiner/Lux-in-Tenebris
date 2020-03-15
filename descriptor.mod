@@ -17,7 +17,6 @@ tags={
 	"Trade"
 	"Historical"
 }
-name="Lux in Tenebris"
+name="Lux in Tenebris development version"
 picture="thumbnail.png"
-supported_version="1.29.5"
-remote_file_id="2022845934"
+supported_version="1.29.*.*"
