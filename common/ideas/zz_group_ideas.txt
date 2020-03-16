@@ -41,12 +41,12 @@ client_ideas = {
 
 colonial_ideas = {
 	start = {
-		development_cost = -0.1
-		missionaries = 1
+		global_missionary_strength = 0.01
+		missionary_maintenance_cost = -0.8
 	}
 
 	bonus = {
-		land_morale = 0.10
+		missionaries = 1
 	}
 
 	trigger = {
@@ -62,6 +62,7 @@ colonial_ideas = {
 	}
 	manufacturing_center = {
 		build_cost = -0.1
+		development_cost = -0.1
 	}
 	free_thinkers = {
 		idea_cost = -0.1
@@ -75,6 +76,7 @@ colonial_ideas = {
 	}
 	liberty_heroes = {
 		free_leader_pool = 1
+		land_morale = 0.10
 	}
 }
 
