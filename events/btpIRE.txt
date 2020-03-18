@@ -138,22 +138,9 @@ country_event = {
 	option = {
 		name = "btpIRE.EVTOPTA3"
 		add_prestige = 10
-		if = {
-			limit = { has_dlc = "Res Publica" }
-			change_government = transitional_government_reform
-			hidden_effect = {
-				country_event = {
-					id = btpIRE.4
-					days = 1095
-				}
-				set_country_flag = independent_ireland_reorganisation_underway
-			}
-		}
-		if = {
-			limit = { NOT = { has_dlc = "Res Publica" } }
-			change_government = anglo_irish_monarchy_reform
-			add_stability = -1
-		}
+		change_government = monarchy
+		add_government_reform = anglo_irish_monarchy_reform
+		add_stability = -1
 	}
 }
 

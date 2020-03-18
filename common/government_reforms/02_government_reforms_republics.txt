@@ -24,7 +24,7 @@ oligarchy_reform = {
 	nation_designer_cost = 0
 	potential = {
 		NOT = {
-				has_reform = florentine_republic_btc 
+			has_reform = florentine_republic_btc 
 		}
 	}
 	modifiers = {
@@ -1283,32 +1283,5 @@ puppet_kingdom_reform = {
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
-	}
-}
-
-transitional_government_reform = {
-	icon = "parliament_hall"
-	dictatorship = yes
-	allow_normal_conversion = no
-	potential = {
-		has_country_flag = independent_ireland_reorganisation_underway
-		has_reform = transitional_government_reform
-	}
-	lock_level_when_selected = yes
-	legacy_equivalent = transitional_government_ireland_legacy
-	valid_for_nation_designer = no
-	modifiers = {
-		legitimacy = -0.5
-		stability_cost_modifier = 0.25
-		global_unrest = 5
-	}
-	conditional = {
-		allow = { has_dlc = "Common Sense" }
-		has_parliament = yes
-	}
-	custom_attributes = {
-		locked_government_type = yes
-		enables_plutocratic_idea_group = yes
-		enables_aristocratic_idea_group = no
 	}
 }
