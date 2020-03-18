@@ -1,0 +1,1506 @@
+# country
+on_monarch_death = {
+	if = {
+		limit = {
+			tag = ANS
+			BRA = {
+				has_country_flag = albrecht_achilles_flag
+			}
+		}
+		BRA = {
+			clr_country_flag = albrecht_achilles_flag #Just to be sure
+			kill_heir = yes #If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
+		}
+	}
+	if = {
+		limit = { has_country_modifier = sought_after_bachelor }
+		remove_country_modifier = sought_after_bachelor
+	}
+	events = {
+		flavor_tus.16 #Savanorola Leaves This World
+		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
+		flavor_nav.4 # Navarra succession event
+	}
+	if = {
+		limit = {
+			tag = BYZ
+		}
+		country_event = { id = integrated_byz_events.16 } #The Rebellion of Demetrios Palaiologos
+	}
+	if = { #Making the ruler a general if you've got the Basileus Protostrategos reform.
+		limit = {
+			has_government_attribute = forces_ruler_general
+			is_monarch_leader = no
+		}
+		if = {
+			limit = {
+				is_female = yes
+			}
+			convert_female_ruler_to_general = yes
+		}
+		else = {
+			convert_ruler_to_general = yes
+		}
+	}
+}
+
+on_bi_yearly_pulse = {
+	random_events = {
+		# randomevents.txt
+		100 = 3051
+		100 = 5008
+		100 = 5014
+		100 = 5015
+		100 = 5017
+		100 = 5018
+		100 = 5019
+		100 = 5020
+		100 = 5021
+		100 = 5022
+		100 = 5023
+		100 = 5024
+		100 = 5025
+		100 = 5027
+		100 = 5032
+		100 = 5040
+		100 = 5045
+		100 = 5050
+		100 = 5051
+		100 = 5052
+		100 = 5053
+		100 = 5054
+		100 = 5055
+		100 = 5056
+		100 = 5058
+		100 = 5059
+		100 = 5060
+		100 = 5061
+		100 = 5064
+		100 = 5065
+		100 = 5066
+		100 = 5068
+		100 = 5070
+		100 = 5071
+		100 = 5072
+		100 = 5074
+		100 = 5075
+		100 = 5076
+		100 = 5077
+		100 = 5082
+		100 = 5083
+		100 = 5084
+		100 = 5085
+		100 = 5086
+		100 = 5088
+		100 = 5089
+		100 = 5090
+		100 = 5091
+		100 = 5092
+		100 = 5093
+		100 = 5094
+		100 = 5095
+		100 = 5096
+		100 = 5097
+		100 = 5098
+		100 = 5099
+		100 = 6000
+		100 = 6001
+		100 = 6003
+		100 = 6004
+		100 = 6005
+		100 = 6006
+		100 = 6012
+		100 = 6013
+		100 = 6015
+		100 = 710
+		100 = 711
+		100 = 712
+		100 = 713
+		100 = 714
+		100 = 715
+		100 = 716
+		100 = 717
+		100 = 718
+		100 = 719
+		100 = 720
+		100 = 722
+		100 = 723
+		100 = 724
+		100 = 725
+		100 = 726
+		100 = 727
+		100 = 728
+		100 = 729
+		100 = 730
+		100 = 731
+		100 = 732
+		100 = 733
+		100 = 734
+		100 = 735
+		100 = 736
+		100 = 737
+		100 = 738
+		100 = 739
+		100 = 740
+		100 = 741
+		100 = 742
+
+		100 = 850
+		100 = 851
+		100 = 852
+		100 = 853
+		100 = 854
+		100 = 855
+		100 = 857
+		100 = 858
+		100 = 859
+		100 = 860
+		100 = 861
+		100 = 862
+		100 = 863
+		100 = 864
+		100 = 865
+		100 = 866
+		100 = 867
+		100 = 868
+		100 = 869
+		100 = 870
+		100 = 871
+		100 = 872
+		100 = 873
+		100 = 874
+		100 = 875
+		100 = 876
+		100 = 877
+		100 = 878
+		100 = 879
+		100 = 880
+		100 = 881
+		100 = 882
+		100 = 883
+		100 = 884
+		100 = 885
+		100 = 836
+		100 = 837
+		100 = 838
+
+		100 = 9472
+		100 = 3097
+		100 = 5005
+		100 = 5026
+		100 = 5037
+		100 = 5063
+		100 = 6014
+
+		100 = random_event.1
+		300 = random_event.2
+		100 = random_event.3
+		100 = random_event.4
+		100 = random_event.5
+		100 = random_event.6
+		100 = random_event.7
+		100 = random_event.8
+		100 = random_event.9
+		100 = random_event.10
+		100 = random_event.11
+		100 = random_event.12
+		100 = random_event.13
+		100 = random_event.14
+		100 = random_event.15
+		100 = random_event.16
+
+		100 = random_event.26
+
+		#Culture and Religion Events
+		125 = culture_religion_events.1
+		125 = culture_religion_events.3
+		125 = culture_religion_events.4
+		125 = culture_religion_events.5
+		125 = culture_religion_events.6
+		125 = culture_religion_events.7
+		125 = culture_religion_events.8
+		125 = culture_religion_events.9
+		125 = culture_religion_events.10
+		125 = culture_religion_events.11
+		125 = culture_religion_events.12
+		125 = culture_religion_events.13
+		125 = culture_religion_events.14
+		125 = culture_religion_events.15
+		125 = culture_religion_events.16
+		100 = culture_religion_events.17
+		125 = culture_religion_events.18
+		125 = culture_religion_events.19
+		125 = culture_religion_events.20
+		175 = culture_religion_events.21
+		125 = culture_religion_events.22
+		125 = culture_religion_events.23
+
+		#Mamluk Events
+
+		175 = mamluk_events.1
+		175 = mamluk_events.2
+		175 = mamluk_events.3
+		235 = mamluk_events.4
+		185 = mamluk_events.5
+		175 = mamluk_events.6
+		250 = mamluk_events.7
+		185 = mamluk_events.10
+		185 = mamluk_events.11
+		235 = mamluk_events.12
+
+		#Colonization of Siberia
+		125 = siberian_events.2
+		125 = siberian_events.3
+		125 = siberian_events.4
+		125 = siberian_events.5
+		125 = siberian_events.6
+
+		#Russian Principalities
+
+		100 = russian_principality_events.1
+		125 = russian_principality_events.2
+		125 = russian_principality_events.3
+		125 = russian_principality_events.4
+		125 = russian_principality_events.6
+		125 = russian_principality_events.5
+		125 = russian_principality_events.7
+		100 = russian_principality_events.8
+		75 = russian_principality_events.9
+		125 = russian_principality_events.10
+
+		#Tsardoms
+
+		125 = russian_tsardom_events.1
+		125 = russian_tsardom_events.2
+		125 = russian_tsardom_events.3
+		100 = russian_tsardom_events.4
+		125 = russian_tsardom_events.5
+		100 = russian_tsardom_events.6
+		100 = russian_tsardom_events.7
+		100 = russian_tsardom_events.8
+		125 = russian_tsardom_events.9
+		125 = russian_tsardom_events.10
+		100 = russian_tsardom_events.11
+
+		#Streltsy Events
+		125 = streltsy_events.1
+		125 = streltsy_events.3
+		125 = streltsy_events.4
+		125 = streltsy_events.5
+		100 = streltsy_events.6
+
+		#Orthodox Metropolitans
+		125 = patriarch_events.1
+		125 = patriarch_events.2
+		125 = patriarch_events.3
+		75 = patriarch_events.4
+		75 = patriarch_events.5
+
+		# Old Centralisation/Decentralisation
+		100 = 806
+
+		# Mercantilism
+		100 = 6326
+		100 = 6327
+		100 = 6328
+		100 = 6329
+
+		# Trade Specific
+		100 = trade.1
+		100 = trade.2
+		100 = trade.3
+		100 = trade.4
+		100 = trade.5
+		100 = trade.6
+		100 = trade.7
+		100 = trade.8
+		100 = trade.9
+		100 = trade.10
+		100 = trade.11
+		100 = trade.12
+
+		# Catholic  Events
+		100 = catholic_flavor.4
+		100 = catholic_flavor.5
+		100 = catholic_flavor.6
+		100 = catholic_flavor.7
+		100 = catholic_flavor.8
+		100 = catholic_flavor.9
+		100 = catholic_flavor.10
+
+		# Tradegoods events
+		100 = 6418
+		100 = 6419
+		100 = 6420
+		100 = 6421
+		100 = 6422
+		100 = 6423
+		100 = 6424
+		100 = 6425
+		100 = 6426
+		100 = 6427
+		100 = 6428
+		100 = 6429
+		100 = 6431
+		100 = 6432
+		100 = 6433
+		100 = 6434
+
+		# Refoms, when having parliaments.
+		100 = reforms.1
+		100 = reforms.2
+		100 = reforms.3
+		100 = reforms.4
+
+		100 = randomeventsstapehordes.1
+		100 = randomeventsstapehordes.2
+		100 = randomeventsstapehordes.3
+		100 = randomeventsstapehordes.4
+		100 = randomeventsstapehordes.5
+		100 = randomeventsstapehordes.6
+		100 = randomeventsstapehordes.7
+		100 = randomeventsstapehordes.8
+		100 = randomeventsstapehordes.13
+		100 = randomeventsstapehordes.14
+		100 = randomeventsstapehordes.17
+		100 = randomeventsstapehordes.19
+		100 = randomeventsstapehordes.20
+		100 = randomeventsstapehordes.21
+		100 = randomeventsstapehordes.22
+		100 = randomeventsstapehordes.23
+		100 = randomeventsstapehordes.24
+
+		# Sailor events
+		100 = sailor_event.1
+		100 = sailor_event.2
+		100 = sailor_event.3
+		100 = sailor_event.4
+		100 = sailor_event.5
+
+		# Corruption Events
+		100 = corruption_event.16
+		100 = corruption_event.17
+		100 = corruption_event.18
+		100 = corruption_event.19
+		100 = corruption_event.20
+
+		# Trade League Events
+		100 = trade_league.1
+		100 = trade_league.2
+		100 = trade_league.3
+		100 = trade_league.4
+		100 = trade_league.7
+		100 = trade_league.8
+		100 = trade_league.9
+		100 = trade_league.10
+		100 = trade_league.11
+		100 = trade_league.12
+		100 = trade_league.13
+		100 = trade_league.14
+
+		# Institution Events
+		#Feudalism Spread Events:
+		100 = institution_events.8
+		100 = institution_events.9
+		100 = institution_events.10
+		100 = institution_events.11
+
+
+		#Personality Events
+		50 = personality_events.10 #Just Dilema
+		50 = personality_events.11 #A righteous King
+		50 = personality_events.12 #A Righteous Republican Ruler
+		50 = personality_events.13
+		50 = personality_events.14
+		50 = personality_events.15
+		50 = personality_events.16
+		50 = personality_events.17
+		50 = personality_events.18
+		50 = personality_events.19
+		50 = personality_events.20
+		50 = personality_events.21
+		50 = personality_events.22
+		50 = personality_events.23
+		50 = personality_events.24
+		50 = personality_events.25
+		50 = personality_events.26
+		50 = personality_events.27
+		50 = personality_events.28
+		50 = personality_events.29
+		50 = personality_events.30
+		50 = personality_events.31
+		50 = personality_events.32
+		50 = personality_events.33
+		50 = personality_events.34
+		50 = personality_events.35
+		50 = personality_events.36
+		50 = personality_events.37
+		50 = personality_events.38
+		50 = personality_events.39
+		50 = personality_events.40
+		50 = personality_events.41
+		50 = personality_events.42
+		50 = personality_events.43
+		50 = personality_events.44
+		50 = personality_events.45
+		50 = personality_events.46
+		50 = personality_events.47
+		50 = personality_events.48
+		50 = personality_events.49
+		50 = personality_events.50
+		50 = personality_events.51
+		50 = personality_events.52
+		50 = personality_events.53
+		50 = personality_events.54
+		50 = personality_events.55
+		50 = personality_events.56
+		50 = personality_events.57
+		50 = personality_events.58
+
+		#Industrial Revolution
+
+		200 = industrialization_events.7
+		200 = industrialization_events.8
+		200 = industrialization_events.9
+		200 = industrialization_events.10
+		200 = industrialization_events.11
+		200 = industrialization_events.12
+		200 = industrialization_events.13
+		200 = industrialization_events.14
+		200 = industrialization_events.15
+		200 = industrialization_events.16
+		200 = industrialization_events.17
+		200 = industrialization_events.18
+		200 = industrialization_events.19
+		200 = industrialization_events.20
+		200 = industrialization_events.21
+		200 = industrialization_events.22
+
+		#Confucian Events
+		75 = confucian_events.19
+		75 = confucian_events.20
+
+		# Orthodox Icon Events
+		75 = orthodox_icon_events.1
+		75 = orthodox_icon_events.3
+		75 = orthodox_icon_events.4
+		75 = orthodox_icon_events.5
+		75 = orthodox_icon_events.6
+
+		# Anglican Events
+		100 = anglican_events.1
+		100 = anglican_events.2
+		100 = anglican_events.3
+		100 = anglican_events.4
+		100 = anglican_events.5
+		100 = anglican_events.6
+		100 = anglican_events.7
+		100 = anglican_events.8
+		100 = anglican_events.9
+		100 = anglican_events.10
+		100 = anglican_events.11
+		100 = anglican_events.12
+		100 = anglican_events.13
+		150 = anglican_events.15
+
+		# Innovativeness
+		100 = innovativeness_events.1
+		100 = innovativeness_events.2
+		100 = innovativeness_events.3
+		100 = innovativeness_events.4
+		100 = innovativeness_events.5
+		100 = innovativeness_events.6
+		100 = innovativeness_events.7
+		100 = innovativeness_events.8
+		100 = innovativeness_events.9
+		100 = innovativeness_events.10
+		100 = innovativeness_events.11
+		100 = innovativeness_events.12
+		100 = innovativeness_events.13
+		100 = innovativeness_events.14
+		100 = innovativeness_events.15
+
+		# Trade Company Investments
+		100 = investment_events.1
+		100 = investment_events.2
+		100 = investment_events.3
+		100 = investment_events.4
+		100 = investment_events.5
+		100 = investment_events.6
+		100 = investment_events.7
+		100 = investment_events.8
+		100 = investment_events.9
+		100 = investment_events.10
+
+		# Catholic Order Events
+		100 = order_events.1
+		100 = order_events.2
+		100 = order_events.3
+		100 = order_events.4
+		100 = order_events.5
+		100 = order_events.6
+		100 = order_events.7
+		100 = order_events.8
+		100 = order_events.9
+
+		# Minority Expulsion Events
+		100 = expel_minority_events.1
+		100 = expel_minority_events.2
+		100 = expel_minority_events.3
+		100 = expel_minority_events.4
+		100 = expel_minority_events.5
+
+		#Waldensian events
+		100 = waldensian_events.1
+		100 = waldensian_events.2
+		100 = waldensian_events.3
+		100 = waldensian_events.4
+		100 = waldensian_events.5
+		100 = waldensian_events.6
+		100 = waldensian_events.7
+		100 = waldensian_events.8
+		100 = waldensian_events.9
+		100 = waldensian_events.10
+		100 = waldensian_events.11
+		
+		#Nestorian events
+		100 = nestorian_events.1
+		100 = nestorian_events.2
+		100 = nestorian_events.3
+		100 = nestorian_events.4
+		100 = nestorian_events.5
+		100 = nestorian_events.6
+		100 = nestorian_events.7
+		100 = nestorian_events.8
+		100 = nestorian_events.9
+		100 = nestorian_events.10
+		1250 = 0
+	}
+}
+
+on_thri_yearly_pulse_2 = {
+	random_events = {
+		# Random to increase or decrease patriarch authority.
+		25 = orthodox_flavor.1
+		25 = orthodox_flavor.2
+		25 = orthodox_flavor.3
+		25 = orthodox_flavor.4
+		25 = orthodox_flavor.5
+
+		# Muslim Piety Events
+		40 = muslim_piety.1
+		40 = muslim_piety.2
+		40 = muslim_piety.3
+		20 = muslim_piety.4
+		40 = muslim_piety.5
+		40 = muslim_piety.6
+		40 = muslim_piety.7
+		40 = muslim_piety.8
+		40 = muslim_piety.9
+		40 = muslim_piety.10
+		40 = muslim_piety.11
+		40 = muslim_piety.12
+		40 = muslim_piety.13
+		40 = muslim_piety.14
+		40 = muslim_piety.15
+		40 = muslim_piety.16
+		40 = muslim_piety.22
+		40 = muslim_events.1
+		40 = muslim_events.2
+		40 = muslim_events.3
+		40 = muslim_events.4
+		40 = muslim_events.5
+		40 = muslim_events.6
+		40 = muslim_events.7
+		40 = muslim_events.8
+		40 = muslim_events.9
+		40 = muslim_events.10
+		40 = muslim_events.11
+		40 = muslim_events.12
+		40 = muslim_events.13
+		40 = muslim_events.14
+		40 = muslim_events.15
+		40 = muslim_events.16
+		300 = 0
+	}
+}
+
+on_four_year_pulse = {
+	random_events = {
+		# Colonial Nations
+		100 = colonial_nation.1
+		100 = colonial_nation.4
+		100 = colonial_nation.10
+		100 = colonial_nation.12
+		100 = colonial_nation.14
+		100 = colonial_nation.77
+		100 = colonial_nation.100
+		100 = colonial_nation.102
+		100 = colonial_nation.104
+		100 = colonial_nation.106
+		100 = colonial_nation.108
+		100 = colonial_nation.110
+		100 = colonial_nation.112
+		100 = colonial_nation.114
+		100 = colonial_nation.116
+		100 = colonial_nation.118
+		100 = colonial_nation.120
+		100 = colonial_nation.122
+		100 = colonial_nation.124
+		100 = colonial_nation.126
+		100 = colonial_nation.128
+		100 = colonial_nation.130
+		100 = colonial_nation.132
+		100 = colonial_nation.134
+		100 = colonial_nation.182
+		100 = colonial_nation.184
+		100 = colonial_nation.186
+		100 = colonial_nation.188
+		100 = colonial_nation.190
+		100 = colonial_nation.192
+		100 = colonial_nation.194
+		100 = colonial_nation.196
+		100 = colonial_nation.198
+		100 = colonial_nation.200
+		100 = colonial_nation.202
+		100 = colonial_nation.204
+		100 = colonial_nation.206
+		100 = colonial_nation.208
+		100 = colonial_nation.210
+		100 = colonial_nation.212
+		100 = colonial_nation.214
+		100 = colonial_nation.216
+		100 = colonial_nation.218
+		100 = colonial_nation.220
+		100 = colonial_nation.222
+		100 = colonial_nation.224
+		100 = colonial_nation.226
+		100 = colonial_nation.228
+		10 = colonial_nation.140
+		10 = colonial_nation.142
+		10 = colonial_nation.144
+		10 = colonial_nation.146
+		10 = colonial_nation.148
+		10 = colonial_nation.150
+		10 = colonial_nation.152
+		10 = colonial_nation.154
+		10 = colonial_nation.156
+		10 = colonial_nation.158
+		10 = colonial_nation.160
+		10 = colonial_nation.162
+		10 = colonial_nation.164
+		10 = colonial_nation.166
+		10 = colonial_nation.168
+		10 = colonial_nation.170
+		10 = colonial_nation.172
+		10 = colonial_nation.174
+		10 = colonial_nation.176
+
+		# Dutch Republic
+		100 = dutch_republic.1
+		100 = dutch_republic.2
+		100 = dutch_republic.3
+		100 = dutch_republic.4
+		100 = dutch_republic.5
+		100 = dutch_republic.6
+		100 = dutch_republic.7
+		100 = dutch_republic.8
+		100 = dutch_republic.9
+		100 = dutch_republic.10
+		150 = dutch_republic.11
+		100 = dutch_republic.13
+		100 = dutch_republic.14
+		100 = dutch_republic.15
+		100 = dutch_republic.16
+		100 = dutch_republic.17
+		100 = dutch_republic.18
+		100 = dutch_republic.19
+		100 = dutch_republic.20
+		100 = dutch_republic.21
+		100 = dutch_republic.22
+		100 = dutch_republic.23
+		100 = dutch_republic.24
+		100 = dutch_republic.25
+		100 = dutch_republic.27
+
+		# Republic Factions
+		100 = republic_factions.2
+		100 = republic_factions.5
+		100 = republic_factions.7
+		100 = republic_factions.9
+		100 = republic_factions.10
+		100 = republic_factions.12
+		100 = republic_factions.13
+		100 = republic_factions.14
+		100 = republic_factions.15
+		100 = republic_factions.16
+		100 = republic_factions.17
+		100 = republic_factions.18
+		100 = republic_factions.19
+		100 = republic_factions.20
+		100 = republic_factions.22
+		100 = republic_factions.23
+		100 = republic_factions.24
+
+		# Revolutionary Republic Factions
+
+		100 = revolutionary_republic_factions.0
+		100 = revolutionary_republic_factions.1
+		100 = revolutionary_republic_factions.2
+		100 = revolutionary_republic_factions.3
+		100 = revolutionary_republic_factions.4
+		100 = revolutionary_republic_factions.5
+		100 = revolutionary_republic_factions.6
+		100 = revolutionary_republic_factions.7
+		100 = revolutionary_republic_factions.8
+		100 = revolutionary_republic_factions.9
+
+		# Pirate Factions
+		100 = pirates.10
+		100 = pirates.11
+		100 = pirates.12
+		100 = pirates.13
+		100 = pirates.14
+		100 = pirates.15
+		100 = pirates.16
+		100 = pirates.17
+		100 = pirates.18
+		100 = pirates.19
+
+		# Republican Dictatorship
+		100 = republican_dictatorship.1
+		100 = republican_dictatorship.2
+		100 = republican_dictatorship.3
+		100 = republican_dictatorship.4
+		100 = republican_dictatorship.5
+		100 = republican_dictatorship.6
+		100 = republican_dictatorship.7
+		100 = republican_dictatorship.8
+
+		# Elective Monarchy
+		150 = elective_monarchy.1
+		150 = elective_monarchy.2
+		25 = elective_monarchy.3
+		25 = elective_monarchy.4
+		150 = elective_monarchy.6
+		150 = elective_monarchy.8
+		150 = elective_monarchy.9
+		150 = elective_monarchy.10
+		150 = elective_monarchy.11
+		150 = elective_monarchy.12
+		150 = elective_monarchy.14
+		150 = elective_monarchy.17
+		25 = elective_monarchy.18
+
+		# Free Cities
+		25 = free_cities.3
+		25 = free_cities.7
+		25 = free_cities.8
+		25 = free_cities.10
+		25 = free_cities.13
+		25 = free_cities.17
+		25 = free_cities.19
+
+		#Tribal Federations
+		50 = tribal_federation_events.1
+		50 = tribal_federation_events.2
+		50 = tribal_federation_events.3
+		50 = tribal_federation_events.4
+		50 = tribal_federation_events.5
+		50 = tribal_federation_events.6
+		50 = tribal_federation_events.7
+		50 = tribal_federation_events.8
+		50 = tribal_federation_events.10
+
+		#Empire of China
+		100 = china_events.1
+		100 = china_events.2
+		100 = china_events.3
+		100 = china_events.4
+		75 = china_events.5
+		100 = china_events.6
+		100 = china_events.7
+		100 = china_events.8
+		100 = china_events.9
+		100 = china_events.10
+		100 = china_events.11
+		100 = china_events.12
+		100 = china_events.13
+		100 = china_events.14
+		100 = china_events.15
+		100 = china_events.16
+		100 = china_events.17
+		100 = china_events.18
+		100 = china_events.19
+		100 = china_events.20
+		100 = china_events.21
+		100 = china_events.22
+		100 = china_events.23
+		100 = china_events.24
+		100 = china_events.25
+		100 = china_events.26
+		100 = china_events.27
+		100 = china_events.28
+		100 = china_events.29
+		100 = china_events.30
+		100 = china_events.33
+		100 = china_events.34
+		100 = china_events.35
+		100 = china_events.36
+		100 = china_events.37
+		100 = china_events.38
+		100 = china_events.39
+		50 = china_events.40
+		100 = china_events.41
+		100 = china_events.42
+		100 = china_events.44
+
+		10 = tortoise.1 # Galapagos Island Tortoises
+
+		1000 = 0
+	}
+}
+
+on_five_year_pulse_2 = {
+	random_events = {
+		# Burghers
+		100 = burghers_estate_events.1
+		100 = burghers_estate_events.2
+		100 = burghers_estate_events.3
+		100 = burghers_estate_events.4
+		100 = burghers_estate_events.5
+		100 = burghers_estate_events.6
+		100 = burghers_estate_events.7
+		100 = burghers_estate_events.8
+		100 = burghers_estate_events.9
+		400 = burghers_estate_events.10 #Demands
+		100 = burghers_estate_events.11 #Bonus
+		100 = burghers_estate_events.12
+		100 = burghers_estate_events.13
+		400 = burghers_estate_events.14 #Demands
+		100 = burghers_estate_events.15 #Disloyal
+		# Nobles
+		100 = nobles_estate_events.1 #Demands
+		100 = nobles_estate_events.2
+		100 = nobles_estate_events.3
+		100 = nobles_estate_events.4
+		400 = nobles_estate_events.5 #Demands
+		100 = nobles_estate_events.6
+		100 = nobles_estate_events.7
+		400 = nobles_estate_events.8 #Disloyal
+		400 = nobles_estate_events.9 #Disloyal
+		50 = nobles_estate_events.10
+		100 = nobles_estate_events.11 #Bonus
+		# Clergy
+		100 = church_estate_events.1
+			#Regional Variations:
+			100 = church_estate_events.101
+			100 = church_estate_events.102
+			100 = church_estate_events.103
+			100 = church_estate_events.104
+			100 = church_estate_events.105
+		100 = church_estate_events.2
+		100 = church_estate_events.3
+		100 = church_estate_events.4
+		400 = church_estate_events.5 #Disloyal
+		400 = church_estate_events.6 #Demands
+		100 = church_estate_events.7 #Bonus
+		100 = church_estate_events.8
+		100 = church_estate_events.9
+		100 = church_estate_events.10
+		# Dhimmi
+		100 = dhimmi_estate_events.1
+		400 = dhimmi_estate_events.2 #Demands
+		100 = dhimmi_estate_events.3
+		100 = dhimmi_estate_events.4
+		100 = dhimmi_estate_events.5
+		100 = dhimmi_estate_events.6
+		400 = dhimmi_estate_events.7 #Disloyal
+		100 = dhimmi_estate_events.8
+		# Cossacks
+		100 = cossack_estate_events.1
+		#100 = cossack_estate_events.2 (triggers in neighbor country)
+		100 = cossack_estate_events.6
+		100 = cossack_estate_events.7
+		100 = cossack_estate_events.8
+		100 = cossack_estate_events.9
+		100 = cossack_estate_events.10
+		100 = cossack_estate_events.11
+		400 = cossack_estate_events.12 #Disloyal
+		100 = cossack_estate_events.13
+		400 = cossack_estate_events.14 #Demands
+		# Tribes
+		100 = tribal_estate_events.1
+		100 = tribal_estate_events.2
+		100 = tribal_estate_events.3
+		100 = tribal_estate_events.4
+		100 = tribal_estate_events.5
+		100 = tribal_estate_events.6
+		100 = tribal_estate_events.7
+		100 = tribal_estate_events.8
+		100 = tribal_estate_events.9
+		150 = tribal_estate_events.11 #Demands
+		150 = tribal_estate_events.12 #Demands
+		150 = tribal_estate_events.13 #Demands
+		150 = tribal_estate_events.14 #Demands
+		# Marathas
+		100 = marathas_estate_events.2
+		100 = marathas_estate_events.3
+		100 = marathas_estate_events.4
+		100 = marathas_estate_events.5
+		100 = marathas_estate_events.6
+		400 = marathas_estate_events.7 # Demands
+		100 = marathas_estate_events.8
+		100 = marathas_estate_events.9
+		100 = marathas_estate_events.10
+		400 = marathas_estate_events.11 # Disloyal
+		# Brahmins
+		400 = brahmins_estate_events.2 # demands
+		100 = brahmins_estate_events.3
+		100 = brahmins_estate_events.4
+		100 = brahmins_estate_events.5
+		400 = brahmins_estate_events.6 # disloyal
+		100 = brahmins_estate_events.7
+		100 = brahmins_estate_events.8
+		100 = brahmins_estate_events.9
+		100 = brahmins_estate_events.10
+		100 = brahmins_estate_events.11
+		# Jains
+		100 = jains_estate_events.2
+		100 = jains_estate_events.3
+		100 = jains_estate_events.4
+		100 = jains_estate_events.5
+		100 = jains_estate_events.6
+		100 = jains_estate_events.7
+		400 = jains_estate_events.8 # Disloyal
+		100 = jains_estate_events.9
+		400 = jains_estate_events.10 # Demands
+		100 = jains_estate_events.11
+		# Vaishyas
+		100 = vaisyas_estate_events.2
+		100 = vaisyas_estate_events.3
+		100 = vaisyas_estate_events.4
+		100 = vaisyas_estate_events.5
+		100 = vaisyas_estate_events.6
+		100 = vaisyas_estate_events.7
+		100 = vaisyas_estate_events.8
+		400 = vaisyas_estate_events.9
+		100 = vaisyas_estate_events.10
+		100 = vaisyas_estate_events.11
+		# Rajputs
+		100 = rajputs_estate_events.2
+		100 = rajputs_estate_events.3
+		100 = rajputs_estate_events.4
+		100 = rajputs_estate_events.5
+		400 = rajputs_estate_events.6
+		100 = rajputs_estate_events.7
+		400 = rajputs_estate_events.8
+		100 = rajputs_estate_events.9
+		100 = rajputs_estate_events.10
+		100 = rajputs_estate_events.11
+		1000 = 0
+		
+		#BR
+		# Strategoi
+		100 = strategoi_estate_events.1
+		100 = strategoi_estate_events.2
+		100 = strategoi_estate_events.3
+		100 = strategoi_estate_events.4 #Bonus
+		100 = strategoi_estate_events.5
+		100 = strategoi_estate_events.6
+		100 = strategoi_estate_events.7
+		100 = strategoi_estate_events.8
+		100 = strategoi_estate_events.9
+		100 = strategoi_estate_events.10 
+		100 = strategoi_estate_events.11 
+		400 = strategoi_estate_events.12 #Demands
+		100 = strategoi_estate_events.13
+		100 = strategoi_estate_events.14 
+		
+		# Exarches
+		50 = exarches_estate_events.1
+		50 = exarches_estate_events.2
+		50 = exarches_estate_events.3
+		100 = exarches_estate_events.4
+	}
+}
+
+on_revoke_estate_land = {
+	add_province_modifier = {
+		name = revoked_estate_modifier
+		duration = 5475 #15 years
+	}
+	if = {
+		limit = {
+			has_estate = estate_cossacks
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_cossacks
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = cossack_rebels
+			size = 1
+		}
+		province_event = { id = cossack_estate_events.15 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_dhimmi
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_dhimmi
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = religious_rebels
+			size = 1
+		}
+		province_event = { id = dhimmi_estate_events.9 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_church
+			has_owner_religion = yes
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = religious_rebels
+			size = 1
+		}
+		province_event = { id = church_estate_events.11 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_church
+			has_owner_religion = no
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = particularist_rebels
+			size = 1
+		}
+		province_event = { id = church_estate_events.11 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_nobles
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = noble_rebels
+			size = 1
+		}
+		province_event = { id = nobles_estate_events.12 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_burghers
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = particularist_rebels
+			size = 1
+		}
+		province_event = { id = burghers_estate_events.16 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_nomadic_tribes
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_nomadic_tribes
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = tribal_rebels
+			size = 1
+		}
+		province_event = { id = tribal_estate_events.10 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_brahmins
+			owner = {
+				NOT = {
+					religion = hinduism
+				}
+				NOT = {
+					estate_loyalty = {
+						estate = estate_brahmins
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = religious_rebels
+			size = 1
+		}
+		province_event = { id = brahmins_estate_events.1 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_brahmins
+			owner = {
+				religion = hinduism
+				NOT = {
+					estate_loyalty = {
+						estate = estate_brahmins
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = particularist_rebels
+			size = 1
+		}
+		province_event = { id = brahmins_estate_events.1 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_vaisyas
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_vaisyas
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = particularist_rebels
+			size = 1
+		}
+		province_event = { id = vaisyas_estate_events.1 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_rajput
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_rajput
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = noble_rebels
+			size = 1
+		}
+		province_event = { id = rajputs_estate_events.1 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_jains
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_jains
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = particularist_rebels
+			size = 1
+		}
+		province_event = { id = jains_estate_events.1 }
+	}
+	if = {
+		limit = {
+			has_estate = estate_maratha
+			owner = {
+				NOT = {
+					estate_loyalty = {
+						estate = estate_maratha
+						loyalty = 40
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = noble_rebels
+			size = 1
+		}
+		province_event = { id = marathas_estate_events.1 }
+	}
+
+	#BR
+	#Changing themes is not something you do just like that, assuming the themes are influential enough.
+	if = {
+		limit = {
+			has_estate = estate_strategoi
+			owner = {
+				#Either 50 strategoi influence and not loyal, or them being pissed during revocation.
+				OR = {
+					AND = {
+						estate_influence = {
+							estate = estate_strategoi
+							influence = 50
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_strategoi
+								loyalty = 60
+							}
+						}
+					}
+					NOT = { #Disloyal
+						estate_loyalty = {
+							estate = estate_strategoi
+							loyalty = 40
+						}
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 2
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					#If the strategoi also have 75 influence and not loyal during revocation:
+					AND = {
+						estate_influence = {
+							estate = estate_strategoi
+							influence = 75
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_strategoi
+								loyalty = 60
+							}
+						}
+					}
+					
+				}
+			}
+			owner = {
+				every_owned_province = {
+					limit = {
+						has_estate = estate_strategoi
+					}
+					random = {
+						chance = 20
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 1
+						}
+					}
+					
+				}
+			}
+		}
+		
+		
+		province_event = { id = strategoi_estate_events.42 }
+	}
+
+	#Exarches trigger is similar to the Strategoi.
+	if = {
+		limit = {
+			has_estate = estate_exarches
+			owner = {
+				#Either 50 strategoi influence and not loyal, or them being pissed during revocation.
+				OR = {
+					AND = {
+						estate_influence = {
+							estate = estate_exarches
+							influence = 50
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_exarches
+								loyalty = 60
+							}
+						}
+					}
+					NOT = { #Disloyal
+						estate_loyalty = {
+							estate = estate_exarches
+							loyalty = 40
+						}
+					}
+				}
+			}
+		}
+		spawn_rebels = {
+			type = pretender_rebels
+			size = 2
+		}
+		
+		if = {
+			limit = {
+				owner = {
+					#If the strategoi also have 75 influence and not loyal during revocation:
+					AND = {
+						estate_influence = {
+							estate = estate_exarches
+							influence = 75
+						}
+						NOT = { #Not loyal
+							estate_loyalty = {
+								estate = estate_exarches
+								loyalty = 60
+							}
+						}
+					}
+					
+				}
+			}
+			owner = {
+				every_owned_province = {
+					limit = {
+						has_estate = estate_exarches
+					}
+					random = {
+						chance = 20
+						spawn_rebels = {
+							type = pretender_rebels
+							size = 1
+						}
+					}
+					
+				}
+			}
+		}
+		
+		
+		province_event = { id = exarches_estate_events.42 }
+	}
+}
+
+on_harmonized_taoism = {
+	events = {
+		confucian_events.22
+	}
+}
+on_harmonized_anglican= {
+	events = {
+		confucian_events.23
+	}
+}
+on_harmonized_protestant= {
+	events = {
+		confucian_events.24
+	}
+}
+on_harmonized_reformed= {
+	events = {
+		confucian_events.25
+	}
+}
+on_harmonized_orthodox= {
+	events = {
+		confucian_events.26
+	}
+}
+on_harmonized_coptic= {
+	events = {
+		confucian_events.27
+	}
+}
+on_harmonized_waldensian= {
+	events = {
+		confucian_events.28
+	}
+}
+on_harmonized_nestorian= {
+	events = {
+		confucian_events.29
+	}
+}
+on_harmonized_shiite= {
+	events = {
+		confucian_events.30
+	}
+}
+on_harmonized_ibadi= {
+	events = {
+		confucian_events.31
+	}
+}
+on_harmonized_sikhism= {
+	events = {
+		confucian_events.32
+	}
+}
+on_harmonized_druze= {
+	events = {
+		confucian_events.33
+	}
+}
+on_harmonized_yazidi= {
+	events = {
+		confucian_events.34
+	}
+}
+on_harmonized_yarsan= {
+	events = {
+		confucian_events.35
+	}
+}
+on_harmonized_bahai= {
+	events = {
+		confucian_events.36
+	}
+}
+on_harmonized_mandaean= {
+	events = {
+		confucian_events.37
+	}
+}
+on_harmonized_manichaean= {
+	events = {
+		confucian_events.38
+	}
+}

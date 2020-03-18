@@ -10,8 +10,8 @@ capital = "Ghent"
 culture = flemish
 religion = catholic
 hre = no
-base_tax = 6
-base_production = 6
+base_tax = 7
+base_production = 10
 trade_goods = cloth
 base_manpower = 3
 
@@ -39,7 +39,6 @@ discovered_by = eastern
 1665.9.17 = { add_claim = FRA } # Louis XIV's father-in-law, Philip IV of Spain, dies
 1672.5.1 = { controller = FRA } # France blitzes through the Lowlands in the Franco-Dutch War
 1678.9.19 = { controller = SPA } # Treaty of Nijmegen (France-Spain)
-1681.1.1 = { base_tax = 7 base_production = 7 } # Ghent remains important. Even though the area remains Catholic
 1706.6.1 = { controller = ENG } # Marlborough captures Antwerp for the Spanish
 1707.5.12 = { controller = GBR }
 1713.4.11 = { owner = HAB controller = HAB add_core = HAB remove_core = SPA } # Treaty of Utrecht
