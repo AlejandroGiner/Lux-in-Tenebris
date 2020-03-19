@@ -399,7 +399,7 @@ country_event = {
   trigger = {
     NOT = { has_country_flag = svaneti_rebels_happened }
     NOT = { exists = SVN }
-    owns = 7302
+    owns = 7032
     OR = {
       NOT = { has_country_flag = georgian_rebels }
       had_country_flag = {
@@ -657,7 +657,7 @@ country_event = {
         NOT = { has_country_flag = svaneti_rebels_happened }
         OR = {
           exists = SVN
-          NOT = { owns = 7302 }
+          NOT = { owns = 7032 }
         }
       }
       set_country_flag = svaneti_rebels_happened
