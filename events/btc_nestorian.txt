@@ -855,12 +855,6 @@ country_event = {
 	trigger = {
 		is_year = 1552
 		NOT = { is_year = 1553 }
-        OR = {
-			religion = nestorian
-			any_owned_province = {
-                religion = nestorian
-            }
-		}
 		any_owned_province = {
 			OR = {
 				region = anatolia_region
@@ -868,6 +862,26 @@ country_event = {
 				region = persia_region
 			}
 		}
+        if = {
+            limit = {
+                any_country = {
+                    religion = nestorian
+                    any_owned_province = {
+                        OR = {
+                            region = anatolia_region
+                            region = mesopotamia_region
+                            region = persia_region
+                        }
+                    }
+                }
+            }
+            religion = nestorian
+        }
+        else = {
+            any_owned_province = {
+                religion = nestorian
+            }
+        }
 	}
   
 	mean_time_to_happen = {
@@ -895,7 +909,7 @@ province_event = {
 				flag = schism_of_1552
 				days = 10950
 			}
-		has_global_flag = btc_schism_of_1552_end
+            has_global_flag = btc_schism_of_1552_end
 		}
 	}
   
