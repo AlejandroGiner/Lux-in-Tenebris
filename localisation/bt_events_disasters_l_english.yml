@@ -76,11 +76,12 @@
  two_thirds_of_britain_tooltip:0 "Own at least 55 of Britain's 83 provinces as cores"
  three_quarters_of_britain_tooltip:0 "Own at least 62 of Britain's 83 provinces as cores"
  #France Tooltip
- half_of_france_tooltip:0 "Own at least half (63) of France's 125 provinces as cores"
- two_thirds_of_france_tooltip:0 "Own at least 83 of France's 125 provinces as cores"
- three_quarters_of_france_tooltip:0 "Own at least 94 of France's 125 provinces as cores"
- #Balkan Tooltips
- half_of_greece_tooltip:0 "Own at least 23 of Greece's 55 provinces as cores"
+ half_of_france_tooltip:0 "[Root.GetName] owns at least half (75) of France's 150 provinces as cores"
+ two_thirds_of_france_tooltip:0 "[Root.GetName] owns at least 100 of France's 150 provinces as cores"
+ three_quarters_of_france_tooltip:0 "[Root.GetName] owns at least 112 of France's 150 provinces as cores"
+ #Greek formable
+ third_of_greece_tooltip:0 "[Root.GetName] owns at least a quarter (17) of the highlighted provinces as cores"
+ greece_formable_claims_tooltip:0 "[Root.GetName] gains a permanent claim on all of the highlighted provinces"
  #Middle East Tooltip
  half_of_yemen_tooltip:0 "Own 5 provinces as cores in Lower and/or Upper Yemen"
  half_of_najd_tooltip:0 "Own 6 provinces as cores in Najd and/or Al-Yamama"
@@ -88,11 +89,12 @@
  #Eastern Europe
  two_thirds_of_poland_tooltip:0 "Own at least 24 of Poland's 36 provinces as cores"
  #Hegemony Tooltips (Typically 90 percent of a region)
- hegemony_over_britain_tooltip:0 "At least 75 of Britain's 83 provinces owned as cores by self or subject"
- hegemony_over_ireland_tooltip:0 "At least 40 of Ireland's 44 provinces owned as cores by self or subject"
- hegemony_over_france_tooltip:0 "At least 68 of France's 75 provinces owned as cores by self or subject"
- hegemony_over_iberia_tooltip:0 "At least 72 of Iberia's 91 provinces owned as cores by self or subject"
- hegemony_over_italy_tooltip:0 "At least 86 of Italy's 114 provinces owned as cores by self or subject"
+ hegemony_over_britain_tooltip:0 "[Root.GetName] or their subjects own at least 75 of Britain's 83 provinces"
+ hegemony_over_ireland_tooltip:0 "[Root.GetName] or their subjects own at least 40 of Ireland's 44 provinces"
+ hegemony_over_france_tooltip:0 "[Root.GetName] or their subjects own at least 135 of France's 150 provinces"
+ hegemony_over_iberia_tooltip:0 "[Root.GetName] or their subjects own at least 80 of Iberia's 102 provinces"
+ hegemony_over_iberia_military_tooltip:0 "[Root.GetName] or their subjects own at least 68 of Iberia's 102 provinces"
+ hegemony_over_italy_tooltip:0 "[Root.GetName] or their subjects own at least 81 of Italy's 124 provinces"
 
  #All other custom tooltips, generally to shorten, clean up, or make legible complicated code for a friendly UI
  emilia_in_hre_tooltip_btpl:0 "Emilia Area is in the Empire or a vassal of the Emperor."

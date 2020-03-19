@@ -30,10 +30,16 @@ country_decisions = {
 			owns_core_province = 112	# Venice
 			owns_core_province = 116	# Florence
 			adm_tech = 20
-			num_of_owned_provinces_with = {
-				value = 35
-				region = italy_region
-				is_core = ROOT
+			custom_trigger_tooltip = {
+				tooltip = hegemony_over_italy_tooltip
+				calc_true_if = {
+					all_province = {
+						region = italy_region
+						country_or_vassal_holds = ROOT
+						is_core = owner
+					}
+					amount = 81			#At least 2/3 of Italy's 124 provinces
+				}
 			}
 		}
 		effect = {

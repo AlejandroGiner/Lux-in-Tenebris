@@ -126,6 +126,21 @@ province_eligible_for_potato_spawn = {
 	}
 }
 
+form_greece_provinces_btc = {
+	OR = {
+		area = macedonia_area
+		area = northern_greece_area
+		area = morea_area
+		area = cyprus_area
+		area = thrace_area
+		area = eastern_mediterrenean_islands_area
+		area = western_aegean_area
+		area = aegean_archipelago_area
+		area = northern_aegean_islands_area
+		area = thessaly_area
+	}
+}
+
 #Important cities with cortes and the regions their vote represented, on top of city itself
 castile_important_cortes_provinces = {
 	OR = {
