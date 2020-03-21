@@ -1,5 +1,5 @@
-NDefines.NDiplomacy.MAX_FREE_CITIES = 15			-- from original BtP increased from 8
-NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 35			-- from original BtP increased from 25
+NDefines.NDiplomacy.MAX_FREE_CITIES = 20			-- from original BtP increased from 8
+NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 45			-- from original BtP increased from 25
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075			-- from original BtP reduced from 01
 
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10

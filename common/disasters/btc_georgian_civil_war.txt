@@ -30,7 +30,7 @@ georgian_civil_war = {
           area = southgeorgia_area
         }
       }
-      amount = 8 #half of them
+      amount = 9 #half of them
     }
   }
   
@@ -69,7 +69,7 @@ georgian_civil_war = {
     }
     modifier = {
       factor = 2.5
-      NOT = { legitimacy = 95 }
+      NOT = { legitimacy = 90 }
     }
     modifier = {
       factor = 2.5
@@ -110,16 +110,14 @@ georgian_civil_war = {
       has_country_flag = abkhazian_rebels_happened
     }
     NOT = {
-      OR = {
-        war_with = MGL
-        war_with = IME
-        war_with = GUR
-        war_with = KAH
-        war_with = KRT
-        war_with = SVN
-        war_with = SME
-        war_with = ABK
-      }
+	    war_with = MGL
+	    war_with = IME
+	    war_with = GUR
+	    war_with = KAH
+	    war_with = KRT
+	    war_with = SVN
+	    war_with = SME
+	    war_with = ABK
     }
   }
   
