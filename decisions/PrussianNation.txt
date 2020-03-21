@@ -6,11 +6,11 @@ country_decisions = {
 	institute_prussian_monarchy = {
 		major = yes
 		potential = {
-			NOT = { has_dlc = "Dharma" }
+			has_dlc = "Rights of Man"
 			normal_or_historical_nations = yes
 			tag = PRU
-			government = monarchy
 			NOT = { has_reform = prussian_monarchy_legacy }
+			NOT = { has_reform = prussian_monarchy }
 		}
 
 		allow = {
@@ -21,7 +21,26 @@ country_decisions = {
 		}
 
 		effect = {
-			add_government_reform = prussian_monarchy
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+				every_neighbor_country = {
+					limit = { government = monarchy }
+					add_opinion = { who = ROOT modifier = secularized_monastic_order }
+				}
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = { has_dlc = "Dharma" }
+				add_government_reform = prussian_monarchy
+			}
+			if = {
+				limit = { NOT = { has_dlc = "Dharma" } }
+				add_government_reform = prussian_monarchy_legacy
+			}
 		}
 	}
 
@@ -59,17 +78,13 @@ country_decisions = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
 			}
-			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { has_dlc = "Rights of Man" }
-				add_government_reform = prussian_monarchy
-			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -79,9 +94,7 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
+				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
 			add_prestige = 25
@@ -168,37 +181,19 @@ country_decisions = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
 			}
-			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { has_dlc = "Rights of Man" }
-				add_government_reform = prussian_monarchy
-			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
 			}
 			add_prestige = 25
-			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
-				remove_government_reform = states_general_reform
-			}
 			change_primary_culture = prussian
-			every_neighbor_country = {
-				limit = { government = monarchy }
-				add_opinion = { who = ROOT modifier = secularized_monastic_order }
-			}				#The special thing about this decision, apparently, instead of auto culture-flip
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -253,12 +248,12 @@ country_decisions = {
 				}
 				NOT = { tag = TEU }
 			}
-			owns_core_province = 41			# K�nigsberg
+			owns_core_province = 41			# Koenigsberg
 			num_of_cities = 12			#If not one of the normal candidates, needs 12 provinces plus Koenigsberg to see
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# K�nigsberg
+				province_id = 41	# Koenigsberg
 				province_id = 43	# Danzig
 				province_id = 2995	# Stolp
 			}
@@ -272,20 +267,16 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# K�nigsberg
+			owns_core_province = 41			# Koenigsberg
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
-			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { has_dlc = "Rights of Man" }
-				add_government_reform = prussian_monarchy
-			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -295,9 +286,7 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
+				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
 			add_prestige = 25

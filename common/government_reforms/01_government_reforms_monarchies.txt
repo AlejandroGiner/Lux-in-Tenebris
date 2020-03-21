@@ -486,6 +486,12 @@ prussian_monarchy = {
 		OR = {
 			AND = {
 				tag = PRU
+				religion = protestant
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = PRU
+				religion = reformed
 				NOT = { map_setup = map_setup_random }
 			}
 			AND = {
