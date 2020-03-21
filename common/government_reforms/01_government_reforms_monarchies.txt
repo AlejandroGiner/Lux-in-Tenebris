@@ -896,53 +896,6 @@ mughal_government = {
 	}
 }
 
-#Legacy version
-roman_autocracy_legacy = {
-	# government mechanics flags go here
-	allow_normal_conversion = no
-	icon = "basileus"
-	legacy_government = yes
-
-	valid_for_new_country = no
-	allow_convert = no
-	valid_for_nation_designer = yes
-	nation_designer_cost = 10
-	nation_designer_trigger = {
-		OR = {
-			culture_group = byzantine
-			primary_culture = roman
-		}
-	}
-	
-	monarchy = yes
-	modifiers = {
-		global_trade_goods_size_modifier = 0.10
-		global_tax_modifier = 0.10
-		yearly_absolutism = 0.5
-		max_absolutism = 10
-		global_autonomy = -0.1
-	}
-
-	#color = { 100 0 60 } #Semi-tyrian purple
-	
-	factions = {
-		logothete_military
-		logothete_postal
-		logothete_general
-	}
-	
-	conditional = {
-		allow = { has_dlc = "Cradle of Civilization" }
-		government_abilities = {
-			iqta_mechanic
-		}
-	}
-
-	ai = {
-		factor = 5
-	}
-}
-
 roman_empire_reform = {
 	icon = "roman_empire_reform"
 	allow_normal_conversion = no
