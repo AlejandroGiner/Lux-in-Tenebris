@@ -130,6 +130,13 @@ province_event = {
     name = btc_tradegoods.3.a
     change_trade_goods = potatoes
   }
+  option = {
+  	name = btc_tradegoods.3.b
+	trigger = {
+		trade_goods = cloth
+	}
+	set_province_flag = rejected_potatoes
+  }
 }
 
 #Hidden event that triggers potato spread
@@ -430,6 +437,13 @@ province_event = {
   option = {
     name = btc_tradegoods.7.a
     change_trade_goods = maize
+  }
+  option = {
+  	name = btc_tradegoods.3.b
+	trigger = {
+		trade_goods = cloth
+	}
+	set_province_flag = rejected_potatoes
   }
 }
 

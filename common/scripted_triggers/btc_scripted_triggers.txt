@@ -101,6 +101,7 @@ this_or_colony_has_goods = {
 }
 
 province_eligible_for_potato_spawn = {
+	NOT = { has_province_flag = rejected_potatoes }
 	OR = {
 		trade_goods = grain
 		trade_goods = legumes
