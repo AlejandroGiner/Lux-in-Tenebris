@@ -5493,6 +5493,7 @@ GEV_ideas = {
 	}
 	GEV_idea5 = {
 		global_trade_goods_size_modifier = 0.15
+		envoy_travel_time = -0.25
 	}
 	GEV_idea6 = {
         defensiveness = 0.15
@@ -5501,3 +5502,44 @@ GEV_ideas = {
 		prestige = 1
 	}
 }
+
+TUL_ideas = {
+	start = {
+        adm_tech_cost_modifier = -0.05
+		trade_range_modifier = 0.10
+	}
+
+	bonus = {
+		merchants = 1
+	}
+
+	trigger = {
+		tag = TUL
+	}
+	free = yes		# will be added at load
+
+	TUL_idea1 = {
+        garrison_size = 0.15
+	}
+	TUL_idea2 = {
+		global_missionary_strength = 0.01
+	}
+	TUL_idea3 = {
+		production_efficiency = 0.15
+		trade_steering = 0.2
+	}
+	TUL_idea4 = {
+		stability_cost_modifier = -0.15
+	}
+	TUL_idea5 = {
+		global_unrest = -1
+	}
+	TUL_idea6 = {
+		prestige_decay = -0.01
+        defensiveness = 0.10
+	}
+	TUL_idea7 = {
+        land_forcelimit_modifier = 0.2
+	}
+}
+
