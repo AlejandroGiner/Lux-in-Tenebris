@@ -5543,3 +5543,42 @@ TUL_ideas = {
 	}
 }
 
+STS_ideas = {
+	start = {
+        diplomatic_reputation = 2
+        movement_speed = 0.25
+	}
+
+	bonus = {
+		global_autonomy = -0.05
+	}
+
+	trigger = {
+		tag = STS
+	}
+	free = yes		# will be added at load
+
+	STS_idea1 = {
+		prestige = 1
+	}
+	STS_idea2 = {
+		global_own_trade_power = 0.15
+	}
+	STS_idea3 = {
+		global_institution_spread = 0.1
+	}
+	STS_idea4 = {
+		build_cost = -0.2
+		prestige_decay = -0.01
+	}
+	STS_idea5 = {
+		tolerance_own = 2
+	}
+	STS_idea6 = {
+        diplomats = 1
+	}
+	STS_idea7 = {
+		improve_relation_modifier = 0.25
+	}
+}
+
