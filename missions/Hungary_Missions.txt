@@ -11,83 +11,52 @@ hun_north_group = {
 		icon = mission_alliances
 		required_missions = {  }
 		position = 1
-			trigger = {
-				custom_trigger_tooltip = {
-				tooltip = hungary_poland_mission_alliance_tooltip
-				if = {
-					limit = {
-						exists = POL
-						has_dlc = "Res Publica"
-						POL = {
-							has_reform = elective_monarchy
+		trigger = {
+            if = {
+                limit = {
+                    exists = POL
+                }
+                OR = {
+                    custom_trigger_tooltip = {
+                        tooltip = hungary_poland_mission_alliance_tooltip1
+                        alliance_with = POL
+                        POL = {
+                            has_opinion = {
+                                who = ROOT
+                                value = 160
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            has_dlc = "Res Publica"
+                        }
+                        POL = { has_reform = elective_monarchy }
+                        custom_trigger_tooltip = {
+                            tooltip = hungary_poland_mission_alliance_tooltip3
+                            dynasty = POL
+                        }
+                    }
+                    else = { hidden_trigger = { always = no } }
+                    AND = {
+                        custom_trigger_tooltip = {
+                            tooltip = hungary_poland_mission_alliance_tooltip2
+                            OR = {
+                                is_rival = POL
+                                POL = { is_rival = ROOT }
+                            }
+                        }
+                        army_size = POL
+                        has_spy_network_in = {
+							who = POL
+							value = 50
 						}
-					}
-					OR = {
-						dynasty = POL
-						OR = {
-							AND = {
-								is_rival = POL
-								army_size = POL
-								has_spy_network_in = {
-									who = POL
-									value = 50
-								}
-							}
-							AND = {
-								POL = {
-									is_rival = ROOT
-								}
-								army_size = POL
-								has_spy_network_in = {
-									who = POL
-									value = 50
-								}
-							}
-						}
-					}
-					else = {
-						OR = {
-							OR = {
-								AND = {
-									alliance_with = POL
-									POL = {
-										has_opinion = {
-											who = ROOT
-											value = 160
-										}
-									}
-								}
-							}
-							OR = {
-								AND = {
-									is_rival = POL
-									army_size = POL
-									has_spy_network_in = {
-										who = POL
-										value = 50
-									}
-								}
-								AND = {
-									POL = {
-										is_rival = ROOT
-									}
-									army_size = POL
-									has_spy_network_in = {
-										who = POL
-										value = 50
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = { exists = POL }
-				}
-				army_size_percentage = 1
-			}
+                    }
+                }
+            }
+            else = {
+                army_size_percentage = 1
+            }
 		}
 
 		effect = {
