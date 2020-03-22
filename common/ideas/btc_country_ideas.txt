@@ -5462,3 +5462,42 @@ MTZ_ideas = {
 		build_cost = -0.15
 	}
 }
+
+GEV_ideas = {
+	start = {
+		tolerance_own = 1
+        discipline = 0.05
+	}
+
+	bonus = {
+        fire_damage_received = -0.2
+	}
+
+	trigger = {
+		tag = GEV
+	}
+	free = yes		# will be added at load
+
+	GEV_idea1 = {
+		diplomatic_upkeep = 2
+	}
+	GEV_idea2 = {
+		state_maintenance_modifier = -0.25
+		global_unrest = -2
+	}
+	GEV_idea3 = {
+		global_garrison_growth = 0.15
+	}
+	GEV_idea4 = {
+		global_missionary_strength = 0.03
+	}
+	GEV_idea5 = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	GEV_idea6 = {
+        defensiveness = 0.15
+	}
+	GEV_idea7 = {
+		prestige = 1
+	}
+}
