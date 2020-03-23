@@ -110,7 +110,7 @@ province_eligible_for_potato_spawn = {
 		trade_goods = wool
 		AND = {
 			trade_goods = cloth
-			NOT = {
+			OR = {
 				region = france_region
 				region = british_isles_region
 			}
