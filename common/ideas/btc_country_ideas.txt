@@ -917,3 +917,42 @@ STS_ideas = {
 	}
 }
 
+DHL_ideas = {
+	start = {
+		trade_efficiency = 0.15
+		naval_forcelimit_modifier = 0.15
+	}
+
+	bonus = {
+		privateer_efficiency = 0.25
+	}
+
+	trigger = {
+		tag = DHL
+	}
+	free = yes		# will be added at load
+
+	DHL_idea1 = {
+		diplomatic_reputation = 2
+	}
+	DHL_idea2 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	DHL_idea3 = {
+		build_cost = -0.15
+		development_cost = -0.10
+	}
+	DHL_idea4 = {
+		inflation_reduction = 0.1
+	}
+	DHL_idea5 = {
+		trade_range_modifier = 0.15
+	}
+	DHL_idea6 = {
+		naval_morale = 0.15
+	}
+	DHL_idea7 = {
+		technology_cost = -0.05
+	}
+}
+
