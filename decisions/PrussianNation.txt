@@ -24,10 +24,6 @@ country_decisions = {
 			if = {
 				limit = { NOT = { government = monarchy } }
 				change_government = monarchy
-				every_neighbor_country = {
-					limit = { government = monarchy }
-					add_opinion = { who = ROOT modifier = secularized_monastic_order }
-				}
 			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -73,6 +69,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 6
 			owns_core_province = 41			# K�nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
@@ -176,6 +173,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 6
 			owns_core_province = 41			# K�nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
@@ -191,6 +189,15 @@ country_decisions = {
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
+			}
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				every_neighbor_country = {
+					limit = { government = monarchy }
+					add_opinion = { who = ROOT modifier = secularized_monastic_order }
+				}
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
@@ -267,6 +274,7 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 6
 			owns_core_province = 41			# Koenigsberg
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
