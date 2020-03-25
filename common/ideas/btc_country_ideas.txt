@@ -956,3 +956,43 @@ DHL_ideas = {
 	}
 }
 
+ROC_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.15
+        defensiveness = 0.2
+	}
+
+	bonus = {
+        fire_damage_received = -0.1
+	}
+
+	trigger = {
+		tag = ROC
+	}
+	free = yes		# will be added at load
+
+	ROC_idea1 = {
+		global_unrest = -1
+	}
+	ROC_idea2 = {
+		diplomatic_reputation = 2
+	}
+	ROC_idea3 = {
+		fort_maintenance_modifier = -0.15
+	}
+	ROC_idea4 = {
+		naval_morale = 0.15
+	}
+	ROC_idea5 = {
+		improve_relation_modifier = 0.15
+	}
+	ROC_idea6 = {
+		global_trade_goods_size_modifier = 0.10
+		trade_range_modifier = 0.15
+	}
+	ROC_idea7 = {
+		ship_durability = 0.15
+		global_trade_power = 0.15
+	}
+}
+
