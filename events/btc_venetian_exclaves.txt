@@ -1,0 +1,1086 @@
+namespace = btc_venetian_exclaves
+
+# The Fate of Negroponte
+country_event = {
+	id = btc_venetian_exclaves.1
+	title = btc_venetian_exclaves.1.t
+	desc = btc_venetian_exclaves.1.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = VEN
+		is_subject = no
+		NOT = {
+			exists = ATH
+		}
+		TUR = {
+			owns = 5085
+			owns = 3177
+			owns = 146
+			num_of_cities = VEN
+		}
+		OR = {
+			AND = {
+				controls = 3003
+				owns = 3003
+			}
+			AND = {
+				controls = 5086
+				owns = 5086
+			}
+		}
+		NOT = {
+			war_with = TUR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# We will never surrender Negroponte!
+	option = {
+		name = btc_venetian_exclaves.1.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 90
+				is_rival = TUR
+			}
+		}
+		if = {
+			limit = {
+				3003 = {
+					owned_by = VEN
+				}
+			}
+			3003 = {
+				add_province_modifier = {
+					name = the_fall_of_negroponte
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		if = {
+			limit = {
+				5086 = {
+					owned_by = VEN
+				}
+			}
+			5086 = {
+				add_province_modifier = {
+					name = the_fall_of_negroponte
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.2
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = kept_exclaves
+			}
+		}
+	}
+
+	# We cannot defend these lands from the Ottomans.
+	option = {
+		name = btc_venetian_exclaves.1.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10
+				is_rival = TUR
+			}
+		}
+		if = {
+			limit = {
+				3003 = {
+					owned_by = VEN
+				}
+			}
+			3003 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		if = {
+			limit = {
+				5086 = {
+					owned_by = VEN
+				}
+			}
+			5086 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.3
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = abandoned_exclaves
+			}
+		}
+		add_prestige = -10
+	}
+}
+
+# The Triarchy of Negroponte
+country_event = {
+	id = btc_venetian_exclaves.2
+	title = btc_venetian_exclaves.2.t
+	desc = btc_venetian_exclaves.2.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# Negroponte will be ours!
+	option = {
+		name = btc_venetian_exclaves.2.a
+		tooltip = {
+			if = {
+				limit = {
+					3003 = {
+						owned_by = VEN
+					}
+				}
+				3003 = {
+					add_core = TUR
+				}
+			}
+			if = {
+				limit = {
+					5086 = {
+						owned_by = VEN
+					}
+				}
+				5086 = {
+					add_core = TUR
+				}
+			}
+		}
+	}
+}
+
+# Venice Abandons Negroponte!
+country_event = {
+	id = btc_venetian_exclaves.3
+	title = btc_venetian_exclaves.3.t
+	desc = btc_venetian_exclaves.3.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# They are wise not to oppose us.
+	option = {
+		name = btc_venetian_exclaves.3.a
+		tooltip = {
+			if = {
+				limit = {
+					3003 = {
+						owned_by = TUR
+					}
+				}
+				3003 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+			if = {
+				limit = {
+					5086 = {
+						owned_by = TUR
+					}
+				}
+				5086 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+		}
+		add_prestige = 10
+	}
+}
+
+# The Fate of the Morea
+country_event = {
+	id = btc_venetian_exclaves.4
+	title = btc_venetian_exclaves.4.t
+	desc = btc_venetian_exclaves.4.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = VEN
+		is_subject = no
+		NOT = {
+			exists = BYZ
+		}
+		TUR = {
+			owns = 5114
+			owns = 3178
+			owns = 1773
+			owns = 5089
+			owns = 5088
+			owns = 145
+			num_of_cities = VEN
+		}
+		OR = {
+			AND = {
+				controls = 3179
+				owns = 3179
+			}
+			AND = {
+				controls = 5087
+				owns = 5087
+			}
+		}
+		NOT = {
+			war_with = TUR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# We will never surrender the Morea!
+	option = {
+		name = btc_venetian_exclaves.4.a
+		ai_chance = {
+			factor = 60
+			modifier = {
+				factor = 80
+				is_rival = TUR
+			}
+		}
+		if = {
+			limit = {
+				3179 = {
+					owned_by = VEN
+				}
+			}
+			3179 = {
+				add_province_modifier = {
+					name = the_fall_of_the_morea
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		if = {
+			limit = {
+				5087 = {
+					owned_by = VEN
+				}
+			}
+			5087 = {
+				add_province_modifier = {
+					name = the_fall_of_the_morea
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.5
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = kept_exclaves
+			}
+		}
+	}
+
+	# We cannot defend these lands from the Ottomans.
+	option = {
+		name = btc_venetian_exclaves.4.b
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 20
+				is_rival = TUR
+			}
+		}
+		if = {
+			limit = {
+				3179 = {
+					owned_by = VEN
+				}
+			}
+			3179 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		if = {
+			limit = {
+				5087 = {
+					owned_by = VEN
+				}
+			}
+			5087 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.6
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = abandoned_exclaves
+			}
+		}
+		add_prestige = -10
+	}
+}
+
+# The Fortresses of the Morea
+country_event = {
+	id = btc_venetian_exclaves.5
+	title = btc_venetian_exclaves.5.t
+	desc = btc_venetian_exclaves.5.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# The Morea will be ours!
+	option = {
+		name = btc_venetian_exclaves.5.a
+		tooltip = {
+			if = {
+				limit = {
+					3179 = {
+						owned_by = VEN
+					}
+				}
+				3179 = {
+					add_core = TUR
+				}
+			}
+			if = {
+				limit = {
+					5087 = {
+						owned_by = VEN
+					}
+				}
+				5087 = {
+					add_core = TUR
+				}
+			}
+		}
+	}
+}
+
+# Venice Abandons the Morea!
+country_event = {
+	id = btc_venetian_exclaves.6
+	title = btc_venetian_exclaves.6.t
+	desc = btc_venetian_exclaves.6.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# Better for them that they live to fight another day.
+	option = {
+		name = btc_venetian_exclaves.6.a
+		tooltip = {
+			if = {
+				limit = {
+					3179 = {
+						owned_by = TUR
+					}
+				}
+				3179 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+			if = {
+				limit = {
+					5087 = {
+						owned_by = TUR
+					}
+				}
+				5087 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+		}
+		add_prestige = 10
+	}
+}
+
+# The Fate of Preveza
+country_event = {
+	id = btc_venetian_exclaves.7
+	title = btc_venetian_exclaves.7.t
+	desc = btc_venetian_exclaves.7.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = VEN
+		is_subject = no
+		NOT = {
+			exists = EPI
+		}
+		TUR = {
+			owns = 3175
+			owns = 5095
+			num_of_cities = VEN
+		}
+		AND = {
+			controls = 5883
+			owns = 5883
+		}
+		NOT = {
+			war_with = TUR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# We will never surrender Preveza!
+	option = {
+		name = btc_venetian_exclaves.7.a
+		ai_chance = {
+			factor = 50
+		}
+		5883 = {
+			add_province_modifier = {
+				name = the_fall_of_epirus
+				duration = 3650
+			}
+			add_core = TUR
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.8
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = kept_exclaves
+			}
+		}
+	}
+
+	# We cannot defend these lands from the Ottomans.
+	option = {
+		name = btc_venetian_exclaves.7.b
+		ai_chance = {
+			factor = 50
+		}
+		5883 = {
+			cede_province = TUR
+			add_core = TUR
+			remove_core = VEN
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.9
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = abandoned_exclaves
+			}
+		}
+		add_prestige = -10
+	}
+}
+
+# The Outpost of Preveza
+country_event = {
+	id = btc_venetian_exclaves.8
+	title = btc_venetian_exclaves.8.t
+	desc = btc_venetian_exclaves.8.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# Preveza will be ours!
+	option = {
+		name = btc_venetian_exclaves.8.a
+		tooltip = {
+			5883 = {
+				add_core = TUR
+			}
+		}
+	}
+}
+
+# Venice Abandons Preveza!
+country_event = {
+	id = btc_venetian_exclaves.9
+	title = btc_venetian_exclaves.9.t
+	desc = btc_venetian_exclaves.9.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# They will live longer lives for having made this choice.
+	option = {
+		name = btc_venetian_exclaves.9.a
+		tooltip = {
+			5883 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		add_prestige = 10
+	}
+}
+
+# The Fate of Albania
+country_event = {
+	id = btc_venetian_exclaves.10
+	title = btc_venetian_exclaves.10.t
+	desc = btc_venetian_exclaves.10.d
+	picture = SIEGE_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = VEN
+		is_subject = no
+		NOT = {
+			exists = ALB
+		}
+		TUR = {
+			owns = 5882
+			owns = 143
+			owns = 5886
+			owns = 4175
+			owns = 5094
+			num_of_cities = VEN
+		}
+		OR = {
+			AND = {
+				controls = 4174
+				owns = 4174
+			}
+			AND = {
+				controls = 3182
+				owns = 3182
+			}
+			AND = {
+				controls = 3184
+				owns = 3184
+			}
+		}
+		NOT = {
+			war_with = TUR
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	# We will never surrender Albania!
+	option = {
+		name = btc_venetian_exclaves.10.a
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 90
+				is_rival = TUR
+			}
+		}
+		if = {
+			limit = {
+				4174 = {
+					owned_by = VEN
+				}
+			}
+			4174 = {
+				add_province_modifier = {
+					name = the_fall_of_albania
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		if = {
+			limit = {
+				3182 = {
+					owned_by = VEN
+				}
+			}
+			3182 = {
+				add_province_modifier = {
+					name = the_fall_of_albania
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		if = {
+			limit = {
+				3184 = {
+					owned_by = VEN
+				}
+			}
+			3184 = {
+				add_province_modifier = {
+					name = the_fall_of_albania
+					duration = 3650
+				}
+				add_core = TUR
+			}
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.11
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = kept_exclaves
+			}
+		}
+	}
+
+	# We cannot defend these lands from the Ottomans.
+	option = {
+		name = btc_venetian_exclaves.10.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 10
+				is_rival = TUR
+			}
+		}
+		if = {
+			limit = {
+				4174 = {
+					owned_by = VEN
+				}
+			}
+			4174 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		if = {
+			limit = {
+				3182 = {
+					owned_by = VEN
+				}
+			}
+			3182 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		if = {
+			limit = {
+				3184 = {
+					owned_by = VEN
+				}
+			}
+			3184 = {
+				cede_province = TUR
+				add_core = TUR
+				remove_core = VEN
+			}
+		}
+		TUR = {
+			country_event = {
+				id = btc_venetian_exclaves.12
+				days = 1
+			}
+			add_opinion = {
+				who = VEN
+				modifier = abandoned_exclaves
+			}
+		}
+		add_prestige = -10
+	}
+}
+
+# Albania Veneta
+country_event = {
+	id = btc_venetian_exclaves.11
+	title = btc_venetian_exclaves.11.t
+	desc = btc_venetian_exclaves.11.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# Albania will be ours!
+	option = {
+		name = btc_venetian_exclaves.11.a
+		tooltip = {
+			if = {
+				limit = {
+					4174 = {
+						owned_by = VEN
+					}
+				}
+				4174 = {
+					add_core = TUR
+				}
+			}
+			if = {
+				limit = {
+					3182 = {
+						owned_by = VEN
+					}
+				}
+				3182 = {
+					add_core = TUR
+				}
+			}
+			if = {
+				limit = {
+					3184 = {
+						owned_by = VEN
+					}
+				}
+				3184 = {
+					add_core = TUR
+				}
+			}
+		}
+	}
+}
+
+# Venice Abandons Albania!
+country_event = {
+	id = btc_venetian_exclaves.12
+	title = btc_venetian_exclaves.12.t
+	desc = btc_venetian_exclaves.12.d
+	picture = SIEGE_eventPicture
+
+	is_triggered_only = yes
+
+	# It is well that they have spared us the shedding of blood.
+	option = {
+		name = btc_venetian_exclaves.12.a
+		tooltip = {
+			if = {
+				limit = {
+					4174 = {
+						owned_by = TUR
+					}
+				}
+				4174 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+			if = {
+				limit = {
+					3182 = {
+						owned_by = TUR
+					}
+				}
+				3182 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+			if = {
+				limit = {
+					3184 = {
+						owned_by = TUR
+					}
+				}
+				3184 = {
+					cede_province = TUR
+					add_core = TUR
+					remove_core = VEN
+				}
+			}
+		}
+		add_prestige = 10
+	}
+}
+
+# Removing the Fall Modifiers - Hidden
+country_event = {
+	id = btc_venetian_exclaves.13
+	title = btc_venetian_exclaves.13.t
+	desc = btc_venetian_exclaves.13.d
+	picture = SIEGE_eventPicture
+
+	hidden = yes
+
+	trigger = {
+		tag = TUR
+		any_owned_province = {
+			OR = {
+				has_province_modifier = the_fall_of_albania
+				has_province_modifier = the_fall_of_epirus
+				has_province_modifier = the_fall_of_the_morea
+				has_province_modifier = the_fall_of_negroponte				
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = btc_venetian_exclaves.13.a
+		every_owned_province = {
+			limit = {
+				OR = {
+					has_province_modifier = the_fall_of_albania
+					has_province_modifier = the_fall_of_epirus
+					has_province_modifier = the_fall_of_the_morea
+					has_province_modifier = the_fall_of_negroponte				
+				}
+			}
+			remove_province_modifier = the_fall_of_albania
+			remove_province_modifier = the_fall_of_epirus
+			remove_province_modifier = the_fall_of_the_morea
+			remove_province_modifier = the_fall_of_negroponte
+		}
+	}
+}
+
+# A Venetian Queen of Cyprus
+country_event = {
+	id = btc_venetian_exclaves.14
+	title = btc_venetian_exclaves.14.t
+	desc = btc_venetian_exclaves.14.d
+	picture = KING_DOING_GREAT_eventPicture
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CYP
+		is_subject = no
+		government = monarchy
+		is_female = no
+		VEN = {
+			is_subject = no
+			exists = yes
+		}
+		has_consort = no
+		is_year = 1460
+	}
+
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			alliance_with = VEN
+		}
+	}
+
+	option = {
+		name = btc_venetian_exclaves.14.a
+		set_ruler_flag = venetian_queen_of_cyprus
+		set_country_flag = venetian_inheritance
+		define_consort = {
+			name = "Catarina"
+			dynasty = "Corner"
+			culture = venetian
+			max_random_adm = 3
+			max_random_dip = 3
+			max_random_mil = 3
+		}
+		VEN = {
+			add_opinion = {
+				who = CYP
+				modifier = accepted_venetian_queen
+			}
+		}
+	}
+
+	option = {
+		name = btc_venetian_exclaves.14.b
+		VEN = {
+			add_opinion = {
+				who = CYP
+				modifier = denied_venetian_queen
+			}
+		}
+	}
+}
+
+# The Inheritance of Cyprus
+country_event = {
+	id = btc_venetian_exclaves.15
+	title = btc_venetian_exclaves.15.t
+	desc = btc_venetian_exclaves.15.d
+	picture = KING_SICK_IN_BED_eventPicture
+
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+		tag = CYP
+		NOT = {
+			has_ruler_flag = venetian_queen_of_cyprus
+		}
+		has_country_flag = venetian_inheritance
+		is_subject = no
+		VEN = {
+			is_subject = no
+			exists = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_consort = "Catarina"
+			}
+		}
+	}
+
+	option = {
+		name = btc_venetian_exclaves.15.a
+		ai_chance = {
+			factor = 100
+		}
+		clr_country_flag = venetian_inheritance
+		VEN = {
+			inherit = ROOT
+			country_event = {
+				id = btc_venetian_exclaves.16
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = btc_venetian_exclaves.15.b
+		ai_chance = {
+			factor = 0
+		}
+		clr_country_flag = venetian_inheritance
+		VEN = {
+			add_opinion = {
+				who = CYP
+				modifier = venetian_claim_to_cyprus
+			}
+			remove_opinion = {
+				who = CYP
+				modifier = accepted_venetian_queen
+			}
+			add_casus_belli = {
+				target = CYP
+				type = cb_insult
+				months = 120
+			}
+			country_event = {
+				id = btc_venetian_exclaves.17
+				days = 1
+			}
+		}
+		remove_opinion = {
+			who = VEN
+			modifier = benevolent_gifts
+		}
+	}
+}
+
+# The Venetian Takeover of Cyprus
+country_event = {
+	id = btc_venetian_exclaves.16
+	title = btc_venetian_exclaves.16.t
+	desc = btc_venetian_exclaves.16.d
+	picture = CONQUEST_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = btc_venetian_exclaves.16.a
+		add_prestige = 5
+	}
+}
+
+# The Cypriots Declare Independence
+country_event = {
+	id = btc_venetian_exclaves.17
+	title = btc_venetian_exclaves.17.t
+	desc = btc_venetian_exclaves.17.d
+	picture = ACCUSATION_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = btc_venetian_exclaves.17.a
+		tooltip = {
+			add_casus_belli = {
+				target = CYP
+				type = cb_insult
+				months = 60
+			}
+		}
+	}
+}
+
+# Venetian Aid
+country_event = {
+	id = btc_venetian_exclaves.18
+	title = btc_venetian_exclaves.18.t
+	desc = btc_venetian_exclaves.18.d
+	picture = KING_DOING_GREAT_eventPicture
+
+	trigger = {
+		tag = CYP
+		VEN = {
+			exists = yes
+		}
+		has_ruler_flag = venetian_queen_of_cyprus
+	}
+
+	mean_time_to_happen = {
+		months = 24
+	}
+
+	option = {
+		name = btc_venetian_exclaves.18.a
+		add_years_of_income = 0.5
+		add_opinion = {
+			who = VEN
+			modifier = benevolent_gifts
+		}
+	}
+}
