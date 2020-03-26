@@ -504,35 +504,59 @@ tur_conquest_of_middle_east = {
 		trigger = {
 			pamphylia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			karaman_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			caria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			aydin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			kastamonu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			cukurova_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			rum_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 			dulkadir_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					country_or_non_sovereign_subject_holds = ROOT
+					owned_by = GEN
+				}
 			}
 		}
 		effect = {
