@@ -1,4 +1,20 @@
 # country
+on_startup = {
+	events = {
+		muslim_school_events.20 #Pick School
+		oceanics.1
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			has_country_modifier = tur_janissary
+		}
+		remove_country_modifier = tur_janissary
+	}
+	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
+}
+
+# country
 on_monarch_death = {
 	if = {
 		limit = {
