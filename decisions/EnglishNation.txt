@@ -5,12 +5,16 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_england_flag }
-			NOT = { tag = ENG }
-			NOT = { exists = GBR }
-      OR = {
-        primary_culture = northumbrian
-        primary_culture = english
-      }
+			NOT = {
+                tag = ENG
+                was_tag = ENG
+				exists = GBR
+				exists = UNK
+			}
+            OR = {
+                primary_culture = northumbrian
+                primary_culture = english
+            }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
