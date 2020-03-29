@@ -846,7 +846,7 @@ estate_burghers =
 		potential = {
 			NOT = { has_disaster = estate_church_disaster }
 			NOT = { has_disaster = estate_nobility_disaster }
-			num_of_ports = 1
+			num_of_total_ports = 1
 		}
 		
 		trigger = {
@@ -927,7 +927,7 @@ estate_burghers =
 		potential = {
 			NOT = { has_disaster = estate_church_disaster }
 			NOT = { has_disaster = estate_nobility_disaster }
-			num_of_ports = 1
+			num_of_total_ports = 1
 			primitives = no
 		}
 		
@@ -940,7 +940,7 @@ estate_burghers =
 				estate = estate_burghers
 				influence = 40
 			}
-			num_of_ports = 10
+			num_of_total_ports = 10
 			any_owned_province = {
 				has_port = yes
 				has_estate = estate_burghers

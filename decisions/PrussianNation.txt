@@ -21,6 +21,7 @@ country_decisions = {
 		}
 
 		effect = {
+			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government = monarchy } }
 				change_government = monarchy
@@ -84,7 +85,6 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -187,7 +187,6 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
@@ -276,7 +275,6 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
