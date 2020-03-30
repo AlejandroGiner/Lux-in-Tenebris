@@ -92,15 +92,6 @@ country_decisions = {
 				}
 			}
 			change_primary_culture = roman
-			custom_tooltip = restore_roman_empire_tt
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						is_part_of_hre = yes
-					}
-					set_in_empire = no
-				}
-			}
 			set_government_rank = 3
 			add_prestige = 50
 			add_core = 118 # Rome

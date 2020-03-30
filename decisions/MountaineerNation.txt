@@ -14,11 +14,12 @@ country_decisions = {
 			NOT = { tag = TUR }
 			NOT = { tag = TKY }
 			NOT = { tag = PER }
-			NOT = { primary_culture = udi_culture }
 			OR = { 
 				culture_group = dagestani_group
 				primary_culture = caucasian_turkic
 			}
+			NOT = { primary_culture = udi_culture }
+			adm_tech = 13
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -36,7 +37,7 @@ country_decisions = {
 		}
 		allow = {
 			NOT = { exists = MCR }
-			adm_tech = 27
+			adm_tech = 20
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
@@ -54,16 +55,12 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = MCR
-			}	
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
 			add_prestige = 25
-			#if = {
-			#	limit = { has_custom_ideas = no }
-			#	country_event = { id = ideagroups.1 } #Swap Ideas
-			#}
 			set_country_flag = formed_mountaineers_flag_btp
 		}
 		ai_will_do = {
