@@ -53,10 +53,10 @@ country_decisions = {
 			owns_core_province = 609
 		}
 		effect = {
-			4656 = {
+			5938 = {
 				add_base_tax = 3
-	    	add_base_production = 3
-      	add_base_manpower = 2
+				add_base_production = 3
+				add_base_manpower = 2
 				move_capital_effect = yes
 			}
 			change_tag = SIA
@@ -67,15 +67,6 @@ country_decisions = {
 				set_government_rank = 2
 			}
 			siam_region = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = SIA
-			}
-			cambodia_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT

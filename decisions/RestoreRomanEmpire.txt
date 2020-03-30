@@ -78,20 +78,21 @@ country_decisions = {
 		effect = {
 			118 = {
 				move_capital_effect = yes
+				change_culture = roman
 			}
 			change_tag = ROM
-			custom_tooltip = roman_culture_provinces_tooltip
 			change_government  = monarchy
 			add_government_reform = roman_empire_reform
+			change_primary_culture = roman
+			custom_tooltip = restore_roman_empire_tt
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						has_owner_accepted_culture = yes
+						is_part_of_hre = yes
 					}
-					change_culture = roman
+					set_in_empire = no
 				}
 			}
-			change_primary_culture = roman
 			set_government_rank = 3
 			add_prestige = 50
 			add_core = 118 # Rome
