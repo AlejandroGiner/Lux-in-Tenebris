@@ -524,11 +524,11 @@ pentarchy_mod = {
 	}
 
 	trigger = {
-		owns = 118 	# Rome
-		owns = 151 	# Constantinople
-		owns = 2313 # Antioch
-		owns = 379 	# Jerusalem
-		owns = 358 	# Alexandria
+		owns_or_non_sovereign_subject_of = 118 	# Rome
+		owns_or_non_sovereign_subject_of = 151 	# Constantinople
+		owns_or_non_sovereign_subject_of = 2313 # Antioch
+		owns_or_non_sovereign_subject_of = 379 	# Jerusalem
+		owns_or_non_sovereign_subject_of = 358 	# Alexandria
 		118 = { religion = orthodox }
 		151 = { religion = orthodox }
 		2313 = { religion = orthodox }
