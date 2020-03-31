@@ -1,18 +1,22 @@
 country_decisions = {
 	greek_nation = {
 		major = yes
-		potential = { 
+		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_greece_flag }
 			NOT = { tag = GRE }
 			NOT = { tag = BYZ }
-			primary_culture = greek
+			culture_group = byzantine
 			any_owned_province = {
 				OR = {
 					province_id = 151
 					province_id = 1853
 					province_id = 146
 				}
+			}
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
 			}
 		}
 		provinces_to_highlight = {

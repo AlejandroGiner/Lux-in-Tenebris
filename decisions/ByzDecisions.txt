@@ -39,6 +39,10 @@ country_decisions = {
 				}
 				is_core = ROOT
 			}	#Requires at least 5 provinces to see the decision
+			OR = {
+				current_age = age_of_discovery
+				current_age = age_of_reformation
+			}
 		}
 		provinces_to_highlight = {
 			OR = {

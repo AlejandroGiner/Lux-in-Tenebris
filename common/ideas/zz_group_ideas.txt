@@ -461,7 +461,7 @@ SIL_ideas = {
 	}
 }
 
-irish_ideas = {
+irish_minor_ideas = {
 	start = {
 		army_tradition = 0.5
 		global_unrest = -1
@@ -472,19 +472,16 @@ irish_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			tag = IRE
-			primary_culture = irish
-		}
+		primary_culture = irish
 	}
 	free = yes
 	
-	irish_endurance = {
-		war_exhaustion = -0.02
+	sln_a_different_way = {
+		spy_offence = 0.10
+		global_spy_defence = 0.10	  
 	}
-	the_clanns = {
-		same_culture_advisor_cost = -0.2
-		republican_tradition = 0.3
+	mcm_basque_fishermen = {
+		trade_efficiency = 0.1
 	}
 	more_than_irish = {
 		culture_conversion_cost = -0.2
