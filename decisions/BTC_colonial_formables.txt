@@ -15,7 +15,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -73,7 +76,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -131,7 +137,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -194,20 +203,15 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
+			
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 748	# Belem
-				province_id = 2935	# Gurupa
-				province_id = 2929	# Para
-				province_id = 7558	# Chaves
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			amazonia_provinces_btc = yes
 		}
 		allow = {
 			adm_tech = 10
@@ -215,10 +219,21 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = AMZ }
-			owns_core_province = 748	# Belem
-			owns_core_province = 2935	# Gurupa
-			owns_core_province = 2929	# Para
-			owns_core_province = 7558	# Chaves
+			custom_trigger_tooltip = {
+			tooltip = form_amazonia_capital_tooltip
+				capital_scope = {
+					amazonia_provinces_btc = yes
+					is_core = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+			tooltip = form_amazonia_provinces_tooltip
+				num_of_owned_provinces_with = {
+					value = 10
+					amazonia_provinces_btc = yes
+					is_core = ROOT
+				}
+			}
 		}
 		effect = {
 			change_tag = AMZ
@@ -227,14 +242,16 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			colonial_brazil = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
+			custom_tooltip = amazonia_formable_claims_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						amazonia_provinces_btc = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
 					}
+					add_permanent_claim = AMZ
 				}
-				add_permanent_claim = AMZ
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -263,7 +280,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -326,22 +346,14 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 867	# Xalychidom
-				province_id = 876	# O'nk Akimel O'odham
-				province_id = 877	# O'odham
-				province_id = 5839	# Piipash
-				province_id = 5840	# O'nk Akimel O'otham
-				province_id = 5841	# Sobaipuri
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			arizona_provinces_btc = yes
 		}
 		allow = {
 			adm_tech = 10
@@ -349,12 +361,21 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = ARI }
-			owns_core_province = 867	# Xalychidom
-			owns_core_province = 876	# O'nk Akimel O'odham
-			owns_core_province = 877	# O'odham
-			owns_core_province = 5839	# Piipash
-			owns_core_province = 5840	# O'nk Akimel O'otham
-			owns_core_province = 5841	# Sobaipuri
+			custom_trigger_tooltip = {
+			tooltip = form_amazonia_capital_tooltip
+				capital_scope = {
+					arizona_provinces_btc = yes
+					is_core = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+			tooltip = form_arizona_provinces_tooltip
+				num_of_owned_provinces_with = {
+					value = 5
+					arizona_provinces_btc = yes
+					is_core = ROOT
+				}
+			}
 		}
 		effect = {
 			change_tag = ARI
@@ -363,14 +384,16 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			colonial_california = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
+			custom_tooltip = amazonia_formable_claims_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						arizona_provinces_btc = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
 					}
+					add_permanent_claim = AMZ
 				}
-				add_permanent_claim = ARI
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -399,7 +422,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -462,7 +488,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -531,7 +560,10 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -589,7 +621,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -647,7 +682,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -710,7 +748,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -779,7 +820,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -837,7 +881,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -895,7 +942,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -958,7 +1008,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		provinces_to_highlight = {
@@ -1020,7 +1073,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -1078,7 +1134,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		allow = {
@@ -1141,7 +1200,10 @@ florida_nation = {
 			}
 			OR = {
 				ai = no
-				num_of_cities = 3	
+				AND = {
+					ai = yes
+					num_of_cities = 3	
+				}
 			}
 		}
 		provinces_to_highlight = {

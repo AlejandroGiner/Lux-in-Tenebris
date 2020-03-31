@@ -142,6 +142,50 @@ form_greece_provinces_btc = {
 	}
 }
 
+amazonia_provinces_btc = {
+	OR = {
+		area = amazon_area
+		area = lower_amazon_area
+		area = pontal_area
+		area = grao_para_area
+		area = maranhao_area
+		area = mato_grosso_area
+		area = guapore_area
+		province_id = 2923
+	}
+}
+
+brazil_provinces_btc = {
+	OR = {
+		area = rio_grande_do_sol_area
+		area = minas_gerais_area
+		area = goias_area
+		area = sao_paolo_area
+		area = rio_de_janeiro_area
+		area = mato_grosso_area
+		area = pernambuco_area
+		area = sao_francisco_area
+		area = diamantina_area
+		area = ofaie_area
+		area = piaui_area
+		area = ceara_area
+		area = west_sao_paolo_area
+		area = santa_catarina_area
+		area = alagoas_area
+	}
+}
+
+arizona_provinces_btc = {
+	OR = {
+		area = arizona_area
+		area = mogollon_rim_area
+		area = lower_colorado_river_area
+		area = southern_colorado_plateau_area
+		area = upper_gila_area
+		area = painted_desert_area
+	}
+}
+
 #Important cities with cortes and the regions their vote represented, on top of city itself
 castile_important_cortes_provinces = {
 	OR = {
