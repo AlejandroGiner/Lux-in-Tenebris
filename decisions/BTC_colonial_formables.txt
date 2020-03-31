@@ -57,4 +57,1139 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	
+	acadia_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_acadia = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_acadia
+				is_core = ROOT
+			}
+			NOT = { exists = ACA }
+		}
+		effect = {
+			change_tag = ACA
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_acadia = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ACA
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	alaska_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_alaska = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_alaska
+				is_core = ROOT
+			}
+			NOT = { exists = ALK }
+		}
+		effect = {
+			change_tag = ALK
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_alaska = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ALK
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	amazonia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_nomad = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_brazil = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 748	# Belem
+				province_id = 2935	# Gurupa
+				province_id = 2929	# Para
+				province_id = 7558	# Chaves
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = AMZ }
+			owns_core_province = 748	# Belem
+			owns_core_province = 2935	# Gurupa
+			owns_core_province = 2929	# Para
+			owns_core_province = 7558	# Chaves
+		}
+		effect = {
+			change_tag = AMZ
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_brazil = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = AMZ
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	aotearoa_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_polynesia = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_polynesia
+				is_core = ROOT
+			}
+			NOT = { exists = NZL }
+		}
+		effect = {
+			change_tag = NZL
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_polynesia = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = NZL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	arizona_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_nomad = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_california = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 867	# Xalychidom
+				province_id = 876	# O'nk Akimel O'odham
+				province_id = 877	# O'odham
+				province_id = 5839	# Piipash
+				province_id = 5840	# O'nk Akimel O'otham
+				province_id = 5841	# Sobaipuri
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = ARI }
+			owns_core_province = 867	# Xalychidom
+			owns_core_province = 876	# O'nk Akimel O'odham
+			owns_core_province = 877	# O'odham
+			owns_core_province = 5839	# Piipash
+			owns_core_province = 5840	# O'nk Akimel O'otham
+			owns_core_province = 5841	# Sobaipuri
+		}
+		effect = {
+			change_tag = ARI
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_california = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ARI
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	bahamas_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_bahamas = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_bahamas
+				is_core = ROOT
+			}
+			NOT = { exists = BMS }
+		}
+		effect = {
+			change_tag = BMS
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_bahamas = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = BMS
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	columbia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_nomad = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_cascadia = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 973	# S'olh Temexw
+				province_id = 5736	# Skwxwuhmesh
+				province_id = 5734	# Snuneymuxw
+				province_id = 4940	# Lekwungen
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = CLU }
+			owns_core_province = 973	# S'olh Temexw
+			owns_core_province = 5736	# Skwxwuhmesh
+			owns_core_province = 5734	# Snuneymuxw
+			owns_core_province = 4940	# Lekwungen
+		}
+		effect = {
+			change_tag = CLU
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_cascadia = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = CLU
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	cuba_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_cuba = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_cuba
+				is_core = ROOT
+			}
+			NOT = { exists = CUB }
+		}
+		effect = {
+			change_tag = CUB
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_cuba = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = CUB
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+florida_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_florida = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_florida
+				is_core = ROOT
+			}
+			NOT = { exists = FLO }
+		}
+		effect = {
+			change_tag = FLO
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_florida = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = FLO
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	newfoundland_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_newfoundland = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_newfoundland
+				is_core = ROOT
+			}
+			NOT = { exists = NFL }
+		}
+		effect = {
+			change_tag = NFL
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_newfoundland = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = NFL
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	nevada_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_nomad = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_california = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2479	# Maidu
+				province_id = 4954	# Achomawi
+				province_id = 5796	# Cullumah
+				province_id = 4953	# Waashiw
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = NVD }
+			owns_core_province = 2479	# Maidu
+			owns_core_province = 4954	# Achomawi
+			owns_core_province = 5796	# Cullumah
+			owns_core_province = 4953	# Waashiw
+		}
+		effect = {
+			change_tag = NVD
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_california = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = NVD
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	michigan_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_great_lakes = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_great_lakes
+				is_core = ROOT
+			}
+			NOT = { exists = MIH }
+		}
+		effect = {
+			change_tag = MIH
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_great_lakes = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = MIH
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	madagascar_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_madagascar = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_madagascar
+				is_core = ROOT
+			}
+			NOT = { exists = MDG }
+		}
+		effect = {
+			change_tag = MDG
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_madagascar = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = MDG
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	hudsonbay_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_hudson_bay = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_hudson_bay
+				is_core = ROOT
+			}
+			NOT = { exists = BAY }
+		}
+		effect = {
+			change_tag = BAY
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_hudson_bay = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = BAY
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	guyana_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_nomad = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_colombia = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 743
+				province_id = 744
+				province_id = 2803
+				province_id = 2804
+				province_id = 2931
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = GYU }
+			owns_core_province = 743
+			owns_core_province = 744
+			owns_core_province = 2803
+			owns_core_province = 2804
+			owns_core_province = 2931
+		}
+		effect = {
+			change_tag = GYU
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	nunatsiaq_nation = { #Northwest territories
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_northwest_territories = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_northwest_territories
+				is_core = ROOT
+			}
+			NOT = { exists = NTQ }
+		}
+		effect = {
+			change_tag = NTQ
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_northwest_territories = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = NTQ
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	southafrica_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_cape = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_cape
+				is_core = ROOT
+			}
+			NOT = { exists = RSA }
+		}
+		effect = {
+			change_tag = RSA
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_cape = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = RSA
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	yucatan_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			is_nomad = no
+			is_random_new_world = no			
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_central_america = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 842	# Petén
+				province_id = 846	# Sotuta
+				province_id = 2633	# Mani
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			NOT = { exists = YUC }
+			owns_core_province = 842	# Petén
+			owns_core_province = 846	# Sotuta
+			owns_core_province = 2633	# Mani
+		}
+		effect = {
+			change_tag = YUC
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_central_america = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = YUC
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
