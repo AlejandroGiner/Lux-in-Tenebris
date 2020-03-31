@@ -186,6 +186,38 @@ arizona_provinces_btc = {
 	}
 }
 
+columbia_provinces_btc = {
+	OR = {
+		area = vancouver_island_area
+		area = straits_of_georgia_area
+		area = interior_plateau_area
+		area = cariboo_area
+		area = hecate_strait_area
+		area = columbia_plateau_area
+		area = northern_cascades_area
+		area = columbia_river_area
+		area = salish_sea_area
+	}
+}
+
+nevada_provinces_btc = {
+	OR = {
+		area = great_basin_area
+		province_id = 5017
+		province_id = 5822
+		province_id = 5821
+		province_id = 4955
+	}
+}
+
+yucatan_provinces_btc = {
+	OR = {
+		area = guatemala_lowlands_area
+		area = yucatan_area
+		area = east_yucatan_area
+	}
+}
+
 #Important cities with cortes and the regions their vote represented, on top of city itself
 castile_important_cortes_provinces = {
 	OR = {

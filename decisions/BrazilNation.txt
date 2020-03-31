@@ -31,14 +31,14 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			custom_trigger_tooltip = {
-			tooltip = form_amazonia_capital_tooltip
+			tooltip = formable_own_capital_tooltip
 				capital_scope = {
 					brazil_provinces_btc = yes
 					is_core = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
-			tooltip = form_amazonia_provinces_tooltip
+			tooltip = formable_ten_provinces_tooltip
 				num_of_owned_provinces_with = {
 					value = 10
 					brazil_provinces_btc = yes
