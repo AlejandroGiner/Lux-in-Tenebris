@@ -481,7 +481,9 @@ industrialized_province_trigger = { #Province Scope
 }
 
 was_never_end_game_tag_trigger = {
-	always = yes #Destroyed DDRJake
+	NOT = { tag = ROM }
+	NOT = { tag = HLR }
+	NOT = { tag = PAP }
 }
 
 
