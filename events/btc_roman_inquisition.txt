@@ -71,7 +71,10 @@ country_event = {
         religion = protestant
         religion = reformed
       }
-      NOT = { has_province_flag = received_inquisition_help_flag }
+      had_province_flag = {
+          flag = received_inquisition_help_flag
+          days = 9125
+      }
     }
   }
   
