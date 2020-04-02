@@ -9,12 +9,19 @@ country_decisions = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_great_britain_flag }
 			NOT = { tag = GBR }
+			NOT = { tag = UKP }
+			NOT = { tag = FRA }
+			NOT = { tag = IRE }
+			NOT = { tag = NED }
+			NOT = { tag = BEL }
+			NOT = { tag = SPA }
+			NOT = { tag = IBE }
 			OR = {
 				tag = ENG
 				tag = SCO
 				AND = {
 					culture_group = british
-					num_of_cities = 37			#At least 1/2 of Britain's 74 provinces to see, if not ENG or SCO
+					num_of_cities = 41			#At least 1/2 of Britain's 83 provinces to see, if not ENG or SCO
 				}
 			}
 		}
@@ -26,7 +33,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-      adm_tech = 10
+			adm_tech = 10
 			NOT = { exists = GBR }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
@@ -42,7 +49,7 @@ country_decisions = {
 						owned_by = ROOT
 						is_core = ROOT
 					}
-					amount = 56			#At least 3/4 of Britain's 74 provinces (Note England has 44 in 1444 with 11 more under subjects, so this is rather easy)
+					amount = 62			#At least 3/4 of Britain's 83 provinces
 				}
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
@@ -90,7 +97,7 @@ country_decisions = {
 			}
 			swap_ideas = yes
 			set_country_flag = formed_great_britain_flag
-      if = {
+			if = {
 				limit = {
 					mission_completed = eng_rb_spice_islands
 					has_dlc = "Rule Britannia"
@@ -100,10 +107,10 @@ country_decisions = {
 					}
 					add_permanent_claim = GBR
 				}
-        east_bengal_area = {
-          limit = { NOT = { is_permanent_claim = ROOT } }
-          add_permanent_claim = GBR
-        }
+				east_bengal_area = {
+					limit = { NOT = { is_permanent_claim = ROOT } }
+					add_permanent_claim = GBR
+				}
 			}
 		}
 		ai_will_do = {
@@ -121,25 +128,32 @@ country_decisions = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_great_britain_flag }
 			NOT = { tag = GBR }
+			NOT = { tag = UKP }
+			NOT = { tag = FRA }
+			NOT = { tag = IRE }
+			NOT = { tag = NED }
+			NOT = { tag = BEL }
+			NOT = { tag = SPA }
+			NOT = { tag = IBE }
 			OR = {
 				tag = ENG
 				tag = SCO
 				AND = {
 					culture_group = british
-					num_of_cities = 28			#At least 1/2 of Britain's 56 provinces to see, if not ENG or SCO
+					num_of_cities = 41			#At least 1/2 of Britain's 83 provinces to see, if not ENG or SCO
 				}
 			}
-      OR = {
-        ai = no
-        AND = {
-          NOT = { tag = ENG }
-          ENG = { NOT = { num_of_cities = 60 } }
-        }
-        AND = {
-          NOT = { tag = SCO }
-          SCO = { NOT = { num_of_cities = 24 } }
-        }
-      }
+			OR = {
+				ai = no
+				AND = {
+				  NOT = { tag = ENG }
+				  ENG = { NOT = { num_of_cities = 65 } }
+				}
+				AND = {
+				  NOT = { tag = SCO }
+				  SCO = { NOT = { num_of_cities = 25 } }
+				}
+			}
 		}
 		provinces_to_highlight = {
 			region = british_isles_region
@@ -149,14 +163,14 @@ country_decisions = {
 			}
 		}
 		allow = {
-    	adm_tech = 10
+			adm_tech = 10
 			NOT = { exists = GBR }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			if = {
 				limit = { government = monarchy }
-				legitimacy = 100
+				legitimacy = 95
 			}
 			owns_or_vassal_of = 236		# London
 			owns_or_vassal_of = 242		# Gwynedd
@@ -169,7 +183,7 @@ country_decisions = {
 						country_or_vassal_holds = ROOT
 						is_core = owner
 					}
-					amount = 67			#At least 90 percent of Britain's 74 provinces (Note England has 44 in 1444, anything less than this might be too easy)
+					amount = 75			#At least 90 percent of Britain's 83 provinces
 				}
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
@@ -184,21 +198,21 @@ country_decisions = {
 						NOT = { num_of_cities = 12 }
 						AND = {
 							tag = SCO
-							NOT = { num_of_cities = 24 }
+							NOT = { num_of_cities = 25 }
 						}
-            AND = {
-              tag = ENG
-              NOT = { num_of_cities = 60 }
-            }
+						AND = {
+						  tag = ENG
+						  NOT = { num_of_cities = 65 }
+						}
 					}
 				}
 				ROOT = { inherit = PREV }
 			}
 			hidden_effect = {
-        if = {
-          limit = { tag = ENG }
-          complete_mission = eng_rb_war_of_roses
-        }
+				if = {
+				  limit = { tag = ENG }
+				  complete_mission = eng_rb_war_of_roses
+				}
 			}
 			hidden_effect = {
 				if = {
@@ -239,7 +253,7 @@ country_decisions = {
 		do_not_integrate = ENG
 		do_not_integrate = SCO
 		do_not_integrate = WLS
-    do_not_integrate = WMC
-    do_not_integrate = KOI
+		do_not_integrate = WMC
+		do_not_integrate = KOI
 	}
 }

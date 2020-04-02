@@ -5,12 +5,10 @@ country_decisions = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_ireland_flag }
 			NOT = {
-				OR = {
-					tag = IRE
-					tag = SCO
-					tag = ANI
-					tag = TNA
-				}
+				tag = IRE
+				tag = SCO
+				tag = ANI
+				tag = TNA
 			}
 			OR = {
 				primary_culture = irish

@@ -64,6 +64,10 @@ country_decisions = {
 				3191 = { add_permanent_claim = ROOT }
 			}
 			set_country_flag = formed_italy_flag
+			country_event = {
+				id = flavor_ita.1
+				days = 30
+			}
 		}
 		ai_will_do = {
 			factor = 1

@@ -19,11 +19,11 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1108	# 
-				province_id = 1107	# 
-				province_id = 2737	# 
-				province_id = 2739	# 
-				province_id = 1106	# 
+				province_id = 1108
+				province_id = 1107
+				province_id = 2737
+				province_id = 2739
+				province_id = 5608
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -35,11 +35,11 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 1108			# 
-			owns_core_province = 1107			# 
-			owns_core_province = 2737			# 
-			owns_core_province = 2739			# 
-			owns_core_province = 1106			# 
+			owns_core_province = 1108
+			owns_core_province = 1107
+			owns_core_province = 2737
+			owns_core_province = 2739
+			owns_core_province = 5608
 		}
 		effect = {
 			2739 = {
@@ -58,19 +58,19 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = { primary_culture = maori }
+					NOT = { government = monarchy }
 				}
-				change_primary_culture = maori
+				change_government = monarchy
 			}
-			if = {
+			new_zealand_region = {
 				limit = {
-					government = tribal
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
 				}
-				change_government = monarchy #Desert tribes settling down, theocracies become monarchies.
+				add_permanent_claim = MAO
 			}
-			add_permanent_claim = 2738
-			add_permanent_claim = 1109
-			add_permanent_claim = 1246
 			set_country_flag = formed_maori_flag
 		}
 		ai_will_do = {

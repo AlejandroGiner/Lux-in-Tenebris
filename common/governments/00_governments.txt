@@ -42,6 +42,8 @@ monarchy = {
 				coptic_monarchy_reform
 				tuscan_duchy_btc
 				iberian_cortes
+				exarchate_reform
+				autocracy_reform_btc
 			}
 		}
 		hereditary_vs_nobility = {
@@ -142,6 +144,12 @@ monarchy = {
 		archduchy_government_legacy
 		tuscan_duchy_legacy
 		iberian_cortes_legacy
+        french_principality_legacy
+        french_crown_legacy
+        french_monarchy_legacy
+        chrysanthemum_throne_legacy
+        edo_shogunate_legacy
+		lithuanian_grand_duchy_legacy
 	}
 
 	# Each group of exclusive reforms are mutually exclusive to each other
@@ -213,6 +221,7 @@ republic = {
 		merchant_republic
 		venetian_merchant_republic
 		genoese_merchant_republic
+        florence_republic_legacy
 		imperial_city
 		trading_city_legacy
 		ambrosian_republic_legacy
@@ -658,77 +667,5 @@ pre_dharma_mapping = {
 	all_mechanics = {
 		government = monarchy
 		legacy_government = despotic_monarchy
-	}
-	
-	#Added by Beyond Typus
-	irish_clann_reform = {
-		government = monarchy
-		legacy_government = irish_clann_legacy
-	}
-	high_kingship = {
-		government = monarchy
-		legacy_government = high_kingship_legacy
-	}
-	tanistry_reform = {
-		government = monarchy
-		legacy_government = high_kingship_legacy
-	}
-	anglo_irish_monarchy_reform = {
-		government = monarchy
-		legacy_government = anglo_irish_monarchy_legacy
-	}
-	norman_lordship_reform = {
-		government = monarchy
-		legacy_government = norman_lordship_legacy
-	}
-	puppet_kingdom_of_ireland = {
-		government = republic
-		legacy_government = puppet_kingdom_of_ireland_legacy
-	}
-	
-	#BTC
-	french_principality = {
-		government = monarchy
-		legacy_government = french_principality_legacy
-	}
-	french_crown = {
-		government = monarchy
-		legacy_government = french_crown_legacy
-	}
-	french_monarchy = {
-		government = monarchy
-		legacy_government = french_monarchy_legacy
-	}
-	coptic_monarchy_reform = {
-		government = monarchy
-		legacy_government = coptic_monarchy_reform_legacy
-	}
-	tuscan_duchy_btc = {
-		government = monarchy
-		legacy_government = tuscan_duchy_legacy
-	}
-	iberian_cortes = {
-		government = monarchy
-		legacy_government = iberian_cortes_legacy
-	}
-	edo_shogunate = {
-		government = monarchy
-		legacy_government = edo_shogunate_legacy
-	}
-	chrysanthemum_throne = {
-		government = monarchy
-		legacy_government = chrysanthemum_throne_legacy
-	}
-	archduchy_government = {
-		government = monarchy
-		legacy_government = archduchy_government_legacy
-	}
-	roman_empire_reform = {
-		government = monarchy
-		legacy_government = roman_empire_legacy
-	}
-	florentine_republic_btc = {
-		government = republic
-		legacy_government = florence_republic_legacy
 	}
 }

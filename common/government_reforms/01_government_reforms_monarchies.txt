@@ -34,7 +34,23 @@ autocracy_reform = {
 	allow_normal_conversion = yes
 	legacy_equivalent = despotic_monarchy
 	valid_for_nation_designer = yes
+	potential = {
+		NOT = { is_byz_or_hellenic_rome_trigger = yes }
+	}
 	nation_designer_cost = 0
+	modifiers = {
+		unjustified_demands = -0.1
+	}
+}
+
+autocracy_reform_btc = {
+	icon = "crown"
+	allow_normal_conversion = yes
+	legacy_equivalent = roman_autocracy_legacy
+	valid_for_nation_designer = no
+	potential = {
+		is_byz_or_hellenic_rome_trigger = yes
+	}
 	modifiers = {
 		unjustified_demands = -0.1
 	}

@@ -77,6 +77,7 @@
  flavor_spa.EVTNAME1100:0 "Miguel de Cervantes Saavedra"
  flavor_spa.EVTDESC1100:0 "Miguel de Cervantes was an early modern period Spanish soldier, playwright, novelist, poet and accountant born in Alcalá de Henares in 1547. Due to an unstable and travelling family, Cervantes did not do university studies, although it is presumed his first studies could've been in either Valladolid, Córdoba or Sevilla.\n\nIn 1566 he moved to Madrid to study in the royal institution 'Estudio de la Villa', where he showed his first recorded literary skills, when Cervantes' teacher and mentor López de Hoyos included two of Cervantes' poems in his own book. It is also here where he develops an interest for theather, attending to several performances by Lope de Rueda, one of the first Spanish actors.\n\nAfter an unfortunate event in a duel that causes Philip II of Spain to call for his arrest, Cervantes flees to Roma, Italy, place from which he would draw much inspiration for his later work and how to approach romantic themes. Cervantes was so charmed by the eternal city that he wrote several pieces about it, even creating an entire tourist guide about the city.\n\nContinuing his adventures through Italy working as chamber assistant of cardinal Giulio Acquaviva, Cervantes saw himself involved in the Battle of Lepanto, where after receiving a bad wound on his hand received the nickname of 'the One-handed of Lepanto', even though he didn't fully lost his hand. After 5 years of prison under the Berber corsairs, he finally returned to Spain in 1580.\n\nIt was during these last years of his life that he started his literary career while working as tax collector, quickly becoming a succesful writer and consolidating his legacy as the greatest writer in the Spanish language one of history's most prominent novelists, with his widely recognized as the first modern novel and best work of fiction ever written 'Don Quijote' being the most translated-book in the world after the Bible, being available in more than 140 languages. His influence on the Spanish language has been so great that the language is often called 'the language of Cervantes'."
  flavor_spa.EVTDESC1003:0 "The Casa de la Contratación de Indias (House of Trade of the Indies) was a crown agency established by Isabella I in 1503 to encourage navigation with Spanish territories overseas. Initially created to oversee all aspects of colonization, it got replaced in this matter by the Council of Indies and the Casa instead focused on trade with the New World, voyages of exploration and protecting secret information on new trade routes and discoveries.\n\nWith the broadening of the expanding Spanish Empire's ambitions and the increase in American imports, the Casa drastically increased its number of employees and was granted several special privileges. By 1550 it was a well regulated body, with its own chapel and jail, and anyone who would break any of the Casa's laws would fall directly under its jurisdiction rather than the Crown's."
+ unite_mongol_culture_tt:1 "All owned provinces with §YKorchin§!, §YKhalka§!, or §YOirat§! culture will change to §YTumed§! culture"
  
  #Governments
  venice_merchants_reform:0 "Dogado Venexiano"
@@ -110,43 +111,6 @@
  mongol_rus_tt:0 "§Y[Root.GetName]§! owns at least §Y60§! cored provinces in the §YRussia§! and §YRuthenia§!."
  cas_spa_havana.tooltip:0 "§Y[Root.GetName]§! or their subjects own at least §Y5§! fully colonized provinces in the §YCuba§! colonial region."
  
- #Sea Addon missions
- ayu_build_up_to_force_limit:0 "Build to Force Limit"
- ayu_build_up_to_force_limit_title:0 "Build to Force Limit"
- ayu_build_up_to_force_limit_desc:0 "Any growing country must maintain a reasonably sized army. By expanding our forces we can both further our political interests abroad and stimulate our domestic economy."
- ayu_subjugate_lan_na:0 "Subjugate Lan Na"
- ayu_subjugate_lan_na_title:0 "Subjugate Lan Na"
- ayu_subjugate_lan_na_desc:0 "The small Kingdom of Lan Na has had a long history of conflict with us, both militarily and culturally. Since days of old however, they have been a part of our realm, and they shall be once more!"
- 
- ayu_conquer_angkor:0 "Conquer Angkor"
- ayu_conquer_angkor_desc:0 ""
- ayu_integrate_sukhothai:0 "Integrate Sukhothai"
- ayu_integrate_sukhothai_title:0 "Integrate Sukhothai"
- ayu_integrate_sukhothai_desc:0 "The old Principality of Sukhothai, ruled by the heir apparent, has outlived its usefulness for decades now. It is important that we bring this ancient city under our direct authority."
- ayu_centralize_our_authority:0 "Centralize our Authority"
- ayu_centralize_our_authority_title:0 "Centralize our Authority"
- ayu_centralize_our_authority_desc:0 "The autonomous towns, cities and provinces which dot our realm have proven difficult to handle. Warlordism plagues our nation, and it has now become obvious now that we must infringe on local autonomy."
- 
- ayu_taification:0 "Taification"
- ayu_taification_title:0 "Taification"
- ayu_taification_desc:0 "Despite our conquests of the Siamese heartlands finishing decades ago, the old people who once inhabited these lands still populate many of our cities, and refuse to assimiliate. We should put a bit of pressure on these minorities, so that they may finally integrate properly into our society."
- ayu_conquer_the_khmer_remenants:0 "Reclaim Cambodia"
- ayu_conquer_the_khmer_remenants_title:0 "Reclaim Cambodia"
- ayu_conquer_the_khmer_remenants_desc:0 "Ever since our people sacked Angkor, the old Khmer Empire has been dead. To this date, the Khmers have proven that they cannot govern themselves properly, and is about time that we finish off our conquest of Cambodia."
- ayu_reclaim_hanthawaddy:0 "Conquer the Irawaddy"
- ayu_reclaim_hanthawaddy_title:0 "Conquer the Irawaddy"
- ayu_reclaim_hanthawaddy_desc:0 "The rich Irawaddy, traditionally controlled by the Hanthawaddy Kingdom, for a long time was a part of our empire. With the rising Bamar threat north however, the Mon people are in danger. We must get our hands on the Irawaddy before the Burmese do."
- 
- khm_reclaim_old_cambodia:0 "Reclaim Old Cambodia"
- khm_reclaim_old_cambodia_title:0 "Reclaim Old Cambodia"
- khm_reclaim_old_cambodia_desc:0 "It wasn't until the sack of Angkor that Koreach and surrounding cities were stripped away from us by the Siamese. Our lands must be reclaimed, be it peacefully, or by force if necessary..."
- khm_conquer_the_siamese_heartland:0 "Conquer Central Siam"
- khm_conquer_the_siamese_heartland_title:0 "Conquer Central Siam"
- khm_conquer_the_siamese_heartland_desc:0 "The rich lands of Central Siam traditionally were once a valuable part of the Khmer Empire. That was until Tai immigrants overtook the local Khmer and Mon population, and claimed the region as their own. It is about time we bring this valuable area back into the fold."
- khm_end_siam:0 "End Siam"
- khm_end_siam_title:0 "End Siam"
- khm_end_siam_desc:0 "In a twist of irony, we have stripped Siam of their most valuable lands, and left them vulnerable. Let us finally bring an end to Siam."
- khm_conquer_khorat_plateau:0 "Conquer the Plateau"
- khm_conquer_khorat_plateau_title:0 "Conquer the Plateau"
- khm_conquer_khorat_plateau_desc:0 "The lands beyond Koreach once, like Koreach itself, were once a part of the Khmer Empire. Our influence over the Koreach Plateau however came to an end with the rise of the Lao and their primitive city states. With our successful wars in Siam, taking the plateau from the Lao will be quick and easy."
+ #Decisions
+ roman_culture_provinces_tooltip:0 "All Primary and Accepted Culture provinces will now have §YRoman§! Culture."
  

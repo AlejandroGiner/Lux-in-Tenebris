@@ -14,6 +14,8 @@ country_decisions = {
 			NOT = { tag = ROM }
 			NOT = { tag = PAP }
 			NOT = { exists = ROM }
+			NOT = { tag = BYZ }
+			NOT = { exists = BYZ }
 			OR = {
 				religion_group = christian
 				religion_group = pagan
@@ -76,19 +78,11 @@ country_decisions = {
 		effect = {
 			118 = {
 				move_capital_effect = yes
+				change_culture = roman
 			}
 			change_tag = ROM
-			custom_tooltip = roman_culture_provinces_tooltip
 			change_government  = monarchy
 			add_government_reform = roman_empire_reform
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						has_owner_culture = yes
-					}
-					change_culture = roman
-				}
-			}
 			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt
 			hidden_effect = {
@@ -102,18 +96,6 @@ country_decisions = {
 			set_government_rank = 3
 			add_prestige = 50
 			add_core = 118 # Rome
-			#if = {
-			#	limit = {
-			#		is_part_of_hre = yes
-			#		is_elector = no
-			#	}
-			#	every_owned_province = {
-			#		limit = {
-			#			is_part_of_hre = yes
-			#		}
-			#		set_in_empire = no
-			#	}
-			#}
 			swap_ideas = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -124,6 +106,95 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
+	}
+	
+	restore_roman_empire_byzantium = {
+	    major = yes
+		potential = {
+			has_idea_group = BYZ_ideas #Because this caused issues with custom nations.
+		    normal_or_historical_nations = yes
+			tag = BYZ
+			OR = {
+				religion_group = christian
+				religion_group = pagan #Hellenic
+			}
+			NOT = { exists = ROM }
+			OR = {
+				ai = no
+				num_of_cities = 20
+			}
+			is_colonial_nation = no
+			NOT = { has_global_flag = roman_empire_restored }
+			is_subject = no
+			is_nomad = no
+		}
+		allow = {
+			OR = {
+				legitimacy = 90
+				republican_tradition = 90
+			}
+			prestige = 50
+			is_at_war = no
+			if = {
+				limit = { religion = orthodox }
+				custom_trigger_tooltip = {
+					tooltip = restore_roman_empire_byzantium_pentarchy_tooltip
+					has_country_modifier = pentarchy_mod
+				}
+			}
+			num_of_cities = 400
+			total_development = 2500
+			else = { #Because some people actually play catholic Byzantium?!
+				118 = { 
+					owned_by = ROOT
+					religion = ROOT
+				}
+				151 = { 
+					owned_by = ROOT
+					religion = ROOT
+				}
+				2313 = {
+					owned_by = ROOT
+					religion = ROOT
+				}
+				379 = { 
+					owned_by = ROOT
+					religion = ROOT 
+				}
+				358 = { 
+					owned_by = ROOT
+					religion = ROOT 
+				}
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = restore_roman_empire_byzantium_dismantle_hre_tooltip
+					NOT = { hre_size = 1 }
+					NOT = { exists = HLR } #Added
+				}
+				AND = { #Byzantium is the emperor
+					is_emperor = yes
+					hre_reform_level = 6
+					imperial_influence = 50
+				}
+			}
+			
+		}
+		effect = {
+			change_tag = ROM
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 50
+			set_global_flag = roman_empire_restored
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
 	}
 	
 }

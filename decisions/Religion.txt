@@ -148,55 +148,6 @@ country_decisions = {
 		}
 	}
 	
-#	suffragan_bishop_act = {
-#		potential = {
-#			NOT = { has_country_modifier = the_suffragan_bishop_act }
-#			religion_group = christian
-#		}
-#		allow = {
-#			adm_tech = 8
-#		}
-#		effect = {	
-#			add_country_modifier = {
-#				name = "the_suffragan_bishop_act"
-#				duration = -1
-#			}
-#		}
-#		ai_will_do = {
-#			factor = 0
-#		}
-#	}
-	
-#	church_tax = {
-#		potential = {
-#			NOT = { has_country_modifier = church_taxes }
-#			religion_group = christian
-#			NOT = { tag = PAP }
-#			NOT = { government = republic }
-#		}
-#		allow = {
-#			# Raises the king to be the legal authority in all religious matters
-#			OR = {
-#				NOT = { religion = catholic }
-#				has_country_modifier = the_statue_in_restraint_of_appeals
-#			}
-#			advisor = theologian
-#		}
-#		effect = {	
-#			add_country_modifier = {
-#				name = "church_taxes"
-#				duration = -1
-#			}
-#		}
-#		ai_will_do = {
-#			factor = 0
-#			modifier = { 
-#				NOT = { revolt_percentage = 0 }
-#				factor = 0 
-#			}
-#		}
-#	}
-	
 	sunday_school = {
 		potential = {
 			NOT = { has_country_modifier = sunday_schools }
@@ -241,32 +192,6 @@ country_decisions = {
 			factor = 1
 		}
 	}
-
-#	superintendents = {
-#		potential = {
-#			NOT = { has_country_modifier = superintendent_office }
-#			OR = {
-#				religion = protestant
-#				religion = reformed
-#			}
-#		}
-#		allow = {
-#			advisor = theologian
-#		}
-#		effect = {	
-#			add_country_modifier = {
-#				name = "superintendent_office"
-#				duration = -1
-#			}
-#		}
-#		ai_will_do = {
-#			factor = 1
-#			modifier = { 
-#				NOT = { stability = 2 }
-#				factor = 0
-#			}
-#		}
-#	}
 	
 	test_act = {
 		potential = {
@@ -446,35 +371,6 @@ country_decisions = {
 			}			
 		}
 	}
-	
-	#jizya_tax = {
-	#	potential = {
-	#		NOT = { has_ruler_modifier = per_capita_tax }
-	#		religion_group = muslim
-	#		any_owned_province = {
-	#			has_owner_religion = no
-	#		}
-	#		NOT = { has_dlc = "The Cossacks" }
-	#	}
-	#	allow = {
-	#		adm = 3
-	#		has_regency = no
-	#	}
-	#	effect = {	
-	#		add_ruler_modifier = {
-	#			name = "per_capita_tax"
-	#			duration = -1
-	#		}
-	#		add_piety = 0.15
-	#	}
-	#	ai_will_do = {
-	#		factor = 1
-	#		modifier = {
-	#			NOT = { piety = 0.01 }
-	#			factor = 0
-	#		}
-	#	}
-	#}
 	
 	monastic_education = {
 		potential = {

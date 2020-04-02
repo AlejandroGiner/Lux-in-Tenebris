@@ -4,7 +4,11 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_arabia_flag }
-			NOT = { tag = ARB}
+			NOT = { tag = ADU }
+			NOT = { tag = TUR }
+			NOT = { tag = RUM }
+			NOT = { tag = EGY }
+			NOT = { tag = ARB }
 			any_owned_province = {region = arabia_region}
 			religion_group = muslim
 			culture_group = turko_semitic

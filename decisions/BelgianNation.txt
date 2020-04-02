@@ -14,6 +14,10 @@ country_decisions = {
 				primary_culture = flemish
 			}
 			NOT = { num_of_cities = 30 }			#With more than 30 cities, we want the tag to be trying to form something else, like NED or FRA
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 		provinces_to_highlight = {
 			OR = {

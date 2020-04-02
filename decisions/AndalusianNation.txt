@@ -6,6 +6,12 @@ country_decisions = {
 			religion_group = muslim
 			NOT = { has_country_flag = formed_andalusia_flag }
 			NOT = { tag = ADU }
+			NOT = { tag = MAM }
+			NOT = { tag = HSN }
+			NOT = { tag = RUM }
+			NOT = { tag = TUR }
+			NOT = { tag = EGY }
+			NOT = { tag = ARB }
 			OR = {
 				primary_culture = andalusi_culture
 				AND = {
