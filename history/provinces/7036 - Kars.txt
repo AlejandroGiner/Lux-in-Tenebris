@@ -1,7 +1,6 @@
-#4377 - Kars
 
-owner = QAR
-controller = QAR
+owner = GEO
+controller = GEO
 culture = armenian
 religion = coptic
 capital = "Kars"
@@ -12,7 +11,10 @@ base_production = 2
 base_manpower = 2
 is_city = yes
 add_core = ARM
-add_core = QAR
+add_core = GEO
+add_core = SME
+fort_15th = yes
+
 discovered_by = east_african
 discovered_by = western
 discovered_by = muslim
@@ -20,4 +22,3 @@ discovered_by = persian_btc
 discovered_by = ottoman
 discovered_by = eastern
 discovered_by = nomad_group
-fort_15th = yes
