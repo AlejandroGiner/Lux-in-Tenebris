@@ -21,7 +21,6 @@ country_decisions = {
 		}
 
 		effect = {
-			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government = monarchy } }
 				change_government = monarchy
@@ -46,6 +45,8 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { tag = PRU }
+			NOT = { tag = GER }
 			tag = BRA
 		}
 		provinces_to_highlight = {
@@ -82,6 +83,7 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -96,17 +98,65 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
-			PRU = {
-				every_owned_province = {
-					limit = { 
-						OR = {
-							culture = saxon
-							culture = pommeranian
-						}
-					} 
-					change_culture = prussian
+			capital_scope = { change_culture = prussian }
+			custom_tooltip = prussia_change_culture_provinces_tooltip
+			hidden_effect = {
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
 				}
-			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+			}
 			west_prussia_area = {
 				limit = {
 					NOT = {
@@ -185,6 +235,7 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
@@ -283,6 +334,7 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -297,17 +349,65 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
-			PRU = {
-				every_owned_province = {
-					limit = { 
-						OR = {
-							culture = saxon
-							culture = pommeranian
-						}
-					} 
-					change_culture = prussian
+			capital_scope = { change_culture = prussian }
+			custom_tooltip = prussia_change_culture_provinces_tooltip
+			hidden_effect = {
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
 				}
-			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+			}
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
