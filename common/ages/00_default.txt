@@ -75,18 +75,18 @@ age_of_discovery = {
 	 		}
 		}
 		
-		obj_two_unions = {
-			allow = {
-				religion_group = christian
-			}
-			personal_union  = 2
-		}
+		#obj_two_unions = {
+		#	allow = {
+		#		religion_group = christian
+		#	}
+		#	personal_union  = 2
+		#}
 		
 		obj_many_vassals = {
-			allow = {
-				NOT = { religion_group = christian }
+			OR = {
+				personal_union  = 2
+				vassal = 5
 			}
-			vassal = 5
 		}		
 	
 		obj_two_continents = {
