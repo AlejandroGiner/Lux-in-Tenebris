@@ -2,18 +2,20 @@
 #Region - Scandinavia
 #Area - Denmark
 
+add_core = BRN
 add_core = DAN
 owner = DAN
 controller = DAN
 culture = danish
 religion = catholic
 hre = no
-base_tax = 2
-base_production = 1
-trade_goods = fish
-base_manpower = 1
+base_tax = 3
+base_production = 3
+trade_goods = glass # Centre of pottery production using local clay
+base_manpower = 2
 capital = "Rønne"			#Draiocht added accent, for fun. Probably wasnt present in 15th century name
 is_city = yes
+fort_15th = yes # Hammershus
 
 discovered_by = western
 discovered_by = muslim
