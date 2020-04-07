@@ -91,21 +91,21 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			low_countries_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { province_id = 87 }
-					NOT = { province_id = 1931 }
+			custom_tooltip = belgium_formable_claims_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						NOT = { owned_by = ROOT }
+						OR = {
+							region = low_countries_region
+							area = picardy_area
+						}
+						NOT = { province_id = 3024 }
+						NOT = { province_id = 89 }
+						NOT = { province_id = 1931 }
+					}
+					add_permanent_claim = NED
 				}
-				add_permanent_claim = NED
-			}
-			picardy_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { province_id = 89 }
-					NOT = { province_id = 3024 }
-				}
-				add_permanent_claim = NED
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

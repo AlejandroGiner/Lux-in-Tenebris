@@ -45,6 +45,8 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { tag = PRU }
+			NOT = { tag = GER }
 			tag = BRA
 		}
 		provinces_to_highlight = {
@@ -96,17 +98,65 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
-			PRU = {
-				every_owned_province = {
-					limit = { 
-						OR = {
-							culture = saxon
-							culture = pommeranian
-						}
-					} 
-					change_culture = prussian
+			capital_scope = { change_culture = prussian }
+			custom_tooltip = prussia_change_culture_provinces_tooltip
+			hidden_effect = {
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
 				}
-			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+			}
 			west_prussia_area = {
 				limit = {
 					NOT = {
@@ -299,17 +349,65 @@ country_decisions = {
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
-			PRU = {
-				every_owned_province = {
-					limit = { 
-						OR = {
-							culture = saxon
-							culture = pommeranian
-						}
-					} 
-					change_culture = prussian
+			capital_scope = { change_culture = prussian }
+			custom_tooltip = prussia_change_culture_provinces_tooltip
+			hidden_effect = {
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
 				}
-			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+			}
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
