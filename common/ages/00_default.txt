@@ -588,7 +588,13 @@ age_of_absolutism = {
 		}
 		ab_dutch_anti_corruption = {
 			allow = {
-				tag = NED
+				OR = {
+					AND = {
+						tag = HOL
+						NOT = { exists = NED }
+					}
+					tag = NED
+				}
 			}
 			modifier = {
 				yearly_corruption = -0.2
@@ -599,7 +605,13 @@ age_of_absolutism = {
 		}	
 		ab_sweden_manpower = {
 			allow = {
-				tag = SWE
+				OR = {
+					tag = SWE
+					AND = {
+						tag = SCA
+						was_tag = SWE
+					}
+				}
 			}
 			modifier = {
 				manpower_recovery_speed = 0.35
@@ -767,7 +779,13 @@ age_of_revolutions = {
 		}
 		ab_pru_military = {
 			allow = {
-				tag = PRU
+				OR = {
+					tag = PRU
+					AND = {
+						tag = GER
+						was_tag = PRU
+					}
+				}
 			}
 			modifier = {
 				fire_damage_received = -0.2
@@ -778,7 +796,10 @@ age_of_revolutions = {
 		}
 		ab_gbr_fleet = {
 			allow = {
-				tag = GBR
+				OR = {
+					tag = UKP
+					tag = GBR
+				}
 			}
 			modifier = {
 				naval_maintenance_modifier = -0.33
