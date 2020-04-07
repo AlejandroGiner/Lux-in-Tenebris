@@ -1035,3 +1035,42 @@ GLC_ideas = {
 	}
 }
 
+GTA_ideas = {
+	start = {
+		movement_speed = 0.10
+        defensiveness = 0.1
+	}
+
+	bonus = {
+		siege_ability = 0.15
+	}
+
+	trigger = {
+		tag = GTA
+	}
+	free = yes		# will be added at load
+
+	GTA_idea1 = {
+		development_cost = -0.10
+	}
+	GTA_idea2 = {
+		core_creation = -0.15
+	}
+	GTA_idea3 = {
+		improve_relation_modifier = 0.15
+		envoy_travel_time = -0.25
+	}
+	GTA_idea4 = {
+		hostile_attrition = 1
+	}
+	GTA_idea5 = {
+		global_trade_power = 0.2
+	}
+	GTA_idea6 = {
+		heavy_ship_power = 0.10
+	}
+	GTA_idea7 = {
+		prestige = 1
+	}
+}
+
