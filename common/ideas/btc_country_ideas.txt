@@ -1158,11 +1158,11 @@ SIC_ideas = {
 EPI_ideas = {
     start = {
         navy_tradition_decay = -0.01
-        tolerance_heretic = 3
+        legitimacy = 1
     }
 
     bonus = {
-        advisor_cost = -0.1
+        advisor_cost = -0.15
     }
 
     trigger = {
@@ -1172,25 +1172,25 @@ EPI_ideas = {
 
     EPI_idea_1 = {
         reinforce_cost_modifier = -0.15
-        reinforce_speed = 0.1
+        reinforce_speed = 0.15
     }
     EPI_idea_2 = {
-        ae_impact = -0.05
+        ae_impact = -0.1
     }
     EPI_idea_3 = {
-        culture_conversion_cost = -0.15
+        culture_conversion_cost = -0.2
     }
     EPI_idea_4 = {
         hostile_attrition = 1
     }
     EPI_idea_5 = {
-        global_unrest = -1
+        global_unrest = -2
     }
     EPI_idea_6 = {
-        global_ship_trade_power = 0.15
+        global_trade_power = 0.1
     }
     EPI_idea_7 = {
-        enemy_core_creation = 0.2
+        enemy_core_creation = 0.25
     }
 }
 
