@@ -4,10 +4,7 @@ country_decisions = {
 		potential = {
 			tag = RUS
 			normal_or_historical_nations = yes
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
+			is_playing_custom_nation = no
 			owns = 33
 			NOT = { capital = 33 }
 			NOT = { has_country_flag = relocated_capital_st_petersburg }
@@ -20,13 +17,15 @@ country_decisions = {
 			33 = {
 				change_province_name = "St. Petersburg"
 				rename_capital = "St. Petersburg"
-				add_base_tax = 6 
-				add_base_manpower = 3
+				add_base_tax = 8 
+				add_base_production = 6 
+				add_base_manpower = 4
+				add_building = castle
 				change_culture = capital
 			}
 			set_country_flag = relocated_capital_st_petersburg
-			add_years_of_income = -1
-			add_prestige = 100
+			add_years_of_income = -0.25
+			add_prestige = 50
 			33 = {
 				move_capital_effect = yes
 			}
@@ -43,9 +42,6 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				NOT = { years_of_income = 1.25 }
 			}
 		}
 	}
