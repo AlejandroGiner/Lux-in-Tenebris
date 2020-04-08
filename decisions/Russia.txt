@@ -24,7 +24,6 @@ country_decisions = {
 				change_culture = capital
 			}
 			set_country_flag = relocated_capital_st_petersburg
-			add_years_of_income = -0.25
 			add_prestige = 50
 			33 = {
 				move_capital_effect = yes
@@ -38,7 +37,12 @@ country_decisions = {
 				33 = {
 					add_center_of_trade_level = 1
 				}
-			}							
+			}
+			if = {
+				limit = { ai = no }
+				add_years_of_income = -0.75
+			}
+			else = { add_years_of_income = -0.25 }
 		}
 		ai_will_do = {
 				factor = 1
@@ -80,5 +84,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 }
