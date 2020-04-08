@@ -465,6 +465,13 @@ hun_ottoman_group = {
 				}
 				add_claim = ROOT
 			}
+			ionian_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
 			morea_area = {
 				limit = {
 					NOT = { is_core = ROOT }

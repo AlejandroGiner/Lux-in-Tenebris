@@ -238,6 +238,13 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ionian_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			morea_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -267,6 +274,7 @@ romanian_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_greece_area
+				area = ionian_islands_area
 				area = morea_area
 				area = western_aegean_area
 				area = thessaly_area
@@ -281,6 +289,10 @@ romanian_missions_1 = {
 				exists = BYZ
 			}
 			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ionian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

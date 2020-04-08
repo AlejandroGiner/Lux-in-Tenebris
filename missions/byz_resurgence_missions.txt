@@ -683,6 +683,7 @@ byz_resurges = {
 							OR = {
 								area = morea_area
 								area = northern_greece_area
+								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
@@ -733,6 +734,7 @@ byz_resurges = {
 							OR = {
 								area = morea_area
 								area = northern_greece_area
+								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
@@ -787,6 +789,7 @@ byz_resurges = {
 			OR = {
 				area = morea_area
 				area = northern_greece_area
+				area = ionian_islands_area
 				area = western_aegean_area
 				area = thessaly_area
 				area = macedonia_area
@@ -819,6 +822,7 @@ byz_resurges = {
 							OR = {
 								area = morea_area
 								area = northern_greece_area
+								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
@@ -1626,6 +1630,13 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 					}
 					add_permanent_claim = ROOT
 				}
+				ionian_islands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				northern_aegean_islands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1685,6 +1696,7 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 				area = northern_aegean_islands_area
 				area = aegean_archipelago_area
 				area = eastern_mediterrenean_islands_area
+				area = ionian_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1694,6 +1706,10 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 			NOT = { exists = CDA }
 			NOT = { exists = KNI }
 			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			ionian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

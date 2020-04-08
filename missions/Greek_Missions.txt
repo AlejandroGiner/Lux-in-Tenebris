@@ -77,13 +77,19 @@ gre_rebirth_of_hellas = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_permanent_claim = ROOT
-					}
+				}
 				northern_greece_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_permanent_claim = ROOT
+				}
+				ionian_islands_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -108,6 +114,9 @@ gre_rebirth_of_hellas = {
 			northern_greece_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			ionian_islands_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			is_subject = no
 		}
 		effect = {
@@ -115,11 +124,11 @@ gre_rebirth_of_hellas = {
 			custom_tooltip = greece_reclaim_macedonia_claims
 			hidden_effect = {
 				said_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
