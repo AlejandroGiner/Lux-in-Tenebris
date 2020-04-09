@@ -297,7 +297,15 @@ country_event = {
 		any_owned_province = {
 			OR = {
 				area = transdanubia_area
+				area = southern_transdanubia_area
+				area = western_transdanubia_area
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = szeklerland_area
 				area = alfold_area
+				area = southern_alfold_area
+				area = slovakia_area
+				area = felvidek_area
 			}
 		}
 		NOT = { stability = 1 }
@@ -314,9 +322,17 @@ country_event = {
 				limit = {
 					OR = {
 						area = transdanubia_area
+						area = southern_transdanubia_area
+						area = western_transdanubia_area
+						area = transylvania_area
+						area = southern_transylvania_area
+						area = szeklerland_area
 						area = alfold_area
+						area = southern_alfold_area
+						area = slovakia_area
+						area = felvidek_area
 					}
-					development = 10
+					development = 7
 				}
 				set_province_flag = hungarian_revolt
 			}
@@ -343,7 +359,15 @@ country_event = {
 			limit = {
 				OR = {
 					area = transdanubia_area
+					area = southern_transdanubia_area
+					area = western_transdanubia_area
+					area = transylvania_area
+					area = southern_transylvania_area
+					area = szeklerland_area
 					area = alfold_area
+					area = southern_alfold_area
+					area = slovakia_area
+					area = felvidek_area
 				}
 			}	
 			add_unrest = 5
@@ -355,7 +379,15 @@ country_event = {
 			limit = {
 				OR = {
 					area = transdanubia_area
+					area = southern_transdanubia_area
+					area = western_transdanubia_area
+					area = transylvania_area
+					area = southern_transylvania_area
+					area = szeklerland_area
 					area = alfold_area
+					area = southern_alfold_area
+					area = slovakia_area
+					area = felvidek_area
 				}
 				is_capital = no
 			}	
@@ -495,10 +527,11 @@ country_event = {
 		NOT = { exists = HUN }
 		NOT = { religion = protestant }
 		any_owned_province = {
-			OR = {
-				area = transdanubia_area
-				area = alfold_area
-			}
+			region = carpathia_region
+			NOT = { area = wallachia_area }
+			NOT = { area = eastern_wallachia_area }
+			NOT = { area = moldavia_area }
+			NOT = { area = western_moldovia }
 			religion = protestant
 		}
 	}
@@ -515,20 +548,22 @@ country_event = {
 			set_country_flag = HAB_had_event_3099
 			random_owned_province = {
 				limit = {
-					OR = {
-						area = transdanubia_area
-						area = alfold_area
-					}
+					region = carpathia_region
+					NOT = { area = wallachia_area }
+					NOT = { area = eastern_wallachia_area }
+					NOT = { area = moldavia_area }
+					NOT = { area = western_moldovia }
 					religion = protestant
 				}
 				set_province_flag = hungarian_revolt
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						area = transdanubia_area
-						area = alfold_area
-					}
+					region = carpathia_region
+					NOT = { area = wallachia_area }
+					NOT = { area = eastern_wallachia_area }
+					NOT = { area = moldavia_area }
+					NOT = { area = western_moldovia }
 					religion = protestant
 					NOT = { has_province_flag = second_hungarian_revolt }
 				}
@@ -543,6 +578,7 @@ country_event = {
 			limit = {
 				has_province_flag = hungarian_revolt
 			}
+			change_culture = hungarian
 			spawn_rebels = {
 				type = nationalist_rebels
 				size = 3
@@ -555,6 +591,7 @@ country_event = {
 			limit = {
 				has_province_flag = second_hungarian_revolt
 			}
+			change_culture = hungarian
 			spawn_rebels = {
 				type = nationalist_rebels
 				size = 2
@@ -672,14 +709,20 @@ country_event = {
 		any_owned_province = {
 			OR = {
 				area = transdanubia_area
+				area = southern_transdanubia_area
+				area = western_transdanubia_area
 				area = alfold_area
+				area = southern_alfold_area
 			}
 		}
 		TUR = {
 			any_owned_province = {
 				OR = {
 					area = transdanubia_area
+					area = southern_transdanubia_area
+					area = western_transdanubia_area
 					area = alfold_area
+					area = southern_alfold_area
 				}
 			}
 		}
@@ -697,7 +740,10 @@ country_event = {
 				limit = {
 					OR = {
 						area = transdanubia_area
+						area = southern_transdanubia_area
+						area = western_transdanubia_area
 						area = alfold_area
+						area = southern_alfold_area
 					}
 				}
 				set_province_flag = hungarian_revolt
@@ -713,7 +759,10 @@ country_event = {
 			limit = {
 				OR = {
 					area = transdanubia_area
+					area = southern_transdanubia_area
+					area = western_transdanubia_area
 					area = alfold_area
+					area = southern_alfold_area
 				}
 			}
 			add_unrest = 10
@@ -740,7 +789,10 @@ country_event = {
 			limit = {
 				OR = {
 					area = transdanubia_area
+					area = southern_transdanubia_area
+					area = western_transdanubia_area
 					area = alfold_area
+					area = southern_alfold_area
 				}
 			}
 			add_core = HUN
@@ -766,10 +818,11 @@ country_event = {
 		
 		NOT = { exists = HUN }
 		any_owned_province = {
-			OR = {
-				area = transdanubia_area
-				area = alfold_area
-			}
+			region = carpathia_region
+			NOT = { area = wallachia_area }
+			NOT = { area = eastern_wallachia_area }
+			NOT = { area = moldavia_area }
+			NOT = { area = western_moldovia }
 		}
 		NOT = { accepted_culture = hungarian }
 		NOT = {
@@ -789,10 +842,11 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					OR = {
-						area = transdanubia_area
-						area = alfold_area
-					}
+					region = carpathia_region
+					NOT = { area = wallachia_area }
+					NOT = { area = eastern_wallachia_area }
+					NOT = { area = moldavia_area }
+					NOT = { area = western_moldovia }
 				}
 				set_province_flag = hungarian_revolt
 			}
@@ -826,19 +880,21 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					OR = {
-						area = transdanubia_area
-						area = alfold_area
-					}
+					region = carpathia_region
+					NOT = { area = wallachia_area }
+					NOT = { area = eastern_wallachia_area }
+					NOT = { area = moldavia_area }
+					NOT = { area = western_moldovia }
 					NOT = { has_province_flag = hungarian_revolt }
 				}
 			}
 			random_owned_province = {
 				limit = {
-					OR = {
-						area = transdanubia_area
-						area = alfold_area
-					}
+					region = carpathia_region
+					NOT = { area = wallachia_area }
+					NOT = { area = eastern_wallachia_area }
+					NOT = { area = moldavia_area }
+					NOT = { area = western_moldovia }
 					NOT = { has_province_flag = hungarian_revolt }
 				}
 				spawn_rebels = {
@@ -1600,7 +1656,27 @@ country_event = {
 			}
 		}
 		NOT = {
+			southern_alfold_area = {
+ 				owned_by = TUR
+			}
+		}
+		NOT = {
 			transdanubia_area = {
+ 				owned_by = TUR
+			}
+		}
+		NOT = {
+			southern_transdanubia_area = {
+ 				owned_by = TUR
+			}
+		}
+		NOT = {
+			western_transdanubia_area = {
+ 				owned_by = TUR
+			}
+		}
+		NOT = {
+			felvidek_area = {
  				owned_by = TUR
 			}
 		}
