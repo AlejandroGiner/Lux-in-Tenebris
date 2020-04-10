@@ -1683,49 +1683,20 @@ country_event = {
 		NOT = { exists = HUN }
 		is_year = 1700
 		NOT = {
-			slovakia_area = {
- 				owned_by = TUR
-			}
+			slovakia_area = { owned_by = TUR }
+			alfold_area = { owned_by = TUR }
+			southern_alfold_area = { owned_by = TUR }
+			transdanubia_area = { owned_by = TUR }
+			southern_transdanubia_area = { owned_by = TUR }
+			western_transdanubia_area = { owned_by = TUR }
+			felvidek_area = { owned_by = TUR }
 		}
-		NOT = {
-			alfold_area = {
- 				owned_by = TUR
-			}
-		}
-		NOT = {
-			southern_alfold_area = {
- 				owned_by = TUR
-			}
-		}
-		NOT = {
-			transdanubia_area = {
- 				owned_by = TUR
-			}
-		}
-		NOT = {
-			southern_transdanubia_area = {
- 				owned_by = TUR
-			}
-		}
-		NOT = {
-			western_transdanubia_area = {
- 				owned_by = TUR
-			}
-		}
-		NOT = {
-			felvidek_area = {
- 				owned_by = TUR
-			}
-		}
-
 		owns = 153 #Pest
 		owns = 155 #Bekes
 		owns = 1864 #Somogy
 	}
 
-	mean_time_to_happen = {
-		months = 100
-	}
+	mean_time_to_happen = { months = 100 }
 
 
 	option = {# Encourage it!
@@ -1756,14 +1727,10 @@ country_event = {
 		owns = 73
 		is_year = 1460
 		NOT = { is_year = 1480 }
-		73 = {
-			NOT = { has_province_modifier = hab_schwaz_mine }
-		}
+		73 = { NOT = { has_province_modifier = hab_schwaz_mine } }
 	}
 
-	mean_time_to_happen = {
-		months = 60
-	}
+	mean_time_to_happen = { months = 60 }
 
 
 	option = {# Great!

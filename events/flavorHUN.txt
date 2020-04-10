@@ -15,6 +15,7 @@ country_event = {
 	picture = DEBATE_REPUBLICAN_eventPicture
 	
 	fire_only_once = yes
+	major = yes
 
 	trigger = {
 		tag = HUN
@@ -60,9 +61,9 @@ country_event = {
 			name = "Ladislaus Postumus"
 			dynasty = "von Habsburg"
 			culture = austrian
-			adm = 1
-			dip = 2
-			mil = 1
+			adm = 3
+			dip = 3
+			mil = 2
 			birth_date = 1440.2.22
 		}
 		every_country = {
@@ -88,9 +89,9 @@ country_event = {
 			name = "Ladislaus Postumus"
 			dynasty = "von Habsburg"
 			culture = austrian
-			adm = 1
-			dip = 2
-			mil = 1
+			adm = 3
+			dip = 3
+			mil = 2
 			birth_date = 1440.2.22
 		}
 		add_estate_loyalty = {
@@ -119,7 +120,7 @@ country_event = {
 			has_heir = no
 		}
 		has_regency = no
-		NOT = { personal_union = 1 }
+		NOT = { personal_union = 3 }
 		HAB = {
 			is_subject = no
 			government = monarchy
@@ -133,7 +134,7 @@ country_event = {
 	}
 	
 	option = {
-		ai_chance = { factor = 75 }
+		ai_chance = { factor = 70 }
 		name = flavor_hun.2.a
 		remove_historical_friend = HAB
 		HAB = { remove_historical_friend = HUN }
@@ -169,7 +170,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_hun.2.b	
-		ai_chance = { factor = 25 }
+		ai_chance = { factor = 30 }
 		add_stability_or_adm_power = yes
 		HAB = {
 			create_union = HUN
@@ -186,7 +187,7 @@ country_event = {
 			NOT = { dynasty = HAB }
 		}
 		ai_chance = {
-			factor = 25
+			factor = 30
 			modifier = {
 				factor = 10
 				heir_adm = 5
