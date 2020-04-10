@@ -125,6 +125,10 @@ ARE_ideas = {
 
 ANC_ideas = {
 	start = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 		republican_tradition = 0.3
 		diplomatic_reputation = 1
 	}
@@ -204,7 +208,7 @@ MTS_ideas = {
 	}
 	
 	mts_roberto_valturio = {
-		siege_ability = 0.2
+		siege_ability = 0.1
 	}
 	
 	mts_gate_to_orient = {
@@ -290,6 +294,10 @@ ICE_ideas = {
 		naval_forcelimit_modifier = 0.20
 	}
 	the_althing = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	icelandic_heritage = {
@@ -322,7 +330,7 @@ TSI_ideas = {
 		land_morale = 0.15
 	}
 	TSI_idea4 = {
-		development_cost = -0.2
+		development_cost = -0.1
 	}
 	TSI_idea5 = {
 		galley_power = 0.3
@@ -351,10 +359,10 @@ TKY_ideas = {
 	free = yes		# will be added at load
 	
 	TKY_idea1 = {
-		global_autonomy = -0.025
+		global_autonomy = -0.05
 	}
 	TKY_idea2 = {
-		harsh_treatment_cost = -0.25
+		harsh_treatment_cost = -0.2
 	}
 	TKY_idea3 = {
 		warscore_cost_vs_other_religion = -0.15
@@ -402,7 +410,7 @@ LEB_ideas = {
 	}
 	multicultural_state = {
 		global_unrest = -1
-		culture_conversion_cost = -0.25
+		culture_conversion_cost = -0.1
 	}
 	mount_lebanon = {
 		defensiveness = 0.2
@@ -433,6 +441,10 @@ ASY_ideas = {
 
 	heirs_of_ashurbanipal = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
 	assyrian_homeland = {
 		enemy_core_creation = 0.5
@@ -479,6 +491,10 @@ RSA_ideas = {
 		global_missionary_strength = 0.02
 	}
 	boer_republicanism = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	skilled_gunmen_afrikaners = {
@@ -627,11 +643,11 @@ KEM_ideas = {
 	free = yes
 
 	the_nile_old_egypt = {
-		development_cost = -0.2
+		development_cost = -0.05
 		global_trade_power = 0.10
 	}
 	the_two_lands = {
-		land_forcelimit_modifier = 0.33
+		land_forcelimit_modifier = 0.2
 		war_exhaustion = -0.02
 	}
 	great_monuments_old_egypt = {
@@ -639,10 +655,14 @@ KEM_ideas = {
 	}
 	coptic_church_old_egypt = {
 		tolerance_own = 2
+		legitimacy = 0.5
 		devotion = 0.5
+		horde_unity = 0.5
+		meritocracy = 0.5
+		republican_tradition = 0.2
 	}
 	hieroglyphic_writing = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.15
 	}
 	egyptian_technological_advancements = {
 		technology_cost = -0.10
@@ -673,6 +693,10 @@ BEL_ideas = {
 	}
 	king_law_liberty = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
 	joyous_entries_bel = {
 		global_unrest = -1
@@ -756,6 +780,10 @@ exarchate_ideas = {
 	protector_of_the_emperor = {
 		land_morale = 0.1
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
 	
 	byz_incorporate_far_lands = {
