@@ -15,6 +15,37 @@ country_decisions = {
 		}
 		}
 	}
+	
+
+	nestorian_all_seats_btc = {
+		potential = {
+			religion = nestorian
+			NOT = { has_country_flag = nestorian_seats_completed }
+		}
+    
+		provinces_to_highlight = { area = mardin_area }
+    
+		allow = {
+			religion = nestorian
+			mardin_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
+			418 = {
+				religion = nestorian
+				is_state = yes
+			}
+		}
+    
+		effect = {
+			418 = { change_province_name = "Nisibis" }
+			country_event = { id =  btc_nestorian_seats.1 }
+			hidden_effect = { set_country_flag = nestorian_seats_completed }
+		}
+    
+		ai_will_do = { factor = 1 }
+	}
   
 	seat_of_nisibis = {
 		potential = {

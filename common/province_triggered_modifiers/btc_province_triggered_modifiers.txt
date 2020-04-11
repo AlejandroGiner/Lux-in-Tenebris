@@ -1,173 +1,72 @@
 frankfurt_imperial_seat = {
-	potential = {
-		owner = { is_part_of_hre = yes }
-	}
-
-	trigger = {
-		owner = { is_part_of_hre = yes }
-	}
+	potential = { owner = { is_part_of_hre = yes } }
+	trigger = { owner = { is_part_of_hre = yes } }
 	
 	prestige = 0.5
 	imperial_authority = 0.05
-
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 mount_athos_modifier_muslim = {
-	potential = {
-		owner = {
-			religion_group = muslim
-		}
-	}
-
-	trigger = {
-		owner = {
-			religion_group = muslim
-		}
-		religion = orthodox
-	}
+	potential = { owner = { religion_group = muslim } }
+	trigger = { owner = { religion_group = muslim } religion = orthodox }
 	
 	tolerance_heathen = 1
-
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 mount_athos_modifier_orthodox = {
-	potential = {
-		owner = {
-			religion = orthodox
-		}
-	}
-
-	trigger = {
-		owner = {
-			religion = orthodox
-		}
-		religion = orthodox
-	}
+	potential = { owner = { religion = orthodox } }
+	trigger = { owner = { religion = orthodox } religion = orthodox }
 	
 	missionaries = 1
-
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 #Ecumenical Patriarch
 ecumenical_patriarch_modifier_muslim = {
-	potential = {
-		owner = {
-			religion_group = muslim
-		}
-	}
-
-	trigger = {
-		owner = {
-			religion_group = muslim
-		}
-		#Adjust this to require the event that Ottomans get.
-		religion = orthodox
-	}
+	potential = { owner = { religion_group = muslim } }
+	trigger = { owner = { religion_group = muslim } religion = orthodox } #Adjust this to require the event that Ottomans get. 
 	
 	tolerance_heathen = 1
-
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 ecumenical_patriarch_modifier_orthodox = {
-	potential = {
-		owner = {
-			religion = orthodox
-		}
-	}
-
-	trigger = {
-		owner = {
-			religion = orthodox
-		}
-		religion = orthodox
-	}
+	potential = { owner = { religion = orthodox } }
+	trigger = { owner = { religion = orthodox } religion = orthodox }
 	
 	global_missionary_strength = 0.01
-
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 orthodox_religious_center = {
-	potential = {
-		religion = orthodox
-	}
-
-	trigger = {
-		religion = orthodox
-	}
+	potential = { religion = orthodox }
+	trigger = { religion = orthodox }
 	
 	local_missionary_strength = -0.05
-
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 center_of_waldensian_worship = {
-	potential = {
-		NOT = { has_global_flag = false_waldo_flag }
-	}
-	trigger = {
-		owner = { religion = waldensian }
-	}
+	potential = { NOT = { has_global_flag = false_waldo_flag } }
+	trigger = { owner = { religion = waldensian } }
+	
 	tolerance_own = 1
+}
 
-	on_activation = {
+nestorian_seat_triggered_modifier = {
+	potential = { }
+	trigger = { owner = { religion = nestorian } religion = nestorian }
 	
-	}
-	
-	on_deactivation = {
-	
-	}
+	discipline = 0.01
+	land_morale = 0.02
+	technology_cost = -0.01
+	production_efficiency = 0.02
+	trade_efficiency = 0.02
+	administrative_efficiency = 0.005
+	envoy_travel_time = -0.025
+	global_autonomy = -0.025
 }
 
 #Exarch-related modifiers.
 exarch_territory_modifier = {
-	potential = {
-		exarches_territory_modifier_trigger = yes
-	}
-
-	trigger = {
-		exarches_territory_modifier_trigger = yes
-	}
+	potential = { exarches_territory_modifier_trigger = yes }
+	trigger = { exarches_territory_modifier_trigger = yes }
 	
 	picture = "exarch_seat_modifier"
 	min_local_autonomy = 33
@@ -175,52 +74,24 @@ exarch_territory_modifier = {
 }
 
 exarch_seat_modifier_med_dev = {
-	potential = {
-		has_estate = estate_exarches
-		NOT = { development = 10 }
-	}
-
-	trigger = {
-		has_estate = estate_exarches
-		development = 5
-		hidden_trigger = {
-			NOT = { development = 10 }
-		}
-	}
+	potential = { has_estate = estate_exarches NOT = { development = 10 } }
+	trigger = { has_estate = estate_exarches development = 5 hidden_trigger = { NOT = { development = 10 } } }
 	
 	picture = "exarch_seat_modifier_states"
 	max_states = 3
 }
 
 exarch_seat_modifier_high_dev = {
-	potential = {
-		has_estate = estate_exarches
-		development = 5
-		NOT = { development = 15 }
-	}
-
-	trigger = {
-		has_estate = estate_exarches
-		development = 10
-		hidden_trigger = {
-			NOT = { development = 15 }
-		}
-	}
+	potential = { has_estate = estate_exarches development = 5 NOT = { development = 15 } }
+	trigger = { has_estate = estate_exarches development = 10 hidden_trigger = { NOT = { development = 15 } } }
 	
 	picture = "exarch_seat_modifier_states_big"
 	max_states = 5
 }
 
 exarch_seat_modifier_very_high_dev = {
-	potential = {
-		has_estate = estate_exarches
-		development = 10
-	}
-
-	trigger = {
-		has_estate = estate_exarches
-		development = 15
-	}
+	potential = { has_estate = estate_exarches development = 10 }
+	trigger = { has_estate = estate_exarches development = 15 }
 	
 	picture = "exarch_seat_modifier_states_bigger"
 	max_states = 8
