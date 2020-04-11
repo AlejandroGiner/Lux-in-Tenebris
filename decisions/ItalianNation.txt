@@ -88,43 +88,55 @@ country_decisions = {
 			NOT = { has_country_modifier = btp_kingdom_of_god }
 		}
 		provinces_to_highlight = {
-			province_group = kingdom_of_god_requirements
-			NOT = { owned_by = ROOT is_core = ROOT }
+			OR = {
+				province_id = 101	# Genoa
+				province_id = 103	# Torino
+				province_id = 104	# Milano
+				province_id = 106	# Modena
+				province_id = 110	# Trento
+				province_id = 111	# Udine / Aquileia
+				province_id = 112	# Venice
+				province_id = 114	# Ravenna
+				province_id = 116	# Firenze
+				province_id = 115	# Pisa
+				province_id = 119	# Ancona
+				province_id = 2976	# Perugia
+				province_id = 2977	# Pesaro
+				province_id = 3041	# Bologna
+				province_id = 5712	# Fermo
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
 			#Ecclesiastical provinces of Northern Italy
-			#owns_core_province = 101	# Genoa
-			#owns_core_province = 103	# Torino
-			#owns_core_province = 104	# Milano
-			#owns_core_province = 105	# Parma
-			#owns_core_province = 106	# Modena
-			#owns_core_province = 107	# Brescia
-			#owns_core_province = 108	# Verona
-			#owns_core_province = 109	# Mantua
-			#owns_core_province = 110	# Trento
-			#owns_core_province = 111	# Udine / Aquileia
-			#owns_core_province = 112	# Venice
-			#owns_core_province = 113	# Ferrara
-			#owns_core_province = 114	# Bologna + Ravenna
-			#owns_core_province = 115	# Pisa
-			#owns_core_province = 116	# Firenze
-			#owns_core_province = 117	# Siena
-			#owns_core_province = 118	# Roma
-			#owns_core_province = 119	# Ancona + Fermo
-			#owns_core_province = 2976	# Perugia
-			#owns_core_province = 2977	# Pesaro
-			custom_trigger_tooltip = {
-				tooltip = kingdom_of_god_requirements.tooltip
-				kingdom_of_god_requirements = {
-					type = all
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-
+			owns_core_province = 101	# Genoa
+			owns_core_province = 103	# Torino
+			owns_core_province = 104	# Milano
+			owns_core_province = 105	# Parma
+			owns_core_province = 106	# Modena
+			owns_core_province = 107	# Brescia
+			owns_core_province = 108	# Verona
+			owns_core_province = 109	# Mantua
+			owns_core_province = 110	# Trento
+			owns_core_province = 111	# Udine / Aquileia
+			owns_core_province = 112	# Venice
+			owns_core_province = 113	# Ferrara
+			owns_core_province = 114	# Ravenna
+			owns_core_province = 115	# Pisa
+			owns_core_province = 116	# Firenze
+			owns_core_province = 117	# Siena
+			owns_core_province = 118	# Roma
+			owns_core_province = 119	# Ancona
+			owns_core_province = 2976	# Perugia
+			owns_core_province = 2977	# Pesaro
+			owns_core_province = 3041	# Bologna
+			owns_core_province = 5712	# Fermo
 		}
 		effect = {
 			add_country_modifier = {
@@ -135,6 +147,7 @@ country_decisions = {
 			italy_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
+					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
