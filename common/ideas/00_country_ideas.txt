@@ -109,10 +109,6 @@ SWE_ideas = {
 
 	kung_och_riksdag = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		possible_policy = 1
 	}
 	swedish_steel = {
@@ -152,7 +148,6 @@ MOS_ideas = {
 			tag = MOS
 			tag = MOZ
 			tag = SPK
-			tag = GLC
 			tag = VLG
 		}
 	}
@@ -192,10 +187,6 @@ RUS_ideas = {
 
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 
 	trigger = {
@@ -512,7 +503,7 @@ VEN_ideas = {
 		center_of_trade_upgrade_cost = -0.3
 	}
 	state_inquisition = {
-		global_spy_defence = 0.2
+		global_spy_defence = 0.3
 		spy_offence = 0.15
 	}
 	conscription = {
@@ -770,10 +761,6 @@ BAV_ideas = {
 	
 	everlating_succeession = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	bavarian_purity_law = {
 		production_efficiency = 0.1
@@ -937,10 +924,6 @@ NRM_Ideas = {
 	
 	from_dukes_to_kings = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	norman_adventurers = {
 		possible_mercenaries = 0.25
@@ -950,7 +933,7 @@ NRM_Ideas = {
 		movement_speed = 0.15
 	}
 	norman_architecture = {
-		build_cost = -0.15
+		build_cost = -0.25
 	}
 	catholic_piety_norman = {
 		papal_influence = 1
@@ -1121,10 +1104,6 @@ NAP_ideas = {
 	}
 	lazzaroni_support = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -1232,10 +1211,7 @@ TIM_ideas = {
 	}
 	chagatai_literature = {
 		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	timurid_renaissance = {
 		technology_cost = -0.05
@@ -1337,10 +1313,6 @@ MLO_ideas = {
 BYZ_ideas = { #New Byzantine ideas, from Byzantine Resurgence mod, by Dub.
 	start = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		tolerance_own = 2
 	}
 	
@@ -1435,7 +1407,7 @@ AYU_ideas = {
 	free = yes
 	
 	ayu_bunga_mas = {
-		global_tax_modifier = 0.10
+                global_tax_modifier = 0.10
 		vassal_income = 0.15
 	}
 	ayu_mueang = {
@@ -1545,7 +1517,7 @@ OMA_ideas = {
 
 KOR_ideas = {
 	start = {
-		development_cost = -0.1
+		development_cost = -0.15
 		defensiveness = 0.15
 	}
 	
@@ -1605,10 +1577,6 @@ BOH_ideas = {
 	}
 	boh_elective_monarchy = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	wagenburg = {
 		shock_damage_received = -0.1
@@ -1650,9 +1618,6 @@ ITA_ideas = {
 	
 	no_a_geographical_construct = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	tradition_of_the_legion = {
@@ -1702,11 +1667,8 @@ MJZ_ideas = {
 		hostile_attrition = 1.0
 	}
 	jurchen_pigtail = {
-		legitimacy = 0.5
-		devotion = 0.5
 		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.2
+		legitimacy = 0.5
 		global_unrest = -1
 	}
 	jurchen_foreign_service = {
@@ -1753,11 +1715,8 @@ MCH_ideas = {
 		stability_cost_modifier = -0.1
 	}
 	the_later_jin = {
-		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1
 	}	
 	link_with_the_mongol_dynasty = {
 		cavalry_power = 0.15
@@ -1799,10 +1758,7 @@ QNG_ideas = {
 	qng_bogda_khan = {
 		years_of_nationalism = -5
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
 		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	the_chinese_rules = {
 		administrative_efficiency = 0.05
@@ -1878,10 +1834,6 @@ NOV_ideas = {
 		global_missionary_strength = 0.01
 	}
 	ivans_hundred = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	control_of_the_hanseatic_kontor = {
@@ -1909,10 +1861,6 @@ ETH_ideas = {
 	
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	trigger = {
@@ -1982,11 +1930,7 @@ SAV_ideas = {
 
 	}
 	savoyard_legitimacy = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3 
+		legitimacy = 1   
 	}
 }
 
@@ -2336,10 +2280,6 @@ ORI_ideas = {
 	}
 	servitor_of_jagganath = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	parikshas = {
 		global_tax_modifier = 0.1
@@ -2568,10 +2508,6 @@ USA_ideas = {
 	}
 	
 	bonus = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.5
 	}
 	
@@ -2595,15 +2531,15 @@ USA_ideas = {
 		development_cost = -0.05
 	}
 	shining_city_on_a_hill = { #Empire of liberty
-		unjustified_demands = -0.2
-		improve_relation_modifier = 0.25
+		unjustified_demands = -0.3
+		improve_relation_modifier = 0.3
 	}
 	immigration_usa = {
 		colonist_placement_chance = 0.15
 	}
 	indian_removal = { #Trail of tears
 		harsh_treatment_cost = -0.15
-		culture_conversion_cost = -0.2
+		culture_conversion_cost = -0.3
  	}
 }
 
@@ -3104,10 +3040,6 @@ PUE_ideas = {
 	
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	trigger = {
@@ -3280,10 +3212,6 @@ PRO_ideas = {
 	}
 	revive_house_of_anjou = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	composite_monarchy = {
 		global_unrest = -1
@@ -3345,10 +3273,6 @@ MDI_ideas = {
 TRE_ideas = {
 	start = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		heir_chance = 0.5
 	}
 
@@ -3413,10 +3337,6 @@ GEO_ideas = {
 	bagrationi_dynasty = {
 		heir_chance = 0.5
 		legitimacy = 0.5
-		devotion = 1
-		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.3
 	}
 	georgian_isolation = {
 		improve_relation_modifier = 0.3
@@ -3470,10 +3390,6 @@ AFG_ideas = {
 	}
 	institutionalized_loya_jirga = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	graveyard_of_empires = {
 		hostile_attrition = 1
@@ -3512,10 +3428,6 @@ WAL_ideas = {
 	}
 	boyar_regime = { 
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	abolition_of_serfdom = {
 		global_manpower_modifier = 0.2
@@ -3575,11 +3487,7 @@ CYP_ideas = {
 	free = yes
 
 	king_of_jerusalem = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 0.5
 		fabricate_claims_cost = -0.25
 	}
 	frankish_crusaders = {
@@ -3660,10 +3568,6 @@ AZT_ideas = {
 	}
 	sustaining_the_gods = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	telpochcalli = {
 		manpower_recovery_speed = 0.1
@@ -3699,10 +3603,6 @@ DAH_ideas = {
 	
 	children_of_the_panther = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	slave_hunts = {
 		global_manpower_modifier = 0.15
@@ -3711,7 +3611,7 @@ DAH_ideas = {
 		stability_cost_modifier = -0.1
 	}
 	lagredis = {
-		global_spy_defence = 0.3
+		global_spy_defence = 0.3		
 	}
 	the_amazons = {
 		discipline = 0.05
@@ -3733,10 +3633,6 @@ KBO_ideas = {
 
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
  
 	trigger = {
@@ -4155,10 +4051,6 @@ BOS_ideas = {
 	}
 	per_aspera_ad_astra = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	empower_bosnian_nobility = {
 		free_leader_pool = 1
@@ -4203,10 +4095,6 @@ MOL_ideas = {
 	}
 	moldavia_hospodar = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	moldavia_metropoly = {
 		global_missionary_strength = 0.02
@@ -4243,10 +4131,6 @@ AIR_ideas = {
 	}
 	legacy_of_tin_hinan = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	blue_people = { 
 		prestige = 1
@@ -4284,10 +4168,6 @@ mossi_ideas = {
 	
 	riale_and_yennenga = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	mossi_cavalry_raids = { 
@@ -4368,10 +4248,6 @@ fulani_jihad_ideas = {
 TAR_ideas = {
 	start = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		years_of_nationalism = -5
 	}
 	
@@ -4434,7 +4310,7 @@ KAR_ideas = {
 	
 	mehmet_bey_firman = {
 		stability_cost_modifier = -0.1
-		culture_conversion_cost = -0.1
+		culture_conversion_cost = -0.2
 	}
 	ghazi = {
 		#uses ottoman ideas
@@ -4453,10 +4329,6 @@ KAR_ideas = {
 	}
 	true_heirs_seljuk_empire = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -4476,11 +4348,7 @@ MON_ideas = {
 	free = yes
 	
 	mon_idea_1 = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1	
 	}
 	mon_idea_2 = {
 		tolerance_own = 1		
@@ -4530,10 +4398,6 @@ RMN_ideas = {
 	}
 	latin_island = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	rom_peasant_soldiers = {
 		infantry_cost = -0.1
@@ -4562,10 +4426,6 @@ ATH_ideas = {
 
 	dominus_athenarum = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	athenian_openeness = {
 		num_accepted_cultures = 1
@@ -4723,11 +4583,7 @@ PLT_ideas = {
 		fabricate_claims_cost = -0.25
 	}	
 	heritage_of_the_rus = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1	
 	}
 	cultural_center = {
 		idea_cost = -0.1	
@@ -4814,10 +4670,6 @@ ASH_ideas = {
 	}
 	ash_idea_4 = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ash_idea_5 = {
 		global_manpower_modifier = 0.15
@@ -4981,10 +4833,6 @@ MCA_ideas = {
 	}
 	mca_idea_7 = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -5053,7 +4901,7 @@ TEU_ideas = {
 	}
 	teu_idea_4 = {
 		papal_influence = 1
-		church_power_modifier = 0.1
+		church_power_modifier = 0.05
 		global_missionary_strength = 0.02
 	}
 	teu_idea_5 = {
@@ -5102,10 +4950,6 @@ BUL_ideas = {
 	}
 	bul_idea_7 = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -5382,10 +5226,6 @@ WLS_ideas = {
 	}
 	unbennaeth_prydain = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	economic_revival = {
 		production_efficiency = 0.1
@@ -5615,7 +5455,7 @@ KHI_ideas = {
 	}
 
 	bonus = {
-		reinforce_speed = 0.15
+		reinforce_speed = 0.1
 	}
 	
 	trigger = {
@@ -5681,10 +5521,6 @@ BAH_ideas = {
 	}
 	bahmani_primogeniture = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	madrasa_of_mahmud_gawan = {
 		idea_cost = -0.1
@@ -5788,10 +5624,6 @@ HAM_ideas = {
 		global_trade_power = 0.15
 	}		
 	hamburg_republic = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	walls_of_hamburg = {
@@ -5831,10 +5663,6 @@ jerusalem_ideas = {
 	crown_of_thorns = {
 		prestige = 1
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	latin_patriarch = {
 		papal_influence = 2
@@ -5941,11 +5769,8 @@ CAN_ideas = {
 	}
 	
 	bonus = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
+		legitimacy = 1
 	}
 	
 	trigger = {
@@ -6057,7 +5882,7 @@ MEX_ideas = {
 
 TRA_ideas = {
 	start = {
-		global_manpower_modifier = 0.1
+		num_accepted_cultures = 1
 		defensiveness = 0.15
 	}
 
@@ -6072,6 +5897,7 @@ TRA_ideas = {
 	
 	unio_trium_nationum = {
 		cavalry_power = 0.15
+		global_manpower_modifier = 0.1
 	}
 	torda_salt_mines = {
 		production_efficiency = 0.1
@@ -6125,10 +5951,6 @@ SUK_ideas = {
 	}
 	ramkhamhaeng_stele = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	suk_war_elephants = {
 		cavalry_power = 0.1
@@ -6140,7 +5962,7 @@ WBG_ideas = {
 	start = {
 		global_prov_trade_power_modifier = 0.10
 		papal_influence = 1
-		church_power_modifier = 0.1
+		church_power_modifier = 0.05
 	}
 	
 	bonus = {
@@ -6288,10 +6110,6 @@ BRZ_ideas = {
 	}
 	old_seat_of_the_empire = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -6348,10 +6166,6 @@ BEN_ideas = {
 	
 	ben_curb_the_uzama = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ben_isiatua = {
 		siege_ability = 0.1
@@ -6448,10 +6262,6 @@ SHL_ideas = {
 	}
 	danish_protest_pigs = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -6477,7 +6287,7 @@ HES_ideas = {
 	}
 	welcome_reformers = {
 		religious_unity = 0.25
-		church_power_modifier = 0.1
+		church_power_modifier = 0.05
 	}
 	let_in_religious_emigrants = {
 		development_cost = -0.1
@@ -6509,10 +6319,6 @@ ARK_ideas = {
 	
 	ark_mrauk_u_dynasty = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ark_rohingya_immigrants = {
 		tolerance_heathen = 2
@@ -6551,10 +6357,6 @@ NOL_ideas = {
 	
 	nol_secure_percy_rule = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	nol_memory_of_hegemony = {
 		fabricate_claims_cost = -0.25
@@ -6579,7 +6381,7 @@ NOL_ideas = {
 MUN_ideas = {
 	start = {
 		papal_influence = 1
-		church_power_modifier = 0.1
+		church_power_modifier = 0.05
 		global_trade_power = 0.1
 	}
 	bonus = {
@@ -6630,10 +6432,6 @@ THU_ideas = {
 	
 	thu_partition_of_leipizg = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	thu_erfurt_fortifications = {
 		defensiveness = 0.2
@@ -6683,10 +6481,6 @@ BTI_ideas = {
 	}
 	bti_gideon_dynasty = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	bti_lost_tribe = {
 		advisor_cost = -0.15
@@ -6752,10 +6546,6 @@ LNA_ideas = {
  
 	lna_legacy_of_mangrai = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
     }
 	lna_million_ice_paddies = {
         global_trade_goods_size_modifier = 0.1
@@ -6800,10 +6590,6 @@ PGR_ideas = {
     }
     pgr_istano_basa = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
     }
     pgr_rajo_tigo_selo = {
 		global_unrest = -1
@@ -6916,10 +6702,6 @@ BAD_ideas = {
 	}
 	bad_zahringen = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	bad_small_nation_diplomacy = {
 		diplomats = 1
@@ -6999,10 +6781,6 @@ MLB_ideas = {
 	}
 	mlb_kingdom_of_the_meitei = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	mlb_mayek = {
 		tolerance_own = 2
@@ -7050,10 +6828,6 @@ PEG_ideas = {
 	}
 	peg_buddhist_traditions = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	peg_mon_diaspora = {
 		diplomatic_reputation = 1
@@ -7068,10 +6842,6 @@ KIC_ideas = {
 
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	trigger = {
@@ -7134,10 +6904,6 @@ LDK_ideas = {
 	}
 	ldk_kingdom_united = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ldk_far_away_traders = {
 		trade_efficiency = 0.1
@@ -7171,9 +6937,6 @@ ZIM_ideas = {
 	zim_spokesman_before_the_dead = {
 		legitimacy = 1
 		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	zim_elected_administrators = {
 		global_tax_modifier = 0.1
@@ -7209,10 +6972,6 @@ BAL_ideas = {
 	}
 	bal_khan_of_the_baloch = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	bal_reorganization_of_the_army = {
 		global_manpower_modifier = 0.15
@@ -7370,11 +7129,7 @@ KAS_ideas = {
 	}
 	kas_empower_the_khojas = {
 		tolerance_own = 2
-		legitimacy = 0.5
 		devotion = 0.5
-		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.2
 	}
 	kas_holy_warriors = {
 		land_morale = 0.1
@@ -7496,9 +7251,6 @@ CYI_ideas = {
 	cyi_renovate_skyward_tombs = {
 		legitimacy = 1
 		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	cyi_children_of_the_black_tiger = {
 		land_morale = 0.1
@@ -7614,10 +7366,6 @@ MAZ_ideas = {
     }
     maz_sejmy_i_sejmiki = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
     }
     maz_emporium = {
 		global_prov_trade_power_modifier = 0.25
@@ -7863,10 +7611,6 @@ MRA_ideas = {
 	
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	trigger = {
@@ -7901,10 +7645,6 @@ ROM_ideas = {
 	start = {
 		discipline = 0.05
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	bonus = {
@@ -8093,10 +7833,6 @@ BTS_ideas = {
 	}
 	bts_royal_justice = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	bts_european_diplomacy = {
 		diplomatic_reputation = 1
@@ -8164,10 +7900,6 @@ TBK_ideas = {
 	}
 	tbk_healthy_priest_kings = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	tbk_office_of_the_mulwa = {
 		tolerance_own = 2
@@ -8203,10 +7935,6 @@ LUB_ideas = {
 	}
 	lub_royal_village_shrines = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	lub_bambudye = {
 		stability_cost_modifier = -0.1
@@ -8257,10 +7985,6 @@ KUB_ideas = {
 	}
 	kub_ndop_statue = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	kub_courtly_competition = {
 		global_unrest = -1
@@ -8287,10 +8011,6 @@ LND_ideas = {
 	}
 	lnd_perpetual_kingship = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	lnd_tukwata = {
 		global_tax_modifier = 0.1
@@ -8491,10 +8211,6 @@ KAF_ideas = {
 	}
 	kaf_strengthen_ties_with_ethiopian_church = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	kaf_king_of_kings = {
 		discipline = 0.05
@@ -8579,10 +8295,6 @@ LOR_ideas = {
 WUR_ideas = {
 	start = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		trade_efficiency = 0.1
 	}
 	bonus = {
@@ -8667,11 +8379,8 @@ GLH_ideas = {
 	free = yes
 	
 	glh_legacy_of_the_golden_horde = {
-		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1
 	}
 	glh_perso_mongol_administration = {
 		core_creation = -0.25
@@ -8787,10 +8496,6 @@ OKA_ideas = {
 	
 	oka_heirs_of_chernigov = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	oka_dynamic_diplomacy = {
 		diplomats = 1
@@ -8841,9 +8546,6 @@ GHR_ideas = {
 	ghr_source_of_the_ganges = {
 		legitimacy = 1
 		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ghr_land_of_the_gods = {
 		tolerance_own = 2
@@ -8860,10 +8562,6 @@ DTT_ideas = {
 		shock_damage_received = -0.1
 	}
 	bonus = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	trigger = {
@@ -8935,10 +8633,6 @@ HTK_ideas = {
 	
 	HTK_clan_unification = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	HTK_saiku_shu = {
@@ -8954,10 +8648,6 @@ IMG_ideas = {
 	
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 
 	trigger = {
@@ -9059,10 +8749,6 @@ HSK_ideas = {
 	
 	hsk_kanrei = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	hsk_branches_and_retainers = {
@@ -9477,10 +9163,6 @@ ASK_ideas = {
 	
 	ask_defender_of_the_imperial_court = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 
 	higashiyama_culture = {
@@ -9818,10 +9500,6 @@ TTI_ideas = {
 	
 	tti_nara_city = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	tti_wise_opportunist = {
@@ -9858,10 +9536,6 @@ KKC_ideas = {
 	}
 	kkc_aso_schrine = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	kkc_resistance_against_foreign_intervention = {
 		land_morale = 0.1
@@ -10053,10 +9727,6 @@ BLO_ideas = {
 	}
 	blo_strengthen_local_lineages = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	blo_control_the_northern_trade = {
 		global_own_trade_power = 0.25
@@ -10200,10 +9870,6 @@ TPR_ideas = {
 	
 	tpr_rajmala = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	tpr_adaptive_administration = {
 		global_tax_modifier = 0.1
@@ -10322,10 +9988,6 @@ KHO_ideas = {
 	}
 	kho_dynastic_chronicles = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	kho_irrigation_network = {
 		global_trade_goods_size_modifier = 0.1
@@ -10571,6 +10233,8 @@ YEM_ideas = {
 		OR = {
 			tag = YEM
 			tag = ADE
+			tag = RSU
+			tag = TAH
 		}
 	}
 	free = yes
@@ -10622,10 +10286,6 @@ RAS_ideas = {
 	}
 	ras_unite_rassid_state = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ras_mountain_strongholds = {
 		shock_damage_received = -0.15
@@ -10666,10 +10326,6 @@ MSY_ideas = {
 	}
 	msy_house_united = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	msy_outward_pragmatism = {
 		diplomats = 1
@@ -10709,10 +10365,6 @@ SIS_ideas = {
 	}
 	sis_chronicles_of_sistan = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	sis_scholars_of_sistan = {
 		global_institution_spread = 0.1
@@ -10741,10 +10393,6 @@ RUM_ideas = {
 	}
 	rum_shahanshah = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	rum_sultan_of_rum = {
 		tolerance_heathen = 3
@@ -10795,10 +10443,6 @@ ARL_ideas = {
 	}
 	arl_shahs_of_iran = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -10817,10 +10461,6 @@ SME_ideas = {
 	
 	sme_atabegs_of_samtskhe = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	sme_proactive_diplomacy = {
 		spy_offence = 0.2
@@ -10857,10 +10497,6 @@ SRV_ideas = {
 	
 	srv_khalwati_order = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		monthly_piety = -0.001
 	}
 	srv_fortresses_of_shirvan = {
@@ -11204,10 +10840,6 @@ CEB_ideas = {
 	}
 	ceb_chola_legacy = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ceb_protect_against_the_magalos = {
 		navy_tradition = 1
@@ -11282,10 +10914,6 @@ HJO_ideas = {
 	
 	hjo_legacy_of_the_kamakura_shogunate = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	hjo_night_combat = {
 		leader_land_shock = 1
@@ -11412,10 +11040,6 @@ ASA_ideas = {
 	}
 	asa_seventeen_clan_code = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	asa_control_of_buddhist_sects = {
 		tolerance_own = 2
@@ -11486,10 +11110,6 @@ TYR_ideas = {
 	}
 	tyr_o_neill_mor = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	tyr_tanistry = {
 		stability_cost_modifier = -0.1 # change to heir chance?
@@ -11679,10 +11299,6 @@ ORD_ideas = {
 
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	
 	trigger = {
@@ -11721,9 +11337,6 @@ irish_ideas = {
 	
 	bonus = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	
@@ -11739,7 +11352,7 @@ irish_ideas = {
 		same_culture_advisor_cost = -0.25
 	}
 	more_than_irish = {
-		culture_conversion_cost = -0.1
+		culture_conversion_cost = -0.15
 		global_unrest = -1
 	}
 	loyal_catholics = {
@@ -11831,9 +11444,6 @@ FLY_ideas = {
 	}
 	fly_family_affair = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	fly_buannacht = {
@@ -12143,11 +11753,7 @@ LIE_ideas = {
 		manpower_recovery_speed = 0.2
 	}
 	lie_religious_devotion = {
-		legitimacy = 1
 		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	lie_wittelsbach_bishops = {
 		improve_relation_modifier = 0.3
@@ -12185,10 +11791,6 @@ GEL_ideas = {
 	}
 	gel_defy_burgundy = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	gel_rivers = {
 		development_cost = -0.1
@@ -12259,10 +11861,6 @@ AAC_ideas = {
 		prestige_decay = -0.01
 	}
 	aac_free_city = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	aac_spa = {
@@ -12301,10 +11899,6 @@ KLE_ideas = {
 	}
 	kle_cleves_mark = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	kle_reformers = {
 		papal_influence = 1
@@ -12399,10 +11993,6 @@ DLH_ideas = {
 	}
 	dlh_throne_of_india = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -12467,10 +12057,6 @@ HIN_ideas = {
 	}
 	hin_peacock_throne = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	hin_gunpowder_empire = {
 		fire_damage = 0.1
@@ -12519,10 +12105,6 @@ RJP_ideas = {
 	}
 	rjp_monumental_architecture = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -12691,10 +12273,6 @@ SND_ideas = {
 
 	snd_enduring_dynasty = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	snd_bab_ul_islam = {
 		global_missionary_strength = 0.02
@@ -12774,10 +12352,6 @@ MYS_ideas = {
 	}
 	mys_patronize_kannada_literature = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	mys_religious_tolerance = {
 		tolerance_heathen = 2
@@ -12920,10 +12494,7 @@ ILK_ideas = {
 	free = yes
 	ilk_restored_ilkhanate = {
 		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	ilk_favor_sufism = {
 		tolerance_heretic = 2
@@ -13237,11 +12808,8 @@ OIR_ideas = {
 		land_attrition = -0.20
 	}
 	the_four_oirats = {
-		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1
 	}
 	todo_besheg_script = {
 		technology_cost = -0.05
@@ -13374,10 +12942,7 @@ CSH_ideas = {
 	}
 	shun_claim_to_the_mandate = {
 		imperial_mandate = 0.03
-		legitimacy = 0.5
-		devotion = 0.5
-		horde_unity = 0.5
 		meritocracy = 0.5
-		republican_tradition = 0.2
+		legitimacy = 0.5
 	}
 }

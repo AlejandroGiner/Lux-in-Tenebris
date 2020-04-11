@@ -77,9 +77,6 @@ IRQ_ideas = {
 	}
 	IRQ_behold_al_iraq = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 }
@@ -154,10 +151,6 @@ YZD_ideas = {
 	}
 	YZD_sassanian_roots = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	YZD_uniting_persia = {
 		discipline = 0.05	
@@ -166,7 +159,7 @@ YZD_ideas = {
 
 BAR_ideas = {
 	start = {
-		build_cost = -0.15
+		build_cost = -0.20
 		defensiveness = 0.10
 	}
 	
@@ -226,10 +219,6 @@ ADA_ideas = {
 	}
 	lead_the_somali_people = {
 		legitimacy = 0.5
-		devotion = 0.5
-		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.2
 		global_unrest = -1
 	}
 	futuh_al_habash = {
@@ -267,7 +256,7 @@ HDY_ideas = {
 		cavalry_cost = -0.10
 	}
 	iron_currency = {
-		inflation_reduction = 0.1
+		inflation_reduction = 0.05
 	}
 	uphold_hadiya_fertility = { 
 		development_cost = -0.10
@@ -307,10 +296,6 @@ JJI_ideas = {
 	}
 	the_mwa_clan = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	janjiros_isolation = {
 		global_autonomy = -0.05
@@ -357,10 +342,6 @@ SOA_ideas = {
 	}
 	memory_of_the_makhzumi_dynasty = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	tensions_with_the_oromo = {
 		global_spy_defence = 0.25
@@ -377,8 +358,8 @@ SOA_ideas = {
 
 ENA_ideas = {
 	start = {
-		inflation_reduction = 0.1
-		caravan_power = 0.2
+		inflation_reduction = 0.05
+		caravan_power = 0.25
 	}
 	
 	bonus = {
@@ -404,13 +385,9 @@ ENA_ideas = {
 	}
 	keep_the_divine_kingship = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	reforming_tribal_polities = {
-		global_manpower_modifier = 0.2
+		global_manpower_modifier = 0.25
 	}
 	charting_an_independent_path = {
 		global_own_trade_power = 0.20
@@ -421,10 +398,6 @@ ENA_ideas = {
 WLY_ideas = {
 	start = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		defensiveness = 0.25
 	}
 	
@@ -517,12 +490,9 @@ QAS_ideas = {  #Qasim
 	free = yes
 	
 	muscovite_influences = {
-		reform_progress_growth = 0.15
+		reform_progress_growth = 0.10
 		legitimacy = 0.5
-		devotion = 0.5
 		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.2
 	}
 	ryazan_memories = {
 		global_manpower_modifier = 0.20
@@ -534,7 +504,7 @@ QAS_ideas = {  #Qasim
 		army_tradition = 0.50
 	}
 	lands_of_a_buffer_state = {
-        global_spy_defence = 0.1
+        global_spy_defence = 0.20
 		diplomatic_reputation = 1
 	}
 	reformed_administrative_leadership = {
@@ -619,11 +589,8 @@ KLM_ideas = {  #Kalmyk
 		land_attrition = -0.2
 	}
 	maintain_kalmyk_authority = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1.0
+		horde_unity = 1.0
 	}
 }
 
@@ -645,10 +612,7 @@ SHY_ideas = {
 	
 	reign_over_many_tribes = {
 		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	degrading_golden_horde_influence = {
 		core_creation = -0.25
@@ -661,7 +625,7 @@ SHY_ideas = {
 		free_adm_policy = 1
 	}
 	consolidate_shaybanid_domain = {
-		build_cost = -0.15
+		build_cost = -0.2
 	}
 	abulkharids = {
 		global_unrest = -1
@@ -748,10 +712,7 @@ NOG_ideas = {
 	}
 	fluid_political_organization = {
 		legitimacy = 1
-		devotion = 1
 		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -799,7 +760,7 @@ SIB_ideas = {  #Sibir
 JIN_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -813,7 +774,7 @@ JIN_ideas = {
 	
 	winners_of_the_three_kingdoms = {
 		army_tradition_decay = -0.01
-		harsh_treatment_cost = -0.15
+		harsh_treatment_cost = -0.25
 	}
 	lodged_administrative_divisions = {
 		state_maintenance_modifier = -0.25
@@ -826,10 +787,6 @@ JIN_ideas = {
 	}
 	war_of_the_eight_princes = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	the_five_barbarians = {
 		defensiveness = 0.15
@@ -843,7 +800,7 @@ JIN_ideas = {
 
 SHU_ideas = {
 	start = {
-		advisor_pool = 1
+		advisor_pool = 2
 		free_leader_pool = 1
 	}
 	
@@ -862,10 +819,6 @@ SHU_ideas = {
 	}
 	shu_han = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	three_kingdoms_period_shu = {
 		land_morale = 0.15
@@ -888,7 +841,7 @@ SHU_ideas = {
 
 WUU_ideas = {
 	start = {
-		advisor_pool = 1
+		advisor_pool = 2
 		free_leader_pool = 1
 	}
 	
@@ -971,7 +924,7 @@ CHC_ideas = {
 QIC_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1040,7 +993,7 @@ CXI_ideas = {
 		years_of_nationalism = -5
 	}
 	cut_down_opposition = {
-		harsh_treatment_cost = -0.2
+		harsh_treatment_cost = -0.25
 	}
 	great_western_dynasty_ascendant = {
 		stability_cost_modifier = -0.10
@@ -1056,7 +1009,7 @@ NNG_ideas = {
 	}
 	
 	bonus = {
-		global_autonomy = -0.05
+		global_autonomy = -0.1
 	}
 	
 	trigger = {
@@ -1065,11 +1018,7 @@ NNG_ideas = {
 	free = yes
 	
 	the_question_of_ming_succession = {
-		legitimacy = 0.5
-		devotion = 0.5
-		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.2
+		legitimacy = 1
 		global_unrest = -1
 	}
 	zhu_chenhao = {
@@ -1098,7 +1047,7 @@ NNG_ideas = {
 TNG_ideas = {
 	start = {
 		global_institution_spread = 0.10
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1131,6 +1080,8 @@ TNG_ideas = {
 	}
 	reclaim_the_lost_glory = {
 		core_creation = -0.10
+		legitimacy = 1
+		republican_tradition = 0.3
 		imperial_mandate = 0.10
 	}
 }
@@ -1139,7 +1090,7 @@ TNG_ideas = {
 MIN_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1162,7 +1113,7 @@ MIN_ideas = {
 		global_manpower_modifier = 0.15
 	}
 	cultivate_the_min_domain = {
-		development_cost = -0.1
+		development_cost = -0.15
 	}
 	succeed_where_we_failed_southern_tang = {
 		infantry_power = 0.15
@@ -1180,7 +1131,7 @@ MIN_ideas = {
 YAN_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1204,9 +1155,6 @@ YAN_ideas = {
 	}
 	revise_succession_laws = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	soldiers_from_many_regions = {
@@ -1225,7 +1173,7 @@ YAN_ideas = {
 LNG_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1245,10 +1193,7 @@ LNG_ideas = {
 		core_creation = -0.2
 	}
 	from_kaifeng_outwards = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
+		legitimacy = 1.0
 		republican_tradition = 0.3
 	}
 	memories_of_the_southern_tang = {
@@ -1258,7 +1203,7 @@ LNG_ideas = {
 		cavalry_power = 0.15
 	}
 	warranted_brutality = {
-		harsh_treatment_cost = -0.2
+		harsh_treatment_cost = -0.25
 	}
 	zhongguo = {
 		land_forcelimit_modifier = 0.15
@@ -1274,7 +1219,7 @@ CGS_ideas = {
 	}
 	
 	bonus = {
-		development_cost = -0.1
+		development_cost = -0.15
 	}
 	
 	trigger = {
@@ -1287,7 +1232,7 @@ CGS_ideas = {
 		land_attrition = -0.15
 	}
 	tenuous_chinese_authority = {
-		global_autonomy = -0.05
+		global_autonomy = -0.1
 	}
 	remember_the_nanzhao = {
 		global_manpower_modifier = 0.2
@@ -1305,7 +1250,7 @@ CGS_ideas = {
 	}
 	peace_for_the_zhuang_people = {
 		state_maintenance_modifier = -0.10
-		global_spy_defence = 0.15
+		global_spy_defence = 0.20
 	}
 }
 
@@ -1313,7 +1258,7 @@ CGS_ideas = {
 QIN_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1333,7 +1278,7 @@ QIN_ideas = {
 		discipline = 0.05
 	}
 	developments_of_the_qin_capital = {
-		development_cost = -0.1
+		development_cost = -0.15
 	}
 	ready_for_military_reforms = {
 		mil_tech_cost_modifier  = -0.10
@@ -1383,7 +1328,7 @@ HUA_ideas = {
 		defensiveness = 0.20
 	}
 	carve_out_a_place_for_the_hakka = {
-		development_cost = -0.1
+		development_cost = -0.15
 	}
 	zhongguo = {
 		land_forcelimit_modifier = 0.15
@@ -1395,7 +1340,7 @@ HUA_ideas = {
 YUE_ideas = {
 	start = {
 		free_leader_pool = 1
-		advisor_pool = 1
+		advisor_pool = 2
 	}
 	
 	bonus = {
@@ -1425,10 +1370,6 @@ YUE_ideas = {
 	}
 	the_great_nanyue_kingdom = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	zhongguo = {
 		land_forcelimit_modifier = 0.15
@@ -1474,7 +1415,7 @@ MUL_ideas = {
 		monthly_piety = -0.001
 	}
 	from_frontier_land_to_heart_land = {
-		global_autonomy = -0.05
+		global_autonomy = -0.1
 	}
 }
 
@@ -1527,11 +1468,7 @@ KMT_ideas = {
     }
     
     bonus = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+        legitimacy = 1  
     }
     
     trigger = {
@@ -1549,7 +1486,7 @@ KMT_ideas = {
         hostile_attrition = 1.0
     }
     settle_the_turbulent_times_after_the_pala = {
-        global_autonomy = -0.05
+        global_autonomy = -0.1
     }
     asserting_authority_over_the_bhuyan_chiefs = {
         global_manpower_modifier = 0.20
@@ -1588,11 +1525,11 @@ KAC_ideas = {
 		global_missionary_strength = 0.02
     }
     formalize_the_patra_and_bhandari_advisors = {
-        advisor_pool = 1
+        advisor_pool = 2
     }
     specialize_the_sephongs_tribes = {
         state_maintenance_modifier = -0.20
-		global_spy_defence = 0.15
+		global_spy_defence = 0.20
     }
     build_up_the_mel_mandap = {
         same_culture_advisor_cost = -0.20
@@ -1618,17 +1555,15 @@ LIV_ideas = {
 	free = yes
 	
 	legacy_of_livonian_brothers_sword = {
-		legitimacy = 1
 		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
+		legitimacy = 1.0
 		republican_tradition = 0.3
 	}
 	reverse_the_decline = {
-		yearly_corruption = -0.1
+		yearly_corruption = -0.05
 	}
 	riga_and_catholic_ties = {
-		diplomatic_reputation = 1
+		diplomatic_reputation = 1.00
 	}
 	bastion_against_the_orthodox = {
 		papal_influence = 2
