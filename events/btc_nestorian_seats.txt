@@ -2,171 +2,387 @@ namespace = btc_nestorian_seats
 
 #Nestorian seats events, coded by Alejandro, written and designed by Dynamo
 country_event = {
-  id = btc_nestorian_seats.1
-  title = seat_of_nisibis_title
-  desc = btc_nestorian_seats.1.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.1
+	title = seat_of_nisibis_title
+	desc = btc_nestorian_seats.1.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_1
-      duration = -1
-    }
-  }
+	trigger = {
+		religion = nestorian
+		418 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
+  
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		418 = { change_province_name = "Nisibis" }
+		mardin_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_nisibis_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.2
-  title = seat_of_ctesiphon_title
-  desc = btc_nestorian_seats.2.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.2
+	title = seat_of_ctesiphon_title
+	desc = btc_nestorian_seats.2.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		410 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_2
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		410 = { change_province_name = "Ctesiphon" }
+		iraq_arabi_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_ctesiphon_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.3
-  title = seat_of_arbela_title
-  desc = btc_nestorian_seats.3.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.3
+	title = seat_of_arbela_title
+	desc = btc_nestorian_seats.3.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		4293 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_3
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		4293 = { change_province_name = "Arbela" change_culture = assyrian }
+		shahrizor_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_arbela_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.4
-  title = seat_of_beth_lapat_title
-  desc = btc_nestorian_seats.4.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.4
+	title = seat_of_beth_lapat_title
+	desc = btc_nestorian_seats.4.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		4289 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_4
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		4289 = { change_province_name = "Beth Lapat" }
+		khuzestan_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_beth_lapat_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.5
-  title = seat_of_herat_title
-  desc = btc_nestorian_seats.5.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.5
+	title = seat_of_herat_title
+	desc = btc_nestorian_seats.5.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		446 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_5
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		herat_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_herat_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.6
-  title = seat_of_merv_title
-  desc = btc_nestorian_seats.6.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.6
+	title = seat_of_merv_title
+	desc = btc_nestorian_seats.6.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		445 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_6
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		merv_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_merv_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.7
-  title = seat_of_samarkand_title
-  desc = btc_nestorian_seats.7.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.7
+	title = seat_of_samarkand_title
+	desc = btc_nestorian_seats.7.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		454 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_7
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		transoxiana_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_samarkand_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.8
-  title = seat_of_mukar_title
-  desc = btc_nestorian_seats.8.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.8
+	title = seat_of_mukar_title
+	desc = btc_nestorian_seats.8.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		2199 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_8
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		2199 = { change_province_name = "Mukar" rename_capital = "Mukar" }
+		dagestan_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_mukar_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.9
-  title = seat_of_angamaly_title
-  desc = btc_nestorian_seats.9.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.9
+	title = seat_of_angamaly_title
+	desc = btc_nestorian_seats.9.d
+	picture = SEATRESTORED_eventPicture
   
-  is_triggered_only = yes
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		535 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_9
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+  
+	option = {
+		name = btc_nestorian_seats.a
+		535 = { change_province_name = "Angamaly" }
+		malabar_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_angamaly_completed }
+	}
 }
 
 country_event = {
-  id = btc_nestorian_seats.10
-  title = seat_of_xian_title
-  desc = btc_nestorian_seats.10.d
-  picture = SEATRESTORED_eventPicture
+	id = btc_nestorian_seats.10
+	title = seat_of_xian_title
+	desc = btc_nestorian_seats.10.d
+	picture = SEATRESTORED_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		religion = nestorian
+		700 = {
+			religion = nestorian
+			is_state = yes
+			is_core = ROOT
+			owned_by = ROOT
+		}
+	}
   
-  is_triggered_only = yes
-  
-  option = {
-    name = btc_nestorian_seats.a
-    add_country_modifier = {
-      name = btc_nestorian_seat_10
-      duration = -1
-    }
-  }
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = btc_nestorian_seats.a
+		shaanxi_area = {
+			limit = {
+				NOT = {
+					is_permanent_claim = ROOT
+					is_core = ROOT
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		hidden_effect = { set_country_flag = seat_of_xian_completed }
+	}
 }

@@ -9,370 +9,101 @@ country_decisions = {
 			stability = 1
 		}
 		effect = {
-		add_country_modifier = {
-			name = prohibited_iconography
-			duration = -1
-		}
+			add_country_modifier = {
+				name = prohibited_iconography
+				duration = -1
+			}
 		}
 	}
 	
 
 	nestorian_all_seats_btc = {
+		major = yes
 		potential = {
 			religion = nestorian
 			NOT = { has_country_flag = nestorian_seats_completed }
 		}
     
-		provinces_to_highlight = { area = mardin_area }
-    
-		allow = {
-			religion = nestorian
-			mardin_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
+		provinces_to_highlight = {
+			OR = {
+				province_id = 418
+				province_id = 410
+				province_id = 4293
+				province_id = 4289
+				province_id = 446
+				province_id = 445
+				province_id = 454
+				province_id = 2199
+				province_id = 535
+				province_id = 700
 			}
-			418 = {
-				religion = nestorian
-				is_state = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+				NOT = { religion = nestorian }
+				NOT = { is_state = yes }
+			}
+		}
+	
+		allow = {
+			custom_trigger_tooltip = {
+				tooltip = seat_of_nisibis_tooltip
+				has_country_flag = seat_of_nisibis_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_ctesiphon_tooltip
+				has_country_flag = seat_of_ctesiphon_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_arbela_tooltip
+				has_country_flag = seat_of_arbela_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_beth_lapat_tooltip
+				has_country_flag = seat_of_beth_lapat_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_herat_tooltip
+				has_country_flag = seat_of_herat_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_merv_tooltip
+				has_country_flag = seat_of_merv_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_samarkand_tooltip
+				has_country_flag = seat_of_samarkand_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_mukar_tooltip
+				has_country_flag = seat_of_mukar_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_angamaly_tooltip
+				has_country_flag = seat_of_angamaly_completed
+			}
+			custom_trigger_tooltip = {
+				tooltip = seat_of_xian_tooltip
+				has_country_flag = seat_of_xian_completed
 			}
 		}
     
 		effect = {
-			418 = { change_province_name = "Nisibis" }
-			country_event = { id =  btc_nestorian_seats.1 }
-			hidden_effect = { set_country_flag = nestorian_seats_completed }
+			hidden_effect = { 
+				set_country_flag = nestorian_seats_completed 
+				clr_country_flag = seat_of_nisibis_completed
+				clr_country_flag = seat_of_ctesiphon_completed
+				clr_country_flag = seat_of_arbela_completed
+				clr_country_flag = seat_of_beth_lapat_completed
+				clr_country_flag = seat_of_herat_completed
+				clr_country_flag = seat_of_merv_completed
+				clr_country_flag = seat_of_samarkand_completed
+				clr_country_flag = seat_of_mukar_completed
+				clr_country_flag = seat_of_angamaly_completed
+				clr_country_flag = seat_of_xian_completed
+			}
 		}
-    
+		
 		ai_will_do = { factor = 1 }
 	}
-  
-	seat_of_nisibis = {
-		potential = {
-			religion = nestorian
-			NOT = { has_country_modifier = btc_nestorian_seat_1 }
-		}
-    
-		provinces_to_highlight = { area = mardin_area }
-    
-		allow = {
-			religion = nestorian
-			mardin_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			418 = {
-				religion = nestorian
-				is_state = yes
-			}
-		}
-    
-		effect = {
-			418 = { change_province_name = "Nisibis" }
-			country_event = {
-				id =  btc_nestorian_seats.1
-			}
-		}
-    
-		ai_will_do = {
-			factor = 1
-		}
-	}
-  
-	seat_of_ctesiphon = {
-		potential = {
-			religion = nestorian
-			NOT = { has_country_modifier = btc_nestorian_seat_2 }
-		}
-    
-		provinces_to_highlight = { area = iraq_arabi_area }
-    
-		allow = {
-			religion = nestorian
-			iraq_arabi_area = {
-				type = all
-				owned_by = ROOT
-				is_core = ROOT
-			}
-			410 = {
-				religion = nestorian
-				is_state = yes
-			}
-		}
-    
-		effect = {
-			410 = { change_province_name = "Ctesiphon" }
-			country_event = {
-				id =  btc_nestorian_seats.2
-			}
-		}
-    
-		ai_will_do = {
-			factor = 1
-		}
-	}
-  
-  seat_of_arbela = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_3 }
-    }
-    
-    provinces_to_highlight = { area = shahrizor_area }
-    
-    allow = {
-      religion = nestorian
-      shahrizor_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      4293 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      4293 = {
-        change_province_name = "Arbela"
-        change_culture = assyrian
-      }
-      country_event = {
-        id =  btc_nestorian_seats.3
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_beth_lapat = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_4 }
-    }
-    
-    provinces_to_highlight = { area = khuzestan_area }
-    
-    allow = {
-      religion = nestorian
-      khuzestan_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      4289 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      4289 = { change_province_name = "Beth Lapat" }
-      country_event = {
-        id =  btc_nestorian_seats.4
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_herat = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_5 }
-    }
-    
-    provinces_to_highlight = { area = herat_area }
-    
-    allow = {
-      religion = nestorian
-      herat_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      446 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      country_event = {
-        id =  btc_nestorian_seats.5
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_merv = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_6 }
-    }
-    
-    provinces_to_highlight = { area = merv_area }
-    
-    allow = {
-      religion = nestorian
-      merv_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      445 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      country_event = {
-        id =  btc_nestorian_seats.6
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_samarkand  = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_7 }
-    }
-    
-    provinces_to_highlight = { area = transoxiana_area }
-    
-    allow = {
-      religion = nestorian
-      transoxiana_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      454 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      country_event = {
-        id =  btc_nestorian_seats.7
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_mukar  = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_8 }
-    }
-    
-    provinces_to_highlight = { area = dagestan_area }
-    
-    allow = {
-      religion = nestorian
-      dagestan_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      2199 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      2199 = { change_province_name = "Mukar" rename_capital = "Mukar" }
-      country_event = {
-        id =  btc_nestorian_seats.8
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_angamaly  = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_9 }
-    }
-    
-    provinces_to_highlight = { area = malabar_area }
-    
-    allow = {
-      religion = nestorian
-      malabar_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      535 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      535 = { change_province_name = "Angamaly" }
-      country_event = {
-        id =  btc_nestorian_seats.9
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
-  
-  seat_of_xian  = {
-    potential = {
-      religion = nestorian
-      NOT = { has_country_modifier = btc_nestorian_seat_10 }
-    }
-    
-    provinces_to_highlight = { area = shaanxi_area }
-    
-    allow = {
-      religion = nestorian
-      shaanxi_area = {
-        type = all
-        owned_by = ROOT
-        is_core = ROOT
-      }
-      700 = {
-        religion = nestorian
-        is_state = yes
-      }
-    }
-    
-    effect = {
-      country_event = {
-        id =  btc_nestorian_seats.10
-      }
-    }
-    
-    ai_will_do = {
-      factor = 1
-    }
-  }
 }
