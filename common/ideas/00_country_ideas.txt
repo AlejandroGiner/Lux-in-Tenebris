@@ -6056,7 +6056,7 @@ MEX_ideas = {
 
 TRA_ideas = {
 	start = {
-		global_manpower_modifier = 0.1
+		num_accepted_cultures = 1
 		defensiveness = 0.15
 	}
 
@@ -10570,6 +10570,8 @@ YEM_ideas = {
 		OR = {
 			tag = YEM
 			tag = ADE
+			tag = RSU
+			tag = TAH
 		}
 	}
 	free = yes
