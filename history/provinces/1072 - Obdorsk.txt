@@ -8,15 +8,14 @@ hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+
 native_size = 1
 native_ferocity = 1
 native_hostileness = 3
 
+discovered_by = siberian_btc
 
-#discovered_by = western			#Now borders North Sea, so needs to be discovered by western or AI will try to 'discover' the North Atlantic. Later removed as new areas were added to the Atlantic, so western will try to discover anyway.
-discovered_by = eastern
-discovered_by = KAZ
-#1594.12.30 = { discovered_by = RUS }				#removed when above added
+1594.12.30 = { discovered_by = RUS }
 
 1595.1.1 = {
 	owner = RUS
