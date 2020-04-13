@@ -275,6 +275,39 @@ groups = {
 			value = 75
 		}
 	}
+	oriental_btc = {
+		start_level = 3
+		start_cost_modifier = 0.30
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	siberian_btc = {
+		start_level = 2
+		start_cost_modifier = 1.00
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+					}
+				}
+			}
+			value = 35
+		}
+	}
 }
 
 tables = {
