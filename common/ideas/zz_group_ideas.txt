@@ -486,7 +486,9 @@ irish_minor_ideas = {
 		culture_conversion_cost = -0.2
 	}
 	loyal_catholics = {
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		global_heretic_missionary_strength = 0.02
 	}
 	ire_abundant_harvests = {
@@ -1177,7 +1179,9 @@ arabian_ideas = {
 latin_ideas = {
 	start = {
 		production_efficiency = 0.1
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 
 	bonus = {
@@ -1191,14 +1195,17 @@ latin_ideas = {
 	free = yes
 
 	italian_renaissance = {
-		idea_cost = -0.05
+		idea_cost = -0.1
 	}
 	italian_condottieri = {
-		merc_maintenance_modifier = -0.15
-		possible_mercenaries = 0.5
+		merc_maintenance_modifier = -0.1
+		possible_mercenaries = 0.25
 	}
 	italian_aristocracy = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 		republican_tradition = 0.3
  	}
 	tracee_italienne = {
@@ -2887,9 +2894,9 @@ heptarchy_ideas = {
 	
 	hep_christianity = {
 		global_tax_modifier = 0.1
-		papal_influence = 1
-        church_power_modifier = 0.2
-		monthly_fervor_increase = 0.5
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	hep_dream_of_hegemony = {
 		fabricate_claims_cost = -0.25
@@ -2913,11 +2920,15 @@ heptarchy_ideas = {
 
 free_city_ideas = {
 	start = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 		republican_tradition = 0.3
 		diplomatic_reputation = 1
 	}
 	bonus = {
-		build_cost = -0.25
+		build_cost = -0.15
 	}
 	trigger = {
 		has_reform = free_city
@@ -2935,24 +2946,26 @@ free_city_ideas = {
 		stability_cost_modifier = -0.1
 	}
 	free_city_4 = {
-		trade_efficiency = 0.25
+		trade_efficiency = 0.15
 	}	
 	free_city_5 = {
 		global_tax_modifier = 0.10
 	}
 	free_city_6 = {
-		merc_maintenance_modifier = -0.30
+		merc_maintenance_modifier = -0.2
 	}
 	free_city_7 = {
-		defensiveness = 0.2
-		prestige = 1
+		defensiveness = 0.1
+		prestige = 0.5
 	}
 }
 
 crusader_ideas = {
     start = {
-		naval_forcelimit_modifier = 0.2
-        papal_influence = 2
+		naval_forcelimit_modifier = 0.25
+        papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
     }
 
     bonus = {
@@ -2973,7 +2986,7 @@ crusader_ideas = {
     free = yes
 
     stone_fortresses_crusaders = {
-        defensiveness = 0.25
+        defensiveness = 0.2
     }
     soldiers_of_god_crusaders = {
         global_missionary_strength = 0.02
@@ -2986,6 +2999,7 @@ crusader_ideas = {
     }
     monastic_orders_crusaders = {
         mercenary_cost = -0.2
+		merc_maintenance_modifier = -0.1
     }
     pilgrim_fighters = {
         manpower_recovery_speed = 0.25

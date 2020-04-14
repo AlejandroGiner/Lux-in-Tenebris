@@ -248,7 +248,9 @@ SPA_ideas = {
 	free = yes		#will be added at load.
 
 	devout_catholisism = {
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 	inter_caetera = {
 		idea_claim_colonies = yes
@@ -781,8 +783,10 @@ BAV_ideas = {
 		prestige = 1
 	}
 	geistlicher_rat = {
-		global_heretic_missionary_strength = 0.03
-		papal_influence = 1
+		global_heretic_missionary_strength = 0.02
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	brewmaster_general = {
 		global_tax_modifier = 0.1
@@ -952,7 +956,9 @@ NRM_Ideas = {
 		build_cost = -0.15
 	}
 	catholic_piety_norman = {
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		tolerance_own = 1
 	}
 	norman_victories = {
@@ -1964,7 +1970,9 @@ SAV_ideas = {
 		defensiveness = 0.2
 	}
 	the_shroud_of_turin = {
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		prestige = 0.5
 	}
 	sav_mercenary_tradition = {
@@ -2019,7 +2027,9 @@ SAX_ideas = {
 	}
 	corpus_evangelicorum = {
 		diplomatic_upkeep = 1
-		church_power_modifier = 0.10
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	sax_principal_line = {
 		global_tax_modifier = 0.10
@@ -2519,7 +2529,9 @@ ASS_ideas = {
 
 TUS_ideas = {
 	start = {
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 		development_cost = -0.1
 	}
 	
@@ -2540,10 +2552,10 @@ TUS_ideas = {
 		technology_cost = -0.05
 	}
 	tuscan_condottieri = {
-		merc_maintenance_modifier = -0.15
+		merc_maintenance_modifier = -0.25
 	}
 	tuscan_banking = {
-		interest = -0.5
+		interest = -1
 	}
 	tuscan_arts = {
 		prestige = 1
@@ -2671,6 +2683,8 @@ BRI_ideas = {
 	}
 	breton_catholicism = {
 		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		global_missionary_strength = 0.01
 	}
 	protect_the_coastline = {
@@ -2814,7 +2828,9 @@ KNI_ideas = {
 	}
 	
 	bonus = {
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 	
 	trigger = {
@@ -2826,7 +2842,7 @@ KNI_ideas = {
 		defensiveness = 0.25
 	}
 	assistance_to_the_suffering = {
-		manpower_recovery_speed = 0.15
+		manpower_recovery_speed = 0.25
 	}
 	the_tongues_of_knights = {
 		diplomatic_upkeep = 1
@@ -2842,7 +2858,7 @@ KNI_ideas = {
 		naval_forcelimit_modifier = 0.5
 	}
 	crusader_tradition = {
-		army_tradition = 0.5
+		army_tradition = 1
 	}
 }
 
@@ -5051,8 +5067,9 @@ TEU_ideas = {
 		infantry_power = 0.1
 	}
 	teu_idea_4 = {
-		papal_influence = 1
-		church_power_modifier = 0.1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		global_missionary_strength = 0.02
 	}
 	teu_idea_5 = {
@@ -5810,8 +5827,8 @@ HAM_ideas = {
 
 jerusalem_ideas = {
 	start = {
-		tolerance_heathen = 1
-		global_missionary_strength = 0.02
+		tolerance_heathen = 3
+		global_missionary_strength = 0.03
 	}
 	
 	bonus = {
@@ -5833,16 +5850,18 @@ jerusalem_ideas = {
 		republican_tradition = 0.3
 	}
 	latin_patriarch = {
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 	frontier_state = {
 		discipline = 0.05
 	}
 	land_of_the_heathen = {
-		missionaries = 1
+		missionaries = 2
 	}
 	crusader_aristocracy = {
-		leader_land_shock = 1
+		leader_land_shock = 2
 	}
 	crusader_castles = {
 		defensiveness = 0.25
@@ -6134,9 +6153,10 @@ SUK_ideas = {
 WBG_ideas = {
 
 	start = {
-		global_prov_trade_power_modifier = 0.10
-		papal_influence = 1
-		church_power_modifier = 0.1
+		global_prov_trade_power_modifier = 0.25
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 	
 	bonus = {
@@ -6473,7 +6493,9 @@ HES_ideas = {
 	}
 	welcome_reformers = {
 		religious_unity = 0.25
-		church_power_modifier = 0.1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	let_in_religious_emigrants = {
 		development_cost = -0.1
@@ -6574,12 +6596,13 @@ NOL_ideas = {
 
 MUN_ideas = {
 	start = {
-		papal_influence = 1
-		church_power_modifier = 0.1
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 		global_trade_power = 0.1
 	}
 	bonus = {
-		global_heretic_missionary_strength = 0.02
+		global_heretic_missionary_strength = 0.03
 	}
 	trigger = {
 		tag = MUN
@@ -6606,7 +6629,7 @@ MUN_ideas = {
 		fire_damage = 0.1
 	}
 	mun_support_of_schools = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.15
 	}
 }
 
@@ -7662,7 +7685,9 @@ GAL_ideas = {
 NEV_ideas = {
     start = {
 		infantry_cost = -0.1
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
     }
 
     bonus = {
@@ -7691,7 +7716,7 @@ NEV_ideas = {
 		defensiveness = 0.2
     }
 	nev_morvan_wet_nurses = {
-		manpower_recovery_speed = 0.1
+		manpower_recovery_speed = 0.2
     }
 	nev_greatest_palace_of_the_loire = {
 		prestige = 1
@@ -8749,8 +8774,10 @@ ANS_ideas = {
 		diplomatic_reputation = 1
 	}
 	ans_franconian_reformers = {
-		religious_unity = 0.1
-		church_power_modifier = 0.1
+		religious_unity = 0.2
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	ans_protestant_exiles = {
 		development_cost = -0.1
@@ -9348,11 +9375,13 @@ OTM_ideas = {
 	
 	otm_christian_conversion = {
 		missionaries = 1
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	
 	otm_tensho_embassy = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.15
 	}
 	
 	otm_kunikuzushi = {
@@ -10107,10 +10136,10 @@ RSO_ideas = {
 MVA_ideas = {
 	start = {
 		global_trade_goods_size_modifier = 0.1
-		global_manpower_modifier = 0.1
+		global_manpower_modifier = 0.15
 	}
 	bonus = {
-		state_maintenance_modifier = -0.15
+		state_maintenance_modifier = -0.25
 	}
 	trigger = {
 		OR = {
@@ -10133,10 +10162,12 @@ MVA_ideas = {
 		production_efficiency = 0.1
 	}
 	mva_german_quarters = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 	mva_jesuit_university = {
 		papal_influence = 1
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		adm_tech_cost_modifier = -0.1
 	}
 	mva_legacy_of_great_moravia = {
@@ -11490,7 +11521,8 @@ TYR_ideas = {
 		republican_tradition = 0.3
 	}
 	tyr_tanistry = {
-		stability_cost_modifier = -0.1 # change to heir chance?
+		stability_cost_modifier = -0.1
+		heir_chance = 0.25
 	}
 	tyr_arming_people = {
 		land_forcelimit_modifier = 0.15
@@ -11498,13 +11530,15 @@ TYR_ideas = {
 	}
 	tyr_catholic_diplomacy = {
 		diplomats = 1
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 	}
 	tyr_ambush_warfare = {
 		leader_land_manuever = 1
 	}
 	tyr_wild_geese = {
-		mercenary_discipline = 0.025
+		mercenary_discipline = 0.05
 	}
 }
 
@@ -11628,9 +11662,8 @@ LEI_ideas = {
 
 CNN_ideas = {
 	start = {
-		# traditions potentially a bit on the weak side
-		tolerance_own = 1
-		trade_steering = 0.10
+		tolerance_own = 2
+		trade_steering = 0.25
 	}
 
 	bonus = {
@@ -11650,7 +11683,7 @@ CNN_ideas = {
 		trade_efficiency = 0.10
 	}
 	cnn_fire_and_sword = {
-		harsh_treatment_cost = -0.15
+		harsh_treatment_cost = -0.2
 	}
 	cnn_sea_people = {
 		global_sailors_modifier = 0.25
@@ -11662,7 +11695,9 @@ CNN_ideas = {
 		land_attrition = -0.10
 	}
 	cnn_catholicism = {
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 	cnn_lord_presidency = {
 		stability_cost_modifier = -0.1
@@ -11742,6 +11777,8 @@ irish_ideas = {
 	}
 	loyal_catholics = {
 		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		global_heretic_missionary_strength = 0.02
 	}
 	ire_abundant_harvests = {
@@ -12002,7 +12039,7 @@ UTR_ideas = {
 	}
 	
 	bonus = {
-		embracement_cost = -0.1
+		embracement_cost = -0.15
 	}
 	
 	trigger = {
@@ -12011,13 +12048,17 @@ UTR_ideas = {
 	free = yes
 	
 	utr_devotio_moderna = {
-		tolerance_own = 1
+		tolerance_own = 2
 	}
 	utr_ex_cathedra = {
 		papal_influence = 2
-		devotion = 0.5
+        church_power_modifier = 0.1
 		monthly_fervor_increase = 0.25
-		church_power_modifier = 0.1
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		meritocracy = 0.5
+		republican_tradition = 0.2
 	}
 	utr_fortified_town = {
 		defensiveness = 0.1
@@ -12121,7 +12162,9 @@ BRB_ideas = {
 
 LIE_ideas = {
 	start = {
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 		land_morale = 0.10
 	}
 	
@@ -12154,7 +12197,7 @@ LIE_ideas = {
 		diplomatic_reputation = 1
 	}
 	lie_literary_society = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.15
 	}
 	lie_rights_of_man = {
 		global_unrest = -1
@@ -12305,10 +12348,10 @@ KLE_ideas = {
 		republican_tradition = 0.3
 	}
 	kle_reformers = {
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
 		monthly_fervor_increase = 0.25
-		church_power_modifier = 0.1
-		global_heretic_missionary_strength = 0.01
+		global_heretic_missionary_strength = 0.02
 	}
 	kle_marriages = {
 		diplomatic_reputation = 1
@@ -12317,7 +12360,7 @@ KLE_ideas = {
 		diplomatic_annexation_cost = -0.15
 	}
 	kle_educated_duisburg = {
-		dip_tech_cost_modifier = -0.1
+		dip_tech_cost_modifier = -0.15
 	}
 	kle_renovate_swan_castle = {
 		global_garrison_growth = 0.25
@@ -12800,16 +12843,16 @@ RIG_ideas = {
 		development_cost = -0.1
 	}
 	bonus = {
-		manpower_recovery_speed = 0.2
+		manpower_recovery_speed = 0.25
 	}
 	trigger = {
 		tag = RIG
 	}
 	free = yes
 	rig_legacy_of_bishop_albert = {
-		papal_influence = 2
-		monthly_fervor_increase = 0.25
-		church_power_modifier = 0.1
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 	rig_hanseatic_port = {
 		trade_efficiency = 0.1

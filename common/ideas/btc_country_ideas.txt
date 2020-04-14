@@ -41,13 +41,13 @@ ABK_ideas = {
 		global_ship_cost = -0.1
 	}
 	ABK_idea7 = {
-		army_tradition = 0.5
+		army_tradition = 1
 	}
 }
 
 UDI_ideas = {
 	start = {
-		development_cost = -0.15
+		development_cost = -0.1
 		stability_cost_modifier = -0.15
 	}
 
@@ -61,15 +61,19 @@ UDI_ideas = {
 	free = yes
 
 	UDI_idea1 = {
-		legitimacy = 1
+		legitimacy = 0.5
+		devotion = 0.5
+		horde_unity = 0.5
+		meritocracy = 0.5
+		republican_tradition = 0.2
 		prestige_decay = -0.01
 	}
 	UDI_idea2 = {
 		prestige = 0.5
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	UDI_idea3 = {
-		war_exhaustion = -0.02
+		war_exhaustion = -0.03
 	}
 	UDI_idea4 = {
 		tolerance_own = 1
@@ -80,10 +84,10 @@ UDI_ideas = {
 	}
 	UDI_idea6 = {
 		global_manpower_modifier = 0.15
-		discipline = 0.025
+		garrison_size = 0.1
 	}
 	UDI_idea7 = {
-		province_warscore_cost = -0.1
+		province_warscore_cost = -0.15
 	}
 }
 
@@ -94,7 +98,7 @@ KCY_ideas = {
 	}
 
 	bonus = {
-		land_maintenance_modifier = -0.15
+		land_maintenance_modifier = -0.1
 	}
 
 	trigger = {
@@ -123,7 +127,7 @@ KCY_ideas = {
 		production_efficiency = 0.10
 	}
 	KCY_idea6 = {
-		global_own_trade_power = 0.2
+		global_own_trade_power = 0.25
 	}
 	KCY_idea7 = {
 		tolerance_heathen = 1
@@ -134,6 +138,10 @@ KCY_ideas = {
 AVR_ideas = {
 	start = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 		cavalry_power = 0.15
 	}
 
@@ -147,10 +155,10 @@ AVR_ideas = {
 	free = yes
 
 	AVR_idea1 = {
-		land_attrition = -0.2
+		land_attrition = -0.15
 	}
 	AVR_idea2 = {
-		stability_cost_modifier = -0.2
+		stability_cost_modifier = -0.15
 	}
 	AVR_idea3 = {
 		defensiveness = 0.15
@@ -241,11 +249,11 @@ SHE_ideas = {
 	}
 
 	SHE_idea5 = {
-		build_cost = -0.2
+		build_cost = -0.1
 	}
 
 	SHE_idea6 = {
-		improve_relation_modifier = 0.2
+		improve_relation_modifier = 0.25
 	}
 
 	SHE_idea7 = {
@@ -269,10 +277,10 @@ VAK_ideas = {
 	free = yes
 
 	VAK_idea1 = {
-		land_attrition = -0.2
+		land_attrition = -0.15
 	}
 	VAK_idea2 = {
-		movement_speed = 0.2
+		movement_speed = 0.05
 		shock_damage = 0.10
 	}
 	VAK_idea3 = {
@@ -289,7 +297,7 @@ VAK_ideas = {
 		production_efficiency = 0.10
 	}
 	VAK_idea7 = {
-		recover_army_morale_speed = 0.15
+		recover_army_morale_speed = 0.1
 	}
 }
 
@@ -312,7 +320,7 @@ GAZ_ideas = {
 		stability_cost_modifier = -0.15
 	}
 	GAZ_idea2 = {
-		global_autonomy = -0.1
+		global_autonomy = -0.05
 	}
 	GAZ_idea3 = {
 		land_morale = 0.10
@@ -353,7 +361,7 @@ KTG_ideas = {
 		idea_cost = -0.1
 	}
 	KTG_idea3 = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.2
 	}
 	KTG_idea4 = {
 		build_cost = -0.15
@@ -362,10 +370,10 @@ KTG_ideas = {
 		discipline = 0.05
 	}
 	KTG_idea6 = {
-		global_own_trade_power = 0.2
+		global_own_trade_power = 0.25
 	}
 	KTG_idea7 = {
-		reinforce_speed = 0.15
+		reinforce_speed = 0.2
 	}
 }
 
@@ -385,7 +393,7 @@ LEK_ideas = {
 	free = yes
 
 	LEK_idea1 = {
-		land_attrition = -0.2
+		land_attrition = -0.15
 	}
 	LEK_idea2 = {
 		global_unrest = -2
@@ -394,7 +402,7 @@ LEK_ideas = {
 		global_manpower_modifier = 0.15
 	}
 	LEK_idea4 = {
-		advisor_pool = 2
+		advisor_pool = 1
 	}
 	LEK_idea5 = {
 		loot_amount = 0.25
@@ -409,7 +417,7 @@ LEK_ideas = {
 
 AMZ_ideas = {
 	start = {
-		trade_steering = 0.15
+		trade_steering = 0.25
 		hostile_attrition = 1
 	}
 
@@ -429,8 +437,8 @@ AMZ_ideas = {
         movement_speed = 0.15
 	}
 	AMZ_idea3 = {
-		build_cost = -0.15
-		development_cost = -0.15
+		build_cost = -0.1
+		development_cost = -0.1
 	}
 	AMZ_idea4 = {
         shock_damage = 0.15
@@ -439,7 +447,7 @@ AMZ_ideas = {
 		trade_efficiency = 0.15
 	}
 	AMZ_idea6 = {
-		improve_relation_modifier = 0.2
+		improve_relation_modifier = 0.25
 	}
 	AMZ_idea7 = {
 		light_ship_power = 0.15
@@ -449,7 +457,7 @@ AMZ_ideas = {
 CUB_ideas = {
 	start = {
 		global_tax_modifier = 0.15
-		improve_relation_modifier = 0.2
+		improve_relation_modifier = 0.25
 	}
 
 	bonus = {
@@ -465,7 +473,7 @@ CUB_ideas = {
 		land_morale = 0.15
 	}
 	CUB_idea2 = {
-		stability_cost_modifier = -0.2
+		stability_cost_modifier = -0.15
 	}
 	CUB_idea3 = {
 		naval_forcelimit_modifier = 0.5
@@ -503,6 +511,10 @@ TNV_ideas = {
 
 	TNV_idea1 = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
 	TNV_idea2 = {
 		fort_maintenance_modifier = -0.1
@@ -549,13 +561,13 @@ BDN_ideas = {
         movement_speed = 0.1
 	}
 	BDN_idea4 = {
-		rebel_support_efficiency = 0.25
+		rebel_support_efficiency = 0.5
 	}
 	BDN_idea5 = {
 		shock_damage_received = -0.1
 	}
 	BDN_idea6 = {
-		tolerance_own = 1
+		tolerance_own = 2
 	}
 	BDN_idea7 = {
         army_tradition_from_battle = 0.5
@@ -606,7 +618,7 @@ DRJ_ideas = {
 VBZ_ideas = {
 	start = {
 		stability_cost_modifier = -0.2
-		enemy_core_creation = 0.25
+		land_morale = 0.15
 	}
 
 	bonus = {
@@ -619,13 +631,13 @@ VBZ_ideas = {
 	free = yes		# will be added at load
 
 	VBZ_idea1 = {
-		global_autonomy = -0.1
+		global_autonomy = -0.05
 	}
 	VBZ_idea2 = {
 		num_accepted_cultures = 2
 	}
 	VBZ_idea3 = {
-		land_maintenance_modifier = -0.2
+		land_maintenance_modifier = -0.15
 	}
 	VBZ_idea4 = {
 		inflation_reduction = 0.1
@@ -635,6 +647,7 @@ VBZ_ideas = {
 	}
 	VBZ_idea6 = {
 		mercenary_cost = -0.2
+		merc_maintenance_modifier = -0.1
 	}
 	VBZ_idea7 = {
 		diplomatic_upkeep = 1
@@ -695,7 +708,7 @@ KYL_ideas = {
 	free = yes		# will be added at load
 
 	KYL_idea1 = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 	KYL_idea2 = {
 		production_efficiency = 0.15
@@ -758,11 +771,11 @@ VDN_ideas = {
 MTZ_ideas = {
 	start = {
 		prestige = 1
-		idea_cost = -0.15
+		idea_cost = -0.1
 	}
 
 	bonus = {
-		development_cost = -0.15
+		development_cost = -0.1
 	}
 
 	trigger = {
@@ -772,23 +785,25 @@ MTZ_ideas = {
 
 	MTZ_idea1 = {
 		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
 		republican_tradition = 0.3
-		devotion = 0.5
 	}
 	MTZ_idea2 = {
 		imperial_authority = 0.1
 	}
 	MTZ_idea3 = {
-		religious_unity = 0.50
+		religious_unity = 0.25
 		tolerance_own = 1
 	}
 	MTZ_idea4 = {
-		inflation_reduction = 0.15
-		interest = -1
+		inflation_reduction = 0.1
+		interest = -0.5
 	}
 	MTZ_idea5 = {
-		technology_cost = -0.1
-		advisor_cost = -0.15
+		technology_cost = -0.05
+		advisor_cost = -0.1
 	}
 	MTZ_idea6 = {
 		fort_maintenance_modifier = -0.2
@@ -800,7 +815,7 @@ MTZ_ideas = {
 
 GEV_ideas = {
 	start = {
-		tolerance_own = 1
+		tolerance_own = 2
         discipline = 0.05
 	}
 
@@ -814,11 +829,11 @@ GEV_ideas = {
 	free = yes		# will be added at load
 
 	GEV_idea1 = {
-		diplomatic_upkeep = 2
+		diplomatic_upkeep = 1
 	}
 	GEV_idea2 = {
-		state_maintenance_modifier = -0.25
-		global_unrest = -2
+		state_maintenance_modifier = -0.15
+		global_unrest = -1
 	}
 	GEV_idea3 = {
 		global_garrison_growth = 0.15
@@ -827,7 +842,7 @@ GEV_ideas = {
 		global_missionary_strength = 0.03
 	}
 	GEV_idea5 = {
-		global_trade_goods_size_modifier = 0.15
+		global_trade_goods_size_modifier = 0.1
 		envoy_travel_time = -0.25
 	}
 	GEV_idea6 = {
@@ -840,8 +855,8 @@ GEV_ideas = {
 
 TUL_ideas = {
 	start = {
-        adm_tech_cost_modifier = -0.05
-		trade_range_modifier = 0.10
+        adm_tech_cost_modifier = -0.1
+		trade_range_modifier = 0.3
 	}
 
 	bonus = {
@@ -857,11 +872,11 @@ TUL_ideas = {
         garrison_size = 0.15
 	}
 	TUL_idea2 = {
-		global_missionary_strength = 0.01
+		global_missionary_strength = 0.02
 	}
 	TUL_idea3 = {
-		production_efficiency = 0.15
-		trade_steering = 0.2
+		production_efficiency = 0.1
+		trade_steering = 0.25
 	}
 	TUL_idea4 = {
 		stability_cost_modifier = -0.15
@@ -881,7 +896,7 @@ TUL_ideas = {
 STS_ideas = {
 	start = {
         diplomatic_reputation = 2
-        movement_speed = 0.25
+        movement_speed = 0.15
 	}
 
 	bonus = {
@@ -897,13 +912,13 @@ STS_ideas = {
 		prestige = 1
 	}
 	STS_idea2 = {
-		global_own_trade_power = 0.15
+		global_own_trade_power = 0.25
 	}
 	STS_idea3 = {
-		global_institution_spread = 0.1
+		global_institution_spread = 0.15
 	}
 	STS_idea4 = {
-		build_cost = -0.2
+		build_cost = -0.1
 		prestige_decay = -0.01
 	}
 	STS_idea5 = {
@@ -920,11 +935,11 @@ STS_ideas = {
 DHL_ideas = {
 	start = {
 		trade_efficiency = 0.15
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.25
 	}
 
 	bonus = {
-		privateer_efficiency = 0.25
+		privateer_efficiency = 0.3
 	}
 
 	trigger = {
@@ -939,14 +954,14 @@ DHL_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	DHL_idea3 = {
-		build_cost = -0.15
+		build_cost = -0.1
 		development_cost = -0.10
 	}
 	DHL_idea4 = {
 		inflation_reduction = 0.1
 	}
 	DHL_idea5 = {
-		trade_range_modifier = 0.15
+		trade_range_modifier = 0.3
 	}
 	DHL_idea6 = {
 		naval_morale = 0.15
@@ -958,7 +973,7 @@ DHL_ideas = {
 
 ROC_ideas = {
 	start = {
-		naval_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.25
         defensiveness = 0.2
 	}
 
@@ -984,15 +999,15 @@ ROC_ideas = {
 		naval_morale = 0.15
 	}
 	ROC_idea5 = {
-		improve_relation_modifier = 0.15
+		improve_relation_modifier = 0.2
 	}
 	ROC_idea6 = {
-		global_trade_goods_size_modifier = 0.10
-		trade_range_modifier = 0.15
+		global_trade_goods_size_modifier = 0.05
+		trade_range_modifier = 0.25
 	}
 	ROC_idea7 = {
-		ship_durability = 0.15
-		global_trade_power = 0.15
+		ship_durability = 0.1
+		global_trade_power = 0.05
 	}
 }
 
@@ -1018,17 +1033,17 @@ GLC_ideas = {
 		fort_maintenance_modifier = -0.15
 	}
 	GLC_idea3 = {
-		global_trade_power = 0.15
+		global_trade_power = 0.1
 	}
 	GLC_idea4 = {
-		trade_range_modifier = 0.15
+		trade_range_modifier = 0.3
 		diplomatic_reputation = 1
 	}
 	GLC_idea5 = {
-		war_exhaustion = -0.02
+		war_exhaustion = -0.03
 	}
 	GLC_idea6 = {
-		tolerance_own = 1
+		tolerance_own = 2
 	}
 	GLC_idea7 = {
 		infantry_power = 0.15
@@ -1037,12 +1052,12 @@ GLC_ideas = {
 
 GTA_ideas = {
 	start = {
-		movement_speed = 0.10
-        defensiveness = 0.1
+		movement_speed = 0.15
+        defensiveness = 0.15
 	}
 
 	bonus = {
-		siege_ability = 0.15
+		siege_ability = 0.1
 	}
 
 	trigger = {
@@ -1064,10 +1079,10 @@ GTA_ideas = {
 		hostile_attrition = 1
 	}
 	GTA_idea5 = {
-		global_trade_power = 0.2
+		global_trade_power = 0.1
 	}
 	GTA_idea6 = {
-		heavy_ship_power = 0.10
+		heavy_ship_power = 0.15
 	}
 	GTA_idea7 = {
 		prestige = 1
