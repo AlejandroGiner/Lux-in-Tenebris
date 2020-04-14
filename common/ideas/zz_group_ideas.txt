@@ -55,10 +55,6 @@ colonial_ideas = {
 	free = yes
 
 	founding_fathers = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	continental_trade = {
@@ -66,7 +62,6 @@ colonial_ideas = {
 	}
 	manufacturing_center = {
 		build_cost = -0.1
-		
 	}
 	free_thinkers = {
 		idea_cost = -0.1
@@ -90,11 +85,8 @@ barbary_pirate_ideas = {
 		privateer_efficiency = 0.2
 	}
 	bonus = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
+		legitimacy = 1
 	}
 	trigger = {
 		has_reform = pirate_republic_reform
@@ -187,10 +179,6 @@ cossack_ideas = {
 		manpower_recovery_speed = 0.2
 	}
 	cossacks_hetmanate = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
 		republican_tradition = 0.3
 	}
 	zaz_steppe_riders = {
@@ -336,10 +324,6 @@ SCO_Ideas = {
 	}
 	basilikon_doron = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	act_of_revocation = {
 		ae_impact = -0.15
@@ -502,7 +486,9 @@ irish_minor_ideas = {
 		culture_conversion_cost = -0.2
 	}
 	loyal_catholics = {
-		papal_influence = 1
+		papal_influence = 2
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
 		global_heretic_missionary_strength = 0.02
 	}
 	ire_abundant_harvests = {
@@ -583,7 +569,7 @@ DAI_ideas = {
 		prestige = 1
 	}
 	nam_tien = {
-		culture_conversion_cost = -0.2
+		culture_conversion_cost = -0.25
 	}
 	village_militia = {
 		global_manpower_modifier = 0.25
@@ -592,11 +578,7 @@ DAI_ideas = {
 		core_creation = -0.10
 	}
 	thuan_thien = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
+		legitimacy = 1   
 	}
 	literary_reform = {
 		technology_cost = -0.05
@@ -632,10 +614,6 @@ telugu_ideas = { #Telugu Ideas
 	}
 	yor_legend_of_prataparudra = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	yor_diamond_mines_of_kollur = {
 		production_efficiency = 0.1
@@ -676,10 +654,6 @@ dravidian_ideas = {
 	}
 	patronage_of_temples = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	south_indian_literature = {
 		prestige = 1
@@ -768,10 +742,6 @@ gujarati_ideas = {
 	}
 	guj_ashapura_mata = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	guj_african_trade = {
 		trade_range_modifier = 0.2
@@ -915,7 +885,7 @@ theocracy_ideas = {
 	}
 
 	bonus = {
-		culture_conversion_cost = -0.15
+		culture_conversion_cost = -0.1
 	}
 
 	trigger = {
@@ -1017,10 +987,6 @@ daimyo_ideas = {
 	}
 	honor_ancestors = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	five_rings = {
 		land_morale = 0.10
@@ -1117,7 +1083,7 @@ malayan_ideas = {
 		production_efficiency = 0.1
 	}
 	classical_malay = {
-		idea_cost = -0.1
+		idea_cost = -0.05
 	}
 	trading_fleets = {
 		naval_maintenance_modifier = -0.2
@@ -1213,7 +1179,9 @@ arabian_ideas = {
 latin_ideas = {
 	start = {
 		production_efficiency = 0.1
-		papal_influence = 2
+		papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
 	}
 
 	bonus = {
@@ -1230,8 +1198,8 @@ latin_ideas = {
 		idea_cost = -0.1
 	}
 	italian_condottieri = {
-		merc_maintenance_modifier = -0.15
-		possible_mercenaries = 0.5
+		merc_maintenance_modifier = -0.1
+		possible_mercenaries = 0.25
 	}
 	italian_aristocracy = {
 		legitimacy = 1
@@ -1334,10 +1302,6 @@ central_indic_ideas = { #Gond Ideas
 	}
 	ancient_roots_central_indic = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	formalize_relations_with_cheifs_central_indic = {
 		global_tax_modifier = 0.1
@@ -1370,7 +1334,7 @@ swahili_ideas = {
 		tolerance_own = 1
 	}
 	indian_ocean_melting_pot = {
-		idea_cost = -0.1
+		idea_cost = -0.05
 	}
 	recruit_the_unbelievers = {
 		merc_maintenance_modifier = -0.15
@@ -1441,16 +1405,16 @@ evenk_ideas = {
 	
 	evenk_family_brigades = {
 		land_attrition = -0.1
-		movement_speed = 0.1
+		movement_speed = 0.05
 	}
 	evenk_reindeer_herds = {
-		trade_range_modifier = 0.25
+		trade_range_modifier = 0.15
 	}
 	event_self_sufficiency = {
 		years_of_nationalism = -5
 	}
 	evenk_siberian_resources = {
-		build_cost = -0.15
+		build_cost = -0.1
 	}
 	evenk_mongolian_deel = {
 		possible_mercenaries = 0.25
@@ -1497,7 +1461,7 @@ siberian_ideas = {
 	}
 	siberian_raids = {
 		global_manpower_modifier = 0.15
-		reinforce_speed = 0.1
+		reinforce_speed = 0.05
 	}
 	siberian_hunting_expansion = {
 		global_colonial_growth = 20
@@ -1542,10 +1506,6 @@ mesoamerican_ideas = {
 
 	ritual_bloodletting = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 
 	pyramid_architecture = {
@@ -1644,10 +1604,6 @@ west_african_ideas = {
 andean_ideas = {
 	start = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 		heir_chance = 0.5
 	}
 
@@ -1794,10 +1750,6 @@ caucasus_ideas = {
 	}
 	highland_khans = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	eastern_influence = {
 		army_tradition = 0.5
@@ -1827,10 +1779,6 @@ ruthenian_ideas = {
 
 	mother_of_russian_cities = { #Mother of Russian States
 		legitimacy = 0.5
-		devotion = 0.5
-		horde_unity = 0.5
-		meritocracy = 0.5
-		republican_tradition = 0.2
 		prestige = 0.5
 	}
 	international_influences = {
@@ -1985,10 +1933,6 @@ shan_ideas = {
 	}
 	shan_chronicles = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	shan_expansionism = {
 		global_manpower_modifier = 0.25
@@ -2031,10 +1975,6 @@ chinese_ideas = {
 	}
 	son_of_heaven = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	middle_kingdom = {
 		diplomatic_reputation = 1
@@ -2084,10 +2024,6 @@ vindhyan_ideas = {
 	}
 	candella_legacy = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 }
 
@@ -2123,10 +2059,6 @@ kurdish_ideas = {
 	}
 	legacy_of_the_kurdish_dynasties = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	gorani_literature = {
 		prestige_decay = -0.01
@@ -2318,10 +2250,6 @@ moluccan_ideas = {
 	}
 	moluccan_cultural_heritage = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	moluccan_agents_of_trade = {
 		merchants = 1
@@ -2518,10 +2446,6 @@ malagasy_ideas = {
 	}
 	malagasy_zafivolemena = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	malagasy_pirate_ports = {
 		#Effects from BTS Ideas
@@ -2576,9 +2500,6 @@ zambezi_ideas = { #Above all based on the Bororo/Lundu.
 	zambezi_centralizing_the_mbona_cult = {
 		legitimacy = 1
 		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	zambezi_wealth_of_the_shire_valley = {
 		diplomatic_annexation_cost = -0.15
@@ -2617,7 +2538,7 @@ congolese_minor_ideas = {
 		infantry_cost = -0.1
 	}
 	congolese_minor_aggressive_migrations = {
-		culture_conversion_cost = -0.15
+		culture_conversion_cost = -0.1
 	}
 	congolese_minor_subordinate_chiefs = {
 		global_unrest = -1
@@ -2772,13 +2693,9 @@ deccani_muslim_ideas = {
 
 	dec_legacy_of_bahmanis = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	dec_deccani_identity = {
-		idea_cost = -0.1
+		idea_cost = -0.10
 	}
 	dec_brahmin_administrators = {
 		stability_cost_modifier = -0.1
@@ -2861,10 +2778,6 @@ garjati_ideas = {
 	}
 	garjati_ancient_mandalas = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	garjati_tribal_feudatories = {
 		global_manpower_modifier = 0.15
@@ -2941,10 +2854,6 @@ polynesian_ideas = {
 	}
 	tatau = {
 		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
 	}
 	haka = {
 		land_morale = 0.10
@@ -2986,8 +2895,8 @@ heptarchy_ideas = {
 	hep_christianity = {
 		global_tax_modifier = 0.1
 		papal_influence = 2
+        church_power_modifier = 0.1
 		monthly_fervor_increase = 0.25
-		church_power_modifier = 0.1
 	}
 	hep_dream_of_hegemony = {
 		fabricate_claims_cost = -0.25
@@ -3006,9 +2915,96 @@ heptarchy_ideas = {
 	}
 	hep_warrior_kings = {
 		legitimacy = 1
+	}
+}
+
+free_city_ideas = {
+	start = {
+		legitimacy = 1
 		devotion = 1
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.3
+		diplomatic_reputation = 1
 	}
+	bonus = {
+		build_cost = -0.15
+	}
+	trigger = {
+		has_reform = free_city
+	}
+	free = yes
+	
+	free_city_1 = {
+		prestige = 1
+	}
+	free_city_2 = {
+		diplomats = 1
+	}	
+	free_city_3 = {
+		production_efficiency = 0.1
+		stability_cost_modifier = -0.1
+	}
+	free_city_4 = {
+		trade_efficiency = 0.15
+	}	
+	free_city_5 = {
+		global_tax_modifier = 0.10
+	}
+	free_city_6 = {
+		merc_maintenance_modifier = -0.2
+	}
+	free_city_7 = {
+		defensiveness = 0.1
+		prestige = 0.5
+	}
+}
+
+crusader_ideas = {
+    start = {
+		naval_forcelimit_modifier = 0.25
+        papal_influence = 3
+        church_power_modifier = 0.25
+		monthly_fervor_increase = 0.5
+    }
+
+    bonus = {
+        prestige = 1
+    }
+
+    trigger = {
+		OR = {
+            tag = TPL
+            tag = ATC
+            tag = EDE
+            tag = DMU
+            tag = APO
+            tag = SIN
+            tag = EME
+		}
+    }
+    free = yes
+
+    stone_fortresses_crusaders = {
+        defensiveness = 0.2
+    }
+    soldiers_of_god_crusaders = {
+        global_missionary_strength = 0.02
+    }
+    mediterranean_traders_crusaders = {
+        merchants = 1
+    }
+    reclaiming_the_holy_land = {
+        core_creation = -0.15
+    }
+    monastic_orders_crusaders = {
+        mercenary_cost = -0.2
+		merc_maintenance_modifier = -0.1
+    }
+    pilgrim_fighters = {
+        manpower_recovery_speed = 0.25
+    }
+    deus_vult = {
+        land_morale = 0.15
+    }
 }
