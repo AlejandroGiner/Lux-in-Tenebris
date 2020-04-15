@@ -654,12 +654,9 @@ mamluk_government = {
 
 	modifiers = {
 		num_accepted_cultures = 3
-		#-50% cost to promote cultures
-		global_autonomy = -0.025
 		monarch_admin_power = 2
 		same_culture_advisor_cost = -0.25
 		promote_culture_cost = -0.5
-		max_states = 1
 	}
 
 	conditional = {
