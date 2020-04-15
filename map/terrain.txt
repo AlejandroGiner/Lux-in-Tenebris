@@ -21,9 +21,9 @@ categories =  {
 		type = plains
 		sound_type = plains
 
-		supply_limit = 10
-		movement_cost = 1.10
-		local_development_cost = -0.05
+		supply_limit = 11
+		movement_cost = 1.0
+		local_development_cost = -0.1
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1.05
 
@@ -58,10 +58,11 @@ categories =  {
 		type = plains
 		sound_type = plains
 
-		supply_limit = 8
+		supply_limit = 10
 		movement_cost = 1.0
+		local_development_cost = -0.05
 		allowed_num_of_buildings = 1
-		nation_designer_cost_multiplier = 1.
+		nation_designer_cost_multiplier = 1
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -89,9 +90,8 @@ categories =  {
 		type = plains
 		sound_type = plains
 
-		supply_limit = 7
+		supply_limit = 9
 		movement_cost = 1.00
-		local_development_cost = 0.05
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 0.95
 
@@ -122,7 +122,7 @@ categories =  {
 		type = plains
 		sound_type = plains
 
-		supply_limit = 6
+		supply_limit = 9
 		movement_cost = 1.00
 		local_development_cost = 0.20
 		nation_designer_cost_multiplier = 0.9
@@ -151,7 +151,7 @@ categories =  {
 		type = forest
 		sound_type = forest
 
-		supply_limit = 6
+		supply_limit = 8
 		movement_cost = 1.10
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.9
@@ -195,7 +195,7 @@ categories =  {
 		type = forest
 		sound_type = forest
 
-		supply_limit = 2
+		supply_limit = 4
 		movement_cost = 1.30
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.9
@@ -221,7 +221,7 @@ categories =  {
 		color = { 49 175 191 }
 		sound_type = sea
 
-		supply_limit = 6
+		supply_limit = 7
 		movement_cost = 1.0
 		local_development_cost = 0.25
 		allowed_num_of_buildings = 1
@@ -280,7 +280,7 @@ categories =  {
 		type = hills
 		sound_type = mountain
 		
-		supply_limit = 5
+		supply_limit = 6
 		movement_cost = 1.65
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
@@ -334,7 +334,7 @@ categories =  {
 		type = hills
 		sound_type = mountain
 
-		supply_limit = 4
+		supply_limit = 7
 		movement_cost = 1.40
 		local_development_cost = 0.2
 		nation_designer_cost_multiplier = 0.9
@@ -367,7 +367,7 @@ categories =  {
 		type = mountains
 		sound_type = mountain
 
-		supply_limit = 1
+		supply_limit = 2
 		movement_cost = 2.1
 		local_development_cost = 0.45
 		nation_designer_cost_multiplier = 0.85
@@ -405,7 +405,7 @@ categories =  {
 		color = { 248 199 23  }
 		sound_type = plains
 	
-		supply_limit = 6
+		supply_limit = 7
 		movement_cost = 1.00
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.95	
@@ -435,7 +435,7 @@ categories =  {
 		type = jungle
 		sound_type = jungle
 
-		supply_limit = 3
+		supply_limit = 4
 		movement_cost = 2.0
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.8
@@ -466,7 +466,7 @@ categories =  {
 		type = jungle
 		sound_type = jungle
 
-		supply_limit = 5
+		supply_limit = 6
 		movement_cost = 1.50
 		local_development_cost = 0.30
 		allowed_num_of_buildings = 1
@@ -493,7 +493,7 @@ categories =  {
 		type = desert
 		sound_type = desert
 	
-		supply_limit = 0
+		supply_limit = 2
 		movement_cost = 1.40
 		local_development_cost = 0.60
 		nation_designer_cost_multiplier = 0.8
@@ -516,7 +516,7 @@ categories =  {
 		type = desert
 		sound_type = desert
 
-		supply_limit = 1
+		supply_limit = 3
 		movement_cost = 1.20
 		local_development_cost = 0.45
 		nation_designer_cost_multiplier = 0.9
@@ -537,7 +537,7 @@ categories =  {
 		color = { 235 235 235 }
 		sound_type = desert
 
-		supply_limit = 0
+		supply_limit = 1
 		movement_cost = 2.0
 		local_development_cost = 1.0
 		nation_designer_cost_multiplier = 0.75
@@ -557,11 +557,11 @@ categories =  {
 		color = { 66 69 245 }
 		sound_type = sea
 
-		supply_limit = 6
-		movement_cost = 1.0
+		supply_limit = 8
+		movement_cost = 1.05
 		local_development_cost = 0.2
 		allowed_num_of_buildings = 1
-		local_sailors = 50
+		local_sailors = 100
 		nation_designer_cost_multiplier = 0.9
 		
 		terrain_override = {
