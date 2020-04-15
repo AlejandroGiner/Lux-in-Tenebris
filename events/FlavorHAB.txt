@@ -323,23 +323,21 @@ country_event = {
 		set_country_flag = HAB_had_event_3201
 		hidden_effect = {
  			random_owned_province = {
-				limit = {
-					OR = {
-						area = transdanubia_area
-						area = southern_transdanubia_area
-						area = western_transdanubia_area
-						area = transylvania_area
-						area = southern_transylvania_area
-						area = szeklerland_area
-						area = alfold_area
-						area = southern_alfold_area
-						area = slovakia_area
-						area = felvidek_area
-					}
-					development = 7
-					NOT = { province_id = 3445 }
-					NOT = { province_id = 3051 }
+				OR = {
+					area = transdanubia_area
+					area = southern_transdanubia_area
+					area = western_transdanubia_area
+					area = transylvania_area
+					area = southern_transylvania_area
+					area = szeklerland_area
+					area = alfold_area
+					area = southern_alfold_area
+					area = slovakia_area
+					area = felvidek_area
 				}
+				development = 7
+				NOT = { province_id = 3445 }
+				NOT = { province_id = 3051 }
 				set_province_flag = hungarian_revolt
 			}
 		}
@@ -723,17 +721,15 @@ country_event = {
 		tag = HAB
 		NOT = { exists = HUN }
 		any_owned_province = {
-			limit = {
-				OR = {
-					area = transdanubia_area
-					area = southern_transdanubia_area
-					area = western_transdanubia_area
-					area = alfold_area
-					area = southern_alfold_area
-				}
-				NOT = { province_id = 3445 }
-				NOT = { province_id = 3051 }
+			OR = {
+				area = transdanubia_area
+				area = southern_transdanubia_area
+				area = western_transdanubia_area
+				area = alfold_area
+				area = southern_alfold_area
 			}
+			NOT = { province_id = 3445 }
+			NOT = { province_id = 3051 }
 		}
 		TUR = {
 			any_owned_province = {
