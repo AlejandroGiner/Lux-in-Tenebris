@@ -2086,13 +2086,13 @@ country_decisions = {
 		}
 		effect = {
 			609 = {
-			        add_base_tax = 3
-                                add_base_production = 3
-                                add_base_manpower = 3
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
 				move_capital_effect = yes
 			}
 			change_tag = KME
-                        swap_non_generic_missions = yes
+			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 3 } }
