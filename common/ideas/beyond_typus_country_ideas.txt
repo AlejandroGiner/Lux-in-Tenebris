@@ -2,7 +2,132 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new groups or ideas, make sure they are unique.
 
-#Plan to do some real NIs here eventually
+# HR's work (original BtP dev)
+ANI_ideas = {
+	start = {
+		global_tax_modifier = 0.15
+		production_efficiency = 0.1
+	}
+
+	bonus = {
+		diplomatic_upkeep = 1
+	}
+	
+	trigger = {
+		OR = {
+			tag = ANI
+			primary_culture = anglo_irish
+		}
+	}
+	free = yes		#will be added at load.
+	
+	koi_baptism_by_fire = {
+		army_tradition = 0.25
+		discipline = 0.025
+	}
+	koi_parliament_ireland = {
+		advisor_cost = -0.15
+	}
+	koi_trim_castle = {
+		defensiveness = 0.1			#added by Draiocht
+		fort_maintenance_modifier = -0.1			#halved because of defensiveness bonus
+	}
+	koi_urban_culture = {
+		development_cost = -0.1
+	}
+	koi_anglo_rapprochement = {
+		improve_relation_modifier = 0.25			#moved forward 1 more, from the 7th idea to the 5th
+	}
+	koi_bill_of_rights = {
+		global_unrest = -1			#reduced to 1 to match the English Bill of Rights, only the American one gets -2, also moved back to 6th place
+	}
+	koi_mixed_heritage = {
+		religious_unity = 0.25			#changed by Draiocht because of culture changes in 1.18 and the Ireland overhaul in BT 3.0, was formerly more accepted cultures and the second idea, now religious and the last. All other ideas moved forward
+		tolerance_heretic = 2				#changed by Draiocht because of culture changes in 1.18 and the Ireland overhaul in BT 3.0, was formerly more accepted cultures and the second idea, now religious and the last. All other ideas moved forward
+	}
+}
+
+CEL_ideas = {
+	start = {
+		infantry_power = 0.15
+		land_morale = 0.15
+	}
+
+	bonus = {
+		army_tradition = 1
+	}
+	
+	trigger = {
+		tag = CEL
+	}
+	free = yes		#will be added at load.
+	
+	celts_survival = {
+		war_exhaustion = -0.05
+	}
+	celts_six_nations = {
+		idea_cost = -0.1	
+	}
+	celts_monastic_schools = {
+		technology_cost = -0.05
+	}
+	celts_soldiers = {
+		discipline = 0.05
+	}
+	celts_memory = {
+		core_creation = -0.2
+	}
+	celts_illuminated_manuscripts = {
+		prestige = 1
+	}
+	celts_resettle = {
+		culture_conversion_cost = -0.2
+	}
+}
+
+TNA_ideas = {
+	start = {
+		army_tradition = 0.5
+		global_unrest = -1
+	}
+
+	bonus = {
+		culture_conversion_cost = -0.2
+	}
+
+	trigger = {
+		tag = TNA
+	}
+	free = yes		#will be added at load.
+
+	tirnangael_bards = {
+		legitimacy = 0.5
+		republican_tradition = 0.2
+		prestige_from_land = 0.5
+	}
+	tirnangael_gall_oglaigh = {
+		possible_mercenaries = 0.25
+		mercenary_discipline = 0.05
+	}
+	tirnangael_explorers_legacy = {
+		range = 0.33
+		may_explore = yes
+	}
+	tirnangael_brehon_law = {
+		stability_cost_modifier = -0.2
+	}
+	tirnangael_gaelic_renown = {
+		diplomatic_reputation = 2
+	}
+	tirnangael_monastic_heritage = {
+		global_missionary_strength = 0.02
+		papal_influence = 1
+	}
+	tirnangael_beacon_of_civ = {
+		global_institution_spread = 0.1
+		idea_cost = -0.05
+	}
+}
 
 PMO_ideas = {
 	start = {
@@ -32,15 +157,54 @@ PMO_ideas = {
 		defensiveness = 0.15
 	}
 	pmo_directional_spirits = {
-		leader_land_manuever = 1			
+		leader_land_manuever = 1
 	}
 	pmo_kuksu_ceremony = {
-		stability_cost_modifier = -0.1			
+		stability_cost_modifier = -0.1
 	}
 	pmo_our_lands = {
 		hostile_attrition = 1			
 	}
 }
+
+CHP_ideas = {
+		start = {
+			prestige_decay = -0.01
+			global_tax_modifier = 0.15
+		}
+		
+		bonus = {
+			infantry_power = 0.15
+		}
+		
+		trigger = {
+			tag = CHP
+		}
+		free = yes		#will be added at load
+		
+		chp_fairs = {
+			trade_steering = 0.25
+		}
+		chp_chretien_de_troyes = {
+			global_institution_spread = 0.15
+		}
+		chp_reims_city_of_crownings = {
+			prestige = 1
+		}
+		chp_rose_of_provins = {
+			diplomatic_reputation = 1
+		}
+		chp_the_paraclete = {
+			tolerance_own = 2
+			papal_influence = 2
+		}
+		chp_wine = {
+			diplomatic_upkeep = 1
+		}
+		chp_fortify = {
+			defensiveness = 0.2
+		}
+	}
 
 RAV_ideas = {
 	start = {
@@ -2791,6 +2955,45 @@ SUL_ideas = {
 	}
 	SUL_chinese_junks = {
 		transport_cost = -0.2
+	}
+}
+
+ATJ_ideas = {
+	start = {
+		land_maintenance_modifier = -0.1
+		discipline = 0.05
+	}
+	
+	bonus = {
+		infantry_power = 0.1
+	}
+	
+	trigger = {
+		tag = ATJ
+	}
+	free = yes
+	
+	atj_cham_ties = {
+		prestige = 1
+	}
+	atj_pepper_trade = {
+		production_efficiency = 0.10
+		global_own_trade_power = 0.1
+	}
+	center_of_scholarship = {
+		advisor_cost = -0.15
+	}
+	atj_the_conquest_of_sumatra = {
+		core_creation = -0.1
+	}
+	atj_parang_sabil = {
+		enemy_core_creation = 0.5
+	}
+	atj_military_reforms = {
+		mil_tech_cost_modifier  = -0.15
+	}
+	atj_subdue_the_rajas = {
+		global_autonomy = -0.05 
 	}
 }
 
