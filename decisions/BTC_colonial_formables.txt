@@ -56,9 +56,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	acadia_nation = {
@@ -117,9 +115,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	alaska_nation = {
@@ -178,9 +174,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	amazonia_nation = {
@@ -260,9 +254,7 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	aotearoa_nation = {
@@ -321,9 +313,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	arizona_nation = {
@@ -402,9 +392,7 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	bahamas_nation = {
@@ -463,9 +451,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	columbia_nation = {
@@ -544,9 +530,7 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	cuba_nation = {
@@ -605,9 +589,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 florida_nation = {
@@ -666,9 +648,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	newfoundland_nation = {
@@ -727,9 +707,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	nevada_nation = {
@@ -808,9 +786,7 @@ florida_nation = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	michigan_nation = {
@@ -869,9 +845,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	madagascar_nation = {
@@ -930,9 +904,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	hudsonbay_nation = {
@@ -991,9 +963,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	guyana_nation = {
@@ -1061,9 +1031,7 @@ florida_nation = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	nunatsiaq_nation = { #Northwest territories
@@ -1122,9 +1090,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	southafrica_nation = {
@@ -1183,9 +1149,7 @@ florida_nation = {
 			swap_ideas = yes
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	yucatan_nation = {
@@ -1264,8 +1228,63 @@ florida_nation = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do = { factor = 1 }
+	}
+	
+	westindies_nation = {
+		major = yes
+		potential = {
+			NOT = { has_country_flag = changed_from_colonial_nation }
+			is_nomad = no
+			is_random_new_world = no
+			OR = {
+				is_former_colonial_nation = yes
+				is_colonial_nation = yes
+			}
+			colonial_the_carribean = {
+				owned_by = ROOT
+			}
+			OR = {
+				ai = no
+				num_of_cities = 3	
+			}
 		}
+		allow = {
+			adm_tech = 10
+			is_former_colonial_nation = yes
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			capital_scope = {
+				colonial_region = colonial_the_carribean
+				is_core = ROOT
+			}
+			NOT = { exists = WIE }
+		}
+		effect = {
+			change_tag = WIE
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			colonial_the_carribean = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = WIE
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			swap_ideas = yes
+			set_country_flag = changed_from_colonial_nation
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
 	}
 }

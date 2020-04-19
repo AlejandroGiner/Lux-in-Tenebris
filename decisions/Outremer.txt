@@ -65,9 +65,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			379 = {
-				move_capital_effect = yes
-			}
+			379 = { move_capital_effect = yes }
 			change_tag = OUT
 			set_government_rank = 3
 			add_prestige = 50
@@ -78,8 +76,7 @@ country_decisions = {
 			}
 			set_country_flag = formed_outremer
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
 	}
 }
