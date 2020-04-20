@@ -27,6 +27,7 @@ country_decisions = {
 				region = france_region
 				region = iberia_region
 				region = balkan_region
+				region = greece_region_btc
 				region = anatolia_region
 				region = mashriq_region
 				province_id = 343 # Fez
@@ -53,6 +54,10 @@ country_decisions = {
 				owned_by = ROOT
 			}
 			balkan_region = {
+				type = all
+				owned_by = ROOT
+			}
+			greece_region_btc = {
 				type = all
 				owned_by = ROOT
 			}
