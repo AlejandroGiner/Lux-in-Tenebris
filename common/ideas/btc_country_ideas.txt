@@ -366,7 +366,6 @@ SHE_ideas = {
 	trigger = {
 		tag = SHE
 	}
-
 	free = yes
 
 	SHE_idea1 = {
@@ -407,7 +406,7 @@ VAK_ideas = {
 	bonus = {
 		land_morale = 0.15
 	}
-
+	
 	trigger = {
 		tag = VAK
 	}
@@ -949,3 +948,280 @@ MTZ_ideas = {
 		build_cost = -0.15
 	}
 }
+
+GEV_ideas = {
+	start = {
+		tolerance_own = 2
+        discipline = 0.05
+	}
+
+	bonus = {
+        fire_damage_received = -0.2
+	}
+
+	trigger = {
+		tag = GEV
+	}
+	free = yes		# will be added at load
+
+	GEV_idea1 = {
+		diplomatic_upkeep = 1
+	}
+	GEV_idea2 = {
+		state_maintenance_modifier = -0.15
+		global_unrest = -1
+	}
+	GEV_idea3 = {
+		global_garrison_growth = 0.15
+	}
+	GEV_idea4 = {
+		global_missionary_strength = 0.03
+	}
+	GEV_idea5 = {
+		global_trade_goods_size_modifier = 0.1
+		envoy_travel_time = -0.25
+	}
+	GEV_idea6 = {
+        defensiveness = 0.15
+	}
+	GEV_idea7 = {
+		prestige = 1
+	}
+}
+
+TUL_ideas = {
+	start = {
+        adm_tech_cost_modifier = -0.1
+		trade_range_modifier = 0.3
+	}
+
+	bonus = {
+		merchants = 1
+	}
+
+	trigger = {
+		tag = TUL
+	}
+	free = yes		# will be added at load
+
+	TUL_idea1 = {
+        garrison_size = 0.15
+	}
+	TUL_idea2 = {
+		global_missionary_strength = 0.02
+	}
+	TUL_idea3 = {
+		production_efficiency = 0.1
+		trade_steering = 0.25
+	}
+	TUL_idea4 = {
+		stability_cost_modifier = -0.15
+	}
+	TUL_idea5 = {
+		global_unrest = -1
+	}
+	TUL_idea6 = {
+		prestige_decay = -0.01
+        defensiveness = 0.10
+	}
+	TUL_idea7 = {
+        land_forcelimit_modifier = 0.2
+	}
+}
+
+STS_ideas = {
+	start = {
+        diplomatic_reputation = 2
+        movement_speed = 0.15
+	}
+
+	bonus = {
+		global_autonomy = -0.05
+	}
+
+	trigger = {
+		tag = STS
+	}
+	free = yes		# will be added at load
+
+	STS_idea1 = {
+		prestige = 1
+	}
+	STS_idea2 = {
+		global_own_trade_power = 0.25
+	}
+	STS_idea3 = {
+		global_institution_spread = 0.15
+	}
+	STS_idea4 = {
+		build_cost = -0.1
+		prestige_decay = -0.01
+	}
+	STS_idea5 = {
+		tolerance_own = 2
+	}
+	STS_idea6 = {
+        diplomats = 1
+	}
+	STS_idea7 = {
+		improve_relation_modifier = 0.25
+	}
+}
+
+DHL_ideas = {
+	start = {
+		trade_efficiency = 0.15
+		naval_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		privateer_efficiency = 0.3
+	}
+
+	trigger = {
+		tag = DHL
+	}
+	free = yes		# will be added at load
+
+	DHL_idea1 = {
+		diplomatic_reputation = 2
+	}
+	DHL_idea2 = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	DHL_idea3 = {
+		build_cost = -0.1
+		development_cost = -0.10
+	}
+	DHL_idea4 = {
+		inflation_reduction = 0.1
+	}
+	DHL_idea5 = {
+		trade_range_modifier = 0.3
+	}
+	DHL_idea6 = {
+		naval_morale = 0.15
+	}
+	DHL_idea7 = {
+		technology_cost = -0.05
+	}
+}
+
+ROC_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.25
+        defensiveness = 0.2
+	}
+
+	bonus = {
+        fire_damage_received = -0.1
+	}
+
+	trigger = {
+		tag = ROC
+	}
+	free = yes		# will be added at load
+
+	ROC_idea1 = {
+		global_unrest = -1
+	}
+	ROC_idea2 = {
+		diplomatic_reputation = 2
+	}
+	ROC_idea3 = {
+		fort_maintenance_modifier = -0.15
+	}
+	ROC_idea4 = {
+		naval_morale = 0.15
+	}
+	ROC_idea5 = {
+		improve_relation_modifier = 0.2
+	}
+	ROC_idea6 = {
+		global_trade_goods_size_modifier = 0.05
+		trade_range_modifier = 0.25
+	}
+	ROC_idea7 = {
+		ship_durability = 0.1
+		global_trade_power = 0.05
+	}
+}
+
+GLC_ideas = {
+	start = {
+		ae_impact = -0.15
+		leader_land_shock = 1
+	}
+
+	bonus = {
+		core_creation = -0.15
+	}
+
+	trigger = {
+		tag = GLC
+	}
+	free = yes		# will be added at load
+
+	GLC_idea1 = {
+		production_efficiency = 0.10
+	}
+	GLC_idea2 = {
+		fort_maintenance_modifier = -0.15
+	}
+	GLC_idea3 = {
+		global_trade_power = 0.1
+	}
+	GLC_idea4 = {
+		trade_range_modifier = 0.3
+		diplomatic_reputation = 1
+	}
+	GLC_idea5 = {
+		war_exhaustion = -0.03
+	}
+	GLC_idea6 = {
+		tolerance_own = 2
+	}
+	GLC_idea7 = {
+		infantry_power = 0.15
+	}
+}
+
+GTA_ideas = {
+	start = {
+		movement_speed = 0.15
+        defensiveness = 0.15
+	}
+
+	bonus = {
+		siege_ability = 0.1
+	}
+
+	trigger = {
+		tag = GTA
+	}
+	free = yes		# will be added at load
+
+	GTA_idea1 = {
+		development_cost = -0.10
+	}
+	GTA_idea2 = {
+		core_creation = -0.15
+	}
+	GTA_idea3 = {
+		improve_relation_modifier = 0.15
+		envoy_travel_time = -0.25
+	}
+	GTA_idea4 = {
+		hostile_attrition = 1
+	}
+	GTA_idea5 = {
+		global_trade_power = 0.1
+	}
+	GTA_idea6 = {
+		heavy_ship_power = 0.15
+	}
+	GTA_idea7 = {
+		prestige = 1
+	}
+}
+
