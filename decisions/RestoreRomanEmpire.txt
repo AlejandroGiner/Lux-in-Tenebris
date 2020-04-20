@@ -147,8 +147,6 @@ country_decisions = {
 					has_country_modifier = pentarchy_mod
 				}
 			}
-			num_of_cities = 400
-			total_development = 2500
 			else = { #Because some people actually play catholic Byzantium?!
 				118 = { 
 					owned_by = ROOT
@@ -171,6 +169,8 @@ country_decisions = {
 					religion = ROOT 
 				}
 			}
+			num_of_cities = 400
+			total_development = 2500
 			OR = {
 				custom_trigger_tooltip = {
 					tooltip = restore_roman_empire_byzantium_dismantle_hre_tooltip
