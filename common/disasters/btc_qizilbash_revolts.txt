@@ -4,7 +4,10 @@ qizilbash_revolts = {
     potential = {
         tag = TUR
         religion = sunni
-        NOT = { is_year = 1600 }
+        NOT = {
+            is_year = 1600
+            has_country_flag = had_qizilbash_revolts
+        }
     }
     
     can_start = {
@@ -60,6 +63,10 @@ qizilbash_revolts = {
     progress = {
         modifier = {
             factor = 2.5
+            custom_trigger_tooltip = {
+                tooltip = NO_TOLERANCE_OF_HERETICS_TOOLTIP
+                NOT = { shiite = 2 }
+            }
         }
         modifier = {
             factor = 2.5

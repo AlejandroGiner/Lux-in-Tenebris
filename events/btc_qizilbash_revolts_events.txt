@@ -6,18 +6,24 @@ country_event = {
     id = btc_qizilbash_revolts.1
     title = qizilbash_revolts   #test?
     desc = btc_qizilbash_revolts.1.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_ACCUSATION_eventPicture
     
     is_triggered_only = yes
     
     immediate = {
         hidden_effect = {
-            set_country_flag = had_qizilbash_revolts
             set_variable = {
                 which = violence_event_counter
                 value = 0
             }
-            
+            set_variable = {
+                which = qizilbash_rise_counter
+                value = 0
+            }
+            set_variable = {
+                which = qizilbash_rise_counter
+                value = 0
+            }
         }
     }
     
@@ -32,13 +38,14 @@ country_event = {
     id = btc_qizilbash_revolts.2
     title = btc_qizilbash_revolts.2.t
     desc = btc_qizilbash_revolts.2.d
-    picture = BORDER_TENSION_eventPicture
+    picture = muslimgfx_BORDER_TENSION_eventPicture
     
     is_triggered_only = yes
     
     option = {
         name = btc_qizilbash_revolts.2.a
         add_stability = 2
+        set_country_flag = had_qizilbash_revolts
     }
 }
 
@@ -61,7 +68,13 @@ country_event = {
                 limit = {
                     OR = {
                         #karaman or eastern anatolia
+                        area = ankara_area
+                        area = karaman_area
+                        area = dulkadir_area
+                        area = erzurum_area
+                        area = mardin_area
                     }
+                    NOT = { has_province_modifier = btc_devastated_by_army }
                 }
                 save_event_target_as = violent_province
             }
@@ -72,10 +85,13 @@ country_event = {
         any_owned_province = {
             OR = {
                 #karaman or eastern anatolia
+                area = ankara_area
+                area = karaman_area
+                area = dulkadir_area
+                area = erzurum_area
+                area = mardin_area
             }
-            NOT = {
-                has_province_modifier = btc_devastated_by_army
-            }
+            NOT = { has_province_modifier = btc_devastated_by_army }
         }
         NOT = {
             check_variable = {
@@ -103,16 +119,25 @@ country_event = {
     id = btc_qizilbash_revolts.4
     title = btc_qizilbash_revolts.4.t
     desc = btc_qizilbash_revolts.4.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_REFORM_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
+        NOT = { has_country_flag = fatwa_against_qizilbash }
+    }
     
+    immediate = {
+        hidden_effect = { set_country_flag = fatwa_against_qizilbash }
     }
     
     option = {
         name = btc_qizilbash_revolts.4.a
+        add_prestige = 10
+        add_legitimacy = 10
+        add_adm_power = 100
+        add_dip_power = 100
+        add_mil_power = 100
     }
 }
 
@@ -121,16 +146,34 @@ country_event = {
     id = btc_qizilbash_revolts.5
     title = btc_qizilbash_revolts.5.t
     desc = btc_qizilbash_revolts.5.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_MILITARY_CAMP_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
+        NOT = { has_country_flag = successful_raid }
+    }
     
+    immediate = {
+        hidden_effect = { set_country_flag = successful_raid }
     }
     
     option = {
         name = btc_qizilbash_revolts.5.a
+        add_mil_power = -25
+        add_legitimacy = 10
+    }
+    
+    option = {
+        name = btc_qizilbash_revolts.5.b
+        add_mil_power = -25
+        add_prestige = 10
+    }
+    
+    option = {
+        name = btc_qizilbash_revolts.5.c
+        add_adm_power = 25
+        add_mil_power = 50
     }
 }
 
@@ -139,16 +182,24 @@ country_event = {
     id = btc_qizilbash_revolts.6
     title = btc_qizilbash_revolts.6.t
     desc = btc_qizilbash_revolts.6.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_SPY_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
+        NOT = { has_country_flag = efficient_espionage }
+    }
     
+    immediate = {
+        hidden_effect = { set_country_flag = efficient_espionage }
     }
     
     option = {
         name = btc_qizilbash_revolts.6.a
+        add_country_modifier = {
+            name = efficent_spies
+            duration = 10950
+        }
     }
 }
 
@@ -157,16 +208,25 @@ country_event = {
     id = btc_qizilbash_revolts.7
     title = btc_qizilbash_revolts.7.t
     desc = btc_qizilbash_revolts.7.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_NAVAL_MILITARY_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
+        NOT = { has_country_flag = foolish_escape_attempt }
+        any_owned_province = {
+            has_port = yes
+        }
+    }
     
+    immediate = {
+        hidden_effect = { set_country_flag = foolish_escape_attempt }
     }
     
     option = {
         name = btc_qizilbash_revolts.7.a
+        add_dip_power = -25
+        add_navy_tradition = 10
     }
 }
 
@@ -175,16 +235,63 @@ country_event = {
     id = btc_qizilbash_revolts.8
     title = btc_qizilbash_revolts.8.t
     desc = btc_qizilbash_revolts.8.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_RELIGIOUS_TURMOIL_eventPicture
     
     is_triggered_only = yes
     
-    trigger = {
+    immediate = {
+        hidden_effect = {
+            change_variable = {
+                which = qizilbash_rise_counter
+                value = 1
+            }
+            random_owned_province = {
+                limit = {
+                    OR = {
+                        #karaman or eastern anatolia
+                        area = ankara_area
+                        area = karaman_area
+                        area = dulkadir_area
+                        area = erzurum_area
+                        area = mardin_area
+                    }
+                    NOT = { has_province_flag = qizilbash_rose_here }
+                }
+                set_province_flag = qizilbash_rose_here
+                save_event_target_as = qizilbash_province
+            }
+        }
+    }
     
+    trigger = {
+        any_owned_province = {
+            OR = {
+                #karaman or eastern anatolia
+                area = ankara_area
+                area = karaman_area
+                area = dulkadir_area
+                area = erzurum_area
+                area = mardin_area
+            }
+            NOT = { has_province_flag = qizilbash_rose_here }
+        }
+        NOT = {
+            check_variable = {
+                which = qizilbash_rise_counter
+                value = 2
+            }
+        }
     }
     
     option = {
         name = btc_qizilbash_revolts.8.a
+        event_target:qizilbash_province = {
+            add_devastation = 5
+            spawn_rebels = {
+                type = anti_tax_rebels
+                size = 1
+            }
+        }
     }
 }
 
@@ -193,16 +300,53 @@ country_event = {
     id = btc_qizilbash_revolts.9
     title = btc_qizilbash_revolts.9.t
     desc = btc_qizilbash_revolts.9.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_BORDER_TENSION_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
+        any_owned_province = {
+            OR = {
+                #greece or bulgaria
+            }
+            NOT = { has_province_flag = traitors_here }
+        }
+        NOT = {
+            check_variable = {
+                which = traitors_counter
+                value = 3
+            }
+        }
+    }
     
+    immediate = {
+        hidden_effect = {
+            change_variable = {
+                which = traitors_counter
+                value = 1
+            }
+        }
     }
     
     option = {
         name = btc_qizilbash_revolts.9.a
+        trigger = {
+            cyprus_area = {
+                owned_by = ROOT
+            }
+        }
+    }
+    
+    option = {
+        name = btc_qizilbash_revolts.9.b
+    }
+    
+    option = {
+        name = btc_qizilbash_revolts.9.c
+    }
+    
+    option = {
+        name = btc_qizilbash_revolts.9.z
     }
 }
 
@@ -211,16 +355,22 @@ country_event = {
     id = btc_qizilbash_revolts.10
     title = btc_qizilbash_revolts.10.t
     desc = btc_qizilbash_revolts.10.d
-    picture = ACCUSATION_eventPicture
+    picture = SOLDIERS_FREEZING_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
+        NOT = { has_country_flag = caravan_in_mountain }
+    }
     
+    immediate = {
+        hidden_effect = { set_country_flag = caravan_in_mountain }
     }
     
     option = {
         name = btc_qizilbash_revolts.10.a
+        add_years_of_income = 1
+        add_adm_power = 50
     }
 }
 
@@ -229,15 +379,24 @@ country_event = {
     id = btc_qizilbash_revolts.11
     title = btc_qizilbash_revolts.11.t
     desc = btc_qizilbash_revolts.11.d
-    picture = ACCUSATION_eventPicture
+    picture = muslimgfx_CIVIL_WAR_eventPicture
     
     is_triggered_only = yes
     
     trigger = {
-    
+        karaman_area = {
+            ROOT = {
+                owns_or_non_sovereign_subject_of = PREV
+            }
+        }
     }
     
     option = {
         name = btc_qizilbash_revolts.11.a
+        random_province = {
+            limit = {
+                
+            }
+        }
     }
 }
