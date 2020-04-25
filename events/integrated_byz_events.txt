@@ -110,6 +110,7 @@ country_event = {
 	picture = CIVIL_WAR_eventPicture
 	
 	is_triggered_only = yes
+	fire_only_once = yes
 	
 	trigger = {
 		tag = BYZ
@@ -117,10 +118,6 @@ country_event = {
         NOT = { is_year = 1460 }
 		owns = 151
 		owns = 5713
-	}
-
-	mean_time_to_happen = {
-		days = 1
 	}
 	
 	option = {
