@@ -19,6 +19,9 @@ is_city = yes
 hre = yes
 add_core = MUN
 
+extra_cost = 8
+center_of_trade = 1
+
 discovered_by = western
 discovered_by = muslim
 discovered_by = persian_btc
@@ -28,9 +31,7 @@ discovered_by = eastern
 1532.1.1 = { religion = protestant }
 1534.5.1 = { unrest = 3 } # The Babtists (Täufer) are executed and removed from power during 1534 and 1535
 1535.3.1 = { unrest = 0 }
-1585.1.1 = {
-	religion = catholic
-}
+1585.1.1 = { religion = catholic }
 1643.1.1 = { base_manpower = 2 } # The 30 years war was hard on Münster. It is one of the two towns where the peace is negotiated. 1643-1648
 1650.1.1 = {
  	base_tax = 5

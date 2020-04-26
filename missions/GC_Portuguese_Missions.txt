@@ -254,19 +254,25 @@ gc_por_1_b = {
 		icon = mission_great_trading_houses
 		required_missions = { gc_por_wine_monopolies }
 
-		provinces_to_highlight = {
-			province_id = 224
-		}
+		provinces_to_highlight = { province_id = 224 }
 
 		trigger = {
 			OR = {
 				num_of_merchants = 8
+				AND = {
 					224 = {
 						trade_share = {
 							country = ROOT
-							share = 70
+							share = 55
 						}
 					}
+					227 = {
+						trade_share = {
+							country = ROOT
+							share = 85
+						}
+					}
+				}
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 10
