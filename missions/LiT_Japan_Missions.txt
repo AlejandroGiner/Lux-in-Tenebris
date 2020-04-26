@@ -55,9 +55,8 @@ ja_daimyo_2 = {
 		}
 		
 		provinces_to_highlight = {
-			any_owned_province = {
-				trade_goods = rice
-			}
+			owned_by = ROOT
+			trade_goods = rice
 		}
 		
 		trigger = {
