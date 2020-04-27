@@ -36,12 +36,7 @@ on_monarch_death = {
 		flavor_tus.16 #Savanorola Leaves This World
 		flavor_wal.1 # Vlad the Impaler. So that he doesn't try to usurp his father.
 		flavor_nav.4 # Navarra succession event
-	}
-	if = {
-		limit = {
-			tag = BYZ
-		}
-		country_event = { id = integrated_byz_events.16 } #The Rebellion of Demetrios Palaiologos
+		integrated_byz_events.16 # The Rebellion of Demetrios Palaiologos
 	}
 	if = { #Making the ruler a general if you've got the Basileus Protostrategos reform.
 		limit = {
