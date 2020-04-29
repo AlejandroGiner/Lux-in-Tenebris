@@ -19,7 +19,7 @@ ja_daimyo_1 = {
 		}
 		
 		provinces_to_highlight = {
-			CAPITAL
+			is_capital_of = ROOT
 		}
 		
 		trigger = {
@@ -31,6 +31,103 @@ ja_daimyo_1 = {
 		effect = {
 		
 		}
+	}
+	
+	ja_daimyo_kyushu = {
+		icon = mission_dominate_home_trade_node
+		position = 3 #1-3
+		required_missions = { ja_daimyo_sengoku }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			NOT = { 
+				owned_by = ROOT 
+			}
+			OR = {
+				area = kyushu
+				area = northern_kyushu
+				area = btc_south_kyushu_area
+				area = central_kyushu_area
+			}
+		}
+		
+		trigger = {
+			kyushu = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_kyushu = {
+				type = all
+				owned_by = ROOT
+			}
+			btc_south_kyushu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_kyushu_area = {
+				type = all
+				owned_by = ROOT
+			}
+				
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
+	ja_daimyo_dojos = {
+		icon = mission_dominate_home_trade_node
+		position = 4 #1-4
+		required_missions = { }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
+	ja_daimyo_shinobi = {
+		icon = mission_dominate_home_trade_node
+		position = 5 #1-5
+		required_missions = { ja_daimyo_dojos }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+	
 	}
 	
 }
@@ -101,6 +198,37 @@ ja_daimyo_2 = {
 		}
 	}
 	
+	ja_daimyo_shikoku = {
+		icon = mission_dominate_home_trade_node
+		position = 3 #2-3
+		required_missions = { ja_daimyo_sengoku }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			NOT = { 
+				owned_by = ROOT 
+			}
+			area = shikoku_area
+		}
+		
+		trigger = {
+			shikoku_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
 	
 }
 ja_daimyo_3 = {
@@ -111,6 +239,108 @@ ja_daimyo_3 = {
 		has_government_reform = daimyo
 	}
 	has_country_shield = yes
+	
+	ja_daimyo_loyalty = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #3-1
+		required_missions = { }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
+	ja_daimyo_sengoku = {
+		icon = mission_dominate_home_trade_node
+		position = 2 #3-2
+		required_missions = { ja_daimyo_loyalty }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
+	ja_daimyo_seat_power = {
+		icon = mission_dominate_home_trade_node
+		position = 3 #3-3
+		required_missions = { ja_daimyo_sengoku }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			NOT = { 
+				owned_by = ROOT 
+			}
+			province_id = 1020
+		}
+		
+		trigger = {
+			1020 = {
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
+	ja_daimyo_consolidate = {
+		icon = mission_dominate_home_trade_node
+		position = 4 #3-4
+		required_missions = { ja_daimyo_seat_power }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+		
+		}
+		
+		effect = {
+		
+		}
+	
+	}
 }
 ja_daimyo_4 = {
 	slot = 4
@@ -169,6 +399,70 @@ ja_daimyo_4 = {
 		effect = {
 		
 		}
+	}
+	
+	ja_daimyo_east_honshu = {
+		icon = mission_dominate_home_trade_node
+		position = 3 #4-3
+		required_missions = { ja_daimyo_sengoku }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			NOT = { 
+				owned_by = ROOT 
+			}
+			OR= {
+				area = saigoku_area
+				area = sanindo_area
+				area = east_sanyodo_area
+				area = south_kinai_area
+				area = kinai_area
+				area = hokuriku_area
+			}				
+			NOT = { 
+				province_id = 1020 
+			}
+		}
+		
+		trigger = {
+			saigoku_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sanindo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_sanyodo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_kinai_area = {
+				type = all
+				owned_by = ROOT
+			}
+            kinai_area = {
+                type = all
+                OR = {
+                    province_id = 1020
+                    owned_by = ROOT
+                }
+            }
+			hokuriku_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+		
+		}
+	
 	}
 
 }
@@ -234,5 +528,73 @@ ja_daimyo_5 = {
 		effect = {
 		
 		}
+	}
+	
+	ja_daimyo_west_honshu = {
+		icon = mission_dominate_home_trade_node
+		position = 3 #3-3
+		required_missions = { ja_daimyo_sengoku }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			NOT = { 
+				owned_by = ROOT 
+			}
+			OR = {
+				area = chubu_area
+				area = eastern_chubu_area
+				area = kanto_area
+				area = eastern_kanto_area
+				area = east_hokuriku_area
+				area = thohoku_area
+				area = south_thohoku_area
+				area = central_thohoku_area
+			}
+		}
+		
+		trigger = {
+			chubu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_chubu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			kanto_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_kanto_area = {
+				type = all
+				owned_by = ROOT
+			}
+			east_hokuriku_area = {
+				type = all
+				owned_by = ROOT
+			}
+			thohoku_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_thohoku_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_thohoku_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+		
+		}
+	
 	}
 }
