@@ -1,4 +1,6 @@
-ja_daimyo_1 = {
+#pre unification generics
+
+ja_generics_1 = {
 	slot = 1
 	generic = no
 	ai = yes
@@ -7,7 +9,7 @@ ja_daimyo_1 = {
 	}
 	has_country_shield = yes
 	
-	ja_daimyo_fort_cap = {
+	ja_generics_fort_cap = {
 		icon = mission_dominate_home_trade_node
 		position = 1 #1-1
 		required_missions = {}
@@ -33,56 +35,7 @@ ja_daimyo_1 = {
 		}
 	}
 	
-	ja_daimyo_kyushu = {
-		icon = mission_dominate_home_trade_node
-		position = 3 #1-3
-		required_missions = { ja_daimyo_sengoku }
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-			NOT = { 
-				owned_by = ROOT 
-			}
-			OR = {
-				area = kyushu
-				area = northern_kyushu
-				area = btc_south_kyushu_area
-				area = central_kyushu_area
-			}
-		}
-		
-		trigger = {
-			kyushu = {
-				type = all
-				owned_by = ROOT
-			}
-			northern_kyushu = {
-				type = all
-				owned_by = ROOT
-			}
-			btc_south_kyushu_area = {
-				type = all
-				owned_by = ROOT
-			}
-			central_kyushu_area = {
-				type = all
-				owned_by = ROOT
-			}
-				
-		}
-		
-		effect = {
-		
-		}
-	
-	}
-	
-	ja_daimyo_dojos = {
+	ja_generics_dojos = {
 		icon = mission_dominate_home_trade_node
 		position = 4 #1-4
 		required_missions = { }
@@ -106,10 +59,10 @@ ja_daimyo_1 = {
 	
 	}
 	
-	ja_daimyo_shinobi = {
+	ja_generics_shinobi = {
 		icon = mission_dominate_home_trade_node
 		position = 5 #1-5
-		required_missions = { ja_daimyo_dojos }
+		required_missions = { ja_generics_dojos }
 		ai_weight = {
 			factor = 5
 		}
@@ -130,8 +83,10 @@ ja_daimyo_1 = {
 	
 	}
 	
+	
 }
-ja_daimyo_2 = {
+
+ja_generics_2 = {
 	slot = 2
 	generic = no
 	ai = yes
@@ -140,7 +95,7 @@ ja_daimyo_2 = {
 	}
 	has_country_shield = yes
 	
-	ja_daimyo_rice = {
+	ja_generics_rice = {
 		icon = mission_dominate_home_trade_node
 		position = 1 #2-1
 		required_missions = {}
@@ -171,10 +126,10 @@ ja_daimyo_2 = {
 		}
 	}
 	
-		ja_daimyo_joukamachi = {
+		ja_generics_joukamachi = {
 		icon = mission_dominate_home_trade_node
 		position = 2 #2-2
-		required_missions = {ja_daimyo_rice ja_daimyo_fort_cap}
+		required_missions = {ja_generics_rice ja_generics_fort_cap}
 		ai_weight = {
 			factor = 5
 		}
@@ -186,17 +141,225 @@ ja_daimyo_2 = {
 		}
 		
 		trigger = {
-		number_of_owned_provinces_with = {
-			development = 15
-			fort_level = 2
-		}
-		#At least 10 provinces: 15 dev and a level 2 fort or higher
+			number_of_owned_provinces_with = {
+				development = 15
+				fort_level = 2
+				amount = 10
+			}
 		}
 		
 		effect = {
 		
 		}
 	}
+	
+}
+
+ja_generics_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+
+ja_generics_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+	ja_generics_pirates = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #4-1
+		required_missions = { }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			num_of_light_ship = 10
+			is_incident_happened = incident_wokou
+		#10 ships protecting from pirates in japan node, wokou incident
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+	ja_generics_divine_wind = {
+		icon = mission_dominate_home_trade_node
+		position = 2 #4-2
+		required_missions = {ja_generics_pirates}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			num_of_heavy_ship = 5
+			navy_size_percentage = .9
+		#5 heavies, 90% naval FL
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+}
+
+ja_generics_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+	ja_generics_bushido = {
+		icon = mission_dominate_home_trade_node
+		position = 1 #5-1
+		required_missions = { }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			army_tradition = 25
+			OR = {
+				mil = 3
+				has_mil_advisor_2 = yes
+			}
+		#Has at least 25% army tradition, Ruler has at least military skill 3 or level 2 mil advisor
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+	ja_generics_ashigaru = {
+		icon = mission_dominate_home_trade_node
+		position = 2 #5-2
+		required_missions = {ja_generics_bushido}
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+		}
+		
+		trigger = {
+			mil_tech = 5
+			land_forcelimit = 15
+			army_size_percentage = .9
+			manpower_percentage = .6
+		#Has mil tech 5, Forcelimit at least 15, 90% FL, Manpower at least 60%
+		}
+		
+		effect = {
+		
+		}
+	}
+	
+}
+#daimyo missions
+
+ja_daimyo_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+	
+	ja_daimyo_kyushu = {
+		icon = mission_dominate_home_trade_node
+		position = 3 #1-3
+		required_missions = { ja_daimyo_sengoku }
+		ai_weight = {
+			factor = 5
+		}
+		ai_priority = {
+			factor = 5
+		}
+		
+		provinces_to_highlight = {
+			NOT = { 
+				owned_by = ROOT 
+			}
+			OR = {
+				area = kyushu_area
+				area = northern_kyushu
+				area = btc_south_kyushu_area
+				area = central_kyushu_area
+			}
+		}
+		
+		trigger = {
+			kyushu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			northern_kyushu = {
+				type = all
+				owned_by = ROOT
+			}
+			btc_south_kyushu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			central_kyushu_area = {
+				type = all
+				owned_by = ROOT
+			}		
+		}
+		
+		effect = {
+		
+		}
+	
+	}
+	
+}
+
+ja_daimyo_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
 	
 	ja_daimyo_shikoku = {
 		icon = mission_dominate_home_trade_node
@@ -228,9 +391,8 @@ ja_daimyo_2 = {
 		}
 	
 	}
-	
-	
 }
+
 ja_daimyo_3 = {
 	slot = 3
 	generic = no
@@ -342,6 +504,7 @@ ja_daimyo_3 = {
 	
 	}
 }
+
 ja_daimyo_4 = {
 	slot = 4
 	generic = no
@@ -350,57 +513,7 @@ ja_daimyo_4 = {
 		has_government_reform = daimyo
 	}
 	has_country_shield = yes
-	
-	ja_daimyo_pirates = {
-		icon = mission_dominate_home_trade_node
-		position = 1 #4-1
-		required_missions = { }
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-		}
-		
-		trigger = {
-			num_of_light_ship = 10
-			is_incident_happened = incident_wokou
-		#10 ships protecting from pirates in japan node, wokou incident
-		}
-		
-		effect = {
-		
-		}
-	}
-	
-	ja_daimyo_divine_wind = {
-		icon = mission_dominate_home_trade_node
-		position = 2 #4-2
-		required_missions = {ja_daimyo_pirates}
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-		}
-		
-		trigger = {
-			num_of_heavy_ship = 5
-			navy_size_percentage = .9
-		#5 heavies, 90% naval FL
-		}
-		
-		effect = {
-		
-		}
-	}
-	
+
 	ja_daimyo_east_honshu = {
 		icon = mission_dominate_home_trade_node
 		position = 3 #4-3
@@ -464,8 +577,8 @@ ja_daimyo_4 = {
 		}
 	
 	}
-
 }
+
 ja_daimyo_5 = {
 	slot = 5
 	generic = no
@@ -475,64 +588,9 @@ ja_daimyo_5 = {
 	}
 	has_country_shield = yes
 	
-		ja_daimyo_bushido = {
-		icon = mission_dominate_home_trade_node
-		position = 1 #5-1
-		required_missions = { }
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-		}
-		
-		trigger = {
-			army_tradition = 25
-			OR = {
-				mil = 3
-				#<list mil advisors> = 2
-			}
-		#Has at least 25% army tradition, Ruler has at least military skill 3 or level 2 mil advisor
-		}
-		
-		effect = {
-		
-		}
-	}
-	
-	ja_daimyo_ashigaru = {
-		icon = mission_dominate_home_trade_node
-		position = 2 #5-2
-		required_missions = {ja_daimyo_bushido}
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-		}
-		
-		trigger = {
-			mil_tech = 5
-			land_forcelimit = 15
-			army_size_percentage = .9
-			manpower_percentage = .6
-		#Has mil tech 5, Forcelimit at least 15, 90% FL, Manpower at least 60%
-		}
-		
-		effect = {
-		
-		}
-	}
-	
 	ja_daimyo_west_honshu = {
 		icon = mission_dominate_home_trade_node
-		position = 3 #3-3
+		position = 3 #5-3
 		required_missions = { ja_daimyo_sengoku }
 		ai_weight = {
 			factor = 5
@@ -598,3 +656,59 @@ ja_daimyo_5 = {
 	
 	}
 }
+	
+	
+
+#"shogun"/Ashikaga missions
+
+ja_shogun_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+
+ja_shogun_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+
+ja_shogun_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+
+ja_shogun_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+
+ja_shogun_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		has_government_reform = daimyo
+	}
+	has_country_shield = yes
+}
+
+#Japanese Main Generics
