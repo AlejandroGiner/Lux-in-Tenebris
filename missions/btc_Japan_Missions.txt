@@ -27,63 +27,20 @@ ja_generics_1 = {
 		trigger = {
 			capital_scope = {
 				fort_level = 3
+				base_manpower = 5
 			}
 		}
 		
 		effect = {
-		
+			capital_scope = {
+				add_province_modifier = {
+					name = btc_ja_fortified_capital
+					duration = 7300
+					desc = btc_ja_fortified_capital_tooltip
+				}
+			}
 		}
 	}
-	
-	ja_generics_dojos = {
-		icon = mission_dominate_home_trade_node
-		position = 4 #1-4
-		required_missions = { }
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-		}
-		
-		trigger = {
-
-		}
-		
-		effect = {
-		
-		}
-	
-	}
-	
-	ja_generics_shinobi = {
-		icon = mission_dominate_home_trade_node
-		position = 5 #1-5
-		required_missions = { ja_generics_dojos }
-		ai_weight = {
-			factor = 5
-		}
-		ai_priority = {
-			factor = 5
-		}
-		
-		provinces_to_highlight = {
-		}
-		
-		trigger = {
-		
-		}
-		
-		effect = {
-		
-		}
-	
-	}
-	
-	
 }
 
 ja_generics_2 = {
@@ -122,7 +79,11 @@ ja_generics_2 = {
 		}
 		
 		effect = {
-		
+			add_country_modifier = { 
+				name = btc_ja_rice_season
+				duration = 3650
+				desc = btc_ja_rice_season_tooltip
+			}
 		}
 	}
 	
@@ -141,18 +102,29 @@ ja_generics_2 = {
 		}
 		
 		trigger = {
-			number_of_owned_provinces_with = {
+			num_of_owned_provinces_with = {
+				value = 3
 				development = 15
 				fort_level = 2
-				amount = 10
 			}
 		}
 		
 		effect = {
-		
+			every_owned_province = {
+				limit = {
+					AND = {
+						development = 15
+						fort_level = 2
+					}	
+				}
+				add_province_modifier = {
+					name = btc_ja_joukamachi
+					duration = -1
+					desc = btc_ja_joukamachi_tooltip
+				}
+			}
 		}
-	}
-	
+	}	
 }
 
 ja_generics_3 = {
@@ -195,7 +167,8 @@ ja_generics_4 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			add_mercantilism = 2
 		}
 	}
 	
@@ -220,10 +193,13 @@ ja_generics_4 = {
 		}
 		
 		effect = {
-		
+			add_country_modifier = {
+				name = btc_ja_divine_wind
+				duration = -1
+				desc = btc_ja_divine_wind_tooltip
+			}
 		}
 	}
-	
 }
 
 ja_generics_5 = {
@@ -259,7 +235,9 @@ ja_generics_5 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			add_army_professionalism = 0.05
+			
 		}
 	}
 	
@@ -286,11 +264,16 @@ ja_generics_5 = {
 		}
 		
 		effect = {
-		
+			add_country_modifier = {
+				name = btc_ja_ashigaru
+				duration = -1 
+				desc = btc_ja_ashigaru_tooltip
+			}
+			add_yearly_manpower = 1
 		}
 	}
-	
 }
+
 #daimyo missions
 
 ja_daimyo_1 = {
@@ -345,9 +328,36 @@ ja_daimyo_1 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			kyushu_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			northern_kyushu = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			btc_south_kyushu_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			central_kyushu_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
 		}
-	
 	}
 	
 }
@@ -387,9 +397,15 @@ ja_daimyo_2 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			shikoku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
 		}
-	
 	}
 }
 
@@ -423,7 +439,6 @@ ja_daimyo_3 = {
 		effect = {
 		
 		}
-	
 	}
 	
 	ja_daimyo_sengoku = {
@@ -447,7 +462,6 @@ ja_daimyo_3 = {
 		effect = {
 		
 		}
-	
 	}
 	
 	ja_daimyo_seat_power = {
@@ -475,9 +489,15 @@ ja_daimyo_3 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			1020 = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
 		}
-	
 	}
 	
 	ja_daimyo_consolidate = {
@@ -501,7 +521,6 @@ ja_daimyo_3 = {
 		effect = {
 		
 		}
-	
 	}
 }
 
@@ -573,9 +592,55 @@ ja_daimyo_4 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			saigoku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			sanindo_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			east_sanyodo_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			south_kinai_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			kinai_area = {
+				limit = {
+					NOT = { 
+						province_id = 1020 
+					}
+				}
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			hokuriku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
 		}
-	
 	}
 }
 
@@ -651,9 +716,64 @@ ja_daimyo_5 = {
 		}
 		
 		effect = {
-		
+			add_prestige = 10
+			chubu_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			eastern_chubu_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			kanto_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			eastern_kanto_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			east_hokuriku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			thohoku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			south_thohoku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
+			central_thohoku_area = {
+				add_province_modifier = {
+					name = btc_ja_provinces_recovery
+					duration = 3650
+					desc = btc_ja_provinces_recovery_tooltip
+				}
+			}
 		}
-	
 	}
 }
 	
@@ -712,3 +832,58 @@ ja_shogun_5 = {
 }
 
 #Japanese Main Generics
+
+ja_main_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		has_reform = daimyo
+	}
+	has_country_shield = yes
+	
+}
+
+ja_main_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		has_reform = daimyo
+	}
+	has_country_shield = yes
+
+}
+
+ja_main_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		has_reform = daimyo
+	}
+	has_country_shield = yes
+
+}
+
+ja_main_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		has_reform = daimyo
+	}
+	has_country_shield = yes
+
+}
+
+ja_main_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		has_reform = daimyo
+	}
+	has_country_shield = yes
+
+}

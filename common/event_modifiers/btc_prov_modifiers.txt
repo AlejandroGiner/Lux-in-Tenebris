@@ -275,3 +275,19 @@ btc_roman_inquisition_modifier = {
 btc_roman_inquisition_help = {
 	local_missionary_strength = 0.05
 }
+
+#japan btc missions
+btc_ja_provinces_recovery = {
+	local_monthly_devastation = -0.1
+}
+
+btc_ja_fortified_capital = {
+	local_defensiveness = 0.25
+	local_development_cost = -0.1	
+}
+
+btc_ja_joukamachi = {
+	province_trade_power_modifier = 0.1
+	local_tax_modifier = 0.1
+	local_institution_spread = 0.1
+}
