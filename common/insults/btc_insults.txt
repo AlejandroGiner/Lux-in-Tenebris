@@ -371,3 +371,20 @@ insult_memri_goths = {
 		religion_group = christian
 	}
 }
+
+insult_memri_dutchmen = {
+	trigger = {
+		OR = {
+			primary_culture = dutch
+			primary_culture = flemish
+			primary_culture = frisian
+			primary_culture = afrikaner_culture
+		}
+	}
+}
+
+insult_memri_infidel = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
