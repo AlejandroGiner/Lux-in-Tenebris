@@ -1,0 +1,88 @@
+######################################################################
+# Mamluk rebels.
+######################################################################
+mamluk_rebels = {
+    color = { 230 175 175 }
+
+	area = nation 					# Sticks to provinces of their nation
+	government = monarchy 			# Desires Monarchy
+	defection = none				# Will not defect
+	independence = none				# Does not strive for independence
+	gfx_type = culture_province
+	will_relocate = yes
+	
+	resilient = yes					# Can retreat
+	reinforcing = yes				# Can reinforce
+	general = yes					# Does use generals
+	smart = yes						# Do assault forts, tactically withdraw from battle, etc.
+	unit_transfer = no				# Units do not remain after enforcing demands.
+	
+	artillery = 0.0
+	infantry = 0.6
+	cavalry = 0.4
+	
+	morale = 1.25
+    
+    handle_action_negotiate = yes
+    handle_action_stability = yes
+    
+    spawn_chance = {
+        #factor = 14
+        factor = 0 #Eventually, mamluk rebels will be tied to a new estate. For now they only spawn through events.
+    }
+    
+    movement_evaluation = {
+        factor = 1
+        modifier = {
+			factor = 0.1
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+        modifier = {
+            factor = 4.0
+            is_capital = yes
+        }
+        modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+    }
+    
+    siege_won_trigger = {
+        is_capital = yes
+    }
+    
+    siege_won_effect = {
+        #Fate of the Sultan event
+    }
+    
+    # Country scope
+	can_negotiate_trigger = {
+		always = yes
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+    
+    demands_description = mamluk_rebels_demand
+    
+    demands_enforced_effect = {
+        #add_country_modifier = {
+        #    name = mamluk_self_rule
+        #    duration = 5475
+        #}
+    }
+}
