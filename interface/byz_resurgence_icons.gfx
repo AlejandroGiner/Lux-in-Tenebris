@@ -1,0 +1,123 @@
+spriteTypes = {
+	#Succession Crisis image
+	spriteType = {
+		name = "GFX_disaster_succession_crisis"
+		texturefile = "gfx//interface//disasters//succession_crisis.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	#Strategoi disaster image
+	spriteType = {
+		name = "GFX_disaster_estate_strategoi_disaster"
+		texturefile = "gfx//interface//disasters//estate_strategoi_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	
+	#Exarches disaster image
+	spriteType = {
+		name = "GFX_disaster_estate_exarches_disaster"
+		texturefile = "gfx//interface//disasters//estate_exarches_disaster.dds"
+		noOfFrames = 3
+		loadType = "INGAME"
+	}
+	
+	#Military General Strategoi advisor
+	spriteType = {
+		name = "GFX_advisor_military_general"
+		texturefile = "gfx//interface//advisors//military_general.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_military_general_female"
+		texturefile = "gfx//interface//advisors//military_general_female.dds"
+	}
+	
+	#Provincial Governor Strategoi advisor
+	spriteType = {
+		name = "GFX_advisor_provincial_governor"
+		texturefile = "gfx//interface//advisors//provincial_governor.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_provincial_governor_female"
+		texturefile = "gfx//interface//advisors//provincial_governor_female.dds"
+	}
+	
+	#Byzantine Empire factions
+	spriteType = {
+		name = "GFX_faction_bg_logothete_military"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_logothete_military"	
+		texturefile = "gfx//interface//logothete-military_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_logothete_postal"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_logothete_postal"	
+		texturefile = "gfx//interface//logothete-postal_icon.tga"
+	}
+	spriteType = {
+		name = "GFX_faction_bg_logothete_general"	
+		texturefile = "gfx//interface//faction_blue_frame.tga"
+		transparencecheck = yes
+	}	
+	spriteType = {
+		name = "GFX_faction_logothete_general"	
+		texturefile = "gfx//interface//logothete-general_icon.tga"
+	}
+	
+	#Missions
+	spriteType = {
+		name = "mission_constantinople"
+		texturefile = "gfx//interface//missions//mission_constantinople.dds"
+	}
+	spriteType = {
+		name = "mission_skoutatoi"
+		texturefile = "gfx//interface//missions//mission_skoutatoi.dds"
+	}
+	spriteType = {
+		name = "mission_varangians"
+		texturefile = "gfx//interface//missions//mission_varangians.dds"
+	}
+	spriteType = {
+		name = "mission_strategoi"
+		texturefile = "gfx//interface//missions//mission_strategoi.dds"
+	}
+	spriteType = {
+		name = "mission_army_camp"
+		texturefile = "gfx//interface//missions//mission_army_camp.dds"
+	}
+	spriteType = {
+		name = "mission_desert"
+		texturefile = "gfx//interface//missions//mission_desert.dds"
+	}
+	spriteType = {
+		name = "mission_pyramids"
+		texturefile = "gfx//interface//missions//mission_pyramids.dds"
+	}
+	spriteType = {
+		name = "mission_mesopotamia"
+		texturefile = "gfx//interface//missions//mission_mesopotamia.dds"
+	}
+	spriteType = {
+		name = "mission_curtained_window"
+		texturefile = "gfx//interface//missions//mission_curtained_window.dds"
+	}
+}
