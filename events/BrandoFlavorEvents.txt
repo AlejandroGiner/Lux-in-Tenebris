@@ -31,6 +31,7 @@ country_event = {
 			name = adyghe_rug_production
 			duration = 9125
 		}
+		ai_chance = { factor = 50 }
 	}
 
 	option = {
@@ -39,6 +40,7 @@ country_event = {
 			name = adyghe_traditional_rug
 			duration = 9125
 		}
+		ai_chance = { factor = 50 }
 	}
 }
 
@@ -187,6 +189,7 @@ country_event = {
 			duration = 9125
 		}
 		add_dip_power = 30
+		ai_chance = { factor = 90 }
 	}
 	
 	option = {
@@ -234,6 +237,7 @@ country_event = {
 				}
 			}
 		}
+		ai_chance = { factor = 10 }
 	}
 	
 }
