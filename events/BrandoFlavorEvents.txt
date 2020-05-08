@@ -9,11 +9,13 @@ country_event = {
 	title = "brando_flavor_events.1.t"
 	desc = "brando_flavor_events.1.d"
 	picture = ARTWORK_eventPicture
+	major = yes
 	fire_only_once = yes
 
 	trigger = {
 		tag = CIR
-		is_year = 1650
+		has_institution = global_trade
+		has_institution = manufactories
 	}
 	
 	mean_time_to_happen = {
@@ -22,9 +24,12 @@ country_event = {
 
 	option = {
 		name = "brando_flavor_events.1.a"
+		add_prestige = -5
+		add_legitimacy = -5
+		add_innovativeness_big_effect = yes
 		add_country_modifier = {
 			name = adyghe_rug_production
-			duration = -1
+			duration = 9125
 		}
 	}
 
@@ -32,7 +37,7 @@ country_event = {
 		name = "brando_flavor_events.1.b"
 		add_country_modifier = {
 			name = adyghe_traditional_rug
-			duration = -1
+			duration = 9125
 		}
 	}
 }
@@ -49,19 +54,20 @@ country_event = {
 
 	trigger = {
 		tag = CIR
+		is_great_power = no
 		is_subject = no
 		is_year = 1450
 		
 		RUS = {
 			exists = yes
-			ai = yes
+			is_great_power = yes
 			is_subject = no
 			is_neighbor_of = ROOT
 		}
 		
 		TUR = {
 			exists = yes
-			ai = yes
+			is_great_power = yes
 			is_subject = no
 			is_neighbor_of = ROOT
 		}
@@ -73,55 +79,62 @@ country_event = {
 	
 	option = {
 		name = "brando_flavor_events.2.a"
+		add_prestige = -10
+		add_stability = -1
 		add_dip_power = 50
 		TUR = {
 			add_opinion = {
-					who = ROOT
-					modifier = opinion_good_relations
-				}
+				who = ROOT
+				modifier = opinion_good_relations
+			}
 		}
 		RUS = {
 			add_opinion = {
-					who = ROOT
-					modifier = opinion_irritated
-				}
+				who = ROOT
+				modifier = border_friction_from_event
+			}
 		}
+		ai_chance = { factor = 25 }
 	}
 		
 	option = {
 		name = "brando_flavor_events.2.b"
+		add_prestige = -10
+		add_stability = -1
 		add_dip_power = 50
 		RUS = {
 			add_opinion = {
-					who = ROOT
-					modifier = opinion_good_relations	
-				}
+				who = ROOT
+				modifier = opinion_good_relations	
+			}
 		}
 		TUR = {
 			add_opinion = {
-					who = ROOT
-					modifier = opinion_irritated
-				}
+				who = ROOT
+				modifier = border_friction_from_event
 			}
 		}
+		ai_chance = { factor = 50 }
+	}
 		
 	option = {
 		name = "brando_flavor_events.2.c"
-		add_adm_power = 50
-		add_mil_power = 50
-		add_dip_power = 50
+		add_prestige = 10
+		add_legitimacy = 10
+		add_stability_or_adm_power = yes
 		RUS = {
 			add_opinion = {
 				who = ROOT
-				modifier = opinion_irritated
+				modifier = border_friction_from_event
 			}
 		}
 		TUR = {
 			add_opinion = {
 				who = ROOT
-				modifier = opinion_irritated
+				modifier = border_friction_from_event
 			}
 		}
+		ai_chance = { factor = 25 }
 	}
 }
 
@@ -141,12 +154,11 @@ country_event = {
 		is_year = 1450
 		
 		NOT = {
-				is_year = 1650
+			is_year = 1650
 		}
 		
 		GEN = {
 			exists = yes
-			ai = yes
 			is_neighbor_of = ROOT
 		}
 	}
@@ -170,15 +182,58 @@ country_event = {
 			}
 		}
 		add_prestige = 5
-		add_years_of_income = 0.10
+		add_country_modifier = {
+			name = adyghe_allowed_slave
+			duration = 9125
+		}
 		add_dip_power = 30
 	}
 	
 	option = {
 		name = "brando_flavor_events.3.b"
-		add_army_tradition = 20
-		add_navy_tradition = 20
 		add_legitimacy = 20
+		add_country_modifier = {
+			name = adyghe_curtailed_slave
+			duration = 36500
+		}
+		286 = {
+			add_permanent_province_modifier = {
+				name = adyghe_curtailed_slave_province
+				duration = -1
+			}
+		}
+		7190 = {
+			add_permanent_province_modifier = {
+				name = adyghe_curtailed_slave_province
+				duration = -1
+			}
+		}
+		custom_tooltip = adyghe_anger_tooltip
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					any_owned_province = { range = ROOT }
+					NOT = { tag = GEN }
+					NOT = { tag = GZR }
+				}
+				add_opinion = {
+					modifier = impeded_slave_trade
+					who = ROOT
+				}
+			}
+			GEN = {
+				add_opinion = {
+					who = ROOT
+					modifier = impeded_slave_trade_genoa
+				}
+			}
+			GZR = {
+				add_opinion = {
+					who = ROOT
+					modifier = impeded_slave_trade_genoa
+				}
+			}
+		}
 	}
 	
 }
