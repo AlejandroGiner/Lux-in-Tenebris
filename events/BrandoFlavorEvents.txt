@@ -1,0 +1,430 @@
+
+namespace = brando_flavor_events
+
+#Adyghe Rugs
+
+country_event = {
+
+	id = brando_flavor_events.1
+	title = "brando_flavor_events.1.t"
+	desc = "brando_flavor_events.1.d"
+	picture = ARTWORK_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = CIR
+		is_year = 1650
+	}
+	
+	mean_time_to_happen = {
+		months = 450
+	}
+
+	option = {
+		name = "brando_flavor_events.1.a"
+		add_country_modifier = {
+			name = adyghe_rug_production
+			duration = -1
+		}
+	}
+
+	option = {
+		name = "brando_flavor_events.1.b"
+		add_country_modifier = {
+			name = adyghe_traditional_rug
+			duration = -1
+		}
+	}
+}
+
+#Crescent and the Bear
+
+country_event = {
+
+	id = brando_flavor_events.2
+	title = "brando_flavor_events.2.t"
+	desc = "brando_flavor_events.2.d"
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = CIR
+		is_subject = no
+		is_year = 1450
+		
+		RUS = {
+			exists = yes
+			ai = yes
+			is_subject = no
+			is_neighbor_of = ROOT
+		}
+		
+		TUR = {
+			exists = yes
+			ai = yes
+			is_subject = no
+			is_neighbor_of = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	option = {
+		name = "brando_flavor_events.2.a"
+		add_dip_power = 50
+		TUR = {
+			add_opinion = {
+					who = ROOT
+					modifier = opinion_good_relations
+				}
+		}
+		RUS = {
+			add_opinion = {
+					who = ROOT
+					modifier = opinion_irritated
+				}
+		}
+	}
+		
+	option = {
+		name = "brando_flavor_events.2.b"
+		add_dip_power = 50
+		RUS = {
+			add_opinion = {
+					who = ROOT
+					modifier = opinion_good_relations	
+				}
+		}
+		TUR = {
+			add_opinion = {
+					who = ROOT
+					modifier = opinion_irritated
+				}
+			}
+		}
+		
+	option = {
+		name = "brando_flavor_events.2.c"
+		add_adm_power = 50
+		add_mil_power = 50
+		add_dip_power = 50
+		RUS = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_irritated
+			}
+		}
+		TUR = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_irritated
+			}
+		}
+	}
+}
+
+#The Italian and the Slave
+
+country_event = {
+
+	id = brando_flavor_events.3
+	title = "brando_flavor_events.3.t"
+	desc = "brando_flavor_events.3.d"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CIR
+		is_subject = no
+		is_year = 1450
+		
+		NOT = {
+				is_year = 1650
+		}
+		
+		GEN = {
+			exists = yes
+			ai = yes
+			is_neighbor_of = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	option = {
+		name = "brando_flavor_events.3.a"
+		GEN = {
+			random_owned_province = {
+				limit = {
+					is_claim = ROOT
+				}
+				remove_claim = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_good_relations
+			}
+		}
+		add_prestige = 5
+		add_years_of_income = 0.10
+		add_dip_power = 30
+	}
+	
+	option = {
+		name = "brando_flavor_events.3.b"
+		add_army_tradition = 20
+		add_navy_tradition = 20
+		add_legitimacy = 20
+	}
+	
+}
+
+# First Salmon Ceremony
+
+country_event = {
+
+	id = brando_flavor_events.4
+	title = "brando_flavor_events.4.t"
+	desc = "brando_flavor_events.4.d"
+	picture = SHIP_SAILING_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			region = cascadia_region
+		}
+		is_month = 2
+		NOT = { is_month = 7 }
+		NOT = { has_country_flag = celebrate_first_salmon_ceremony }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	# Celebrate First Salmon Ceremony
+	option = {
+		name = "brando_flavor_events.4.a"
+		country_event = { id = brando_flavor_events.5 days = 60 tooltip = brando_flavor_events.4.a.tt }
+		add_manpower = -2
+		add_treasury = -25
+		add_prestige = 5
+		set_country_flag = celebrate_first_salmon_ceremony
+	}
+	
+	#Harvest the Salmon Run
+	option = {
+		name = "brando_flavor_events.4.b"
+		add_prestige = -5
+		add_corruption = 1
+		add_manpower = 3
+		add_mil_power = 20
+	}
+}
+
+#Celebrate the First Salmon Ceremony
+
+country_event = {
+
+	id = brando_flavor_events.5
+	title = "brando_flavor_events.5.t"
+	desc = "brando_flavor_events.5.d"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	#Celebrated the Return of the Salmon
+	option = {
+		name = "brando_flavor_events.5.a"
+		add_stability = 1
+		add_adm_power = 10
+		add_war_exhaustion = -1
+		clr_country_flag = celebrate_first_salmon_ceremony
+	}
+}
+
+# Abundant Acorn Harvest
+
+country_event = {
+
+	id = brando_flavor_events.6
+	title = "brando_flavor_events.6.t"
+	desc = "brando_flavor_events.6.d"
+	picture = HUNTER_GATHERERS_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			region = california_region
+		}
+		is_month = 6
+		NOT = { is_month = 11 }
+		NOT = { has_province_modifer = acorn_surplus }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	#Feed Our Warriors
+	option = {
+		name = "brando_flavor_events.6.a"
+		add_manpower = 3
+		add_prestige = 5
+	}
+	
+	#Save for Winter
+	option = {
+		name = "brando_flavor_events.6.b"
+		add_dip_power = 20
+		capital_scope = {
+			add_province_modifier = {
+				name = "acorn_surplus"
+				duration = 1625
+			}
+		}
+	}
+}
+
+#Horse Changes Native Life on the Plains
+
+country_event = {
+
+	id = brando_flavor_events.7
+	title = "brando_flavor_events.7.t"
+	desc = "brando_flavor_events.7.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			OR = {
+				region = great_plains_region
+				region = rio_grande_region
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_modifier = adopted_the_horse
+				has_country_modifier = travel_and_trade_advantages
+			}
+		}
+		mil_tech = 6
+	
+	}
+	
+	mean_time_to_happen = {
+		months = 250
+	}
+	
+	#Master the Horse
+	option = {
+		name = "brando_flavor_events.7.a"
+		add_country_modifier = {
+			name = adopted_the_horse
+			duration = -1
+		}
+	}
+	
+	#Use for Travel and Trade
+	option = {
+		name = "brando_flavor_events.7.b"
+		add_country_modifier = {
+			name = travel_and_trade_advantages
+			duration = -1
+		}
+	}
+}
+
+# Gives Taino and Cueba a ship transport
+country_event = {
+
+	id = brando_flavor_events.8
+	title = "brando_flavor_events.8.t"
+	desc = "brando_flavor_events.8.d"
+	picture = SHIP_SAILING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TAO
+			tag = CUE
+		}
+		dip_tech = 2
+		num_of_ports = 1
+		NOT = { num_of_transport = 1 }
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	#We need boats
+	option = {
+		name = "brando_flavor_events.8.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+			limit = { has_port = yes }
+			transport = ROOT 
+		}
+	}
+	
+}
+
+# Hold a Potlatch
+country_event = {
+
+	id = brando_flavor_events.9
+	title = "brando_flavor_events.9.t"
+	desc = "brando_flavor_events.9.d"
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			region = cascadia_region
+			base_tax = 2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	#Hold the Potlatch
+	option = {
+		name = "brando_flavor_events.9.a"
+		add_prestige = 5
+		add_adm_power = 30
+		add_dip_power = 30
+		add_treasury = -25
+	}
+	
+	#We Can't Afford It
+	option = {
+		name = "brando_flavor_events.9.b"
+		add_prestige = -5
+	}
+}
+

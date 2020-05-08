@@ -310,13 +310,10 @@ bt_swedish_balticum_intermarum = {
 		}
 		trigger = {
 			owns = 4
-			custom_trigger_tooltip = {
-				tooltip = swe_mission_sala_mine_tooltip
 				4 = { #Sala lies in Västmanland, north of Västerås. Not that many pixels north from the capital placement actually.
 					base_production = 5
 					has_building = workshop
 				}
-			}
 		}
 		effect = {
 			4 = {
