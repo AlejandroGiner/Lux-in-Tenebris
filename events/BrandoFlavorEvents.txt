@@ -65,6 +65,7 @@ country_event = {
 			is_great_power = yes
 			is_subject = no
 			is_neighbor_of = ROOT
+			NOT = { alliance_with = ROOT }
 		}
 		
 		TUR = {
@@ -72,6 +73,7 @@ country_event = {
 			is_great_power = yes
 			is_subject = no
 			is_neighbor_of = ROOT
+			NOT = { alliance_with = ROOT }
 		}
 	}
 	
@@ -121,9 +123,10 @@ country_event = {
 		
 	option = {
 		name = "brando_flavor_events.2.c"
-		add_prestige = 10
-		add_legitimacy = 10
+		add_prestige = 5
+		add_legitimacy = 5
 		add_stability_or_adm_power = yes
+		add_mil_power = -100
 		RUS = {
 			add_opinion = {
 				who = ROOT
