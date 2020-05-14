@@ -1,0 +1,239 @@
+
+namespace = btc_cir_flavor
+
+#Adyghe Rugs
+
+country_event = {
+
+	id = btc_cir_flavor.1
+	title = "btc_cir_flavor.1.t"
+	desc = "btc_cir_flavor.1.d"
+	picture = ARTWORK_eventPicture
+	major = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = CIR
+		has_institution = global_trade
+		has_institution = manufactories
+	}
+	
+	mean_time_to_happen = {
+		months = 450
+	}
+
+	option = {
+		name = "btc_cir_flavor.1.a"
+		add_prestige = -5
+		add_legitimacy = -5
+		add_innovativeness_big_effect = yes
+		add_country_modifier = {
+			name = adyghe_rug_production
+			duration = 9125
+		}
+	}
+
+	option = {
+		name = "btc_cir_flavor.1.b"
+		add_country_modifier = {
+			name = adyghe_traditional_rug
+			duration = 9125
+		}
+	}
+}
+
+#Crescent and the Bear
+
+country_event = {
+
+	id = btc_cir_flavor.2
+	title = "btc_cir_flavor.2.t"
+	desc = "btc_cir_flavor.2.d"
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = yes
+
+	trigger = {
+		tag = CIR
+		is_great_power = no
+		is_subject = no
+		is_year = 1450
+		
+		RUS = {
+			exists = yes
+			is_great_power = yes
+			is_subject = no
+			is_neighbor_of = ROOT
+		}
+		
+		TUR = {
+			exists = yes
+			is_great_power = yes
+			is_subject = no
+			is_neighbor_of = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	option = {
+		name = "btc_cir_flavor.2.a"
+		add_prestige = -10
+		add_stability = -1
+		add_dip_power = 50
+		TUR = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_good_relations
+			}
+		}
+		RUS = {
+			add_opinion = {
+				who = ROOT
+				modifier = border_friction_from_event
+			}
+		}
+		ai_chance = { factor = 25 }
+	}
+		
+	option = {
+		name = "btc_cir_flavor.2.b"
+		add_prestige = -10
+		add_stability = -1
+		add_dip_power = 50
+		RUS = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_good_relations	
+			}
+		}
+		TUR = {
+			add_opinion = {
+				who = ROOT
+				modifier = border_friction_from_event
+			}
+		}
+		ai_chance = { factor = 50 }
+	}
+		
+	option = {
+		name = "btc_cir_flavor.2.c"
+		add_prestige = 10
+		add_legitimacy = 10
+		add_stability_or_adm_power = yes
+		RUS = {
+			add_opinion = {
+				who = ROOT
+				modifier = border_friction_from_event
+			}
+		}
+		TUR = {
+			add_opinion = {
+				who = ROOT
+				modifier = border_friction_from_event
+			}
+		}
+		ai_chance = { factor = 25 }
+	}
+}
+
+#The Italian and the Slave
+
+country_event = {
+
+	id = btc_cir_flavor.3
+	title = "btc_cir_flavor.3.t"
+	desc = "btc_cir_flavor.3.d"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CIR
+		is_subject = no
+		is_year = 1450
+		
+		NOT = {
+			is_year = 1650
+		}
+		
+		GEN = {
+			exists = yes
+			is_neighbor_of = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 100
+	}
+	
+	option = {
+		name = "btc_cir_flavor.3.a"
+		GEN = {
+			random_owned_province = {
+				limit = {
+					is_claim = ROOT
+				}
+				remove_claim = ROOT
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_good_relations
+			}
+		}
+		add_prestige = 5
+		add_country_modifier = {
+			name = adyghe_allowed_slave
+			duration = 9125
+		}
+		add_dip_power = 30
+	}
+	
+	option = {
+		name = "btc_cir_flavor.3.b"
+		add_legitimacy = 20
+		add_country_modifier = {
+			name = adyghe_curtailed_slave
+			duration = 36500
+		}
+		286 = {
+			add_permanent_province_modifier = {
+				name = adyghe_curtailed_slave_province
+				duration = -1
+			}
+		}
+		7190 = {
+			add_permanent_province_modifier = {
+				name = adyghe_curtailed_slave_province
+				duration = -1
+			}
+		}
+		custom_tooltip = adyghe_anger_tooltip
+		hidden_effect = {
+			every_known_country = {
+				limit = {
+					any_owned_province = { range = ROOT }
+					NOT = { tag = GEN }
+					NOT = { tag = GZR }
+				}
+				add_opinion = {
+					modifier = impeded_slave_trade
+					who = ROOT
+				}
+			}
+			GEN = {
+				add_opinion = {
+					who = ROOT
+					modifier = impeded_slave_trade_genoa
+				}
+			}
+			GZR = {
+				add_opinion = {
+					who = ROOT
+					modifier = impeded_slave_trade_genoa
+				}
+			}
+		}
+	}
+	
+}
