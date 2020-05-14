@@ -1,0 +1,560 @@
+
+namespace = brando_flavor_events
+
+# First Salmon Ceremony
+
+country_event = {
+
+	id = brando_flavor_events.4
+	title = "brando_flavor_events.4.t"
+	desc = "brando_flavor_events.4.d"
+	picture = SHIP_SAILING_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			region = cascadia_region
+		}
+		is_month = 2
+		NOT = { is_month = 7 }
+		NOT = { has_country_flag = celebrate_first_salmon_ceremony }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+    # Celebrate First Salmon Ceremony
+	option = {
+		name = "brando_flavor_events.4.a"
+		country_event = { id = brando_flavor_events.5 days = 60 tooltip = brando_flavor_events.4.a.tt }
+		add_manpower = -2
+		add_treasury = -25
+		add_prestige = 5
+		set_country_flag = celebrate_first_salmon_ceremony
+	}
+	
+	#Harvest the Salmon Run
+	option = {
+		name = "brando_flavor_events.4.b"
+		add_prestige = -5
+		add_corruption = 1
+		add_manpower = 3
+		add_mil_power = 20
+	}
+}
+
+#Celebrate the First Salmon Ceremony
+
+country_event = {
+
+	id = brando_flavor_events.5
+	title = "brando_flavor_events.5.t"
+	desc = "brando_flavor_events.5.d"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	#Celebrated the Return of the Salmon
+	option = {
+		name = "brando_flavor_events.5.a"
+		add_stability = 1
+		add_adm_power = 10
+		add_war_exhaustion = -1
+		clr_country_flag = celebrate_first_salmon_ceremony
+	}
+}
+
+# Abundant Acorn Yield
+
+country_event = {
+
+	id = brando_flavor_events.6
+	title = "brando_flavor_events.6.t"
+	desc = "brando_flavor_events.6.d"
+	picture = HUNTER_GATHERERS_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			region = california_region
+		}
+		is_month = 6
+		NOT = { is_month = 11 }
+		NOT = { has_province_modifer = acorn_surplus }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	#Feed Our Warriors
+	option = {
+		name = "brando_flavor_events.6.a"
+		add_manpower = 3
+		add_prestige = 5
+	}
+	
+	#Save for Winter
+	option = {
+		name = "brando_flavor_events.6.b"
+		add_dip_power = 20
+		capital_scope = {
+			add_province_modifier = {
+				name = "acorn_surplus"
+				duration = 1625
+			}
+		}
+	}
+}
+
+#Horse Changes Native Life on the Plains
+
+country_event = {
+
+	id = brando_flavor_events.7
+	title = "brando_flavor_events.7.t"
+	desc = "brando_flavor_events.7.d"
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			OR = {
+				region = great_plains_region
+				region = rio_grande_region
+			}
+		}
+		NOT = {
+			OR = {
+				has_country_modifier = adopted_the_horse
+				has_country_modifier = travel_and_trade_advantages
+			}
+		}
+		mil_tech = 6
+	
+	}
+	
+	mean_time_to_happen = {
+		months = 250
+	}
+	
+	#Master the Horse
+	option = {
+		name = "brando_flavor_events.7.a"
+		add_country_modifier = {
+			name = adopted_the_horse
+			duration = -1
+		}
+	}
+	
+	#Use for Travel and Trade
+	option = {
+		name = "brando_flavor_events.7.b"
+		add_country_modifier = {
+			name = travel_and_trade_advantages
+			duration = -1
+		}
+	}
+}
+
+# Gives Taino and Cueba a ship transport
+country_event = {
+
+	id = brando_flavor_events.8
+	title = "brando_flavor_events.8.t"
+	desc = "brando_flavor_events.8.d"
+	picture = SHIP_SAILING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = TAO
+			tag = CUE
+		}
+		dip_tech = 2
+		num_of_ports = 1
+		NOT = { num_of_transport = 1 }
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	#We need boats
+	option = {
+		name = "brando_flavor_events.8.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+			limit = { has_port = yes }
+			transport = ROOT 
+		}
+	}
+	
+}
+
+# Hold a Potlatch
+country_event = {
+
+	id = brando_flavor_events.9
+	title = "brando_flavor_events.9.t"
+	desc = "brando_flavor_events.9.d"
+	picture = FEAST_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			region = cascadia_region
+			base_tax = 2
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+	}
+	
+	#Hold the Potlatch
+	option = {
+		name = "brando_flavor_events.9.a"
+		add_prestige = 5
+		add_adm_power = 30
+		add_dip_power = 30
+		add_treasury = -25
+	}
+	
+	#We Can't Afford It
+	option = {
+		name = "brando_flavor_events.9.b"
+		add_prestige = -5
+	}
+}
+
+# European Fur Trade
+country_event = {
+	id = brando_flavor_events.10
+	title = "brando_flavor_events.10.t"
+	desc = "brando_flavor_events.10.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		government = native
+		capital_scope = {
+			OR = {
+				region = canada_region
+				region = great_lakes_region
+				region = northeast_america_region
+				region = southeast_america_region
+				region = mississippi_region
+				region = cascadia_region
+				region = hudson_bay_region
+				region = northwest_territories_region
+				region = great_plains_region
+			}
+		}
+		NOT = { has_country_modifier = fur_trade_boon }
+		fur = 1
+		is_year = 1600
+		NOT = { is_year = 1780 }
+		any_province = {
+			OR = {
+				region = canada_region
+				region = northeast_america_region
+				region = southeast_america_region
+				region = hudson_bay_region
+			}
+			owner = {
+				capital_scope = {
+					continent = europe
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 150
+	}
+	
+	option = {
+		name = "brando_flavor_events.10.a"
+		country_event = { id = brando_flavor_events.11 days = 14600 tooltip = brando_flavor_events.10.a.tt }
+		add_country_modifier = {
+			name = "fur_trade_boon"
+			duration = 14235
+		}
+		every_owned_province = {
+			limit = {
+				trade_goods = fur
+			}
+			add_province_modifier = {
+				name = "extend_hunting"
+				duration = 14235
+			}
+		}
+	}
+}
+
+#Overhunting Destroys the Fur Trade
+country_event = {
+	id = brando_flavor_events.11
+	title = "brando_flavor_events.11.t"
+	desc = "brando_flavor_events.11.d"
+	picture = OVEREXTENSION_eventPicture
+	
+	is_triggered_only = yes
+	
+	#The fur is gone
+	option = {
+		name = "brando_flavor_events.11.a"
+		remove_country_modifier = { fur_trade_boon }
+		random_country = {
+			limit = {
+				is_neighbor_of = ROOT
+				government = native
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_irritated
+			}
+		}
+		prestige = -5
+		add_manpower = -2
+		every_owned_province = {
+			limit = {
+				trade_goods = fur
+			}
+			remove_province_modifier = { extend_hunting }
+			add_permanent_province_modifier = {
+				name = decimated_hunting_ground
+				duration = 10950
+			}
+			add_devastation = 10
+		}
+	}
+}
+
+#The Beaver Wars
+country_event = {
+	id = brando_flavor_events.12
+	title = "brando_flavor_events.12.t"
+	desc = "brando_flavor_events.12.d"
+	picture = BATTLE_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		government = native
+		fur = 1
+		num_of_cities = 3
+		has_country_modifier = fur_trade_boon
+		is_year = 1600
+		NOT = { is_year = 1780 }
+		capital_scope = {
+			OR = {
+				area = iroquoisia_area
+				area = eastern_iroquoisia_area
+				area = susquehanna_area
+				area = westsylvania_area
+				area = upper_canada_area
+				area = ohio_country_area
+				area = michigan_area
+				area = minisink_area
+			}		
+		}
+		any_ally = {
+			OR = {
+				is_colonial_nation = yes
+				AND = {
+					capital_scope = {
+						continent = europe
+					}
+					any_owned_province = {
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 50
+	}
+	
+	#Powerful allies lend support for expansion
+	option = {
+		name = "brando_flavor_events.12.a"
+		iroquoisia_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		eastern_iroquoisia_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		susquehanna_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		westsylvania_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		upper_canada_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		ohio_country_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		michigan_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+		minisink_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_permanent_claim = ROOT
+		}
+	}
+}
+
+#Green Corn Festival
+country_event = {
+	id = brando_flavor_events.13
+	title = "brando_flavor_events.13.t"
+	desc = "brando_flavor_events.13.d"
+	picture = FARMING_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			any_owned_province	=	{
+				has_building = native_three_sisters_field
+			}
+			maize = 1 
+		}	
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			OR = {
+				region = mississippi_region
+				region = southeast_america_region
+				region = northeast_america_region
+			}
+		}
+		is_month = 5
+		NOT = { is_month = 11 }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	#Hold the Festival
+	option = {
+		name = "brando_flavor_events.13.a"
+		add_stability = 1
+		add_adm_power = 10
+		add_prestige = 5
+	}
+	
+	#Expand the Fields
+	option = {
+		name = "brando_flavor_events.13.b"
+		add_treasury = -15
+		add_stability = 1
+		add_prestige = 5
+		every_owned_province = {
+			limit = {
+				OR = {
+					trade_goods = maize
+					has_building = native_three_sisters_field
+				}
+			}
+			add_province_modifier = {
+				name = "well_tended_corn_fields"
+				duration = 1000
+			}
+		}
+	}
+}
