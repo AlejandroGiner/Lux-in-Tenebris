@@ -27,7 +27,7 @@ adyghe_curtailed_slave = {
 
 adyghe_curtailed_slave_province = {
 	local_production_efficiency = -0.15
-	province_trade_power_modifier = -0.1
+	stability_cost_modifier = -0.1
 	trade_value_modifier = -0.1
 }
 
@@ -44,4 +44,28 @@ adopted_the_horse = {
 travel_and_trade_advantages = {
 	migration_cooldown = -0.2
 	trade_efficiency = 0.05
+}
+
+fur_trade_boon = {
+	technology_cost = -0.02
+	caravan_power = 0.05
+}
+
+extend_hunting = {
+	local_tax_modifier = 0.1
+	trade_goods_size = 0.1
+	picture = "province_trade_power_value"
+}
+
+decimated_hunting_ground = {
+	local_tax_modifier = -0.1
+	local_manpower_modifier = -0.1
+	trade_goods_size = -0.1
+	picture = "province_trade_power_value"
+}
+
+well_tended_corn_fields = {
+	local_tax_modifier = 0.1
+	trade_goods_size = 0.1
+	picture = "province_trade_power_value"
 }
