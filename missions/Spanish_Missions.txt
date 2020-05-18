@@ -22,8 +22,11 @@ spa_colonial_group = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
-				colonial_the_carribean = {
-					has_discovered = ROOT
+				OR = {
+					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_cuba = { has_discovered = ROOT }
+					colonial_hispaniola = { has_discovered = ROOT }
+					colonial_bahamas = { has_discovered = ROOT }
 				}
 			}
 		}

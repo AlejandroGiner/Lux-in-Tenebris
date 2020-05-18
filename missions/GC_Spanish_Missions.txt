@@ -113,15 +113,15 @@ gc_spain_1 = {
 		# free mission
 		
 		trigger = {
-				custom_trigger_tooltip = {
-					tooltip = miss_discover_caribbean
-					OR = {
+			custom_trigger_tooltip = {
+				tooltip = miss_discover_caribbean
+				OR = {
 					colonial_the_carribean = { has_discovered = ROOT }
 					colonial_cuba = { has_discovered = ROOT }
 					colonial_hispaniola = { has_discovered = ROOT }
 					colonial_bahamas = { has_discovered = ROOT }
-					}
 				}
+			}
 		}
 		
 		effect = {
