@@ -18,7 +18,7 @@ travel_and_trade_advantages = {
 }
 
 fur_trade_boon = {
-	technology_cost = -0.02
+	dip_tech_cost_modifier = -0.05
 	caravan_power = 0.05
 }
 
@@ -39,4 +39,10 @@ well_tended_corn_fields = {
 	local_tax_modifier = 0.1
 	trade_goods_size = 0.1
 	picture = "province_trade_power_value"
+}
+
+adopted_written_language = {
+	technology_cost = -0.02
+	administrative_efficieny = 0.05
+	diplomatic_reputation = 1
 }
