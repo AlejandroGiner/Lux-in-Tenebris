@@ -2,7 +2,6 @@
 namespace = brando_flavor_events
 
 # First Salmon Ceremony
-
 country_event = {
 
 	id = brando_flavor_events.4
@@ -49,7 +48,6 @@ country_event = {
 }
 
 #Celebrate the First Salmon Ceremony
-
 country_event = {
 
 	id = brando_flavor_events.5
@@ -70,7 +68,6 @@ country_event = {
 }
 
 # Abundant Acorn Yield
-
 country_event = {
 
 	id = brando_flavor_events.6
@@ -117,7 +114,6 @@ country_event = {
 }
 
 #Horse Changes Native Life on the Plains
-
 country_event = {
 
 	id = brando_flavor_events.7
@@ -557,4 +553,46 @@ country_event = {
 			}
 		}
 	}
+}
+
+# Gives Pacific Coast Natives a ship transport
+country_event = {
+
+	id = brando_flavor_events.14
+	title = "brando_flavor_events.14.t"
+	desc = "brando_flavor_events.14.d"
+	picture = SHIP_SAILING_eventPicture
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = SAL
+			tag = STL
+			tag = NOO
+			tag = YYG
+			tag = TSM
+			tag = HDA
+			tag = TGI
+			tag = CNK
+		}
+		dip_tech = 2
+		num_of_ports = 1
+		NOT = { num_of_transport = 1 }
+		is_at_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 100
+	}
+	
+	#Expert canoe builders
+	option = {
+		name = "brando_flavor_events.14.a"
+		ai_chance = { factor = 100 }
+		random_owned_province = {
+			limit = { has_port = yes }
+			transport = ROOT 
+		}
+	}
+	
 }
