@@ -628,17 +628,21 @@ country_decisions = {
 			religion_group = muslim
 		}
 		allow = {
-			full_idea_group = innovativeness_ideas
+			OR = {
+				full_idea_group = innovativeness_ideas
+				full_idea_group = humanist_ideas
+				ruler_has_personality = free_thinker_personality
+				ruler_has_personality = scholar_personality
+				ruler_has_personality = tolerant_personality
+			}
 		}
 		effect = {
-			add_country_modifier = {
+			add_ruler_modifier = {
 				name = "house_of_worship"
 				duration = -1
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	din_i_illahi = {
