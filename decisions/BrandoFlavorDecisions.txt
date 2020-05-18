@@ -1,0 +1,81 @@
+country_decisions = {
+
+
+	#N and S American Natives adopt written language
+	adopt_written_language = {
+		potential = {
+			NOT = { has_country_modifier = adopted_written_language }
+			OR = {
+				culture_group = eskaleut
+				culture_group = northern_na_dene
+				culture_group = dorset
+				culture_group = central_algonquian
+				culture_group = penutian
+				culture_group = mosan_culture_group
+				culture_group = wakashan_group
+				culture_group = salish_group
+				culture_group = chimakuan
+				culture_group = apachean
+				culture_group = siouan
+				culture_group = iroquoian
+				culture_group = eastern_algonquian
+				culture_group = cusaboan
+				culture_group = muskogean
+				culture_group = timucuan
+				culture_group = calusan
+				culture_group = uchean
+				culture_group = tunican
+				culture_group = natchezean
+				culture_group = caddoan
+				culture_group = chitimachan
+				culture_group = tonkawan
+				culture_group = karankawan
+				culture_group = coahuiltecan
+				culture_group = comecrudan
+				culture_group = southern_uto_aztecan
+				culture_group = chumash_group
+				culture_group = hokan
+				culture_group = sonoran
+				culture_group = pacific_na_dene
+				culture_group = pacific_algonquian_group
+				culture_group = aridoamerican
+				culture_group = central_american
+				culture_group = maya
+				culture_group = otomanguean
+				culture_group = chibchan
+				culture_group = cariban_g
+				culture_group = arawakan_g
+				culture_group = maranon
+				culture_group = andean_group
+				culture_group = je_tupi
+				culture_group = mataco
+				culture_group = araucanian
+				culture_group = je
+				culture_group = carribean
+			}
+		}
+		allow = {
+			is_at_war = no
+			stability = 2
+			dip_tech = 5
+			adm_tech = 5
+			ADM = 5
+			DIP = 3
+		}
+		effect = {
+			prestige = 20
+			add_country_modifier = {
+				name = "adopted_written_language"
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				NOT = { stability = 1 }
+				factor = 0
+			}
+		}
+	}
+	
+}
