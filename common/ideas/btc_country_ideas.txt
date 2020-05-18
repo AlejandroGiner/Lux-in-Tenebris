@@ -1261,3 +1261,44 @@ HAW_ideas = {
 	HAW_idea7 = {
         defensiveness = 0.15
 	}
+}
+
+AFS_ideas = {
+	start = {
+		tolerance_heathen = 3
+		artillery_fire = 1
+	}
+
+	bonus = {
+		backrow_artillery_damage = 0.15
+	}
+
+	trigger = {
+		tag = AFS
+	}
+	free = yes		# will be added at load
+
+	AFS_idea1 = {
+		reform_progress_growth = 1
+	}
+	AFS_idea2 = {
+		mil_tech_cost_modifier  = -0.1
+	}
+	AFS_idea3 = {
+		drill_gain_modifier = 1.0
+	}
+	AFS_idea4 = {
+		tolerance_heretic = 3	
+	}
+	AFS_idea5 = {
+		discipline = 0.05
+		movement_speed = 0.15
+	}
+	AFS_idea6 = {
+		prestige_from_land = 1.0
+		vassal_income = 0.25
+	}
+	AFS_idea7 = {
+		core_creation = -0.2
+	}
+}

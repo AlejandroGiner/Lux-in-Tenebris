@@ -23,11 +23,10 @@ country_decisions = {
 			NOT = { tag = TUR }
 			NOT = { tag = BYZ }
 			NOT = { tag = ARB }
-			OR = {
-				culture_group = iranian
-				primary_culture = azerbaijani
-				tag = AKK
-			}
+            OR = {
+                tag = ARL
+                dynasty = "Safavid"
+            }
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no

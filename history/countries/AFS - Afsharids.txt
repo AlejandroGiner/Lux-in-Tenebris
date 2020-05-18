@@ -1,0 +1,89 @@
+government = monarchy
+add_government_reform = feudal_theocracy
+primary_culture = persian
+religion = sunni
+technology_group = muslim
+historical_rival = TUR
+capital = 2221 # Mashhad
+#religious_school = jafari_school
+
+1736.3.9 = {
+	monarch = {
+		name = "Nadir"
+		dynasty = "Afsharid"
+		adm = 2
+		dip = 4
+		mil = 6
+		leader = {	name = "Nadir Shah" 
+			type = general
+			fire = 3
+			shock = 5
+			manuever = 5
+			siege = 1
+		}
+	}
+}
+
+1747.6.20 = {
+	monarch = {
+		name = "Adil"
+		dynasty = "Afsharid"
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+}
+
+1748.12.9 = {
+	monarch = {
+		name = "Ibrahim"
+		dynasty = "Afsharid"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1749.7.2 = {
+	monarch = {
+		name = "Shah Rukh"
+		dynasty = "Afsharid"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1750.6.13 = {
+	monarch = {
+		name = "Ismail III"
+		dynasty = "Afsharid"
+		adm = 0
+		dip = 0
+		mil = 0
+	}
+}
+
+1794.1.1 = {
+	monarch = {
+		name = "Aga Muhammad"
+		dynasty = "Qajar"
+		adm = 0
+		dip = 0
+		mil = 3
+	}
+}
+
+1794.1.1 = { leader = {	name = "Aga Muhammad"          	type = general	fire = 2	shock = 4	manuever = 4	siege = 1	death_date = 1797.6.17 } }
+
+1795.1.1 = { capital = 428 } # Tehran
+
+1797.6.18 = {
+	monarch = {
+		name = "Fath Alî"
+		dynasty = "Qajar"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+}
