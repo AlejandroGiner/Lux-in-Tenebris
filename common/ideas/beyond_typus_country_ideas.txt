@@ -5664,3 +5664,41 @@ CAM_ideas = {
 		core_creation = -0.15
 	}
 }
+
+ABA_ideas = {
+	start = {
+		num_accepted_cultures = 1
+		technology_cost = -0.05
+	}
+
+	bonus = {
+		global_unrest = -1
+	}
+
+	trigger = {
+		tag = ABA
+	}
+	free = yes
+
+	islamic_golden_age = {
+		idea_cost = -0.1
+	}
+	foundation_of_baghdad = {
+		build_cost = -0.15
+	}
+	pottery_glass_and_textiles = {
+		trade_efficiency = 0.1
+	}
+	arab_agricultural_revolution = {
+		production_efficiency = 0.1
+	}
+	mongol_defence = {
+		defensiveness = 0.15
+	}
+	caliph_of_cairo = {
+		tolerance_own = 2
+	}
+	islamic_literature = {
+		prestige = 1
+	}
+}
