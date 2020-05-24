@@ -1288,3 +1288,40 @@ country_event = {
 		remove_country_modifier = eth_mount_geshen
 	}
 }
+
+#################
+#Lux in Tenebris#
+#################
+country_event = {
+	id = flavor_eth.29
+	title = flavor_eth.29.t
+	desc = flavor_eth.29.d
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	trigger = {
+		1207 = { is_empty = yes }
+		2779 = { is_empty = yes }
+		owns = 1210
+		owns = 1208
+		owns = 2778
+		owns = 2785
+		owns = 2780
+		owns = 2781
+	}
+	
+	mean_time_to_happen = {
+		years = 5
+	}
+	
+	option = {
+		name = flavor_eth.29.a
+		1207 = {
+			cede_province = ROOT
+			change_trade_goods = livestock
+		}
+		2779 = {
+			cede_province = ROOT
+			change_trade_goods = livestock
+		}
+	}
+}
