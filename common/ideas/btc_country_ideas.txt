@@ -1147,6 +1147,48 @@ ROC_ideas = {
 	}
 }
 
+CRT_ideas = {
+	start = {
+		naval_morale = 0.15
+		global_trade_power = 0.10
+	}
+
+	bonus = {
+		blockade_efficiency = 0.33
+	}
+	
+	trigger = {
+		tag = CRT
+	}
+	free = yes		#will be added at load.
+
+
+	CRT_idea1 = {
+		prestige = 1
+	}
+	CRT_idea2 = {
+		global_ship_cost = -0.1
+	}
+	CRT_idea3 = {
+        defensiveness = 0.15
+		hostile_attrition = 1.0
+	}
+	CRT_idea4 = {
+		land_morale = 0.10
+	}
+	CRT_idea5 = {
+		idea_cost = -0.1
+	}
+	CRT_idea6 = {
+		may_perform_slave_raid = yes
+		privateer_efficiency = 0.15
+	}
+	CRT_idea7 = {
+		siege_blockade_progress = 1
+		rebel_support_efficiency = 0.3
+	}
+}
+
 GLC_ideas = {
 	start = {
 		ae_impact = -0.15
