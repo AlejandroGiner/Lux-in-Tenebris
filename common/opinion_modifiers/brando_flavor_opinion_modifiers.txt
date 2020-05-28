@@ -1,0 +1,12 @@
+#########################################################################
+# OPINION MODIFIERS FOR NATIVE FLAVOR EVENTS AND DECISIONS
+##########################################################################
+
+# Wampum Trade
+did_exchange_wampum = {
+	opinion = 50
+	yearly_decay = 1
+}
+not_exchange_wampum = {
+	opinion = -50
+}
