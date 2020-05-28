@@ -996,3 +996,43 @@ ROC_ideas = {
 	}
 }
 
+KOK_ideas = {
+	start = {
+		cavalry_power = 0.1
+        defensiveness = 0.2
+	}
+
+	bonus = {
+        tolerance_heathen = 1
+	}
+
+	trigger = {
+		tag = KOK
+	}
+	free = yes		# will be added at load
+	
+	KOK_idea1 = {
+		development_cost = -0.1
+	}
+	KOK_idea2 = {
+		diplomatic_reputation = 1
+	}
+	KOK_idea3 = {
+		cavalry_shock = 1
+	}
+	KOK_idea4 = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 0.5
+	}
+	KOK_idea5 = {
+		caravan_power = 0.1
+	}
+	KOK_idea6 = {
+		artillery_power = 0.1
+	}
+	zabt_system = {
+		global_tax_modifier = 0.1
+	}
+}
+
