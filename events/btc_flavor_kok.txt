@@ -1,0 +1,91 @@
+#KOK is tag for Ferghana
+
+namespace = btc_kok
+
+normal_or_historical_nations = yes
+
+country_event = {
+	id = btc_kok.1
+	title = btc_kok.1.t
+	desc = btc_kok.1.d
+	picture = babur_eventPicture
+	
+	trigger = {
+		is_year = 1460
+		NOT = {
+			is_year = 1510
+		}
+		OR = {
+			tag = KOK
+			tag = MUG
+		}
+		is_lesser_in_union = no
+		government = monarchy
+		NOT = {
+			has_global_flag = btc_babur_flag
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 36
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_global_flag = btc_babur_flag
+		}
+	}
+	
+	option = {
+		name = btc_kok.1.a
+		define_ruler = {
+			name = "Babur"
+			dynasty = "Timurid"
+			culture = ROOT
+			fixed = yes
+			adm = 6
+			dip = 6
+			mil = 6
+			age = 11
+		}
+		if = {
+			limit = {
+				has_states_general_mechanic = yes
+			}
+			change_statists_vs_orangists = 1
+		}
+		if = {
+			limit = {
+				has_dlc = "Rights of Man" 
+			}
+			hidden_effect = { add_ruler_personality = inspiring_leader_personality }
+		}
+		define_ruler_to_general = {
+			fire = 6
+			shock = 3
+			manuever = 3
+			siege = 3
+		}
+	}
+	option = {
+		name = btc_kok.1.b
+		add_adm_power = 100
+		add_dip_power = 100
+		add_mil_power = 100
+		add_meritocracy_effect = yes
+		define_advisor = {
+			culture = ROOT
+			type = army_reformer
+			skill = 3
+			discount = yes
+			name = "Babur Timurid"
+		}
+		define_general = {
+			shock = 6
+			fire = 3
+			manuever = 3
+			siege = 3
+			name = "Babur Timurid"
+		}
+	}
+}
