@@ -82,7 +82,14 @@ country_event = {
 			religion = totemism
 		}
 		capital_scope = {
-			region = california_region
+			OR = {
+				area = lost_coast_area
+				area = sacramento_valley_area
+				area = sierra_nevada_area
+				area = san_francisco_bay_area
+				area = california_area 
+				area = northern_california_area 
+			}
 		}
 		is_month = 6
 		NOT = { is_month = 11 }
@@ -144,7 +151,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 250
+		months = 150
 	}
 	
 	#Master the Horse
@@ -223,7 +230,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 600
+		months = 300
 	}
 	
 	#Hold the Potlatch
@@ -595,4 +602,208 @@ country_event = {
 		}
 	}
 	
+}
+
+#Winter Count for specific plains tribes
+country_event = {
+	
+	id = brando_flavor_events.15
+	title = "brando_flavor_events.15.t"
+	desc = "brando_flavor_events.15.d"
+	picture = ARTWORK_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		is_at_war = no
+		OR = {
+			primary_culture = dakota
+			primary_culture = nakota
+			primary_culture = lakota
+			primary_culture = crow_culture
+			primary_culture = mandan_culture
+			primary_culture = dhegihan
+			primary_culture = kiowa
+			primary_culture = blackfoot
+			primary_culture = arapaho
+			primary_culture = pawnee
+			primary_culture = arikara
+			primary_culture = cheyenne
+		}
+		OR = {
+			great_plains_region = { owned_by = ROOT }
+			northwest_territories_region = { owned_by = ROOT }
+		}
+	}
+	
+	mean_time_to_happen = = {
+		months = 300
+	}
+	
+	#Add about our leader
+	option = {
+		name = "brando_flavor_events.15.a"
+		add_prestige = 5
+		add_adm_power = -10
+		add_mil_power = -10
+	}
+	
+	#Add important event for the tribe
+	option = {
+		name = "brando_flavor_events.15.b"
+		add_adm_power = -20
+		add_dip_power = -20
+		add_stability = 1
+	}
+}
+
+# Wampum Trade Line
+country_event = {
+	id = brando_flavor_events.16
+	title = "brando_flavor_events.16.t"
+	desc = "brando_flavor_events.16.d"
+	picture = ECONOMY_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = { 
+			region = northeast_america_region
+		}
+		any_neighbor_country = {
+			has_opinion = {
+				who = ROOT
+				value = 50
+			}
+			is_at_war = no
+			NOT = {
+				war_with = ROOT
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	option = {
+		name = "brando_flavor_events.16.a"
+		random_neighbor_country = {
+			limit = {
+				has_opinion = {
+					who = ROOT
+					value = 50
+				}
+				is_at_war = no
+				NOT = {
+					war_with = ROOT
+				}
+			}
+			country_event = {
+				id = brando_flavor_events.17
+				days = 1
+				tooltip = brando_flavor_events.17.t
+			}
+		}
+	}
+	option = {
+		name = "brando_flavor_events.16.b"
+		ai_chance = { 
+			factor = 1
+		}
+		add_prestige = 5
+	}
+}
+
+# Option to Exchange Wampum
+country_event = {
+	id = brando_flavor_events.17
+	title = "brando_flavor_events.17.t"
+	desc = "brando_flavor_events.17.d"
+	picture = ECONOMY_eventPicture
+	
+	is_triggered_only = yes
+	
+	#exchange wampum with neighbor
+	option = {
+		name = "brando_flavor_events.17.a"
+		ai_chance = { 
+			factor = 1
+		}
+		add_years_of_income = 0.1
+		FROM = {
+			country_event = {
+				id = brando_flavor_events.18
+				days = 7
+				tooltip = brando_flavor_events.18.t
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = did_exchange_wampum
+			}
+		}
+	}
+	
+	#exchange wampum among our own leaders and elders
+	option = {
+		name = "brando_flavor_events.17.b"
+		add_prestige = 10
+		FROM = {
+			country_event = {
+				id = brando_flavor_events.19
+				days = 7
+				tooltip = brando_flavor_events.19.t
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = not_exchange_wampum
+			}
+		}
+	}
+}
+
+# Did Wampum Exchange
+country_event = {
+	id = brando_flavor_events.18
+	title = "brando_flavor_events.18.t"
+	desc = "brando_flavor_events.18.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brando_flavor_events.18.a"
+		tooltip = {
+			FROM = {
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = did_exchange_wampum
+				}
+			}
+		}
+	}
+}
+
+# Did not exchange wampum
+country_event = {
+	id = brando_flavor_events.19
+	title = "brando_flavor_events.19.t"
+	desc = "brando_flavor_events.19.d"
+	picture = MERCHANTS_TALKING_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "brando_flavor_events.19.a"
+		tooltip = {
+			FROM = {
+				reverse_add_opinion = {
+					who = ROOT
+					modifier = not_exchange_wampum
+				}
+			}
+		}
+	}
 }
