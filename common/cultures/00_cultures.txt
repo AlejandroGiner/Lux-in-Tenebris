@@ -9,7 +9,7 @@
 
 #Note all BtP and BT cultures are now moved into the main culture file in the interest of improving the auto-generated colours, hopefully preventing the recurring issue of little-no distinction between different cultures' colours.
 
-#Yes, I know, the modular nature of different files is a better modding practice and better etiquette. Yes, I know this may, in extreme cases, make already incompatible mods more incompatible. Yes, I know it makes things harder to fnd in a giant file like this. Yes, I know it makes using a compare program to spot vanilla changes that much more difficult.
+#Yes, I know, the modular nature of different files is a better modding practice and better etiquette. Yes, I know this may, in extreme cases, make already incompatible mods more incompatible. Yes, I know it makes things harder to find in a giant file like this. Yes, I know it makes using a compare program to spot vanilla changes that much more difficult.
 #In the end, the trade-off for hopefully more consistant culture colours will hopefully outweigh the downsides, the mods this affects are already incompatible, it is already long past the point where ctrl-f  is a must anyway, and it is also long past the point where this file can be compared directly to a vanilla file.
 
 #All new additions to old culture groups should be searchable using the following terms:
@@ -29,9 +29,6 @@ french	= {
 			"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" 
 		}
 	}
-	gascon = {
-		primary = GUY
-	}
 	normand = {
 		primary = NRM
 	}
@@ -41,17 +38,11 @@ french	= {
 	burgundian = {
 		primary = BUR
 	}
-	occitain = {
-		primary = TOU
-	}
 	picard = {
 		primary = PIC
 		}
 	poitevin = {
 		primary = POI
-		}
-	provencal = {
-		primary = PRO
 		}
 	#Beyond the Pale Culture
 	arpitan = {
@@ -1626,27 +1617,6 @@ iberian	= {
 			Maria Marquesa Marquise Sança Sancha Sibila Sibylla Teresa Teresa Toda Toda Violant Yolanda
 		}
 	}
-	catalan = {
-		primary = CAT
-		dynasty_names = {
-			"d'Aragó" "de Borja" "de Luna" "d'Urgell" "Folc de Cardona"
-			#CK2
-			"de Menezes" "de Mendoza" "de Niebla" "de Silva" "de Alba" "de Borja"  
-			"de Medinaceli" "de Castro" "de Haro" "Santcliment" "de Altamira" Osorio
-			Zúñiga "de Villahermosa" Vilafermosa Garmendia "de Rocamora" "de Goyeneche"
-			"de Cabrera" "de Villena"
-		}
-		male_names = {
-			Aaró Aaron Abelard Abraham Absaló Abundi Adalbert Adam Adrià Alaric Albà Albí Aleix Àlvar Àngel Antoni Arnau 
-			Artur Blai Carles Cecili Conrad Dari Dionís Emili Enric Felip Ferran Francés Francesc Fructuós Germà 
-			Gonçal Guillem Guiu Ignasi Israel Joan Jordi Josep Josep Maria Lleó Lluc Lluís Macedoni Màrius Martí Miquel 
-			Octavi Òscar Pau Pere Pol Pompeu Pròsper Prudenci Prudencià Quirze Rafael Ramir Raül Reginald Ricard Robert Roc 
-			Rubèn Sergi Simó Teodor Tomàs Vicenç Vicent Xavier
-		}
-		female_names = {
-			Àgata Àgueda Aina Anna Antònia Caterina Cecília Cristina Dolors Francesca Genoveva Isabel Joana Justina Laia 
-			Montserrat Núria Octàvia Prudència Roberta Rodolfa
-		}
 	}
 	galician = {
 		primary = GAL
@@ -13853,3 +13823,43 @@ septrional_creoles = {
 	}
 }
 
+occitan = { #From default French and Iberian
+		
+	graphical_culture = westerngfx
+	
+	provencal = {
+		primary = PRO
+	}
+	
+	occitain = {
+		primary = TOU
+	}
+	
+	catalan = {
+		primary = CAT
+	}
+	
+	gascon = {
+		primary = GUY
+	}
+	
+	dynasty_names = {
+		"d'Aragó" "de Borja" "de Luna" "d'Urgell" "Folc de Cardona"
+		#CK2
+		"de Menezes" "de Mendoza" "de Niebla" "de Silva" "de Alba" "de Borja"  
+		"de Medinaceli" "de Castro" "de Haro" "Santcliment" "de Altamira" Osorio
+		Zúñiga "de Villahermosa" Vilafermosa Garmendia "de Rocamora" "de Goyeneche"
+		"de Cabrera" "de Villena"
+	}
+	male_names = {
+		Aaró Aaron Abelard Abraham Absaló Abundi Adalbert Adam Adrià Alaric Albà Albí Aleix Àlvar Àngel Antoni Arnau 
+		Artur Blai Carles Cecili Conrad Dari Dionís Emili Enric Felip Ferran Francés Francesc Fructuós Germà 
+		Gonçal Guillem Guiu Ignasi Israel Joan Jordi Josep Josep Maria Lleó Lluc Lluís Macedoni Màrius Martí Miquel 
+		Octavi Òscar Pau Pere Pol Pompeu Pròsper Prudenci Prudencià Quirze Rafael Ramir Raül Reginald Ricard Robert Roc 
+		Rubèn Sergi Simó Teodor Tomàs Vicenç Vicent Xavier
+	}
+	female_names = {
+		Àgata Àgueda Aina Anna Antònia Caterina Cecília Cristina Dolors Francesca Genoveva Isabel Joana Justina Laia 
+		Montserrat Núria Octàvia Prudència Roberta Rodolfa
+	}
+}
