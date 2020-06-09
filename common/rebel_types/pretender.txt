@@ -296,6 +296,13 @@ pretender_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+        hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				has_states_general_mechanic = yes
@@ -337,8 +344,10 @@ pretender_rebels = {
 				}
 			}
 			change_government = REB
-			set_legacy_government = despotic_monarchy
+			#set_legacy_government = despotic_monarchy
 		}
+        kill_heir = yes
+		kill_consort = yes
 		set_country_flag = no_new_succession_crisis_if_pretender_rebels #This is used in the event that triggers from the on_action to ensure that you don't get new pretenders if these pretenders are happening because of a succession crisis.
 		define_ruler = {
 			rebel = yes
@@ -379,6 +388,10 @@ pretender_rebels = {
 			limit = { has_disaster = english_civil_war }
 			country_event = { id = english_civil_war.100 }
 			end_disaster = english_civil_war
+		}
+        if = {
+			limit = { is_revolution_target = yes }
+			set_revolution_target = ---
 		}
 		#Byz_resurgence added: Clears Succession Crisis upon enforcing demands.
 		if = {
