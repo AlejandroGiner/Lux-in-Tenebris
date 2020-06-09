@@ -78,7 +78,7 @@ exarch_seat_modifier_med_dev = {
 	trigger = { has_estate = estate_exarches development = 5 hidden_trigger = { NOT = { development = 10 } } }
 	
 	picture = "exarch_seat_modifier_states"
-	max_states = 3
+	governing_capacity = 150
 }
 
 exarch_seat_modifier_high_dev = {
@@ -86,7 +86,7 @@ exarch_seat_modifier_high_dev = {
 	trigger = { has_estate = estate_exarches development = 10 hidden_trigger = { NOT = { development = 15 } } }
 	
 	picture = "exarch_seat_modifier_states_big"
-	max_states = 5
+	governing_capacity = 150
 }
 
 exarch_seat_modifier_very_high_dev = {
@@ -94,5 +94,5 @@ exarch_seat_modifier_very_high_dev = {
 	trigger = { has_estate = estate_exarches development = 15 }
 	
 	picture = "exarch_seat_modifier_states_bigger"
-	max_states = 8
+	governing_capacity = 400
 }
