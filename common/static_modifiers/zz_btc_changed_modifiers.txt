@@ -57,8 +57,7 @@ capital_city = {
 
 base_values = {
 	max_absolutism = 65
-	merc_maintenance_modifier = 1.5
-	merchants = 2							#Start with 2 merchants
+	merchants = 3							#LiT modified, more nodes
 	diplomats = 2							#Start with 2 diplomats..
 	missionaries = 2						#1 missionary
 	army_tradition_decay = 0.05				#lose 5% yearly
@@ -68,7 +67,6 @@ base_values = {
 	diplomatic_upkeep = 3
 	tolerance_heathen = -3
 	tolerance_heretic = -2
-	mercenary_cost = 0.5
 	global_missionary_strength = 0.02
 	global_manpower = 8.0
 	advisor_pool = 3
@@ -80,11 +78,12 @@ base_values = {
 	horde_unity = -2
 	devotion = -0.5
 	meritocracy = -2
-	max_states = 8
+	governing_capacity = 200
 	num_accepted_cultures = 1
 	monthly_splendor = 1
 	artillery_bonus_vs_fort = 5
 	cav_to_inf_ratio = 0.5
+    merc_maintenance_modifier = 0.5
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -119,7 +118,6 @@ negative_stability = {
 	migration_cooldown = 0.1
 	devotion = 1
 	caravan_power = 0.05
-	monthly_militarized_society = -0.05
 	logothete_general_influence = 0.1
 }
 
@@ -173,6 +171,9 @@ army_tradition = {
 	rr_girondists_influence = 0.1
 	logothete_military_influence = 0.1
 	monthly_militarized_society = 0.1
+    nobles_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -187,7 +188,6 @@ free_cities_in_hre = {							#bonuses for each free city in the HRE.. as emperor
 }
 
 num_of_provinces = {
-	monthly_militarized_society = -0.009 # Way more provinces in Prussia's base region, lowered from -0.015
 	
 }
 
@@ -200,6 +200,19 @@ corruption = {
 	global_unrest = -20
 	imperial_mandate = -1
 	logothete_general_influence = 1
+    brahmins_hindu_loyalty_modifier = 0.1
+	brahmins_muslim_loyalty_modifier = 0.1
+	brahmins_other_loyalty_modifier = 0.1
+	church_loyalty_modifier = 0.1
+	maratha_loyalty_modifier = 0.1
+	nobles_loyalty_modifier = 0.1
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	cossacks_loyalty_modifier = 0.1
+	nomadic_tribes_loyalty_modifier = 0.1
+	dhimmi_loyalty_modifier = 0.1
+	jains_loyalty_modifier = 0.1
+	rajput_loyalty_modifier = 0.1
 }
 
 over_extension = {
