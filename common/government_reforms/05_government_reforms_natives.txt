@@ -20,6 +20,9 @@ native_basic_reform = {
 			technology_group = north_american
 			technology_group = south_american
 		}
+        NOT = { religion = nahuatl }
+		NOT = { religion = mesoamerican_religion }
+		NOT = { religion = inti }
 		capital_scope = {
 			OR = {
 				continent = north_america
