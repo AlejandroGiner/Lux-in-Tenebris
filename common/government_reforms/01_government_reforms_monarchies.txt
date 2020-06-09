@@ -784,13 +784,13 @@ feudal_theocracy = {
 		missionaries = 1
 		global_missionary_strength = 0.01
 		tolerance_own = 2
+		governing_capacity = 50
+		brahmins_hindu_loyalty_modifier = 0.05
+		church_loyalty_modifier = 0.05
 	}
 
 	custom_attributes = {
 		locked_government_type = yes
-		governing_capacity = 50
-		brahmins_hindu_loyalty_modifier = 0.05
-		church_loyalty_modifier = 0.05
 	}
 
 	conditional = {
