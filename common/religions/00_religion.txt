@@ -56,6 +56,75 @@ christian = {
 			papal_tag = PAP
 			election_cost = 5
 			seat_of_papacy = 118 # rome
+            
+            #Council of Trent Positions
+			harsh = {
+				relation_with_heretics = -20
+				global_religious_conversion_resistance = 0.25
+				global_institution_spread = -0.25
+				global_missionary_strength = 0.02
+			}
+			neutral = {
+				global_religious_conversion_resistance = -0.33
+			}
+			concilatory = {
+				relation_with_heretics = 10
+				global_religious_conversion_resistance = 0.25
+				global_heretic_missionary_strength = -0.05
+				improve_relation_modifier = 0.25
+			}
+
+			#Council of Trent Concessions
+			concessions = {
+				first_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						global_heretic_missionary_strength  = 0.02
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						tolerance_heretic = 2
+					}
+				}
+				second_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						institution_spread_from_true_faith = 0.30
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						global_institution_spread = 0.10
+					}
+				}
+				third_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						manpower_in_true_faith_provinces  = 0.1
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						global_manpower_modifier = 0.05
+					}
+				}
+				fourth_concession = {
+					harsh = {
+						relation_with_heretics = -20
+						warscore_cost_vs_other_religion  = -0.10
+					}	
+					concilatory = {
+						relation_with_heretics = 10
+						curia_powers_cost = -0.10
+					}
+				}
+			}
+
+
+
+
+
+
+
+			# Papal Actions below!
 			
 			levy_church_tax = {
 				cost = 50
@@ -188,6 +257,7 @@ christian = {
 				cost = 50
 				potential = {
 					NOT = { tag = PAP }
+                    is_papal_controller = no
 				}
 				allow = {
 					NOT = { war_with = PAP }
@@ -223,6 +293,24 @@ christian = {
 					}
 				}
 			}			
+            investigate_heresy = {
+				curia_treasury_cost = 200
+				potential = {
+					has_dlc = "Emperor"
+					is_papal_controller = yes
+				}
+				allow = {
+					is_papal_controller = yes
+					reform_desire = 0.05
+				}
+				effect = {
+					add_reform_desire = -0.05
+					add_reform_desire_scale = 0.1
+				}
+				ai_will_do = {
+					factor = 0
+				}				
+			}	
 		}# harmonized_catholic
 		
 	}
@@ -277,6 +365,7 @@ christian = {
 		country = {
 			global_tax_modifier = 0.1
 			improve_relation_modifier = 0.15
+            church_loyalty_modifier = 0.1
 		}
 		
 		country_as_secondary = {
@@ -315,6 +404,7 @@ christian = {
 			add_prestige = -100
 			remove_country_modifier = counter_reformation
 			remove_country_modifier = the_statue_in_restraint_of_appeals
+            remove_country_modifier = revocation_of_restraint_of_appeals
 			remove_country_modifier = bavarian_jesuits
 			remove_country_modifier = the_societas_jesu
 			remove_country_modifier = the_declaration_of_indulgence
@@ -435,6 +525,7 @@ christian = {
 			add_prestige = -100
 			remove_country_modifier = counter_reformation
 			remove_country_modifier = the_statue_in_restraint_of_appeals
+            remove_country_modifier = revocation_of_restraint_of_appeals
 			remove_country_modifier = bavarian_jesuits
 			remove_country_modifier = the_societas_jesu
 			remove_country_modifier = the_declaration_of_indulgence
@@ -759,8 +850,12 @@ christian = {
 	}
 	
 	hussite = {
-		color = { 207 207 109 }
+		color = { 244 55 9 }
 		icon = 32
+        
+        allowed_center_conversion = {
+			catholic
+		}
 	
 		flags_with_emblem_percentage = 20
 		flag_emblem_index_range = { 1 4 }
@@ -773,18 +868,28 @@ christian = {
 			infantry_power = 0.075
 			global_heretic_missionary_strength = 0.01
 		}
+        
+        uses_hussite_power = yes				# Uses church power/aspect mechanics
+        
 		province = {
 			local_missionary_strength = -0.03
 		}
 		
-		heretic = { BOGOMILIST FRATICELLI LOLLARD SOCINIAN } #Needs updating
-		
-		#misguided_heretic = yes
-		#GENERIC REFORMED MECHANIC FOR NOW
-		uses_church_power = yes				# Uses church power/aspect mechanics
+		aspects = {
+			clerical_poverty_aspect
+			bread_and_wine_aspect
+			sola_scriptura_aspect
+			adamite_services_aspect
+			pacifism_aspect
+			punishment_of_sins_aspect
+			regular_defenestrations_aspect
+			taborite_resurgence_aspect
+			orphan_hetmans_aspect
+			freedom_to_preach_aspect
+		}
 		aspects_name = PROTESTANT_ASPECTS
-		
-		#harmonized_modifier = harmonized_hussite
+
+		heretic = { TABORITE UTRAQUIST ORPHAN }
 		
 	}
 		
@@ -811,7 +916,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -831,7 +936,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = hanafi_scholar_modifier duration = 7300 }
@@ -852,7 +957,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -872,7 +977,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = hanbali_scholar_modifier duration = 7300 }
@@ -892,7 +997,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -912,7 +1017,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = maliki_scholar_modifier duration = 7300 }
@@ -932,7 +1037,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = sunni }
@@ -952,7 +1057,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = shafii_scholar_modifier duration = 7300 }
@@ -973,7 +1078,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = shiite }
@@ -993,7 +1098,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = ismaili_scholar_modifier duration = 7300 }
@@ -1016,7 +1121,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = shiite }
@@ -1036,7 +1141,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = jafari_scholar_modifier duration = 7300 }
@@ -1056,7 +1161,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FROM = Nation that follows that school
 			can_invite_scholar = {
-				adm_power = 50
+				adm_power_cost = 50
 				if = {
 					limit = {
 						NOT = { religion = shiite }
@@ -1076,7 +1181,7 @@ muslim = {
 
 			# THIS = Nation wanting to invite the scholar, FORM = Nation that sends scholar
 			on_invite_scholar = {
-				add_adm_power = -50
+				adm_power_cost = 50
 				clear_religious_scholar_modifiers_effect = yes
 				custom_tooltip = INVITE_SCHOLAR_COUNTRY_TEXT
 				add_country_modifier = { name = zaidi_scholar_modifier duration = 7300 }
@@ -1331,6 +1436,7 @@ dharmic = {
 		country = {
 			tolerance_heathen = 1
 			tolerance_own = 1
+            brahmins_hindu_influence_modifier = 0.2
 		}
 		country_as_secondary = {
 			tolerance_heretic = 1
@@ -1407,6 +1513,7 @@ pagan = {
 		country = {
 			tolerance_own = 1
 			global_unrest = -1
+            burghers_influence_modifier = -0.05
 		}
 		country_as_secondary = {
 			tolerance_own = 2
