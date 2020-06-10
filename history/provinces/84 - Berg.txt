@@ -2,9 +2,9 @@
 #Region - Germany
 #Area - North Rhine
 
-owner = JUL #In reality Kleves and Berg are not united before 1510.
-controller = JUL			#Draiocht- I'd like to revisit this Whole Rhein-Ruhr-Rur-Westphalia area eventually. HR's is better than it was, but still some stuff I'd like to see, and there are a few major mistakes left over from vanilla
-add_core = JUL
+owner = BRG #In reality Kleves and Berg are not united before 1510.
+controller = BRG			#Draiocht- I'd like to revisit this Whole Rhein-Ruhr-Rur-Westphalia area eventually. HR's is better than it was, but still some stuff I'd like to see, and there are a few major mistakes left over from vanilla
+add_core = BRG
 culture = hessian
 religion = catholic
 trade_goods = cloth
@@ -26,7 +26,7 @@ discovered_by = eastern
 	owner = KLE
 	controller = KLE
 	add_core = KLE
-	remove_core = JUL
+	remove_core = BRG
 }
 1545.1.1 = { fort_15th = yes }
 1584.1.1 = { fort_15th = no fort_16th = yes }

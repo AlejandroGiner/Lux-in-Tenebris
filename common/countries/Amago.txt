@@ -2,14 +2,14 @@
 
 graphical_culture = asiangfx
 
-color = { 200  85  84 }
+color = { 205  94  60 }
 
-revolutionary_colors = { 4 0 4 }
+revolutionary_colors = { 6 1 6 }
 
 historical_idea_groups = {
 	offensive_ideas
 	defensive_ideas
-	naval_ideas
+	maritime_ideas
 	trade_ideas
 	quality_ideas
 	spy_ideas
@@ -35,25 +35,26 @@ historical_units = {
 	rangaku_riflemen
 }
 
-monarch_names = {
-	"Sadasue #0" = 50
-	"Shugesue #0" = 50
-	"Norisue #0" = 50
-	"Munesue #0" = 50
-	"Akisue #0" = 50
-	"Morisue #0" = 50
-	"Yasusue #0" = 50
-	"Yoshisue #0" = 50
-	"Masasue #0" = 50
-	"Tadasue #0" = 50	
-	"Hirosue #0" = 50	
-	"Kiyosue #0" = 50	
-	"Chikasue #0" = 50	
-	"Sanesue #0" = 50
-	"Toshisue #0" = 50
-	"Terusue #0" =50
-	"Nobusue #0" = 50
-	"Takasue #0" = 50
+monarch_names = { #Most Monarchs were named with "hisa"
+	"Takahisa #0" = 50
+	"Mochihisa #0" = 50
+	"Kiyosada #0" = 50
+	"Yukihisa #0" = 50
+	"Hisayuki #0" = 50	
+	"Masahisa #0" = 50	
+	"Okihisa #0" = 50	
+	"Kunihisa #0" = 50
+	"Toyohisa #0" = 50
+	"Haruhisa #0" = 50
+	"Yoshihisa #0" = 50
+	"Hidehisa #0" = 50
+    "Norihisa #0" = 50
+	"Sanehisa #0" = 50
+	"Ujihisa #0" = 50
+	"Tsunehisa #0" = 50	
+	"Katsuhisa #0" = 50
+	"Kiyohisa #0" = 50
+	"Tokihisa #0" = 50
 	"Toku #0" = -5
 	"Sen #0" = -5
 	"Tama #0" = -5
@@ -68,26 +69,27 @@ leader_names = {
 	Matsunaga Mimura Miyoshi Mogami Mori Nabeshima Nagao Oda Ogasawara Otomo Ouchi
 	Ryuzoji Sagara Saito Sanada Satake Satomi Shiba Shibata Shimazu Shoni Takeda Toki
 	Tokugawa Matsudaira Toyotomi Tsutsui Uesugi Uragami Yamana Yamauchi
-	# Ando Flavor
-	Ando Ando Ando Ando Ando Ando Ando Ando Ando Ando
-	Ando Ando Ando Ando Ando Akita Akita Akita Akita Akita
-	# Regional names:Tohoku
-	Matsumae Tsugaru Namioka Shiba Nanbu Kunohe Kudo Asonuma Waga Kurosawa Kita Hei
-	Kasai Nikaido Osaki Sudo Rusu Katakura Ujiie Rusu Kurokawa Watari Moniwa Kokubun
-	Shiraishi Endo Akita Asari Onodera Tozawa Yuri Nikaho Mogami Tendo
-	Sakenobe Sagae Daihoji Tateoka Date Tamura Ishikawa Ouchi Hatakeyama Ashina Inawashiro
-	Soma Sato Iwaki Shirakawa Kanagami
+    # Amago Flavor
+	Amago Amago Amago Amago Amago Amago Amago Amago Amago Amago
+	Amago Amago Amago Amago Amago Amago Amago Amago Amago Amago
+	# Retainers of the Amago clan
+    Shisido Shisido Shisido Shisido Shisido Yamanaka Yamanaka Yamanaka Yamanaka Yamanaka
+	Kurachi Kurachi Kurachi Kurachi Kurachi Kamei Kamei Kamei Kamei Kamei
+	Tachihara Tachihara Tachihara Tachihara Tachihara Ushio Ushio Ushio Ushio Ushio
+	Kawazoe Kawazoe Kawazoe Kawazoe Kawazoe Matsuda Matsuda Matsuda Matsuda Matsuda
+	Kanzai Kanzai Kanzai Kanzai Kanzai Misawa Misawa Misawa Misawa Misawa
+	Akana Akana Akana Akana Akana Mitoya Mitoya Mitoya Mitoya Mitoya
 }
 
 ship_names = {
 	"Mutsu Maru" "Dewa Maru" "Shimotsuke Maru"
 	"Hitachi Maru"
-	"Kazusa Maru" "Shimousa Maru" "Musashi Maru" "Kozuke Maru" "Izu Maru" "Echigo Maru" "Ettchu Maru"
+	"Kazusa Maru" "Shimousa Maru" "Awa Maru" "Musashi Maru" "Kozuke Maru" "Izu Maru" "Echigo Maru" "Ettchu Maru"
 	"Kaga Maru" "Noto Maru" "Suruga Maru" "Totomi Maru" "Joshu Maru" "Enshu Maru" "Bushu Maru" "Esshu Maru"
 	"Mikawa Maru" "Ushu Maru" "Soushu Maru" "Boushu Maru" "Kai Maru" "Shinshu Maru" "Koshu Maru"
 	"Owari Maru" "Bishu Maru" "Mino Maru" "Echizen Maru" "Ise Maru" "Shima Maru" "Omi Maru" 
 	"Goushu Maru" "Yamashiro Maru" "Wakasa Maru" "Tanba Maru" "Tango Maru" "Yamato Maru" "Kii Maru"
-	"Kishu Maru" "Iga Maru" "Awa Maru" "Sanuki Maru" "Tosa Maru"
+	"Kishu Maru" "Iga Maru" "Sanuki Maru" "Tosa Maru"
 	"Iyo Maru" "Harima Maru" "Banshu Maru"
 	"Hoki Maru" "Inaba Maru" "Bizen Maru" "Mimasaka Maru" "Binshu Maru"
 	"Bingo Maru" "Bittchu Maru" "Aki Maru" "Izumo Maru" "Iwami Maru" "Suou Maru" "Nagato Maru" "Bungo Maru"
@@ -96,9 +98,9 @@ ship_names = {
 }
 
 army_names = {
-	"Ando Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"Amago Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
 }
 
 fleet_names = {
-	"Ando Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "$PROVINCE$ Tai"
+	"Amago Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "$PROVINCE$ Tai"
 }

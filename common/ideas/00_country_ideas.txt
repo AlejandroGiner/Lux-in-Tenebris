@@ -8753,7 +8753,7 @@ YUA_ideas = {
 
 ANS_ideas = {
 	start = {
-		global_trade_goods_size_modifier = 0.1
+		diplomatic_reputation = 1
 		merc_maintenance_modifier = -0.15
 	}
 	bonus = {
@@ -8770,9 +8770,6 @@ ANS_ideas = {
 	ans_restore_the_burgraviate = {
 		ae_impact = -0.1
 	}
-	ans_plassenburg = {
-		diplomatic_reputation = 1
-	}
 	ans_franconian_reformers = {
 		religious_unity = 0.2
 		papal_influence = 2
@@ -8785,8 +8782,129 @@ ANS_ideas = {
 	ans_wolf_of_ansbach = {
 		global_unrest = -1
 	}
+	ans_fayencemanufaktur = {
+		global_trade_goods_size_modifier = 0.1
+	}
 	ans_dragoons_of_ansbach = {
 		cavalry_power = 0.15
+	}
+}
+
+BYT_ideas = {
+	start = {
+		global_trade_goods_size_modifier = 0.1
+		merc_maintenance_modifier = -0.15
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = BYT
+	}
+	free = yes
+	
+	byt_land_of_the_hohenzollerns = {
+		diplomatic_reputation = 1
+	}
+	ans_restore_the_burgraviate = {
+		# ae_impact = -0.1
+	}
+	ans_plassenburg = {
+		garrison_size = 0.2
+	}
+	ans_franconian_reformers = {
+		# religious_unity = 0.2
+		# church_power_modifier = 0.1
+	}
+	byt_ordre_de_la_sincerite = {
+		army_tradition = 0.5
+	}
+	byt_gravenreuther_stift = {
+		manpower_recovery_speed = 0.15
+	}
+	byt_margravial_opera_house = {
+		prestige = 1
+	}
+}
+
+NUM_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		trade_efficiency = 0.1
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		tag = NUM
+	}
+	free = yes
+	
+	num_imperial_regalia = {
+		prestige_decay = -0.01
+	}
+	num_nuremberg_castle = {
+		land_maintenance_modifier = -0.05
+	}
+	num_nuremberg_chronicle = {
+		technology_cost = -0.05
+        idea_cost = -0.05
+	}
+	num_rostbratwurst = {
+		production_efficiency = 0.1
+	}
+	num_franconian_center_of_reformation = {
+		global_missionary_strength = 0.02
+	}
+	num_christkindlmarkt = {
+		stability_cost_modifier = -0.1
+	}
+	num_nuremberg_exchange = {
+		global_trade_power = 0.15
+	}
+}
+
+BAM_ideas = {
+	start = {
+		missionaries = 1
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = BAM
+	}
+	free = yes
+	
+	bam_bishop_of_bamberg = {
+		diplomatic_reputation = 1
+	}
+	bam_cathedral = {
+		papal_influence = 1
+        church_power_modifier = 0.1
+		monthly_fervor_increase = 0.25
+		prestige_decay = -0.01
+	}
+	bam_city_of_beer = {
+		production_efficiency = 0.1
+	}
+	bam_little_venice = {
+		development_cost = -0.05
+		trade_efficiency = 0.1
+	}
+	bam_witch_burner = {
+		global_heretic_missionary_strength = 0.03
+	}
+	bam_vierzehnheiligen = {
+		tolerance_own = 2
+	}
+	bam_university = {
+		technology_cost = -0.05
 	}
 }
 
@@ -13136,6 +13254,267 @@ TEX_ideas = {
 	}
 }
 
+AUS_ideas = {
+	start = {	
+		global_ship_recruit_speed = -0.2
+		global_colonial_growth = 25
+	}
+	bonus = {
+		development_cost = -0.15
+	}
+	trigger = {
+		tag = AUS
+	}
+	free = yes
+	AUS_outback_stations = {
+		colonists = 1
+	}
+	AUS_land_down_under = {
+		land_attrition = -0.1
+		hostile_attrition = 1
+	}
+	AUS_eureka_rebellion = {
+		global_manpower_modifier = 0.2
+	}
+	AUS_sandpaper_and_cheating = {
+		infantry_power = 0.1
+		allowed_marine_fraction = 0.1
+	}
+	AUS_royal_navy = {
+		global_ship_cost = -0.1
+		disengagement_chance = 0.05
+	}
+	AUS_bushrangers = {
+		shock_damage = 0.1
+	}
+	AUS_waltzing_matilda = {
+		build_cost = -0.1
+	}
+}
+
+NZL_ideas = {
+	start = {	
+		diplomatic_upkeep = 1
+		global_trade_power = 0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	trigger = {
+		tag = NZL
+	}
+	free = yes
+	NZL_maori_seats = {
+		no_religion_penalty = yes
+		republican_tradition = 0.15
+	}
+	NZL_otago_gold = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	NZL_piopiotahi = {
+		development_cost = -0.1
+		prestige_decay = -0.005
+	}
+	NZL_haka = {
+		shock_damage = 0.1
+	}
+	NZL_company = {
+		global_colonial_growth = 25
+	}
+	NZL_rejecting_australia = {
+		land_morale = 0.15
+	}
+	NZL_pokarekare_ana = {
+		diplomatic_reputation = 2
+	}
+}
+
+ALA_ideas = {
+	start = {	
+		light_ship_power = 0.15
+		naval_morale = 0.2
+	}
+	bonus = {
+		heavy_ship_power = 0.1
+	}
+	trigger = {
+		tag = ALA
+	}
+	free = yes
+	ALA_endurance = {
+		development_cost = -0.15
+	}
+	ALA_hard_push_east = {
+		global_colonial_growth = 25
+	}
+	ALA_secretary_icebox = {
+		core_creation = -0.2
+	}
+	ALA_bear_hunting = {
+		fire_damage = 0.15
+	}
+	ALA_diversity = {
+		tolerance_heretic = 2
+		num_accepted_cultures = 1
+	}
+	ALA_navy = {
+		naval_forcelimit_modifier = 0.25
+		global_sailors_modifier = 0.15
+	}
+	ALA_beauty = {
+		prestige = 1
+	}
+}
+
+CSC_ideas = {
+	start = {	
+		land_morale = 0.15 
+		build_cost = -0.1
+	}
+	bonus = {
+		global_ship_trade_power = 0.25
+	}
+	trigger = {
+		tag = CSC
+	}
+	free = yes
+	CSC_melting_pot = {
+		num_accepted_cultures = 2
+	}
+	CSC_chinook_jargon = {
+		native_uprising_chance = -0.5
+		native_assimilation = 0.5
+	}
+	CSC_forts_of_hudson_bay = {
+		fort_maintenance_modifier = -0.2
+	}
+	CSC_settling_boundaries = {
+		global_spy_defence = 0.33
+	}
+	CSC_nookta_sound = {
+		global_own_trade_power = 0.25
+	}
+	the_hudson_bay_company = {
+		# shared with Canada
+	}
+	CSC_oregon_trail = {
+		land_attrition = -0.2
+	}
+}
+
+WSI_ideas = {
+	start = {
+		merchants = 1
+		development_cost = -0.1
+	}
+	bonus = {
+		colonists = 1
+	}
+	trigger = {
+		tag = WSI
+	}
+	free = yes      #will be added at load.
+	WSI_Plantation_Economy = {
+		production_efficiency = 0.1
+		build_cost = -0.10
+	}
+	WSI_Blue_Mountain_Coffee = {
+		global_institution_spread = 0.2
+	}
+	WSI_Sugar_Revolution = {
+		global_unrest = -2
+	}
+	WSI_American_Trade_Hub = {
+		global_trade_power = 0.05
+		trade_range_modifier = 0.1
+	}
+	WSI_Miskoto_Zambos = {
+		num_accepted_cultures = 2
+	}
+	WSI_Interconnected_Relations = {
+		diplomatic_reputation = 1
+	}
+	WSI_Colonial_Legacy = {
+		naval_forcelimit_modifier = 0.25
+	}
+}
+
+SNA_ideas = {
+	start = {
+		global_tax_modifier = 0.1
+		prestige = 1
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	trigger = {
+		tag = SNA
+	}
+	free = yes      #will be added at load.
+	SNA_mercenary_republic = {
+		mercenary_discipline = 0.05
+		mercenary_manpower = 0.5
+	}
+	SNA_sale_of_script = {
+		core_creation = -0.1
+	}
+	SNA_Good_Use_Of_Gold = {
+		inflation_reduction = 0.1
+	}
+	SNA_cowboy_country = {
+		fire_damage = 0.1
+	}
+	SNA_take_what_is_yours = {
+		light_ship_cost = -0.1
+		privateer_efficiency = 0.1
+	}
+	SNA_uniting_the_outlaws = {
+		land_forcelimit_modifier = 0.33
+	}
+	SNA_taking_the_fight_south = {
+		movement_speed = 0.15
+		prestige_from_land = 0.5
+	}
+}
+
+VRM_ideas = {
+	start = {
+		no_religion_penalty = yes
+		stability_cost_modifier = -0.15
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = VRM
+	}
+	free = yes      #will be added at load.
+	VRM_home_of_the_revolution = {
+		land_morale = 0.15
+		max_revolutionary_zeal = 10
+	}
+	VRM_tea_party = {
+		embargo_efficiency = 0.25
+		prestige = 0.5
+	}
+	VRM_American_Frontier = {
+		native_uprising_chance = -0.5
+		native_assimilation = 0.5
+	}
+	VRM_Cheese_wheels = {
+		global_tax_modifier = 0.1
+	}
+	VRM_vermont_constitution = {
+		num_accepted_cultures = 2
+	}
+	VRM_Liberty_is_Life = {
+		liberty_desire_from_subject_development = -0.25
+	}
+	VRM_What_we_do_best = {
+		trade_company_investment_cost = -0.1
+	}
+}
+
 ASU_ideas = {
 	start = {
 		missionaries = 1
@@ -13420,5 +13799,472 @@ CSH_ideas = {
 		horde_unity = 0.5
 		meritocracy = 0.5
 		republican_tradition = 0.2
+	}
+}
+
+NRM_ideas = {
+	start = {
+		leader_land_manuever = 1
+		legitimacy = 1
+	}
+	
+	bonus = {
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	
+	trigger = {
+		tag = NRM
+	}
+	free = yes
+	
+	nrm_norman_conquest = {
+		ae_impact = -0.1
+	}
+	nrm_norman_philosophers = {
+		advisor_cost = -0.1
+	}
+	nrm_channel_islands = {
+		global_tax_modifier = 0.1
+	}
+	nrm_viking_explorers = {
+		range = 0.2
+	}
+	nrm_viking_raids = {
+		privateer_efficiency = 0.15
+	}
+	nrm_naval_invasion = {
+		siege_blockade_progress = 1
+	}
+	nrm_great_commanders = {
+		leader_naval_fire = 1
+	}
+}
+PIS_ideas = {
+	start = {
+		global_trade_power = 0.1
+		defensiveness = 0.10
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		tag = PIS
+	}
+	free = yes
+	pis_restore_the_pisan_navy = {
+		global_ship_recruit_speed = -0.10
+	}
+	pis_the_leaning_tower = {
+		prestige = 1
+	}
+	pis_the_university_of_pisa = {
+		idea_cost = -0.1
+	}
+	pis_urbanization_effort = {
+		development_cost = -0.1
+	}
+	pis_anziani_del_popolo = {
+		republican_tradition = 0.3
+	}
+	pis_maritimes_legacy = {
+		light_ship_cost = -0.10
+		trade_efficiency = 0.05
+	}
+	pis_fund_the_masnada = {
+		global_manpower_modifier = 0.1
+	}
+}
+
+
+EPI_ideas = {
+	start = {
+		merchants = 1
+		tolerance_heretic = 4
+	}
+	
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	
+	trigger = {
+		tag = EPI
+	}
+	free = yes		#will be added at load.
+	
+	epi_pyrrhus = {
+		leader_land_shock = 1
+	}
+	epi_chronicle_of_the_toco = {
+		prestige = 1
+	}
+	epi_serbs_and_albanians = {
+		merc_maintenance_modifier = -0.15
+	}
+	epi_metropolis_of_knowledge = {
+		idea_cost = -0.1
+	}
+	epi_latin_knights = {
+		cavalry_power = 0.15
+	}
+	epi_trade_influences = {
+		global_trade_power = 0.1
+	}
+	epi_unity_in_strength = {
+		discipline = 0.05
+	}
+}
+
+
+LOT_ideas = {
+	start = {
+		infantry_power = 0.1
+		global_manpower_modifier = 0.25
+	}
+	
+	bonus = {
+		ae_impact = -0.1
+	}
+	
+	trigger = {
+		tag = LOT
+	}
+	free = yes		#will be added at load.
+	
+	lot_legacy_of_the_carolingians = {
+		prestige_decay = -0.01
+	}
+	lot_glory_of_charlemagne = {
+		land_morale = 0.15
+	}
+	lot_dutch_cities = {
+		trade_efficiency = 0.1
+	}
+	lot_carolingian_renaissance_II = {
+		idea_cost = -0.1
+	}
+	lot_court_of_europe = {
+		prestige = 0.5
+		advisor_pool = 1
+	}
+	lot_land_of_abbeys = {
+		missionaries = 1
+	}
+	lot_european_empire = {
+		core_creation = -0.2
+	}
+}
+
+FKN_ideas = {
+	start = {
+		ae_impact = -0.1
+		global_manpower_modifier = 0.2
+	}
+	
+	bonus = {
+		discipline = 0.05
+	}
+	
+	trigger = {
+		tag = FKN
+	}
+	free = yes		#will be added at load.
+	
+	fkn_duchy_restored = {
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+	}
+	fkn_main_trading = {
+		trade_efficiency = 0.1
+	}
+	fkn_rugged_land_of_fortresses = {
+		defensiveness = 0.2
+	}
+	fkn_free_knights_of_franconia = {
+		cavalry_power = 0.10
+	}
+	franconian_wine = { #in WBG_ideas
+		#production_efficiency = 0.1
+	}
+	fkn_baroque = {
+		prestige = 1
+	}
+	fkn_franconian_bourgeoisie = {
+		development_cost = -0.05
+		advisor_cost = -0.1
+	}
+}
+
+SOR_ideas = {
+	start = {
+		vassal_income = 0.2
+		tolerance_own = 2
+	}
+	
+	bonus = {
+		global_autonomy = -0.05
+	}
+	
+	trigger = {
+		tag = SOR
+	}
+	free = yes		#will be added at load.
+	
+	sor_zittau_mountains = {
+		hostile_attrition = 1
+	}
+	sor_sale_of_land = {
+		global_tax_modifier = 0.1
+	}
+	sor_lusatian_landtag = {
+		stability_cost_modifier = -0.15
+	}
+	sor_wittelsbach_history = {
+		ae_impact = -0.1
+	}
+	sor_lusatian_league = {
+		state_maintenance_modifier = -0.15
+	}
+	sor_rights_of_all_religions = {
+		tolerance_heretic = 3
+	}
+	sor_political_influences = {
+		num_accepted_cultures = 2
+	}
+}
+
+CLI_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		dip_tech_cost_modifier = -0.1
+	}
+	
+	bonus = {
+		leader_siege = 1
+	}
+	
+	trigger = {
+		tag = CLI
+	}
+	free = yes		#will be added at load.
+	
+	cli_marry_your_daughters = {
+		diplomatic_annexation_cost = -0.15
+	}
+	cli_mercenary_captains = {
+		leader_land_shock = 1
+	}
+	cli_political_manoevring = {
+		diplomats = 1
+	}
+	cli_slovenian_reformation = {
+		idea_cost = -0.1
+	}
+	cli_border_wars = {
+		garrison_size = 0.2
+	}
+	cli_italian_baroque = {
+		advisor_pool = 1
+	}
+	cli_standardised_slovene_language = {
+		stability_cost_modifier = -0.2
+	}
+}
+
+WES_ideas = {
+	start = {
+		diplomats = 1
+		land_forcelimit_modifier = 0.2
+	}
+	bonus = {
+		discipline = 0.05
+	}
+	trigger = {
+		tag = WES
+	}
+	free = yes
+
+	wes_jewish_rights = {
+		idea_cost = -0.1
+	}
+	wes_westphalian_decentralisation  = {
+		state_maintenance_modifier = -0.1
+		development_cost = -0.05
+	}
+	wes_increased_conscription = {
+		global_manpower_modifier = 0.20
+	}
+	wes_administrative_assimilation_of_rheinlanders = {
+		num_accepted_cultures = 1
+		same_culture_advisor_cost = -0.25
+	}
+	wes_taxation = {
+		global_tax_modifier = 0.1
+	}
+	wes_enlightenment = {
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	wes_cities_of_the_rhineland = {
+		global_prov_trade_power_modifier = 0.15
+	}
+}
+
+SWA_ideas = {
+	start = {
+		global_manpower_modifier = 0.2
+		improve_relation_modifier = 0.25
+	}
+	bonus = {
+		land_morale = 0.15
+	}
+	trigger = {
+		tag = SWA
+	}
+	free = yes
+
+	swa_decentralisation = {
+		state_maintenance_modifier = -0.15
+	}
+	fugger_banks = { #from HAB_ideas
+		inflation_reduction = 0.05
+		interest = -0.5
+	}
+	swa_free_cities = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	swa_swabian_league = {
+		diplomatic_upkeep = 1
+	}
+	swa_stinginess = {
+		build_cost = -0.05
+		advisor_cost = -0.1
+	}
+	swa_hohenstaufen_emperors = {
+		prestige = 1
+	}
+	swa_barbarossas_legacy = {
+		ae_impact = -0.15
+	}
+}
+
+TTL_ideas = {
+	start = {
+		discipline = 0.05
+		global_tax_modifier = 0.1
+	}
+	
+	bonus = {
+		infantry_power = 0.15
+	}	
+
+	trigger = {
+		tag = TTL
+	}
+	free = yes
+	
+	ttl_league_system = {
+		diplomatic_upkeep = 1
+	}
+	ttl_gods_house = {
+		tolerance_own = 1
+		global_spy_defence = 0.33
+	}
+	ttl_grey_league = {
+		diplomatic_reputation = 1
+	}
+	ttl_league_of_ten = {
+		land_morale = 0.1
+	}
+	ttl_independent_cities = {
+		build_cost = -0.1
+	}
+	ttl_economic_league = {
+		global_prov_trade_power_modifier = 0.15
+	}
+	ttl_expanding_league = {
+		liberty_desire_from_subject_development = -0.2
+	}
+}
+
+GNV_ideas = {
+	start = {
+		drill_gain_modifier = 0.25
+		global_trade_power = 0.1
+	}
+	
+	bonus = {
+		heavy_ship_power = 0.1
+	}	
+
+	trigger = {
+		tag = GNV
+	}
+	free = yes
+	
+	gnv_grand_council = {
+		development_cost = -0.15
+	}
+	gnv_neutral_grounds = {
+		diplomatic_reputation = 1
+	}
+	gnv_home_of_calvin = {
+		enforce_religion_cost = -0.33
+		monthly_fervor_increase = 1
+	}
+	gnv_spiritual_leader = {
+		tolerance_own = 1
+	}
+	gnv_calvins_laws = {
+		global_missionary_strength = 0.01
+	}
+	gnv_unconquerable_city = {
+		defensiveness = 0.25
+	}
+	gnv_armed_neutrality = {
+		land_morale = 0.1
+	}
+}
+
+ICE_ideas = {
+	start = {
+		may_explore = yes
+		hostile_attrition = 1
+	}
+	
+	bonus = {
+		colonists = 1
+	}	
+
+	trigger = {
+		tag = ICE
+	}
+	free = yes
+	
+	ICE_althingi = {
+		global_unrest = -1
+		reform_progress_growth = 0.15
+	}
+	ICE_hrafna_floki = {
+		global_ship_recruit_speed = -0.2
+	}
+	ICE_christian_identity = {
+		papal_influence = 1
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+		global_missionary_strength = 0.01
+	}
+	ICE_merchant_navy = {
+		light_ship_power = 0.15
+	}
+	ICE_fire_and_ice = {
+		discipline = 0.05
+	}
+	ICE_natural_builders = {
+		build_cost = -0.1
+		development_cost = -0.05
+	}
+	ICE_nationalism = {
+		culture_conversion_cost = -0.2
 	}
 }
