@@ -360,6 +360,51 @@
   
   GEORGIAN_END_CIVIL_WAR_TOOLTIP: "All 8 rebellions have happened, or Georgia no longer owns the rebellious provinces."
   
+ #Mamluk flavor 1.1
+  btc_misc_mamluks.1.t: "The Stagnation of Egypt"
+  btc_misc_mamluks.1.d: "Egypt has for a long time been the epicenter of the Muslim world, particularly following the Mongol destruction of Baghdad. For centuries now under the rule of the Mamluks, Egypt has seen significant prosperity in the past few centuries as well as decisive military defeats of the Abbasids, Mongols and Crusaders, all in the Mamluks' favor. Arts and commerce flowered and Cairo became the second largest city in the Near East, whilst the religious office of the Abbasid Caliphate was kept in Cairo as a way for the Mamluks to legitimaze their own power. By the 15th century however a series of factors led to a steady and prolonged decline of Egypt and the Mamluk Sultanate as a whole. Repeated outbreaks of the plague devastated Cairo and several other major cities, resulting in major population losses all across the sultanate. Increased desertification in Upper Egypt, already in progress for a long time, led to ever growing immigration to the north, leaving the area largely in control of independence-minded Berbers and Bedouins. And while the Mamluks' code of honor still holds the country together like glue, constant infighting between several Mamluk factions, power struggles at the court, subterfuge by disloyal emirs in the Levant and a deep and worsening economic crisis are making the position of the Mamluk Sultanate a very precarious one indeed, with bouts of pure anarchy ensuing in particular during the frequent succession crises. Some now fear that the Mongols, Crusaders, and especially the expanding Turks in the north, will seize the opportunity and come back to finish us off. What is certain is that whoever will be crowned Sultan will have a long and arduous road to try and keep the country in one piece..."
+  btc_misc_mamluks.1.a: "We will endure."
+  
+  btc_mamluk_succession_disaster.1.t: "Contested Succession"
+  btc_mamluk_succession_disaster.1.d: "The newly proclaimed Sultan has met significant opposition among many of the Mamluk factions in the realm, as they portray him as too detached from their interests and that of their allies. Talks between the Sultan and the opposition have broken down, and the rival Mamluk factions have entered an alliance in order to depose the Sultan and replace him with someone more amenable to their own influence. Even though the Sultan can still rely on the support of a good portion of his army, it is clear that this current crisis can dangerously escalate and the Sultan risks joining the ranks of the many Mamluk sultans who managed to rule for only a handful of months before being deposed."
+  btc_mamluk_succession_disaster.1.a: "I am the Sultan."
+  
+  btc_mamluk_succession_disaster.3.t: "Cornered"
+  btc_mamluk_succession_disaster.3.d: "The rebellious mamluks have managed to capture the citadel of [Root.Capital.GetName]! Having overpowered the palace guard, they are now making their way to the Sultan's chambers in order to "settle" the dispute they have with the current government. Whether they plan to kill the Sultan immediately or to imprison and exile him is not known, but either way, things have finally come to a head."
+  btc_mamluk_succession_disaster.3.a: "Plead them to spare you."
+  btc_mamluk_succession_disaster.3.b: "Convince them of the need of your just rule."
+  btc_mamluk_succession_disaster.3.c: "Fiercely argue the surrender terms until reinforcements arrive."
+  btc_mamluk_succession_disaster.3.dd: "Fight them off."
+  btc_mamluk_succession_disaster.3.e: "Pray for salvation."
+  btc_mamluk_succession_disaster.3.f: "Jump out of the window."
+  btc_mamluk_succession_disaster.3.g: "Camouflage yourself as the Court Jester."
+  
+  btc_mamluk_succession_disaster.4.t: "Mamluks Mutiny in [mamluk_mutiny_province.GetName]"
+  btc_mamluk_succession_disaster.4.d: "Upset by delayed salaries, long assignments and perceived lack of respect towards their importance to the realm, a Mamluk contingent in [mamluk_mutiny_province.GetName] has mutinied and began looting the city in order to obtain what they call their unpaid dues. Even though they do not immediately threaten the royal palace they are nonetheless understood as being entirely outside of our control and, until they are brought back in line by force, will undoubtedly cause significant damage to the cities they loot."
+  btc_mamluk_succession_disaster.4.a: "We'll remind them who the masters are, and who the slaves are."
+  
+  btc_mamluk_succession_disaster.5.t: "The Caliph Intervenes"
+  btc_mamluk_succession_disaster.5.d: "The current crisis affecting our government has not escaped the attention of the Abbasid Caliph. Though initially unwilling to involve himself in the rather turbulent affairs of the succession, the current situation has escalated to the point where he has no choice but to issue a proclamation in light of repeated demands by several of the factions involved. His support, or lack thereof, is surely to result in a significant boost in legitimacy to whoever it shall support, as well as a decisive blow to their opponents."
+  btc_mamluk_succession_disaster.5.a: "The Caliph has ruled in our favor!"
+  btc_mamluk_succession_disaster.5.b: "The Caliph has ruled against us!"
+  
+  btc_mamluk_succession_disaster.6.t: "An Underhanded Approach"
+  btc_mamluk_succession_disaster.6.d: "The claimants to the throne are backed by many of the most powerful and rich Mamluk factions in the realm, but it is abundantly clear that for many of them their interest is purely economic rather than dynastic. Because of this, some of them have made no secret of the fact that they are receptive to the idea of switching sides in this struggle, should they be rewarded accordingly for doing so. Our agents have approached some of the backers for one of our major opponents, and for a price, we can likely convince them to switch their position to support our Sultan instead..."
+  btc_mamluk_succession_disaster.6.a: "We'll make them an offer they can't refuse."
+  btc_mamluk_succession_disaster.6.b: "What? No! We'll cut off their heads, and those of their horses too!"
+  
+  btc_mamluk_succession_disaster.7.t: "Big Trouble in Little Levant"
+  btc_mamluk_succession_disaster.7.d: "One of the most prominent claimants, having lost several of his lieutenants in battle, has now taken refuge in the palace of the governor of [little_levant_province.GetName] in the Levant. Many of the region's governors have long been known to wish for much greater autonomy for their provinces, which has resulted in tensions with the leadership in [Root.Capital.GetName]. No doubt the governor hopes that by sheltering and funding the claimant, he and his allies in the Levant hope he will be indebted to them once he becomes the new Sultan. Under our perspective however this attitude is tantamount to treason, and we will act accordingly towards this governor and his puppet claimant."
+  btc_mamluk_succession_disaster.7.a: "Storm the city!"
+  btc_mamluk_succession_disaster.7.b: "Let us cut a deal, so they may hand the claimant over to us."
+  
+  btc_mamluk_succession_disaster.8.t: "End of Succession Dispute"
+  btc_mamluk_succession_disaster.8.d: "As the loyalists of the reigning Sultan have decisively crushed the rebellion, the authority of the Sultan in the country is now firmly established as the various Mamluk factions have begrudgingly agreed to lay down their arms. With their funds depleted, their will to fight exhausted and their backers now assuring us of their loyalty, it looks as if Sultan [Root.Monarch.GetName] will not have to worry about internal unrest for quite some time, but will still have to be careful in the coming years as several groups will not stop resenting his rule, and who knows when and if they'll organize another uprising again..."
+  btc_mamluk_succession_disaster.8.a: "We are in control."
+  
+  btc_mamluk_succession_disaster.9.d: "As anarchy continues to plague parts of the realm, the situation has come to a standstill, as the rebels have repeatedly failed to oust the sultan yet many of them continue to roam freely and loot what they find. The mamluk factions that oppose the Sultan have however largely lost their momentum, as funding has dried up and many of their supporters are tired of the seemingly endless violence. Though they may continue to be a thorn in the Sultan's side for some time, this revolt has its days numbered."
+  btc_mamluk_succession_disaster.9.a: "Things will get better."
+  
   #Misc
   papacy_events.20.t2:0 "[Root.GetName] Follows the Pope's Decree"
   papacy_events.21.t2:0 "[Root.GetName] Disregards the Pope's Decree"

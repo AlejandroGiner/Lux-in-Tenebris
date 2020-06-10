@@ -80,9 +80,9 @@ mamluk_rebels = {
     demands_description = mamluk_rebels_demand
     
     demands_enforced_effect = {
-        #add_country_modifier = {
-        #    name = mamluk_self_rule
-        #    duration = 5475
-        #}
+        add_country_modifier = {
+            name = mamluk_self_rule
+            duration = 5475
+        }
     }
 }
