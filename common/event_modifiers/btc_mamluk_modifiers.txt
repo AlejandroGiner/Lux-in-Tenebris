@@ -1,0 +1,28 @@
+mamluk_self_rule = {
+	discipline = -0.05
+	stability_cost_modifier = 0.2
+	global_unrest = 4
+	global_trade_goods_size_modifier = -0.2
+	fire_damage_received = 0.1
+	shock_damage_received = 0.1
+	reduced_liberty_desire = -20
+	legitimacy = -1
+	global_manpower_modifier = -0.2
+}
+
+btc_strengthened_by_caliph = {
+	legitimacy = 1
+	prestige_decay = -0.02
+}
+
+btc_caliph_ruled_against_us = {
+	legitimacy = -1
+	prestige = -1
+	diplomatic_reputation = -3
+}
+
+btc_mamluk_gave_in_to_levant_governor_demands = {
+	local_autonomy = 0.1
+	local_tax_modifier = -0.5
+	local_manpower_modifier = -0.5
+}

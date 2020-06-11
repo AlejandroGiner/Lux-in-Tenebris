@@ -129,3 +129,29 @@ byz_chariot_race_effect = {
 		}
 	}
 }
+
+mamluk_cornered_scripted_effect = {
+	if = {
+		limit = { has_country_flag = mamluk_cornered_ruler_success }
+		capital_scope = {
+			kill_units = {
+				who = controller
+			}
+			change_controller = ROOT
+		}
+		add_ruler_personality = $TRAIT$
+	}
+	else = {
+		set_country_flag = mamluk_succession_crisis_cornered_happened
+	}
+}
+
+mamluk_roll_cornered_chance_effect = {
+	hidden_effect = {
+		clr_country_flag = mamluk_cornered_ruler_success
+		random = {
+			chance = 25
+			set_country_flag = mamluk_cornered_ruler_success
+		}
+	}
+} 

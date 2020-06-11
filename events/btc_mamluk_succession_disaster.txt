@@ -1,0 +1,449 @@
+namespace = btc_mamluk_succession_disaster
+
+#Disaster Start: Contested Succession
+country_event = {
+	id = btc_mamluk_succession_disaster.1
+	title = btc_mamluk_succession_disaster.1.t
+	desc = btc_mamluk_succession_disaster.1.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		mamluk_roll_cornered_chance_effect = yes
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.1.a
+		add_stability = -1
+		add_legitimacy = -10
+		capital_scope = {
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				area = bahari_area #Lower Egypt
+			}
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+			set_province_flag = mamluk_rebels_here
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { is_capital = yes }
+				area = bahari_area #Lower Egypt
+				NOT = { has_province_flag = mamluk_rebels_here }
+			}
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+		bahari_area = {
+			clr_province_flag = mamluk_rebels_here
+		}
+	}
+}
+
+#Disaster End
+country_event = {
+	id = btc_mamluk_succession_disaster.2
+	title = btc_mamluk_succession_disaster.2.t
+	desc = btc_mamluk_succession_disaster.2.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				had_country_flag = {
+					flag = mamluk_succession_started
+					days = 2555 #7 years
+				}
+			}
+			country_event = {
+				id = btc_mamluk_succession_disaster.9
+			}
+		}
+		else = {
+			country_event = {
+				id = btc_mamluk_succession_disaster.8
+			}
+		}
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.2.a
+	}
+}
+
+#Cornered
+country_event = {
+	id = btc_mamluk_succession_disaster.3
+	title = btc_mamluk_succession_disaster.3.t
+	desc = btc_mamluk_succession_disaster.3.d
+	picture = LIBERUM_VETO_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_mamluk_succession_disaster.3.a
+		mamluk_cornered_scripted_effect = {
+			TRAIT = silver_tongue_personality
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.3.b
+		mamluk_cornered_scripted_effect = {
+			TRAIT = charismatic_negotiator_personality
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.3.c
+		mamluk_cornered_scripted_effect = {
+			TRAIT = fierce_negotiator_personality
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.3.dd
+		mamluk_cornered_scripted_effect = {
+			TRAIT = bold_fighter_personality
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.3.e
+		mamluk_cornered_scripted_effect = {
+			TRAIT = zealot_personality
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.3.f
+		mamluk_cornered_scripted_effect = {
+			TRAIT = drunkard_personality
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.3.g
+		mamluk_cornered_scripted_effect = {
+			TRAIT = babbling_buffoon_personality
+		}
+	}
+}
+
+#Mamluks Mutiny in [province]
+country_event = {
+	id = btc_mamluk_succession_disaster.4
+	title = btc_mamluk_succession_disaster.4.t
+	desc = btc_mamluk_succession_disaster.4.d
+	picture = HORDE_ON_HORSEBACK_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_capital = no
+			OR = {
+				region = egypt_region
+				region = mashriq_region
+				#Iraq
+				area = basra_area
+				area = dhi_qar_area
+				area = iraq_arabi_area
+				area = sanjak_al_dulaim_area
+				area = al_jazira_area
+				area = rakka_area
+			}
+		}
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					is_capital = no
+					OR = {
+						region = egypt_region
+						region = mashriq_region
+						#Iraq
+						area = basra_area
+						area = dhi_qar_area
+						area = iraq_arabi_area
+						area = sanjak_al_dulaim_area
+						area = al_jazira_area
+						area = rakka_area
+					}
+				}
+				save_event_target_as = mamluk_mutiny_province
+			}
+		}
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.4.a
+		event_target:mamluk_mutiny_province = {
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+	}
+	
+}
+
+
+#The Caliph Intervenes
+country_event = {
+	id = btc_mamluk_succession_disaster.5
+	title = btc_mamluk_succession_disaster.5.t
+	desc = btc_mamluk_succession_disaster.5.d
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_global_flag = btc_abbasid_caliphate_abolished }
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.5.a
+		trigger = {}
+		add_legitimacy = 20
+		add_stability_or_adm_power = yes
+		random_owned_province = {
+			limit = {
+				sieged_by = REB
+			}
+			kill_units = {
+				who = enemy
+			}
+		}
+		add_country_modifier = {
+			name = btc_strengthened_by_caliph
+			duration = 1825
+		}
+	}
+	option = {
+		name = btc_mamluk_succession_disaster.5.b
+		trigger = {}
+		add_legitimacy = -20
+		add_stability = -1
+		add_country_modifier = {
+			name = btc_caliph_ruled_against_us
+			duration = 1825
+		}
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				OR = {
+					region = egypt_region
+					region = mashriq_region
+					#Iraq
+					area = basra_area
+					area = dhi_qar_area
+					area = iraq_arabi_area
+					area = sanjak_al_dulaim_area
+					area = al_jazira_area
+					area = rakka_area
+				}
+			}
+			set_province_flag = mamluks_rise_up
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+		random_owned_province = {
+			limit = {
+				NOT = { has_province_flag = mamluks_rise_up }
+				is_capital = no
+				OR = {
+					region = egypt_region
+					region = mashriq_region
+					#Iraq
+					area = basra_area
+					area = dhi_qar_area
+					area = iraq_arabi_area
+					area = sanjak_al_dulaim_area
+					area = al_jazira_area
+					area = rakka_area
+				}
+			}
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+		event_target:mamluks_rose_up_here = {
+			clr_province_flag = mamluks_rise_up
+		}
+	}
+}
+
+#An Underhanded Approach
+country_event = {
+	id = btc_mamluk_succession_disaster.6
+	title = btc_mamluk_succession_disaster.6.t
+	desc = btc_mamluk_succession_disaster.6.d
+	picture = CORRUPTION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			is_capital = no
+			OR = {
+				region = egypt_region
+				region = mashriq_region
+				#Iraq
+				area = basra_area
+				area = dhi_qar_area
+				area = iraq_arabi_area
+				area = sanjak_al_dulaim_area
+				area = al_jazira_area
+				area = rakka_area
+			}
+		}
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.6.a
+		add_years_of_income = -1
+		random_owned_province = {
+			limit = {
+				sieged_by = REB
+			}
+			kill_units = {
+				who = enemy
+			}
+		}
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.6.b
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				OR = {
+					region = egypt_region
+					region = mashriq_region
+					#Iraq
+					area = basra_area
+					area = dhi_qar_area
+					area = iraq_arabi_area
+					area = sanjak_al_dulaim_area
+					area = al_jazira_area
+					area = rakka_area
+				}
+			}
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+	}
+}
+
+#Big Trouble in Little Levant
+country_event = {
+	id = btc_mamluk_succession_disaster.7
+	title = btc_mamluk_succession_disaster.7.t
+	desc = btc_mamluk_succession_disaster.7.d
+	picture = REFUGEES_ESCAPING_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		any_owned_province = {
+			region = mashriq_region
+		}
+		capital_scope = { NOT = { region = mashriq_region } }
+		NOT = { war_with = TUR }
+		# TODO levantine independence disaster has not fired
+		# NOT = { has_country_flag = levantine_independence_happened }
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					region = mashriq_region
+				}
+				save_event_target_as = little_levant_province
+			}
+		}
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.7.a
+		event_target:little_levant_province = {
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+			spawn_rebels = {
+				type = mamluk_rebels
+				size = 1
+			}
+		}
+	}
+	
+	option = {
+		name = btc_mamluk_succession_disaster.7.b
+		add_adm_power = -50
+		add_years_of_income = -1
+		event_target:little_levant_province = {
+			area = {
+				add_province_modifier = {
+					name = btc_mamluk_gave_in_to_levant_governor_demands
+					duration = 5475
+				}
+			}
+		}
+	}
+	
+}
+
+#End of Succession Dispute // We are in control
+country_event = {
+	id = btc_mamluk_succession_disaster.8
+	title = btc_mamluk_succession_disaster.8.t
+	desc = btc_mamluk_succession_disaster.8.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_mamluk_succession_disaster.8.a
+		add_stability_or_adm_power = yes
+		add_prestige = 5
+		add_legitimacy = 20
+	}
+}
+
+#End of Succession Dispute // Things will get better
+country_event = {
+	id = btc_mamluk_succession_disaster.9
+	title = btc_mamluk_succession_disaster.8.t
+	desc = btc_mamluk_succession_disaster.9.d
+	picture = WOUNDED_SOLDIERS_eventPicture
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_mamluk_succession_disaster.9.a
+		add_prestige = 5
+	}
+}
