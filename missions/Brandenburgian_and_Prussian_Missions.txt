@@ -187,16 +187,16 @@ prussian_missions_main_slot = {
 			}
 			else_if = {
 				limit = {
-					exists = JUL
+					exists = BRG
 					is_subject = no
-					JUL = {
+					BRG = {
 						is_subject = no
 					}
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
 					months = 300
-					target = JUL
+					target = BRG
 				}
 			}
 			else = {
