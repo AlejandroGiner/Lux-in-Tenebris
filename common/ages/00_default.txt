@@ -6,6 +6,7 @@ age_of_discovery = {
 	}
 	
 	religious_conflicts = yes
+    papacy = 1.0
 	
 
 	objectives = {
@@ -245,6 +246,7 @@ age_of_reformation = {
 	
 	
 	religious_conflicts = yes
+    papacy = 1.25
 	
 	objectives = {
 		obj_christian_convert = {
@@ -252,6 +254,7 @@ age_of_reformation = {
 				religion = protestant
 				religion = reformed
 				religion = anglican
+                religion = hussite
 			}
 		}
 		
@@ -451,6 +454,7 @@ age_of_absolutism = {
 		is_institution_enabled = global_trade
 	}
 	
+    papacy = 1.5
 	
 	absolutism = {
 		harsh_treatment = 1
@@ -645,6 +649,7 @@ age_of_revolutions = {
 		is_institution_enabled = enlightenment
 	}
 	
+    papacy = 2.0
 	absolutism = {
 		harsh_treatment = 1
 		stability = 1
@@ -813,7 +818,7 @@ age_of_revolutions = {
 				tag = RUS
 			}
 			modifier = {
-				max_states = 20
+				governing_capacity_modifier = 0.33
 			}
 			ai_will_do = {
 				factor = 100
