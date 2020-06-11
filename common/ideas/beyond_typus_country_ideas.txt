@@ -106,7 +106,7 @@ TNA_ideas = {
 		prestige_from_land = 0.5
 	}
 	tirnangael_gall_oglaigh = {
-		possible_mercenaries = 0.25
+		mercenary_manpower = 0.25
 		mercenary_discipline = 0.05
 	}
 	tirnangael_explorers_legacy = {
@@ -1637,7 +1637,7 @@ ISF_ideas = {
 		num_accepted_cultures = 2
 	}
 	ISF_idea6 = {
-		possible_mercenaries = 0.3
+		mercenary_manpower = 0.3
 	}
 	ISF_idea7 = {
 		prestige = 1
@@ -5034,7 +5034,7 @@ IBE_ideas = {
 	}
 	free = yes
 	iberian_global_empire = {
-		max_states = 5
+		governing_capacity_modifier = 0.15
 	}
 	spirit_of_sailors = {
 		naval_forcelimit_modifier = 0.25
