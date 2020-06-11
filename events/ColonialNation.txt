@@ -942,7 +942,7 @@ country_event = {
 			}
 		}
 		change_government = monarchy
-		set_legacy_government = administrative_monarchy
+		#set_legacy_government = administrative_monarchy
 		kill_ruler = yes
 	}
 	option = {
@@ -957,7 +957,7 @@ country_event = {
 			}
 		}
 		remove_government_reform = colonial_government
-		set_legacy_government = administrative_republic
+		#set_legacy_government = administrative_republic
 		kill_ruler = yes
 	}
 }

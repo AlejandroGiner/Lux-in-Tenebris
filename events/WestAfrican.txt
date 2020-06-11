@@ -118,8 +118,8 @@ country_event = {
 		name = "west_african.3.a"
 		if = {
 			limit = { government = tribal }
-			change_government = monarchy
-			set_legacy_government = despotic_monarchy
+			change_government_to_monarchy = yes
+			#set_legacy_government = despotic_monarchy
 		}
 		if = {
 			limit = {
@@ -403,6 +403,7 @@ province_event = {
 		has_missionary = yes
 		religion = shamanism
 		owner = { religion_group = christian }
+        owner = { NOT = { has_country_modifier = animist_syncretism } }
 	}
 
 	mean_time_to_happen = {
@@ -495,6 +496,7 @@ province_event = {
 		has_missionary = yes
 		religion = shamanism
 		owner = { religion_group = muslim }
+        owner = { NOT = { has_country_modifier = animist_syncretism } }
 	}
 
 	mean_time_to_happen = {
@@ -1011,18 +1013,18 @@ country_event = {
 	option = {
 		name = "west_african.21.a"
 		ai_chance = { factor = 75 }
-		declare_war_with_cb = {
-			who = FROM
-			casus_belli = cb_insult
+        
+		add_casus_belli = {
+			target = FROM
+			type = cb_insult
+			months = 24
 		}
 	}
-
 	# Give up the Golden Stool
 	option = {
 		name = "west_african.21.b"
 		ai_chance = { factor = 25 }
 		add_prestige = -10
-		add_stability = -1
 	}
 }
 
@@ -1154,8 +1156,15 @@ country_event = {
 			any_empty_neighbor_province = {
 				has_climate = tropical
 			}
-		}
-	}
+        }
+        manpower = 3
+        monthly_income = 5
+        NOT = { num_of_loans = 5 }
+        OR = {
+            years_of_income = 1
+            is_in_deficit = no
+        }
+    }
 
 	mean_time_to_happen = {
 		months = 1200
@@ -1177,6 +1186,17 @@ country_event = {
 				add_province_modifier = {
 					name = "used_to_tropical"
 					duration = -1
+				}
+			}
+		}
+        ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				OR = {
+					is_in_deficit = yes
+					num_of_loans = 1
+					NOT = { monthly_income = 10 }
 				}
 			}
 		}
