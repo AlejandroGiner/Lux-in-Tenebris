@@ -207,9 +207,7 @@ council_of_the_indies_reform = {
 	}
 }
 
-# for England
-
-penal_transportation_reform = {
+penal_colonies_reform = {
 	icon = "merchant_ship"
 	allow_normal_conversion = yes
 	potential = {
@@ -232,7 +230,7 @@ penal_transportation_reform = {
 		expel_minorities_cost = -0.3
 		global_unrest = -1
 	}
-    ai = {
+	ai = {
 		factor = 0.1
 	}
 }

@@ -722,7 +722,7 @@ country_decisions = {
 	reduce_exarch_autonomy = {
 		major = yes
 		potential = {
-			has_idea_group = new_BYZ_ideas #Because this caused issues with custom nations.
+			has_idea_group = BYZ_ideas #Because this caused issues with custom nations.
 			is_byz_or_hellenic_rome_trigger = yes
 			has_country_modifier = the_exarch_system
 			NOT = { has_country_flag = revoked_exarch_autonomy }
@@ -922,7 +922,7 @@ country_decisions = {
 	#Capital move.
 	byz_move_capital_to_rome = {
 		potential = {
-			has_idea_group = new_BYZ_ideas #Because this caused issues with custom nations.
+			has_idea_group = BYZ_ideas #Because this caused issues with custom nations.
 			normal_or_historical_nations = yes
 			is_byz_or_hellenic_rome_trigger = yes
 			owns = 118 #Rome
