@@ -75,6 +75,7 @@ despotic_monarchy = {
 	nation_designer_cost = 0
 	monarchy = yes
 	modifiers = {
+        governing_capacity = 50
 		global_unrest = -1
 		unjustified_demands = -0.1
 		max_absolutism = 5
@@ -259,6 +260,7 @@ constitutional_monarchy = {
 			has_idea_group = innovativeness_ideas
 		}
 	}
+    
     custom_attributes = {
 		blocked_call_diet = yes
 	}
@@ -302,7 +304,6 @@ holy_state_legacy = {
 		global_autonomy = -0.2
 	}
 }
-
 
 revolutionary_empire = {
 	# government mechanics flags go here
@@ -353,6 +354,7 @@ revolutionary_empire = {
 			}
 		}
 	}
+    
 	ai = {
 		factor = 0
 	}
@@ -888,10 +890,10 @@ noble_republic = {
 
 	monarchy = yes
 	modifiers = {
+        governing_capacity = 100
 		tolerance_heretic = 1
 		land_morale = 0.1
 		max_absolutism = -40
-        governing_capacity = 100
 	}
 
 	ai = {
@@ -1125,7 +1127,6 @@ revolutionary_republic = {
 			rr_girondists
 		}
 	}
-    
     removed_effect = {
 		hidden_effect = {
 			if = {
@@ -1160,6 +1161,7 @@ revolutionary_republic = {
 			}
 		}
 	}
+
 
 	ai = {
 		factor = 0
@@ -1243,6 +1245,8 @@ monastic_order_government = {
 
 	royal_marriage = no
 
+    rulers_can_be_generals = yes
+    
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 
@@ -1418,6 +1422,7 @@ tribal_despotism_legacy = {
 
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+
 
 	monarchy = yes
 	modifiers = {

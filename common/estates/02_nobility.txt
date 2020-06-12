@@ -49,6 +49,7 @@ estate_nobles =
 			}
 			has_parliament = no
 		}
+        NOT = { has_reform = revolutionary_empire_reform }
 	}
 
 	country_modifier_happy = {
@@ -64,7 +65,6 @@ estate_nobles =
 		land_maintenance_modifier = 0.1
         global_unrest = 2
 	}
-	
     land_ownership_modifier = {
 		nobles_loyalty_modifier = 0.2
 	}
@@ -120,7 +120,7 @@ estate_nobles =
 			has_country_modifier = br_theme_system
 		}
 		influence = -10
-	}		
+	}
 	influence_modifier = {
 		desc = EST_VAL_ESTABLISHED_PRONOIAR
 		trigger = {
@@ -164,7 +164,16 @@ estate_nobles =
 		}
 		loyalty = -20
 	}
-    
+    loyalty_modifier = {
+		desc = EST_VAL_NOBLE_CONSORT
+		trigger = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+			is_origin_of_consort = ROOT
+
+		}
+		loyalty = 5
+	}
 	loyalty_modifier = {
 		desc = EST_VAL_NOBLES_OF_THE_ROBE_LOY   #might not work
 		trigger = {
