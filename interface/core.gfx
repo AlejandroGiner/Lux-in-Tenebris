@@ -144,6 +144,10 @@ spriteTypes = {
 		name = "GFX_icon_font_province"
 		texturefile = "gfx//interface//icon_province_font.tga"
 	}
+    spriteType = {
+		name = "GFX_icon_font_governing_capacity"
+		texturefile = "gfx//interface//icon_font_governing_capacity.dds"
+	}
 	spriteType = {
 		name = "GFX_alliance_leader"
 		texturefile = "gfx//interface//alliance_leader.tga"
@@ -226,7 +230,12 @@ spriteTypes = {
 		borderSize = { x=1 y=1 }
 	}
 
-	
+	corneredTileSpriteType = {
+		name = "gfx__message_selection_frame"
+		size= {x=39 y=39 }
+		textureFile ="gfx//interface//selection.dds"
+		borderSize = { x=8 y=8 }
+	}
 	
 	spriteType = {
 		name = "default_cursor"
@@ -295,15 +304,11 @@ spriteTypes = {
 	textSpriteType = {
 		name = "mini_button"
 		texturefile = "gfx//interface//minibutton.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
 	spriteType = {
 		name = "button_left"
 		texturefile = "gfx//interface//button_left.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 	}
 
@@ -325,8 +330,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "button_type_1"
 		texturefile = "gfx//interface//button_type_1.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 		clicksound = click
 	}
@@ -350,8 +353,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "button_type_6"
 		texturefile = "gfx//interface//button_type_6.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 		clicksound = click
 	}
@@ -359,8 +360,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "button_type_7"
 		texturefile = "gfx//interface//button_type_7.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 		clicksound = click
 	}
@@ -368,8 +367,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "button_type_8"
 		texturefile = "gfx//interface//button_type_8.dds"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 		clicksound = click
 	}	
@@ -377,8 +374,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "button_type_9"
 		texturefile = "gfx//interface//button_type_9.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 		clicksound = click
 	}
@@ -386,8 +381,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "button_type_4"
 		texturefile = "gfx//interface//button_type_4.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 		
 		clicksound = click
 	}
@@ -565,6 +558,12 @@ bitmapfonts = {
 		path = "gfx/fonts/tahoma_20_bold"
 		color = 0xff7799ff
 		border_color = 0xe0000000
+	}
+    
+    bitmapfont = {
+		name = "chat_largefont"
+		path = "gfx/fonts/tahoma_20_bold"
+		color = 0xffffffff
 	}
 	
 	bitmapfont = {
