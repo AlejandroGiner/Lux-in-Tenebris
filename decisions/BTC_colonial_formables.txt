@@ -148,10 +148,10 @@ country_decisions = {
 				colonial_region = colonial_alaska
 				is_core = ROOT
 			}
-			NOT = { exists = ALK }
+			NOT = { exists = ALA }
 		}
 		effect = {
-			change_tag = ALK
+			change_tag = ALA
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -164,7 +164,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = ALK
+				add_permanent_claim = ALA
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

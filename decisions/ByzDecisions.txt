@@ -27,7 +27,7 @@ country_decisions = {
 			NOT = { has_country_flag = established_march_alania }
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			NOT = { exists = ALA }
+			NOT = { exists = ALN }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -78,11 +78,11 @@ country_decisions = {
 						}
 						remove_core = ROOT
 					}
-					add_core = ALA
+					add_core = ALN
 				}
-				release = ALA
+				release = ALN
 				hidden_effect = { #Because this caused issues with government names???
-					ALA = {
+					ALN = {
 						change_government = monarchy
 					}
 				}
@@ -99,22 +99,22 @@ country_decisions = {
 				}
 				2201 = {
 					owner = {
-						change_tag = ALA
+						change_tag = ALN
 						swap_ideas = yes
 					}
 				}
 			}
 			#Claims
-			circassia_area = { add_permanent_claim = ALA }
-			dagestan_area = { add_permanent_claim = ALA }
-			astrakhan_area = { add_permanent_claim = ALA }
-			alania_area = { add_permanent_claim = ALA }
-			avaria_area = { add_permanent_claim = ALA }
-			kabardia_area = { add_permanent_claim = ALA }
-			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 } } add_permanent_claim = ALA }
-			circassia_area = { limit = { NOT = { province_id = 2447 } } add_permanent_claim = ALA }
+			circassia_area = { add_permanent_claim = ALN }
+			dagestan_area = { add_permanent_claim = ALN }
+			astrakhan_area = { add_permanent_claim = ALN }
+			alania_area = { add_permanent_claim = ALN }
+			avaria_area = { add_permanent_claim = ALN }
+			kabardia_area = { add_permanent_claim = ALN }
+			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 } } add_permanent_claim = ALN }
+			circassia_area = { limit = { NOT = { province_id = 2447 } } add_permanent_claim = ALN }
 			#Marshy March
-			create_march = ALA
+			create_march = ALN
 			set_country_flag = established_march_alania
 		}
 		ai_will_do = {
