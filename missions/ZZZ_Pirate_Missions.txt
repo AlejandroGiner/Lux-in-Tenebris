@@ -1,3 +1,5 @@
+#Always make sure this file is the last one in the list or there will be issues.
+
 
 # Pirate 1 - Trade & Piracy
 pirate_1 = {
@@ -348,6 +350,7 @@ pirate_2 = {
 		provinces_to_highlight = {
 			trade_goods = gold
 			has_discovered = ROOT
+            NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
@@ -435,14 +438,17 @@ pirate_3 = {
 
 		trigger = {
 			any_rival_country = {
-				OR = {
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = insulted
-					}
-					has_opinion_modifier = {
-						who = ROOT
-						modifier = scornfully_insulted
+				custom_trigger_tooltip = {
+					tooltip = has_been_insulted_by_root
+					OR = {
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = insulted
+						}
+						has_opinion_modifier = {
+							who = ROOT
+							modifier = scornfully_insulted
+						}
 					}
 				}
 			}

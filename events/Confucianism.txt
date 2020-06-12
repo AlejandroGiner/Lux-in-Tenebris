@@ -678,6 +678,13 @@ country_event = {
 					}
 				}
 				save_event_target_as = harmonization_province
+                ROOT = {
+					set_saved_name = {
+						key = local_influential_person
+						type = advisor
+						scope = prev
+					}
+				}
 			}
 		}
 	}
@@ -709,6 +716,11 @@ country_event = {
 				}
 				add_local_autonomy = -25
 			}
+		}
+	}
+    after = {
+		hidden_effect = {
+			clear_saved_name = local_influential_person
 		}
 	}
 }
@@ -792,6 +804,9 @@ country_event = {
 		NOT = {
 			heir_has_personality = just_personality
 		}
+        NOT = {
+			heir_has_personality = humane_personality
+		}
 	}
 	
 	immediate = {
@@ -837,6 +852,13 @@ country_event = {
 	}
 	option = {
 		name = "confucian_events.18.b"
+        if = {
+			limit = {
+				NOT = { heir_has_personality = petty_personality }
+				NOT = { heir_age = 45 }
+			}
+			add_heir_personality = petty_personality
+		}
 		add_harmony = -10
 		add_dip_power = 30
 		add_adm_power = 30

@@ -11,6 +11,25 @@ hun_north_group = {
 		icon = mission_alliances
 		required_missions = {  }
 		position = 1
+        
+        provinces_to_highlight = {
+			OR = {
+				owned_by = POL
+				AND = {
+					NOT = { exists = POL }
+					region = poland_region
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 6
+								region = poland_region
+							}
+						}
+					}
+				}
+			}
+		}
+        
 		trigger = {
             if = {
                 limit = {

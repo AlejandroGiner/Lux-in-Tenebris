@@ -3,7 +3,18 @@ country_event = {
 	id = 2001
 	title = "EVTNAME2001"
 	desc = "EVTDESC2001"
-	picture = RELIGION_eventPicture
+	picture = {	
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = LUTHER_eventPicture
+	}
+	picture = {	
+		trigger = {
+			NOT = { has_dlc = "Emperor" }
+		}
+		picture = RELIGION_eventPicture
+	}
 	
 	major = yes
 	
@@ -24,7 +35,7 @@ country_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2500
+		months = 4000
 		
 		#Some new BT controls to finally get ahold of when the Reformation hits... bit heavy handed, but what can you do? Especially now that ages are controled by it.
 		modifier = {
@@ -84,6 +95,7 @@ country_event = {
 			factor = 0.75
 			NOT = { num_of_cities = 2 }
 		}
+        
 		modifier = {
 			factor = 0.75
 			has_idea_group = innovativeness_ideas
@@ -92,6 +104,7 @@ country_event = {
 			factor = 1.25
 			has_idea_group = religious_ideas
 		}
+        
 		modifier = {
 			factor = 0.95
 			NOT = { has_opinion = { who = PAP value = -50 } }
@@ -105,12 +118,28 @@ country_event = {
 			NOT = { has_opinion = { who = PAP value = -150 } }
 		}		
 		modifier = {
-			factor = 0.5
-			num_of_rebel_controlled_provinces = 1
-		}
-		modifier = {
 			factor = 2.0
 			government = theocracy
+		}
+        modifier = {
+			factor = 8.0
+			OR = {
+				NOT = { exists = PAP }
+				PAP = { is_part_of_hre = no }
+			}
+			OR = {
+				culture_group = latin
+				culture_group = iberian
+			}
+		}
+        modifier = {
+			factor = 0.75
+			PAP = { is_part_of_hre = yes }
+			is_part_of_hre = no
+			OR = {
+				culture_group = latin
+				culture_group = iberian
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -183,6 +212,22 @@ country_event = {
 			}
 		}
 		set_country_flag = "protestant_reformation" 
+        hidden_effect = {
+			set_global_flag = reformation_started
+			if = {
+				limit = {
+					BOH = {
+						religion = hussite
+					}
+				}
+				BOH = {
+					country_event = {
+						id = flavor_boh.7
+						days = 10
+					}
+				}
+			}
+		}
 	}
 	
 	option = {
