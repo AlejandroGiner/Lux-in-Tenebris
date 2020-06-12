@@ -99,35 +99,6 @@ estate_nobles =
 		}	
 		influence = 5
 	}
-	influence_modifier = {
-		desc = EST_VAL_IBERIAN_CORTES
-		trigger = {
-			has_reform = iberian_cortes
-		}
-		influence = 10
-	}
-	#Byz Resurgence added: Establishing the Theme System should remove some influence of the Dynatoi, as they only really became influentual in the Empire post-themes.
-	influence_modifier = {
-		desc = EST_VAL_ESTABLISHED_THEME_SYSTEM
-		trigger = {
-			has_reform = theme_system_reform
-		}
-		influence = -10
-	}
-	influence_modifier = { #Non-dharma version. Split up simply because it would not show up in the reform tooltip otherwise.
-		desc = EST_VAL_ESTABLISHED_THEME_SYSTEM
-		trigger = {
-			has_country_modifier = br_theme_system
-		}
-		influence = -10
-	}
-	influence_modifier = {
-		desc = EST_VAL_ESTABLISHED_PRONOIAR
-		trigger = {
-			has_reform = pronoiar_reform
-		}
-		influence = -10
-	}
 	
 	# Influence modifiers from Events:
 	influence_modifier = {
@@ -170,17 +141,9 @@ estate_nobles =
 			has_dlc = "Rights of Man"
 			has_consort = yes
 			is_origin_of_consort = ROOT
-
 		}
 		loyalty = 5
-	}
-	loyalty_modifier = {
-		desc = EST_VAL_NOBLES_OF_THE_ROBE_LOY   #might not work
-		trigger = {
-			has_idea = kutnohorian_deal
-		}
-		loyalty = 5
-	}
+    }
     
     # Great Peasants' War Modifiers
 	
@@ -256,15 +219,6 @@ estate_nobles =
 		loyalty = -10
 	}
     
-	#BR added loyalty modifiers from reforms
-	loyalty_modifier = {
-		desc = EST_VAL_PRONOIAR
-		trigger = {
-			has_reform = pronoiar_reform
-		}
-		loyalty = -20
-	}
-	
 	#Alternative naming of estates
 	custom_name = {
 		desc = estate_beys
