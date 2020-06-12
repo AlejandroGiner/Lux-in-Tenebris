@@ -473,7 +473,7 @@ ICE_ideas = {
 	}
 }
 
-TSI_ideas = {
+TTS_ideas = {
 	start = {
 		merchants = 2
 		global_tax_modifier = 0.10
@@ -484,30 +484,30 @@ TSI_ideas = {
 	}
 
 	trigger = {
-		tag = TSI
+		tag = TTS
 	}
 	free = yes		# will be added at load
 	
-	TSI_idea1 = {
+	TTS_idea1 = {
 		global_unrest = -2
 	}
-	TSI_idea2 = {
-		ship_power_propagation = 0.5
+	TTS_idea2 = {
+		ship_power_propagation = 0.3
 		light_ship_cost = -0.15
 	}
-	TSI_idea3 = {
+	TTS_idea3 = {
 		land_morale = 0.15
 	}
-	TSI_idea4 = {
+	TTS_idea4 = {
 		development_cost = -0.1
 	}
-	TSI_idea5 = {
-		galley_power = 0.3
+	TTS_idea5 = {
+		galley_power = 0.2
 	}
-	TSI_idea6 = {
+	TTS_idea6 = {
 		navy_tradition_decay = -0.02
 	}
-	TSI_idea7 = {
+	TTS_idea7 = {
 		province_warscore_cost = -0.15
 	}
 }
@@ -856,7 +856,7 @@ LUS_ideas = {
 	}
 	
 	trigger = {
-		tag = LUS
+		tag = SOR
 	}
 	free = yes
 	
@@ -4866,7 +4866,7 @@ BRA_ideas = {
     trigger = {
 		OR = {
 			tag = BRA
-			tag = RPN
+			tag = RUP
 			tag = STR
 		}
 	}

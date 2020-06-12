@@ -1305,24 +1305,24 @@ country_decisions = {
 			BAV = { exists = no }
 			is_nomad = no
 			OR = {
-				tag = BV1
-				tag = BV2
-				tag = BV3
+				tag = UBV
+				tag = LBV
+				tag = ING
 			}
 		}
 		allow = {
 			is_at_war = no
 			if = {
-				limit = { NOT = { tag = BV1 } }
-				BV1 = { exists = no }
+				limit = { NOT = { tag = UBV } }
+				UBV = { exists = no }
 			}
 			if = {
-				limit = { NOT = { tag = BV2 } }
-				BV2 = { exists = no }
+				limit = { NOT = { tag = LBV } }
+				LBV = { exists = no }
 			}
 			if = {
-				limit = { NOT = { tag = BV3 } }
-				BV3 = { exists = no }
+				limit = { NOT = { tag = ING } }
+				ING = { exists = no }
 			}
 		}
 		effect = {
@@ -1330,10 +1330,10 @@ country_decisions = {
 			custom_tooltip = bav_lose_cores_tooltip
 			hidden_effect = {
 				every_province = {
-						limit = { OR = { is_core = BV1 is_core = BV2 is_core = BV3 } }
-						remove_core = BV1
-						remove_core = BV2
-						remove_core = BV3
+						limit = { OR = { is_core = UBV is_core = LBV is_core = ING } }
+						remove_core = UBV
+						remove_core = LBV
+						remove_core = ING
 				}
 			}
 			add_country_modifier = {
@@ -1372,8 +1372,8 @@ country_decisions = {
 			}
 			OR = {
 				#Tags which we want to see the decision by default
-				tag = WLG
-				tag = STT
+				tag = WOL
+				tag = STE
 				tag = STP
 				tag = KMI
 				AND = {
@@ -1411,27 +1411,27 @@ country_decisions = {
 					tooltip = bt_sole_pomeranian_duchy_tooltip
 					OR = {
 						AND = {
-							tag = WLG
-							NOT = { exists = STT }
+							tag = WOL
+							NOT = { exists = STE }
 							NOT = { exists = STP }
 						}
 						AND = {
-							tag = STT
-							NOT = { exists = WLG }
+							tag = STE
+							NOT = { exists = WOL }
 							NOT = { exists = STP }
 						}
 						AND = {
 							tag = STP
-							NOT = { exists = WLG }
-							NOT = { exists = STT }
+							NOT = { exists = WOL }
+							NOT = { exists = STE }
 						}
 					}
 				}
 				AND  = {
 					custom_trigger_tooltip = {
 						tooltip = bt_no_other_surviving_pomeranian_minors
-						NOT = { exists = WLG }
-						NOT = { exists = STT }
+						NOT = { exists = WOL }
+						NOT = { exists = STE }
 						NOT = { exists = STP }
 					}
 					custom_trigger_tooltip = {
@@ -1477,17 +1477,17 @@ country_decisions = {
 				every_province = {
 					limit = {
 						continent = europe
-						is_core = WLG
+						is_core = WOL
 					}
-					remove_core = WLG
+					remove_core = WOL
 					add_core = POM
 				}
 				every_province = {
 					limit = {
 						continent = europe
-						is_core = STT
+						is_core = STE
 					}
-					remove_core = STT
+					remove_core = STE
 					add_core = POM
 				}
 				every_province = {

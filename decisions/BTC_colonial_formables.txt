@@ -1258,10 +1258,10 @@ florida_nation = {
 				colonial_region = colonial_the_carribean
 				is_core = ROOT
 			}
-			NOT = { exists = WIE }
+			NOT = { exists = WSI }
 		}
 		effect = {
-			change_tag = WIE
+			change_tag = WSI
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -1274,7 +1274,7 @@ florida_nation = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = WIE
+				add_permanent_claim = WSI
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

@@ -2,9 +2,8 @@
 
 graphical_culture = asiangfx
 
-color = { 200  200  200 }
-
-revolutionary_colors = { 10 9 10 }
+color = { 144  121  173 }
+revolutionary_colors = { 1 0 1 }
 
 historical_idea_groups = {
 	offensive_ideas
@@ -35,28 +34,21 @@ historical_units = {
 	rangaku_riflemen
 }
 
-monarch_names = {
-    "Tomomune #0" = 30
-	"Tomofusa #0" = 30
-	"Norisada #0" = 50
-	"Norishige #0" = 50
-	"Noritaka #0" = 50
-	"Norimoto #0" = 50	
-	"Noriaki #0" = 50	
-	"Yorishige #0" = 30	
+monarch_names = { 
+	"Toshiie #0" = 50	
+	"Toshinaga #0" = 50	
+	"Toshitsune #0" = 50	
+	"Mitsutaka #0" = 50	
+	"Tsunanori #0" = 50
 	"Yoshinori #0" = 50
-	"Shigefusa #0" = 30
-	"Noriharu #0" = 50
-	"Norikata #0" = 50
-	"Norizane #0" = 50
-	"Norifusa #0" = 50
-	"Norimasa #0" = 50
-    "Norihiro #0" = 50
-	"Norifuji #0" = 50
-	"Norikuni #0" = 50
-	"Terutora #0" = 10	
-	"Kagetora #0" = 10	
-	"Sadakatsu #0" = 10
+	"Munetoki #0" = 50
+	"Shigehiro #0" = 50
+	"Shigenobu #0" = 50
+	"Shigemichi #0" = 50	
+	"Harunaga #0" = 50	
+	"Narinaga #0" = 50	
+	"Nariyasu #0" = 50	
+	"Yoshiyasu #0" = 50
 	"Toku #0" = -5
 	"Sen #0" = -5
 	"Tama #0" = -5
@@ -71,23 +63,17 @@ leader_names = {
 	Matsunaga Mimura Miyoshi Mogami Mori Nabeshima Nagao Oda Ogasawara Otomo Ouchi
 	Ryuzoji Sagara Saito Sanada Satake Satomi Shiba Shibata Shimazu Shoni Takeda Toki
 	Tokugawa Matsudaira Toyotomi Tsutsui Uesugi Uragami Yamana Yamauchi
-	# Uesugi Flavor
-	Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi
-	Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi Uesugi
-	# Retainers of the Uesugi clan
-	Nagano Nagano Nagano Nagano Nagano Kamiizumi Kamiizumi Kamiizumi Kamiizumi Kamiizumi
-	Nagao Nagao Nagao Nagao Nagao Fujita Fujita Fujita Fujita Fujita
-	Ota Ota Ota Ota Ota Ueda Ueda Ueda Ueda Ueda
-	Miura Miura Miura Miura Miura Omori Omori Omori Omori Omori
-	Chiba Chiba Chiba Chiba Chiba Soga Soga Soga Soga Soga
-	# Region Flavor: Kanto
-	Nasu Otawara Utsunomiya Oyama Haga Sano Naganuma Okamoto
-	Yuki Satake Edo Daijo Kashima Tagaya Oda Kasama Makabe Oguri
-	Nagano Obata Numata Wada Nitta Yura Yokose Watase Annaka Kamiizumi
-	Nagao Akai Kiryu Chiba Satomi Takeda Masaki Sakai Unakami
-	Hara Aihara Anzai Osuka Soma Kira Narita Ota Oishi Toyama Edo Toshima
-	Kawagoe Kaneko Fujita Okabe Uesugi Ashikaga Hojo Miura
-	Omori Katsurayama Itabeoka Soga Kajiwara Daidoji Shimizu
+	# Maeda Flavor
+	Maeda Maeda Maeda Maeda Maeda Maeda Maeda Maeda Maeda Maeda
+	Maeda Maeda Maeda Maeda Maeda Maeda Maeda Maeda Maeda Maeda
+	# Region Flavor:Tokai-Chubu
+	Toki Toyama Endo Saito Ujiie Inaba Ando Fuwa Akechi Takenaka Hineno
+	Aoki Sengoku Anekoji Ema Miki Kanamori Imagawa Amano Asahina Okabe Iio Hamana
+	Sekiguchi Sena Fuji Matsushita Ii Katsurayama Abe Kira Tokugawa Matsudaira Udono Okudaira
+	Suganuma Toda Natsume Ishikawa Hattori Torii Naito Okubo Honda
+	Hiraiwa Sakai Sakakibara Itakura Ina Shiba Niki Oda Mizuno Saji Ikeda
+	Shibata Niwa Takigawa Kinoshita Maeda Sassa Sakuma Hirate Hayashi
+	Hachisuka Kato Asano Ikoma Horio Fukushima Maeda
 }
 
 ship_names = {
@@ -107,9 +93,9 @@ ship_names = {
 }
 
 army_names = {
-	"Uesugi Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
+	"Maeda Gun" "$PROVINCE$ Gun" "$PROVINCE$ Zei" "$PROVINCE$ Dan"
 }
 
 fleet_names = {
-	"Uesugi Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "$PROVINCE$ Tai"
+	"Maeda Suigun" "$PROVINCE$ Suigun" "$PROVINCE$ Sendan" "$PROVINCE$ Tai"
 }

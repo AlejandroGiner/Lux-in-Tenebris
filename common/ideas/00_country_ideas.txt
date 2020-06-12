@@ -761,10 +761,10 @@ BAV_ideas = {
 	
 	trigger = {
 		OR = {
-		tag = BAV
-		tag = BV1
-		tag = BV2
-		tag = BV3 
+			tag = BAV
+			tag = ING
+			tag = LBV
+			tag = UBV 
 		}
 	}
 	free = yes
@@ -5252,9 +5252,9 @@ POM_ideas = {
 	trigger = {
 		OR = {
 			tag = POM
-			tag = WLG
+			tag = WOL
 			tag = MKL
-			tag = STT
+			tag = STE
 			tag = STP
 			tag = KMI
 		}
