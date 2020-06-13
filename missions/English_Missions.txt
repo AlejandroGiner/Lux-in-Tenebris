@@ -308,12 +308,12 @@ eng_french_conquest = {
 			}
 			if = {
 				limit = {
-					4782 = {
+					3646 = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
 					}
 				}
-				4782 = { add_permanent_claim = ROOT }
+				3646 = { add_permanent_claim = ROOT }
 			}
 		}
 	}
