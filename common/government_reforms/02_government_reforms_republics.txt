@@ -658,6 +658,7 @@ junior_revolutionary_republic_reform = {
 			}
 		}
 	}
+    
     conditional = {
 		allow = {
 			has_dlc = "Rights of Man"
@@ -826,7 +827,9 @@ veche_republic = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			culture_group = east_slavic
+			AND = {
+				culture_group = east_slavic
+			}
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = veche_republic
@@ -1382,15 +1385,15 @@ frequent_elections_reform = {
 consolidation_of_power_reform = {
 	icon = "constitution"
 	allow_normal_conversion = yes
-	modifiers = {
-		max_absolutism = 10
-		election_cycle = 1
-	}
     potential = {
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
+	}
+    modifiers = {
+		max_absolutism = 10
+		election_cycle = 1
 	}
 }
 
@@ -1716,6 +1719,7 @@ two_chamber_reform = {
 	}
 }
 
+
 #Consolidation of Power
 
 broaden_executive_powers_reform = {
@@ -1904,7 +1908,6 @@ imperial_principle_reform = {
 		factor = 2
 	}
 }
-
 
 #Electorate
 

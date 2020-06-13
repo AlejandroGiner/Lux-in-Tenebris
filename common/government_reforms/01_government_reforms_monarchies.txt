@@ -505,6 +505,7 @@ english_monarchy = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
 	}
+    
     custom_attributes = {
 		blocked_call_diet = yes
 	}
@@ -806,8 +807,10 @@ mughal_government = {
 	allow_normal_conversion = yes
 	potential = {
         has_dlc = "Dharma"
-        tag = MUG
-        NOT = { map_setup = map_setup_random }
+        AND = {
+			tag = MUG
+			NOT = { map_setup = map_setup_random }
+		}
 	}
 	lock_level_when_selected = yes
 	legacy_equivalent = feudal_monarchy
@@ -1229,6 +1232,7 @@ revolutionary_empire_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 	}
+    
     removed_effect = {
 		hidden_effect = {
 			if = {
@@ -1698,9 +1702,9 @@ mansabdari_reform = {
 	icon = "noble_muslim"
 	allow_normal_conversion = yes
 	potential = {
-        has_dlc = "Dharma"
 		tag = MUG
 		NOT = { map_setup = map_setup_random }
+        has_dlc = "Dharma"
 	}
 	modifiers = {
 		army_tradition_decay = -0.003
@@ -2088,7 +2092,6 @@ consulate_reform = {
 		factor = 2.5
 	}
 }
-
 
 #separation_of_power
 

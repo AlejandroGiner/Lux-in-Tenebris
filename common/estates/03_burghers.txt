@@ -11,7 +11,6 @@ estate_burghers =
 		NOT = { has_reform = veche_republic }
 		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
-        NOT = { has_reform = revolutionary_empire_reform }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
@@ -21,6 +20,7 @@ estate_burghers =
 		}
 		is_nomad = no
 		is_colonial_nation = no
+        NOT = { has_reform = revolutionary_empire_reform }
 	}
 
 	# These scale with loyalty & power
