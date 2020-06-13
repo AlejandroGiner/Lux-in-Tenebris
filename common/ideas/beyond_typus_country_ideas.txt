@@ -431,48 +431,6 @@ MDG_ideas = {
 	}
 }
 
-ICE_ideas = {
-	start = {
-		hostile_attrition = 1.0
-		land_morale = 0.15
-	}
-
-	bonus = {
-		core_creation = -0.15
-	}
-
-	trigger = {
-		tag = ICE
-	}
-	free = yes
-
-	north_sea_fishing_iceland = {
-		global_manpower_modifier = 0.2
-	}
-	recolonize_vinland = {
-		colonists = 1
-	}
-	the_freezing_north_iceland = {
-		land_attrition = -0.10
-	}
-	icelandic_sagas = {
-		prestige = 1
-	}
-	natural_harbors_iceland = {
-		naval_forcelimit_modifier = 0.25
-	}
-	the_althing = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
-	}
-	icelandic_heritage = {
-		enemy_core_creation = 0.5
-	}
-}
-
 TTS_ideas = {
 	start = {
 		merchants = 2
@@ -1116,84 +1074,6 @@ DAM_ideas = {
 #		prestige = 1
 #	}
 #}
-
-COR_ideas = {
-	start = {
-		trade_efficiency = 0.15
-		global_unrest = -2
-	}
-	
-	bonus = {
-		global_autonomy = -0.05
-	}
-	
-	trigger = {
-		tag = COR
-	}
-	free = yes
-	
-	cor_mountain_in_the_sea = {
-		hostile_attrition = 1
-	}
-	cor_rebel_state = {
-		rebel_support_efficiency = 0.5
-	}
-	cor_national_defence_front = {
-		global_regiment_cost = -0.1
-		land_morale = 0.1
-	}
-	cor_independent_state = {
-		state_maintenance_modifier = -0.25
-	}
-	cor_corsican_culture = {
-		tolerance_own = 2
-	}
-	cor_corsican_diplomacy = {
-		diplomatic_reputation = 1
-		improve_relation_modifier = 0.15
-	}
-	cor_island_state = {
-		naval_forcelimit_modifier = 0.25
-	}
-}
-
-SAR_ideas = {
-	start = {
-		build_cost = -0.15
-		trade_steering = 0.25
-	}
-
-	bonus = {
-		land_morale = 0.15
-	}
-
-	trigger = {
-		tag = SAR
-	}
-	free = yes
-
-	SAR_idea1 = {
-		defensiveness = 0.15
-	}
-	SAR_idea2 = {
-		global_spy_defence = 0.2
-	}
-	SAR_idea3 = {
-		enemy_core_creation = 0.5
-	}
-	SAR_idea4 = {
-		state_maintenance_modifier = -0.25
-	}
-	SAR_idea5 = {
-		hostile_attrition = 1
-	}
-	SAR_idea6 = {
-		diplomats = 1
-	}
-	SAR_idea7 = {
-		movement_speed = 0.15
-	}
-}
 
 FRX_ideas = {
 	start = {
@@ -3523,48 +3403,6 @@ MSA_ideas = {
 }
 
 #Misc ideas, from IR
-SIC_ideas = {
-    start = {
-        trade_steering = 0.25
-        cavalry_power = 0.15
-    }
-
-    bonus = {
-        naval_forcelimit_modifier = 0.25
-    }
-
-    trigger = {
-        tag = SIC
-    }
-    free = yes
-
-    SIC_idea_1 = {
-        discipline = 0.05
-    }
-    SIC_idea_2 = {
-        core_creation = -0.15
-    }
-    SIC_idea_3 = {
-		papal_influence = 3
-        church_power_modifier = 0.25
-		monthly_fervor_increase = 0.5
-    }
-    SIC_idea_4 = {
-        global_autonomy = -0.05
-        global_tax_modifier = 0.1
-    }
-    SIC_idea_5 = {
-        global_trade_power = 0.1
-    }
-    SIC_idea_6 = {
-        galley_power = 0.15
-        global_ship_cost = -0.1
-    }
-    SIC_idea_7 = {
-        global_unrest = -1
-    }
-}
-
 EPI_ideas = {
     start = {
         navy_tradition_decay = -0.01
@@ -3644,54 +3482,6 @@ MAG_ideas = {
     }
     MAG_idea_7 = {
         garrison_size = 0.15
-    }
-}
-
-MAI_ideas = {
-	start = {
-		inflation_reduction = 0.1
-		global_missionary_strength = 0.02
-	}
-	bonus = {
-		discipline = 0.05
-	}
-
-	trigger = {
-		tag = MAI
-	}
-	free = yes
-	# Archchancellor of Germany
-	MAI_idea_1 = {
-		diplomatic_reputation = 2
-	}
-	# Primas Germaniae
-	MAI_idea_2 = {
-		missionaries = 1
-		papal_influence = 2
-        church_power_modifier = 0.1
-		monthly_fervor_increase = 0.25
-    }
-    # Large Military Household
-    MAI_idea_3 = {
-        land_forcelimit_modifier = 0.2
-    }
-    # Old Roman Road Network
-	MAI_idea_4 = {
-		global_trade_power = 0.1
-	}
-	# Brand zu Mainz
-	MAI_idea_5 = {
-        global_trade_goods_size_modifier = 0.1
-        trade_efficiency = 0.05
-    }
-    # Mainz Diocesan Feud
-    MAI_idea_6 = {
-        army_tradition_from_battle = 0.5
-    }
-    # Absolute Electors and the Cathedral Chapter
-    MAI_idea_7 = {
-        max_absolutism = 5
-        yearly_absolutism = 0.5
     }
 }
 
@@ -3819,49 +3609,6 @@ HBN_ideas = {
     }
 }
 
-BRU_ideas = {
-	start = {
-	   	prestige = 1
-		global_autonomy = -0.05
-	}
-
-	bonus = {
-		tolerance_own = 2
-	}
-
-	trigger = {
-		OR = {
-			tag = BRU
-			tag = LUN
-			tag = HOY
-		}
-	}
-	free = yes
-
-	brunswick_1 = {
-		imperial_authority = 0.1
-	}
-	brunswick_2 = {
-		diplomatic_reputation = 2
-	}
-	brunswick_3 = {
-		defensiveness = 0.15
-		fort_maintenance_modifier = -0.15
-	}
-	brunswick_4 = {
-		stability_cost_modifier = -0.15
-	}
-	brunswick_5 = {
-		diplomats = 1
-	}
-	brunswick_6 = {
-		advisor_pool = 2
-	}
-	brunswick_7 = {
-		heir_chance = 0.5
-	}
-}
-
 OLD_ideas = {
 	start = {
 	   	naval_morale = 0.15
@@ -3979,44 +3726,6 @@ CMB_ideas = {
     }
     CMB_idea_7 = {
         global_trade_power = 0.1
-    }
-}
-
-LAU_ideas = {
-    start = {
-        stability_cost_modifier = -0.15
-        global_autonomy = -0.05
-    }
-
-    bonus = {
-        global_trade_goods_size_modifier = 0.1
-    }
-
-    trigger = {
-        tag = LAU
-    }
-    free = yes
-
-    LAU_idea_1 = {
-        prestige = 1
-    }
-    LAU_idea_2 = {
-        trade_steering = 0.25
-    }
-    LAU_idea_3 = {
-        diplomats = 1
-    }
-    LAU_idea_4 = {
-        trade_efficiency = 0.1
-    }
-    LAU_idea_5 = {
-        movement_speed = 0.15
-    }
-    LAU_idea_6 = {
-        spy_offence = 0.2
-    }
-    LAU_idea_7 = {
-        build_cost = -0.15
     }
 }
 
@@ -4227,50 +3936,6 @@ MEM_ideas = {
     }
 }
 
-RVA_ideas = {
-	start = {
-		global_tax_modifier = 0.15
-		infantry_power = 0.1
-	}
-
-	bonus = {
-		global_manpower_modifier = 0.1
-	}
-
-	trigger = {
-		tag = RVA
-	}
-	free = yes
-
-	Towers_Ravensburg = {
-		defensiveness = 0.10
-		fort_maintenance_modifier = -0.15
-    }
-    Dynastic_seat_of_ravensburg = {
-		diplomatic_reputation = 1
-    }
-    Republican_History = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
-	}
-	Great_Ravensburger_Trading_Society = {
-		trade_efficiency = 0.1
-	}
-	Paritetic_government_of_ravensburg = {
-		tolerance_heretic = 2
-		prestige = 0.5
-	}
-    Ravensburger_paper_mill = {
-		production_efficiency = 0.2
-	}
-	The_Many_Twinned_cities = {
-		diplomatic_upkeep = 1
-	}
-}
-
 FLD_ideas = {
     start = {
         manpower_recovery_speed = 0.15
@@ -4313,87 +3978,6 @@ FLD_ideas = {
     FLD_fulda_gap = {
         land_forcelimit_modifier = 0.25
     }
-}
-
-KOL_ideas = {
-	start = {
-		global_unrest = -2
-		global_trade_goods_size_modifier = 0.1
-    }
-
-	bonus = {
-		siege_ability = 0.1
-	}
-
-	trigger = {
-        tag = KOL
-	}
-	free = yes
-
-	KOL_idea_1 = {
-        land_morale = 0.15
-    }
-	KOL_idea_2 = {
-		diplomatic_upkeep = 1
-    }
-    KOL_idea_3 = {
-		global_own_trade_power = 0.25
-    }
-    KOL_idea_4 = {
-		global_missionary_strength = 0.02
-    }
-    KOL_idea_5 = {
-        discipline = 0.05
-    }
-    KOL_idea_6 = {
-		diplomatic_reputation = 2
-    }
-    KOL_idea_7 = {
-		trade_efficiency = 0.1
-    }
-}
-
-ULM_ideas = {
-	start = {
-		infantry_power = 0.1
-		land_morale = 0.1
-    }
-
-	bonus = {
-		global_tax_modifier = 0.15
-	}
-
-	trigger = {
-		tag = ULM
-	}
-	free = yes
-
-	ULM_trade = {
-		trade_efficiency = 0.1
-	}
-	ULM_constitution = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
-	}
-	ULM_church = {
-		build_cost = -0.15
-	}
-	ULM_textiles = {
-		global_trade_goods_size_modifier = 0.1
-	}
-	ULM_Conquistador = {
-		prestige = 1
-	}
-	ULM_rennisance = {
-		prestige_decay = -0.01
-		advisor_pool = 1
-	}
-	ULM_stockpile = {
-		land_attrition = -0.15
-	}
 }
 
 BSL_ideas = {
