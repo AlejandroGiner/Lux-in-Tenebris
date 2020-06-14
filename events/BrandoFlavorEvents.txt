@@ -93,7 +93,7 @@ country_event = {
 		}
 		is_month = 6
 		NOT = { is_month = 11 }
-		NOT = { has_province_modifer = acorn_surplus }
+		NOT = { has_province_modifier = acorn_surplus }
 	}
 	
 	mean_time_to_happen = {
@@ -327,7 +327,7 @@ country_event = {
 	#The fur is gone
 	option = {
 		name = "brando_flavor_events.11.a"
-		remove_country_modifier = { fur_trade_boon }
+		remove_country_modifier = fur_trade_boon
 		random_country = {
 			limit = {
 				is_neighbor_of = ROOT
@@ -338,13 +338,13 @@ country_event = {
 				modifier = opinion_irritated
 			}
 		}
-		prestige = -5
+		add_prestige = -5
 		add_manpower = -2
 		every_owned_province = {
 			limit = {
 				trade_goods = fur
 			}
-			remove_province_modifier = { extend_hunting }
+			remove_province_modifier = extend_hunting
 			add_permanent_province_modifier = {
 				name = decimated_hunting_ground
 				duration = 10950
@@ -635,7 +635,7 @@ country_event = {
 		}
 	}
 	
-	mean_time_to_happen = = {
+	mean_time_to_happen = {
 		months = 300
 	}
 	
