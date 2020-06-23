@@ -557,18 +557,8 @@ country_event = {
 country_event = {
 	id = flavor_boh.7
 	title = flavor_boh.7.t
-	desc = {
-		trigger = {
-			religion = hussite
-		}
-		desc = flavor_boh.7.d
-	}
-	desc = {
-		trigger = {
-			NOT = { religion = hussite }
-		}
-		desc = flavor_boh.7.d2
-	}
+	desc = flavor_boh.7.d
+    
 	picture = {	
 		trigger = {
 			has_dlc = "Emperor"
@@ -659,7 +649,7 @@ country_event = {
 				religion = hussite 
 			}
 		}
-		name = "flavor_boh.7.c"
+		name = "flavor_boh.7.b"
 		every_owned_province = {
 			limit = {
 				religion = hussite
