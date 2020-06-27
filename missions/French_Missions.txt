@@ -14,19 +14,67 @@ french_missions_north = {
 		required_missions = { }
 		completed_by = 1450.1.1
 		provinces_to_highlight = {
-			area = normandy_area
+			OR = {
+				province_id = 3447
+				province_id = 167
+				province_id = 3453
+				province_id = 5173
+				province_id = 1879
+				province_id = 177
+				province_id = 3454
+				province_id = 3025
+				province_id = 168
+				province_id = 3452
+				province_id = 4385
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			normandy_area = {
-				type = all
+			3447 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			167 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3453 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			5173 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1879 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			177 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3454 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3025 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			168 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3452 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4385 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			brittany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_brittany_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -41,13 +89,20 @@ french_missions_north = {
 		position = 3
 		completed_by = 1491.12.6
 		provinces_to_highlight = {
-			area = brittany_area
+			OR = {
+				area = brittany_area
+				area = lower_brittany_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			brittany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_brittany_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -94,6 +149,28 @@ french_missions_north = {
 					add_permanent_claim = ROOT
 				}
 			}
+			3023 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3024 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	conquer_picardy_fra = {
@@ -107,6 +184,8 @@ french_missions_north = {
 				province_id = 89
 				province_id = 88
 				province_id = 1743
+				province_id = 3023
+				province_id = 3024
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -130,6 +209,12 @@ french_missions_north = {
 			1743 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			3023 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3024 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			wallonia_area = {
@@ -147,6 +232,20 @@ french_missions_north = {
 				add_permanent_claim = ROOT
 			}
 			flanders_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luxemburg_liege_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luxembourg_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -212,23 +311,33 @@ french_mission_slot_2 = {
 				area = wallonia_area
 				area = brabant_area
 				area = flanders_area
+				area = luxembourg_area
+				area = luxemburg_liege_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		trigger = {
 			wallonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			brabant_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 			flanders_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
+			}
+			luxemburg_liege_area = {
+				type = all
+				owned_by = ROOT
+			}
+			luxembourg_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -245,6 +354,18 @@ french_mission_slot_2 = {
 				}
 			}
 			flanders_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			luxemburg_liege_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			luxembourg_area = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300
@@ -445,15 +566,52 @@ french_missions_colonial = {
 		required_missions = { annex_savoy }
 		position = 7
 		provinces_to_highlight = {
-			area = lombardy_area
+			OR = {
+				province_id = 3054
+				province_id = 3095
+				province_id = 3294
+				province_id = 104
+				province_id = 3043
+				province_id = 1862
+				province_id = 3086
+				province_id = 2979
+				province_id = 3067
+				province_id = 5133
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			lombardy_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			3054 = {
+				owned_by = ROOT
+			}
+			3095 = {
+				owned_by = ROOT
+			}
+			3294 = {
+				owned_by = ROOT
+			}
+			104 = {
+				owned_by = ROOT
+			}
+			3043 = {
+				owned_by = ROOT
+			}
+			1862 = {
+				owned_by = ROOT
+			}
+			3086 = {
+				owned_by = ROOT
+			}
+			2979 = {
+				owned_by = ROOT
+			}
+			3067 = {
+				owned_by = ROOT
+			}
+			5133 = {
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -493,6 +651,17 @@ french_missions_colonial = {
 					}
 					add_permanent_claim = ROOT
 				}
+				120 = {
+					if = {
+						limit = {
+							NOT = {
+								is_permanent_claim = ROOT
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
 			}
 		}
 	}
@@ -503,6 +672,7 @@ french_missions_colonial = {
 			OR = {
 				area = calabria_area
 				area = apulia_area
+				area = abruzzo_area
 				area = naples_area
 			}
 			NOT = {
@@ -524,6 +694,10 @@ french_missions_colonial = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 					naples_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					abruzzo_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -560,16 +734,30 @@ france_expand_south = {
 			OR = {
 				province_id = 174
 				province_id = 173
-				province_id = 177
+				province_id = 3324
+				province_id = 3083
+				province_id = 3647
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			owns_core_province = 174
-			owns_core_province = 173
-			owns_core_province = 177
+			174 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			173 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3324 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3083 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3647 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			provence_area = {
@@ -579,7 +767,7 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
-			loire_area = {
+			anjou_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -596,7 +784,7 @@ france_expand_south = {
 		provinces_to_highlight = {
 			OR = {
 				area = provence_area
-				area = loire_area
+				area = anjou_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -607,13 +795,13 @@ france_expand_south = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			loire_area = {
+			anjou_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
-			west_burgundy_area = {
+			franche_comte_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -635,15 +823,15 @@ france_expand_south = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-				area = west_burgundy_area
 				area = bourgogne_area
+				area = franche_comte_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			west_burgundy_area = {
+			franche_comte_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -660,6 +848,13 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
+			verdun_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			savoy_dauphine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -667,12 +862,45 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
-			piedmont_area = {
+			west_piedmont_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
+			}
+			3045 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3249 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			2981 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -680,7 +908,10 @@ france_expand_south = {
 		icon = mission_build_up_to_force_limit
 		required_missions = { conquer_burgundy_area }
 		provinces_to_highlight = {
-			area = lorraine_area
+			OR = {
+				area = verdun_area
+				area = lorraine_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -690,9 +921,13 @@ france_expand_south = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			verdun_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			alsace_area = {
+			elsass_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -705,13 +940,13 @@ france_expand_south = {
 		icon = mission_assemble_an_army
 		required_missions = { subjugate_lorraine }
 		provinces_to_highlight = {
-			area = alsace_area
+			area = elsass_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		trigger = {
-			alsace_area = {
+			elsass_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -720,6 +955,27 @@ france_expand_south = {
 			add_country_modifier = {
 				name = "fra_into_germany"
 				duration = 7300
+			}
+			upper_rhineland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			romandie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			switzerland_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -740,7 +996,12 @@ france_expand_south_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = savoy_dauphine_area
-				area = piedmont_area
+				area = west_piedmont_area
+				province_id = 3045
+				province_id = 3249
+				province_id = 2981
+				province_id = 5540
+				province_id = 102
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -751,9 +1012,24 @@ france_expand_south_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			piedmont_area = {
+			west_piedmont_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
+			}
+			3045 = {
+				owned_by = ROOT
+			}
+			3249 = {
+				owned_by = ROOT
+			}
+			2981 = {
+				owned_by = ROOT
+			}
+			5540 = {
+				owned_by = ROOT
+			}
+			102 = {
+				owned_by = ROOT
 			}
 		}
 		effect = {
@@ -764,19 +1040,115 @@ france_expand_south_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lombardy_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			3086 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
 			}
-			po_valley_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+			2979 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
+			}
+			3067 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			5133 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3043 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			1862 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			104 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3054 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3095 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			3294 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
