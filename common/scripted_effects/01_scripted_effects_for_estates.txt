@@ -805,6 +805,30 @@ on_province_owner_change_estate_privileges_effect = {
 	if = {
 		limit = {
 			owner = {
+				has_estate_privilege = estate_church_monopoly_of_fish
+			}
+			trade_goods = fish
+		}
+		add_province_modifier = {
+			name = estate_church_monopoly_of_fish_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_brahmins_monopoly_of_fish
+			}
+			trade_goods = fish
+		}
+		add_province_modifier = {
+			name = estate_brahmins_monopoly_of_fish_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
 				has_estate_privilege = estate_burghers_monopoly_of_wool
 			}
 			trade_goods = wool
@@ -1236,6 +1260,36 @@ on_trade_good_changed_estate_privileges_effect = {
 			trade_goods = incense
 		}
 		remove_province_modifier = estate_brahmins_monopoly_of_incense_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_church_monopoly_of_fish_mod
+			NOT = { trade_goods = fish }
+		}
+		remove_province_modifier = estate_church_monopoly_of_fish_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_church_monopoly_of_fish }
+			NOT = { has_province_modifier = estate_church_monopoly_of_fish_mod }
+			trade_goods = fish
+		}
+		remove_province_modifier = estate_church_monopoly_of_fish_mod
+	}
+	if = {
+		limit = {
+			has_province_modifier = estate_brahmins_monopoly_of_fish_mod
+			NOT = { trade_goods = fish }
+		}
+		remove_province_modifier = estate_brahmins_monopoly_of_fish_mod
+	}
+	else_if = {
+		limit = {
+			from = { has_estate_privilege = estate_brahmins_monopoly_of_fish }
+			NOT = { has_province_modifier = estate_brahmins_monopoly_of_fish_mod }
+			trade_goods = fish
+		}
+		remove_province_modifier = estate_brahmins_monopoly_of_fish_mod
 	}
 	if = {
 		limit = {

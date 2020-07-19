@@ -58,6 +58,19 @@
  estate_brahmins_monopoly_of_paper_revoke_tooltip:0 "Production income from §YPaper§! is restored"
  desc_estate_brahmins_monopoly_of_paper_mod:0 "The state has granted the Brahmins monopoly rights over paper production."
  
+ estate_church_monopoly_of_fish:0 "Monopoly on Fish"
+ estate_church_monopoly_of_fish_desc:0 "Besides being an essential food source for many, Fish have played an important role in culture and religion of many nations for thousands of years. Giving the [Root.GetClergyName] greater control over our distribution is sure to be seen positively by everyone."
+ estate_church_monopoly_of_fish_effect_tooltip:2 "§RNo income from §YFish§!§!"
+ estate_church_monopoly_of_fish_mod:1 "Monopoly on Fish"
+ estate_church_monopoly_of_fish_revoke_tooltip:0 "Production income from §YFish§! is restored"
+ desc_estate_church_monopoly_of_fish_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over fish production."
+ estate_brahmins_monopoly_of_fish:0 "Monopoly on Fish"
+ estate_brahmins_monopoly_of_fish_desc:0 "Besides being an essential food source for many, Fish have played an important role in culture and religion of many nations for thousands of years. Giving the [Root.GetBrahminsName] greater control over our distribution is sure to be seen positively by everyone."
+ estate_brahmins_monopoly_of_fish_effect_tooltip:2 "§RNo income from §YFish§!§!"
+ estate_brahmins_monopoly_of_fish_mod:1 "Monopoly on Fish"
+ estate_brahmins_monopoly_of_fish_revoke_tooltip:0 "Production income from §YFish§! is restored"
+ desc_estate_brahmins_monopoly_of_fish_mod:0 "The state has granted the Brahmins monopoly rights over fish production."
+ 
  ## Nobility / Rajputs / Marathas
  
  estate_nobles_monopoly_of_metals:0 "Monopoly on Iron"
@@ -139,3 +152,4 @@
  MONOPOLY_INCOME_CLOTH_DESC:0 "from linen production."
  MONOPOLY_INCOME_IRON_DESC:0 "from iron production."
  MONOPOLY_INCOME_GRAIN_DESC:0 "from wheat production."
+ MONOPOLY_INCOME_FISH_DESC:0 "from fish production."
