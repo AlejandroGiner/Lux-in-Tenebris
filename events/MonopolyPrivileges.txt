@@ -497,3 +497,52 @@ country_event = {
 		}
 	}
 }
+
+# Extension of Grain Monopoly
+country_event = {
+	id = monopoly_privileges.51
+	title = monopoly_privileges.51.t
+	desc = {
+		trigger = { has_estate_privilege = estate_nobles_monopoly_of_grain }
+		desc = monopoly_privileges.51.d.nobles
+	}
+	desc = {
+		trigger = { has_estate_privilege = estate_rajput_monopoly_of_grain }
+		desc = monopoly_privileges.51.d.rajput
+	}
+	desc = {
+		trigger = { has_estate_privilege = estate_maratha_monopoly_of_grain }
+		desc = monopoly_privileges.51.d.maratha
+	}
+	picture = FARMING_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_nobles_monopoly_of_grain }
+		remove_estate_monopoly_modifier = { privilege = estate_rajput_monopoly_of_grain }
+		remove_estate_monopoly_modifier = { privilege = estate_maratha_monopoly_of_grain }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_nobles_monopoly_of_grain }
+		reapply_estate_privilege = { privilege = estate_rajput_monopoly_of_grain }
+		reapply_estate_privilege = { privilege = estate_maratha_monopoly_of_grain }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = monopoly_privileges.51.b.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = grain
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_nobles_monopoly_of_grain }
+				apply_estate_monopoly_modifier = { privilege = estate_rajput_monopoly_of_grain }
+				apply_estate_monopoly_modifier = { privilege = estate_maratha_monopoly_of_grain }
+			}
+		}
+	}
+}
