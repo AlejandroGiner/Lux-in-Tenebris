@@ -13,7 +13,263 @@
 
 ## Burghers / Vaisyas / Jains
 
+estate_burghers_monopoly_of_fur = {
+	icon = privilege_monopoly_of_goods_fur
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = fur
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = fur
+			}
+			custom_tooltip = MONOPOLY_INCOME_FUR_DESC
+		}
+		custom_tooltip = estate_burghers_monopoly_of_fur_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = fur
+				}
+				add_province_modifier = {
+					name = estate_burghers_monopoly_of_fur_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_burghers_monopoly_of_fur_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_monopoly_of_fur_mod
+				}
+				remove_province_modifier = estate_burghers_monopoly_of_fur_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_burghers_monopoly_of_fur_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_burghers_monopoly_of_fur_mod
+				}
+				remove_province_modifier = estate_burghers_monopoly_of_fur_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.53 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
+estate_vaisyas_monopoly_of_fur = {
+	icon = privilege_monopoly_of_goods_fur
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = fur
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = fur
+			}
+			custom_tooltip = MONOPOLY_INCOME_FUR_DESC
+		}
+		custom_tooltip = estate_vaisyas_monopoly_of_fur_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = fur
+				}
+				add_province_modifier = {
+					name = estate_vaisyas_monopoly_of_fur_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_vaisyas_monopoly_of_fur_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_vaisyas_monopoly_of_fur_mod
+				}
+				remove_province_modifier = estate_vaisyas_monopoly_of_fur_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_vaisyas_monopoly_of_fur_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_vaisyas_monopoly_of_fur_mod
+				}
+				remove_province_modifier = estate_vaisyas_monopoly_of_fur_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.53 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_jains_monopoly_of_fur = {
+	icon = privilege_monopoly_of_goods_fur
+	max_absolutism = -10
+	loyalty = 0.1
+	is_valid = {
+		has_dlc = "Emperor"
+		any_owned_province = {
+			trade_goods = fur
+		}
+	}
+	can_select = {
+		custom_trigger_tooltip = {
+			tooltip = unavailable_during_revolution_disaster
+			NOT = { has_disaster = revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = revolution
+					value = 1
+				}
+			}
+			NOT = { has_disaster = french_revolution }
+			NOT = {
+				has_disaster_progress = {
+					disaster = french_revolution
+					value = 1
+				}
+			}
+		}
+	}
+	on_granted = {
+		add_mercantilism = 1
+		add_years_of_owned_provinces_production_income = {
+			years = 8
+			trigger = {
+				trade_goods = fur
+			}
+			custom_tooltip = MONOPOLY_INCOME_FUR_DESC
+		}
+		custom_tooltip = estate_jains_monopoly_of_fur_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = fur
+				}
+				add_province_modifier = {
+					name = estate_jains_monopoly_of_fur_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_jains_monopoly_of_fur_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_jains_monopoly_of_fur_mod
+				}
+				remove_province_modifier = estate_jains_monopoly_of_fur_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_jains_monopoly_of_fur_revoke_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_jains_monopoly_of_fur_mod
+				}
+				remove_province_modifier = estate_jains_monopoly_of_fur_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	cooldown_years = 10
+	on_cooldown_expires = {
+		country_event = { id = monopoly_privileges.53 }
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
 
 ## Nobility / Rajputs / Marathas
 

@@ -588,3 +588,52 @@ country_event = {
 		}
 	}
 }
+
+# Extension of Fur Monopoly
+country_event = {
+	id = monopoly_privileges.53
+	title = monopoly_privileges.53.t
+	desc = {
+		trigger = { has_estate_privilege = estate_burghers_monopoly_of_fur }
+		desc = monopoly_privileges.53.d.burghers
+	}
+	desc = {
+		trigger = { has_estate_privilege = estate_vaisyas_monopoly_of_fur }
+		desc = monopoly_privileges.53.d.vaisyas
+	}
+	desc = {
+		trigger = { has_estate_privilege = estate_jains_monopoly_of_fur }
+		desc = monopoly_privileges.53.d.jains
+	}
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_fur }
+		remove_estate_monopoly_modifier = { privilege = estate_vaisyas_monopoly_of_fur }
+		remove_estate_monopoly_modifier = { privilege = estate_jains_monopoly_of_fur }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_fur }
+		reapply_estate_privilege = { privilege = estate_vaisyas_monopoly_of_fur }
+		reapply_estate_privilege = { privilege = estate_jains_monopoly_of_fur }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = monopoly_privileges.53.b.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = fur
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_fur }
+				apply_estate_monopoly_modifier = { privilege = estate_vaisyas_monopoly_of_fur }
+				apply_estate_monopoly_modifier = { privilege = estate_jains_monopoly_of_fur }
+			}
+		}
+	}
+}
