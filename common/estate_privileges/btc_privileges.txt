@@ -96,7 +96,7 @@ estate_nobles_monopoly_of_grain = {
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {
-		country_event = { id = monopoly_privileges.51 }
+		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
 		factor = 0
@@ -182,7 +182,7 @@ estate_rajput_monopoly_of_grain = {
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {
-		country_event = { id = monopoly_privileges.51 }
+		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
 		factor = 0
@@ -268,7 +268,7 @@ estate_maratha_monopoly_of_grain = {
 	}
 	cooldown_years = 10
 	on_cooldown_expires = {
-		country_event = { id = monopoly_privileges.51 }
+		country_event = { id = monopoly_privileges.6 }
 	}
 	ai_will_do = {
 		factor = 0
@@ -277,174 +277,3 @@ estate_maratha_monopoly_of_grain = {
 
 ## Clergy / Brahmins
 
-estate_church_monopoly_of_fish = {
-	icon = privilege_monopoly_of_goods_fish
-	max_absolutism = -10
-	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = fish
-		}
-	}
-	can_select = {
-		custom_trigger_tooltip = {
-			tooltip = unavailable_during_revolution_disaster
-			NOT = { has_disaster = revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = revolution
-					value = 1
-				}
-			}
-			NOT = { has_disaster = french_revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = french_revolution
-					value = 1
-				}
-			}
-		}
-	}
-	on_granted = {
-		add_mercantilism = 1
-		add_years_of_owned_provinces_production_income = {
-			years = 8
-			trigger = {
-				trade_goods = fish
-			}
-			custom_tooltip = MONOPOLY_INCOME_FISH_DESC
-		}
-		custom_tooltip = estate_church_monopoly_of_fish_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					trade_goods = fish
-				}
-				add_province_modifier = {
-					name = estate_church_monopoly_of_fish_mod
-					duration = -1
-				}
-			}
-		}
-	}
-	on_revoked = {
-		custom_tooltip = estate_church_monopoly_of_fish_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_church_monopoly_of_fish_mod
-				}
-				remove_province_modifier = estate_church_monopoly_of_fish_mod
-			}
-		}
-	}
-	on_invalid = {
-		custom_tooltip = estate_church_monopoly_of_fish_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_church_monopoly_of_fish_mod
-				}
-				remove_province_modifier = estate_church_monopoly_of_fish_mod
-			}
-		}
-	}
-	penalties = {
-	}
-	benefits = {
-	}
-	cooldown_years = 10
-	on_cooldown_expires = {
-		country_event = { id = monopoly_privileges.51 }
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-
-estate_brahmins_monopoly_of_fish = {
-	icon = privilege_monopoly_of_goods_fish
-	max_absolutism = -10
-	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = fish
-		}
-	}
-	can_select = {
-		custom_trigger_tooltip = {
-			tooltip = unavailable_during_revolution_disaster
-			NOT = { has_disaster = revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = revolution
-					value = 1
-				}
-			}
-			NOT = { has_disaster = french_revolution }
-			NOT = {
-				has_disaster_progress = {
-					disaster = french_revolution
-					value = 1
-				}
-			}
-		}
-	}
-	on_granted = {
-		add_mercantilism = 1
-		add_years_of_owned_provinces_production_income = {
-			years = 8
-			trigger = {
-				trade_goods = fish
-			}
-			custom_tooltip = MONOPOLY_INCOME_FISH_DESC
-		}
-		custom_tooltip = estate_brahmins_monopoly_of_fish_effect_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					trade_goods = fish
-				}
-				add_province_modifier = {
-					name = estate_brahmins_monopoly_of_fish_mod
-					duration = -1
-				}
-			}
-		}
-	}
-	on_revoked = {
-		custom_tooltip = estate_brahmins_monopoly_of_fish_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_brahmins_monopoly_of_fish_mod
-				}
-				remove_province_modifier = estate_brahmins_monopoly_of_fish_mod
-			}
-		}
-	}
-	on_invalid = {
-		custom_tooltip = estate_brahmins_monopoly_of_fish_revoke_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					has_province_modifier = estate_brahmins_monopoly_of_fish_mod
-				}
-				remove_province_modifier = estate_brahmins_monopoly_of_fish_mod
-			}
-		}
-	}
-	penalties = {
-	}
-	benefits = {
-	}
-	cooldown_years = 10
-	on_cooldown_expires = {
-		country_event = { id = monopoly_privileges.51 }
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
