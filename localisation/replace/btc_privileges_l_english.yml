@@ -61,25 +61,6 @@
  estate_jains_monopoly_of_fur_mod:1 "Monopoly on Fur"
  estate_jains_monopoly_of_fur_revoke_tooltip:0 "Production income from §YFur§! is restored"
  desc_estate_jains_monopoly_of_fur_mod:1 "The state has granted the Jains monopoly rights over fur production."
-  
- estate_burghers_monopoly_of_naval_supplies:0 "Monopoly on Naval Supplies"
- estate_burghers_monopoly_of_naval_supplies_desc:0 "Missing localisation."
- estate_burghers_monopoly_of_naval_supplies_effect_tooltip:2 "§RNo income from §YNaval Supplies§!§!"
- estate_burghers_monopoly_of_naval_supplies_mod:1 "Monopoly on Naval Supplies"
- estate_burghers_monopoly_of_naval_supplies_revoke_tooltip:0 "Production income from §YNaval Supplies§! is restored"
- desc_estate_burghers_monopoly_of_naval_supplies_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over naval supplies production."
- estate_vaisyas_monopoly_of_naval_supplies:0 "Monopoly on Naval Supplies"
- estate_vaisyas_monopoly_of_naval_supplies_desc:0 "Missing localisation."
- estate_vaisyas_monopoly_of_naval_supplies_effect_tooltip:2 "§RNo income from §YNaval Supplies§!§!"
- estate_vaisyas_monopoly_of_naval_supplies_mod:1 "Monopoly on Naval Supplies"
- estate_vaisyas_monopoly_of_naval_supplies_revoke_tooltip:0 "Production income from §YNaval Supplies§! is restored"
- desc_estate_vaisyas_monopoly_of_naval supplies_mod:1 "The state has granted the Vaishyas monopoly rights over naval supplies production."
- estate_jains_monopoly_of_naval_supplies:0 "Monopoly on Naval Supplies"
- estate_jains_monopoly_of_naval_supplies_desc:0 "Missing localisation."
- estate_jains_monopoly_of_naval_supplies_effect_tooltip:2 "§RNo income from §YNaval Supplies§!§!"
- estate_jains_monopoly_of_naval_supplies_mod:1 "Monopoly on Naval Supplies"
- estate_jains_monopoly_of_naval_supplies_revoke_tooltip:0 "Production income from §YNaval Supplies§! is restored"
- desc_estate_jains_monopoly_of_naval_supplies_mod:1 "The state has granted the Jains monopoly rights over naval supplies production."
  
  ## Clergy / Brahmins
  
@@ -149,25 +130,6 @@
  estate_maratha_monopoly_of_grain_revoke_tooltip:0 "Production income from §YWheat§! is restored"
  desc_estate_maratha_monopoly_of_grain_mod:1 "The state has granted the Marathas monopoly rights over wheat production."
  
- estate_nobles_monopoly_of_salt:0 "Monopoly on Salt"
- estate_nobles_monopoly_of_salt_desc:0 "Highly sought after, salt is an expensive and prestigious commodity all over the world. By giving the [Root.GetNobilityName] tighter control over our salt mines we shall make even better use of it in the future."
- estate_nobles_monopoly_of_salt_effect_tooltip:2 "§RNo income from §YSalt§!§!"
- estate_nobles_monopoly_of_salt_mod:1 "Monopoly on Salt"
- estate_nobles_monopoly_of_salt_revoke_tooltip:0 "Production income from §YSalt§! is restored"
- desc_estate_nobles_monopoly_of_salt_mod:1 "The state has granted the [Root.Owner.GetNobilityName] monopoly rights over salt production."
- estate_rajput_monopoly_of_salt:0 "Monopoly on Salt"
- estate_rajput_monopoly_of_salt_desc:0 "Highly sought after, salt is an expensive and prestigious commodity all over the world. By giving the [Root.GetRajputsName] tighter control over our salt mines we shall make even better use of it in the future"
- estate_rajput_monopoly_of_salt_effect_tooltip:2 "§RNo income from §YSalt§!§!"
- estate_rajput_monopoly_of_salt_mod:1 "Monopoly on Salt"
- estate_rajput_monopoly_of_salt_revoke_tooltip:0 "Production income from §YSalt§! is restored"
- desc_estate_rajput_monopoly_of_salt_mod:1 "The state has granted the Rajputs monopoly rights over salt production."
- estate_maratha_monopoly_of_salt:0 "Monopoly on Salt"
- estate_maratha_monopoly_of_salt_desc:0 "Highly sought after, salt is an expensive and prestigious commodity all over the world. By giving the [Root.GetMarathasName] tighter control over our salt mines we shall make even better use of it in the future"
- estate_maratha_monopoly_of_salt_effect_tooltip:2 "§RNo income from §YSalt§!§!"
- estate_maratha_monopoly_of_salt_mod:1 "Monopoly on Salt"
- estate_maratha_monopoly_of_salt_revoke_tooltip:0 "Production income from §YSalt§! is restored"
- desc_estate_maratha_monopoly_of_salt_mod:1 "The state has granted the Marathas monopoly rights over salt production."
- 
  #########################################################
  ################Estate privileges events#################
  #########################################################
@@ -186,23 +148,12 @@
  monopoly_privileges.53.d.jains:0 "The monopoly on fur we granted to the [Root.GetJainsName] has expired, meaning that we are now able to reclaim the income from our fur production. However, the [Root.GetJainsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
  monopoly_privileges.53.b.tooltip:0 "We will be able to revoke the §YMonopoly on Fur§! estate privilege."
  
- monopoly_privileges.55.t:0 "Extension of the Monopoly on Naval Supplies"
- monopoly_privileges.55.d.burghers:0 "The monopoly on naval supplies we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our naval supplies production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.55.d.vaisyas:0 "The monopoly on naval supplies we granted to the [Root.GetVaishyasName] has expired, meaning that we are now able to reclaim the income from our naval supplies production. However, the [Root.GetVaishyasName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.55.d.jains:0 "The monopoly on naval supplies we granted to the [Root.GetJainsName] has expired, meaning that we are now able to reclaim the income from our naval supplies production. However, the [Root.GetJainsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.55.b.tooltip:0 "We will be able to revoke the §YMonopoly on Naval Supplies§! estate privilege."
- 
  ## Clergy / Brahmins
  
  monopoly_privileges.4.t:0 "Extension of the Monopoly on Paper"
  monopoly_privileges.4.d.church:0 "The monopoly on paper we granted to the [Root.GetClergyName] has expired, meaning that we are now able to reclaim the income from our paper production. However, the [Root.GetClergyName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
  monopoly_privileges.4.d.brahmins:0 "The monopoly on paper we granted to the [Root.GetBrahminsName] has expired, meaning that we are now able to reclaim the income from our paper production. However, the [Root.GetBrahminsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
  monopoly_privileges.4.b.tooltip:0 "We will be able to revoke the §YMonopoly on Paper§! estate privilege."
- 
- monopoly_privileges.52.t:0 "Extension of the Monopoly on Fish"
- monopoly_privileges.52.d.church:0 "The monopoly on fish we granted to the [Root.GetClergyName] has expired, meaning that we are now able to reclaim the income from our fish production. However, the [Root.GetClergyName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.52.d.brahmins:0 "The monopoly on fish we granted to the [Root.GetBrahminsName] has expired, meaning that we are now able to reclaim the income from our fish production. However, the [Root.GetBrahminsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.52.b.tooltip:0 "We will be able to revoke the §YMonopoly on Fish§! estate privilege."
  
  ## Nobility / Rajputs / Marathas
  
@@ -218,12 +169,6 @@
  monopoly_privileges.51.d.maratha:0 "The monopoly on wheat production we granted to the [Root.GetMarathasName] has expired, meaning that we are now able to reclaim the income from our wheat production. However, the [Root.GetMarathasName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
  monopoly_privileges.51.b.tooltip:0 "We will be able to revoke the §YMonopoly on Wheat§! estate privilege."
  
- monopoly_privileges.54.t:0 "Extension of the Monopoly on Salt"
- monopoly_privileges.54.d.nobles:0 "The monopoly on salt production we granted to the [Root.GetNobilityName] has expired, meaning that we are now able to reclaim the income from our salt production. However, the [Root.GetNobilityName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.54.d.rajput:0 "The monopoly on salt production we granted to the [Root.GetRajputsName] has expired, meaning that we are now able to reclaim the income from our salt production. However, the [Root.GetRajputsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.54.d.maratha:0 "The monopoly on salt production we granted to the [Root.GetMarathasName] has expired, meaning that we are now able to reclaim the income from our salt production. However, the [Root.GetMarathasName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.54.b.tooltip:0 "We will be able to revoke the §YMonopoly on Salt§! estate privilege."
- 
  #Misc
  
  monopoly_privileges.1.a:0 "Let us extend the monopoly."
@@ -234,7 +179,3 @@
  MONOPOLY_INCOME_GRAIN_DESC:0 "from wheat production."
  MONOPOLY_INCOME_FISH_DESC:0 "from fish production."
  MONOPOLY_INCOME_FUR_DESC:0 "from fur production."
- MONOPOLY_INCOME_SALT_DESC:0 "from salt production."
- MONOPOLY_INCOME_NVSUP_DESC:0 "from nvsp production."
- 
- 

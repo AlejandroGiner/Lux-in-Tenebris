@@ -814,42 +814,6 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
-		if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_burghers_monopoly_of_naval_supplies
-			}
-			trade_goods = naval_supplies
-		}
-		add_province_modifier = {
-			name = estate_burghers_monopoly_of_naval_supplies_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_vaisyas_monopoly_of_naval_supplies
-			}
-			trade_goods = naval_supplies
-		}
-		add_province_modifier = {
-			name = estate_vaisyas_monopoly_of_naval_supplies_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_jains_monopoly_of_naval_supplies
-			}
-			trade_goods = naval_supplies
-		}
-		add_province_modifier = {
-			name = estate_jains_monopoly_of_naval_supplies_mod
-			duration = -1
-		}
-	}
 	if = {
 		limit = {
 			owner = {
@@ -1126,42 +1090,6 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_nobles_monopoly_of_salt
-			}
-			trade_goods = salt
-		}
-		add_province_modifier = {
-			name = estate_nobles_monopoly_of_salt_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_rajput_monopoly_of_salt
-			}
-			trade_goods = salt
-		}
-		add_province_modifier = {
-			name = estate_rajput_monopoly_of_salt_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_maratha_monopoly_of_salt
-			}
-			trade_goods = salt
-		}
-		add_province_modifier = {
-			name = estate_maratha_monopoly_of_salt_mod
-			duration = -1
-		}
-	}
 }
 
 on_trade_good_changed_estate_privileges_effect = {
@@ -1344,51 +1272,6 @@ on_trade_good_changed_estate_privileges_effect = {
 			trade_goods = fur
 		}
 		remove_province_modifier = estate_jains_monopoly_of_fur_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_burghers_monopoly_of_naval_supplies_mod
-			NOT = { trade_goods = naval_supplies }
-		}
-		remove_province_modifier = estate_burghers_monopoly_of_naval_supplies_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_burghers_monopoly_of_naval_supplies }
-			NOT = { has_province_modifier = estate_burghers_monopoly_of_naval_supplies_mod }
-			trade_goods = naval_supplies
-		}
-		remove_province_modifier = estate_burghers_monopoly_of_naval_supplies_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_vaisyas_monopoly_of_naval_supplies_mod
-			NOT = { trade_goods = naval_supplies }
-		}
-		remove_province_modifier = estate_vaisyas_monopoly_of_naval_supplies_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_vaisyas_monopoly_of_naval_supplies }
-			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_naval_supplies_mod }
-			trade_goods = naval_supplies
-		}
-		remove_province_modifier = estate_vaisyas_monopoly_of_naval_supplies_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_jains_monopoly_of_naval_supplies_mod
-			NOT = { trade_goods = naval_supplies }
-		}
-		remove_province_modifier = estate_jains_monopoly_of_naval_supplies_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_jains_monopoly_of_naval_supplies }
-			NOT = { has_province_modifier = estate_jains_monopoly_of_naval_supplies_mod }
-			trade_goods = naval_supplies
-		}
-		remove_province_modifier = estate_jains_monopoly_of_naval_supplies_mod
 	}
 	if = {
 		limit = {
@@ -1734,51 +1617,6 @@ on_trade_good_changed_estate_privileges_effect = {
 			trade_goods = grain
 		}
 		remove_province_modifier = estate_maratha_monopoly_of_grain_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_nobles_monopoly_of_salt_mod
-			NOT = { trade_goods = salt }
-		}
-		remove_province_modifier = estate_nobles_monopoly_of_salt_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_nobles_monopoly_of_salt }
-			NOT = { has_province_modifier = estate_nobles_monopoly_of_salt_mod }
-			trade_goods = salt
-		}
-		remove_province_modifier = estate_nobles_monopoly_of_salt_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_rajput_monopoly_of_salt_mod
-			NOT = { trade_goods = salt }
-		}
-		remove_province_modifier = estate_rajput_monopoly_of_salt_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_rajput_monopoly_of_salt }
-			NOT = { has_province_modifier = estate_rajput_monopoly_of_salt_mod }
-			trade_goods = salt
-		}
-		remove_province_modifier = estate_rajput_monopoly_of_salt_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_maratha_monopoly_of_salt_mod
-			NOT = { trade_goods = salt }
-		}
-		remove_province_modifier = estate_maratha_monopoly_of_salt_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_maratha_monopoly_of_salt }
-			NOT = { has_province_modifier = estate_maratha_monopoly_of_salt_mod }
-			trade_goods = salt
-		}
-		remove_province_modifier = estate_maratha_monopoly_of_salt_mod
 	}
 }
 
