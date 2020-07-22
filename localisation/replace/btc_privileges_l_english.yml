@@ -43,25 +43,6 @@
  estate_jains_monopoly_of_wool_revoke_tooltip:0 "Production income from §YWool§! is restored"
  desc_estate_jains_monopoly_of_wool_mod:1 "The state has granted the Jains monopoly rights over wool production."
  
- estate_burghers_monopoly_of_fur:0 "Monopoly on Fur"
- estate_burghers_monopoly_of_fur_desc:0 "Furs from many animals, especially in the colder regions of the world, are highly sought after. By tasking our [Root.GetBurghersName] to establish a monopoly over the trading posts looking for these coats, we're sure to get great wealth from this trade."
- estate_burghers_monopoly_of_fur_effect_tooltip:2 "§RNo income from §YFur§!§!"
- estate_burghers_monopoly_of_fur_mod:1 "Monopoly on Fur"
- estate_burghers_monopoly_of_fur_revoke_tooltip:0 "Production income from §YFur§! is restored"
- desc_estate_burghers_monopoly_of_fur_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over fur production."
- estate_vaisyas_monopoly_of_fur:0 "Monopoly on Fur"
- estate_vaisyas_monopoly_of_fur_desc:0 "Furs from many animals, especially in the colder regions of the world, are highly sought after. By tasking our [Root.GetVaishyasName] to establish a monopoly over the trading posts looking for these coats, we're sure to get great wealth from this trade."
- estate_vaisyas_monopoly_of_fur_effect_tooltip:2 "§RNo income from §YFur§!§!"
- estate_vaisyas_monopoly_of_fur_mod:1 "Monopoly on Fur"
- estate_vaisyas_monopoly_of_fur_revoke_tooltip:0 "Production income from §YFur§! is restored"
- desc_estate_vaisyas_monopoly_of_fur_mod:1 "The state has granted the Vaishyas monopoly rights over fur production."
- estate_jains_monopoly_of_fur:0 "Monopoly on Fur"
- estate_jains_monopoly_of_fur_desc:0 "Furs from many animals, especially in the colder regions of the world, are highly sought after. By tasking our [Root.GetJainsName] to establish a monopoly over the trading posts looking for these coats, we're sure to get great wealth from this trade."
- estate_jains_monopoly_of_fur_effect_tooltip:2 "§RNo income from §YFur§!§!"
- estate_jains_monopoly_of_fur_mod:1 "Monopoly on Fur"
- estate_jains_monopoly_of_fur_revoke_tooltip:0 "Production income from §YFur§! is restored"
- desc_estate_jains_monopoly_of_fur_mod:1 "The state has granted the Jains monopoly rights over fur production."
- 
  ## Clergy / Brahmins
  
  estate_church_monopoly_of_paper:0 "Monopoly on Paper"
@@ -142,12 +123,6 @@
  monopoly_privileges.1.d.jains:0 "The monopoly on linen we granted to the [Root.GetJainsName] has expired, meaning that we are now able to reclaim the income from our linen production. However, the [Root.GetJainsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
  monopoly_privileges.1.b.tooltip:0 "We will be able to revoke the §YMonopoly on Linen§! estate privilege."
  
- monopoly_privileges.53.t:0 "Extension of the Monopoly on Fur"
- monopoly_privileges.53.d.burghers:0 "The monopoly on fur we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our fur production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.53.d.vaisyas:0 "The monopoly on fur we granted to the [Root.GetVaishyasName] has expired, meaning that we are now able to reclaim the income from our fur production. However, the [Root.GetVaishyasName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.53.d.jains:0 "The monopoly on fur we granted to the [Root.GetJainsName] has expired, meaning that we are now able to reclaim the income from our fur production. However, the [Root.GetJainsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.53.b.tooltip:0 "We will be able to revoke the §YMonopoly on Fur§! estate privilege."
- 
  ## Clergy / Brahmins
  
  monopoly_privileges.4.t:0 "Extension of the Monopoly on Paper"
@@ -178,4 +153,3 @@
  MONOPOLY_INCOME_IRON_DESC:0 "from iron production."
  MONOPOLY_INCOME_GRAIN_DESC:0 "from wheat production."
  MONOPOLY_INCOME_FISH_DESC:0 "from fish production."
- MONOPOLY_INCOME_FUR_DESC:0 "from fish production."

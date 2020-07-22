@@ -781,42 +781,6 @@ on_province_owner_change_estate_privileges_effect = {
 	if = {
 		limit = {
 			owner = {
-				has_estate_privilege = estate_burghers_monopoly_of_fur
-			}
-			trade_goods = fur
-		}
-		add_province_modifier = {
-			name = estate_burghers_monopoly_of_fur_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_vaisyas_monopoly_of_fur
-			}
-			trade_goods = fur
-		}
-		add_province_modifier = {
-			name = estate_vaisyas_monopoly_of_fur_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_jains_monopoly_of_fur
-			}
-			trade_goods = fur
-		}
-		add_province_modifier = {
-			name = estate_jains_monopoly_of_fur_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
 				has_estate_privilege = estate_church_monopoly_of_incense
 			}
 			trade_goods = incense
@@ -951,7 +915,10 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_nobles_monopoly_of_metals
 			}
-			trade_goods = iron
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+			}
 		}
 		add_province_modifier = {
 			name = estate_nobles_monopoly_of_metals_mod
@@ -963,7 +930,10 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_rajput_monopoly_of_metals
 			}
-			trade_goods = iron
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+			}
 		}
 		add_province_modifier = {
 			name = estate_rajput_monopoly_of_metals_mod
@@ -975,7 +945,10 @@ on_province_owner_change_estate_privileges_effect = {
 			owner = {
 				has_estate_privilege = estate_maratha_monopoly_of_metals
 			}
-			trade_goods = iron
+			OR = {
+				trade_goods = iron
+				trade_goods = copper
+			}
 		}
 		add_province_modifier = {
 			name = estate_maratha_monopoly_of_metals_mod
@@ -1227,51 +1200,6 @@ on_trade_good_changed_estate_privileges_effect = {
 			trade_goods = glass
 		}
 		remove_province_modifier = estate_jains_monopoly_of_glass_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_burghers_monopoly_of_fur_mod
-			NOT = { trade_goods = fur }
-		}
-		remove_province_modifier = estate_burghers_monopoly_of_fur_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_burghers_monopoly_of_fur }
-			NOT = { has_province_modifier = estate_burghers_monopoly_of_fur_mod }
-			trade_goods = fur
-		}
-		remove_province_modifier = estate_burghers_monopoly_of_fur_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_vaisyas_monopoly_of_fur_mod
-			NOT = { trade_goods = fur }
-		}
-		remove_province_modifier = estate_vaisyas_monopoly_of_fur_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_vaisyas_monopoly_of_fur }
-			NOT = { has_province_modifier = estate_vaisyas_monopoly_of_fur_mod }
-			trade_goods = fur
-		}
-		remove_province_modifier = estate_vaisyas_monopoly_of_fur_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_jains_monopoly_of_fur_mod
-			NOT = { trade_goods = fur }
-		}
-		remove_province_modifier = estate_jains_monopoly_of_fur_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_jains_monopoly_of_fur }
-			NOT = { has_province_modifier = estate_jains_monopoly_of_fur_mod }
-			trade_goods = fur
-		}
-		remove_province_modifier = estate_jains_monopoly_of_fur_mod
 	}
 	if = {
 		limit = {
