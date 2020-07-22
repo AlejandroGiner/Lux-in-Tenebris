@@ -1003,42 +1003,6 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_nobles_monopoly_of_grain
-			}
-			trade_goods = grain
-		}
-		add_province_modifier = {
-			name = estate_nobles_monopoly_of_grain_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_rajput_monopoly_of_grain
-			}
-			trade_goods = grain
-		}
-		add_province_modifier = {
-			name = estate_rajput_monopoly_of_grain_mod
-			duration = -1
-		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_estate_privilege = estate_maratha_monopoly_of_grain
-			}
-			trade_goods = grain
-		}
-		add_province_modifier = {
-			name = estate_maratha_monopoly_of_grain_mod
-			duration = -1
-		}
-	}
 }
 
 on_trade_good_changed_estate_privileges_effect = {
@@ -1446,51 +1410,6 @@ on_trade_good_changed_estate_privileges_effect = {
 			trade_goods = gems
 		}
 		remove_province_modifier = estate_maratha_monopoly_of_gems_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_nobles_monopoly_of_grain_mod
-			NOT = { trade_goods = grain }
-		}
-		remove_province_modifier = estate_nobles_monopoly_of_grain_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_nobles_monopoly_of_grain }
-			NOT = { has_province_modifier = estate_nobles_monopoly_of_grain_mod }
-			trade_goods = grain
-		}
-		remove_province_modifier = estate_nobles_monopoly_of_grain_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_rajput_monopoly_of_grain_mod
-			NOT = { trade_goods = grain }
-		}
-		remove_province_modifier = estate_rajput_monopoly_of_grain_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_rajput_monopoly_of_grain }
-			NOT = { has_province_modifier = estate_rajput_monopoly_of_grain_mod }
-			trade_goods = grain
-		}
-		remove_province_modifier = estate_rajput_monopoly_of_grain_mod
-	}
-	if = {
-		limit = {
-			has_province_modifier = estate_maratha_monopoly_of_grain_mod
-			NOT = { trade_goods = grain }
-		}
-		remove_province_modifier = estate_maratha_monopoly_of_grain_mod
-	}
-	else_if = {
-		limit = {
-			from = { has_estate_privilege = estate_maratha_monopoly_of_grain }
-			NOT = { has_province_modifier = estate_maratha_monopoly_of_grain_mod }
-			trade_goods = grain
-		}
-		remove_province_modifier = estate_maratha_monopoly_of_grain_mod
 	}
 }
 
