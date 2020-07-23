@@ -18,14 +18,20 @@ cro_1 = {
 		position = 2
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4753
 				province_id = 136
+        province_id = 5186
+        province_id = 3192
+        province_id = 5185
+        province_id = 5187
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
-			4753 = { owned_by = ROOT }
 			136 = { owned_by = ROOT }
+      5186 = { owned_by = ROOT }
+      3192 = { owned_by = ROOT }
+      5185 = { owned_by = ROOT }
+      5187 = { owned_by = ROOT }
 		}
 		effect = {
 			add_prestige = 20
@@ -250,12 +256,12 @@ cro_2 = {
 		icon = mission_landsknecht_soldier
 		required_missions = { cro_dominate_dubrovnik }
 		provinces_to_highlight = {
-			area = carinthia_area
+			area = carniola_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		position = 5
 		trigger = {
-			carinthia_area = {
+			carniola_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

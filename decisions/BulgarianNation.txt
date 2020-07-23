@@ -17,29 +17,24 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 150	# Tarnovo
-				province_id = 3165	# Varna
-				province_id = 3169	# Boruy
-				province_id = 2750	# Plovdiv
-				province_id = 2746	# Vidin
-				province_id = 1765	# Sofia
+				area = eastern_bulgaria_area
+				area = upper_thrace_area
 			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
+			NOT = { owned_by = ROOT }
 		}
 		allow = {
 			NOT = { exists = BUL }
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 150	# Tarnovo
-			owns_core_province = 3165	# Varna
-			owns_core_province = 3169	# Boruy
-			owns_core_province = 2750	# Plovdiv
-			owns_core_province = 2746	# Vidin
-			owns_core_province = 1765	# Sofia
+			eastern_bulgaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_thrace_area = {
+				type = all
+				owned_by = ROOT
+			}
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
@@ -58,33 +53,6 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			add_prestige = 25
-			bulgaria_area = { #Western bulgaria
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = BUL
-			}
-			eastern_bulgaria_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = BUL
-			}
-			upper_thrace_area = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = BUL
-			}
 			swap_ideas = yes
 			set_country_flag = formed_bulgaria_flag
 		}

@@ -174,7 +174,7 @@ alb_1 = {
 					exists = TUR
 					TUR = {
 						any_owned_province = {
-							region = balkan_region
+							region = greece_region_btc
 						}
 					}
 				}
@@ -199,7 +199,7 @@ alb_1 = {
 			}
 			custom_tooltip = albanian_inspiration_tt
 			hidden_effect = {
-				balkan_region = {
+				greece_region_btc = {
 					limit = {
 						owned_by = TUR
 						religion_group = christian
@@ -230,7 +230,7 @@ alb_1 = {
 			add_mil_power = 200
 			custom_tooltip = ottoman_balkans_alb_tt
 			hidden_effect = {
-				balkan_region = {
+				greece_region_btc = {
 					limit = {
 						owned_by = TUR
 						NOT = {
@@ -249,11 +249,11 @@ alb_1 = {
 		icon = mission_crusade_for_varna
 		required_missions = { alb_lord_of_albania }
 		provinces_to_highlight = {
-			region = balkan_region
+			region = greece_region_btc
 			owned_by = TUR
 		}
 		trigger = {
-			balkan_region = {
+			greece_region_btc = {
 				type = all
 				NOT = { owned_by = TUR }
 			}
