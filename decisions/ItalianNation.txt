@@ -54,14 +54,14 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					3191 = {
+					4752 = {
 						NOT = {
 							is_permanent_claim = ROOT
 							is_core = ROOT
 						}
 					}
 				}
-				3191 = { add_permanent_claim = ROOT }
+				4752 = { add_permanent_claim = ROOT }
 			}
 			set_country_flag = formed_italy_flag
 			country_event = {

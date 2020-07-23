@@ -1792,7 +1792,7 @@ country_decisions = {
 				province_id = 3001			# Skopje
 				province_id = 3002			# Sarajevo
 				province_id = 3187			# Podrinje
-				province_id = 3191			# Rijeka
+				province_id = 4752			# Fiume
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -1818,7 +1818,7 @@ country_decisions = {
 					province_id = 3001			# Skopje
 					province_id = 3002			# Sarajevo
 					province_id = 3187			# Podrinje
-					province_id = 3191			# Rijeka
+					province_id = 4752			# Fiume
 				}
 				is_core = ROOT
 			}
@@ -2360,7 +2360,7 @@ country_decisions = {
 				province_id = 1769	# Gorizia
 				province_id = 1774	# Treviso
 				province_id = 1862	# Cremona
-				province_id = 3047	# Bergamo
+				province_id = 4739	# Bergamo
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2394,7 +2394,7 @@ country_decisions = {
 						province_id = 1769	# Gorizia
 						province_id = 1774	# Treviso
 						province_id = 1862	# Cremona
-						province_id = 3047	# Bergamo
+						province_id = 4739	# Bergamo
 					}
 				}
 				amount = 7			#At least 2/3 of lmv's 11 provinces (approximate)
