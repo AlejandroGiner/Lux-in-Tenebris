@@ -143,6 +143,7 @@ emp_ita_gallia_branch = {
 			OR = {
 				area = provence_area
 				area = savoy_dauphine_area
+				area = dauphine_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -155,9 +156,21 @@ emp_ita_gallia_branch = {
 				type = all
 				owned_by = ROOT
 			}
+			dauphine_area = {
+				type = all
+				owned_by = ROOT
+			}
+			
 		}
 		effect = {
 			languedoc_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_languedoc_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -179,6 +192,13 @@ emp_ita_gallia_branch = {
 				add_permanent_claim = ROOT
 			}
 			massif_central_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_massif_central_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -203,15 +223,21 @@ emp_ita_gallia_branch = {
 		provinces_to_highlight = {
 			OR = {
 				area = languedoc_area
+				area = east_languedoc_area
 				area = guyenne_area
 				area = poitou_area
 				area = massif_central_area
+				area = west_massif_central_area
 				area = pyrenees_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			languedoc_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_languedoc_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -224,6 +250,10 @@ emp_ita_gallia_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			massif_central_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_massif_central_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -314,11 +344,14 @@ emp_ita_war_branch = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = liguria_area
-				area = piedmont_area
-				area = lombardy_area
-				area = po_valley_area
-				area = venetia_area
+				province_id = 1875
+				province_id = 3080
+				province_id = 3045
+				province_id = 3086
+				province_id = 3054
+				province_id = 3294
+				province_id = 110
+				province_id = 1769
 			}
 			owned_by = root
 
@@ -328,11 +361,14 @@ emp_ita_war_branch = {
 						num_of_owned_provinces_with = {
 							value = 5
 							OR = {
-								area = liguria_area
-								area = piedmont_area
-								area = lombardy_area
-								area = po_valley_area
-								area = venetia_area
+								province_id = 1875
+								province_id = 3080
+								province_id = 3045
+								province_id = 3086
+								province_id = 3054
+								province_id = 3294
+								province_id = 110
+								province_id = 1769
 							}
 							fort_level = 1
 						}
@@ -434,11 +470,14 @@ emp_ita_war_branch = {
 			num_of_owned_provinces_with = {
 				value = 5
 				OR = {
-					area = liguria_area
-					area = piedmont_area
-					area = lombardy_area
-					area = po_valley_area
-					area = venetia_area
+					province_id = 1875
+					province_id = 3080
+					province_id = 3045
+					province_id = 3086
+					province_id = 3054
+					province_id = 3294
+					province_id = 110
+					province_id = 1769
 				}
 				if = {
 					limit = {
@@ -495,6 +534,13 @@ emp_ita_war_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			dauphine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			east_adriatic_coast_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -502,22 +548,23 @@ emp_ita_war_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			130 = {
+			albania_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			1826 = {
 				add_permanent_claim = ROOT
 			}
-			4174 = {
-				add_permanent_claim = ROOT
-			}
-			4738 = {
-				add_permanent_claim = ROOT
-			}
 			4752 = {
 				add_permanent_claim = ROOT
 			}
-			4754 = {
+			5184 = {
+				add_permanent_claim = ROOT
+			}
+			5189 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -530,36 +577,39 @@ emp_ita_war_branch = {
 		
 		provinces_to_highlight = {
 			OR = {
+				area = dauphine_area
 				area = east_adriatic_coast_area
-				province_id = 4174
-				province_id = 130
+				area = albania_area
 				province_id = 1826
-				province_id = 4738
 				province_id = 4752
-				province_id = 4754
+				province_id = 5184
+				province_id = 5189
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
+			dauphine_area = {
+				type = all
+				owned_by = ROOT
+			}
 			east_adriatic_coast_area = {
+				type = all
 				owned_by = ROOT
 			}
-			4174 = {
-				owned_by = ROOT
-			}
-			130 = {
+			albania_area = {
+				type = all
 				owned_by = ROOT
 			}
 			1826 = {
 				owned_by = ROOT
 			}
-			4738 = {
-				owned_by = ROOT
-			}
 			4752 = {
 				owned_by = ROOT
 			}
-			4754 = {
+			5184 = {
+				owned_by = ROOT
+			}
+			5189 = {
 				owned_by = ROOT
 			}
 		}
@@ -649,14 +699,7 @@ emp_ita_war_branch = {
 				}
 			}
 		}
-		effect = {		
-			albania_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
+		effect = {
 			northern_greece_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -664,10 +707,11 @@ emp_ita_war_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			1853 = {
-				add_permanent_claim = ROOT
-			}
-			148 = {
+			thessaly_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			aragon_area = {
@@ -765,9 +809,9 @@ emp_ita_war_branch = {
 			}
 		}
 		effect = {
-			add_dip_power = 75
-			add_adm_power = 75
-			add_mil_power = 75
+			add_dip_power = 100
+			add_adm_power = 100
+			add_mil_power = 100
 		}
 	}
 }
@@ -897,15 +941,13 @@ emp_ita_unification_branch = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = albania_area
+				area = thessaly_area
 				area = northern_greece_area
-				province_id = 1853
-				province_id = 148
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			albania_area = {
+			thessaly_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -913,15 +955,16 @@ emp_ita_unification_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1853 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			148 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 		}
 		effect = {
 			aegean_archipelago_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hellas_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -939,6 +982,20 @@ emp_ita_unification_branch = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			macedonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_macedonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -953,13 +1010,20 @@ emp_ita_unification_branch = {
 		provinces_to_highlight = {
 			OR = {
 				area = aegean_archipelago_area
+				area = hellas_area
 				area = thrace_area
 				area = morea_area
+				area = macedonia_area
+				area = north_macedonia_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hellas_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -971,12 +1035,38 @@ emp_ita_unification_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			151 = {
+			macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_macedonia_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			aydin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			karasi_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			caria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pamphylia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1015,6 +1105,9 @@ emp_ita_unification_branch = {
 		provinces_to_highlight = {
 			OR = {
 				area = aydin_area
+				area = karasi_area
+				area = caria_area
+				area = pamphylia_area
 				area = hudavendigar_area
 				area = germiyan_area
 				area = cukurova_area
@@ -1023,6 +1116,18 @@ emp_ita_unification_branch = {
 		}
 		trigger = {
 			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			karasi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			caria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pamphylia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1272,6 +1377,7 @@ emp_ita_overseas_branch = {
 				area = palestine_area
 				area = syria_area
 				area = aleppo_area
+				area = tripolitania_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1285,6 +1391,10 @@ emp_ita_overseas_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aleppo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripolitania_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
