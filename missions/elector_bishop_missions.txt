@@ -305,19 +305,21 @@ mai_group_1 = {
 		required_missions = { }
 
 		provinces_to_highlight = {
-			province_id = 63
-			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+			OR {
+				province_id = 63
+				province_id = 3643
+			}
+		}
+		trigger = {
+			63 = { development = 12 }
+			3643 = {
+				owned_by = root
 			}
 		}
 
-		trigger = {
-			owns_core_province = 63
-		}
-
 		effect = {
-			add_prestige = 15
+			add_prestige = 25
+			add_mil_power = 100
 			hesse_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }
@@ -385,7 +387,7 @@ kol_group_1 = {
 		}
 
 		effect = {
-			north_westphalia_area = {
+			south_westphalia_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -399,12 +401,12 @@ kol_group_1 = {
 		required_missions = { kol_consolidate_lands }
 
 		provinces_to_highlight = {
-			area = north_westphalia_area
+			area = south_westphalia_area
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 
 		trigger = {
-			north_westphalia_area = {
+			south_westphalia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
@@ -427,15 +429,6 @@ kol_group_1 = {
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
-			}
-			4775 = {
-				if = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
 			}
 		}
 	}
