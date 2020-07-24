@@ -42,6 +42,13 @@ bri_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			anjou_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	bri_expand_up_the_loire = {
@@ -65,17 +72,31 @@ bri_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			west_normandy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	bri_seize_normandy = {
 		icon = mission_landsknecht_soldier
 		required_missions = { bri_expand_up_the_loire }
 		provinces_to_highlight = {
-			area = normandy_area
+			OR {
+				area = normandy_area
+				area = west_normandy_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			normandy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_normandy_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -88,14 +109,14 @@ bri_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			orleans_area = {
+			wessex_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			wessex_area = {
+			cornwall_area = {
 				limit = {
 					NOT = { is_permanent_claim = root }
 					NOT = { is_core = root }
