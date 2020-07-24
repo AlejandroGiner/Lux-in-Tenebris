@@ -338,18 +338,17 @@ SPA_ideas = {
 	}
 	tercios_btc = {
 		army_tradition_decay = -0.01
-		drill_gain_modifier = 0.5
+		drill_gain_modifier = 0.25
 	}
 	spanish_emigration_btc = {
 		colonist_placement_chance = 0.1
-						   
 	}
 	evangelization_america_btc = {
 		missionaries = 1
 		global_missionary_strength = 0.01
 	}
 	spanish_armada = {
-		heavy_ship_power = 0.1
+		heavy_ship_power = 0.05
 		naval_forcelimit_modifier = 0.15
 		allowed_marine_fraction = 0.05
 	}
@@ -399,7 +398,7 @@ CAS_ideas = {
 
 NED_ideas = {
 	start = {
-		global_sailors_modifier = 0.5
+		global_sailors_modifier = 0.25
 		naval_forcelimit_modifier = 0.5
 	}
 	
@@ -469,7 +468,7 @@ DAN_ideas = {
 	}
 	rentekammer = {
 		build_cost = -0.15
-	}	
+	}
 	klaedekammer = {
 		naval_maintenance_modifier = -0.15
 	}
@@ -1055,7 +1054,7 @@ PRU_ideas = {
 
 BRA_ideas = {
 	start = {
-		army_tradition = 0.5
+		fabricate_claims_cost= -0.25
         ae_impact = -0.1
 	}
 	
@@ -1131,7 +1130,7 @@ POR_ideas = {
 		global_trade_power = 0.1
 	}
 	land_before_faith = {
-		global_colonial_growth = 25
+		global_colonial_growth = 35
 	}
 	the_bandeirantes = {
 		merchants = 1
@@ -1204,13 +1203,7 @@ HAB_ideas = {
 	}
 	
 	trigger = {
-		
-			tag = HAB
-		  
-			 
-							
-	
-   
+		tag = HAB
 	}
 	free = yes		#will be added at load.
 
@@ -1452,58 +1445,6 @@ GEN_Ideas = {
 	}
 }
 
-
-NRM_Ideas = {
-	start = {
-		diplomatic_reputation = 1
-		mercenary_cost = -0.15
-	}
-	
-	bonus = {
-		leader_land_fire = 1
-	}
-	
-	trigger = {
-		OR = {
-			tag = NRM
-			tag = JER
-		}
-	}
-	free = yes
-	
-	from_dukes_to_kings = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
-	}
-	norman_adventurers = {
-		mercenary_manpower = 0.25
-	}	
-	journey_across_the_continent = {
-		envoy_travel_time = -0.25
-		movement_speed = 0.15
-	}
-	norman_architecture = {
-		build_cost = -0.15
-	}
-	catholic_piety_norman = {
-		papal_influence = 2
-        church_power_modifier = 0.1
-		monthly_fervor_increase = 0.25
-		tolerance_own = 1
-	}
-	norman_victories = {
-		prestige_from_land = 0.5
-		land_morale = 0.1
-	}
-	norman_law = {
-		state_maintenance_modifier = -0.25
-	}
-}
-
-
 HUN_ideas = {
 	start = {
 		cavalry_power = 0.20
@@ -1538,7 +1479,7 @@ HUN_ideas = {
 		global_own_trade_power = 0.25
 	}
 	hungarian_estates_general = {
-		no_religion_penalty = yes
+		reform_progress_growth = 0.25
 	}
 }
 
@@ -1585,7 +1526,6 @@ JAP_ideas = {
 
 MAM_ideas = {
 	start = {
-					   
 		cavalry_power = 0.10
 		tolerance_heathen = 3
 	}
@@ -2956,7 +2896,7 @@ MAR_ideas = {
 		core_creation = -0.15
 	}
 	encourage_ties_with_brahmin_financial_families = {
-		reform_progress_growth = 0.15
+		reform_progress_growth = 0.25
 	}
 	reform_the_bureaucracy = {
 		global_trade_goods_size_modifier = 0.1
@@ -11870,7 +11810,7 @@ TNT_ideas = {
 	free = yes
 	
 	TNT_prince_bishop = {
-		reform_progress_growth = 0.1
+		reform_progress_growth = 0.15
 		tolerance_own = 1
 	}
 	TNT_republican_slaughter = {
@@ -15493,8 +15433,8 @@ CSH_ideas = {
 
 NRM_ideas = {
 	start = {
-		leader_land_manuever = 1
-		legitimacy = 1
+		leader_land_fire = 1
+		diplomatic_reputation = 1
 	}
 	
 	bonus = {
@@ -15502,32 +15442,44 @@ NRM_ideas = {
 	}
 	
 	trigger = {
-		tag = NRM
+		OR = {
+			tag = NRM
+			tag = JER
+		}
 	}
 	free = yes
 	
-	nrm_norman_conquest = {
-		ae_impact = -0.1
+	from_dukes_to_kings = {
+		legitimacy = 1
+		devotion = 1
+		horde_unity = 1
+		meritocracy = 1
+		republican_tradition = 0.3
 	}
-	nrm_norman_philosophers = {
-		advisor_cost = -0.1
+	norman_adventurers = {
+		mercenary_manpower = 0.25
+		mercenary_cost = -0.1
+	}	
+	journey_across_the_continent = {
+		envoy_travel_time = -0.25
+		movement_speed = 0.15
 	}
-	nrm_channel_islands = {
-		global_tax_modifier = 0.1
+	norman_architecture = {
+		build_cost = -0.15
 	}
-	nrm_viking_explorers = {
-		range = 0.2
+	catholic_piety_norman = {
+		papal_influence = 2
+		tolerance_own = 1
 	}
-	nrm_viking_raids = {
-		privateer_efficiency = 0.15
+	norman_victories = {
+		prestige_from_land = 0.5
+		land_morale = 0.1
 	}
-	nrm_naval_invasion = {
-		siege_blockade_progress = 1
-	}
-	nrm_great_commanders = {
-		leader_naval_fire = 1
+	norman_law = {
+		state_maintenance_modifier = -0.25
 	}
 }
+
 PIS_ideas = {
 	start = {
 		global_trade_power = 0.1
