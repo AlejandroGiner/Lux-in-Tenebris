@@ -1,3 +1,4 @@
+#Generic Japanese models
 basic_japan_btc_sprite_pack = {
 	#Tests against every tag in the game
 	country_trigger = {
@@ -26,9 +27,9 @@ basic_japan_btc_sprite_pack = {
 	}
 }
 
+#Samurai clan models
 btc_uesugi_sprite_pack = {
 	#Tests against every tag in the game
-	#Didn't include those that use base JAP because they are included already in base game.
 	country_trigger = {
 		OR = {
 			tag = HNM
@@ -367,5 +368,40 @@ btc_yamana_sprite_pack = {
 		1 = JAP_NEW_ARTILLERY_2
 		2 = JAP_NEW_ARTILLERY_3
 		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+#Generic Korean models	
+btc_korea_sprite_pack = { 
+	country_trigger = {
+		OR = {
+			tag = GOG
+			tag = BKJ
+			tag = SLL
+			tag = GAY
+			tag = TAM
+			tag = KRE
+		}
+	}
+	
+	sprite_infantry = {
+		0 = KOR_INFANTRY_1
+		1 = KOR_INFANTRY_2
+		2 = KOR_INFANTRY_3
+		3 = KOR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = KOR_CAVALRY_1
+		1 = KOR_CAVALRY_2
+		2 = KOR_CAVALRY_3
+		3 = KOR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = KOR_ARTILLERY_1
+		1 = KOR_ARTILLERY_2
+		2 = KOR_ARTILLERY_3
+		3 = KOR_ARTILLERY_4
 	}
 }
