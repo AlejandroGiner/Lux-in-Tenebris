@@ -1,0 +1,407 @@
+#Generic Japanese models
+basic_japan_btc_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		culture_group = japanese_g
+	}
+	
+	sprite_infantry = {
+		0 = JAP_NEW_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = JAP_NEW_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = JAP_NEW_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+#Samurai clan models
+btc_uesugi_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = HNM
+			tag = OUE
+			tag = UES
+		}
+	}
+
+	sprite_infantry = {
+		0 = UES_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = UES_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = UES_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}		
+}
+
+btc_imagawa_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = ODA
+			tag = IMG
+		}
+	}
+
+	sprite_infantry = {
+		0 = IMG_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = IMG_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = IMG_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_date_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = DTE
+	}
+
+	sprite_infantry = {
+		0 = DTE_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = DTE_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = DTE_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_hosokawa_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = HSK
+	}
+
+	sprite_infantry = {
+		0 = HSK_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = HSK_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = HSK_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_hatakeyama_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = HTK
+	}
+
+	sprite_infantry = {
+		0 = HTK_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = HTK_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = HTK_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_otomo_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = OTM
+	}
+
+	sprite_infantry = {
+		0 = OTM_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = OTM_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = OTM_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_ouchi_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = OUC
+	}
+
+	sprite_infantry = {
+		0 = OUC_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = OUC_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = OUC_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_shiba_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = SBA
+	}
+
+	sprite_infantry = {
+		0 = SBA_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SBA_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = SBA_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_shimazu_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = SMZ
+	}
+
+	sprite_infantry = {
+		0 = SMZ_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SMZ_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = SMZ_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_takeda_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = TKD
+	}
+
+	sprite_infantry = {
+		0 = TKD_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TKD_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = TKD_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_nanbu_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = RFR
+	}
+
+	sprite_infantry = {
+		0 = RFR_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = RFR_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = RFR_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+btc_yamana_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		tag = YMN
+	}
+
+	sprite_infantry = {
+		0 = YMN_INFANTRY_1
+		1 = JAP_NEW_INFANTRY_2
+		2 = JAP_NEW_INFANTRY_3
+		3 = JAP_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = YMN_CAVALRY_1
+		1 = JAP_NEW_CAVALRY_2
+		2 = JAP_NEW_CAVALRY_3
+		3 = JAP_NEW_CAVALRY_4
+	}
+	
+	sprite_artillery = {
+		0 = YMN_ARTILLERY_1
+		1 = JAP_NEW_ARTILLERY_2
+		2 = JAP_NEW_ARTILLERY_3
+		3 = JAP_NEW_ARTILLERY_4
+	}
+}
+
+#Generic Korean models	
+btc_korea_sprite_pack = { 
+	country_trigger = {
+		OR = {
+			tag = GOG
+			tag = BKJ
+			tag = SLL
+			tag = GAY
+			tag = TAM
+			tag = KRE
+		}
+	}
+	
+	sprite_infantry = {
+		0 = KOR_INFANTRY_1
+		1 = KOR_INFANTRY_2
+		2 = KOR_INFANTRY_3
+		3 = KOR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = KOR_CAVALRY_1
+		1 = KOR_CAVALRY_2
+		2 = KOR_CAVALRY_3
+		3 = KOR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = KOR_ARTILLERY_1
+		1 = KOR_ARTILLERY_2
+		2 = KOR_ARTILLERY_3
+		3 = KOR_ARTILLERY_4
+	}
+}
