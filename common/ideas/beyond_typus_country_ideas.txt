@@ -3403,48 +3403,6 @@ MSA_ideas = {
 }
 
 #Misc ideas, from IR
-EPI_ideas = {
-    start = {
-        navy_tradition_decay = -0.01
-        legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
-    }
-
-    bonus = {
-        advisor_cost = -0.15
-    }
-
-    trigger = {
-        tag = EPI
-    }
-    free = yes
-
-    EPI_idea_1 = {
-        reinforce_cost_modifier = -0.15
-        reinforce_speed = 0.15
-    }
-    EPI_idea_2 = {
-        ae_impact = -0.1
-    }
-    EPI_idea_3 = {
-        culture_conversion_cost = -0.15
-    }
-    EPI_idea_4 = {
-        hostile_attrition = 1
-    }
-    EPI_idea_5 = {
-        global_unrest = -2
-    }
-    EPI_idea_6 = {
-        global_trade_power = 0.1
-    }
-    EPI_idea_7 = {
-        enemy_core_creation = 0.25
-    }
-}
 
 MAG_ideas = {
     start = {
@@ -3495,7 +3453,7 @@ SLZ_ideas = {
     }
 
     trigger = {
-        tag = SLZ
+		tag = SLZ
     }
     free = yes
     SLZ_idea_1 = {
@@ -3524,32 +3482,32 @@ SLZ_ideas = {
 }
 
 STY_ideas = {
-    start = {
-        culture_conversion_cost = -0.15
-        development_cost = -0.1
-    }
-    bonus = {
-        diplomatic_reputation = 2
-    }
+	start = {
+		culture_conversion_cost = -0.15
+		development_cost = -0.1
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
 
-    trigger = {
-        tag = STY
-    }
+	trigger = {
+		tag = STY
+	}
 	
-    free = yes
+	free = yes
 	
-    STY_idea_1 = {
-        legitimacy = 1
+	STY_idea_1 = {
+		legitimacy = 1
 		devotion = 1
 		horde_unity = 1
 		meritocracy = 1
 		republican_tradition = 0.3
     }
-    STY_idea_2 = {
-        fort_maintenance_modifier = -0.1
-        global_garrison_growth = 0.15
-    }
-    STY_idea_3 = {
+	STY_idea_2 = {
+		fort_maintenance_modifier = -0.1
+		global_garrison_growth = 0.15
+	}
+	STY_idea_3 = {
         global_tax_modifier = 0.1
     }
     STY_idea_4 = {
