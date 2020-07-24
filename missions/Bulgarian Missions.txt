@@ -4,10 +4,10 @@ bul_1 = {
 	ai = yes
 	potential = {
 		NOT = { map_setup = map_setup_random }
-    OR = {
-      tag = BUL
-      tag = TNV
-    }
+		OR = {
+		  tag = BUL
+		  tag = TNV
+		}
 	}
 	has_country_shield = yes
 	
@@ -78,8 +78,8 @@ bul_1 = {
 				area = serbia_area
 				area = rascia_area
 				area = macedonia_area
-        area = north_macedonia_area
-        area = bulgaria_area
+				area = north_macedonia_area
+				area = bulgaria_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -96,11 +96,11 @@ bul_1 = {
 				type = all
 				owned_by = ROOT
 			}
-      north_macedonia_area = {
+			north_macedonia_area = {
 				type = all
 				owned_by = ROOT
 			}
-      bulgaria_area = {
+			bulgaria_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -121,7 +121,7 @@ bul_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-      wallachia_area = {
+			wallachia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -135,21 +135,21 @@ bul_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-      thessaly_area = {
+			thessaly_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-      lower_danube_area = {
+			lower_danube_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-      western_moldovia = {
+			western_moldovia = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -170,21 +170,21 @@ bul_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-      szeklerland_area = {
+			szeklerland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-      alfold_area = {
+			alfold_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-      crisana_area = {
+			crisana_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -212,19 +212,19 @@ bul_1 = {
 		required_missions = { bul_restore_empire }
 		provinces_to_highlight = {
 			OR = {
-        area = eastern_wallachia_area
-        area = wallachia_area
-        area = moldavia_area
-        area = thessaly_area
-        area = lower_danube_area
-        area = western_moldovia
-        area = transylvania_area
-        area = southern_transylvania_area
-        area = szeklerland_area
-        area = alfold_area
-        area = crisana_area
-        area = northern_greece_area
-        area = thrace_area
+				area = eastern_wallachia_area
+				area = wallachia_area
+				area = moldavia_area
+				area = thessaly_area
+				area = lower_danube_area
+				area = western_moldovia
+				area = transylvania_area
+				area = southern_transylvania_area
+				area = szeklerland_area
+				area = alfold_area
+				area = crisana_area
+				area = northern_greece_area
+				area = thrace_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -233,59 +233,59 @@ bul_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      wallachia_area = {
+			wallachia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      moldavia_area = {
+			moldavia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      thessaly_area = {
+			thessaly_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      lower_danube_area = {
+			lower_danube_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      western_moldovia = {
+			western_moldovia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      transylvania_area = {
+			transylvania_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      southern_transylvania_area = {
+			southern_transylvania_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      szeklerland_area = {
+			szeklerland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      alfold_area = {
+			alfold_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      crisana_area = {
+			crisana_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      northern_greece_area = {
+			northern_greece_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-      thrace_area = {
+			thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_mil_power = 200
-      add_adm_power = 200
-      add_dip_power = 200
+			add_adm_power = 200
+			add_dip_power = 200
 		}
 	}
 }
