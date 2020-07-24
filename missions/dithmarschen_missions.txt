@@ -51,6 +51,13 @@ peasants_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			schleswig_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	peasants_hemmingstedt = {
@@ -58,10 +65,15 @@ peasants_1 = {
 		required_missions = { peasants_likedealers }
 		provinces_to_highlight = {
 			area = holstein_area
+			area = schleswig_area
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			holstein_area = {
+				type = all
+				owned_by = ROOT
+			}
+			schleswig_area = {
 				type = all
 				owned_by = ROOT
 			}
