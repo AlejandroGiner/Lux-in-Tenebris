@@ -1,0 +1,104 @@
+btc_beyliks_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		primary_culture = turkish
+		NOT = {
+			OR = {
+				tag = TUR
+				tag = AKK
+			}
+		}
+	}
+	
+	sprite_infantry = {
+		0 = TUR_NEW_INFANTRY_1
+		1 = TUR_NEW_INFANTRY_2
+		2 = TUR_NEW_INFANTRY_3
+		3 = TUR_NEW_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TUR_NEW_CAVALRY_1
+		1 = TUR_NEW_CAVALRY_2
+		2 = TUR_NEW_CAVALRY_3
+		3 = TUR_NEW_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = TUR_NEW_ARTILLERY_1
+		1 = TUR_NEW_ARTILLERY_2
+		2 = TUR_NEW_ARTILLERY_3
+		3 = TUR_NEW_ARTILLERY_4
+	}
+}
+
+btc_serbian_yugoslavia_also_its_illyria_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = serbian
+					primary_culture = bulgarian
+				}
+				tag = YUG	
+			}
+			
+			tag = ILY
+			tag = BUL
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SER_INFANTRY_1
+		1 = SER_INFANTRY_2
+		2 = SER_INFANTRY_3
+		3 = SER_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SER_CAVALRY_1
+		1 = SER_CAVALRY_2
+		2 = SER_CAVALRY_3
+		3 = SER_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SER_ARTILLERY_1
+		1 = SER_ARTILLERY_2
+		2 = SER_ARTILLERY_3
+		3 = SER_ARTILLERY_4
+	}
+}
+
+btc_croatian_yugoslav_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		NOT = {
+			primary_culture = serbian
+			primary_culture = bulgarian
+		}
+		tag = YUG
+	}
+	
+		sprite_infantry = {
+		0 = BOS_INFANTRY_1
+		1 = BOS_INFANTRY_2
+		2 = BOS_INFANTRY_3
+		3 = BOS_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = BOS_CAVALRY_1
+		1 = BOS_CAVALRY_2
+		2 = BOS_CAVALRY_3
+		3 = BOS_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = BOS_ARTILLERY_1
+		1 = BOS_ARTILLERY_2
+		2 = BOS_ARTILLERY_3
+		3 = BOS_ARTILLERY_4
+	}
+}
