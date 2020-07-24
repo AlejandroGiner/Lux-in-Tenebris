@@ -142,7 +142,7 @@ emp_hab_empire_branch = {
 				OR = {
 					AND = {
 						num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-							value = 10
+							value = 18
 							continent = europe
 						}
 						is_part_of_hre = yes
@@ -164,7 +164,7 @@ emp_hab_empire_branch = {
 								NOT = { is_subject_of = ROOT }
 								is_part_of_hre = yes
 								num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-									value = 10
+									value = 18
 									continent = europe
 								}
 							}
@@ -172,7 +172,7 @@ emp_hab_empire_branch = {
 					}
 					calc_true_if = {
 						desc = emp_hab_no_one_to_threaten_us_trigger2_tooltip
-						amount = 10
+						amount = 18
 						all_country = {
 							has_reform = free_city
 						}
@@ -520,6 +520,8 @@ emp_hab_prestige_branch = {
 	has_country_shield = yes
 	
 	emp_hab_balanced_estates = {
+		slot = 4
+		position = 1
 		icon = balance_the_estates
 		required_missions = {  }
 		trigger = {
@@ -612,6 +614,8 @@ emp_hab_prestige_branch = {
 	}
 	
 	emp_hab_prospering_nation = {
+		slot = 4
+		position = 2
 		icon = austria_prospers
 		required_missions = { emp_hab_balanced_estates }
 		provinces_to_highlight = {
@@ -660,6 +664,8 @@ emp_hab_prestige_branch = {
 	}
 	
 	emp_hab_imperial_capitals = {
+		slot = 4
+		position = 3
 		icon = imperial_capitals
 		required_missions = { emp_hab_prospering_nation }
 		provinces_to_highlight = {
@@ -717,6 +723,8 @@ emp_hab_prestige_branch = {
 	}
 	
 	emp_hab_viennese_waltz = {
+		slot = 4
+		position = 4
 		icon = the_viennese_waltz
 		required_missions = { emp_hab_imperial_capitals }
 		provinces_to_highlight = {
@@ -776,6 +784,9 @@ emp_hab_minorities_branch = {
 						area = slovakia_area
 						area = transdanubia_area
 						area = alfold_area
+						area = felvidek_area
+						area = southern_transdanubia_area
+						area = southern_alfold_area
 					}
 					OR = {
 						NOT = { owned_by = root }
@@ -786,11 +797,14 @@ emp_hab_minorities_branch = {
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
-								value = 12 #out of 14
+								value = 20
 								OR = {
 									area = slovakia_area
 									area = transdanubia_area
 									area = alfold_area
+									area = felvidek_area
+									area = southern_transdanubia_area
+									area = southern_alfold_area
 								}
 								NOT = { unrest = 1 }
 								NOT = { nationalism = 1 }
@@ -972,6 +986,7 @@ emp_hab_german_expansion_branch = {
 							province_id = 76
 							province_id = 4709
 							province_id = 1868
+							province_id = 3615
 						}
 					}
 				}
@@ -986,6 +1001,7 @@ emp_hab_german_expansion_branch = {
 					province_id = 76
 					province_id = 4709
 					province_id = 1868
+					province_id = 3615
 				}
 			}
 		}
@@ -1013,13 +1029,6 @@ emp_hab_german_expansion_branch = {
 					add_permanent_claim = root
 				}
 				lower_bavaria_area = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = root
-				}
-				east_bavaria_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -1312,7 +1321,7 @@ emp_hab_german_expansion_branch_2 = {
 			}
 		}
 		effect = {
-			add_dip_power = 250
+			add_dip_power = 150
 			if = {
 				limit = { exists = PRU }
 				if = {
@@ -1499,11 +1508,19 @@ emp_hab_western_expansion_branch = {
 				}
 				add_permanent_claim = root
 			}
+			franche_comte_area = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
 			every_province = {
 				limit = {
 					region = france_region
 					NOT = { area = bourgogne_area }
 					NOT = { area = lorraine_area }
+					NOT = { area = franche_comte_area }
 					is_part_of_hre = yes
 					owner = {
 						OR = {
@@ -1528,6 +1545,7 @@ emp_hab_western_expansion_branch = {
 			OR = {
 				area = bourgogne_area
 				area = lorraine_area
+				area = franche_comte_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
@@ -1537,6 +1555,10 @@ emp_hab_western_expansion_branch = {
 				country_or_non_sovereign_subject_holds = root
 			}
 			lorraine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			franche_comte_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
@@ -1553,6 +1575,12 @@ emp_hab_western_expansion_branch = {
 				}
 			}
 			lorraine_area = {
+				add_province_modifier = {
+					name = hab_back_into_empire
+					duration = 7300
+				}
+			}
+			franche_comte_area = {
 				add_province_modifier = {
 					name = hab_back_into_empire
 					duration = 7300
@@ -1734,13 +1762,20 @@ emp_hab_balkans_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = wallachia_area
+				area = eastern_wallachia_area
 				area = silistria_area
 				area = bulgaria_area
+				area = eastern_bulgaria_area
+				area = upper_thrace_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_wallachia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1752,9 +1787,17 @@ emp_hab_balkans_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			eastern_bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
-			balkan_region = {
+			greece_region_btc = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -1770,7 +1813,6 @@ emp_hab_balkans_2 = {
 						NOT = { is_permanent_claim = root }
 						NOT = { region = anatolia_region }
 						NOT = { region = caucasia_region }
-						NOT = { region = balkan_region }
 					}
 					add_claim = root
 				}
@@ -1934,6 +1976,13 @@ emp_hab_more_italy_branch = {
 					add_permanent_claim = root
 				}
 				calabria_area = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+				abruzzo_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }

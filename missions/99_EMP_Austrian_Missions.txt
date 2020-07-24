@@ -372,6 +372,13 @@ emp_hab_netherlands_branch = {
 				}
 				add_permanent_claim = root
 			}
+			south_zhejiang_area = {
+				limit = {
+					NOT = { is_core = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
 			custom_tooltip = emp_hab_indian_trading_effect_tooltip
 			hidden_effect = {
 				every_province = {
