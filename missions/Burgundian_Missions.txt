@@ -5,6 +5,7 @@ bur_conquest = {
 	ai = yes
 	
 	potential = {
+		NOT = { has_dlc = "Emperor" }
 		tag = BUR
 		NOT = { map_setup = map_setup_random }
 	}
@@ -29,13 +30,22 @@ bur_conquest = {
 		effect = {
 			lorraine_area = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			luxembourg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
 			verdun_area = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -44,37 +54,37 @@ bur_conquest = {
 	
 	bur_lorraine = {
 		icon = mission_conquer_50_development
-		required_missions = { bur_subjects }
-		position = 2
+		required_missions = { emp_bur_subjects }
 		
 		provinces_to_highlight = {
-			area = lorraine_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			OR {
+				area = lorraine_area
+				area = luxembourg_area
+				area = verdun_area
+			}
+			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
 			lorraine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
+			}
+			luxembourg_area = {
+				type = all
+				owned_by = ROOT
+			}
+			verdun_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
 		effect = {
 			luxemburg_liege_area = {
 				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			luxembourg_area = {
-				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			wallonia_area = {
-				limit = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -83,36 +93,17 @@ bur_conquest = {
 	
 	bur_liege = {
 		icon = mission_have_two_subjects
-		required_missions = { bur_lorraine }
-		position = 3
+		required_missions = { emp_bur_lorraine }
 		
 		provinces_to_highlight = {
-			OR = {
-				province_id = 93
-				province_id = 5531
-				province_id = 2974
-				province_id = 4835
-				area = luxembourg_area
-			}
+			area = luxemburg_liege_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			93 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5531 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2974 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4835 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			luxembourg_area = {
+			luxemburg_liege_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		
@@ -141,13 +132,12 @@ bur_conquest = {
 	
 	bur_frisia = {
 		icon = mission_hanseatic_city
-		required_missions = { bur_liege }
-		position = 5
+		required_missions = { emp_bur_liege }
 		
 		provinces_to_highlight = {
-			OR = {
-				area = guelders_area
+			OR {
 				area = frisia_area
+				area = guelders_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -186,6 +176,7 @@ bur_arles = {
 	ai = yes
 	
 	potential = {
+		NOT = { has_dlc = "Emperor" }
 		tag = BUR
 		NOT = { map_setup = map_setup_random }
 	}
@@ -194,10 +185,12 @@ bur_arles = {
 	bur_nevers = {
 		icon = mission_have_two_subjects
 		required_missions = { }
-		position = 1
 		
 		provinces_to_highlight = {
-			province_id = 191
+			OR = {
+				province_id = 191
+				province_id = 181
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
@@ -205,19 +198,17 @@ bur_arles = {
 			191 = {
 				owned_by = ROOT
 			}
+			181 = {
+				owned_by = ROOT
+			}
 		}
 		
 		effect = {
-			1871 = {
-				add_permanent_claim = ROOT
-			}
-			3056 = {
-				add_permanent_claim = ROOT
-			}
-			1867 = {
-				add_permanent_claim = ROOT
-			}
-			4794 = {
+			romandie_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 			savoy_dauphine_area = {
@@ -232,31 +223,19 @@ bur_arles = {
 	
 	bur_romandie = {
 		icon = mission_landsknecht_soldier
-		required_missions = { bur_nevers }
-		position = 3
+		required_missions = { emp_bur_nevers }
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1871
-				province_id = 3056
-				province_id = 1867
-				province_id = 4794
+				area = romandie_area
 				area = savoy_dauphine_area
 			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			1871 = {
-				owned_by = ROOT
-			}
-			3056 = {
-				owned_by = ROOT
-			}
-			1867 = {
-				owned_by = ROOT
-			}
-			4794 = {
+			romandie_area = {
+				type = all
 				owned_by = ROOT
 			}
 			savoy_dauphine_area = {
@@ -266,20 +245,6 @@ bur_arles = {
 		}
 		
 		effect = {
-			provence_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			west_piedmont_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			dauphine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -287,10 +252,14 @@ bur_arles = {
 				}
 				add_permanent_claim = ROOT
 			}
-			102 = {
+			provence_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
-			3045 = {
+			102 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -298,38 +267,37 @@ bur_arles = {
 	
 	bur_cisjurania = {
 		icon = mission_italian_condottiere
-		required_missions = { bur_romandie }
-		position = 5
+		required_missions = { emp_bur_romandie }
 		
 		provinces_to_highlight = {
 			OR = {
 				area = provence_area
-				area = west_piedmont_area
 				area = dauphine_area
 				province_id = 102
-				province_id = 3045
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				ROOT = {
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						value = 10
+						OR = {
+							area = provence_area
+							area = dauphine_area
+							province_id = 102
+						}
+					}
+				}
+			}
 		}
 		
 		trigger = {
-			provence_area = {
-				type = all
-				owned_by = ROOT
-			}
-			west_piedmont_area = {
-				type = all
-				owned_by = ROOT
-			}
-			dauphine_area = {
-				type = all
-				owned_by = ROOT
-			}
-			102 = {
-				owned_by = ROOT
-			}
-			3045 = {
-				owned_by = ROOT
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 10
+				OR = {
+					area = provence_area
+					area = dauphine_area
+					province_id = 102
+				}
 			}
 		}
 		
@@ -347,19 +315,26 @@ bur_arles = {
 				name = "bur_arles_mod"
 				duration = "7300"
 			}
-			liguria_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_claim = ROOT
-			}
 			piedmont_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			lombardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}

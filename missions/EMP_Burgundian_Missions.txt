@@ -44,10 +44,11 @@ emp_burgundy_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			205 = {
-				add_permanent_claim = ROOT
-			}
-			4719 = {
+			savoy_dauphine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -59,8 +60,7 @@ emp_burgundy_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = romandie_area
-				province_id = 205
-				province_id = 4719
+				area = savoy_dauphine_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -70,16 +70,14 @@ emp_burgundy_1 = {
 				type = all
 				owned_by = ROOT
 			}
-			205 = {
-				owned_by = ROOT
-			}
-			4719 = {
+			savoy_dauphine_area = {
+				type = all
 				owned_by = ROOT
 			}
 		}
 		
 		effect = {
-			savoy_dauphine_area = {
+			dauphine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -106,17 +104,17 @@ emp_burgundy_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = provence_area
-				area = savoy_dauphine_area
+				area = dauphine_area
 				province_id = 102
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 8 #out of 9 (so you can leave out Avignon)
+						value = 10
 						OR = {
 							area = provence_area
-							area = savoy_dauphine_area
+							area = dauphine_area
 							province_id = 102
 						}
 					}
@@ -126,10 +124,10 @@ emp_burgundy_1 = {
 		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8 #out of 9 (so you can leave out Avignon)
+				value = 10
 				OR = {
 					area = provence_area
-					area = savoy_dauphine_area
+					area = dauphine_area
 					province_id = 102
 				}
 			}
@@ -163,7 +161,7 @@ emp_burgundy_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			po_valley_area = {
+			west_piedmont_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -181,16 +179,16 @@ emp_burgundy_1 = {
 					OR = {
 						area = piedmont_area
 						area = lombardy_area
-						area = po_valley_area
+						area = west_piedmont_area
 					}
 					NOT = {
 						ROOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 10 #out of 12
+								value = 13
 								OR = {
 									area = piedmont_area
 									area = lombardy_area
-									area = po_valley_area
+									area = west_piedmont_area
 								}
 							}
 						}
@@ -204,11 +202,11 @@ emp_burgundy_1 = {
 		trigger = {
 			owns_or_non_sovereign_subject_of = 104
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10 #out of 12
+				value = 13
 				OR = {
 					area = piedmont_area
 					area = lombardy_area
-					area = po_valley_area
+					area = west_piedmont_area
 				}
 			}
 		}
@@ -236,6 +234,20 @@ emp_burgundy_1 = {
 				add_permanent_claim = ROOT
 			}
 			tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_tuscany_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -567,6 +579,20 @@ emp_burgundy_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			luxembourg_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			verdun_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -575,7 +601,11 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_subjects }
 		
 		provinces_to_highlight = {
-			area = lorraine_area
+			OR {
+				area = lorraine_area
+				area = luxembourg_area
+				area = verdun_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
@@ -584,19 +614,22 @@ emp_burgundy_3 = {
 				type = all
 				owned_by = ROOT
 			}
+			luxembourg_area = {
+				type = all
+				owned_by = ROOT
+			}
+			verdun_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		
 		effect = {
-			93 = {
-				add_permanent_claim = ROOT
-			}
-			1878 = {
-				add_permanent_claim = ROOT
-			}
-			2974 = {
-				add_permanent_claim = ROOT
-			}
-			1742 = {
+			luxemburg_liege_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
 				add_permanent_claim = ROOT
 			}
 		}
@@ -607,27 +640,14 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_lorraine }
 		
 		provinces_to_highlight = {
-			OR = {
-				province_id = 93
-				province_id = 1878
-				province_id = 2974
-				province_id = 1742
-			}
+			area = luxemburg_liege_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			93 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1878 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2974 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			1742 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			luxemburg_liege_area = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		
@@ -644,6 +664,13 @@ emp_burgundy_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			guelders_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -652,12 +679,19 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_liege }
 		
 		provinces_to_highlight = {
-			area = frisia_area
+			OR {
+				area = frisia_area
+				area = guelders_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			frisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guelders_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1172,7 +1206,14 @@ emp_burgundy_4 = {
 					}
 					add_permanent_claim = root
 				}
-				orleans_area = {
+				southern_champagne_area = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+				loire_valley_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -1202,7 +1243,14 @@ emp_burgundy_4 = {
 					}
 					add_permanent_claim = root
 				}
-				orleans_area = {
+				southern_champagne_area = {
+					limit = {
+						NOT = { is_core = root }
+						NOT = { is_permanent_claim = root }
+					}
+					add_permanent_claim = root
+				}
+				loire_valley_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -1223,7 +1271,7 @@ emp_burgundy_4 = {
 					NOT = {
 						ROOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 18
+								value = 26
 								region = france_region
 							}
 						}
@@ -1236,7 +1284,7 @@ emp_burgundy_4 = {
 		trigger = {
 			owns_core_province = 183 #Paris
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 18
+				value = 26
 				region = france_region
 			}
 			total_own_and_non_tributary_subject_development = FRA
@@ -1246,7 +1294,7 @@ emp_burgundy_4 = {
 		effect = {
 			add_country_modifier = {
 				name = bur_king_of_franks
-				duration = 7300
+				duration = 10950
 			}
 
 			if = {
@@ -1827,7 +1875,7 @@ emp_burgundy_5 = {
 			}
 			add_country_modifier = {
 				name = bur_we_shall_not_be_annexed
-				duration = 7300
+				duration = 10950
 			}
 			if = {
 				limit = {
@@ -1905,6 +1953,10 @@ emp_burgundy_5 = {
 						area = north_brabant_area
 						area = holland_area
 						area = frisia_area
+						area = verdun_area
+						area = luxembourg_area
+						area = luxemburg_liege_area
+						area = guelders_area
 					}
 					NOT = {
 						ROOT = {
@@ -1921,6 +1973,10 @@ emp_burgundy_5 = {
 									area = north_brabant_area
 									area = holland_area
 									area = frisia_area
+									area = verdun_area
+									area = luxembourg_area
+									area = luxemburg_liege_area
+									area = guelders_area
 								}
 							}
 						}
@@ -1940,7 +1996,7 @@ emp_burgundy_5 = {
 			owns_core_province = 1878
 			owns_core_province = 189
 			num_of_owned_provinces_with = {
-				value = 25 #out of 34
+				value = 34
 				is_core = root
 				OR = {
 					area = alsace_area
@@ -1952,6 +2008,10 @@ emp_burgundy_5 = {
 					area = north_brabant_area
 					area = holland_area
 					area = frisia_area
+					area = verdun_area
+					area = luxembourg_area
+					area = luxemburg_liege_area
+					area = guelders_area
 				}
 			}
 
@@ -2049,6 +2109,20 @@ emp_burgundy_5 = {
 				add_permanent_claim = ROOT
 			}
 			braunschweig_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			muenster_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			paderborn_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
