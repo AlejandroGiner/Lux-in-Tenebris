@@ -82,7 +82,7 @@ emp_hun_poland_branch = {
 			OR = {
 				area = malopolska_area
 				area = red_ruthenia_area
-				area = sandomierz_area
+				area = central_galicia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -93,7 +93,7 @@ emp_hun_poland_branch = {
 					OR = {
 						area = malopolska_area
 						area = red_ruthenia_area
-						area = sandomierz_area
+						area = central_galicia_area
 					}
 				}
 				if = {
@@ -150,7 +150,7 @@ emp_hun_poland_branch = {
 					}
 					add_permanent_claim = ROOT
 				}
-				central_poland_area = {
+				lublin_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -182,7 +182,7 @@ emp_hun_poland_branch = {
 		provinces_to_highlight = {
 			OR = {
 				area = mazovia_area
-				area = central_poland_area
+				area = lublin_area
 				area = wielkopolska_area
 				area = kuyavia_area
 			}
@@ -193,7 +193,7 @@ emp_hun_poland_branch = {
 						value = 12 #out of 15
 						OR = {
 							area = mazovia_area
-							area = central_poland_area
+							area = lublin_area
 							area = wielkopolska_area
 							area = kuyavia_area
 						}
@@ -206,7 +206,7 @@ emp_hun_poland_branch = {
 				value = 12 #out of 15
 				OR = {
 					area = mazovia_area
-					area = central_poland_area
+					area = lublin_area
 					area = wielkopolska_area
 					area = kuyavia_area
 				}
@@ -493,7 +493,14 @@ emp_hun_bohemia_austria_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lusatia_area = {
+			lower_silesia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lausitz_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -517,7 +524,8 @@ emp_hun_bohemia_austria_branch = {
 			OR = {
 				area = moravia_area
 				area = silesia_area
-				area = lusatia_area
+				area = lower_silesia_area
+				area = lausitz_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
@@ -527,7 +535,8 @@ emp_hun_bohemia_austria_branch = {
 						OR = {
 							area = moravia_area
 							area = silesia_area
-							area = lusatia_area
+							area = lower_silesia_area
+							area = lausitz_area
 						}
 					}
 				}
@@ -539,7 +548,8 @@ emp_hun_bohemia_austria_branch = {
 				OR = {
 					area = moravia_area
 					area = silesia_area
-					area = lusatia_area
+					area = lower_silesia_area
+					area = lausitz_area
 				}
 			}
 			is_subject = no
@@ -576,6 +586,13 @@ emp_hun_bohemia_austria_branch = {
 					}
 					add_permanent_claim = ROOT
 				}
+				moravia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -594,6 +611,7 @@ emp_hun_bohemia_austria_branch = {
 			OR = {
 				area = bohemia_area
 				area = erzgebirge_area
+				area = moravia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -603,6 +621,10 @@ emp_hun_bohemia_austria_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			erzgebirge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moravia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -665,7 +687,7 @@ emp_hun_bohemia_austria_branch_2 = {
 			country_or_non_sovereign_subject_holds = HAB
 			HAB = {
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 13
+					value = 17
 				}
 			}
 		}
@@ -677,7 +699,7 @@ emp_hun_bohemia_austria_branch_2 = {
 						tooltip = emp_hun_weaken_austria_trigger_tooltip
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 14
+								value = 18
 							}
 						}
 					}
@@ -719,6 +741,13 @@ emp_hun_bohemia_austria_branch_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				carniola_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -732,7 +761,7 @@ emp_hun_bohemia_austria_branch_2 = {
 					OR = {
 						area = austria_proper_area
 						area = inner_austria_area
-						area = carinthia_area
+						area = carniola_area
 					}
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					NOT = {
@@ -742,7 +771,7 @@ emp_hun_bohemia_austria_branch_2 = {
 								OR = {
 									area = austria_proper_area
 									area = inner_austria_area
-									area = carinthia_area
+									area = carniola_area
 								}
 							}
 						}
@@ -761,7 +790,7 @@ emp_hun_bohemia_austria_branch_2 = {
 				OR = {
 					area = austria_proper_area
 					area = inner_austria_area
-					area = carinthia_area
+					area = carniola_area
 				}
 			}
 		}
@@ -846,7 +875,7 @@ emp_hun_bulwark_of_christianity_branch = {
 		effect = {
 			add_country_modifier = {
 				name = hun_bulwark_of_christianity
-				duration = 7300
+				duration = 10950
 			}
 		}
 	}
