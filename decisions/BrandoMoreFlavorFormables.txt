@@ -1,0 +1,523 @@
+country_decisions = {
+
+	#Cherokee nation
+	form_cherokee_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = form_cherokee_nation_flag }
+			NOT = { tag = NF8 }
+			religion = totemism
+			tag = CHE
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = south_appalachia_area
+				area = eastern_tennessee_area
+				area = middle_tennessee_area
+				area = western_tennessee_area
+				area = kentucky_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF8 }
+			is_at_war = no
+			owns_core_province = 7453
+			custom_trigger_tooltip = {
+				tooltip = majority_of_cherokee_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = south_appalachia_area
+								area = eastern_tennessee_area
+								area = middle_tennessee_area
+								area = western_tennessee_area
+								area = kentucky_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = NF8
+			btc_new_nation_effects = yes
+			south_appalachia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_tennessee_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			middle_tennessee_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_tennessee_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kentucky_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = form_cherokee_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Wendake
+	wendake_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = wendake_nation_flag }
+			NOT = { tag = NF9 }
+			religion = totemism
+			tag = HUR
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = upper_canada_area
+				area = michigan_area
+				area = ohio_country_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF9 }
+			is_at_war = no
+			owns_core_province = 5037
+			custom_trigger_tooltip = {
+				tooltip = majority_of_wendake_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = upper_canada_area
+								area = michigan_area
+								area = ohio_country_area
+							}
+						}
+						amount = 10
+					}
+			}
+		}
+		effect = {
+			change_tag = NF9
+			btc_new_nation_effects = yes
+			upper_canada_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ohio_country_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = wendake_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Haudenosaunee
+	haudenosaunee_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = haudenosaunee_nation_flag }
+			NOT = { tag = N1F }
+			religion = totemism
+			OR = {
+				primary_culture = iroquois
+				primary_culture = cayuga
+				primary_culture = onondaga
+				primary_culture = oneida
+				primary_culture = mohawk
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = iroquoisia_area
+				area = eastern_iroquoisia_area
+				area = westsylvania_area
+				area = ohio_country_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N1F }
+			is_at_war = no
+			owns_core_province = 960
+			custom_trigger_tooltip = {
+				tooltip = majority_of_haudenosaunee_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = iroquoisia_area
+								area = eastern_iroquoisia_area
+								area = westsylvania_area
+								area = ohio_country_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = N1F
+			btc_new_nation_effects = yes
+			iroquoisia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_iroquoisia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			westsylvania_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ohio_country_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = haudenosaunee_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Denendeh
+	denendeh_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = denendeh_nation_flag }
+			NOT = { tag = N2F }
+			religion = totemism
+			OR = {
+				primary_culture = slavey
+				primary_culture = sahtu
+				primary_culture = athabascan
+				primary_culture = chipewyan
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = peace_river_area
+				area = deh_cho_area
+				area = sahtu_area
+				area = stikine_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N2F }
+			is_at_war = no
+			owns_core_province = 4985
+			custom_trigger_tooltip = {
+				tooltip = majority_of_denendeh_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = peace_river_area
+								area = deh_cho_area
+								area = sahtu_area
+								area = stikine_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = N2F
+			btc_new_nation_effects = yes
+			peace_river_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			deh_cho_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sahtu_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			stikine_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = denendeh_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Dinetah nation
+	dinetah_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = dinetah_nation_flag }
+			NOT = { tag = N3F }
+			religion = totemism
+			OR = {
+				primary_culture = navajo
+				primary_culture = apache
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = southern_colorado_plateau_area
+				area = painted_desert_area
+				area = mogollon_rim_area
+				area = upper_gila_area
+				area = new_mexico_area
+				area = upper_rio_grande_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N3F }
+			is_at_war = no
+			owns_core_province = 4979
+			custom_trigger_tooltip = {
+				tooltip = majority_of_dinetah_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = southern_colorado_plateau_area
+								area = painted_desert_area
+								area = mogollon_rim_area
+								area = upper_gila_area
+								area = new_mexico_area
+								area = upper_rio_grande_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = N3F
+			btc_new_nation_effects = yes
+			southern_colorado_plateau_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			painted_desert_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mogollon_rim_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_gila_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			new_mexico_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_rio_grande_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = dinetah_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Coast Salish Union
+	coast_salish_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = coast_salish_nation_flag }
+			NOT = { tag = N4F }
+			religion = totemism
+			OR = {
+				primary_culture = salish
+				primary_culture = halkomelem
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = salish_sea_area
+				area = straits_of_georgia_area
+				area = vancouver_island_area
+				area = northern_cascades_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N4F }
+			is_at_war = no
+			owns_core_province = 874
+			custom_trigger_tooltip = {
+				tooltip = majority_of_salish_sea_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = salish_sea_area
+								area = straits_of_georgia_area
+								area = vancouver_island_area
+								area = northern_cascades_area
+							}
+						}
+						amount = 10
+					}
+			}
+		}
+		effect = {
+			change_tag = N4F
+			btc_new_nation_effects = yes
+			salish_sea_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			straits_of_georgia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			vancouver_island_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_cascades_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = coast_salish_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

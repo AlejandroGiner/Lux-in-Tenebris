@@ -1,0 +1,199 @@
+country_decisions = {
+
+	#Hopi Pueblo Union
+	hopitutskwa_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = hopitutskwa_nation_flag }
+			NOT = { tag = N5F }
+			religion = totemism
+			OR = {
+				primary_culture = hopi
+				primary_culture = keres
+				primary_culture = pueblo
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = southern_colorado_plateau_area
+				area = painted_desert_area
+				area = mogollon_rim_area
+				area = new_mexico_area
+				area = lower_colorado_river_area
+				area = upper_colorado_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N5F }
+			is_at_war = no
+			owns_core_province = 1447
+			custom_trigger_tooltip = {
+				tooltip = majority_of_hopitutskwa_tooltip
+					calc_true_if = {
+						all_owned_provinces = {
+							is_core = ROOT
+							OR = {
+								area = southern_colorado_plateau_area
+								area = painted_desert_area
+								area = mogollon_rim_area
+								area = new_mexico_area
+								area = lower_colorado_river_area
+								area = upper_colorado_area
+							}
+						}
+						amount = 10
+					}
+			}
+		}
+		effect = {
+			change_tag = N5F
+			btc_new_nation_effects = yes
+			southern_colorado_plateau_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			painted_desert_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mogollon_rim_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			new_mexico_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_colorado_river_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_colorado_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = hopitutskwa_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Muscogee Nation
+	muscogee_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = muscogee_nation_flag }
+			NOT = { tag = N6F }
+			religion = totemism
+			OR = {
+				primary_culture = creek
+				primary_culture = alibamu
+				primary_culture = hitchiti
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wiregrass_area
+				area = upper_chattahoochee_area
+				area = alabama_area
+				area = american_georgia_area
+				area = upper_american_georgia_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N6F }
+			is_at_war = no
+			owns_core_province = 925
+			custom_trigger_tooltip = {
+				tooltip = majority_of_muscogee_tooltip
+					calc_true_if = {
+						all_owned_provinces = {
+							is_core = ROOT
+							OR = {
+								area = wiregrass_area
+								area = upper_chattahoochee_area
+								area = alabama_area
+								area = american_georgia_area
+								area = upper_american_georgia_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = N6F
+			btc_new_nation_effects = yes
+			wiregrass_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_chattahoochee_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			alabama_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			american_georgia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_american_georgia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = muscogee_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}

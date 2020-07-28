@@ -1,0 +1,560 @@
+country_decisions = {
+	
+	#Wabanaki
+	wabanaki_nation = {
+		major = yes
+		potential = { 
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_wabanaki_flag }
+			NOT = { tag = NF1 }
+			religion = totemism
+			OR = {
+				primary_culture = abenaki
+				primary_culture = mikmaq
+				primary_culture = wabenaki
+			}
+		}
+		provinces_to_highlight = { 
+			OR = {
+				area = great_woods_area
+				area = maine_area
+				area = lower_acadia_area
+				area = upper_acadia_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF1 }
+			is_at_war = no
+			owns_core_province = 971
+			custom_trigger_tooltip = {
+				tooltip = majority_of_wabanaki_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = great_woods_area
+								area = maine_area
+								area = lower_acadia_area
+								area = upper_acadia_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = NF1
+			btc_new_nation_effects = yes 
+			great_woods_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			maine_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_acadia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_acadia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_wabanaki_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 
+	}
+	
+	#Seven Council Fires Oceti Sakowin
+	oceti_sakowin_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_oceti_sakowin_flag }
+			NOT = { tag = NF2 }
+			religion = totemism
+			OR = {
+				tag = YZB
+				tag = SIO
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = dakota_area
+				area = west_dakota_area
+				area = lakota_area
+				area = south_dakota_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF2 }
+			is_at_war = no
+			owns_core_province = 906
+			custom_trigger_tooltip = {
+				tooltip = majority_of_oceti_sakowin_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = dakota_area
+								area = west_dakota_area
+								area = lakota_area
+								area = south_dakota_area
+							}
+						}
+						amount = 10
+					}
+			}
+		}
+		effect = {
+			change_tag = NF2
+			btc_new_nation_effects = yes
+			dakota_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_dakota_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lakota_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_dakota_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_oceti_sakowin_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Three Council Fires
+	three_council_fires_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_three_council_fires_flag }
+			NOT = { tag = NF3 }
+			religion = totemism
+			OR = {
+				tag = OJI
+				tag = POT
+				tag = OTT
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = upper_ontario_area
+				area = michigan_area
+				area = wisconsin_area
+				area = lake_superior_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF3 }
+			is_at_war = no
+			owns_core_province = 1001
+			custom_trigger_tooltip = {
+				tooltip = majority_of_three_fires_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = upper_ontario_area
+								area = michigan_area
+								area = wisconsin_area
+								area = lake_superior_area
+							}
+						}
+						amount = 10
+					}
+			}
+		}
+		effect = {
+			change_tag = NF3
+			btc_new_nation_effects = yes
+			upper_ontario_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			michigan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = {is_core = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
+			wisconsin_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lake_superior_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_three_council_fires_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Iron Confederacy
+	iron_confederacy_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_iron_confederacy_flag }
+			NOT = { tag = NF4 }
+			religion = totemism
+			OR = {
+				primary_culture = cree
+				primary_culture = ojicree
+				primary_culture = nakota
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = churchill_area
+				area = saskatchewan_area
+				area = assiniboia_area
+				area = manitoba_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF4 }
+			is_at_war = no
+			owns_core_province = 2597
+			custom_trigger_tooltip = {
+				tooltip = majority_of_iron_confederacy_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = churchill_area
+								area = saskatchewan_area
+								area = assiniboia_area
+								area = manitoba_area
+							}
+						}
+						amount = 10
+					}
+			}
+		}
+		effect = {
+			change_tag = NF4
+			btc_new_nation_effects = yes
+			churchill_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT}
+				}
+				add_permanent_claim = ROOT
+			}
+			saskatchewan_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			assiniboia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			manitoba_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = formed_iron_confederacy_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Blackfoot Confederacy
+	blackfoot_confederacy_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = blackfoot_confederacy_nation_flag }
+			NOT = { tag = NF5 }
+			religion = totemism
+			primary_culture = blackfoot
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = badlands_area
+				area = prairies_area
+				area = east_prairies_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT}
+			}
+		}
+		allow = {
+			NOT = { exists = NF5 }
+			is_at_war = no
+			owns_core_province = 2004
+			custom_trigger_tooltip = {
+				tooltip = majority_of_blackfoot_confederacy_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = badlands_area
+								area = prairies_area
+								area = east_prairies_area
+							}
+						}
+						amount = 8
+					}
+			}
+		}
+		effect = {
+			change_tag = NF5
+			btc_new_nation_effects = yes
+			badlands_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			prairies_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_prairies_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = blackfoot_confederacy_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Haida Tlingit Union
+	haa_aani_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = haa_aani_nation_flag }
+			NOT = { tag = NF6 }
+			religion = totemism
+			OR = {
+				primary_culture = haida
+				primary_culture = tlingit
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_alaska_area
+				area = hecate_strait_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF6 }
+			is_at_war = no
+			owns_core_province = 5728
+			custom_trigger_tooltip = {
+				tooltip = majority_of_haa_aani_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = east_alaska_area
+								area = hecate_strait_area
+							}
+						}
+						amount = 8
+					}
+			}
+		}
+		effect = {
+			change_tag = NF6
+			btc_new_nation_effects = yes
+			east_alaska_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hecate_strait_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = haa_aani_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Tsenacommacah
+	powhatan_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = powhatan_nation_flag }
+			NOT = { tag = NF7 }
+			religion = totemism
+			tag = POW
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = virginia_tidewater_area
+				area = inner_banks_area
+				area = delmarva_area
+				area = chesapeake_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = NF7 }
+			is_at_war = NO
+			owns_core_province = 950
+			custom_trigger_tooltip = {
+				tooltip = majority_of_powhatan_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = virginia_tidewater_area
+								area = inner_banks_area
+								area = delmarva_area
+								area = chesapeake_area
+							}
+						}
+						amount = 12
+					}
+			}
+		}
+		effect = {
+			change_tag = NF7
+			btc_new_nation_effects = yes
+			virginia_tidewater_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			inner_banks_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delmarva_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim
+			}
+			chesapeake_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = powhatan_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+}
