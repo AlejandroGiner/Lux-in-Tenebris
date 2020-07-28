@@ -964,7 +964,7 @@ emp_ita_unification_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			hellas_area = {
+			western_aegean_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1010,7 +1010,7 @@ emp_ita_unification_branch = {
 		provinces_to_highlight = {
 			OR = {
 				area = aegean_archipelago_area
-				area = hellas_area
+				area = western_aegean_area
 				area = thrace_area
 				area = morea_area
 				area = macedonia_area
@@ -1023,7 +1023,7 @@ emp_ita_unification_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			hellas_area = {
+			western_aegean_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -294,7 +294,7 @@ hun_south_group = {
 			western_moldovia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
-			}`
+			}
 			is_subject = no
 		}
 		
@@ -663,7 +663,7 @@ hun_ottoman_group = {
 				}
 				add_claim = ROOT
 			}
-			hellas_area = {
+			western_aegean_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

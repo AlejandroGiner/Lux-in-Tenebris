@@ -520,7 +520,6 @@ emp_hab_prestige_branch = {
 	has_country_shield = yes
 	
 	emp_hab_balanced_estates = {
-		slot = 4
 		position = 1
 		icon = balance_the_estates
 		required_missions = {  }
@@ -614,7 +613,6 @@ emp_hab_prestige_branch = {
 	}
 	
 	emp_hab_prospering_nation = {
-		slot = 4
 		position = 2
 		icon = austria_prospers
 		required_missions = { emp_hab_balanced_estates }
@@ -664,7 +662,6 @@ emp_hab_prestige_branch = {
 	}
 	
 	emp_hab_imperial_capitals = {
-		slot = 4
 		position = 3
 		icon = imperial_capitals
 		required_missions = { emp_hab_prospering_nation }
@@ -723,7 +720,6 @@ emp_hab_prestige_branch = {
 	}
 	
 	emp_hab_viennese_waltz = {
-		slot = 4
 		position = 4
 		icon = the_viennese_waltz
 		required_missions = { emp_hab_imperial_capitals }
@@ -1763,7 +1759,7 @@ emp_hab_balkans_2 = {
 			OR = {
 				area = wallachia_area
 				area = eastern_wallachia_area
-				area = silistria_area
+				area = lower_danube_area
 				area = bulgaria_area
 				area = eastern_bulgaria_area
 				area = upper_thrace_area
@@ -1779,7 +1775,7 @@ emp_hab_balkans_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			silistria_area = {
+			lower_danube_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

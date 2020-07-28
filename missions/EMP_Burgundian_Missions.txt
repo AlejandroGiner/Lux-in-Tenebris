@@ -1206,14 +1206,14 @@ emp_burgundy_4 = {
 					}
 					add_permanent_claim = root
 				}
-				southern_champagne_area = {
+				south_champagne_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = root
 				}
-				loire_valley_area = {
+				loire_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -1243,14 +1243,14 @@ emp_burgundy_4 = {
 					}
 					add_permanent_claim = root
 				}
-				southern_champagne_area = {
+				south_champagne_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = root
 				}
-				loire_valley_area = {
+				loire_area = {
 					limit = {
 						NOT = { is_core = root }
 						NOT = { is_permanent_claim = root }
@@ -1913,13 +1913,6 @@ emp_burgundy_5 = {
 					amount = 25
 				}
 			}
-			alsace_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			lower_rhineland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1944,7 +1937,6 @@ emp_burgundy_5 = {
 			OR = {
 				AND = {
 					OR = {
-						area = alsace_area
 						area = lower_rhineland_area
 						area = north_rhine_area
 						area = lorraine_area
@@ -1964,7 +1956,6 @@ emp_burgundy_5 = {
 								value = 25 #out of 34
 								is_core = root
 								OR = {
-									area = alsace_area
 									area = lower_rhineland_area
 									area = north_rhine_area
 									area = lorraine_area
@@ -1999,7 +1990,6 @@ emp_burgundy_5 = {
 				value = 34
 				is_core = root
 				OR = {
-					area = alsace_area
 					area = lower_rhineland_area
 					area = north_rhine_area
 					area = lorraine_area
@@ -2087,13 +2077,6 @@ emp_burgundy_5 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			north_westphalia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			weser_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -2161,7 +2144,6 @@ emp_lotharingia_5 = {
 				area = lower_rhineland_area
 				area = north_rhine_area
 				area = westphalia_area
-				area = north_westphalia_area
 				area = weser_area
 				area = lower_saxony_area
 				area = braunschweig_area
@@ -2179,7 +2161,6 @@ emp_lotharingia_5 = {
 							area = lower_rhineland_area
 							area = north_rhine_area
 							area = westphalia_area
-							area = north_westphalia_area
 							area = weser_area
 							area = lower_saxony_area
 							area = braunschweig_area
@@ -2200,7 +2181,6 @@ emp_lotharingia_5 = {
 					area = lower_rhineland_area
 					area = north_rhine_area
 					area = westphalia_area
-					area = north_westphalia_area
 					area = weser_area
 					area = lower_saxony_area
 					area = braunschweig_area

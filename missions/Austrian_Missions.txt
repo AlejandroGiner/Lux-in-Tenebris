@@ -232,7 +232,7 @@ hab_holy_roman_ambitions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			carpathain_ruthenia_area = {
+			carpathian_ruthenia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -287,7 +287,7 @@ hab_holy_roman_ambitions = {
 				area = malopolska_area
 				area = red_ruthenia_area
 				area = felvidek_area
-				area = carpathain_ruthenia_area
+				area = carpathian_ruthenia_area
 				area = central_galicia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -309,7 +309,7 @@ hab_holy_roman_ambitions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			carpathain_ruthenia_area = {
+			carpathian_ruthenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -436,19 +436,19 @@ hab_protect_the_balkans = {
 					}
 					add_permanent_claim = ROOT
 				}
-				area = southern_transdanubia_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+				southern_transdanubia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
-				add_permanent_claim = ROOT
-				}
-				area = southern_alfold_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
+				southern_alfold_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
