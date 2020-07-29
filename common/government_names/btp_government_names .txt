@@ -31,7 +31,8 @@ gov_puppet_kingdom_of_ireland = {
 	}
 
 	trigger = {
-		government = puppet_kingdom_of_ireland_legacy
+		#government = puppet_kingdom_of_ireland_legacy
+		always = no
 	}
 }
 
@@ -113,7 +114,8 @@ gov_high_kingship = {
 	}
 	
 	trigger = {
-		government = high_kingship_legacy
+		#government = high_kingship_legacy
+		always = no
 	}
 }
 
@@ -147,7 +149,8 @@ gov_norman_lordship_reform = {
 	}
 	
 	trigger = {
-		government = norman_lordship_legacy
+		#government = norman_lordship_legacy
+		always = no
 	}
 }
 
@@ -195,7 +198,8 @@ gov_anglo_irish_monarchy_reform = {
 	}
 	
 	trigger = {
-		government = anglo_irish_monarchy_legacy
+		#government = anglo_irish_monarchy_legacy
+		always = no
 	}
 }
 
@@ -219,8 +223,9 @@ gov_florentine_republic_btc = {
 	}
 
 	trigger = {
-		government = florence_republic_legacy
-		government = florentine_republic_btc
+		#government = florence_republic_legacy
+		#government = florentine_republic_btc
+		always = no
 	}
 }
 
@@ -245,9 +250,10 @@ gov_florence_duchy  = {
 
 	trigger = {
 		OR = {
-		government = tuscan_duchy_legacy
-		government = tuscan_duchy_btc
+			#government = tuscan_duchy_legacy
+			#government = tuscan_duchy_btc
 		}
+		always = no
 	}
 }
 
