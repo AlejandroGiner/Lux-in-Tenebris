@@ -2101,8 +2101,6 @@ byz_all_your_balkan_base_are_belong_to_us = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
 						NOT = { province_id = 112 }
-						NOT = { province_id = 3048 }
-						NOT = { province_id = 3616 }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -2142,7 +2140,6 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				area = friuli_area
 				province_id = 1774
 				province_id = 3228
-				province_id = 110
 				province_id = 7018
 				province_id = 7019
 				province_id = 108
@@ -2157,8 +2154,6 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					type = all
 					OR = {
 						province_id = 112
-						province_id = 3616
-						province_id = 3048
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
@@ -2182,6 +2177,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			custom_tooltip = byz_lombardy_claims
 			hidden_effect = { #Lombardy
 				lombardy_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				po_valley_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -2328,7 +2330,14 @@ byz_roman_italy = {
 					}
 					add_permanent_claim = ROOT
 				}
-				east_sicily_area = {
+				western_sicily_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sicily_islands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -2359,6 +2368,13 @@ byz_roman_italy = {
 					}
 					add_permanent_claim = ROOT
 				}
+				umbria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -2380,6 +2396,7 @@ byz_roman_italy = {
 				area = lazio_area
 				area = abruzzo_area
 				area = central_italy_area
+				area = umbria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2390,6 +2407,10 @@ byz_roman_italy = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			lazio_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			umbria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2429,6 +2450,13 @@ byz_roman_italy = {
 					}
 					add_permanent_claim = ROOT
 				}
+				lunigiana_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -2450,12 +2478,17 @@ byz_roman_italy = {
 				area = tuscany_area
 				area = south_tuscany_area
 				area = emilia_romagna_area
+				area = lunigiana_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lunigiana_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2492,6 +2525,7 @@ byz_roman_italy = {
 		provinces_to_highlight = {
 			OR = {
 				area = lombardy_area
+				area = po_valley_area
 				area = west_piedmont_area
 				area = piedmont_area
 				area = liguria_area
@@ -2502,6 +2536,10 @@ byz_roman_italy = {
 		
 		trigger = {
 			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			po_valley_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2567,7 +2605,8 @@ byz_italian_islands = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2577,7 +2616,11 @@ byz_italian_islands = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -4598,27 +4641,12 @@ byz_false_emperors = {
 					}
 					add_permanent_claim = ROOT
 				}
-				3616 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
+				sudtirol_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-				}
-				3048 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -4643,8 +4671,7 @@ byz_false_emperors = {
 				area = tirol_area
 				area = upper_bavaria_area
 				area = upper_swabia_area
-				province_id = 3616
-				province_id = 3048
+				area = sudtirol_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4674,10 +4701,8 @@ byz_false_emperors = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			3616 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			3048 = {
+			sudtirol_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
@@ -5822,6 +5847,13 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				north_brabant_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				luxemburg_liege_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5875,17 +5907,6 @@ byz_galatia = {
 						NOT = { province_id = 77 }
 					}
 					add_permanent_claim = ROOT
-				}
-				5497 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
 				}
 				3060 = {
 					if = {
@@ -5949,6 +5970,7 @@ byz_galatia = {
 		provinces_to_highlight = {
 			OR = {
 				area = brabant_area
+				area = north_brabant_area
 				area = luxemburg_liege_area
 				area = elsass_area
 				area = switzerland_area
@@ -5956,7 +5978,6 @@ byz_galatia = {
 				province_id = 96
 				province_id = 5496
 				province_id = 5494
-				province_id = 5497
 				province_id = 3060
 				province_id = 2975
 				province_id = 4820
@@ -5977,6 +5998,10 @@ byz_galatia = {
 		
 		trigger = {
 			brabant_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			north_brabant_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

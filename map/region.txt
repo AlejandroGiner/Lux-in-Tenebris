@@ -72,14 +72,14 @@ low_countries_region = {
 	areas = {
 		wallonia_area
 		flanders_area
-		#holland_area			#New in 1.25, but not yet used in BT. Will almost certainly use it later.
 		brabant_area
-		netherlands_area
+		holland_area
 		frisia_area
 		luxemburg_liege_area			#Cut in 1.25, but kept in BT for the moment until I can redo the area.
 		#BTADDITIONS
 		guelders_area
 		luxembourg_area
+		north_brabant_area
 	}
 }
 
@@ -92,20 +92,24 @@ italy_region = {
 		liguria_area
 		corsica_sardinia_area
 		sicily_area
+		western_sicily_area
 		naples_area
 		calabria_area
 		apulia_area
 		emilia_romagna_area
 		central_italy_area
+		po_valley_area
 		#BTADDITIONS
 		emilia_area
 		abruzzo_area
 		south_tuscany_area
-		east_sicily_area
 		lazio_area
 		west_piedmont_area
 		corsica_area
 		friuli_area
+		sicily_islands_area
+		umbria_area
+		lunigiana_area
 	}
 }
 
@@ -155,6 +159,7 @@ south_german_region = {
 		carniola_area
 		upper_palatinate_area
 		west_swabia_area
+		sudtirol_area
 	}
 }
 

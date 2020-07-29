@@ -231,6 +231,13 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			flanders_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -310,6 +317,7 @@ french_mission_slot_2 = {
 			OR = {
 				area = wallonia_area
 				area = brabant_area
+				area = north_brabant_area
 				area = flanders_area
 				area = luxembourg_area
 				area = luxemburg_liege_area
@@ -324,6 +332,10 @@ french_mission_slot_2 = {
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -348,6 +360,12 @@ french_mission_slot_2 = {
 				}
 			}
 			brabant_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			north_brabant_area = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300

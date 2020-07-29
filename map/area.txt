@@ -397,10 +397,14 @@ flanders_area = { #8
 }
 
 brabant_area = { #3
-	92 95 4770 1744 6667
+	92 1744 6667 1866
 }
 
-netherlands_area = { #4
+north_brabant_area = {
+	3063 4770 5497 95
+}
+
+holland_area = { #4
 	color = { 219 30 57 }
 	96 97 98 4383 4833 5494 5496
 }
@@ -411,7 +415,7 @@ frisia_area = {
 }
 
 luxemburg_liege_area = { #Liege/Limburg
-	93 1742 2974 4835 3063 1866
+	93 1742 2974 4835
 }
 
 luxembourg_area = {
@@ -419,7 +423,7 @@ luxembourg_area = {
 }
 
 guelders_area = {
-	99 4381 3060 3062 4824 5497
+	99 4381 3060 3062 4824
 }
 
 ########################################
@@ -510,7 +514,7 @@ baetica_area = { #Granada
 ########################################
 
 venetia_area = { #4
-	 112 1774 3228 7018 4729 108 110 4758 3616
+	 112 1774 3228 7018 4729
 }
 
 friuli_area = {
@@ -518,7 +522,12 @@ friuli_area = {
 }
 
 lombardy_area = { 
-	104 4728 4740 1862 107 4739 3054 3294
+	104 4728 4740 1862 3054 3294
+}
+
+po_valley_area = {
+	color = { 205 190 47 }
+	109 108 107 4739
 }
 
 piedmont_area = { #East Piedmont
@@ -530,16 +539,20 @@ west_piedmont_area = { #West Piedmont
 }
 
 tuscany_area = { #North Tuscany
-	115 116 2978 2980 5878 3042
+	115 116 2978 5878 7005
 }
 
 south_tuscany_area = {
-	117 3040 3232 7043 5709 7005
+	117 3040 3232 7043 5709
+}
+
+lunigiana_area = {
+	3011 3042 5169 2980
 }
 
 liguria_area = { #5
 	color = { 219 30 57 }
-	101 102 2992 3011 3072 6323
+	101 102 2992 3072 6323
 }
 
 corsica_sardinia_area = { #Sardinia
@@ -550,12 +563,16 @@ corsica_area = {
 	3097 3098 5092 1247
 }
 
-sicily_area = { #West sicily
-	125 4737 4736 7003 7607 3553 7001
+western_sicily_area = {
+	125 4737 4736 7003 3553
 }
 
-east_sicily_area = { #5
-	124 2982 126 7002 7004 7060 
+sicily_area = { #Eastern Sicily
+	124 2982 7002 7004 7001
+}
+
+sicily_islands_area = {
+	126 7607 7060
 }
 
 naples_area = { #Campania
@@ -572,16 +589,16 @@ apulia_area = { #5
 
 emilia_romagna_area = { #Romagna
 	color = { 24 222 66 }
-	113 114 4730 5711 5136 7057 5710 6320
+	114 5711 5136 7057 5710 6320
 }
 
 emilia_area = {
-	105 106 109 7017 5149 5169 
+	105 106 7017 5149 4730 113
 }
 
 central_italy_area = { #6
 	color = { 252 242 252 }
-	2976 4731 5580 2977 119 5712 5153
+	5580 2977 119 5712 5153
 }
 
 abruzzo_area = {
@@ -589,7 +606,11 @@ abruzzo_area = {
 }
 
 lazio_area = {
-	118 3236 3295 3107 4732 5706 5128
+	118 3236 3295 3107 4732
+}
+
+umbria_area = {
+	5706 5128 2976 4731
 }
 ########################################
 # British Isles			 			   #
@@ -1131,13 +1152,17 @@ tirol_area = { #3
 	73 4710 3017 3617 3615 76
 }
 
+sudtirol_area = {
+	1768 3616 4758 110
+}
+
 austria_proper_area = { #3
 	color = { 13 40 40 }
 	133 134 1770 3052 4761 4762 3624
 }
 
 inner_austria_area = { #3
-	128 132 1863 6660 6664 1768
+	128 132 1863 6660 6664
 }
 
 carniola_area = { #3
@@ -4314,8 +4339,6 @@ basque_country = { }
 volga_area = { }
 
 kartli_kakheti_area = { }
-
-holland_area = { }
 
 lancashire_area = { }
 

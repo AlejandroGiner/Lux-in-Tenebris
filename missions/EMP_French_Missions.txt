@@ -213,6 +213,7 @@ emp_france_missions_1 = {
 			OR = {
 				area = wallonia_area
 				area = brabant_area
+				area = north_brabant_area
 				area = flanders_area
 				area = luxembourg_area
 				area = luxemburg_liege_area
@@ -227,6 +228,10 @@ emp_france_missions_1 = {
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -251,6 +256,12 @@ emp_france_missions_1 = {
 				}
 			}
 			brabant_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			north_brabant_area = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300
@@ -721,6 +732,13 @@ emp_france_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_brabant_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

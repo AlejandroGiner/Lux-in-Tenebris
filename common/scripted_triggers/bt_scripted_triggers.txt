@@ -148,10 +148,6 @@ integrate_naples_provinces = {
 		area = apulia_area
 		#BT additions:
 		area = naples_area
-		#Replaced by naples_area
-		#province_id = 121
-		#province_id = 120
-		#province_id = 2983
 	}
 }
 conquer_athens_provinces = {
@@ -160,8 +156,6 @@ conquer_athens_provinces = {
 		area = northern_greece_area
 		#BT additions:
 		area = western_aegean_area
-		#Replaced by western_aegean_area (Attike)
-		#province_id = 3003
 	}
 }
 
@@ -232,7 +226,7 @@ austrian_italian_ambition_provinces = {
 		area = venetia_area
 		area = friuli_area
 		area = lombardy_area
-		province_id = 109 #Was part of Habsburg Lombardo-Venetia
+		area = po_valley_area
 	}
 }
 

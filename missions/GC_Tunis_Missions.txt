@@ -320,7 +320,13 @@ gc_tunis_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -376,7 +382,8 @@ gc_tunis_3 = {
 				area = corsica_sardinia_area
 				area = baleares_area
 				area = corsica_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -394,7 +401,11 @@ gc_tunis_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
