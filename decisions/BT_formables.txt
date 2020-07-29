@@ -640,6 +640,8 @@ country_decisions = {
 				area = scottish_marches_area
 				area = kingdom_of_the_isles_area
 				area = wales_area
+				area = mid_wales_area
+				area = south_wales_area
 				area = cornwall_area
 				area = brittany_area
 				area = lower_brittany_area
@@ -686,7 +688,11 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = wales_area
+						OR = {
+							area = wales_area
+							area = mid_wales_area
+							area = south_wales_area
+						}
 					}
 					amount = 5			#At least half of Wales
 				}
@@ -751,6 +757,14 @@ country_decisions = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
+				mid_wales_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
+				south_wales_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
 				cornwall_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
@@ -779,6 +793,10 @@ country_decisions = {
 					add_claim = CEL
 				}
 				northern_england_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_claim = CEL
+				}
+				cumbria_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_claim = CEL
 				}
