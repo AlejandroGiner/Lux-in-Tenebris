@@ -258,49 +258,73 @@ lower_brittany_area = {
 }
 
 normandy_area = { #Upper Normandy 
-	167 1879 3073 5173 3646 3447 3448 3453
+	167 3646 3447 3448 3453
 }
 
 west_normandy_area = { #Lower Normandy
-	3025 3026 168 4385 3110 5915 3452
+	3026 168 4385 3452
+}
+
+central_normandy_area = {
+	5173 3073 1879 3025 
+}
+
+channel_islands_area = {
+	3110 5915
 }
 
 provence_area = { #3
-	201 202 4696 3090 3331 5540 5539
+	201 202 4696 2991 3331 5540 5539
 }
 
 guyenne_area = { #Aquitaine
-	174 194 3081 3324 4387 3648
+	174 194 3081 3324 3648
 }
 
 pyrenees_area = { #Gascony
-	173 175 176 3083 3328 3647 7643
+	173 175 3083 3647
+}
+
+btc_pyrenees_area = {
+	7643 176 3328 4694
 }
 
 languedoc_area = { # West
-	2753 4694 4695 196 5542 5543 
+	2753 4695 196 5542 5543 
 }
 
 east_languedoc_area = {
-	4391 3085 3223 5541 200
+	4391 3085 3223 200
 }
 
-bourgogne_area = { #4
+bourgogne_area = { #Burgundy
 	color = { 144 0 32 }
 	191 192 1877 4392 5143 5144 5535 
 }
 
-franche_comte_area = {
-	3130 3132 4764 3092 193 5536 5537 5538
+west_burgundy_area = { #Southern Franche Comte
+	193 5536 4764
 }
 
-massif_central_area = { # East
+franche_comte_area = { #Northern Franche Comte
+	3130 3132 3092 5537 5538
+}
+
+massif_central_area = { #Auvergne
 	color = { 26 26 217 }
-	190 199 4777 3020 3021 5544
+	199 3021 5544 3087
 }
 
-west_massif_central_area = {
-	3087 3022 195 4697 4112 198
+bourbonnais_area = {
+	4777 190 3020
+}
+
+east_guyenne_area = {
+	4112 198 5541
+}
+
+limousin_area = {
+	4697 195 3022
 }
 
 savoy_dauphine_area = { #Savoy
@@ -324,24 +348,36 @@ picardy_area = { #4
 }
 
 ile_de_france_area = { #3
-	183 4388 5142 3012 3449 3450 3451
+	183 5142 3449 3450 3451 182 
 }
 
-loire_area = { #4
+orleans_area  = { #4
 	color = { 231 143 5 }
-	179 184 3075 4389 4776 3018 5172
+	184 3075 4776 4388
 }
 
-anjou_area = {
-	3446 178 5171 177 3454 3455
+berry_area = {
+	179 3018 4389
+}
+
+loire_area = {
+	3446 178 3455 5172
+}
+
+fr_maine_area = {	
+	177 3454 5171 3012
 }
 
 poitou_area = {
-	180 3077 4386 4111 5160 5140
+	180 3077 4386 5140
+}
+
+saintonge_area = {
+	4387 5160 4111
 }
 
 champagne_area = {
-	186 3070 181 5530 3010 182 5529
+	186 3070 181 5530 3010 5529
 }
 
 south_champagne_area = {
@@ -413,7 +449,7 @@ upper_andalucia_area = { #3
 
 castille_area = { #3
 	color = { 58 58 207 }
-	2989 1746 3299 215 3540 
+	2989 1746 4552 215 3540 
 }
 
 toledo_area = { #4
@@ -421,7 +457,7 @@ toledo_area = { #4
 }
 
 new_castile_area = {
-	4552 4551 217 4549 3079 2755
+	4789 4551 217 4549 3079 2755
 }
 
 galicia_area = { #4
@@ -446,7 +482,7 @@ beieras_area = { #4
 }
 
 alentejo_area = { #3
-	227 3106 4150 3108 229 230 3131 4140
+	227 4787 4150 3108 229 230 3131 4140
 }
 
 macaronesia_area = { #3
@@ -454,7 +490,7 @@ macaronesia_area = { #3
 }
 
 extremadura_area = {
-	218 1747 3099 3100 3147 7651
+	218 1747 3099 4788 3147 7651
 }
 
 btc_murcia_area = {
@@ -523,7 +559,7 @@ east_sicily_area = { #5
 }
 
 naples_area = { #Campania
-	121 2983 3039 5705 3127
+	121 2983 3039 4734 3127
 }
 
 calabria_area = { #5
@@ -553,7 +589,7 @@ abruzzo_area = {
 }
 
 lazio_area = {
-	118 3236 3295 3107 3116 5706 5128
+	118 3236 3295 3107 4732 5706 5128
 }
 ########################################
 # British Isles			 			   #
@@ -603,12 +639,24 @@ lowlands_area = { #4
 	248 250 251 4361 3139 5829
 }
 
-wales_area = { 
-	242 4369 3036 5214 5216 5215 4366 3034 241 5257
+wales_area = { #North Wales
+	242 5216 5215
 }
 
-northern_england_area = { #4
-	246 247 4368 5227 5308 5562 5564
+mid_wales_area = {
+	4366 3034 3036
+}
+
+south_wales_area = {
+	5257 241 5214 4369
+}
+
+northern_england_area = { #Northumbria
+	246 4368 5562 5564
+}
+
+cumbria_area = {
+	5308 247 5227
 }
 
 east_midlands_area = { #4
@@ -640,7 +688,7 @@ cornwall_area = {
 }
 
 yorkshire_area = { #North Yorkshire
-	4367 245 5566 5568 5916 
+	4367 245 4785 5568 5916 
 }
 
 five_boroughs_area = { #South Yorkshire
@@ -1068,7 +1116,7 @@ neumark_area = { #3
 }
 
 mittelmark_area = { # 3
-	51 1759 3216 50 4748 2993
+	51 1759 4786 50 4748 2993
 }
 
 vorpommern_area = { #3
@@ -1076,7 +1124,7 @@ vorpommern_area = { #3
 }
 
 hinter_pommern_area = { #3
-	48 1858 2995 7597 7781 7783 7784
+	48 1858 2995 7597 7781 7783 4746
 }
 
 tirol_area = { #3
@@ -1111,7 +1159,7 @@ upper_rhineland_area = { #Baden
 }
 
 elsass_area = {
-	4801 4802 75 4800 4799 1880
+	4801 4802 75 4800 4765 1880
 }
 
 palatinate_area = { #3
@@ -1123,7 +1171,7 @@ north_rhine_area = { #3
 }
 
 lower_rhineland_area = { #3
-	80 4821 1760 3198 4816 83
+	80 4821 1760 3198 4816 83 4767
 }
 
 westphalia_area = { #5
@@ -1131,7 +1179,7 @@ westphalia_area = { #5
 }
 
 paderborn_area = {
-	2972 3203 3202 4817 1762
+	2972 3203 4775 4817 1762
 }
 
 muenster_area = {
@@ -1147,7 +1195,7 @@ braunschweig_area = { #3
 }
 
 weser_area = { #3
-	54 55 1874 2971 4822 4823
+	54 55 1874 2971 4771 4823
 }
 
 holstein_area = { #3
@@ -1159,7 +1207,7 @@ lower_saxony_area = { #4
 }
 
 mecklenburg_area = { #3
-	46 2996 3217 45 7412 7593
+	46 2996 4749 45 7412 7593
 }
 
 ########################################
@@ -1167,7 +1215,7 @@ mecklenburg_area = { #3
 ########################################
 
 lausitz_area = {
-	60 1763 4155 7600 4153 
+	60 1763 4778 7600 4153 
 }
 
 silesia_area = { #3
@@ -1184,7 +1232,7 @@ erzgebirge_area = { #Sudety
 }
 
 moravia_area = {
-	265 4237 3297 3609 3457 3606
+	265 4237 4726 4725 3457 3606
 }
 
 lower_silesia_area = {
@@ -1200,7 +1248,7 @@ cyprus_area = {
 }
 
 north_macedonia_area = {
-	5098 3001 4703 5099 3183 5882 1853
+	4780 3001 4703 5099 3183 5882 1853
 }
 
 macedonia_area = { #4 
@@ -1217,7 +1265,7 @@ northern_greece_area = { #Epirus
 }
 
 thrace_area = { #5 
-	151 3170 5713 5714 149 5720 5721 5719 4705
+	151 3170 5713 5714 149 5720 5721 4779 4705
 }
 
 eastern_mediterrenean_islands_area = { #Crete
@@ -4316,7 +4364,7 @@ oran_area = {
 #South Africa
 
 bt_natal_area = {
-	1181 5371 5372 5373 5374 5375
+	1181 5371 5372 5373 4783 5375
 }
 
 eastern_cape_area = {
@@ -4344,7 +4392,7 @@ highveld_area = {
 }
 
 transvaal_area = {
-	5367 5368 5376 5377 5379 5383
+	4781 4784 5376 4782 5379 5383
 }
 
 lowveld_area = {
@@ -4683,15 +4731,12 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #BTC working on
-3084 5132 2991 3109 3172 3173 5095 5114 5884 3176 5895 3171 3163 3628 3627 3618 3053 3632 3205 4807 4805 4815 3211 3212 3208
+7784 5705 4799 4822 3609 3544 3297 3116 
+3084 5132 3090 3109 3172 3173 5095 5114 5884 3176 5895 3171 3163 3628 3627 3618 3053 3632 3205 4807 4805 4815 3211 3212 3208
 3046 3056 4794 4792 3141 3143 3044 3043 3041 3240 3038 5090 7000 3049 3047 3095 3191 3213 3214 3637 7440 7506 7595 5886 6663
-3192 3184 5192 3187 3048 6661 3625 6665 6666 3133 3069 3197 3065 3061 3272 3215 3210 5141 3088
+3192 3184 5192 3187 3048 6661 3625 6665 6666 3133 3069 3197 3065 3061 3272 3215 3210 5141 3088 5719 4155 5098 5566 3216 3106
+3100 3299 5367 5377 5374 5368
 
-4778 4746 4781 4725 4786 4767
-4780 4765 4789 4788 4726
-4779 4785 4782 4787 4749 4784 4771 4783
-4763
-4734 4729 4775 4732
 #RNW Sea provinces
 1928
 #RNW Land provinces

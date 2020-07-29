@@ -1,0 +1,273 @@
+btc_tuscan_nations_unit_pack = {
+	#Tests against every tag in the game
+	#Only applies to new tags with Tuscan culture
+	country_trigger = {
+		primary_culture = tuscan
+		NOT = {
+			tag = LAN
+			tag = SIE
+			tag = LUC
+			tag = TUS
+		}
+	}
+	
+	sprite_infantry = {
+		0 = LAN_INFANTRY_1
+		1 = LAN_INFANTRY_2
+		2 = LAN_INFANTRY_3
+		3 = LAN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = LAN_CAVALRY_1
+		1 = LAN_CAVALRY_2
+		2 = LAN_CAVALRY_3
+		3 = LAN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = LAN_ARTILLERY_1
+		1 = LAN_ARTILLERY_2
+		2 = LAN_ARTILLERY_3
+		3 = LAN_ARTILLERY_4
+	}
+}
+
+btc_piedmontese_nations_unit_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		primary_culture = piedmontese
+	}
+	
+	sprite_infantry = {
+		0 = SAV_INFANTRY_1
+		1 = SAV_INFANTRY_2
+		2 = SAV_INFANTRY_3
+		3 = SAV_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SAV_CAVALRY_1
+		1 = SAV_CAVALRY_2
+		2 = SAV_CAVALRY_3
+		3 = SAV_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SAV_ARTILLERY_1
+		1 = SAV_ARTILLERY_2
+		2 = SAV_ARTILLERY_3
+		3 = SAV_ARTILLERY_4
+	}
+}
+
+btc_swiss_nations_unit_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = BSL
+			tag = ZND
+			tag = FRB
+			tag = SCH
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SWI_INFANTRY_1
+		1 = SWI_INFANTRY_2
+		2 = SWI_INFANTRY_3
+		3 = SWI_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SWI_CAVALRY_1
+		1 = SWI_CAVALRY_2
+		2 = SWI_CAVALRY_3
+		3 = SWI_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SWI_ARTILLERY_1
+		1 = SWI_ARTILLERY_2
+		2 = SWI_ARTILLERY_3
+		3 = SWI_ARTILLERY_4
+	}
+}
+
+btc_genoan_unit_pack = {
+	#Tests against every tag in the game 
+	country_trigger = {
+		primary_culture = ligurian
+	}
+	
+	sprite_infantry = {
+		0 = GEN_INFANTRY_1
+		1 = GEN_INFANTRY_2
+		2 = GEN_INFANTRY_3
+		3 = GEN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = GEN_CAVALRY_1
+		1 = GEN_CAVALRY_2
+		2 = GEN_CAVALRY_3
+		3 = GEN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = GEN_ARTILLERY_1
+		1 = GEN_ARTILLERY_2
+		2 = GEN_ARTILLERY_3
+		3 = GEN_ARTILLERY_4
+	}
+}
+
+btc_papal_vassals_unit_pack = {
+	#Tests against every tag in the game 
+	country_trigger = {
+		OR = {
+			tag = VLT
+			tag = ORV
+			tag = CMR
+			tag = ANC
+			tag = MRC
+			tag = URB
+			tag = MTS
+			tag = FNZ
+			tag = PGA
+		}
+	}
+	
+	sprite_infantry = {
+		0 = PAP_INFANTRY_1
+		1 = PAP_INFANTRY_2_catup
+		2 = PAP_INFANTRY_3
+		3 = PAP_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = PAP_CAVALRY_1
+		1 = PAP_CAVALRY_2_catup
+		2 = PAP_CAVALRY_3
+		3 = PAP_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = PAP_ARTILLERY_1
+		1 = PAP_ARTILLERY_2_catup
+		2 = PAP_ARTILLERY_3
+		3 = PAP_ARTILLERY_4
+	}
+}
+
+btc_misc_other_italian_tags_sicilian_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = SRA
+			tag = EBA
+			tag = TAN
+			tag = TNR
+			tag = BGM
+			tag = CMN
+			tag = PCZ
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SIC_INFANTRY_1
+		1 = SIC_INFANTRY_2
+		2 = SIC_INFANTRY_3
+		3 = SIC_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SIC_CAVALRY_1
+		1 = SIC_CAVALRY_2
+		2 = SIC_CAVALRY_3
+		3 = SIC_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SIC_ARTILLERY_1
+		1 = SIC_ARTILLERY_2
+		2 = SIC_ARTILLERY_3
+		3 = SIC_ARTILLERY_4
+	}
+}
+
+btc_misc_other_italian_tags_savoyard_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = FER
+			tag = RAV
+			tag = RMG
+			tag = LUG
+			tag = TIV
+			tag = SPL
+			tag = BLL
+			tag = TIE
+			tag = CMO
+			tag = ASD
+			tag = PAV
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SAV_INFANTRY_1
+		1 = ITA_INFANTRY_2
+		2 = ITA_INFANTRY_3
+		3 = ITA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SAV_CAVALRY_1
+		1 = ITA_CAVALRY_2
+		2 = ITA_CAVALRY_3
+		3 = ITA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SAV_ARTILLERY_1
+		1 = ITA_ARTILLERY_2
+		2 = ITA_ARTILLERY_3
+		3 = ITA_ARTILLERY_4
+	}
+}
+
+btc_misc_other_italian_tags_sicilian_two_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = DOV
+			tag = BLG
+			tag = MAN
+			tag = RMA
+			tag = SMR
+			tag = AQU
+			tag = NVA
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SIC_INFANTRY_1
+		1 = ITA_INFANTRY_2
+		2 = ITA_INFANTRY_3
+		3 = ITA_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ITA_CAVALRY_1
+		1 = ITA_CAVALRY_2
+		2 = ITA_CAVALRY_3
+		3 = ITA_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ITA_ARTILLERY_1
+		1 = ITA_ARTILLERY_2
+		2 = ITA_ARTILLERY_3
+		3 = ITA_ARTILLERY_4
+	}
+}

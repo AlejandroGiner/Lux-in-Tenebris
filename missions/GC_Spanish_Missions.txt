@@ -926,7 +926,7 @@ gc_spain_3 = {
 				naples_area = {
 					type = all
 					OR = {
-						province_id = 5705
+						province_id = 4734
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
@@ -1184,7 +1184,7 @@ btc_spain_3 = {
 				province_id = 3249
 				province_id = 3189
 				province_id = 3056
-				province_id = 3133
+				province_id = 4764
 				province_id = 193
 				province_id = 3092
 				province_id = 187
@@ -1222,7 +1222,7 @@ btc_spain_3 = {
 				3249 = { country_or_non_sovereign_subject_holds = ROOT }
 				3189 = { country_or_non_sovereign_subject_holds = ROOT }
 				3056 = { country_or_non_sovereign_subject_holds = ROOT }
-				3133 = { country_or_non_sovereign_subject_holds = ROOT }
+				4764 = { country_or_non_sovereign_subject_holds = ROOT }
 				193 = { country_or_non_sovereign_subject_holds = ROOT }
 				3092 = { country_or_non_sovereign_subject_holds = ROOT }
 				187 = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1264,7 +1264,7 @@ btc_spain_3 = {
 							province_id = 3249
 							province_id = 3189
 							province_id = 3056
-							province_id = 3133
+							province_id = 4764
 							province_id = 193
 							province_id = 3092
 							province_id = 187
@@ -2029,6 +2029,13 @@ gc_spain_4_b = {
 					}
 					add_permanent_claim = ROOT
 				}
+				cumbria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				cornwall_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -2053,6 +2060,7 @@ gc_spain_4_b = {
 				area = yorkshire_area
 				area = five_boroughs_area
 				area = northern_england_area
+				area = cumbria_area
 				area = cornwall_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2088,6 +2096,10 @@ gc_spain_4_b = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			northern_england_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cumbria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

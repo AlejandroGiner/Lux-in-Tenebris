@@ -373,7 +373,7 @@ swe_bremen_verden_provinces = {
 		province_id = 54 #Stade (Verden)
 		province_id = 1874 #Bremen
 		province_id = 4823
-		province_id = 4822
+		province_id = 4771
 	}
 }
 swedish_prussia_provinces = {
@@ -414,6 +414,7 @@ danish_curonia_provinces = {
 dan_enforce_danelaw_provinces = {
 	OR = {
 		area = northern_england_area
+		area = cumbria_area
 		area = east_midlands_area
 		area = wessex_area
 		area = east_anglia_area
