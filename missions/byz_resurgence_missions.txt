@@ -682,11 +682,13 @@ byz_resurges = {
 						any_province = {
 							OR = {
 								area = morea_area
+								area = north_morea_area
 								area = northern_greece_area
 								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
+								area = eastern_thrace_area
 								area = macedonia_area
 							}
 							owned_by = TUR
@@ -717,7 +719,10 @@ byz_resurges = {
 		}
 		
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_thrace_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
@@ -727,17 +732,23 @@ byz_resurges = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT	
 				}
+				eastern_thrace_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT	
+				}
 				custom_trigger_tooltip = {
 					tooltip = byz_turn_the_tide_tooltip
 					NOT = {
 						any_province = {
 							OR = {
 								area = morea_area
+								area = north_morea_area
 								area = northern_greece_area
 								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
+								area = eastern_thrace_area
 								area = macedonia_area
 							}
 							owned_by = TUR
@@ -788,6 +799,7 @@ byz_resurges = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				area = northern_greece_area
 				area = ionian_islands_area
 				area = western_aegean_area
@@ -821,11 +833,13 @@ byz_resurges = {
 						any_province = {
 							OR = {
 								area = morea_area
+								area = north_morea_area
 								area = northern_greece_area
 								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
+								area = eastern_thrace_area
 								area = macedonia_area
 							}
 							owned_by = TUR
@@ -1547,6 +1561,7 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				province_id = 5883
 				province_id = 4699
 				province_id = 3175
@@ -1560,6 +1575,10 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 			NOT = { exists = EPI }
 			NOT = { exists = LES }
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1658,6 +1677,13 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 					}
 					add_permanent_claim = ROOT
 				}
+				cyclades_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				eastern_mediterrenean_islands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1704,6 +1730,7 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 				area = northern_aegean_islands_area
 				area = aegean_archipelago_area
 				area = eastern_mediterrenean_islands_area
+				area = cyclades_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1725,6 +1752,10 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cyclades_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1885,6 +1916,9 @@ byz_all_your_balkan_base_are_belong_to_us = {
 		effect = {			
 			#Effects:
 			thrace_area = {
+				add_prosperity = 50
+			}
+			eastern_thrace_area = {
 				add_prosperity = 50
 			}
 			macedonia_area = {

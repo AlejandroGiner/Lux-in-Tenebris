@@ -537,6 +537,7 @@ country_event = {
 		any_owned_province = {
 			region = carpathia_region
 			NOT = { area = wallachia_area }
+			NOT = { area = oltenia_area }
 			NOT = { area = eastern_wallachia_area }
 			NOT = { area = moldavia_area }
 			NOT = { area = western_moldovia }
@@ -560,6 +561,7 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
@@ -573,6 +575,7 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
@@ -842,6 +845,7 @@ country_event = {
 		any_owned_province = {
 			region = carpathia_region
 			NOT = { area = wallachia_area }
+			NOT = { area = oltenia_area }
 			NOT = { area = eastern_wallachia_area }
 			NOT = { area = moldavia_area }
 			NOT = { area = western_moldovia }
@@ -868,6 +872,7 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
@@ -885,6 +890,7 @@ country_event = {
 		carpathia_region = {
 			limit = {
 				NOT = { area = wallachia_area }
+				NOT = { area = oltenia_area }
 				NOT = { area = eastern_wallachia_area }
 				NOT = { area = moldavia_area }
 				NOT = { area = western_moldovia }
@@ -911,6 +917,7 @@ country_event = {
 				any_owned_province = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
@@ -923,6 +930,7 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }

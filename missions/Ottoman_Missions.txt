@@ -42,6 +42,12 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			northern_aegean_islands_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -55,6 +61,12 @@ tur_conquerors_of_the_near_east = {
 				add_permanent_claim = ROOT
 			}
 			morea_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_morea_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -83,6 +95,7 @@ tur_conquerors_of_the_near_east = {
 				province_id = 5883
 				province_id = 3175
 				province_id = 4699
+				area = north_morea_area
 				area = morea_area
 				area = western_aegean_area
 			}
@@ -99,6 +112,10 @@ tur_conquerors_of_the_near_east = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -138,6 +155,12 @@ tur_conquerors_of_the_near_east = {
 				add_claim = ROOT
 			}
 			aegean_archipelago_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			cyclades_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -225,6 +248,7 @@ tur_conquerors_of_the_near_east = {
 						limit = {
 							OR = {
 								area = wallachia_area
+								area = oltenia_area
 								area = eastern_wallachia_area
 							}
 							NOT = { is_core = ROOT }
@@ -397,6 +421,7 @@ tur_eastern_balkans = {
 			OR = {
 				area = eastern_wallachia_area
 				area = wallachia_area
+				area = oltenia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -406,6 +431,10 @@ tur_eastern_balkans = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oltenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

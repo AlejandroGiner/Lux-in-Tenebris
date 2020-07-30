@@ -725,6 +725,13 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			oltenia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			eastern_wallachia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -771,6 +778,7 @@ tr_russia_exclusive_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = wallachia_area
+				area = oltenia_area
 				area = eastern_wallachia_area
 				area = moldavia_area
 				area = western_moldovia
@@ -781,6 +789,10 @@ tr_russia_exclusive_1 = {
 		}
 		trigger = {
 			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oltenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -840,6 +852,13 @@ tr_russia_exclusive_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -853,6 +872,7 @@ tr_russia_exclusive_1 = {
 				area = lower_danube_area
 				area = upper_thrace_area
 				area = thrace_area
+				area = eastern_thrace_area
 				area = sofya_area
 			}
 			NOT = {
@@ -881,6 +901,10 @@ tr_russia_exclusive_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

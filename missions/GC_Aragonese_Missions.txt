@@ -979,6 +979,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			northern_greece_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1025,6 +1032,7 @@ gc_aragon_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				area = northern_greece_area
 				area = eastern_mediterrenean_islands_area
 				area = western_aegean_area
@@ -1037,6 +1045,10 @@ gc_aragon_4 = {
 		}
 		trigger = {
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1088,6 +1100,13 @@ gc_aragon_4 = {
 				add_permanent_claim = ROOT
 			}
 			aegean_archipelago_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cyclades_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1177,6 +1196,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			macedonia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1202,6 +1228,7 @@ gc_aragon_4 = {
 				area = thrace_area
 				area = macedonia_area
 				area = upper_thrace_area
+				area = eastern_thrace_area
 				province_id = 1320
 			}
 			NOT = {
@@ -1214,6 +1241,10 @@ gc_aragon_4 = {
 				is_strongest_trade_power = ROOT
 			}
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1303,6 +1334,7 @@ gc_aragon_4 = {
 				area = aegean_archipelago_area
 				area = northern_aegean_islands_area
 				area = carniola_area
+				area = cyclades_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1371,6 +1403,10 @@ gc_aragon_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cyclades_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -86,6 +86,13 @@ hun_north_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			oltenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			moldavia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -119,12 +126,17 @@ hun_north_group = {
 			OR = {
 				area = eastern_wallachia_area
 				area = wallachia_area
+				area = oltenia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oltenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -362,6 +374,13 @@ hun_south_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			upper_thrace_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -504,12 +523,17 @@ hun_ottoman_group = {
 			OR = {
 				area = thrace_area
 				area = upper_thrace_area
+				area = eastern_thrace_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -541,6 +565,13 @@ hun_ottoman_group = {
 				add_claim = ROOT
 			}
 			morea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			north_morea_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

@@ -2209,7 +2209,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_thrace_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -2239,6 +2242,11 @@ country_decisions = {
 					owned_by = ROOT
 					is_core = ROOT
 				}
+				eastern_thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 			if = {							#crusader state
 				limit = {
@@ -2260,6 +2268,11 @@ country_decisions = {
 					owned_by = ROOT
 					is_state_core = ROOT
 				}
+				eastern_thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_state_core = ROOT
+				}
 			}
 		}
 		effect = {
@@ -2268,6 +2281,9 @@ country_decisions = {
 				add_core = LTE
 			}
 			thrace_area = {
+				add_core = LTE
+			}
+			eastern_thrace_area = {
 				add_core = LTE
 			}
 			western_aegean_area = {

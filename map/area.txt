@@ -1284,9 +1284,13 @@ macedonia_area = { #4
 	148 4702 5725 5083 5885
 }
 
-morea_area = { #Peloponnese
+north_morea_area = {
+	1773 3178 5089 4701 3179
+}
+
+morea_area = {
 	color = { 219 30 57 }
-	1773 3178 5089 4701 145 5088 5087 3179
+	145 5088 5087 7615
 }
 
 northern_greece_area = { #Epirus
@@ -1298,19 +1302,27 @@ ionian_islands_area = {
 }
 
 thrace_area = { #5 
-	151 3170 5713 5714 149 5720 5721 4779 4705
+	151 3170 5713 5714 1764
+}
+
+eastern_thrace_area = {
+	4779 149 5720 5721 4705
 }
 
 eastern_mediterrenean_islands_area = { #Crete
-	163 3180 7106 7107 7615 7611
+	163 3180 7106 7107
 }
 
 western_aegean_area = { #Hellas
 	146 3177 5085 3003 5086
 }
 
+cyclades_area = {
+	164 5234 5237
+}
+
 aegean_archipelago_area = { #Southern aegean islands
-	164 320 5291 5230 5234 5237 7612
+	320 5291 5230 7612 7611
 }
 
 northern_aegean_islands_area = {
@@ -1322,7 +1334,7 @@ thessaly_area = {
 }
 
 upper_thrace_area = { #6
-	3168 3169 5080 5062 5082 1764
+	3168 3169 5080 5062 5082
 }
 
 bulgaria_area = { #Western Bulgaria
@@ -1345,12 +1357,16 @@ lower_danube_area = {
 	4706 3164 5715 3165 5899
 }
 
+oltenia_area = {
+	5904 4532 5903 5902 160
+}
+
 wallachia_area = { #Western Wallachia
-	5718 4532 160 5901 5902 5903 5904 5905
+	5718 5901 5905 161 5906 4531
 }
 
 eastern_wallachia_area = {
-	4531 161 5900 3160 5716 2998 5717 5906
+	5900 3160 5716 2998 5717
 }
 
 moldavia_area = { #5

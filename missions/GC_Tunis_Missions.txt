@@ -425,6 +425,12 @@ gc_tunis_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cyclades_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT } 
+				}
+				add_permanent_claim = ROOT
+			}
 			eastern_mediterrenean_islands_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT } 

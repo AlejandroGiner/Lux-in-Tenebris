@@ -280,6 +280,13 @@ genoa_europe_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	end_bosphorous_sound_toll = {
@@ -289,6 +296,7 @@ genoa_europe_slot = {
 			OR = {
 				area = hudavendigar_area
 				area = thrace_area
+				area = eastern_thrace_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -300,6 +308,10 @@ genoa_europe_slot = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
