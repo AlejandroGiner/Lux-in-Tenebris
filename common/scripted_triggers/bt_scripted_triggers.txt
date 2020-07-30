@@ -154,6 +154,7 @@ conquer_athens_provinces = {
 	OR = {
 		area = morea_area
 		area = northern_greece_area
+		area = ionian_islands_area
 		#BT additions:
 		area = western_aegean_area
 	}
@@ -202,7 +203,9 @@ austrian_hungary_provinces = {
 austrian_croatia_provinces = {
 	OR = {
 		area = east_adriatic_coast_area
+		area = ragusa_area
 		area = croatia_area
+		area = croatia_coast_area
 		#BT additions
 		area = slavonia_area
 	}
@@ -225,6 +228,7 @@ austrian_italian_ambition_provinces = {
 	OR = {
 		area = venetia_area
 		area = friuli_area
+		area = istria_area
 		area = lombardy_area
 		area = po_valley_area
 	}

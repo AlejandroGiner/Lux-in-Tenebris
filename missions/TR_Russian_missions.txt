@@ -826,6 +826,13 @@ tr_russia_exclusive_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sofya_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			thrace_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -846,6 +853,7 @@ tr_russia_exclusive_1 = {
 				area = lower_danube_area
 				area = upper_thrace_area
 				area = thrace_area
+				area = sofya_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -865,6 +873,10 @@ tr_russia_exclusive_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			upper_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sofya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

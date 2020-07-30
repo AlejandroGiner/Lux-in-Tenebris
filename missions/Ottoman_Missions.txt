@@ -30,6 +30,12 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sofya_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			thrace_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -113,7 +119,19 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_serbia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			albania_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			south_albania_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -149,11 +167,16 @@ tur_conquerors_of_the_near_east = {
 			OR = {
 				area = serbia_area
 				area = rascia_area
+				area = south_serbia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_serbia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -169,6 +192,12 @@ tur_conquerors_of_the_near_east = {
 			}
 			
 			bosnia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_bosnia_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -218,11 +247,18 @@ tur_conquerors_of_the_near_east = {
 		}
 		completed_by = 1463.1.1
 		provinces_to_highlight = {
-			area = bosnia_area
+			OR = {
+				area = bosnia_area
+				area = east_bosnia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			bosnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_bosnia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -247,6 +283,13 @@ tur_conquerors_of_the_near_east = {
 				add_permanent_claim = ROOT
 			}
 			east_adriatic_coast_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+			ragusa_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -311,6 +354,13 @@ tur_conquerors_of_the_near_east = {
 				add_claim = ROOT
 			}
 			croatia_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+			croatia_coast_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}

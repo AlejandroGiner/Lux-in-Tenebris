@@ -683,6 +683,7 @@ byz_resurges = {
 							OR = {
 								area = morea_area
 								area = northern_greece_area
+								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
@@ -733,6 +734,7 @@ byz_resurges = {
 							OR = {
 								area = morea_area
 								area = northern_greece_area
+								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
@@ -787,6 +789,7 @@ byz_resurges = {
 			OR = {
 				area = morea_area
 				area = northern_greece_area
+				area = ionian_islands_area
 				area = western_aegean_area
 				area = thessaly_area
 				area = macedonia_area
@@ -819,6 +822,7 @@ byz_resurges = {
 							OR = {
 								area = morea_area
 								area = northern_greece_area
+								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
@@ -864,6 +868,13 @@ byz_resurges = {
 			custom_tooltip = byz_safeguard_balkan_border_claims
 			hidden_effect = {
 				upper_thrace_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				sofya_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -1626,6 +1637,13 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 					}
 					add_permanent_claim = ROOT
 				}
+				ionian_islands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				northern_aegean_islands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1682,6 +1700,7 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_greece_area
+				area = ionian_islands_area
 				area = northern_aegean_islands_area
 				area = aegean_archipelago_area
 				area = eastern_mediterrenean_islands_area
@@ -1694,6 +1713,10 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 			NOT = { exists = CDA }
 			NOT = { exists = KNI }
 			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			ionian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1733,6 +1756,13 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_albania_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -1750,12 +1780,19 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		}
 		
 		provinces_to_highlight = {
-			area = albania_area
+			OR = {
+				area = albania_area
+				area = south_albania_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			albania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_albania_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1825,7 +1862,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = upper_thrace_area
 				area = north_macedonia_area
-				province_id = 5894
+				area = sofya_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1835,12 +1872,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			north_macedonia_area = {
+			sofya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			5894 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			north_macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
@@ -1965,6 +2003,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_serbia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				rascia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1991,6 +2036,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = serbia_area
 				area = rascia_area
+				area = south_serbia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2001,6 +2047,10 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_serbia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2089,6 +2139,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
+				istria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				carniola_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -2138,10 +2195,11 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = carniola_area
 				area = friuli_area
+				area = istria_area
 				province_id = 1774
 				province_id = 3228
 				province_id = 7018
-				province_id = 7019
+				province_id = 4729
 				province_id = 108
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2163,6 +2221,10 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			friuli_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			istria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

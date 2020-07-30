@@ -143,6 +143,13 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sofya_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			custom_tooltip = romania_turk_tt
 			hidden_effect = {
 				carpathia_region = {
@@ -185,6 +192,7 @@ romanian_missions_1 = {
 						area = north_macedonia_area
                         area = thrace_area
 						area = upper_thrace_area
+						area = sofya_area
                     }
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -213,6 +221,10 @@ romanian_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			sofya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			bulgaria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -232,6 +244,13 @@ romanian_missions_1 = {
 			add_prestige = 25
 			add_mil_power = 100
 			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			ionian_islands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -270,6 +289,7 @@ romanian_missions_1 = {
 				area = morea_area
 				area = western_aegean_area
 				area = thessaly_area
+				area = ionian_islands_area
 				owned_by = BYZ
 			}
 			NOT = {
@@ -281,6 +301,10 @@ romanian_missions_1 = {
 				exists = BYZ
 			}
 			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ionian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -1,7 +1,4 @@
- ##################################################
- ##### Dub's Mission Work - All credit to Dub for this #####
- ##################################################
-#Updated vanilla missions to BT. Updates done by Dub.
+
 gre_rebirth_of_hellas = {
 	slot = 1 #upper left column
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
@@ -83,7 +80,13 @@ gre_rebirth_of_hellas = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_permanent_claim = ROOT
+				}
+				ionian_islands_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -94,8 +97,9 @@ gre_rebirth_of_hellas = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = morea_area
-				area = western_aegean_area
+				area = thessaly_area
+				area = northern_greece_area
+				area = ionian_islands_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -104,9 +108,15 @@ gre_rebirth_of_hellas = {
 		trigger = {
 			thessaly_area = {
 				country_or_non_sovereign_subject_holds = ROOT
+				type = all
 			}
 			northern_greece_area = {
 				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			ionian_islands_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
 			}
 			is_subject = no
 		}

@@ -518,7 +518,11 @@ venetia_area = { #4
 }
 
 friuli_area = {
-	130 4738 1769 3013 111 6321 4752
+	1769 3013 111 6321
+}
+
+istria_area = {
+	4752 130 4738
 }
 
 lombardy_area = { 
@@ -1273,11 +1277,11 @@ cyprus_area = {
 }
 
 north_macedonia_area = {
-	4780 3001 4703 5099 3183 5882 1853
+	4780 3001 4703 5099 3183 1853
 }
 
 macedonia_area = { #4 
-	148 4702 5725 5083 3167 5885
+	148 4702 5725 5083 5885
 }
 
 morea_area = { #Peloponnese
@@ -1286,7 +1290,11 @@ morea_area = { #Peloponnese
 }
 
 northern_greece_area = { #Epirus
-	142 144 3175 4698 4699 5115 7614 7613 5883 
+	144 3175 4699 5883 
+}
+
+ionian_islands_area = {
+	7614 4698 7613 142
 }
 
 thrace_area = { #5 
@@ -1314,15 +1322,19 @@ thessaly_area = {
 }
 
 upper_thrace_area = { #6
-	2750 3168 3169 5080 5062 5082 1764
+	3168 3169 5080 5062 5082 1764
 }
 
 bulgaria_area = { #Western Bulgaria
-	1765 2746 5199 5891 5892 5894 5897
+	2746 5199 5891 5892 5897
 }
 
 eastern_bulgaria_area = {
-	5081 159 4704 150 5898 5896
+	5081 159 4704 150 5896
+}
+
+sofya_area = {
+	1765 5894 3167 2750 5898
 }
 
 carpathian_ruthenia_area = {
@@ -1374,32 +1386,56 @@ felvidek_area = {
 }
 
 serbia_area = { #5
-	141 3000 3185 4176 4757 4239 5893 4755
+	141 4176 4757 4239 1827
 }
 
-rascia_area = { #3
-	138 1766 1827 1831 5887 5888 5889 5890
+south_serbia_area = {
+	3185 3000 5893
+}
+
+rascia_area = { #Kosovo
+	1766 5887 5889 5890
 }
 
 albania_area = {
-	143 3181 4174 4175 5094 3182 4750
+	4174 4175 5094 3182 138
 }
 
-bosnia_area = { #4
-	139 140 1828 3002 3193 3194 5193 5195
+south_albania_area = {
+	5115 5882 143 3181 4750
+}
+
+bosnia_area = { #Western
+	140 1828 3193 5193
+}
+
+east_bosnia_area = {
+	4755 3002 5888 3194
+}
+
+herzegovina_area = {
+	1831 139 5195
 }
 
 croatia_area = { #4
 	color = { 18 126 16 }
-	131 1826 3196 5184 5189 5190 5191 7058 6322
+	131 3196 5190 5191 152
+}
+
+croatia_coast_area = {
+	5189 1826 7058 6322 5184
 }
 
 slavonia_area = {
-	1767 3190 5194 4756 152 5198
+	1767 3190 5194 4756 5198
 }
 
-east_adriatic_coast_area = { #3
-	136 137 4754 4753 5185 5186 5187 5188
+east_adriatic_coast_area = {
+	136 4753 5186 5188
+}
+
+ragusa_area = {
+	4754 137 5187 5185
 }
 
 alfold_area = { #Northern Alfold

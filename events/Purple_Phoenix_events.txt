@@ -300,11 +300,16 @@ country_event = {
 			owns = 148
 		}
 		serbia_area = { type = all NOT = { owned_by = TUR }}
+		south_serbia_area = { type = all NOT = { owned_by = TUR }}
 		rascia_area = { type = all NOT = { owned_by = TUR }}
 		bosnia_area = { type = all NOT = { owned_by = TUR }}
+		east_bosnia_area = { type = all NOT = { owned_by = TUR }}
 		croatia_area = { type = all NOT = { owned_by = TUR }}
+		croatia_coast_area = { type = all NOT = { owned_by = TUR }}
 		albania_area = { type = all NOT = { owned_by = TUR }}
+		south_albania_area = { type = all NOT = { owned_by = TUR }}
 		east_adriatic_coast_area = { type = all NOT = { owned_by = TUR }}
+		ragusa_area = { type = all NOT = { owned_by = TUR }}
 	}
 	
 	mean_time_to_happen = {
@@ -341,7 +346,9 @@ country_event = {
 		}
 		north_macedonia_area = { type = all NOT = { owned_by = TUR }}
 		bulgaria_area = { type = all NOT = { owned_by = TUR }}
+		eastern_bulgaria_area = { type = all NOT = { owned_by = TUR }}
 		upper_thrace_area = { type = all NOT = { owned_by = TUR }}
+		sofya_area = { type = all NOT = { owned_by = TUR }}
 		wallachia_area = { type = all NOT = { owned_by = TUR }}
 		lower_danube_area = { type = all NOT = { owned_by = TUR }}
 		
@@ -350,6 +357,7 @@ country_event = {
 		morea_area = { type = all NOT = { owned_by = TUR }}
 		western_aegean_area = { type = all NOT = { owned_by = TUR }}
 		northern_greece_area = { type = all NOT = { owned_by = TUR }}
+		ionian_islands_area = { type = all NOT = { owned_by = TUR }}
 		
 		eastern_mediterrenean_islands_area = { type = all NOT = { owned_by = TUR }}
 		aegean_archipelago_area = { type = all NOT = { owned_by = TUR }}
