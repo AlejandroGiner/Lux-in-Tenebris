@@ -7,6 +7,7 @@ prussian_missions_main_slot = {
 	generic = no
 	ai = yes
 	potential = {
+        NOT = { has_dlc = "Emperor" }
 		OR = {
 			tag = BRA
 			tag = PRU
@@ -260,6 +261,7 @@ prussian_missions_slot_2 = {
 	generic = no
 	ai = yes
 	potential = {
+        NOT = { has_dlc = "Emperor" }
 		OR = {
 			tag = BRA
 			tag = PRU
