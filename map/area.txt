@@ -526,20 +526,28 @@ istria_area = {
 }
 
 lombardy_area = { 
-	104 4728 4740 1862 3054 3294
+	104 4728 1862 4739
+}
+
+lepontine_alps_area = {
+	3054 4740 3294 3086
 }
 
 po_valley_area = {
 	color = { 205 190 47 }
-	109 108 107 4739
+	109 108 107
 }
 
 piedmont_area = { #East Piedmont
-	3086 3249 2979 2981 5133 3067  3045
+	3249 2979 2981 5133 3067
 }
 
 west_piedmont_area = { #West Piedmont
-	3078 103 3080 4727 3076 1875 3074
+	3078 103 3080 3074 3045
+}
+
+cuneo_area = {
+	1875 4727 3076
 }
 
 tuscany_area = { #North Tuscany
@@ -1096,34 +1104,50 @@ south_saxony_area = { #3
 	59 61 62 2965 4169 4744
 }
 
+ingolstadt_area = {
+	2955 3631 4708
+}
+
 upper_bavaria_area = {
-	65 2955 4707 3623 4708 3631
+	65 4707 3623 3617
 }
 
 lower_bavaria_area = { #4
 	color = { 219 30 57 }
-	2956 4709 3629 4760 3626 64
+	2956 3629 3626 64 4709
 }
 
-lower_swabia_area = { #3 
-	70 1872 3206 4713 4814 4711
+east_bavaria_area = {
+	3615 76 3624 4760
+}
+
+lower_swabia_area = {
+	70 1872 3206 4814 4711
 }
 
 west_swabia_area = {
-	4712 4827 4808 3204 4806 
+	4827 4808 3204 4806 
 }
 
-franconia_area = { #3
+central_swabia_area = {
+	4712 69 4811 4713
+}
+
+franconia_area = { #Lower & Middle
 	color = { 219 30 57 }
-	4715 79 3645 4716 4718 66
+	4715 79 4718 71 67
+}
+
+upper_franconia_area = {
+	66 4716 3644 3645 4774
 }
 
 upper_palatinate_area = {
-	2957 3630 1757 4717 67 71
+	2957 3630 1757 4717
 }
 
 upper_swabia_area = { #3
-	68 69 1868 4809 4810 4811
+	68 1868 4809 4810
 }
 
 northern_saxony_area = { #3 (Saxe-Altmark)
@@ -1132,7 +1156,7 @@ northern_saxony_area = { #3 (Saxe-Altmark)
 }
 
 thuringia_area = { #3	#TOTBTPCHANGES
-	63 4743 4741 3640 3643 3644 
+	63 4743 4741 3640 3643 
 }
 
 neumark_area = { #3
@@ -1153,7 +1177,7 @@ hinter_pommern_area = { #3
 }
 
 tirol_area = { #3
-	73 4710 3017 3617 3615 76
+	73 4710 3017
 }
 
 sudtirol_area = {
@@ -1162,7 +1186,7 @@ sudtirol_area = {
 
 austria_proper_area = { #3
 	color = { 13 40 40 }
-	133 134 1770 3052 4761 4762 3624
+	133 134 1770 3052 4761 4762
 }
 
 inner_austria_area = { #3
@@ -1176,11 +1200,19 @@ carniola_area = { #3
 
 switzerland_area = { #East Switzerland
 	color = { 21 14 237 }
-	166 4793 4798 4797 1870 1869 4722 1873 
+	166 4798 4797 1870 1869 
 }
 
 romandie_area = { #West Switzerland
-	1867 1871 4720 4721 3055 165 4795 4796
+	1867 1871 4720 4721
+}
+
+west_switzerland_area = {
+	165 4795 4796 4793 3055
+}
+
+grisons_area = {
+	4722 1873
 }
 
 upper_rhineland_area = { #Baden
@@ -1216,7 +1248,7 @@ muenster_area = {
 }
 
 hesse_area = { #4
-	81 1876 3209 4774 4818 3201
+	81 1876 3209 4818 3201
 }
 
 braunschweig_area = { #3
@@ -1243,12 +1275,12 @@ mecklenburg_area = { #3
 #             Czech Lands 			   #
 ########################################
 
-lausitz_area = {
+lusatia_area = {
 	60 1763 4778 7600 4153 
 }
 
 silesia_area = { #3
-	263 4723 3142 3604 3605 3608 
+	263 4723 3142 3604 3605 3608 3606
 }
 
 bohemia_area = { #4
@@ -1261,7 +1293,7 @@ erzgebirge_area = { #Sudety
 }
 
 moravia_area = {
-	265 4237 4726 4725 3457 3606
+	265 4237 4726 4725 3457
 }
 
 lower_silesia_area = {

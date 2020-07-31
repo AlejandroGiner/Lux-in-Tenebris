@@ -280,6 +280,13 @@ bur_arles = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cuneo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			dauphine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -306,6 +313,7 @@ bur_arles = {
 				area = provence_area
 				area = west_piedmont_area
 				area = dauphine_area
+				area = cuneo_area
 				province_id = 102
 				province_id = 3045
 			}
@@ -318,6 +326,10 @@ bur_arles = {
 				owned_by = ROOT
 			}
 			west_piedmont_area = {
+				type = all
+				owned_by = ROOT
+			}
+			cuneo_area = {
 				type = all
 				owned_by = ROOT
 			}

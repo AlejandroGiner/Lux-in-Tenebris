@@ -972,6 +972,13 @@ gc_spain_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			lepontine_alps_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			wallonia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1019,6 +1026,7 @@ gc_spain_3 = {
 				area = tuscany_area
 				area = south_tuscany_area
 				area = lombardy_area
+				area = lepontine_alps_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1033,6 +1041,10 @@ gc_spain_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lepontine_alps_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

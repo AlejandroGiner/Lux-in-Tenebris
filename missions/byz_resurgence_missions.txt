@@ -2279,6 +2279,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
+				lepontine_alps_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				po_valley_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -2294,6 +2301,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					add_permanent_claim = ROOT
 				}
 				west_piedmont_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				cuneo_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -2626,6 +2640,8 @@ byz_roman_italy = {
 				area = piedmont_area
 				area = liguria_area
 				area = emilia_area
+				area = cuneo_area
+				area = lepontine_alps_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2635,11 +2651,19 @@ byz_roman_italy = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			lepontine_alps_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			po_valley_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			west_piedmont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cuneo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
