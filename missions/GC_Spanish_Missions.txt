@@ -46,12 +46,10 @@ gc_spain_1 = {
 				limit = {
 					210 = {
 						NOT = {
-							OR = {
-								has_building = fort_15th
-								has_building = fort_16th
-								has_building = fort_17th
-								has_building = fort_18th
-							}
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
 						}
 					}
 				}
@@ -118,14 +116,8 @@ gc_spain_1 = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
-				OR = {
-					colonial_the_carribean = { has_discovered = ROOT }
-					colonial_cuba = { has_discovered = ROOT }
-					colonial_hispaniola = { has_discovered = ROOT }
-					colonial_bahamas = { has_discovered = ROOT }
-				}
+				carribeans_region = { has_discovered = ROOT }
 			}
-			carribeans_region = { has_discovered = ROOT }
 		}
 		
 		effect = {
@@ -618,7 +610,7 @@ gc_spain_2_b = {
 				fire = 5
 				manuever = 6
 				siege = 1
-				name = "Hern�n Cort�s"
+				name = "Hernán Cortés"
 			}
 			490 = {
 				add_base_production = 3
