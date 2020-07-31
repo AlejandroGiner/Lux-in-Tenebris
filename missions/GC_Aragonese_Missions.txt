@@ -257,6 +257,13 @@ gc_aragon_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			istria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			tuscany_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -279,6 +286,20 @@ gc_aragon_2 = {
 				add_permanent_claim = ROOT
 			}
 			west_piedmont_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			cuneo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lunigiana_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -537,6 +558,7 @@ gc_aragon_3 = {
 			OR = {
 				area = venetia_area
 				area = friuli_area
+				area = istria_area
 				province_id = 1308
 			}
 			NOT = {
@@ -553,12 +575,30 @@ gc_aragon_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			istria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			1308 = {
 				is_strongest_trade_power = ROOT
 			}
 		}
 		effect = {
 			lombardy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lepontine_alps_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -613,6 +653,13 @@ gc_aragon_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ragusa_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			carniola_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -621,6 +668,13 @@ gc_aragon_3 = {
 				add_permanent_claim = ROOT
 			}
 			croatia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			croatia_coast_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -939,7 +993,21 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			northern_greece_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			ionian_islands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -978,10 +1046,12 @@ gc_aragon_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				area = northern_greece_area
 				area = eastern_mediterrenean_islands_area
 				area = western_aegean_area
 				area = thessaly_area
+				area = ionian_islands_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -992,7 +1062,15 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			north_morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			northern_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ionian_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1021,6 +1099,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_albania_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			northern_aegean_islands_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1035,6 +1120,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cyclades_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	gc_ara_albania = {
@@ -1042,7 +1134,10 @@ gc_aragon_4 = {
 		required_missions = { gc_ara_athens }
 
 		provinces_to_highlight = {
-			area = albania_area
+			OR = {
+				area = albania_area
+				area = south_albania_area
+			}
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = {
@@ -1071,9 +1166,20 @@ gc_aragon_4 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
+				south_albania_area = {
+					type = all
+					OR = {
+						owned_by = ALB
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
 			}
 			else = {
 				albania_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				south_albania_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -1098,6 +1204,13 @@ gc_aragon_4 = {
 				}
 			}
 			thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_thrace_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1129,6 +1242,7 @@ gc_aragon_4 = {
 				area = thrace_area
 				area = macedonia_area
 				area = upper_thrace_area
+				area = eastern_thrace_area
 				province_id = 1320
 			}
 			NOT = {
@@ -1141,6 +1255,10 @@ gc_aragon_4 = {
 				is_strongest_trade_power = ROOT
 			}
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1220,7 +1338,9 @@ gc_aragon_4 = {
 				area = karasi_area
 				area = cyprus_area
 				area = east_adriatic_coast_area
+				area = ragusa_area
 				area = croatia_area
+				area = croatia_coast_area
 				area = caria_area
 				area = aleppo_area
 				area = palestine_area
@@ -1228,6 +1348,7 @@ gc_aragon_4 = {
 				area = aegean_archipelago_area
 				area = northern_aegean_islands_area
 				area = carniola_area
+				area = cyclades_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1264,6 +1385,10 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			ragusa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			carniola_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1287,7 +1412,15 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			croatia_coast_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cyclades_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

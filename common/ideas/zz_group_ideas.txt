@@ -198,6 +198,47 @@ cossack_ideas = {
 	}
 }
 
+nusa_tenggara_ideas = {
+	start = {
+		production_efficiency = 0.1
+		enemy_core_creation = 0.25
+	}
+	
+	bonus = {
+		land_attrition = -0.10
+	}
+	
+	trigger = {
+		OR = {
+			primary_culture = nusa_tenggara
+			primary_culture = bimanese
+			primary_culture = timorese
+		}
+	}
+	free = yes
+	
+	nt_vast_forests = {
+		hostile_attrition = 2
+	}
+	nt_ethnic_diversity = {
+		num_accepted_cultures = 2
+	}
+	nt_splendid_isolation = {
+		global_unrest = -1
+	}
+	nt_coasts = {
+		global_ship_cost = -0.1
+	}
+	nt_adoption_of_foreign_customs = {
+		tolerance_heathen = 2
+	}
+	nt_gateway_to_australia = {
+		global_trade_power = 0.1
+	}
+	nt_foreign_migrants = {
+		global_tax_modifier = 0.10
+	}
+}
 
 maghrebi_ideas = {
 	start = {

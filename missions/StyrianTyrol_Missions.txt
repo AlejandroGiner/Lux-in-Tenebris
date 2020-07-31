@@ -21,27 +21,19 @@ hab_reform_austria = {
 			}
 		}
 		effect = {
-			custom_tooltip = styria_inner_austria_claims_tooltip
-			hidden_effect = {
-				inner_austria_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-						NOT = { province_id = 1768	}
-					}
-					add_permanent_claim = ROOT
+			inner_austria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
-			custom_tooltip = styria_austria_claims_tooltip
-			hidden_effect = {
-				austria_proper_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-						NOT = { province_id = 3624	}
-					}
-					add_permanent_claim = ROOT
+			austria_proper_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			if = {
 				limit = {
@@ -61,42 +53,21 @@ hab_reform_austria = {
 		required_missions = { unite_austria }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 6660
-				province_id = 132
-				province_id = 6664
-				province_id = 128
-				province_id = 1863
-				province_id = 134
-				province_id = 3052
-				province_id = 6666
-				province_id = 1770
-				province_id = 133
-				province_id = 6665
+				area = austria_proper_area
+				area = inner_austria_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = styria_conquer_austria_tooltip
-				austria_proper_area = {
-					type = all
-					OR = {
-						province_id = 3624
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+			austria_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			custom_trigger_tooltip = {
-				tooltip = styria_conquer_inner_austria_tooltip
-				inner_austria_area = {
-					type = all
-					OR = {
-						province_id = 1768
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+			inner_austria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {

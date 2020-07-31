@@ -16,11 +16,12 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
 				area = naples_area
 				area = apulia_area
 				area = calabria_area
 				area = abruzzo_area
+				area = sicily_islands_area
 			}
 			NOT = {
 				province_id = 126
@@ -55,7 +56,8 @@ country_decisions = {
 							area = calabria_area
 							area = abruzzo_area
 							area = sicily_area
-							area = east_sicily_area
+							area = western_sicily_area
+							area = sicily_islands_area
 						}
 						NOT = {
 							province_id = 126		#Malta
@@ -84,20 +86,27 @@ country_decisions = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 7607
 					}
 				}
 				add_permanent_claim = TTS
 			}
-			east_sicily_area = {
+			western_sicily_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 126
 					}
 				}
 				add_permanent_claim = TTS
+			}
+			7060 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
 			}
 			naples_area = {
 				limit = {
@@ -218,20 +227,27 @@ country_decisions = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 7607
 					}
 				}
 				add_permanent_claim = TTS
 			}
-			east_sicily_area = {
+			western_sicily_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 126
 					}
 				}
 				add_permanent_claim = TTS
+			}
+			7060 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
 			}
 			naples_area = {
 				limit = {

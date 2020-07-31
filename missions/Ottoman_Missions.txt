@@ -30,7 +30,19 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sofya_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			thrace_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_thrace_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -49,6 +61,12 @@ tur_conquerors_of_the_near_east = {
 				add_permanent_claim = ROOT
 			}
 			morea_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_morea_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -77,6 +95,7 @@ tur_conquerors_of_the_near_east = {
 				province_id = 5883
 				province_id = 3175
 				province_id = 4699
+				area = north_morea_area
 				area = morea_area
 				area = western_aegean_area
 			}
@@ -93,6 +112,10 @@ tur_conquerors_of_the_near_east = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -113,13 +136,31 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_serbia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			albania_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				add_claim = ROOT
 			}
+			south_albania_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
 			aegean_archipelago_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			cyclades_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -149,11 +190,16 @@ tur_conquerors_of_the_near_east = {
 			OR = {
 				area = serbia_area
 				area = rascia_area
+				area = south_serbia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_serbia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -169,6 +215,12 @@ tur_conquerors_of_the_near_east = {
 			}
 			
 			bosnia_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_bosnia_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -196,6 +248,7 @@ tur_conquerors_of_the_near_east = {
 						limit = {
 							OR = {
 								area = wallachia_area
+								area = oltenia_area
 								area = eastern_wallachia_area
 							}
 							NOT = { is_core = ROOT }
@@ -218,11 +271,18 @@ tur_conquerors_of_the_near_east = {
 		}
 		completed_by = 1463.1.1
 		provinces_to_highlight = {
-			area = bosnia_area
+			OR = {
+				area = bosnia_area
+				area = east_bosnia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			bosnia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_bosnia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -247,6 +307,13 @@ tur_conquerors_of_the_near_east = {
 				add_permanent_claim = ROOT
 			}
 			east_adriatic_coast_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
+			ragusa_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -317,6 +384,13 @@ tur_conquerors_of_the_near_east = {
 				}
 				add_claim = ROOT
 			}
+			croatia_coast_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 }
@@ -347,6 +421,7 @@ tur_eastern_balkans = {
 			OR = {
 				area = eastern_wallachia_area
 				area = wallachia_area
+				area = oltenia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -356,6 +431,10 @@ tur_eastern_balkans = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			wallachia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			oltenia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

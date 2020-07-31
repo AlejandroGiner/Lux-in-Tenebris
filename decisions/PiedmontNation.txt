@@ -1,45 +1,47 @@
 country_decisions = {
 
-  piedmont_nation = {
-    major = yes
-    potential = {
-      btc_potential_trigger = yes
-      NOT = { has_country_flag = formed_piedmont_flag }
-      NOT = { tag = PIE }
-      NOT = { tag = SAV }
-      NOT = { tag = SPI }
-      primary_culture = piedmontese
-    }
-    provinces_to_highlight = {
-      OR = {
-        area = west_piedmont_area
-        area = piedmont_area
-      }
-      OR = {
-        NOT = { owned_by = ROOT }
-        NOT = { is_core = ROOT }
-      }
-    }
-    allow = {
-      NOT = { exists = PIE }
-      is_at_war = no
-      is_free_or_tributary_trigger = yes
-      owns_core_province = 103 #Turin
-      calc_true_if = {
+	piedmont_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_piedmont_flag }
+			NOT = { tag = PIE }
+			NOT = { tag = SAV }
+			NOT = { tag = SPI }
+			primary_culture = piedmontese
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = west_piedmont_area
+				area = piedmont_area
+				area = cuneo_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+		  NOT = { exists = PIE }
+		  is_at_war = no
+		  is_free_or_tributary_trigger = yes
+		  owns_core_province = 103 #Turin
+		  calc_true_if = {
 				all_owned_province = {
 					is_core = ROOT
 					OR = {
 						area = piedmont_area
-            area = west_piedmont_area
+						area = west_piedmont_area
+						area = cuneo_area
 					}
 				}
 				amount = 10			#At least 2/3 of Piedmont's 14 provinces
 			}
-    }
-    effect = {
-      change_tag = PIE
-      remove_non_electors_emperors_from_empire_effect = yes
-      if = {
+		}
+		effect = {
+			change_tag = PIE
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
@@ -49,11 +51,9 @@ country_decisions = {
 			}
 			add_prestige = 25
 			swap_ideas = yes
-      set_country_flag = formed_piedmont_flag
-    }
-    ai_will_do = {
-      factor = 1
-    }
-    ai_importance = 400
-  }
+			set_country_flag = formed_piedmont_flag
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
 }

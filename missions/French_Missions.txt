@@ -231,6 +231,13 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			flanders_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -310,6 +317,7 @@ french_mission_slot_2 = {
 			OR = {
 				area = wallonia_area
 				area = brabant_area
+				area = north_brabant_area
 				area = flanders_area
 				area = luxembourg_area
 				area = luxemburg_liege_area
@@ -324,6 +332,10 @@ french_mission_slot_2 = {
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -348,6 +360,12 @@ french_mission_slot_2 = {
 				}
 			}
 			brabant_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			north_brabant_area = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300
@@ -893,16 +911,12 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
-			3045 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			cuneo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			3249 = {
 				if = {
@@ -1021,7 +1035,7 @@ france_expand_south_2 = {
 			OR = {
 				area = savoy_dauphine_area
 				area = west_piedmont_area
-				province_id = 3045
+				area = cuneo_area
 				province_id = 3249
 				province_id = 2981
 				province_id = 5540
@@ -1040,8 +1054,9 @@ france_expand_south_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3045 = {
-				owned_by = ROOT
+			cuneo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			3249 = {
 				owned_by = ROOT

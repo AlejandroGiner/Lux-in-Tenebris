@@ -246,7 +246,13 @@ eng_rb_islands_med = {
 				}
 				add_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}

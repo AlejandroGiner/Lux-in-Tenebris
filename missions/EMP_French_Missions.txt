@@ -213,6 +213,7 @@ emp_france_missions_1 = {
 			OR = {
 				area = wallonia_area
 				area = brabant_area
+				area = north_brabant_area
 				area = flanders_area
 				area = luxembourg_area
 				area = luxemburg_liege_area
@@ -227,6 +228,10 @@ emp_france_missions_1 = {
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -251,6 +256,12 @@ emp_france_missions_1 = {
 				}
 			}
 			brabant_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			north_brabant_area = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300
@@ -721,6 +732,13 @@ emp_france_missions_2 = {
 				add_permanent_claim = ROOT
 			}
 			brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_brabant_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1418,7 +1436,7 @@ emp_france_missions_3 = {
 			OR = {
 				area = savoy_dauphine_area
 				area = west_piedmont_area
-				province_id = 3045
+				area = cuneo_area
 				province_id = 3249
 				province_id = 2981
 				province_id = 5540
@@ -1437,8 +1455,9 @@ emp_france_missions_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3045 = {
-				owned_by = ROOT
+			cuneo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			3249 = {
 				owned_by = ROOT
@@ -1885,16 +1904,12 @@ emp_france_missions_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			3045 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			cuneo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			3249 = {
 				if = {
