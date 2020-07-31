@@ -21,21 +21,30 @@ france_region = {
 		picardy_area
 		#seine_area			#Cut in 1.25
 		ile_de_france_area			#Added in 1.25, using it as a 1-to-1 replacement of seine_area
-		loire_area
+		orleans_area 
 		bourgogne_area
+		west_burgundy_area
 		pyrenees_area
 		#BTADDITIONS
+		fr_maine_area
 		poitou_area			#also added by Paradox in 1.25, same id so no change needed.
 		champagne_area			#also added by Paradox in 1.25, same id so no change needed.
 		dauphine_area
 		franche_comte_area
-		west_massif_central_area
+		east_guyenne_area
+		limousin_area
 		east_languedoc_area
 		west_normandy_area
+		central_normandy_area
+		channel_islands_area
 		lower_brittany_area
 		verdun_area
-		anjou_area
+		loire_area
+		berry_area
 		south_champagne_area
+		saintonge_area
+		btc_pyrenees_area
+		bourbonnais_area
 	}
 }
 
@@ -63,14 +72,14 @@ low_countries_region = {
 	areas = {
 		wallonia_area
 		flanders_area
-		#holland_area			#New in 1.25, but not yet used in BT. Will almost certainly use it later.
 		brabant_area
-		netherlands_area
+		holland_area
 		frisia_area
 		luxemburg_liege_area			#Cut in 1.25, but kept in BT for the moment until I can redo the area.
 		#BTADDITIONS
 		guelders_area
 		luxembourg_area
+		north_brabant_area
 	}
 }
 
@@ -83,20 +92,25 @@ italy_region = {
 		liguria_area
 		corsica_sardinia_area
 		sicily_area
+		western_sicily_area
 		naples_area
 		calabria_area
 		apulia_area
 		emilia_romagna_area
 		central_italy_area
+		po_valley_area
 		#BTADDITIONS
 		emilia_area
 		abruzzo_area
 		south_tuscany_area
-		east_sicily_area
 		lazio_area
 		west_piedmont_area
 		corsica_area
 		friuli_area
+		sicily_islands_area
+		umbria_area
+		lunigiana_area
+		istria_area
 	}
 }
 
@@ -146,6 +160,7 @@ south_german_region = {
 		carniola_area
 		upper_palatinate_area
 		west_swabia_area
+		sudtirol_area
 	}
 }
 
@@ -251,6 +266,9 @@ british_isles_region = {
 		five_boroughs_area
 		#lancashire_area			#cut in 1.25, using west_midlands_area as a replacement
 		northern_england_area			#vanilla cut in 1.25, but kept in BT because the new yorkshire_area replacing it was already in BT, and I need an area. This is as good as any and already in triggers
+		south_wales_area
+		mid_wales_area
+		cumbria_area
 	}
 }
 
@@ -346,6 +364,12 @@ balkan_region = {
 		albania_area
 		#BTADDITIONS
 		slavonia_area
+		croatia_coast_area
+		ragusa_area
+		south_albania_area
+		herzegovina_area
+		east_bosnia_area
+		south_serbia_area
 	}
 }
 
@@ -366,6 +390,11 @@ greece_region_btc = { #Rumelia
 		bulgaria_area
 		cyprus_area
 		eastern_bulgaria_area
+		sofya_area
+		ionian_islands_area
+		cyclades_area
+		north_morea_area
+		eastern_thrace_area
 	}
 }
 
@@ -389,6 +418,7 @@ carpathia_region = {
 		southern_transdanubia_area
 		southern_alfold_area
 		szeklerland_area
+		oltenia_area
 	}
 }
 

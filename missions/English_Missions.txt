@@ -38,6 +38,18 @@ eng_british_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_wales_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mid_wales_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -65,21 +77,34 @@ eng_british_conquest_wales = {
 		completed_by = 1535.1.1
 
 		provinces_to_highlight = {
-			area = wales_area
+			OR = {
+				area = wales_area
+				area = south_wales_area
+				area = mid_wales_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
-			wales_area = {
-				type = all
-				OR = {
-					owned_by = ROOT
-					owner = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 30 }
-						has_opinion = {
-							who = ROOT
-							value = 150
+			custom_trigger_tooltip = {
+				tooltip = wales_hold_tooltip
+				every_province = {
+					limit = {
+						OR = { 
+							area = wales_area
+							area = mid_wales_area
+							area = south_wales_area
+						}
+					}
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = { liberty_desire = 30 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
 						}
 					}
 				}

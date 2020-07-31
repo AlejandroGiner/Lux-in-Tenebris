@@ -232,6 +232,13 @@ sco_rb_conquest_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cumbria_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			ulster_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
@@ -252,13 +259,20 @@ sco_rb_conquest_missions = {
 		icon = mission_assemble_an_army
 		required_missions = { sco_auld_alliance }
 		provinces_to_highlight = {
-			area = northern_england_area
+			OR = {
+				area = northern_england_area
+				cumbria_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_england_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cumbria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -391,6 +405,20 @@ sco_rb_conquest_missions = {
 				add_permanent_claim = ROOT
 			}
 			wales_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			mid_wales_area = {
+				limit = {
+					NOT = { owned_by = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_wales_area = {
 				limit = {
 					NOT = { owned_by = ROOT	}
 					NOT = { is_core = ROOT	}

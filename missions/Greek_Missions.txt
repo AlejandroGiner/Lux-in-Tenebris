@@ -1,7 +1,4 @@
- ##################################################
- ##### Dub's Mission Work - All credit to Dub for this #####
- ##################################################
-#Updated vanilla missions to BT. Updates done by Dub.
+
 gre_rebirth_of_hellas = {
 	slot = 1 #upper left column
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
@@ -41,10 +38,17 @@ gre_rebirth_of_hellas = {
 			custom_tooltip = greece_control_peloponnese_claims
 			hidden_effect = {
 				morea_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+				add_permanent_claim = ROOT
 				}
+				north_morea_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
 				add_permanent_claim = ROOT
 				}
 			}
@@ -56,13 +60,20 @@ gre_rebirth_of_hellas = {
 		required_missions = { greece_liberation_of_hellas }
 		position = 2
 		provinces_to_highlight = {
-			area = morea_area
+			OR = {
+				area = morea_area
+				area = north_morea_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -83,7 +94,13 @@ gre_rebirth_of_hellas = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
 					add_permanent_claim = ROOT
+				}
+				ionian_islands_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -94,8 +111,9 @@ gre_rebirth_of_hellas = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				area = morea_area
-				area = western_aegean_area
+				area = thessaly_area
+				area = northern_greece_area
+				area = ionian_islands_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -104,9 +122,15 @@ gre_rebirth_of_hellas = {
 		trigger = {
 			thessaly_area = {
 				country_or_non_sovereign_subject_holds = ROOT
+				type = all
 			}
 			northern_greece_area = {
 				country_or_non_sovereign_subject_holds = ROOT
+				type = all
+			}
+			ionian_islands_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				type = all
 			}
 			is_subject = no
 		}
@@ -147,10 +171,17 @@ gre_rebirth_of_hellas = {
 			custom_tooltip = greece_control_peloponnese_claims
 			hidden_effect = {
 				thrace_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+				add_permanent_claim = ROOT
 				}
+				eastern_thrace_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
 				add_permanent_claim = ROOT
 				}
 			}
@@ -162,13 +193,20 @@ gre_rebirth_of_hellas = {
 		required_missions = { greece_reclaim_macedonia }
 		position = 5
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_thrace_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_thrace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

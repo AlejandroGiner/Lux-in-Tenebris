@@ -302,7 +302,11 @@ colonial_newfoundland = {
 		trigger = {
 			tag = ENG
 			any_owned_province = {
-				area = wales_area
+				OR = {
+					area = wales_area
+					area = mid_wales_area
+					area = south_wales_area
+				}
 			}
 		}
 		name = "COLONIAL_CANADA_Avalon"

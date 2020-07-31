@@ -246,7 +246,13 @@ eng_rb_islands_med = {
 				}
 				add_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -1036,6 +1042,13 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
+			btc_pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			guyenne_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1050,14 +1063,35 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_massif_central_area = {
+			saintonge_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			anjou_area = {
+			east_guyenne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			limousin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			loire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			fr_maine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1078,8 +1112,12 @@ eng_rb_conquest_europe = {
 				area = pyrenees_area #Gascony
 				area = poitou_area
 				area = guyenne_area #Aquitaine
-				area = west_massif_central_area
-				area = anjou_area
+				area = east_guyenne_area
+				area = limousin_area
+				area = loire_area
+				area = fr_maine_area
+				area = saintonge_area
+				area = btc_pyrenees_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1089,7 +1127,15 @@ eng_rb_conquest_europe = {
 				type = all
 				owned_by = ROOT
 			}
+			btc_pyrenees_area = {
+				type = all
+				owned_by = ROOT
+			}
 			poitou_area = {
+				type = all
+				owned_by = ROOT
+			}
+			saintonge_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1097,11 +1143,19 @@ eng_rb_conquest_europe = {
 				type = all
 				owned_by = ROOT
 			}
-			west_massif_central_area = {
+			east_guyenne_area = {
 				type = all
 				owned_by = ROOT
 			}
-			anjou_area = {
+			limousin_area = {
+				type = all
+				owned_by = ROOT
+			}
+			loire_area = {
+				type = all
+				owned_by = ROOT
+			}
+			fr_maine_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -1138,7 +1192,21 @@ eng_rb_conquest_europe = {
 				}
 				add_permanent_claim = ROOT
 			}
-			loire_area = {
+			west_burgundy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			orleans_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			berry_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1146,6 +1214,13 @@ eng_rb_conquest_europe = {
 				add_permanent_claim = ROOT
 			}
 			massif_central_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			bourbonnais_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

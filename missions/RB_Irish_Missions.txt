@@ -283,6 +283,20 @@ ire_conquest_main = {
 				}
 				add_permanent_claim = ROOT
 			}
+			mid_wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_wales_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			kingdom_of_the_isles_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -314,13 +328,25 @@ ire_conquest_main = {
 		icon = mission_rb_conquer_wales
 		required_missions = { beyond_the_pale }
 		provinces_to_highlight = {
-			area = wales_area
+			OR = {
+				area = wales_area
+				area = south_wales_area
+				area = mid_wales_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mid_wales_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -581,6 +607,13 @@ ire_conquest_2 = {
 				add_permanent_claim = ROOT
 			}
 			northern_england_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cumbria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}

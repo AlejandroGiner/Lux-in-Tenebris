@@ -231,6 +231,13 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_brabant_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			flanders_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -310,6 +317,7 @@ french_mission_slot_2 = {
 			OR = {
 				area = wallonia_area
 				area = brabant_area
+				area = north_brabant_area
 				area = flanders_area
 				area = luxembourg_area
 				area = luxemburg_liege_area
@@ -324,6 +332,10 @@ french_mission_slot_2 = {
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -348,6 +360,12 @@ french_mission_slot_2 = {
 				}
 			}
 			brabant_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			north_brabant_area = {
 				add_province_modifier = {
 					name = "faster_integration"
 					duration = 7300
@@ -767,7 +785,14 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
-			anjou_area = {
+			loire_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			fr_maine_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -784,7 +809,8 @@ france_expand_south = {
 		provinces_to_highlight = {
 			OR = {
 				area = provence_area
-				area = anjou_area
+				area = loire_area
+				area = fr_maine_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -795,13 +821,24 @@ france_expand_south = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			anjou_area = {
+			loire_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			fr_maine_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			franche_comte_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			west_burgundy_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -825,6 +862,7 @@ france_expand_south = {
 			OR = {
 				area = bourgogne_area
 				area = franche_comte_area
+				area = west_burgundy_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -832,6 +870,10 @@ france_expand_south = {
 		}
 		trigger = {
 			franche_comte_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_burgundy_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -381,7 +381,14 @@ hab_protect_the_balkans = {
 				}
 				add_claim = ROOT
 			}
-			wallachia_area = {
+			south_serbia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			oltenia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }

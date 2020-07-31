@@ -486,7 +486,11 @@ country_event = {
 		NOT = { has_country_flag = ENG_had_event_9230 }
 		has_country_flag = supports_parliamentarians
 		any_owned_province = {
-			area = wales_area
+			OR = {
+				area = wales_area
+				area = mid_wales_area
+				area = south_wales_area
+			}
 			unrest = 1
 		}
 	}
@@ -509,7 +513,11 @@ country_event = {
 		ai_chance = { factor = 50 }
 		random_owned_province = {
 			limit = {
-				area = wales_area
+				OR = {
+					area = wales_area
+					area = mid_wales_area
+					area = south_wales_area
+				}
 				unrest = 1
 			}
 			spawn_rebels = {
@@ -533,7 +541,11 @@ country_event = {
 		NOT = { has_country_flag = ENG_had_event_9231 }
 		has_country_flag = supports_royalists
 		any_owned_province = {
-			area = wales_area
+			OR = {
+				area = wales_area
+				area = mid_wales_area
+				area = south_wales_area
+			}
 			unrest = 1
 		}
 	}
@@ -556,7 +568,11 @@ country_event = {
 		ai_chance = { factor = 50 }
 		random_owned_province = {
 			limit = {
-				area = wales_area
+				OR = {
+					area = wales_area
+					area = mid_wales_area
+					area = south_wales_area
+				}
 				unrest = 1
 			}
 			spawn_rebels = {

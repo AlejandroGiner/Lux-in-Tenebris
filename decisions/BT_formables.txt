@@ -640,6 +640,8 @@ country_decisions = {
 				area = scottish_marches_area
 				area = kingdom_of_the_isles_area
 				area = wales_area
+				area = mid_wales_area
+				area = south_wales_area
 				area = cornwall_area
 				area = brittany_area
 				area = lower_brittany_area
@@ -686,7 +688,11 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = wales_area
+						OR = {
+							area = wales_area
+							area = mid_wales_area
+							area = south_wales_area
+						}
 					}
 					amount = 5			#At least half of Wales
 				}
@@ -751,6 +757,14 @@ country_decisions = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
+				mid_wales_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
+				south_wales_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
 				cornwall_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
@@ -779,6 +793,10 @@ country_decisions = {
 					add_claim = CEL
 				}
 				northern_england_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_claim = CEL
+				}
+				cumbria_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_claim = CEL
 				}
@@ -2191,7 +2209,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_thrace_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -2221,6 +2242,11 @@ country_decisions = {
 					owned_by = ROOT
 					is_core = ROOT
 				}
+				eastern_thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 			if = {							#crusader state
 				limit = {
@@ -2242,6 +2268,11 @@ country_decisions = {
 					owned_by = ROOT
 					is_state_core = ROOT
 				}
+				eastern_thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_state_core = ROOT
+				}
 			}
 		}
 		effect = {
@@ -2252,10 +2283,16 @@ country_decisions = {
 			thrace_area = {
 				add_core = LTE
 			}
+			eastern_thrace_area = {
+				add_core = LTE
+			}
 			western_aegean_area = {
 				add_permanent_claim = LTE
 				}
 			east_adriatic_coast_area = {
+				add_permanent_claim = LTE
+			}
+			ragusa_area = {
 				add_permanent_claim = LTE
 			}
 			if = {
@@ -2983,7 +3020,7 @@ country_decisions = {
 					add_permanent_claim = FRX
 				}
 			}
-			netherlands_area = {
+			holland_area = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
