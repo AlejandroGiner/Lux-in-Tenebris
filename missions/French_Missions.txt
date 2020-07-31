@@ -911,16 +911,12 @@ france_expand_south = {
 				}
 				add_permanent_claim = ROOT
 			}
-			3045 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+			cuneo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
+				add_permanent_claim = ROOT
 			}
 			3249 = {
 				if = {
@@ -1039,7 +1035,7 @@ france_expand_south_2 = {
 			OR = {
 				area = savoy_dauphine_area
 				area = west_piedmont_area
-				province_id = 3045
+				area = cuneo_area
 				province_id = 3249
 				province_id = 2981
 				province_id = 5540
@@ -1058,8 +1054,9 @@ france_expand_south_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			3045 = {
-				owned_by = ROOT
+			cuneo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			3249 = {
 				owned_by = ROOT
