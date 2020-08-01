@@ -257,7 +257,10 @@ defeat_the_livonian_order_provinces = { #Unchanged, though it creates errors in 
 
 #Poland-Commonwealth
 conquer_warmia_provinces = { #Unchanged
+	OR = {
 		area = west_prussia_area
+		area = pomerelia_area
+	}
 }
 annex_mazovia_provinces = { #Unchanged
 	OR = {
@@ -267,7 +270,10 @@ annex_mazovia_provinces = { #Unchanged
 	}
 }
 vassalize_the_teutonic_order_provinces = { #Unchanged
-	area = east_prussia_area
+	OR = {
+		area = east_prussia_area
+		area = sudovia_area
+	}
 }
 vassalize_lithuania_provinces = {
 	OR = {
@@ -378,9 +384,9 @@ swe_bremen_verden_provinces = {
 swedish_prussia_provinces = {
 	OR = {
 		area = east_prussia_area
+		area = sudovia_area
 		province_id = 7778
 		province_id = 2958
-		#province_id = xxxx add Marienwerder in the future
 	}
 }
 

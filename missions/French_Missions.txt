@@ -965,7 +965,7 @@ france_expand_south = {
 			}
 		}
 		effect = {
-			elsass_area = {
+			alsace_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -978,13 +978,13 @@ france_expand_south = {
 		icon = mission_assemble_an_army
 		required_missions = { subjugate_lorraine }
 		provinces_to_highlight = {
-			area = elsass_area
+			area = alsace_area
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		trigger = {
-			elsass_area = {
+			alsace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

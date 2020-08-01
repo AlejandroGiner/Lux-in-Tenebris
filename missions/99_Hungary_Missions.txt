@@ -145,6 +145,13 @@ hun_north_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			oltenia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -521,7 +528,14 @@ hun_ottoman_group = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_danube_area = {
+			sofya_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			silistria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -540,7 +554,8 @@ hun_ottoman_group = {
 			OR = {
 				area = bulgaria_area
 				area = eastern_bulgaria_area
-				area = lower_danube_area
+				area = sofya_area
+				area = silistria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -554,7 +569,11 @@ hun_ottoman_group = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_danube_area = {
+			sofya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

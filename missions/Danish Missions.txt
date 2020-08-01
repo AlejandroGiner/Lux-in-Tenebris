@@ -271,6 +271,17 @@ bt_danish_trade_2 = {
 				}
 				add_claim = ROOT
 			}
+			pomerelia_area = { #Danziger domain
+				if = {
+					limit = {
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
 			livonia_area = { #Rigan domain
 				if = {
 					limit = {
@@ -943,6 +954,15 @@ bt_danish_resist_prussia = {
 				duration = 5475
 			}
 			west_prussia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			pomerelia_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT

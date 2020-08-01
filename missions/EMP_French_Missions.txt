@@ -1958,7 +1958,7 @@ emp_france_missions_4 = {
 			}
 		}
 		effect = {
-			elsass_area = {
+			alsace_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1971,13 +1971,13 @@ emp_france_missions_4 = {
 		icon = mission_assemble_an_army
 		required_missions = { emp_fra_subjugate_lorraine }
 		provinces_to_highlight = {
-			area = elsass_area
+			area = alsace_area
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		trigger = {
-			elsass_area = {
+			alsace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

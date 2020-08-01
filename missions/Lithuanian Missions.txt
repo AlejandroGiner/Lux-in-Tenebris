@@ -230,6 +230,7 @@ lithuanian_missions_2 = {
 				area = malopolska_area
 				area = mazovia_area
 				area = west_prussia_area
+				area = pomerelia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -251,6 +252,10 @@ lithuanian_missions_2 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 					west_prussia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					pomerelia_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -634,6 +639,13 @@ lithuanian_missions_slot = {
 					add_permanent_claim = ROOT
 				}
 				west_prussia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				pomerelia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}

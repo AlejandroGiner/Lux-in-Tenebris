@@ -164,7 +164,7 @@ emp_hun_poland_branch = {
 					}
 					add_permanent_claim = ROOT
 				}
-				kuyavia_area = {
+				kalisz_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -184,7 +184,7 @@ emp_hun_poland_branch = {
 				area = mazovia_area
 				area = lublin_area
 				area = wielkopolska_area
-				area = kuyavia_area
+				area = kalisz_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
@@ -195,7 +195,7 @@ emp_hun_poland_branch = {
 							area = mazovia_area
 							area = lublin_area
 							area = wielkopolska_area
-							area = kuyavia_area
+							area = kalisz_area
 						}
 					}
 				}
@@ -208,7 +208,7 @@ emp_hun_poland_branch = {
 					area = mazovia_area
 					area = lublin_area
 					area = wielkopolska_area
-					area = kuyavia_area
+					area = kalisz_area
 				}
 			}
 		}

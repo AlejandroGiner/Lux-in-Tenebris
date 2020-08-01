@@ -1955,7 +1955,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
-				lower_danube_area = {
+				silistria_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -1982,7 +1982,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = bulgaria_area
 				area = eastern_bulgaria_area
-				area = lower_danube_area
+				area = silistria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1996,7 +1996,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			lower_danube_area = {
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5981,7 +5981,7 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
-				elsass_area = {
+				alsace_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -6092,7 +6092,7 @@ byz_galatia = {
 				area = brabant_area
 				area = north_brabant_area
 				area = luxemburg_liege_area
-				area = elsass_area
+				area = alsace_area
 				area = switzerland_area
 				area = romandie_area
 				province_id = 96
@@ -6129,7 +6129,7 @@ byz_galatia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			elsass_area = {
+			alsace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

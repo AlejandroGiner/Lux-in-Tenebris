@@ -142,7 +142,7 @@ bul_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_danube_area = {
+			silistria_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }
@@ -216,7 +216,7 @@ bul_1 = {
 				area = wallachia_area
 				area = moldavia_area
 				area = thessaly_area
-				area = lower_danube_area
+				area = silistria_area
 				area = western_moldovia
 				area = transylvania_area
 				area = southern_transylvania_area
@@ -245,7 +245,7 @@ bul_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_danube_area = {
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

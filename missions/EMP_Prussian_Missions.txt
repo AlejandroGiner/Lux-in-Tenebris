@@ -78,7 +78,21 @@ emp_bra_pru_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sudovia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -102,6 +116,8 @@ emp_bra_pru_1 = {
 				area = west_prussia_area
 				area = east_prussia_area
 				area = mittelmark_area
+				area = pomerelia_area
+				area = sudovia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -112,7 +128,15 @@ emp_bra_pru_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			pomerelia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			east_prussia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sudovia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -391,7 +415,7 @@ emp_bra_pru_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			kuyavia_area = {
+			kalisz_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -405,7 +429,7 @@ emp_bra_pru_2 = {
 		required_missions = { emp_brapru_conquer_silesia }
 		provinces_to_highlight = {
 			OR = {
-				area = kuyavia_area
+				area = kalisz_area
 				area = wielkopolska_area
 			}
 			NOT = {
@@ -413,7 +437,7 @@ emp_bra_pru_2 = {
 			}
 		}
 		trigger = {
-			kuyavia_area = {
+			kalisz_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

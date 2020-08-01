@@ -160,7 +160,25 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PRU
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PRU
+			}
+			sudovia_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
@@ -251,7 +269,19 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			sudovia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
@@ -408,7 +438,19 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			sudovia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

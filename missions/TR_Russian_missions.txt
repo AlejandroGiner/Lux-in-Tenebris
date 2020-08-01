@@ -824,7 +824,7 @@ tr_russia_exclusive_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_danube_area = {
+			silistria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -869,7 +869,7 @@ tr_russia_exclusive_1 = {
 			OR = {
 				area = bulgaria_area
 				area = eastern_bulgaria_area
-				area = lower_danube_area
+				area = silistria_area
 				area = upper_thrace_area
 				area = thrace_area
 				area = eastern_thrace_area
@@ -888,7 +888,7 @@ tr_russia_exclusive_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_danube_area = {
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

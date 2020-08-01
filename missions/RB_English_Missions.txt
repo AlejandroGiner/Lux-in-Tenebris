@@ -2198,6 +2198,13 @@ eng_rb_trade_in_home_cot_group = {
 				}
 				add_claim = ROOT
 			}
+			sudovia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 

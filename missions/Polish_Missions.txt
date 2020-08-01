@@ -57,7 +57,10 @@ polish_missions_main_slot = {
 				limit = {
 					any_subject_country = {
 						any_owned_province = {
-							area = west_prussia_area
+							OR = {
+								area = west_prussia_area
+								area = pomerelia_area
+							}
 						}
 					}
 				}
@@ -67,9 +70,22 @@ polish_missions_main_slot = {
 					}
 					add_core = ROOT
 				}
+				pomerelia_area = {
+					limit = {
+						NOT = { is_core = ROOT}
+					}
+					add_core = ROOT
+				}
 			}
 			else = {
 				west_prussia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				pomerelia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT}
 						NOT = { is_core = ROOT	}
@@ -86,7 +102,10 @@ polish_missions_main_slot = {
 		completed_by = 1466.10.19
 		position = 3
 		provinces_to_highlight = {
-			area = west_prussia_area
+			OR = {
+				area = west_prussia_area
+				area = pomerelia_area
+			}
 			NOT = {
 				AND = {
 					owned_by = ROOT
@@ -99,6 +118,10 @@ polish_missions_main_slot = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			pomerelia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			if = {
@@ -107,7 +130,10 @@ polish_missions_main_slot = {
 					TEU = {
 						is_subject = no
 						any_owned_province = {
-							area = east_prussia_area
+							OR = {
+								area = sudovia_area
+								area = east_prussia_area
+							}
 						}
 					}
 				}
@@ -125,6 +151,13 @@ polish_missions_main_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
+				sudovia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -133,13 +166,20 @@ polish_missions_main_slot = {
 		required_missions = { conquer_warmia }
 		position = 5
 		provinces_to_highlight = {
-			area = east_prussia_area
+			OR = {
+				area = east_prussia_area
+				area = sudovia_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			east_prussia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sudovia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -163,7 +203,7 @@ polish_missions_main_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_danube_area = {
+			silistria_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -317,7 +357,7 @@ polish_missions_branch_slot = {
 				AND = {
 					OR = {
 						area = eastern_bulgaria_area
-						area = lower_danube_area
+						area = silistria_area
 						area = bulgaria_area
 					}
 					NOT = {
@@ -335,7 +375,7 @@ polish_missions_branch_slot = {
 			}
 		}
 		trigger = {
-			lower_danube_area = {
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -828,16 +828,24 @@ curonia_area = { #3
 	39 1935 3227 7803 7804 7805
 }
 
+pomerelia_area = {
+	7598 43 5097 7780 2997
+}
+
+sudovia_area = {
+	767 7776 3224
+}
+
 east_prussia_area = { #4
-	40 41 767 3224 42 7773 7775 7776 7777
+	40 41 7773 7775 7777
 }
 
 west_prussia_area = { #5
-	43 1841 7598 1859 5097 2997 7778 7780 2958
+	1841 7778 2958 42
 }
 
 wielkopolska_area = { #5
-   254 2963 4526 4523 4836 4837
+   254 2963 4526 4836 4837
 }
 
 malopolska_area = { #5
@@ -866,11 +874,15 @@ podlasie_area = {
 }
 
 mazovia_area = { #4
-	256 257 7264 4525 4524
+	256 257 7264 4525
 }
 
-kuyavia_area = {			#converting in BT Kalisz area, and cutting the old BT Kalisz
-	255 1939 4528 258 4533 4838
+kuyavia_area = {
+	4528 4523 4524 1859
+}
+
+kalisz_area = {
+	4533 255 4838 1939 258
 }
 
 samogitia_area = { #4
@@ -1219,7 +1231,7 @@ upper_rhineland_area = { #Baden
 	72 74 4803 4804 4714
 }
 
-elsass_area = {
+alsace_area = {
 	4801 4802 75 4800 4765 1880
 }
 
@@ -1235,16 +1247,20 @@ lower_rhineland_area = { #3
 	80 4821 1760 3198 4816 83 4767
 }
 
-westphalia_area = { #5
-	82 86 4819 3292 3199 3200
+north_westphalia_area = {
+	4826 4825 86 4819
+}
+
+westphalia_area = { #South Westphalia
+	82 3292 3199 3200
 }
 
 paderborn_area = {
-	2972 3203 4775 4817 1762
+	2972 3203 4817 1762
 }
 
 muenster_area = {
-	56 2973 4825 4826 4834
+	56 2973 4834 4775
 }
 
 hesse_area = { #4
@@ -1385,7 +1401,7 @@ carpathian_ruthenia_area = {
 	1952 3146 3434 3443
 }
 
-lower_danube_area = {
+silistria_area = {
 	4706 3164 5715 3165 5899
 }
 

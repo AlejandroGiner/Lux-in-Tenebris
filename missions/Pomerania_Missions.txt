@@ -139,7 +139,7 @@ pom_1 = {
 				AND = {
 					OR = {
 						area = wielkopolska_area
-						area = kuyavia_area
+						area = kalisz_area
 						area = mazovia_area
 						area = central_poland_area
 					}
@@ -223,7 +223,7 @@ pom_1 = {
 								type = all
 								country_or_non_sovereign_subject_holds = ROOT
 							}
-							kuyavia_area = {
+							kalisz_area = {
 								type = all
 								country_or_non_sovereign_subject_holds = ROOT
 							}
@@ -255,7 +255,7 @@ pom_1 = {
 							type = all
 							country_or_non_sovereign_subject_holds = ROOT
 						}
-						kuyavia_area = {
+						kalisz_area = {
 							type = all
 							country_or_non_sovereign_subject_holds = ROOT
 						}
@@ -312,7 +312,7 @@ pom_1 = {
 								type = all
 								country_or_non_sovereign_subject_holds = ROOT
 							}
-							kuyavia_area = {
+							kalisz_area = {
 								type = all
 								country_or_non_sovereign_subject_holds = ROOT
 							}
@@ -344,7 +344,7 @@ pom_1 = {
 							type = all
 							country_or_non_sovereign_subject_holds = ROOT
 						}
-						kuyavia_area = {
+						kalisz_area = {
 							type = all
 							country_or_non_sovereign_subject_holds = ROOT
 						}
@@ -364,7 +364,7 @@ pom_1 = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
-				kuyavia_area = {
+				kalisz_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -381,6 +381,15 @@ pom_1 = {
 		
 		effect = {
 			west_prussia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			pomerelia_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT
@@ -426,7 +435,7 @@ pom_1 = {
 						}
 						add_claim = ROOT
 					}
-					kuyavia_area = {
+					kalisz_area = {
 						limit = {
 							NOT = {
 								is_core = ROOT
@@ -505,7 +514,7 @@ pom_1 = {
 						}
 						add_claim = ROOT
 					}
-					kuyavia_area = {
+					kalisz_area = {
 						limit = {
 							NOT = {
 								is_core = ROOT
@@ -565,7 +574,10 @@ pom_1 = {
 		icon = mission_teutonic_knights
 		required_missions = { pom_strengthen_old_ties }
 		provinces_to_highlight = { 
-			area = west_prussia_area
+			OR = {
+				area = west_prussia_area
+				area = pomerelia_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
@@ -573,9 +585,22 @@ pom_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			pomerelia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			east_prussia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sudovia_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT

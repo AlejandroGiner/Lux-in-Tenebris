@@ -875,6 +875,13 @@ bt_swedish_hre_intervention_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
