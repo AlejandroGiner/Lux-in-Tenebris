@@ -252,6 +252,8 @@ defeat_the_livonian_order_provinces = { #Unchanged, though it creates errors in 
 		area = livonia_area
 		area = estonia_ingria_area
 		area = curonia_area
+		area = osel_wiek_area
+		area = east_livonia_area
 	}
 }
 
@@ -330,7 +332,10 @@ swe_expand_finland_provinces = { #Kexholm County + Ingria
 	NOT = { province_id = 7746 }
 }
 control_estonia_provinces = { #Swedish Estonia
-    area = estonia_ingria_area
+	OR = {
+		area = estonia_ingria_area
+		area = osel_wiek_area
+	}
     NOT = { province_id = 35 } #Ösel was actually part of Swedish Livonia, ceded in 1645 as part of the treaty of Brömsebro, together with Jämtland & Gotland (+Halland).
     NOT = { province_id = 7763 } #Also part of Livonia
 }
@@ -338,6 +343,7 @@ control_estonia_provinces = { #Swedish Estonia
 control_latvia_provinces = { #Now adjusted to only include Swedish Livonia
     OR = {
         area = livonia_area
+		area = east_livonia_area
         area = north_livonia_area
         province_id = 35 #Ösel
         province_id = 7763 #Sontack

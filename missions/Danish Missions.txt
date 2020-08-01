@@ -293,6 +293,17 @@ bt_danish_trade_2 = {
 				}
 				add_claim = ROOT
 			}
+			east_livonia_area = { #Rigan domain
+				if = {
+					limit = {
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
 			north_livonia_area = { #Rigan domain
 				if = {
 					limit = {
@@ -1051,6 +1062,15 @@ danish_missions_baltic = {
 		}
 		effect = {
 			estonia_ingria_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			osel_wiek_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT

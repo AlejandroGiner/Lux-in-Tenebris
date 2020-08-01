@@ -175,6 +175,8 @@ tr_muscovy_conquest = {
 				area = curonia_area
 				area = estonia_ingria_area
 				area = livonia_area
+				area = osel_wiek_area
+				area = east_livonia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -189,7 +191,15 @@ tr_muscovy_conquest = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			osel_wiek_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			livonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			east_livonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -628,6 +638,13 @@ tr_russia_conquest_1 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				osel_wiek_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				curonia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT	}
@@ -636,6 +653,13 @@ tr_russia_conquest_1 = {
 					add_permanent_claim = ROOT
 				}
 				livonia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT	}
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				east_livonia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT	}
 						NOT = { is_core = ROOT	}
