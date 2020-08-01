@@ -9,15 +9,18 @@ india_superregion = {
 }
 
 east_indies_superregion = {
-	siam_region
-	burma_region
 	malaya_region
 	moluccas_region	
 	indonesia_region
 	philippines_region
-	indo_china_region
 	java_region
 	sumatra_region
+}
+
+indochina_superregion = {
+	indo_china_region
+	siam_region
+	burma_region
 }
 
 oceania_superregion = {
@@ -36,36 +39,48 @@ china_superregion = {
 europe_superregion = {
 	france_region
 	iberia_region
-	italy_region
-	british_isles_region
-	south_german_region
-	north_german_region
-	scandinavia_region
 	low_countries_region
+	british_isles_region
 	ireland_region
-	czech_lands_region
-	greece_region_btc
 }
 
 eastern_europe_superregion = {
-	poland_region
-	baltic_region
 	russia_region
 	ruthenia_region
-	carpathia_region
-	balkan_region
 	crimea_region
 	ural_region
+	carpathia_region
+}
+
+southern_europe_superregion = {
+	greece_region_btc
+	balkan_region
+	italy_region
+}
+
+central_europe_superregion = {
+	poland_region
+	south_german_region
+	north_german_region
+	czech_lands_region
+}
+
+northern_europe_superregion = {
+	baltic_region
 	suomi_region
+	scandinavia_region
 }
 
 tartary_superregion = {
-	east_siberia_region
-	west_siberia_region
 	manchuria_region
 	mongolia_region
 	central_asia_region
 	tibet_region
+}
+
+siberia_superregion = {
+	east_siberia_region
+	west_siberia_region
 }
 
 far_east_superregion = {
@@ -78,26 +93,38 @@ africa_superregion = {
 	egypt_region
 }
 
-southern_africa_superregion = {
-	east_africa_region
-	kongo_region
-	south_africa_region
-	central_africa_region
-    madagascar_region
-    angola_region
-    midafrica_region
-    niger_region
+west_africa_superregion = {
+	niger_region
 	guinea_region
 	sahel_region
-    horn_of_africa_region
+}
+
+east_africa_superregion = {
+	east_africa_region
+	madagascar_region
+	horn_of_africa_region
+}
+
+central_africa_superregion = {
+	midafrica_region
+	kongo_region
+	central_africa_region
+}
+
+southern_africa_superregion = {
+	south_africa_region
+	angola_region
 }
 
 south_america_superregion = {
 	brazil_region
-	la_plata_region
 	colombia_region
+}
+
+andes_superregion = {
 	peru_region
 	upper_peru_region
+	la_plata_region
 	chile_region
 }
 
@@ -126,13 +153,13 @@ near_east_superregion = {
 	anatolia_region
 	mashriq_region
 	mesopotamia_region
-	caucasia_region
 	arabia_region
 }
 
 persia_superregion = {
 	khorasan_region
 	persia_region
+	caucasia_region
 }
 
 new_world_superregion = {
