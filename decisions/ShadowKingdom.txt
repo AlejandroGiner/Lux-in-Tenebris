@@ -24,6 +24,19 @@ country_decisions = {
 				}
 			}
 			custom_trigger_tooltip = {
+				tooltip = lunigiana_in_hre_tooltip
+				lunigiana_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						is_part_of_hre = yes
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
 				tooltip = emilia_in_hre_tooltip
 				emilia_romagna_area = {
 					type = all
@@ -78,6 +91,32 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = lombardy_in_hre_tooltip
 				lombardy_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						is_part_of_hre = yes
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = alps_in_hre_tooltip
+				lepontine_alps_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						is_part_of_hre = yes
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = po_valley_in_hre_tooltip
+				po_valley_area = {
 					type = all
 					OR = {
 						owned_by = ROOT

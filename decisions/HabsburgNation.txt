@@ -36,34 +36,24 @@ country_decisions = {
 		effect = {
 			change_tag = HAB
 			add_legitimacy = 10
-			custom_tooltip = styria_inner_austria_claims_tooltip
-			hidden_effect = {
-				inner_austria_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-						NOT = { province_id = 1768	}
-					}
-					add_permanent_claim = ROOT
+			inner_austria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
-			custom_tooltip = styria_austria_claims_tooltip
-			hidden_effect = {
-				austria_proper_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
-						NOT = { province_id = 4760	}
-					}
-					add_permanent_claim = ROOT
+			austria_proper_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			swap_non_generic_missions = yes
 			set_country_flag = formed_austria_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 	

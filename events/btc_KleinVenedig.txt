@@ -50,7 +50,7 @@ country_event = {
 	}
 	
 	option = {
-		name = kv_buyer_request
+		name = klein_venedig.1.a
 		ai_chance = { factor = 90 }
 		1868 = {
 			owner = {
@@ -65,7 +65,7 @@ country_event = {
 	}
 	
 	option = {
-		name = kv_decline_buying
+		name = klein_venedig.1.b
 		ai_chance = { factor = 10 }
 		add_stability = -2
 	}
@@ -81,7 +81,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = kv_allow_purchase
+		name = klein_venedig.2.a
 		ai_chance = { factor = 60 }
 		FROM = {
 			country_event = {
@@ -94,7 +94,7 @@ country_event = {
 	}
 	
 	option = {
-		name = kv_take_over_purchase
+		name = klein_venedig.2.b
 		ai_chance = { factor = 30 }
 		
 		add_years_of_income = -1
@@ -109,7 +109,7 @@ country_event = {
 	}
 	
 	option = {
-		name = kv_block_purchase
+		name = klein_venedig.2.c
 		ai_chance = { factor = 10 }
 		
 		FROM = {
@@ -130,10 +130,11 @@ country_event = {
 	desc = klein_venedig.3.d
 	picture = MERCHANTS_TALKING_eventPicture
 	
+	major = yes
 	is_triggered_only = yes
 	
 	option = {
-		name = kv_spain_family_reaction
+		name = klein_venedig.3.a
 		add_years_of_income = 1
 		random_owned_area = {
     	limit = { has_port = yes }
@@ -170,6 +171,7 @@ country_event = {
   }
     
   option = {
+		name = klein_venedig.4.a
   	add_years_of_income = 1
 		random_subject_country = {
 			limit = {
@@ -209,7 +211,7 @@ country_event = {
   }
 	
 	option = {
-		name = kv_spain_negative_reaction
+		name = klein_venedig.5.a
 		add_stability = -1
 		add_opinion = {
 			who = event_target:augsburg_fuggers

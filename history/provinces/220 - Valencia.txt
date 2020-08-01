@@ -9,8 +9,8 @@ add_core = VAL
 culture = catalan
 religion = catholic
 hre = no
-base_tax = 6
-base_production = 6
+base_tax = 5
+base_production = 5
 trade_goods = legumes
 base_manpower = 3
 fort_15th = yes
@@ -30,7 +30,7 @@ center_of_trade = 2
 	controller = SPA
 	owner = SPA
 	add_core = SPA
-	estate = estate_burghers
+	
 } # King Fernando dies, Carlos inherits Aragon and becames co-regent of Castille
 1519.7.1 = { unrest = 2 } # Revolt of the Germanies, which is at first moderate and appeased by the King
 1521.5.1 = { unrest = 0 revolt = { type = revolutionary_rebels size = 2 } controller = REB } # The revolt radicalizes and the Agermanats organize an army 

@@ -114,7 +114,7 @@ colonial_canada = {
 		#BTCHANGES
 		986 989 990 991 992 993 994 995 996 2012 2576 
 		2577 2578 2579 2580 2581 2582 2583 2584 2585 997 2574 2575 1007 2015 1001 2671 988 2586 2587 
-		2670 987 2588 5592
+		2670 987 2588 5592 5009 5057
 		#BTNEWPROVINCES
 		5010 5011 5012 5014 5015 5037 5038 5039 2590 4973 5053 5054 5055 5056 5060
 	}
@@ -334,7 +334,7 @@ colonial_eastern_america = {
 	}
 	
 	provinces = {
-		7407 929 7445 7405 2539 2538 7446 7434 7435 2537 7433 930 2540 7406 7436 7432 7408 7437 931 7474 7475 7476 935 7477 934 7480 7478  
+		7407 929 7445 7405 2539 2538 7446 7434 7435 2537 7433 930 2540 7406 7436 7432 7408 7437 931 7474 7475 7476 935 7477 934 7471  
 		2526 941 940 2527 7465 936 2544 7462 7461 7459 7457 7455 2547 938 7456 7473 2546 2543 7448 932 7447 2542 7452 2541 7453 7464 7463 933 7454
 		7451 7449 7450 7460 2545 7458 937 956 2023 955 2557 954 2555 2556 7546 7547 7548 7549 7551 7552 7553 7554 7555 7556 950 952 2550 2549 2011 949 
 		2552 2551 951 2548 7524 7525 7526 7527 7528 7529 7530 7531 7532 7534 7542 7543 7544 7545 2554 953 2553 7537 7538 7539 7540 2639 962 
@@ -498,9 +498,9 @@ colonial_louisiana = {
 		893 894 895 897 899 900 916 918 919 920 896 917 909 906 898 901 903
 		907 905 902 1809 2006 2007 2008 2009 2014
 		2501 2502 2503 2504 2505 2507 2508 2509 2510 2513 2514 2515 2516
-		2520 2528 2529 2625 2672 2506 5845 7479 7471
+		2520 2528 2529 2625 2672 2506 5845 7479
 		#BTCHANGES
-		939 890 891 892 921 5623 5634 2004
+		939 890 891 892 921 5623 5634 2004 7478 7480
 		#BTNEWPROVINCES
 		5613 5614 5615 5616 5617 5618 5619 5620 5627 5628 5629 5630 5631 5632 5633 5638 5846
 		7402 7404 7429 7430 7428 7403 7425 7426 7490 7489 7486 7482 7483 7484 7485 7487 7488
@@ -549,6 +549,10 @@ colonial_louisiana = {
 	names = {
 		trigger = { culture_group = germanic }
 		name = "COLONIAL_LOUISIANA_BTP_Neufrankreich"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_LOUISIANA_BTP_Savoiarda"
 	}
 	names = {
 		trigger = { culture_group = byzantine }
@@ -730,10 +734,12 @@ colonial_california = {
 
 	# Specific
 	names = {
-		trigger = {
-			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
-		}
+		trigger = { culture_group = scandinavian }
 		name = "COLONIAL_CALIFORNIA_BTP_Kalarheimr"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_CALIFORNIA_Nuova_Campania"
 	}
 	names = {
 		trigger = { culture_group = germanic }
@@ -795,22 +801,20 @@ colonial_mexico = {
 	
 	# Specific
 	names = {
-		trigger = {
-			tag = SPA
-		}
+		trigger = { tag = SPA }
 		name = "COLONIAL_MEXICO_New_Spain"
 	}
 	names = {
-		trigger = {
-			tag = CAS
-		}
+		trigger = { tag = CAS }
 		name = "COLONIAL_MEXICO_New_Castile"
 	}
 	names = {
-		trigger = {
-			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
-		}
+		trigger = { culture_group = scandinavian }
 		name = "COLONIAL_MEXICO_BTP_Meksavik"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_MEXICO_Messico"
 	}
 	names = {
 		trigger = { culture_group = germanic }
@@ -883,7 +887,7 @@ colonial_mexico = {
 	}
 }
 
-# The Carribean			-note in BT this is limited to the lesser antilles plus Jamaica and Puerto Rico. Cuba, Florida, and Hispaniola all get their own CR
+# The Carribean - Lesser antilles plus Jamaica and Puerto Rico
 colonial_the_carribean = {
 	color = { 254 117 9 }
 
@@ -909,24 +913,25 @@ colonial_the_carribean = {
 	}
 	
 	provinces = {
-		487 491 492 493 494 495 496 497 498 499 500 501 502 1881 5578 5581 5582 5583 5584 5585 5586 7624 5579 7623 7622 7621 5545
+		487 491 492 493 494 495 496 497 498 499 500 501 502 1881 5578 
+		5581 5582 5583 5584 5585 5586 7624 5579 7623 7622 7621 5545
 	}
 
 	names = {
-		trigger = {
-			tag = POR
-		}
+		trigger = { tag = POR }
 		name = "COLONIAL_THE_CARRIBEAN_Caraibas"
 	}
 	names = {
-		trigger = {
-			tag = POR
-		}
+		trigger = { tag = POR }
 		name = "COLONIAL_THE_CARRIBEAN_Antilhas"
 	}
 	names = {
 		trigger = { culture_group = germanic }
 		name = "COLONIAL_THE_CARRIBEAN_Westindien"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_THE_CARRIBEAN_Indie_Occidentali"
 	}
 	names = {
 		trigger = {
@@ -1078,16 +1083,8 @@ colonial_peru = {
 		2944 2945 #Amazon
 	}
 
-#	# Specific
-#	names = {
-#		trigger = {
-#		}
-#		name = ""
-#	}
 	names = {
-		trigger = {
-			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
-		}
+		trigger = { culture_group = scandinavian }
 		name = "COLONIAL_PERU_BTP_Birurheimr"
 	}
 	names = {
@@ -1097,6 +1094,18 @@ colonial_peru = {
 	names = {
 		trigger = { culture_group = byzantine }
 		name = "COLONIAL_PERU_BTP_Perou"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_PERU_Terra_Andina"
+	}
+	names = {
+		trigger = { tag = CAS }
+		name = "COLONIAL_PERU_Nueva_Castilla"
+	}
+	names = {
+		trigger = { tag = SPA }
+		name = "COLONIAL_PERU_Spain_Peru"
 	}
 	# Generic
 	names = {
@@ -1174,27 +1183,19 @@ colonial_la_plata = {
 	
 	# Specific
 	names = {
-		trigger = {
-			culture_group = british
-		}
+		trigger = { culture_group = british }
 		name = "COLONIAL_LA_PLATA_Argentine"
 	}
 	names = {
-		trigger = {
-			tag = POR
-		}
+		trigger = { tag = POR }
 		name = "COLONIAL_LA_PLATA_Rio_de_Prata"
 	}
 	names = {
-		trigger = {
-			tag = POR
-		}
+		trigger = { tag = POR }
 		name = "COLONIAL_LA_PLATA_Transplatina"
 	}
 	names = {
-		trigger = {
-			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
-		}
+		trigger = { culture_group = scandinavian }
 		name = "COLONIAL_LA_PLATA_BTP_Sylfrdalar"
 	}
 	names = {
@@ -1296,9 +1297,7 @@ colonial_brazil = {
 	
 	# Specific
 	names = {
-		trigger = {
-			tag = POR
-		}
+		trigger = { tag = POR }
 		name = "COLONIAL_BRAZIL_Root_Culture_GetName_Brazil"
 	}
 	names = {
@@ -1307,6 +1306,12 @@ colonial_brazil = {
 			religion_group = christian
 		}
 		name = "COLONIAL_BRAZIL_Terra_de_Vera_Cruz"
+	}
+    names = {
+		trigger = {
+			tag = FRA
+		}
+		name = "COLONIAL_BRAZIL_France_Antarctique"
 	}
 	names = {
 		trigger = {
@@ -1320,10 +1325,12 @@ colonial_brazil = {
 		name = "COLONIAL_BRAZIL_new_granada"
 	}
 	names = {
-		trigger = {
-			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
-		}
+		trigger = { culture_group = scandinavian }
 		name = "COLONIAL_BRAZIL_BTP_Miklavidr"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_BRAZIL_Terra_di_Papaga"
 	}
 	names = {
 		trigger = { culture_group = germanic }
@@ -1412,9 +1419,7 @@ colonial_australia = {
 		name = "COLONIAL_AUSTRALIA_New_Holland"
 	}
 	names = {
-		trigger = {
-			culture_group = scandinavian			#Actually OWN based, but any Swedes or Danes will have to suggest better if they dont like it
-		}
+		trigger = { culture_group = scandinavian }
 		name = "COLONIAL_AUSTRALIA_BTP_Fjarejyar"
 	}
 	names = {
@@ -1428,6 +1433,10 @@ colonial_australia = {
 	names = {
 		trigger = { culture_group = gaelic }
 		name = "COLONIAL_AUSTRALIA_BTP_Astrail"
+	}
+	names = {
+		trigger = { culture_group = latin }
+		name = "COLONIAL_AUSTRALIA_Terra_Australe"
 	}
 	# Generic
 	names = {

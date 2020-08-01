@@ -8,17 +8,7 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			owns = 379
 			religion = catholic
-			OR = {
-				tag = KOJ
-				tag = CYP
-				tag = TPL
-				tag = ATC
-				tag = EDE
-				tag = DMU
-				tag = APO
-				tag = EME
-				tag = SIN
-				}
+			tag = KOJ
 		}
 		provinces_to_highlight = {
 			region = mashriq_region
@@ -65,9 +55,7 @@ country_decisions = {
 		}
 		
 		effect = {
-			379 = {
-				move_capital_effect = yes
-			}
+			379 = { move_capital_effect = yes }
 			change_tag = OUT
 			set_government_rank = 3
 			add_prestige = 50
@@ -78,8 +66,7 @@ country_decisions = {
 			}
 			set_country_flag = formed_outremer
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
 	}
 }

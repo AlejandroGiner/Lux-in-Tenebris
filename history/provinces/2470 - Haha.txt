@@ -13,7 +13,7 @@ base_production = 2
 base_manpower = 1
 is_city = yes
 add_core = MOR
-add_core = REG
+add_core = RGR
 
 
 discovered_by = muslim
@@ -40,9 +40,9 @@ discovered_by = eastern
 } #In 1506, the king of Portugal, D. Manuel I, ordered a fortress to be built there, named Castelo Real de Mogador.
 
 1510.1.1 = {
-	controller = REG
-	owner = REG
-	add_core = REG
+	controller = RGR
+	owner = RGR
+	add_core = RGR
 	remove_core = POR
 } #The fortress of Castelo Real of Mogador fell to the local resistance of the Regraga fraternity four years after its establishment, in 1510.
 
@@ -50,7 +50,7 @@ discovered_by = eastern
 	owner = MOR
 	controller = MOR
 	add_core = MOR
-	remove_core = REG
+	remove_core = RGR
 }	#Fall of Fez, country reunified
 
 1603.8.1 = { unrest = 5 } #Death of al-Mansur, long period of instability follows

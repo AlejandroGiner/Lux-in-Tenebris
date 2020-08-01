@@ -1,6 +1,54 @@
 ﻿l_english:
  
  #Tooltips
+ #British Isles Tooltip
+ ireland_provincial_kingdom_hegemony_tooltip_a:0 "Own 5 of Connacht's 9 traditional provinces as cores"
+ ireland_provincial_kingdom_hegemony_tooltip_b:0 "Own 9 of Munster's 13 traditional provinces as cores"
+ ireland_provincial_kingdom_hegemony_tooltip_c:0 "Own 6 of Leinster's 10 traditional provinces as cores"
+ ireland_provincial_kingdom_hegemony_tooltip_d:0 "Own 9 of Ulster's 12 traditional provinces as cores"
+ celtic_nation_required_provinces_tooltip_a:0 "Own 22 of Ireland's 44 traditional provinces as cores"
+ celtic_nation_required_provinces_tooltip_b:0 "Own 11 of Scotland's 21 traditional provinces as cores"
+ celtic_nation_required_provinces_tooltip_c:0 "Own 5 of Wales' 10 traditional provinces as cores"
+ celtic_nation_required_provinces_tooltip_d:0 "Own 2 of Cornwall's 4 traditional provinces as cores"
+ celtic_nation_required_provinces_tooltip_e:0 "Own 5 of Brittany's 11 traditional provinces as cores"
+ two_thirds_of_ireland_tooltip:0 "Own 12 of Ireland's 44 traditional provinces as cores"
+ three_quarters_of_ireland_tooltip:0 "Own 33 of Ireland's 44 traditional provinces as cores"
+ two_thirds_of_scotland_tooltip:0 "Own 14 of Scotland's 21 traditional provinces as cores"
+ three_quarters_of_scotland_tooltip:0 "Own 16 of Scotland's 21 traditional provinces as cores"
+ two_thirds_of_england_tooltip:0 "Own 32 of England's 48 traditional provinces as cores"
+ two_thirds_of_britain_tooltip:0 "Own at least 55 of Britain's 83 provinces as cores"
+ three_quarters_of_britain_tooltip:0 "Own at least 62 of Britain's 83 provinces as cores"
+ #France Tooltip
+ half_of_france_tooltip:0 "[Root.GetName] owns at least half (§Y75§!) of France's 150 provinces as cores"
+ two_thirds_of_france_tooltip:0 "[Root.GetName] owns at least 100 of France's 150 provinces as cores"
+ three_quarters_of_france_tooltip:0 "[Root.GetName] owns at least 112 of France's 150 provinces as cores"
+ #Greek formable
+ third_of_greece_tooltip:0 "[Root.GetName] owns at least a quarter (§Y17§!) of the highlighted provinces as cores"
+ greece_formable_claims_tooltip:0 "[Root.GetName] gains a permanent claim on all of the highlighted provinces"
+ #Middle East Tooltip
+ half_of_yemen_tooltip:0 "Own 5 provinces as cores in Lower and/or Upper Yemen"
+ half_of_najd_tooltip:0 "Own 6 provinces as cores in Najd and/or Al-Yamama"
+ half_of_greater_armenia_tooltip:0 "Own 6 provinces as cores in Armenia and/or Vaspurakan"
+ #Eastern Europe
+ two_thirds_of_poland_tooltip:0 "Own at least 24 of Poland's 36 provinces as cores"
+ #Hegemony Tooltips (Typically 90 percent of a region)
+ hegemony_over_britain_tooltip:0 "[Root.GetName] or their subjects own at least 75 of Britain's 83 provinces"
+ hegemony_over_ireland_tooltip:0 "[Root.GetName] or their subjects own at least 40 of Ireland's 44 provinces"
+ hegemony_over_france_tooltip:0 "[Root.GetName] or their subjects own at least 135 of France's 150 provinces"
+ hegemony_over_iberia_tooltip:0 "[Root.GetName] or their subjects own at least three quarters (§Y76§!) of Iberia's 102 provinces"
+ hegemony_over_iberia_military_tooltip:0 "[Root.GetName] or their subjects own at least 68 of Iberia's 102 provinces"
+ hegemony_over_italy_tooltip:0 "[Root.GetName] or their subjects own at least 81 of Italy's 124 provinces"
+ #Misc
+ wales_hold_tooltip:0 "One of the following must be true:\n   All provinces in §YWales§! are owned by §Y[Root.GetName]§!\n   All provinces in §YWales§! are owned by a subject of §Y[Root.GetName]§! whose opinion of §Y[Root.GetName]§! is at least §Y150§! and is under §Y30§! liberty desire"
+ belgium_formable_claims_tooltip:0 "[Root.GetName] gains a permanent claim on all provinces in the §YLow Countries§! region except §Y[1931.GetName]§! and all provinces in the §YPicardy§! area except §Y[89.GetName]§! and §Y[3024.GetName]§!"
+ formable_belgium_provinces_tooltip:0 "Owns two thirds (§Y12§!) of the highlighted provinces as cores"
+ prussia_change_culture_provinces_tooltip:0 "Culture of §Y5§! randomly chosen provinces will become §YPrussian§!."
+ colonial_empire_req_tooltip:0 "One of the following must be true:\n   Have §Y4§! colonial subjects while §Y2§! of them have at least §Y10§! provinces and §Y100§! development.\n\n   Have §Y2§! colonial subjects while §Y1§! of them owns all provinces in §YMexico§! area and have at least §Y200§! development.\n\n   Have §Y2§! colonial subjects while §Y1§! of them owns all provinces in §YEast Yucatan§! area and have at least §Y150§! development.\n\n   Have §Y2§! colonial subjects while §Y1§! of them owns all provinces in §YKuntisuyu§! area and have at least §Y180§! development."
+ half_of_emilia_tooltip:0 "Owns 6 of Emilia-Romagna's 12 traditional provinces as cores"
+ formable_five_provinces_tooltip:0 "[Root.GetName] owns at least §Y5§! of the highlighted provinces as cores"
+ formable_ten_provinces_tooltip:0 "[Root.GetName] owns at least §Y10§! of the highlighted provinces as cores"
+ formable_own_capital_tooltip:0 "[Root.GetName]'s capital is within the highlighted provinces"
+ amazonia_formable_claims_tooltip:0 "[Root.GetName] gains a permanent claim on all of the highlighted provinces"
  can_from_francia.tooltip: "Decision to Restore the §YFrankish Empire§! is Enabled"
  only_cores_change.tooltip: "\nOnly full state cores will be converted."
  french_missions_north_tooltip:0 "All provinces in continental §YNormandy§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
@@ -21,7 +69,6 @@
  conquer_sistan_byz_tooltip:0 "All provinces in the §YSistan§! area except §Y[2229.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  mor_mission_jan_mayen_tooltip:0 "All provinces in the §YNorthern Isles§! area except §Y[5591.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_mascat_oman_tooltip:0 "All provinces in the §YDhofar§! area except §Y[5244.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- conquer_normandy_byz_tooltip:0 "All §Ymainland§! provinces in the §YLower Normandy§! area:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_palatinate_byz_tooltip:0 "All provinces §Ywest§! of the §YRhine§! in the §YPalatinate§! area:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_northrhine_byz_tooltip:0 "All provinces §Ywest§! of the §YRhine§! in the §YNorth Rhine§! area:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_lowerrhine_byz_tooltip:0 "All provinces §Ysouth§! of the §YRhine§! in the §YLower Rhineland§! area:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
@@ -31,15 +78,11 @@
  conquer_cyrenaica_byz_tooltip:0 "All provinces in the §YCyrenaica§! area except §Y[5304.GetName]§! and §Y[5303.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_djerba_byz_tooltip:0 "All provinces in the §YGulf of Gabes§! area except §Y[5315.GetName]§! and §Y[2450.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_aleppo_byz_tooltip:0 "All provinces in the §YAleppo§! area except §Y[4298.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- conquer_veneto_byz_tooltip:0 "All provinces in the §YVeneto§! area except §Y[112.GetName]§!, §Y[3048.GetName]§! and §Y[4752.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- styria_conquer_austria_tooltip:0 "All provinces in the §YAustria Proper§! area except §Y[4760.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- styria_conquer_inner_austria_tooltip:0 "All provinces in the §YInner Austria§! area except §Y[1768.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- styria_austria_claims_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on all of §YAustria Proper§! area except §Y[4760.GetName]§!."
- styria_inner_austria_claims_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on all of §YInner Austria§! area except §Y[1768.GetName]§!."
+ conquer_veneto_byz_tooltip:0 "All provinces in the §YVeneto§! area except §Y[112.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  reconquista_three_cat_tooltip:0 "All provinces in the §YCatalonia§! area except §Y[3320.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  conquer_valencia_gra_tooltip:0 "All provinces in the §YValencia§! area except §Y[4550.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- conquer_murcia_gra_tooltip:0 "All provinces in the §YCuenca§! area except §Y[3079.GetName]§! and §YCuenca§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
- integrate_naples_benevento_tooltip:0 "All provinces in the §YCampania§! area except §Y[5705.GetName]§!:\n   Owned by §Y[Root.GetName]§!"
+ integrate_naples_benevento_tooltip:0 "All provinces in the §YCampania§! area except §Y[4734.GetName]§!:\n   Owned by §Y[Root.GetName]§!"
+ italian_ambition_benevento_tooltip:0 "All provinces in the §YCampania§! area except §Y[4734.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  spain_florida_claims_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on §YColonial Florida§!."
  eng_rb_colonial_empire_title: "The Sun Never Sets"
  kor_manchu_borderlands_tooltip:0 "Own at least §Y10§! provinces in the following areas:\n\n   §YNingguta§! area\n   §YSouth Jilin§! area\n   §YLiaoning§! area\n   §YFurdan§! area"
@@ -55,7 +98,9 @@
  rus_revolution_mission_tooltip:0 "One of the following must be true:\n   §Y[Root.GetName]§! is at war with a country who is\n   §Rrevolution target§! while controlling their §Ycapital§!.\n\n   §Y[Root.GetName]§! is the §Rrevolutionary target§!."
  rus_conquer_novgorod_finish_tooltip:0 "All of §YNovgorod§!'s traditional lands:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  eng_rb_colonial_empire_desc: "With our control over the New World established, England now stands as one of the most powerful nations in the world. It is time to proclaim ourselves an empire and seek to exert our new strength against our enemies."
- hungary_poland_mission_alliance_tooltip:0 "One of the following must be true:\n   Allied with §YPoland§! and have their opinion of you be\n   at least §Y160§!.\n\n   §RRival§! (or be §Rrivaled§! by) §YPoland§! while having a Spy\n   Network of at least size §Y50§! on them and an equal or\n   bigger size army."
+ hungary_poland_mission_alliance_tooltip1:0 "Allied with §Y[POL.GetName]§! and  their opinion of [Root.GetName] is\n   at least §Y160§!.\n"
+ hungary_poland_mission_alliance_tooltip2:0 "§RRival§! (or be §Rrivaled§! by) §Y[POL.GetName]§!."
+ hungary_poland_mission_alliance_tooltip3:0 "§Y[POL.GetName]§!'s ruling dynasty is the same as [Root.GetName]'s.\n"
  irl_conquer_pale_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on §YEnglish Leinster§! and §YEnglish Ulster§!."
  unite_clans_trigger_tooltip:0 "All §Ynon-traditionally English§! provinces in §YIreland§! region:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
  east_ulster_no_ulster_tooltip:0 "All provinces in the §YEast Ulster§! area except §Y[3006.GetName]§!:\n   Owned by §Y[Root.GetName]§! or its non-Tributary Subjects."
@@ -87,12 +132,17 @@
  tib_chinese_frontier_claim_tooltip:0 "§Y[Root.GetName]§! gains a permanent claim on all of §YChuannan§! area except §Y[4213.GetName]§! and §Y[2168.GetName]§!."
  africa_slave_trigger_tooltip:0 "One of the following must be true:\n   §Y[Root.GetName]§! is the leader producer of §YSlaves§! while controlling at least §Y4§! slave producing provinces\n   Has §Yabolished slavery§! and doesn't neighbour any country producing §YSlaves§!"
  qing_invade_south_china_tooltip:0 "§Y[Root.GetName]§! owns at least §Y35§! provinces in the §YXinan§! and §YSouth China§! regions."
+ more_colonies_than_portugal_tooltip:0 "§Y[Root.GetName]§! has more §YColonial subjects§! than §Y[POR.GetName]§!"
+ own_or_ally_spain_tooltip:0 "§Y[Root.GetName]§! owns, is the overlord of, or is allied with the owner of:\n      §Y[118.GetName]§!\n      §Y[101.GetName]§!\n      §Y[106.GetName]§!\n      §Y[116.GetName]§!\n      §Y[3045.GetName]§!\n      §Y[4803.GetName]§!"
+ spanish_road_modifier_tooltip:0 "Every province required for this mission that is owned by §Y[Root.GetName]§! or its non-Tributary Subjects will receive the §YSpanish Road§! modifier until the end of the game giving the following effects:\nFriendly Movement Speed: §G+50%§!\nSupply Limit Modifier: §G+40%§!\nAttrition for Enemies: §G+2.00§!"
+ own_spanish_road_tooltip:0 "All highlighted provinces are owned by §Y[Root.GetName]§!"
  #Opinions
  fra_dynastic_rivalry:0 "Tensions between families"
  signed_treaty:0 "Signed Treaty"
  rejected_treaty:0 "Rejected Treaty"
  helped_reconquista:0 "Helped Reconquista"
  refused_hand_over_granada:0 "Refused to Hand Over Provinces"
+ killed_our_king:0 "Killed our King"
  
  #Missions
  adu_umayyad_final:0 "New Islamic Golden Age"
@@ -102,10 +152,21 @@
  mos_arkhangelsk_btc_title:0 "Found Arkhangelsk"
  mos_arkhangelsk_btc_desc:0 "It would be easy to forget that the White Sea is a navigable and potentially profitable trading route, at least for those months that the sea is not frozen over. We should found a new city on its shore, Arkhangelsk, so we can begin exploring the potential of this region."
  
+ #Spain
+ btc_cas_spa_iberian_hegemony:0 "Iberian Hegemony"
+ btc_cas_spa_iberian_hegemony_title:0 "Iberian Hegemony"
+ btc_cas_spa_iberian_hegemony_desc:0 "We may be called [Root.GetName], but ever since the time of our ancestors everyone knows this region as 'Spains', plural. We must secure ourselves as THE regional power if we are to be taken seriously, and that means moving our ambitions towards our lesser neighbour.. Portugal"
+ btc_cas_spa_spanish_road_mission:0 "Spanish Road"
+ btc_cas_spa_spanish_road_mission_title:0 "Spanish Road"
+ btc_cas_spa_spanish_road_mission_desc:0 "As our empire expands in Europe, communication with some of our far away lands in Italy and Netherlands grows difficult and the risk of revolts is a constant threat. While travel by boat is the fastest way to ship troops, the sea is filled with corsairs, pirates, the English Royal Navy, or worse. If we are to keep these lands loyal to the Crown, we must secure land supply lines between our territories."
+ btc_cas_spa_spanish_road_mission_2:0 "Expand Spanish Road"
+ btc_cas_spa_spanish_road_mission_2_title:0 "Expand Spanish Road"
+ btc_cas_spa_spanish_road_mission_2_desc:0 "While our supply lines are working as intended, the route still depends on the willingness of some of our allies to allow our troops to march through their borders. If we want to secure a permanent, solid supply line we must seize the land for ourselves."
+ 
  #England
  wales_hold:0 "Our Hold on Wales"
  wales_hold_title:0 "Our Hold on Wales"
- wales_hold_desc:0 "Our hold over the region of Wales has at times appeared tenuous, as rebellious locals and highly decentralized authorities have failed to allow us to mantain a grip on the area comparable to what we oversee in the rest of our realm. Regardless of whether we choose to do it through the pen or through the sword, it is time to rein in the recalcitrant Welsh."
+ wales_hold_desc:0 "Our hold over the region of Wales has at times appeared tenuous, as rebellious locals and highly decentralized authorities have failed to allow us to maintain a grip on the area comparable to what we oversee in the rest of our realm. Regardless of whether we choose to do it through the pen or through the sword, it is time to rein in the recalcitrant Welsh."
  eng_held_wales:0 "Strenghtened Control on Wales"
  
  #Francia missions
@@ -173,3 +234,6 @@
  maj_convert_java_desc:0 "Despite the island of Java being united under our rule, various religious minorities still threaten the peace. We must bring religious unity to Java!"
  maj_survive_civil_war.tooltip:0 "Complete the Majapahit Civil War disaster, or reach the Age of Reformation without triggering it."
 
+ #Flanders missions
+fla_lowlands_one_tt:0 "Gain permanent claims on Wallonian provinces in §YThionville§! and the §YLow Countries§!"
+fla_lowlands_two_tt:0 "Own and core all Wallonian provinces in the §YLow Countries§!"

@@ -9,8 +9,16 @@ country_decisions = {
 			NOT = { has_country_flag = formed_spain_flag }
 			NOT = { tag = IBE }
 			NOT = { tag = SPA }
+			NOT = { tag = FRA }
+			NOT = { tag = ENG }
+			NOT = { tag = GBR }
+			NOT = { tag = UNK }
+			NOT = { tag = MOR }
+			NOT = { tag = ITA }
+			NOT = { tag = ITL }
 			NOT = { tag = ADU }
 			NOT = { tag = KNI }
+			NOT = { tag = KNT }
 			NOT = { religion_group = muslim }			#Muslims go for Andalusia
 			OR = {
 				AND = {
@@ -33,17 +41,22 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 10
 			owns_core_province = 208	# Leon
 			owns_core_province = 214	# Zaragoza
 			owns_core_province = 215	# Castilla La Vieja
 			owns_core_province = 219	# Toledo
 			owns_core_province = 224	# Sevilla
-			calc_true_if = {
-				all_owned_province = {
-					is_core = ROOT
-					region = iberia_region
+			custom_trigger_tooltip = {
+				tooltip = hegemony_over_iberia_military_tooltip
+				calc_true_if = {
+					all_province = {
+						region = iberia_region
+						country_or_vassal_holds = ROOT
+						is_core = owner
+					}
+					amount = 68			#At least 2/3 of Iberia's 102 provinces
 				}
-				amount = 60			#At least 2/3 of Iberia's 91 provinces
 			}
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
@@ -75,16 +88,15 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			custom_tooltip = spanish_unification_effect_2.tooltip
 			hidden_effect = {
 				iberia_region = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
 						NOT = {
-							OR = {
-								area = alentejo_area
-								area = beieras_area
-							}
+							is_permanent_claim = ROOT
+							is_core = ROOT
+							area = alentejo_area
+							area = beieras_area
 						}
 					}
 					add_permanent_claim = SPA
@@ -110,20 +122,28 @@ country_decisions = {
 			NOT = { has_country_flag = formed_spain_flag }
 			NOT = { tag = IBE }
 			NOT = { tag = SPA }
+			NOT = { tag = FRA }
+			NOT = { tag = ENG }
+			NOT = { tag = GBR }
+			NOT = { tag = UNK }
+			NOT = { tag = MOR }
+			NOT = { tag = ITA }
+			NOT = { tag = ITL }
 			NOT = { tag = ADU }
 			NOT = { tag = KNI }
+			NOT = { tag = KNT }
 			NOT = { religion_group = muslim }			#Muslims go for Andalusia
 			OR = {
 				tag = CAS
 				tag = ARA
 				AND = {
 					primary_culture = basque
-					num_of_cities = 37
+					num_of_cities = 25		#At least 1/4 to see
 				}
 				AND = {
 					culture_group = iberian
 					NOT = { primary_culture = portugese }				#Portuguese go for Iberia tag
-					num_of_cities = 45
+					num_of_cities = 51		#At least 1/2 to see
 				}
 			}
 		}
@@ -142,7 +162,7 @@ country_decisions = {
 			is_at_war = no
 			if = {
 				limit = { government = monarchy }
-				legitimacy = 100
+				legitimacy = 95
 			}
 			adm_tech = 10
 			owns_or_vassal_of = 208	# Leon
@@ -158,12 +178,12 @@ country_decisions = {
 						country_or_vassal_holds = ROOT
 						is_core = owner
 					}
-					amount = 72			#At least 79% of Iberia's 91 provinces (Note Portugal has 16, so Castile or Aragon needs everything but Portugal and 3 others)
+					amount = 76			#At least 3/4 of Iberia's 102 provinces (Note Portugal has 16, so Castile or Aragon needs everything but Portugal and 10 others)
 				}
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
-			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
+			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still Spain can be formed
 		}
 		effect = {
 			every_subject_country = {
@@ -174,11 +194,11 @@ country_decisions = {
 						NOT = { num_of_cities = 12 }
 						AND = {
 							tag = ARA
-							NOT = { num_of_cities = 32 }			#Aragon, including Mallorca, Sardinia, and Sicily is 24. Naples adds 11 more.
+							NOT = { num_of_cities = 47 }			#Aragon, including Mallorca is 23, Sardinia and Corsica 8. Sicily is 13 more & Naples adds 19 more.
 						}
 						AND = {
 							tag = CAS
-							NOT = { num_of_cities = 40 }			#Castile is 33, or 34 with both Canaries. Granada adds 4 more and Navarra another 1.
+							NOT = { num_of_cities = 77 }			#Castile is 62, or 64 with Canaries. Granada adds 6 more and Navarra another 3.
 						}
 					}
 				}
@@ -223,10 +243,8 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = formed_spain_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
-		ai_importance = 200
+		ai_will_do = { factor = 1 }
+		ai_importance = 1000
 		do_not_integrate = CAS
 		do_not_integrate = ARA
 		do_not_integrate = LON
@@ -236,5 +254,16 @@ country_decisions = {
 		do_not_integrate = MJO
 		do_not_integrate = VAL
 		do_not_integrate = GRA			#If force converted
+		do_not_integrate = SN7
+		do_not_integrate = VZC
+		do_not_integrate = LLI
+		do_not_integrate = A7D
+		do_not_integrate = ASU
+		do_not_integrate = EXT
+		do_not_integrate = SEV
+		do_not_integrate = CRD
+		do_not_integrate = JAE
+		do_not_integrate = MUR
+		do_not_integrate = TLD
 	}
 }

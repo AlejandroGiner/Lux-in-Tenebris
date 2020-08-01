@@ -1,17 +1,17 @@
-#2991 - Toulon
+#3090 - Forcalquier
 #Region - France
 #Area - Provence
 
 owner = PRO
 controller = PRO 
-capital = "Toulon"
+capital = "Forcalquier"
 is_city = yes
 culture = provencal
 religion = catholic
 hre = no
-base_tax = 5
-base_production = 5				#Dev boost slightly above history because pro lost most of its vassal dev
-trade_goods = wine
+base_tax = 4
+base_production = 4				#Dev boost slightly above history because pro lost most of its vassal dev
+trade_goods = wool
 base_manpower = 3
 add_core = PRO
 
@@ -41,4 +41,3 @@ discovered_by = eastern
 1652.10.21 = { unrest = 0 } # The King is allowed to enter Paris again, Mazarin leaves France for good. Second Fronde over.
 1659.1.1 = { unrest = 5 }
 1662.1.1 = { unrest = 0 }
-1806.7.12 = { hre = no } # The Holy Roman Empire is dissolved

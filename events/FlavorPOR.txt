@@ -260,7 +260,7 @@ country_event = {
 	}
 }
 
-# King SebastiÃ£o's Expedition to North Africa
+# King Sebastião's Expedition to North Africa
 country_event = {
 	id = flavor_por.3272
 	title = "flavor_por.EVTNAME3272"
@@ -511,7 +511,7 @@ country_event = {
 		add_dip_power = 100
 		define_advisor = {
 			type = statesman
-			name = "Dom Lu?s de Meneses"
+			name = "Dom Luís de Meneses"
 			culture = portugese
 			discount = yes
 			skill = 2
@@ -550,7 +550,7 @@ country_event = {
 	}
 }
 
-# MarquÃªs de Pombal
+# Marquês de Pombal
 country_event = {
 	id = flavor_por.3279
 	title = "flavor_por.EVTNAME3279"
@@ -646,7 +646,7 @@ country_event = {
 	}
 }
 
-# The Expulsion of MarquÃªs de Pombal
+# The Expulsion of Marquês de Pombal
 country_event = {
 	id = flavor_por.3281
 	title = "flavor_por.EVTNAME3281"
@@ -695,7 +695,7 @@ country_event = {
 			duration = -1
 		}
 	}
-	option = {		# Let the 'Great MarquÃªs' rule
+	option = {		# Let the 'Great Marquês' rule
 		name = "flavor_por.EVTOPTB3281"
 		ai_chance = { factor = 25 }
 		every_owned_province = {
@@ -812,7 +812,7 @@ country_event = {
 		set_global_flag = columbus_happened
 		add_years_of_income = -0.10
 		define_explorer = {
-			name = "CristÃ³vÃ£o Colombo"
+			name = "Cristóvão Colombo"
 			fire = 2
 			shock = 2
 			manuever = 6
@@ -1185,7 +1185,7 @@ country_event = {
 	}
 }
 
-# Jer?nimos Monastery
+# Jerónimos Monastery
 country_event = {
 	id = flavor_por.10
 	title = "flavor_por.EVTNAME10"
@@ -1244,7 +1244,7 @@ country_event = {
 		trigger = {
 			2030 = {
 				owner = {
-					ai = no
+					ai = yes
 				}
 			}
 		}

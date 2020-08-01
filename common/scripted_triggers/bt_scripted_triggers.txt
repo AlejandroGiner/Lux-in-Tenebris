@@ -135,9 +135,10 @@ ara_crowns_of_iberia_provinces = {
 	OR = {
 		area = castille_area
 		area = toledo_area
+		area = new_castile_area
 		area = leon_area
-		#BT additions:
-		area = basque_area #Changed from just Viscaya, as BT does not have the issue of Basque/Vasconia going into France.
+		area = cantabrian_range_area
+		area = basque_area
 		area = extremadura_area
 	}
 }
@@ -147,20 +148,16 @@ integrate_naples_provinces = {
 		area = apulia_area
 		#BT additions:
 		area = naples_area
-		#Replaced by naples_area
-		#province_id = 121
-		#province_id = 120
-		#province_id = 2983
 	}
 }
 conquer_athens_provinces = {
 	OR = {
 		area = morea_area
+		area = north_morea_area
 		area = northern_greece_area
+		area = ionian_islands_area
 		#BT additions:
 		area = western_aegean_area
-		#Replaced by western_aegean_area (Attike)
-		#province_id = 3003
 	}
 }
 
@@ -171,12 +168,12 @@ subjugate_bohemia_provinces = {
 		area = erzgebirge_area
 		area = moravia_area
 	}
-	NOT = { province_id = 4742 }
 }
 recover_silesia_provinces = {
 	OR = {
 		area = silesia_area
-		area = lower_silesia_area
+		area = legnica_area
+		area = opole_area
 	}
 }
 partition_poland_provinces = {
@@ -207,7 +204,9 @@ austrian_hungary_provinces = {
 austrian_croatia_provinces = {
 	OR = {
 		area = east_adriatic_coast_area
+		area = ragusa_area
 		area = croatia_area
+		area = croatia_coast_area
 		#BT additions
 		area = slavonia_area
 	}
@@ -230,8 +229,10 @@ austrian_italian_ambition_provinces = {
 	OR = {
 		area = venetia_area
 		area = friuli_area
+		area = istria_area
 		area = lombardy_area
-		province_id = 109 #Was part of Habsburg Lombardo-Venetia
+		area = lepontine_alps_area
+		area = po_valley_area
 	}
 }
 
@@ -252,12 +253,17 @@ defeat_the_livonian_order_provinces = { #Unchanged, though it creates errors in 
 		area = livonia_area
 		area = estonia_ingria_area
 		area = curonia_area
+		area = osel_wiek_area
+		area = east_livonia_area
 	}
 }
 
 #Poland-Commonwealth
 conquer_warmia_provinces = { #Unchanged
+	OR = {
 		area = west_prussia_area
+		area = pomerelia_area
+	}
 }
 annex_mazovia_provinces = { #Unchanged
 	OR = {
@@ -267,7 +273,10 @@ annex_mazovia_provinces = { #Unchanged
 	}
 }
 vassalize_the_teutonic_order_provinces = { #Unchanged
-	area = east_prussia_area
+	OR = {
+		area = east_prussia_area
+		area = sudovia_area
+	}
 }
 vassalize_lithuania_provinces = {
 	OR = {
@@ -284,7 +293,8 @@ vassalize_lithuania_provinces = {
 conquer_silesia_provinces = {
 	OR = {
 		area = silesia_area
-		area = lower_silesia_area
+		area = legnica_area
+		area = opole_area
 	}
 }
 
@@ -324,7 +334,10 @@ swe_expand_finland_provinces = { #Kexholm County + Ingria
 	NOT = { province_id = 7746 }
 }
 control_estonia_provinces = { #Swedish Estonia
-    area = estonia_ingria_area
+	OR = {
+		area = estonia_ingria_area
+		area = osel_wiek_area
+	}
     NOT = { province_id = 35 } #Ösel was actually part of Swedish Livonia, ceded in 1645 as part of the treaty of Brömsebro, together with Jämtland & Gotland (+Halland).
     NOT = { province_id = 7763 } #Also part of Livonia
 }
@@ -332,6 +345,7 @@ control_estonia_provinces = { #Swedish Estonia
 control_latvia_provinces = { #Now adjusted to only include Swedish Livonia
     OR = {
         area = livonia_area
+		area = east_livonia_area
         area = north_livonia_area
         province_id = 35 #Ösel
         province_id = 7763 #Sontack
@@ -372,15 +386,15 @@ swe_bremen_verden_provinces = {
 		province_id = 54 #Stade (Verden)
 		province_id = 1874 #Bremen
 		province_id = 4823
-		province_id = 4822
+		province_id = 4771
 	}
 }
 swedish_prussia_provinces = {
 	OR = {
 		area = east_prussia_area
+		area = sudovia_area
 		province_id = 7778
 		province_id = 2958
-		#province_id = xxxx add Marienwerder in the future
 	}
 }
 
@@ -413,6 +427,7 @@ danish_curonia_provinces = {
 dan_enforce_danelaw_provinces = {
 	OR = {
 		area = northern_england_area
+		area = cumbria_area
 		area = east_midlands_area
 		area = wessex_area
 		area = east_anglia_area

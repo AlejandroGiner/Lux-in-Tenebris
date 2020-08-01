@@ -271,7 +271,29 @@ bt_danish_trade_2 = {
 				}
 				add_claim = ROOT
 			}
+			pomerelia_area = { #Danziger domain
+				if = {
+					limit = {
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
 			livonia_area = { #Rigan domain
+				if = {
+					limit = {
+						NOT = {
+							is_claim = ROOT
+							is_core = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
+			east_livonia_area = { #Rigan domain
 				if = {
 					limit = {
 						NOT = {
@@ -688,8 +710,6 @@ bt_danish_internal_missions = {
 						area = northern_norway
 						area = eastern_norway
 						area = western_norway
-						area = southern_norway_area
-						area = trondelag_area
 					}
 					NOT = {
 						province_id = 17 #Akershus
@@ -953,6 +973,15 @@ bt_danish_resist_prussia = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -1033,6 +1062,15 @@ danish_missions_baltic = {
 		}
 		effect = {
 			estonia_ingria_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+						is_claim = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			osel_wiek_area = {
 				limit = {
 					NOT = {
 						is_core = ROOT

@@ -588,10 +588,7 @@ oil = {
 	rnw_latent_chance = 5
 
 	trigger = {
-		OR = {
-			development = 35
-			owner = { innovativeness = 50 }
-		}
+		development = 999
 		provincial_institution_progress = {
 			which = enlightenment
 			value = 100
@@ -621,10 +618,7 @@ rubber = {
 	rnw_latent_chance = 5
 
 	trigger = {
-		OR = {
-			development = 10
-			owner = { innovativeness = 40 }
-		}
+		development = 999
 		provincial_institution_progress = {
 			which = enlightenment
 			value = 100

@@ -1,6 +1,6 @@
 namespace = btc_misc
 
-#Conquest of Constantinople, coded, written, and designed by Dynamo
+#Conquest of Constantinople, coded, written and designed by Dynamo
 country_event = {
 	id = btc_misc.1
 	title = "btc_misc.1.t"
@@ -83,7 +83,7 @@ country_event = {
 	}
 }
 
-#Aalst printer, coded, written, and designed by Helena
+#Aalst printer, coded, written and designed by Helena
 province_event = {
 	id = btc_misc.3
 	title = "btc_misc.3.t"
@@ -134,7 +134,7 @@ province_event = {
 	}
 }
 
-#Barbarossa Ottomans, coded, written, and designed by Helena
+#Barbarossa Ottomans, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.4
 	title = btc_misc.4.t
@@ -167,7 +167,7 @@ country_event = {
 	option = { #Make him Grand Admiral
 		name = btc_misc.4.b
 		ai_chance = { factor = 90 }
-		years_of_income = -0.15
+		add_years_of_income = -0.15
 		add_mil_power = 15
 		define_admiral = {
 			name = "Hayreddin Barbarossa"
@@ -544,6 +544,10 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
+		saintonge_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
 		brittany_area = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
@@ -556,7 +560,15 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
+		central_normandy_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
 		west_normandy_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		channel_islands_area = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
@@ -564,7 +576,23 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
-		west_massif_central_area = {
+		bourbonnais_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		east_guyenne_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		limousin_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		orleans_area  = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
+		berry_area  = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
@@ -572,7 +600,7 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
-		anjou_area = {
+		fr_maine_area = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
@@ -584,11 +612,15 @@ country_event = {
 			limit = { owned_by = ROOT }
 			add_local_autonomy = 30
 		}
+		btc_pyrenees_area = {
+			limit = { owned_by = ROOT }
+			add_local_autonomy = 30
+		}
 		add_prestige = -10
 	}
 }
 
-#Miguel Serveto, coded, written, and designed by Helena
+#Miguel Serveto, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.12
 	title = btc_misc.12.t
@@ -682,7 +714,7 @@ country_event = {
 	}
 }
 
-#Diego Velázquez, coded, written, and designed by Helena
+#Diego Velázquez, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.13
 	title = "btc_misc.13.t"
@@ -706,7 +738,7 @@ country_event = {
 	
 	option = {		# Excellent
 		name = btc_misc.13.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 10
 		add_splendor = 50
 		if = {
@@ -734,7 +766,7 @@ country_event = {
 	}
 }
 
-#Bartolomé Esteban Murillo, coded, written, and designed by Helena
+#Bartolomé Esteban Murillo, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.14
 	title = "btc_misc.14.t"
@@ -759,7 +791,7 @@ country_event = {
 	
 	option = {	#Hire him
 		name = btc_misc.14.a
-		years_of_income = -0.15
+		add_years_of_income = -0.15
 		ai_chance = { factor = 50 }
 		add_splendor = 50
 		if = {
@@ -791,7 +823,7 @@ country_event = {
 	}
 }
 
-#Antonio de Nebrija, coded, written, and designed by Helena
+#Antonio de Nebrija, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.15
 	title = "btc_misc.15.t"
@@ -844,7 +876,7 @@ country_event = {
 		required_personality = scholar_personality
 		ai_chance = { factor = 100 }
 		
-		years_of_income = -0.3
+		add_years_of_income = -0.3
 		add_prestige = 5
 		add_innovativeness_big_effect = yes
 		if = {
@@ -865,7 +897,7 @@ country_event = {
 	}
 }
 
-#Jorgue Manrique, coded, written, and designed by Helena
+#Jorgue Manrique, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.16
 	title = btc_misc.16.t
@@ -933,7 +965,7 @@ country_event = {
 	}
 }
 
-#Luis de Góngora, coded, written, and designed by Helena
+#Luis de Góngora, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.17
 	title = "btc_misc.17.t"
@@ -964,7 +996,7 @@ country_event = {
 	
 	option = {
 		name = btc_misc.17.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 5
 		add_splendor = 50
 		define_advisor = {
@@ -977,7 +1009,7 @@ country_event = {
 	}
 }
 
-#Francisco de Quevedo, coded, written, and designed by Helena
+#Francisco de Quevedo, coded, written and designed by Helena
 country_event = {
 	id = btc_misc.18
 	title = "btc_misc.18.t"
@@ -1008,7 +1040,7 @@ country_event = {
 	
 	option = {
 		name = btc_misc.18.a
-		years_of_income = -0.2
+		add_years_of_income = -0.2
 		add_prestige = 5
 		add_splendor = 50
 		define_advisor = {
@@ -1018,5 +1050,183 @@ country_event = {
 			name = "Francisco de Quevedo"
 			cost_multiplier = 0.7
 		}
+	}
+}
+
+#Tirso de Molina, coded, written and designed by Helena
+country_event = {
+	id = btc_misc.19
+	title = "btc_misc.19.t"
+	desc = "btc_misc.19.d"
+	picture = BIG_BOOK_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1575
+		NOT = { is_year = 1650 }
+	}
+
+	mean_time_to_happen = { years = 25 }
+	
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 5
+		add_papal_influence = 10
+		add_splendor = 25
+	}
+	
+	option = {
+		name = btc_misc.19.a
+		add_years_of_income = -0.2
+		add_prestige = 5
+		add_papal_influence = 10
+		add_splendor = 25
+		define_advisor = {
+			type = philosopher
+			culture = castillian
+			skill = 3
+			name = "Tirso de Molina"
+			cost_multiplier = 0.75
+		}
+	}
+}
+
+#Lope de Vega, coded, written (not really.. English wiki article was very well written and presented, theres nothing else I could talk about really) and designed by Helena
+country_event = {
+	id = btc_misc.20
+	title = "btc_misc.20.t"
+	desc = "btc_misc.20.d"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	major = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1560
+		NOT = { is_year = 1635 }
+	}
+
+	mean_time_to_happen = { years = 25 }
+	
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 10
+		add_splendor = 75
+	}
+}
+
+#Pedro Calder?n de la Barca, coded, written and designed by Helena
+country_event = {
+	id = btc_misc.21
+	title = "btc_misc.21.t"
+	desc = "btc_misc.21.d"
+	picture = ADVISOR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1600
+		NOT = { is_year = 1680 }
+	}
+
+	mean_time_to_happen = { years = 35 }
+	
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 5
+		add_splendor = 50
+	}
+}
+
+#El Greco, coded, written and designed by Helena
+country_event = {
+	id = btc_misc.22
+	title = "btc_misc.22.t"
+	desc = "btc_misc.22.d"
+	picture = PAINTER_ARTIST_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CAS
+				NOT = { exists = SPA }
+			}
+			tag = SPA
+		}
+		is_year = 1540
+		NOT = { is_year = 1615 }
+	}
+
+	mean_time_to_happen = { years = 30 }
+	
+	option = {
+		name = "EXCELLENT"
+		add_prestige = 5
+		add_splendor = 35
+	}
+}
+
+#Como Breaks Free, coded by Alejandro, written and designed by Dynamo
+country_event = {
+	id = btc_misc.23
+	title = btc_misc.23.t
+	desc = btc_misc.23.d
+	picture = ACCUSATION_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = MLO
+		has_reform = ambrosian_republic
+		NOT = { exists = CMO }
+	}
+	
+	mean_time_to_happen = {
+		years = 1
+	}
+	
+	option = {
+		name = btc_misc.23.a
+		hidden_effect = {
+			release = CMO
+			add_truce_with = CMO
+			add_opinion = {
+				who = CMO
+				modifier = broke_free_from_us
+			}
+			reverse_add_opinion = {
+				who = CMO
+				modifier = previous_oppressor
+			}
+			CMO = {
+				change_government = republic
+			}
+		}
+		custom_tooltip = btc_misc.23.tt
+		
 	}
 }

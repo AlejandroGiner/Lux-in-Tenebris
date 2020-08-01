@@ -1,5 +1,5 @@
-Beyond Typus Classic
-An expansion for Beyond Typus 9.0, updated for EU4 1.28.\
+Lux in Tenebris
+An EU4 expansion mod, updated for EU4 1.29.\
 changelog
 
 On top of what Beyond Typus 9.0 had, the following regions have been overhauled or re-overhauled from their BT state following this mod's design philosophy (compared with their state in vanilla):
@@ -10,23 +10,23 @@ Europe:
 
 (Finished) - Baltic has received 39 new provinces, an increase of 144% from 27 to 66. Dev increased by 37%, from 215 to 294.
 
-(Finished) - Britain has received 41 new provinces, an increase of 98% from 42 to 83. Dev increased by 28%, from 308 to 394, 6 new tags, several new national ideas and formables.
+(Finished) - Britain has received 41 new provinces, an increase of 98% from 42 to 83. Dev increased by 27%, from 308 to 391, 6 new tags, several new national ideas and formables.
 
-(Finished) - South Germany has received 60 new provinces, an increase of 158% from 38 to 98. Dev increased by 80%, from 454 to 819.
+(Finished) - South Germany has received 60 new provinces, an increase of 158% from 38 to 98. Dev increased by 79%, from 454 to 816.
 
 (Finished) - North Germany has received 54 new provinces, an increase of 110% from 49 to 103. Dev increased by 66%, from 469 to 778.
 
 (Finished) - Czechia has received 24 new provinces, an increase of 171% from 14 to 38. Dev increased by 45%, from 147 to 214.
 
-(Finished) - Italy has received 79 new provinces, an increase of 180% from 44 to 123. Dev increased by 65%, from 676 to 1119, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
+(Finished) - Italy has received 79 new provinces, an increase of 180% from 44 to 123. Dev increased by 65%, from 676 to 1117, 42 new tags, many national ideas and several formables and mechanics from normal BT, like Papal Autonomous Vassals.
 
-(Finished) - Iberia has received 43 new provinces, an increase of 73% from 59 to 102. Dev increased by 17%, from 545 to 659, 15 new tags, 2 new cultures and many national ideas.
+(Finished) - Iberia has received 50 new provinces, an increase of 85% from 59 to 109. Dev increased by 26%, from 545 to 688, 15 new tags, 2 new cultures and many national ideas.
 
-(Finished) - France has received 93 new provinces, an increase of 163% from 57 to 150. Dev increased by 51%, from 763 to 1151, 2 new tags, 3 new cultures and many national ideas.
+(Finished) - France has received 93 new provinces, an increase of 163% from 57 to 150. Dev increased by 51%, from 763 to 1152, 2 new tags, 3 new cultures and many national ideas.
 
 (Finished) - Greece has received 50 new provinces, an increase of 294% from 17 to 67. Dev increased by 84%, from 188 to 346 and a new culture.
 
-(Finished) - Caucasus has received 25 new provinces, an increase of 86% from 29 to 54. Dev increased by 60%, from 206 to 331, 28 new tags, re-done cultures and unique national ideas.
+(Finished) - Caucasus has received 41 new provinces, an increase of 141% from 29 to 70. Dev increased by 76%, from 206 to 363, 28 new tags, re-done cultures and unique national ideas.
 
 (Finished) - Ruthenia has received 58 new provinces, an increase of 153% from 38 to 96. Dev increased by 60%, from 208 to 333. 
 
@@ -34,7 +34,7 @@ Europe:
 
 (Finished) - Low Countries has received 30 new provinces, an increase of 150% from 20 to 50. Dev increased by 52%, from 283 to 431.
 
-(Likely Finished) - Poland has received 10 new provinces, an increase of 43% from 23 to 33. Dev decreased by 16%, from 191 to 160.
+(Likely Finished) - Poland has received 10 new provinces, an increase of 43% from 23 to 33. Dev decreased by 10%, from 191 to 172.
 
 (Finished) - Balkans has received 56 new provinces, an increase of 200% from 28 to 84. Dev increased by 69%, from 230 to 388.
 
@@ -42,9 +42,9 @@ Europe:
 
 (Finished) - Carpathia has received 68 new provinces, an increase of 219% from 31 to 99. Dev increased by 91%, from 246 to 470.
 
-(Planned) - Pontic Steppe has received 27 new provinces, an increase of 117% from 23 to 50. Dev increased by 16%, from 199 to 232.
+(Finished) - Pontic Steppe has received 45 new provinces, an increase of 196% from 23 to 68. Dev increased by 47%, from 199 to 293.
 
-(Planned) - Urals has received 11 new provinces, an increase of 30% from 36 to 47. Dev decreased by 1%, from 254 to 250.
+(WIP) - Urals has received 11 new provinces, an increase of 30% from 36 to 47. Dev decreased by 1%, from 254 to 250.
 
 
 
@@ -84,9 +84,9 @@ Asia:
 
 (Planned) - Mesopotamia has received  new provinces, an increase of % from  to . Dev increased by %, from  to .
 
-(Planned) - Levant has received 11 new provinces, an increase of 58% from 19 to 30. Dev increased by 2%, from 163 to 167.
+(Likely Finished) - Levant has received 11 new provinces, an increase of 58% from 19 to 30. Dev increased by 2%, from 163 to 167.
 
-(Planned) - Persia has received 5 new provinces, an increase of 10% from 52 to 57. Dev increased by 6%, from 368 to 389.
+(WIP) - Persia has received 6 new provinces, an increase of 11% from 52 to 58. Dev increased by 7%, from 368 to 395.
 
 (Planned) - Khorasan has received  new provinces, an increase of % from  to . Dev increased by %, from  to .
 
@@ -152,7 +152,7 @@ Africa:
 
 (Finished) - South Africa has received 70 new provinces, an increase of 467% from 15 to 85. Dev increased by 258%, from 74 to 265.
 
-(Likely Finished) - Maghreb has received 38 new provinces, an increase of 59% from 64 to 102. Dev increased by 25%, from 406 to 507.
+(Likely Finished) - Maghreb has received 38 new provinces, an increase of 59% from 64 to 102. Dev increased by 25%, from 406 to 509.
 
 (Likely Finished) - Sahel has received 8 new provinces, an increase of 18% from 45 to 53. Dev increased by 12%, from 222 to 248.
 

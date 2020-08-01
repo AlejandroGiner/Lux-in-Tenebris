@@ -1,0 +1,82 @@
+country_decisions = {
+	lithuanian_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_lithuania_flag }
+			NOT = { tag = LIT }
+			NOT = { tag = UKR }
+			NOT = { tag = POL }
+			NOT = { tag = PLC }
+			NOT = { exists = PLC }
+			primary_culture = lithuanian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 272	# Vilnius
+				province_id = 1936	# Kaunas
+				province_id = 270	# Trakai
+				province_id = 271	# Zemaitija
+				province_id = 7797	# Siauliai
+				province_id = 40	# Klaipeda
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = LIT }
+			NOT = { exists = PLC }
+			is_nomad = no
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 272	# Vilnius
+			owns_core_province = 1936	# Kaunas
+			owns_core_province = 270	# Trakai
+			owns_core_province = 271	# Zemaitija
+			owns_core_province = 7797	# Siauliai
+			owns_core_province = 40		# Klaipeda
+		}
+		effect = {
+			change_tag = LIT
+			swap_non_generic_missions = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = centralization_modifier
+				duration = 7300
+			}
+			add_prestige = 25
+			lithuania_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LIT
+			}
+			trakai_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LIT
+			}
+			samogitia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LIT
+			}
+			sudovia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = LIT
+			}
+			swap_ideas = yes
+			set_country_flag = formed_lithuania_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 #
+	}
+}

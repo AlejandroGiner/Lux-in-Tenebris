@@ -875,6 +875,13 @@ bt_swedish_hre_intervention_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -915,7 +922,7 @@ swedish_missions_baltic = {
 	#Restored from vanilla.
 	control_estonia = {
 		icon = mission_invade_island
-		required_missions = { swe_expand_finland }
+		required_missions = { swe_baltic_fleet }
 		provinces_to_highlight = {
 			control_estonia_provinces = yes
 			NOT = {
@@ -951,7 +958,7 @@ swedish_missions_baltic = {
 	#New to symbolise the Ingrian War.
 	swe_expand_finland = {
 		icon = mission_unite_home_region
-		required_missions = { swe_baltic_fleet }
+		required_missions = { control_estonia }
 		provinces_to_highlight = {
 			swe_expand_finland_provinces = yes
 			NOT = {
@@ -1011,7 +1018,7 @@ swedish_missions_baltic = {
 	}
 	control_latvia = {
 		icon = mission_sea_battles
-		required_missions = { control_estonia }
+		required_missions = { swe_expand_finland }
 		provinces_to_highlight = {
 			control_latvia_provinces = yes
 			NOT = {

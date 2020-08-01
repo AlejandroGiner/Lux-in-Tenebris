@@ -3,14 +3,13 @@ country_decisions = {
 		major = yes
 		potential = {
 			btc_potential_trigger = yes
+			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_ireland_flag }
 			NOT = {
-				OR = {
-					tag = IRE
-					tag = SCO
-					tag = ANI
-					tag = TNA
-				}
+				tag = IRE
+				tag = SCO
+				tag = ANI
+				tag = TNA
 			}
 			OR = {
 				primary_culture = irish
@@ -32,11 +31,14 @@ country_decisions = {
 			NOT = { exists = IRE }
 			btc_can_form_trigger = yes
 			btc_was_not_colonial_nation_trigger = yes
-			
-			num_of_owned_provinces_with = {
-				value = 10
-				region = ireland_region
-				is_core = ROOT
+			custom_trigger_tooltip = {
+				tooltip = three_quarters_of_ireland_tooltip
+				num_of_owned_provinces_with = {
+					value = 33
+					region = ireland_region
+					is_core = ROOT
+					owned_by = ROOT
+				}	#3/4 of Ireland's 44 provinces
 			}
 		}
 		effect = {

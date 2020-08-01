@@ -230,6 +230,7 @@ lithuanian_missions_2 = {
 				area = malopolska_area
 				area = mazovia_area
 				area = west_prussia_area
+				area = pomerelia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -251,6 +252,10 @@ lithuanian_missions_2 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 					west_prussia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					pomerelia_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -387,6 +392,13 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			crimea_coast_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			azov_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -424,6 +436,7 @@ lithuanian_missions_slot = {
 			OR = {
 				area = zaporizhia_area
 				area = crimea_area
+				area = crimea_coast_area
 				area = azov_area
 				area = sloboda_ukraine_area
 				area = lower_dnieper_area
@@ -451,6 +464,10 @@ lithuanian_missions_slot = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			crimea_coast_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -515,7 +532,21 @@ lithuanian_missions_slot = {
 				}
 				add_permanent_claim = ROOT
 			}
+			east_livonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			estonia_ingria_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			osel_wiek_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -557,6 +588,8 @@ lithuanian_missions_slot = {
 				area = curonia_area
 				area = latgallia_area
 				area = north_livonia_area
+				area = osel_wiek_area
+				area = east_livonia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -564,6 +597,10 @@ lithuanian_missions_slot = {
 		}
 		trigger = {
 			livonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			east_livonia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -576,6 +613,10 @@ lithuanian_missions_slot = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			estonia_ingria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			osel_wiek_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -622,6 +663,13 @@ lithuanian_missions_slot = {
 					add_permanent_claim = ROOT
 				}
 				west_prussia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				pomerelia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}

@@ -78,15 +78,13 @@ country_event = {
 		MMA = { release = MKA release = MYA }
 		2166 = { cede_province = ROOT }
 		hidden_effect = {
-			MYA = { 
-				change_government = monarchy 
-				set_legacy_government = mandala_system_legacy
+			MYA = {
+				change_government = monarchy
 				add_government_reform = mandala_reform					
 					
 			}
 			MKA = { 
-				change_government = monarchy 
-				set_legacy_government = mandala_system_legacy
+				change_government = monarchy
 				add_government_reform = mandala_reform
 			}
 		}

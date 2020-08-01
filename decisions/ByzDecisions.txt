@@ -1,172 +1,4 @@
 country_decisions = {
-
-	restore_byzantine_empire = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			NOT = { has_country_flag = formed_byzantium_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = { exists = BYZ }
-			NOT = { tag = HLR }
-			NOT = { tag = ROM }
-			NOT = { exists = ROM }
-			NOT = { tag = LTE }
-			NOT = { tag = TUR }
-			NOT = { tag = GRE }
-			culture_group = byzantine
-			religion = orthodox
-			num_of_owned_provinces_with = {
-				value = 5
-				OR = {
-					region = greece_region_btc
-					region = anatolia_region
-					area = apulia_area
-					area = calabria_area
-					area = naples_area
-					area = sicily_area
-					area = erzurum_area
-					area = cyprus_area
-					province_id = 3249
-					province_id = 5183
-					province_id = 2313
-					province_id = 5170
-					province_id = 2410
-					province_id = 285
-					province_id = 3245
-				}
-				is_core = ROOT
-			}	#Requires at least 5 provinces to see the decision
-		}
-		provinces_to_highlight = {
-			OR = {
-				region = greece_region_btc
-				region = anatolia_region
-				area = apulia_area
-				area = calabria_area
-				area = naples_area
-				area = sicily_area
-				area = erzurum_area
-				area = cyprus_area
-				province_id = 3249
-				province_id = 5183
-				province_id = 2313
-				province_id = 5170
-				province_id = 2410
-				province_id = 285
-				province_id = 3245
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			owns_core_province = 148 # Thessaloniki
-			owns_core_province = 151 # Constantinople
-			#This replaces the various specific provinces required, leaving Constantinople and Thessaloniki, though, as the two primary cities of the empire
-			num_of_owned_provinces_with = {
-				value = 30
-				OR = {
-					region = greece_region_btc
-					region = anatolia_region
-					area = apulia_area
-					area = calabria_area
-					area = naples_area
-					area = sicily_area
-					area = erzurum_area
-					area = cyprus_area
-					province_id = 3249
-					province_id = 5183
-					province_id = 2313
-					province_id = 5170
-					province_id = 2410
-					province_id = 285
-					province_id = 3245
-				}
-				is_core = ROOT
-			}	#Need to recover at least 30 provinces (roughly 1/5) of the Empire (154 or so) under Basil II required to restablish the empire
-			is_at_war = no
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-		}
-		effect = {
-			151 = { move_capital_effect = yes } # Constantinople
-			change_tag = BYZ
-			swap_non_generic_missions = yes
-			#Removed the long and tedious list of various specific provinces in favour of a region and area based approach.
-			#For permanent claims, going for just the two regions for now
-			greece_region_btc = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = BYZ
-			}
-			anatolia_region = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = BYZ
-			}
-			random_owned_province = {
-				limit = { culture = greek }
-				add_base_tax = 1
-			}
-			random_owned_province = {
-				limit = { culture = greek }
-				add_base_tax = 1
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25			#10 to 25 prestige, this is quite an accomplishment -Draiocht
-			BYZ = {
-				add_core = 151 # Constantinople
-				change_primary_culture = greek			#Culture turns to greek now, instead of BYZ changing to culture. Works better for events, and represents that standard 'greek' is whoever controls Constantinople
-			}
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = { has_global_flag = constantinople_restored }
-				}
-				151 = {
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 1
-					rename_capital = Constantinople
-					if = {
-						limit = { NOT = { culture = greek } }
-						change_culture = greek
-					}
-				}
-				set_global_flag = constantinople_restored
-			}
-			if = {
-				limit = { has_global_flag = hagia_sophia_now_mosque }
-				clr_global_flag = hagia_sophia_now_mosque
-				show_ambient_object = hagia_sophia
-				hide_ambient_object = hagia_sophia_minarets
-			}
-			if = {
-				limit = { NOT = { government_rank = 3 } }
-				set_government_rank = 3
-			}
-			swap_ideas = yes
-			set_country_flag = formed_byzantium_flag
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	establish_march_of_alania = {
 		potential = {
@@ -195,7 +27,7 @@ country_decisions = {
 			NOT = { has_country_flag = established_march_alania }
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
-			NOT = { exists = ALA }
+			NOT = { exists = ALN }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -246,11 +78,11 @@ country_decisions = {
 						}
 						remove_core = ROOT
 					}
-					add_core = ALA
+					add_core = ALN
 				}
-				release = ALA
+				release = ALN
 				hidden_effect = { #Because this caused issues with government names???
-					ALA = {
+					ALN = {
 						change_government = monarchy
 					}
 				}
@@ -267,22 +99,22 @@ country_decisions = {
 				}
 				2201 = {
 					owner = {
-						change_tag = ALA
+						change_tag = ALN
 						swap_ideas = yes
 					}
 				}
 			}
 			#Claims
-			circassia_area = { add_permanent_claim = ALA }
-			dagestan_area = { add_permanent_claim = ALA }
-			astrakhan_area = { add_permanent_claim = ALA }
-			alania_area = { add_permanent_claim = ALA }
-			avaria_area = { add_permanent_claim = ALA }
-			kabardia_area = { add_permanent_claim = ALA }
-			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 } } add_permanent_claim = ALA }
-			circassia_area = { limit = { NOT = { province_id = 2447 } } add_permanent_claim = ALA }
+			circassia_area = { add_permanent_claim = ALN }
+			dagestan_area = { add_permanent_claim = ALN }
+			astrakhan_area = { add_permanent_claim = ALN }
+			alania_area = { add_permanent_claim = ALN }
+			avaria_area = { add_permanent_claim = ALN }
+			kabardia_area = { add_permanent_claim = ALN }
+			azov_area = { limit = { NOT = { province_id = 286 province_id = 2413 } } add_permanent_claim = ALN }
+			circassia_area = { limit = { NOT = { province_id = 2447 } } add_permanent_claim = ALN }
 			#Marshy March
-			create_march = ALA
+			create_march = ALN
 			set_country_flag = established_march_alania
 		}
 		ai_will_do = {
@@ -890,7 +722,7 @@ country_decisions = {
 	reduce_exarch_autonomy = {
 		major = yes
 		potential = {
-			has_idea_group = new_BYZ_ideas #Because this caused issues with custom nations.
+			has_idea_group = BYZ_ideas #Because this caused issues with custom nations.
 			is_byz_or_hellenic_rome_trigger = yes
 			has_country_modifier = the_exarch_system
 			NOT = { has_country_flag = revoked_exarch_autonomy }
@@ -1090,7 +922,7 @@ country_decisions = {
 	#Capital move.
 	byz_move_capital_to_rome = {
 		potential = {
-			has_idea_group = new_BYZ_ideas #Because this caused issues with custom nations.
+			has_idea_group = BYZ_ideas #Because this caused issues with custom nations.
 			normal_or_historical_nations = yes
 			is_byz_or_hellenic_rome_trigger = yes
 			owns = 118 #Rome

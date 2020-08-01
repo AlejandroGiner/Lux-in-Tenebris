@@ -6,11 +6,11 @@ country_decisions = {
 	institute_prussian_monarchy = {
 		major = yes
 		potential = {
-			NOT = { has_dlc = "Dharma" }
+			has_dlc = "Rights of Man"
 			normal_or_historical_nations = yes
 			tag = PRU
-			government = monarchy
 			NOT = { has_reform = prussian_monarchy_legacy }
+			NOT = { has_reform = prussian_monarchy }
 		}
 
 		allow = {
@@ -21,7 +21,16 @@ country_decisions = {
 		}
 
 		effect = {
+			if = {
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+			}
 			add_government_reform = prussian_monarchy
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			
 		}
 	}
 
@@ -30,6 +39,8 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = { tag = PRU }
+			NOT = { tag = GER }
 			tag = BRA
 		}
 		provinces_to_highlight = {
@@ -54,22 +65,19 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 6
 			owns_core_province = 41			# K�nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
 			}
-			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { has_dlc = "Rights of Man" }
-				add_government_reform = prussian_monarchy
-			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -79,24 +87,70 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
+				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
-			PRU = {
-				every_owned_province = {
-					limit = { 
-						OR = {
-							culture = saxon
-							culture = pommeranian
-						}
-					} 
-					change_culture = prussian
+			capital_scope = { change_culture = prussian }
+			custom_tooltip = prussia_change_culture_provinces_tooltip
+			hidden_effect = {
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
 				}
-			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+			}
 			west_prussia_area = {
 				limit = {
 					NOT = {
@@ -106,7 +160,25 @@ country_decisions = {
 				}
 				add_permanent_claim = PRU
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PRU
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PRU
+			}
+			sudovia_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
@@ -163,49 +235,53 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
+			adm_tech = 6
 			owns_core_province = 41			# K�nigsberg
 			OR = {
 				owns_core_province = 43		# Danzig
 				owns_core_province = 2995	# Stolp
 			}
-			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { has_dlc = "Rights of Man" }
-				add_government_reform = prussian_monarchy
-			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			add_prestige = 25
 			if = {
-				limit = {
-					has_reform = states_general_reform
+				limit = { NOT = { government = monarchy } }
+				change_government = monarchy
+				add_government_reform = feudalism_reform
+				every_neighbor_country = {
+					limit = { government = monarchy }
+					add_opinion = { who = ROOT modifier = secularized_monastic_order }
 				}
-				remove_government_reform = states_general_reform
 			}
+			add_prestige = 25
 			change_primary_culture = prussian
-			every_neighbor_country = {
-				limit = { government = monarchy }
-				add_opinion = { who = ROOT modifier = secularized_monastic_order }
-			}				#The special thing about this decision, apparently, instead of auto culture-flip
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = PRU
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			sudovia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
@@ -253,12 +329,12 @@ country_decisions = {
 				}
 				NOT = { tag = TEU }
 			}
-			owns_core_province = 41			# K�nigsberg
+			owns_core_province = 41			# Koenigsberg
 			num_of_cities = 12			#If not one of the normal candidates, needs 12 provinces plus Koenigsberg to see
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# K�nigsberg
+				province_id = 41	# Koenigsberg
 				province_id = 43	# Danzig
 				province_id = 2995	# Stolp
 			}
@@ -272,20 +348,17 @@ country_decisions = {
 			is_nomad = no
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
-			owns_core_province = 41			# K�nigsberg
+			adm_tech = 6
+			owns_core_province = 41			# Koenigsberg
 			owns_core_province = 43		# Danzig
 			owns_core_province = 2995	# Stolp
-			total_development = 75			#Normal requirement for rank 2 is 300 dev, so this is 75 percent discounted
+			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 			change_tag = PRU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { has_dlc = "Rights of Man" }
-				add_government_reform = prussian_monarchy
-			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -295,31 +368,89 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
+				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
 			add_prestige = 25
 			change_primary_culture = prussian
-			PRU = {
-				every_owned_province = {
-					limit = { 
-						OR = {
-							culture = saxon
-							culture = pommeranian
-						}
-					} 
-					change_culture = prussian
+			capital_scope = { change_culture = prussian }
+			custom_tooltip = prussia_change_culture_provinces_tooltip
+			hidden_effect = {
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
 				}
-			}				#The special thing about this decision, apparently. Monastic TEU gets relation change instead with neighbours
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+				PRU = {
+					random_owned_province = {
+						limit = { 
+							OR = {
+								culture = saxon
+								culture = pommeranian
+							}
+						} 
+						change_culture = prussian
+					}
+				}
+			}
 			west_prussia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = PRU
 			}
+			pomerelia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
 			east_prussia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = PRU
+			}
+			sudovia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
 				}

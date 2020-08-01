@@ -390,7 +390,8 @@ ned_reconquest_group = {
 		provinces_to_highlight = {
 			OR = {
 				area = flanders_area
-				area = netherlands_area
+				area = holland_area
+				area = north_brabant_area
 				area = brabant_area
 			}
 			NOT = { owned_by = ROOT }
@@ -401,11 +402,15 @@ ned_reconquest_group = {
 				type = all
 				owned_by = ROOT
 			}
-			netherlands_area = {
+			holland_area = {
 				type = all
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			c = {
 				type = all
 				owned_by = ROOT
 			}

@@ -34,6 +34,7 @@ insult_thames = {
 		OR = {
 			tag = GBR
 			tag = ENG
+			tag = UNK
 		}
 	}
 }
@@ -50,6 +51,7 @@ insult_churchill = {
 			OR = {
 				tag = GBR
 				tag = ENG
+				tag = UNK
 			}
 		}
 		tag = USA
@@ -66,6 +68,7 @@ insult_thought_disease = {
 		OR = {
 			tag = GBR 
 			tag = ENG
+			tag = UNK
 		}
 	}
 }
@@ -134,4 +137,237 @@ insult_sinai = {
     trigger = {
         tag = MAM
     }
+}
+
+insult_memri_shoe = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_disaster = {
+	trigger = {
+		FROM = { religion = sunni }
+		religion = shiite
+	}
+}
+
+insult_memri_jeans = {
+	trigger = {	
+		FROM = { religion_group = muslim }
+		tag = USA
+	}
+}
+
+insult_memri_death_america = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		tag = USA
+	}
+}
+
+insult_memri_lesbianism = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		tag = LES
+	}
+}
+
+insult_memri_rock = {
+	trigger = {
+		FROM = { religion = sunni }
+		religion = shiite
+	}
+}
+
+insult_memri_watermelon = {
+	trigger = {
+		OR = {
+			tag = TUR
+			tag = TKY
+		}
+	}
+}
+
+insult_memri_mickey = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		tag = USA
+	}
+}
+
+insult_memri_treaties = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_dogs = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_pickle = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_muslims = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		NOT = { religion_group = muslim }
+	}
+}
+
+insult_memri_albanian = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		tag = ALB
+	}
+}
+
+insult_memri_jihad = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		NOT = { religion_group = muslim }
+	}
+}
+
+insult_memri_stalin = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		tag = RUS
+	}
+}
+
+insult_memri_shoes = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_memri_human = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_memri_circumcised = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		NOT = { religion_group = muslim }
+	}
+}
+
+insult_memri_pure = {
+	trigger = {
+		FROM = { religion = sunni }
+		NOT = { religion = sunni }
+	}
+}
+
+insult_memri_kurd = {
+	trigger = {
+		FROM = { NOT = { primary_culture = kurdish } }
+		primary_culture = kurdish
+	}
+}
+
+insult_memri_chinese = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		culture_group = east_asian
+	}
+}
+
+insult_memri_japan = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		culture_group = japanese_g
+	}
+}
+
+insult_memri_scream = {
+	trigger = {
+		always = yes
+	}
+}
+
+insult_memri_women = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		religion_group = christian
+	}
+}
+
+insult_memri_nose = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		OR = {
+			religion_group = jewish_group
+			culture_group = jewish_culture_group
+		}
+	}
+}
+
+insult_memri_grinch = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		religion_group = christian
+	}
+}
+
+insult_memri_jihadd = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_anus = {
+	trigger = {
+		FROM = { religion = shiite }
+		religion = sunni
+	}
+}
+
+insult_memri_comment = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_media = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		religion_group = christian
+	}
+}
+
+insult_memri_kardashian = {
+	trigger = {
+		FROM = { religion_group = muslim }
+	}
+}
+
+insult_memri_shame = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		NOT = { religion_group = muslim }
+	}
+}
+
+insult_memri_democracies = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		religion_group = christian
+	}
+}
+
+insult_memri_goths = {
+	trigger = {
+		FROM = { religion_group = muslim }
+		religion_group = christian
+	}
 }

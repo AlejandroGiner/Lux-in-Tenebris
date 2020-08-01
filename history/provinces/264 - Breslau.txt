@@ -1,19 +1,19 @@
 #264 - Breslau
 
-owner = SIL
-controller = SIL
+owner = OPL
+controller = OPL
 culture = german_schlesian			#With the influx of settlers the town expanded and adopted in 1242 German town law. The city council used Latin and German, and "Breslau", the Germanized name of the city, appeared for the first time in written records.
 religion = catholic
 capital = "Breslau"
 trade_goods = cloth
 hre = yes
-base_tax = 6				#According to Wiki (I know, lofty source!) Breslau was the 7th largest city in Central Europe around this time, about 25% larger than Vienna and nearly double the size of Hamburg, the only cities significantly larger than it in CE being Prague, Koeln, and Nuremberg
-base_production = 6
+base_tax = 5				#According to Wiki (I know, lofty source!) Breslau was the 7th largest city in Central Europe around this time, about 25% larger than Vienna and nearly double the size of Hamburg, the only cities significantly larger than it in CE being Prague, Koeln, and Nuremberg
+base_production = 5
 is_city = yes 
-base_manpower = 4
+base_manpower = 3
 fort_15th = yes
-add_core = SIL
-estate = estate_burghers			#The city adopted Magdeburg rights in 1261. The Polish Piast dynasty remained in control of the region, but the right of the city council to govern independently increased. The city joined the Hanseatic League in 1387.
+add_core = OPL
+			#The city adopted Magdeburg rights in 1261. The Polish Piast dynasty remained in control of the region, but the right of the city council to govern independently increased. The city joined the Hanseatic League in 1387.
 
 discovered_by = western
 discovered_by = muslim
@@ -29,8 +29,6 @@ discovered_by = QAS
 extra_cost = 16
 center_of_trade = 2
 
-1419.12.1 = { revolt = { type = heretic_rebels size = 0 } controller = REB } # Hussite Wars, Battle of Nekmir
-1436.7.5 = { revolt = {} controller = SIL } # Peace is signed in Jihlava
 #Need to do some history here, was apparently ceeded to Hungary for several years, and was much more politicaly complex than the current 10 entries
 1526.8.30 = { owner = HAB controller = HAB add_core = HAB }
 1618.5.23 = { # Defenestration of Prague
@@ -45,15 +43,15 @@ center_of_trade = 2
 	remove_core = BOH
 } # Tilly beats the Winterking. Deus Vult!
 1640.1.1 = {
-	base_tax = 5
-	base_production = 5
-	base_manpower = 3
+	base_tax = 3
+	base_production = 3
+	base_manpower = 2
 }	 # Lost big part of its population during the Thirty years war. Random date
 1648.1.1 = { unrest = 0 }
 1694.1.1 = { unrest = 4 } # Religious oppositions
 1700.1.1 = {
-	base_tax = 7
-	base_production = 7
+	base_tax = 6
+	base_production = 6
 }
 1742.1.1 = { owner = PRU controller = PRU add_core = PRU } # Peace of Breslau, 1 st Silesian war against Austria
 1750.1.1 = {  base_tax = 9 base_production = 9 base_manpower = 6 }

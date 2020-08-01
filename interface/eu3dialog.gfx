@@ -25,6 +25,12 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "ImperialIncidentBackground"
+		textureFile ="gfx//interface//imperial_incident_popup_bg.dds"
+		loadType = "INGAME"
+	}
+    
+    spriteType = {
 		name = "MessageSettingsButton"
 		textureFile ="gfx//interface//message_settings_button.dds"
 		loadType = "INGAME"
@@ -65,8 +71,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "largefloaterbutton"
 		texturefile = "gfx//interface//button_type_1.tga"
-		noOfFrames = 1
-		effectFile = "gfx/FX/buttonstate.lua"
 	}
 
 	spriteType = {
@@ -78,7 +82,6 @@ spriteTypes = {
 	textSpriteType = {
 		name = "gfx_stats_button"
 		texturefile = "gfx//interface//stats_button.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	
 	spriteType = {
@@ -90,6 +93,12 @@ spriteTypes = {
 	spriteType = {
 		name = "gfx_header_decoration"
 		texturefile = "gfx//interface//mission_complete_popup_frame_top.dds"
+		allwaystransparent = yes
+	}
+    
+    spriteType = {
+		name = "GFX_imperial_incident_popup_bg"
+		texturefile = "gfx/interface/imperial_incident_popup_bg.dds"
 		allwaystransparent = yes
 	}
 }

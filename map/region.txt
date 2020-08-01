@@ -21,21 +21,30 @@ france_region = {
 		picardy_area
 		#seine_area			#Cut in 1.25
 		ile_de_france_area			#Added in 1.25, using it as a 1-to-1 replacement of seine_area
-		loire_area
+		orleans_area 
 		bourgogne_area
+		west_burgundy_area
 		pyrenees_area
 		#BTADDITIONS
+		fr_maine_area
 		poitou_area			#also added by Paradox in 1.25, same id so no change needed.
 		champagne_area			#also added by Paradox in 1.25, same id so no change needed.
 		dauphine_area
 		franche_comte_area
-		west_massif_central_area
+		east_guyenne_area
+		limousin_area
 		east_languedoc_area
 		west_normandy_area
+		central_normandy_area
+		channel_islands_area
 		lower_brittany_area
 		verdun_area
-		anjou_area
+		loire_area
+		berry_area
 		south_champagne_area
+		saintonge_area
+		btc_pyrenees_area
+		bourbonnais_area
 	}
 }
 
@@ -63,14 +72,14 @@ low_countries_region = {
 	areas = {
 		wallonia_area
 		flanders_area
-		#holland_area			#New in 1.25, but not yet used in BT. Will almost certainly use it later.
 		brabant_area
-		netherlands_area
+		holland_area
 		frisia_area
 		luxemburg_liege_area			#Cut in 1.25, but kept in BT for the moment until I can redo the area.
 		#BTADDITIONS
 		guelders_area
 		luxembourg_area
+		north_brabant_area
 	}
 }
 
@@ -83,20 +92,27 @@ italy_region = {
 		liguria_area
 		corsica_sardinia_area
 		sicily_area
+		western_sicily_area
 		naples_area
 		calabria_area
 		apulia_area
 		emilia_romagna_area
 		central_italy_area
+		po_valley_area
 		#BTADDITIONS
 		emilia_area
 		abruzzo_area
 		south_tuscany_area
-		east_sicily_area
 		lazio_area
 		west_piedmont_area
 		corsica_area
 		friuli_area
+		sicily_islands_area
+		umbria_area
+		lunigiana_area
+		istria_area
+		cuneo_area
+		lepontine_alps_area
 	}
 }
 
@@ -118,6 +134,7 @@ north_german_region = {
 		weser_area
 		holstein_area
 		mecklenburg_area
+		north_westphalia_area
 		#BTADDITIONS
 		muenster_area
 		paderborn_area
@@ -142,10 +159,17 @@ south_german_region = {
 		upper_rhineland_area
 		romandie_area
 		palatinate_area
-		elsass_area
+		alsace_area
 		carniola_area
 		upper_palatinate_area
 		west_swabia_area
+		sudtirol_area
+		east_bavaria_area
+		upper_franconia_area
+		ingolstadt_area
+		central_swabia_area
+		west_switzerland_area
+		grisons_area
 	}
 }
 
@@ -154,8 +178,9 @@ czech_lands_region = {
 		moravia_area
 		erzgebirge_area
 		bohemia_area
-		lausitz_area
-		lower_silesia_area
+		lusatia_area
+		legnica_area
+		opole_area
 		silesia_area
 	}
 }
@@ -219,9 +244,11 @@ iberia_region = {
 		galicia_area
 		baleares_area
 		#BTADDITIONS
-		extremadura_area #Salamanca
+		extremadura_area
+		new_castile_area
 		btc_murcia_area
 		baetica_area
+		cantabrian_range_area
 	}
 }
 
@@ -249,6 +276,9 @@ british_isles_region = {
 		five_boroughs_area
 		#lancashire_area			#cut in 1.25, using west_midlands_area as a replacement
 		northern_england_area			#vanilla cut in 1.25, but kept in BT because the new yorkshire_area replacing it was already in BT, and I need an area. This is as good as any and already in triggers
+		south_wales_area
+		mid_wales_area
+		cumbria_area
 	}
 }
 
@@ -277,6 +307,10 @@ baltic_region = {
 		trakai_area
 		north_livonia_area
 		latgallia_area
+		pomerelia_area
+		sudovia_area
+		osel_wiek_area
+		east_livonia_area
 	}
 }
 
@@ -287,6 +321,7 @@ poland_region = {
 		mazovia_area
 		kuyavia_area			#Repurposing this into BT's old Kalisz area
 		podlasie_area			#moved from Ruthenia
+		kalisz_area
 		#BTADDITIONS
 		lublin_area
 	}
@@ -324,10 +359,13 @@ crimea_region = {
 		azov_area
 		sloboda_ukraine_area
 		#BTADDITIONS
+		kuban_area
 		middle_don_area
 		western_zaporizhia_area
 		lower_dnieper_area
 		pryazovia_area
+		crimea_coast_area
+		kalmykia_area
 	}
 }
 
@@ -341,6 +379,12 @@ balkan_region = {
 		albania_area
 		#BTADDITIONS
 		slavonia_area
+		croatia_coast_area
+		ragusa_area
+		south_albania_area
+		herzegovina_area
+		east_bosnia_area
+		south_serbia_area
 	}
 }
 
@@ -357,10 +401,15 @@ greece_region_btc = { #Rumelia
 		thrace_area
 		northern_aegean_islands_area
 		upper_thrace_area
-		lower_danube_area
+		silistria_area
 		bulgaria_area
 		cyprus_area
 		eastern_bulgaria_area
+		sofya_area
+		ionian_islands_area
+		cyclades_area
+		north_morea_area
+		eastern_thrace_area
 	}
 }
 
@@ -384,6 +433,8 @@ carpathia_region = {
 		southern_transdanubia_area
 		southern_alfold_area
 		szeklerland_area
+		oltenia_area
+		bukovina_area
 	}
 }
 
@@ -503,6 +554,7 @@ caucasia_region = {
 		armenia_area
 		sheki_area
 		shirvan_area
+		ordzhonikidze_area
 	}
 }
 
@@ -634,6 +686,8 @@ east_africa_region = {
 		zambia_area
 		quelimane_area
 		butua_area
+		barotseland_area
+		kazungula_area
 	}
 	monsoon = {
 		00.11.01
@@ -698,6 +752,8 @@ kongo_region = {
 		kasai_area
 		chokwe_area
 		sankuru_area
+		ncuna_area
+		lomami_area
 	}
 	monsoon = {
 		00.02.01
@@ -1398,6 +1454,7 @@ northeast_america_region = {
 		hudson_valley_area
 		delaware_valley_area
 		iroquoisia_area
+		eastern_iroquoisia_area
 		susquehanna_area
 		#BTARG
 		minisink_area
@@ -1406,8 +1463,8 @@ northeast_america_region = {
 		chesapeake_area
 		appalachia_area
 		great_valley_area
-		piedmont_north_america_area
 		virginia_tidewater_area
+		delmarva_area
 	}
 }
 
@@ -1424,7 +1481,6 @@ southeast_america_region =  {
 		#BTARG
 		wiregrass_area
 		upper_chattahoochee_area
-		everglades_area
 		grand_strand_area
 		inner_banks_area
 		eastern_tennessee_area
@@ -1445,10 +1501,6 @@ mississippi_region = { #66
 		choctaw_area
 		mississippi_plain_area
 		#BTARG
-		pine_belt_area
-		chickasaw_area
-		black_warrior_river_area
-		nickajack_area
 		northeast_louisiana_area
 		western_tennessee_area
 		middle_tennessee_area
@@ -1719,6 +1771,7 @@ american_east_coast_region = {
 		gulf_of_st_lawrence_area
 		gulf_stream_area
 		grand_banks_sea_area			#BT New
+		great_lakes_sea_area
 	}
 }
 
@@ -1890,9 +1943,7 @@ midafrica_region = {
 		ubangi_shari_area
 		cameroon_area
 		gabon_area
-		ncuna_area
 		uele_area
-		lomami_area
 	}
 }
 

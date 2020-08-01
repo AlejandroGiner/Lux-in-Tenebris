@@ -42,7 +42,7 @@ granada_development_missions = {
 				add_base_manpower = 2
 			}
 			4546 = { add_base_manpower = 1 }
-			4771 = { add_base_manpower = 1 }
+			3635 = { add_base_manpower = 1 }
 			226 = { add_base_manpower = 1 }
 			222 = { add_base_manpower = 1 }
 			3145 = { add_base_manpower = 1 }
@@ -371,53 +371,34 @@ granada_slot_2_missions = {
 				}
 			}
 			btc_murcia_area = {
-				if = {
-					limit = {
-						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
+				add_permanent_claim = ROOT
 			}
 			valencia_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			lower_andalucia_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_andalucia_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
-
 	}
 
 	gra_reconquer_valencia = { #art
@@ -427,13 +408,11 @@ granada_slot_2_missions = {
 
 		provinces_to_highlight = {
 			OR = {
-				province_id = 7653 
-				province_id = 4547
-				province_id = 3082
-				province_id = 221
+				area = btc_murcia_area
 				province_id = 1750
 				province_id = 3300
 				province_id = 220
+				province_id = 3468
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -441,16 +420,9 @@ granada_slot_2_missions = {
 		}
 
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = conquer_murcia_gra_tooltip
-				btc_murcia_area = {
-					type = all
-					OR = {
-						province_id = 3079
-						province_id = 2751
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+			btc_murcia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			custom_trigger_tooltip = {
 				tooltip = conquer_valencia_gra_tooltip
@@ -531,6 +503,15 @@ granada_slot_2_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			new_castile_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 			castille_area = {
 				limit = {
 					NOT = {
@@ -588,6 +569,7 @@ adu_slot_2_missions = {
 				area = toledo_area
 				area = castille_area
 				area = aragon_area
+				area = new_castile_area
 				province_id = 218
 				province_id = 1747
 				province_id = 216
@@ -599,6 +581,10 @@ adu_slot_2_missions = {
 
 		trigger = {
 			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			new_castile_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -625,42 +611,40 @@ adu_slot_2_missions = {
 			add_adm_power = 200
 			galicia_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			leon_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			cantabrian_range_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			basque_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 			catalonia_area = {
 				limit = {
-					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
-						is_core = ROOT
-					}
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
-
 	}
 
 	gra_own_iberia = {
@@ -773,6 +757,15 @@ adu_slot_2_missions = {
 				add_claim = ROOT
 			}
 			west_piedmont_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			cuneo_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -1295,7 +1288,16 @@ andalusia_slot_4_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = {
 						owned_by = ROOT
@@ -1316,7 +1318,8 @@ andalusia_slot_4_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1329,7 +1332,12 @@ andalusia_slot_4_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT

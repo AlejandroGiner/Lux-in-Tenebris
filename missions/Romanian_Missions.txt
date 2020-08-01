@@ -136,7 +136,21 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			upper_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			sofya_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -185,6 +199,8 @@ romanian_missions_1 = {
 						area = north_macedonia_area
                         area = thrace_area
 						area = upper_thrace_area
+						area = sofya_area
+						area = eastern_thrace_area
                     }
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -209,7 +225,15 @@ romanian_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			eastern_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			upper_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sofya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -238,7 +262,21 @@ romanian_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ionian_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			north_morea_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -268,8 +306,10 @@ romanian_missions_1 = {
 			OR = {
 				area = northern_greece_area
 				area = morea_area
+				area = north_morea_area
 				area = western_aegean_area
 				area = thessaly_area
+				area = ionian_islands_area
 				owned_by = BYZ
 			}
 			NOT = {
@@ -284,6 +324,10 @@ romanian_missions_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			ionian_islands_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			western_aegean_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -293,6 +337,10 @@ romanian_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -328,9 +376,11 @@ romanian_missions_5 = {
 		provinces_to_highlight = {
 			OR = {
 				area = wallachia_area
+				area = oltenia_area
 				area = moldavia_area
 				area = western_moldovia
 				area = eastern_wallachia_area
+				area = bukovina_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -342,11 +392,19 @@ romanian_missions_5 = {
 				type = all
 				owned_by = ROOT
 			}
+			oltenia_area = {
+				type = all
+				owned_by = ROOT
+			}
 			eastern_wallachia_area = {
 				type = all
 				owned_by = ROOT
 			}
 			western_moldovia = {
+				type = all
+				owned_by = ROOT
+			}
+			bukovina_area = {
 				type = all
 				owned_by = ROOT
 			}

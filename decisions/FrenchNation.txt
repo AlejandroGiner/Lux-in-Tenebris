@@ -10,20 +10,24 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = HLR }
 			NOT = { tag = LTE }
 			NOT = { tag = FRA }
 			NOT = { tag = OUT }
-			NOT = { tag = PAP }
-			NOT = { tag = SPA }		# Basque is a valid culture for both FRA and SPA
+			NOT = { tag = SPA }
+			NOT = { tag = GBR }
+			NOT = { tag = UNK }
+			NOT = { tag = NED }
+			NOT = { tag = GER }
+			NOT = { tag = IBE }
+			NOT = { tag = ITA }
 			OR = {
 				ai = no
 				NOT = { exists = FRA }
 			}
 			OR = {
 				culture_group = french
-				primary_culture = basque
 				primary_culture = breton
+				TAG = NAV
 			}
 			is_colonial_nation = no
 			OR = {
@@ -46,7 +50,7 @@ country_decisions = {
 			owns_core_province = 183			# Paris
 			owns_core_province = 186			# Rheims, coronation site
 			owns_core_province = 203			# Lyon
-			owns_core_province = 4389			# Tours
+			owns_core_province = 5172			# Tours
 			custom_trigger_tooltip = {
 			tooltip = half_of_france_tooltip
 				calc_true_if = {
@@ -54,7 +58,7 @@ country_decisions = {
 						is_core = ROOT
 						region = france_region
 					}
-					amount = 63			#At least half of France's 125 provinces
+					amount = 75			#At least half of France's 150 provinces
 				}
 			}
 		}

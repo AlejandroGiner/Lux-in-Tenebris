@@ -62,7 +62,7 @@ country_event = {
     capital_scope = { region = italy_region }
     reverse_has_opinion = {
       who = PAP
-      value = 75
+      value = 25
     }
     religion = catholic
     any_owned_province = {
@@ -71,6 +71,13 @@ country_event = {
         religion = protestant
         religion = reformed
       }
+      OR = {
+            had_province_flag = {
+                flag = received_inquisition_help_flag
+                days = 9125
+            }
+            NOT = { has_province_flag = received_inquisition_help_flag }
+        }
     }
   }
   
@@ -88,10 +95,14 @@ country_event = {
           religion = protestant
           religion = reformed
         }
-        had_province_flag = {
-          flag = received_inquisition_help_flag
-          days = 9125
+        OR = {
+            had_province_flag = {
+                flag = received_inquisition_help_flag
+                days = 9125
+            }
+            NOT = { has_province_flag = received_inquisition_help_flag }
         }
+        
       }
       remove_province_modifier = religious_zeal_at_conv
       add_province_modifier = {

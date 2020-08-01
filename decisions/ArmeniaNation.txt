@@ -12,6 +12,8 @@ country_decisions = {
 			}
 			NOT = { tag = ARM }
 			NOT = { tag = MOU }
+			NOT = { tag = RUM }
+			NOT = { tag = TUR }
 			OR = {
 				ai = no
 				AND = {
@@ -19,8 +21,6 @@ country_decisions = {
 					num_of_cities = 3
 				}
 			}
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
 			primary_culture = armenian
 			is_colonial_nation = no
 			OR = {
@@ -35,13 +35,13 @@ country_decisions = {
 				province_id = 7036  # Kars
 				province_id = 4302	# Manzikert
 				AND = {
-	        province_id = 2306
-	        ROOT = { NOT = { owns_core_province = 2307 } }
-        }
+					province_id = 2306
+					ROOT = { NOT = { owns_core_province = 2307 } }
+				}
 				AND = {
-          province_id = 2307
-          ROOT = { NOT = { owns_core_province = 2306 } }
-        }
+					province_id = 2307
+					ROOT = { NOT = { owns_core_province = 2306 } }
+				}
 			}
 			OR = {
 				NOT = { owned_by = ROOT }

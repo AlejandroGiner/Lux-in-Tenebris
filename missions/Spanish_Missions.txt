@@ -22,8 +22,11 @@ spa_colonial_group = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
-				colonial_the_carribean = {
-					has_discovered = ROOT
+				OR = {
+					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_cuba = { has_discovered = ROOT }
+					colonial_hispaniola = { has_discovered = ROOT }
+					colonial_bahamas = { has_discovered = ROOT }
 				}
 			}
 		}
@@ -849,7 +852,14 @@ spa_reconquista_por = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -881,7 +891,8 @@ spa_reconquista_por = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 				area = calabria_area
 				area = apulia_area
 			}
@@ -893,7 +904,11 @@ spa_reconquista_por = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

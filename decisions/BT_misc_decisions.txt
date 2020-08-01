@@ -1,0 +1,463 @@
+country_decisions = {
+
+	move_capital_dublin = {
+		major = yes
+		potential = {
+			OR = {
+				tag = IRE
+				tag = TNA
+				tag = ANI
+			}
+			OR = {
+				culture_group = gaelic
+				culture_group = british
+			}
+			owns = 373
+			NOT = { has_global_flag = built_capital_in_dublin }
+		}
+		allow = {
+			is_core = 373
+			is_at_war = no
+			adm_power = 100
+		}
+		effect = {
+			set_global_flag = built_capital_in_dublin
+			if = {
+				limit = { NOT = { capital = 373 } }
+				373 = { move_capital_effect = yes }
+				add_adm_power = -50			#Roughly 1/4 price compared to normal moving capital
+			}
+			if = {
+				limit = { culture_group = gaelic }
+				373 = { rename_capital = "Baile Átha Cliath" }
+			}
+			else = {
+				373 = { rename_capital = "Dublin" }
+			}
+			if = {
+				limit = { 373 = { has_owner_culture = no } }
+				373 = {
+					add_culture_construction = {
+						culture = ROOT
+						speed = 0.5
+						cost = 0.0
+					}
+				}
+			}
+			373 = {
+			 	add_base_tax = 2
+				add_base_production = 2
+			 	add_base_manpower = 1
+			}
+			add_prestige = 10
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	create_the_kingdom_of_ireland_as_england = {
+		major = yes
+		potential = {
+			NOT = { exists = ANI }
+			NOT = { exists = IRE }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			capital_scope = { region = british_isles_region }			#This will include England, Scotland, and Great Britain, but also dynamically any alt history powers in the British Isles. For non British polities history is out the window enough that this option shouldn't really be available, as it isn't for any other area.
+			NOT = { culture_group = gaelic }			#Gaels will try to form TnG
+			num_of_owned_provinces_with = {
+				value = 25
+				region = ireland_region
+			}	#over half of Ireland to see
+		}
+		provinces_to_highlight = {
+			region = ireland_region
+			owned_by = ROOT
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			NOT = { exists = IRE }
+			custom_trigger_tooltip = {
+				tooltip = three_quarters_of_ireland_tooltip
+				num_of_owned_provinces_with = {
+					value = 33
+					region = ireland_region
+					is_core = ROOT
+					owned_by = ROOT
+				}	#3/4 of Ireland's 44 provinces
+			}
+		}
+		effect = {
+			ireland_region = {
+				limit = { NOT = { is_core = ROOT } }
+				add_permanent_claim = ANI
+			}
+			hidden_effect = {
+				ireland_region = {
+					limit = { is_core = ROOT }
+					remove_core = ROOT
+					add_core = ANI
+				}
+			}
+			ireland_region = {
+				limit = { owned_by = ROOT }
+				cede_province = ANI
+			}
+			hidden_effect = {
+				ANI = {
+					set_government_rank = 2
+					change_government = monarchy
+					add_government_reform = anglo_irish_monarchy_reform
+					add_historical_friend = ROOT
+					change_primary_culture = ROOT
+					change_religion = ROOT
+					set_country_flag = formed_kingdom_of_ireland_flag_btp
+				}
+			}
+			create_subject = {
+				subject_type = viceroyalty_bt
+				subject = ANI
+			}
+			add_country_modifier = {
+				name = "huzzah_for_devolution"
+				duration = 7300
+			}
+			add_dip_power = 300			#Little reward for founder in addition to dip rep
+			add_prestige = 10
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { total_development = 350 }			#tag will not do if the new country (197 dev with 1444 values + Dublin decision) would have over 50 percent the dev of the remaining country. Note this is based on 1444 values, because there is no way to calculate dynamically.
+			}	#Also note England's base dev in 181, plus 28 in Wales and Cornwall, and 90 in Ireland so this will almost always be a yes even if England loses all French holdings and doesn't build up dev
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						tag = ENG
+						tag = GBR			#AI will not do unless one of the historical nations in Britain.
+						tag = SCO
+					}
+				}
+			}
+		}
+	}
+
+	embrace_irish_traditions = {
+		major = yes
+		potential = { 
+			has_reform = norman_lordship_reform 
+		}
+		allow = {
+			NOT = { alliance_with = ENG }
+			any_ally = { primary_culture = irish }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+		}
+		effect = {
+			change_primary_culture = irish
+			capital_scope = { change_culture = irish }
+			add_stability = -1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }			#tag will not do if stability 0 or lower
+			}
+		}
+	}
+	
+	reform_irish_government = {
+		major = yes
+		potential = {
+			NOT = { exists = ANI }
+			NOT = { exists = IRE }
+			is_year = 1595		#So players can plan a bit ahead
+			OR = {
+				has_reform = norman_lordship_reform
+				has_reform = irish_clann_reform
+			}
+		}
+		allow = {
+			is_year = 1600
+			OR = {
+				has_reform = norman_lordship_reform
+				has_reform = irish_clann_reform
+			}
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+		}
+		effect = {
+			add_government_reform = feudalism_reform
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			capital_scope = { add_base_tax = 1 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	recognise_marcharid_of_brittany = {
+		major = yes
+		potential = {
+			tag = BRI
+			dynasty = "de Dreux"
+			OR = {
+				has_ruler = "Fransez I"
+				has_ruler = "Pêr II"
+			}
+			OR = {
+				has_heir = no
+				AND = {
+					has_heir = "Pêr"
+					heir_age = 25
+				}
+			}
+			is_year = 1443			#Marc'harid is born
+			NOT = { is_year = 1469 }			#Marc'harid dies
+			NOT = { has_country_flag = marcharid_recognised }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			stability = -2
+			custom_trigger_tooltip = {
+				tooltip = tooltip_bt_marcharid_of_brittany_is_alive
+				is_year = 1443
+				NOT = { is_year = 1469 }
+			}
+		}
+		effect = {
+			add_stability = -1
+			FRA = {
+				add_casus_belli = {
+					target = ROOT
+					type = cb_insult
+					months = 12
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_insulted
+				}
+			}
+			SCO = {
+				add_opinion = {
+					who = ROOT
+					modifier = we_are_kin
+				}
+			}
+			hidden_effect = { set_country_flag = marcharid_recognised }
+			define_heir = {
+				name = "Marc'harid"
+				dynasty = "de Dreux" 
+				birth_date = 1443.11.11
+				claim = 65
+				female = yes
+				adm = 4
+				dip = 4
+				mil = 3
+				no_consort_with_heir = yes
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }	#No negative stability
+			}
+		}
+	}
+	
+	move_trade_to_mogador = {
+		potential = {
+			tag = MOR
+			owns = 345
+			owns = 2470
+			345 = { province_has_center_of_trade_of_level = 1 }
+			2470 = { NOT = { province_has_center_of_trade_of_level = 1 } }
+			num_of_owned_provinces_with = {
+				value = 5
+				region = maghreb_region
+				has_port = yes
+			}	#must control at least 3 other ports in the Maghreb
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 345
+				province_id = 2470
+			}
+		}
+		allow = {
+			is_at_war = no
+			adm_power = 100
+			treasury = 500
+			2470 = { NOT = { has_estate = yes } }
+		}
+
+		effect = {
+			if = {
+				limit = { NOT = { adm = 5 } }
+				add_corruption = 2
+			}
+			345 = {
+				add_center_of_trade_level = -1
+				add_base_tax = -2
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+			2470 = {
+				center_of_trade = 2
+				add_base_tax = 4
+				add_base_production = 1
+				add_base_manpower = 1
+				if = {
+					limit = { NOT = { has_building = fort_15th } }
+					add_building = fort_15th
+				}
+				if = {
+					limit = { local_autonomy = 5 }
+					set_local_autonomy = 0
+				}
+			}
+			add_adm_power = -100
+			add_treasury = -500
+			add_prestige = 5
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { is_year = 1700 }
+			}
+			modifier = {
+				factor = 0
+				NOT = { adm = 5 }
+			}
+		}
+	}
+	
+	sweads_and_geats_one_big_happy_family = {
+		potential = {
+			tag = SWE
+			OR = {
+				AND = {
+					primary_culture = swedish
+					accepted_culture = gotlander
+				}
+				AND = {
+					primary_culture = gotlander
+					accepted_culture = swedish
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 4
+				culture = gotlander
+				is_core = ROOT
+			} #Dont want this decision appearing constantly everytime a new province is taken. Need at least 4 provinces with Gotlander culture
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			culture = gotlander
+			NOT = { province_id = 25 }
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			dip_power = 50
+		}
+		effect = {
+			if = {
+				limit = { primary_culture = gotlander }
+				change_primary_culture = swedish
+			}
+			every_core_province = {
+				limit = {
+					culture = gotlander
+					NOT = { province_id = 25 }	#will not change Gotlands culture
+				}
+				change_culture = swedish
+				if = {
+					limit = {
+						local_autonomy = 10
+						NOT = { has_estate = yes }
+					}
+					add_local_autonomy = -10
+				}
+				if = {
+					limit = {
+						local_autonomy = 35
+						has_estate = yes
+					}
+					add_local_autonomy = -10
+				}
+			}
+			add_dip_power = -50
+			add_prestige = 5
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+	bt_enforce_temporal_authority = {
+		major = yes
+		potential = {
+			tag = PAP
+			any_subject_country = { is_subject_of_type = papal_subject_bt }
+		}
+
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			any_neighbor_country = {
+				is_subject_of_type = papal_subject_bt
+				has_opinion = { who = PAP value = 175 }
+				is_at_war = no
+			}
+		}
+
+		effect = {
+			every_neighbor_country = {
+				limit = {
+					is_subject_of_type = papal_subject_bt
+					has_opinion = { who = PAP value = 175 }
+					is_at_war = no
+				}
+				PAP = { vassalize = PREV }
+				add_opinion = {
+					who = PAP
+					modifier = bt_temporal_authority_enforced
+				}
+			}
+			every_subject_country = {
+				limit = {
+					is_subject_of_type = papal_subject_bt
+					OR = {
+						NOT = { is_neighbor_of = PAP }
+						NOT = { has_opinion = { who = PAP value = 175 } }
+						is_at_war = yes
+					}
+				}
+				add_opinion = {
+					who = PAP
+					modifier = bt_temporal_authority_enforced_on_other
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { has_opinion = { who = PAP value = 75 } }
+			}
+		}
+	}
+}

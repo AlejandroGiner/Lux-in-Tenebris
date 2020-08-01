@@ -10,13 +10,10 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
+
 native_size = 20
 native_ferocity = 3
 native_hostileness = 1
-
-discovered_by = eastern
-discovered_by = western
-discovered_by = KAZ
 
 extra_cost = 18
 center_of_trade = 1
@@ -26,7 +23,11 @@ add_permanent_province_modifier = {
 	duration = -1
 }
 
-#
+discovered_by = siberian_btc
+discovered_by = eastern
+discovered_by = western
+discovered_by = KAZ
+
 1499.1.1 = {
 	owner = MOS
 	controller = MOS

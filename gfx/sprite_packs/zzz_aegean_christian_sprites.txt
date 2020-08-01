@@ -1,0 +1,97 @@
+btc_greek_states_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = TRE
+			tag = LES
+			tag = ATH
+			tag = EPI
+			tag = CPH
+			tag = ROC
+			tag = CAP
+			tag = ACH
+			tag = MOE
+		}
+	}
+	
+	sprite_infantry = {
+		0 = FEO_INFANTRY_1
+		1 = FEO_INFANTRY_2
+		2 = FEO_INFANTRY_3
+		3 = FEO_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = FEO_CAVALRY_1
+		1 = FEO_CAVALRY_2
+		2 = FEO_CAVALRY_3
+		3 = FEO_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = FEO_ARTILLERY_1
+		1 = FEO_ARTILLERY_2
+		2 = FEO_ARTILLERY_3
+		3 = FEO_ARTILLERY_4
+	}
+}
+
+btc_latin_empire_sprite_pack = {
+	#Tests against every tag in the game
+		country_trigger = {
+			tag = LTE
+		}
+		
+		sprite_infantry = {
+		0 = KNI_INFANTRY_1
+		1 = FEO_INFANTRY_2
+		2 = FEO_INFANTRY_3
+		3 = FEO_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = KNI_CAVALRY_1
+		1 = FEO_CAVALRY_2
+		2 = FEO_CAVALRY_3
+		3 = FEO_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = KNI_ARTILLERY_1
+		1 = FEO_ARTILLERY_2
+		2 = FEO_ARTILLERY_3
+		3 = FEO_ARTILLERY_4
+	}
+}
+
+btc_venetian_vassals_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {	
+			tag = CDA
+			tag = CEP
+			tag = NAX
+		}
+	}
+
+	sprite_infantry = {
+		0 = VEN_INFANTRY_1
+		1 = VEN_INFANTRY_2
+		2 = VEN_INFANTRY_3
+		3 = VEN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = VEN_CAVALRY_1
+		1 = VEN_CAVALRY_2
+		2 = VEN_CAVALRY_3
+		3 = VEN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = VEN_ARTILLERY_1
+		1 = VEN_ARTILLERY_2
+		2 = VEN_ARTILLERY_3
+		3 = VEN_ARTILLERY_4
+	}
+}

@@ -1,1 +1,340 @@
-#Unused. Overwriting vanilla file.
+country_decisions = {
+
+###################################################################################################
+################################			Hannover			 ##################################
+###################################################################################################
+	hannoverian_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_hannover_flag }
+			NOT = { tag = HAN }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = SWI }
+			primary_culture = hannoverian
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 53	# L�neburg
+				province_id = 54	# Stade
+				province_id = 1758	# Hannover
+				province_id = 2971	# Hoya
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = HAN }
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			OR = {
+				NOT = { is_part_of_hre = yes }
+				is_elector = yes
+			}
+			capital_scope = { province_id = 1758 }
+			owns_core_province = 53	# L�neburg
+			owns_core_province = 54	# Stade
+			owns_core_province = 1758	# Hannover
+			owns_core_province = 2971	# Hoya
+		}
+		effect = {
+			change_tag = HAN
+			btc_new_nation_effects = yes 
+			every_province = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+					OR = {
+						#province_id = 53 # Luneburg
+						#province_id = 54 # Stade
+						province_id = 55 # Oldenburg
+						province_id = 56 # Osnabruck
+						province_id = 57 # Brunswick
+						#province_id = 1758 # Hannover
+						province_id = 1874 #Bremen
+						province_id = 1931 # East Frisia
+						#province_id = 2971 # Hoya
+					}
+				}
+				add_permanent_claim = HAN
+			}
+			set_country_flag = formed_hannover_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				is_part_of_hre = yes
+				is_elector = no	
+			}
+		}
+		ai_importance = 400
+	}
+	
+###################################################################################################
+################################			Westphalia			 ##################################
+###################################################################################################
+	westphalian_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_westphalia_flag }
+			NOT = { tag = WES }
+			NOT = { tag = GER }
+			NOT = { tag = PRU }
+			NOT = { tag = HSA }
+			NOT = { tag = SWI }
+			OR = {
+				primary_culture = hannoverian #Westphalian
+				primary_culture = hessian
+				capital_scope = { area = westphalia_area }
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 52	# Magdeburg
+				province_id = 82	# Westfalen
+				province_id = 1758	# Hannover
+				province_id = 1762	# Kassel
+				province_id = 2972	# Paderborn
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = WES }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			OR = {
+				NOT = { is_part_of_hre = yes }
+				is_elector = yes
+			}
+			capital_scope = { area = westphalia_area }
+			owns_core_province = 52	# Magdeburg
+			owns_core_province = 82	# Westfalen
+			owns_core_province = 1758	# Hannover
+			owns_core_province = 1762	# Kassel
+			owns_core_province = 2972	# Paderborn
+		}
+		effect = {
+			change_tag = WES
+			remove_non_electors_emperors_from_empire_effect = yes
+			capital_scope = { add_base_tax = 1 }
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 3650
+			}
+			add_prestige = 10
+			westphalia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = WES
+			}
+			lower_saxony_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = WES
+			}
+			swap_ideas = yes
+			set_country_flag = formed_westphalia_flag
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+
+###################################################################################################
+################################			Greece			 ######################################
+###################################################################################################
+	greek_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_greece_flag }
+			NOT = { tag = GRE }
+			NOT = { tag = BYZ }
+			culture_group = byzantine
+			any_owned_province = {
+				OR = {
+					province_id = 151
+					province_id = 1853
+					province_id = 146
+				}
+			}
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
+		provinces_to_highlight = {
+			form_greece_provinces_btc = yes
+		}
+		allow = {
+			NOT = { exists = GRE }
+			NOT = { exists = BYZ }
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			owns_core_province = 146
+			custom_trigger_tooltip = {
+			tooltip = third_of_greece_tooltip
+				num_of_owned_provinces_with = {
+					value = 17
+					form_greece_provinces_btc = yes
+					is_core = ROOT
+				}
+			}
+		}
+		effect = {
+			change_tag = GRE
+			btc_new_nation_effects = yes 
+			custom_tooltip = greece_formable_claims_tooltip
+			hidden_effect = {
+				every_province = {
+					limit = {
+						form_greece_provinces_btc = yes
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			set_country_flag = formed_greece_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400 
+	}
+	
+###################################################################################################
+################################			Iceland			 ######################################
+###################################################################################################
+	icelandic_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_iceland_flag }
+			NOT = { tag = ICE }
+			NOT = { tag = SCA }
+			NOT = { tag = NOR }
+			NOT = { tag = DAN }
+			NOT = { tag = SWE }
+			OR = {
+				primary_culture = icelandic
+				AND = {
+					culture_group = scandinavian
+					any_owned_province = { area = iceland_area }
+				}
+			}
+		}
+		provinces_to_highlight = {
+			area = iceland_area
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ICE }
+			btc_can_form_trigger = yes
+			btc_was_not_colonial_nation_trigger = yes
+			num_of_owned_provinces_with = { 
+				value = 3
+				area = iceland_area
+				is_core = ROOT
+			}
+		}
+		effect = {
+			hidden_effect = {
+				every_province = {
+					limit = {
+						is_core = ROOT
+						NOT = { owned_by = ROOT }
+					}
+					remove_core = ROOT
+					if = {
+						limit = { ROOT = { tag = NOR } }
+						set_province_flag = norwegian_core
+					}
+					if = {
+						limit = { ROOT = { tag = DAN } }
+						set_province_flag = danish_core
+					}
+					if = {
+						limit = { ROOT = { tag = SWE } }
+						set_province_flag = swedish_core
+					}					
+				}
+			}
+			change_tag = ICE
+			hidden_effect = {
+				every_province = {
+					if = {
+						limit = {
+							has_province_flag = norwegian_core
+						}
+						add_core = NOR
+						clr_province_flag = norwegian_core					
+					}
+					if = {
+						limit = {
+							has_province_flag = danish_core
+						}
+						add_core = DAN
+						clr_province_flag = danish_core					
+					}
+					if = {
+						limit = {
+							has_province_flag = swedish_core
+						}
+						add_core = SWE
+						clr_province_flag = swedish_core					
+					}					
+				}
+			}
+			#Not using btc for iceland because it wouldn't make sense to make iceland a kingdom rank
+			#Modified btc effects
+			swap_non_generic_missions = yes
+			add_prestige = 25
+			remove_non_electors_emperors_from_empire_effect = yes
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					government = tribal
+				}
+				change_government = monarchy
+				set_legacy_government = despotic_monarchy
+			}
+			swap_ideas = yes
+			set_country_flag = formed_iceland_flag
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				capital_scope = { NOT = { area = iceland_area } }
+			}
+		}
+		ai_importance = 400 #
+	}
+
+}

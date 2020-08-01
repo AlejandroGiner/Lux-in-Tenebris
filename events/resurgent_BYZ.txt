@@ -87,6 +87,7 @@ country_event = { #2 The Genoese Merchants
 				region = anatolia_region
 				area = erzurum_area
 				area = crimea_area
+				area = crimea_coast_area
 				province_id = 286
 			}
 			owned_by = GEN
@@ -126,6 +127,7 @@ country_event = { #2 The Genoese Merchants
 					region = anatolia_region
 					area = erzurum_area
 					area = crimea_area
+					area = crimea_coast_area
 					province_id = 286
 				}
 			}
@@ -827,7 +829,7 @@ country_event = { #11 City of the World's Desire
 				}
 			}
 			modifier = {
-				factor = 0.05
+				factor = 0.5
 				#Takes care of Austria, Hungary and the PLC, sometimes also the Mamluks.
 				OR = {
 					any_country = {
@@ -844,6 +846,9 @@ country_event = { #11 City of the World's Desire
 		
 		add_prestige = 10
 		thrace_area = {
+			add_claim = TUR
+		}
+		eastern_thrace_area = {
 			add_claim = TUR
 		}
 		declare_war_with_cb = {

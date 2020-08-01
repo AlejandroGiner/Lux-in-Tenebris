@@ -101,6 +101,10 @@ country_decisions = {
 				complete_mission = tr_subjugate_novgorod
 			}
 			change_tag = RUS
+			hidden_effect = {
+				add_historical_rival = UKR
+				remove_historical_rival = KIE
+			}
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

@@ -16,11 +16,12 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
 				area = naples_area
 				area = apulia_area
 				area = calabria_area
 				area = abruzzo_area
+				area = sicily_islands_area
 			}
 			NOT = {
 				province_id = 126
@@ -32,7 +33,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = TSI }
+			NOT = { exists = TTS }
 			adm_tech = 15
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
@@ -55,7 +56,8 @@ country_decisions = {
 							area = calabria_area
 							area = abruzzo_area
 							area = sicily_area
-							area = east_sicily_area
+							area = western_sicily_area
+							area = sicily_islands_area
 						}
 						NOT = {
 							province_id = 126		#Malta
@@ -68,7 +70,7 @@ country_decisions = {
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
-			change_tag = TSI
+			change_tag = TTS
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -84,20 +86,27 @@ country_decisions = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 7607
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
-			east_sicily_area = {
+			western_sicily_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 126
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
+			}
+			7060 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
 			}
 			naples_area = {
 				limit = {
@@ -106,7 +115,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			apulia_area = {
 				limit = {
@@ -115,7 +124,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			calabria_area = {
 				limit = {
@@ -124,7 +133,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			abruzzo_area = {
 				limit = {
@@ -133,7 +142,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			corsica_sardinia_area = {
 				limit = {
@@ -142,7 +151,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			corsica_area = {
 				limit = {
@@ -151,7 +160,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			swap_ideas = yes
 		}
@@ -178,7 +187,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = { exists = TSI }
+			NOT = { exists = TTS }
 			adm_tech = 15
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
@@ -202,7 +211,7 @@ country_decisions = {
 				limit = { tag = SIC }
 				inherit = NAP
 			}
-			change_tag = TSI
+			change_tag = TTS
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -218,20 +227,27 @@ country_decisions = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 7607
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
-			east_sicily_area = {
+			western_sicily_area = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
 						is_core = ROOT
-						province_id = 126
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
+			}
+			7060 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
 			}
 			naples_area = {
 				limit = {
@@ -240,7 +256,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			apulia_area = {
 				limit = {
@@ -249,7 +265,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			calabria_area = {
 				limit = {
@@ -258,7 +274,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			abruzzo_area = {
 				limit = {
@@ -267,7 +283,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			corsica_sardinia_area = {
 				limit = {
@@ -276,7 +292,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			corsica_area = {
 				limit = {
@@ -285,7 +301,7 @@ country_decisions = {
 						is_core = ROOT
 					}
 				}
-				add_permanent_claim = TSI
+				add_permanent_claim = TTS
 			}
 			swap_ideas = yes
 		}

@@ -1,6 +1,41 @@
 # For specific government types
 # Will pick the first valid one it finds in list
 
+gov_puppet_kingdom_of_ireland = {
+	rank = {
+		2 = KINGDOM
+	}	
+	
+	ruler_male = {
+		2 = BTLORDLIEUTENANT
+	}
+	
+	ruler_female = {
+		2 = BTLORDLIEUTENANTFEMALE	
+	}
+	
+	consort_male = {
+		2 = BTLORDLIEUTENANT
+	}
+
+	consort_female = {
+		2 = BTLORDLIEUTENANTFEMALE
+	}
+	
+	heir_male = {
+		2 = BTHEIRAPPARENT
+	}
+
+	heir_female = {
+		2 = BTHEIRAPPARENT
+	}
+
+	trigger = {
+		#government = puppet_kingdom_of_ireland_legacy
+		always = no
+	}
+}
+
 gov_irish_clann = {
 	rank = {
 		1 = CLANN
@@ -32,40 +67,6 @@ gov_irish_clann = {
 	
 	trigger = {
 		has_reform = irish_clann_reform
-	}
-}
-
-gov_provincial_kingdom = {
-	rank = {
-		1 = PROVKINGDOM
-	}
-	
-	ruler_male = {
-		1 = RIRUIR
-	}
-	
-	ruler_female = {
-		1 = BANRIONRUIR
-	}
-	
-	consort_male = {
-		1 = FEARNABANRION
-	}
-
-	consort_female = {
-		1 = BANANRI
-	}
-	
-	heir_male = {
-		1 = TANAISTE
-	}
-
-	heir_female = {
-		1 = BANTANAISTE
-	}
-	
-	trigger = {
-		government = provincial_kingdom_legacy
 	}
 }
 
@@ -113,11 +114,12 @@ gov_high_kingship = {
 	}
 	
 	trigger = {
-		government = high_kingship_legacy
+		#government = high_kingship_legacy
+		always = no
 	}
 }
 
-gov_norman_lordship = {
+gov_norman_lordship_reform = {
 	rank = {
 		1 = EARLDOM
 	}
@@ -147,45 +149,12 @@ gov_norman_lordship = {
 	}
 	
 	trigger = {
-		government = norman_lordship_legacy
+		#government = norman_lordship_legacy
+		always = no
 	}
 }
 
-gov_norman_duchy = {
-	rank = {
-		1 = DUCHY
-	}
-	
-	ruler_male = {
-		1 = DUKE
-	}
-	
-	ruler_female = {
-		1 = DUCHESS
-	}
-	
-	consort_male = {
-		1 = DUKE
-	}
-
-	consort_female = {
-		1 = DUCHESS
-	}
-	
-	heir_male = {
-		1 = HEIR
-	}
-
-	heir_female = {
-		1 = HEIRESSBTP
-	}
-	
-	trigger = {
-		government = norman_duchy_legacy
-	}
-}
-
-gov_anglo_irish_monarchy = {
+gov_anglo_irish_monarchy_reform = {
 	rank = {
 		1 = DUCHY
 		2 = KINGDOM
@@ -229,11 +198,12 @@ gov_anglo_irish_monarchy = {
 	}
 	
 	trigger = {
-		government = anglo_irish_monarchy_legacy
+		#government = anglo_irish_monarchy_legacy
+		always = no
 	}
 }
 
-gov_florence_republic = {
+gov_florentine_republic_btc = {
 	rank = {
 		1 = SIGNORIA
 		2 = GRAND_REPUBLIC
@@ -253,10 +223,9 @@ gov_florence_republic = {
 	}
 
 	trigger = {
-		OR = {
-		government = florence_republic_legacy
-		government = florentine_republic_btc
-		}
+		#government = florence_republic_legacy
+		#government = florentine_republic_btc
+		always = no
 	}
 }
 
@@ -281,45 +250,10 @@ gov_florence_duchy  = {
 
 	trigger = {
 		OR = {
-		government = tuscan_duchy_legacy
-		government = tuscan_duchy_btc
+			#government = tuscan_duchy_legacy
+			#government = tuscan_duchy_btc
 		}
-	}
-}
-
-gov_regnum_dei = {
-	rank = {
-		1 = PAPACY
-		2 = PAPACY
-		3 = PAPACY
-	}
-	
-	ruler_male = {
-		1 = POPE
-		2 = POPE
-		3 = POPE
-	}
-	
-	ruler_female  ={
-		1 = POPETTE
-		2 = POPETTE
-		3 = POPETTE
-	}
-	
-	heir_male = {
-		1 = PREFERATUSBTP
-		2 = PREFERATUSBTP
-		3 = PREFERATUSBTP
-	}
-
-	heir_female = {
-		1 = PREFERATABTP
-		2 = PREFERATABTP
-		3 = PREFERATABTP
-	}
-	
-	trigger = {
-		government = regnum_dei_legacy
+		always = no
 	}
 }
 

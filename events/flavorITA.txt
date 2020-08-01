@@ -3,32 +3,25 @@ normal_or_historical_nations = yes
 
 country_event = {
   id =  flavor_ita.1
-  title = "flavor_ita.1.t"
-  desc =  "flavor_ita.1.d"
+  title = flavor_ita.1.t
+  desc =  flavor_ita.1.d
   picture = COASTLINE_MAP_eventPicture
 
   fire_only_once = yes
+  is_triggered_only = yes
 
   trigger = {
     tag = ITA
-    NOT = { primary_culture = tuscan }
-    NOT = { primary_culture = umbrian }
-    NOT = { has_country_flag = italy_tuscan_language_flag }
-  }
-
-  mean_time_to_happen = {
-    days = 1
-  }
-
-  immediate = {
-    set_country_flag = italy_tuscan_language_flag
+    NOT = {
+		primary_culture = tuscan
+		primary_culture = umbrian
+	}
   }
 
   option = {  #adopt tuscan language
     name = flavor_ita.1.a
     add_country_modifier = {
       name = btc_language_of_italy
-      desc = btc_language_of_italy_desc
       duration = 7300
     }
     hidden_effect = {
@@ -36,7 +29,6 @@ country_event = {
         limit = { has_owner_culture = yes }
         add_province_modifier = {
           name = btc_italy_local_language_unrest
-          desc = btc_italy_local_language_unrest_desc
           duration = 1825
         }
       }

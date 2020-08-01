@@ -6,7 +6,7 @@ pom_recon_wlg = {
 	potential = {
 		OR = {
 			tag = STP #Stolp
-			tag = STT #Stettin
+			tag = STE #Stettin
 		}
 	}
 	has_country_shield = yes
@@ -14,14 +14,15 @@ pom_recon_wlg = {
 	pom_gen_recon_wlg = {
 		icon = mission_invade_island
 		required_missions = { }
+		position = 1
 		
 		provinces_to_highlight = {
-			owned_by = WLG
+			owned_by = WOL
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			NOT = { exists = WLG }
+			NOT = { exists = WOL }
 			owns = 2994 #Wolgast
 		}
 		
@@ -32,13 +33,13 @@ pom_recon_wlg = {
 			#Claims
 			if = {
 				limit = {
-					NOT = { tag = STT }
+					NOT = { tag = STE }
 				}
 				custom_tooltip = pom_gen_recon_stt_claims
 				hidden_effect = {
 					every_province = {
 						limit = {
-							owned_by = STT
+							owned_by = STE
 							NOT = { is_core = ROOT }
 							NOT = { owned_by = ROOT }
 						}
@@ -73,7 +74,7 @@ pom_recon_stt = {
 	potential = {
 		OR = {
 			tag = STP #Stolp
-			tag = WLG #Wolgast
+			tag = WOL #Wolgast
 		}
 	}
 	has_country_shield = yes
@@ -81,14 +82,15 @@ pom_recon_stt = {
 	pom_gen_recon_stt = {
 		icon = mission_hanseatic_city
 		required_missions = { }
+		position = 2
 		
 		provinces_to_highlight = {
-			owned_by = STT
+			owned_by = STE
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			NOT = { exists = STT }
+			NOT = { exists = STE }
 			owns = 1858 #Stettin
 		}
 		
@@ -99,13 +101,13 @@ pom_recon_stt = {
 			#Claims
 			if = {
 				limit = {
-					NOT = { tag = WLG }
+					NOT = { tag = WOL }
 				}
 				custom_tooltip = pom_gen_recon_wlg_claims
 				hidden_effect = {
 					every_province = {
 						limit = {
-							owned_by = WLG
+							owned_by = WOL
 							NOT = { is_core = ROOT }
 							NOT = { owned_by = ROOT }
 						}
@@ -139,8 +141,8 @@ pom_recon_stp = {
 	
 	potential = {
 		OR = {
-			tag = STT #Stettin
-			tag = WLG #Wolgast
+			tag = STE #Stettin
+			tag = WOL #Wolgast
 		}
 	}
 	has_country_shield = yes
@@ -148,7 +150,7 @@ pom_recon_stp = {
 	pom_gen_recon_stp = {
 		icon = mission_assemble_an_army
 		required_missions = { }
-		position = 2
+		position = 3
 		
 		provinces_to_highlight = {
 			owned_by = STP
@@ -167,13 +169,13 @@ pom_recon_stp = {
 			#Claims
 			if = {
 				limit = {
-					NOT = { tag = WLG }
+					NOT = { tag = WOL }
 				}
 				custom_tooltip = pom_gen_recon_wlg_claims
 				hidden_effect = {
 					every_province = {
 						limit = {
-							owned_by = WLG
+							owned_by = WOL
 							NOT = { is_core = ROOT }
 							NOT = { owned_by = ROOT }
 						}
@@ -183,13 +185,13 @@ pom_recon_stp = {
 			}
 			if = {
 				limit = {
-					NOT = { tag = STT }
+					NOT = { tag = STE }
 				}
 				custom_tooltip = pom_gen_recon_stt_claims
 				hidden_effect = {
 					every_province = {
 						limit = {
-							owned_by = STT
+							owned_by = STE
 							NOT = { is_core = ROOT }
 							NOT = { owned_by = ROOT }
 						}
