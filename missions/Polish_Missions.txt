@@ -739,7 +739,14 @@ polish_missions_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_silesia_area = {
+			legnica_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			opole_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -754,7 +761,8 @@ polish_missions_slot_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = silesia_area
-				area = lower_silesia_area
+				area = legnica_area
+				area = opole_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -765,7 +773,11 @@ polish_missions_slot_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_silesia_area = {
+			opole_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legnica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

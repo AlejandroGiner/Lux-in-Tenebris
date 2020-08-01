@@ -156,6 +156,13 @@ bul_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			bukovina_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			transylvania_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -219,6 +226,7 @@ bul_1 = {
 				area = silistria_area
 				area = western_moldovia
 				area = transylvania_area
+				area = bukovina_area
 				area = southern_transylvania_area
 				area = szeklerland_area
 				area = alfold_area
@@ -250,6 +258,10 @@ bul_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			western_moldovia = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bukovina_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

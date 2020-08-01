@@ -154,6 +154,13 @@ emp_bra_pru_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			opole_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			lusatia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -388,6 +395,7 @@ emp_bra_pru_2 = {
 			OR = {
 				area = silesia_area
 				area = lusatia_area
+				area = opole_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -395,6 +403,10 @@ emp_bra_pru_2 = {
 		}
 		trigger = {
 			silesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			opole_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

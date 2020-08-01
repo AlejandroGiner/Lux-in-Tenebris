@@ -333,12 +333,24 @@ emp_bohemia_2 = {
 		completed_by = 1457.1.1
 		
 		provinces_to_highlight = {
-			area = silesia_area
+			OR = {
+				area = silesia_area
+				area = opole_area
+				area = legnica_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
 			silesia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			opole_area = {
+				type = all
+				owned_by = ROOT
+			}
+			legnica_area = {
 				type = all
 				owned_by = ROOT
 			}

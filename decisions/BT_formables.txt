@@ -2743,6 +2743,18 @@ country_decisions = {
 				}
 				add_permanent_claim = GMV
 			}
+			opole_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
+			legnica_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = GMV
+			}
 			slovakia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

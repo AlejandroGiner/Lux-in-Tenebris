@@ -1109,7 +1109,11 @@ trakai_area = {
 }
 
 western_moldovia = {
-	268 3157 4529 4530 7276 3156 7274
+	268 3157 4529 4530 7276
+}
+
+bukovina_area = {
+	7274 7275 3156
 }
 
 ########################################
@@ -1303,8 +1307,16 @@ lusatia_area = {
 	60 1763 4778 7600 4153 
 }
 
-silesia_area = { #3
-	263 4723 3142 3604 3605 3608 3606
+silesia_area = { #Wroclaw
+	3604 3605 3603 264 4347
+}
+
+legnica_area = {
+	2966 4238 7599 4178
+}
+
+opole_area = {
+	4723 3608 3142 263 3606
 }
 
 bohemia_area = { #4
@@ -1318,10 +1330,6 @@ erzgebirge_area = { #Sudety
 
 moravia_area = {
 	265 4237 4726 4725 3457
-}
-
-lower_silesia_area = {
-	264 2966 4238 7599 4178 4347 3603
 }
 
 ########################################
@@ -1426,7 +1434,7 @@ eastern_wallachia_area = {
 }
 
 moldavia_area = { #5
-	2405 3159 1756 7277 7278 7275
+	2405 3159 1756 7277 7278
 }
 
 transylvania_area = { # Inner transylvania

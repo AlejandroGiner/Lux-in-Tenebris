@@ -172,7 +172,8 @@ subjugate_bohemia_provinces = {
 recover_silesia_provinces = {
 	OR = {
 		area = silesia_area
-		area = lower_silesia_area
+		area = legnica_area
+		area = opole_area
 	}
 }
 partition_poland_provinces = {
@@ -292,7 +293,8 @@ vassalize_lithuania_provinces = {
 conquer_silesia_provinces = {
 	OR = {
 		area = silesia_area
-		area = lower_silesia_area
+		area = legnica_area
+		area = opole_area
 	}
 }
 

@@ -110,6 +110,10 @@ hun_north_group = {
 								type = all
 								country_or_non_sovereign_subject_holds = POL
 							}
+							bukovina_area = {
+								type = all
+								country_or_non_sovereign_subject_holds = POL
+							}
 						}
 					}
 				}
@@ -121,6 +125,13 @@ hun_north_group = {
 					add_permanent_claim = ROOT
 				}
 				western_moldovia = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				bukovina_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -307,6 +318,7 @@ hun_south_group = {
 			OR {
 				area = moldavia_area
 				area = western_moldovia
+				area = bukovina_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -317,6 +329,10 @@ hun_south_group = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			western_moldovia = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bukovina_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -331,6 +347,12 @@ hun_south_group = {
 				}
 			}
 			western_moldovia = {
+				add_province_modifier = {
+					name = "hun_moldavia_mod"
+					duration = 10950
+				}
+			}
+			bukovina_area = {
 				add_province_modifier = {
 					name = "hun_moldavia_mod"
 					duration = 10950

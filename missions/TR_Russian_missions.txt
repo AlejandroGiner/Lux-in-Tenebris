@@ -777,6 +777,13 @@ tr_russia_conquest_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			bukovina_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -806,6 +813,7 @@ tr_russia_exclusive_1 = {
 				area = eastern_wallachia_area
 				area = moldavia_area
 				area = western_moldovia
+				area = bukovina_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -829,6 +837,10 @@ tr_russia_exclusive_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			western_moldovia = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bukovina_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

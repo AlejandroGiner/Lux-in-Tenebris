@@ -1,7 +1,7 @@
 # - Glogau 
 
-owner = SIL
-controller = SIL
+owner = GLG
+controller = GLG
 culture = german_schlesian
 religion = catholic
 capital = "Glogau"
@@ -11,7 +11,7 @@ base_tax = 3
 base_production = 3
 is_city = yes
 base_manpower = 2
-add_core = SIL
+add_core = GLG
 
 discovered_by = KAZ
 discovered_by = CRI
@@ -24,8 +24,6 @@ discovered_by = muslim
 discovered_by = persian_btc
 discovered_by = ottoman
 
-1419.12.1 = { revolt = { type = heretic_rebels size = 0 } controller = REB } # Hussite Wars, Battle of Nekmir
-1436.7.5 = { revolt = {} controller = SIL } # Peace is signed in Jihlava
 1476.1.1 = { owner = BOH controller = BOH add_core = BOH }
 1526.8.30 = { owner = HAB controller = HAB add_core = HAB }
 1618.5.23 = {

@@ -121,7 +121,7 @@ prussian_missions_main_slot = {
 			#Claims
 			custom_tooltip = pru_conquer_silesia_claims
 			hidden_effect = {
-				lower_silesia_area = {
+				legnica_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -129,6 +129,13 @@ prussian_missions_main_slot = {
 					add_permanent_claim = ROOT
 				}
 				silesia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				opole_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -167,8 +174,9 @@ prussian_missions_main_slot = {
 		required_missions = { connect_the_prussian_lands }
 		provinces_to_highlight = {
 			OR = {
-				area = lower_silesia_area
+				area = legnica_area
 				area = silesia_area
+				area = opole_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -179,7 +187,11 @@ prussian_missions_main_slot = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_silesia_area = {
+			opole_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legnica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

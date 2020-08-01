@@ -78,6 +78,20 @@ emp_sax_missions_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
+			opole_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			legnica_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -86,13 +100,21 @@ emp_sax_missions_conquest = {
 		position = 2
 		required_missions = { emp_sax_conquer_erzgebirge }
 		provinces_to_highlight = {
-			area = silesia_area
+			OR = {
+				area = silesia_area
+				area = legnica_area
+				area = opole_area
+			}
 			NOT = { owned_by = root }
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
 						value = 3
-						area = silesia_area
+						OR = {
+							area = silesia_area
+							area = opole_area
+							area = legnica_area
+						}
 					}
 				}
 			}
@@ -100,11 +122,31 @@ emp_sax_missions_conquest = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 3
-				area = silesia_area
+				OR = {
+					area = silesia_area
+					area = opole_area
+					area = legnica_area
+				}
 			}
 		}
 		effect = {
 			silesia_area = {
+				limit = { owned_by = root }
+				add_nationalism = -10
+				add_province_modifier = {
+					name = sax_saxon_settlement
+					duration = 10950
+				}
+			}
+			opole_area = {
+				limit = { owned_by = root }
+				add_nationalism = -10
+				add_province_modifier = {
+					name = sax_saxon_settlement
+					duration = 10950
+				}
+			}
+			legnica_area = {
 				limit = { owned_by = root }
 				add_nationalism = -10
 				add_province_modifier = {

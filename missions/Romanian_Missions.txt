@@ -380,6 +380,7 @@ romanian_missions_5 = {
 				area = moldavia_area
 				area = western_moldovia
 				area = eastern_wallachia_area
+				area = bukovina_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -400,6 +401,10 @@ romanian_missions_5 = {
 				owned_by = ROOT
 			}
 			western_moldovia = {
+				type = all
+				owned_by = ROOT
+			}
+			bukovina_area = {
 				type = all
 				owned_by = ROOT
 			}

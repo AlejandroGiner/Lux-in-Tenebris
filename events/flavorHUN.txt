@@ -800,6 +800,28 @@ country_event = {
 				add_permanent_claim = HUN
 			}
 		}
+		if = {
+			limit = {
+				opole_area = {
+					country_or_non_sovereign_subject_holds = BOH
+				}
+			}
+			opole_area = {
+				limit = { country_or_non_sovereign_subject_holds = BOH }
+				add_permanent_claim = HUN
+			}
+		}
+		if = {
+			limit = {
+				legnica_area = {
+					country_or_non_sovereign_subject_holds = BOH
+				}
+			}
+			legnica_area = {
+				limit = { country_or_non_sovereign_subject_holds = BOH }
+				add_permanent_claim = HUN
+			}
+		}
 		BOH = {
 			265 = {
 				spawn_rebels = {
@@ -889,6 +911,28 @@ country_event = {
 					}
 				}
 				silesia_area = {
+					limit = { country_or_non_sovereign_subject_holds = BOH }
+					add_permanent_claim = HUN
+				}
+			}
+			if = {
+				limit = {
+					opole_area = {
+						country_or_non_sovereign_subject_holds = BOH
+					}
+				}
+				opole_area = {
+					limit = { country_or_non_sovereign_subject_holds = BOH }
+					add_permanent_claim = HUN
+				}
+			}
+			if = {
+				limit = {
+					legnica_area = {
+						country_or_non_sovereign_subject_holds = BOH
+					}
+				}
+				legnica_area = {
 					limit = { country_or_non_sovereign_subject_holds = BOH }
 					add_permanent_claim = HUN
 				}

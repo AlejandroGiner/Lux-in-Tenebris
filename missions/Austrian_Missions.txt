@@ -164,7 +164,10 @@ hab_holy_roman_ambitions = {
 			silesia_area = {
 				add_permanent_claim = ROOT
 			}
-			lower_silesia_area = {
+			opole_area = {
+				add_permanent_claim = ROOT
+			}
+			legnica_area = {
 				add_permanent_claim = ROOT
 			}
 			hidden_effect = {
@@ -190,7 +193,11 @@ hab_holy_roman_ambitions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_silesia_area = {
+			legnica_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			opole_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -198,12 +205,27 @@ hab_holy_roman_ambitions = {
 		provinces_to_highlight = {
 			OR {
 				area = silesia_area
-				area = lower_silesia_area
+				area = legnica_area
+				area = opole_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			silesia_area = {
+				add_province_modifier = {
+					name = "austrian_silesia"
+					duration = 7300
+				}
+				add_nationalism = -5
+			}
+			opole_area = {
+				add_province_modifier = {
+					name = "austrian_silesia"
+					duration = 7300
+				}
+				add_nationalism = -5
+			}
+			legnica_area = {
 				add_province_modifier = {
 					name = "austrian_silesia"
 					duration = 7300

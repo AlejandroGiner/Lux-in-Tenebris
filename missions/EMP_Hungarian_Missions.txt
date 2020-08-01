@@ -493,7 +493,14 @@ emp_hun_bohemia_austria_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			lower_silesia_area = {
+			opole_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			legnica_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -524,7 +531,8 @@ emp_hun_bohemia_austria_branch = {
 			OR = {
 				area = moravia_area
 				area = silesia_area
-				area = lower_silesia_area
+				area = opole_area
+				area = legnica_area
 				area = lausitz_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -535,7 +543,8 @@ emp_hun_bohemia_austria_branch = {
 						OR = {
 							area = moravia_area
 							area = silesia_area
-							area = lower_silesia_area
+							area = legnica_area
+							area = opole_area
 							area = lausitz_area
 						}
 					}
@@ -548,7 +557,8 @@ emp_hun_bohemia_austria_branch = {
 				OR = {
 					area = moravia_area
 					area = silesia_area
-					area = lower_silesia_area
+					area = opole_area
+					area = legnica_area
 					area = lausitz_area
 				}
 			}
