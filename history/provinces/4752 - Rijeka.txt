@@ -1,9 +1,9 @@
 #4752 - Fiume/Rijeka
 #Region - Italy
-#Area - Friuli
+#Area - Istria
 
-owner = HAB
-controller = HAB
+owner = FIU
+controller = FIU
 culture = dalmatian
 religion = catholic
 capital = "Fiume"
@@ -13,10 +13,7 @@ base_tax = 3
 base_production = 3
 base_manpower = 2
 is_city = yes
-
 add_core = FIU
-add_core = HAB
-add_core = CRO
 
 discovered_by = KAZ
 discovered_by = CRI
@@ -29,6 +26,11 @@ discovered_by = muslim
 discovered_by = persian_btc
 discovered_by = ottoman
 
+1466.1.1 = {
+	owner = HAB
+	controller = HAB
+	add_core = HAB
+} # Habsburgs assume control
 1573.1.20 = { revolt = { type = anti_tax_rebels size = 1 } controller = REB } # Peasant uprising against Habsburg rule & the feudal system
 1671.1.1 = { unrest = 5 } # Conspiracy against Habsburg rule uncovered
 1671.5.1 = { unrest = 0 } # Estimated, the conspirators are executed
