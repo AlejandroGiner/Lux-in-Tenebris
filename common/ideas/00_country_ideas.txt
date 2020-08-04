@@ -3304,7 +3304,7 @@ TUS_ideas = {
 
 USA_ideas = {
 	start = {
-		no_religion_penalty = yes
+		tolerance_heretic = 5
 		land_morale = 0.2
 	}
 	
@@ -3320,27 +3320,26 @@ USA_ideas = {
 	usa_bill_of_rights = {
 		global_unrest = -2
 	}
-	empire_of_liberty = { #Manifest destiny
+	manifest_destiny = {
 		colonists = 2
 	}
-	american_innovation = {
+	american_innovation_btc = {
 		idea_cost = -0.05
 		innovativeness_gain = 0.5
 	}
 	workshop_of_the_world = {
 		global_trade_goods_size_modifier = 0.15
-		development_cost = -0.05
 	}
-	shining_city_on_a_hill = { #Empire of liberty
+	empire_of_liberty = {
 		unjustified_demands = -0.2
 		improve_relation_modifier = 0.25
 	}
-	immigration_usa = {
+	usa_immigration_btc = {
 		colonist_placement_chance = 0.20
 	}
-	indian_removal = { #Trail of tears
-		harsh_treatment_cost = -0.15
-		culture_conversion_cost = -0.2
+	trail_of_tears_btc = {
+		development_cost = -0.05
+		culture_conversion_cost = -0.15
  	}
 }
 
