@@ -79,7 +79,7 @@ nav_missions_1 = {
 			}
 		}
 		effect = {
-			create_explorer = 50
+			create_explorer = { tradition = 50 }
 			add_country_modifier = {
 				name = "basque_exploration"
 				duration = 7300

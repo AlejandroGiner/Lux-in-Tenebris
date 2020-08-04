@@ -631,7 +631,9 @@ japanse_missions_the_empire = {
 			}
 		}
 		effect = {
-			create_explorer = 60
+			create_explorer = {
+				tradition = 60
+			}
 			fujian_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -752,7 +754,7 @@ japanse_missions_the_empire = {
 			}
 		}
 		effect = {
-			create_conquistador = 80
+			create_conquistador = { tradition = 80 }
 		}
 	}
 }
