@@ -210,13 +210,7 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					capital_scope = {
-						superregion = europe_superregion
-					}
-					NOT = {
-						tag = MAM
-						tag = TUR
-					}
+					has_country_modifier = great_bullion_famine_modifier
 				}
 				country_event = { id = bullion.1 days = 15 random = 15 }
 			}
