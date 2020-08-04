@@ -11,7 +11,10 @@ country_decisions = {
 				tag = JAI
 				tag = TAN
 				tag = LEC
-				}
+				primary_culture = neapolitan
+				primary_culture = sicilian
+			}
+			NOT = { has_country_flag = formed_two_sicilies_flag }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -71,11 +74,19 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = TTS
+			if = {
+				limit = {
+					NOT = { tag = NAP }
+					NOT = { was_tag = NAP }
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
+			set_country_flag = formed_two_sicilies_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -164,9 +175,7 @@ country_decisions = {
 			}
 			swap_ideas = yes
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 
@@ -178,6 +187,7 @@ country_decisions = {
 				tag = SIC
 				tag = NAP
 			}
+			NOT = { has_country_flag = formed_two_sicilies_flag }
 		}
 		provinces_to_highlight = {
 			NOT = { owned_by = ROOT }
@@ -212,11 +222,19 @@ country_decisions = {
 				inherit = NAP
 			}
 			change_tag = TTS
+			if = {
+				limit = {
+					NOT = { tag = NAP }
+					NOT = { was_tag = NAP }
+				}
+				swap_non_generic_missions = yes
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
+			set_country_flag = formed_two_sicilies_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
@@ -305,9 +323,7 @@ country_decisions = {
 			}
 			swap_ideas = yes
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 }

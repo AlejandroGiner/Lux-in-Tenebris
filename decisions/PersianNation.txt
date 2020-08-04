@@ -101,14 +101,16 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
-					NOT = {
-						government = monarchy
-					}
+					NOT = { government = monarchy }
+					is_revolutionary = no
 				}
-				change_government = monarchy
+				change_government_to_monarchy = yes
 			}
 			set_government_rank = 3
-			add_government_reform = feudal_theocracy
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = feudal_theocracy
+			}
 			if = {
 				limit = {
 					has_reform = states_general_reform

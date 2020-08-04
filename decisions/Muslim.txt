@@ -7,9 +7,12 @@ country_decisions = {
 			ai = no
 			religion_group = muslim
 			num_of_cities = 10
-			NOT = {
-				has_country_modifier = unified_islam
-			}
+			NOT = { has_country_flag = unified_islam }
+			NOT = { has_global_flag = unified_islam_global }
+			NOT = { tag = PAP } # NO
+			is_emperor_of_china = no
+			NOT = { has_reform = shogunate }
+			NOT = { has_reform = celestial_empire }
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -25,18 +28,8 @@ country_decisions = {
 				province_id = 347
 				province_id = 388
 				province_id = 400
-				AND = {
-					owned_by = ROOT
-					NOT = { religion_group = muslim }
-				}					
 			}
-			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				AND = {
-					owned_by = ROOT
-					NOT = { religion_group = muslim }
-				}
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		allow = {
 			religion_group = muslim
@@ -52,25 +45,28 @@ country_decisions = {
 			owns_or_vassal_of = 347
 			owns_or_vassal_of = 388
 			owns_or_vassal_of = 400
-			all_owned_province = {
-				religion_group = muslim
-			}
-			adm_power = 200
-			mil_power = 200
-			dip_power = 200
 		}
 		effect = {
 			add_country_modifier = {
 				name = unified_islam
 				duration = -1
 			}
-			add_adm_power = -100
-			add_mil_power = -100
-			add_dip_power = -100
+			if = {
+				limit = { NOT = { government_rank = 3 } }
+				set_government_rank = 3
+			}
+			set_country_flag = unified_islam
+			set_global_flag = unified_islam_global
+			if = {
+				limit = {
+					government = monarchy
+					NOT = { has_reform = feudal_theocracy }
+					is_revolutionary = no
+				}
+				add_government_reform = feudal_theocracy
+			}
 		}
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	change_religion_sunni = {

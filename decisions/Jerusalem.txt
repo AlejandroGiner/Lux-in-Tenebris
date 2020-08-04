@@ -54,6 +54,18 @@ country_decisions = {
 			379 = {
 				is_state = yes
 			}
+			if = {
+				limit = {
+					OR = {
+						tag = KNI
+						tag = CYP
+						tag = PRO
+						has_mission = EMP_crusader_antioch
+					}
+					was_never_end_game_tag_trigger = yes
+				}
+				is_emperor = no
+			}
 		}
 		effect = {
 			add_prestige = 25
@@ -75,6 +87,9 @@ country_decisions = {
 							NOT = { tag = KNI }
 							NOT = { tag = CYP }
 							NOT = { tag = PRO }
+							NOT = { has_mission = EMP_crusader_antioch }
+							NOT = { capital_scope = { region = arabia_region } }
+							NOT = { capital_scope = { region = egypt_region } }
 						}
 						was_never_end_game_tag_trigger = no
 					}
@@ -88,8 +103,15 @@ country_decisions = {
 						tag = KNI
 						tag = CYP
 						tag = PRO
+						has_mission = EMP_crusader_antioch
+						capital_scope = { region = arabia_region }
+						capital_scope = { region = egypt_region }
 					}
 					was_never_end_game_tag_trigger = yes
+				}
+				if = {
+					limit = { is_part_of_hre = yes }
+					set_in_empire = no
 				}
 				change_tag = KOJ
 				swap_ideas = yes
@@ -102,24 +124,27 @@ country_decisions = {
 				set_capital = 379 #Jerusalem
 				change_religion = catholic
 				if = {
-					limit = {
-						NOT = { government = monarchy }
-					}
+					limit = { NOT = { government = theocracy } }
+					change_government_to_monarchy = yes
+					add_government_reform = holy_state_reform
+					#set_legacy_government = holy_state_legacy
+				}
+				else_if = {
+					limit = { government = theocracy }
 					change_government = monarchy
 					set_legacy_government = feudal_monarchy
+					add_government_reform = holy_state_reform
+					#set_legacy_government = holy_state_theocracy
 				}
 				if = {
-					limit = {
-						NOT = { government_rank = 2 }
-					}
+					limit = { NOT = { government_rank = 2 } }
 					set_government_rank = 2
 				}
 				set_country_flag = formed_jerusalem
+				swap_non_generic_missions = yes
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 }

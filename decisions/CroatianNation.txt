@@ -7,7 +7,10 @@ country_decisions = {
 			NOT = { tag = CRO }
 			NOT = { tag = ILY }
 			NOT = { tag = YUG }
-			primary_culture = croatian
+			OR = {
+				primary_culture = croatian
+				primary_culture = dalmatian
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -56,10 +59,25 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CRO
+			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = croatian }
+					NOT = { accepted_culture = croatian }
+				}
+				add_accepted_culture = croatian
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = dalmatian }
+					NOT = { accepted_culture = dalmatian }
+				}
+				add_accepted_culture = dalmatian
 			}
 			every_province = {
 				limit = {
@@ -81,9 +99,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = formed_croatia_flag_btp
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 }

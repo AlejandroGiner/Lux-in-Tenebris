@@ -86,7 +86,8 @@ country_decisions = {
 				change_culture = roman
 			}
 			change_tag = ROM
-			change_government  = monarchy
+			restore_country_name_effect = yes
+			change_government_to_monarchy = yes
 			add_government_reform = roman_empire_reform
 			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt

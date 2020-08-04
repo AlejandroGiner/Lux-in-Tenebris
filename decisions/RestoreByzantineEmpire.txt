@@ -12,6 +12,7 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			NOT = { exists = BYZ }
 			NOT = { exists = ROM }
+			NOT = { exists = GRE }
 			NOT = { tag = LTE }
 			NOT = { tag = TUR }
 			NOT = { tag = GRE }
@@ -19,8 +20,17 @@ country_decisions = {
 			NOT = { tag = MAM }
 			NOT = { tag = RUM }
 			NOT = { tag = PER }
-			culture_group = byzantine
-			religion = orthodox
+			OR = {
+				culture_group = byzantine
+				AND = {
+					has_idea = MFA_byzantine_claimants
+					dynasty = "Palaiologos"
+				}
+			}
+			OR = {
+				religion = orthodox
+				has_idea = MFA_byzantine_claimants
+			}
 			num_of_owned_provinces_with = {
 				value = 5
 				OR = {
@@ -102,6 +112,13 @@ country_decisions = {
 		effect = {
 			151 = { move_capital_effect = yes } # Constantinople
 			change_tag = BYZ
+			if = {
+				limit = {
+					NOT = { culture_group = byzantine }
+					NOT = { accepted_culture = greek }
+				}
+				add_accepted_culture = greek
+			}
 			swap_non_generic_missions = yes
 			#Removed the long and tedious list of various specific provinces in favour of a region and area based approach.
 			#For permanent claims, going for just the two regions for now

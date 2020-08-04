@@ -5,12 +5,12 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
+			was_never_german_regional_tag_trigger = yes
 			NOT = { has_country_flag = formed_austria_flag }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			tag = STY
 			primary_culture = austrian
 			NOT = { tag = HAB }
 			OR = {
@@ -19,7 +19,24 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 134
+			OR = {
+				province_id = 134
+				AND = {
+					culture = austrian
+					continent = europe
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 10
+								is_core = ROOT
+								culture = austrian
+								continent = europe
+							}
+						}
+						owns_core_province = 134
+					}
+				}
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -32,6 +49,12 @@ country_decisions = {
 			is_nomad = no			
 			is_at_war = no
 			owns = 134
+			num_of_owned_provinces_with = {
+				value = 10
+				is_core = ROOT
+				culture = austrian
+				continent = europe
+			}
 		}
 		effect = {
 			change_tag = HAB
@@ -52,6 +75,10 @@ country_decisions = {
 			}
 			swap_non_generic_missions = yes
 			set_country_flag = formed_austria_flag
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400

@@ -10,6 +10,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_brazil = {
 				owned_by = ROOT
@@ -24,10 +39,13 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			brazil_provinces_btc = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			custom_trigger_tooltip = {
@@ -48,8 +66,22 @@ country_decisions = {
 			NOT = { exists = BRZ }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = BRZ
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = {
 					NOT = { government_rank = 2 }
@@ -162,12 +194,18 @@ country_decisions = {
 				}
 				custom_tooltip = brazil_portugal_tooltip
 				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							continent = europe
+						}
+						add_core = POR
+					}
 					release = POR
-					create_union = POR
 					POR = {
 						change_government = monarchy
 						add_government_reform = autocracy_reform
 					}
+					create_union = POR
 				}
 				hidden_effect = {
 					every_province = {

@@ -80,9 +80,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			280 = {
-				move_capital_effect = yes
-			}
+			280 = { move_capital_effect = yes }
 			ruthenia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -112,9 +110,12 @@ country_decisions = {
 						has_reform = principality
 					}
 				}
-				change_government = monarchy
 				set_government_rank = 3
-				add_government_reform = tsardom
+				if = {
+					limit = { is_revolutionary = no }
+					change_government_to_monarchy = yes
+					add_government_reform = tsardom
+				}
 			}
 			set_country_flag = formed_ruthenia_flag
 			if = {

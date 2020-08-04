@@ -13,6 +13,8 @@ country_decisions = {
 			NOT = { tag = EMR }
 			NOT = { tag = LMV }
 			OR = {
+				tag = SAV
+				tag = SAR
 				primary_culture = sardinian
 				primary_culture = piedmontese
 			}
@@ -36,8 +38,22 @@ country_decisions = {
 		allow = {
 			NOT = { exists = SPI }
 			OR = {
-				NOT = { exists = SAV }
-				NOT = { exists = SAR }
+				AND = {
+					tag = SAR
+					NOT = { exists = SAV }
+				}
+				AND = {
+					tag = SAV
+					NOT = { exists = SAR }
+				}
+				AND = {
+					OR = {
+						primary_culture = sardinian
+						primary_culture = piedmontese
+					}
+					NOT = { exists = SAV }
+					NOT = { exists = SAR }
+				}
 			}
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
@@ -73,13 +89,31 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
+			if = {
+				limit = {
+					primary_culture = sardinian
+					NOT = { accepted_culture = piedmontese }
+				}
+				add_accepted_culture = piedmontese
+			}
+			else_if = {
+				limit = {
+					primary_culture = piedmontese
+					NOT = { accepted_culture = sardinian }
+				}
+				add_accepted_culture = sardinian
+			}
+			if = {
+				limit = {
+					NOT = { was_tag = SAV }
+				}
+				swap_non_generic_missions = yes
+			}
 			add_prestige = 25
 			swap_ideas = yes
 			set_country_flag = formed_sardinia_piedmont_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 
@@ -160,13 +194,31 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
+			if = {
+				limit = {
+					primary_culture = sardinian
+					NOT = { accepted_culture = piedmontese }
+				}
+				add_accepted_culture = piedmontese
+			}
+			else_if = {
+				limit = {
+					primary_culture = piedmontese
+					NOT = { accepted_culture = sardinian }
+				}
+				add_accepted_culture = sardinian
+			}
+			if = {
+				limit = {
+					NOT = { was_tag = SAV }
+				}
+				swap_non_generic_missions = yes
+			}
 			add_prestige = 25
 			swap_ideas = yes
 			set_country_flag = formed_sardinia_piedmont_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 }

@@ -6,7 +6,13 @@ country_decisions = {
 	institute_prussian_monarchy = {
 		major = yes
 		potential = {
-			has_dlc = "Rights of Man"
+			always = no
+			NOT = {
+				OR = {
+					has_dlc = "Dharma" 
+					has_dlc = "Emperor"
+				}
+			}
 			normal_or_historical_nations = yes
 			tag = PRU
 			NOT = { has_reform = prussian_monarchy_legacy }
@@ -30,7 +36,34 @@ country_decisions = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
-			
+		}
+	}
+	
+	institute_prussian_republic = {
+		major = yes
+		potential = {
+			always = no
+			NOT = {
+				OR = {
+					has_dlc = "Dharma" 
+					has_dlc = "Emperor"
+				}
+			}
+			normal_or_historical_nations = yes
+			tag = PRU
+			government = republic
+			NOT = { has_reform = prussian_republic }
+		}
+
+		allow = {
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+		}
+
+		effect = {
+			add_government_reform = prussian_republic
 		}
 	}
 
@@ -76,16 +109,29 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = PRU
+			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = { 
+					NOT = { government_rank = 2 }
+					OR = {
+						NOT = { has_dlc = "Emperor" }
+						NOT = { hre_size = 1 }
+					}
+				}
 				set_government_rank = 2
 			}
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
 			}
+			if =  {
+				limit = { NOT = { government = republic } }
+				change_government_to_monarchy = yes
+				add_government_reform = prussian_monarchy
+			}
+			else = { add_government_reform = prussian_republic_reform }
 			if = {
 				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
@@ -196,9 +242,7 @@ country_decisions = {
 			}
 			set_country_flag = formed_prussia_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400 #
 	}
 
@@ -246,21 +290,19 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = PRU
+			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			if = {
-				limit = { NOT = { government = monarchy } }
-				change_government = monarchy
-				add_government_reform = feudalism_reform
-				every_neighbor_country = {
-					limit = { government = monarchy }
-					add_opinion = { who = ROOT modifier = secularized_monastic_order }
-				}
+			if =  {
+				limit = { NOT = { government = republic } }
+				change_government_to_monarchy = yes
+				add_government_reform = prussian_monarchy
 			}
+			else = { add_government_reform = prussian_republic_reform }
 			add_prestige = 25
 			change_primary_culture = prussian
 			west_prussia_area = {
@@ -357,16 +399,29 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = PRU
+			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = { 
+					NOT = { government_rank = 2 }
+					OR = {
+						NOT = { has_dlc = "Emperor" }
+						NOT = { hre_size = 1 }
+					}
+				}
 				set_government_rank = 2
 			}
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 7300
 			}
+			if =  {
+				limit = { NOT = { government = republic } }
+				change_government_to_monarchy = yes
+				add_government_reform = prussian_monarchy
+			}
+			else = { add_government_reform = prussian_republic_reform }
 			if = {
 				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform

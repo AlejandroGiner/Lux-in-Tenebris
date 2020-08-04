@@ -40,11 +40,9 @@ country_decisions = {
 				name = "de_heretico_comburendo"
 				duration = -1
 			}
-			add_reform_desire = 0.001
+			#add_reform_desire = 0.001
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	# Commons for all christians.
@@ -1117,6 +1115,21 @@ country_decisions = {
 			NOT = { has_country_modifier = royal_fires_modifier }
 			religion = zoroastrian
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2221 #Various locations suggested to have been the site of these fires.
+				province_id = 2207 #Various locations suggested to have been the site of these fires.
+				province_id = 2235 #Various locations suggested to have been the site of these fires.
+				province_id = 2236 #Various locations suggested to have been the site of these fires.
+				province_id = 2218 #Various locations suggested to have been the site of these fires.
+				province_id = 441 #Various locations suggested to have been the site of these fires.
+				province_id = 2223 #Various locations suggested to have been the site of these fires.
+			}
+			OR = {
+				NOT = { owned_by = root }
+				NOT = { is_core = root }
+			}
+		}
 		allow = {
 			government_rank = 3
 			owns_core_province = 2221 #Various locations suggested to have been the site of these fires.
@@ -1155,6 +1168,32 @@ country_decisions = {
 			NOT = { has_country_modifier = reunification_with_parsees }
 			religion = zoroastrian
 		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 428 #Teheran
+						province_id = 429 #Isfahan
+						province_id = 431 #Mogostan
+						province_id = 432 #Kerman
+						province_id = 433 #Yazd
+						province_id = 450 #Balkh
+						province_id = 504 #Thatta
+						province_id = 517 #Sanjan
+						province_id = 529 #Mumbai
+						province_id = 2210 #Kermanshah
+					}
+					OR = {
+						NOT = { owned_by = root }
+						NOT = { is_core = root }
+					}
+				}
+				AND = {
+					owned_by = root
+					NOT = { religion = zoroastrian }
+				}
+			}
+		}
 		allow = {
 			owns_core_province = 428 #Teheran
 			owns_core_province = 429 #Isfahan
@@ -1166,9 +1205,7 @@ country_decisions = {
 			owns_core_province = 517 #Sanjan
 			owns_core_province = 529 #Mumbai
 			owns_core_province = 2210 #Kermanshah
-			all_owned_province = {
-				religion = zoroastrian
-			}
+			all_owned_province = { religion = zoroastrian }
 		}
 		effect = {
 			add_country_modifier = {
