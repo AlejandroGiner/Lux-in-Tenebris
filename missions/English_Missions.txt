@@ -416,6 +416,12 @@ eng_french_conquest = {
 					}
 					add_permanent_claim = ROOT
 				}
+				morbihan_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				lower_brittany_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }

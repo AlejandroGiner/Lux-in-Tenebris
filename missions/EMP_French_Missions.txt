@@ -20,6 +20,7 @@ emp_france_missions_1 = {
 			OR = {
 				area = brittany_area
 				area = lower_brittany_area
+				area = morbihan_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -31,6 +32,10 @@ emp_france_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lower_brittany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			morbihan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

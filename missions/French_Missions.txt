@@ -81,6 +81,13 @@ french_missions_north = {
 				}
 				add_permanent_claim = ROOT
 			}
+			morbihan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	subjugate_brittany = {
@@ -92,6 +99,7 @@ french_missions_north = {
 			OR = {
 				area = brittany_area
 				area = lower_brittany_area
+				area = morbihan_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -103,6 +111,10 @@ french_missions_north = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lower_brittany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			morbihan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

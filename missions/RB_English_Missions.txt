@@ -992,6 +992,7 @@ eng_rb_conquest_europe = {
 		provinces_to_highlight = {
             OR = {
                 area = brittany_area
+				area = morbihan_area
                 province_id = 3026
                 province_id = 3646
             }
@@ -1015,6 +1016,10 @@ eng_rb_conquest_europe = {
 
 		trigger = {
 			brittany_area = {
+				type = all
+				owned_by = ROOT
+			}
+			morbihan_area = {
 				type = all
 				owned_by = ROOT
 			}

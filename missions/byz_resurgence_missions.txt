@@ -5609,6 +5609,13 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				morbihan_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -5636,6 +5643,7 @@ byz_galatia = {
 				area = berry_area
 				area = loire_area
 				area = fr_maine_area
+				area = morbihan_area
 				province_id = 3025
 				province_id = 168
 				province_id = 3026
@@ -5650,6 +5658,10 @@ byz_galatia = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			lower_brittany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			morbihan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

@@ -393,6 +393,7 @@ ned_reconquest_group = {
 				area = holland_area
 				area = north_brabant_area
 				area = brabant_area
+				area = south_holland_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -410,7 +411,11 @@ ned_reconquest_group = {
 				type = all
 				owned_by = ROOT
 			}
-			c = {
+			north_brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_holland_area = {
 				type = all
 				owned_by = ROOT
 			}

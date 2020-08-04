@@ -644,6 +644,7 @@ country_decisions = {
 				area = south_wales_area
 				area = cornwall_area
 				area = brittany_area
+				area = morbihan_area
 				area = lower_brittany_area
 			}
 			OR = {
@@ -715,6 +716,7 @@ country_decisions = {
 						OR = {
 							area = lower_brittany_area
 							area = brittany_area
+							area = morbihan_area
 						}
 					}
 					amount = 5			#At least half of Brittany
@@ -774,6 +776,10 @@ country_decisions = {
 					add_permanent_claim = CEL
 				}
 				lower_brittany_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
+				morbihan_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
@@ -3033,6 +3039,15 @@ country_decisions = {
 				}
 			}
 			holland_area = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
+			}
+			south_holland_area = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
