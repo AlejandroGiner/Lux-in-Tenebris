@@ -37,6 +37,13 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_alaska
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
 			is_free_or_tributary_trigger = yes

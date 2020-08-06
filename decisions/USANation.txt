@@ -40,6 +40,13 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
 			is_free_or_tributary_trigger = yes
@@ -129,6 +136,13 @@ country_decisions = {
 					ai = yes
 					num_of_cities = 3	
 				}
+			}
+		}
+		provinces_to_highlight = {
+			colonial_region = colonial_eastern_america
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
 			}
 		}
 		allow = {
