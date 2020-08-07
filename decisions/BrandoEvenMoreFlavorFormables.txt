@@ -35,7 +35,7 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = majority_of_hopitutskwa_tooltip
 					calc_true_if = {
-						all_owned_provinces = {
+						all_owned_province = {
 							is_core = ROOT
 							OR = {
 								area = southern_colorado_plateau_area
@@ -137,7 +137,7 @@ country_decisions = {
 			custom_trigger_tooltip = {
 				tooltip = majority_of_muscogee_tooltip
 					calc_true_if = {
-						all_owned_provinces = {
+						all_owned_province = {
 							is_core = ROOT
 							OR = {
 								area = wiregrass_area
@@ -190,6 +190,241 @@ country_decisions = {
 				add_permanent_claim = ROOT
 			}
 			set_country_flag = muscogee_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Lenapehoking Union
+	lenape_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = lenape_nation_flag }
+			NOT = { tag = N7F }
+			religion = totemism
+			OR = {
+				primary_culture = munsee
+				primary_culture = delaware
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = delaware_valley_area
+				area = delmarva_area
+				area = minisink_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = N7F }
+			is_at_war = no
+			owns_core_province = 956
+			custom_trigger_tooltip = {
+				tooltip = majority_of_lenapehoking_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = delaware_valley_area
+								area = delmarva_area
+								area = minisink_area
+							}
+						}
+						amount = 8
+					}
+			}
+		}
+		effect = {
+			change_tag = N7F
+			btc_new_nation_effects = yes
+			delaware_valley_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			delmarva_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			minisink_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = lenape_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400	
+	}
+	
+	#Seminole nation
+	seminole_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = seminole_nation_flag }
+			NOT = { tag = S4M }
+			NOT = { tag = N6F }
+			religion = totemism
+			OR = {
+				primary_culture = hitchiti
+				primary_culture = pensacola
+				primary_culture = guale
+				primary_culture = apalachee
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = florida_area
+				area = north_florida_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = S4M }
+			is_at_war = no
+			owns_core_province = 7438
+			custom_trigger_tooltip = {
+				tooltip = majority_of_seminole_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = florida_area
+								area = north_florida_area
+							}
+						}
+						amount = 8
+					}
+			}
+		}
+		effect = {
+			change_tag = S4M
+			btc_new_nation_effects = yes
+			change_primary_culture = seminole
+			every_owned_province = {
+				limit = {
+					is_core = ROOT
+				}
+				change_culture = seminole
+			}
+			florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			north_florida_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = seminole_nation_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
+	
+	#Inuit nation
+	inuit_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = inuit_nation_flag }
+			NOT = { tag = INU }
+			religion = totemism
+			primary_culture = inuit
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kativik_area
+				area = qikiqtaaluk_area
+				area = kivalliq_area
+				area = nunavut_area
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = INU }
+			is_at_war = no
+			OR = {
+				owns_core_province = 4992
+				owns_core_province = 998
+			}
+			custom_trigger_tooltip = {
+				tooltip = majority_of_inuit_tooltip
+					calc_true_if = {
+						all_owned_province = {
+							is_core = ROOT
+							OR = {
+								area = kativik_area
+								area = qikiqtaaluk_area
+								area = kivalliq_area
+								area = nunavut_area
+							}
+						}
+						amount = 8
+					}
+			}
+		}
+		effect = {
+			change_tag = INU
+			btc_new_nation_effects = yes
+			kativik_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			qikiqtaaluk_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kivalliq_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			nunavut_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			set_country_flag = inuit_nation_flag
 		}
 		ai_will_do = {
 			factor = 1
