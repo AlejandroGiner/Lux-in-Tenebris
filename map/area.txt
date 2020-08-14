@@ -2482,7 +2482,7 @@ arys_area = { #3
 }
 
 kyzylkum_area = { #3
-	455 1970 2363 2352
+	455 1970 2363
 }
 
 transoxiana_area = { #6
@@ -2499,7 +2499,7 @@ khiva_area = { #5
 
 kabulistan_area = { #5
 	color = { 96 219 58 }
-	448 451 452 578 2226
+	448 451 578 2226
 }
 
 transcaspia_area = {
@@ -2529,7 +2529,7 @@ merv_area = { #3
 }
 
 balkh_area = { #3
-	450 2227 2228
+	450 2227 2228 452
 }
 
 kerman_area = { #4
@@ -3110,7 +3110,11 @@ left_hwanghae_area = { #4
 ########################################
 
 hokkaido_area = { #5
-	1031 1032 1847 1852 4193 3310 3255 3257 3260
+	1031 1847 1852 4193 3310 3255 3257
+}
+
+kurils_area = {
+	3260 1032
 }
 
 hokuriku_area = { #5 (West Hokuriku)
@@ -3257,7 +3261,7 @@ balchasj_area = { #4
 }
 
 kazakhstan_area = { #5
-	476 2351 2353 2358 2359
+	476 2351 2353 2358 2359 2352
 }
 
 syr_darya_area = { #4
@@ -3270,12 +3274,12 @@ yrtesh_area = { #5
 }
 
 ishim_area = { #4
-	1074 1075 1076 2369 4692
+	1074 1075 1076 2369 4690
 }
 
 aqmola_area = { #5
 	color = { 44 110 132 }
-	479 2354 2357 4686 4690
+	479 2354 2357 4686 4692
 }
 
 ########################################
@@ -3386,7 +3390,7 @@ shanshan_area = { #3
 }
 
 turpan_kumul_area = { #4
-	2122 4206 4207
+	2122 4206 4207 707
 }
 
 zungaria_area = { #4
@@ -3537,7 +3541,7 @@ gansu_area = { #5 (East Gansu)
 }
 
 west_gansu_area = { #4
-	707 708 2182 2184
+	708 2182 2184
 }
 
 hainan_area = { #4

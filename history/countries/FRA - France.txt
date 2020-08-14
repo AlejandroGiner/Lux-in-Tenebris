@@ -9,6 +9,19 @@ capital = 183 # Paris
 national_focus = DIP
 historical_rival = HAB
 
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 10
+}
+change_estate_land_share = {
+	estate = estate_church
+	share = -5
+}
+change_estate_land_share = {
+	estate = estate_burghers
+	share = -5
+}
+
 1380.9.16 = {
 	monarch = {
 		name = "Charles VI"
@@ -125,6 +138,10 @@ historical_rival = HAB
 		death_date = 1463.7.5
 		personality = siege_specialist_personality
 	}
+}
+
+1444.10.1 = {
+	set_estate_privilege = estate_nobles_french_strong_duchies
 }
 
 1455.1.1 = { add_army_professionalism = 0.1 }
