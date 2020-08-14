@@ -198,7 +198,6 @@ courthouse = {
 	modifier = {
 		local_state_maintenance_modifier = -0.25
 		local_autonomy = -0.1
-		allowed_num_of_buildings = 1
         local_governing_cost = -0.25
 	}
 	
@@ -572,7 +571,6 @@ town_hall = {
 		local_state_maintenance_modifier = -0.5
 		local_autonomy = -0.2
         local_governing_cost = -0.5
-		allowed_num_of_buildings = 1
 	}
 	
 	ai_will_do = {
@@ -897,19 +895,30 @@ soldier_households = {
 		fish
 		livestock
 		wine
+		beer
+		rice
+		potatoes
+		maize
+		millet
+		fruit
+		olives
+		dates
+		amaranth
+		legumes
+		teff
 	}
 
 	modifier = {
-		local_manpower = 0.75
+		local_manpower = 0.60
 	}
 	bonus_modifier = {
-		local_manpower = 0.75
+		local_manpower = 0.60
 	}
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
-	ai_will_do = {
-		factor = 1
+	ai_will_do = { 
+		factor = 1 
 	}
 }
 
@@ -923,6 +932,8 @@ impressment_offices = {
 		fish
 		naval_supplies
 		tropical_wood
+		whales
+		pearls
 	}
 
 	build_trigger = {
@@ -938,7 +949,7 @@ impressment_offices = {
 	onmap = no
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
-	ai_will_do = {
+	ai_will_do = { 
 		factor = 1
 	}
 }
