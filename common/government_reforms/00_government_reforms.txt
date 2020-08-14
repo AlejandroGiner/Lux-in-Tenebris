@@ -1405,7 +1405,10 @@ great_mongol_state_legacy = {
 		reinforce_cost_modifier = -0.5
 		cav_to_inf_ratio = 0.25
 		movement_speed = 0.2
-		has_banners = 1
+	}
+    conditional = {
+		allow = { has_dlc = "Mandate of Heaven" }
+		allow_banners = yes
 	}
 	ai = {
 		factor = 0
