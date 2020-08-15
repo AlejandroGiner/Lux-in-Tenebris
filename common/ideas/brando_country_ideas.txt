@@ -1,0 +1,607 @@
+# Blackfoot Ideas
+NF5_ideas = {
+	start = {
+		hostile_attrition = 1
+		global_autonomy = -0.1
+	}
+	bonus = {
+		free_leader_pool = 1
+	}
+	trigger = {
+		tag = NF5
+	}
+	free = yes
+	
+	bla_dogdays = {
+		land_attrition = -0.10
+	}
+	bla_rockymnthouse = {
+		global_trade_power = 0.15
+	}
+	bla_bearknives = {
+		leader_land_shock = 1
+	}
+	bla_tradeguns = {
+		cavalry_power = 0.10
+	}
+	bla_allcomrades = {
+		army_tradition = 0.5
+	}
+	bla_nhclans = {
+		global_unrest = -2
+	}
+	bla_bigknives = {
+		trade_steering = 0.15
+	}
+}
+
+# Lenape Ideas
+N7F_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.15
+		inflation_reduction = 0.1
+	}
+	bonus = {
+		reinforce_speed = 0.15
+	}
+	trigger = {
+		tag = N7F
+	}
+	free = yes
+	
+	len_unalachtigo = {
+		global_tariffs = 0.10
+	}
+	len_bighouse = {
+		tolerance_heretic = 2
+	}
+	len_unamie = {
+		defensiveness = 0.10
+		fort_maintenance_modifier = -0.20
+	}
+	len_munsie = {
+		global_colonial_growth = 20
+	}
+	len_secret_names = {
+		land_morale = 0.10
+	}
+	len_peacemakers = {
+		global_autonomy = -0.10
+	}
+	len_sinquas = {
+		war_exhaustion = -0.02
+	}
+}
+
+# Calusa Ideas
+C4U_ideas = {
+	start = {
+		global_regiment_recruit_speed = -0.10
+		diplomatic_upkeep = 1
+	}
+	bonus = {
+		naval_maintenance_modifier = -0.20
+	}
+	trigger = {
+		tag = C4U
+	}
+	free = yes
+	
+	qqa_fishing = {
+		production_efficiency = 0.1
+	}
+	qqa_tributary_plp = {
+		trade_efficiency = 0.1
+	}
+	qqa_exl_carribean = {
+		light_ship_cost = -0.15
+		light_ship_power = 0.15
+	}
+	qqa_sunkentreasure = {
+		global_tax_modifier = 0.1
+		global_sailors_modifier = 0.20
+	}
+	qqa_shellculture = {
+		development_cost = -0.2
+	}
+	qqa_keymarcocat = {
+		prestige_decay = -0.01
+	}
+	qqa_cubanmigration = {
+		core_creation = -0.20
+	}
+}
+
+# Seminole Ideas
+S4M_ideas = {
+	start = {
+		core_creation = -0.15
+		global_unrest = -1
+	}
+	bonus = {
+		culture_conversion_cost = -0.2
+	}
+	trigger = {
+		tag = S4M
+	}
+	free = yes
+	
+	qqb_black_drink = {
+		land_morale = 0.1
+	}
+	qqb_painted_post = {
+		global_regiment_recruit_speed = -0.10
+	}
+	qqb_caribbean_trade = {
+		global_prov_trade_power_modifier = 0.1
+	}
+	qqb_black_seminole = {
+		num_accepted_cultures = 2
+	}
+	qqb_hidden_swamp = {
+		hostile_attrition = 2.0
+	}
+	qqb_religious_tolerance = {
+		no_religion_penalty = yes
+	}
+	qqb_eu_intermarraige = {
+		technology_cost = -0.1
+	}
+}
+
+# Sioux Ideas
+NF2_ideas = {
+	start = {
+		stability_cost_modifier = -0.1
+		land_forcelimit_modifier = 0.25
+	}
+	bonus = {
+		cavalry_cost = -0.2
+	}
+	trigger = {
+		tag = NF2
+	}
+	free = yes
+	
+	sio_woodland_tradition = {
+		production_efficiency = 0.1 
+	}
+	sio_westward_migration = { 
+		colonists = 1 
+	}
+	sio_winter_counts = {
+		prestige_decay = -0.01 
+	}
+	sio_disease_resistance = { 
+		global_colonial_growth = 20 
+	}
+	sio_eagle_headdress = { 
+		land_morale = 0.1 
+	}
+	sio_white_buffalo_woman = { 
+		global_unrest = -2 
+	}
+	sio_dog_soldiers = { 
+		cavalry_power = 0.1 
+	}
+}
+
+# Cree Ideas
+NF4_ideas = {
+	start = {
+		global_autonomy = -0.05
+		discipline = 0.1
+	}
+	bonus = {
+		trade_efficiency = 0.1
+	}
+	trigger = {
+		tag = NF4
+	}
+	free = yes
+
+	wrc_cree_medicine = {
+		prestige_decay = -0.01
+		global_missionary_strength = 0.01
+	}
+	wrc_woods_cree = {
+		infantry_power = 0.15
+	}
+	wrc_winter_camps = {
+		global_manpower_modifier = 0.10
+	}
+	wrc_jamesbay_cree = {
+		diplomatic_upkeep = 1
+	}
+	wrc_hudsonbay_co = {
+		leader_land_fire = 1
+		global_trade_power = 0.1
+	}
+	wrc_plains_cree = {
+		cavalry_power = 0.15
+	}
+	wrc_shining_island = {
+		idea_cost = -0.1
+	}
+}
+
+# Chichimeca Ideas
+CCM_ideas = {
+	start = {
+		infantry_power = 0.15
+		leader_land_shock = 1
+	}
+	bonus = {
+		global_tax_modifier = 0.1
+	}
+	trigger = {
+		tag = CCM
+	}
+	free = yes
+
+	wwq_coyolxauhqui = {
+		stability_cost_modifier = -0.1
+	}
+	wwq_toltec_conquerors = {
+		ae_impact = -0.15
+	}
+	wwq_mixcoatl = {
+		war_exhaustion = -0.02
+		leader_land_fire = 1
+	}
+	wwq_ancestors_ashes = {
+		global_unrest = -2
+	}
+	wwq_guamare_confederacy = {
+		num_accepted_cultures = 2
+	}
+	wwq_hunting_dogs = {
+		land_attrition = -0.1
+		land_morale = 0.1
+	}
+	wwq_craftsmen = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+# Miskito Ideas
+MIS_ideas = {
+	start = {
+		land_forcelimit_modifier = 0.15
+		years_of_nationalism = -5
+	}
+	bonus = {
+		army_tradition_decay = -0.01
+	}
+	trigger = {
+		tag = MIS
+	}
+	free = yes
+	
+	x2f_tawira = {
+		global_institution_spread = 0.1
+	}
+	x2f_zambo = {
+		infantry_power = 0.15
+	}
+	x2f_slave_raids = {
+		global_own_trade_power = 0.1
+	}
+	x2f_bluefields = {
+		trade_efficiency = 0.15
+	}
+	x2f_jamaica = {
+		inflation_reduction = 0.1
+	}
+	x2f_resist_spanish = {
+		enemy_core_creation = 0.5
+	}
+	x2f_british_settlers = {
+		development_cost = -0.2
+	}
+}
+
+# Wabanaki Ideas
+NF1_ideas = {
+	start = {
+		leader_land_manuever = 1
+		diplomatic_reputation = 1
+	}
+	bonus = {
+		prestige_decay = -0.01
+	}
+	trigger = {
+		tag = NF1
+	}
+	free = yes
+	
+	xxn_gluskabe = {
+		discipline = 0.1
+	}
+	xxn_fishing_moon = {
+		production_efficiency = 0.1
+	}
+	xxn_storage_pits = {
+		land_attrition = -0.10
+	}
+	xxn_wampum = {
+		trade_efficiency = 0.15
+	}
+	xxn_powwow = {
+		manpower_recovery_speed = 0.1
+		stability_cost_modifier = -0.1
+	}
+	xxn_jesuits = {
+		idea_cost = -0.1
+	}
+	xxn_father_rale = {
+		spy_offence = 0.2
+	}
+}
+
+# Navajo Ideas
+N3F_ideas = {
+	start = {
+		shock_damage = 0.10
+		diplomatic_reputation = 1
+	}
+	bonus = {
+		army_tradition = 0.5
+	}
+	trigger = {
+		tag = N3F
+	}
+	free = yes
+	
+	anasazi_memories = {
+		infantry_power = 0.10
+	}
+	the_four_mountains = {
+		global_autonomy = -0.05
+		core_creation = -0.10
+	}
+	aridoamerica_land = {
+		hostile_attrition = 1.5
+	}
+	navajo_hogans = {
+		development_cost = -0.10
+	}
+	the_blessing_way = {
+		stability_cost_modifier = -0.10
+	}
+	navajo_weaving = {
+		prestige = 1
+	}
+	the_enemy_way = {
+		land_morale = 0.10
+	}
+}
+
+# Hopi Ideas
+N5F_ideas = {
+	start = {
+		defensiveness = 0.20
+		years_of_nationalism = -5
+	}
+	bonus = {
+		global_tax_modifier = 0.10
+	}
+	trigger = {
+		tag = N5F
+	}
+	free = yes
+	
+	descendants_of_hisatsinom = {
+		same_culture_advisor_cost = -0.20
+	}
+	old_oraibi = {
+		prestige = 1
+	}
+	aridoamerica_land = {
+		hostile_attrition = 1.5
+	}
+	kachina_dolls = {
+		stability_cost_modifier = -0.10
+	}
+	the_peaceful_people = {
+		num_accepted_cultures = 2
+	}
+	mesa_architecture = {
+		build_cost = -0.1
+	}
+	the_pueblo_revolt = {
+		enemy_core_creation = 0.1
+		army_tradition_from_battle = 0.5
+	}
+}
+
+# Powhatan Ideas
+NF7_ideas = {
+	start = {
+		global_regiment_recruit_speed = -0.20
+		trade_efficiency = 0.10
+	}
+	bonus = {
+		prestige = 1
+	}
+	trigger = {
+		tag = NF7
+	}
+	free = yes
+	
+	densely_inhabited_land = {
+		global_manpower_modifier = 0.25
+	}
+	united_chiefdoms = {
+		years_of_nationalism = -10
+	}
+	the_laughing_king = {
+		same_culture_advisor_cost = -0.20
+	}
+	great_mamanatowick = {
+		army_tradition = 1.00
+	}
+	the_jamestown_problem = {
+		trade_efficiency = 0.10
+		global_institution_spread = 0.10
+	}
+	centralize_tsenacommacah = {
+		global_autonomy = 0.10
+	}
+	the_anglo_powhatan_wars = {
+		land_morale = 0.10
+	}
+}
+
+# Salish Union Ideas
+N4F_ideas = {
+	start = {
+		naval_forcelimit_modifier = 0.25
+		movement_speed = 0.15
+	}
+	bonus = {
+		global_prov_trade_power_modifier = 0.20
+	}
+	trigger = {
+		tag = N4F
+	}
+	free = yes
+	
+	many_people_one_tongue = {
+		stability_cost_modifier = -0.10
+	}
+	other_salmon_migrations = {
+		global_trade_goods_size_modifier = 0.10
+	}
+	sxwaywey_society = {
+		global_unrest = -1
+	}
+	salish_wool_dogs = {
+		development_cost = -0.10
+	}
+	other_dugout_canoes = {
+		trade_range_modifier = 0.2
+	}
+	plutocratic_salish_elites = {
+		vassal_income = 0.25
+	}
+	mare_salish = {
+		naval_morale = 0.10
+		naval_tradition_from_trade = 1.0
+	}
+}
+
+# Haida Tlingit Ideas
+NF6_ideas = {
+	start = {
+		naval_morale = 0.10
+		advisor_cost = -0.15
+	}
+	bonus = {
+		defensiveness = 0.10
+	}
+	trigger = {
+		tag = NF6
+	}
+	free = yes
+	
+	other_legacy_of_raven = {
+		leader_land_manuever = 1
+	}
+	argillite_carvings = {
+		prestige = 1
+	}
+	clan_moieties = {
+		free_adm_policy = 1
+	}
+	haida_lightning_raids = {
+		loot_amount = 0.25
+		naval_forcelimit_modifier = 0.2
+	}
+	other_dugout_canoes = {
+		trade_range_modifier = 0.2
+	}
+	tlingit_coin_armor = {
+		infantry_power = 0.10
+	}
+	chilkat_blankets = {
+		yearly_corruption = -0.05
+	}
+	
+}
+
+# Three Fires Ideas
+NF3_ideas = {
+	start = {
+		advisor_cost = -0.15
+		num_accepted_cultures = 2
+	}
+	bonus = {
+		merchants = 1
+	}
+	trigger = {
+		tag = NF3
+	}
+	free = yes
+	
+	wiigwaasabak_scrolls = {
+		free_dip_policy = 1
+		prestige = 1
+	}
+	the_older_brother = {
+		manpower_recovery_speed = 0.25
+	}
+	the_next_born = {
+		trade_efficiency = 0.05
+	}
+	the_younger_brother = {
+		build_cost = -0.1
+	}
+	le_pays_den_haut = {
+		province_warscore_cost = -0.2
+	}
+	council_at_michilimackinac = {
+		global_spy_defence = 0.2
+	}
+	pontiacs_war = {
+		infantry_power = 0.1
+	}
+}
+
+# Dene Ideas
+N2F_ideas = {
+	start = {
+		tolerance_heathen = 1
+		movement_speed = 0.15
+	}
+	bonus = {
+		shock_damage = 0.5
+	}
+	trigger = {
+		tag = N2F
+	}
+	free = yes
+	
+	land_of_the_people = {
+		hostile_attrition = 1
+	}
+	snow_snake = {
+		discipline = 0.05
+	}
+	the_winding_dehcho = {
+		trade_range_modifier = 0.25
+	}
+	moose_hunts = {
+		production_efficiency = 0.1
+	}
+	decentralized_authority = {
+		years_of_nationalism = -10
+		autonomy_change_time = -0.5
+	}
+	the_tea_dance = {
+		religious_unity = 0.5
+	}
+	dene_hand_games = {
+		stability_cost_modifier = -0.1
+	}
+}
