@@ -50,6 +50,7 @@ country_event = {
 		religion_group = christian
 		any_owned_province = {
 			NOT = { continent = europe }
+			NOT = { province_id = 5253 }
 			trade_goods = gold
 		}
 	}
