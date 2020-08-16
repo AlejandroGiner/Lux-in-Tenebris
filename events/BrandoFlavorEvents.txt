@@ -381,6 +381,10 @@ country_event = {
 				area = ohio_country_area
 				area = michigan_area
 				area = minisink_area
+				area = kentucky_area
+				area = appalachia_area
+				area = miami_river_area
+				area = illinois_country_area
 			}		
 		}
 		any_ally = {
@@ -417,7 +421,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		eastern_iroquoisia_area = {
 			limit = {
@@ -428,7 +432,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		susquehanna_area = {
 			limit = {
@@ -439,7 +443,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		westsylvania_area = {
 			limit = {
@@ -450,7 +454,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		upper_canada_area = {
 			limit = {
@@ -461,7 +465,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		ohio_country_area = {
 			limit = {
@@ -472,7 +476,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		michigan_area = {
 			limit = {
@@ -483,7 +487,7 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
 		}
 		minisink_area = {
 			limit = {
@@ -494,7 +498,51 @@ country_event = {
 					}
 				}
 			}
-			add_permanent_claim = ROOT
+			add_claim = ROOT
+		}
+		illinois_country_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_claim = ROOT
+		}
+		miami_river_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_claim = ROOT
+		}
+		kentucky_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_claim = ROOT
+		}
+		appalachia_area = {
+			limit = {
+				NOT = {
+					OR = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+			}
+			add_claim = ROOT
 		}
 	}
 }
@@ -805,5 +853,60 @@ country_event = {
 				}
 			}
 		}
+	}
+}
+
+# Organize a bear hunt
+country_event = {
+	id = brando_flavor_events.20
+	title = "brando_flavor_events.20.t"
+	desc = "brando_flavor_events.20.d"
+	picture = EXPLORERS_eventPicture
+	
+	trigger = {
+		has_dlc = "Conquest of Paradise"
+		is_at_war = no
+		OR = {
+			government = native
+			religion = totemism
+		}
+		capital_scope = {
+			OR = {
+				region = alaska_region
+				region = northwest_territories_region
+				area = kativik_area
+				area = churchill_area
+				area = kivalliq_area
+				area = nunavut_area
+				area = qikiqtaaluk_area
+				area = east_alaska_area
+				area = hecate_strait_area
+				area = cariboo_area
+				area = james_bay_area
+			}
+		}
+		NOT = { has_country_modifier = bear_taboos_respected }
+	}
+	
+	mean_time_to_happen = {
+		months = 300
+	}
+	
+	# Respect the traditions
+	option = {
+		name = "brando_flavor_events.20.a"
+		add_treasury = -25
+		add_prestige = 5
+		add_country_modifier = {
+			name = bear_taboos_respected
+			duration = 14235
+		}
+	}
+	
+	# Hunt recklessly 
+	option = {
+		name = "brando_flavor_events.20.b"
+		add_stability = -1
+		add_manpower = 3
 	}
 }
