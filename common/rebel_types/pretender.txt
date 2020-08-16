@@ -35,18 +35,6 @@ pretender_rebels = {
 	
 	spawn_chance = {
 		factor = 1
-		#Byz_resurgence added: In case of Theme capital, it should not spawn noble rebels, but pretenders should unrest get too high.
-		modifier = {
-			factor = 20
-			has_estate = estate_strategoi
-		}
-		#Byz_resurgence added: If the Military Coup disaster fires, adjust so there's plenty of chance for pretenders to rise.
-		modifier = {
-			factor = 20
-			owner = {
-				has_disaster = estate_strategoi_disaster
-			}
-		}
 		#Byz_resurgence added: If the Succession Crisis disaster fires, adjust so there's plenty of chance for pretenders to rise.
 		modifier = {
 			factor = 20
@@ -399,13 +387,6 @@ pretender_rebels = {
 			end_disaster = succession_crisis
 			clr_country_flag = had_byz_succ_crisis
 			country_event = { id = succession_crisis.36 }
-		}
-		#Byz_resurgence added: Clears Military Coup upon enforcing demands.
-		if = {
-			limit = { has_disaster = estate_strategoi_disaster }
-			end_disaster = estate_strategoi_disaster
-			clr_country_flag = byz_current_ruler_is_not_deposed
-			country_event = { id = strategoi_estate_events.22 }
 		}
 	}
 }

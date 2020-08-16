@@ -1,0 +1,45 @@
+########################################
+# BTC Flavor Events for Korea
+########################################
+
+namespace = btc_flavor_kor
+normal_or_historical_nations = yes
+
+# Commentary on Sericulture
+country_event = {
+	id = btc_flavor_kor.1
+	title = btc_flavor_kor.1.t
+	desc = btc_flavor_kor.1.d
+	picture = TRADEGOODS_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KOR
+		is_year = 1456
+		NOT = { is_year = 1468 }
+		owns = 736
+		owns = 1013
+		owns = 6484
+		owns = 6487
+	}
+	
+	mean_time_to_happen = {
+		months = 75
+	}
+	
+	option = {
+		name = "flavor_kor.EVTOPTOK"
+		6484 = { 
+			add_base_production = 1
+			change_trade_goods = silk
+		}
+		6487 = { 
+			add_base_production = 1
+			change_trade_goods = silk
+		}
+		1013 = { 
+			add_base_production = 1
+		}
+	}
+}

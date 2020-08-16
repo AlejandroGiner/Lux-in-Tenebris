@@ -22,19 +22,6 @@ btc_can_form_trigger = {
 	adm_tech = 10
 }
 
-exarches_territory_modifier_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = exarches_territory_modifier_trigger
-		owner = {
-			has_estate = estate_exarches
-		}
-		any_province = {
-			region = PREV
-			has_estate = estate_exarches
-		}
-	}
-}
-
 is_exarch_tag_and_exarch_of_root_trigger = {
 	custom_trigger_tooltip = { 
 		tooltip = any_exarch_tag_under_root_exists_trigger

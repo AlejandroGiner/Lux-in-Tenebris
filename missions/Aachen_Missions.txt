@@ -12,7 +12,11 @@ aachen_form_francia_mission = {
 		required_missions = { }
 		position = 1
 		trigger = {
-			hre_reform_level = 2
+			if = {
+				limit = { has_dlc = "Emperor" }
+				hre_reform_passed = emperor_reichsregiment
+			}
+			else = { hre_reform_passed = reichsregiment }
 			is_emperor = yes
 			imperial_influence = 25
 		}
