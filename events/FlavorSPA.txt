@@ -1478,7 +1478,7 @@ country_event = {
 			add_reform_progress_medium_effect = yes
 		}
 		add_government_reform = parliamentary_reform
-		set_legacy_government = constitutional_monarchy
+		#set_legacy_government = constitutional_monarchy
 	}
 	option = {		# Resist these liberals!
 		name = "flavor_spa.EVTOPTB3095"
@@ -1591,7 +1591,14 @@ country_event = {
 	id = flavor_spa.1007
 	title = "flavor_spa.EVTNAME1007"
 	desc = "flavor_spa.EVTDESC1007"
-	picture = LAND_MILITARY_eventPicture
+	picture = {	
+		trigger = { has_dlc = "Emperor" }
+		picture = ITALIAN_wars_eventPicture
+	}
+	picture = {	
+		trigger = { NOT = { has_dlc = "Emperor" } }
+		picture = MILITARY_CAMP_eventPicture
+	}
 	
 	fire_only_once = yes
 	
@@ -1658,7 +1665,14 @@ country_event = {
 	id = flavor_spa.1008
 	title = "flavor_spa.EVTNAME1008"
 	desc = "flavor_spa.EVTDESC1008"
-	picture = MILITARY_CAMP_eventPicture
+	picture = {	
+		trigger = { has_dlc = "Emperor" }
+		picture = ITALIAN_wars_eventPicture
+	}
+	picture = {	
+		trigger = { NOT = { has_dlc = "Emperor" } }
+		picture = MILITARY_CAMP_eventPicture
+	}
 	
 	is_triggered_only = yes
 	
@@ -1695,7 +1709,14 @@ country_event = {
 	id = flavor_spa.1009
 	title = "flavor_spa.EVTNAME1009"
 	desc = "flavor_spa.EVTDESC1009"
-	picture = MILITARY_CAMP_eventPicture
+	picture = {	
+		trigger = { has_dlc = "Emperor" }
+		picture = ITALIAN_wars_eventPicture
+	}
+	picture = {	
+		trigger = { NOT = { has_dlc = "Emperor" } }
+		picture = MILITARY_CAMP_eventPicture
+	}
 	
 	is_triggered_only = yes
 	
@@ -1955,16 +1976,11 @@ country_event = {
 						province_id = 217
 					}
 					has_seat_in_parliament = no
-					has_estate = yes
 				}
-				remove_estate = yes
 				set_seat_in_parliament = yes #Has to placate all the local Cortes from now on.
 			}
 		}
-		if = {
-			limit = {
-				NOT = { has_dlc = "Common Sense" }
-			}
+		else = {
 			every_owned_province = {
 				limit = {
 					OR = {
@@ -2709,17 +2725,25 @@ country_event = {
 		is_lesser_in_union = no
 		marriage_with = HAB
 		HAB = {
-			dynasty = "von Habsburg"
 			ai = yes
-			has_country_flag = bur_marriage_successor
+			OR = {
+				any_subject_country = {
+					any_owned_province = {
+						OR = {
+							region = low_countries_region
+							area = picardy_area
+						}
+					}
+				}
+				any_owned_province = {
+					OR = {
+						region = low_countries_region
+						area = picardy_area
+					}
+				}
+			}
 		}
-		NOT = {
-			dynasty = HAB
-		}
-		FRA = {
-			is_rival = HAB
-			is_rival = ROOT
-		}
+		ruler_age = 20
 		NOT = { is_rival = HAB }
 		NOT = { war_with = HAB }
 		NOT = {
@@ -2727,15 +2751,56 @@ country_event = {
 				is_rival = ROOT
 			}
 		}
-		NOT = {
-			dynasty = FRA
-		}
-		ruler_age = 20
 		has_government_attribute = heir
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		months = 120
+		modifier = {
+			factor = 0.5
+			NOT = {
+				dynasty = HAB
+			}
+		}
+		modifier = {
+			factor = 0.5
+			FRA = {
+				is_rival = HAB
+				is_rival = ROOT
+			}
+			NOT = {
+				dynasty = FRA
+			}
+		}
+		modifier = {
+			factor = 0.5
+			HAB = {
+				dynasty = "von Habsburg"
+			}
+		}
+		modifier = {
+			factor = 0.5
+			HAB = {
+				OR = {
+					any_subject_country = {
+						num_of_owned_provinces_with = {
+							OR = {
+								region = low_countries_region
+								area = picardy_area
+							}
+							value = 5
+						}
+					}
+					num_of_owned_provinces_with = {
+						OR = {
+							region = low_countries_region
+							area = picardy_area
+						}
+						value = 5
+					}
+				}
+			}
+		}
 	}
 	
 	option = {
@@ -2754,7 +2819,6 @@ country_event = {
 				country_event = { id = flavor_spa.14 }
 				every_owned_province = {
 					limit = {
-						has_province_flag = bur_succession_province
 						OR = {
 							region = low_countries_region
 							area = picardy_area
@@ -2763,6 +2827,19 @@ country_event = {
 					add_core = ROOT
 					remove_core = HAB
 					cede_province = ROOT
+				}
+				every_subject_country = {
+					every_owned_province = {
+						limit = {
+							OR = {
+								region = low_countries_region
+								area = picardy_area
+							}
+						}
+						add_core = ROOT
+						remove_core = HAB
+						cede_province = ROOT
+					}
 				}
 			}
 		}
@@ -2831,24 +2908,8 @@ country_event = {
 				duration = -1
 			}
 		}
-		custom_tooltip = merino_wool_tooltip
-		hidden_effect = {
-			every_owned_province = {
-				limit = {
-					region = iberia_region
-					trade_goods = wool
-					has_estate = no
-				}
-				random_list = {
-					50 = {
-						set_estate = estate_church
-					}
-					50 = {
-						set_estate = estate_nobles
-					}
-				}
-			}
-		}
+		give_estate_land_share_medium = { estate = estate_nobles }
+		give_estate_land_share_medium = { estate = estate_church }
 	}
 }
 
@@ -2886,40 +2947,21 @@ country_event = {
 	
 	option = {
 		name = "flavor_spa.17.a"
-		if = {
-			limit = {
-				any_owned_province = {
-					has_province_modifier = merino_wool
-					has_estate = estate_church
-				}
-			}
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = -10
-			}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
 		}
-		if = {
-			limit = {
-				any_owned_province = {
-					has_province_modifier = merino_wool
-					has_estate = estate_nobles
-				}
-			}
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = -10
-			}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
 		}
+		take_estate_land_share_small = { estate = estate_church }
+		take_estate_land_share_small = { estate = estate_nobles }
 		every_owned_province = {
 			limit = {
 				has_province_modifier = merino_wool
 			}
 			remove_province_modifier = merino_wool
-			custom_tooltip = church_nobles_removed_mesta
-			hidden_effect = {
-				remove_estate = estate_church
-				remove_estate = estate_nobles
-			}
 			change_trade_goods = cloth
 			add_province_modifier = {
 				name = "mesta_privileged_revoked"
@@ -2929,34 +2971,16 @@ country_event = {
 	}
 	option = {
 		name = "flavor_spa.17.b"
-		if = {
-			limit = {
-				any_owned_province = {
-					has_province_modifier = merino_wool
-					has_estate = estate_church
-				}
-			}
-			add_estate_loyalty = {
-				estate = estate_church
-				loyalty = 10
-			}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 5
 		}
-		if = {
-			limit = {
-				any_owned_province = {
-					has_province_modifier = merino_wool
-					has_estate = estate_nobles
-				}
-			}
-			add_estate_loyalty = {
-				estate = estate_nobles
-				loyalty = 10
-			}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = 5
 		}
 		every_owned_province = {
-			limit = {
-				has_province_modifier = merino_wool
-			}
+			limit = { has_province_modifier = merino_wool }
 			add_local_autonomy = 50
 		}
 	}

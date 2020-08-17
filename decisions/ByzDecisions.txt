@@ -760,35 +760,13 @@ country_decisions = {
 			add_adm_power = -100
 			add_mil_power = -100
 			add_prestige = 25
-			hidden_effect = {
-				every_province = {
-					add_province_triggered_modifier = exarch_territory_modifier
-					add_province_triggered_modifier = exarch_seat_modifier_med_dev
-					add_province_triggered_modifier = exarch_seat_modifier_high_dev
-					add_province_triggered_modifier = exarch_seat_modifier_very_high_dev
-				}
-			}
 			set_country_flag = revoked_exarch_autonomy
 			custom_tooltip = byz_revoke_exarch_autonomy_tooltip
 			hidden_effect = {
 				#Integrate all vassals here
 				every_country = {
-					limit = {
-						is_exarch_tag_and_exarch_of_root_trigger = yes
-					}
-					capital_scope = {
-						set_province_flag = byz_former_exarch_capital
-					}
-					ROOT = {
-						inherit = PREV
-					}
-				}
-				every_province = {
-					limit = {
-						has_province_flag = byz_former_exarch_capital
-					}
-					set_estate = estate_exarches
-					clr_province_flag = byz_former_exarch_capital
+					limit = { is_exarch_tag_and_exarch_of_root_trigger = yes }
+					ROOT = { inherit = PREV }
 				}
 			}
 			
