@@ -250,15 +250,16 @@
   #Roman Inquisition
   btc_roman_inquisition_modifier: "Roman Inquisition"
   desc_btc_roman_inquisition_modifier: ""
-  btc_roman_inquisition_help: ""
+  btc_roman_inquisition_help: "Roman Inquisition"
   desc_btc_roman_inquisition_help: ""
+  btc_roman_inquisition_country_modifier: "Roman Inquisition"
   
   btc_roman_inquisition.1.t: "The Roman Inquisition"
   btc_roman_inquisition.1.d: "The rapid spread of Protestantism in Europe has not gone unnoticed by the Holy See. Determined to stop the spread of such heretical beliefs in Italy, Pope [PAP.Monarch.GetName] has decreed the establishment of the Supreme Sacred Congregation of the Roman and Universal Inquisition, in order to shield Catholicism in the peninsula, echoing the Medieval Inquisitions of ages past that put down the Cathars and Waldensians. As several attempts to convince European monarchs of the dangers of these new heretical beliefs have failed, the Church believes this new bureaucratic, rather than military, approach will be effective in outright preventing the spread of such ideas in the Papal States. Already many people have been questioned and imprisoned over Protestantism, sorcery, immorality, blasphemy, Judaizing and witchcraft, and many books deemed heretical have been censored and destroyed. While this office will certainly hinder any attempts of Protestant theologians to spread their ideas to Italy it remains to be seen if this will result in any meaningful contributions to stopping the spread of the Reformation in Europe as a whole."
   btc_roman_inquisition.1.a: "Deus Vult!"
   btc_roman_inquisition_start_tooltip: "§GThe Roman Inquisition is established.§!"
 
-  btc_roman_inquisition.2.t: "The Roman Inqusition in [Root.Country.GetName]"
+  btc_roman_inquisition.2.t: "The Roman Inquisition in [Root.Country.GetName]"
   btc_roman_inquisition.2.d: "Heretical beliefs have been quietly spreading in our provinces, as covert foreign missionaries are trying to sway our people away from Holy Catholicism in favor of these new heresies originating in the Empire. Our holy men are having difficulties trying to solve the situation and rumors are that some of them have even enjoyed the heretics in their clandestine activities. Fortunately for us, the Papacy has recently announced the establishment of the Roman Inquisition. Should we choose to, we can invite their inquisitors into our nation. Whilst this would definitely increase the Papacy's hold over our people, their effective measures would undoubtedly help us root out the heresies at their core."
   btc_roman_inquisition.2.a: "We will ask His Holiness for assistance."
   btc_roman_inquisition.2.b: "We are on our own."
@@ -274,6 +275,12 @@
   btc_roman_inquisition.5.t: "The Inquisition has arrived in [inquisition_province.GetName]"
   btc_roman_inquisition.5.d: "The province of [inquisition_province.GetName] is home to many heretics who, despite our best efforts, continue to practice their perversion of Christianity amongst themselves. Inquisitors from the Roman Inquisition have arrived in the area and will get to work immediately in stamping out any resistance these heretics might have to returning to the One Church. Through their diligent work our missionaries will be able to ensure that [inquisition_province.GetName] is wholly Catholic in no time."
   btc_roman_inquisition.5.a: "They will repent... or they'll wish they had."
+  
+  btc_roman_inquisition.6.t: "The Roman Inquisition in [Root.GetName]"
+  btc_roman_inquisition.6.d: "With the rise of new heretical beliefs in the Holy Roman Empire, many preachers, theologians and religious refugees began spreading these heresies far and wide in Europe, allowing them to get established in places far away from the Empire in only a few decades. The Italian peninsula has long been a bastion of Catholicism and many are worried that if such heresies ever reach us we would suffer significant internal strife and furthermore incur the anger of the Pope. With the recent establishment of the Roman Inquisition in the Papal States, we could allow the inquisitors working for [PAP.Monarch.GetName] to operate in our country in order to stop the spread of heresies before they take root. Such a venture will have significant costs and will, for better or worse, result in much greater Papal influence in our politics, but doing so might prevent our society from splitting apart on religious lines."
+  btc_roman_inquisition.6.a: "We must do what we must do."
+  btc_roman_inquisition.6.b: "We don't need anyone's help!"
+  btc_inquisition_established_all_provinces_tooltip: "Every owned catholic province in the Italy region gets §Y'Roman Inquisition'§!, giving the following effects:\nResistance to Reformation: §G+90.0%§!"
   
   #Modding test events
   btc_modding_test.1.t: "Instant Japan Nation" 
