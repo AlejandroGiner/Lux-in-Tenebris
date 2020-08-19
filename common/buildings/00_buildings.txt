@@ -704,7 +704,7 @@ manufactory = {
 	cost = 500
 	time = 60
 	modifier = {
-		trade_goods_size = 1.0
+		trade_goods_size = 0.8
 	}
 }
 
@@ -859,7 +859,7 @@ furnace = {
 	}
 
 	modifier = {
-		global_trade_goods_size_modifier = 0.025 #National Bonus
+		global_trade_goods_size_modifier = 0.02 #National Bonus
 	}
 	onmap = yes
 	show_separate = yes # Means as a manufactory it will be shown according to the old way

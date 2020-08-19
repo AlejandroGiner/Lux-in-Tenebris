@@ -1648,6 +1648,14 @@ imperial_diplomacy_reform = {
 	}
 	ai = {
 		factor = 1.5
+		modifier = {
+			factor = 2
+			has_idea_group = diplomatic_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = influence_ideas
+		}
 	}
 }
 
@@ -1658,11 +1666,23 @@ municipal_self_defense_reform = {
 		has_reform = free_city
 	}
 	modifiers = {
-		land_forcelimit_modifier = 0.25
-		global_manpower = 5
+		land_forcelimit = 8
+		global_manpower = 8
 	}
 	ai = {
 		factor = 1.5
+		modifier = {
+			factor = 3
+			has_idea_group = defensive_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = quantity_ideas
+		}
 	}
 }
 
