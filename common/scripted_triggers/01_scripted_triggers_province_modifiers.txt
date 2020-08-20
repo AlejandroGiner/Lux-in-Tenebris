@@ -87,9 +87,28 @@ has_river_estuary_trigger = {
 			has_province_modifier = breede_estuary_modifier
 			has_province_modifier = tugela_estuary_modifier
 			
+			#Added estuaries in LiT
 			has_province_modifier = volta_estuary_modifier
 			has_province_modifier = uruguay_estuary_modifier
 			has_province_modifier = saofrancisco_estuary_modifier
+			has_province_modifier = humber_estuary_modifier
+			has_province_modifier = jubba_estuary_modifier
+			has_province_modifier = maenam_estuary_modifier
+			has_province_modifier = tone_estuary_modifier
+			has_province_modifier = shinano_estuary_modifier
+			has_province_modifier = kitakami_estuary_modifier
+			has_province_modifier = millewa_estuary_modifier
+			has_province_modifier = qiantang_estuary_modifier
+			has_province_modifier = thanlwin_estuary_modifier
+			has_province_modifier = mahanadi_estuary_modifier
+			has_province_modifier = narmada_estuary_modifier
+			has_province_modifier = kaveri_estuary_modifier
+			has_province_modifier = oxus_estuary_modifier
+			has_province_modifier = jaxartes_estuary_modifier
+			has_province_modifier = hai_estuary_modifier
+			has_province_modifier = liao_estuary_modifier
+			has_province_modifier = hwai_estuary_modifier
+			has_province_modifier = amur_estuary_modifier
 		}
 	}
 }
@@ -181,9 +200,28 @@ has_no_river_estuary_trigger = {
 			has_province_modifier = breede_estuary_modifier
 			has_province_modifier = tugela_estuary_modifier
 			
+			#Added estuaries in LiT
 			has_province_modifier = volta_estuary_modifier
 			has_province_modifier = uruguay_estuary_modifier
 			has_province_modifier = saofrancisco_estuary_modifier
+			has_province_modifier = humber_estuary_modifier
+			has_province_modifier = jubba_estuary_modifier
+			has_province_modifier = maenam_estuary_modifier
+			has_province_modifier = tone_estuary_modifier
+			has_province_modifier = shinano_estuary_modifier
+			has_province_modifier = kitakami_estuary_modifier
+			has_province_modifier = millewa_estuary_modifier
+			has_province_modifier = qiantang_estuary_modifier
+			has_province_modifier = thanlwin_estuary_modifier
+			has_province_modifier = mahanadi_estuary_modifier
+			has_province_modifier = narmada_estuary_modifier
+			has_province_modifier = kaveri_estuary_modifier
+			has_province_modifier = oxus_estuary_modifier
+			has_province_modifier = jaxartes_estuary_modifier
+			has_province_modifier = hai_estuary_modifier
+			has_province_modifier = liao_estuary_modifier
+			has_province_modifier = hwai_estuary_modifier
+			has_province_modifier = amur_estuary_modifier
 		}
 	}
 }
@@ -251,6 +289,7 @@ province_without_special_goods_produced_trigger = {
 		has_province_modifier = diamond_district
 		has_province_modifier = jingdezhen_kilns
 		has_province_modifier = perfume_capital
+		
 		has_latent_trade_goods = coal
 		has_latent_trade_goods = rubber
 		has_latent_trade_goods = oil
@@ -286,5 +325,8 @@ is_religious_center_province = {
 		province_id = 409
 		province_id = 2221
 		province_id = 2095
+		province_id = 1146
+		province_id = 151
+		province_id = 5258
 	}
 }
