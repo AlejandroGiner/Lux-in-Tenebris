@@ -220,14 +220,14 @@ ned_colonial_group_two = {
 				}
 				add_permanent_claim = ROOT
 			}
-			malacca_area = {
+			perak_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			johor_area = {
+			malacca_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -289,7 +289,7 @@ ned_colonial_group_three = {
 			OR = {
 				area = malaya_area
 				area = malacca_area
-				area = johor_area
+				area = perak_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
@@ -304,7 +304,7 @@ ned_colonial_group_three = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			johor_area = {
+			perak_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

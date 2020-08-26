@@ -2273,13 +2273,6 @@ gc_spain_4_d = {
 				}
 				add_permanent_claim = ROOT
 			}
-			palawan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	gc_cas_spa_conquer_philippines = {
