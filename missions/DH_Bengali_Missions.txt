@@ -556,6 +556,13 @@ bng_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			salween_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			central_burma_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}

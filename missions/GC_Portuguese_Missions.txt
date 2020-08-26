@@ -600,6 +600,7 @@ gc_por_2_c = {
 			OR = {
 				area = arakan_area
 				area = lower_burma_area
+				area = salween_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -610,6 +611,10 @@ gc_por_2_c = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lower_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			salween_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1026,6 +1031,13 @@ gc_por_3_c = {
 				add_permanent_claim = ROOT
 			}
 			lower_burma_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			salween_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

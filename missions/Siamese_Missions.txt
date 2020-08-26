@@ -78,6 +78,13 @@ siamese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			salween_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	ayu_conquer_the_khmer_remenants = {
@@ -120,13 +127,20 @@ siamese_missions_2 = {
 		required_missions = { ayu_subjugate_lan_na }
 		position = 6
 		provinces_to_highlight = {
-			area = lower_burma_area
+			OR = {
+				area = lower_burma_area
+				area = salween_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lower_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			salween_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

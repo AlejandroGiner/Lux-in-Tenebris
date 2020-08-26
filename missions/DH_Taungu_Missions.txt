@@ -263,6 +263,13 @@ tau_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			salween_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -422,13 +429,20 @@ tau_slot_3 = {
 		icon = mission_conquer_lower_burma_tau
 		required_missions = {  }
 		provinces_to_highlight = {
-			area = lower_burma_area
+			OR = {
+				area = lower_burma_area
+				area = salween_area
+			}
 			NOT = {
 				owned_by = ROOT
 			}
 		}
 		trigger = {
 			lower_burma_area = {
+				type = all
+				owned_by = ROOT
+			}
+			salween_area = {
 				type = all
 				owned_by = ROOT
 			}
