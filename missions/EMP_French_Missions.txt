@@ -1770,6 +1770,7 @@ emp_france_missions_3 = {
 			OR = {
 				region = indo_china_region
 				area = cambodia_area
+				area = eastern_cambodia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1778,6 +1779,7 @@ emp_france_missions_3 = {
 				OR = {
 					region = indo_china_region
 					area = cambodia_area
+					area = eastern_cambodia_area
 				}
 				value = 20
 			}

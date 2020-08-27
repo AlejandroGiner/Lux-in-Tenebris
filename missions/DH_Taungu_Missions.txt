@@ -44,6 +44,13 @@ tau_slot_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sagaing_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			kengtung_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -62,11 +69,10 @@ tau_slot_1 = {
 				area = shan_hill_area
 				area = yawnghwe_area
 				area = kachin_area
+				area = sagaing_area
 			}
 			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
+				NOT = { owned_by = ROOT }
 				local_autonomy = 30
 			}
 		}
@@ -74,32 +80,26 @@ tau_slot_1 = {
 			shan_hill_area = {
 				type = all
 				owned_by = ROOT
-				NOT = {
-					local_autonomy = 30
-				}
-				NOT = {
-					unrest = 1
-				}
+				NOT = { local_autonomy = 30 }
+				NOT = { unrest = 1 }
 			}
 			yawnghwe_area = {
 				type = all
 				owned_by = ROOT
-				NOT = {
-					local_autonomy = 30
-				}
-				NOT = {
-					unrest = 1
-				}
+				NOT = { local_autonomy = 30 }
+				NOT = { unrest = 1 }
 			}
 			kachin_area = {
 				type = all
 				owned_by = ROOT
-				NOT = {
-					local_autonomy = 30
-				}
-				NOT = {
-					unrest = 1
-				}
+				NOT = { local_autonomy = 30 }
+				NOT = { unrest = 1 }
+			}
+			sagaing_area = {
+				type = all
+				owned_by = ROOT
+				NOT = { local_autonomy = 30 }
+				NOT = { unrest = 1 }
 			}
 		}
 		effect = {
@@ -189,6 +189,20 @@ tau_slot_1 = {
 				add_permanent_claim = ROOT
 			}
 			khorat_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			phnom_dangrek_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			sakon_nakhon_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -364,6 +378,13 @@ tau_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			gulf_siam_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			sukhothai_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -501,6 +522,7 @@ tau_slot_3 = {
 			OR = {
 				area = central_thai_area
 				area = sukhothai_area
+				area = gulf_siam_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -508,6 +530,10 @@ tau_slot_3 = {
 		}
 		trigger = {
 			central_thai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			gulf_siam_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

@@ -454,6 +454,13 @@ manchu_missions_1_b = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sagaing_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	mch_burma_campaign = {
@@ -463,6 +470,7 @@ manchu_missions_1_b = {
 			OR = {
 				area = shan_hill_area
 				area = kachin_area
+				area = sagaing_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -472,6 +480,10 @@ manchu_missions_1_b = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			kachin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sagaing_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

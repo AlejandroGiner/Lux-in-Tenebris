@@ -1929,7 +1929,21 @@ country_decisions = {
 				}
 				add_permanent_claim = KME
 			}
+			eastern_cambodia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KME
+			}
 			mekong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KME
+			}
+			mekong_lowlands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -3076,6 +3090,15 @@ country_decisions = {
 				}
 				add_permanent_claim = SIA
 			}
+			mekong_lowlands_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = SIA
+			}
 			north_laos_area = {
 				limit = {
 					NOT = {
@@ -3283,12 +3306,24 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
+			mekong_lowlands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 		effect = {
 			mekong_area = {
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+			mekong_lowlands_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				change_culture = ROOT
 				change_religion = ROOT
 			}
@@ -3343,7 +3378,25 @@ country_decisions = {
 				}
 				add_permanent_claim = VTM
 			}
+			mekong_lowlands_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = VTM
+			}
 			cambodia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = VTM
+			}
+			eastern_cambodia_area = {
 				limit = {
 					NOT = {
 						owned_by = ROOT

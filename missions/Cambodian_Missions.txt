@@ -15,25 +15,41 @@ cambodian_missions_1 = {
 		icon = mission_unite_home_region
 		required_missions = {  }
 		provinces_to_highlight = {
-				area = inner_cambodia_area
+			OR = {
+				province_id = 3601
+				province_id = 4842
+				province_id = 603
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			inner_cambodia_area = {
-				type = all
-				owned_by = ROOT
-			}
+			3601 = { owned_by = ROOT }
+			4842 = { owned_by = ROOT }
+			603 = { owned_by = ROOT }
 		}
 		effect = {
-			inner_cambodia_area = {
-				limit = {
-					is_core = ROOT
-				}
+			3601 = {
+				limit = { owned_by = ROOT }
 				change_culture = ROOT
-                        }
+			}
+			4842 = {
+				limit = { owned_by = ROOT }
+				change_culture = ROOT
+			}
+			603 = {
+				limit = { owned_by = ROOT }
+				change_culture = ROOT
+			}
 			central_thai_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			gulf_siam_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -48,13 +64,20 @@ cambodian_missions_1 = {
 		required_missions = { khm_reclaim_old_cambodia }
 		position = 5
 		provinces_to_highlight = {
-			area = central_thai_area
+			OR = {
+				area = central_thai_area
+				area = gulf_siam_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_thai_area = {
+				type = all
+				owned_by = ROOT
+			}
+			gulf_siam_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -108,13 +131,25 @@ cambodian_missions_2 = {
 		required_missions = { khm_conquer_the_siamese_heartland }
 		position = 6
 		provinces_to_highlight = {
+			OR = {
 				area = khorat_area
+				area = sakon_nakhon_area
+				area = phnom_dangrek_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			khorat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			phnom_dangrek_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sakon_nakhon_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
