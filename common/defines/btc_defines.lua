@@ -12,7 +12,7 @@ NDefines.NMilitary.FORTRESS_COST = 0.35			-- Beyond Typus added all the new prov
 NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 8
 
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
-NDefines.NEconomy.CARAVAN_FACTOR = 6.0,							-- More development in LiT in general 210 development needed to reach max 35
+NDefines.NEconomy.CARAVAN_FACTOR = 6.0							-- More development in LiT in general 210 development needed to reach max 35
 NDefines.NEconomy.TRADE_ADDED_VALUE_MODIFER = 0.02			-- from 0 5 many more nodes in LiT
 
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.65			-- from 0 75
