@@ -2233,15 +2233,15 @@ cameia_area = {
 ########################################
 
 mascarenes_area = { #3
-	1100 1102 1103
+	1100 1102 1103 1101
 }
 
-indian_ocean_islands_area = { #5
-	574 7056 1101 1998 1999 5093
+indian_ocean_islands_area = {
+	574 7056 1998 1999
 }
 
 maldives_area = {
-	1248 5705
+	1248 5705 
 }
 
 papua_area = { #5 (Papuan Peninsula)
@@ -2887,7 +2887,7 @@ riau_islands_area = {
 }
 
 phnom_dangrek_area = {
-	2383 5969 5929 608
+	2383 5969 5929
 }
 
 khorat_area = { #5
@@ -2969,7 +2969,7 @@ sipsongchautai_area = { #5
 }
 
 south_laos_area = { #3
-	611 2382 5968 5970
+	611 2382 5968 5970 608
 }
 
 north_laos_area = { #4
@@ -3033,27 +3033,39 @@ southern_luzon_area = { #5
 }
 
 north_sumatra_area = { #5
-	617 2673 2674 2685 4888 3571 3596
+	617 2673 2674 2685 4888
 }
 
 batak_area = { #5
-	619 3569 618 3565 4887 4889
+	619 4887 4889 3571 3570
+}
+
+melayu_area = {
+	3569 618 3565
 }
 
 central_sumatra_area = { #5
-	620 2675 2676 4891 3566 3568
+	620 2675 4891 3568 2676
 }
 
 minangkabau_area = { #3
-	2681 2682 4890 4896 2680 3570 2683 2684 
+	2681 2682 4890 4896 3566
 }
 
 south_sumatra_area = { #5
-	623 4894 4895 4893 2679 621
+	623 4894 4895 4893 2679
 }
 
 palembang_area = { #4
-	622 5953 4892 2678 3567 2677 
+	622 4892 2677 2678
+}
+
+pasemah_area = {
+	621 5953 3567 2680
+}
+
+kepulauan_nias_area = {
+	2683 2684 3596
 }
 
 east_java_area = { #Surabaya
@@ -4659,7 +4671,7 @@ northwest_sahara_area = {
 }
 
 subantarctic_islands_area = {
-	5125 7015
+	5125 7015 5093
 }
 
 ########################################
