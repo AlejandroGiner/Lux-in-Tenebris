@@ -3,6 +3,28 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
+waterford_harbour_modifier = {
+	province_trade_power_value = 10
+	picture = "province_trade_power_value"
+}
+
+cinque_ports_modifier = {
+	province_trade_power_value = 5
+	naval_forcelimit = 2
+	local_development_cost = -0.05
+	local_sailors_modifier = 0.25
+	local_defensiveness = 0.25
+}
+
+wealth_of_carbery_modifier = {
+	trade_goods_size = 0.3
+	local_development_cost = -0.2
+}
+
+stannery_law_modifier = {
+	trade_goods_size = 0.5
+}
+
 bosphorous_sound_toll = {
 	province_trade_power_value = 10
 	picture = "btc_sound_toll"
@@ -16,6 +38,11 @@ the_staple_port = {
 	province_trade_power_modifier = 0.25
 	local_tax_modifier = 0.50
 	picture = "btc_sound_toll"
+}
+
+tweed_estuary_modifier = {
+	picture = "estuary_icon"
+	province_trade_power_value = 10
 }
 
 fraiser_estuary_modifier = {

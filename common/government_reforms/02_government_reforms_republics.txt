@@ -64,8 +64,9 @@ signoria_reform = {
 		culture_group = latin
 	}
 	modifiers = {
-		global_tax_modifier = 0.05
-		max_absolutism = -30
+		build_cost = -0.05
+		merc_maintenance_modifier = -0.05
+		max_absolutism = -20
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -1134,9 +1135,9 @@ florentine_republic_btc = {
 	}
 	nation_designer_cost = 30
 	royal_marriage = yes
-	queen = yes
-	fixed_rank = 1
 	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
 		enables_nepotism = yes
 	}
 	modifiers = {
@@ -1144,7 +1145,7 @@ florentine_republic_btc = {
 		merc_maintenance_modifier = -0.1
 		max_absolutism = -30
 	}
-	duration = 4
+	duration = 12
 }
 
 cossacks_reform = {

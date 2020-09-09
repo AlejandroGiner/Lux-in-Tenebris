@@ -1,5 +1,5 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = republic
+add_government_reform = signoria_reform
 government_rank = 1
 technology_group = western
 primary_culture = romagnan
@@ -7,8 +7,14 @@ religion = catholic
 capital = 5710
 fixed_capital = 5710
 
-#historical_friend = XXX
-#historical_rival = XXX
-
-
-#History, currently empty.
+1438.1.1 = { #Time of ousting the papal governor c. 1433. Then forced to cede Forli to Francesco Sforza in 1436 and was exiled to Ferrara, but regained it in 1438.
+	monarch = {
+		name = "Antonio I"
+		dynasty = "Ordelaffi"
+		birth_date = 1390.1.1 #c. 1390
+		death_date = 1448.8.4
+		adm = 2			#Nothing noteworthy.
+		dip = 3			#He got imprisoned in Imola I suppose and he took possession of Forli from the papal governor during a popular revolt in 1433ish.
+		mil = 4			#He did manage to regain his holding against the Pope. Should warrant *some* mil.
+	}
+}

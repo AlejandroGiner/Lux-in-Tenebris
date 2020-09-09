@@ -1,11 +1,7 @@
 #5562 - Tynedale
 
-latent_trade_goods = {
-	coal
-}
-
-owner = ENG
-controller = ENG
+owner = SCO #Tynedale was held in fief by the Kings of Scotland. It also gives England an instant Reconquest CB on Scotland helping to encourage more earlier conflict. Vice-versa for England holding Berwick.
+controller = SCO
 culture = northumbrian
 religion = catholic
 hre = no
@@ -16,6 +12,7 @@ base_manpower = 1
 capital = "Hexham"
 is_city = yes
 add_core = ENG
+add_core = SCO
 add_core = NOL
 
 discovered_by = western

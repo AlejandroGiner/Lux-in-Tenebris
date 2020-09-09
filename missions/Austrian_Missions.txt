@@ -77,6 +77,13 @@ hab_holy_roman_ambitions = {
 					}
 					add_permanent_claim = ROOT
 				}
+				sudety_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				erzgebirge_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -129,6 +136,7 @@ hab_holy_roman_ambitions = {
 								value = 8
 								OR = {
 									area = bohemia_area
+									area = sudety_area
 									area = erzgebirge_area
 									area = moravia_area
 								}
@@ -137,6 +145,7 @@ hab_holy_roman_ambitions = {
 					}
 					OR = {
 						area = bohemia_area
+						area = sudety_area
 						area = erzgebirge_area
 						area = moravia_area
 					}
@@ -151,6 +160,7 @@ hab_holy_roman_ambitions = {
 				value = 8
 				OR = {
 					area = bohemia_area
+					area = sudety_area
 					area = erzgebirge_area
 					area = moravia_area
 				}

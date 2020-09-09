@@ -104,7 +104,14 @@ hsn_conquest_group = {
 				}
 				add_claim = ROOT
 			}
-			erzurum_area  = {
+			erzurum_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = {  is_permanent_claim = ROOT }
+				}
+				add_claim = ROOT
+			}
+			upper_euphrates_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = {  is_permanent_claim = ROOT }

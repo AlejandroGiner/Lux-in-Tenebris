@@ -211,10 +211,18 @@ capital = 1020	# Yamashiro
 
 1443.8.16 = {
 	monarch = {
+		name = "(Bakufu)"
+		regent = yes
+		adm = 1
+		dip = 1
+		mil = 1
+	}
+	heir = {
 		name = "Yoshimasa"
+		monarch_name = "Yoshimasa I"
 		dynasty = "Ashikaga"
 		birth_date = 1436.1.20
-#		death_date = 1490.1.27
+		death_date = 1490.1.27
 		adm = 2
 		dip = 3
 		mil = 1

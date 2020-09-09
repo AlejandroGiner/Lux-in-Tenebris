@@ -702,6 +702,13 @@ spa_reconquista = {
 				}
 				add_permanent_claim = ROOT
 			}
+			catalan_pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			valencia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -723,6 +730,7 @@ spa_reconquista = {
 				area = valencia_area
 				area = catalonia_area
 				area = aragon_area
+				area = catalan_pyrenees_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -733,6 +741,10 @@ spa_reconquista = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalan_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

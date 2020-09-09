@@ -483,6 +483,13 @@ palatinate_other_group = {
 					}
 					add_permanent_claim = root
 				}
+				sudety_area = {
+					limit = {
+						NOT = { is_permanent_claim = root }
+						NOT = { is_core = root }
+					}
+					add_permanent_claim = root
+				}
 			}
 		}
 	}
@@ -496,11 +503,16 @@ palatinate_other_group = {
 				area = bohemia_area
 				area = moravia_area
 				area = erzgebirge_area
+				area = sudety_area
 			}
 		}
 
 		trigger = {
 			bohemia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			sudety_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}

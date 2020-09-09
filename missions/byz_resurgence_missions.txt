@@ -1331,6 +1331,7 @@ byz_resurges = {
 					limit = {
 						OR = {
 							area = erzurum_area
+							area = upper_euphrates_area
 							area = mardin_area
 							area = north_kurdistan_area
 							province_id = 4298
@@ -2836,6 +2837,7 @@ byz_armenia_into_mesopotamia = {
 		provinces_to_highlight = {
 			OR = {
 				area = erzurum_area
+				area = upper_euphrates_area
 				area = mardin_area
 				area = north_kurdistan_area
 				province_id = 4298
@@ -2846,6 +2848,10 @@ byz_armenia_into_mesopotamia = {
 		
 		trigger = {
 			erzurum_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			upper_euphrates_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2986,6 +2992,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -3005,6 +3012,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -3027,6 +3035,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -3050,6 +3059,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -5200,6 +5210,13 @@ byz_iberia_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				catalan_pyrenees_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				aragon_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5241,6 +5258,7 @@ byz_iberia_3 = {
 				area = castille_area
 				area = aragon_area
 				area = catalonia_area
+				area = catalan_pyrenees_area
 				area = basque_area
 				province_id = 4550
 				province_id = 220
@@ -5258,6 +5276,10 @@ byz_iberia_3 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			catalan_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

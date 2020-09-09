@@ -267,6 +267,9 @@ aragon_important_cortes_provinces = {
 }
 
 catalonia_important_cortes_provinces = {
-	area = catalonia_area
+	OR = {
+		area = catalonia_area
+		area = catalan_pyrenees_area
+	}
 	NOT = { province_id = 3320 } # Andorra
 }

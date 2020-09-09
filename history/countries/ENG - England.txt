@@ -9,6 +9,20 @@ religion = catholic
 capital = 236 # London
 national_focus = DIP
 
+change_estate_land_share = {
+	estate = estate_church
+	share = -10
+}
+change_estate_land_share = {
+	estate = estate_burghers
+	share = -10
+}
+
+change_estate_land_share = { #compensates for lack of nobles, distributes 20 between the remaining estates
+	estate = all
+	share = 20
+}
+
 #1422.8.31 = { #Succession
 
 1429.11.6 = { #Coronation
@@ -27,7 +41,7 @@ national_focus = DIP
 
 #1428.11.22 = { leader = {	name = "Richard Neville"	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1471.4.14 } }
 
-1435.1.1 = { leader = {	name = "Richard Plantagenet"	type = general	fire = 2	shock = 4	manuever = 3	siege = 0	death_date = 1460.12.30 } }
+1444.1.1 = { leader = {	name = "John Talbot"	type = general	fire = 2	shock = 4	manuever = 3	siege = 0	death_date = 1453.7.17 } }
 
 1445.4.23 = {
 	queen = {
@@ -680,9 +694,9 @@ national_focus = DIP
 		name = "Oliver"
 		dynasty = "Cromwell"
 		birth_date = 1599.4.25
-		adm = 5
-		dip = 5
-		mil = 6
+		adm = 4
+		dip = 4
+		mil = 5
 		leader = { name = "Oliver Cromwell"	type = general	fire = 5	shock = 5	manuever = 4	siege = 1 }
 	}
 	

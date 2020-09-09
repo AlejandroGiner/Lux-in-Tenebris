@@ -826,6 +826,13 @@ polish_missions_slot_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				sudety_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -837,11 +844,16 @@ polish_missions_slot_3 = {
 				area = bohemia_area
 				area = erzgebirge_area
 				area = moravia_area
+				area = sudety_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			bohemia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sudety_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

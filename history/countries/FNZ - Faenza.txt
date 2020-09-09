@@ -1,14 +1,20 @@
-government = monarchy
-add_government_reform = feudalism_reform
+government = republic
+add_government_reform = signoria_reform
 government_rank = 1
 technology_group = western
 primary_culture = romagnan
 religion = catholic
 capital = 5136
 fixed_capital = 5136
+set_estate_privilege = estate_church_papal_emissary
 
-#historical_friend = XXX
-#historical_rival = XXX
-
-
-#History, currently empty.
+1439.1.1 = {
+	monarch = {
+		name = "Astorre II"	
+		dynasty = "Manfredi"
+		birth_date = 1412.12.8
+		adm = 4
+		dip = 3
+		mil = 4
+	}
+}

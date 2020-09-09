@@ -5,12 +5,8 @@ religion = catholic
 elector = yes
 capital = 266 # Praha
 technology_group = western
-historical_friend = SIL
-historical_friend = SOR
-historical_friend = OPL
-historical_friend = GLG
 add_accepted_culture = bavarian			#Draiocht added, only change in this file
-add_army_professionalism = 0.1
+add_army_professionalism = 0.15
 
 1378.11.29 = {
 	monarch = {
@@ -39,6 +35,10 @@ add_army_professionalism = 0.1
 		dip = 2
 		mil = 2
 	}
+}
+
+1444.10.1 = {
+	set_estate_privilege = estate_nobles_strong_duchies
 }
 
 # Personal Union with Habsburg under Ladislaus Postumus 1453-1457

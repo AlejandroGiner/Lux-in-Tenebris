@@ -374,6 +374,7 @@ emp_naples_3 = {
 				area = aragon_area
 				area = catalonia_area
 				area = valencia_area
+				area = catalan_pyrenees_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -388,6 +389,10 @@ emp_naples_3 = {
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 					catalonia_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					catalan_pyrenees_area = {
 						type = all
 						country_or_non_sovereign_subject_holds = ROOT
 					}
@@ -522,6 +527,13 @@ emp_naples_4 = {
 				add_permanent_claim = ROOT
 			}
 			catalonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catalan_pyrenees_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

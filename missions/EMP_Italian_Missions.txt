@@ -728,6 +728,13 @@ emp_ita_war_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			catalan_pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			valencia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -761,6 +768,7 @@ emp_ita_war_branch = {
 				area = catalonia_area
 				area = valencia_area
 				area = baleares_area
+				area = catalan_pyrenees_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -770,6 +778,10 @@ emp_ita_war_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalan_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

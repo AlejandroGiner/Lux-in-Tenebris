@@ -20,6 +20,7 @@ provence_missions_1 = {
 			OR = {
 				area = aragon_area
 				area = catalonia_area
+				area = catalan_pyrenees_area
 				area = valencia_area
 				area = baleares_area
 			}
@@ -35,6 +36,7 @@ provence_missions_1 = {
 					OR = {
 						area = aragon_area
 						area = catalonia_area
+						area = catalan_pyrenees_area
 						area = valencia_area
 						area = baleares_area
 					}
@@ -276,6 +278,13 @@ provence_missions_2 = {
 					add_permanent_claim = ROOT
 				}
 				catalonia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				catalan_pyrenees_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }

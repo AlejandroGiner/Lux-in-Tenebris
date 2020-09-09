@@ -1568,6 +1568,7 @@ gc_spain_4 = {
 			OR = {
 				area = valencia_area
 				area = catalonia_area
+				area = catalan_pyrenees_area
 				area = aragon_area
 			}
 			NOT = { owned_by = ROOT }
@@ -1581,13 +1582,17 @@ gc_spain_4 = {
 			}
 			custom_trigger_tooltip = {
 				tooltip = reconquista_three_cat_tooltip
-				catalonia_area = {
+				catalan_pyrenees_area = {
 					type = all
 					OR = {
 						province_id = 3320
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
+			}
+			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aragon_area = {
 				type = all

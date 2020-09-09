@@ -8,6 +8,19 @@ capital = 223	# Granada
 government_rank = 1
 religious_school = maliki_school
 
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 8
+}
+change_estate_land_share = {
+	estate = estate_church
+	share = -15
+}
+change_estate_land_share = {
+	estate = estate_burghers
+	share = 7
+}
+
 1392.1.1 = {
 	monarch = {
 		name = "Muhammad VII"

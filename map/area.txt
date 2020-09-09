@@ -443,7 +443,11 @@ aragon_area = { #4
 }
 
 catalonia_area = { #4
-	197 2987 3320 3186 3188 2988 213 212 7645
+	197 3188 2988 213 212
+}
+
+catalan_pyrenees_area = {
+	7645 3186 2987 3320
 }
 
 valencia_area = { #3
@@ -1329,11 +1333,15 @@ opole_area = {
 
 bohemia_area = { #4
 	color = { 19 30 57 }
-	266 2970 4724 3607 3612 3614 3611 3296 
+	266 4724 3612 3611 3296 
 }
 
-erzgebirge_area = { #Sudety
-	267 1771 2967 3613 3610 2968
+erzgebirge_area = {
+	267 2967 3613 3610 2968
+}
+
+sudety_area = {
+	3614 2970 3607 1771
 }
 
 moravia_area = {
@@ -1628,8 +1636,12 @@ rum_area = { # Galatia
 	2304 1846 2300 5152 5851 5867
 }
 
-erzurum_area = { #3	
-	331 4310 2305 2303 2306 5849 5854
+upper_euphrates_area = { #3	
+	4310 2303 2306 5849
+}
+
+erzurum_area = {
+	5853 2305 5854 331
 }
 
 hudavendigar_area = { # Bithynia
@@ -3753,7 +3765,11 @@ patagonian_andes = { #4
 }
 
 cuyo_area  = { #5
-	2843 2845 2847 2877 7634 7633
+	2843 2845 2847 2877 7633
+}
+
+catamarca_area = {
+	7634 791 7635
 }
 
 nehuenken_area = { #4
@@ -3780,15 +3796,19 @@ misiones_area = { #5
 	777 2853 2855 2858 2859 7692
 }
 
-tucuman_area  = { #3
-	791 2836 2842 7636 7635 7631
+tucuman_area = { #3
+	2836 2842 7636 7631
 }
 
 jujuy_area = { #3
-	794 2837 2839 7627 7626 7625
+	794 7625 2838
 }
 
-chaco_area  = { #4
+atacama_area = {
+	7627 7626 2839 2837
+}
+
+chaco_area = { #4
 	790 2854 2878 7696 7691 7632
 }
 
@@ -3817,7 +3837,6 @@ quito_area = { #5
 }
 
 iquitos_area = { #3
-
 	815 818 821
 }
 
@@ -3925,7 +3944,7 @@ moxos_area = { #3
 }
 
 upper_peru = { #4
-	2835 2838 2941 2942
+	2835 2941 2942
 }
 
 potosi_area = { #4
@@ -4095,15 +4114,19 @@ inner_banks_area = {
 }
 
 western_tennessee_area = { 
-	7479 918 939 7478 7480 7481
+	7479 918 939 7481
+}
+
+south_tennessee_area = {
+	7471 7431 7470 7423 2527
 }
 
 middle_tennessee_area = { 
-	7431 7423 7471 2527 7470 934
+	934 7480 7478 7477 935
 }
 
 eastern_tennessee_area = { 
-	7474 7475 7476 7477 935 7532
+	7474 7475 7476 7532
 }
 
 arkansas_plains_area = { 
@@ -4679,7 +4702,7 @@ subantarctic_islands_area = {
 ########################################
 
 pontus_area = {
-	330 4315 5206 3248 5853 5151
+	330 4315 5206 3248 5151
 }
 
 karasi_area = {

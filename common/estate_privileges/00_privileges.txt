@@ -1076,7 +1076,7 @@ estate_nobles_french_strong_duchies = {
 	penalties = {
 	}
 	benefits = {
-		diplomatic_upkeep = 3
+		diplomatic_upkeep = 4
 		reduced_liberty_desire_on_same_continent = 10
 	}
 	ai_will_do = {
@@ -5803,10 +5803,11 @@ estate_nobles_strong_duchies = {
 		}
 	}
 	penalties = {
+		global_tax_modifier = -0.1
 	}
 	benefits = {
-		diplomatic_upkeep = 2
-		reduced_liberty_desire = 10
+		diplomatic_upkeep = 3
+		reduced_liberty_desire = 15
 	}
 	ai_will_do = {
 		factor = 1

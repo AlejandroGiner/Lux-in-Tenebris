@@ -589,6 +589,13 @@ emp_hun_bohemia_austria_branch = {
 					}
 					add_permanent_claim = ROOT
 				}
+				sudety_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				erzgebirge_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -621,12 +628,17 @@ emp_hun_bohemia_austria_branch = {
 			OR = {
 				area = bohemia_area
 				area = erzgebirge_area
+				area = sudety_area
 				area = moravia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = { #8 provinces so fine for demanding all
 			bohemia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sudety_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
