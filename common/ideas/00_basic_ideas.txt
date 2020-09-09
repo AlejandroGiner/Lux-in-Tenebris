@@ -325,7 +325,7 @@ defensive_ideas = {
 	}
 
 	battlefield_commisions = {
-		army_tradition_from_battle = 1.0
+		army_tradition = 1
 	}
 	military_drill = {
 		land_morale = 0.15
@@ -459,7 +459,8 @@ exploration_ideas = {
 	important = yes
 
 	bonus = {
-		cb_on_primitives = yes
+		global_tax_income = 36
+		colonists = 1
 	}
 
 	quest_for_the_new_world	= {
@@ -474,7 +475,7 @@ exploration_ideas = {
 		range = 0.5
 	}
 	land_of_opportunity = {
-		global_colonial_growth = 10
+		global_colonial_growth = 35
 	}
 	vice_roys  = {
 		global_tariffs = 0.10
@@ -482,9 +483,11 @@ exploration_ideas = {
  	}
 	free_colonies = {
 		expel_minorities_cost = -1.0
+		colonist_placement_chance = 0.05
 	}
 	global_empire = {
 		naval_forcelimit_modifier = 0.25
+		cb_on_primitives = yes
 	}
 
 	ai_will_do = {
@@ -641,6 +644,7 @@ maritime_ideas = {
 
 	bonus = {
 		sea_repair = yes
+		allowed_marine_fraction = 0.1
 	}
 
 	merchant_traditions = {
@@ -779,6 +783,7 @@ expansion_ideas = {
 	important = yes
 
 	bonus = {
+		core_creation = -0.1
  		min_autonomy_in_territories = -0.1
 	}
 
@@ -789,7 +794,7 @@ expansion_ideas = {
 		merchants = 1
 	}
 	faster_colonists = {
-		global_colonial_growth = 20
+		global_colonial_growth = 35
 	}
 	factories = {
 		rival_border_fort_maintenance = -0.5
@@ -797,6 +802,7 @@ expansion_ideas = {
 	}
 	additional_diplomats = {
 		diplomatic_upkeep = 1
+		cb_on_overseas = yes
 	}
 	general_colonization_law  = {
 		colonists = 1
@@ -862,7 +868,7 @@ administrative_ideas = {
 	}
 
 	organised_mercenary_payment = {
-		mercenary_cost = -0.10
+		mercenary_cost = -0.15
 	}
 	adaptability = {
 		core_creation = -0.25
@@ -990,7 +996,7 @@ naval_ideas = {
 
 	bonus = {
 		ship_durability = 0.1
-		allowed_marine_fraction = 0.05
+		allowed_marine_fraction = 0.1
 	}
 
 	boarding_parties = {
