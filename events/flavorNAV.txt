@@ -126,16 +126,20 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					area = catalonia_area
-					area = catalan_pyrenees_area
+					OR = {
+						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
 			}
 			every_owned_province = {
 				limit = {
-					area = catalonia_area
-					area = catalan_pyrenees_area
+					OR = {
+						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
-				add_local_autonomy = 25
+					add_local_autonomy = 25
 			}
 		}
 	}
@@ -148,14 +152,18 @@ country_event = {
 		if = {
 			limit = {
 				any_owned_province = {
-					area = catalonia_area
-					area = catalan_pyrenees_area
+					OR = {
+						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
 			}
 			every_owned_province = {
 				limit = {
-					area = catalonia_area
-					area = catalan_pyrenees_area
+					OR = {
+						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
 				add_unrest = 10
 			}
