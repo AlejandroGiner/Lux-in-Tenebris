@@ -58,10 +58,13 @@ country_event = {
   desc = btc_roman_inquisition.2.d
   picture = COPTIC_MONASTERY_eventPicture
   
+  goto = province_asking_for_inquisition_help
+  
 	trigger = {
 		exists = PAP
 		NOT = { tag = PAP }
 		PAP = { has_country_flag = btc_roman_inquisition_flag }
+		has_country_flag = btc_roman_inquisition_flag
 		capital_scope = { region = italy_region }
 		reverse_has_opinion = {
 			who = PAP
