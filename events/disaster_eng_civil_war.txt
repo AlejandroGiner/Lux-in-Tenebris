@@ -278,6 +278,7 @@ country_event = {
 			OR = {
 				area = highlands_area
 				area = lowlands_area
+                area = scottish_marches_area
 			}
 			religion = catholic
 		}
@@ -300,6 +301,7 @@ country_event = {
 					OR = {
 						area = highlands_area
 						area = lowlands_area
+                        area = scottish_marches_area
 					}
 					religion = catholic
 				}
@@ -326,6 +328,17 @@ country_event = {
 					duration = 9000
 				}
 			}
+            scottish_marches_area = {
+                limit = {
+					owned_by = root
+					religion = catholic
+				}
+				change_religion = reformed
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+            }
 		}
 	}
 	option = {			# Who are they to demand anything!
@@ -363,6 +376,22 @@ country_event = {
 				}
 			}
 		}
+        if = {
+			limit = {
+				any_owned_province = {
+					area = scottish_marches_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = scottish_marches_area
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
 	}
 }
 
@@ -384,6 +413,7 @@ country_event = {
 			OR = {
 				area = highlands_area
 				area = lowlands_area
+                area = scottish_marches_area
 			}
 			religion = catholic
 		}
@@ -406,6 +436,7 @@ country_event = {
 					OR = {
 						area = highlands_area
 						area = lowlands_area
+                        area = scottish_marches_area
 					}
 					religion = catholic
 				}
@@ -422,6 +453,17 @@ country_event = {
 				}
 			}
 			highlands_area = {
+				limit = {
+					owned_by = root
+					religion = catholic
+				}
+				change_religion = reformed
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+			}
+            scottish_marches_area = {
 				limit = {
 					owned_by = root
 					religion = catholic
@@ -463,6 +505,22 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					area = lowlands_area
+				}
+				spawn_rebels = {
+					type = pretender_rebels
+					size = 2
+				}
+			}
+		}
+        if = {
+			limit = {
+				any_owned_province = {
+					area = scottish_marches_area
+				}
+			}
+			random_owned_province = {
+				limit = {
+					area = scottish_marches_area
 				}
 				spawn_rebels = {
 					type = pretender_rebels
@@ -597,12 +655,7 @@ country_event = {
 		has_country_flag = supports_parliamentarians
 		num_of_owned_provinces_with = {
 			value = 2
-			OR = {
-				area = munster_area
-				area = connacht_area
-				area = leinster_area
-				area = ulster_area
-			}
+			region = ireland_region
 			unrest = 1
 		}
 	}
@@ -615,24 +668,14 @@ country_event = {
 		set_country_flag = ENG_had_event_9232
 		random_owned_province = {
 			limit = {
-				OR = {
-					area = munster_area
-					area = connacht_area
-					area = leinster_area
-					area = ulster_area
-				}
+				region = ireland_region
 				unrest = 1
 			}
 			set_province_flag = irish_rebellion
 		}
 		random_owned_province = {
 			limit = {
-				OR = {
-					area = munster_area
-					area = connacht_area
-					area = leinster_area
-					area = ulster_area
-				}
+				region = ireland_region
 				NOT = { has_province_flag = irish_rebellion }
 				unrest = 1
 			}
@@ -675,12 +718,7 @@ country_event = {
 		has_country_flag = supports_royalists
 		num_of_owned_provinces_with = {
 			value = 2
-			OR = {
-				area = munster_area
-				area = connacht_area
-				area = leinster_area
-				area = ulster_area
-			}
+			region = ireland_region
 			unrest = 1
 		}
 	}
@@ -693,24 +731,14 @@ country_event = {
 		set_country_flag = ENG_had_event_9233
 		random_owned_province = {
 			limit = {
-				OR = {
-					area = munster_area
-					area = connacht_area
-					area = leinster_area
-					area = ulster_area
-				}
+				region = ireland_region
 				unrest = 1
 			}
 			set_province_flag = irish_rebellion
 		}
 		random_owned_province = {
 			limit = {
-				OR = {
-					area = munster_area
-					area = connacht_area
-					area = leinster_area
-					area = ulster_area
-				}
+				region = ireland_region
 				NOT = { has_province_flag = irish_rebellion }
 				unrest = 1
 			}
@@ -753,10 +781,6 @@ country_event = {
 		has_country_modifier = new_model_army
 		any_owned_province = {
 			region = british_isles_region
-			NOT = { area = munster_area }
-			NOT = { area = connacht_area }
-			NOT = { area = leinster_area }
-			NOT = { area = ulster_area }
 			is_capital = no
 		}
 	}
@@ -775,10 +799,6 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				region = british_isles_region
-				NOT = { area = munster_area }
-				NOT = { area = connacht_area }
-				NOT = { area = leinster_area }
-				NOT = { area = ulster_area }
 				is_capital = no
 			}
 			spawn_rebels = {
