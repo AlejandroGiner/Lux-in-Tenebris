@@ -10,7 +10,7 @@ local_quarter = {
 	
 	upgrades_to = permanent_quarters
 	
-	cost = 200.0
+	cost = 250.0
 	
 	company_province_area_modifier = {
 		local_defensiveness = 0.15
@@ -28,7 +28,7 @@ permanent_quarters = {
 
 	sprite = "GFX_investment_permanent_quarter"
 
-	cost = 400.0
+	cost = 500.0
 
 	company_province_area_modifier = {
 		local_defensiveness = 0.30
@@ -46,7 +46,7 @@ officers_mess = {
 
 	sprite = "GFX_investment_officers_mess"
 
-	cost = 1000.0
+	cost = 1300.0
 
 	allow = {
 		NOT = {
@@ -100,7 +100,7 @@ company_warehouse = {
 	
 	upgrades_to = company_depot
 		
-	cost = 200.0
+	cost = 250.0
 
 	company_province_area_modifier = {
 		province_trade_power_value = 2
@@ -121,7 +121,7 @@ company_depot = {
 	
 	sprite = "GFX_investment_company_depot"
 
-	cost = 400.0
+	cost = 500.0
 
 	company_province_area_modifier = {
 		province_trade_power_value = 4
@@ -142,7 +142,7 @@ admiralty = {
 
 	sprite = "GFX_investment_admiralty"
 
-	cost = 1000.0
+	cost = 1300.0
 
 	allow = {
 		NOT = {
@@ -196,7 +196,7 @@ brokers_office = {
 
 	upgrades_to = brokers_exchange
 		
-	cost = 200.0
+	cost = 250.0
 
 	company_province_area_modifier = {
 		local_production_efficiency = 0.25
@@ -217,7 +217,7 @@ brokers_exchange = {
 				
 	sprite = "GFX_investment_brokers_exchange"
 
-	cost = 400.0
+	cost = 500.0
 
 	company_province_area_modifier = {
 		local_production_efficiency = 0.5
@@ -238,7 +238,7 @@ property_appraiser = {
 			
 	sprite = "GFX_investment_property_appraiser"
 
-	cost = 1000.0
+	cost = 1300.0
 
 	allow = {
 		NOT = {
@@ -292,7 +292,7 @@ settlements = {
 
 	upgrades_to = district
 		
-	cost = 200.0
+	cost = 250.0
 
 	company_province_area_modifier = {
 		local_tax_modifier = 0.25
@@ -313,7 +313,7 @@ district = {
 		
 	sprite = "GFX_investment_district"
 		
-	cost = 400.0
+	cost = 500.0
 
 	company_province_area_modifier = {
 		local_tax_modifier = 0.5
@@ -334,7 +334,7 @@ townships = {
 	
 	sprite = "GFX_investment_townships"
 	
-	cost = 1000.0
+	cost = 1300.0
 			
 	allow = {
 		NOT = {
@@ -370,7 +370,7 @@ townships = {
 	}
 
 	owner_modifier = {
-		army_tradition = 0.025
+		army_tradition = 0.08
 	}
 	
 	company_region_modifier = {
@@ -392,7 +392,7 @@ company_administration = {
 	
 	upgrades_to = military_administration
 	
-	cost = 200.0
+	cost = 250.0
 	
 	company_province_area_modifier = {
 		local_manpower_modifier = 0.5
@@ -410,7 +410,7 @@ military_administration = {
 	
 	sprite = "GFX_investment_military_administration"
 	
-	cost = 400.0
+	cost = 500.0
 	
 	company_province_area_modifier = {
 		local_manpower_modifier = 1.0
@@ -428,7 +428,7 @@ governor_general_mansion = {
 	
 	sprite = "GFX_investment_governor_general_mansion"
 	
-	cost = 1000.0
+	cost = 1300.0
 			
 	allow = {
 		NOT = {
@@ -464,11 +464,11 @@ governor_general_mansion = {
 	}
 
 	company_region_modifier = {
-		min_local_autonomy = -5
+		min_local_autonomy = -10
 	}
 	
 	owner_modifier = {
-		allowed_marine_fraction = 0.02
+		allowed_marine_fraction = 0.04
 	}
 
 	ai_global_worth = { factor = 2 }
