@@ -49,7 +49,7 @@ genoa_missions_africa = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			tunisia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -112,7 +112,7 @@ genoa_missions_africa = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			226 = {
 				if = {
 					limit = {
@@ -141,7 +141,7 @@ genoa_missions_africa = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			224 = {
 				if = {
 					limit = {
@@ -183,10 +183,10 @@ genoa_africa_slot_2 = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			add_country_modifier = {
 				name = "mediterranean_ambition"
-				duration = 5475
+				duration = 36500
 			}
 		}
 	}
@@ -236,7 +236,7 @@ genoa_europe_slot = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			137 = {
 				if = {
 					limit = {
@@ -265,7 +265,7 @@ genoa_europe_slot = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			hudavendigar_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -317,7 +317,7 @@ genoa_europe_slot = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			add_country_modifier = {
 				name = "black_sea_ambition"
 				duration = 5475
