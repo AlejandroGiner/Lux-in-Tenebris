@@ -445,6 +445,13 @@ hanseatic_sound_toll_tree = {
 				}
 				add_permanent_claim = ROOT
 			}
+			schleswig_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			jutland_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -467,6 +474,7 @@ hanseatic_sound_toll_tree = {
 		provinces_to_highlight = {
 			OR = {
 				area = holstein_area
+				area = schleswig_area
 				area = jutland_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -474,10 +482,11 @@ hanseatic_sound_toll_tree = {
 
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
+				value = 6
 				OR = {
-					area = jutland_area
 					area = holstein_area
+					area = schleswig_area
+					area = jutland_area
 				}
 			}
 		}
