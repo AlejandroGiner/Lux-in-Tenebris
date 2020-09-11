@@ -525,12 +525,7 @@ dates = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				has_winter = severe_winter
-				has_winter = normal_winter
-				has_winter = mild_winter
-				area = taiwan_area
-			}
+			NOT = { has_climate = arid }
 		}
 	}
 }
