@@ -384,17 +384,31 @@ emp_bohemia_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			felvidek_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_boh_great_moravia = {
 		icon = restore_great_moravia
 		required_missions = { emp_boh_integrate_silesia }
 		provinces_to_highlight = {
-			area = slovakia_area
+			OR = {
+				area = slovakia_area
+				area = felvidek_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			slovakia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			felvidek_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -430,6 +444,20 @@ emp_bohemia_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				southern_transdanubia_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				southern_alfold_area = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -440,6 +468,8 @@ emp_bohemia_2 = {
 			OR = {
 				area = transdanubia_area
 				area = alfold_area
+				area = southern_transdanubia_area
+				area = southern_alfold_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -450,6 +480,14 @@ emp_bohemia_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			alfold_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_alfold_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -666,27 +704,13 @@ emp_bohemia_3 = {
 				}
 			}
 			else = {
-				malopolska_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
+				poland_region = {
+						limit = {
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
+						}
+						add_permanent_claim = ROOT
 					}
-					add_permanent_claim = ROOT
-				}
-				wielkopolska_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
-				central_poland_area = {
-					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 		}
 	}
@@ -699,6 +723,7 @@ emp_bohemia_3 = {
 				area = wielkopolska_area
 				area = malopolska_area
 				area = central_poland_area
+				area = kalisz_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -713,6 +738,10 @@ emp_bohemia_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			central_poland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kalisz_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

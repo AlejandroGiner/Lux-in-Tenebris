@@ -1152,7 +1152,14 @@ emp_bav_missions_conquer_austria = {
 				}
 				add_permanent_claim = ROOT
 			}
-			carinthia_area = {
+			friuli_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			guelders_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -1190,7 +1197,7 @@ emp_bav_missions_conquer_italy = {
 		provinces_to_highlight = {
 			OR = {
 				area = venetia_area
-				area = carinthia_area
+				area = friuli_area
 			}
 			NOT = {
 				ROOT = {
@@ -1198,7 +1205,7 @@ emp_bav_missions_conquer_italy = {
 						value = 8
 						OR = {
 							area = venetia_area
-							area = carinthia_area
+							area = friuli_area
 						}
 					}
 				}
@@ -1210,7 +1217,7 @@ emp_bav_missions_conquer_italy = {
 				value = 8
 				OR = {
 					area = venetia_area
-					area = carinthia_area
+					area = friuli_area
 				}
 			}
 		}
@@ -1266,17 +1273,19 @@ emp_bav_missions_netherlands = {
 				area = brabant_area
 				area = south_holland_area
 				area = north_brabant_area
+				area = guelders_area
 			}
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 12
+						value = 15
 						OR = {
 							area = frisia_area
 							area = holland_area
 							area = brabant_area
 							area = south_holland_area
 							area = north_brabant_area
+							area = guelders_area
 						}
 					}
 				}
@@ -1285,13 +1294,14 @@ emp_bav_missions_netherlands = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 12
+				value = 15
 				OR = {
 					area = frisia_area
 					area = holland_area
 					area = south_holland_area
 					area = brabant_area
 					area = north_brabant_area
+					area = guelders_area
 				}
 			}
 		}

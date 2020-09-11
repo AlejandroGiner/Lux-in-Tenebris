@@ -44,6 +44,13 @@ EMP_crusader_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			tripoli_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			syrian_desert_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -63,11 +70,16 @@ EMP_crusader_1 = {
 				area = palestine_area
 				area = trans_jordan_area
 				area = aleppo_area
+				area = tripoli_area
 			}
 			NOT = { religion = ROOT }
 		}
 		trigger = {
 			syria_area = {
+				type = all
+				religion = ROOT
+			}
+			tripoli_area = {
 				type = all
 				religion = ROOT
 			}
@@ -184,6 +196,7 @@ EMP_crusader_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = syria_area
+				area = tripoli_area
 				area = syrian_desert_area
 				area = trans_jordan_area
 			}
@@ -199,6 +212,10 @@ EMP_crusader_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			trans_jordan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tripoli_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -376,7 +393,23 @@ EMP_crusader_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = PAP }
+				}
+				add_permanent_claim = ROOT
+			}
 			aegean_archipelago_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+					NOT = { owned_by = PAP }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_aegean_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -392,7 +425,9 @@ EMP_crusader_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				area = aegean_archipelago_area
+				area = western_aegean_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -403,7 +438,9 @@ EMP_crusader_3 = {
 					value = 5
 					OR = {
 						area = morea_area
+						area = north_morea_area
 						area = aegean_archipelago_area
+						area = western_aegean_area
 					}
 				}
 			}
@@ -430,7 +467,35 @@ EMP_crusader_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_thrace_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			thessaly_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			hudavendigar_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			karasi_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -447,7 +512,11 @@ EMP_crusader_3 = {
 				area = northern_greece_area
 				area = macedonia_area
 				area = thrace_area
+				area = eastern_thrace_area
+				area = upper_thrace_area
+				area = thessaly_area
 				area = hudavendigar_area
+				area = karasi_area
 			}
 			OR = {
 				AND = {
@@ -477,10 +546,27 @@ EMP_crusader_3 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			eastern_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_thrace_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			thessaly_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			hudavendigar_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			karasi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
 		}
 		effect = {
 			if = {
@@ -534,11 +620,11 @@ EMP_crusader_3 = {
 				limit = {
 					religion = catholic
 				}
-				add_papal_influence = 50
+				add_papal_influence = 100
 			}
-			add_adm_power = 50
-			add_dip_power = 50
-			add_mil_power = 50
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
 		}
 	}	
 }
