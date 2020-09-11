@@ -104,13 +104,19 @@ emp_naples_2 = {
 		required_missions = { emp_nap_independent_naples }
 		position = 2
 		provinces_to_highlight = {
-			area = tuscany_area
+			OR {
+				area = tuscany_area
+				area = south_tuscany_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 3
-				area = tuscany_area
+				value = 5
+				OR {
+					area = tuscany_area
+					area = south_tuscany_area
+				}
 			}
 			117 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -125,6 +131,13 @@ emp_naples_2 = {
 				add_permanent_claim = ROOT
 			}
 			emilia_romagna_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -237,6 +250,13 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_tuscany_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_nap_two_sicilies = {
@@ -274,6 +294,27 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_morea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			western_aegean_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			thessaly_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_nap_despot_of_epirus = {
@@ -283,6 +324,9 @@ emp_naples_3 = {
 			OR = {
 				area = morea_area
 				area = northern_greece_area
+				area = north_morea_area
+				area = western_aegean_area
+				area = thessaly_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -292,10 +336,13 @@ emp_naples_3 = {
 				EPI = { is_subject_of = ROOT }
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 6
+				value = 10
 				OR = {
 					area = morea_area
 					area = northern_greece_area
+					area = north_morea_area
+					area = western_aegean_area
+					area = thessaly_area
 				}
 			}
 			4699 = {
@@ -334,6 +381,13 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			tripoli_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_nap_king_of_jerusalem = {
@@ -345,6 +399,7 @@ emp_naples_3 = {
 				area = syria_area
 				area = aleppo_area
 				area = trans_jordan_area
+				area = tripoli_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -356,6 +411,7 @@ emp_naples_3 = {
 					area = syria_area
 					area = aleppo_area
 					area = trans_jordan_area
+					area = tripoli_area
 				}
 			}
 			379 = {
@@ -463,6 +519,13 @@ emp_naples_4 = {
 				add_permanent_claim = ROOT
 			}
 			baleares_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			tripoli_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
