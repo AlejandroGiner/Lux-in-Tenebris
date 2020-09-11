@@ -396,6 +396,7 @@ emp_bra_pru_2 = {
 				area = silesia_area
 				area = lusatia_area
 				area = opole_area
+				area = legnica_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -411,6 +412,10 @@ emp_bra_pru_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lusatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legnica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -663,6 +668,13 @@ emp_bra_pru_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			muenster_area  = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			north_westphalia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -854,6 +866,7 @@ emp_bra_pru_4 = {
 		provinces_to_highlight = {
 			OR = {
 				area = braunschweig_area
+				area = muenster_area
 				area = north_westphalia_area
 				area = westphalia_area
 			}
@@ -864,6 +877,7 @@ emp_bra_pru_4 = {
 				value = 8
 				OR = {
 					area = braunschweig_area
+					area = muenster_area
 					area = north_westphalia_area
 					area = westphalia_area
 				}
