@@ -227,12 +227,35 @@ penal_colonies_reform = {
 		NOT = { TAG = SCO }
 	}
 	modifiers = {
-		expel_minorities_cost = -0.3
+		expel_minorities_cost = -0.4
 		global_unrest = -1
 	}
-	ai = {
-		factor = 0.1
+	ai = { factor = 2 }
+}
+
+btc_chartered_companies_reform = {
+	icon = "chartered_company_btc"
+	allow_normal_conversion = yes
+	potential = {
+        num_of_colonists = 1
+		culture_group = british
+		capital_scope = {
+			region = british_isles_region
+		}
 	}
+	trigger = {
+		num_of_colonists = 1
+        num_of_continents = 2
+		culture_group = british
+		capital_scope = {
+			region = british_isles_region
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.05
+		global_colonial_growth = 15
+	}
+	ai = { factor = 2 }
 }
 
 # Holy State for Jerusalem

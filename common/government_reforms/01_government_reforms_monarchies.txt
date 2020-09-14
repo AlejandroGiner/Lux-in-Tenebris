@@ -495,7 +495,6 @@ english_monarchy = {
 	legacy_equivalent = english_monarchy_legacy
 	start_territory_to_estates = 0.3
 	modifiers = {
-		governing_capacity = 50
 		legitimacy = 0.5
 		global_unrest = -1
 		max_absolutism = -30
@@ -628,8 +627,8 @@ austrian_dual_monarchy = {
 	}
 
 	modifiers = {
-		num_accepted_cultures = 2
-		global_unrest = -2
+		num_accepted_cultures = 1
+		global_unrest = -1
 		monarch_diplomatic_power = 2
 		promote_culture_cost = -0.33
 	}
@@ -1654,6 +1653,9 @@ centralize_reform = {
 	}
 	modifiers = {
 		global_autonomy = -0.05
+	}
+	ai = {
+		factor = 1
 	}
 }
 
