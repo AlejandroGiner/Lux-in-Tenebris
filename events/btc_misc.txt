@@ -453,24 +453,24 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		NOT = { has_dlc = "Emperor" }
 		tag = FRA
 		is_year = 1550
 		has_reform = french_crown
 		adm = 4
+		NOT = { has_country_flag = passed_edict_moulins }
 	}
 	
 	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = btc_misc.11.a
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 95 }
 		
 		add_reform_progress_medium_effect = yes
 		add_government_reform = french_monarchy
 		every_subject_country = {
-			limit = {
-				capital_scope = { region = france_region }
-			}
+			limit = { capital_scope = { region = france_region } }
 			ROOT = { inherit = PREV }
 		}
 		add_country_modifier = {
@@ -527,7 +527,7 @@ country_event = {
 	
 	option = {
 		name = btc_misc.11.b
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 5 }
 
 		every_subject_country = {
 			limit = { capital_scope = { region = france_region } }

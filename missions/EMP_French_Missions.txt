@@ -2211,7 +2211,8 @@ emp_france_missions_5 = {
 				}
 				remove_country_modifier = annexers_legacy
 			}
-			add_reform_progress_medium_effect = yes
+			set_country_flag = passed_edict_moulins
+			country_event = { id = btc_misc.11 }
 		}
 	}
 	emp_fra_wars_of_religion = {
