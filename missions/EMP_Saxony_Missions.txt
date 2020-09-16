@@ -1128,6 +1128,7 @@ emp_sax_missions_economic = {
 		required_missions = { emp_sax_manufacturing }
 		provinces_to_highlight = {
 			province_id = 61
+			province_id = 59
 			OR = {
 				NOT = { is_strongest_trade_power = root }
 				NOT = { owned_by = root }
@@ -1147,7 +1148,7 @@ emp_sax_missions_economic = {
 				has_production_building_trigger = yes
 				development = 20
 			}
-			61 = {
+			59 = {
 				is_strongest_trade_power = root
 			}
 			share_of_starting_income = 3

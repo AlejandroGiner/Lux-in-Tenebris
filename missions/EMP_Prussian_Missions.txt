@@ -474,9 +474,11 @@ emp_bra_pru_2 = {
 		icon = mission_open_up_china
 		required_missions = { emp_brapru_emden_company }
 		provinces_to_highlight = {
+			province_id = 1371
+			NOT = { 1371 = { is_strongest_trade_power = ROOT } }
 		}
 		trigger = {
-			667 = {
+			1371 = {
 				is_strongest_trade_power = ROOT
 			}
 		}

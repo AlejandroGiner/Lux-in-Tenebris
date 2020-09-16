@@ -606,14 +606,12 @@ eng_chesapeake_dominance = {
 		completed_by = 1618.5.1
 
 		provinces_to_highlight = {
-			province_id = 1500
+			province_id = 5477
 			has_discovered = ROOT
 		}
 
 		trigger = {
-			1500 = {	# Chesapeake Bay
-				is_strongest_trade_power = ROOT
-			}
+			5477 = { is_strongest_trade_power = ROOT }
 		}
 
 		effect = {
@@ -622,12 +620,8 @@ eng_chesapeake_dominance = {
 				duration = 7300
 			}
 			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
-				226 = {
-					add_permanent_claim = ROOT
-				}
+				limit = { has_dlc = "Rule Britannia" }
+				226 = { add_permanent_claim = ROOT }
 			}
 		}
 	}

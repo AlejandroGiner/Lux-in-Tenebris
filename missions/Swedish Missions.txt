@@ -389,7 +389,8 @@ bt_swedish_balticum_intermarum = {
 		required_missions = { swe_expand_kopparberget }
 		provinces_to_highlight = {
 			province_has_center_of_trade_of_level = 1
-			any_trade_node_member_province = { province_id = 1926 }
+			any_trade_node_member_province = { province_id = 1 }
+			any_trade_node_member_province = { province_id = 43 }
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
@@ -401,13 +402,22 @@ bt_swedish_balticum_intermarum = {
 				country_has_center_of_trade_of_level = 3
 				custom_trigger_tooltip = {
 					tooltip = swe_control_baltic_trade_tooltip
-					1926 = { #Baltic sea
+					1 = { #Baltic sea
 						calc_true_if = {
 							all_trade_node_member_province = {
 								owned_by = ROOT
 								province_has_center_of_trade_of_level = 2
 							}
-							amount = 5
+							amount = 2
+						}
+					}
+					43 = { #Baltic sea
+						calc_true_if = {
+							all_trade_node_member_province = {
+								owned_by = ROOT
+								province_has_center_of_trade_of_level = 2
+							}
+							amount = 3
 						}
 					}
 				}
@@ -430,7 +440,10 @@ bt_swedish_balticum_intermarum = {
 					}
 				}
 			}
-			1926 = { #Baltic sea
+			1 = {
+				is_strongest_trade_power = ROOT
+			}
+			43 = {
 				is_strongest_trade_power = ROOT
 			}
 		}

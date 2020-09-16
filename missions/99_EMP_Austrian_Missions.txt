@@ -405,16 +405,16 @@ emp_hab_netherlands_branch = {
 		required_missions = { emp_hab_indian_trading }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 667
-				province_id = 684
+				province_id = 1371
+				province_id = 1822
 			}
-			NOT = { 667 = { is_strongest_trade_power = ROOT } }
-			NOT = { 684 = { is_strongest_trade_power = ROOT } }
+			NOT = { 1371 = { is_strongest_trade_power = ROOT } }
+			NOT = { 1822 = { is_strongest_trade_power = ROOT } }
 		}
 		trigger = {
 			OR = {
-				667 = { is_strongest_trade_power = ROOT }
-				684 = { is_strongest_trade_power = ROOT }
+				1371 = { is_strongest_trade_power = ROOT }
+				1822 = { is_strongest_trade_power = ROOT }
 			}
 		}
 		effect = {

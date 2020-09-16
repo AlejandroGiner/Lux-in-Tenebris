@@ -867,7 +867,8 @@ emp_germany_hlr_4 = {
 			OR = {
 				region = baltic_region
 				region = scandinavia_region
-				province_id = 1926
+				province_id = 1
+				province_id = 43
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -879,7 +880,10 @@ emp_germany_hlr_4 = {
 					region = scandinavia_region
 				}
 			}
-			1926 = {
+			1 = {
+				is_strongest_trade_power = ROOT
+			}
+			43 = {
 				is_strongest_trade_power = ROOT
 			}
 		}

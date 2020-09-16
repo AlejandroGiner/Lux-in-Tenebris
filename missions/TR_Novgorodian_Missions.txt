@@ -424,10 +424,11 @@ tr_novgorod_3 = {
 			OR = {
 				province_id = 40
 				province_id = 43
-				province_id = 1926
+				province_id = 1
 			}
 			OR = {
-				province_id = 1926
+				province_id = 43
+				province_id = 1
 				NOT = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -440,7 +441,10 @@ tr_novgorod_3 = {
 			43 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1926 = {
+			1 = {
+				is_strongest_trade_power = ROOT
+			}
+			43 = {
 				is_strongest_trade_power = ROOT
 			}
 		}

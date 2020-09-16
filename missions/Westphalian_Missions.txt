@@ -376,7 +376,7 @@ westfalian_group_3 = {
 		position = 6
 		
 		trigger = {
-			1876 = {
+			86 = {
 				is_strongest_trade_power = ROOT
 				trade_share = {
 					country = ROOT
@@ -473,7 +473,7 @@ westfalian_group_3 = {
 					}
 				}
 				AND = {
-					province_id = 1876
+					province_id = 86
 					OR = {
 						NOT = { is_strongest_trade_power = ROOT }
 						trade_share = {
@@ -491,7 +491,7 @@ westfalian_group_3 = {
 			owns_core_province = 67	# Nuremburg
 			owns_core_province = 1876	# Frankfurt
 			owns_core_province = 69	# Dortmund
-			1876 = {
+			86 = {
 				is_strongest_trade_power = ROOT
 				trade_share = {
 					country = ROOT

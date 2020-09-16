@@ -1176,7 +1176,7 @@ emp_france_missions_2_b = {
 			has_discovered = ROOT
 			OR = {
 				AND = {
-					province_id = 2526
+					province_id = 948
 					NOT = { is_strongest_trade_power = ROOT }
 				}
 				owner = {
@@ -1191,7 +1191,7 @@ emp_france_missions_2_b = {
 			}
 		}
 		trigger = {
-			2526 = {
+			948 = {
 				is_strongest_trade_power = ROOT
 			}
 			if = {
@@ -2212,7 +2212,7 @@ emp_france_missions_5 = {
 				remove_country_modifier = annexers_legacy
 			}
 			set_country_flag = passed_edict_moulins
-			country_event = { id = btc_misc.11 }
+			country_event = { id = btc_misc.25 }
 		}
 	}
 	emp_fra_wars_of_religion = {
@@ -2251,8 +2251,12 @@ emp_france_missions_5 = {
 				current_age = age_of_revolutions
 			}
 			monthly_adm = 10
-			NOT = {
-				average_autonomy = 15
+			if = {
+				has_reform = french_crown
+				NOT = { average_autonomy = 35 }
+			}
+			else = {
+				NOT = { average_autonomy = 15 }
 			}
 			crown_land_share = 70
 		}
@@ -2262,13 +2266,15 @@ emp_france_missions_5 = {
 				duration = -1
 			}
 			if = {
-				limit = {
-					is_revolutionary = no
-				}
+				limit = { is_revolutionary = no }
 				add_absolutism = 10
 			}
 			else = {
 				add_revolutionary_zeal = 10
+			}
+			if = {
+				has_reform = french_crown
+				add_government_reform = french_monarchy
 			}
 		}
 	}

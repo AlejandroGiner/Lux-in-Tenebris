@@ -313,6 +313,26 @@ guiTypes = {
 			maxHeight = 32
 			format = left
 		}
+		
+		iconType = {
+			name = "modifier_icon_4"
+			position = { x=265 y=85 }
+			Orientation = "UPPER_LEFT"
+			scale = 0.5
+			quadTextureSprite ="GFX_event_bg_transparency"
+		}
+
+		instantTextBoxType = {
+			name = "modifier_desc_4"
+			position = { x=293 y=89 }
+			textureFile = ""
+			font = "vic_18"
+			borderSize = {x=4 y=4}
+			text = ""
+			maxWidth = 64
+			maxHeight = 32
+			format = left
+		}
 	}
 
 	################################################################################################
@@ -459,6 +479,7 @@ guiTypes = {
 			maxHeight = 32
 			format = left
 		}
+
 	}
 
 	################################################################################################
