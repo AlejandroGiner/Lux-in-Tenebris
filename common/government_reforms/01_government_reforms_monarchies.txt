@@ -2556,13 +2556,11 @@ french_monarchy = {
 		monthly_splendor = 1
 		max_absolutism = 5
 		global_manpower_modifier = 0.15
+		governing_capacity = 100
 	}
 }
 
 #BTC
-
-
-
 tuscan_duchy_btc = {
 	icon = "florentine_republic_btc"
 	allow_normal_conversion = no
@@ -2661,11 +2659,8 @@ edo_shogunate = {
 
 	modifiers = {
 		diplomats = 2
-		envoy_travel_time = -0.40
 		monthly_splendor = 1
-		development_cost = -0.1
 		vassal_forcelimit_bonus = 1
-		max_absolutism = 10
 	}
 
 	custom_attributes = {

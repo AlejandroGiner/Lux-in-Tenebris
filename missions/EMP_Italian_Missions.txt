@@ -212,6 +212,34 @@ emp_ita_gallia_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			btc_pyrenees_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_guyenne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			limousin_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			saintonge_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -229,6 +257,10 @@ emp_ita_gallia_branch = {
 				area = massif_central_area
 				area = west_massif_central_area
 				area = pyrenees_area
+				area = btc_pyrenees_area
+				area = east_guyenne_area
+				area = limousin_area
+				area = saintonge_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -258,6 +290,22 @@ emp_ita_gallia_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			btc_pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			limousin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			saintonge_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

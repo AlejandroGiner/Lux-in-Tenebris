@@ -146,7 +146,7 @@ fla_reconquest_group = {
     }
 
 		effect = {
-			netherlands_area = {
+			holland_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -181,7 +181,7 @@ fla_reconquest_group = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = netherlands_area
+				area = holland_area
 				area = frisia_area
         area = guelders_area
 			}
@@ -189,7 +189,7 @@ fla_reconquest_group = {
 		}
 
 		trigger = {
-			netherlands_area = {
+			holland_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -309,7 +309,7 @@ fla_slot4_branch = {
 
 		provinces_to_highlight = {
 			OR = {
-				area = netherlands_area
+				area = holland_area
 				area = flanders_area
         area = brabant_area
 			}
@@ -323,7 +323,7 @@ fla_slot4_branch = {
 				NOT = {
 					any_owned_province = {
 									OR = {
-                    area = netherlands_area
+                    area = holland_area
                     area = flanders_area
                     area = brabant_area
                   }

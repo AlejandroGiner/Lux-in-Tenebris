@@ -141,7 +141,6 @@ pom_1 = {
 						area = wielkopolska_area
 						area = kalisz_area
 						area = mazovia_area
-						area = central_poland_area
 					}
 					OR = {
 						ROOT = {
@@ -231,10 +230,6 @@ pom_1 = {
 								type = all
 								country_or_non_sovereign_subject_holds = ROOT
 							}
-							central_poland_area = {
-								type = all
-								country_or_non_sovereign_subject_holds = ROOT
-							}
 						}
 					}
 				}
@@ -260,10 +255,6 @@ pom_1 = {
 							country_or_non_sovereign_subject_holds = ROOT
 						}
 						mazovia_area = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
-						central_poland_area = {
 							type = all
 							country_or_non_sovereign_subject_holds = ROOT
 						}
@@ -320,10 +311,6 @@ pom_1 = {
 								type = all
 								country_or_non_sovereign_subject_holds = ROOT
 							}
-							central_poland_area = {
-								type = all
-								country_or_non_sovereign_subject_holds = ROOT
-							}
 						}
 					}
 				}
@@ -352,10 +339,6 @@ pom_1 = {
 							type = all
 							country_or_non_sovereign_subject_holds = ROOT
 						}
-						central_poland_area = {
-							type = all
-							country_or_non_sovereign_subject_holds = ROOT
-						}
 					}
 				}
 			}
@@ -369,10 +352,6 @@ pom_1 = {
 					country_or_non_sovereign_subject_holds = ROOT
 				}
 				mazovia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				central_poland_area = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT
 				}
@@ -455,16 +434,6 @@ pom_1 = {
 						}
 						add_claim = ROOT
 					}
-					central_poland_area = {
-						limit = {
-							NOT = {
-								is_core = ROOT
-								is_claim = ROOT
-							}
-							owned_by = PLC
-						}
-						add_claim = ROOT
-					}
 				}
 			}
 			else_if = {
@@ -525,16 +494,6 @@ pom_1 = {
 						add_claim = ROOT
 					}
 					mazovia_area = {
-						limit = {
-							NOT = {
-								is_core = ROOT
-								is_claim = ROOT
-							}
-							owned_by = POL
-						}
-						add_claim = ROOT
-					}
-					central_poland_area = {
 						limit = {
 							NOT = {
 								is_core = ROOT

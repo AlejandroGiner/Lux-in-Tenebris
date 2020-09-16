@@ -490,7 +490,7 @@ emp_ser_west_balkan_branch = {
 			}
 		}
 		effect = {
-			carinthia_area = {
+			carniola_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -506,7 +506,7 @@ emp_ser_west_balkan_branch = {
 		position = 6
 		
 		provinces_to_highlight = {
-			area = carinthia_area
+			area = carniola_area
 			NOT = { 
 				OR = {
 					owned_by = ROOT
@@ -515,7 +515,7 @@ emp_ser_west_balkan_branch = {
 			}
 		}
 		trigger = {
-			carinthia_area = {
+			carniola_area = {
 				type = all
 				OR = {
 					owned_by = ROOT

@@ -722,7 +722,6 @@ emp_bohemia_3 = {
 			OR = {
 				area = wielkopolska_area
 				area = malopolska_area
-				area = central_poland_area
 				area = kalisz_area
 			}
 			NOT = { owned_by = ROOT }
@@ -734,10 +733,6 @@ emp_bohemia_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			malopolska_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			central_poland_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

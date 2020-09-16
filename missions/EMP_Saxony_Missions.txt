@@ -675,9 +675,8 @@ emp_sax_missions_religion = {
 		provinces_to_highlight = {
 			OR = {
 				area = wielkopolska_area
-				area = central_poland_area
+				area = kalisz_area
 				area = malopolska_area
-				area = sandomierz_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			ROOT = {
@@ -686,9 +685,8 @@ emp_sax_missions_religion = {
 						value = 10
 						OR = {
 							area = wielkopolska_area
-							area = central_poland_area
+							area = kalisz_area
 							area = malopolska_area
-							area = sandomierz_area
 						}
 					}
 				}
@@ -699,9 +697,8 @@ emp_sax_missions_religion = {
 				value = 10
 				OR = {
 					area = wielkopolska_area
-					area = central_poland_area
+					area = kalisz_area
 					area = malopolska_area
-					area = sandomierz_area
 				}
 			}
 		}
@@ -1011,7 +1008,7 @@ emp_sax_missions_culture_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				central_poland_area = {
+				kalisz_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }
@@ -1019,13 +1016,6 @@ emp_sax_missions_culture_2 = {
 					add_permanent_claim = ROOT
 				}
 				malopolska_area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-					}
-					add_permanent_claim = ROOT
-				}
-				sandomierz_area = {
 					limit = {
 						NOT = { is_core = ROOT }
 						NOT = { is_permanent_claim = ROOT }

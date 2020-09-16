@@ -31,15 +31,15 @@ cambodian_missions_1 = {
 		}
 		effect = {
 			3601 = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				change_culture = ROOT
 			}
 			4842 = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				change_culture = ROOT
 			}
 			603 = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_non_sovereign_subject_holds = ROOT }
 				change_culture = ROOT
 			}
 			central_thai_area = {

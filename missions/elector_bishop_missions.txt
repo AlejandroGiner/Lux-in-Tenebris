@@ -387,7 +387,7 @@ kol_group_1 = {
 		}
 
 		effect = {
-			south_westphalia_area = {
+			westphalia_area = {
 				limit = {
 					NOT = { is_core = root }
 					NOT = { is_permanent_claim = root }
@@ -401,12 +401,12 @@ kol_group_1 = {
 		required_missions = { kol_consolidate_lands }
 
 		provinces_to_highlight = {
-			area = south_westphalia_area
+			area = westphalia_area
 			NOT = { country_or_non_sovereign_subject_holds = root }
 		}
 
 		trigger = {
-			south_westphalia_area = {
+			westphalia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}

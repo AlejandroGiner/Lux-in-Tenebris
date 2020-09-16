@@ -966,7 +966,7 @@ emp_france_missions_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				asturias_area = {
+				cantabrian_range_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -1057,7 +1057,7 @@ emp_france_missions_2 = {
 			OR = {
 				area = castille_area
 				area = toledo_area
-				area = asturias_area
+				area = cantabrian_range_area
 				area = leon_area
 				area = extremadura_area
 				area = basque_area
@@ -1080,7 +1080,7 @@ emp_france_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			asturias_area = {
+			cantabrian_range_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -2269,13 +2269,8 @@ emp_france_missions_5 = {
 				limit = { is_revolutionary = no }
 				add_absolutism = 10
 			}
-			else = {
-				add_revolutionary_zeal = 10
-			}
-			if = {
-				has_reform = french_crown
-				add_government_reform = french_monarchy
-			}
+			else = { add_revolutionary_zeal = 10 }
+			add_government_reform = french_monarchy
 		}
 	}
 	emp_fra_move_court_to_versailles = {
