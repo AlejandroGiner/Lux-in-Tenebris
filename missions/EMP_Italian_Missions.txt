@@ -198,13 +198,6 @@ emp_ita_gallia_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
-			west_massif_central_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			pyrenees_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -282,10 +275,6 @@ emp_ita_gallia_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			massif_central_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			west_massif_central_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

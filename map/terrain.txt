@@ -23,7 +23,7 @@ categories =  {
 
 		supply_limit = 11
 		movement_cost = 1.0
-		local_development_cost = -0.1
+		local_development_cost = -0.05
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1.05
 
@@ -61,7 +61,6 @@ categories =  {
 
 		supply_limit = 10
 		movement_cost = 1.0
-		local_development_cost = -0.05
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 1
 
@@ -127,6 +126,8 @@ categories =  {
 		movement_cost = 1.00
 		local_development_cost = 0.20
 		nation_designer_cost_multiplier = 0.9
+		local_build_time = 0.05
+		local_build_cost = 0.1
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -157,6 +158,7 @@ categories =  {
 		local_development_cost = 0.15
 		nation_designer_cost_multiplier = 0.9
 		defence = 1
+		local_build_cost = 0.05
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -198,9 +200,11 @@ categories =  {
 
 		supply_limit = 4
 		movement_cost = 1.30
-		local_development_cost = 0.25
+		local_development_cost = 0.3
 		nation_designer_cost_multiplier = 0.9
 		defence = 2
+		local_build_time = 0.15
+		local_build_cost = 0.2
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -224,7 +228,7 @@ categories =  {
 
 		supply_limit = 7
 		movement_cost = 1.0
-		local_development_cost = 0.25
+		local_development_cost = 0.2
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 0.90
 
@@ -257,6 +261,8 @@ categories =  {
 		local_development_cost = 0.25
 		nation_designer_cost_multiplier = 0.85
 		defence = 1
+		local_build_time = 0.05
+		local_build_cost = 0.1
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -287,6 +293,8 @@ categories =  {
 		nation_designer_cost_multiplier = 0.85
 		defence = 1
 		local_defensiveness = 0.15
+		local_build_time = 0.1
+		local_build_cost = 0.15
 
 		
 		terrain_override = {
@@ -341,6 +349,8 @@ categories =  {
 		nation_designer_cost_multiplier = 0.9
 		defence = 1
 		local_defensiveness = 0.1
+		local_build_time = 0.05
+		local_build_cost = 0.1
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -375,8 +385,8 @@ categories =  {
 		defence = 2
 		max_attrition = 2
 		local_defensiveness = 0.35
-		local_build_time = 0.15
-		local_build_cost = 0.2
+		local_build_time = 0.25
+		local_build_cost = 0.3
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -409,7 +419,9 @@ categories =  {
 		supply_limit = 7
 		movement_cost = 1.00
 		local_development_cost = 0.15
-		nation_designer_cost_multiplier = 0.95	
+		nation_designer_cost_multiplier = 0.95
+		local_build_time = 0.05
+		local_build_cost = 0.1
 		
 		terrain_override = {
 			#Unaltered Vanilla
@@ -441,6 +453,8 @@ categories =  {
 		local_development_cost = 0.35
 		nation_designer_cost_multiplier = 0.8
 		defence = 1
+		local_build_time = 0.15
+		local_build_cost = 0.2
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -472,6 +486,8 @@ categories =  {
 		local_development_cost = 0.30
 		allowed_num_of_buildings = 1
 		nation_designer_cost_multiplier = 0.85
+		local_build_time = 0.05
+		local_build_cost = 0.1
 		
 		terrain_override = {
 			831 4620 490 2654 487 2652 843 4589 2660 838 2663 4597 4595 2664 835 2819 4596 7016 482 5574 5576 483 492
@@ -498,10 +514,12 @@ categories =  {
 		movement_cost = 1.40
 		local_development_cost = 0.60
 		nation_designer_cost_multiplier = 0.8
+		local_build_time = 0.25
+		local_build_cost = 0.35
 		
 		terrain_override = {
 			#Unaltered Vanilla
-			503 2078 2088 512 513 514 2064 2066 2086 867 2844 350 355 2271 2272 2773 715 2119 2120 710 711 712 2121 2123 
+			503 2078 2088 512 513 514 2064 2066 2086 867 2844 350 2271 2272 2773 715 2119 2120 710 711 712 2121 2123 
 			2191 2192 706 707 708 698 701 709 720 2193 2747 4204 4207 4208 4221 4223 4506 4502 4507 4508 3361 4669 4678
 			
 			#Beyond Typus
@@ -519,18 +537,20 @@ categories =  {
 
 		supply_limit = 3
 		movement_cost = 1.20
-		local_development_cost = 0.45
+		local_development_cost = 0.3
 		nation_designer_cost_multiplier = 0.9
+		local_build_time = 0.1
+		local_build_cost = 0.15
 		
 		terrain_override = {
 			#Unaltered Vanilla
 			1174 389 394 395 396 397 398 2329 2331 2333 2340 2341 2342 792 793 796 805 806 2821 2822 2841 1212 
-			1215 1230 1232 2315 2320 2321 2765 2786 2788 2789 1206 1209 2024 2790 2793 7658 7657 7656
+			1215 1230 1232 2315 2320 2321 2765 2786 2788 2789 1206 1209 2024 2790 2793 7658 7657 7656 355
 
 			#Beyond Typus
-			2324 2346 387 388 347 1111 2828 812 809 2826 2782 2783 2795 1175 364 365 2325 2326 353 355 2451 2452 865 866 
-			2620 5043 2616 5061 5228 4268 363 4964 5233 4278 4279 5241 4286 5250 5251 4269 2327 5271 5272 5274 5282 5283 5288 
-			5298 5311 5312 5387 5346 5426 5862 5861 5860 5859 4577 2999 6390 6328
+			2324 2346 387 388 347 1111 2828 812 809 2826 2782 2783 2795 1175 364 365 2325 2326 353 2451 2452 865 866 
+			2620 5043 2616 5061 5228 4268 363 4964 5233 4278 4279 5241 4286 5250 5251 4269 2327 5271 5272 5274 5282
+			5298 5311 5312 5387 5346 5426 5862 5861 5860 5859 4577 2999 6390 6328 5283 5288 
 		}
 	}
 	
@@ -540,9 +560,11 @@ categories =  {
 
 		supply_limit = 1
 		movement_cost = 2.0
-		local_development_cost = 1.0
+		local_development_cost = 0.6
 		nation_designer_cost_multiplier = 0.75
 		defence = 1
+		local_build_time = 0.5
+		local_build_cost = 0.5
 
 		terrain_override = {
 			#Unaltered Vanilla
@@ -560,7 +582,7 @@ categories =  {
 
 		supply_limit = 8
 		movement_cost = 1.05
-		local_development_cost = 0.2
+		local_development_cost = 0.1
 		allowed_num_of_buildings = 1
 		local_sailors = 100
 		nation_designer_cost_multiplier = 0.9
