@@ -1117,8 +1117,10 @@ emp_sax_missions_economic = {
 		icon = porcelain_from_meissen
 		required_missions = { emp_sax_manufacturing }
 		provinces_to_highlight = {
-			province_id = 61
-			province_id = 59
+			OR = {
+				province_id = 61
+				province_id = 59
+			}
 			OR = {
 				NOT = { is_strongest_trade_power = root }
 				NOT = { owned_by = root }
