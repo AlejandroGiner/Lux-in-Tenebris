@@ -88,14 +88,36 @@ eng_british_conquest_wales = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = wales_hold_tooltip
-				all_province = {
-					limit = {
-						OR = { 
-							area = wales_area
-							area = mid_wales_area
-							area = south_wales_area
+				wales_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = { liberty_desire = 30 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
 						}
 					}
+				}
+				mid_wales_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = { liberty_desire = 30 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+				}
+				south_wales_area = {
+					type = all
 					OR = {
 						owned_by = ROOT
 						owner = {
