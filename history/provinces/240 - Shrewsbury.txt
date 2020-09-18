@@ -2,8 +2,8 @@
 #Region - Britain
 #Area - Mercia
 
-owner = ENG
-controller = ENG
+owner = WMC
+controller = WMC
 culture = english
 religion = catholic
 hre = no
@@ -14,6 +14,7 @@ base_manpower = 1
 capital = "Shrewsbury"
 is_city = yes
 add_core = ENG
+add_core = WMC
 add_core = MEC
 
 discovered_by = western
@@ -37,7 +38,8 @@ discovered_by = eastern
 1585.1.1 = { religion = reformed }
 1645.12.17 = { revolt = { type = revolutionary_rebels size = 0 } controller = REB }
 1646.5.5 = { revolt = {} controller = ENG } # End of First English Civil War
-1707.5.12 = {	owner = GBR
+1707.5.12 = {	
+	owner = GBR
 	controller = GBR
 	add_core = GBR
 	remove_core = ENG

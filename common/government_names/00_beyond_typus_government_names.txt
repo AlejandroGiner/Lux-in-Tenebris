@@ -347,7 +347,10 @@ lao_monarchy = {
 
 	trigger = {
 		government = monarchy
-		primary_culture = laotian
+		OR = {
+			primary_culture = lao
+			tag = MPH
+		}
 	}
 }
 

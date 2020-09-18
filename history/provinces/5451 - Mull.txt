@@ -11,7 +11,6 @@ base_manpower = 1
 capital = "Mull"
 is_city = yes
 add_core = LOI
-add_core = SCO
 
 discovered_by = western
 discovered_by = muslim
@@ -22,6 +21,7 @@ discovered_by = eastern
 1493.1.1 = {
 	owner = SCO
 	controller = SCO
+	add_core = SCO
 }
 1560.8.1 = { religion = anglican }
 1604.1.1 = { culture = highland_scottish }	#By the time of the union of the crowns, the distinction between Gallgael and Gael was negligable

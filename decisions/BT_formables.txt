@@ -11,6 +11,7 @@ country_decisions = {
 			NOT = { tag = CNN }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_connacht_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -60,6 +61,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CNN
+			add_government_reform = provincial_kingdom_reform
 			connacht_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -80,6 +82,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_connacht_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -91,6 +94,7 @@ country_decisions = {
 			NOT = { tag = MNS }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_munster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -140,6 +144,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MNS
+			add_government_reform = provincial_kingdom_reform
 			munster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -160,6 +165,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_munster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -171,6 +177,7 @@ country_decisions = {
 			NOT = { tag = LEI }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_leinster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -220,6 +227,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LEI
+			add_government_reform = provincial_kingdom_reform
 			leinster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -240,6 +248,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_leinster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -251,6 +260,7 @@ country_decisions = {
 			NOT = { tag = ULS }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_ulster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -300,6 +310,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ULS
+			add_government_reform = provincial_kingdom_reform
 			ulster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -320,6 +331,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_ulster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -333,6 +345,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = CNN }
 			NOT = { has_country_flag = formed_connacht_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -373,6 +386,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CNN
+			add_government_reform = norman_duchy_reform
 			connacht_area = {
 				limit = { NOT = { owned_by = CNN } }
 				add_permanent_claim = CNN
@@ -387,6 +401,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_connacht_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -397,6 +412,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = MNS }
 			NOT = { has_country_flag = formed_munster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -437,6 +453,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MNS
+			add_government_reform = norman_duchy_reform
 			munster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -457,6 +474,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_munster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -467,6 +485,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = LEI }
 			NOT = { has_country_flag = formed_leinster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -507,6 +526,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LEI
+			add_government_reform = norman_duchy_reform
 			leinster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -527,6 +547,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_leinster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400 
@@ -535,8 +556,10 @@ country_decisions = {
 	form_duchy_ulster = {
 		major = yes
 		potential = {
+			btc_potential_trigger = yes
 			NOT = { tag = ULS }
 			NOT = { has_country_flag = formed_ulster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -577,6 +600,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ULS
+			add_government_reform = norman_duchy_reform
 			ulster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -597,8 +621,104 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_ulster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
+		ai_importance = 400 #
+	}
+	
+	anglo_irish_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_ireland_flag }
+			NOT = { has_country_flag = formed_kingdom_of_ireland_flag_btp }			#remove this after 9.0.
+			NOT = { tag = ANI }
+			NOT = { tag = IRE }
+			NOT = { tag = SCO }
+			NOT = { tag = ENG }
+			NOT = { tag = GBR }
+			OR = {
+				primary_culture = anglo_irish
+				AND = {
+					culture_group = british
+					capital_scope = { region = ireland_region }
+				}
+			}
+			OR = {
+				tag = LEI
+				tag = ULS
+				tag = MNS
+				tag = CNN
+				num_of_owned_provinces_with = {
+					is_core = ROOT
+					region = ireland_region
+					value = 25			#over half of Ireland to see if not one of the four primary provincial kingdoms
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = ireland_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ANI }
+			hidden_trigger = { NOT = { exists = IRE } }			#Hidden because it shows up in UI as doubled Ireland
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 373			# The Pale and Dublin
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = ireland_region
+				value = 30			#requires roughly two thirds of Ireland to form, so ANI can be formed without the west or IRE can be formed without the Pale and the NE plantations
+			}
+			total_development = 150			#Special discount. Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = ANI
+			change_government = monarchy
+			add_government_reform = anglo_irish_monarchy_reform
+			remove_non_electors_emperors_from_empire_effect = yes
+			ireland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ANI
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					exists = ENG
+					NOT = { historical_friend_with = ENG }
+					NOT = { historical_rival_with = ENG }
+					has_opinion = { who = ENG value = 1 }
+				}
+				add_historical_friend = ENG #Eh, Draiocht? It says you are adding a historical rival. Not a friend.
+			}			#Add England as a historical friend if relations are positive (and not already rival or friends)
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#I decided to remove the development bonus from forming altogether. With the ability to build up provinces already there, this isn't really needed and can get out of hand quickly. Plus capital should move to Dublin anyway.
+			add_prestige = 25
+			if = { limit = { NOT = { has_idea_group = ANI_ideas } }
+				swap_ideas = yes
+			}
+			swap_non_generic_missions = yes
+			set_country_flag = formed_ireland_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
 		ai_importance = 400 #
 	}
 

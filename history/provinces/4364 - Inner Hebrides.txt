@@ -14,7 +14,6 @@ base_manpower = 2			#New Province, all 3 new
 capital = "Sléibhte"
 is_city = yes
 add_core = LOI
-add_core = SCO
 
 discovered_by = western
 discovered_by = muslim
@@ -25,6 +24,7 @@ discovered_by = eastern
 1493.1.1 = {
 	owner = SCO
 	controller = SCO
+	add_core = SCO
 	capital = "Sleat"
 }
 1560.8.1 = { religion = reformed }

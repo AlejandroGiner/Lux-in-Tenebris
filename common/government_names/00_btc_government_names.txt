@@ -166,17 +166,14 @@ archbishop_government = {
 		3 = EMPEROR_ARCHBISHOP
 	}
 
-	ruler_female = { #not really of use because no archbishops were female
+	ruler_female = {
 		1 = ARCHBISHOP_fem
 		2 = ARCHBISHOP_fem
 		3 = ARCHBISHOP_fem
 	}
 
 	trigger = {
-		OR = {
-			has_reform = archbishop_reform
-			has_reform = archbishop_legacy
-		}
+		has_reform = archbishop_reform
 	}
 }
 

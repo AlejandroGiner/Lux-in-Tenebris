@@ -268,7 +268,8 @@ monastic_breweries_reform = {
 		any_owned_province = {
 			OR = {
 				trade_goods = wine
-				trade_goods = grain
+				trade_goods = beer
+				trade_goods = fruit
 			}
 		}
 	}
@@ -282,9 +283,7 @@ monastic_breweries_reform = {
 		hidden_effect = {
 			every_owned_province = {
 				if = {
-					limit = {
-						trade_goods = wine
-					}
+					limit = { trade_goods = wine }
 					add_province_modifier = { 
 						name = wine_bonus_prod
 						duration = -1
@@ -292,11 +291,17 @@ monastic_breweries_reform = {
 					}
 				}
 				if = {
-					limit = {
-						trade_goods = grain
+					limit = { trade_goods = beer }
+					add_province_modifier = {
+						name = grain_bonus_prod #Nerfed to 50% since beer is more valuable.
+						duration = -1
+						hidden = yes
 					}
-					add_province_modifier = { 
-						name = grain_bonus_prod
+				}
+				if = {
+					limit = { trade_goods = fruit }
+					add_province_modifier = {
+						name = fruit_bonus_prod
 						duration = -1
 						hidden = yes
 					}
@@ -888,7 +893,7 @@ priestly_autonomy_reform = {
 	}
 
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 350
 	}
 	ai = {
 		factor = 3

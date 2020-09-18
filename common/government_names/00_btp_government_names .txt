@@ -1,7 +1,7 @@
 # For specific government types
 # Will pick the first valid one it finds in list
 
-gov_puppet_kingdom_of_ireland = {
+gov_puppet_kingdom_of_ireland = { #For released anglo-Ireland under England or similar.
 	rank = {
 		2 = KINGDOM
 	}	
@@ -31,8 +31,55 @@ gov_puppet_kingdom_of_ireland = {
 	}
 
 	trigger = {
-		#government = puppet_kingdom_of_ireland_legacy
-		always = no
+		has_reform = puppet_kingdom_reform
+	}
+}
+
+gov_transitional_government_ireland = { #Something to do with viceroyalty anglo-Ireland or something.
+	rank = {
+		1 = DUCHY
+		2 = KINGDOM
+		3 = EMPIRE
+	}
+	
+	ruler_male = {
+		1 = DUKE
+		2 = BTTRANSITIONALKING
+		3 = EMPEROR
+	}
+	
+	ruler_female = {
+		1 = DUCHESS
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+	
+	consort_male = {
+		1 = DUKE
+		2 = KING
+		3 = EMPEROR
+	}
+
+	consort_female = {
+		1 = DUCHESS
+		2 = QUEEN	
+		3 = EMPRESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+		2 = PRINCE
+		3 = PRINCE
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+		2 = PRINCESS
+		3 = PRINCESS
+	}
+	
+	trigger = {
+		has_reform = transitional_government_reform
 	}
 }
 
@@ -67,6 +114,40 @@ gov_irish_clann = {
 	
 	trigger = {
 		has_reform = irish_clann_reform
+	}
+}
+
+gov_provincial_kingdom = { #Provincial Kingdom formables Munster, Leinster, Ulster & Connacht, by Irish
+	rank = {
+		1 = PROVKINGDOM
+	}
+	
+	ruler_male = {
+		1 = RIRUIR
+	}
+	
+	ruler_female = {
+		1 = BANRIONRUIR
+	}
+	
+	consort_male = {
+		1 = FEARNABANRION
+	}
+
+	consort_female = {
+		1 = BANANRI
+	}
+	
+	heir_male = {
+		1 = TANAISTE
+	}
+
+	heir_female = {
+		1 = BANTANAISTE
+	}
+	
+	trigger = {
+		has_reform = provincial_kingdom_reform
 	}
 }
 
@@ -114,12 +195,11 @@ gov_high_kingship = {
 	}
 	
 	trigger = {
-		#government = high_kingship_legacy
-		always = no
+		has_reform = tanistry_reform
 	}
 }
 
-gov_norman_lordship_reform = {
+gov_norman_lordship = { #Starting Old English minors.
 	rank = {
 		1 = EARLDOM
 	}
@@ -149,8 +229,47 @@ gov_norman_lordship_reform = {
 	}
 	
 	trigger = {
-		#government = norman_lordship_legacy
-		always = no
+		OR = {
+			has_reform = norman_lordship_reform
+			AND = {
+				tag = WMC
+				is_subject = yes
+			}
+		}
+	}
+}
+
+gov_norman_duchy = { #Norma Duchy formables Munser, Leinster, Ulster & Connacht, by Old English
+	rank = {
+		1 = DUCHY
+	}
+	
+	ruler_male = {
+		1 = DUKE
+	}
+	
+	ruler_female = {
+		1 = DUCHESS
+	}
+	
+	consort_male = {
+		1 = DUKE
+	}
+
+	consort_female = {
+		1 = DUCHESS
+	}
+	
+	heir_male = {
+		1 = HEIR
+	}
+
+	heir_female = {
+		1 = HEIRESSBTP
+	}
+	
+	trigger = {
+		has_reform = norman_duchy_reform
 	}
 }
 
@@ -198,8 +317,7 @@ gov_anglo_irish_monarchy_reform = {
 	}
 	
 	trigger = {
-		#government = anglo_irish_monarchy_legacy
-		always = no
+		has_reform = anglo_irish_monarchy_reform
 	}
 }
 
@@ -223,9 +341,7 @@ gov_florentine_republic_btc = {
 	}
 
 	trigger = {
-		#government = florence_republic_legacy
-		#government = florentine_republic_btc
-		always = no
+		has_reform = florentine_republic_btc
 	}
 }
 
@@ -249,11 +365,7 @@ gov_florence_duchy  = {
 	}
 
 	trigger = {
-		OR = {
-			#government = tuscan_duchy_legacy
-			#government = tuscan_duchy_btc
-		}
-		always = no
+		has_reform = tuscan_duchy_btc
 	}
 }
 

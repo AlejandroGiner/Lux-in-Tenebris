@@ -202,6 +202,121 @@ country_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
+	#Just some house cleaning
+	cede_stragglers_to_koi_as_ruler = {
+		major = yes
+		potential = {
+			exists = ANI
+			ANI = { is_subject_of = ROOT }
+			any_owned_province = { region = ireland_region }
+		}
+		provinces_to_highlight = {
+			region = ireland_region
+			owned_by = ROOT
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+		}
+		effect = {
+			random_core_province = {
+				limit = { region = ireland_region }
+				cede_province = ANI
+				if = {
+					limit = { is_core = ROOT }
+					remove_core = ROOT
+					add_core = ANI
+				}
+			}
+			ANI = {
+				add_opinion = {
+					who = ROOT
+					modifier = returned_core_to_me
+				}
+				add_liberty_desire = -5
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+	england_demand_fealty_of_ireland = {
+		potential = {
+			tag = ENG
+			NOT = { has_country_modifier = humiliated_by_former_vassal }
+			NOT = { has_country_modifier = irish_fealty_negotiations_ongoing }
+			num_of_owned_provinces_with = {
+				value = 1
+				region = ireland_region
+			}	#changed Dublin only to any Irish province being able to allow this decision
+			any_known_country = {
+				primary_culture = anglo_irish
+				OR = {
+					has_reform = norman_lordship_reform
+					has_reform = anglo_irish_monarchy_reform
+				}
+				num_of_owned_provinces_with = {
+					value = 1
+					region = ireland_region
+				}
+				is_free_or_tributary_trigger = yes
+				is_at_war = no
+			}
+			NOT = { has_country_flag = demanded_fealty_of_ireland }
+		}
+		allow = {
+			tag = ENG
+			num_of_free_diplomatic_relations = 1
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+		}
+		effect = {
+			set_country_flag = demanded_fealty_of_ireland
+			random_known_country = {
+				limit = {
+					primary_culture = anglo_irish
+					OR = {
+						has_reform = norman_lordship_reform
+						has_reform = anglo_irish_monarchy_reform
+					}
+					num_of_owned_provinces_with = {
+						value = 1
+						region = ireland_region
+					}
+					is_free_or_tributary_trigger = yes
+					is_at_war = no
+				}
+				country_event = { id = btpIRE.1 days = 3 }
+				hidden_effect = { add_country_modifier = { name = "irish_fealty_negotiations_ongoing" duration = 30 } }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						ruler_has_personality = expansionist_personality
+						ruler_has_personality = conqueror_personality
+						ruler_has_personality = greedy_personality
+						any_province = {
+							region = ireland_region
+							NOT = { owned_by = ENG }
+							OR = {
+								is_claim = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+			}	#Draiocht added a few conditions and details. Need a ruler personality trait or claim to justify, also to prevent instant spam
+			modifier = {
+				factor = 0
+				NOT = { stability = 1 }
+			}	#Want a stable England before they try to reclaim old hegemony, also to prevent instant spam
+		}
+	}
+	
 	recognise_marcharid_of_brittany = {
 		major = yes
 		potential = {
