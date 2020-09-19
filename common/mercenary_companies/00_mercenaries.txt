@@ -191,6 +191,7 @@ merc_schwarze_garde = {
 				OR = {
 					region = south_german_region
 					region = north_german_region
+					region = czech_lands_region
 				}
 			}
 			has_country_modifier = swedish_mercenary_core
@@ -217,6 +218,7 @@ merc_doppelsoeldner = {
 				OR = {
 					region = south_german_region
 					region = north_german_region
+					region = czech_lands_region
 				}
 			}
 			has_country_modifier = swedish_mercenary_core
@@ -240,6 +242,7 @@ merc_reislaufer = {
 				OR = {
 					region = south_german_region
 					region = north_german_region
+					region = czech_lands_region
 					region = italy_region
 					region = france_region
 				}
@@ -269,6 +272,7 @@ merc_hessian_jaegerkorps = {
 				OR = {
 					region = south_german_region
 					region = north_german_region
+					region = czech_lands_region
 				}
 			}
 			has_country_modifier = swedish_mercenary_core
@@ -298,6 +302,7 @@ merc_routiers = {
 			OR = {
 				region = france_region
 				region = british_isles_region
+				region = ireland_region
 			}
 		}
 		current_age = age_of_discovery
@@ -333,7 +338,10 @@ merc_levends = {
 	sprites = { easterngfx_sprite_pack }
     trigger = {
 		any_owned_province = {
-			region = balkan_region
+			OR = {
+				region = balkan_region
+				region = greece_region_btc
+			}
 		}
 	}
 	modifier = { }
@@ -347,7 +355,10 @@ merc_stratioti = {
     trigger = {	
 		religion_group = christian
 		any_owned_province = {
-			region = balkan_region
+			OR = {
+				region = balkan_region
+				region = greece_region_btc
+			}
 		}
 	}
 	modifier = { }
@@ -364,7 +375,10 @@ merc_morlachs = {
     trigger = {
 		OR = {
 			any_owned_province = {
-				region = balkan_region
+				OR = {
+					region = balkan_region
+					region = greece_region_btc
+				}
 			}
 			has_country_modifier = mercenaries_to_the_standard
 			has_country_modifier = glut_of_mercs
@@ -384,7 +398,12 @@ merc_guardia_corsa = {
     trigger = {
 		OR = {
 			capital_scope = { region = italy_region }
-			any_owned_province = { area = corsica_sardinia_area }
+			any_owned_province = {
+				OR = {
+					area = corsica_sardinia_area
+					area = corsica_area
+				}
+			}
 		}
 	}
 	modifier = { }
@@ -404,6 +423,7 @@ merc_hadjuks = {
 		capital_scope = {
 			OR = {
 				region = balkan_region
+				region = greece_region_btc
 				region = carpathia_region
 				region = poland_region
 			}
@@ -422,14 +442,16 @@ merc_gallowglasses = {
 	sprites = { dlc087_ire_sprite_pack lei_base_sprite_pack westerngfx_sprite_pack }
     trigger = {
 		OR = {
-			capital_scope = { region = british_isles_region }
+			capital_scope = {
+				OR = {
+					region = british_isles_region
+					region = ireland_region
+				}
+			}
 			any_owned_province = {
 				OR = {
 					area = kingdom_of_the_isles_area
-					area = munster_area
-					area = connacht_area
-					area = leinster_area
-					area = ulster_area
+					region = ireland_region
 				}
 			}
 			has_country_modifier = mercenaries_to_the_standard
@@ -453,7 +475,12 @@ merc_redshanks = {
 	sprites = { dlc087_sco_sprite_pack dlc001_sco_sprite_pack sco_base_sprite_pack westerngfx_sprite_pack }
     trigger = { 
 		OR = {
-			capital_scope = { region = british_isles_region }
+			capital_scope = {
+				OR = {
+					region = british_isles_region
+					region = ireland_region
+				}
+			}
 			has_country_modifier = scottish_mercenaries
 			has_country_modifier = swedish_mercenary_core
 			has_country_modifier = mercenaries_to_the_standard
@@ -482,6 +509,7 @@ merc_scottish_guard = {
 			capital_scope = { 
 				OR = {
 					region = british_isles_region
+					region = ireland_region
 					region = france_region
 				}
 			}
@@ -545,8 +573,18 @@ merc_white_company = {
 	sprites = { dlc049_ENG_sprite_pack dlc042_eng_sprite_pack dlc028_eng_sprite_pack eng_base_sprite_pack }
     trigger = { 
 		OR = {
-			capital_scope = { region = british_isles_region }
-			any_owned_province = { region = british_isles_region }
+			capital_scope = {
+				OR = {
+					region = british_isles_region
+					region = ireland_region
+				}
+			}
+			any_owned_province = {
+				OR = {
+					region = british_isles_region
+					region = ireland_region
+				}
+			}
 			has_country_modifier = mercenaries_to_the_standard
 			has_country_modifier = glut_of_mercs
 		}
@@ -568,8 +606,10 @@ merc_flemish_company = {
 				OR = {
 					region = south_german_region
 					region = north_german_region
+					region = czech_lands_region
 					region = low_countries_region
 					region = british_isles_region
+					region = ireland_region
 					region = france_region
 				}
 			}
@@ -591,7 +631,12 @@ merc_forlorn_hope = {
 	cost_modifier = 1.2
 	sprites = { dlc049_ENG_sprite_pack dlc042_eng_sprite_pack dlc028_eng_sprite_pack eng_base_sprite_pack }
     trigger = {	
-		capital_scope = { region = british_isles_region }
+		capital_scope = {
+			OR = {
+				region = british_isles_region
+				region = ireland_region
+			}
+		}
 	}
 	modifier = {
 		reinforce_speed = -0.25
@@ -944,13 +989,13 @@ merc_mesopotamian_mamluks = {
 	trigger = {
 		OR = {
 			capital_scope = {
-				region = mashriq_region
+				region = mesopotamia_region
 			}
 			accepted_culture = al_iraqiya_arabic
 			AND = {
 				religion_group = muslim
 				any_owned_province = {
-					region = mashriq_region
+					region = mesopotamia_region
 				}
 			}
 		}
@@ -975,6 +1020,7 @@ merc_nile_mamluks = {
 		capital_scope = {
 			OR = {
 				region = mashriq_region
+				region = mesopotamia_region
 				region = arabia_region
 				region = egypt_region
 				region = maghreb_region
@@ -1012,6 +1058,8 @@ merc_zeybeks = {
 		any_owned_province = {
 			OR = {
 				area = aegean_archipelago_area
+				area = northern_aegean_islands_area
+				area = cyclades_area
 				area = hudavendigar_area
 				area = aydin_area
 			}
@@ -1067,19 +1115,15 @@ merc_madagascar_company = {
 				OR = {
 					region = east_africa_region
 					region = south_africa_region
+                    region = madagascar_region
 				}
 			}
 			any_owned_province = {
-				OR = {
-					area = madagascar_highlands_area
-					area = betsimasaraka_area
-					area = sakalava_area
-					area = southern_madagascar
-				}
+				region = madagascar_region
 			}
 		}
 	}
-    modifier = { }
+    modifier = { discipline = 0.05 }
 }
 
 merc_sahel_company = {
@@ -1220,7 +1264,10 @@ merc_royal_circassian_guards = {
 				region = egypt_region
 				region = central_asia_region
 				AND = {
-					region = balkan_region
+					OR = {
+						region = balkan_region
+						region = greece_region_btc
+					}
 					religion_group = muslim
 				}
 			}
@@ -1253,6 +1300,7 @@ merc_bedouin_auxiliaries = {
 				OR = {
 					region = arabia_region
 					region = mashriq_region
+					region = mesopotamia_region
 					region = egypt_region
 				}
 			}
@@ -1273,6 +1321,7 @@ merc_kurdish_company = {
 				OR = {
 					region = persia_region
 					region = mashriq_region
+					region = mesopotamia_region
 					region = anatolia_region
 				}
 			}
@@ -1382,6 +1431,7 @@ merc_frisian_free_company = {
 			capital_scope = { 
 				OR = {
 					region = north_german_region 
+					region = czech_lands_region
 					region = low_countries_region
 				}
 			}
@@ -1409,7 +1459,12 @@ merc_finnish_company = {
 	sprites = { swe_base_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		OR = {
-			capital_scope = { region = scandinavia_region }
+			capital_scope = {
+				OR = {
+					region = scandinavia_region
+					region = suomi_region
+				}
+			}
 			any_owned_province = { area = finland_area }
 			has_country_modifier = mercenaries_to_the_standard
 			has_country_modifier = glut_of_mercs
@@ -1524,6 +1579,7 @@ merc_crabats = {
 			capital_scope = { 
 				OR = {
 					region = balkan_region
+					region = greece_region_btc
 					region = south_german_region
 					region = carpathia_region
 				}
@@ -1543,7 +1599,13 @@ merc_free_swiss_guard = {
 	sprites = { westerngfx_sprite_pack }
     trigger = { 
 		OR = {
-			capital_scope = { superregion = europe_superregion }
+			capital_scope = {
+				OR = {
+					superregion = europe_superregion
+					superregion = southern_europe_superregion
+					superregion = central_europe_superregion
+				}
+			}
 			any_owned_province = {
 				OR = {
 					area = switzerland_area
@@ -1889,7 +1951,13 @@ merc_gascon_musket_company = {
     cost_modifier = 1.2
 	sprites = { dlc001_amg_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
     trigger = {
-		capital_scope = { superregion = europe_superregion }
+		capital_scope = {
+			OR = {
+				superregion = europe_superregion
+				superregion = southern_europe_superregion
+				superregion = central_europe_superregion
+			}
+		}
 		NOT = { current_age = age_of_discovery }
 	}
 	modifier = {
