@@ -79,6 +79,7 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			NOT = { exists = IRE }
+			hidden_trigger = { NOT = { exists = ANI } } #Hidden because it shows up in UI as doubled 
 			custom_trigger_tooltip = {
 				tooltip = three_quarters_of_ireland_tooltip
 				num_of_owned_provinces_with = {
@@ -108,12 +109,13 @@ country_decisions = {
 			hidden_effect = {
 				ANI = {
 					set_government_rank = 2
-					change_government = monarchy
-					add_government_reform = anglo_irish_monarchy_reform
+					set_country_flag = formed_kingdom_of_ireland_flag_btp
+					set_country_flag = bt_is_a_puppet_state
+					change_government = republic
+					add_government_reform = puppet_kingdom_reform
 					add_historical_friend = ROOT
 					change_primary_culture = ROOT
 					change_religion = ROOT
-					set_country_flag = formed_kingdom_of_ireland_flag_btp
 				}
 			}
 			create_subject = {

@@ -142,15 +142,16 @@ country_event = {
 		add_prestige = 10
 		if = {
 			limit = { has_dlc = "Res Publica" }
+			set_country_flag = independent_ireland_reorganisation_underway
 			remove_government_reform = pupet_kingdom_reform
+			clr_country_flag = bt_is_a_puppet_state
 			add_government_reform = transitional_government_reform
+			add_republican_tradition = -50
 			hidden_effect = {
 				country_event = {
 					id = btpIRE.4
 					days = 1095
 				}
-				set_country_flag = independent_ireland_reorganisation_underway
-				clr_country_flag = bt_is_a_puppet_state
 			}
 		}
 		if = {
@@ -205,9 +206,9 @@ country_event = {
 		}
 		clr_country_flag = independent_ireland_reorganisation_underway
 		change_tag = IRE
+		change_primary_culture = irish
 		change_government = monarchy
 		add_government_reform = tanistry_reform
-		change_primary_culture = irish
 		if = {
 			limit = { historical_friend_with = ENG }
 			remove_historical_friend = ENG
@@ -220,7 +221,7 @@ country_event = {
 			limit = {
 				NOT = { religion = catholic }
 				num_of_owned_provinces_with = {
-					value = 8
+					value = 22
 					region = ireland_region
 					religion = catholic
 				}
@@ -258,7 +259,7 @@ country_event = {
 			}	#Disabled if no Irish culture provinces left
 		}
 		clr_country_flag = independent_ireland_reorganisation_underway
-		change_government = constitutional_republic
+		change_government = republic
 		remove_government_reform = transitional_government_reform
 		add_government_reform = federal_republic
 		change_primary_culture = irish
@@ -266,7 +267,7 @@ country_event = {
 			limit = {
 				NOT = { religion = catholic }
 				num_of_owned_provinces_with = {
-					value = 8
+					value = 22
 					region = ireland_region
 					religion = catholic
 				}
