@@ -2015,7 +2015,7 @@ tanistry_reform = {
 	nation_designer_cost = 75
 	nation_designer_trigger = { culture_group = gaelic }
 	modifiers = {
-		prestige = 1.0
+		stability_cost_modifier = -0.2
 		legitimacy = 1.0
 	}
 }
@@ -2094,6 +2094,8 @@ norman_lordship_reform = { #T1
 		NOT = { culture_group = gaelic }
 		capital_scope = { region = ireland_region }
 		NOT = { has_reform = norman_duchy_reform }
+		NOT = { has_reform = puppet_kingdom_reform }
+		NOT = { has_reform = transitional_government_reform }
 	}
 	lock_level_when_selected = yes
 	legacy_equivalent = norman_lordship_legacy
@@ -2120,6 +2122,9 @@ norman_duchy_reform = { #T2
 	potential = {
 		NOT = { culture_group = gaelic }
 		capital_scope = { region = ireland_region }
+		NOT = { has_reform = norman_lordship_reform }
+		NOT = { has_reform = puppet_kingdom_reform }
+		NOT = { has_reform = transitional_government_reform }
 		NOT = { has_reform = anglo_irish_monarchy_reform }
 	}
 	modifiers = {
