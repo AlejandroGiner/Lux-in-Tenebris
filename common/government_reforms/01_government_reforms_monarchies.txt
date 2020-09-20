@@ -457,6 +457,7 @@ iqta = {
 	allow_normal_conversion = yes
 	potential = {
 		religion_group = muslim
+		NOT = { has_reform = bt_ayyubid_sultanate_reform }
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
@@ -2560,10 +2561,9 @@ bt_ayyubid_sultanate_reform = {
 	}
 	maintain_dynasty = yes
 	modifiers = {
-		unjustified_demands = -0.1
+		unjustified_demands = -0.2
 		legitimacy = 0.5
 		monarch_admin_power = 1
-		governing_capacity = 200
 	}
 
 	custom_attributes = {
