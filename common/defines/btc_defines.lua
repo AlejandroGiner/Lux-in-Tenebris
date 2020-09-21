@@ -7,7 +7,7 @@ NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0.003			-- Beyond Typus added reducing ia
 NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.003			-- Beyond Typus added reducing ia to account for all the new provinces Base 0005
 
 NDefines.NMilitary.FORT_PER_DEV_RATIO = 30			-- Beyond Typus added more provinces means more forts needed for same dev Base 50
-NDefines.NMilitary.FORTRESS_COST = 0.35			-- Beyond Typus added all the new provinces mean more forts but no more dev so everyone was going broke Base 05
+NDefines.NMilitary.FORTRESS_COST = 0.3			-- Beyond Typus added all the new provinces mean more forts but no more dev so everyone was going broke Base 05
 
 NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 8
 
