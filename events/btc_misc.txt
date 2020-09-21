@@ -1253,7 +1253,6 @@ country_event = {
 province_event = {
 	id = btc_misc.24
 	title = btc_misc.24.t
-	desc = btc_misc.24.d
 	desc = {
 		trigger = { owner = { NOT = { culture_group = british } } }
 		desc = btc_misc.24.d.1
@@ -1262,7 +1261,7 @@ province_event = {
 		trigger = { owner = { culture_group = british } }
 		desc = btc_misc.24.d.2
 	}
-	picture = ACCUSATION_eventPicture
+	picture = HARBOUR_eventPicture
 	
 	fire_only_once = yes
 	
