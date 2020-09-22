@@ -1442,15 +1442,19 @@ estate_church_inwards_perfection = {
 		modifier = {
 			factor = 10
 			tag = MNG
-			every_country = {
-				limit = { is_neighbor_of = ROOT }
-				OR = {
-					is_subject = yes
-					is_subject_of = ROOT
-				}
-			}
 			religion = confucianism
 			is_absolutism_active = no
+			all_neighbor_country = {
+				OR = {
+					is_subject_of = MNG
+					AND = {
+						is_subject = yes
+						overlord = {
+							is_subject_of = MNG
+						}
+					}
+				}
+			}
 		}
 	}
 }
