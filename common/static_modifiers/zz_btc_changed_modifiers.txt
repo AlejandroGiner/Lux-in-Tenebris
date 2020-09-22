@@ -174,6 +174,21 @@ army_tradition = {
     nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
+	generals_loyalty_modifier = 0.1
+}
+
+# Multiplied by current Legitimacy - 50
+legitimacy = {
+	global_unrest = -4
+	tolerance_own = 2
+	tolerance_heathen = 2
+	tolerance_heretic = 2
+	diplomatic_reputation = 2
+	vassal_income = 0.1
+	monthly_militarized_society = 0.05
+	max_absolutism = 20
+	nobles_loyalty_modifier = 0.1
+	generals_loyalty_modifier = 0.1
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -213,6 +228,35 @@ corruption = {
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
+	generals_loyalty_modifier = 0.1
+}
+
+prestige = {
+	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
+	land_morale = 0.1
+	naval_morale = 0.1
+	global_spy_defence = 0.1				#+10/-10
+	legitimacy = 1.0
+	improve_relation_modifier = 0.5
+	monthly_fervor_increase = 1
+	ae_impact = -0.10
+	embracement_cost = -0.1
+
+	brahmins_hindu_loyalty_modifier = 0.05
+	brahmins_muslim_loyalty_modifier = 0.05
+	brahmins_other_loyalty_modifier = 0.05
+	church_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	nobles_loyalty_modifier = 0.05
+	burghers_loyalty_modifier = 0.05
+	vaisyas_loyalty_modifier = 0.05
+	cossacks_loyalty_modifier = 0.05
+	nomadic_tribes_loyalty_modifier = 0.05
+	dhimmi_loyalty_modifier = 0.05
+	jains_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
+	generals_loyalty_modifier = 0.05
+	logothete_general_influence = -0.1
 }
 
 over_extension = {

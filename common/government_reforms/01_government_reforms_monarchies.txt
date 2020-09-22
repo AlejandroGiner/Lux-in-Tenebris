@@ -2217,8 +2217,8 @@ pronoiar_reform = {
 	
 	modifiers = {
 		global_autonomy = -0.05
-		#-10% Nobility influence
-		#-20% Nobility loyalty
+		nobles_influence_modifier = -0.1
+		nobles_loyalty_modifier = -0.1
 	}
 
 	conditional = {
@@ -2245,7 +2245,7 @@ roman_bureaucracy_reform = {
 	modifiers = {
 		global_tax_modifier = 0.05
 		global_trade_goods_size_modifier = 0.05
-		state_maintenance_modifier = 0.15
+		state_maintenance_modifier = 0.1
 	}
 	
 	factions = {
@@ -2269,13 +2269,26 @@ theme_system_reform = {
 		}
 	}
 	trigger = {
-		has_reform = roman_bureaucracy_reform
+		#has_reform = roman_bureaucracy_reform
 	}
 	
 	modifiers = {
 		land_forcelimit_modifier = 0.15
-		#Enables Strategoi estate
-		#-10% Nobility influence
+		nobles_influence_modifier = -0.1
+	}
+	effect = { #Shuffle over 10% of Noble lands and 5% of burgher lands to the Strategoi. An additional 5% will be taken from crown land.
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -10
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = -5
+		}
+		change_estate_land_share = {
+			estate = estate_generals
+			share = 20
+		}
 	}
 	custom_attributes = {
 		enables_strategoi_estate = yes
@@ -2299,13 +2312,16 @@ basileus_protostrategos_reform = {
 			has_reform = theme_system_reform
 			full_idea_group = quality_ideas
 		}
-		is_monarch_leader = yes
+		OR = {
+			is_monarch_leader = yes
+			has_reform = basileus_protostrategos_reform
+		}
 	}
 	
 	modifiers = {
 		monarch_military_power = 2
 		war_exhaustion = -0.03
-		reserves_organisation = 0.1
+		generals_loyalty_modifier = 0.1
 	}
 	custom_attributes = {
 		forces_ruler_general = yes

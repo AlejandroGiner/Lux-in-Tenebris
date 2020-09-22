@@ -1,0 +1,606 @@
+estate_generals =
+{
+	icon = 12
+	
+	# If true, country will get estate
+	trigger = {	
+		OR = {
+			has_idea = byz_exarch_themata
+			has_government_attribute = enables_strategoi_estate
+		}
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = cossacks_reform }
+		NOT = { government = native }
+		NOT = { has_reform = trading_city }
+		NOT = { has_reform = siberian_tribe }
+		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = { has_reform = peasants_republic }
+		NOT = { has_reform = american_republic }
+		NOT = { has_reform = federal_republic }
+		OR = {
+			NOT = { has_reform = celestial_empire }
+			has_dlc = "Mandate of Heaven"
+		}
+	}
+
+	country_modifier_happy = {
+		defensiveness = 0.2
+		shock_damage_received = -0.1
+		fire_damage_received = -0.1
+		garrison_size = 0.25
+	}
+	country_modifier_neutral = {
+		defensiveness = 0.2
+	}	
+	country_modifier_angry = {			
+		defensiveness = -0.4
+		shock_damage_received = 0.1
+		fire_damage_received = 0.1
+		garrison_size = -0.5
+	}
+	
+	#New in 1.30. Seems to be a modifier scaled to the percentage of crown land.
+	land_ownership_modifier = {
+		generals_loyalty_modifier = 0.25 #Normal ones tend to be at 0.2
+	}
+
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 20		
+	#Up to 50% influence from 9 generals that are NOT ruler/heir. That's the sole reason for the long-ass trigger for EVERY SINGLE ONE of them. Oh well.
+	influence_modifier = { #1
+		desc = EST_VAL_NUM_OF_GENERALS_ONE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 1
+				NOT = { num_of_generals = 2 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 2
+				NOT = { num_of_generals = 3 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 2
+				NOT = { num_of_generals = 3 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = { #2
+		desc = EST_VAL_NUM_OF_GENERALS_TWO
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 2
+				NOT = { num_of_generals = 3 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+		}
+		influence = 10
+	}
+	influence_modifier = { #3
+		desc = EST_VAL_NUM_OF_GENERALS_THREE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+		}
+		influence = 15
+	}
+	influence_modifier = { #4
+		desc = EST_VAL_NUM_OF_GENERALS_FOUR
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+		}
+		influence = 20
+	}
+	influence_modifier = { #5
+		desc = EST_VAL_NUM_OF_GENERALS_FIVE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+		}
+		influence = 25
+	}
+	influence_modifier = { #6
+		desc = EST_VAL_NUM_OF_GENERALS_SIX
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+		}
+		influence = 30
+	}
+	influence_modifier = { #7
+		desc = EST_VAL_NUM_OF_GENERALS_SEVEN
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
+			}
+		}
+		influence = 35
+	}
+	influence_modifier = { #8
+		desc = EST_VAL_NUM_OF_GENERALS_EIGHT
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 10
+				NOT = { num_of_generals = 11 }
+			}
+		}
+		influence = 40
+	}
+	influence_modifier = { #9
+		desc = EST_VAL_NUM_OF_GENERALS_NINE_OR_MORE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 9
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 10
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 10
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 11
+			}
+		}
+		influence = 45
+	}
+	#Well-developed theme capital
+	influence_modifier = {	
+		desc = EST_VAL_HIGH_DEVELOPMENT_THEME_CAPITAL
+		trigger = {
+			any_owned_province = {
+				estate_generals_is_theme_capital_trigger = yes
+				development = 20
+			}
+			NOT = { #To prevent this existing when very-well developed theme capital is in effect
+				any_owned_province = {
+					estate_generals_is_theme_capital_trigger = yes
+					development = 30
+				}
+			}
+		}
+		influence = 5
+	}
+	#Very well-developed theme capital
+	influence_modifier = {	
+		desc = EST_VAL_VERY_HIGH_DEVELOPMENT_THEME_CAPITAL
+		trigger = {
+			any_owned_province = {
+				estate_generals_is_theme_capital_trigger = yes
+				development = 30
+			}
+		}
+		influence = 10
+	}
+	#Small army
+	influence_modifier = {	
+		desc = EST_VAL_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		influence = -5
+	}
+	#Very small army
+	influence_modifier = {	
+		desc = EST_VAL_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		influence = -10
+	}
+	#Has established Varangian Guard
+	influence_modifier = {	
+		desc = EST_VAL_VARANGIAN_GUARD
+		trigger = {
+			has_country_flag = br_varangian_guard_enabled
+		}
+		influence = -5
+	}
+	#Very few Thema
+	influence_modifier = {	
+		desc = EST_VAL_VERY_FEW_THEMA
+		trigger = {
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 15
+					estate_generals_is_theme_capital_trigger = yes
+				}
+			}
+		}
+		influence = 20
+	}
+	#Few Thema
+	influence_modifier = {	
+		desc = EST_VAL_FEW_THEMA
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				estate_generals_is_theme_capital_trigger = yes
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 30
+					estate_generals_is_theme_capital_trigger = yes
+				}
+			}
+		}
+		influence = 10
+	}
+	#Many Thema
+	influence_modifier = {	
+		desc = EST_VAL_MANY_THEMA
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 45
+				estate_generals_is_theme_capital_trigger = yes
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 60
+					estate_generals_is_theme_capital_trigger = yes
+				}
+			}
+		}
+		influence = -10
+	}
+	#Very many Thema
+	influence_modifier = {	
+		desc = EST_VAL_VERY_MANY_THEMA
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 60
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+		influence = -20
+	}
+	#Established Exarch System
+	influence_modifier = {	
+		desc = EST_VAL_ESTABLISHED_EXARCH_SYSTEM
+		trigger = {
+			has_government_attribute = enables_exarches_estate
+		}
+		influence = -10
+	}
+	
+	
+	# Influence modifiers from Events:
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}	
+		influence = -40
+	}
+	
+	influence_from_dev_modifier = 0.667
+	
+	# Loyalty modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_nobility_disaster
+			}
+		}
+		loyalty = -20
+	}
+	
+	# Alternative naming of estates
+	custom_name = {
+		desc = estate_strategoi
+		trigger = {
+			tag = BYZ
+		}
+	}
+	
+	color = { 50 0 100 }
+	
+	privileges = {
+		estate_generals_land_rights
+		estate_generals_autonomous_defences
+		estate_generals_settled_armies
+		estate_generals_promote_to_katepano
+		estate_generals_military_parades
+		estate_generals_dynastic_support
+		estate_generals_pike_formation_training
+		estate_generals_combined_arms_training
+		estate_generals_flintlock_musket_training
+		estate_generals_bring_to_court
+	}
+	
+	agendas = {
+		#None at the moment, TODO.
+	}
+	
+}

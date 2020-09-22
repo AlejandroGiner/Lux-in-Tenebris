@@ -13,6 +13,7 @@ aristocracy_ideas = {
 	bonus = {
 		leader_siege = 1
 		nobles_loyalty_modifier = 0.1
+		generals_loyalty_modifier = -0.1
 	}
 
 	trigger = {
@@ -287,6 +288,7 @@ offensive_ideas = {
 
 	bonus = {
 		recover_army_morale_speed = 0.05
+		generals_loyalty_modifier = 0.05
 	}
 
 	bayonet_leaders = {
@@ -322,6 +324,7 @@ defensive_ideas = {
 
 	bonus = {
 		hostile_attrition = 1
+		generals_loyalty_modifier = 0.05
 	}
 
 	battlefield_commisions = {
@@ -714,6 +717,7 @@ quality_ideas = {
 
 	bonus = {
 		discipline = 0.05
+		generals_loyalty_modifier = 0.05
 	}
 
 	private_to_marshal = {
@@ -749,6 +753,7 @@ quantity_ideas = {
 
 	bonus = {
 		land_forcelimit_modifier  = 0.50
+		generals_loyalty_modifier = 0.05
 	}
 	mass_army = {
 		global_manpower_modifier = 0.50

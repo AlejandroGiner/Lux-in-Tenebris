@@ -458,3 +458,39 @@ nor_conquer_scotland_provinces = {
 nor_conquer_ireland_provinces = {
 	region = ireland_region
 }
+
+#################
+#Estate triggers
+#################
+
+#Generals estate
+
+#Used to define a Theme Capital province.
+estate_generals_is_theme_capital_trigger = {
+	#custom_trigger_tooltip = {
+		#tooltip = estate_generals_is_theme_capital_tooltip
+		OR = {
+			has_building = fort_15th
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+		}
+		has_forcelimit_building_trigger = yes
+		NOT = { is_capital = yes } #Let's exclude Constantinople from this.
+	#}
+}
+
+#Call using estate_generals_country_has_num_of_theme_capitals_trigger = { value = X }
+#Creates a estate_generals_country_has_$value$_theme_capital_tooltip string that needs localisation.
+estate_generals_country_has_num_of_theme_capitals_trigger = { 
+	# custom_trigger_tooltip = {
+		# tooltip = estate_generals_country_has_$value$_theme_capital_tooltip
+		calc_true_if = {
+			desc = estate_generals_is_theme_capital_tooltip
+			all_owned_province = {
+				estate_generals_is_theme_capital_trigger = yes
+			}
+			amount = $value$
+		}
+	#}
+}

@@ -789,8 +789,9 @@ country_decisions = {
 	reform_varangian_guard = {
 		potential = {
 			has_idea_group = BYZ_ideas #Because this caused issues with custom nations.
-			is_byz_or_hellenic_rome_trigger = yes
-			NOT = { has_country_modifier = varangian_guard }
+			tag = BYZ
+			NOT = { has_country_flag = br_varangian_guard_enabled }
+			capital = 151 #Because a new world Byzantium could actually pass this decision and not get mercenaries.
 		}
 		allow = {
 			has_idea = basilics_law
@@ -800,10 +801,8 @@ country_decisions = {
 		effect = {
 			add_years_of_income = -1.5
 			add_mil_power = -100
-			add_country_modifier = {
-				name = "varangian_guard"
-				duration = -1
-			}	
+			custom_tooltip = br_varangian_guard_enabled_tooltip
+			set_country_flag = br_varangian_guard_enabled
 			capital_scope = {
 				area = {
 					add_province_modifier = {
@@ -813,9 +812,7 @@ country_decisions = {
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	#Theme System

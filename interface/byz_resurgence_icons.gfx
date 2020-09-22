@@ -9,8 +9,8 @@ spriteTypes = {
 	
 	#Strategoi disaster image
 	spriteType = {
-		name = "GFX_disaster_estate_strategoi_disaster"
-		texturefile = "gfx//interface//disasters//estate_strategoi_disaster.dds"
+		name = "GFX_disaster_estate_generals_disaster"
+		texturefile = "gfx//interface//disasters//estate_generals_disaster.dds"
 		noOfFrames = 3
 		loadType = "INGAME"
 	}
@@ -119,5 +119,95 @@ spriteTypes = {
 	spriteType = {
 		name = "mission_curtained_window"
 		texturefile = "gfx//interface//missions//mission_curtained_window.dds"
+	}
+	
+	#Privileges
+	spriteType = {
+		name = "privilege_settled_armies"
+		texturefile = "gfx/interface/privileges/privilege_settled_armies.dds"
+	}
+							
+	spriteType = {
+		name = "privilege_promote_to_katepano"
+		texturefile = "gfx/interface/privileges/privilege_promote_to_katepano.dds"
+	}
+							
+	spriteType = {
+		name = "privilege_bring_to_court"
+		texturefile = "gfx/interface/privileges/privilege_bring_to_court.dds"
+	}
+							
+	spriteType = {
+		name = "privilege_integrated_viceroys"
+		texturefile = "gfx/interface/privileges/privilege_integrated_viceroys.dds"
+	}
+							
+	spriteType = {
+		name = "privilege_establish_new_viceroy_seat"
+		texturefile = "gfx/interface/privileges/privilege_establish_new_viceroy_seat.dds"
+	}
+							
+	spriteType = {
+		name = "privilege_dynastic_exarches"
+		texturefile = "gfx/interface/privileges/privilege_dynastic_exarches.dds"
+	}
+							
+	spriteType = {
+		name = "privilege_autonomous_exarches"
+		texturefile = "gfx/interface/privileges/privilege_autonomous_exarches.dds"
+	}
+	
+	spriteType = {
+		name = "privilege_autonomous_defences"
+		texturefile = "gfx/interface/privileges/privilege_autonomous_defences.dds"
+	}
+	
+	#Event pictures
+	spriteType = {
+		name = "BYZ_ROME_RUINS_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/ROME_RUINS_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BYZ_CONSTANTINOPLE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/CONSTANTINOPLE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BYZ_GREAT_PALACE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/GREAT_PALACE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BYZ_BYZANTINE_ARMY_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/BYZANTINE_ARMY_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BYZ_CATAPHRACT_BATTLE_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/CATAPHRACT_BATTLE_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "BYZ_JUSTINIAN_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/JUSTINIAN_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "CHARIOT_RACES_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/CHARIOT_RACES_eventPicture.dds"
+		allwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "byzantine_TOURNAMENT_eventPicture"
+		texturefile = "gfx/event_pictures/event_pictures_BYZANTINE/CHARIOT_RACES_eventPicture.dds"
+		allwaystransparent = yes
 	}
 }
