@@ -886,6 +886,13 @@ byz_resurges = {
 					}
 					add_permanent_claim = ROOT
 				}
+				aeolia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			custom_tooltip = byz_safeguard_balkan_border_claims
 			hidden_effect = {
@@ -942,6 +949,7 @@ byz_resurges = {
 				area = hudavendigar_area
 				area = karasi_area
 				area = aydin_area
+				area = aeolia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -956,6 +964,10 @@ byz_resurges = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aeolia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

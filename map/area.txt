@@ -881,8 +881,8 @@ podolia_volhynia_area = { #4
 	1943 3241 4540 7206 7209 7197
 }
 
-volhynia_area = { # 4				#West Volhynia in BT
-	279 7268 7243 7253
+volhynia_area = {
+	279 7268 7243 7253 3238
 }
 
 pripyat_area = { #3
@@ -1088,7 +1088,7 @@ eastern_severia = { #Severia
 }
 
 eastern_volhynia_area = {
-	2962 3238 7207 7244 4539 7228
+	2962 7207 7244 4539 7228
 }
 
 western_zaporizhia_area = {
@@ -1645,26 +1645,34 @@ erzurum_area = {
 }
 
 hudavendigar_area = { # Bithynia
-	316 317 322 4312 5157 5168 5869 
+	316 322 4312 5157 5168 5869 
 }
 
 germiyan_area = { # Phrygia
 	color = { 234 145 65 }
-	5155 4311 5163 5865 5866 1848 5863
+	5155 4311 5163 1848 326
+}
+
+pisidia_area = {
+	5864 5865 5866 5863
 }
 
 aydin_area = { # Lydia
 	color = { 239 70 86 }
-	318 2297 5253 5874 5875 5254 5131
+	5874 5254 5877 5872 4308
+}
+
+aeolia_area = {
+	5875 318 2297 5253 5131
 }
 
 caria_area = {
-	319 5134 4309 4308 5872 5873
+	319 5134 4309 5873
 }
 
 ankara_area = { #3
 	color = { 57 154 172 }
-	326 329 5165 5137 5167 5850
+	329 5165 5137 5167 5850
 }
 
 kastamonu_area = { #3
@@ -1672,7 +1680,7 @@ kastamonu_area = { #3
 }
 
 karaman_area = { #3
-	323 4307 324 4314 5811 5864
+	323 4307 324 4314 5811
 }
 
 cukurova_area = { #3
@@ -4710,11 +4718,15 @@ pontus_area = {
 }
 
 karasi_area = {
-	2296 5130 5156 5252 5876 5877
+	2296 5130 5156 5252 5876 317
 }
 
 pamphylia_area = {
-	2298 5162 5147 2302 7601 5870 5871
+	2298 5147 2302 7601
+}
+
+lycia_area = {
+	5870 5871 5162
 }
 
 mardin_area = {

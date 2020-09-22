@@ -1100,6 +1100,13 @@ emp_ita_unification_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			aeolia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			karasi_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1121,6 +1128,13 @@ emp_ita_unification_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			lycia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			hudavendigar_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1129,6 +1143,13 @@ emp_ita_unification_branch = {
 				add_permanent_claim = ROOT
 			}
 			germiyan_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			pisidia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1158,12 +1179,19 @@ emp_ita_unification_branch = {
 				area = pamphylia_area
 				area = hudavendigar_area
 				area = germiyan_area
+				area = pisidia_area
 				area = cukurova_area
+				area = lycia_area
+				area = aeolia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aeolia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1179,11 +1207,19 @@ emp_ita_unification_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			lycia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			hudavendigar_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			germiyan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pisidia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

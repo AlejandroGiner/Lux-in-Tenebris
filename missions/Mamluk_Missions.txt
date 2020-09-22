@@ -330,6 +330,15 @@ mam_north_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pisidia_area = {
+				limit = {
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 			ankara_area = {
 				limit = {
 					NOT = { 
@@ -348,6 +357,15 @@ mam_north_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			lycia_area = {
+				limit = {
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 			caria_area = {
 				limit = {
 					NOT = { 
@@ -358,6 +376,15 @@ mam_north_missions = {
 				add_permanent_claim = ROOT
 			}
 			aydin_area = {
+				limit = {
+					NOT = { 
+						owned_by = ROOT	
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			aeolia_area = {
 				limit = {
 					NOT = { 
 						owned_by = ROOT	

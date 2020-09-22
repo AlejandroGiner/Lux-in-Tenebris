@@ -1287,6 +1287,13 @@ gc_aragon_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			aeolia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			cukurova_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1302,6 +1309,13 @@ gc_aragon_4 = {
 				add_permanent_claim = ROOT
 			}
 			pamphylia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			lycia_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -1349,6 +1363,8 @@ gc_aragon_4 = {
 				area = northern_aegean_islands_area
 				area = carniola_area
 				area = cyclades_area
+				area = lycia_area
+				area = aeolia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1361,6 +1377,10 @@ gc_aragon_4 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			aeolia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			cukurova_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1370,6 +1390,10 @@ gc_aragon_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			pamphylia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lycia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
