@@ -923,6 +923,20 @@ estate_nobles_levies = {
 			max_manpower = 200
 		}
 		modifier = {
+			factor = 200
+			estate_territory = {
+				estate = estate_nobles
+				territory = 65
+			}
+		}
+		modifier = {
+			factor = 20
+			estate_territory = {
+				estate = estate_nobles
+				territory = 60
+			}
+		}
+		modifier = {
 			factor = 2
 			estate_territory = {
 				estate = estate_nobles
@@ -1409,7 +1423,7 @@ estate_church_inwards_perfection = {
 	on_granted = {
 	}
 	modifier_by_land_ownership = {
-		development_cost = -0.15
+		development_cost = -0.25
 	}
 	penalties = {
 		stability_cost_to_declare_war = 1
@@ -1419,9 +1433,22 @@ estate_church_inwards_perfection = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 7.5
+			factor = 10
 			tag = KOR
-			NOT = { num_of_cities = 30 }
+			NOT = { num_of_cities = 70 }
+			religion = confucianism
+			is_absolutism_active = no
+		}
+		modifier = {
+			factor = 10
+			tag = MNG
+			every_country = {
+				limit = { is_neighbor_of = ROOT }
+				OR = {
+					is_subject = yes
+					is_subject_of = ROOT
+				}
+			}
 			religion = confucianism
 			is_absolutism_active = no
 		}
