@@ -1,0 +1,721 @@
+defined_text = { #Because I initially thought I could refer to the Strategoi as [estate_strategoi.GetName], which simply is not possible.
+    name = GetGeneralsName
+
+    text = { #Because there is currently no specific such
+        localisation_key = estate_strategoi_string
+        trigger = {
+			OR = { #This is funny, apparently because one of the events is a province_event, it uses the province's culture to check, and if it isn't hellenic it bugs up and returns nothing.
+				culture_group = byzantine
+				owner = {
+					culture_group = byzantine
+				}
+			}
+        }
+    }
+	#text = { #Because there is currently no specific such
+    #    localisation_key = estate_latin_strategoi_string
+    #    trigger = {
+	#		has_idea = lte_modernizing_the_themata
+    #    }
+    #}
+}
+
+defined_text = {
+	name = GetNumOfThemeCapitals
+	text = {
+		localisation_key = estate_generals_theme_capitals.60
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 60
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.59
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 59
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.58
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 58
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.57
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 57
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.56
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 56
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.55
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 55
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.54
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 54
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.53
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 53
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.52
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 52
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.51
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 51
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.50
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 50
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.49
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 49
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.48
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 48
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.47
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 47
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.46
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 46
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.45
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 45
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.44
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 44
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.43
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 43
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.42
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 42
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.41
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 41
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.40
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 40
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.39
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 39
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.38
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 38
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.37
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 37
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.36
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 36
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.35
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 35
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.34
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 34
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.33
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 33
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.32
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 32
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.31
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 31
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.30
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 30
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.29
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 29
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.28
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 28
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.27
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 27
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.26
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 26
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.25
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 25
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.24
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 24
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.23
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 23
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.22
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 22
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.21
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 21
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.20
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 20
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.19
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 19
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.18
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 18
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.17
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 17
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.16
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 16
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.15
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 15
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.14
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 14
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.13
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 13
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.12
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 12
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.11
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 11
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.10
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.9
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 9
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.8
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 8
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.7
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 7
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.6
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 6
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.5
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.4
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 4
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.3
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.2
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 2
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.1
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 1
+				estate_generals_is_theme_capital_trigger = yes
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_generals_theme_capitals.0
+		trigger = {
+			always = yes #If you're down here, you have no Theme capitals.
+		}
+	}
+}
+
+defined_text = {
+	name = GetTourmaNumberArt
+	text = {
+		localisation_key = estate_strategoi_tourma_art.12
+		trigger = {
+			owner = {
+				mil_tech = 32
+				num_of_owned_provinces_with = {
+					value = 50
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.11
+		trigger = {
+			owner = {
+				mil_tech = 29
+				num_of_owned_provinces_with = {
+					value = 45
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.10
+		trigger = {
+			owner = {
+				mil_tech = 25
+				num_of_owned_provinces_with = {
+					value = 40
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.9
+		trigger = {
+			owner = {
+				mil_tech = 22
+				num_of_owned_provinces_with = {
+					value = 35
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.8
+		trigger = {
+			owner = {
+				mil_tech = 20
+				num_of_owned_provinces_with = {
+					value = 30
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.7
+		trigger = {
+			owner = {
+				mil_tech = 16
+				num_of_owned_provinces_with = {
+					value = 25
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.6
+		trigger = {
+			owner = {
+				mil_tech = 14
+				num_of_owned_provinces_with = {
+					value = 20
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.5
+		trigger = {
+			owner = {
+				mil_tech = 13
+				num_of_owned_provinces_with = {
+					value = 15
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.4
+		trigger = {
+			owner = {
+				mil_tech = 11
+				num_of_owned_provinces_with = {
+					value = 15
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.3
+		trigger = {
+			owner = {
+				mil_tech = 9
+				num_of_owned_provinces_with = {
+					value = 10
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.2
+		trigger = {
+			owner = {
+				mil_tech = 7
+				num_of_owned_provinces_with = {
+					value = 10
+					has_estate = estate_strategoi
+				}
+			}
+		}
+	}
+	text = {
+		localisation_key = estate_strategoi_tourma_art.1
+		trigger = {
+			NOT = {
+				owner = {
+					mil_tech = 7
+					num_of_owned_provinces_with = {
+						value = 10
+						has_estate = estate_strategoi
+					}
+				}
+			}
+		}
+	}
+}
