@@ -10,6 +10,7 @@ NDefines.NMilitary.FORT_PER_DEV_RATIO = 30			-- Beyond Typus added more province
 NDefines.NMilitary.FORTRESS_COST = 0.3			-- Beyond Typus added all the new provinces mean more forts but no more dev so everyone was going broke Base 05
 
 NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 8
+NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.002 		-- Fixed 29,998% error
 
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							-- More development in LiT in general 210 development needed to reach max 35

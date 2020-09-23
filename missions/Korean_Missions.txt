@@ -1651,6 +1651,8 @@ korea_trade_group = {
 		effect = {
 			2745 = {
 				add_base_production = 2
+			}
+			1389 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
@@ -1658,7 +1660,7 @@ korea_trade_group = {
 					key = kor_traders_tm
 				}
 			}
-			1376 = {
+			1390 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
@@ -1675,14 +1677,23 @@ korea_trade_group = {
 		position = 7
 
 		provinces_to_highlight = {
-			province_id = 1376
+			OR = {
+				province_id = 1390
+				province_id = 1389
+			}
 		}
 
 		trigger = {
-			1376 = {
+			1389 = {
 				trade_share = {
 					country = root
-					share = 50
+					share = 65
+				}
+			}
+			1390 = {
+				trade_share = {
+					country = root
+					share = 20
 				}
 			}
 		}
