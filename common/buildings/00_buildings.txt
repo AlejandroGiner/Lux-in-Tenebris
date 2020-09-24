@@ -33,6 +33,7 @@ marketplace = {
 	
 	modifier = {
 		province_trade_power_modifier = 0.5
+		local_state_maintenance_modifier = 0.15
 	}
 	
 	ai_will_do = {
@@ -45,6 +46,7 @@ workshop = {
 	time = 12
 	modifier = {
 		local_production_efficiency = 0.5
+		local_state_maintenance_modifier = 0.15
 	}
 	
 	allow_in_gold_provinces = no
@@ -59,6 +61,7 @@ temple = {
 	time = 12
 	modifier = {
 		local_tax_modifier = 0.4
+		local_state_maintenance_modifier = 0.15
 	}
 	
 	ai_will_do = {
@@ -71,6 +74,7 @@ barracks = {
 	time = 12
 	modifier = {
 		local_manpower_modifier = 0.5
+		local_state_maintenance_modifier = 0.15
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -114,6 +118,7 @@ shipyard = {
 		naval_forcelimit = 2
 		ship_recruit_speed = -0.25
 		local_ship_repair = 0.25
+		local_state_maintenance_modifier = 0.15
 	}
 	
 	ai_will_do = {
@@ -181,6 +186,7 @@ coastal_defence = {
 	modifier = {
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
+		local_state_maintenance_modifier = 0.15
 	}
 
 	ai_will_do = {
@@ -217,6 +223,7 @@ dock = {
 	}
 	modifier = {
 		local_sailors_modifier = 0.5
+		local_state_maintenance_modifier = 0.15
 	}
 	
 	ai_will_do = {
@@ -233,6 +240,7 @@ regimental_camp = {
 	time = 12
 	modifier = {
 		land_forcelimit = 1
+		local_state_maintenance_modifier = 0.15
 	}
 
 #	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
@@ -323,6 +331,7 @@ naval_battery = {
 		blockade_force_required = 1.0
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
+		local_state_maintenance_modifier = 0.2
 	}
 
 	ai_will_do = {
@@ -341,6 +350,7 @@ cathedral = {
 	modifier = {
 		local_missionary_strength = 0.03
 		local_tax_modifier = 0.6
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	ai_will_do = {
@@ -355,6 +365,7 @@ university = {
 	modifier = {
 		local_development_cost = -0.20
 		allowed_num_of_buildings = 1
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	ai_will_do = {
@@ -399,6 +410,7 @@ trade_depot = {
 	
 	modifier = {
 		province_trade_power_modifier = 1
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	ai_will_do = {
@@ -422,6 +434,7 @@ grand_shipyard = {
 		naval_forcelimit = 4
 		ship_recruit_speed = -0.50
 		local_ship_repair = 0.50
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	ai_will_do = {
@@ -472,6 +485,7 @@ training_fields = {
 	
 	modifier = {
 		local_manpower_modifier = 1
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	ai_will_do = {
@@ -535,6 +549,7 @@ stock_exchange = {
 	
 	modifier = {
 		province_trade_power_modifier = 1.25
+		local_state_maintenance_modifier = 0.25
 	}
 	
 	ai_will_do = {
@@ -549,6 +564,7 @@ counting_house = {
 	make_obsolete = workshop
 	modifier = {
 		local_production_efficiency = 1
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	allow_in_gold_provinces = no
@@ -593,6 +609,7 @@ drydock = {
 	
 	modifier = {
 		local_sailors_modifier = 1.0
+		local_state_maintenance_modifier = 0.2
 	}	
 	
 	ai_will_do = {
@@ -636,6 +653,7 @@ conscription_center = {
 	
 	modifier = {
 		land_forcelimit = 2
+		local_state_maintenance_modifier = 0.2
 	}
 	
 	ai_will_do = {
@@ -705,6 +723,7 @@ manufactory = {
 	time = 60
 	modifier = {
 		trade_goods_size = 0.8
+		local_state_maintenance_modifier = 0.25
 	}
 }
 
@@ -860,6 +879,7 @@ furnace = {
 
 	modifier = {
 		global_trade_goods_size_modifier = 0.02 #National Bonus
+		local_state_maintenance_modifier = 0.25
 	}
 	onmap = yes
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
@@ -909,6 +929,7 @@ soldier_households = {
 
 	modifier = {
 		local_manpower = 0.60
+		local_state_maintenance_modifier = 0.25
 	}
 	bonus_modifier = {
 		local_manpower = 0.60
@@ -941,6 +962,7 @@ impressment_offices = {
 
 	modifier = {
 		local_sailors = 250
+		local_state_maintenance_modifier = 0.25
 	}
 	bonus_modifier = {
 		local_sailors = 250
@@ -998,6 +1020,7 @@ state_house = {
 	modifier = {
 		statewide_governing_cost = -0.2
 		min_local_autonomy = -5
+		local_state_maintenance_modifier = 0.25
 	}
 	bonus_modifier = {
 		statewide_governing_cost = -0.2
