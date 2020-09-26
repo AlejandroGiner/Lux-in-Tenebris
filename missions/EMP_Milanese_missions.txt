@@ -17,7 +17,7 @@ emp_mlo_conquest_branch = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 101
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		ai_weight = {
 			factor = 5
@@ -33,7 +33,7 @@ emp_mlo_conquest_branch = {
 		effect = {
 			101 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 20
 					key = mlo_taken_genoa
@@ -41,24 +41,24 @@ emp_mlo_conquest_branch = {
 			}
       emilia_romagna_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			emilia_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			liguria_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -71,16 +71,16 @@ emp_mlo_conquest_branch = {
         area = emilia_area
         area = emilia_romagna_area
       }
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			emilia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
       emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -89,17 +89,17 @@ emp_mlo_conquest_branch = {
 
 			tuscany_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
       south_tuscany_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -111,16 +111,16 @@ emp_mlo_conquest_branch = {
         area = tuscany_area
         area = south_tuscany_area
       }
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			tuscany_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
       south_tuscany_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -169,7 +169,7 @@ emp_mlo_conquest_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 121
@@ -188,45 +188,45 @@ emp_mlo_conquest_branch = {
 			if = {
 				limit = {
 					exists = NAP
-					NAP = { is_subject_of = root }
+					NAP = { is_subject_of = ROOT }
 				}
 				NAP = { add_liberty_desire = -25 }
 			}
 			if = {
 				limit = {
 					exists = TTS
-					TTS = { is_subject_of = root }
+					TTS = { is_subject_of = ROOT }
 				}
 				TTS = { add_liberty_desire = -25 }
 			}
 			if = {
 				limit = {
-					NOT = { TTS = { is_subject_of = root } }
-					NOT = { NAP = { is_subject_of = root } }
+					NOT = { TTS = { is_subject_of = ROOT } }
+					NOT = { NAP = { is_subject_of = ROOT } }
 				}
 				naples_area = {
-					limit = { owned_by = root }
+					limit = { owned_by = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
 					}
 				}
 				apulia_area = {
-					limit = { owned_by = root }
+					limit = { owned_by = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
 					}
 				}
 				calabria_area = {
-					limit = { owned_by = root }
+					limit = { owned_by = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
 					}
 				}
         abruzzo_area = {
-					limit = { owned_by = root }
+					limit = { owned_by = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
@@ -236,10 +236,10 @@ emp_mlo_conquest_branch = {
 
 			italy_region = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -264,14 +264,14 @@ emp_mlo_venice_branch = {
 		required_missions = { }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 3047
+				province_id = 4740
 				province_id = 107
-        province_id = 108
-				province_id = 7019
+				province_id = 108
+				province_id = 4729
 			}
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		ai_weight = {
@@ -283,9 +283,9 @@ emp_mlo_venice_branch = {
 
 		trigger = {
 			owns_core_province = 107
-			owns_core_province = 3047`
-      owns_core_province = 108
-      owns_core_province = 7019
+			owns_core_province = 4740
+			owns_core_province = 108
+			owns_core_province = 4729
 			is_subject = no
 		}
 		effect = {
@@ -299,10 +299,10 @@ emp_mlo_venice_branch = {
 					limit = {
 						region = italy_region
 						NOT = { province_id = 112 }
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -337,7 +337,7 @@ emp_mlo_venice_branch = {
 				AND = {
 					OR = {
 						province_id = 108
-						province_id = 4729
+						province_id = 7018
 						province_id = 1774
 						province_id = 111
 						province_id = 114
@@ -348,7 +348,7 @@ emp_mlo_venice_branch = {
 								value = 3
 								OR = {
 									province_id = 108
-									province_id = 4729
+									province_id = 7018
 									province_id = 1774
 									province_id = 111
 									province_id = 114
@@ -364,7 +364,7 @@ emp_mlo_venice_branch = {
 				value = 3
 				OR = {
 					province_id = 108
-					province_id = 4729
+					province_id = 7018
 					province_id = 1774
 					province_id = 111
 					province_id = 114
@@ -406,25 +406,25 @@ emp_mlo_venice_branch = {
 
 			piedmont_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
-      west_piedmont_area = {
+			west_piedmont_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			112 = {
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -441,32 +441,32 @@ emp_mlo_venice_branch = {
 				area = emilia_romagna_area
 				area = west_piedmont_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			lombardy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			west_piedmont_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			piedmont_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			liguria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -502,40 +502,40 @@ emp_mlo_venice_branch = {
 			else = {
 				naples_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				apulia_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				calabria_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
         abruzzo_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			110 = {
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -603,7 +603,7 @@ emp_mlo_security_branch = {
 		trigger = {
 			any_ally = {
 				army_strength = {
-					who = root
+					who = ROOT
 					value = 1.65
 				}
 			}
@@ -612,8 +612,8 @@ emp_mlo_security_branch = {
 				amount = 3
 				all_known_country = {
 					OR = {
-						alliance_with = root
-						is_subject_of = root
+						alliance_with = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -652,7 +652,7 @@ emp_mlo_security_branch = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					owned_by = root
+					owned_by = ROOT
 					region = italy_region
 					OR = {
 						unrest = 1
@@ -666,7 +666,7 @@ emp_mlo_security_branch = {
 					NOT = {
 						emperor = {
 							OR = {
-								tag = root
+								tag = ROOT
 								has_opinion = {
 									who = ROOT
 									value = 150
@@ -705,7 +705,7 @@ emp_mlo_security_branch = {
 					is_capital = yes
 					ROOT = { NOT = { religion = catholic } }
 					owner = {
-						religion = root
+						religion = ROOT
 						is_defender_of_faith = yes
 					}
 				}
@@ -780,7 +780,7 @@ emp_mlo_security_branch = {
 					any_country = {
 						has_casus_belli = {
 							type = cb_restore_personal_union
-							target = root
+							target = ROOT
 						}
 					}
 				}
@@ -790,12 +790,12 @@ emp_mlo_security_branch = {
 						limit = {
 							has_casus_belli = {
 								type = cb_restore_personal_union
-								target = root
+								target = ROOT
 							}
 						}
 						remove_casus_belli = {
 							type = cb_restore_personal_union
-							target = root
+							target = ROOT
 						}
 					}
 				}
@@ -808,7 +808,7 @@ emp_mlo_security_branch = {
 		position = 4
 		required_missions = { emp_mlo_secure_rule }
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			NOT = { has_building = university }
 			has_courthouse_building_trigger = no
 			ROOT = {
@@ -819,7 +819,7 @@ emp_mlo_security_branch = {
 							has_building = courthouse
 							has_building = town_hall
 						}
-						value = 6
+						value = 10
 					}
 				}
 			}
@@ -888,7 +888,7 @@ emp_mlo_victorious_branch = {
 				}
 				army_size = MLO
 				NOT = {
-					root = {
+					ROOT = {
 						has_won_war_against = {
 							who = prev
 							max_years_since = 100
@@ -919,7 +919,7 @@ emp_mlo_victorious_branch = {
 						}
 						army_size = ROOT
 						NOT = {
-							root = {
+							ROOT = {
 								has_won_war_against = {
 									who = prev
 									max_years_since = 100
@@ -1013,7 +1013,7 @@ emp_mlo_security_branch_2 = {
 				province_id = 1769
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { owned_by = ROOT }
 				AND = {
 					NOT = { has_building = fort_15th }
 					NOT = { has_building = fort_16th }
@@ -1245,14 +1245,14 @@ emp_mlo_economy_branch = {
 		provinces_to_highlight = {
 			province_id = 104
 			OR = {
-				NOT = { is_capital_of = root }
+				NOT = { is_capital_of = ROOT }
 				NOT = { development = 30 }
 			}
 		}
 		trigger = {
 			has_institution = renaissance
 			104 = {
-				is_capital_of = root
+				is_capital_of = ROOT
 				development = 30
 			}
 		}
@@ -1273,7 +1273,7 @@ emp_mlo_economy_branch = {
 					ROOT = {
 						NOT = {
 							development_in_provinces = {
-								value = 180
+								value = 200
 								culture = lombard
 							}
 						}
@@ -1281,7 +1281,7 @@ emp_mlo_economy_branch = {
 				}
 				AND = {
 					province_id = 4740
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 				}
 			}
 		}
@@ -1290,10 +1290,10 @@ emp_mlo_economy_branch = {
 				value = 180
 				culture = lombard
 			}
-			owns = 3095
+			owns = 4740
 		}
 		effect = {
-			3095 = {
+			4740 = {
 				province_event = { id = new_flavour_mlo.15 }
 			}
 		}
@@ -1340,7 +1340,7 @@ emp_mlo_economy_branch = {
 					}
 				}
 				AND = {
-					superregion = europe_superregion
+					continent = europe
 					NOT = { province_id = 104 }
 					higher_development_than = 104
 				}
@@ -1353,14 +1353,14 @@ emp_mlo_economy_branch = {
 				custom_trigger_tooltip = {
 					tooltip = emp_mlo_all_roads_lead_to_milan_trigger_tooltip
 					NOT = {
-						europe_superregion = {
+						europe = {
 							NOT = { province_id = 104 }
 							higher_development_than = 104
 						}
 					}
 				}
 			}
-			num_of_cities = 20
+			num_of_cities = 40
 		}
 		effect = {
 			capital_scope = {
@@ -1394,8 +1394,8 @@ emp_mlo_papal_branch = {
 		required_missions = { emp_mlo_kingdom_of_lombardy }
 		provinces_to_highlight = {
 			province_id = 118
-			NOT = { country_or_non_sovereign_subject_holds = root }
-			NOT = { root = { religion = catholic } }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { ROOT = { religion = catholic } }
 		}
 		trigger = {
 			if = {
