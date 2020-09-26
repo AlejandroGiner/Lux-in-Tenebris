@@ -2829,6 +2829,7 @@ defined_text = {
 				trade_goods = naval_supplies
 				trade_goods = fish
 				trade_goods = salt
+				trade_goods = whales
 			}
 		}
 	}
@@ -2838,6 +2839,7 @@ defined_text = {
 			OR = {
 				trade_goods = copper
 				trade_goods = iron
+				trade_goods = marble
 			}
 		}
 	}
@@ -2849,19 +2851,6 @@ defined_text = {
 				trade_goods = cloth
 				trade_goods = silk
 				trade_goods = dyes
-			}
-		}
-	}
-	text = {
-		localisation_key = building_plantations
-		trigger = {
-			OR = {
-				trade_goods = coffee
-				trade_goods = cotton
-				trade_goods = sugar
-				trade_goods = tobacco
-				trade_goods = tea
-				trade_goods = cocoa
 			}
 		}
 	}
@@ -2884,6 +2873,13 @@ defined_text = {
 				trade_goods = grain
 				trade_goods = livestock
 				trade_goods = wine
+				trade_goods = beer
+                trade_goods = rice
+                trade_goods = potatoes
+                trade_goods = maize
+                trade_goods = millet
+                trade_goods = amaranth
+                trade_goods = legumes
 			}
 		}
 	}
@@ -2896,6 +2892,7 @@ defined_text = {
 				trade_goods = tropical_wood
 				trade_goods = glass
 				trade_goods = chinaware
+				trade_goods = books
 			}
 		}
 	}
@@ -2903,6 +2900,12 @@ defined_text = {
 		localisation_key = building_furnace
 		trigger = {
 			trade_goods = coal
+		}
+	}
+	text = {
+		localisation_key = building_plantations
+		trigger = {
+			always = yes
 		}
 	}
 }
