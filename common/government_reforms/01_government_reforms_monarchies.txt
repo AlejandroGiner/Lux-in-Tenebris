@@ -179,7 +179,7 @@ coptic_monarchy_reform = {
 		}
 	}
 	valid_for_nation_designer = yes
-	nation_designer_cost = 100
+	nation_designer_cost = 20
 	nation_designer_trigger = {
 		culture_group = egyptian_group
 		religion_group = christian
@@ -2410,7 +2410,7 @@ tuscan_duchy_btc = {
 		OR = {
 			AND = {
 				tag = TUS
-				dynasty = "de' Medici"
+				has_reform = tuscan_duchy_btc
 				NOT = { map_setup = map_setup_random }
 			}
 			AND = {

@@ -1,3 +1,13 @@
+NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.4 -- Changed from 1.7. AI wants this advantage to enter battles typically.
+NDefines.NAI.REGIMENTS_PER_GENERAL = 20
+NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 20
+NDefines.NAI.FORCE_MARCH_MIN_SIZE = 10
+NDefines.NAI.DEBASE_THRESHOLD = 3500
+NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
+NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 3
+NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 30.1
+NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 50.1
+
 NDefines.NDiplomacy.MAX_FREE_CITIES = 20			-- from original BtP increased from 8
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 45			-- from original BtP increased from 25
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075			-- from original BtP reduced from 01
