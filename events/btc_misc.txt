@@ -1221,6 +1221,8 @@ country_event = {
 		tag = MLO
 		has_reform = ambrosian_republic
 		NOT = { exists = CMO }
+		owns = 4740
+		4740 = { is_core = CMO }
 	}
 	
 	mean_time_to_happen = {
