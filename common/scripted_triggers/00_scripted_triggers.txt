@@ -669,9 +669,18 @@ has_no_manufactory_trigger = { #Province Scope
 	NOT = { has_building = state_house }
 }
 
+has_no_manufactury_in_construction_trigger = { #Province Scope
+	NOT = { has_construction = furnace }
+	NOT = { has_construction = ramparts }
+	NOT = { has_construction = soldier_households }
+	NOT = { has_construction = impressment_offices }
+	NOT = { has_construction = state_house }
+}
+
 # Does not include new manufactories - they don't fit for the purposes of this trigger
 root_can_build_manufactory_here_trigger = {
     has_no_manufactory_trigger = yes
+	has_no_manufactury_in_construction_trigger = yes
     num_free_building_slots = 1
     if = {
         limit = {
