@@ -6,90 +6,10 @@
 # HR
 # Nitro
 
-7245 = "Dabrowica"
-236 = "Londyn"
-104 = "Mediolan"
-4155 = "Zgorzelec"
-7506 = "Drawsko"
-4738 = "Triest"
-121 = "Neapol"
-118 = "Rzym"
-120 = "Abruzja"
-103 = "Turyn"
-101 = "Genua"
-4730 = "Bolonia"
-112 = "Wenecja"
-108 = "Werona"
-124 = "Mesyna"
-4729 = "Padwa"
-122 = "Tarent"
-183 = "Paryz"
-201 = "Prowansja"
-196 = "Tuluza"
-102 = "Nicea"
-202 = "Awinion"
-199 = "Owernia"
-217 = "Madryt"
-220 = "Walencja"
-224 = "Sewilla"
-214 = "Saragossa"
-221 = "Murcja"
-225 = "Kordoba"
-223 = "Grenada"
-210 = "Pampeluna"
-7653 = "Nowa Kartagena"
-216 = "Salamanka"
-1749 = "Kadyks"
-218 = "Oliwencja"
-227 = "Lizbona"
+
+# Anatolia
 318 = "Smyrna"
-358 = "Aleksandria"
-361 = "Kair"
-290 = "Poltawa"
-3241 = "Kalnik"
-334 = "Tangier"
 330 = "Trapezunt"
-116 = "Florencja"
-4364 = "Hebrydy"
-253 = "Górne Hebrydy"
-
-303 = "Saratów"
-302 = "Tambow"
-475 = "Baszkortostan"
-767 = "Szczytno"
-1079 = "Wiatka"
-1081 = "Symbirsk"
-1083 = "Wietluga"
-1772 = "Pozon"
-1941 = "Turów"
-1966 = "Czelabinsk"
-1972 = "Udmurcja"
-2415 = "Chopior"
-2419 = "Syzran"
-2420 = "Agidel"
-2421 = "Czystopol"
-2422 = "Czeboksary"
-2427 = "Bielojarskij"
-2444 = "Zlatoust"
-2959 = "Tarnów"
-2964 = "Hawolin"
-2993 = "Przeslaw"
-4129 = "Stary Perm"
-
-
-#Americas
-965 = "Nowy Gdansk"
-5013 = "Swiety Jan"
-
-#Westafrica
-1119 = "Wybrzeze Pieprzowe"
-
-#st lawrence bay
-2578 = "Wniebowziecie"
-
-
-
-
 
 # Baltic
 35 = "Ozylia"
@@ -105,6 +25,7 @@
 271 = "Zmudz"
 272 = "Wilno"
 273 = "Latgalia"          # or, for the city only, "Dzwinsk" or "Dzwinow"
+767 = "Szczytno"
 770 = "Krewo"
 1834 = "Dorpat"
 1841 = "Malbork"
@@ -153,15 +74,24 @@
 7808 = "Kies"             # it's name of Wenden, not Wolmar
 
 # Britain
+233 = "Kornwalia"
+236 = "Londyn"
 237 = "Oksford"           # "Woli Brod" if feeling fancy, more literal translation
+253 = "Górne Hebrydy"
+4364 = "Hebrydy"
 4365 = "Wyspa Mann"
+4367 = "Jork"
+
+# Canada
+2578 = "Wniebowziecie"
+5013 = "Swiety Jan"
 
 # Carpathia
 153 = "Peszt"
 162 = "Zemplin"
 1318 = "Spisz"
 1756 = "Besarabia"
-1772 = "Bratyslawa"
+1772 = "Pozon"            # now "Bratyslawa"
 1952 = "Marmarosz"
 2405 = "Tehinia"
 3146 = "Uzgród"
@@ -206,15 +136,41 @@
 4237 = "Olomuniec"
 4238 = "Lignica"
 4726 = "Walachy"
+4778 = "Zgorzelec"
 
 # Egypt
+358 = "Aleksandria"
+361 = "Kair"
 363 = "Peluzjum"
+
+# France
+183 = "Paryz"
+196 = "Tuluza"
+199 = "Owernia"
+201 = "Prowansja"
+202 = "Awinion"
 
 # Guinea
 1096 = "Wyspy Zielonego Przyladka"  # yeah, it can't be shortened really
 1111 = "Arkin"            # real name, probably inspired by phonetics of the original name
 1113 = "Kajor"
 1116 = "Dzolof"
+1119 = "Wybrzeze Pieprzowe"
+
+# Iberia
+210 = "Pampeluna"
+214 = "Saragossa"
+216 = "Salamanka"
+217 = "Madryt"
+218 = "Oliwencja"
+220 = "Walencja"
+221 = "Murcja"
+223 = "Grenada"
+224 = "Sewilla"
+225 = "Kordoba"
+227 = "Lizbona"
+1749 = "Kadyks"
+7653 = "Nowa Kartagena"
 
 # Illyria
 131 = "Zagrzeb"
@@ -225,8 +181,23 @@
 4239 = "Belgrad"
 
 # Italy
+101 = "Genua"
+102 = "Nicea"
+103 = "Turyn"
+104 = "Mediolan"
+108 = "Werona"
 110 = "Trydent"
+112 = "Wenecja"
+116 = "Florencja"
+118 = "Rzym"
+120 = "Abruzja"
+121 = "Neapol"
+122 = "Tarent"
+124 = "Mesyna"
 1769 = "Gorycja"
+4729 = "Padwa"
+4730 = "Bolonia"
+4738 = "Triest"
 
 # Levant
 364 = "Arisz"
@@ -266,6 +237,7 @@
 6667 = "Brabancja"
 
 # Maghreb
+334 = "Tangier"
 367 = "Azory"
 368 = "Madera"
 4565 = "Teneryfa"
@@ -311,17 +283,18 @@
 1858 = "Szczecin"
 1874 = "Brema"
 1878 = "Akwizgran"
-2964 = "Stara Marchia"
+2964 = "Hawolin"              # or "Stara Marchia" (literal translation of "Altmark")
 2965 = "Plawno"
 2969 = "Lubusz"
 2973 = "Mepa"
-2993 = "Marchia Wkrzanska"
-2994 = "Pomorze Przednie"	    #Note (actually "Vorpommern")
+2993 = "Przeslaw"             # or "Marchia Wkrzanska" (literal translation of "Uckermark")
+2994 = "Pomorze Przednie"	    # actually "Vorpommern"
 2995 = "Slupsk"
 2996 = "Wyszomierz"
 4169 = "Misnia"
 4745 = "Rugia"
 4746 = "Pyrzyce"
+4747 = "Drawsko Pomorskie"
 4786 = "Bragniza"
 7412 = "Zwierzyn"
 7498 = "Wologoszcz"
@@ -332,6 +305,9 @@
 7787 = "Leknica"
 7788 = "Uznam"
 7794 = "Drezdenko"
+
+# Northeast
+965 = "Nowy Gdansk"
 
 # Poland
 262 = "Kraków"
@@ -469,6 +445,7 @@
 292 = "Mohylew"
 297 = "Briansk"
 771 = "Witebsk"
+1941 = "Turów"
 1942 = "Zytomierz"
 1943 = "Braclaw"
 1944 = "Czerkasy"
@@ -479,6 +456,7 @@
 2962 = "Równe"
 3238 = "Luck"
 3239 = "Zaslaw"
+3241 = "Kalnik"
 3267 = "Bielgorod"
 4115 = "Homel"
 4242 = "Borysów"
@@ -509,6 +487,7 @@
 7239 = "Biala Cerkiew"
 7241 = "Mozyrz"
 7243 = "Ratno"
+7245 = "Dabrowica"
 7246 = "Nowogród Wolynski"
 7249 = "Putywl"
 7252 = "Hadziacz"
@@ -587,3 +566,21 @@
 5650 = "Warzuga"
 7750 = "Sortawala"
 7801 = "Ostrobotnia"
+
+# Ural
+302 = "Tambow"
+303 = "Saratów"
+475 = "Baszkortostan"
+1081 = "Symbirsk"
+1083 = "Wietluga"
+1966 = "Czelabinsk"
+1972 = "Udmurcja"
+2415 = "Chopior"
+2419 = "Syzran"
+2420 = "Agidel"
+2421 = "Czystopol"
+2422 = "Czeboksary"
+2427 = "Bielojarskij"
+2444 = "Zlatoust"
+3281 = "Wiatka"
+4129 = "Stary Perm"
