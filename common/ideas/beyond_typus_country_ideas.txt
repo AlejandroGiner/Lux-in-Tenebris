@@ -433,8 +433,8 @@ MDG_ideas = {
 
 TTS_ideas = {
 	start = {
-		merchants = 2
-		global_tax_modifier = 0.10
+		merchants = 1
+		technology_cost = -0.05
 	}
 	
 	bonus = {
@@ -446,11 +446,11 @@ TTS_ideas = {
 	}
 	free = yes		# will be added at load
 	
-	TTS_idea1 = {
-		global_unrest = -2
+	sic_constitions_of_melfi = {
+		
 	}
 	TTS_idea2 = {
-		ship_power_propagation = 0.3
+		global_ship_trade_power = 0.25
 		light_ship_cost = -0.15
 	}
 	TTS_idea3 = {
@@ -463,7 +463,7 @@ TTS_ideas = {
 		galley_power = 0.2
 	}
 	TTS_idea6 = {
-		navy_tradition_decay = -0.02
+		navy_tradition_decay = -0.015
 	}
 	TTS_idea7 = {
 		province_warscore_cost = -0.15
