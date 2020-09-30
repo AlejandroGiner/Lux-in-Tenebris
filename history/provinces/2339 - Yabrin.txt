@@ -3,12 +3,16 @@
 culture = bedouin_arabic
 religion = sunni
 capital = "Yabrin"
-trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = no
+owner = DAW
+controller = DAW
+add_core = DAW
+is_city = yes
+trade_goods = livestock
+
 native_size = 10
 native_ferocity = 9
 native_hostileness = 5
@@ -24,8 +28,6 @@ discovered_by = east_african
 1515.1.1 = { discovered_by = POR }
 
 1750.1.1 = {
-	is_city = yes
-	trade_goods = livestock
 	owner = NAJ
 	controller = NAJ
 	add_core = NAJ

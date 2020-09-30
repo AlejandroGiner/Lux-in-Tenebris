@@ -3,11 +3,16 @@
 culture = bedouin_arabic
 religion = sunni
 capital = "Turabah"
-trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+owner = UTA
+controller = UTA
+add_core = UTA
+is_city = yes
+trade_goods = wool
+
 native_size = 10
 native_ferocity = 9
 native_hostileness = 5
@@ -26,8 +31,6 @@ discovered_by = east_african
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-	is_city = yes
-	trade_goods = wool
 } # Calling it under Ottoman hegemony
 
 1750.1.1 = {

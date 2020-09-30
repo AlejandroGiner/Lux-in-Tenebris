@@ -1187,8 +1187,10 @@ arabian_ideas = {
 	}
 
 	trigger = {
-		culture_group = turko_semitic
-		NOT = { primary_culture = turkish }
+		OR = {
+			culture_group = turko_semitic
+			tag = TYM
+		}
 	}
 	free = yes
 

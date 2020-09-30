@@ -1,16 +1,28 @@
 #2328 - Tayma
 
-culture = bedouin_arabic
-religion = sunni
+culture = mizrahi
+religion = jewish
 capital = "Tayma"
-trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+is_city = yes
+trade_goods = salt
+owner = TYM
+controller = TYM
+add_core = TYM
+
 native_size = 10
 native_ferocity = 9
 native_hostileness = 5
+
+extra_cost = 18
+center_of_trade = 1
+add_permanent_province_modifier = {
+	name = btpl_oasis
+	duration = -1
+}
 
 discovered_by = muslim
 discovered_by = persian_btc
@@ -25,8 +37,6 @@ discovered_by = east_african
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-	is_city = yes
-	trade_goods = salt
 } # Calling it under Ottoman hegemony
 
 1750.1.1 = {
