@@ -104,6 +104,12 @@ country_event = {
 			}
 			5096 = { add_core = ROOT }
 		}
+		if = {
+			limit = { ai = yes}
+			366 = { cede_province = ROOT }
+			4565 = { cede_province = ROOT }
+			5096 = { cede_province = ROOT }
+		}
 	}
 
 	option = {
