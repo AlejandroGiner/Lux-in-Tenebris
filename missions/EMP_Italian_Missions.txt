@@ -666,15 +666,21 @@ emp_ita_war_branch = {
 		required_missions = { emp_ita_take_the_littoral }
 		
 		provinces_to_highlight = {
-			area = tirol_area
+			OR = {
+				area = tirol_area
+				area = sudtirol_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = emp_ita_redeem_tirolo_tt
 				num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-					value = 4
-					area = tirol_area
+					value = 6
+					OR = {
+						area = tirol_area
+						area = sudtirol_area
+					}
 				}
 			}
 		}
