@@ -1,0 +1,67 @@
+#Arabian tags including levant
+
+btc_bedouin_unit_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = TYM
+			tag = UNZ
+			tag = UTA
+			tag = MRU
+			tag = AZD
+		}
+	}
+	
+	sprite_infantry = {
+		0 = SHM_INFANTRY_1
+		1 = SHM_INFANTRY_2
+		2 = SHM_INFANTRY_3
+		3 = SHM_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = SHM_CAVALRY_1
+		1 = SHM_CAVALRY_2
+		2 = SHM_CAVALRY_3
+		3 = SHM_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = SHM_ARTILLERY_1
+		1 = SHM_ARTILLERY_2
+		2 = SHM_ARTILLERY_3
+		3 = SHM_ARTILLERY_4
+	}
+}
+
+btc_levantine_unit_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = PLS
+			tag = SYR
+		}
+	}
+	
+	sprite_infantry = {
+		0 = NAJ_INFANTRY_1
+		1 = NAJ_INFANTRY_2
+		2 = NAJ_INFANTRY_3
+		3 = NAJ_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = NAJ_CAVALRY_1
+		1 = NAJ_CAVALRY_2
+		2 = NAJ_CAVALRY_3
+		3 = NAJ_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = NAJ_ARTILLERY_1
+		1 = NAJ_ARTILLERY_2
+		2 = NAJ_ARTILLERY_3
+		3 = NAJ_ARTILLERY_4
+	}
+	
+}
