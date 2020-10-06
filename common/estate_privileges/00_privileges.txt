@@ -1933,7 +1933,11 @@ estate_dhimmi_lighter_dhimmi_taxes = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = { tag = TUR }
+		}
 	}
 }
 
@@ -2008,7 +2012,11 @@ estate_dhimmi_manpower = {
 	benefits = {
 	}
 	ai_will_do = {
-		factor = 0
+		factor = 1000
+		modifier = {
+			factor = 0
+			NOT = { tag = TUR }
+		}
 	}
 }
 
