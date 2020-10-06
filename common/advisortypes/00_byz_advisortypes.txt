@@ -1,23 +1,23 @@
-#provincial_governor = {
-#	monarch_power = ADM
-#	
-#	# Bonus
-#	core_creation = -0.05
-#
-#	skill_scaled_modifier = { meritocracy = 0.5 }
-#
-#	chance = { #Only gotten from Exarches estate privilege.
-#		factor = 1
-#		modifier = {
-#			factor = 0
-#			NOT = { has_estate_privilege = estate_exarches_court_advisors }
-#		}
-#	}
-#	
-#	ai_will_do = {
-#		factor = 1
-#	}
-#}
+provincial_governor = {
+	monarch_power = ADM
+	
+	# Bonus
+	core_creation = -0.075
+
+	skill_scaled_modifier = { meritocracy = 0.5 }
+
+	chance = { #Only gotten from Exarches estate privilege.
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_estate_privilege = estate_exarches_court_advisors }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
 
 military_general = {
 	monarch_power = MIL
