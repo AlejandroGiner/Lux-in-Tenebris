@@ -681,7 +681,21 @@ spa_reconquista = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_beiras_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			alentejo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_alentejo_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -817,6 +831,8 @@ spa_reconquista_por = {
 			OR = {
 				area = beieras_area
 				area = alentejo_area
+				area = south_beiras_area
+				area = south_alentejo_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -826,7 +842,15 @@ spa_reconquista_por = {
 				type = all
 				owned_by = ROOT
 			}
+			south_beiras_area = {
+				type = all
+				owned_by = ROOT
+			}
 			alentejo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_alentejo_area = {
 				type = all
 				owned_by = ROOT
 			}

@@ -973,7 +973,25 @@ granada_slot_3_missions = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_alentejo_area = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 				beieras_area = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				south_beiras_area = {
 					limit = {
 						NOT = {
 							country_or_non_sovereign_subject_holds = ROOT
@@ -1012,6 +1030,8 @@ andalusia_slot_3_missions = {
 			OR = {
 				area = alentejo_area
 				area = beieras_area
+				area = south_beiras_area
+				area = south_alentejo_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1024,7 +1044,13 @@ andalusia_slot_3_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
 			}
+			south_alentejo_area
 			beieras_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+			south_beiras_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT

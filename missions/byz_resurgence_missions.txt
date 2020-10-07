@@ -4622,6 +4622,8 @@ byz_iberia_2 = {
 				area = extremadura_area
 				area = beieras_area
 				area = alentejo_area
+				area = south_beiras_area
+				area = south_alentejo_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4635,7 +4637,15 @@ byz_iberia_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			south_beiras_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			alentejo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_alentejo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -4935,6 +4945,13 @@ byz_iberia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				extremadura_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -4943,6 +4960,13 @@ byz_iberia = {
 					add_permanent_claim = ROOT
 				}
 				beieras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				south_beiras_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
