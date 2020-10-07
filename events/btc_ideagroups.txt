@@ -1,0 +1,81 @@
+namespace = btc_ideagroups
+
+country_event = {
+	id = btc_ideagroups.1
+	title = btc_ideagroups.1.t
+	desc = btc_ideagroups.1.d
+	picture = ADVISOR_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				NOT = { has_government_attribute = enables_plutocratic_idea_group }
+		        has_idea_group = plutocracy_ideas
+		        NOT = { has_idea_group = aristocracy_ideas }
+			}
+			AND = {
+				NOT = { has_government_attribute = enables_aristocratic_idea_group }
+		        has_idea_group = aristocracy_ideas
+		        NOT = { has_idea_group = plutocracy_ideas }
+			}
+		}
+	}
+	
+	option = {
+		name = btc_ideagroups.1.a
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+		    limit = {
+		        NOT = { has_government_attribute = enables_plutocratic_idea_group }
+		        has_idea_group = plutocracy_ideas
+		        NOT = { has_idea_group = aristocracy_ideas }
+		    }
+		    #Switch ideas
+			custom_tooltip = btc_ideagroups.1.getaristo
+			hidden_effect = {
+			    trigger_switch = {
+			        on_trigger = has_idea
+			        emancipation = {            remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = noble_resilience }
+			        free_cities = {             remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = international_nobility }
+			        free_subjects = {           remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = noble_officers }
+			        free_merchants = {          remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = serfdom }
+			        bill_of_rights = {          remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = local_nobility }
+			        abolished_serfdom = {       remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = military_traditions }
+			        tradition_of_payment = {    remove_idea_group = plutocracy_ideas add_idea_group = aristocracy_ideas add_idea = noble_knights }
+			    }
+			}
+		}
+		else_if = {
+		    limit = {
+		        #NOT = { has_government_attribute = enables_aristocratic_idea_group }
+		        has_idea_group = aristocracy_ideas
+		        NOT = { has_idea_group = plutocracy_ideas }
+		    }
+		    #Switch ideas
+			custom_tooltip = btc_ideagroups.1.getpluto
+			hidden_effect = {
+			    trigger_switch = {
+			        on_trigger = has_idea
+			        noble_resilience = {        remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = emancipation }
+			        international_nobility = {  remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = free_cities }
+			        noble_officers = {          remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = free_subjects }
+			        serfdom = {                 remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = free_merchants }
+			        local_nobility = {          remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = bill_of_rights }
+			        military_traditions = {     remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = abolished_serfdom }
+			        noble_knights = {           remove_idea_group = aristocracy_ideas add_idea_group = plutocracy_ideas add_idea = tradition_of_payment }
+			    }
+			}
+		}
+	}
+	
+	option = {
+		name = btc_ideagroups.1.b
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
