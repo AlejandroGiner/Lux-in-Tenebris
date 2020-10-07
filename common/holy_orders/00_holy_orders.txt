@@ -1,9 +1,20 @@
 jesuit_order = {
     icon = GFX_holy_order_jesuits
     trigger = {
-        culture_group = iberian
-        religion = catholic
-    }
+		OR = {
+			technology_group = western
+			capital_scope = { region = carpathia_region }
+			capital_scope = { region = poland_region }
+			colonial_parent = {
+				OR = {
+					technology_group = western
+					capital_scope = { region = carpathia_region }
+					capital_scope = { region = poland_region }
+				}
+			}
+		}
+		religion = catholic
+	}
     cost = 60
     cost_type = adm_power
     per_province_effect = {
@@ -28,9 +39,20 @@ jesuit_order = {
 dominican_order = {
     icon = GFX_holy_order_dominicans
     trigger = {
-        culture_group = iberian
-        religion = catholic
-    }
+		OR = {
+			technology_group = western
+			capital_scope = { region = carpathia_region }
+			capital_scope = { region = poland_region }
+			colonial_parent = {
+				OR = {
+					technology_group = western
+					capital_scope = { region = carpathia_region }
+					capital_scope = { region = poland_region }
+				}
+			}
+		}
+		religion = catholic
+	}
     cost = 60
     cost_type = dip_power
     per_province_effect = {
@@ -68,11 +90,22 @@ dominican_order = {
 }
 
 franciscan_order = {
-    icon = GFX_holy_order_franciscans
-    trigger = {
-        culture_group = iberian
-        religion = catholic
-    }
+	icon = GFX_holy_order_franciscans
+	trigger = {
+		OR = {
+			technology_group = western
+			capital_scope = { region = carpathia_region }
+			capital_scope = { region = poland_region }
+			colonial_parent = {
+				OR = {
+					technology_group = western
+					capital_scope = { region = carpathia_region }
+					capital_scope = { region = poland_region }
+				}
+			}
+		}
+		religion = catholic
+	}
     cost = 60
     cost_type = mil_power
     per_province_effect = {
@@ -99,11 +132,21 @@ franciscan_order = {
 }
 
 shadhili_order = {
-    icon = GFX_holy_order_shadhili
-    trigger = {
-        primary_culture = andalusi_culture
-        religion_group = muslim
-    }
+	icon = GFX_holy_order_shadhili
+	trigger = {
+		NOT = { technology_group = nomad_group }
+		capital_scope = {
+			OR = {
+				superregion = india_superregion
+				superregion = africa_superregion
+				superregion = persia_superregion
+				superregion = near_east_superregion
+				superregion = west_africa_superregion
+				superregion = east_africa_superregion
+			}
+		}
+		religion_group = muslim
+	}
     cost = 60
     cost_type = adm_power
     per_province_effect = {
@@ -130,9 +173,19 @@ shadhili_order = {
 qadiri_order = {
     icon = GFX_holy_order_qadiri
     trigger = {
-        primary_culture = andalusi_culture
-        religion_group = muslim
-    }
+		NOT = { technology_group = nomad_group }
+		capital_scope = {
+			OR = {
+				superregion = india_superregion
+				superregion = africa_superregion
+				superregion = persia_superregion
+				superregion = near_east_superregion
+				superregion = west_africa_superregion
+				superregion = east_africa_superregion
+			}
+		}
+		religion_group = muslim
+	}
     cost = 60
     cost_type = dip_power
     per_province_effect = {
@@ -159,9 +212,19 @@ qadiri_order = {
 aissawa_order = {
     icon = GFX_holy_order_aissawa
     trigger = {
-        primary_culture = andalusi_culture
-        religion_group = muslim
-    }
+		NOT = { technology_group = nomad_group }
+		capital_scope = {
+			OR = {
+				superregion = india_superregion
+				superregion = africa_superregion
+				superregion = persia_superregion
+				superregion = near_east_superregion
+				superregion = west_africa_superregion
+				superregion = east_africa_superregion
+			}
+		}
+		religion_group = muslim
+	}
     cost = 60
     cost_type = mil_power
     per_province_effect = {

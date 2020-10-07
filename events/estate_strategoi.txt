@@ -1577,7 +1577,7 @@ country_event = { #32 Fixing some estate-related modifiers.
 			AND = { #Autonomous defences
 				has_estate_privilege = estate_generals_autonomous_defences
 				any_owned_province = {
-					estate_general_is_theme_capital_trigger = yes
+					estate_generals_is_theme_capital_trigger = yes
 					NOT = {
 						has_province_modifier = estate_generals_autonomous_defences_privilege_mod
 					}
@@ -1620,7 +1620,7 @@ country_event = { #32 Fixing some estate-related modifiers.
 			limit = {
 				has_estate_privilege = estate_generals_autonomous_defences
 				any_owned_province = {
-					estate_general_is_theme_capital_trigger = yes
+					estate_generals_is_theme_capital_trigger = yes
 					NOT = {
 						has_province_modifier = estate_generals_autonomous_defences_privilege_mod
 					}
