@@ -4983,6 +4983,13 @@ byz_iberia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				cuenca_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				new_castile_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5039,6 +5046,7 @@ byz_iberia = {
 				area = btc_murcia_area
 				area = toledo_area
 				area = new_castile_area
+				area = cuenca_area
 				province_id = 1750
 				province_id = 3300
 			}
@@ -5047,6 +5055,10 @@ byz_iberia = {
 		
 		trigger = {
 			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cuenca_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
