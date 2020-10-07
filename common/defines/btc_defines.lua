@@ -18,6 +18,7 @@ NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.003			-- Beyond Typus added
 
 NDefines.NMilitary.FORT_PER_DEV_RATIO = 30			-- Beyond Typus added more provinces means more forts needed for same dev Base 50
 NDefines.NMilitary.FORTRESS_COST = 0.3			-- Beyond Typus added all the new provinces mean more forts but no more dev so everyone was going broke Base 05
+NDefines.NMilitary.MARINE_SHOCK_DAMAGE_TAKEN = 0.00
 
 NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 8
 NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.002 		-- Fixed 29,998% error
