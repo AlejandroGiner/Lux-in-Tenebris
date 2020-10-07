@@ -6,21 +6,26 @@ country_event = {
 	desc = btc_ideagroups.1.d
 	picture = ADVISOR_eventPicture
 	
-	is_triggered_only = yes
 	
 	trigger = {
 		OR = {
 			AND = {
 				NOT = { has_government_attribute = enables_plutocratic_idea_group }
 		        has_idea_group = plutocracy_ideas
+				has_idea = tradition_of_payment
 		        NOT = { has_idea_group = aristocracy_ideas }
 			}
 			AND = {
 				NOT = { has_government_attribute = enables_aristocratic_idea_group }
 		        has_idea_group = aristocracy_ideas
+				has_idea = noble_knights
 		        NOT = { has_idea_group = plutocracy_ideas }
 			}
 		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
 	}
 	
 	option = {
