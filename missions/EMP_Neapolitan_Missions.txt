@@ -173,31 +173,27 @@ emp_naples_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = east_adriatic_coast_area
-				area = croatia_area
-				province_id = 4754
+				area = croatia_coast_area
+				area = ragusa_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
+				value = 6
 				OR = {
 					area = east_adriatic_coast_area
-					area = croatia_area
-					province_id = 4754
+					area = croatia_coast_area
+					area = ragusa_area
 				}
 			}
-			137 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			137 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			if = {
 				limit = {
 					has_dlc = "Dharma"
-					137 = {
-						NOT = { province_has_center_of_trade_of_level = 2 }
-					}
+					137 = { NOT = { province_has_center_of_trade_of_level = 2 } }
 				}
 				137 = { add_center_of_trade_level = 1 }
 			}
@@ -265,8 +261,7 @@ emp_naples_3 = {
 		provinces_to_highlight = {
 			OR = {
 				area = western_sicily_area
-				province_id = 124
-				province_id = 2982
+				area = sicily_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -275,8 +270,10 @@ emp_naples_3 = {
 				type = all
 				owned_by = ROOT
 			}
-			owns = 124
-			owns = 2982
+			sicily_area = {
+				type = all
+				owned_by = ROOT
+			}
 		}
 		effect = {
 			add_prestige = 20
@@ -315,6 +312,20 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ionian_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_mediterrenean_islands_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_nap_despot_of_epirus = {
@@ -327,6 +338,8 @@ emp_naples_3 = {
 				area = north_morea_area
 				area = western_aegean_area
 				area = thessaly_area
+				area = ionian_islands_area
+				area = eastern_mediterrenean_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -336,13 +349,15 @@ emp_naples_3 = {
 				EPI = { is_subject_of = ROOT }
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10
+				value = 12
 				OR = {
 					area = morea_area
 					area = northern_greece_area
 					area = north_morea_area
 					area = western_aegean_area
 					area = thessaly_area
+					area = ionian_islands_area
+					area = eastern_mediterrenean_islands_area
 				}
 			}
 			4699 = {
@@ -360,7 +375,14 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			croatia_area = {
+			croatia_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			ragusa_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -525,7 +547,7 @@ emp_naples_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			tripoli_area = {
+			corsica_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -541,6 +563,7 @@ emp_naples_4 = {
 			OR = {
 				area = corsica_sardinia_area
 				area = baleares_area
+				area = corsica_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -549,6 +572,10 @@ emp_naples_4 = {
 				area = baleares_area
 			}
 			corsica_sardinia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			corsica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
