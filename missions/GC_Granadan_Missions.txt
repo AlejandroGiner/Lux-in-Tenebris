@@ -975,9 +975,7 @@ granada_slot_3_missions = {
 				change_culture = andalusi_culture
 			}
 			if = {
-				limit = {
-					tag = ADU
-				}
+				limit = { tag = ADU }
 				alentejo_area = {
 					limit = {
 						NOT = {
@@ -1058,7 +1056,11 @@ andalusia_slot_3_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
 			}
-			south_alentejo_area
+			south_alentejo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
 			beieras_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1075,15 +1077,9 @@ andalusia_slot_3_missions = {
 			if = {
 				limit = {
 					is_random_new_world = no
-					ceara_area = {
-						NOT = {
-							has_discovered = ROOT
-						}
-					}
+					ceara_area = { NOT = { has_discovered = ROOT } }
 				}
-				ceara_area = {
-					discover_country = ROOT
-				}
+				ceara_area = { discover_country = ROOT }
 			}
 			add_country_modifier = {
 				name = "adu_new_world_discoveries"
@@ -2357,13 +2353,9 @@ andalusia_slot_5_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
+				limit = { has_dlc = "Common Sense" }
 				government_rank	= 3
-				else = {
-					total_development = 1000
-				}
+				else = { total_development = 1000 }
 			}
 			has_country_modifier = unified_islam
 		}
