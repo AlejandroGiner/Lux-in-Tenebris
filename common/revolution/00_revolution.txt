@@ -12,6 +12,10 @@ revolution = {
 			}
 		}
 		modifier = {
+			factor = 0
+			owner = { has_reform = celestial_empire }
+		}
+		modifier = {
 			factor = 2
 			controller = {
 				is_revolution_target = yes
