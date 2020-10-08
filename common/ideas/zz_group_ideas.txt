@@ -336,7 +336,7 @@ SCO_Ideas = {
 	}
 	
 	bonus = {
-		land_maintenance_modifier = -0.05
+		land_morale = 0.15
 	}
 	
 	trigger = {
@@ -840,16 +840,17 @@ indian_muslim_ideas = {
 mindanao_ideas = {
 	start = {
 		navy_tradition_decay = -0.01
-		infantry_power = 0.1
+		may_perform_slave_raid = yes
 	}
 	bonus = {
-		global_manpower_modifier = 0.1
+		naval_morale = 0.10
 	}
 
 	trigger = {
 		OR = {
 			tag = MGD
 			tag = LNO
+			tag = DPT
 		}
 	}
 
@@ -1579,6 +1580,7 @@ TIB_ideas = {
 
 	vajrayana_buddhism  = {
 		stability_cost_modifier = -0.10
+		monthly_karma = 0.001
 	}
 	bon_influence = {
 		leader_land_shock = 1
@@ -2717,7 +2719,7 @@ highland_scottish_ideas = {
 
 deccani_muslim_ideas = {
 	start = {
-		cavalry_power = 0.1
+		cavalry_power = 0.2
 		num_accepted_cultures = 2
 	}
 

@@ -4758,16 +4758,16 @@ SN7_ideas = {
 	}
 }
 
-TAO_ideas = {
+taino_ideas = {
 	start = {
-		movement_speed = 0.2
-		war_exhaustion = -0.05
-	}
-	
-	bonus = {
+		migration_cooldown = -0.25
 		navy_tradition = 1
 	}
-	
+
+	bonus = {
+		monarch_admin_power = 1
+	}
+
 	trigger = {
 		OR = {
 			tag = TAO
@@ -4775,26 +4775,28 @@ TAO_ideas = {
 		}
 	}
 	free = yes
-	kanoa = {
-		migration_cooldown = -0.25
+
+	cacicazgo = {
+		global_manpower_modifier = 0.25
 	}
-	caciques = {
-		monarch_admin_power = 1
+	taino_agriculture = {
+		production_efficiency = 0.1
+		development_cost = -0.05
 	}
-	batey = {
-		diplomatic_reputation = 2
-	}
-	bohiques = {
+	ways_of_the_behiques = {
 		tolerance_own = 2
 	}
-	cohoba = {
-		global_unrest = -2
+	the_mountains_of_hispaniola = {
+		leader_land_manuever = 1
 	}
-	guanahatabey_assimilation = {
-		native_assimilation = 0.3
+	worship_the_zemis = {
+		prestige_decay = -0.01
 	}
-	caribbean_alliance = {
-		manpower_recovery_speed = 0.25
+	the_taino_spirit = {
+		land_morale = 0.15
+	}
+	standardize_the_taino_language = {
+		technology_cost = -0.05
 	}
 }
 
@@ -5302,4 +5304,207 @@ kempten_ideas = {
     kempten_idea_7 = {
         global_trade_goods_size_modifier = 0.1
     }
+}
+
+#From IPE, by Nguyen
+GOC_ideas = {
+	start = {
+		cavalry_power = 0.20
+		land_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.15
+	}
+
+	trigger = {
+		tag = GOC
+		religion_group = muslim
+	}
+	free = yes		#will be added at load.
+
+	persianate_culture = {
+		idea_cost = -0.1
+	}
+	indo_islamic_architecture = {
+		build_cost = -0.1
+	}
+	foundation_of_hyderabad = {
+		development_cost = -0.1
+	}
+	forts_of_golkonda = {
+		fort_maintenance_modifier = -0.2
+	}
+	patronage_of_telugu = {
+		num_accepted_cultures = 1
+	}
+	rama_navami = {
+		tolerance_heathen = 3
+	}
+	downfall_of_vijayanagar = {
+		discipline = 0.05
+	}
+}
+
+BIJ_ideas = {
+	start = {
+		cavalry_power = 0.20
+		land_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		global_trade_goods_size_modifier = 0.1
+	}
+
+	trigger = {
+		tag = BIJ
+		religion_group = muslim
+	}
+	free = yes		#will be added at load.
+
+	jihad_against_vijayanagar = {
+		discipline = 0.05
+	}
+	sufis_of_bijapur = {
+		advisor_cost = -0.1
+	}
+	enlist_the_marathas = {
+		infantry_power = 0.1
+	}
+	palmyra_of_the_deccan = {
+		development_cost = -0.1
+	}
+	banaras_of_the_south = {
+		technology_cost = -0.05
+	}
+	control_deccani_trade = {
+		global_own_trade_power = 0.1
+	}
+	dakani_language = {
+		#Copied from BAH
+	}
+}
+
+AHM_ideas = {
+	start = {
+		cavalry_power = 0.20
+		land_forcelimit_modifier = 0.25
+	}
+
+	bonus = {
+		land_morale = 0.1
+	}
+
+	trigger = {
+		tag = AHM
+		religion_group = muslim
+	}
+	free = yes		#will be added at load.
+
+	forts_of_ahmadnagar = {
+		defensiveness = 0.2
+	}
+	deccan_diplomacy = {
+		diplomatic_upkeep = 1
+	}
+	multilingual_scholarship = {
+		idea_cost = -0.1
+	}
+	loyal_habshis = {
+		infantry_power = 0.15
+	}
+	legacy_of_chand_bibi = {
+		may_recruit_female_generals = yes
+		discipline = 0.05
+	}
+	reforms_of_malik_ambar = {
+		global_tax_modifier = 0.1
+	}
+	guerilla_warfare = {
+		hostile_attrition = 1
+	}
+}
+
+BLI_ideas = {
+	start = {
+		land_morale = 0.1
+		tolerance_own = 2
+	}
+
+	bonus = {
+		prestige = 1
+	}
+
+	trigger = {
+		tag = BLI
+	}
+	free = yes
+
+	hindu_buddhist_iconography = {
+		global_missionary_strength = 0.02	
+	}
+
+	foreign_royalty = {
+		legitimacy = 1
+	}
+
+	javanese_influences = {
+		idea_cost = -0.05
+	}
+
+	hindu_stronghold = {
+		defensiveness = 0.20
+	}
+
+	balinese_slave_trade = {
+		global_trade_power = 0.1
+	}
+
+	salvage_european_shipwrecks = {
+		global_ship_cost = -0.1
+	}
+
+	restore_hinduism = {
+		missionaries = 1
+	}
+}
+
+FRM_ideas = {
+	start = {
+		naval_morale = 0.2
+		naval_forcelimit_modifier = 0.5
+	}
+
+	bonus = {
+		global_ship_cost = -0.1
+	}
+
+	trigger = {
+		tag = FRM
+	}
+	free = yes
+
+	connections_of_the_zheng = {
+		global_sailors_modifier = 0.2
+		sailor_maintenance_modifer = -0.1
+	}
+	modernize_the_junks = {
+		heavy_ship_power = 0.1
+	}
+	pirate_king = {
+		privateer_efficiency = 0.15
+	}
+	protection_passes = {
+		trade_efficiency = 0.15
+	}
+	african_musketeers = {
+		fire_damage = 0.1
+	}
+	koxingas_ambition = {
+		discipline = 0.05
+	}
+	restoration_of_the_ming = {
+		imperial_mandate = 0.03
+		global_unrest = -1
+	}
 }
