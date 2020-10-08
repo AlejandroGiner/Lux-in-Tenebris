@@ -69,10 +69,6 @@ ai_capitalist = {
 			tag = MNG
 		}
 		modifier = {
-			factor = 1.5
-			tag = KOR
-		}		
-		modifier = {
 			factor = 100
 			tag = MAM
 			luck = no
@@ -167,11 +163,11 @@ ai_diplomat = {
 			tag = PAP
 		}		
 		modifier = {
-			factor = 1.5
+			factor = 3
 			tag = MNG
 		}
 		modifier = {
-			factor = 1.5
+			factor = 8
 			tag = KOR
 		}
 		modifier = {
@@ -183,9 +179,34 @@ ai_diplomat = {
 			NOT = { is_year = 1500 }
 		}
 		modifier = {
-			factor = 5
+			factor = 3
+			is_part_of_hre = yes
+			is_elector = no
+			is_emperor = no
+			NOT = { tag = STY }
+			NOT = { tag = HAB }
+			NOT = { tag = BOH }
+			NOT = { tag = BRA }
+			NOT = { tag = NED }
+			NOT = { tag = BAV }
+			NOT = { tag = BUR }
+			NOT = { tag = SWI }
+			NOT = { culture_group = latin }
+			NOT = { total_development = 50 }
+		}
+		modifier = {
+			factor = 8
+			is_part_of_hre = yes
+			government = theocracy
+		}
+		modifier = {
+			factor = 8
 			has_reform = free_city
-		}		
+		}
+		modifier = {
+			factor = 8
+			tag = HSA
+		}
 	}
 	icon = 3
 }
@@ -282,22 +303,40 @@ ai_militarist = {
 			OR = {
 				has_reform = daimyo
 				has_reform = indep_daimyo
-				has_reform = shogunate
 			}
+			has_global_flag = sengoku_jidai_begins
+		}
+		modifier = {
+			factor = 0.5
+			has_reform = shogunate
+		}
+		modifier = {
+			factor = 5
+			tag = JAP
 		}
 		modifier = {
 			factor = 2
 			is_march = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				tag = MOS
 				tag = RUS
 				tag = TUR
 				tag = CSU
+				tag = ARL
+				tag = PER
 			}
-		}			
+		}
+		modifier = {
+			factor = 0.5
+			has_reform = free_city
+		}
+		modifier = {
+			factor = 0.5
+			tag = HSA
+		}
 		modifier = {
 			factor = 0.5
 			tag = FRA
