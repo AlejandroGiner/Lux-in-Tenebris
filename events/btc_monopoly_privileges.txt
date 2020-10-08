@@ -1,0 +1,73 @@
+# Extension of Whales Monopoly
+country_event = {
+	id = btc_monopoly_privileges.1
+	title = btc_monopoly_privileges.1.t
+	desc = btc_monopoly_privileges.1.d.burghers
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_whales }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_burghers_monopoly_of_whales }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = btc_monopoly_privileges.1.b.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = whales
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_whales }
+			}
+		}
+	}
+}
+
+# Extension of Apiculture Monopoly
+country_event = {
+	id = btc_monopoly_privileges.2
+	title = btc_monopoly_privileges.2.t
+	desc = {
+		trigger = { has_estate_privilege = estate_church_monopoly_of_apiculture }
+		desc = btc_monopoly_privileges.2.d.church
+	}
+	desc = {
+		trigger = { has_estate_privilege = estate_brahmins_monopoly_of_apiculture }
+		desc = btc_monopoly_privileges.2.d.brahmins
+	}
+	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
+
+	is_triggered_only = yes
+
+	immediate = {
+		remove_estate_monopoly_modifier = { privilege = estate_church_monopoly_of_apiculture }
+		remove_estate_monopoly_modifier = { privilege = estate_brahmins_monopoly_of_apiculture }
+	}
+	
+	option = {
+		name = monopoly_privileges.1.a
+		reapply_estate_privilege = { privilege = estate_church_monopoly_of_apiculture }
+		reapply_estate_privilege = { privilege = estate_brahmins_monopoly_of_apiculture }
+	}
+	option = {
+		name = monopoly_privileges.1.b
+		custom_tooltip = btc_monopoly_privileges.2.b.tooltip
+
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					trade_goods = apiculture
+				}
+				apply_estate_monopoly_modifier = { privilege = estate_church_monopoly_of_apiculture }
+				apply_estate_monopoly_modifier = { privilege = estate_brahmins_monopoly_of_apiculture }
+			}
+		}
+	}
+}

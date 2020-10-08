@@ -5,21 +5,12 @@
  
  ## Burghers / Vaisyas / Jains
  
- estate_burghers_monopoly_of_textiles:1 "Monopoly on Linen"
- estate_burghers_monopoly_of_textiles_desc:0 "Linen is a highly valued textile for garments and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen garments."
- estate_burghers_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§!§!"
- estate_burghers_monopoly_of_textiles_mod:1 "Monopoly on Linen"
- desc_estate_burghers_monopoly_of_textiles_mod:2 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over linen production."
- estate_vaisyas_monopoly_of_textiles:0 "Monopoly on Linen"
- estate_vaisyas_monopoly_of_textiles_desc:0 "Linen is a highly valued textile for garments and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen garments."
- estate_vaisyas_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§!§!"
- estate_vaisyas_monopoly_of_textiles_mod:1 "Monopoly on Linen"
- desc_estate_vaisyas_monopoly_of_textiles_mod:0 "The state has granted the Vaishyas monopoly rights over linen production."
- estate_jains_monopoly_of_textiles:0 "Monopoly on Linen"
- estate_jains_monopoly_of_textiles_desc:0 "Linen is a highly valued textile for garments and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen garments."
- estate_jains_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§!§!"
- estate_jains_monopoly_of_textiles_mod:1 "Monopoly on Linen"
- desc_estate_jains_monopoly_of_textiles_mod:0 "The state has granted the Jains monopoly rights over linen production."
+ estate_burghers_monopoly_of_textiles_desc:0 "Linen and Silk are highly valued textiles for garments, carpets and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen and silk products."
+ estate_burghers_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§! or §YSilk§!§!"
+ estate_vaisyas_monopoly_of_textiles_desc:0 "Linen and Silk are highly valued textiles for garments, carpets and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen and silk products."
+ estate_vaisyas_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§! or §YSilk§!§!"
+ estate_jains_monopoly_of_textiles_desc:0 "Linen and Silk are highly valued textiles for garments, carpets and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen and silk products."
+ estate_jains_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§! or §YSilk§!§!"
  
  estate_burghers_monopoly_of_wool:0 "Monopoly on Wool"
  estate_burghers_monopoly_of_wool_desc:0 "As one of the most widespread textiles, wool is a vital good that is indispensable to the common people for clothing. Rather than leave its supply scattered and disorganized, we could put it under the firm administration of the entrepreneurial classes so that everyone will have more than enough to wear."
@@ -50,36 +41,46 @@
  estate_brahmins_monopoly_of_paper_mod:1 "Monopoly on Paper"
  desc_estate_brahmins_monopoly_of_paper_mod:0 "The state has granted the Brahmins monopoly rights over paper production."
  
- ## Nobility / Rajputs / Marathas
+ ## BTC
+ estate_burghers_monopoly_of_whales:0 "Monopoly on Whaling"
+ estate_burghers_monopoly_of_whales_desc:0 "The hunt for whales is a complicated process, with whalers often away for months at a time hunting whales near whaling stations located on faraway islands. Much of the process is sometimes almost entirely outside the control of the authorities, so it may be convenient for everyone to allow the entrepreneurial classes to monitor the process closely, thus centralizing the process further."
+ estate_burghers_monopoly_of_whales_effect_tooltip:2 "§RNo income from §YWhaling§!"
+ estate_burghers_monopoly_of_whales_revoke_tooltip: "Production income from §YWhaling§! is restored"
+ estate_burghers_monopoly_of_whales_mod:1 "Monopoly on Whaling"
+ desc_estate_burghers_monopoly_of_whales_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over whaling production."
  
- estate_nobles_monopoly_of_metals:0 "Monopoly on Iron"
- estate_nobles_monopoly_of_metals_desc:0 "Without iron, our armies would be toothless. Only the [Root.GetNobilityName] can be trusted with administering its revenues, for it is they who make the greatest contribution to our nation's armies."
- estate_nobles_monopoly_of_metals_effect_tooltip:2 "§RNo income from §YIron§!§!"
- estate_nobles_monopoly_of_metals_mod:1 "Monopoly on Iron"
- desc_estate_nobles_monopoly_of_metals_mod:1 "The state has granted the [Root.Owner.GetNobilityName] monopoly rights over iron production."
- estate_rajput_monopoly_of_metals:0 "Monopoly on Iron"
- estate_rajput_monopoly_of_metals_desc:0 "Without iron, our armies would be toothless. Only the [Root.GetRajputsName] can be trusted with administering its revenues, for it is their own livelihood that would be at stake were supply to be disrupted."
- estate_rajput_monopoly_of_metals_effect_tooltip:2 "§RNo income from §YIron§!§!"
- estate_rajput_monopoly_of_metals_mod:1 "Monopoly on Iron"
- desc_estate_rajput_monopoly_of_metals_mod:0 "The state has granted the Rajputs monopoly rights over iron production."
- estate_maratha_monopoly_of_metals:0 "Monopoly on Iron"
- estate_maratha_monopoly_of_metals_desc:0 "Without iron, our armies would be toothless. Only the [Root.GetMarathasName] can be trusted with administering its revenues, for it is their own livelihood that would be at stake were supply to be disrupted."
- estate_maratha_monopoly_of_metals_effect_tooltip:2 "§RNo income from §YIron§!§!"
- estate_maratha_monopoly_of_metals_mod:1 "Monopoly on Iron"
- desc_estate_maratha_monopoly_of_metals_mod:0 "The state has granted the Marathas monopoly rights over iron production."
+ MONOPOLY_INCOME_WHALES_DESC: "from whaling production."
  
+ estate_church_monopoly_of_apiculture:0 "Monopoly on Apiculture"
+ estate_church_monopoly_of_apiculture_desc:0 "monasteries blablabla"
+ estate_church_monopoly_of_apiculture_effect_tooltip:2 "§RNo income from §YApiculture§!"
+ estate_church_monopoly_of_apiculture_revoke_tooltip: "Production income from §YApiculture§! is restored"
+ estate_church_monopoly_of_apiculture_mod:1 "Monopoly on Apiculture"
+ desc_estate_church_monopoly_of_incense_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over apiculture production."
+ 
+ estate_brahmins_monopoly_of_apiculture:0 "Monopoly on Apiculture"
+ estate_brahmins_monopoly_of_apiculture_desc:0 "indian monasteries blablabla"
+ estate_brahmins_monopoly_of_apiculture_effect_tooltip:2 "§RNo income from §YApiculture§!"
+ estate_brahmins_monopoly_of_apiculture_revoke_tooltip: "Production income from §YApiculture§! is restored"
+ estate_brahmins_monopoly_of_apiculture_mod:1 "Monopoly on Apiculture"
+ desc_estate_brahmins_monopoly_of_incense_mod:0 "The state has granted the Brahmins monopoly rights over apiculture production."
+ 
+ MONOPOLY_INCOME_APICULTURE_DESC: "from apiculture production."
+ 
+ btc_monopoly_privileges.1.t: "Extension of the Monopoly on Whaling"
+ btc_monopoly_privileges.1.d.burghers: "The monopoly on whaling we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our whaling production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ btc_monopoly_privileges.1.b.tooltip: "We will be able to revoke the §YMonopoly on Whaling§! estate privilege."
+ btc_monopoly_privileges.2.t: "Extension of the Monopoly on Apiculture"
+ btc_monopoly_privileges.2.d.church: "The monopoly on apiculture we granted to the [Root.GetClergyName] has expired, meaning that we are now able to reclaim the income from apiculture production. However, the [Root.GetClergyName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ btc_monopoly_privileges.2.d.brahmins: "The monopoly on apiculture we granted to the [Root.GetBrahminsName] has expired, meaning that we are now able to reclaim the income from apiculture production. However, the [Root.GetBrahminsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ btc_monopoly_privileges.2.b.tooltip: "We will be able to revoke the §YMonopoly on Apiculture§! estate privilege."
+
  #########################################################
  ################Estate privileges events#################
  #########################################################
  
  ## Burghers / Vaisyas / Jains
- 
- monopoly_privileges.1.t:0 "Extension of the Monopoly on Linen"
- monopoly_privileges.1.d.burghers:0 "The monopoly on linen we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our linen production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.1.d.vaisyas:0 "The monopoly on linen we granted to the [Root.GetVaishyasName] has expired, meaning that we are now able to reclaim the income from our linen production. However, the [Root.GetVaishyasName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.1.d.jains:0 "The monopoly on linen we granted to the [Root.GetJainsName] has expired, meaning that we are now able to reclaim the income from our linen production. However, the [Root.GetJainsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.1.b.tooltip:0 "We will be able to revoke the §YMonopoly on Linen§! estate privilege."
- 
+  
  ## Clergy / Brahmins
  
  monopoly_privileges.4.t:0 "Extension of the Monopoly on Paper"
@@ -89,16 +90,6 @@
  
  ## Nobility / Rajputs / Marathas
  
- monopoly_privileges.5.t:0 "Extension of the Monopoly on Iron"
- monopoly_privileges.5.d.nobles:0 "The monopoly on iron production we granted to the [Root.GetNobilityName] has expired, meaning that we are now able to reclaim the income from our iron production. However, the [Root.GetNobilityName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.5.d.rajput:0 "The monopoly on iron production we granted to the [Root.GetRajputsName] has expired, meaning that we are now able to reclaim the income from our iron production. However, the [Root.GetRajputsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.5.d.maratha:0 "The monopoly on iron production we granted to the [Root.GetMarathasName] has expired, meaning that we are now able to reclaim the income from our iron production. However, the [Root.GetMarathasName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
- monopoly_privileges.5.b.tooltip:0 "We will be able to revoke the §YMonopoly on Iron§! estate privilege."
- 
  #Misc
  
- monopoly_privileges.1.a:0 "Let us extend the monopoly."
- monopoly_privileges.1.b:0 "Not now."
- 
- MONOPOLY_INCOME_CLOTH_DESC:0 "from linen production."
- MONOPOLY_INCOME_IRON_DESC:0 "from iron production."
+ MONOPOLY_INCOME_CLOTH_DESC:0 "from linen or silk production."

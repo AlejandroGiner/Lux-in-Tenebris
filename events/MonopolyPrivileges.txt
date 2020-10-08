@@ -46,7 +46,10 @@ country_event = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
-					trade_goods = cloth
+					OR = {
+						trade_goods = cloth
+						trade_goods = silk
+					}
 				}
 				apply_estate_monopoly_modifier = { privilege = estate_burghers_monopoly_of_textiles }
 				apply_estate_monopoly_modifier = { privilege = estate_vaisyas_monopoly_of_textiles }
@@ -296,6 +299,7 @@ country_event = {
 		}
 	}
 }
+
 
 # Extension of Gems Monopoly
 country_event = {
