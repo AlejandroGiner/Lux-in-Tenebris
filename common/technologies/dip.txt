@@ -74,6 +74,7 @@ technology = { #Basic Financial Instruments
 	trade_range				=	20
 	
 	coastal_defence = yes
+	may_slander_merchants = yes
 }
 
 technology = { #Shipyards
@@ -115,7 +116,6 @@ technology = { #Carracks & Caravel
 	
 	enable = carrack
 	enable = caravel
-	may_study_technology = yes
 	
 }
 
@@ -144,7 +144,6 @@ technology = { #Man of War
 	# Tech 12
 	year = 1557
 	naval_morale			=	0.4
-	may_slander_merchants = yes
 
 	naval_battery = yes
 	
@@ -180,7 +179,6 @@ technology = { #The Galleon
 	
 	enable = galleon
 	enable = early_frigate
-	may_sabotage_recruitment = yes
 
 }
 
@@ -213,8 +211,6 @@ technology = { #Line of Battle
 	
 	enable = galiot
 	naval_morale			=	0.5
-	may_sow_discontent = yes
-
 	
 }
 
@@ -273,7 +269,7 @@ technology = { #Heavy Frigates
 	
 	global_colonial_growth  = 	25	
 	range					=	150
-	allow_client_states = yes		
+	allow_client_states = yes
 
 	
 	enable = heavy_frigate
@@ -290,7 +286,6 @@ technology = { #The Archipelago Frigate
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
 	enable = archipelago_frigate
-	may_corrupt_officials = yes
 
 }
 
@@ -322,7 +317,6 @@ technology = { #Public Punishments
 	
 	naval_morale			=	0.5
 	naval_maintenance		= 	0.1
-	may_agitate_for_liberty = yes
 
 }
 
@@ -348,7 +342,6 @@ technology = { #Insurance Companies
 	
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
-	may_infiltrate_administration = yes
 }
 
 technology = { #Superior Ship Design
