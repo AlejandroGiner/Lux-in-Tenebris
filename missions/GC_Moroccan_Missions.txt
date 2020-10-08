@@ -1068,21 +1068,16 @@ gc_morocco_5 = {
 			OR = {
 				province_id = 366
 				province_id = 4565
+				province_id = 5096
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			num_of_explorers = 1
-			366 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			4565 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			5096 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			366 = { country_or_non_sovereign_subject_holds = ROOT }
+			4565 = { country_or_non_sovereign_subject_holds = ROOT }
+			5096 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		effect = {
