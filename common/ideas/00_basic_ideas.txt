@@ -42,8 +42,8 @@ aristocracy_ideas = {
 		army_tradition_decay = -0.01
 		navy_tradition_decay = -0.01
 	}
-	international_nobility = {
-		diplomats = 1
+	defense_of_privileges = {
+		land_morale = 0.10
 		free_leader_pool = 1
 	}
 	noble_resilience = {
@@ -210,11 +210,13 @@ spy_ideas = {
 	}	
 	
 	agent_training = {
-		diplomats = 1		
+		diplomats = 1
+		global_spy_defence = 0.33
 	}
 
-	vetting = {
-		global_spy_defence = 0.33
+	military_reconaissance = {
+		movement_speed = 0.10
+		land_attrition = -0.10
 	}
 
 	state_propaganda = {
@@ -222,7 +224,7 @@ spy_ideas = {
 	}
 	
 	claim_fabrication = {
-		fabricate_claims_cost = -0.25
+		fabricate_claims_cost = -0.5
 		can_fabricate_for_vassals = yes
 	}
 	
@@ -232,6 +234,7 @@ spy_ideas = {
 	}
 	audit_checks = {
 		yearly_corruption = -0.1
+		global_tax_modifier = 0.1
 	}
 
 	ai_will_do = {
@@ -481,11 +484,11 @@ exploration_ideas = {
 		global_colonial_growth = 35
 	}
 	vice_roys  = {
-		global_tariffs = 0.10
+		global_tariffs = 0.35
  		envoy_travel_time = -0.20
  	}
 	free_colonies = {
-		expel_minorities_cost = -1.0
+		expel_minorities_cost = -0.7
 		colonist_placement_chance = 0.05
 	}
 	global_empire = {
@@ -671,7 +674,7 @@ maritime_ideas = {
 		admiral_cost = -0.25
 	}
 	naval_fighting_instruction = {
-		blockade_efficiency = 0.5
+		blockade_efficiency = 0.25
 		privateer_efficiency = 0.25
 	}
 
@@ -752,11 +755,11 @@ quantity_ideas = {
 	category = MIL
 
 	bonus = {
-		land_forcelimit_modifier  = 0.50
+		land_forcelimit_modifier  = 0.3
 		generals_loyalty_modifier = 0.05
 	}
 	mass_army = {
-		global_manpower_modifier = 0.50
+		global_manpower_modifier = 0.35
 	}
 	the_young_can_serve = {
 		manpower_recovery_speed = 0.20
