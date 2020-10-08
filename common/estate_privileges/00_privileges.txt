@@ -4332,6 +4332,7 @@ estate_jains_monopoly_of_wool = {
 		any_owned_province = {
 			trade_goods = wool
 		}
+        NOT = { has_estate = estate_vaisyas }
 		NOT = { has_estate = estate_church }
 	}
 	can_select = {
@@ -5716,6 +5717,7 @@ estate_brahmins_monopoly_of_paper = {
 				trade_goods = books
 			}
 		}
+        NOT = { has_estate = estate_church }
 	}
 	can_select = {
 		custom_trigger_tooltip = {
@@ -5798,6 +5800,7 @@ estate_brahmins_monopoly_of_paper = {
 		factor = 0
 	}
 }
+
 
 #### END OF MONOPOLIES ####
 
