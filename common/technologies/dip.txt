@@ -61,7 +61,7 @@ technology = { #Marketplace
 		
 	trade_range	= 10
 	marketplace = yes 
-	
+	trade_efficiency 		= 	0.02
 	
 }
 
@@ -70,7 +70,6 @@ technology = { #Basic Financial Instruments
 	year = 1466
 	
 	naval_maintenance		=	0.1	
-	trade_efficiency 		= 	0.02
 	trade_range				=	20
 	
 	coastal_defence = yes
@@ -99,7 +98,6 @@ technology  = { #Docks
 	# Tech 8
 	year = 1505
 	
-	num_accepted_cultures = 1
 	shipyard = yes
 
 	trade_range				=	10
@@ -155,6 +153,7 @@ technology = { #Chartered Companies
 	
 	trade_efficiency 		= 	0.02
 	enable = brig
+	num_accepted_cultures = 1
 
 }
 
@@ -163,7 +162,6 @@ technology = { #The Galleass
 	year = 1583
 	
 	tradecompany = yes
-	num_accepted_cultures = 1
 
 	
 	enable = galleass
@@ -188,6 +186,7 @@ technology = { #Development of Maritime Law
 	
 	trade_efficiency 		= 	0.02
 	trade_range				=	20
+	num_accepted_cultures = 1
 
 }
 
