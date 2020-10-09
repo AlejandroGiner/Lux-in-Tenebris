@@ -441,7 +441,7 @@ country_event = {
             }
           }
         }
-        capital_scope = { save_event_target_as = trade_province }
+		save_event_target_as = trade_neighbor
       }
     }
   }
