@@ -1,0 +1,46 @@
+btc_pope_enforce_authority = {
+    category = influence
+
+    require_acceptance = no
+
+    is_visible = {
+		tag = PAP
+        FROM = {
+			is_subject_of = ROOT
+			is_subject_of_type = papal_subject_bt
+		}
+    }
+
+    is_allowed = {
+        is_free_or_tributary_trigger = yes
+		is_at_war = no
+		FROM = {
+			has_opinion = { who = ROOT value = 175 }
+			is_at_war = no
+			is_neighbor_of = ROOT
+		}
+        # variable_arithmetic_trigger can be used here to use export_to_variable to extract and compare values such as ruler_age, etc
+    }
+
+    on_accept = {
+        vassalize = FROM
+		reverse_add_opinion = {
+			who = FROM
+			modifier = bt_temporal_authority_enforced
+		}
+		every_subject_country = {
+			limit = {
+				is_subject_of_type = papal_subject_bt
+			}
+			add_opinion = {
+				who = PAP
+				modifier = bt_temporal_authority_enforced_on_other
+			}
+		}
+    }
+    
+    # Controls the AI's usage of the action
+    ai_will_do = {
+        always = yes
+    }
+}
