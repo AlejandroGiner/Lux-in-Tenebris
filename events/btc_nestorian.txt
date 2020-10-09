@@ -751,6 +751,10 @@ country_event = {
       influence = 15
       desc = encroaching_of_land_aristocracy
     }
+	add_country_modifier = {
+		name = encroaching_land_aristocracy
+		duration = 5475
+	}
   }
   option = {
     name = nestorian_events.9.b
