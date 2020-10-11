@@ -178,6 +178,9 @@ province_event = {
 	}
 	option = {
 		name = seven_cities_events.2.b
+        trigger = {
+			FROM = { NOT = { has_mission = EMP_crusader_fountain_of_youth } }
+		}
 		FROM = {
 			set_country_flag = sce_end_fountainofyouth_flag
 			add_adm_power = 50
@@ -1266,6 +1269,7 @@ province_event = {
 		is_empty = yes
 		continent = south_america
 		FROM = {
+            NOT =  { has_mission = EMP_crusader_fountain_of_youth }
 			has_country_modifier = sce_search_fountainofyouth
 			OR = {
 				has_country_flag = sce_action01_flag
@@ -3290,74 +3294,77 @@ province_event = {
 	immediate = {
 		hidden_effect = {
 			FROM = { save_event_target_as = conquistador_country }
+            owner = {
+				random_neighbor_country = {
+					limit = {
+						NOT = {
+							capital_scope = { continent = europe }
+						}
+						OR = {
+							is_rival = ROOT
+							NOT = {
+								has_opinion = {
+									who = ROOT
+									value = -75
+								}
+							}
+						}
+					}
+					save_event_target_as = rival_tribe
+				}
+			}
 		}
 	}
 	
 	option = {
 		name = seven_cities_events.306.a
-		owner = {
-			random_neighbor_country = {
-				limit = {
-					NOT = {
-						capital_scope = { continent = europe }
-					}
-					OR = {
-						is_rival = ROOT
-						NOT = {
-							has_opinion = {
-								who = ROOT
-								value = -75
-							}
-						}
-					}
-				}
-				random_list = {
-					50 = {
-						add_opinion = {
-							who = ROOT
-							modifier = sce_reluctant_peace
-						}
-						hidden_effect = {
-							country_event = {
-								id = seven_cities_events.505
-								days = 1
-							}
-						}
-						reverse_add_opinion = {
-							who = ROOT
-							modifier = sce_reluctant_peace
-						}
-						hidden_effect = {
-							ROOT = {
-								owner = {
-									country_event = {
-										id = seven_cities_events.505
-										days = 1
-									}
-								}
-							}
-						}
-					}
-					50 = {
-						FROM = {
-							reverse_add_opinion = {
-								who = ROOT
-								modifier = sce_interfering_intruder
-							}
-							hidden_effect = {
-								ROOT = {
-									owner = {
-										country_event = {
-											id = seven_cities_events.506
-											days = 1
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
+		event_target:rival_tribe = {
+            random_list = {
+                50 = {
+                    add_opinion = {
+                        who = ROOT
+                        modifier = sce_reluctant_peace
+                    }
+                    hidden_effect = {
+                        country_event = {
+                            id = seven_cities_events.505
+                            days = 1
+                        }
+                    }
+                    reverse_add_opinion = {
+                        who = ROOT
+                        modifier = sce_reluctant_peace
+                    }
+                    hidden_effect = {
+                        ROOT = {
+                            owner = {
+                                country_event = {
+                                    id = seven_cities_events.505
+                                    days = 1
+                                }
+                            }
+                        }
+                    }
+                }
+                50 = {
+                    FROM = {
+                        reverse_add_opinion = {
+                            who = ROOT
+                            modifier = sce_interfering_intruder
+                        }
+                        hidden_effect = {
+                            ROOT = {
+                                owner = {
+                                    country_event = {
+                                        id = seven_cities_events.506
+                                        days = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 		}
 	}
 	option = {

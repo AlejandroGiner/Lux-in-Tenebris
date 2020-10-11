@@ -1,0 +1,18 @@
+
+estate_generals = {
+	modifier_definition = {
+		type = loyalty
+		key = generals_loyalty_modifier
+		trigger = {
+			has_estate = estate_generals
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = generals_influence_modifier
+		trigger = {
+			has_estate = estate_generals
+		}
+	}
+}

@@ -71,7 +71,7 @@ colonial_ideas = {
 	}
 	new_frontiers = {
 		auto_explore_adjacent_to_colony = yes
-		global_colonial_growth = 20
+		global_colonial_growth = 35
 	}
 	liberty_heroes = {
 		free_leader_pool = 1
@@ -198,8 +198,49 @@ cossack_ideas = {
 	}
 }
 
+nusa_tenggara_ideas = {
+	start = {
+		production_efficiency = 0.1
+		enemy_core_creation = 0.25
+	}
+	
+	bonus = {
+		land_attrition = -0.10
+	}
+	
+	trigger = {
+		OR = {
+			primary_culture = nusa_tenggara
+			primary_culture = bimanese
+			primary_culture = timorese
+		}
+	}
+	free = yes
+	
+	nt_vast_forests = {
+		hostile_attrition = 2
+	}
+	nt_ethnic_diversity = {
+		num_accepted_cultures = 2
+	}
+	nt_splendid_isolation = {
+		global_unrest = -1
+	}
+	nt_coasts = {
+		global_ship_cost = -0.1
+	}
+	nt_adoption_of_foreign_customs = {
+		tolerance_heathen = 2
+	}
+	nt_gateway_to_australia = {
+		global_trade_power = 0.1
+	}
+	nt_foreign_migrants = {
+		global_tax_modifier = 0.10
+	}
+}
 
-maghrebi_ideas = {
+berber_ideas = {
 	start = {
 		naval_attrition = -0.25
 		may_perform_slave_raid = yes
@@ -295,7 +336,7 @@ SCO_Ideas = {
 	}
 	
 	bonus = {
-		land_maintenance_modifier = -0.05
+		land_morale = 0.15
 	}
 	
 	trigger = {
@@ -332,7 +373,7 @@ SCO_Ideas = {
 
 SWI_ideas = {
 	start = {
-		global_manpower_modifier = 0.1
+		merc_maintenance_modifier = -0.15
 		infantry_power = 0.1
 	}
 	
@@ -341,28 +382,26 @@ SWI_ideas = {
 	}
 	
 	trigger = {
-		OR = {
-			tag = SWI
-			tag = GRL
-			primary_culture = swiss
-		}
+		primary_culture = swiss
 	}
 	free = yes  #will be triggered at load
 	
-	the_swiss_confederation = {
-		stability_cost_modifier = -0.1
-	}
 	swiss_mercenaries = {
-		merc_maintenance_modifier = -0.15
-	}
-	alpine_defensiveness = {
-		fort_maintenance_modifier = -0.2
-	}
-	oasis_of_peace_and_prosperity = {
-		development_cost = -0.1
+		mercenary_discipline = 0.05
+		mercenary_manpower = 0.5
 	}
 	swiss_tolerance = {
 		tolerance_heretic = 2
+	}
+	the_swiss_confederation = {
+		stability_cost_modifier = -0.1
+	}
+	alpine_defensiveness = {
+		fort_maintenance_modifier = -0.2
+		defensiveness = 0.25
+	}
+	oasis_of_peace_and_prosperity = {
+		development_cost = -0.1
 	}
 	haven_for_refugees = {
 		prestige = 1
@@ -410,7 +449,7 @@ javan_ideas = {
 		global_trade_goods_size_modifier = 0.10
 	}
 	javanese_migration = {
-		global_colonial_growth = 25
+		global_colonial_growth = 35
 	}
 	jawanisasi = {
 		culture_conversion_cost = -0.15
@@ -429,9 +468,11 @@ SIL_ideas = {
 
 	trigger = {
 		OR = {
-		tag = SIL
-		primary_culture = schlesian
-		primary_culture = german_schlesian
+			tag = SIL
+			tag = GLG
+			tag = OPL
+			primary_culture = schlesian
+			primary_culture = german_schlesian
 		}
 	}
 	free = yes
@@ -467,7 +508,7 @@ irish_minor_ideas = {
 	}
 	
 	bonus = {
-		land_morale = 0.15
+		land_morale = 0.1
 	}
 	
 	trigger = {
@@ -482,8 +523,8 @@ irish_minor_ideas = {
 	mcm_basque_fishermen = {
 		trade_efficiency = 0.1
 	}
-	more_than_irish = {
-		culture_conversion_cost = -0.2
+	clann_more_than_irish = {
+		culture_conversion_cost = -0.1
 	}
 	loyal_catholics = {
 		papal_influence = 2
@@ -491,11 +532,11 @@ irish_minor_ideas = {
 		monthly_fervor_increase = 0.25
 		global_heretic_missionary_strength = 0.02
 	}
-	ire_abundant_harvests = {
+	clann_ire_abundant_harvests = {
 		global_trade_goods_size_modifier = 0.10
 	}
-	unconquerable_ireland = {
-		manpower_recovery_speed = 0.20
+	clann_unconquerable_ireland = {
+		manpower_recovery_speed = 0.1
  	}
 	ire_gallowglasses = {
 		discipline = 0.05
@@ -799,16 +840,17 @@ indian_muslim_ideas = {
 mindanao_ideas = {
 	start = {
 		navy_tradition_decay = -0.01
-		infantry_power = 0.1
+		may_perform_slave_raid = yes
 	}
 	bonus = {
-		global_manpower_modifier = 0.1
+		naval_morale = 0.10
 	}
 
 	trigger = {
 		OR = {
 			tag = MGD
 			tag = LNO
+			tag = DPT
 		}
 	}
 
@@ -1093,7 +1135,7 @@ malayan_ideas = {
 		prestige = 1
 	}
 	settle_the_islands = {
-		global_colonial_growth = 20
+		global_colonial_growth = 35
 	}
 }
 
@@ -1146,8 +1188,10 @@ arabian_ideas = {
 	}
 
 	trigger = {
-		culture_group = turko_semitic
-		NOT = { primary_culture = turkish }
+		OR = {
+			culture_group = turko_semitic
+			tag = TYM
+		}
 	}
 	free = yes
 
@@ -1199,7 +1243,7 @@ latin_ideas = {
 	}
 	italian_condottieri = {
 		merc_maintenance_modifier = -0.1
-		possible_mercenaries = 0.25
+		mercenary_manpower = 0.25
 	}
 	italian_aristocracy = {
 		legitimacy = 1
@@ -1264,7 +1308,7 @@ native_ideas = {
 		global_manpower_modifier = 0.20
 	}
 	great_winter_hunts = {
-		global_colonial_growth = 25
+		global_colonial_growth = 35
 	}
 }
 
@@ -1295,7 +1339,7 @@ central_indic_ideas = { #Gond Ideas
 		hostile_attrition = 1.0
 	}
 	flexible_caste_central_indic = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 	raiding_the_plains_central_indic = {
 		infantry_power = 0.1
@@ -1417,7 +1461,7 @@ evenk_ideas = {
 		build_cost = -0.1
 	}
 	evenk_mongolian_deel = {
-		possible_mercenaries = 0.25
+		mercenary_manpower = 0.25
 		merc_maintenance_modifier = -0.1
 	}
 	evenk_love_of_the_forest = {
@@ -1464,7 +1508,7 @@ siberian_ideas = {
 		reinforce_speed = 0.05
 	}
 	siberian_hunting_expansion = {
-		global_colonial_growth = 20
+		global_colonial_growth = 35
 	}
 }
 
@@ -1536,6 +1580,7 @@ TIB_ideas = {
 
 	vajrayana_buddhism  = {
 		stability_cost_modifier = -0.10
+		monthly_karma = 0.001
 	}
 	bon_influence = {
 		leader_land_shock = 1
@@ -1597,7 +1642,7 @@ west_african_ideas = {
 		envoy_travel_time = -0.25
 	}
 	west_african_idea_7 = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 }
 
@@ -1736,11 +1781,11 @@ caucasus_ideas = {
 	free = yes
 
 	crossroads_of_cultures = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 	alan_mercenaries = {
 		merc_maintenance_modifier = -0.10
-		possible_mercenaries = 0.15
+		mercenary_manpower = 0.15
 	}
 	caucasus_hit_and_run = {
 		leader_land_manuever = 1
@@ -1876,7 +1921,7 @@ guajiro_ideas = {
 		global_trade_power = 0.1
 	}
 	tribal_tolerance = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 		tolerance_heretic = 1
 	}
 	guajiro_raiders = {
@@ -1893,7 +1938,7 @@ guajiro_ideas = {
 shan_ideas = {
 	start = {
 		heir_chance = 0.5
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 
 	bonus = {
@@ -1983,7 +2028,7 @@ chinese_ideas = {
 
 vindhyan_ideas = {
 	start = {
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 		fort_maintenance_modifier = -0.2
 	}
 
@@ -2258,7 +2303,7 @@ moluccan_ideas = {
 		global_unrest = -2
 	}
 	moluccan_dominance_over_the_outer_islands = {
-		global_colonial_growth = 20
+		global_colonial_growth = 35
 	}
 	moluccan_ally_papuan_raiders = {
 		light_ship_power = 0.15
@@ -2674,8 +2719,8 @@ highland_scottish_ideas = {
 
 deccani_muslim_ideas = {
 	start = {
-		cavalry_power = 0.1
-		num_accepted_cultures = 1
+		cavalry_power = 0.2
+		num_accepted_cultures = 2
 	}
 
 	bonus = {

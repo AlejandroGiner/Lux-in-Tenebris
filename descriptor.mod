@@ -19,4 +19,4 @@ tags={
 }
 name="Lux in Tenebris development version"
 picture="thumbnail.png"
-supported_version="1.29.*.*"
+supported_version="1.30.*.*"

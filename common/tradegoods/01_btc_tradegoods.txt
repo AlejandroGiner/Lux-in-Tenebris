@@ -46,7 +46,7 @@ rice = {
 		reinforce_speed = 0.2
 	}
 	province = {
-		land_forcelimit = 0.5
+		land_forcelimit = 0.25
 	}
 	chance = {
 		factor = 5
@@ -296,10 +296,10 @@ maize = {
 millet = {
 	color = { 0.76 0.95 0.80 }
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		land_forcelimit_modifier = 0.1
 	}
 	province = {
-		land_forcelimit = 0.75
+		land_forcelimit = 0.4
 	}
 	chance = {
 		factor = 5
@@ -525,12 +525,7 @@ dates = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				has_winter = severe_winter
-				has_winter = normal_winter
-				has_winter = mild_winter
-				area = taiwan_area
-			}
+			NOT = { has_climate = arid }
 		}
 	}
 }

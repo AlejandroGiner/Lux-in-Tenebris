@@ -29,8 +29,9 @@
  PROV121:0 "Naples"
  PROV127:0 "Gallura"
  PROV129:0 "Lower Carniola"
- PROV136:0 "Zadar"
- PROV138:0 "Podgorica"
+ PROV130:0 "Pola"
+ PROV136:0 "Split"
+ PROV138:0 "Crna Gora"
  PROV140:0 "Lashva"
  PROV141:0 "Sumadija"
  PROV143:0 "Berat"
@@ -49,6 +50,7 @@
  PROV206:0 "La Coruña"
  PROV207:0 "Oviedo"
  PROV210:0 "Pamplona"
+ PROV214:0 "Zaragoza"
  PROV230:0 "Faro"
  PROV234:0 "Hampshire"
  PROV237:0 "Oxford"
@@ -320,7 +322,7 @@
  PROV1771:0 "Litomericko"
  PROV1773:0 "Elis"
  PROV1776:0 "Kem"
- PROV1783:0 "Sannikov"
+ PROV1783:0 "East Siberia"
  PROV1796:0 "Bamenda"
  PROV1798:0 "Kafia Kingi"
  PROV1799:0 "Chalbi"
@@ -545,9 +547,13 @@
  PROV2986:0 "Cagliari"
  PROV2991:0 "Toulon"
  PROV2992:0 "Savona"
+ PROV2994:0 "Greifswald"
  PROV2999:0 "Hormuz"
+ PROV3061:0 "Den Bosch"
+ PROV4758:0 "Meran"
  PROV3259:0 "Sheki"
  PROV3261:0 "Shiraki"
+ PROV4760:0 "Burghausen"
  PROV4027:0 "Itafy"
  PROV4028:0 "Ampanihy"
  PROV4029:0 "Anosy"
@@ -719,7 +725,6 @@
  PROV4549:0 "Guadalajara"         #Formerly 3300
  PROV4550:0 "Castellón"         #Formerly 3094
  PROV4551:0 "Ávila"         #Formerly 3298
- PROV4552:0 "Segovia"         #Formerly 3299
  PROV4553:0 "Zamora"         #Formerly 3101
  PROV4554:0 "Lugo"         #Formerly 3102
  PROV4555:0 "Pontevedra"         #Formerly 3103
@@ -744,6 +749,12 @@
  PROV4632:0 "Kewa"         #Formerly 5828
  PROV4634:0 "Dilzhé'é"         #Formerly 5842
  PROV4649:0 "Mayo"         #Formerly 5062
+ PROV4722:0 "Surselva"     #Formerly 4792
+ PROV4752:0 "Fiume"        #Formerly 3191
+ PROV4759:0 "Kranj"
+ PROV4761:0 "Steyr"
+ PROV4779:0 "Rhaedestus"
+ PROV5192:0 "Virovitica"   #Previously Bjelovar
  
  #New NA from IR
  PROV883:0 "Cuitoa"          #Formerly Lipan
@@ -798,6 +809,11 @@
  PROV4627:0 "Payaya" #1.28 replacement
  PROV4628:0 "Jediondo" #1.28 replacement
  PROV4629:0 "Caynaaya" #1.28 replacement
+ PROV4703:0 "Kratovo"
+ PROV4781:0 "Mahikeng"
+ PROV4782:0 "Tshwane"         #ERROR - Return to double check these rushed localisations
+ PROV4783:0 "Ondini"
+ PROV4784:0 "Mokopane"
  
  #Province adjectives
  PROV_ADJ3:0 "Jönköpinger"
@@ -817,7 +833,8 @@
  PROV_ADJ118:0 "Roman"
  PROV_ADJ121:0 "Neapolitan"
  PROV_ADJ129:0 "Lower Carniolan"
- PROV_ADJ136:0 "Zadrani"
+ PROV_ADJ130:0 "Pola"
+ PROV_ADJ136:0 "Split"
  PROV_ADJ140:0 "Lasvan"
  PROV_ADJ141:0 "Sumadijan"
  PROV_ADJ145:0 "Laconian"
@@ -877,6 +894,7 @@
  PROV_ADJ1796:0 "Bamenda"
  PROV_ADJ1798:0 "Kafia Kingi"
  PROV_ADJ1799:0 "Chalbian"
+ PROV_ADJ1801:0 "Tsholotsho"
  PROV_ADJ1806:0 "Wasagamack"
  PROV_ADJ1860:0 "Norfolkian"
  PROV_ADJ1861:0 "Derbyian"
@@ -907,8 +925,11 @@
  PROV_ADJ2744:0 "Yengbyeng"
  PROV_ADJ2991:0 "Toulonnais"
  PROV_ADJ2992:0 "Savona"
+ PROV_ADJ4758:0 "Meranesi"
+ PROV_ADJ3061:0 "Den Boscher"
  PROV_ADJ3259:0 "Sheki"
  PROV_ADJ3261:0 "Shiraki"
+ PROV_ADJ4760:0 "Burghausen"
  PROV_ADJ4052:0 "Wajir"
  PROV_ADJ4053:0 "Turkwel"
  PROV_ADJ4140:0 "Portimão"
@@ -920,3 +941,12 @@
  PROV_ADJ4627:0 "Payayan"
  PROV_ADJ4628:0 "Jediondoan"
  PROV_ADJ4629:0 "Caynaayan"
+ PROV_ADJ4752:0 "Fiume"
+ PROV_ADJ4759:0 "Kranj"
+ PROV_ADJ4761:0 "Steyr"
+ PROV_ADJ4779:0 "Rhaedestus"
+ PROV_ADJ4781:0 "Mahikeng"
+ PROV_ADJ4782:0 "Tshwane"         #ERROR - Return to double check these rushed localisations
+ PROV_ADJ4783:0 "Ondini"
+ PROV_ADJ4784:0 "Mokopane"
+ PROV_ADJ5192:0 "Virovitica"

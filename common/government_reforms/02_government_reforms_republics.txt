@@ -64,8 +64,9 @@ signoria_reform = {
 		culture_group = latin
 	}
 	modifiers = {
-		global_tax_modifier = 0.05
-		max_absolutism = -30
+		build_cost = -0.05
+		merc_maintenance_modifier = -0.05
+		max_absolutism = -20
 	}
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
@@ -452,6 +453,10 @@ noble_elite_reform = {
 	legacy_equivalent = noble_republic
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		NOT = { has_reform = puppet_kingdom_reform }
+		NOT = { has_reform = transitional_government_reform }
+	}
 	modifiers = {
 		army_tradition = 0.10
 		max_absolutism = -20
@@ -658,6 +663,7 @@ junior_revolutionary_republic_reform = {
 			}
 		}
 	}
+    
     conditional = {
 		allow = {
 			has_dlc = "Rights of Man"
@@ -811,7 +817,7 @@ ambrosian_republic = {
 	modifiers = {
 		global_tax_modifier = 0.1
 		land_morale = 0.05
-		governing_capacity = 50
+		governing_capacity = 100
 		max_absolutism = -30
 	}
 	custom_attributes = {
@@ -826,7 +832,9 @@ veche_republic = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-			culture_group = east_slavic
+			AND = {
+				culture_group = east_slavic
+			}
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = veche_republic
@@ -839,8 +847,8 @@ veche_republic = {
 	}
 	modifiers = {
 		merchants = 1
-		governing_capacity = 50
-		max_absolutism = -50
+		governing_capacity = 100
+		max_absolutism = -30
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
@@ -1032,7 +1040,7 @@ colonial_government = {
 		global_autonomy = -0.05
 		recover_army_morale_speed = 0.02
 		embracement_cost = -0.1
-		governing_capacity = 100
+		governing_capacity = 150
 	}
 
 	custom_attributes = {
@@ -1069,7 +1077,7 @@ dutch_republic = {
 	modifiers = {
 		heavy_ship_power = 0.1
 		trade_efficiency = 0.1
-		governing_capacity = 50
+		governing_capacity = 100
 		max_absolutism = -30
 	}
 
@@ -1131,9 +1139,9 @@ florentine_republic_btc = {
 	}
 	nation_designer_cost = 30
 	royal_marriage = yes
-	queen = yes
-	fixed_rank = 1
 	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
 		enables_nepotism = yes
 	}
 	modifiers = {
@@ -1141,7 +1149,7 @@ florentine_republic_btc = {
 		merc_maintenance_modifier = -0.1
 		max_absolutism = -30
 	}
-	duration = 4
+	duration = 12
 }
 
 cossacks_reform = {
@@ -1180,7 +1188,7 @@ cossacks_reform = {
 		cavalry_power = 0.2
 		cavalry_cost = -0.2
 		cav_to_inf_ratio = 0.2
-		governing_capacity = 50
+		governing_capacity = 100
 		max_absolutism = -40
 	}
 	duration = 4
@@ -1382,15 +1390,15 @@ frequent_elections_reform = {
 consolidation_of_power_reform = {
 	icon = "constitution"
 	allow_normal_conversion = yes
-	modifiers = {
-		max_absolutism = 10
-		election_cycle = 1
-	}
     potential = {
 		OR = {
 			is_revolutionary = no
 			NOT = { has_dlc = "Emperor" }
 		}
+	}
+    modifiers = {
+		max_absolutism = 10
+		election_cycle = 1
 	}
 }
 
@@ -1430,6 +1438,7 @@ lottery_reform = {
 	}
 }
 
+#Federalism vs Unitarianism vs Confederacy
 consolidate_power_in_doge_reform = {
 	icon = "consolidate_power_in_doge_reform"
 	allow_normal_conversion = yes
@@ -1538,7 +1547,7 @@ administrative_divisions_reform = {
 	icon = "map"
 	allow_normal_conversion = yes
 	modifiers = {
-		governing_capacity = 250
+		governing_capacity = 350
 	}
 	ai = {
 		factor = 1
@@ -1645,6 +1654,14 @@ imperial_diplomacy_reform = {
 	}
 	ai = {
 		factor = 1.5
+		modifier = {
+			factor = 2
+			has_idea_group = diplomatic_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = influence_ideas
+		}
 	}
 }
 
@@ -1655,11 +1672,23 @@ municipal_self_defense_reform = {
 		has_reform = free_city
 	}
 	modifiers = {
-		land_forcelimit_modifier = 0.25
-		global_manpower = 5
+		land_forcelimit = 8
+		global_manpower = 8
 	}
 	ai = {
 		factor = 1.5
+		modifier = {
+			factor = 3
+			has_idea_group = defensive_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = quality_ideas
+		}
+		modifier = {
+			factor = 2
+			has_idea_group = quantity_ideas
+		}
 	}
 }
 
@@ -1715,6 +1744,7 @@ two_chamber_reform = {
 		factor = 1
 	}
 }
+
 
 #Consolidation of Power
 
@@ -1904,7 +1934,6 @@ imperial_principle_reform = {
 		factor = 2
 	}
 }
-
 
 #Electorate
 
@@ -2242,12 +2271,47 @@ puppet_kingdom_reform = {
 	modifiers = {
 		production_efficiency = 0.2
 		global_tax_modifier = 0.1
-		global_unrest = 3
-		max_absolutism = 10
+		global_unrest = 5
 	}
 	duration = 8
 	conditional = {
 		allow = { has_dlc = "Common Sense" }
 		has_parliament = yes
+	}
+	
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		blocked_call_diet = yes
+	}
+}
+
+transitional_government_reform = {
+	icon = "parliament_hall"
+	dictatorship = yes
+	allow_normal_conversion = no
+	potential = {
+		has_country_flag = independent_ireland_reorganisation_underway
+		has_reform = transitional_government_reform
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = transitional_government_ireland_legacy
+	valid_for_nation_designer = no
+	modifiers = {
+		harsh_treatment_cost = -0.25
+		stability_cost_modifier = 0.25
+		global_unrest = 8
+	}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		blocked_call_diet = yes
 	}
 }

@@ -22,8 +22,11 @@ spa_colonial_group = {
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = miss_discover_caribbean
-				colonial_the_carribean = {
-					has_discovered = ROOT
+				OR = {
+					colonial_the_carribean = { has_discovered = ROOT }
+					colonial_cuba = { has_discovered = ROOT }
+					colonial_hispaniola = { has_discovered = ROOT }
+					colonial_bahamas = { has_discovered = ROOT }
 				}
 			}
 		}
@@ -678,7 +681,21 @@ spa_reconquista = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_beiras_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			alentejo_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			south_alentejo_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -693,6 +710,13 @@ spa_reconquista = {
 				add_permanent_claim = ROOT
 			}
 			catalonia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			catalan_pyrenees_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -720,6 +744,7 @@ spa_reconquista = {
 				area = valencia_area
 				area = catalonia_area
 				area = aragon_area
+				area = catalan_pyrenees_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -730,6 +755,10 @@ spa_reconquista = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			catalan_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -802,6 +831,8 @@ spa_reconquista_por = {
 			OR = {
 				area = beieras_area
 				area = alentejo_area
+				area = south_beiras_area
+				area = south_alentejo_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -811,7 +842,15 @@ spa_reconquista_por = {
 				type = all
 				owned_by = ROOT
 			}
+			south_beiras_area = {
+				type = all
+				owned_by = ROOT
+			}
 			alentejo_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_alentejo_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -849,7 +888,14 @@ spa_reconquista_por = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -881,7 +927,8 @@ spa_reconquista_por = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 				area = calabria_area
 				area = apulia_area
 			}
@@ -893,7 +940,11 @@ spa_reconquista_por = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -325,6 +325,15 @@ mug_towards_china = {
 				}
 				add_permanent_claim = ROOT
 			}
+			sagaing_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	mug_upper_burma_campaign = {
@@ -337,11 +346,16 @@ mug_towards_china = {
 				area = upper_burma_area
 				area = naga_hills_area
 				area = shan_hill_area
+				area = sagaing_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			kachin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sagaing_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -682,6 +696,13 @@ mug_ganges_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			salween_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			central_burma_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -707,6 +728,7 @@ mug_ganges_branch = {
 				area = lower_burma_area
 				area = central_burma_area
 				area = tripura_area
+				area = salween_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -720,6 +742,10 @@ mug_ganges_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			lower_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			salween_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

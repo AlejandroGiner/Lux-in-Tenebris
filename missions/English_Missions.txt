@@ -38,6 +38,18 @@ eng_british_conquest = {
 				}
 				add_permanent_claim = ROOT
 			}
+			south_wales_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mid_wales_area = {
+				limit = {
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 }
@@ -65,21 +77,56 @@ eng_british_conquest_wales = {
 		completed_by = 1535.1.1
 
 		provinces_to_highlight = {
-			area = wales_area
+			OR = {
+				area = wales_area
+				area = south_wales_area
+				area = mid_wales_area
+			}
 			NOT = { owned_by = ROOT }
 		}
 
 		trigger = {
-			wales_area = {
-				type = all
-				OR = {
-					owned_by = ROOT
-					owner = {
-						is_subject_of = ROOT
-						NOT = { liberty_desire = 30 }
-						has_opinion = {
-							who = ROOT
-							value = 150
+			custom_trigger_tooltip = {
+				tooltip = wales_hold_tooltip
+				wales_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = { liberty_desire = 30 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+				}
+				mid_wales_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = { liberty_desire = 30 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
+						}
+					}
+				}
+				south_wales_area = {
+					type = all
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+							NOT = { liberty_desire = 30 }
+							has_opinion = {
+								who = ROOT
+								value = 150
+							}
 						}
 					}
 				}
@@ -308,12 +355,12 @@ eng_french_conquest = {
 			}
 			if = {
 				limit = {
-					4782 = {
+					3646 = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
 					}
 				}
-				4782 = { add_permanent_claim = ROOT }
+				3646 = { add_permanent_claim = ROOT }
 			}
 		}
 	}
@@ -386,6 +433,12 @@ eng_french_conquest = {
 					has_dlc = "Rule Britannia"
 				}
 				brittany_area = {
+					limit = {
+						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				morbihan_area = {
 					limit = {
 						NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					}
@@ -503,7 +556,7 @@ eng_exploration_americas = {
 		}
 
 		effect = {
-			create_conquistador = 80
+			create_conquistador = { tradition = 80 }
 		}
 	}
 
@@ -575,14 +628,12 @@ eng_chesapeake_dominance = {
 		completed_by = 1618.5.1
 
 		provinces_to_highlight = {
-			province_id = 1500
+			province_id = 5477
 			has_discovered = ROOT
 		}
 
 		trigger = {
-			1500 = {	# Chesapeake Bay
-				is_strongest_trade_power = ROOT
-			}
+			5477 = { is_strongest_trade_power = ROOT }
 		}
 
 		effect = {
@@ -591,12 +642,8 @@ eng_chesapeake_dominance = {
 				duration = 7300
 			}
 			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
-				}
-				226 = {
-					add_permanent_claim = ROOT
-				}
+				limit = { has_dlc = "Rule Britannia" }
+				226 = { add_permanent_claim = ROOT }
 			}
 		}
 	}

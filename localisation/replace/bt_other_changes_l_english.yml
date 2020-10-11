@@ -1,5 +1,8 @@
 ﻿l_english: 
  #Colonial regions and names
+ trade_company_indochina:0 "Siamese Charter"
+ TRADE_COMPANY_INDOCHINA_China_Trade_Company:0 "Siamese Trade Company"
+ TRADE_COMPANY_INDOCHINA_Root_Culture_GetName:0 "[Root.Culture.GetName] Siam Company"
  colonial_alaska: "Colonial Alaska"
  short_colonial_alaska: "Alaska"
  colonial_the_carribean:0 "Colonial Lesser Antilles"
@@ -196,6 +199,10 @@
  bordeaux:0 "Biscay"
  english_channel:0 "London"
  rheinland:0 "Frankfurt"
+ hangzhou:0 "Suzhou"
+ brazil:0 "Pernambuco"
+ mexico:0 "Acapulco"
+ baltic_sea:0 "Stockholm"
  
  #Terrain
  marsh:0 "Wetlands"
@@ -210,9 +217,6 @@
  TRADE_COMPANY_EAST_AFRICA_Root_Culture_GetName:0 "[Root.Culture.GetName] Swahili Coast Company"
  
  #European Areas
- naples_area:0 "Campania"
- naples_area_name:0 "Campania"
- naples_area_adj:0 "Campania"
  subarctic_islands_area:0 "Northern Isles"
  subarctic_islands_area_name:0 "Northern Isles"
  subarctic_islands_area_adj:0 "Northern Islander"
@@ -261,9 +265,7 @@
  podolia_volhynia_area:0 "East Podolia"
  podolia_volhynia_area_name:0 "East Podolia"
  podolia_volhynia_area_adj:0 "East Podolian"
- silesia_area:0 "Upper Silesia"
- silesia_area_name:0 "Upper Silesia"
- silesia_area_adj:0 "Upper Silesian"
+ silesia_area:0 "Wroclaw"
  wielkopolska_area:0 "Poznan"
  wielkopolska_area_name:0 "Poznan"
  wielkopolska_area_adj:0 "Poznan"
@@ -325,9 +327,6 @@
  kastamonu_area:0 "Paphlagonia"
  kastamonu_area_name:0 "Paphlagonia"
  kastamonu_area_adj:0 "Paphlagonian"
- erzurum_area:0 "Upper Euphrates"
- erzurum_area_name:0 "Upper Euphrates"
- erzurum_area_adj:0 "Upper Euphrates"
  dulkadir_area:0 "Cappadocia"
  dulkadir_area_name:0 "Cappadocia"
  dulkadir_area_adj:0 "Cappadocian"
@@ -567,6 +566,7 @@
  bajau:0 "Bajau"
  ilocano:0 "Ilocano"
  visayan:0 "Visayan"
+ lower_saxon:0 "Plattdütsch"
  
  #Trade Nodes
  ohio:0 "Great Lakes"
@@ -658,6 +658,8 @@
  ivoryDESC:0 "Ivory, the bone of large animals like elephants or walruses, was highly sought after for use in various manufactured goods such as cutlery, scrimshaw, small pieces of art, furniture, etc."
 
  #Tag Changes
+ HRZ:0 "Hum"            #Duchy of Saint Sava
+ HRZ_ADJ:0 "Human"          #Yup, going with this
  CNN:0 "Connacht"
  CNN_ADJ:0 "Connachtan"
  ULS:0 "Ulster"
@@ -875,7 +877,6 @@
  PER_ideas:0 "Safavid Ideas"
  PER_ideas_start:0 "Safavid Traditions"
  PER_ideas_bonus:0 "Safavid Ambition"
- 
  #SEA Addon ideas
  ayu_bunga_mas:0 "Bunga Mas"
  ayu_bunga_mas_desc: "Bunga mas, Jawi for golden flowers, is a tribute sent to the Siamese King every few years by our Malayan vassal states. This tribute consists of two small trees made of silver and gold, and weapons, goods, and slaves. This tribute is not only prestigious, but also a symbol of order and stability in our realm."

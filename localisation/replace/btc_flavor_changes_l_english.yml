@@ -84,6 +84,7 @@
  venice_merchants_reform_desc:0 "The Dogado (Duchy) represented the administration and government of the city of Venice itself as well as the surroinding areas. The Most Serene Republic of Venice employs a complex and convoluted system for electing officials to public office. A series of secret ballots appoints 41 electors, who then each cast a vote into an urn. A single vote is extracted from the urn, and the man whose name is written on it becomes the new Doge. The system attempts to combat electoral corruption and ensure a fair vote."
  genoese_merchants_reform:0 "Compagna Communis"
  genoese_merchants_reform_desc:0 "The Republic of Genoa began with the foundation of the Campagna Communis (meaning Comune). It was held by a variable number of Consuls, elected through a Parliament comprised of all male citizens aged between 16 and 70, true citizen soldiers who, in case of war, were expected to utilize their own equipment, except in wars in distant lands or at open sea. they gathered at the St. Lawrence cathedral to vote, and the winner of the election obtained the leadership on the 2nd of February."
+ producing_wine_and_grain_tt:0 "Production of §YFruit§!: §G+75.0%§!\nProduction of §YBeer§! & §YWine§!: §G+50.0%§!"
 
  #Missions
  mam_pacify_bedouins_title: "Conquer Nubia"
@@ -110,6 +111,12 @@
  mongol_tatars_tt:0 "§Y[Root.GetName]§! owns at least §Y20§! cored provinces in the §YPontic Steppe§! region."
  mongol_rus_tt:0 "§Y[Root.GetName]§! owns at least §Y60§! cored provinces in the §YRussia§! and §YRuthenia§!."
  cas_spa_havana.tooltip:0 "§Y[Root.GetName]§! or their subjects own at least §Y5§! fully colonized provinces in the §YCuba§! colonial region."
+ fra_pro_tt:0 "At least §Y5§! provinces in the §YProvence§! area are owned by §Y[Root.GetName]§! or its non-sovereign subjects."
+ ottoman_balkans_alb_tt:0 "§Y[Root.GetName]§! gets claims on all §YRumelia§! provinces owned by the §Y[TUR.GetName]§!."
+ albanian_inspiration_tt:0 "All Christian provinces in §YRumelia§! owned by the §Y[TUR.GetName]§! gain §R+10§! Unrest."
+ fla_commercial_infrastructure_tt:0 "All owned provinces in the §YLow Countries§! region have a §YTax Building§!, a §YProduction Building§!, or a §YTrade Building§!"
+ emp_mlo_all_roads_lead_to_milan_trigger_tooltip:1 "No province in §YEurope§! continent has higher development than §Y[104.GetName]§!."
+ emp_ita_redeem_tirolo_tt: "Own 6 of the 7 provinces in §Y[73.GetAreaName]§! or §Y[1768.GetAreaName]§! areas"
  
  #Ideas
  bul_idea_1:0 "Nezavisimost"
@@ -126,6 +133,9 @@
  bul_idea_6_desc:0 "Many great powers in Europe and beyond seek to use Bulgaria for their puny goals, from Russia to the Habsburgs to the Ottomans. They act as if they can decide what our borders should be and who we should be allied to. But thanks to our multiple victories in battle against armies that are more technologically advanced than we are, we have showcased them that our will cannot be broken so easily. These battles have allowed us to master new defensive tactics that we can employ against these new artillery pieces being introduced in the battlefield."
  bul_idea_7:0 "Shield of the East"
  bul_idea_7_desc:0 "Our military reputation has risen to the point that the French military has called our own armies the finest of Eastern Europe. It took untold suffering to get to this point but we are now a regional power that can decide politics for the entirety of the Balkans and beyond. Onwards to Victory!"
+ 
+ empire_of_liberty_desc:0 "From the repressed peoples of South America, to our ravaged by war European brethren, to the victims of terror and those prosecuted for their religion, our fledgling Republic is viewed as an inspiration to the entire human race. Having bled against tyranny and oppression ourselves, ours is the responsibility to spread freedom across the world."
+ usa_bill_of_rights_desc:0 "'Congress shall make no law abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.'"
  
  #Decisions
  pol_commonwealth_title:0 "@PLC Form Polish-Lithuanian Commonwealth"

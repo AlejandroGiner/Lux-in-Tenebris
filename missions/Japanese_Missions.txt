@@ -430,7 +430,9 @@ japanse_missions_china = {
 							OR = {
 								area = vietnam_area
 								area = mekong_area
+								area = mekong_lowlands_area
 								area = central_thai_area
+								area = gulf_siam_area
 								area = red_river_delta_area
 							}
 						}
@@ -451,7 +453,9 @@ japanse_missions_china = {
 							OR = {
 								area = vietnam_area
 								area = mekong_area
+								area = mekong_lowlands_area
 								area = central_thai_area
+								area = gulf_siam_area
 								area = red_river_delta_area
 							}
 						}
@@ -476,6 +480,7 @@ japanse_missions_china = {
 			OR = {
 				area = central_thai_area
 				area = vietnam_area
+				area = gulf_siam_area
 			}
 			NOT = {
 				owner = { 
@@ -489,6 +494,15 @@ japanse_missions_china = {
 		
 		trigger = {
 			central_thai_area = {
+				type = all
+				owner = { 
+					OR = {
+						tag = ROOT 
+						is_subject_of = ROOT
+					}
+				}
+			}
+			gulf_siam_area = {
 				type = all
 				owner = { 
 					OR = {
@@ -631,7 +645,9 @@ japanse_missions_the_empire = {
 			}
 		}
 		effect = {
-			create_explorer = 60
+			create_explorer = {
+				tradition = 60
+			}
 			fujian_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -752,7 +768,7 @@ japanse_missions_the_empire = {
 			}
 		}
 		effect = {
-			create_conquistador = 80
+			create_conquistador = { tradition = 80 }
 		}
 	}
 }

@@ -32,13 +32,19 @@ country_event = {
 				limit = {
 					NOT = {
 						capital_scope = {
-							area = astrakhan_area
+							OR = {
+								area = kalmykia_area
+								province_id = 3518
+							}
 						}
 					}
 				}
 				every_owned_province = {
 					limit = {
-						area = astrakhan_area
+						OR = {
+							area = kalmykia_area
+							province_id = 3518
+						}
 					}
 					add_core = KLM
 				}
@@ -69,7 +75,10 @@ country_event = {
 		trigger = {
 			NOT = {
 				capital_scope = {
-					area = astrakhan_area
+					OR = {
+						area = kalmykia_area
+						province_id = 3518
+					}
 				}
 			}
 		}
@@ -80,11 +89,17 @@ country_event = {
 				modifier = allowed_kalmyk_settlement
 			}
 		}
-		astrakhan_area = {
+		kalmykia_area = {
 			limit = {
 				is_core = ROOT
 			}
 			remove_core = ROOT
+		}
+		3518 = {
+			if = {
+				limit = { is_core = ROOT }
+				remove_core = ROOT
+			}
 		}
 	}
 	option = {
@@ -92,7 +107,10 @@ country_event = {
 		trigger = {
 			NOT = {
 				capital_scope = {
-					area = astrakhan_area
+					OR = {
+						area = kalmykia_area
+						province_id = 3518
+					}
 				}
 			}
 		}
@@ -106,7 +124,10 @@ country_event = {
 		name = "flavor_klm.1.b"
 		trigger = {
 			capital_scope = {
-				area = astrakhan_area
+				OR = {
+					area = kalmykia_area
+					province_id = 3518
+				}
 			}
 		}
 		2417 = {

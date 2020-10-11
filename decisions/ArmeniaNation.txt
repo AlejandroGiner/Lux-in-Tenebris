@@ -97,6 +97,15 @@ country_decisions = {
 				}
 				add_permanent_claim = ARM
 			}
+			upper_euphrates_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ARM
+			}
 			north_kurdistan_area = {
 				limit = {
 					NOT = {

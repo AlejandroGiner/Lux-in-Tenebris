@@ -12,6 +12,7 @@ country_decisions = {
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
+				primary_culture = frisian
 				tag = BUR
 			}
 			OR = {
@@ -47,13 +48,35 @@ country_decisions = {
 			owns_core_province = 98 # Utrecht
 			owns_core_province = 99 # Gelre
 			owns_core_province = 100 # Friesland
+			if = {
+				limit = { tag = BUR }
+				NOT = { has_disaster = dutch_revolt_disaster }
+			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
 			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
 		}
 		effect = {
 	  		if = {
+				limit = {
+					is_elector = no
+					is_emperor = no
+					OR = {
+						is_part_of_hre = yes
+						any_owned_province = { is_part_of_hre = yes }
+					}
+				}
+				set_in_empire = no
+				hidden_effect = {
+					every_owned_province = {
+						limit = { is_part_of_hre = yes }
+						set_in_empire = no
+					}
+				}
+			}
+			if = {
 	  			limit = { tag = BUR }
 	  			change_primary_culture = dutch
+				97 = { move_capital_effect = yes }
 			}
 			if = {
 				limit = {
@@ -86,7 +109,6 @@ country_decisions = {
 	  		}
 			change_tag = NED
 			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2

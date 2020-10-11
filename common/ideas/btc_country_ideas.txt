@@ -20,7 +20,7 @@ EGY_ideas = {
 
 	EGY_idea1 = {
 		tolerance_heathen = 3
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 
 	EGY_idea2 = {
@@ -949,46 +949,6 @@ MTZ_ideas = {
 	}
 }
 
-GEV_ideas = {
-	start = {
-		tolerance_own = 2
-        discipline = 0.05
-	}
-
-	bonus = {
-        fire_damage_received = -0.2
-	}
-
-	trigger = {
-		tag = GEV
-	}
-	free = yes		# will be added at load
-
-	GEV_idea1 = {
-		diplomatic_upkeep = 1
-	}
-	GEV_idea2 = {
-		state_maintenance_modifier = -0.15
-		global_unrest = -1
-	}
-	GEV_idea3 = {
-		global_garrison_growth = 0.15
-	}
-	GEV_idea4 = {
-		global_missionary_strength = 0.03
-	}
-	GEV_idea5 = {
-		global_trade_goods_size_modifier = 0.1
-		envoy_travel_time = -0.25
-	}
-	GEV_idea6 = {
-        defensiveness = 0.15
-	}
-	GEV_idea7 = {
-		prestige = 1
-	}
-}
-
 TUL_ideas = {
 	start = {
         adm_tech_cost_modifier = -0.1
@@ -1269,7 +1229,7 @@ GTA_ideas = {
 
 HAW_ideas = {
 	start = {
-		num_accepted_cultures = 3
+		num_accepted_cultures = 2
 		diplomatic_reputation = 1
 	}
 
@@ -1283,7 +1243,7 @@ HAW_ideas = {
 	free = yes		# will be added at load
 
 	HAW_idea1 = {
-		global_autonomy = -0.025
+		global_autonomy = -0.05
 	}
 	HAW_idea2 = {
 		global_unrest = -1
@@ -1342,5 +1302,43 @@ AFS_ideas = {
 	}
 	AFS_idea7 = {
 		core_creation = -0.2
+    }
+}
+PDV_ideas = {
+	start = {
+		state_maintenance_modifier = -0.25
+		diplomatic_reputation = 1
+	}
+
+	bonus = {
+		development_cost = -0.1
+	}
+
+	trigger = {
+		tag = PDV
+	}
+	free = yes		# will be added at load
+
+	PDV_idea1 = {
+		prestige = 1
+	}
+	PDV_idea2 = {
+		trade_efficiency = 0.10
+	}
+	PDV_idea3 = {
+		discipline = 0.05
+	}
+	PDV_idea4 = {
+		global_missionary_strength = 0.01
+	}
+	PDV_idea5 = {
+		embracement_cost = -0.1
+		global_institution_spread = 0.25
+	}
+	PDV_idea6 = {
+		technology_cost = -0.05
+	}
+	PDV_idea7 = {
+		core_creation = -0.10
 	}
 }

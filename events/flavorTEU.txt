@@ -260,6 +260,15 @@ country_event = {
 			}
 			add_permanent_claim = ROOT
 		}
+		pomerelia_area = {
+			limit = {
+				NOT = { is_permanent_claim = ROOT }
+				NOT = { is_core = ROOT	}
+				NOT = { is_permanent_claim = DNZ }
+				NOT = { is_core = DNZ }
+			}
+			add_permanent_claim = ROOT
+		}
 	}
 }
 

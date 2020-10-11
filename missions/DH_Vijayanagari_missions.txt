@@ -956,6 +956,13 @@ vij_religious_missions = {
 				}
 				add_claim = ROOT
 			}
+			salween_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 }

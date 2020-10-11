@@ -7,7 +7,7 @@ country_event = {
 	picture = COURT_eventPicture
 
 	is_triggered_only = yes
-
+	
 	option = {
 		name = "btpIRE.EVTOPTA1"
 		ai_chance = {
@@ -39,7 +39,7 @@ country_event = {
 		}
 		ENG = { country_event = { id = btpIRE.2 } }
 	}
-
+	
 	option = {
 		name = "btpIRE.EVTOPTB1"
 		ai_chance = {
@@ -62,15 +62,15 @@ country_event = {
 			}	#Higher opinion of England makes acceptance more likely
 			modifier = {
 				factor = 1.5
-				NOT = { army_strength = { who = ENG value = 0.5 } }
+				army_strength = { who = ENG value = 2.0 }
 			}	#Does this condition even work???
 			modifier = {
 				factor = 2.0
-				NOT = { army_strength = { who = ENG value = 0.25 } }
+				army_strength = { who = ENG value = 4.0 }
 			}	#Does this condition even work???
 			modifier = {
 				factor = 2.5
-				NOT = { army_strength = { who = ENG value = 0.125 } }
+				army_strength = { who = ENG value = 8.0 }
 			}	#Does this condition even work???
 		}
 		ENG = {
@@ -85,9 +85,9 @@ country_event = {
 	title = "btpIRE.EVTNAME2"
 	desc = "btpIRE.EVTDESC2"
 	picture = COURT_eventPicture
-
+	
 	is_triggered_only = yes
-
+	
 	option = {
 		name = "btpIRE.EVTOPTA2"
 		ai_chance = {
@@ -101,13 +101,15 @@ country_event = {
 				army_strength = { who = FROM value = 1.0 }
 			}	#England rethinks it when facing matched armies
 		}
-		declare_war_with_cb = {
-			who = FROM
-			casus_belli = cb_disloyal_vassal
+		ENG = {
+			declare_war_with_cb = {
+				who = FROM
+				casus_belli = cb_disloyal_vassal
+			}
 		}
 		hidden_effect = { remove_country_modifier = irish_fealty_negotiations_ongoing }
 	}
-
+	
 	option = {
 		name = "btpIRE.EVTOPTB2"
 		ai_chance = {
@@ -124,7 +126,7 @@ country_event = {
 	title = "btpIRE.EVTNAME3"
 	desc = "btpIRE.EVTDESC3"
 	picture = ELECTION_REPUBLICAN_eventPicture
-
+	
 	trigger = {
 		tag = ANI
 		has_reform = puppet_kingdom_reform
@@ -134,13 +136,30 @@ country_event = {
 	mean_time_to_happen = {
 		days = 3
 	}
-
+	
 	option = {
 		name = "btpIRE.EVTOPTA3"
 		add_prestige = 10
-		change_government = monarchy
-		add_government_reform = anglo_irish_monarchy_reform
-		add_stability = -1
+		if = {
+			limit = { has_dlc = "Res Publica" }
+			set_country_flag = independent_ireland_reorganisation_underway
+			remove_government_reform = pupet_kingdom_reform
+			clr_country_flag = bt_is_a_puppet_state
+			add_government_reform = transitional_government_reform
+			add_republican_tradition = -50
+			hidden_effect = {
+				country_event = {
+					id = btpIRE.4
+					days = 1095
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { has_dlc = "Res Publica" } }
+			change_government = monarchy
+			add_government_reform = feudalism_reform
+			add_stability = -1
+		}
 	}
 }
 
@@ -149,9 +168,9 @@ country_event = {
 	title = "btpIRE.EVTNAME4"
 	desc = "btpIRE.EVTDESC4"
 	picture = ELECTION_REPUBLICAN_eventPicture
-
+	
 	is_triggered_only = yes
-
+	
 	option = {			#Status Quo Accendancy ruled
 		name = "btpIRE.EVTOPTA4"
 		ai_chance = {
@@ -167,7 +186,8 @@ country_event = {
 		clr_country_flag = independent_ireland_reorganisation_underway
 		if = {
 			limit = { NOT = { has_reform = anglo_irish_monarchy_reform } }
-			change_government = anglo_irish_monarchy_reform
+			change_government = monarchy
+			add_government_reform = anglo_irish_monarchy_reform
 		}
 	}
 	option = {			#Return to the High Kingship system
@@ -186,8 +206,9 @@ country_event = {
 		}
 		clr_country_flag = independent_ireland_reorganisation_underway
 		change_tag = IRE
-		change_government = tanistry_reform
 		change_primary_culture = irish
+		change_government = monarchy
+		add_government_reform = tanistry_reform
 		if = {
 			limit = { historical_friend_with = ENG }
 			remove_historical_friend = ENG
@@ -200,7 +221,7 @@ country_event = {
 			limit = {
 				NOT = { religion = catholic }
 				num_of_owned_provinces_with = {
-					value = 8
+					value = 22
 					region = ireland_region
 					religion = catholic
 				}
@@ -238,13 +259,15 @@ country_event = {
 			}	#Disabled if no Irish culture provinces left
 		}
 		clr_country_flag = independent_ireland_reorganisation_underway
-		change_government = constitutional_republic
+		change_government = republic
+		remove_government_reform = transitional_government_reform
+		add_government_reform = federal_republic
 		change_primary_culture = irish
 		if = {
 			limit = {
 				NOT = { religion = catholic }
 				num_of_owned_provinces_with = {
-					value = 8
+					value = 22
 					region = ireland_region
 					religion = catholic
 				}
@@ -268,4 +291,3 @@ country_event = {
 		country_event = { id = ideagroups.1 } #Swap Ideas
 	}
 }
-

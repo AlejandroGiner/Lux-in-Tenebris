@@ -1,9 +1,9 @@
-namespace = strategoi_estate_events
-
-#Strategoi estate events, coded, written and designed by Dub
+#Written by Dub
 #I am not a great artist myself, so the event pictures are taken directly from the Nobility event pictures. If someone wishes to create some, I'd be grateful, but as it stands it is not my forté.
 #Updated to include a LOT more options for personalities if owning RoM
-country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.GetName] have too much say
+namespace = strategoi_estate_events
+
+country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetName] have too much say
 	id = strategoi_estate_events.1
 	title = strategoi_estate_events.1.t
 	desc = strategoi_estate_events.1.d
@@ -11,7 +11,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 	
 	trigger = {
 		has_estate = estate_nobles
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		#The whole "Has one general that is not a ruler or heir"-trigger!
 		if = {
 			limit = {
@@ -45,13 +45,13 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_AGREED_TO_DECREASE_STRATEGOI_INFLUENCE
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_DISAGREED_TO_DECREASE_STRATEGOI_INFLUENCE
 			}
 		}
@@ -68,7 +68,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 				influence = 70
 			}
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 50
 			}
 		}
@@ -86,25 +86,25 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 			loyalty = 15
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -20
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_AGREED_TO_DECREASE_STRATEGOI_INFLUENCE
 			influence = -10
 			duration = 5475
 		}
 	}
 	
-	option = { #Side with the [estate_strategoi.GetName]
+	option = { #Side with the [estate_generals.GetName]
 		name = strategoi_estate_events.1.b
 		ai_chance = {
 			factor = 50
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 15
 		}
 		add_estate_loyalty = {
@@ -112,7 +112,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 			loyalty = -20
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISAGREED_TO_DECREASE_STRATEGOI_INFLUENCE
 			influence = 10
 			duration = 5475
@@ -130,7 +130,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 		required_personality = charismatic_negotiator_personality
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 5
 		}
 		add_estate_loyalty = {
@@ -150,7 +150,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 		required_personality = fierce_negotiator_personality
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 5
 		}
 		add_estate_loyalty = {
@@ -175,7 +175,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_strategoi.Get
 			loyalty = 20
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISAGREED_TO_DECREASE_STRATEGOI_INFLUENCE
 			influence = 10
 			duration = 5475
@@ -191,16 +191,16 @@ country_event = { #2 The growing influence of the Strategoi
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_STRATEGOI_SHRINK
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_STRATEGOI_GROW
 			}
 		}
@@ -217,7 +217,7 @@ country_event = { #2 The growing influence of the Strategoi
 		name = strategoi_estate_events.2.a #Ok
 		
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_STRATEGOI_GROW
 			influence = 10
 			duration = 5475
@@ -233,20 +233,20 @@ country_event = { #3 The shrinking influence of the Strategoi
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		estate_influence = {
-			estate = estate_strategoi
+			estate = estate_generals
 			influence = 15
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_STRATEGOI_SHRINK
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_STRATEGOI_GROW
 			}
 		}
@@ -262,7 +262,7 @@ country_event = { #3 The shrinking influence of the Strategoi
 		name = strategoi_estate_events.3.a #Ok
 		
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_STRATEGOI_SHRINK
 			influence = -10
 			duration = 5475
@@ -280,7 +280,7 @@ country_event = { #4 Promising strategos
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					has_estate = estate_strategoi
+					has_estate = estate_generals
 					NOT = { has_province_modifier = byz_province_fort_commander }
 				}
 				save_event_target_as = supreme_commander_fort
@@ -289,9 +289,9 @@ country_event = { #4 Promising strategos
 	}
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 40
 		}
 		
@@ -304,7 +304,7 @@ country_event = { #4 Promising strategos
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 70
 			}
 		}
@@ -407,7 +407,7 @@ country_event = { #4 Promising strategos
 	}
 }
 
-country_event = { #5 [estate_strategoi.GetName] disagree on current military plans
+country_event = { #5 [estate_generals.GetName] disagree on current military plans
 	id = strategoi_estate_events.5
 	title = strategoi_estate_events.5.t
 	desc = {
@@ -430,16 +430,16 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 	}
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_FOLLOWED_TACTICS_RECOMMENDATION
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_REJECTED_TACTICS_RECOMMENDATION
 			}
 		}
@@ -452,7 +452,7 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 70
 			}
 		}
@@ -470,11 +470,11 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 			duration = 3650
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_FOLLOWED_TACTICS_RECOMMENDATION
 			influence = 10
 			duration = 3650
@@ -493,11 +493,11 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 			duration = 3650
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_REJECTED_TACTICS_RECOMMENDATION
 			influence = -10
 			duration = 3650
@@ -516,11 +516,11 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 			duration = 3650
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_FOLLOWED_TACTICS_RECOMMENDATION
 			influence = 10
 			duration = 3650
@@ -539,11 +539,11 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 			duration = 3650
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_REJECTED_TACTICS_RECOMMENDATION
 			influence = -10
 			duration = 3650
@@ -568,7 +568,7 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 					duration = 3650
 				}
 				add_estate_loyalty = {
-					estate = estate_strategoi
+					estate = estate_generals
 					loyalty = 20
 				}
 			}
@@ -578,7 +578,7 @@ country_event = { #5 [estate_strategoi.GetName] disagree on current military pla
 					duration = 3650
 				}
 				add_estate_loyalty = {
-					estate = estate_strategoi
+					estate = estate_generals
 					loyalty = -10
 				}
 			}
@@ -596,7 +596,7 @@ country_event = { #6 [revolting_theme_capital.GetName] revolts!
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					has_estate = estate_strategoi
+					has_estate = estate_generals
 				}
 				save_event_target_as = revolting_theme_capital
 			}
@@ -604,10 +604,10 @@ country_event = { #6 [revolting_theme_capital.GetName] revolts!
 	}
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			estate_loyalty = {
-				estate = estate_strategoi
+				estate = estate_generals
 				loyalty = 40
 			}
 		}
@@ -620,7 +620,7 @@ country_event = { #6 [revolting_theme_capital.GetName] revolts!
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 40
 			}
 		}
@@ -643,7 +643,7 @@ country_event = { #6 [revolting_theme_capital.GetName] revolts!
 	}
 }
 
-country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
+country_event = { #7 [estate_generals.GetName] wish to use the local Basilica
 	id = strategoi_estate_events.7
 	title = strategoi_estate_events.7.t
 	desc = strategoi_estate_events.7.d
@@ -653,7 +653,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					has_estate = estate_strategoi
+					has_estate = estate_generals
 					NOT = { has_building = regimental_camp }
 					NOT = { has_building = conscription_center }
 				}
@@ -664,22 +664,22 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		has_estate = estate_church
 		any_owned_province = {
-			has_estate = estate_strategoi
+			has_estate = estate_generals
 			NOT = { has_building = regimental_camp }
 			NOT = { has_building = conscription_center }
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_ALLOWED_TO_USE_BASILICA
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_DISALLOWED_TO_USE_BASILICA
 			}
 		}
@@ -692,7 +692,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 50
 			}
 		}
@@ -706,7 +706,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 		
 		add_patriarch_authority = -0.1
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 		add_estate_loyalty = {
@@ -714,7 +714,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 			loyalty = -20
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_ALLOWED_TO_USE_BASILICA
 			influence = 10
 			duration = 3650
@@ -728,7 +728,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 		
 		add_patriarch_authority = 0.05
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 		add_estate_loyalty = {
@@ -736,7 +736,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISALLOWED_TO_USE_BASILICA
 			influence = -10
 			duration = 3650
@@ -754,7 +754,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 		required_personality = zealot_personality
 		add_patriarch_authority = 0.1
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -15
 		}
 		add_estate_loyalty = {
@@ -762,7 +762,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 			loyalty = 30
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISALLOWED_TO_USE_BASILICA
 			influence = -20
 			duration = 3650
@@ -770,7 +770,7 @@ country_event = { #7 [estate_strategoi.GetName] wish to use the local Basilica
 	}
 }
 
-country_event = { #8 The [estate_strategoi.GetName] suggest building a cannon factory
+country_event = { #8 The [estate_generals.GetName] suggest building a cannon factory
 	id = strategoi_estate_events.8
 	title = strategoi_estate_events.8.t
 	desc = strategoi_estate_events.8.d
@@ -780,7 +780,7 @@ country_event = { #8 The [estate_strategoi.GetName] suggest building a cannon fa
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					has_estate = estate_strategoi
+					has_estate = estate_generals
 					NOT = { has_province_modifier = byz_cannon_factory }
 				}
 				save_event_target_as = cannon_factory_province
@@ -790,21 +790,21 @@ country_event = { #8 The [estate_strategoi.GetName] suggest building a cannon fa
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		any_owned_province = {
-			has_estate = estate_strategoi
+			has_estate = estate_generals
 			NOT = { has_province_modifier = byz_cannon_factory }
 		}
 		mil_tech = 7
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_AGREED_TO_BUILD_CANNON_FACTORY
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_DISAGREED_TO_BUILD_CANNON_FACTORY
 			}
 		}
@@ -817,7 +817,7 @@ country_event = { #8 The [estate_strategoi.GetName] suggest building a cannon fa
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 50
 			}
 		}
@@ -837,11 +837,11 @@ country_event = { #8 The [estate_strategoi.GetName] suggest building a cannon fa
 			}
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_AGREED_TO_BUILD_CANNON_FACTORY
 			influence = 10
 			duration = 3650
@@ -854,11 +854,11 @@ country_event = { #8 The [estate_strategoi.GetName] suggest building a cannon fa
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISAGREED_TO_BUILD_CANNON_FACTORY
 			influence = -5
 			duration = 3650
@@ -874,10 +874,10 @@ country_event = { #9 The Themata don't want to fight
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			estate_loyalty = {
-				estate = estate_strategoi
+				estate = estate_generals
 				loyalty = 40
 			}
 		}
@@ -892,7 +892,7 @@ country_event = { #9 The Themata don't want to fight
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 40
 			}
 		}
@@ -921,7 +921,7 @@ country_event = { #10 No taxes to be collected in [failed_taxing_province.GetNam
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					has_estate = estate_strategoi
+					has_estate = estate_generals
 				}
 				save_event_target_as = failed_taxing_province
 			}
@@ -930,9 +930,9 @@ country_event = { #10 No taxes to be collected in [failed_taxing_province.GetNam
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 40
 		}
 	}
@@ -951,7 +951,7 @@ country_event = { #10 No taxes to be collected in [failed_taxing_province.GetNam
 		
 		add_years_of_income = -0.5
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 	}
@@ -962,7 +962,7 @@ country_event = { #10 No taxes to be collected in [failed_taxing_province.GetNam
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 	}
@@ -979,13 +979,13 @@ country_event = { #10 No taxes to be collected in [failed_taxing_province.GetNam
 		
 		add_years_of_income = -1
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 20
 		}
 	}
 }
 
-country_event = { #11 The [estate_strategoi.GetName] renounce the [Root.Monarch.GetTitle]!
+country_event = { #11 The [estate_generals.GetName] renounce the [Root.Monarch.GetTitle]!
 	id = strategoi_estate_events.11
 	title = strategoi_estate_events.11.t
 	desc = strategoi_estate_events.11.d
@@ -993,17 +993,14 @@ country_event = { #11 The [estate_strategoi.GetName] renounce the [Root.Monarch.
 	
 	trigger = {
 		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			estate_loyalty = {
-				estate = estate_strategoi
+				estate = estate_generals
 				loyalty = 40
 			}
 		}
-		has_estate_influence_modifier = {
-			estate = estate_strategoi
-			modifier = EST_VAL_BOUGHT_DYNASTY_SUPPORT
-		}
+		has_estate_privilege = estate_generals_dynastic_support
 	}
 	
 	is_triggered_only = yes
@@ -1013,7 +1010,7 @@ country_event = { #11 The [estate_strategoi.GetName] renounce the [Root.Monarch.
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 40
 			}
 		}
@@ -1087,7 +1084,7 @@ country_event = { #11 The [estate_strategoi.GetName] renounce the [Root.Monarch.
 	}
 }
 
-country_event = { #12 The [estate_strategoi.GetName] demand higher status
+country_event = { #12 The [estate_generals.GetName] demand higher status
 	id = strategoi_estate_events.12
 	title = strategoi_estate_events.12.t
 	desc = strategoi_estate_events.12.d
@@ -1096,21 +1093,21 @@ country_event = { #12 The [estate_strategoi.GetName] demand higher status
 	trigger = {
 		
 		has_estate = estate_nobles
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_AGREED_TO_INCREASE_STRATEGOI_STATUS
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_DISAGREED_TO_INCREASE_STRATEGOI_STATUS
 			}
 		}
 		estate_influence = {
-			estate = estate_strategoi
+			estate = estate_generals
 			influence = 60
 		}
 	}
@@ -1126,7 +1123,7 @@ country_event = { #12 The [estate_strategoi.GetName] demand higher status
 				influence = 50
 			}
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 70
 			}
 		}
@@ -1143,7 +1140,7 @@ country_event = { #12 The [estate_strategoi.GetName] demand higher status
 			loyalty = -10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_AGREED_TO_INCREASE_STRATEGOI_STATUS
 			influence = 10
 			duration = 5475
@@ -1157,11 +1154,11 @@ country_event = { #12 The [estate_strategoi.GetName] demand higher status
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -20
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISAGREED_TO_INCREASE_STRATEGOI_STATUS
 			influence = -10
 			duration = 5475
@@ -1180,36 +1177,35 @@ country_event = { #12 The [estate_strategoi.GetName] demand higher status
 		required_personality = naive_personality
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -5
 		}
 	}
 }
 
-country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estate_strategoi.GetName]
+country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estate_generals.GetName]
 	id = strategoi_estate_events.13
 	title = strategoi_estate_events.13.t
 	desc = strategoi_estate_events.13.d
 	picture = DIPLOMAT_INTERROGATION_eventPicture
 	
 	trigger = {
-		
 		has_estate = estate_nobles
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_SIDED_WITH_THE_STRATEGOI
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_SIDED_WITH_THE_NOBLES
 			}
 		}
 		has_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			modifier = EST_VAL_PROMOTED_STRATEGOS_TO_KATEPANO
 		}
 	}
@@ -1225,13 +1221,13 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 				influence = 50
 			}
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 70
 			}
 		}
 	}
 	
-	option = { #Side with the [estate_strategoi,GetName]
+	option = { #Side with the [estate_generals,GetName]
 		name = strategoi_estate_events.13.a
 		ai_chance = {
 			factor = 50
@@ -1242,7 +1238,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 			loyalty = -10
 		}
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
@@ -1252,7 +1248,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 			duration = 3650
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_SIDED_WITH_THE_STRATEGOI
 			influence = 10
 			duration = 3650
@@ -1266,7 +1262,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 		add_estate_loyalty = {
@@ -1274,7 +1270,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_SIDED_WITH_THE_NOBLES
 			influence = -10
 			duration = 3650
@@ -1299,7 +1295,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		required_personality = charismatic_negotiator_personality
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -5
 		}
 	}
@@ -1336,7 +1332,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_SIDED_WITH_THE_STRATEGOI
 			influence = 10
 			duration = 3650
@@ -1352,21 +1348,20 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 	
 	
 	trigger = {
-		
-		has_estate = estate_strategoi
+		has_estate = estate_generals
 		has_estate = estate_burghers
 		any_owned_province = {
 			has_estate = estate_burghers
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_ALLOWED_INCLUSION_OF_BURGHERS_IN_ARMY
 			}
 		}
 		NOT = {
 			has_estate_influence_modifier = {
-				estate = estate_strategoi
+				estate = estate_generals
 				modifier = EST_VAL_DISALLOWED_INCLUSION_OF_BURGHERS_IN_ARMY
 			}
 		}
@@ -1379,7 +1374,7 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 		modifier = {
 			factor = 2
 			estate_influence = {
-				estate = estate_strategoi
+				estate = estate_generals
 				influence = 50
 			}
 		}
@@ -1393,7 +1388,7 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = 10
 		}
 		add_estate_loyalty = {
@@ -1401,7 +1396,7 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 			loyalty = -20
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_ALLOWED_INCLUSION_OF_BURGHERS_IN_ARMY
 			influence = 10
 			duration = 3650
@@ -1414,7 +1409,7 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 		}
 		
 		add_estate_loyalty = {
-			estate = estate_strategoi
+			estate = estate_generals
 			loyalty = -10
 		}
 		add_estate_loyalty = {
@@ -1422,7 +1417,7 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 			loyalty = 10
 		}
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_DISALLOWED_INCLUSION_OF_BURGHERS_IN_ARMY
 			influence = -10
 			duration = 3650
@@ -1430,7 +1425,7 @@ country_event = { #14 The inclusion of the [estate_burghers.GetName] in the Them
 	}
 }
 
-country_event = { #21 The Strategoi are rebelling against the [Root.Monarch.GetTitle]!
+country_event = { #21 The [Root.GetGeneralsName] are rebelling against the [Root.Monarch.GetTitle]!
 	id = strategoi_estate_events.21
 	title = strategoi_estate_events.21.t
 	desc = strategoi_estate_events.21.d
@@ -1439,14 +1434,13 @@ country_event = { #21 The Strategoi are rebelling against the [Root.Monarch.GetT
 	is_triggered_only = yes
 	
 	trigger = {
-		
 	}
 	
 	immediate = {
 		add_stability = -3
 		every_owned_province = {
 			limit = {
-				has_estate = estate_strategoi
+				has_estate = estate_generals
 			}
 			spawn_rebels = {
 				type = pretender_rebels
@@ -1469,7 +1463,7 @@ country_event = { #21 The Strategoi are rebelling against the [Root.Monarch.GetT
 	}
 }
 
-country_event = { #22 The Strategoi have been pacified
+country_event = { #22 The [Root.GetGeneralsName] have been pacified
 	id = strategoi_estate_events.22
 	title = strategoi_estate_events.22.t
 	desc = {
@@ -1493,7 +1487,7 @@ country_event = { #22 The Strategoi have been pacified
 		
 		add_stability = 3
 		add_estate_influence_modifier = {
-			estate = estate_strategoi
+			estate = estate_generals
 			desc = EST_VAL_REPLACED_STRATEGOI
 			influence = -20
 			duration = 7300
@@ -1508,19 +1502,13 @@ country_event = { #22 The Strategoi have been pacified
 		}
 		
 		add_stability = 3
-		if = {
-			limit = { has_dlc = "Dharma" }
-			remove_government_reform = theme_system_reform
-		}
-		else = {
-			remove_country_modifier = br_theme_system
-		}
-		every_owned_province = {
-			limit = {
-				has_estate = estate_strategoi
-			}
-			remove_estate = estate_strategoi
-		}
+		remove_government_reform = exarch_system_reform #Will remove the revoke thing as well.
+		# every_owned_province = {
+			# limit = {
+				# has_estate = estate_generals
+			# }
+			# remove_estate = estate_generals
+		# }
 		clr_country_flag = byz_current_ruler_is_not_deposed
 	}
 	
@@ -1533,15 +1521,135 @@ country_event = { #22 The Strategoi have been pacified
 	}
 }
 
-province_event = { #42 Mad strategoi, mon
-	id = strategoi_estate_events.42
-	title = strategoi_estate_events.42.t
-	desc = strategoi_estate_events.42.d
-	picture = NOBLE_ESTATE_DEMANDS_eventPicture
+country_event = { #31 The War is won!
+	id = strategoi_estate_events.31
+	title = strategoi_estate_events.31.t
+	desc = strategoi_estate_events.31.d
+	picture = BATTLE_eventPicture
 	
 	is_triggered_only = yes
 	
+	trigger = {
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+		has_country_flag = br_military_parades_mechanic_active
+		capital_scope = { #Every 5 years limit
+			NOT = { has_province_modifier = generals_parade_province_privilege_mod }
+		}
+	}
+	
 	option = {
-		name = strategoi_estate_events.42.a #Yes
+		name = strategoi_estate_events.31.a #Victory!
+		add_army_tradition = 5
+		capital_scope = {
+			add_province_modifier = {
+				name = "generals_parade_province_privilege_mod"
+				duration = 1825
+			}
+		}
+		
 	}
 }
+
+country_event = { #32 Fixing some estate-related modifiers.
+	id = strategoi_estate_events.32
+	title = strategoi_estate_events.32.t
+	desc = strategoi_estate_events.32.d
+	picture = BATTLE_eventPicture
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	trigger = {
+		OR = {
+			AND = { #Katepano privilege
+				has_estate_privilege = estate_generals_promote_to_katepano
+				any_owned_province = {
+					estate_generals_is_theme_capital_trigger = yes
+					NOT = {
+						has_province_flag = byz_no_katepano_rule
+						has_province_modifier = byz_katepano_rule
+					}
+				}
+			}
+			AND = { #Autonomous defences
+				has_estate_privilege = estate_generals_autonomous_defences
+				any_owned_province = {
+					estate_generals_is_theme_capital_trigger = yes
+					NOT = {
+						has_province_modifier = estate_generals_autonomous_defences_privilege_mod
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = strategoi_estate_events.32.a #Apply effects
+		if = { #Katepano privilege
+			limit = {
+				AND = { 
+					has_estate_privilege = estate_generals_promote_to_katepano
+					any_owned_province = {
+						estate_generals_is_theme_capital_trigger = yes
+						NOT = {
+							has_province_flag = byz_no_katepano_rule
+							has_province_modifier = byz_katepano_rule
+						}
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				random_list = {
+					20 = {
+						add_province_modifier = {
+							name = byz_katepano_rule
+							duration = -1
+						}
+					}
+					80 = { set_province_flag = byz_no_katepano_rule }
+				}
+			}
+		}
+		if = { #Autonomous defences
+			limit = {
+				has_estate_privilege = estate_generals_autonomous_defences
+				any_owned_province = {
+					estate_generals_is_theme_capital_trigger = yes
+					NOT = {
+						has_province_modifier = estate_generals_autonomous_defences_privilege_mod
+					}
+				}
+			}
+			every_owned_province = {
+				limit = {
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				add_province_modifier = {
+					name = estate_generals_autonomous_defences_privilege_mod
+					duration = -1
+				}
+			}
+		}
+		
+		
+	}
+}
+
+# province_event = { #42 Mad strategoi, mon
+	# id = strategoi_estate_events.42
+	# title = strategoi_estate_events.42.t
+	# desc = strategoi_estate_events.42.d
+	# picture = NOBLE_ESTATE_DEMANDS_eventPicture
+	
+	# is_triggered_only = yes
+	
+	# option = {
+		# name = strategoi_estate_events.42.a #Yes
+	# }
+# }

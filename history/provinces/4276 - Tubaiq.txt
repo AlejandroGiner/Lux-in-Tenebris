@@ -5,13 +5,19 @@ controller = ANZ
 capital = "Afif"
 culture = bedouin_arabic
 religion = sunni
-trade_goods = dates
 hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
+owner = UTA
+controller = UTA
+add_core = UTA
 is_city = yes
-add_core = ANZ
+trade_goods = livestock
+
+native_size = 10
+native_ferocity = 9
+native_hostileness = 5
 
 discovered_by = east_african
 discovered_by = muslim
@@ -27,8 +33,6 @@ discovered_by = nomad_group
 	owner = TUR
 	controller = TUR
 	add_core = TUR
-	is_city = yes
-	trade_goods = livestock
 } # Calling it under Ottoman hegemony
 
 1750.1.1 = {

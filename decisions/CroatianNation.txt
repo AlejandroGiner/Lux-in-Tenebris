@@ -7,19 +7,22 @@ country_decisions = {
 			NOT = { tag = CRO }
 			NOT = { tag = ILY }
 			NOT = { tag = YUG }
-			primary_culture = croatian
+			OR = {
+				primary_culture = croatian
+				primary_culture = dalmatian
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 131			# Zagreb
-				province_id = 136			# Zadar
+				province_id = 136			# Split
 				province_id = 137			# Ragusa
 				province_id = 152			# Varasd
 				province_id = 1767			# Slavonia
 				province_id = 1826			# Lika
 				province_id = 3190			# Pozega
-				province_id = 3191			# Rijeka
-				province_id = 3192			# Split
+				province_id = 4752			# Fiume
+				province_id = 4753			# Zadar
 				province_id = 3196			# Modrus
 			}
 			OR = {
@@ -38,14 +41,14 @@ country_decisions = {
 					is_core = ROOT
 					OR = {
 						province_id = 131			# Zagreb
-						province_id = 136			# Zadar
+						province_id = 136			# Split
 						province_id = 137			# Ragusa
 						province_id = 152			# Varasd
 						province_id = 1767			# Slavonia
 						province_id = 1826			# Lika
 						province_id = 3190			# Pozega
-						province_id = 3191			# Rijeka
-						province_id = 3192			# Split
+						province_id = 4752			# Fiume
+						province_id = 4753			# Zadar
 						province_id = 3196			# Modrus
 					}
 				}
@@ -56,10 +59,25 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CRO
+			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = croatian }
+					NOT = { accepted_culture = croatian }
+				}
+				add_accepted_culture = croatian
+			}
+			if = {
+				limit = {
+					NOT = { primary_culture = dalmatian }
+					NOT = { accepted_culture = dalmatian }
+				}
+				add_accepted_culture = dalmatian
 			}
 			every_province = {
 				limit = {
@@ -67,6 +85,8 @@ country_decisions = {
 					OR = {
 						area = croatia_area
 						area = east_adriatic_coast_area
+						area = ragusa_area
+						area = croatia_coast_area
 					}
 				}
 				add_permanent_claim = CRO
@@ -79,9 +99,7 @@ country_decisions = {
 			swap_ideas = yes
 			set_country_flag = formed_croatia_flag_btp
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 }

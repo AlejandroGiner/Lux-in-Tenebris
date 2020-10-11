@@ -11,7 +11,6 @@ estate_burghers =
 		NOT = { has_reform = veche_republic }
 		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
-        NOT = { has_reform = revolutionary_empire_reform }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
@@ -21,6 +20,7 @@ estate_burghers =
 		}
 		is_nomad = no
 		is_colonial_nation = no
+        NOT = { has_reform = revolutionary_empire_reform }
 	}
 
 	# These scale with loyalty & power
@@ -260,10 +260,11 @@ estate_burghers =
 		estate_burghers_monopoly_of_textiles
 		estate_burghers_monopoly_of_dyes
 		estate_burghers_monopoly_of_glass
-		estate_burghers_monopoly_of_paper
+		estate_burghers_monopoly_of_wool
 		estate_burghers_enforced_interfaith_dialogue
 		estate_burghers_prussian_confederation
 		estate_burghers_statutory_rights
+		estate_burghers_monopoly_of_whales
 	}
     
     agendas = {

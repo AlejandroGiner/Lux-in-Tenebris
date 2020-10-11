@@ -31,6 +31,13 @@ alliance = {
 }
 
 vassal = {
+    first = BOH
+    second = TSK
+    start_date = 1444.1.1
+    end_date = 1450.1.1
+}
+
+vassal = {
     first = GEO
     second = ABK
     start_date = 1444.1.1
@@ -129,18 +136,11 @@ guarantee = {
 	end_date = 1477.1.5
 }
 
-guarantee = {
-	first = FOI
-	second = A7D
+vassal = {
+	first = FRA
+	second = FOI
 	start_date = 1444.1.1
 	end_date = 1477.1.5
-}
-
-guarantee = {
-	first = FRA
-	second = T0A
-	start_date = 1444.1.1
-	end_date = 1513.1.1			#Occupied by English, who later restored it to direct French authority.
 }
 
 vassal = {
@@ -178,6 +178,13 @@ march = {
 	end_date = 1669.1.1 #Ottoman conquest
 }	#Candia
 
+march = {
+	first = VEN
+	second = CEP
+	start_date = 1444.1.1
+	end_date = 1669.1.1 #Ottoman conquest
+}	#Corfu
+
 royal_marriage = {
 	first = LIT
 	second = KIE
@@ -186,50 +193,8 @@ royal_marriage = {
 } #  Rurikovich princes from Kiev replaced by members of the Lithuanian Gediminid dynasty
 
 vassal = {
-	first = FRA
-	second = AUV
-	start_date = 1441.1.1
-	end_date = 1470.1.1
-}
-
-vassal = {
-	first = FRA
-	second = RHM
-	start_date = 1441.1.1
-	end_date = 1470.1.1
-}
-
-vassal = {
-	first = FRA
-	second = LGR
-	start_date = 1441.1.1
-	end_date = 1470.1.1
-}
-
-vassal = {
-	first = FRA
-	second = AMG
-	start_date = 1441.1.1
-	end_date = 1470.1.1
-}
-
-vassal = {
-	first = FRA
-	second = BOU
-	start_date = 1441.1.1
-	end_date = 1470.1.1
-}
-
-vassal = {
-	first = FRA
-	second = ORL
-	start_date = 1441.1.1
-	end_date = 1470.1.1
-}
-
-vassal = {
 	first = BOH
-	second = LUS
+	second = SOR
 	start_date = 1444.1.1
 	end_date = 1444.11.13
 }	#Lusatia bohemian fief
@@ -518,7 +483,7 @@ union = {
 
 union = {
 	first = KOL
-	second = PDB
+	second = PAD
 	start_date = 1415.1.1
 	end_date = 1463.2.14
 }
@@ -566,7 +531,7 @@ dependency = {
 dependency = {
 	subject_type = "papal_subject_bt"
 	first = PAP
-	second = PGI
+	second = PGA
 	start_date = 1414.8.6 
 	end_date = 1450.1.1
 }

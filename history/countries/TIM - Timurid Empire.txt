@@ -10,6 +10,15 @@ historical_rival = DLH
 historical_rival = MUL
 religious_school = hanafi_school
 
+change_estate_land_share = {
+	estate = estate_church
+	share = -12
+}
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 12
+}
+
 1370.1.1 = {
 	monarch = {
 		name = "Timur"
@@ -100,6 +109,10 @@ religious_school = hanafi_school
 	}
 }
 
+1444.10.1 = {
+	set_estate_privilege = estate_nobles_strong_duchies
+}
+
 1447.3.13 = { # Death of Shah Rukh. The Timurid Empire is broken apart.
 	set_global_flag = death_of_shah_rukh
 	monarch = {
@@ -169,7 +182,8 @@ religious_school = hanafi_school
 		mil = 6
 		leader = {	
 			name = "Abû Sa'id"
-			type = general
+			type = general
+
 			fire = 4
 			shock = 5
 			manuever = 3

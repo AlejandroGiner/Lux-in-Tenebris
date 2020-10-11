@@ -451,7 +451,9 @@ renaissance = {
 				OR = {
 					area = flanders_area
 					area = tuscany_area
+					area = south_tuscany_area
 					area = venetia_area
+					area = lunigiana_area
 				}
 			}
 			custom_trigger_tooltip = {
@@ -459,7 +461,9 @@ renaissance = {
 				OR = {
 					area = flanders_area
 					area = tuscany_area
+					area = south_tuscany_area
 					area = venetia_area
+					area = lunigiana_area
 				}
 			}
 		}
@@ -539,7 +543,7 @@ new_world_i = {
 
 	bonus = {
 		trade_steering = 0.1
-		global_colonial_growth = 10
+		global_colonial_growth = 15
 	}
 
 	trade_company_efficiency = 0.6
@@ -1468,7 +1472,7 @@ manufactories = {
 	penalty = 0.5
 
 	bonus = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.05
 		development_cost = -0.05
 	}
 

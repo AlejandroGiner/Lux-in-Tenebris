@@ -46,13 +46,19 @@ french	= {
 	}
 	picard = {
 		primary = PIC
-		}
+	}
 	poitevin = {
 		primary = POI
-		}
+	}
 	provencal = {
 		primary = PRO
-		}
+	}
+	lorrain = {
+		primary = LOR
+	}
+	wallonian = {
+		primary = HAI
+	}
 	#Beyond the Pale Culture
 	arpitan = {
 		primary = HPI
@@ -510,98 +516,11 @@ dutch_group = {
 			Wila Wendelmoet Wenna Willemine Yonefij Yvonne Zoete Margaretha Rosanne Tamara
 		}
 		dynasty_names = {
-			"van Groningen" Nassau "van Wassenberg" "van Henegouwen" "de Friesland"
-			"van Haspinga" "van Limburg" "van Lotharingen"  "von der Mark"
-			"van Leuven" "van Brabant" "van Egmont" "de Reginar" "van Jülich-Hengebach"
-			# CKII
-			"van Loon" "von Geldern" "van Sulzbach" "von Salm"
-			"van Bergh" "van Heinsberg" "van de Veluwe" "De Graeff"
-			"van Brederode" "van Breda" "van Heemskerk" "van Glymes" "van Grimberghe"
-			"van Renesse" "van Wassenaer" "van Bronckhorst"
-			"van Keppel" "Van Voorst tot Voorst" "van Wisch" "van Kamerijk" "Cirksena"
-			"van Diest" "van Montfoort"
-			# Frisian
-			"van Serooskerken"
-		}
-	}
-	lorrain = {
-		primary = LOR
-		dynasty_names = {
-			"de Valois" "de Bourbon" "de la Tour" "d'Anjou"
-			"de Lorraine" "de Foix" "de Montfort" "de Blois" "de Penthievre" "de Dreux"
-			"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" "de Bourgogne"
-			"de Castellane" "d'Auvergne" "de Montbéliard" "de Metz"
-			#CKII Frankish
-			"de Laval" "de la Tour du Pin" "de La Trémoille" "de Créquy" "de Broglie"
-			"de Montesquiou" "de Courtenay" "d'Harcourt" "de La Croix" "Le Tellier"
-			"de Rochechouart" "d'Aumont" "de Vergy" "de Saboulin" "de Gramont" "de Bissy"
-			"de Barrau" "de La Fayette" "d'Armagnac" "de Rougé" "du Quenoy" "de Ficquelmont"
-			"de Talleyrand" "de Saintignon" "von Luxemburg" "de Montmorency" "de Savoie"
-			"de Vaudemont" "de Nicolaÿ"
-		}
-		male_names = {
-			Édouard Érrard Étienne Adémar Adrien Aimery Alain
-			Aldebert Aldéric Alphonse Amaury Amédée Ancel André Antoine Archambaud Arnaud
-			Arnault Arnoul Aubry Aymar Barthélémi Baudouin Benoît Bérenger Bernard Bertrand Bohemond
-			Boson Bouchard Centule Charles Clotaire Ebbon Enguerrand Eudes Eustache Evrard Foulques François
-			Frédéric Gaucher Gaucelin Gauthier Geoffroi Géraud Gilbert Gilles Godefroi
-			Guichard Guiges Guilhem Guillaume Guy Hélie Hamelin Henri Herbert Hildebert Hugues Humbert Jacques
-			Jaufré Jaspert Jean Jourdain Julien Léon Léonard Lothaire Louis Loup Mathieu Maurice Nicolas Ogier Onfroi Orson Othon
-			Payen Philippe Pierre Raimbaut Raoul Raymond Raynaud Renaud Richard Robert Robin Roger Rorgues Roubaud Savary Sigismond Simon Thibault Thiébaut
-			Thierry Thomas Valeran Yves
-		}
-		female_names = {
-			Éléonore Élodie Étiennette Adèle Adalmode Adelaide Adelinde
-			Agnès Aléarde Alice Aliénor Agathe
-			Alix Almodis Amelie Anne Antoinette Arsinde Aude Aurengarde
-			Béatrice Béatrix Belleassez Benoîte Bérengère
-			Berthe Blanche Bonne Bourgogne Bourguigne Cécile Cathèrine
-			Charlotte Constance Denise Douce Echive Eglantine
-			Elisabeth Emma Ermengarde Ermessinde Esclarmonde
-			Euphrosine Eustachie Eve Gerberge Gisèle Guillaumette Héloise Helvis Hodierne Ide Ildégarde
-			Isabeau Isabelle Jeanne Judith Julienne Mafalda Mahaut Margot Marguerite Marie Marthe
-			Mascarose Mathilde Mélisande Mélisende Mélusine Péronelle Pernelle Perinne Pernette Plaisance
-			Raymonde Sarrazine Solène Sophie Stéphanie Sybille Tiburge Valence Yolande
-		}
-	}
-	wallonian = {
-		primary = HAI
-		dynasty_names = {
-			"de Valois" "de Bourbon" "de la Tour" "d'Anjou"
-			"de Lorraine" "de Foix" "de Montfort" "de Blois" "de Penthievre" "de Dreux"
-			"de Rohan" "de Bar" "d'Albert" "d'Escoubleau" "de Neufville" "de Bourgogne"
-			"de Castellane" "d'Auvergne" "de Montbéliard" "de Metz"
-			#CKII Frankish
-			"de Laval" "de la Tour du Pin" "de La Trémoille" "de Créquy" "de Broglie"
-			"de Montesquiou" "de Courtenay" "d'Harcourt" "de La Croix" "Le Tellier"
-			"de Rochechouart" "d'Aumont" "de Vergy" "de Saboulin" "de Gramont" "de Bissy"
-			"de Barrau" "de La Fayette" "d'Armagnac" "de Rougé" "du Quenoy" "de Ficquelmont"
-			"de Talleyrand" "de Saintignon" "von Luxemburg" "de Montmorency" "de Savoie"
-			"de Vaudemont" "de Nicolaÿ"
-		}
-		male_names = {
-			Édouard Érrard Étienne Adémar Adrien Aimery Alain
-			Aldebert Aldéric Alphonse Amaury Amédée Ancel André Antoine Archambaud Arnaud
-			Arnault Arnoul Aubry Aymar Barthélémi Baudouin Benoît Bérenger Bernard Bertrand Bohemond
-			Boson Bouchard Centule Charles Clotaire Ebbon Enguerrand Eudes Eustache Evrard Foulques François
-			Frédéric Gaucher Gaucelin Gauthier Geoffroi Géraud Gilbert Gilles Godefroi
-			Guichard Guiges Guilhem Guillaume Guy Hélie Hamelin Henri Herbert Hildebert Hugues Humbert Jacques
-			Jaufré Jaspert Jean Jourdain Julien Léon Léonard Lothaire Louis Loup Mathieu Maurice Nicolas Ogier Onfroi Orson Othon
-			Payen Philippe Pierre Raimbaut Raoul Raymond Raynaud Renaud Richard Robert Robin Roger Rorgues Roubaud Savary Sigismond Simon Thibault Thiébaut
-			Thierry Thomas Valeran Yves
-		}
-		female_names = {
-			Éléonore Élodie Étiennette Adèle Adalmode Adelaide Adelinde
-			Agnès Aléarde Alice Aliénor Agathe
-			Alix Almodis Amelie Anne Antoinette Arsinde Aude Aurengarde
-			Béatrice Béatrix Belleassez Benoîte Bérengère
-			Berthe Blanche Bonne Bourgogne Bourguigne Cécile Cathèrine
-			Charlotte Constance Denise Douce Echive Eglantine
-			Elisabeth Emma Ermengarde Ermessinde Esclarmonde
-			Euphrosine Eustachie Eve Gerberge Gisèle Guillaumette Héloise Helvis Hodierne Ide Ildégarde
-			Isabeau Isabelle Jeanne Judith Julienne Mafalda Mahaut Margot Marguerite Marie Marthe
-			Mascarose Mathilde Mélisande Mélisende Mélusine Péronelle Pernelle Perinne Pernette Plaisance
-			Raymonde Sarrazine Solène Sophie Stéphanie Sybille Tiburge Valence Yolande
+			Abdena Accama "fan Aldenboarch" Brandsma "fan Boalsert" "fan Blije" Beninga
+			Brongersma Binnerts Bonninga "tom Brok" Carree Douwama Durks Dirksen Donia
+			Edema Eisinga Emmius Eschels "fan Esens" Feddes Galama Hamkes Halbertsma Haringsma
+			Japiks "fan Jever" Jelckama Jelgersma Lenige Ripperda "fan Rossum" Steenbicker 
+			Sirksena Syrtsema "fan Thabor" Vitringa Walles Wiarda Zelle
 		}
 	}
 	#BtPLegacy Culture
@@ -672,6 +591,9 @@ latin = {
 	}
 	romagnan = {
 		primary = RMG
+		dynasty_names = {
+			Bevilacqua Boschetti Carandini Castelvetri Tassoni "Pico di Mirandola" Rangoni Monesi "da Fogliano" Bevilacqua "da Correggio" Platoni Biondelli Arrigoni Castiglione Cavriani d'Arco Ceresara Donesmondi
+		}
 	}
 	ligurian = {
 		primary = GEN
@@ -709,7 +631,46 @@ latin = {
 		primary = COR
 	}
 	dalmatian = {
-		primary = RAG
+		primary = DAL
+		male_names = {
+			Pongo
+			Alban Arber Ardian Aplis Apludus Aplus Aplius Aelius Andabio Armatus Apurus
+			Baezo Bardylis Baro Bepo Beusas Beuzas Batona Bassegli Bobali
+			Camdus Caboga Curbania Cursulavia
+			Daor Daes Dez Dalmat Dardan Delminium
+			Histro Heracles
+			Epulo Ghetaldi Giorgi Gondola Gozze Gradi
+			Iato Ivka Ibrica Ignacio
+			Lavincia Ledrus Liber
+			Messor Madecus
+			Naren
+			Paiio Panes Panias Panius Panentius Panthia Panes Panto Pinsus Pladomenus Platino
+			Samuntio Seiio Silvanus Statanius Staticus Stato Status Sestus Sextus Sexto
+			Taulant  Teuta Tito Thana Tizius Tritus Titus
+			Varro Vidasus Vidaza
+			Andre Andreas Bisti Blaxius Calenda Clime Comes
+			Domagna Gaucoli Gauzoli Gervasius Giuco Give
+			Jugno Juliano Junius Laurenzo Leonardus Loncho Lucarus
+			Mares Marco Maroe Marinus Matheus Michael Nale Nichiforus Nicola
+			Pascalis Pasqualis Petragna Petrus Piero Perue Rassinus Rusco
+			Stane Thoma Tuone Vallius Vita
+			Adam Aguastin Alecuandur Aliau Aliard Andre Antune Antuone Blasi Buartol Bunedec Bunin Caunstantin
+			Caurnel Clemiant Crastin Cuarl Dimitre Domienc Domienja Fabri Faguor Fiaurens Filip Frane
+			Giorgi Guaspar Jacop Jiolian Joan Jualb Liaun Marc Marjan Matei Mihial Mouro Muerten Nadual Nicaul
+			Paladen Piar Ponsio Puol Puoskal Raimaun Savjan Simaun Sismaun Stanislau Sthepan Taumas Taumasin
+			Teodor Timotei Vait Valdemaur Vidual Vittaur
+		}
+		female_names = {
+			Perdita
+			Ane Aneta Ante Anka Albina Augustina Amaica Amaura Alecuandra Amilja Andreja
+			Bepina Blanca Bruva Buni Catriana Cauleta Caunstantina Cvita Ibrica Ivka
+			Joana Lucia Krysto Matija Manda Nicauleta Pernica Piara Puola
+			Antolina Antonia Anussa Babalio Bodacia Catarena Caterina Clara Clara
+			Drase Dea Descia Deia Deussa Elena Eloija Fiaura Filippa Helene Giva
+			Jachussa Jacobica Jelussa Laurica Lene Helene
+			Magdalena Magdalena Margerita Margaret Maria Mauressa Micha Mira Nicoletta Nixa
+			Rade Rado Regina Regina Rossa Rosa Schimosa Thome Viola Vele Vittaurja
+		}
 	}
 	#BtPLegacy Culture
 	romanch_culture = {
@@ -755,7 +716,7 @@ latin = {
 		Rosso Ruggiero Salinguerra Salvatore Salvestro Sante Sancho Saverio Sciarra Sebastiano 
 		Secondotto Serafino Sergio Sesto Settimio Severino Severo
 		Silvano Silvestro Simone Simonetto Sinibaldo Sinucello Sozzo Spinetto Stefano
-		Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo
+		Taddeo Tedaldo Tedice Teodoro Tibaldo Tiziano Tommaso Lupo Vittorio Umberto
 	}
 	female_names = {
 		Abelina Adalberta Adalgisa Adelaida Adelasia Adelia Adela Adriana Agalina Agnese 
@@ -870,8 +831,19 @@ germanic = {
 			Raphaela Sabine Vera Betten Dagas Gelennis Gerkus Grasus Gulbis Mila Milyuns Weslikan Ziedas
 		}
 	}
-	hannoverian = {
+	lower_saxon = {
 		primary = HAN
+		male_names = {
+			Ernst Adolf Alfred August Christian Eduard Friedrich Georg Karl Philipp Maximilian Octavius Wilhelm 
+			Alexander Alois Anton Bruno Clemens Denis Gerfried Gottfried Günther Helmut Herbert Ignatz Isidor 
+			Konstantin Kuno Markus Martin Oskar Reinhard Silvester Stefan Waldemar Jakob
+		}
+		female_names = {
+			Amanda Beate Debora Sara Anne Saga Sibyl Joanna Joanne Adele Adelgunde Adelheid Adolfine Agatha Agnes Alexandra Alice Alina Aline Alma Alwina Alwine Amalia Amalie 
+		}
+	}
+	hannoverian = {
+		primary = WES
 		male_names = {
 			Ernst Adolf Alfred August Christian Eduard Friedrich Georg Karl Philipp Maximilian Octavius Wilhelm 
 			Alexander Alois Anton Bruno Clemens Denis Gerfried Gottfried Günther Helmut Herbert Ignatz Isidor 
@@ -940,10 +912,10 @@ germanic = {
 		}
 	}
 	franconian = {
-		primary = ANS
+		primary = FKN
 	}
 	swabian = {
-		primary = WUR
+		primary = SWA
 	}
 	swiss = {
 		primary = SWI
@@ -1308,8 +1280,11 @@ brythonic = {
 		graphical_culture = westerngfx
 		primary = CRN
 		dynasty_names = {
-			Kernew "of Cornwall" Penrose Trevelyan Bolitho Kernow Nance Nancarrow Chegwin Nancekivell Chenoweth
-			Menhenick Teague Trelawny Trewin Tremayne
+			Aberffraw Dinefwr Mathrafal Gwynedd Tudor Kernew "of Cornwall" Glyndwr "Ternyllwg" 
+			#CK2
+			"Morgannwg" "Caradoc" "Mostyn" "Gorfynydd" Denbigh "Gwynn" "Gwarthaf" "M?n" "Penfro"
+			"Aberteifi" "Gethin" "Gruffudd" "Carmarthen" "Mynyw" "Anwyl of Tywyn" "Fane"
+			"of Bristol" "Evans" "Owen" "Lloyd" 
 		}
 		male_names = {
 			Arthek Arthyen Austol Benesek Branok Brioc Cadan Cador Carantok Casek Casworon Clemo Clesek Corentyn
@@ -1318,11 +1293,13 @@ brythonic = {
 			Santo Treeve Treave
 		}
 		female_names = {
-			Beaten Bennath Berlewen Bersaba Beryan Bryluen Caja Chesten Conwenna Delen Demelza Derowen Derwa
-			Doryty Ebrel Elestren Elowen Emblyn Endelyn Eseld Ewella Glanna Gwennol Hedra Ia Jenifry Jenifer
-			Jowanet Kelynen Kensa Kerensa Keresen Kerezen Kerra Lamorna Lowdy Lowena Mabyn Melder Melwyn Melyonen
-			Melyonen Meliora Merouda Morwenna Nessa Pasca Peswera Rosen Rosenwyn Senara Sowenna Splanna Steren Talwyn
-			Tamsyn Tegen Tregereth Tressa Trueth Wenna Ysella
+			Cryda Creeda Endellion Endelienta Eia Keyne Keyna
+			Mabena Newlyn Newlyna Wenn Gwenn Gwenyth Beaten Bennath Berlewen Bersaba
+			Beryan Bryluen Caja Chesten Conwenna Delen Demelza Derowen Derwa Doryty Ebrel Elestren Elowen
+			Emblyn Endelyn Eseld Ewella Glanna Gwennol Hedra Ia Jenifry Jenifer Jowanet Kelynen Kensa Kerensa
+			Keresen Kerezen Kerra Lamorna Loveday Lowdy Lowena Lowenna Mabyn Melder Melwyn Melyonen Melyor Meliora
+			Meraud Merouda Merryn Metheven Morgelyn Morvoren Morwen Morwenna Nessa Pasca Pascatte Peswera Rosen 
+			Rosenwyn Senara Sowena Sowenna Splanna Steren Talwyn Tamsyn Tegen Tregereth Tressa Trueth Wenna Ysella
 		}
 	}
 }
@@ -2581,7 +2558,22 @@ west_slavic = {
 	#Beyond the Pale Culture
 	sorbian = {
 		graphical_culture = westerngfx
-		primary = LUS
+		primary = SOR
+		male_names = {
+			Awgust Alojs Abraham Albin Bogumil Bjedrich Bjarnat Cyril Derwan Fryco Frido Filip
+			Handrij Jan Jurij Jakub Jozef Joachim Korla Kito Kristalub Krescan Michal Mikolaj Mato Mercin
+			Matej Marko Miliduch Miklaws Nathanael Petr Pawol Pomgajbog Stanislaw Salomon
+			Wjaclaw Wylem
+		}
+		female_names = {
+			Bogna Benedikta Hanka Inga Irmgard Jewa Lubina Ludmila Marja Marta Marjana Pawlina R?za Sofija
+		}
+		dynasty_names = {
+			Brosk "z Barenstamma" Buk Bronisz Czornak Cyzh Dejka "z Friedenfelsa"
+			Glowan Jakobica Klosopolski Kucank Leska Langa Mosak Muslik Mercink Miczka
+			Parczewski Prätorius Pjekar Rhenisz Rizo Rychtar Swora Stempel Smoler
+			Woski Wirt Zejler
+		}
 	}
 	kashubian_culture = {
 		graphical_culture = westerngfx
@@ -2947,7 +2939,7 @@ south_slavic = {
 			Vedrana Visnja Vjekoslava Zlata Zvonimira Valerija Katalin
 		}
 		dynasty_names = {
-			"Kulinic" "Trpimirovic" "Mihaljevic" "Subic" "Hrvatinic" 
+			"Trpimirovic" "Mihaljevic" "Subic" "Hrvatinic" 
 			"Kosaca" "Vukcic" "Vukasin" "Dukasin" "Babonic" "Frankopan" "Kacic" "Draskovic" 
 			"Bebek" "Svetoslavic" "Krešimirovic" "Domagojevic" "Feštetic" "Gorjanski"
 			"Svacic" "Kobilic" "Lackovic" "Šubic"
@@ -3013,31 +3005,20 @@ south_slavic = {
 	bosnian = {
 		primary = BOS
 		male_names = {
-			Stefan Lazar Djuradj Milosh Djordje Alexa Grgur Petrija Todor Aleksandar Mihailo Milan 
-			Bratislav Darko Dragan Dubravko Dusan Filip Goran Ivan Josif Konstantin Luka Marko Mateja Miroslav 
-			Nebojsa Nemanja Nenad Nikola Pedrag Stanko Toma Vinko Vjekoslav Zdravko Zvonimir
-			Aldimir Asen Berbat Blaz Blaise Boleslav Borna Branimir Budimir Kosmin Danilo Daniel 
-			George Dmitar Dobroslav Dragija Dragos Dragutin Gavrilo Gabriel Godimir Goran
-			Grgur Ilija Ivan John Josif Joseph Josip Joseph Jovan John Kasjan Konstantin Constantine 
-			Lazar Ljudevit Luka Marko Marcus Martin Martin Matija Matthew Mihailo Mihovil Milorad 
-			Mircea Miroslav Miroslav Mislav Nenad Nikodim Nicodemus Nikola Nicholas
-			Ninoslav Petar Peter Porin Prvoslav Radoslav Rastko Ratomir Roman Serapion Simeon 
-			Sinisa Slavko Slobodan Stefan Stephen Teodosije Trajan Uros Visarion Vladimir Vladimir 
-			Vladislav Vladislav Vlastimir Milutin Krsto Djordje Bogdan Branko 
-			Vuk Lupo Vukan Vukasin Vukoman Zoran Zvonimir Simon Mladen
+			Andrija Aljen Boric Bogisa Bogut Batalo Brailo Brajko Batic Beljak Budelja Celk Dabisa
+			Dragonja Danis Dragisa Drazen Franjo Grgur Hran Hrvoje Hval Ivanis Juraj Kulin Krsmir
+			Matej Mladen Miroslav Milovan Milten Mihailo Ninoslav Nikola Nikifor Odola Ostoja Prijezda
+			Pavao Petar Priboje Poznan Radivoj Radogost Radic Sibislav Stjepan Sanko Sibislav Sandalj 
+			Sancin Tvrtko Tomas Tisemir Vuk Vlatko Vladislav Vukmir Vukasin Vojislav Vukac
 		}
 		female_names = {
-			Agata Agatha Barbara Branimira Desislava Dubravka Elena Helen Hicela Jelena Karolina 
-			Lovorka Marija Maria Milka Neda Radica Zdenka Andjela Antonija
-			Bastina Biljana Bistrina Bojana Casna Chasna Dejana Dragana Dragoslava Duga Dusica Gordana 
-			Grana Grubana Jagoda Jovana Jovanka Karika
-			Ljubica Luka Majka Malina Medeni Meki Milinka Miljana Miriti Mirjana Mudary Mudra Nada 
-			Namena Nadanje Keratza Branka Mirna
+			Adrijana Doroteja Dragana Elizabeta Gruba Gojslava Ivana Jelena Katarina Kujava Milisa
+			Marija Mara Mateja Miroslava Margarete Nikolena Nika Petra Pavica Resa Radislava Stana 
+			Teodora Vladava Vitaca Vojaca Vojislava
 		}
 		dynasty_names = {
-			"Nemanjic" "Vlastimirovic" "Obrenovic" "Obilic" "Karadjordjevic" "Kovacevic" "Petrovic" 
-			"Dragutinovic" "Vojislavljevic" "Sokolovic" "Ilic" "Vukanovic" "Mrnjavcevic" "Lazarevic" 
-			"Brakovic" "Balsic" "Vukovic" "Branovic"
+			Boricevic Bogopenec Berislavic Hranusic Kotromanic Kulinic Kristic Kurjakovic Nikolic
+			Nelipcic Purcic Radivojevic Sankovic Vojsalic Vlatkovic Visevic Zlatonosovic
 		}
 	}
 	#Beyond the Pale Culture
@@ -3385,7 +3366,7 @@ maghrebi = {
 		}
 	}
 	shilha = {
-		primary = REG
+		primary = RGR
 		dynasty_names = {
 			"al-Ilighi" "al-Tadsi" "Zayyanid" Maatka Wattasid Atfayyish "Beni Isguen" "al-Afdali" "Mzabi"
 			Tabghurin "al-Malshuti"
@@ -5683,7 +5664,7 @@ alanic = { # Only survivors of this ancient group are the Ossetians and the Jasz
 	graphical_culture = easterngfx
 	
 	alan = { # Ossetians
-		primary = ALA
+		primary = ALN
 		male_names = {
 			Ælbeg Æmbalan Aghsartan Alatey Akhsar Anbal Anbazuk Aravat Arsen Askhkadar Ashot Aslan Aspar Athom Balambar Balsag Barlah Bæqætar Basil Bazuk Beler Ber Biræg Boz-Uruz Buürgur Buriberdi
 			Burikhan Candak Chelakhsartag Davit Djadaron Durgulel Dzæræs Gætæg Georgy Girgon Gokhar Gubaz Guram Hasqar Huddan Istor Itaz Iveri Kandak Kandz Kavtia Kaur
@@ -5953,7 +5934,7 @@ evenks = {
 	manchu = {
 		country = { has_banners = 1}
 		province = { local_has_banners = 1}
-		primary = MCH
+		primary = MJZ
 		dynasty_names = {
 			"Aisin Gioro" Wanyan "Yehe Nara" "Ula Nara" "Magiya Hala" Niohuru
 			Heseri Guwalgiya Tunggiya Hata Hoifa Yeren Udige
@@ -5980,30 +5961,33 @@ korean_g = {
 	
 	korean = {
 		primary = KRE
-		dynasty_names = { 
-			Yi Wang Kim Pak Shin Song Chae Gang Jeong Jang Yun Han Hong Yu Ki Choi Ga Gye Go Na Noh Woo Do Du Ban Ma Min Mun
-			Seo Son Sim An Yang O Jeon Cho Jin Ha Hong Heo Kwak Lim Won Kwon Hwang Bae Seok Bang Dae Gyeong Nam Sung Baek
-		}
-		male_names = {
-			Hongwi Yu Gwang Hyeol Yung Yeok Ho Hwan Yeon Hon Jong Sun Yun Geum San Gong Byeon Myeongbok Ha-eung Un Gu Seon Hyeon
-			Cho Yeong Bu Haeng Hwon Kang Ji Rip Jae-u Seong-ryong Yakyong Jongmu Se-young Hong-rip Deokgi Munsu Hee-woon Busik
-			Jiwon Gwangjo Sukju Hongdo Yong-bok Jong-un Chung-hee Yeong-sil Yun-ui Myung-shin Chae-ho Chwa-jin Honghi Byong-hi
-			Hwang Jae-sang Yu-sin Wonjong Jong-seo Jangchun Museon Sung-gyeom Seungman Sun-sin Chang-ho Dae-seung Jae-suk
-			Dae-yong Eok-gi Si-min Gam-chan Chung-heon U Tong-jeon In-seon Gwanghyeon Gyun Yul Wi Im Geon Jun Mok Il Tak
+	}
+	jeju = {
+		primary = TAM
+	}
+	dynasty_names = { 
+		Yi Wang Kim Pak Shin Song Chae Gang Jeong Jang Yun Han Hong Yu Ki Choi Ga Gye Go Na Noh Woo Do Du Ban Ma Min Mun
+		Seo Son Sim An Yang O Jeon Cho Jin Ha Hong Heo Kwak Lim Won Kwon Hwang Bae Seok Bang Dae Gyeong Nam Sung Baek
+	}
+	male_names = {
+		Hongwi Yu Gwang Hyeol Yung Yeok Ho Hwan Yeon Hon Jong Sun Yun Geum San Gong Byeon Myeongbok Ha-eung Un Gu Seon Hyeon
+		Cho Yeong Bu Haeng Hwon Kang Ji Rip Jae-u Seong-ryong Yakyong Jongmu Se-young Hong-rip Deokgi Munsu Hee-woon Busik
+		Jiwon Gwangjo Sukju Hongdo Yong-bok Jong-un Chung-hee Yeong-sil Yun-ui Myung-shin Chae-ho Chwa-jin Honghi Byong-hi
+		Hwang Jae-sang Yu-sin Wonjong Jong-seo Jangchun Museon Sung-gyeom Seungman Sun-sin Chang-ho Dae-seung Jae-suk
+		Dae-yong Eok-gi Si-min Gam-chan Chung-heon U Tong-jeon In-seon Gwanghyeon Gyun Yul Wi Im Geon Jun Mok Il Tak
  		}
-		female_names = {
-			Ae-jung Areum Bit-na Bo-young Bora Chae-won Chae-young Cho-hee Chun-hwa Chun-ja Da-hee Da-hyun Do-hee Eun-ah 
-			Eun-bi Eun-byul Eun-chae Eun-ha Eun-hee Eun-hye Eun-ji Eun-jin Eun-ju Eun-jung Eun-kyung Eun-mi Eun-sook Eun-suh 
-			Eun-young Ga-in Ga-young Gyuri Ha-eun Hana Hye-bin Hye-in Hye-ja Hye-jin Hye-jung Hye-kyung Hye-mi Hye-rim 
-			Hye-su Hye-won Hyo-joo Hyo-rin Hyun-a Hyun-kyung Hyun-mi Hyun-sook In-hye In-sook In-sun Ja-kyung Jae-eun 
-			Jang-geum Jang-mi Jeong-ja Ji-ae Ji-eun Ji-hye Ji-yeon Ji-young Jina Jin-yi Jung-ah Jung-sook Jung-soon Kyung-ah Kyung-hee 
-			Kyung-hwa Kyung-ja Kyung-ok Kyung-sook Mi-hee Mi-ja Mi-jung Mi-kyung Mi-ran Mi-sook Mi-yeon Mi-young Min-hee 
-			Min-ji Min-jung Min-seo Mina Myung-hwa Myung-ok Myung-sook Myung-soon Na-young Nana Nari Noo-ri Sang-mi  
-			Se-bin Seo-hyeon Seo-yeon Seo-yun Seol-hee Seon-ok Seong-ja Seung-ah Shin-hye Si-yeon So-hee So-hyun So-won So-yi 
-			So-young Soo-ah Soo-hee Sook-ja Soon-hee Soon-ja Sora Su-mi Sun-hee Sun-hwa Sun-mi Sun-ok Sung-mi Sung-sook 
-			Ye-eun Ye-ji Ye-jin Ye-rin Ye-seo Ye-won Yeo-jin Yeon-hee Yi-kyung Yoo-kyung Yoo-na Yoon-hee Yoon-sook Young-ae 
-			Young-hee Young-ja Young-mi Young-sook Yu-ri Yumi
-		}
+	female_names = {
+		Ae-jung Areum Bit-na Bo-young Bora Chae-won Chae-young Cho-hee Chun-hwa Chun-ja Da-hee Da-hyun Do-hee Eun-ah 
+		Eun-bi Eun-byul Eun-chae Eun-ha Eun-hee Eun-hye Eun-ji Eun-jin Eun-ju Eun-jung Eun-kyung Eun-mi Eun-sook Eun-suh 
+		Eun-young Ga-in Ga-young Gyuri Ha-eun Hana Hye-bin Hye-in Hye-ja Hye-jin Hye-jung Hye-kyung Hye-mi Hye-rim 
+		Hye-su Hye-won Hyo-joo Hyo-rin Hyun-a Hyun-kyung Hyun-mi Hyun-sook In-hye In-sook In-sun Ja-kyung Jae-eun 
+		Jang-geum Jang-mi Jeong-ja Ji-ae Ji-eun Ji-hye Ji-yeon Ji-young Jina Jin-yi Jung-ah Jung-sook Jung-soon Kyung-ah Kyung-hee 
+		Kyung-hwa Kyung-ja Kyung-ok Kyung-sook Mi-hee Mi-ja Mi-jung Mi-kyung Mi-ran Mi-sook Mi-yeon Mi-young Min-hee 
+		Min-ji Min-jung Min-seo Mina Myung-hwa Myung-ok Myung-sook Myung-soon Na-young Nana Nari Noo-ri Sang-mi  
+		Se-bin Seo-hyeon Seo-yeon Seo-yun Seol-hee Seon-ok Seong-ja Seung-ah Shin-hye Si-yeon So-hee So-hyun So-won So-yi 
+		So-young Soo-ah Soo-hee Sook-ja Soon-hee Soon-ja Sora Su-mi Sun-hee Sun-hwa Sun-mi Sun-ok Sung-mi Sung-sook 
+		Ye-eun Ye-ji Ye-jin Ye-rin Ye-seo Ye-won Yeo-jin Yeon-hee Yi-kyung Yoo-kyung Yoo-na Yoon-hee Yoon-sook Young-ae 
+		Young-hee Young-ja Young-mi Young-sook Yu-ri Yumi
 	}
 }
 
@@ -9780,6 +9764,7 @@ eastern_algonquian = {
 		}
 	}
 	mahican = {
+		primary = MAH
 		dynasty_names = {
 			Muhhcanneuw Mehckentowoon Wawyachtonoc Westenhuck Wiekagjoc Shecomeco Wechquadnach Pamperaug Bantam Weataug
 			Scaticook Mahaiwe Wikwajek Chaghnet Horikan Kaunaumeek Kenuckpacook Maringoman Monemius Nepaug Paanpaack Peantam
@@ -10586,7 +10571,7 @@ penutian = {
 		}
 	}
 	yokuts = {
-		primary = YKT
+		primary = YKU
 		dynasty_names = {
 			Wishram Wasco Atfalati Yamel Lakmiut Chepenafa Santiam Chelamela Calapooya Yoncalla
 		}
@@ -11020,6 +11005,7 @@ eskaleut = {
 aridoamerican = {			#New group added in 1.28... I'm.... not really a huge fan, but I'll leave it until I can handle it myself.
 	graphical_culture = southamericagfx
 	tecos = {
+		primary = CLM
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin 
 			Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli 
@@ -11052,6 +11038,7 @@ aridoamerican = {			#New group added in 1.28... I'm.... not really a huge fan, b
 		}
 	}
 	tepic = {
+		primary = XAL
 		male_names = {
 			Acalan Acacitli Acamapichtli Acolmiztli Aculnahuacatl Ahuiliztli Ahuitzotl Atl Axayacatl Cacamatzin 
 			Chimalli Chimalpilli Chimalpopoca Cipac Coanacoch Coatl Cozahtli Cuauhtemoc Cuauhtl Cuetlachtli 
@@ -12633,6 +12620,7 @@ african = {	#Eastern Bantu Groups
 	graphical_culture = africangfx
 	
 	madagasque = {
+		primary = SKA
 		dynasty_names = {
 			Mwenemutapa Rozwi Mutopa Lukeni Loanga
 		}
@@ -13022,12 +13010,12 @@ lost_cultures_group = {
 	hebrew = { #EU Rome
 		dynasty_names = {
 			Abiatarid Akabonid Amitid Amramid Boazid Dorid Dovid Eiranid Eleazid Heroid Honioid Hillelid Joazid Kahanid Nahumid Nirid Nogahid 
-			Oferid Omrid Pinchasid Raananid Shemidid Shemidid Yairid
+			Oferid Omrid Pinchasid Raananid Shemidid Yairid
 		}
 		male_names = {
 			Abiatar Ahijah Akabon Alon Amit Amram Ananelus Ananias Aretas Aristobulus Azrikam Barak Baruch Belshazar Costobarus Deror Dori 
-			Eiran Eleazar Erotimus Ezra Hadasa Herod Hillel Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hillel Hodaviah Honio Meir Nahum 
-			Nathan Nehemiah Nikanor Nir Obadiah  Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nahum Nogah Shamgar Shammai 
+			Eiran Eleazar Erotimus Ezra Hadasa Herod Hillel Hyrkanus Jannaeus Joazar Yosef Josiada Kahana Hodaviah Honio Meir Nahum 
+			Nathan Nehemiah Nikanor Nir Obadiah  Ofer Omri Pinchas Phannias Phasael Raanan Malichus Manasseh Nogah Shamgar Shammai 
 			Shaul Shemaiah Shemida Silas Simeon Sosa Talmon Tarfon Tovia Yair Yochanan Zadok
 		}
 		female_names = {

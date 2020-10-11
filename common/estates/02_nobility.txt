@@ -37,6 +37,8 @@ estate_nobles =
 			NOT = { has_dlc = "Common Sense" }
 			AND = {
 				NOT = { has_reform = english_monarchy }
+				NOT = { has_reform = transitional_government_reform }
+				NOT = { has_reform = puppet_kingdom_reform }
                 NOT = { has_reform = parliamentary_reform }
 				NOT = { has_reform = theocratic_democracy_reform }
 				NOT = { has_reform = regionally_elected_commanders }
@@ -49,6 +51,7 @@ estate_nobles =
 			}
 			has_parliament = no
 		}
+        NOT = { has_reform = revolutionary_empire_reform }
 	}
 
 	country_modifier_happy = {
@@ -64,7 +67,6 @@ estate_nobles =
 		land_maintenance_modifier = 0.1
         global_unrest = 2
 	}
-	
     land_ownership_modifier = {
 		nobles_loyalty_modifier = 0.2
 	}
@@ -98,35 +100,6 @@ estate_nobles =
 			technology_group = eastern
 		}	
 		influence = 5
-	}
-	influence_modifier = {
-		desc = EST_VAL_IBERIAN_CORTES
-		trigger = {
-			has_reform = iberian_cortes
-		}
-		influence = 10
-	}
-	#Byz Resurgence added: Establishing the Theme System should remove some influence of the Dynatoi, as they only really became influentual in the Empire post-themes.
-	influence_modifier = {
-		desc = EST_VAL_ESTABLISHED_THEME_SYSTEM
-		trigger = {
-			has_reform = theme_system_reform
-		}
-		influence = -10
-	}
-	influence_modifier = { #Non-dharma version. Split up simply because it would not show up in the reform tooltip otherwise.
-		desc = EST_VAL_ESTABLISHED_THEME_SYSTEM
-		trigger = {
-			has_country_modifier = br_theme_system
-		}
-		influence = -10
-	}		
-	influence_modifier = {
-		desc = EST_VAL_ESTABLISHED_PRONOIAR
-		trigger = {
-			has_reform = pronoiar_reform
-		}
-		influence = -10
 	}
 	
 	# Influence modifiers from Events:
@@ -164,14 +137,15 @@ estate_nobles =
 		}
 		loyalty = -20
 	}
-    
 	loyalty_modifier = {
-		desc = EST_VAL_NOBLES_OF_THE_ROBE_LOY   #might not work
+		desc = EST_VAL_NOBLE_CONSORT
 		trigger = {
-			has_idea = kutnohorian_deal
+			has_dlc = "Rights of Man"
+			has_consort = yes
+			is_origin_of_consort = ROOT
 		}
 		loyalty = 5
-	}
+    }
     
     # Great Peasants' War Modifiers
 	
@@ -237,7 +211,7 @@ estate_nobles =
 		}
 		influence = -10
 	}
-	
+    
 	loyalty_modifier = {
 		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_LOSE_MAJOR_LOYALTY
 		trigger = {
@@ -247,15 +221,6 @@ estate_nobles =
 		loyalty = -10
 	}
     
-	#BR added loyalty modifiers from reforms
-	loyalty_modifier = {
-		desc = EST_VAL_PRONOIAR
-		trigger = {
-			has_reform = pronoiar_reform
-		}
-		loyalty = -20
-	}
-	
 	#Alternative naming of estates
 	custom_name = {
 		desc = estate_beys

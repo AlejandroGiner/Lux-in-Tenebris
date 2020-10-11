@@ -5,13 +5,19 @@ controller = MRU
 capital = "Yabrin"
 culture = bedouin_arabic
 religion = sunni
-trade_goods = livestock
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+owner = DAW
+controller = DAW
+add_core = DAW
 is_city = yes
-add_core = MRU
+trade_goods = livestock
+
+native_size = 10
+native_ferocity = 9
+native_hostileness = 5
 
 discovered_by = muslim
 discovered_by = persian_btc
@@ -24,8 +30,6 @@ discovered_by = east_african
 1515.1.1 = { discovered_by = POR }
 
 1750.1.1 = {
-	is_city = yes
-	trade_goods = livestock
 	owner = NAJ
 	controller = NAJ
 	add_core = NAJ

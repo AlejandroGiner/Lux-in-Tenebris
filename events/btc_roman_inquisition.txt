@@ -35,17 +35,20 @@ country_event = {
   option = {
     name = btc_roman_inquisition.1.a
     custom_tooltip = btc_roman_inquisition_start_tooltip
-    capital_scope = {
-        area = {
-            limit = { owned_by = ROOT religion = catholic }
-            add_province_modifier = {
-                name = btc_roman_inquisition_modifier
-                duration = -1
-            }
-        }
-    }
+	custom_tooltip = btc_roman_inquisition_provinces_tooltip
+	hidden_effect = {
+		every_owned_province = {
+			limit = {
+				region = italy_region
+				religion = catholic
+			}
+			add_province_modifier = {
+				name = btc_roman_inquisition_modifier
+				duration = -1
+			}
+		}
+	}
   }
-  
 }
 
 #Ask pope for help with heretics
@@ -55,70 +58,79 @@ country_event = {
   desc = btc_roman_inquisition.2.d
   picture = COPTIC_MONASTERY_eventPicture
   
-  trigger = {
-    exists = PAP
-    NOT = { tag = PAP }
-    PAP = { has_country_flag = btc_roman_inquisition_flag }
-    capital_scope = { region = italy_region }
-    reverse_has_opinion = {
-      who = PAP
-      value = 25
-    }
-    religion = catholic
-    any_owned_province = {
-      region = italy_region
-      OR = {
-        religion = protestant
-        religion = reformed
-      }
-      OR = {
-            had_province_flag = {
-                flag = received_inquisition_help_flag
-                days = 9125
-            }
-            NOT = { has_province_flag = received_inquisition_help_flag }
-        }
-    }
-  }
+  goto = province_asking_for_inquisition_help
   
-  mean_time_to_happen = {
-    years = 1
-  }
+	trigger = {
+		exists = PAP
+		NOT = { tag = PAP }
+		PAP = { has_country_flag = btc_roman_inquisition_flag }
+		has_country_flag = btc_roman_inquisition_flag
+		capital_scope = { region = italy_region }
+		reverse_has_opinion = {
+			who = PAP
+			value = 0
+		}
+		religion = catholic
+		any_owned_province = {
+			region = italy_region
+			OR = {
+				religion = protestant
+				religion = reformed
+			}
+			OR = {
+				had_province_flag = {
+					flag = received_inquisition_help_flag@ROOT
+					days = 9125
+				}
+				NOT = { has_province_flag = received_inquisition_help_flag@ROOT }
+			}
+		}
+	}
   
-  option = {  #Ask for help
-    name = btc_roman_inquisition.2.a
-    add_adm_power = -50
-    add_years_of_income = -0.1
-    random_owned_province = {
-      limit = {
-        OR = {
-          religion = protestant
-          religion = reformed
-        }
-        OR = {
-            had_province_flag = {
-                flag = received_inquisition_help_flag
-                days = 9125
-            }
-            NOT = { has_province_flag = received_inquisition_help_flag }
-        }
-        
-      }
-      remove_province_modifier = religious_zeal_at_conv
-      add_province_modifier = {
-        name = btc_roman_inquisition_help
-        duration = 1825
-      }
-      hidden_effect = {
-        set_province_flag = received_inquisition_help_flag
-      }
-    }
-  }
+	mean_time_to_happen = {
+		years = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						religion = protestant
+						religion = reformed
+					}
+					OR = {
+						had_province_flag = {
+							flag = received_inquisition_help_flag@ROOT
+							days = 9125
+						}
+						NOT = { has_province_flag = received_inquisition_help_flag@ROOT }
+					}
+				}
+				save_event_target_as = province_asking_for_inquisition_help
+				hidden_effect = {
+					set_province_flag = received_inquisition_help_flag@ROOT
+				}
+			}
+		}
+	}
+  
+	option = {  #Ask for help
+		name = btc_roman_inquisition.2.a
+		add_adm_power = -50
+		add_years_of_income = -0.1
+		event_target:province_asking_for_inquisition_help = {
+			remove_province_modifier = religious_zeal_at_conv
+			add_province_modifier = {
+				name = btc_roman_inquisition_help
+				duration = 1825
+			}
+		}
+	}
   
   option = { #Dont
     name = btc_roman_inquisition.2.b
   }
-  
 }
 
 #Pope gets reward for helping
@@ -143,9 +155,10 @@ country_event = {
     title = btc_roman_inquisition.4.t
     desc = btc_roman_inquisition.4.d
     picture = COPTIC_MONASTERY_eventPicture
+	
+	goto = inquisition_province
     
     trigger = {
-      tag = PAP
       has_country_flag = btc_roman_inquisition_flag
       any_owned_province = {
         NOT = { has_province_modifier = btc_roman_inquisition_modifier }
@@ -196,6 +209,8 @@ country_event = {
   desc = btc_roman_inquisition.5.d
   picture = COPTIC_MONASTERY_eventPicture
   
+  goto = inquisition_province
+  
   trigger = {
     tag = PAP
     has_country_flag = btc_roman_inquisition_flag
@@ -206,7 +221,10 @@ country_event = {
         religion = waldensian
         religion = anglican
       }
-      region = italy_region
+	  OR = {
+	  	region = italy_region
+		area = savoy_dauphine_area
+	  }
       NOT = { has_province_modifier = btc_roman_inquisition_help }
     }
   }
@@ -225,7 +243,10 @@ country_event = {
             religion = waldensian
             religion = anglican
           }
-          region = italy_region
+		  OR = {
+		  	region = italy_region
+			area = savoy_dauphine_area
+		  }
           NOT = { has_province_modifier = btc_roman_inquisition_help }
         }
         save_event_target_as = inquisition_province
@@ -244,4 +265,101 @@ country_event = {
     }
   }
     
+}
+
+#Establish inquisition in italian country
+country_event = {
+  id = btc_roman_inquisition.6
+  title = btc_roman_inquisition.6.t
+  desc = btc_roman_inquisition.6.d
+  picture = POPE_PREACHING_eventPicture
+  
+	trigger = {
+		exists = PAP
+		NOT = { tag = PAP }
+		PAP = { has_country_flag = btc_roman_inquisition_flag }
+		capital_scope = {
+			OR = {
+				region = italy_region
+				area = savoy_dauphine_area
+			}
+		}
+		culture_group = latin
+		reverse_has_opinion = {
+			who = PAP
+			value = 0
+		}
+		religion = catholic
+		NOT = { has_idea_group = humanist_ideas }
+		NOT = { has_country_flag = btc_roman_inquisition_flag }
+		religious_unity = 0.75
+	}
+  
+	mean_time_to_happen = {
+		years = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = btc_roman_inquisition_flag
+		}
+	}
+  
+	option = {  #We must do what we must do.
+		name = btc_roman_inquisition.6.a
+		ai_chance = {
+			factor = 75
+		}
+		add_years_of_income = -0.5
+		reverse_add_opinion = {
+			who = PAP
+			modifier = btc_allowed_roman_inquisition
+		}
+		add_prestige = -10
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+		custom_tooltip = btc_roman_inquisition_provinces_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						area = savoy_dauphine_area
+						region = italy_region
+					}
+					religion = catholic
+					NOT = { has_province_modifier = btc_roman_inquisition_modifier }
+				}
+				add_province_modifier = {
+					name = btc_roman_inquisition_modifier
+					duration = -1
+				}
+			}
+		}
+		add_country_modifier = {
+			name = btc_roman_inquisition_country_modifier
+			duration = 10950	#30 years
+		}
+	}
+  
+  option = { #We don't need anyone's help!
+    name = btc_roman_inquisition.6.b
+	ai_chance = {
+		factor = 25
+		modifier = {
+			factor = 0
+			alliance_with = PAP
+		}
+	}
+	add_prestige = 5
+	add_estate_loyalty = {
+		estate = estate_church
+		loyalty = -10
+	}
+	reverse_add_opinion = {
+		who = PAP
+		modifier = btc_turned_down_inquisition
+	}
+  }
 }

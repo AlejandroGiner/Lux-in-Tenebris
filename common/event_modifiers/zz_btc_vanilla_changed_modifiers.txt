@@ -6,13 +6,16 @@ the_provincial_system = {
 	global_tax_modifier = 0.1
 	yearly_corruption = 0.05
 }
+grain_bonus_prod = {
+	local_production_efficiency = 0.5
+}
 the_state_is_me = {
 	prestige = 0.5
 	yearly_absolutism = 0.8
 }
 russian_absolutism = {
 	legitimacy = 1
-	global_autonomy = -0.04
+	global_autonomy = -0.05
 	yearly_absolutism = 1.5
 }
 casa_de_contratacion = {
@@ -30,49 +33,18 @@ harmonized_vajrayana = {
 	religion = yes
 }
 
-harmonized_buddhism = { #Theravada
-	advisor_cost = -0.10
-	religion = yes
-}
-
-harmonized_mahayana = {
-	idea_cost = -0.15
-	religion = yes
-}
-harmonized_jewish_group = {
-	global_institution_spread = 0.25
-	religion = yes
-}
-
-harmonized_zoroastrian_group = {
-	trade_efficiency = 0.2
-	religion = yes
-}
-
-harmonized_dharmic = {
-
-	prestige = 1
-	religion = yes
-}
-
-harmonized_muslim = {
-
-	province_warscore_cost = -0.15
-	religion = yes
-}
-
-harmonized_christian = {
-	stability_cost_modifier = -0.2
-	religion = yes
+volga_estuary_modifier = {
+	province_trade_power_value = 5
+	picture = "estuary_icon"
 }
 
 harmonized_taoism = {
-	legitimacy = 1
+	development_cost = -0.05
 	religion = yes
 }
 
 harmonized_anglican = {
-	global_tax_modifier = 0.2
+	global_tax_modifier = 0.07
 	religion = yes
 }
 
@@ -82,71 +54,71 @@ harmonized_protestant = {
 }
 
 harmonized_reformed = {
-	global_trade_goods_size_modifier = 0.1
+	global_trade_goods_size_modifier = 0.035
 	religion = yes
 }
 
 harmonized_orthodox = {
-	harsh_treatment_cost = -0.25
+	harsh_treatment_cost = -0.1
 	religion = yes
 }
 
 harmonized_coptic = {
-	core_creation = -0.15
+	core_creation = -0.05
 	religion = yes
 }
 
 harmonized_waldensian = {
-	improve_relation_modifier = 0.20
+	improve_relation_modifier = 0.1
 	religion = yes
 }
 
 harmonized_nestorian = {
-	army_tradition = 1
+	army_tradition = 0.25
 	religion = yes
 }
 
 harmonized_shiite = {
-	development_cost = -0.2
+	development_cost = -0.05
 	religion = yes
 }
 
 harmonized_ibadi = {
-	movement_speed = 0.2
+	movement_speed = 0.05
 	religion = yes
 }
 
 harmonized_sikhism = {
-	land_morale = 0.1
+	land_morale = 0.05
 	religion = yes
 }
 
 harmonized_druze = {
-	diplomatic_upkeep = 2
+	diplomatic_upkeep = 1
 	religion = yes
 }
 
 harmonized_yazidi = {
-	defensiveness = 0.15
+	defensiveness = 0.1
 	religion = yes
 }
 
 harmonized_yarsan = {
-	embracement_cost = -0.25
+	embracement_cost = -0.1
 	religion = yes
 }
 
 harmonized_bahai = {
-	global_colonial_growth = 15
+	global_colonial_growth = 10
 	religion = yes
 }
 
 harmonized_mandaean = {
-	diplomatic_reputation = 2
+	diplomatic_reputation = 1
 	religion = yes
 }
 
 harmonized_manichaean = {
-	administrative_efficiency = 0.05
+	administrative_efficiency = 0.02
 	religion = yes
 }

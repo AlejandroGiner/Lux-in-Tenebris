@@ -79,7 +79,7 @@ nav_missions_1 = {
 			}
 		}
 		effect = {
-			create_explorer = 50
+			create_explorer = { tradition = 50 }
 			add_country_modifier = {
 				name = "basque_exploration"
 				duration = 7300
@@ -282,13 +282,20 @@ nav_missions_2 = {
 		icon = mission_conquer_50_development
 		required_missions = { nav_conquer_lapurdi }
 		provinces_to_highlight = {
-			area = pyrenees_area
+			OR = {
+				area = pyrenees_area
+				area = btc_pyrenees_area
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			btc_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -319,6 +326,27 @@ nav_missions_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				saintonge_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				orleans_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				berry_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 				loire_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -326,7 +354,7 @@ nav_missions_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
-				anjou_area = {
+				fr_maine_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -349,9 +377,12 @@ nav_missions_2 = {
 		provinces_to_highlight = {
 			OR = {
 				area = poitou_area
-				area = loire_area
+				area = orleans_area 
 				area = ile_de_france_area
-				area = anjou_area
+				area = loire_area
+				area = fr_maine_area
+				area = berry_area
+				area = saintonge_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -362,11 +393,23 @@ nav_missions_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			saintonge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			orleans_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			berry_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			loire_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			anjou_area = {
+			fr_maine_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

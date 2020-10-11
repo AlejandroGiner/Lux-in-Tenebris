@@ -39,14 +39,16 @@ monarchy = {
 				french_principality
 				french_crown
 				french_monarchy
-				archduchy_government
 				chrysanthemum_throne
 				edo_shogunate
 				coptic_monarchy_reform
 				tuscan_duchy_btc
+				norman_duchy_reform
 				iberian_cortes
 				exarchate_reform
 				autocracy_reform_btc
+				bt_ayyubid_sultanate_reform
+				provincial_kingdom_reform
 			}
 		}
 		hereditary_vs_nobility = {
@@ -73,10 +75,10 @@ monarchy = {
 				sidhi_recruitment
 				mansabdari_reform
 				council_of_the_indies_reform
-                #penal_colonies_reform
+                penal_colonies_reform
+				btc_chartered_companies_reform
 				liberte_reform
 				fraternite_reform
-				penal_transportation_reform
 				roman_bureaucracy_reform
 			}
 		}
@@ -164,7 +166,6 @@ monarchy = {
 		roman_empire_legacy
 		exarchate_legacy
 		coptic_monarchy_reform_legacy
-		archduchy_government_legacy
 		tuscan_duchy_legacy
 		iberian_cortes_legacy
         french_principality_legacy
@@ -311,6 +312,7 @@ republic = {
 				united_cantons_reform
 				#Added by Beyond Typus
 				puppet_kingdom_reform
+				transitional_government_reform
 				florentine_republic_btc
 			}
 		}
@@ -339,7 +341,8 @@ republic = {
 				council_of_the_indies_reform
                 legislative_assembly_reform
 				national_constituent_reform
-				penal_transportation_reform
+				penal_colonies_reform
+				btc_chartered_companies_reform
 			}
 		}
 		federalism_vs_unitarism_vs_confederacy = {
@@ -425,6 +428,7 @@ republic = {
 		prussian_republic_reform
 		#Added by Beyond Typus
 		puppet_kingdom_reform
+		transitional_government_reform
 	}
 	exclusive_reforms = {
 		lottery_reform
@@ -436,6 +440,20 @@ republic = {
 		military_dictatorship_reform
 		#Added by Beyond Typus
 		puppet_kingdom_reform
+		transitional_government_reform
+	}
+    
+    exclusive_reforms = {
+		free_city
+		administrative_divisions_reform
+	}
+	exclusive_reforms = {
+		free_city
+		presidential_reform
+	}
+	exclusive_reforms = {
+		feuillant_reform
+		military_electorate_reform
 	}
     
     exclusive_reforms = {

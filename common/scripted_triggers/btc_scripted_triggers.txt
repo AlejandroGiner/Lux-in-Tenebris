@@ -22,19 +22,6 @@ btc_can_form_trigger = {
 	adm_tech = 10
 }
 
-exarches_territory_modifier_trigger = {
-	custom_trigger_tooltip = {
-		tooltip = exarches_territory_modifier_trigger
-		owner = {
-			has_estate = estate_exarches
-		}
-		any_province = {
-			region = PREV
-			has_estate = estate_exarches
-		}
-	}
-}
-
 is_exarch_tag_and_exarch_of_root_trigger = {
 	custom_trigger_tooltip = { 
 		tooltip = any_exarch_tag_under_root_exists_trigger
@@ -131,12 +118,16 @@ form_greece_provinces_btc = {
 	OR = {
 		area = macedonia_area
 		area = northern_greece_area
+		area = ionian_islands_area
 		area = morea_area
+		area = north_morea_area
 		area = cyprus_area
 		area = thrace_area
+		area = eastern_thrace_area
 		area = eastern_mediterrenean_islands_area
 		area = western_aegean_area
 		area = aegean_archipelago_area
+		area = cyclades_area
 		area = northern_aegean_islands_area
 		area = thessaly_area
 		area = ionian_islands_area
@@ -301,6 +292,9 @@ aragon_important_cortes_provinces = {
 }
 
 catalonia_important_cortes_provinces = {
-	area = catalonia_area
+	OR = {
+		area = catalonia_area
+		area = catalan_pyrenees_area
+	}
 	NOT = { province_id = 3320 } # Andorra
 }

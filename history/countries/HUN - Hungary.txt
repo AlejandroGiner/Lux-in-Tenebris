@@ -4,10 +4,16 @@ primary_culture = hungarian
 add_accepted_culture = slovak
 add_accepted_culture = jasz
 add_accepted_culture = mantaken
+add_accepted_culture = croatian
 religion = catholic
 technology_group = eastern
 capital = 153 # Buda
 historical_friend = HAB
+
+change_estate_land_share = {
+	estate = estate_church
+	share = -5
+}
 
 1387.3.31 = {
 	monarch = {

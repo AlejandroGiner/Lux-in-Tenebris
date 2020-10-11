@@ -537,9 +537,11 @@ country_event = {
 		any_owned_province = {
 			region = carpathia_region
 			NOT = { area = wallachia_area }
+			NOT = { area = oltenia_area }
 			NOT = { area = eastern_wallachia_area }
 			NOT = { area = moldavia_area }
 			NOT = { area = western_moldovia }
+			NOT = { area = bukovina_area }
 			religion = protestant
 			NOT = { province_id = 3445 }
 			NOT = { province_id = 3051 }
@@ -560,9 +562,11 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
+					NOT = { area = bukovina_area }
 					NOT = { province_id = 3445 }
 					NOT = { province_id = 3051 }
 					religion = protestant
@@ -573,9 +577,11 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
+					NOT = { area = bukovina_area }
 					NOT = { province_id = 3445 }
 					NOT = { province_id = 3051 }
 					religion = protestant
@@ -842,9 +848,11 @@ country_event = {
 		any_owned_province = {
 			region = carpathia_region
 			NOT = { area = wallachia_area }
+			NOT = { area = oltenia_area }
 			NOT = { area = eastern_wallachia_area }
 			NOT = { area = moldavia_area }
 			NOT = { area = western_moldovia }
+			NOT = { area = bukovina_area }
 			NOT = { province_id = 3445 }
 			NOT = { province_id = 3051 }
 		}
@@ -868,9 +876,11 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
+					NOT = { area = bukovina_area }
 					NOT = { province_id = 3445 }
 					NOT = { province_id = 3051 }
 				}
@@ -885,9 +895,11 @@ country_event = {
 		carpathia_region = {
 			limit = {
 				NOT = { area = wallachia_area }
+				NOT = { area = oltenia_area }
 				NOT = { area = eastern_wallachia_area }
 				NOT = { area = moldavia_area }
 				NOT = { area = western_moldovia }
+				NOT = { area = bukovina_area }
 				NOT = { province_id = 3445 }
 				NOT = { province_id = 3051 }
 			}
@@ -911,9 +923,11 @@ country_event = {
 				any_owned_province = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
+					NOT = { area = bukovina_area }
 					NOT = { province_id = 3445 }
 					NOT = { province_id = 3051 }
 					NOT = { has_province_flag = hungarian_revolt }
@@ -923,9 +937,11 @@ country_event = {
 				limit = {
 					region = carpathia_region
 					NOT = { area = wallachia_area }
+					NOT = { area = oltenia_area }
 					NOT = { area = eastern_wallachia_area }
 					NOT = { area = moldavia_area }
 					NOT = { area = western_moldovia }
+					NOT = { area = bukovina_area }
 					NOT = { province_id = 3445 }
 					NOT = { province_id = 3051 }
 					NOT = { has_province_flag = hungarian_revolt }
@@ -1364,7 +1380,7 @@ country_event = {
 	option = {		# The Habsburg dynasty must return!
 		name = "flavor_hab.EVTOPTB7"
 		add_legitimacy = -50
-		add_government_reform = archduchy_government
+		add_government_reform = austrian_archduchy_reform
 		# Male heir
 		if = {
 			limit = {

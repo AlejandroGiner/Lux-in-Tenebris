@@ -453,24 +453,25 @@ country_event = {
 	major = yes
 	
 	trigger = {
+		NOT = { has_dlc = "Emperor" }
 		tag = FRA
 		is_year = 1550
 		has_reform = french_crown
 		adm = 4
+		NOT = { has_country_flag = passed_edict_moulins }
 	}
 	
 	mean_time_to_happen = { months = 60 }
 	
 	option = {
 		name = btc_misc.11.a
-		ai_chance = { factor = 90 }
+		ai_chance = { factor = 95 }
 		
+		set_country_flag = passed_edict_moulins
 		add_reform_progress_medium_effect = yes
 		add_government_reform = french_monarchy
 		every_subject_country = {
-			limit = {
-				capital_scope = { region = france_region }
-			}
+			limit = { capital_scope = { region = france_region } }
 			ROOT = { inherit = PREV }
 		}
 		add_country_modifier = {
@@ -492,7 +493,7 @@ country_event = {
 			184 = {
 				spawn_rebels = {
 					type = noble_rebels
-					size = 1
+					size = 2
 				}
 			}
 		}
@@ -519,6 +520,15 @@ country_event = {
 			190 = {
 				spawn_rebels = {
 					type = noble_rebels
+					size = 2
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 4694 }
+			4694 = {
+				spawn_rebels = {
+					type = noble_rebels
 					size = 1
 				}
 			}
@@ -527,8 +537,9 @@ country_event = {
 	
 	option = {
 		name = btc_misc.11.b
-		ai_chance = { factor = 10 }
+		ai_chance = { factor = 5 }
 
+		set_country_flag = passed_edict_moulins
 		every_subject_country = {
 			limit = { capital_scope = { region = france_region } }
 			add_country_modifier = {
@@ -540,49 +551,88 @@ country_event = {
 			name = btc_keep_apanage_system
 			duration = 3650
 		}
-		poitou_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		brittany_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		lower_brittany_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		normandy_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		west_normandy_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		massif_central_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		west_massif_central_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		loire_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		anjou_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		guyenne_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
-		}
-		pyrenees_area = {
-			limit = { owned_by = ROOT }
-			add_local_autonomy = 30
+		custom_tooltip = edict_moulins_autonomy_tooltip
+		hidden_effect = {
+			poitou_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			saintonge_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			brittany_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			lower_brittany_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			morbihan_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			normandy_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			central_normandy_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			west_normandy_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			channel_islands_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			massif_central_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			bourbonnais_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			east_guyenne_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			limousin_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			orleans_area  = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			berry_area  = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			loire_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			fr_maine_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			guyenne_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			pyrenees_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			btc_pyrenees_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
 		}
 		add_prestige = -10
 	}
@@ -1171,6 +1221,8 @@ country_event = {
 		tag = MLO
 		has_reform = ambrosian_republic
 		NOT = { exists = CMO }
+		owns = 4740
+		4740 = { is_core = CMO }
 	}
 	
 	mean_time_to_happen = {
@@ -1196,5 +1248,229 @@ country_event = {
 		}
 		custom_tooltip = btc_misc.23.tt
 		
+	}
+}
+
+#Cinque Ports 
+province_event = {
+	id = btc_misc.24
+	title = btc_misc.24.t
+	desc = {
+		trigger = { owner = { NOT = { culture_group = british } } }
+		desc = btc_misc.24.d.1
+	}
+	desc = {
+		trigger = { owner = { culture_group = british } }
+		desc = btc_misc.24.d.2
+	}
+	picture = HARBOUR_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		province_id = 235
+		has_province_modifier = cinque_ports_modifier
+		OR = {
+			owner = { NOT = { culture_group = british } }
+			is_year = 1550
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.1
+			owner = {
+				NOT = { culture_group = british }
+			}
+		}
+	}
+	
+	option = {
+		name = btc_misc.24.a
+		remove_province_modifier = cinque_ports_modifier
+	}
+}
+
+#Edict of Moulins, Emperor mission version
+country_event = {
+	id = btc_misc.25
+	title = btc_misc.11.t
+	desc = btc_misc.11.d
+	picture = REFORM_eventPicture
+	
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = btc_misc.11.a
+		ai_chance = { factor = 95 }
+		
+		add_reform_progress_medium_effect = yes
+		add_government_reform = french_monarchy
+		every_subject_country = {
+			limit = { capital_scope = { region = france_region } }
+			ROOT = { inherit = PREV }
+		}
+		add_country_modifier = {
+			name = btc_no_apanage_system
+			duration = 3650
+		}
+		
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 199 }
+			199 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 184 }
+			184 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 2
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 1879 }
+			1879 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 175 }
+			175 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 190 }
+			190 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 2
+				}
+			}
+		}
+		if = {
+			limit = { owns_or_non_sovereign_subject_of = 4694 }
+			4694 = {
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = btc_misc.11.b
+		ai_chance = { factor = 5 }
+
+		every_subject_country = {
+			limit = { capital_scope = { region = france_region } }
+			add_country_modifier = {
+				name = btc_apanages_ld
+				duration = 36500
+			}
+		}
+		add_country_modifier = {
+			name = btc_keep_apanage_system
+			duration = 3650
+		}
+		custom_tooltip = edict_moulins_autonomy_tooltip
+		hidden_effect = {
+			poitou_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			saintonge_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			brittany_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			lower_brittany_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			morbihan_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			normandy_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			central_normandy_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			west_normandy_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			channel_islands_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			massif_central_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			bourbonnais_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			east_guyenne_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			limousin_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			orleans_area  = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			berry_area  = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			loire_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			fr_maine_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			guyenne_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			pyrenees_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+			btc_pyrenees_area = {
+				limit = { owned_by = ROOT }
+				add_local_autonomy = 30
+			}
+		}
+		add_prestige = -10
 	}
 }

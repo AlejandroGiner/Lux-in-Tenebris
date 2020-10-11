@@ -1,64 +1,5 @@
 country_decisions = {
 	
-	cascadia_nation = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_cascadia = {
-				owned_by = ROOT
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_cascadia
-				is_core = ROOT
-			}
-			NOT = { exists = CSC }
-		}
-		effect = {
-			change_tag = CSC
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			colonial_cascadia = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = CSC
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
-			set_country_flag = changed_from_colonial_nation
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
 	acadia_nation = {
 		major = yes
 		potential = {
@@ -68,6 +9,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_acadia = {
 				owned_by = ROOT
@@ -80,9 +36,15 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_acadia
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -92,8 +54,22 @@ country_decisions = {
 			NOT = { exists = ACA }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = ACA
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -106,65 +82,6 @@ country_decisions = {
 					}
 				}
 				add_permanent_claim = ACA
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
-			set_country_flag = changed_from_colonial_nation
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	alaska_nation = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_alaska = {
-				owned_by = ROOT
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_alaska
-				is_core = ROOT
-			}
-			NOT = { exists = ALK }
-		}
-		effect = {
-			change_tag = ALK
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			colonial_alaska = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ALK
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -191,6 +108,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_brazil = {
 				owned_by = ROOT
@@ -206,10 +138,13 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			amazonia_provinces_btc = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = AMZ }
@@ -230,8 +165,22 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = AMZ
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -266,6 +215,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_polynesia = {
 				owned_by = ROOT
@@ -278,9 +242,15 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_polynesia
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -290,8 +260,22 @@ country_decisions = {
 			NOT = { exists = NZL }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = NZL
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -330,6 +314,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_california = {
 				owned_by = ROOT
@@ -344,10 +343,13 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			arizona_provinces_btc = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = ARI }
@@ -368,8 +370,22 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = ARI
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -404,6 +420,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_bahamas = {
 				owned_by = ROOT
@@ -416,9 +447,15 @@ country_decisions = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_bahamas
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -428,8 +465,22 @@ country_decisions = {
 			NOT = { exists = BMS }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = BMS
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -468,6 +519,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_cascadia = {
 				owned_by = ROOT
@@ -482,10 +548,13 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			columbia_provinces_btc = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = CLU }
@@ -506,8 +575,22 @@ country_decisions = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = CLU
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -533,124 +616,6 @@ country_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 	
-	cuba_nation = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_cuba = {
-				owned_by = ROOT
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_cuba
-				is_core = ROOT
-			}
-			NOT = { exists = CUB }
-		}
-		effect = {
-			change_tag = CUB
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			colonial_cuba = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = CUB
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
-			set_country_flag = changed_from_colonial_nation
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-florida_nation = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_florida = {
-				owned_by = ROOT
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 3	
-				}
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_florida
-				is_core = ROOT
-			}
-			NOT = { exists = FLO }
-		}
-		effect = {
-			change_tag = FLO
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			colonial_florida = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = FLO
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
-			set_country_flag = changed_from_colonial_nation
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
 	newfoundland_nation = {
 		major = yes
 		potential = {
@@ -660,6 +625,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_newfoundland = {
 				owned_by = ROOT
@@ -672,9 +652,15 @@ florida_nation = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_newfoundland
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -684,8 +670,22 @@ florida_nation = {
 			NOT = { exists = NFL }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = NFL
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -724,6 +724,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_california = {
 				owned_by = ROOT
@@ -738,10 +753,13 @@ florida_nation = {
 		}
 		provinces_to_highlight = {
 			nevada_provinces_btc = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = NVD }
@@ -762,8 +780,22 @@ florida_nation = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = NVD
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -798,6 +830,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_great_lakes = {
 				owned_by = ROOT
@@ -812,7 +859,6 @@ florida_nation = {
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -821,9 +867,30 @@ florida_nation = {
 			}
 			NOT = { exists = MIH }
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_great_lakes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = MIH
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -857,6 +924,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_madagascar = {
 				owned_by = ROOT
@@ -869,9 +951,15 @@ florida_nation = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_madagascar
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -881,8 +969,22 @@ florida_nation = {
 			NOT = { exists = MDG }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = MDG
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -916,6 +1018,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_hudson_bay = {
 				owned_by = ROOT
@@ -928,9 +1045,15 @@ florida_nation = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_hudson_bay
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -940,8 +1063,22 @@ florida_nation = {
 			NOT = { exists = BAY }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = BAY
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -980,6 +1117,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_colombia = {
 				owned_by = ROOT
@@ -1007,7 +1159,6 @@ florida_nation = {
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = GYU }
@@ -1018,8 +1169,22 @@ florida_nation = {
 			owns_core_province = 2931
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = GYU
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -1043,6 +1208,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_northwest_territories = {
 				owned_by = ROOT
@@ -1055,9 +1235,15 @@ florida_nation = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_northwest_territories
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -1067,8 +1253,22 @@ florida_nation = {
 			NOT = { exists = NTQ }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = NTQ
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -1102,6 +1302,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_cape = {
 				owned_by = ROOT
@@ -1114,9 +1329,15 @@ florida_nation = {
 				}
 			}
 		}
+		provinces_to_highlight = {
+			colonial_region = colonial_cape
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
+		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -1126,8 +1347,22 @@ florida_nation = {
 			NOT = { exists = RSA }
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = RSA
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -1166,6 +1401,21 @@ florida_nation = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						colonial_region = colonial_brazil
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_central_america = {
 				owned_by = ROOT
@@ -1180,10 +1430,13 @@ florida_nation = {
 		}
 		provinces_to_highlight = {
 			yucatan_provinces_btc = yes
+			OR = {
+				NOT = { owned_by = ROOT }
+				is_city = no
+			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = YUC }
@@ -1204,8 +1457,22 @@ florida_nation = {
 			}
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = YUC
-			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
@@ -1229,62 +1496,5 @@ florida_nation = {
 			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = { factor = 1 }
-	}
-	
-	westindies_nation = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
-			is_nomad = no
-			is_random_new_world = no
-			OR = {
-				is_former_colonial_nation = yes
-				is_colonial_nation = yes
-			}
-			colonial_the_carribean = {
-				owned_by = ROOT
-			}
-			OR = {
-				ai = no
-				num_of_cities = 3	
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_former_colonial_nation = yes
-			is_free_or_tributary_trigger = yes
-			is_at_war = no
-			capital_scope = {
-				colonial_region = colonial_the_carribean
-				is_core = ROOT
-			}
-			NOT = { exists = WIE }
-		}
-		effect = {
-			change_tag = WIE
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
-			colonial_the_carribean = {
-				limit = {
-					NOT = {
-						is_permanent_claim = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = WIE
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
-			set_country_flag = changed_from_colonial_nation
-		}
-		ai_will_do = { factor = 1 }
-		ai_importance = 400
 	}
 }

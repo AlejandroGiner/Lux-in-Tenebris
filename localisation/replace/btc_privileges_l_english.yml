@@ -1,0 +1,95 @@
+﻿l_english:
+ #########################################################
+ #######Estate privileges modifiers and interface#########
+ #########################################################
+ 
+ ## Burghers / Vaisyas / Jains
+ 
+ estate_burghers_monopoly_of_textiles_desc:0 "Linen and Silk are highly valued textiles for garments, carpets and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen and silk products."
+ estate_burghers_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§! or §YSilk§!§!"
+ estate_vaisyas_monopoly_of_textiles_desc:0 "Linen and Silk are highly valued textiles for garments, carpets and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen and silk products."
+ estate_vaisyas_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§! or §YSilk§!§!"
+ estate_jains_monopoly_of_textiles_desc:0 "Linen and Silk are highly valued textiles for garments, carpets and other accessories, particularly among the higher classes of society. Giving exclusive production rights to the entrepreneurial classes will ensure the continued use of our linen and silk products."
+ estate_jains_monopoly_of_textiles_effect_tooltip:2 "§RNo income from §YLinen§! or §YSilk§!§!"
+ 
+ estate_burghers_monopoly_of_wool:0 "Monopoly on Wool"
+ estate_burghers_monopoly_of_wool_desc:0 "As one of the most widespread textiles, wool is a vital good that is indispensable to the common people for clothing. Rather than leave its supply scattered and disorganized, we could put it under the firm administration of the entrepreneurial classes so that everyone will have more than enough to wear."
+ estate_burghers_monopoly_of_wool_effect_tooltip:2 "§RNo income from §YWool§!§!"
+ estate_burghers_monopoly_of_wool_mod:1 "Monopoly on Wool"
+ desc_estate_burghers_monopoly_of_wool_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over wool production."
+ estate_vaisyas_monopoly_of_wool:0 "Monopoly on Wool"
+ estate_vaisyas_monopoly_of_wool_desc:0 "As one of the most widespread textiles, wool is a vital good that is indispensable to the common people for clothing. Rather than leave its supply scattered and disorganized, we could put it under the firm administration of the entrepreneurial classes so that everyone will have more than enough to wear."
+ estate_vaisyas_monopoly_of_wool_effect_tooltip:2 "§RNo income from §YWool§!§!"
+ estate_vaisyas_monopoly_of_wool_mod:1 "Monopoly on Wool"
+ desc_estate_vaisyas_monopoly_of_wool_mod:1 "The state has granted the Vaishyas monopoly rights over wool production."
+ estate_jains_monopoly_of_wool:0 "Monopoly on Wool"
+ estate_jains_monopoly_of_wool_desc:0 "As one of the most widespread textiles, wool is a vital good that is indispensable to the common people for clothing. Rather than leave its supply scattered and disorganized, we could put it under the firm administration of the entrepreneurial classes so that everyone will have more than enough to wear."
+ estate_jains_monopoly_of_wool_effect_tooltip:2 "§RNo income from §YWool§!§!"
+ estate_jains_monopoly_of_wool_mod:1 "Monopoly on Wool"
+ desc_estate_jains_monopoly_of_wool_mod:1 "The state has granted the Jains monopoly rights over wool production."
+ 
+ ## Clergy / Brahmins
+ 
+ estate_church_monopoly_of_paper:0 "Monopoly on Paper"
+ estate_church_monopoly_of_paper_desc:0 "The [Root.GetClergyName] have always been teachers and protectors of sacred learning over generations. Their use of paper has allowed them to write important documents and keep records for as long as anyone can remember, and supplying more to them will surely benefit us all."
+ estate_church_monopoly_of_paper_effect_tooltip:2 "§RNo income from §YPaper§!§!"
+ estate_church_monopoly_of_paper_mod:1 "Monopoly on Paper"
+ desc_estate_church_monopoly_of_paper_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over paper production."
+ estate_brahmins_monopoly_of_paper:0 "Monopoly on Paper"
+ estate_brahmins_monopoly_of_paper_desc:0 "The [Root.GetBrahminsName] have always been teachers and protectors of sacred learning over generations. Their use of paper has allowed them to write important documents and keep records for as long as anyone can remember, and supplying more to them will surely benefit us all."
+ estate_brahmins_monopoly_of_paper_effect_tooltip:2 "§RNo income from §YPaper§!§!"
+ estate_brahmins_monopoly_of_paper_mod:1 "Monopoly on Paper"
+ desc_estate_brahmins_monopoly_of_paper_mod:0 "The state has granted the Brahmins monopoly rights over paper production."
+ 
+ ## BTC
+ estate_burghers_monopoly_of_whales:0 "Monopoly on Whaling"
+ estate_burghers_monopoly_of_whales_desc:0 "The hunt for whales is a complicated process, with whalers often away for months at a time hunting whales near whaling stations located on faraway islands. Much of the process is sometimes almost entirely outside the control of the authorities, so it may be convenient for everyone to allow the entrepreneurial classes to monitor the process closely, thus centralizing the process further."
+ estate_burghers_monopoly_of_whales_effect_tooltip:2 "§RNo income from §YWhaling§!"
+ estate_burghers_monopoly_of_whales_revoke_tooltip: "Production income from §YWhaling§! is restored"
+ estate_burghers_monopoly_of_whales_mod:1 "Monopoly on Whaling"
+ desc_estate_burghers_monopoly_of_whales_mod:1 "The state has granted the [Root.Owner.GetBurghersName] monopoly rights over whaling production."
+ 
+ MONOPOLY_INCOME_WHALES_DESC: "from whaling production."
+ 
+ estate_church_monopoly_of_apiculture:0 "Monopoly on Apiculture"
+ estate_church_monopoly_of_apiculture_desc:0 "Apiculture is of significant importance to our realm, providing us with food and wax for many uses. The tradition of beekeeping in monasteries has a long history and as our clergy have shown to be able to utilize the materials quite well for book illumination, perhaps it is best to give them a monopoly over apiculture in our domains."
+ estate_church_monopoly_of_apiculture_effect_tooltip:2 "§RNo income from §YApiculture§!"
+ estate_church_monopoly_of_apiculture_revoke_tooltip: "Production income from §YApiculture§! is restored"
+ estate_church_monopoly_of_apiculture_mod:1 "Monopoly on Apiculture"
+ desc_estate_church_monopoly_of_incense_mod:1 "The state has granted the [Root.Owner.GetClergyName] monopoly rights over apiculture production."
+ 
+ estate_brahmins_monopoly_of_apiculture:0 "Monopoly on Apiculture"
+ estate_brahmins_monopoly_of_apiculture_desc:0 "Apiculture is of significant importance to our realm, providing us with food and wax for many uses. The tradition of beekeeping in monasteries has a long history and as our clergy have shown to be able to utilize the materials quite well for book illumination, perhaps it is best to give them a monopoly over apiculture in our domains."
+ estate_brahmins_monopoly_of_apiculture_effect_tooltip:2 "§RNo income from §YApiculture§!"
+ estate_brahmins_monopoly_of_apiculture_revoke_tooltip: "Production income from §YApiculture§! is restored"
+ estate_brahmins_monopoly_of_apiculture_mod:1 "Monopoly on Apiculture"
+ desc_estate_brahmins_monopoly_of_incense_mod:0 "The state has granted the Brahmins monopoly rights over apiculture production."
+ 
+ MONOPOLY_INCOME_APICULTURE_DESC: "from apiculture production."
+ 
+ btc_monopoly_privileges.1.t: "Extension of the Monopoly on Whaling"
+ btc_monopoly_privileges.1.d.burghers: "The monopoly on whaling we granted to the [Root.GetBurghersName] has expired, meaning that we are now able to reclaim the income from our whaling production. However, the [Root.GetBurghersName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ btc_monopoly_privileges.1.b.tooltip: "We will be able to revoke the §YMonopoly on Whaling§! estate privilege."
+ btc_monopoly_privileges.2.t: "Extension of the Monopoly on Apiculture"
+ btc_monopoly_privileges.2.d.church: "The monopoly on apiculture we granted to the [Root.GetClergyName] has expired, meaning that we are now able to reclaim the income from apiculture production. However, the [Root.GetClergyName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ btc_monopoly_privileges.2.d.brahmins: "The monopoly on apiculture we granted to the [Root.GetBrahminsName] has expired, meaning that we are now able to reclaim the income from apiculture production. However, the [Root.GetBrahminsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ btc_monopoly_privileges.2.b.tooltip: "We will be able to revoke the §YMonopoly on Apiculture§! estate privilege."
+
+ #########################################################
+ ################Estate privileges events#################
+ #########################################################
+ 
+ ## Burghers / Vaisyas / Jains
+  
+ ## Clergy / Brahmins
+ 
+ monopoly_privileges.4.t:0 "Extension of the Monopoly on Paper"
+ monopoly_privileges.4.d.church:0 "The monopoly on paper we granted to the [Root.GetClergyName] has expired, meaning that we are now able to reclaim the income from our paper production. However, the [Root.GetClergyName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ monopoly_privileges.4.d.brahmins:0 "The monopoly on paper we granted to the [Root.GetBrahminsName] has expired, meaning that we are now able to reclaim the income from our paper production. However, the [Root.GetBrahminsName] are keen to keep their privileges and are offering to pay us a lump sum in return for the monopoly being guaranteed for a further 10 years."
+ monopoly_privileges.4.b.tooltip:0 "We will be able to revoke the §YMonopoly on Paper§! estate privilege."
+ 
+ ## Nobility / Rajputs / Marathas
+ 
+ #Misc
+ 
+ MONOPOLY_INCOME_CLOTH_DESC:0 "from linen or silk production."

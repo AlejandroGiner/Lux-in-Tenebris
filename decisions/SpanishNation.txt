@@ -96,7 +96,9 @@ country_decisions = {
 							is_permanent_claim = ROOT
 							is_core = ROOT
 							area = alentejo_area
+							area = south_alentejo_area
 							area = beieras_area
+							area = south_beiras_area
 						}
 					}
 					add_permanent_claim = SPA
@@ -106,9 +108,7 @@ country_decisions = {
 			custom_tooltip = spanish_unification_effect_2.tooltip
 			set_country_flag = formed_spain_flag
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400 #
 	}
 
@@ -191,6 +191,7 @@ country_decisions = {
 					ai = yes
 					capital_scope = { region = iberia_region }
 					OR = {
+						ROOT = { ai = yes }
 						NOT = { num_of_cities = 12 }
 						AND = {
 							tag = ARA
@@ -234,7 +235,9 @@ country_decisions = {
 							is_permanent_claim = ROOT
 							is_core = ROOT
 							area = alentejo_area
+							area = south_alentejo_area
 							area = beieras_area
+							area = south_beiras_area
 						}
 					}
 					add_permanent_claim = SPA

@@ -42,7 +42,7 @@ granada_development_missions = {
 				add_base_manpower = 2
 			}
 			4546 = { add_base_manpower = 1 }
-			4771 = { add_base_manpower = 1 }
+			3635 = { add_base_manpower = 1 }
 			226 = { add_base_manpower = 1 }
 			222 = { add_base_manpower = 1 }
 			3145 = { add_base_manpower = 1 }
@@ -503,6 +503,15 @@ granada_slot_2_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cuenca_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
 			new_castile_area = {
 				limit = {
 					NOT = {
@@ -573,6 +582,7 @@ adu_slot_2_missions = {
 				province_id = 218
 				province_id = 1747
 				province_id = 216
+				area = cuenca_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -581,6 +591,10 @@ adu_slot_2_missions = {
 
 		trigger = {
 			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cuenca_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -638,6 +652,13 @@ adu_slot_2_missions = {
 				add_permanent_claim = ROOT
 			}
 			catalonia_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			catalan_pyrenees_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT	}
@@ -757,6 +778,15 @@ adu_slot_2_missions = {
 				add_claim = ROOT
 			}
 			west_piedmont_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			cuneo_area = {
 				limit = {
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -945,9 +975,7 @@ granada_slot_3_missions = {
 				change_culture = andalusi_culture
 			}
 			if = {
-				limit = {
-					tag = ADU
-				}
+				limit = { tag = ADU }
 				alentejo_area = {
 					limit = {
 						NOT = {
@@ -957,7 +985,25 @@ granada_slot_3_missions = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_alentejo_area = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 				beieras_area = {
+					limit = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				south_beiras_area = {
 					limit = {
 						NOT = {
 							country_or_non_sovereign_subject_holds = ROOT
@@ -996,6 +1042,8 @@ andalusia_slot_3_missions = {
 			OR = {
 				area = alentejo_area
 				area = beieras_area
+				area = south_beiras_area
+				area = south_alentejo_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1008,7 +1056,17 @@ andalusia_slot_3_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
 			}
+			south_alentejo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
 			beieras_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+			south_beiras_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
@@ -1019,15 +1077,9 @@ andalusia_slot_3_missions = {
 			if = {
 				limit = {
 					is_random_new_world = no
-					ceara_area = {
-						NOT = {
-							has_discovered = ROOT
-						}
-					}
+					ceara_area = { NOT = { has_discovered = ROOT } }
 				}
-				ceara_area = {
-					discover_country = ROOT
-				}
+				ceara_area = { discover_country = ROOT }
 			}
 			add_country_modifier = {
 				name = "adu_new_world_discoveries"
@@ -1279,7 +1331,16 @@ andalusia_slot_4_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_islands_area = {
 				limit = {
 					NOT = {
 						owned_by = ROOT
@@ -1300,7 +1361,8 @@ andalusia_slot_4_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1313,7 +1375,12 @@ andalusia_slot_4_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				is_core = ROOT
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 				is_core = ROOT
@@ -2286,13 +2353,9 @@ andalusia_slot_5_missions = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			if = {
-				limit = {
-					has_dlc = "Common Sense"
-				}
+				limit = { has_dlc = "Common Sense" }
 				government_rank	= 3
-				else = {
-					total_development = 1000
-				}
+				else = { total_development = 1000 }
 			}
 			has_country_modifier = unified_islam
 		}

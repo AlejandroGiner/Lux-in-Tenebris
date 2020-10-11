@@ -5,7 +5,9 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			is_nomad = no
-			is_random_new_world = no			
+			is_random_new_world = no	
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -14,6 +16,21 @@ country_decisions = {
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
+				AND = {
+					NOT = {
+						OR = {
+							technology_group = north_american
+							technology_group = mesoamerican
+							technology_group = andean
+							technology_group = high_american
+							technology_group = south_american
+						}
+					}
+					capital_scope = {
+						region = central_america_region
+						is_core = ROOT
+					}
+				}
 			}
 			colonial_central_america = {
 				owned_by = ROOT
@@ -24,29 +41,44 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			OR = {
-				province_id = 835	# Panama
-				province_id = 2663	# Nicoya
-			}
+			region = central_america_region
 			OR = {
 				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				is_city = no
 			}
 		}
 		allow = {
 			adm_tech = 10
-			is_former_colonial_nation = yes
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			NOT = { exists = CAM }
-			owns_core_province = 835	# Panama
-			owns_core_province = 2663	# Nicoya
+			num_of_owned_provinces_with = {
+				value = 5
+				region = central_america_region
+				is_city = yes
+			}
 		}
 		effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { is_former_colonial_nation = yes }
+					}
+					ROOT = { save_event_target_as = old_tag_target }
+				}
+			}
 			change_tag = CAM
-			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = { is_former_colonial_nation = yes }
+				}
+				restore_old_nation_on_formation_effect = yes
+				remove_non_electors_emperors_from_empire_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = { government_rank = 2 }
+				}
 				set_government_rank = 2
 			}
 			colonial_central_america = {
@@ -65,8 +97,6 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = changed_from_colonial_nation
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 }

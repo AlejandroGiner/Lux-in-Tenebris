@@ -63,6 +63,12 @@ country_decisions = {
 				}
 				add_permanent_claim = RMN
 			}
+			oltenia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = RMN
+			}
 			moldavia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }

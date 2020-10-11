@@ -86,6 +86,9 @@ byz_silk_road = {
 				province_id = 5224
 				province_id = 358
 				province_id = 1295
+				province_id = 137
+				province_id = 203
+				province_id = 377
 			}
 		}
 		
@@ -109,6 +112,15 @@ byz_silk_road = {
 				is_strongest_trade_power = ROOT
 			}
 			1295 = { #Valencia
+				is_strongest_trade_power = ROOT
+			}
+			137 = { #Ragusa
+				is_strongest_trade_power = ROOT
+			}
+			203 = { #Lyon
+				is_strongest_trade_power = ROOT
+			}
+			377 = { #Levant
 				is_strongest_trade_power = ROOT
 			}
 		}
@@ -479,10 +491,6 @@ byz_economic_2_plus_military_bonus = {
 			else = {
 				has_country_modifier = br_theme_system
 			}
-			estate_influence = {
-				estate = estate_strategoi
-				influence = 65
-			}
 		}
 		effect = {
 			if = {
@@ -682,11 +690,13 @@ byz_resurges = {
 						any_province = {
 							OR = {
 								area = morea_area
+								area = north_morea_area
 								area = northern_greece_area
 								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
+								area = eastern_thrace_area
 								area = macedonia_area
 							}
 							owned_by = TUR
@@ -717,7 +727,10 @@ byz_resurges = {
 		}
 		
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_thrace_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
@@ -727,17 +740,23 @@ byz_resurges = {
 					type = all
 					country_or_non_sovereign_subject_holds = ROOT	
 				}
+				eastern_thrace_area = {
+					type = all
+					country_or_non_sovereign_subject_holds = ROOT	
+				}
 				custom_trigger_tooltip = {
 					tooltip = byz_turn_the_tide_tooltip
 					NOT = {
 						any_province = {
 							OR = {
 								area = morea_area
+								area = north_morea_area
 								area = northern_greece_area
 								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
+								area = eastern_thrace_area
 								area = macedonia_area
 							}
 							owned_by = TUR
@@ -748,7 +767,7 @@ byz_resurges = {
 		}
 		
 		effect = {
-			5719 = { #Gallipoli
+			4779 = { #Gallipoli
 				change_religion = ROOT
 				change_culture = ROOT
 				add_base_tax = 1
@@ -788,6 +807,7 @@ byz_resurges = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				area = northern_greece_area
 				area = ionian_islands_area
 				area = western_aegean_area
@@ -821,11 +841,13 @@ byz_resurges = {
 						any_province = {
 							OR = {
 								area = morea_area
+								area = north_morea_area
 								area = northern_greece_area
 								area = ionian_islands_area
 								area = western_aegean_area
 								area = thessaly_area
 								area = thrace_area
+								area = eastern_thrace_area
 								area = macedonia_area
 							}
 							owned_by = TUR
@@ -864,10 +886,24 @@ byz_resurges = {
 					}
 					add_permanent_claim = ROOT
 				}
+				aeolia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			custom_tooltip = byz_safeguard_balkan_border_claims
 			hidden_effect = {
 				upper_thrace_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				sofya_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -913,6 +949,7 @@ byz_resurges = {
 				area = hudavendigar_area
 				area = karasi_area
 				area = aydin_area
+				area = aeolia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -927,6 +964,10 @@ byz_resurges = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aeolia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1314,6 +1355,7 @@ byz_resurges = {
 					limit = {
 						OR = {
 							area = erzurum_area
+							area = upper_euphrates_area
 							area = mardin_area
 							area = north_kurdistan_area
 							province_id = 4298
@@ -1540,8 +1582,9 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		provinces_to_highlight = {
 			OR = {
 				area = morea_area
+				area = north_morea_area
 				province_id = 5883
-				province_id = 5095
+				province_id = 4699
 				province_id = 3175
 				area = western_aegean_area
 			}
@@ -1556,10 +1599,14 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			north_morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			3175 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			5095 = {
+			4699 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			5883 = {
@@ -1651,6 +1698,13 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 					}
 					add_permanent_claim = ROOT
 				}
+				cyclades_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				eastern_mediterrenean_islands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -1693,10 +1747,11 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		provinces_to_highlight = {
 			OR = {
 				area = northern_greece_area
+				area = ionian_islands_area
 				area = northern_aegean_islands_area
 				area = aegean_archipelago_area
 				area = eastern_mediterrenean_islands_area
-				area = ionian_islands_area
+				area = cyclades_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1718,6 +1773,10 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cyclades_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1749,6 +1808,13 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_albania_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -1766,12 +1832,19 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		}
 		
 		provinces_to_highlight = {
-			area = albania_area
+			OR = {
+				area = albania_area
+				area = south_albania_area
+			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			albania_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_albania_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1841,7 +1914,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = upper_thrace_area
 				area = north_macedonia_area
-				province_id = 5894
+				area = sofya_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1851,18 +1924,22 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			north_macedonia_area = {
+			sofya_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			5894 = {
-				country_or_non_sovereign_subject_holds = ROOT
+			north_macedonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
 		effect = {			
 			#Effects:
 			thrace_area = {
+				add_prosperity = 50
+			}
+			eastern_thrace_area = {
 				add_prosperity = 50
 			}
 			macedonia_area = {
@@ -1899,7 +1976,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
-				lower_danube_area = {
+				silistria_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -1926,7 +2003,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = bulgaria_area
 				area = eastern_bulgaria_area
-				area = lower_danube_area
+				area = silistria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1940,7 +2017,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			lower_danube_area = {
+			silistria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -1981,6 +2058,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_serbia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				rascia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -2007,6 +2091,7 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = serbia_area
 				area = rascia_area
+				area = south_serbia_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2017,6 +2102,10 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			serbia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_serbia_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2105,6 +2194,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
+				istria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				carniola_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -2117,8 +2213,6 @@ byz_all_your_balkan_base_are_belong_to_us = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
 						NOT = { province_id = 112 }
-						NOT = { province_id = 3048 }
-						NOT = { province_id = 4752 }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -2156,11 +2250,11 @@ byz_all_your_balkan_base_are_belong_to_us = {
 			OR = {
 				area = carniola_area
 				area = friuli_area
+				area = istria_area
 				province_id = 1774
 				province_id = 3228
-				province_id = 110
 				province_id = 7018
-				province_id = 7019
+				province_id = 4729
 				province_id = 108
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -2173,8 +2267,6 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					type = all
 					OR = {
 						province_id = 112
-						province_id = 4752
-						province_id = 3048
 						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
@@ -2184,6 +2276,10 @@ byz_all_your_balkan_base_are_belong_to_us = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			friuli_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			istria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2204,6 +2300,20 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					}
 					add_permanent_claim = ROOT
 				}
+				lepontine_alps_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				po_valley_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				piedmont_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -2212,6 +2322,13 @@ byz_all_your_balkan_base_are_belong_to_us = {
 					add_permanent_claim = ROOT
 				}
 				west_piedmont_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				cuneo_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -2344,7 +2461,14 @@ byz_roman_italy = {
 					}
 					add_permanent_claim = ROOT
 				}
-				east_sicily_area = {
+				western_sicily_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				sicily_islands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -2375,6 +2499,13 @@ byz_roman_italy = {
 					}
 					add_permanent_claim = ROOT
 				}
+				umbria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -2396,6 +2527,7 @@ byz_roman_italy = {
 				area = lazio_area
 				area = abruzzo_area
 				area = central_italy_area
+				area = umbria_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2406,6 +2538,10 @@ byz_roman_italy = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			lazio_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			umbria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2445,6 +2581,13 @@ byz_roman_italy = {
 					}
 					add_permanent_claim = ROOT
 				}
+				lunigiana_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -2466,12 +2609,17 @@ byz_roman_italy = {
 				area = tuscany_area
 				area = south_tuscany_area
 				area = emilia_romagna_area
+				area = lunigiana_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			lunigiana_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2508,10 +2656,13 @@ byz_roman_italy = {
 		provinces_to_highlight = {
 			OR = {
 				area = lombardy_area
+				area = po_valley_area
 				area = west_piedmont_area
 				area = piedmont_area
 				area = liguria_area
 				area = emilia_area
+				area = cuneo_area
+				area = lepontine_alps_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2521,7 +2672,19 @@ byz_roman_italy = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			lepontine_alps_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			po_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			west_piedmont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cuneo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2583,7 +2746,8 @@ byz_italian_islands = {
 		provinces_to_highlight = {
 			OR = {
 				area = sicily_area
-				area = east_sicily_area
+				area = western_sicily_area
+				area = sicily_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -2593,7 +2757,11 @@ byz_italian_islands = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			east_sicily_area = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			sicily_islands_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2693,6 +2861,7 @@ byz_armenia_into_mesopotamia = {
 		provinces_to_highlight = {
 			OR = {
 				area = erzurum_area
+				area = upper_euphrates_area
 				area = mardin_area
 				area = north_kurdistan_area
 				province_id = 4298
@@ -2703,6 +2872,10 @@ byz_armenia_into_mesopotamia = {
 		
 		trigger = {
 			erzurum_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			upper_euphrates_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -2843,6 +3016,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -2862,6 +3036,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -2884,6 +3059,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -2907,6 +3083,7 @@ byz_armenia_into_mesopotamia = {
 						area = eastgeorgia_area
 						area = tabriz_area
 						area = erzurum_area
+						area = upper_euphrates_area
 						area = mardin_area
 						area = north_kurdistan_area
 						province_id = 4298
@@ -4445,6 +4622,8 @@ byz_iberia_2 = {
 				area = extremadura_area
 				area = beieras_area
 				area = alentejo_area
+				area = south_beiras_area
+				area = south_alentejo_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4458,7 +4637,15 @@ byz_iberia_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			south_beiras_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			alentejo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			south_alentejo_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -4614,27 +4801,12 @@ byz_false_emperors = {
 					}
 					add_permanent_claim = ROOT
 				}
-				4752 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
+				sudtirol_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-				}
-				3048 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -4659,8 +4831,7 @@ byz_false_emperors = {
 				area = tirol_area
 				area = upper_bavaria_area
 				area = upper_swabia_area
-				province_id = 4752
-				province_id = 3048
+				area = sudtirol_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4690,10 +4861,8 @@ byz_false_emperors = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			4752 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			3048 = {
+			sudtirol_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
@@ -4776,6 +4945,13 @@ byz_iberia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_alentejo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				extremadura_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -4790,10 +4966,24 @@ byz_iberia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				south_beiras_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			custom_tooltip = byz_karchidonia_claims
 			hidden_effect = { #Karchidonia
 				toledo_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				cuenca_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -4856,6 +5046,7 @@ byz_iberia = {
 				area = btc_murcia_area
 				area = toledo_area
 				area = new_castile_area
+				area = cuenca_area
 				province_id = 1750
 				province_id = 3300
 			}
@@ -4864,6 +5055,10 @@ byz_iberia = {
 		
 		trigger = {
 			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cuenca_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -4918,7 +5113,10 @@ byz_england = {
 			OR = {
 				area = east_midlands_area
 				area = northern_england_area
+				area = cumbria_area
 				area = wales_area
+				area = south_wales_area
+				area = mid_wales_area
 				area = wessex_area
 				area = east_anglia_area
 				area = west_midlands_area
@@ -4926,8 +5124,7 @@ byz_england = {
 				area = cornwall_area
 				area = yorkshire_area
 				area = five_boroughs_area
-				province_id = 5915
-				province_id = 3110
+				area = channel_islands_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -4965,7 +5162,19 @@ byz_england = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			south_wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			mid_wales_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			northern_england_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			cumbria_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -4973,10 +5182,8 @@ byz_england = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			5915 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			3110 = {
+			channel_islands_area = {
+				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
@@ -5063,6 +5270,13 @@ byz_iberia_3 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				catalan_pyrenees_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				aragon_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5104,6 +5318,7 @@ byz_iberia_3 = {
 				area = castille_area
 				area = aragon_area
 				area = catalonia_area
+				area = catalan_pyrenees_area
 				area = basque_area
 				province_id = 4550
 				province_id = 220
@@ -5121,6 +5336,10 @@ byz_iberia_3 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			catalonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			catalan_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5257,7 +5476,21 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				saintonge_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				pyrenees_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				btc_pyrenees_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5278,7 +5511,21 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
-				west_massif_central_area = {
+				bourbonnais_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				east_guyenne_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				limousin_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5306,7 +5553,11 @@ byz_galatia = {
 				area = pyrenees_area
 				area = guyenne_area
 				area = massif_central_area
-				area = west_massif_central_area
+				area = bourbonnais_area
+				area = east_guyenne_area
+				area = limousin_area
+				area = saintonge_area
+				area = btc_pyrenees_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -5316,7 +5567,15 @@ byz_galatia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			saintonge_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			pyrenees_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			btc_pyrenees_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5328,7 +5587,15 @@ byz_galatia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			west_massif_central_area = {
+			bourbonnais_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			east_guyenne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			limousin_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5343,6 +5610,20 @@ byz_galatia = {
 			#Claims
 			custom_tooltip = byz_lougdonia_claims
 			hidden_effect = { #Lougdonia
+				orleans_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				berry_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				loire_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5350,7 +5631,7 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
-				anjou_area = {
+				fr_maine_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5375,12 +5656,17 @@ byz_galatia = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
-						NOT = { province_id = 3110 }
-						NOT = { province_id = 5915 }
 					}
 					add_permanent_claim = ROOT
 				}
 				normandy_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				central_normandy_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5395,6 +5681,13 @@ byz_galatia = {
 					add_permanent_claim = ROOT
 				}
 				brittany_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				morbihan_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5421,10 +5714,14 @@ byz_galatia = {
 				area = brittany_area
 				area = lower_brittany_area
 				area = normandy_area
+				area = central_normandy_area
 				area = bourgogne_area
 				area = ile_de_france_area
+				area = orleans_area
+				area = berry_area
 				area = loire_area
-				area = anjou_area
+				area = fr_maine_area
+				area = morbihan_area
 				province_id = 3025
 				province_id = 168
 				province_id = 3026
@@ -5442,7 +5739,15 @@ byz_galatia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			morbihan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			normandy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			central_normandy_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5454,24 +5759,25 @@ byz_galatia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			orleans_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			berry_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			loire_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			anjou_area = {
+			fr_maine_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			custom_trigger_tooltip = {
-				tooltip = conquer_normandy_byz_tooltip
-				west_normandy_area = {
-					type = all
-					OR = {
-						province_id = 5195
-						province_id = 3110
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
+			west_normandy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
@@ -5485,6 +5791,13 @@ byz_galatia = {
 			custom_tooltip = byz_belgica_claims
 			hidden_effect = { #Belgica
 				franche_comte_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				west_burgundy_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5557,6 +5870,20 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				mid_wales_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				south_wales_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				yorkshire_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5599,6 +5926,13 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				cumbria_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				west_midlands_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5620,27 +5954,12 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
-				3110 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
+				channel_islands_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-				}
-				5915 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -5664,6 +5983,7 @@ byz_galatia = {
 				area = wallonia_area
 				area = flanders_area
 				area = franche_comte_area
+				area = west_burgundy_area
 				area = champagne_area
 				area = south_champagne_area
 				area = picardy_area
@@ -5690,6 +6010,10 @@ byz_galatia = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			franche_comte_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			west_burgundy_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
@@ -5733,6 +6057,13 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				north_brabant_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				luxemburg_liege_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -5740,7 +6071,7 @@ byz_galatia = {
 					}
 					add_permanent_claim = ROOT
 				}
-				elsass_area = {
+				alsace_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -5786,17 +6117,6 @@ byz_galatia = {
 						NOT = { province_id = 77 }
 					}
 					add_permanent_claim = ROOT
-				}
-				5497 = {
-					if = {
-						limit = {
-							NOT = {
-								owned_by = ROOT
-								is_core = ROOT
-							}
-						}
-						add_permanent_claim = ROOT
-					}
 				}
 				3060 = {
 					if = {
@@ -5860,14 +6180,14 @@ byz_galatia = {
 		provinces_to_highlight = {
 			OR = {
 				area = brabant_area
+				area = north_brabant_area
 				area = luxemburg_liege_area
-				area = elsass_area
+				area = alsace_area
 				area = switzerland_area
 				area = romandie_area
 				province_id = 96
 				province_id = 5496
 				province_id = 5494
-				province_id = 5497
 				province_id = 3060
 				province_id = 2975
 				province_id = 4820
@@ -5891,11 +6211,15 @@ byz_galatia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			north_brabant_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			luxemburg_liege_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			elsass_area = {
+			alsace_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

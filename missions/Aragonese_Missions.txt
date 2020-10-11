@@ -42,6 +42,13 @@ aragonese_missions_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			cuenca_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			new_castile_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -91,6 +98,7 @@ aragonese_missions_1 = {
 				area = new_castile_area
 				area = cantabrian_range_area
 				area = extremadura_area
+				area = cuenca_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -102,6 +110,10 @@ aragonese_missions_1 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			toledo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cuenca_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -199,6 +211,13 @@ aragonese_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			north_morea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			northern_greece_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -227,6 +246,13 @@ aragonese_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			ionian_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	conquer_athens = {
@@ -239,6 +265,7 @@ aragonese_missions_2 = {
 				area = eastern_mediterrenean_islands_area
 				area = western_aegean_area
 				area = ionian_islands_area
+				area = north_morea_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -246,6 +273,10 @@ aragonese_missions_2 = {
 		}
 		trigger = {
 			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			north_morea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

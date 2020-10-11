@@ -110,9 +110,15 @@ country_decisions = {
 					}
 				}
 				is_emperor_of_china = yes
-				else = {
-					government_rank = 3
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Common Sense"
 				}
+				government_rank = 3
+			}
+			else = {
+				total_development = 1000
 			}
 		}
 		effect = {
@@ -171,9 +177,7 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 		ai_importance = 400
 	}
 }

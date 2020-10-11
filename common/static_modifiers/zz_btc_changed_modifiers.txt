@@ -51,6 +51,28 @@ capital_city = {
 	allowed_num_of_buildings = 1
 }
 
+blockaded = {
+	regiment_recruit_speed = 0.2
+	ship_recruit_speed = 0.2
+	trade_goods_size_modifier = -0.5
+	province_trade_power_modifier = -0.75
+	local_monthly_devastation = 0.1
+}
+
+horde_development = {
+	horde_unity = -2
+}
+
+patriarch_authority_local = {
+	local_unrest = -2
+	local_manpower_modifier = 0.2
+}
+
+scorched_earth = {
+	local_hostile_movement_speed = -0.50
+	hostile_attrition = 3
+}
+
 ##########################################################################
 # Global Static Modifiers
 ##########################################################################
@@ -93,6 +115,7 @@ ai_nation = {
 	sailors_recovery_speed = 0.25
 	army_tradition_decay = -0.02
 	navy_tradition_decay = -0.02
+	fort_maintenance_modifier = -1
 }
 
 positive_stability = {
@@ -119,6 +142,8 @@ negative_stability = {
 	devotion = 1
 	caravan_power = 0.05
 	logothete_general_influence = 0.1
+	monthly_militarized_society = 0.05
+	monthly_fervor_increase = 1
 }
 
 war = {
@@ -159,6 +184,8 @@ war_exhaustion = {
 	siege_ability = -0.01
 	global_trade_goods_size_modifier = -0.02
 	recover_army_morale_speed = -0.005			#BTAddOn new, as a war drags on soliders recover morale more slowly. At 20 WE it should be the penalty as 100 AT gives in bonus.
+	reduced_liberty_desire = -1.25
+	imperial_mandate = -0.20
 }
 
 army_tradition = {
@@ -174,6 +201,34 @@ army_tradition = {
     nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
+	generals_loyalty_modifier = 0.1
+}
+
+mercantilism = {
+	global_prov_trade_power_modifier = 2.0
+	embargo_efficiency = 0.5
+	burghers_loyalty_modifier = 0.1
+	vaisyas_loyalty_modifier = 0.1
+	production_efficiency = 0.5
+	inflation_reduction = -0.25
+	improve_relation_modifier = -0.25
+	center_of_trade_upgrade_cost = -0.5
+	global_ship_trade_power = 1
+	placed_merchant_power = 100
+}
+
+# Multiplied by current Legitimacy - 50
+legitimacy = {
+	global_unrest = -4
+	tolerance_own = 2
+	tolerance_heathen = 2
+	tolerance_heretic = 2
+	diplomatic_reputation = 2
+	vassal_income = 0.1
+	monthly_militarized_society = 0.05
+	max_absolutism = 20
+	nobles_loyalty_modifier = 0.1
+	generals_loyalty_modifier = 0.1
 }
 
 states_in_hre = {							#bonuses for each non-free city with capital in HRE.. as emperor
@@ -213,6 +268,44 @@ corruption = {
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
+	generals_loyalty_modifier = 0.1
+}
+
+militarized_society = {
+	
+	yearly_army_professionalism = 0.01
+	war_exhaustion = -0.1
+	reinforce_speed = 0.2
+	reinforce_cost_modifier = -0.2
+
+}
+
+prestige = {
+	global_trade_power = 0.15			#+15/-15 total bonus from prestige.
+	land_morale = 0.1
+	naval_morale = 0.1
+	global_spy_defence = 0.1				#+10/-10
+	legitimacy = 1.0
+	improve_relation_modifier = 0.5
+	monthly_fervor_increase = 1
+	ae_impact = -0.10
+	embracement_cost = -0.1
+
+	brahmins_hindu_loyalty_modifier = 0.05
+	brahmins_muslim_loyalty_modifier = 0.05
+	brahmins_other_loyalty_modifier = 0.05
+	church_loyalty_modifier = 0.05
+	maratha_loyalty_modifier = 0.05
+	nobles_loyalty_modifier = 0.05
+	burghers_loyalty_modifier = 0.05
+	vaisyas_loyalty_modifier = 0.05
+	cossacks_loyalty_modifier = 0.05
+	nomadic_tribes_loyalty_modifier = 0.05
+	dhimmi_loyalty_modifier = 0.05
+	jains_loyalty_modifier = 0.05
+	rajput_loyalty_modifier = 0.05
+	generals_loyalty_modifier = 0.05
+	logothete_general_influence = -0.1
 }
 
 over_extension = {
@@ -232,6 +325,25 @@ all_nations = {
 	global_tax_income = 12
 	land_forcelimit	= 6
 	naval_forcelimit = 8
+}
+
+send_officers = {
+	discipline = 0.05
+	army_tradition = 1
+}
+
+high_harmony = {
+	tolerance_own = 1
+	development_cost = -0.05
+	legitimacy = 0.5
+	meritocracy = 0.5
+}
+
+low_harmony = {
+	tolerance_own = -2
+	development_cost = 0.1
+	legitimacy = -1
+	meritocracy = -1
 }
 
 dishonoured_alliance =  {

@@ -11,11 +11,14 @@ base_tax = 4
 base_production = 4
 base_manpower = 3
 is_city = yes
-add_vaisyas_or_burghers_effect = yes
 add_core = VIJ
 add_core = MAD
 add_core = GNG
 add_local_autonomy = 25
+
+extra_cost = 16
+center_of_trade = 2
+
 discovered_by = indian
 discovered_by = muslim
 discovered_by = persian_btc
@@ -26,14 +29,7 @@ discovered_by = japanese_btc
 discovered_by = korean_btc
 discovered_by = indochinese
 discovered_by = malay_group
-extra_cost = 16
-center_of_trade = 2
 
-1405.1.1 = { discovered_by = chinese
-discovered_by = japanese_btc
-discovered_by = korean_btc
-discovered_by = indochinese
-discovered_by = malay_group }
 1498.1.1 = { discovered_by = POR }
 1543.1.1 = {
 	controller = REB

@@ -1,0 +1,329 @@
+country_decisions = {
+
+	two_sicilies_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			OR = {
+				tag = SIC
+				tag = NAP
+				tag = EBA
+				tag = JAI
+				tag = TAN
+				tag = LEC
+				primary_culture = neapolitan
+				primary_culture = sicilian
+			}
+			NOT = { has_country_flag = formed_two_sicilies_flag }
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sicily_area
+				area = western_sicily_area
+				area = naples_area
+				area = apulia_area
+				area = calabria_area
+				area = abruzzo_area
+				area = sicily_islands_area
+			}
+			NOT = {
+				province_id = 126
+				province_id = 7607
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = TTS }
+			adm_tech = 15
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			religion_group = christian
+			owns_core_province = 121 # Napoli
+			owns_core_province = 125 # Palermo
+			owns_core_province = 124 # Messina
+			owns_core_province = 2982 # Syracusae
+			owns_core_province = 1933 # Bari
+			owns_core_province = 2984 # Cosenza
+			custom_trigger_tooltip = {
+				tooltip = two_sicilies_requirements_tooltip
+				calc_true_if = {
+					all_owned_province = {
+						is_core = ROOT
+						OR = {
+							area = naples_area
+							area = apulia_area
+							area = calabria_area
+							area = abruzzo_area
+							area = sicily_area
+							area = western_sicily_area
+							area = sicily_islands_area
+						}
+						NOT = {
+							province_id = 126		#Malta
+							province_id = 7607	#Pantelleria
+						}
+					}
+					amount = 20			#At least 2/3 of Southern Italy's 30 provinces
+				}
+			}
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = TTS
+			if = {
+				limit = {
+					NOT = { tag = NAP }
+					NOT = { was_tag = NAP }
+				}
+				swap_non_generic_missions = yes
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_country_flag = formed_two_sicilies_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			sicily_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			7060 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
+			}
+			naples_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			apulia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			calabria_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			abruzzo_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			corsica_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			swap_ideas = yes
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+
+	two_sicilies_nation_diplomatically = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			OR = {
+				tag = SIC
+				tag = NAP
+			}
+			NOT = { has_country_flag = formed_two_sicilies_flag }
+		}
+		provinces_to_highlight = {
+			NOT = { owned_by = ROOT }
+			OR = {
+				owned_by = NAP
+				owned_by = SIC
+			}
+		}
+		allow = {
+			NOT = { exists = TTS }
+			adm_tech = 15
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			religion_group = christian
+			if = {
+				limit = { tag = NAP }
+				senior_union_with = SIC
+			}
+			if = {
+				limit = { tag = SIC }
+				senior_union_with = NAP
+			}
+		}
+		effect = {
+			if = {
+				limit = { tag = NAP }
+				inherit = SIC
+			}
+			if = {
+				limit = { tag = SIC }
+				inherit = NAP
+			}
+			change_tag = TTS
+			if = {
+				limit = {
+					NOT = { tag = NAP }
+					NOT = { was_tag = NAP }
+				}
+				swap_non_generic_missions = yes
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			set_country_flag = formed_two_sicilies_flag
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			sicily_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			7060 = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
+			}
+			naples_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			apulia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			calabria_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			abruzzo_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			corsica_sardinia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			corsica_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = TTS
+			}
+			swap_ideas = yes
+		}
+		ai_will_do = { factor = 1 }
+		ai_importance = 400
+	}
+}

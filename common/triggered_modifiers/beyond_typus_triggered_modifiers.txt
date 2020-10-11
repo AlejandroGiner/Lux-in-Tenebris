@@ -22,6 +22,7 @@ bt_triggered_modifier_a_big_family = {
 				amount = 4
 			}
 		}
+		NOT = { has_estate = estate_nobles }
 	}
 	trigger = {
 		custom_trigger_tooltip = {
@@ -56,6 +57,7 @@ bt_triggered_modifier_hegemoniacle = {
 				amount = 6
 			}
 		}
+		NOT = { has_estate = estate_nobles }
 	}
 	trigger = {
 		custom_trigger_tooltip = {
@@ -82,6 +84,7 @@ bt_triggered_modifier_decentralisation = {
 			}
 			amount = 4
 		}
+		NOT = { has_estate = estate_nobles }
 	}
 	trigger = {
 		custom_trigger_tooltip = {

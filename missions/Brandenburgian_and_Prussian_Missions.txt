@@ -7,6 +7,7 @@ prussian_missions_main_slot = {
 	generic = no
 	ai = yes
 	potential = {
+        NOT = { has_dlc = "Emperor" }
 		OR = {
 			tag = BRA
 			tag = PRU
@@ -71,6 +72,13 @@ prussian_missions_main_slot = {
 				}
 				add_claim = ROOT
 			}
+			sudovia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
 			mittelmark_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -88,6 +96,7 @@ prussian_missions_main_slot = {
 			OR = {
 				area = mittelmark_area
 				area = east_prussia_area
+				area = sudovia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -102,13 +111,17 @@ prussian_missions_main_slot = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			sudovia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_mil_power = 50
 			#Claims
 			custom_tooltip = pru_conquer_silesia_claims
 			hidden_effect = {
-				lower_silesia_area = {
+				legnica_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -122,10 +135,24 @@ prussian_missions_main_slot = {
 					}
 					add_permanent_claim = ROOT
 				}
+				opole_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 			custom_tooltip = prussia_partitions_poland_claims
 			hidden_effect = {
 				west_prussia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+				pomerelia_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT	}
@@ -147,8 +174,9 @@ prussian_missions_main_slot = {
 		required_missions = { connect_the_prussian_lands }
 		provinces_to_highlight = {
 			OR = {
-				area = lower_silesia_area
+				area = legnica_area
 				area = silesia_area
+				area = opole_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -159,7 +187,11 @@ prussian_missions_main_slot = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			lower_silesia_area = {
+			opole_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			legnica_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -187,16 +219,16 @@ prussian_missions_main_slot = {
 			}
 			else_if = {
 				limit = {
-					exists = JUL
+					exists = BRG
 					is_subject = no
-					JUL = {
+					BRG = {
 						is_subject = no
 					}
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
 					months = 300
-					target = JUL
+					target = BRG
 				}
 			}
 			else = {
@@ -260,6 +292,7 @@ prussian_missions_slot_2 = {
 	generic = no
 	ai = yes
 	potential = {
+        NOT = { has_dlc = "Emperor" }
 		OR = {
 			tag = BRA
 			tag = PRU
@@ -274,6 +307,7 @@ prussian_missions_slot_2 = {
 			OR = {
 				area = wielkopolska_area
 				area = west_prussia_area
+				area = pomerelia_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -288,6 +322,10 @@ prussian_missions_slot_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			pomerelia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -298,6 +336,13 @@ prussian_missions_slot_2 = {
 			#Claims, to mirror further Polish partitions.
 			#2nd Partition provinces (Roughly, missing Plock)
 			kuyavia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = ROOT
+			}
+			kalisz_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }

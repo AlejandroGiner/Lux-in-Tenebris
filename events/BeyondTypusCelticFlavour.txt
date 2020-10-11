@@ -10,7 +10,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
 	}
 
@@ -204,7 +204,7 @@ country_event = {
 	picture = NEW_HEIR_eventPicture
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		has_heir = yes
 		has_country_modifier = bt_tanistry_waiting_on_heir
 		has_female_heir = no
@@ -244,7 +244,7 @@ country_event = {
 	picture = NEW_HEIR_eventPicture
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		has_heir = yes
 		has_country_modifier = bt_tanistry_waiting_on_heir
 		has_female_heir = yes
@@ -306,7 +306,7 @@ country_event = {
 	picture = CONQUEST_eventPicture
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		has_heir = yes
 		has_country_modifier = bt_tanistry_underaged_heir
 		heir_age = 15
@@ -365,7 +365,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		is_female = yes
 		NOT = { has_country_flag = bt_girl_power }
 		NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
@@ -410,7 +410,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		is_female = yes
 		has_country_flag = bt_tanistry_high_queen_reigning
 		NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
@@ -440,7 +440,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		government = high_kingship
+		has_reform = tanistry_reform
 		NOT = { has_country_flag = bt_abolition_of_tanistry_succession }
 	}
 
@@ -649,3 +649,49 @@ country_event = {
 #Place Holder for BeyondTypusCelticFlavour.19 in case I need more Tanistry events
 
 #Place Holder for BeyondTypusCelticFlavour.20 in case I need more Tanistry events
+
+#Brittany's quirky inheritance situation, the Mad War, and Anna's political marriages
+#country_event = {
+#	id = BeyondTypusCelticFlavour.21
+#	title = "BeyondTypusCelticFlavour.EVTNAME21"
+#	desc = "BeyondTypusCelticFlavour.EVTDESC21"
+#	picture = DEATH_OF_HEIR_eventPicture
+#	
+#	trigger = {
+#		tag = BRI
+#		ai = yes
+#		was_player = no
+#		NOT = { has_country_flag = burgundian_succession_crisis }
+#		is_at_war = yes
+#		is_free_or_tributary_trigger = yes
+#
+#		government = monarchy
+#		has_regency = no
+#		is_female = no
+#		NOT = { is_year = 1500 }
+#		capital_scope = {
+#			continent = europe
+#		}
+#		FRA = {
+#			exists = yes
+#			is_free_or_tributary_trigger = yes
+#			num_of_cities = 8
+#			is_neighbor_of = BRI
+#		}
+#		OR = {
+#			emperor = {
+#				exists = yes
+#				NOT = { war_with = FRA }
+#			}
+#			emperor = {
+#				exists = no
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = { days = 1 }
+#
+#	option = { # Queen proves herself
+#		name = "BeyondTypusCelticFlavour.EVTOPTA21"
+#	}
+#}

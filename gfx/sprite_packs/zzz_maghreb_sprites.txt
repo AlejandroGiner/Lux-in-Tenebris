@@ -1,0 +1,137 @@
+##Fixes up some of the maghrebi tags to make them more in line with their neighbors
+##Tried to follow cultural lines for now, feel free to change things
+
+btc_maghreb_algeria_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = TLC
+			tag = WNS
+			tag = KBA
+			tag = LGH
+			tag = MZB
+			tag = TGT
+			tag = OGL
+			tag = GHD
+			tag = ZAB
+			tag = AUR
+		}
+	}
+	
+	sprite_infantry = {
+		0 = ALG_INFANTRY_1
+		1 = ALG_INFANTRY_2
+		2 = ALG_INFANTRY_3
+		3 = ALG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = ALG_CAVALRY_1
+		1 = ALG_CAVALRY_2
+		2 = ALG_CAVALRY_3
+		3 = ALG_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = ALG_ARTILLERY_1
+		1 = ALG_ARTILLERY_2
+		2 = ALG_ARTILLERY_3
+		3 = ALG_ARTILLERY_4
+	}
+	
+}
+
+btc_maghreb_moroccan_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = DBD
+			tag = RIF
+		}
+	}
+	
+	sprite_infantry = {
+		0 = MOR_INFANTRY_1
+		1 = MOR_INFANTRY_2
+		2 = MOR_INFANTRY_3
+		3 = MOR_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MOR_CAVALRY_1
+		1 = MOR_CAVALRY_2
+		2 = MOR_CAVALRY_3
+		3 = MOR_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MOR_ARTILLERY_1
+		1 = MOR_ARTILLERY_2
+		2 = MOR_ARTILLERY_3
+		3 = MOR_ARTILLERY_4
+	}
+}
+
+btc_maghreb_tunisian_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = BSM
+			tag = FZA
+			tag = GDM
+			tag = TRP
+		}
+	}
+	
+	sprite_infantry = {
+		0 = TUN_INFANTRY_1
+		1 = TUN_INFANTRY_2
+		2 = TUN_INFANTRY_3
+		3 = TUN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = TUN_CAVALRY_1
+		1 = TUN_CAVALRY_2
+		2 = TUN_CAVALRY_3
+		3 = TUN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = TUN_ARTILLERY_1
+		1 = TUN_ARTILLERY_2
+		2 = TUN_ARTILLERY_3
+		3 = TUN_ARTILLERY_4
+	}
+	
+}
+
+btc_maghreb_mamluk_sprite_pack = {
+	#Tests against every tag in the game
+	country_trigger = {
+		OR = {
+			tag = EGY
+		}
+	}
+	
+		sprite_infantry = {
+		0 = MAN_INFANTRY_1
+		1 = MAN_INFANTRY_2
+		2 = MAN_INFANTRY_3
+		3 = MAN_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = MAN_CAVALRY_1
+		1 = MAN_CAVALRY_2
+		2 = MAN_CAVALRY_3
+		3 = MAN_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = MAN_ARTILLERY_1
+		1 = MAN_ARTILLERY_2
+		2 = MAN_ARTILLERY_3
+		3 = MAN_ARTILLERY_4
+	}
+}

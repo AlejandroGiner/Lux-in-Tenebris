@@ -5,13 +5,19 @@ controller = MRU
 capital = "Wadi Ad Dawasir"
 culture = bedouin_arabic
 religion = sunni
-trade_goods = salt
 hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
+owner = DAW
+controller = DAW
+add_core = DAW
 is_city = yes
-add_core = MRU
+trade_goods = salt
+
+native_size = 10
+native_ferocity = 9
+native_hostileness = 5
 
 discovered_by = east_african
 discovered_by = muslim
@@ -20,15 +26,12 @@ discovered_by = ottoman
 discovered_by = indian
 discovered_by = nomad_group
 
-
 1515.1.1 = { discovered_by = POR }
 
 1750.1.1 = {
 	owner = NAJ
 	controller = NAJ
 	add_core = NAJ
-	is_city = yes
-	trade_goods = salt
 } # The First Saudi State expands... note information in English is sparse so this is aprx.
 
 1818.9.9 = {

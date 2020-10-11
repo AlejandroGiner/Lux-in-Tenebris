@@ -11,6 +11,7 @@ country_decisions = {
 			NOT = { tag = CNN }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_connacht_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -60,6 +61,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CNN
+			add_government_reform = provincial_kingdom_reform
 			connacht_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -80,6 +82,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_connacht_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -91,6 +94,7 @@ country_decisions = {
 			NOT = { tag = MNS }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_munster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -140,6 +144,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MNS
+			add_government_reform = provincial_kingdom_reform
 			munster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -160,6 +165,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_munster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -171,6 +177,7 @@ country_decisions = {
 			NOT = { tag = LEI }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_leinster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -220,6 +227,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LEI
+			add_government_reform = provincial_kingdom_reform
 			leinster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -240,6 +248,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_leinster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -251,6 +260,7 @@ country_decisions = {
 			NOT = { tag = ULS }
 			NOT = { tag = IRE }
 			NOT = { has_country_flag = formed_ulster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			OR = {
 				primary_culture = irish
 				AND = {
@@ -300,6 +310,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ULS
+			add_government_reform = provincial_kingdom_reform
 			ulster_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -320,6 +331,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_ulster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -333,6 +345,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = CNN }
 			NOT = { has_country_flag = formed_connacht_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -373,6 +386,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CNN
+			add_government_reform = norman_duchy_reform
 			connacht_area = {
 				limit = { NOT = { owned_by = CNN } }
 				add_permanent_claim = CNN
@@ -387,6 +401,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_connacht_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -397,6 +412,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = MNS }
 			NOT = { has_country_flag = formed_munster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -437,6 +453,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MNS
+			add_government_reform = norman_duchy_reform
 			munster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -457,6 +474,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_munster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -467,6 +485,7 @@ country_decisions = {
 		potential = {
 			NOT = { tag = LEI }
 			NOT = { has_country_flag = formed_leinster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -507,6 +526,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = LEI
+			add_government_reform = norman_duchy_reform
 			leinster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -527,6 +547,7 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_leinster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400 
@@ -535,8 +556,10 @@ country_decisions = {
 	form_duchy_ulster = {
 		major = yes
 		potential = {
+			btc_potential_trigger = yes
 			NOT = { tag = ULS }
 			NOT = { has_country_flag = formed_ulster_flag_btp }
+			NOT = { has_country_flag = formed_irish_provincial_kingdom_btp }
 			primary_culture = anglo_irish
 			has_reform = norman_lordship_reform
 			any_owned_province = {
@@ -577,6 +600,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ULS
+			add_government_reform = norman_duchy_reform
 			ulster_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -597,8 +621,104 @@ country_decisions = {
 			}
 			add_prestige = 10
 			set_country_flag = formed_ulster_flag_btp
+			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
 		ai_will_do = { factor = 1 }
+		ai_importance = 400 #
+	}
+	
+	anglo_irish_nation = {
+		major = yes
+		potential = {
+			btc_potential_trigger = yes
+			NOT = { has_country_flag = formed_ireland_flag }
+			NOT = { has_country_flag = formed_kingdom_of_ireland_flag_btp }			#remove this after 9.0.
+			NOT = { tag = ANI }
+			NOT = { tag = IRE }
+			NOT = { tag = SCO }
+			NOT = { tag = ENG }
+			NOT = { tag = GBR }
+			OR = {
+				primary_culture = anglo_irish
+				AND = {
+					culture_group = british
+					capital_scope = { region = ireland_region }
+				}
+			}
+			OR = {
+				tag = LEI
+				tag = ULS
+				tag = MNS
+				tag = CNN
+				num_of_owned_provinces_with = {
+					is_core = ROOT
+					region = ireland_region
+					value = 25			#over half of Ireland to see if not one of the four primary provincial kingdoms
+				}
+			}
+		}
+		provinces_to_highlight = {
+			region = ireland_region
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = ANI }
+			hidden_trigger = { NOT = { exists = IRE } }			#Hidden because it shows up in UI as doubled Ireland
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 373			# The Pale and Dublin
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = ireland_region
+				value = 30			#requires roughly two thirds of Ireland to form, so ANI can be formed without the west or IRE can be formed without the Pale and the NE plantations
+			}
+			total_development = 150			#Special discount. Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
+			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+		}
+		effect = {
+			change_tag = ANI
+			change_government = monarchy
+			add_government_reform = anglo_irish_monarchy_reform
+			remove_non_electors_emperors_from_empire_effect = yes
+			ireland_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ANI
+			}
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			if = {
+				limit = {
+					exists = ENG
+					NOT = { historical_friend_with = ENG }
+					NOT = { historical_rival_with = ENG }
+					has_opinion = { who = ENG value = 1 }
+				}
+				add_historical_friend = ENG #Eh, Draiocht? It says you are adding a historical rival. Not a friend.
+			}			#Add England as a historical friend if relations are positive (and not already rival or friends)
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			#I decided to remove the development bonus from forming altogether. With the ability to build up provinces already there, this isn't really needed and can get out of hand quickly. Plus capital should move to Dublin anyway.
+			add_prestige = 25
+			if = { limit = { NOT = { has_idea_group = ANI_ideas } }
+				swap_ideas = yes
+			}
+			swap_non_generic_missions = yes
+			set_country_flag = formed_ireland_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
 		ai_importance = 400 #
 	}
 
@@ -640,8 +760,11 @@ country_decisions = {
 				area = scottish_marches_area
 				area = kingdom_of_the_isles_area
 				area = wales_area
+				area = mid_wales_area
+				area = south_wales_area
 				area = cornwall_area
 				area = brittany_area
+				area = morbihan_area
 				area = lower_brittany_area
 			}
 			OR = {
@@ -686,7 +809,11 @@ country_decisions = {
 				calc_true_if = {
 					all_owned_province = {
 						is_core = ROOT
-						area = wales_area
+						OR = {
+							area = wales_area
+							area = mid_wales_area
+							area = south_wales_area
+						}
 					}
 					amount = 5			#At least half of Wales
 				}
@@ -709,6 +836,7 @@ country_decisions = {
 						OR = {
 							area = lower_brittany_area
 							area = brittany_area
+							area = morbihan_area
 						}
 					}
 					amount = 5			#At least half of Brittany
@@ -751,6 +879,14 @@ country_decisions = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
+				mid_wales_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
+				south_wales_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
 				cornwall_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
@@ -760,6 +896,10 @@ country_decisions = {
 					add_permanent_claim = CEL
 				}
 				lower_brittany_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_permanent_claim = CEL
+				}
+				morbihan_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_permanent_claim = CEL
 				}
@@ -779,6 +919,10 @@ country_decisions = {
 					add_claim = CEL
 				}
 				northern_england_area = {
+					limit = { NOT = { owned_by = ROOT } }
+					add_claim = CEL
+				}
+				cumbria_area = {
 					limit = { NOT = { owned_by = ROOT } }
 					add_claim = CEL
 				}
@@ -1296,220 +1440,6 @@ country_decisions = {
 	}
 
 ###################################################################################################
-################################		Bavaria			 ##########################################
-###################################################################################################
-	unite_bavaria = {
-		major = yes
-		potential = {
-			NOT = { has_country_flag = united_bavaria_flag }
-			BAV = { exists = no }
-			is_nomad = no
-			OR = {
-				tag = BV1
-				tag = BV2
-				tag = BV3
-			}
-		}
-		allow = {
-			is_at_war = no
-			if = {
-				limit = { NOT = { tag = BV1 } }
-				BV1 = { exists = no }
-			}
-			if = {
-				limit = { NOT = { tag = BV2 } }
-				BV2 = { exists = no }
-			}
-			if = {
-				limit = { NOT = { tag = BV3 } }
-				BV3 = { exists = no }
-			}
-		}
-		effect = {
-			change_tag = BAV
-			custom_tooltip = bav_lose_cores_tooltip
-			hidden_effect = {
-				every_province = {
-						limit = { OR = { is_core = BV1 is_core = BV2 is_core = BV3 } }
-						remove_core = BV1
-						remove_core = BV2
-						remove_core = BV3
-				}
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			set_country_flag = united_bavaria_flag
-		}
-		ai_will_do = { factor = 1 }
-		ai_importance = 400 #
-	}
-	
-###################################################################################################
-################################			Pomerania			 ##################################			#Done by JP 2019-4 & adjusted a bit by Draiocht
-###################################################################################################
-	bt_pomeranian_nation = {
-		major = yes
-		potential = {
-			btc_potential_trigger = yes
-			NOT = { tag = HLR }
-			NOT = { tag = GER }
-			NOT = { tag = PRU }
-			NOT = { tag = HAB }
-			NOT = { tag = SAX }
-			NOT = { tag = MKL }
-			NOT = { tag = POM }
-			NOT = { tag = THU }
-			NOT = { tag = BRA }
-			NOT = { tag = BOH }
-			NOT = { tag = BAV }
-			NOT = { has_country_flag = formed_pomerania_flag } 
-			if = {
-				ai = no
-				NOT = { num_of_cities = 35 }			#With more than 35 cities, we want the tag to be trying to form something else, like Prussia or Germany
-			}
-			OR = {
-				#Tags which we want to see the decision by default
-				tag = WLG
-				tag = STT
-				tag = STP
-				tag = KMI
-				AND = {
-					capital_scope = {
-						OR = {
-							area = vorpommern_area
-							area = hinter_pommern_area
-						}
-					}
-					OR = {
-						culture_group = germanic
-						primary_culture = kashubian_culture
-					}
-					NOT = { government_rank = 2 }
-				}	#Some contingencies for odd situations. So long as the tag is a reasonable culture, it isn't too large, and has a capital in Pomerania, then why not? Note the num of city check should ensure no quirks with giant tags switching who shouldn't
-			}
-		}
-		provinces_to_highlight = {
-			OR = { 
-				area = vorpommern_area
-				area = hinter_pommern_area
-			}
-			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
-			}
-		}
-		allow = {
-			NOT = { exists = POM } 
-			is_at_war = no 
-			is_free_or_tributary_trigger = yes 
-			is_nomad = no 
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = bt_sole_pomeranian_duchy_tooltip
-					OR = {
-						AND = {
-							tag = WLG
-							NOT = { exists = STT }
-							NOT = { exists = STP }
-						}
-						AND = {
-							tag = STT
-							NOT = { exists = WLG }
-							NOT = { exists = STP }
-						}
-						AND = {
-							tag = STP
-							NOT = { exists = WLG }
-							NOT = { exists = STT }
-						}
-					}
-				}
-				AND  = {
-					custom_trigger_tooltip = {
-						tooltip = bt_no_other_surviving_pomeranian_minors
-						NOT = { exists = WLG }
-						NOT = { exists = STT }
-						NOT = { exists = STP }
-					}
-					custom_trigger_tooltip = {
-						tooltip = two_thirds_of_pomerania_tooltip
-						calc_true_if = {
-							all_owned_province = {
-								is_core = ROOT
-									OR = {
-										area = vorpommern_area
-										area = hinter_pommern_area
-									}
-							}
-							amount = 9			#At least 2/3 of Pomerania's 13 provinces
-						}
-					}
-					owns_core_province = 1858			#Stettin
-					owns_core_province = 2994			#Griefswald
-					owns_core_province = 2995			#Stolp
-				}
-			}
-		}
-		effect = {
-			change_tag = POM
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 5
-			vorpommern_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = POM
-			}
-			hinter_pommern_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = POM
-			}
-			custom_tooltip = bt_reunifies_duchy_of_pomerania
-			hidden_effect = {
-				every_province = {
-					limit = {
-						continent = europe
-						is_core = WLG
-					}
-					remove_core = WLG
-					add_core = POM
-				}
-				every_province = {
-					limit = {
-						continent = europe
-						is_core = STT
-					}
-					remove_core = STT
-					add_core = POM
-				}
-				every_province = {
-					limit = {
-						continent = europe
-						is_core = STP
-					}
-					remove_core = STP
-					add_core = POM
-				}
-			}
-			set_country_flag = formed_pomerania_flag
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
-		}
-		ai_will_do = { factor = 1 }
-		ai_importance = 400
-	}
-	
-###################################################################################################
 ################################			Belgium			 ######################################
 ###################################################################################################
 	belgian_nation = {
@@ -1791,8 +1721,8 @@ country_decisions = {
 				province_id = 1826			# Lika
 				province_id = 3001			# Skopje
 				province_id = 3002			# Sarajevo
-				province_id = 3187			# Podrinje
-				province_id = 3191			# Rijeka
+				province_id = 4755			# Podrinje
+				province_id = 4752			# Fiume
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -1817,8 +1747,8 @@ country_decisions = {
 					province_id = 1826			# Lika
 					province_id = 3001			# Skopje
 					province_id = 3002			# Sarajevo
-					province_id = 3187			# Podrinje
-					province_id = 3191			# Rijeka
+					province_id = 4755			# Podrinje
+					province_id = 4752			# Fiume
 				}
 				is_core = ROOT
 			}
@@ -2119,7 +2049,21 @@ country_decisions = {
 				}
 				add_permanent_claim = KME
 			}
+			eastern_cambodia_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KME
+			}
 			mekong_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = KME
+			}
+			mekong_lowlands_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -2191,7 +2135,10 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			area = thrace_area
+			OR = {
+				area = thrace_area
+				area = eastern_thrace_area
+			}
 			OR = {
 				NOT = { owned_by = ROOT }
 				NOT = { is_core = ROOT }
@@ -2221,6 +2168,11 @@ country_decisions = {
 					owned_by = ROOT
 					is_core = ROOT
 				}
+				eastern_thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 			if = {							#crusader state
 				limit = {
@@ -2242,6 +2194,11 @@ country_decisions = {
 					owned_by = ROOT
 					is_state_core = ROOT
 				}
+				eastern_thrace_area = {
+					type = all
+					owned_by = ROOT
+					is_state_core = ROOT
+				}
 			}
 		}
 		effect = {
@@ -2252,10 +2209,16 @@ country_decisions = {
 			thrace_area = {
 				add_core = LTE
 			}
+			eastern_thrace_area = {
+				add_core = LTE
+			}
 			western_aegean_area = {
 				add_permanent_claim = LTE
 				}
 			east_adriatic_coast_area = {
+				add_permanent_claim = LTE
+			}
+			ragusa_area = {
 				add_permanent_claim = LTE
 			}
 			if = {
@@ -2360,7 +2323,7 @@ country_decisions = {
 				province_id = 1769	# Gorizia
 				province_id = 1774	# Treviso
 				province_id = 1862	# Cremona
-				province_id = 3047	# Bergamo
+				province_id = 4739	# Bergamo
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -2394,7 +2357,7 @@ country_decisions = {
 						province_id = 1769	# Gorizia
 						province_id = 1774	# Treviso
 						province_id = 1862	# Cremona
-						province_id = 3047	# Bergamo
+						province_id = 4739	# Bergamo
 					}
 				}
 				amount = 7			#At least 2/3 of lmv's 11 provinces (approximate)
@@ -2689,33 +2652,35 @@ country_decisions = {
 				set_government_rank = 3
 			}
 			bohemia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GMV
+			}
+			sudety_area = {
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = GMV
 			}
 			erzgebirge_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = GMV
 			}
 			silesia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GMV
+			}
+			opole_area = {
+				limit = { NOT = { owned_by = ROOT } }
+				add_permanent_claim = GMV
+			}
+			legnica_area = {
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = GMV
 			}
 			slovakia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = GMV
 			}
 			poland_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = GMV
 			}
 			add_country_modifier = {
@@ -2983,7 +2948,16 @@ country_decisions = {
 					add_permanent_claim = FRX
 				}
 			}
-			netherlands_area = {
+			holland_area = {
+				if = {
+					limit = {
+						NOT = { is_core = ROOT }
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = FRX
+				}
+			}
+			south_holland_area = {
 				if = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -3226,6 +3200,15 @@ country_decisions = {
 				}
 				add_permanent_claim = SIA
 			}
+			mekong_lowlands_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = SIA
+			}
 			north_laos_area = {
 				limit = {
 					NOT = {
@@ -3433,12 +3416,24 @@ country_decisions = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
+			mekong_lowlands_area = {
+				type = all
+				owned_by = ROOT
+				is_core = ROOT
+			}
 		}
 		effect = {
 			mekong_area = {
-				add_base_tax = 2
-				add_base_production = 2
-				add_base_manpower = 2
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				change_culture = ROOT
+				change_religion = ROOT
+			}
+			mekong_lowlands_area = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
 				change_culture = ROOT
 				change_religion = ROOT
 			}
@@ -3493,7 +3488,25 @@ country_decisions = {
 				}
 				add_permanent_claim = VTM
 			}
+			mekong_lowlands_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = VTM
+			}
 			cambodia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = VTM
+			}
+			eastern_cambodia_area = {
 				limit = {
 					NOT = {
 						owned_by = ROOT

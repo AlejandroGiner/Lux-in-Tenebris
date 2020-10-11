@@ -556,6 +556,13 @@ bng_slot_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			salween_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			central_burma_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -749,6 +756,13 @@ bng_slot_4 = {
 		effect = {
 			add_yearly_manpower = 1
 			kachin_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			sagaing_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}

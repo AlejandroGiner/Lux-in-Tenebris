@@ -30,6 +30,7 @@ country_decisions = {
 				area = baetica_area
 				AND = {
 					area = alentejo_area
+					area = south_alentejo_area
 					OR = {
 						ROOT = { NOT = { owns_core_province = 1750 } }
 						ROOT = { NOT = { owns_core_province = 7653 } }
@@ -45,6 +46,7 @@ country_decisions = {
 						province_id = 3082
 					}
 					NOT = { alentejo_area = {type = all owned_by = ROOT} }
+					NOT = { south_alentejo_area = {type = all owned_by = ROOT} }
 				}
 			}
 			OR = {
@@ -63,6 +65,7 @@ country_decisions = {
 			baetica_area = {type = all owned_by = ROOT}
 			OR = {
 				alentejo_area = { type = all owned_by = ROOT}
+				south_alentejo_area = { type = all owned_by = ROOT}
 				AND = {
 					owns_core_province = 1750			# Alicante
 					owns_core_province = 7653

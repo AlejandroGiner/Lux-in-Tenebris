@@ -220,14 +220,14 @@ ned_colonial_group_two = {
 				}
 				add_permanent_claim = ROOT
 			}
-			malacca_area = {
+			perak_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
-			johor_area = {
+			malacca_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -289,7 +289,7 @@ ned_colonial_group_three = {
 			OR = {
 				area = malaya_area
 				area = malacca_area
-				area = johor_area
+				area = perak_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_discovered = ROOT
@@ -304,7 +304,7 @@ ned_colonial_group_three = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			johor_area = {
+			perak_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -390,8 +390,10 @@ ned_reconquest_group = {
 		provinces_to_highlight = {
 			OR = {
 				area = flanders_area
-				area = netherlands_area
+				area = holland_area
+				area = north_brabant_area
 				area = brabant_area
+				area = south_holland_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -401,11 +403,19 @@ ned_reconquest_group = {
 				type = all
 				owned_by = ROOT
 			}
-			netherlands_area = {
+			holland_area = {
 				type = all
 				owned_by = ROOT
 			}
 			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_holland_area = {
 				type = all
 				owned_by = ROOT
 			}

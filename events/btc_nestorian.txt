@@ -441,7 +441,7 @@ country_event = {
             }
           }
         }
-        capital_scope = { save_event_target_as = trade_province }
+		save_event_target_as = trade_neighbor
       }
     }
   }
@@ -729,7 +729,7 @@ country_event = {
   id = nestorian_events.9
   title = nestorian_events.9.t
   desc = nestorian_events.9.d
-  picture = KING_CHOICE_eventPicture
+  picture = KINGS_CHOICE_eventPicture
 
   is_triggered_only = yes
 
@@ -751,6 +751,10 @@ country_event = {
       influence = 15
       desc = encroaching_of_land_aristocracy
     }
+	add_country_modifier = {
+		name = encroaching_land_aristocracy
+		duration = 5475
+	}
   }
   option = {
     name = nestorian_events.9.b
@@ -803,7 +807,7 @@ country_event = {
   id = nestorian_events.10
   title = nestorian_events.10.t
   desc = nestorian_events.10.d
-  picture = DECLARATION_INDEPENDENCE
+  picture = DECLARATION_INDEPENDENCE_eventPicture
   
   is_triggered_only = yes
   

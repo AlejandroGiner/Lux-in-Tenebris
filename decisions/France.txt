@@ -3,6 +3,7 @@ country_decisions = {
 	move_the_court_to_versailles = {
 	
 		potential = {
+			NOT = { has_dlc = "Emperor" }
 			tag = FRA
 			normal_or_historical_nations = yes
 			OR = {
@@ -29,6 +30,7 @@ country_decisions = {
 	
 	say_the_state_is_me = {
 		potential = {
+			NOT = { has_dlc = "Emperor" }
 			tag = FRA
 			normal_or_historical_nations = yes
 			OR = {

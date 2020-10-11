@@ -313,6 +313,7 @@ age_of_reformation = {
 	abilities = {
 	
 		ab_allow_religion_enforced = {
+			modifier = { enforce_religion_cost = -0.25 }
 			effect = {
 				custom_tooltip = religion_enforced_edict
 				set_country_flag = religion_enforced_edict
@@ -826,7 +827,13 @@ age_of_revolutions = {
 		}
 		ab_austria_rep = {
 			allow = {
-				tag = HAB
+				OR = {
+					tag = HAB
+					AND = {
+						was_tag = HAB
+						tag = HLR
+					}
+				}
 			}
 			modifier = {
 				diplomatic_reputation = 5

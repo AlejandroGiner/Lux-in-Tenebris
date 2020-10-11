@@ -5,17 +5,26 @@ country_decisions = {
 			btc_potential_trigger = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_ireland_flag }
-			NOT = {
-				tag = IRE
-				tag = SCO
-				tag = ANI
-				tag = TNA
-			}
+			NOT = { tag = IRE }
+			NOT = { tag = SCO }
+			NOT = { tag = ANI }
+			NOT = { tag = TNA }
 			OR = {
 				primary_culture = irish
 				AND = {
 					culture_group = gaelic
 					any_owned_province = { region = ireland_region }
+				}
+			}
+			OR = {
+				tag = LEI
+				tag = ULS
+				tag = MNS
+				tag = CNN
+				num_of_owned_provinces_with = {
+					is_core = ROOT
+					region = ireland_region
+					value = 23			#over half of Ireland to see if not one of the four primary provincial kingdoms Mun 9 Lei 7 Con 6 Uls 8
 				}
 			}
 		}
@@ -31,6 +40,7 @@ country_decisions = {
 			NOT = { exists = IRE }
 			btc_can_form_trigger = yes
 			btc_was_not_colonial_nation_trigger = yes
+			owns_core_province = 4120			# Kildare, stand in for Tara
 			custom_trigger_tooltip = {
 				tooltip = three_quarters_of_ireland_tooltip
 				num_of_owned_provinces_with = {
@@ -55,6 +65,8 @@ country_decisions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			remove_government_reform = irish_clann_reform
+			add_government_reform = tanistry_reform
 			set_country_flag = formed_ireland_flag
 		}
 		ai_will_do = {

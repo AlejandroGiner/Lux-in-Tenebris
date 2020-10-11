@@ -86,6 +86,7 @@ country_event = { #2 The Genoese Merchants
 				region = greece_region_btc
 				region = anatolia_region
 				area = erzurum_area
+				area = upper_euphrates_area
 				area = crimea_area
 				area = crimea_coast_area
 				province_id = 286
@@ -126,6 +127,7 @@ country_event = { #2 The Genoese Merchants
 					region = greece_region_btc
 					region = anatolia_region
 					area = erzurum_area
+					area = upper_euphrates_area
 					area = crimea_area
 					area = crimea_coast_area
 					province_id = 286
@@ -846,6 +848,9 @@ country_event = { #11 City of the World's Desire
 		
 		add_prestige = 10
 		thrace_area = {
+			add_claim = TUR
+		}
+		eastern_thrace_area = {
 			add_claim = TUR
 		}
 		declare_war_with_cb = {
@@ -1910,117 +1915,6 @@ country_event = { #32 The city of Ailia and the Jews
 				factor = 0
 				has_idea_group = religious_ideas
 			}
-		}
-	}
-}
-
-province_event = { #36 The Theme capital [ROOT.GetName] attracts the countryside populace
-	id = resurgent_BYZ.36
-	title = "resurgent_BYZ.36.t" 
-	desc = "resurgent_BYZ.36.d"
-	picture = CITY_DEVELOPMENT_eventPicture
-	
-	trigger = {
-		has_estate = estate_strategoi
-		has_province_modifier = byz_katepano_rule
-		owner = {
-			is_byz_or_hellenic_rome_trigger = yes
-			any_owned_province = {
-				NOT = { has_estate = estate_strategoi }
-				development = 7
-				NOT = { has_province_modifier = byz_katepano_rule }
-				NOT = { province_has_center_of_trade_of_level = 2 }
-				NOT = { province_has_center_of_trade_of_level = 3 }
-			}
-			NOT = { is_at_war = yes }
-		}		
-	}
-	
-	immediate = {
-		hidden_effect = {
-			owner = {
-				random_owned_province = {
-					limit = {
-						NOT = { has_estate = estate_strategoi }
-						development = 7
-						NOT = { has_province_modifier = byz_katepano_rule }
-						NOT = { province_has_center_of_trade_of_level = 2 }
-						NOT = { province_has_center_of_trade_of_level = 3 }
-					}
-					set_province_flag = byz_emigration_province
-				}
-			}
-			save_event_target_as = byz_immigration_province
-		}
-		
-	}
-	
-	mean_time_to_happen = {
-		years = 25
-	} #This only happens for Katepano theme capitals and such doesn't happen too often
-	
-	option = { 
-		name = "resurgent_BYZ.36.a" #Let them move in
-		owner = {
-			every_owned_province = {
-				limit = {
-					has_province_flag = byz_emigration_province
-				}
-				random_list = {
-					33 = {
-						add_base_tax = -1
-						event_target:byz_immigration_province = {
-							add_base_tax = 1
-						}
-					}
-					33 = {
-						add_base_production = -1
-						event_target:byz_immigration_province = {
-							add_base_production = 1
-						}
-					}
-					33 = {
-						add_base_manpower = -1
-						event_target:byz_immigration_province = {
-							add_base_manpower = 1
-						}
-					}
-				}
-				clr_province_flag = byz_emigration_province
-			}
-		}
-		
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 0
-				owner = {
-					estate_influence = { estate = estate_strategoi influence = 80 }
-				}
-			}
-		}
-	}
-	option = {
-		name = "resurgent_BYZ.36.b" #Stop the relocation attempt
-		owner = {
-			every_owned_province = {
-				limit = {
-					has_province_flag = byz_emigration_province
-				}
-				add_province_modifier = {
-					name = "byz_disallowed_migration_province"
-					duration = 3650
-				}
-				clr_province_flag = byz_emigration_province
-			}
-			add_country_modifier = {
-				name = "byz_disallowed_migration_country"
-				duration = 1825
-			}
-		}
-		
-		ai_chance = {
-			factor = 10
 		}
 	}
 }

@@ -41,11 +41,3 @@ NDefines.NFrontend.CREDITS_POS_X = 2911.0
 NDefines.NFrontend.CREDITS_POS_Z = 1824.0
 NDefines.NFrontend.CREDITS_LOOK_X = 2916.0
 NDefines.NFrontend.CREDITS_LOOK_Z = 2027.0
-
-NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.65			-- from 0 75
-NDefines.NDiplomacy.PO_DEMAND_PROVINCES_PRESTIGE = 0.2			-- from 0 25
-NDefines.NDiplomacy.PEACE_COST_DEMAND_PROVINCE = 0.8			-- from 1
-NDefines.NDiplomacy.PEACE_COST_CONCEDE_PROVINCE = 0.8			-- from 1
-NDefines.NDiplomacy.PEACE_COST_RETURN_CORE = 0.8			-- from 1
-NDefines.NDiplomacy.PEACE_COST_BECOME_VASSAL = 0.8			-- from 1
-NDefines.NDiplomacy.PEACE_COST_REVOKE_CORE = 0.4			-- from 0 5

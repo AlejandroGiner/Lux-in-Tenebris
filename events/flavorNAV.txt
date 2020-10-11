@@ -120,46 +120,50 @@ country_event = {
 	option = {
 		name = flavor_nav.4.a
 		trigger = {
-			NAV = {
-				ai = yes
-			}
+			NAV = { ai = yes }
 		}
-		ARA = {
-			create_union = NAV
-		}
+		ARA = { create_union = NAV }
 		if = {
 			limit = {
 				any_owned_province = {
+					OR = {
 						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
 			}
 			every_owned_province = {
 				limit = {
+					OR = {
 						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
-				add_local_autonomy = 25
+					add_local_autonomy = 25
 			}
 		}
 	}
 	option = {
 		name = flavor_nav.4.c
 		trigger = {
-			NAV = {
-				ai = yes
-			}
+			NAV = { ai = yes }
 		}
-		ARA = {
-			create_union = NAV
-		}
+		ARA = { create_union = NAV }
 		if = {
 			limit = {
 				any_owned_province = {
+					OR = {
 						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
 			}
 			every_owned_province = {
 				limit = {
+					OR = {
 						area = catalonia_area
+						area = catalan_pyrenees_area
+					}
 				}
 				add_unrest = 10
 			}
