@@ -1,8 +1,151 @@
+ned_reconquest_group = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = NED
+				NOT = { was_tag = FLA }
+				NOT = { was_tag = BRB }
+				NOT = { was_tag = T0A }
+			}
+			tag = HOL
+			tag = UTR
+			tag = GEL
+			tag = FRI
+			tag = GRN
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	ned_lowlands_one = {
+		icon = mission_hanseatic_city
+		required_missions = {  }
+		position = 1
+		completed_by = 1560.1.1
+		
+		provinces_to_highlight = {
+			OR = {
+				area = flanders_area
+				area = holland_area
+				area = north_brabant_area
+				area = brabant_area
+				area = south_holland_area
+			}
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			flanders_area = {
+				type = all
+				owned_by = ROOT
+			}
+			holland_area = {
+				type = all
+				owned_by = ROOT
+			}
+			brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_brabant_area = {
+				type = all
+				owned_by = ROOT
+			}
+			south_holland_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "ned_lowlands_victory"
+				duration = 5475
+			}
+		}
+	}
+	
+	ned_lowlands_two = {
+		icon = mission_cannons_firing
+		required_missions = { ned_lowlands_one }
+		position = 2
+		
+		provinces_to_highlight = {
+			OR = {
+				area = wallonia_area
+				area = frisia_area
+				province_id = 88		
+				province_id = 87
+				province_id = 3023
+				province_id = 5534
+			}
+			NOT = { owned_by = ROOT }
+		}
+		
+		trigger = {
+			wallonia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			frisia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			custom_trigger_tooltip = {
+				tooltip = ned_conquer_picardy_area_tooltip
+				picardy_area = {
+					type = all
+					OR = {
+						province_id = 89
+						province_id = 3024
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_adm_power = 100
+			add_treasury = 250
+		}
+	}
+	
+	ned_religious_unity = {
+		icon = mission_luther_theses
+		required_missions = { ned_lowlands_two }
+		position = 3
+		
+		trigger = {
+			NOT = { current_age = age_of_discovery }
+			OR = {
+				NOT = {
+					religion = catholic
+				}
+				has_country_modifier = "counter_reformation"
+			}
+		}
+		
+		effect = {
+			add_country_modifier = {
+				name = "eng_rb_state_religion_mod"
+				duration = 7300
+			}
+		}
+	}
+}
+
 ned_colonial_group = {
 	slot = 5
 	generic = no
 	ai = yes
+	potential_on_load = {
+	
+	}
 	potential = {
+		NOT = { has_dlc = "Emperor" }
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -18,12 +161,7 @@ ned_colonial_group = {
 		trigger = {
 				custom_trigger_tooltip = {
 					tooltip = miss_discover_caribbean
-					OR = {
-					colonial_the_carribean = { has_discovered = ROOT }
-					colonial_cuba = { has_discovered = ROOT }
-					colonial_hispaniola = { has_discovered = ROOT }
-					colonial_bahamas = { has_discovered = ROOT }
-					}
+					carribeans_region = { has_discovered = ROOT }
 				}
 		}
 		
@@ -108,6 +246,7 @@ ned_colonial_group_two = {
 	generic = no
 	ai = yes
 	potential = {
+		NOT = { has_dlc = "Emperor" }
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -274,6 +413,7 @@ ned_colonial_group_three = {
 	generic = no
 	ai = yes
 	potential = {
+		NOT = { has_dlc = "Emperor" }
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -329,6 +469,7 @@ ned_colonial_group_four = {
 	generic = no
 	ai = yes
 	potential = {
+		NOT = { has_dlc = "Emperor" }
 		tag = NED
 		is_random_new_world = no
 		NOT = { map_setup = map_setup_random }
@@ -366,133 +507,6 @@ ned_colonial_group_four = {
 				add_base_tax = 1
 				add_base_production = 1
 				add_base_manpower = 1
-			}
-		}
-	}
-}
-
-ned_reconquest_group = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		tag = NED
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	ned_lowlands_one = {
-		icon = mission_hanseatic_city
-		required_missions = {  }
-		position = 1
-		completed_by = 1560.1.1
-		
-		provinces_to_highlight = {
-			OR = {
-				area = flanders_area
-				area = holland_area
-				area = north_brabant_area
-				area = brabant_area
-				area = south_holland_area
-			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			flanders_area = {
-				type = all
-				owned_by = ROOT
-			}
-			holland_area = {
-				type = all
-				owned_by = ROOT
-			}
-			brabant_area = {
-				type = all
-				owned_by = ROOT
-			}
-			north_brabant_area = {
-				type = all
-				owned_by = ROOT
-			}
-			south_holland_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		
-		effect = {
-			add_country_modifier = {
-				name = "ned_lowlands_victory"
-				duration = 5475
-			}
-		}
-	}
-	
-	ned_lowlands_two = {
-		icon = mission_cannons_firing
-		required_missions = { ned_lowlands_one }
-		position = 3
-		
-		provinces_to_highlight = {
-			OR = {
-				area = wallonia_area
-				area = frisia_area
-				province_id = 88		
-				province_id = 87
-				province_id = 3023
-				province_id = 5534
-			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			wallonia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			frisia_area = {
-				type = all
-				owned_by = ROOT
-			}
-			custom_trigger_tooltip = {
-				tooltip = ned_conquer_picardy_area_tooltip
-				picardy_area = {
-					type = all
-					OR = {
-						province_id = 89
-						province_id = 3024
-						country_or_non_sovereign_subject_holds = ROOT
-					}
-				}
-			}
-		}
-		
-		effect = {
-			add_adm_power = 100
-			add_treasury = 250
-		}
-	}
-	
-	ned_religious_unity = {
-		icon = mission_luther_theses
-		required_missions = { ned_lowlands_two }
-		position = 5
-		
-		trigger = {
-			NOT = { current_age = age_of_discovery }
-			OR = {
-				NOT = {
-					religion = catholic
-				}
-				has_country_modifier = "counter_reformation"
-			}
-		}
-		
-		effect = {
-			add_country_modifier = {
-				name = "eng_rb_state_religion_mod"
-				duration = 7300
 			}
 		}
 	}
