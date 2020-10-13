@@ -1725,16 +1725,16 @@ dulkadir_area = { # 3 +Kayseri
 	332 2301 5150 5158 5146 5848
 }
 
-iraq_arabi_area = { #5 Baghdad
-	409 410 4291 3560 3598 3565 3599 3601
+iraq_arabi_area = { #5 Lower Mesopotamia
+	406 409 410 2310 4291
 }
 
 basra_area = { #4
-	408 4288 2340 3561 3562 3563 3604 3605
+	408 2311 2312 4288 2340
 }
 
 luristan_area = { #4
-	413 414 2209 2210 2211 3616
+	413 414 2209 2210
 }
 
 north_kurdistan_area = { #3
@@ -1742,12 +1742,12 @@ north_kurdistan_area = { #3
 }
 
 khuzestan_area = { #5
-	412 2217 4289 4290 4342 3606 3607 3608 3609 3610 3611
+	412 2217 4289 4290 4342
 }
 
 shahrizor_area = {	#4
 	color = { 152 102 102 }
-	415 4293 4294 3594 3600
+	415 2211 4293 4294
 }
 
 al_jazira_area = { #5
@@ -1756,15 +1756,7 @@ al_jazira_area = { #5
 }
 
 rakka_area = { #4
-	407 2314 5809 5805 405 3615
-}
-
-sanjak_al_dulaim_area = { #4
-	3595 406 3596 3597 2310 
-}
-
-dhi_qar_area = { #4
-	2311 2312 3588 3589 3564 3590 3602 3603
+	407 2314 5809 5805 405
 }
 
 ########################################
@@ -1801,11 +1793,11 @@ tihama_al_yemen_area = { #Tihamat
 
 upper_yemen_area = {
 	color = { 220 41 155 }
-	390 2344 2345 4281 5239 6326
+	390 2344 2345 4281
 }
 
 yemen_area = { #4
-	387 388 4279 4280 6325 6327 
+	387 388 4279 5239 4280
 }
 
 hadramut_area = { #3
@@ -2504,81 +2496,6 @@ south_african_plateau_area = { #5
 	833 1178 5349 5384
 }
 
-########################################
-# South-Eastern Islands				   #
-########################################
-
-mascarenes_area = { #3
-	1100 1102 1103
-}
-
-indian_ocean_islands_area = { #5
-	574 7056 1101 1998 1999 5093 1248
-}
-
-papua_area = { #5 (Papuan Peninsula)
-	1237 2719 2720 2721 2722
-}
-
-vogelkop_area = { #4
-	1245 2718 2723 2724
-}
-
-melanesia_area = { #5
-	1236 1238 1239 1242 1986
-}
-
-micronesia_area = { #7
-	1241 1991 1993 1994 5023 5024
-}
-
-west_micronesia_area = { #3
-	1235 1995 1996 5028
-}
-
-western_australia_area = { #4
-	1084 2726 2727
-}
-
-top_end_area = { #2
-	2728 4863 4864 4865 2729 4860 4861 4862
-}
-
-northern_australia_area = { #3
-	2730 2731 2732 4866
-}
-
-eastern_australia_area = { #5
-	1091 1092 1093 1094 2733
-}
-
-southern_australia_area = { #3
-	1089 1090 2734 1085
-}
-
-murray_river_area = { #5
-	1086 1087 1088 2735 2736
-}
-
-northern_polynesia_area = { #3
-	1240 1997 5029 5817 5818
-}
-
-eastern_polynesia_area = { #3
-	1988 2002 7059
-}
-
-polynesia_area = { #5
-	1243 1989 1990 1992
-}
-
-te_ika_a_maui_area = { #5
-	1107 5604 5605 5610
-}
-
-te_waipounamu_area = { #3
-	2738 5601 5602 5603
-}
 
 ########################################
 # Greater Persia		               #
@@ -3292,7 +3209,7 @@ hamgyeong_area = { #3
 }
 
 western_korea_area = { #4 (Gyeonggi)
-	735 6486 6487 6488 6489
+	735 4230 6486 6487 6488 6489
 }
 
 eastern_korea_area = { #5 (Gangwon)
@@ -3304,7 +3221,7 @@ south_korea_area = { #4 (Jeolla)
 }
 
 left_chungcheong_area = { #Chungcheong
-	1013 4229 6490 6491 4230
+	1013 4229 6490 6491
 }
 
 left_gyeongsang_area = { #Gyeongsang
@@ -4717,7 +4634,7 @@ southeast_sahara_area = {
 }
 
 medri_bahri_area = {
-	1230 5288 2765 5298 6328
+	1230 5288 2765 5298
 }
 
 nafusa_mountains_area = {
