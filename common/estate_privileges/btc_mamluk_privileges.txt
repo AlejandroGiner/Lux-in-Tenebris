@@ -1,0 +1,186 @@
+estate_btc_mamluks_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 150
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_btc_mamluks
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_btc_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_territories = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_btc_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_btc_mamluks_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_btc_mamluks_autonomy = {
+	icon = privilege_royal_authority
+	max_absolutism = -10
+	loyalty = 0.1
+	influence = 0.1
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 10
+		modifier = {
+			factor = 0
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_btc_mamluks_red_sea_trading_posts = {
+	icon = privilege_give_money
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.05
+	penalties = {
+		burghers_loyalty_modifier = -0.1
+	}
+	benefits = {
+	}
+	on_granted = {
+		#-35% dev cost and +40 autonomy floor to Red Sea coastal provinces
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_btc_mamluks_sudan_somalia_raids = {
+	icon = privilege_military_power
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0
+	penalties = {
+		yearly_corruption = 0.1
+	}
+	benefits = {
+		global_tax_income = 24 #yearly
+	}
+	on_granted = {
+		#A bunch of sailors (from Somalia), manpower and ducats
+		#Reduces opinion of any nation owning provinces in the affected areas
+		#Also adds devastation to the affected provinces
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_btc_mamluks_rotate_palace_guard = {
+	icon = privilege_military_power
+	max_absolutism = 0
+	loyalty = -0.1
+	influence = 0.05
+	penalties = {
+	}
+	benefits = {
+		stability_cost_modifier = -0.25
+		land_maintenance_modifier = 0.05
+	}
+	on_granted = {
+		add_stability_or_adm_power = yes
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_btc_mamluks_entrenched_syrian_governors = {
+	icon = privilege_admin_power
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.15
+	penalties = {
+		yearly_corruption = 0.1
+		nobles_loyalty_modifier = -0.05
+	}
+	benefits = {
+	}
+	on_granted = {
+		#Static modifier of +20 autonomy floor and +5 local unrest in Syria
+	}
+	ai_will_do = {
+		factor = 0
+	}
+	#The privilege has a tooltip that says
+	#"If this privilege is revoked, the governor and his guard will return to Egypt, likely causing trouble" 
+	#After a year or 2 of revoking the privilege, you get a big revolt in Egypt of Mamluk rebels
+}
+
+estate_btc_mamluks_enforce_recruitment_levant = {
+	icon = privilege_royal_authority
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	land_share = 5
+	penalties = {
+	}
+	benefits = {
+	}
+	on_granted = {
+		#Every owned muslim province of Levantine culture gets
+		#+30% manpower and +8 unrest
+	}
+}
