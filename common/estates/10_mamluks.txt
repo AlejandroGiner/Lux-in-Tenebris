@@ -1,0 +1,133 @@
+estate_btc_mamluks = {
+	
+	icon = 14
+	
+	trigger = {
+		tag = MAM
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = cossacks_reform }
+		NOT = { government = native }
+		NOT = { has_reform = trading_city }
+		NOT = { has_reform = siberian_tribe }
+		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = { has_reform = peasants_republic }
+		NOT = { has_reform = american_republic }
+		NOT = { has_reform = federal_republic }
+		is_nomad = no
+		is_colonial_nation = no
+		OR = {
+			NOT = { has_reform = celestial_empire }
+			has_dlc = "Mandate of Heaven"
+		}
+	}
+	
+	country_modifier_happy = {
+		cavalry_cost = -0.2
+		state_maintenance_modifier = -0.15
+		army_tradition = 0.5
+	}
+	
+	country_modifier_neutral = {
+		state_maintenance_modifier = -0.15
+	}
+	
+	country_modifier_angry = {
+		cavalry_cost = 0.2
+		yearly_corruption = 0.15
+		global_unrest = 4
+	}
+	
+	land_ownership_modifier = {
+		btc_mamluks_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 2
+			culture = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 2
+			region = mashriq_region
+		}
+		modifier = {
+			factor = 3
+			region = egypt_region
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 15
+	influence_from_dev_modifier = 1.0
+
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
+			}
+		}
+		influence = -40
+	}
+	
+	#Loyalty Modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
+			}
+		}
+		loyalty = -20
+	}
+	
+	color = { 230 145 20 }
+	
+	privileges = {
+		estate_btc_mamluks_land_rights
+		estate_btc_mamluks_autonomy
+		estate_btc_mamluks_red_sea_trading_posts
+		estate_btc_mamluks_sudan_somalia_raids
+		estate_btc_mamluks_rotate_palace_guard
+		estate_btc_mamluks_entrenched_syrian_governors
+		estate_btc_mamluks_enforce_recruitment_levant
+	}
+	
+	agendas = {
+		estate_church_develop_x
+	}
+	
+}

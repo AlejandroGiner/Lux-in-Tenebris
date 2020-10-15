@@ -12,12 +12,24 @@ add_army_professionalism = 0.1
 religious_school = shafii_school
 
 change_estate_land_share = {
-	estate = estate_church
-	share = -10
+	estate = estate_burghers
+	share = -40
 }
 change_estate_land_share = {
-	estate = estate_burghers
-	share = 10
+	estate = estate_church
+	share = -40
+}
+change_estate_land_share = {
+	estate = estate_nobles
+	share = -40
+}
+change_estate_land_share = {
+	estate = estate_dhimmi
+	share = -40
+}
+change_estate_land_share = {
+	estate = estate_mamluks
+	share = -40
 }
 
 1399.1.1 = {
@@ -78,6 +90,29 @@ change_estate_land_share = {
 	clear_scripted_personalities = yes
 	add_ruler_personality = silver_tongue_personality
 	add_ruler_personality = obsessive_perfectionist_personality
+}
+
+1444.11.10 = {
+	change_estate_land_share = {
+		estate = estate_nobles
+		share = 10
+	}
+	change_estate_land_share = {
+		estate = estate_church
+		share = 10
+	}
+	change_estate_land_share = {
+		estate = estate_burghers
+		share = 10
+	}
+	change_estate_land_share = {
+		estate = estate_dhimmi
+		share = 10
+	}
+	change_estate_land_share = {
+		estate = estate_mamluks
+		share = 40
+	}
 }
 
 1453.2.13 = {

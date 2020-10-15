@@ -95,12 +95,13 @@ estate_btc_mamluks_red_sea_trading_posts = {
 	loyalty = 0.1
 	influence = 0.05
 	penalties = {
-		burghers_loyalty_modifier = -0.1
+		burghers_loyalty_modifier = -0.05
 	}
 	benefits = {
 	}
 	on_granted = {
 		#-35% dev cost and +40 autonomy floor to Red Sea coastal provinces
+		add_mercantilism = 3
 	}
 	ai_will_do = {
 		factor = 0
@@ -170,7 +171,7 @@ estate_btc_mamluks_entrenched_syrian_governors = {
 }
 
 estate_btc_mamluks_enforce_recruitment_levant = {
-	icon = privilege_royal_authority
+	icon = privilege_demand_more_troops
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
@@ -180,7 +181,25 @@ estate_btc_mamluks_enforce_recruitment_levant = {
 	benefits = {
 	}
 	on_granted = {
-		#Every owned muslim province of Levantine culture gets
-		#+30% manpower and +8 unrest
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					culture = al_suryah_arabic
+					religion_group = muslim
+				}
+				add_province_modifier = {
+					name = estate_mamluks_forcerd_recruitment_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = estate_mamluks_forcerd_recruitment_mod }
+				remove_province_modifier = estate_mamluks_forcerd_recruitment_mod
+			}
+		}
 	}
 }

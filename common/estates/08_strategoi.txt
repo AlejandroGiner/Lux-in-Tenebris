@@ -27,7 +27,6 @@ estate_generals =
 	}
 
 	country_modifier_happy = {
-		defensiveness = 0.2
 		shock_damage_received = -0.1
 		fire_damage_received = -0.1
 		garrison_size = 0.25
@@ -553,9 +552,17 @@ estate_generals =
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			OR = {
-				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
 				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_rajput_disaster
+				has_disaster = estate_nomadic_tribes_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_cossacks_disaster
+				has_disaster = estate_dhimmi_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_maratha_disaster
 			}
 		}	
 		influence = -40
@@ -568,9 +575,17 @@ estate_generals =
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
 			OR = {
-				has_disaster = estate_church_disaster
-				has_disaster = estate_burghers_disaster
 				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_rajput_disaster
+				has_disaster = estate_nomadic_tribes_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_cossacks_disaster
+				has_disaster = estate_dhimmi_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_maratha_disaster
 			}
 		}
 		loyalty = -20
