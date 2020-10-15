@@ -176,6 +176,12 @@ estate_btc_mamluks_enforce_recruitment_levant = {
 	loyalty = 0.05
 	influence = 0.05
 	land_share = 5
+	is_valid = {
+		any_owned_province = {
+			culture = al_suryah_arabic
+			religion_group = muslim
+		}
+	}
 	penalties = {
 	}
 	benefits = {
@@ -195,6 +201,14 @@ estate_btc_mamluks_enforce_recruitment_levant = {
 		}
 	}
 	on_revoked = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = estate_mamluks_forcerd_recruitment_mod }
+				remove_province_modifier = estate_mamluks_forcerd_recruitment_mod
+			}
+		}
+	}
+	on_invalid = {
 		hidden_effect = {
 			every_owned_province = {
 				limit = { has_province_modifier = estate_mamluks_forcerd_recruitment_mod }
