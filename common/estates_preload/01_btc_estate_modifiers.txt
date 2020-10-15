@@ -16,3 +16,21 @@ estate_generals = {
 		}
 	}
 }
+
+estate_btc_mamluks = {
+	modifier_definition = {
+		type = loyalty
+		key = btc_mamluks_loyalty_modifier
+		trigger = {
+			has_estate = estate_btc_mamluks
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = btc_mamluks_influence_modifier
+		trigger = {
+			has_estate = estate_btc_mamluks
+		}
+	}
+}

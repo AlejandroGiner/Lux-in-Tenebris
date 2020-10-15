@@ -2,6 +2,7 @@ government = monarchy
 add_government_reform = mamluk_government
 primary_culture = al_misr_arabic
 add_accepted_culture = al_suryah_arabic
+add_accepted_culture = coptic_culture
 religion = sunni
 technology_group = muslim
 historical_rival = TUR
@@ -25,10 +26,6 @@ change_estate_land_share = {
 }
 change_estate_land_share = {
 	estate = estate_dhimmi
-	share = -40
-}
-change_estate_land_share = {
-	estate = estate_mamluks
 	share = -40
 }
 
