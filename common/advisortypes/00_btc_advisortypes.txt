@@ -10,7 +10,7 @@ provincial_governor = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_estate_privilege = estate_exarches_court_advisors }
+			NOT = { has_estate_privilege = estate_generals_court_advisors }
 		}
 	}
 	
@@ -23,7 +23,7 @@ military_general = {
 	monarch_power = MIL
 	
 	# Bonus
-	army_tradition = 0.5
+	army_tradition = 0.75
 
 	skill_scaled_modifier = { meritocracy = 0.75 }
 
@@ -32,6 +32,28 @@ military_general = {
 		modifier = {
 			factor = 0
 			NOT = { has_estate_privilege = estate_generals_bring_to_court }
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+mamluk_commander = {
+	monarch_power = MIL
+	
+	# Bonus
+	cavalry_power = 0.15
+	cavalry_flanking = 0.25
+
+	skill_scaled_modifier = { meritocracy = 0.75 }
+
+	chance = { #Only gotten from Mamluk estate privilege.
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { has_estate_privilege = estate_btc_mamluks_promote_leadership }
 		}
 	}
 	

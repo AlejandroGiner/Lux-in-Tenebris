@@ -10,6 +10,21 @@ mamluk_self_rule = {
 	global_manpower_modifier = -0.2
 }
 
+estate_mamluks_forced_recruitment_mod = {
+	local_unrest = 5
+	local_manpower_modifier = 0.3
+}
+
+estate_mamluks_red_sea_ports_mod = {
+	min_local_autonomy = 40
+	local_development_cost = -0.35
+}
+
+estate_mamluks_entrenched_syrian_governors_mod = {
+	local_unrest = 5
+	min_local_autonomy = 35
+}
+
 btc_strengthened_by_caliph = {
 	legitimacy = 1
 	prestige_decay = -0.02

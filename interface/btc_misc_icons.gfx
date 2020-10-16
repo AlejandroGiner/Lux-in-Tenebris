@@ -127,4 +127,42 @@ spriteTypes = {
 		name = "GFX_diplomacy_daimyo_i_from"
 		texturefile = "gfx//interface//daimyo_i_from.dds"
 	}
+	spriteType = {
+		name = "privilege_mamluks_entrenched_syrian_governors"
+		texturefile = "gfx/interface/privileges/privilege_mamluks_entrenched_syrian_governors.dds"
+	}
+	spriteType = {
+		name = "privilege_mamluks_sudan_somalia_raids"
+		texturefile = "gfx/interface/privileges/privilege_mamluks_sudan_somalia_raids.dds"
+	}
+	spriteType = {
+		name = "privilege_mamluks_rotate_palace_guard"
+		texturefile = "gfx/interface/privileges/privilege_mamluks_rotate_palace_guard.dds"
+	}
+	spriteType = {
+		name = "privilege_mamluks_autonomy"
+		texturefile = "gfx/interface/privileges/privilege_mamluks_autonomy.dds"
+	}
+	spriteType = {
+		name = "privilege_mamluks_promote_leadership"
+		texturefile = "gfx/interface/privileges/privilege_mamluks_promote_leadership.dds"
+	}
+	
+	#Mamluk Commander Mamluks advisor
+	spriteType = {
+		name = "GFX_advisor_mamluk_commander"
+		texturefile = "gfx//interface//advisors//mamluk_commander.dds"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_advisor_mamluk_commander_female"
+		texturefile = "gfx//interface//advisors//mamluk_commander_female.tga"
+		noOfFrames = 1
+		norefcount = yes
+		effectFile = "gfx/FX/buttonstate.lua"
+		loadType = "INGAME"
+	}
 }

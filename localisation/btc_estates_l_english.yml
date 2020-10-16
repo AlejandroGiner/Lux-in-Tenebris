@@ -21,25 +21,42 @@
  #Privileges
  estate_btc_mamluks_land_rights:0 "Mamluks Land Rights"
  estate_btc_mamluks_land_rights_desc:0 "The different Mamluk factions are all as greedy as scheming. To keep them happier they all need to have their own piece of ground to operate in."
+ 
  estate_btc_mamluks_mamluk_primacy:0 "Primacy of the Mamluks"
  estate_btc_mamluks_mamluk_primacy_desc:0 "Giving the Mamluks free rein over our military would strengthen our capacities considerably, even if it may cost us dearly in compensating their contributions."
+ 
  estate_btc_mamluks_autonomy:0 "Protect Mamluk Factions"
  estate_btc_mamluks_autonomy_desc:0 "The Mamluks are extremely influential in our realm, and while conflicts between Mamluk groups and with other state actors abound, promising to maintain their historic privileges will go a long way towards making them more cooperative."
+
  estate_btc_mamluks_red_sea_trading_posts:0 "Authorize Red Sea Control"
  estate_btc_mamluks_red_sea_trading_posts_desc:0 "Always vying for more influence in the realm, some Mamluk amirs have been eyeing our strongholds overlooking trade in the Red Sea. They claim that they could be able to control the situation better if they were able to run the operation on their own initiative. The merchant guilds will not be happy with this and we are not sure of their competence over trading matters, or the ramifications this decision could have, but maybe allowing them control over our Red Sea coasts will appease them and allow us to make a profit in return."
- estate_btc_mamluks_red_sea_trading_posts_effect_tooltip:0 "Every province owned bordering §YRed Sea§! sea region gains '§YMamluk Administered Port§!', giving the following effects:\nMinimum Autonomy: §R+40.00§!\nLocal Development cost: §G-35%§!"
+ btc_mamluks_red_sea_trading_posts_tooltip:0 "All owned coastal provinces in the §YRed Sea§! gains §YMamluk Administered Port§!:\nMinimum Autonomy: §R+40.00§!\nLocal Development cost: §G-35%§!"
  estate_btc_mamluks_red_sea_trading_posts_revoke_effect_tooltip:0 "Removes §YMamluk Administered Port§! modifier from all owned provinces"
+
  estate_btc_mamluks_sudan_somalia_raids:0 "Authorize Raids to Sudan and Somalia"
  estate_btc_mamluks_sudan_somalia_raids_desc:0 "Many among the Mamluk elites are often itching for conflict and raids with which they can increase their prestige as well as their stockpile of gold. Some of them are quite riotous when around the major cities, so it may be prudent to organize some new expeditions further south to keep them busy and away from the capital, and to allow us to obtain more slaves."
- estate_btc_mamluks_sudan_somalia_raids_effect_tooltip:0 "While this privilege is active, raids to Somalia and South Sudan will take place regularly, bringing manpower £icon_manpower£, sailors £icon_sailors£ and ducats £cash_picture£, as well as lowering opinion of affected nations and adding devastation to affected areas."
  estate_btc_mamluks_sudan_somalia_raids_revoke_effect_tooltip:0 "The raids will stop taking place"
+ btc_mamluks_somali_raids_tooltip:0 "While this privilege is active, raids to Somalia and South Sudan will take place regularly, bringing §Gmanpower§!, §Gsailors§! and §Gducats§!.\n§RAffected regions will not like this.§!"
+
  estate_btc_mamluks_rotate_palace_guard:0 "Rotate Palace Guard"
  estate_btc_mamluks_rotate_palace_guard_desc:0 "The Mamluks that are part of the palace guard do an essential job in safeguarding the Sultan, but their loyalty and tendency to look after their own interests has long been worrying for our government. As much as they may see it as an affront, perhaps it's best if we were to rotate the guards so that none of them could get too used to being in the palace as opposed to guarding it..."
+
  estate_btc_mamluks_entrenched_syrian_governors:0 "Entrenched Syrian Governors"
  estate_btc_mamluks_entrenched_syrian_governors_desc:0 "Some of the governors of Syria have long maintaned a significant degree of autonomy that has hurt our realm in the long run, what with their blatant corruption coupled with the independentist mindset of many of the inhabitants of the regions. Until we can muster the strength to rein them in, it will remain a thorn in our side."
  estate_btc_mamluks_entrenched_syrian_governors_effect_tooltip:0 ""
  estate_btc_mamluks_entrenched_syrian_governors_revoke_effect_tooltip:0 "If this privilege is revoked, the Syrian governor and his guard will return to Egypt, likely causing trouble"
+ estate_btc_mamluks_entrenched_syrian_governors_tooltip:0 "Every province owned in the §YLevant§! region except §YSinai§! area gains §YEntrenched Governor§!:\nLocal Unrest: §R+5.00§!\nMinimum Autonomy: §R+35.00§!"
+ estate_mamluks_entrenched_syrian_governors_mod:0 "Entrenched Governor"
+ estate_mamluks_entrenched_syrian_governors_mod_desc:0 "The corruption and independentist mindset of the local governor and population is badly damaging this province's output."
+
  estate_btc_mamluks_enforce_recruitment_levant:0 "Enforce Recruitment in the Levant"
  estate_btc_mamluks_enforce_recruitment_levant_desc:0 "As we have successfully curtailed the excesses and disloyalty of many of our Syrian governors, the question remains of what to do with the still restive region. We may be able to convince more people to take on similar positions as before, but this time, under a closer watch from our leadership to ensure they shall comply with our wishes rather than do as they please. In doing so, they may be able to significantly boost our recruitment capabilities in the region. This may upset the locals, but it's not like they ever liked us much in the first place..."
- estate_btc_mamluks_enforce_recruitment_levant_effect_tooltip:0 "Every owned province of §YLevantine§! culture AND §YMuslim§! faith gains '§YForced Recruitment§!, giving the following effects:\nLocal Unrest: §R+5.00§!\nLocal Manpower Modifier: §G+30.0%§!'"
+ btc_mamluks_force_recruitment_levant_tooltip:0 "Every §YMuslim§! §YLevantine§! owned province in the §YLevant§! region and §YRakka§! area gains §YForced Recruitment§!:\nLocal Unrest: §R+5.00§!\nLocal Manpower Modifier: §G+30.0%§!"
  estate_btc_mamluks_enforce_recruitment_levant_revoke_effect_tooltip:0 "Removes §YForced Recruitment§! modifier from all owned provinces"
+ 
+ estate_btc_mamluks_promote_leadership:0 "Promote Mamluk Leadership"
+ estate_btc_mamluks_promote_leadership_desc:0 "There are many Mamluk factions in our realm, most of them in direct competition with one another. By promoting their most capable leaders to the highest ranks in the military we will increase the efficiency of our armies."
+ estate_btc_mamluks_promote_leadership_effect_tooltip:0 "Enables the §YKhassaki Commander§! advisor type, which if employed has the following effects:\nCavalry Combat Ability: §G+15.0%§!\nCavalry Flanking Ability: §G+25.0%§!"
+ estate_btc_mamluks_promote_leadership_revoke_effect_tooltip:0 "Disables the §YKhassaki Commander§! advisor type."
+ mamluk_commander:0 "Khassaki Commander"
+ mamluk_commander_desc:0 "One of the Sultan's senior Khassakis (personal escort and bodyguard) tasked with overseeing lesser Mamluk amirs, making sure that there's no infighting among factions and that all cavalry units are kept at the best of their capabilities."
