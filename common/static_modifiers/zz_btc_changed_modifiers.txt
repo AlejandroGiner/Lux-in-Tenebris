@@ -186,6 +186,7 @@ war_exhaustion = {
 	recover_army_morale_speed = -0.005			#BTAddOn new, as a war drags on soliders recover morale more slowly. At 20 WE it should be the penalty as 100 AT gives in bonus.
 	reduced_liberty_desire = -1.25
 	imperial_mandate = -0.20
+	burghers_loyalty_modifier = -0.005
 }
 
 army_tradition = {
@@ -199,9 +200,23 @@ army_tradition = {
 	logothete_military_influence = 0.1
 	monthly_militarized_society = 0.1
     nobles_loyalty_modifier = 0.05
+	btc_mamluks_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
 	generals_loyalty_modifier = 0.1
+}
+
+power_projection = {
+	defensiveness = 0.1
+	global_trade_power = 0.2
+	prestige = 0.5
+	land_morale = 0.1
+	naval_morale = 0.1
+	legitimacy = 0.5
+	devotion = 0.5
+	horde_unity = 0.5
+	republican_tradition = 0.2
+	btc_mamluks_loyalty_modifier = 0.05
 }
 
 mercantilism = {
@@ -228,6 +243,7 @@ legitimacy = {
 	monthly_militarized_society = 0.05
 	max_absolutism = 20
 	nobles_loyalty_modifier = 0.1
+	btc_mamluks_loyalty_modifier = 0.1
 	generals_loyalty_modifier = 0.1
 }
 
@@ -261,6 +277,7 @@ corruption = {
 	church_loyalty_modifier = 0.1
 	maratha_loyalty_modifier = 0.1
 	nobles_loyalty_modifier = 0.1
+	btc_mamluks_loyalty_modifier = 0.5
 	burghers_loyalty_modifier = 0.1
 	vaisyas_loyalty_modifier = 0.1
 	cossacks_loyalty_modifier = 0.1
@@ -297,6 +314,7 @@ prestige = {
 	church_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	nobles_loyalty_modifier = 0.05
+	btc_mamluks_loyalty_modifier = 0.05
 	burghers_loyalty_modifier = 0.05
 	vaisyas_loyalty_modifier = 0.05
 	cossacks_loyalty_modifier = 0.05

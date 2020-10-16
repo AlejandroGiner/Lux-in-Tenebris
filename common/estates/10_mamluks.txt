@@ -80,7 +80,390 @@ estate_btc_mamluks = {
 	# Influence modifiers
 	base_influence = 20
 	influence_from_dev_modifier = 1.0
-
+	
+	#Medium army
+	influence_modifier = {	
+		desc = EST_VAL_MID_ARMY_INF
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		influence = -5
+	}
+	#Small army
+	influence_modifier = {	
+		desc = EST_VAL_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		influence = -10
+	}
+	#Very small army
+	influence_modifier = {	
+		desc = EST_VAL_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		influence = -15
+	}
+	#Up to 30% influence from 9 generals that are NOT ruler/heir. That's the sole reason for the long-ass trigger for EVERY SINGLE ONE of them
+	influence_modifier = { #1
+		desc = EST_VAL_NUM_OF_GENERALS_ONE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 1
+				NOT = { num_of_generals = 2 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 2
+				NOT = { num_of_generals = 3 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 2
+				NOT = { num_of_generals = 3 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+		}
+		influence = 3
+	}
+	influence_modifier = { #2
+		desc = EST_VAL_NUM_OF_GENERALS_TWO
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 2
+				NOT = { num_of_generals = 3 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+		}
+		influence = 6
+	}
+	influence_modifier = { #3
+		desc = EST_VAL_NUM_OF_GENERALS_THREE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 3
+				NOT = { num_of_generals = 4 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+		}
+		influence = 9
+	}
+	influence_modifier = { #4
+		desc = EST_VAL_NUM_OF_GENERALS_FOUR
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 4
+				NOT = { num_of_generals = 5 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+		}
+		influence = 12
+	}
+	influence_modifier = { #5
+		desc = EST_VAL_NUM_OF_GENERALS_FIVE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 5
+				NOT = { num_of_generals = 6 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+		}
+		influence = 15
+	}
+	influence_modifier = { #6
+		desc = EST_VAL_NUM_OF_GENERALS_SIX
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 6
+				NOT = { num_of_generals = 7 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+		}
+		influence = 18
+	}
+	influence_modifier = { #7
+		desc = EST_VAL_NUM_OF_GENERALS_SEVEN
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 7
+				NOT = { num_of_generals = 8 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
+			}
+		}
+		influence = 21
+	}
+	influence_modifier = { #8
+		desc = EST_VAL_NUM_OF_GENERALS_EIGHT
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 8
+				NOT = { num_of_generals = 9 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 9
+				NOT = { num_of_generals = 10 }
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 10
+				NOT = { num_of_generals = 11 }
+			}
+		}
+		influence = 24
+	}
+	influence_modifier = { #9
+		desc = EST_VAL_NUM_OF_GENERALS_NINE_OR_MORE
+		trigger = {
+			if = {
+				limit = {
+					NOT = {
+						is_heir_leader = yes
+						is_monarch_leader = yes
+					}
+				}
+				num_of_generals = 9
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					NOT = { is_monarch_leader = yes }
+				}
+				num_of_generals = 10
+			}
+			if = {
+				limit = {
+					is_monarch_leader = yes
+					NOT = { is_heir_leader = yes }
+				}
+				num_of_generals = 10
+			}
+			if = {
+				limit = {
+					is_heir_leader = yes
+					is_monarch_leader = yes
+				}
+				num_of_generals = 11
+			}
+		}
+		influence = 27
+	}
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
@@ -113,11 +496,126 @@ estate_btc_mamluks = {
 		}
 		loyalty = -20
 	}
-	
+	#Army reformer advisor
+	loyalty_modifier = {
+		desc = EST_MAM_MIL_ADV_REF
+		trigger = {
+			advisor = army_reformer
+		}
+		loyalty = -5
+	}
+	#Medium army
+	loyalty_modifier = {	
+		desc = EST_MAM_MID_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		loyalty = -5
+	}
+	#Small army
+	loyalty_modifier = {	
+		desc = EST_MAM_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		loyalty = -5
+	}
+	#Very small army
+	loyalty_modifier = {	
+		desc = EST_MAM_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		loyalty = -10
+	}
+	# 1% loyalty per 5% cavalry ratio to infantry, starting at 10% ratio and ending at +10% loyalty with 55% ratio, just below 60% sunni ratio, but above base ratio
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.1
+			NOT = { cavalry_fraction = 0.15 }
+		}
+		loyalty = 1
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.15
+			NOT = { cavalry_fraction = 0.2 }
+		}
+		loyalty = 2
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.2
+			NOT = { cavalry_fraction = 0.25 }
+		}
+		loyalty = 3
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.25
+			NOT = { cavalry_fraction = 0.3 }
+		}
+		loyalty = 4
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.3
+			NOT = { cavalry_fraction = 0.35 }
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.35
+			NOT = { cavalry_fraction = 0.4 }
+		}
+		loyalty = 6
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.4
+			NOT = { cavalry_fraction = 0.45 }
+		}
+		loyalty = 7
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.45
+			NOT = { cavalry_fraction = 0.5 }
+		}
+		loyalty = 8
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.5
+			NOT = { cavalry_fraction = 0.55 }
+		}
+		loyalty = 9
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.55
+		}
+		loyalty = 10
+	}
+
 	color = { 230 145 20 }
 	
 	privileges = {
 		estate_btc_mamluks_land_rights
+		estate_btc_mamluks_mamluk_primacy
 		estate_btc_mamluks_autonomy
 		estate_btc_mamluks_red_sea_trading_posts
 		estate_btc_mamluks_sudan_somalia_raids

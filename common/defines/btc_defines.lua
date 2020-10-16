@@ -22,7 +22,7 @@ NDefines.NMilitary.FORTRESS_COST = 0.3			-- Beyond Typus added all the new provi
 NDefines.NMilitary.MARINE_SHOCK_DAMAGE_TAKEN = 0.00
 
 NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 8
-NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.002 		-- Fixed 29,998% error
+NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.003 		-- Fixed 29,998% error
 NDefines.NCountry.PS_BOOST_MILITARIZATION = 150
 
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
