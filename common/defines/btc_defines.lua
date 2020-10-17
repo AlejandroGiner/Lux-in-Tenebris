@@ -12,17 +12,18 @@ NDefines.NDiplomacy.MAX_FREE_CITIES = 20			-- from original BtP increased from 8
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 45			-- from original BtP increased from 25
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075			-- from original BtP reduced from 01
 NDefines.NDiplomacy.AGITATE_FOR_LIBERTY_DESIRE = 50					-- from 25
-
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10
 NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0.003			-- Beyond Typus added reducing ia to account for all the new provinces Base 0005
 NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.003			-- Beyond Typus added reducing ia to account for all the new provinces Base 0005
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_STATE_WITH_PROSPERITY = 0.024			-- 0 002 per state monthly	-	From 0 03 | 0 0025 per state monthly
+NDefines.NDiplomacy.CELESTIAL_EMPIRE_MANDATE_PER_HUNDRED_TRIBUTARY_DEV = 0.11			-- From 0 15
 
 NDefines.NMilitary.FORT_PER_DEV_RATIO = 30			-- Beyond Typus added more provinces means more forts needed for same dev Base 50
 NDefines.NMilitary.FORTRESS_COST = 0.3			-- Beyond Typus added all the new provinces mean more forts but no more dev so everyone was going broke Base 05
 NDefines.NMilitary.MARINE_SHOCK_DAMAGE_TAKEN = 0.00
 
 NDefines.NCountry.MIN_DEV_FOR_FREE_CITY = 8
-NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.002 		-- Fixed 29,998% error
+NDefines.NCountry.ESTATE_MIN_DISTRIBUTED_CROWNLAND = 30.003 		-- Fixed 29,998% error
 NDefines.NCountry.PS_BOOST_MILITARIZATION = 150
 
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
