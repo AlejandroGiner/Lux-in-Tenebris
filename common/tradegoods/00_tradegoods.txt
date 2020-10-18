@@ -214,7 +214,7 @@ grain = {
 wine = {
 	color = { 0.36 0.13 0.28 }
 	modifier = {
-		global_unrest = -1
+		global_unrest = -0.5
 	}
 	province = {
 		local_unrest = -1
@@ -466,10 +466,10 @@ wool = {
 cloth = {
 	color = { 0.86 0.19 0.19 }
 	modifier = {
-		merc_maintenance_modifier = -0.15
+		merc_maintenance_modifier = -0.1
 	}
 	province = {
-		local_development_cost = -0.1
+		local_development_cost = -0.05
 	}
 	chance = {
 		factor = 10
@@ -519,7 +519,7 @@ cloth = {
 fish = {
 	color = { 0.55 0.82 0.97 }
 	modifier = {
-		global_sailors_modifier = 0.25
+		global_sailors_modifier = 0.2
 	}
 	province = {
 		local_sailors_modifier = 0.25
@@ -880,7 +880,7 @@ salt = {
 naval_supplies = {
 	color = { 0.11 0.17 0.4 }
 	modifier = {
-		naval_forcelimit_modifier = 0.20
+		naval_forcelimit_modifier = 0.10
 	}
 	province = {
 		naval_forcelimit = 0.3
@@ -1497,7 +1497,7 @@ iron = {
 slaves = {
 	color = { 0.0 0.0 0.0 }
 	modifier = {
-		global_tariffs = 0.25
+		global_tariffs = 0.35
 	}
 	province = {
 		local_missionary_strength = 0.01
@@ -1559,7 +1559,7 @@ slaves = {
 ivory = {
 	color = { 0.75 0.7 0.63 }
 	modifier = {
-		diplomatic_reputation = 2
+		diplomatic_reputation = 1
 	}
 	province = {
 		local_state_maintenance_modifier = -0.2
@@ -1788,7 +1788,7 @@ spices = {
 coffee = {
 	color = { 0.22 0.15 0.09 }
 	modifier = {
-		global_autonomy = -0.05
+		global_autonomy = -0.03
 	}
 	province = {
 		local_culture_conversion_cost = -0.1
@@ -1845,7 +1845,7 @@ coffee = {
 cotton = {
 	color = { 0.52 0.68 0.6 }
 	modifier = {
-		global_colonial_growth = 30
+		global_colonial_growth = 35
 	}
 	province = {
 		local_development_cost = -0.1
@@ -2691,7 +2691,7 @@ coal = {
 	}
 
 	modifier = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.05
 	}
 
 	province = {

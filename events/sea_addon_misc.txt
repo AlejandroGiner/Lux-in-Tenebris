@@ -14,9 +14,7 @@ country_event = {
 	trigger = {
 		is_year = 1444
 		tag = MNG
-		2166 = {
-			owned_by = MMA
-		}
+		2166 = { owned_by = MMA }
 	}
 
 	mean_time_to_happen = {
@@ -25,18 +23,17 @@ country_event = {
 	
 	option = {
 		name = "sea_addon.1.a" #Their banditry ends now!
-		add_casus_belli = {	
+		add_casus_belli = {
 			target = MMA
 			type = cb_border_war
 			months = 12
 		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = sea_addon.1.b #We cannot afford any more losses
-		ai_chance = {
-			factor = 0
-		}
 		add_prestige = -10
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -50,9 +47,7 @@ country_event = {
 	fire_only_once = yes	
 	
 	trigger = {
-		MMA = {
-			ai = yes
-		}
+		MMA = { ai = yes }
 		OR = {
 			AND = {
 				tag = MNG
@@ -60,23 +55,16 @@ country_event = {
 			}
 			tag = QNG
 		}
-		2166 = {
-			owned_by = MMA
-		}
-		2166 = {
-			controlled_by = ROOT
-		}
+		2166 = { owned_by = MMA }
+		2166 = { controlled_by = ROOT }
 	}
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	mean_time_to_happen = { days = 1 }
 	
 
 	option = {
 		name = "sea_addon.2.a" #We stand triumphant!
 		MMA = { release = MKA release = MYA }
-		2166 = { cede_province = ROOT }
 		hidden_effect = {
 			MYA = {
 				change_government = monarchy
@@ -88,14 +76,14 @@ country_event = {
 				add_government_reform = mandala_reform
 			}
 		}
+		2166 = { cede_province = ROOT }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = sea_addon.2.b #We are not finished with this war
-		ai_chance = {
-			factor = 0
-		}
 		add_war_exhaustion = 2
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -111,19 +99,11 @@ country_event = {
 	trigger = {
 		tag = POR
 		OR = {
-			east_indies_superregion = {
-				owned_by = ROOT
-			}
-			india_superregion = {
-				owned_by = ROOT
-                        }
+			east_indies_superregion = { owned_by = ROOT }
+			india_superregion = { owned_by = ROOT }
 		}
-		MLC = {
-			ai = yes
-		}
-		596 = {
-			owned_by = MLC
-		}
+		MLC = { ai = yes }
+		596 = { owned_by = MLC }
 	}
 
 	mean_time_to_happen = {
@@ -133,10 +113,8 @@ country_event = {
 
 	option = {
 		name = "sea_addon.3.a" #Sack the city!
-		ai_chance = {
-			factor = 0.5
-		}
-                596 = { cede_province = ROOT }
+		ai_chance = { factor = 0.5 }
+		596 = { cede_province = ROOT }
 		add_years_of_income = 0.05	
 	}
 
