@@ -34,11 +34,9 @@ estate_church =
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		global_tax_modifier = 0.2
+		stability_cost_modifier = -0.1
 		papal_influence = 1
 		devotion = 0.5
-		church_power_modifier = 0.1
-		monthly_fervor_increase = 1
-		stability_cost_modifier = -0.1
 	}
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2

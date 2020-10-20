@@ -3,6 +3,12 @@ estate_generals_autonomous_defences_privilege_mod = {
 	garrison_growth = 0.25
 }
 
+estate_mamluks_relax_ownership_mod = {
+	local_production_efficiency = 0.5
+	local_tax_modifier = -0.25
+	local_unrest = 3
+}
+
 generals_parade_province_privilege_mod = {
 	local_unrest = -2
 }

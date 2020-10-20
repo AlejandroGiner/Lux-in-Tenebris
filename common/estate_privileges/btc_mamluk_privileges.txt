@@ -179,6 +179,32 @@ estate_btc_mamluks_promote_leadership = {
 	}
 }
 
+estate_btc_mamluks_reduce_army_independence = {
+	icon = privilege_mamluks_reduce_army_independence
+	max_absolutism = 0
+	loyalty = -0.15
+	influence = -0.05
+	penalties = {
+		reinforce_speed = -0.25
+		cavalry_power = -0.1
+	}
+	benefits = {
+		yearly_corruption = -0.05
+		army_tradition = 1
+	}
+	on_granted = {
+		add_yearly_manpower = 1
+		add_army_tradition = 10
+		add_estate_loyalty = {
+			estate = estate_btc_mamluks
+			loyalty = -30
+		}
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
 estate_btc_mamluks_red_sea_trading_posts = {
 	icon = privilege_comission_merchant_ships_for_war
 	max_absolutism = -5
@@ -256,53 +282,62 @@ estate_btc_mamluks_rotate_palace_guard = {
 	}
 }
 
-estate_btc_mamluks_entrenched_syrian_governors = {
-	icon = privilege_mamluks_entrenched_syrian_governors
-	max_absolutism = -10
-	loyalty = 0
-	influence = 0.15
+estate_btc_mamluks_relax_ownership_laws = {
+	icon = privilege_monopoly_of_goods_livestock
+	max_absolutism = -5
+	influence = 0.05
+	loyalty = 0.1
+	land_share = 10
 	is_valid = {
 		any_owned_province = {
-			region = mashriq_region
-			NOT = { area = syrian_desert_area }
+			OR = {
+				trade_goods = grain
+				trade_goods = cotton
+				trade_goods = livestock
+			}
 		}
 	}
-	penalties = {
-		yearly_corruption = 0.1
-		nobles_loyalty_modifier = -0.05
-	}
-	benefits = {
-	}
 	on_granted = {
-		custom_tooltip = estate_btc_mamluks_entrenched_syrian_governors_tooltip
+		custom_tooltip = estate_mamluks_relax_ownership_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { 
-					region = mashriq_region
-					NOT = { area = syrian_desert_area }
+				limit = {
+					OR = {
+						trade_goods = grain
+						trade_goods = cotton
+						trade_goods = livestock
+					}
 				}
 				add_province_modifier = {
-					name = estate_mamluks_entrenched_syrian_governors_mod
+					name = estate_mamluks_relax_ownership_mod
 					duration = -1
 				}
 			}
 		}
 	}
 	on_revoked = {
+		custom_tooltip = estate_mamluks_relax_ownership_mod_revoke_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod }
-				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+				limit = { has_province_modifier = estate_mamluks_relax_ownership_mod }
+				remove_province_modifier = estate_mamluks_relax_ownership_mod
 			}
 		}
 	}
 	on_invalid = {
+		custom_tooltip = estate_mamluks_relax_ownership_mod_revoke_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod }
-				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+				limit = { has_province_modifier = estate_mamluks_relax_ownership_mod }
+				remove_province_modifier = estate_mamluks_relax_ownership_mod
 			}
 		}
+	}
+	penalties = {
+		# -10% peasantry loyalty
+	}
+	benefits = {
+		yearly_corruption = -0.1
 	}
 	ai_will_do = {
 		factor = 0
@@ -363,5 +398,58 @@ estate_btc_mamluks_enforce_recruitment_levant = {
 				remove_province_modifier = estate_mamluks_forced_recruitment_mod
 			}
 		}
+	}
+}
+
+estate_btc_mamluks_entrenched_syrian_governors = {
+	icon = privilege_mamluks_entrenched_syrian_governors
+	max_absolutism = -10
+	loyalty = 0
+	influence = 0.15
+	is_valid = {
+		any_owned_province = {
+			region = mashriq_region
+			NOT = { area = syrian_desert_area }
+		}
+	}
+	penalties = {
+		yearly_corruption = 0.1
+		nobles_loyalty_modifier = -0.05
+	}
+	benefits = {
+	}
+	on_granted = {
+		custom_tooltip = estate_btc_mamluks_entrenched_syrian_governors_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = { 
+					region = mashriq_region
+					NOT = { area = syrian_desert_area }
+				}
+				add_province_modifier = {
+					name = estate_mamluks_entrenched_syrian_governors_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod }
+				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+			}
+		}
+	}
+	on_invalid = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = { has_province_modifier = estate_mamluks_entrenched_syrian_governors_mod }
+				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 0
 	}
 }
