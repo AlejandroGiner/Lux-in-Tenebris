@@ -2049,7 +2049,10 @@ OMA_ideas = {
 	}
 	
 	trigger = {
-		tag = OMA
+		OR = {
+			tag = OMA
+			tag = MUS
+		}
 	}
 	free = yes
 	

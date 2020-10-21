@@ -3,13 +3,44 @@ add_government_reform = iqta
 government_rank = 2 #Sultanate
 primary_culture = omani_culture
 add_accepted_culture = mahri_culture
+historical_friend = OMA
 religion = ibadi
 technology_group = muslim
 capital = 400
 
-#Just using vanilla Oman, as Muscat will be under a personal union. Not ideal, but anything better would take longer than it is probably worth right now
+#Draiocth - Just using vanilla Oman, as Muscat will be under a personal union. Not ideal, but anything better would take longer than it is probably worth right now
 
 #To Yarubids, Oman
+
+1406.1.1 = {
+	monarch = {
+		name = "Makhzum bin al Fallah"
+		dynasty = "Nabhan"
+		adm = 3
+		dip = 1
+		mil = 2
+	}
+}
+
+1435.1.1 = {
+	monarch = {
+		name = "Abul Hassan"
+		dynasty = "Nabhan"
+		adm = 1
+		dip = 4
+		mil = 2
+	}
+}
+
+1451.1.1 = {
+	monarch = {
+		name = "Omar bin al Khattab"
+		dynasty = "Nabhan"
+		adm = 2
+		dip = 1
+		mil = 2
+	}
+}
 
 1624.1.1 = {
 	monarch = {
