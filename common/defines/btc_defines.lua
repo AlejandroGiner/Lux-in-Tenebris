@@ -1,8 +1,8 @@
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.4 -- Changed from 1.7. AI wants this advantage to enter battles typically.
+--NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.4 -- Changed from 1.7. AI wants this advantage to enter battles typically.
 NDefines.NAI.REGIMENTS_PER_GENERAL = 20
 NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 20
 NDefines.NAI.FORCE_MARCH_MIN_SIZE = 10
-NDefines.NAI.DEBASE_THRESHOLD = 3500
+NDefines.NAI.DEBASE_THRESHOLD = -5000 --Disables debase currency interaction for AI
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 3
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 30.1
