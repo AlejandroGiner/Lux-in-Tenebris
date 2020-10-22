@@ -512,7 +512,7 @@ english_monarchy = {
 ottoman_government = {
 	lock_level_when_selected = yes
 	allow_normal_conversion = yes
-	icon = "ottoman_government"
+	icon = "btc_ottoman_government"
 	potential = {
 		religion_group = muslim
 		OR = {
@@ -538,9 +538,8 @@ ottoman_government = {
 	legacy_equivalent = ottoman_government_legacy
 	maintain_dynasty = yes
 	modifiers = {
-		unjustified_demands = -0.1
+		unjustified_demands = -0.2
 		legitimacy = 0.5
-		max_absolutism = 5
 		governing_capacity = 250
 	}
 
@@ -2534,6 +2533,52 @@ chrysanthemum_throne = {
 		global_manpower_modifier = 0.2
 		land_forcelimit_modifier = 0.2
 		max_absolutism = 10
+	}
+
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+btc_beylik_government = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "ottoman_government"
+	potential = {
+		OR = {
+			tag = DUL
+			tag = ERE
+			tag = GRM
+			tag = MEN
+			tag = SRU
+			tag = TKK
+			tag = ALI
+			tag = AYD
+			tag = CIK
+			tag = CND
+			tag = KAR
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = btc_beylik_government
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+		religion_group = muslim
+		government_rank = 1
+		capital_scope = { region = anatolia_region }
+		technology_group = anatolian
+		culture_group = turkish_g
+	}
+	legacy_equivalent = btc_beylik_government_legacy
+	maintain_dynasty = yes
+	modifiers = {
+		build_cost = -0.1
+		global_missionary_strength = 0.01
+		culture_conversion_cost = -0.1
 	}
 
 	custom_attributes = {

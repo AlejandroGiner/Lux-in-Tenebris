@@ -1978,7 +1978,7 @@ celestial_empire_legacy = {
 ottoman_government_legacy = {
 	# government mechanics flags go here
 	allow_normal_conversion = no
-	icon = "crown"
+	icon = "btc_ottoman_government"
 	legacy_government = yes
 	monarchy = yes
 	maintain_dynasty = yes
@@ -1992,10 +1992,9 @@ ottoman_government_legacy = {
 
 
 	modifiers = {
-		governing_capacity = 400
-		unjustified_demands = -0.1
+		unjustified_demands = -0.2
 		legitimacy = 0.5
-		max_absolutism = 5
+		governing_capacity = 250
 	}
 
 	conditional = {
@@ -2006,6 +2005,29 @@ ottoman_government_legacy = {
 
 	ai = {
 		factor = 5
+	}
+}
+
+btc_beylik_government_legacy = {
+	allow_normal_conversion = no
+	icon = "ottoman_government"
+	legacy_government = yes
+	monarchy = yes
+	maintain_dynasty = yes
+	valid_for_new_country = no
+	allow_convert = no
+	fixed_rank = 1
+	nation_designer_trigger = {
+		religion_group = muslim
+		government_rank = 1
+		capital_scope = { region = anatolia_region }
+		technology_group = anatolian
+		culture_group = turkish_g
+	}
+	modifiers = {
+		build_cost = -0.1
+		global_missionary_strength = 0.01
+		culture_conversion_cost = -0.1
 	}
 }
 

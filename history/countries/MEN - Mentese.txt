@@ -4,8 +4,16 @@ government_rank = 1
 primary_culture = turkish
 religion = sunni
 technology_group = ottoman
-capital = 5867
+capital = 319	# Antalya
 religious_school = hanafi_school
 
-
-#No information found, EU4 should auto generate appropriate name from culture list
+1399.1.1 = {
+	monarch = {
+		name = "Ilyas I"
+		dynasty = "Mentesoglu"
+		adm = 2
+		dip = 2
+		mil = 2
+	}
+	add_piety = 0.2
+}
