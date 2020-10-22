@@ -1304,6 +1304,46 @@ AFS_ideas = {
 		core_creation = -0.2
     }
 }
+
+QJR_ideas = {
+	start = {
+		tolerance_heathen = 3
+		diplomatic_reputation = 2
+	}
+
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+
+	trigger = {
+		tag = QJR
+	}
+	free = yes		# will be added at load
+
+	QJR_idea1 = {
+		province_warscore_cost = -0.15
+	}
+	QJR_idea2 = {
+		state_maintenance_modifier = -0.25
+	}
+	QJR_idea3 = {
+		land_morale = 0.15
+		harsh_treatment_cost = -0.15
+	}
+	QJR_idea4 = {
+		defensiveness = 0.15
+	}
+	QJR_idea5 = {
+		improve_relation_modifier = 0.2
+	}
+	QJR_idea6 = {
+		fire_damage = 0.15
+	}
+	QJR_idea7 = {
+        land_forcelimit_modifier = 0.3
+    }
+}
+
 PDV_ideas = {
 	start = {
 		state_maintenance_modifier = -0.25
