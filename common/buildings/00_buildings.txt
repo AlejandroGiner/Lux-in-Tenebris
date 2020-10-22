@@ -117,6 +117,7 @@ marketplace = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -155,6 +156,14 @@ workshop = {
 				trade_goods = wine
 				trade_goods = wool
 				trade_goods = tropical_wood
+				trade_goods = fruit
+				trade_goods = olives
+				trade_goods = beer
+				trade_goods = maize
+				trade_goods = millet
+				trade_goods = amaranth
+				trade_goods = legumes
+				trade_goods = teff
 			}
 		}
 		modifier = {
@@ -194,6 +203,13 @@ workshop = {
 				trade_goods = silk
 				trade_goods = dyes
 				trade_goods = salt
+				trade_goods = whales
+				trade_goods = marble
+				trade_goods = dates
+				trade_goods = apiculture
+				trade_goods = chinaware
+				trade_goods = books
+				trade_goods = pearls
 			}
 		}
 		modifier = {
@@ -237,6 +253,7 @@ workshop = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -301,6 +318,7 @@ temple = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -386,6 +404,7 @@ barracks = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -491,6 +510,7 @@ shipyard = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -623,6 +643,7 @@ coastal_defence = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -737,6 +758,7 @@ courthouse = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -825,6 +847,7 @@ dock = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -889,6 +912,7 @@ regimental_camp = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -951,16 +975,7 @@ fort_16th = {
 			}
 			NOT = { is_capital = yes }
 		}
-		modifier = {
-			factor = 5
-			any_neighbor_province = { owner = { is_rival = FROM } }
-			has_building = fort_15th
-		}
-		modifier = {
-			factor = 2.5
-			any_neighbor_province = { NOT = { owned_by = FROM } }
-			has_building = fort_15th
-		}
+
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -969,16 +984,16 @@ fort_16th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
-				has_terrain = steppe_mountains
-				has_terrain = desert_highlands
+				#has_terrain = steppe_mountains
+				#has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			OR = {
-				has_terrain = desert_mountains
+			#OR = {
+				#has_terrain = desert_mountains
 				has_terrain = mountain
-			}
+			#}
 		}
 		modifier = {
 			factor = 1.25
@@ -1035,6 +1050,7 @@ naval_battery = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1102,6 +1118,7 @@ cathedral = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1275,6 +1292,7 @@ trade_depot = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1378,6 +1396,7 @@ grand_shipyard = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1467,6 +1486,7 @@ training_fields = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1538,22 +1558,7 @@ fort_17th = {
 			}
 			NOT = { is_capital = yes }
 		}
-		modifier = {
-			factor = 5
-			any_neighbor_province = { owner = { is_rival = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-			}
-		}
-		modifier = {
-			factor = 2.5
-			any_neighbor_province = { NOT = { owned_by = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-			}
-		}
+
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -1562,16 +1567,16 @@ fort_17th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
-				has_terrain = steppe_mountains
-				has_terrain = desert_highlands
+				#has_terrain = steppe_mountains
+				#has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			OR = {
-				has_terrain = desert_mountains
+			#OR = {
+				#has_terrain = desert_mountains
 				has_terrain = mountain
-			}
+			#}
 		}
 		modifier = {
 			factor = 1.25
@@ -1686,6 +1691,7 @@ stock_exchange = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1726,10 +1732,18 @@ counting_house = {
 				trade_goods = wine
 				trade_goods = wool
 				trade_goods = tropical_wood
+				trade_goods = fruit
+				trade_goods = olives
+				trade_goods = beer
+				trade_goods = maize
+				trade_goods = millet
+				trade_goods = amaranth
+				trade_goods = legumes
+				trade_goods = teff
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 3
 			OR = { 
 				has_building = mills
 				has_building = farm_estate
@@ -1742,7 +1756,7 @@ counting_house = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				trade_goods = paper
 				trade_goods = gems
@@ -1765,6 +1779,13 @@ counting_house = {
 				trade_goods = silk
 				trade_goods = dyes
 				trade_goods = salt
+				trade_goods = whales
+				trade_goods = marble
+				trade_goods = dates
+				trade_goods = apiculture
+				trade_goods = chinaware
+				trade_goods = books
+				trade_goods = pearls
 			}
 		}
 		modifier = {
@@ -1809,6 +1830,7 @@ counting_house = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -1926,6 +1948,7 @@ town_hall = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -2019,6 +2042,7 @@ drydock = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -2087,6 +2111,7 @@ conscription_center = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -2154,24 +2179,7 @@ fort_18th = {
 			}
 			NOT = { is_capital = yes }
 		}
-		modifier = {
-			factor = 5
-			any_neighbor_province = { owner = { is_rival = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-				has_building = fort_17th
-			}
-		}
-		modifier = {
-			factor = 2.5
-			any_neighbor_province = { NOT = { owned_by = FROM } }
-			OR = {
-				has_building = fort_15th
-				has_building = fort_16th
-				has_building = fort_17th
-			}
-		}
+
 		modifier = {
 			factor = 1.667
 			OR = {
@@ -2180,16 +2188,16 @@ fort_18th = {
 				has_terrain = marsh
 				has_terrain = highlands
 				has_terrain = jungle
-				has_terrain = steppe_mountains
-				has_terrain = desert_highlands
+				#has_terrain = steppe_mountains
+				#has_terrain = desert_highlands
 			}
 		}
 		modifier = {
 			factor = 2.5
-			OR = {
-				has_terrain = desert_mountains
+			#OR = {
+				#has_terrain = desert_mountains
 				has_terrain = mountain
-			}
+			#}
 		}
 		modifier = {
 			factor = 1.25
@@ -2641,9 +2649,9 @@ furnace = {
 }
 
 ramparts = {
-	manufactory = {
-		all
-	}
+	#manufactory = {
+	#	all
+	#}
 	keep_trigger = {
 		OR = {
 			fort_level = 1
@@ -2713,6 +2721,7 @@ ramparts = {
 					has_building = furnace 
 					has_building = soldier_households 
 					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
@@ -2758,14 +2767,23 @@ soldier_households = {
 	ai_will_do = {
 		factor = 10
 		modifier = {
-			factor = 0
+			factor = 0.1
 			NOT = {
 				OR = {
-					trade_goods = gold
 					trade_goods = grain
 					trade_goods = fish
 					trade_goods = livestock
 					trade_goods = wine
+					trade_goods = beer
+					trade_goods = rice
+					trade_goods = potatoes
+					trade_goods = maize
+					trade_goods = millet
+					trade_goods = fruit
+					trade_goods = olives
+					trade_goods = amaranth
+					trade_goods = legumes
+					trade_goods = teff
 				}
 			}
 		}
@@ -2775,7 +2793,17 @@ soldier_households = {
 				trade_goods = grain
 				trade_goods = fish
 				trade_goods = livestock
-				#trade_goods = wine
+				trade_goods = wine
+				trade_goods = beer
+				trade_goods = rice
+				trade_goods = potatoes
+				trade_goods = maize
+				trade_goods = millet
+				trade_goods = fruit
+				trade_goods = olives
+				trade_goods = amaranth
+				trade_goods = legumes
+				trade_goods = teff
 			}
 		}
 		modifier = {
@@ -2871,6 +2899,8 @@ impressment_offices = {
 					trade_goods = fish
 					trade_goods = naval_supplies
 					trade_goods = tropical_wood
+					trade_goods = whales
+					trade_goods = pearls
 				}
 			}
 		}
@@ -2964,15 +2994,34 @@ state_house = {
 	ai_will_do = {
 		factor = 400
 		modifier = {
+			factor = 0
+			OR = {
+				has_latent_trade_goods = coal
+				trade_goods = coal
+			}
+		}
+		modifier = {
 			factor = 0.25
 			NOT = { is_state = yes }
 			is_owned_by_trade_company = no
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.15
 			area_for_scope_province = {
 				owner = { tag = ROOT }
 				is_capital = yes
+			}
+		}
+		modifier = {
+			factor = 0.25
+			NOT = {
+				OR = {
+					trade_goods = gold
+					trade_goods = paper
+					trade_goods = glass
+					trade_goods = gems
+					trade_goods = books
+				}
 			}
 		}
 		modifier = {
@@ -3055,23 +3104,23 @@ state_house = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { num_free_building_slots = 2 }
-			NOT = { trade_goods = gold }
-			AND = {
-				NOT = { has_building = wharf }
-				NOT = { has_building = weapons }
-				NOT = { has_building = textile }
-				NOT = { has_building = tradecompany }
-				NOT = { has_building = farm_estate }
-				NOT = { has_building = mills }
-				NOT = { has_building = plantations }
-				NOT = { has_building = furnace }
-				NOT = { has_building = soldier_households }
-				NOT = { has_building = impressment_offices }
-			}
-		}
+		#modifier = {
+		#	factor = 0.1
+		#	NOT = { num_free_building_slots = 2 }
+		#	NOT = { trade_goods = gold }
+		#	AND = {
+		#		NOT = { has_building = wharf }
+		#		NOT = { has_building = weapons }
+		#		NOT = { has_building = textile }
+		#		NOT = { has_building = tradecompany }
+		#		NOT = { has_building = farm_estate }
+		#		NOT = { has_building = mills }
+		#		NOT = { has_building = plantations }
+		#		NOT = { has_building = furnace }
+		#		NOT = { has_building = soldier_households }
+		#		NOT = { has_building = impressment_offices }
+		#	}
+		#}
 	}
 }
 
