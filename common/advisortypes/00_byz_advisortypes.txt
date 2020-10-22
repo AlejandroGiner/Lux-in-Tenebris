@@ -10,7 +10,7 @@ provincial_governor = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_estate_privilege = estate_exarches_court_advisors }
+			owner = { NOT = { has_estate_privilege = estate_generals_court_advisors } }
 		}
 	}
 	
@@ -31,7 +31,7 @@ military_general = {
 		factor = 1
 		modifier = {
 			factor = 0
-			NOT = { has_estate_privilege = estate_generals_bring_to_court }
+			owner = { NOT = { has_estate_privilege = estate_generals_bring_to_court } }
 		}
 	}
 	
