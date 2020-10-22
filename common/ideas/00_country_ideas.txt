@@ -1334,12 +1334,12 @@ BAV_ideas = {
 
 PER_ideas = {
 	start = {
-		land_morale = 0.1
-		global_manpower_modifier = 0.15
+		tolerance_heathen = 3
+		cavalry_power = 0.15
 	}
 	
 	bonus = {
-		land_forcelimit_modifier = 0.33
+		recover_army_morale_speed = 0.05
 	}
 	
 	trigger = {
@@ -1347,28 +1347,29 @@ PER_ideas = {
 	}
 	free = yes
 
-	the_qizilbash = {
-		cavalry_power = 0.15
-		land_attrition = -0.1
+	PER_idea1 = {
+		land_morale = 0.15
 	}
-	persian_rug_production = {
-		global_trade_goods_size_modifier = 0.1
+	PER_idea2 = {
+		warscore_cost_vs_other_religion = -0.15
+		global_heretic_missionary_strength = 0.02
 	}
-	the_ghulams = {
+	PER_idea3 = {
 		discipline = 0.05
 	}
-	improved_silk_road = {
-		caravan_power = 0.2
+	PER_idea4 = {
+		global_trade_goods_size_modifier = 0.10
+		diplomatic_reputation = 1
 	}
-	encouraged_art = {
-		prestige = 1
-		production_efficiency = 0.05
+	PER_idea5 = {
+		global_autonomy = -0.05
 	}
-	promotion_of_irrigation = {
+	PER_idea6 = {
 		manpower_recovery_speed = 0.10
+		leader_land_fire = 1
 	}
-	gunpowder_empire_per = {
-		artillery_fire = 1
+	PER_idea7 = {
+		war_exhaustion = -0.03
 	}
 }
 
@@ -2049,7 +2050,10 @@ OMA_ideas = {
 	}
 	
 	trigger = {
-		tag = OMA
+		OR = {
+			tag = OMA
+			tag = MUS
+		}
 	}
 	free = yes
 	

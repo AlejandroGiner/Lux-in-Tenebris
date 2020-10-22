@@ -523,6 +523,24 @@ defined_text = {
 			has_country_modifier = hanbali_scholar_modifier
 		}
 	}
+	text = {
+		localisation_key = ibadi_school
+		trigger = {
+			has_country_modifier = ibadi_scholar_modifier
+		}
+	}
+	text = {
+		localisation_key = sufri_school
+		trigger = {
+			has_country_modifier = sufri_scholar_modifier
+		}
+	}
+	text = {
+		localisation_key = najdat_school
+		trigger = {
+			has_country_modifier = najdat_scholar_modifier
+		}
+	}
 }
 
 #Will produce fancy trade goods for all provinces in the world.
