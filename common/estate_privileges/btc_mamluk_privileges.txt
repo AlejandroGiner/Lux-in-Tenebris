@@ -432,7 +432,7 @@ estate_btc_mamluks_entrenched_syrian_governors = {
 		custom_tooltip = estate_btc_mamluks_entrenched_syrian_governors_tooltip
 		hidden_effect = {
 			every_owned_province = {
-				limit = { 
+				limit = {
 					region = mashriq_region
 					NOT = { area = syrian_desert_area }
 				}

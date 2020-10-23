@@ -1052,12 +1052,25 @@ on_province_owner_change_estate_privileges_effect = {
 	#BTC mamluks
 	if = {
 		limit = {
-			sea_zone = {
-				area = red_sea_area
-			}
 			owner = {
 				has_estate_privilege = estate_btc_mamluks_red_sea_trading_posts
 			}
+			sea_zone = {
+				area = red_sea_area
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_red_sea_ports_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_entrenched_syrian_governors
+			}
+			region = mashriq_region
+			NOT = { area = syrian_desert_area }
 		}
 		add_province_modifier = {
 			name = estate_mamluks_red_sea_ports_mod
