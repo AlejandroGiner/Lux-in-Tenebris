@@ -598,60 +598,36 @@ french_missions_colonial = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 3054
-				province_id = 3095
+				province_id = 4728
 				province_id = 3294
 				province_id = 104
-				province_id = 3043
+				province_id = 4740
 				province_id = 1862
 				province_id = 3086
 				province_id = 2979
 				province_id = 3067
 				province_id = 5133
 			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			3054 = {
-				owned_by = ROOT
-			}
-			3095 = {
-				owned_by = ROOT
-			}
-			3294 = {
-				owned_by = ROOT
-			}
-			104 = {
-				owned_by = ROOT
-			}
-			3043 = {
-				owned_by = ROOT
-			}
-			1862 = {
-				owned_by = ROOT
-			}
-			3086 = {
-				owned_by = ROOT
-			}
-			2979 = {
-				owned_by = ROOT
-			}
-			3067 = {
-				owned_by = ROOT
-			}
-			5133 = {
-				owned_by = ROOT
-			}
+			104 = { owned_by = ROOT }
+			3054 = { owned_by = ROOT }
+			4728 = { owned_by = ROOT }
+			3294 = { owned_by = ROOT }
+			4740 = { owned_by = ROOT }
+			1862 = { owned_by = ROOT }
+			3086 = { owned_by = ROOT }
+			2979 = { owned_by = ROOT }
+			3067 = { owned_by = ROOT }
+			5133 = { owned_by = ROOT }
 		}
 		effect = {
 			if = {
 				limit = {
 					exists = NAP
 					valid_for_personal_unions_trigger = yes
-					NAP = {
-						valid_for_personal_unions_trigger = yes
-					}
+					NAP = { valid_for_personal_unions_trigger = yes }
 				}
 				add_casus_belli = {
 					type = cb_restore_personal_union
@@ -1135,7 +1111,7 @@ france_expand_south_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			3043 = {
+			4740 = {
 				if = {
 					limit = {
 						NOT = {
@@ -1179,7 +1155,7 @@ france_expand_south_2 = {
 					add_permanent_claim = ROOT
 				}
 			}
-			3095 = {
+			4728 = {
 				if = {
 					limit = {
 						NOT = {

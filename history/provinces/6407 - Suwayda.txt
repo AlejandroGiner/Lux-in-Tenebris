@@ -2,12 +2,12 @@
 
 owner = MAM
 controller = MAM
-culture = al_suryah_arabic
+culture = melkite
 religion = orthodox		#Ghassanids, Druze would come later - from IR
 capital = "Salkhad" 
 trade_goods = grain
 hre = no
-base_tax = 2
+base_tax = 1
 base_production = 1
 base_manpower = 1
 is_city = yes
@@ -23,7 +23,8 @@ discovered_by = nomad_group
 discovered_by = indian
 discovered_by = east_african
 
-1516.8.24 = {	owner = TUR
+1516.8.24 = {	
+	owner = TUR
 	controller = TUR
 	add_core = TUR
 } # Part of the Ottoman Empire
