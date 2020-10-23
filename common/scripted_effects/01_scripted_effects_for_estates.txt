@@ -1012,7 +1012,7 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
-    #BTC
+    #BTC monopolies
 	if = {
 		limit = {
 			owner = {
@@ -1046,6 +1046,21 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		add_province_modifier = {
 			name = estate_brahmins_monopoly_of_apiculture_mod
+			duration = -1
+		}
+	}
+	#BTC mamluks
+	if = {
+		limit = {
+			sea_zone = {
+				area = red_sea_area
+			}
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_red_sea_trading_posts
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_red_sea_ports_mod
 			duration = -1
 		}
 	}

@@ -159,15 +159,12 @@ estate_btc_mamluks_promote_leadership = {
 	benefits = {
 		leader_land_shock = 1
 		movement_speed = 0.1
-		#Also unlocks access to special military advisor Khassaki Commander
+		#Also unlocks access to special military advisor Khassaki Commander (+20% CCA)
 	}
 	on_granted = {
 		custom_tooltip = estate_btc_mamluks_promote_leadership_effect_tooltip
 	}
 	on_revoked = {
-		custom_tooltip = estate_btc_mamluks_promote_leadership_revoke_effect_tooltip
-	}
-	on_invalid = {
 		custom_tooltip = estate_btc_mamluks_promote_leadership_revoke_effect_tooltip
 	}
 	ai_will_do = {
@@ -219,6 +216,19 @@ estate_btc_mamluks_red_sea_trading_posts = {
 		add_mercantilism = 3
 		custom_tooltip = btc_mamluks_red_sea_trading_posts_tooltip
 		#-35% dev cost and +40 autonomy floor to Red Sea coastal provinces
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					sea_zone = {
+						area = red_sea_area
+					}
+				}
+				add_province_modifier = {
+					name = estate_mamluks_red_sea_ports_mod
+					duration = -1
+				}
+			}
+		}
 	}
 	on_revoked = {
 		hidden_effect = {
