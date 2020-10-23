@@ -1077,6 +1077,23 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_enforce_recruitment_levant
+			}
+			culture = al_suryah_arabic
+			religion_group = muslim
+			OR = {
+				region = mashriq_region
+				area = rakka_area
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_forced_recruitment_mod
+			duration = -1
+		}
+	}
 }
 
 on_trade_good_changed_estate_privileges_effect = {
