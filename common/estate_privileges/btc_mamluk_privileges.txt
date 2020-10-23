@@ -264,6 +264,7 @@ estate_btc_mamluks_sudan_somalia_raids = {
 	}
 	on_granted = {
 		custom_tooltip = btc_mamluks_somali_raids_tooltip
+		# TODO
 		#A bunch of sailors (from Somalia), manpower and ducats
 		#Reduces opinion of any nation owning provinces in the affected areas
 		#Also adds devastation to the affected provinces
@@ -450,6 +451,9 @@ estate_btc_mamluks_entrenched_syrian_governors = {
 				remove_province_modifier = estate_mamluks_entrenched_syrian_governors_mod
 			}
 		}
+		# TODO
+		#The privilege has a tooltip that says "If this privilege is revoked, the governor and his guard will return to Egypt, likely causing trouble" 
+		#After a year or 2 of revoking the privilege, you get a big revolt in Egypt of Mamluk rebels
 	}
 	on_invalid = {
 		hidden_effect = {
