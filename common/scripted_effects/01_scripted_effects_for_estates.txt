@@ -1094,6 +1094,22 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_relax_ownership_laws
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = cotton
+				trade_goods = livestock
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_relax_ownership_mod
+			duration = -1
+		}
+	}
 }
 
 on_trade_good_changed_estate_privileges_effect = {
