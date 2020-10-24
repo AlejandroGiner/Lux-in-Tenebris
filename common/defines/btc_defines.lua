@@ -1,8 +1,12 @@
-NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.4 -- Changed from 1.7. AI wants this advantage to enter battles typically.
+--Commented Acceptable balance change. It does not represent 1 to 1 balance of forces, and it's bad idea to change it by more than 0.1.
+--NDefines.NAI.ACCEPTABLE_BALANCE_DEFAULT = 1.4 -- Changed from 1.7 AI wants this advantage to enter battles typically.
+NDefines.NAI.ARTILLERY_FRACTION = 0.25 --from 0.35 Ratio of artillery to infantry AI will build.
+NDefines.NAI.FORCE_COMPOSITION_CHANGE_TECH_LEVEL = 16 -- from 11, Tech level at which AI will double its artillery fraction.
+NDefines.NAI.AI_WANT_ACCEPT_CULTURES = 300	--from 100, How much the AI values having much development in accepted cultures.
 NDefines.NAI.REGIMENTS_PER_GENERAL = 20
 NDefines.NAI.MIN_SHIPS_FOR_ADMIRAL = 20
 NDefines.NAI.FORCE_MARCH_MIN_SIZE = 10
-NDefines.NAI.DEBASE_THRESHOLD = 3500
+NDefines.NAI.DEBASE_THRESHOLD = -5000 --Disables debase currency interaction for AI
 NDefines.NAI.ADVISOR_PROMOTION_AGE_CUTOFF = 45
 NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 3
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 30.1
@@ -12,7 +16,6 @@ NDefines.NDiplomacy.MAX_FREE_CITIES = 20			-- from original BtP increased from 8
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 45			-- from original BtP increased from 25
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075			-- from original BtP reduced from 01
 NDefines.NDiplomacy.AGITATE_FOR_LIBERTY_DESIRE = 50					-- from 25
-
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10
 NDefines.NDiplomacy.IMPERIAL_CITY_IA = 0.003			-- Beyond Typus added reducing ia to account for all the new provinces Base 0005
 NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.003			-- Beyond Typus added reducing ia to account for all the new provinces Base 0005
