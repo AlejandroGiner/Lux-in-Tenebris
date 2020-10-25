@@ -725,7 +725,35 @@ hsn_conquest_group_east = {
 				}
 				add_permanent_claim = ROOT
 			}
+			dulaim_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			kut_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			diwaniya_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			basra_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			mesopotamian_marshes_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }
@@ -760,6 +788,10 @@ hsn_conquest_group_east = {
 			OR = {
 				area = basra_area
 				area = iraq_arabi_area
+				area = diwaniya_area
+				area = mesopotamian_marshes_area
+				area = kut_area
+				area = dulaim_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -769,14 +801,30 @@ hsn_conquest_group_east = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			mesopotamian_marshes_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			diwaniya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			iraq_arabi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			dulaim_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			kut_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 		}
 		
 		effect = {
-			410 = { #8/8/8 (24) to 13/13/11 (37). Needs 40 for the next mission.
+			410 = { #4/4/4 (12) to 7/7/6 (20). Needs 20 for the next mission.
 				add_base_tax = 3
 				add_base_production = 3
 				add_base_manpower = 2
@@ -789,7 +837,35 @@ hsn_conquest_group_east = {
 					duration = 7300
 				}
 			}
+			diwaniya_area = {
+				limit = { religion = shiite }
+				add_province_modifier = {
+					name = "bt_hsn_influx_of_sunni_population"
+					duration = 7300
+				}
+			}
+			mesopotamian_marshes_area = {
+				limit = { religion = shiite }
+				add_province_modifier = {
+					name = "bt_hsn_influx_of_sunni_population"
+					duration = 7300
+				}
+			}
 			iraq_arabi_area = {
+				limit = { religion = shiite }
+				add_province_modifier = {
+					name = "bt_hsn_influx_of_sunni_population"
+					duration = 7300
+				}
+			}
+			dulaim_area = {
+				limit = { religion = shiite }
+				add_province_modifier = {
+					name = "bt_hsn_influx_of_sunni_population"
+					duration = 7300
+				}
+			}
+			kut_area = {
 				limit = { religion = shiite }
 				add_province_modifier = {
 					name = "bt_hsn_influx_of_sunni_population"
@@ -808,14 +884,14 @@ hsn_conquest_group_east = {
 		provinces_to_highlight = {
 			province_id = 410
 			NOT = { 
-				development = 20
+				development = 25
 				has_tax_building_trigger = yes
 			}
 		}
 		
 		trigger = {
 			410 = {
-				development = 20
+				development = 25
 				has_tax_building_trigger = yes
 			}
 		}

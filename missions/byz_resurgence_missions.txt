@@ -3265,7 +3265,35 @@ byz_armenia_into_mesopotamia = {
 					}
 					add_permanent_claim = ROOT
 				}
+				dulaim_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				kut_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				diwaniya_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				basra_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				mesopotamian_marshes_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -3291,6 +3319,10 @@ byz_armenia_into_mesopotamia = {
 			OR = {
 				area = iraq_arabi_area
 				area = basra_area
+				area = mesopotamian_marshes_area
+				area = diwaniya_area
+				area = kut_area
+				area = dulaim_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -3300,7 +3332,23 @@ byz_armenia_into_mesopotamia = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
+			dulaim_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			kut_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			diwaniya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
 			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			mesopotamian_marshes_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

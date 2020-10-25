@@ -25,17 +25,6 @@ country_event = {
 				area = bulgaria_area
 				area = eastern_bulgaria_area
 				area = upper_thrace_area
-<<<<<<< HEAD
-				province_id = 3165
-				province_id = 5715
-				province_id = 5098
-				province_id = 5099
-				province_id = 3001
-				province_id = 5884
-				province_id = 3183
-				province_id = 1853
-				province_id = 3167
-=======
 				area = sofya_area
 				province_id = 3165
 				province_id = 5715
@@ -45,14 +34,11 @@ country_event = {
 				province_id = 4780
 				province_id = 3183
 				province_id = 1853
->>>>>>> master
 			}
 		}
    	}
 	
-	mean_time_to_happen = {
-		months = 120
-	}
+	mean_time_to_happen = { months = 120 }
 
 	option = {		#Ok
 		name = "btc_flavor_bul.1.a"
@@ -64,18 +50,6 @@ country_event = {
 					area = bulgaria_area
 					area = eastern_bulgaria_area
 					area = upper_thrace_area
-<<<<<<< HEAD
-					province_id = 150
-					province_id = 3165
-					province_id = 5715
-					province_id = 5098
-					province_id = 5099
-					province_id = 3001
-					province_id = 5884
-					province_id = 3183
-					province_id = 1853
-					province_id = 3167
-=======
 					area = sofya_area
 					province_id = 150
 					province_id = 3165
@@ -86,32 +60,17 @@ country_event = {
 					province_id = 4780
 					province_id = 3183
 					province_id = 1853
->>>>>>> master
 				}
 			}
 			add_core = BUL
 		}
 		if = {
-			limit = {
-				150 = {
-					NOT = { culture = bulgarian }
-				}
-			}
-			150 = {
-				change_culture = bulgarianz
-			}
+			limit = { 150 = { NOT = { culture = bulgarian } } }
+			150 = { change_culture = bulgarianz }
 		}
 		if = {
-			limit = {
-				150 = {
-					owner = {
-						NOT = { primary_culture = bulgarian }
-					}
-				}
-			}
-			150 = {
-				add_unrest = 4
-			}
+			limit = { 150 = { owner = { NOT = { primary_culture = bulgarian } } } }
+			150 = { add_unrest = 4 }
 		}
 		hidden_effect = {
 			every_known_country = {
@@ -121,17 +80,6 @@ country_event = {
 							area = bulgaria_area
 							area = eastern_bulgaria_area
 							area = upper_thrace_area
-<<<<<<< HEAD
-							province_id = 3165
-							province_id = 5715
-							province_id = 5098
-							province_id = 5099
-							province_id = 3001
-							province_id = 5884
-							province_id = 3183
-							province_id = 1853
-							province_id = 3167
-=======
 							area = sofya_area
 							province_id = 3165
 							province_id = 5715
@@ -141,7 +89,6 @@ country_event = {
 							province_id = 4780
 							province_id = 3183
 							province_id = 1853
->>>>>>> master
 						}
 					}
 				}
@@ -163,17 +110,6 @@ country_event = {
 						area = bulgaria_area
 						area = eastern_bulgaria_area
 						area = upper_thrace_area
-<<<<<<< HEAD
-						province_id = 3165
-						province_id = 5715
-						province_id = 5098
-						province_id = 5099
-						province_id = 3001
-						province_id = 5884
-						province_id = 3183
-						province_id = 1853
-						province_id = 3167
-=======
 						area = sofya_area
 						province_id = 3165
 						province_id = 5715
@@ -183,7 +119,6 @@ country_event = {
 						province_id = 4780
 						province_id = 3183
 						province_id = 1853
->>>>>>> master
 					}
 				}
 				add_core = BUL
@@ -191,22 +126,14 @@ country_event = {
 		}
 		if = {
 			limit = { owns = 150 }
-			tooltip = {
-				150 = {
-					add_unrest = 4
-				}
-			}
+			tooltip = { 150 = { add_unrest = 4 } }
 		}
 		if = {
 			limit = {
 				owns = 150
 				1853 = { NOT = { culture = bulgarian } }
 			}
-			tooltip = {
-				1853 = {
-					change_culture = bulgarian
-				}
-			}
+			tooltip = { 1853 = { change_culture = bulgarian } }
 		}
 	}
 	option = {		#Ok
@@ -219,30 +146,18 @@ country_event = {
 			every_province = {
 				limit = {
 					OR = {
-							area = bulgaria_area
-							area = eastern_bulgaria_area
-							area = upper_thrace_area
-<<<<<<< HEAD
-							province_id = 3165
-							province_id = 5715
-							province_id = 5098
-							province_id = 5099
-							province_id = 3001
-							province_id = 5884
-							province_id = 3183
-							province_id = 1853
-							province_id = 3167
-=======
-							area = sofya_area
-							province_id = 3165
-							province_id = 5715
-							province_id = 4703
-							province_id = 5099
-							province_id = 3001
-							province_id = 4780
-							province_id = 3183
-							province_id = 1853
->>>>>>> master
+						area = bulgaria_area
+						area = eastern_bulgaria_area
+						area = upper_thrace_area
+						area = sofya_area
+						province_id = 3165
+						province_id = 5715
+						province_id = 4703
+						province_id = 5099
+						province_id = 3001
+						province_id = 4780
+						province_id = 3183
+						province_id = 1853
 					}
 				}
 				add_core = BUL

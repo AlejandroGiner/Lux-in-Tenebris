@@ -755,6 +755,9 @@ tur_conquest_of_middle_east = {
 						OR = {
 							area = shahrizor_area
 							area = iraq_arabi_area
+							area = dulaim_area
+							area = kut_area
+							area = diwaniya_area
 							area = al_jazira_area
 							area = rakka_area
 							area = palmyra_area
@@ -778,6 +781,9 @@ tur_conquest_of_middle_east = {
 				area = al_jazira_area
 				area = rakka_area
 				area = palmyra_area
+				area = diwaniya_area
+				area = kut_area
+				area = dulaim_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -798,6 +804,18 @@ tur_conquest_of_middle_east = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			dulaim_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kut_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			diwaniya_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			shahrizor_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -811,6 +829,7 @@ tur_conquest_of_middle_east = {
 						OR = {
 							area = bahrain_area
 							area = basra_area
+							area = mesopotamian_marshes_area
 						}
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -828,6 +847,7 @@ tur_conquest_of_middle_east = {
 			OR = {
 				area = bahrain_area
 				area = basra_area
+				area = mesopotamian_marshes_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -837,6 +857,10 @@ tur_conquest_of_middle_east = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mesopotamian_marshes_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

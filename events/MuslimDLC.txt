@@ -1664,7 +1664,11 @@ province_event = {
 		name = "muslim_dlc.EVTOPTA25"
 		if = {
 			limit = { owner = { has_estate = estate_dhimmi } }
-			set_estate = estate_dhimmi
+			owner = {
+				scaled_estate_land_share_add_effect = {
+					estate = estate_dhimmi
+				}
+			}
 		}
 		if = {
 			limit = { NOT = { owner = { has_estate = estate_dhimmi } } }

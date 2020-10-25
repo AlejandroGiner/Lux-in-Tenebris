@@ -528,6 +528,13 @@ bah_persian_branch = {
 				}
 				add_permanent_claim = ROOT
 			}
+			mesopotamian_marshes_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			khuzestan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -552,10 +559,15 @@ bah_persian_branch = {
 				area = basra_area
 				area = khuzestan_area
 				area = persian_gulf_coast
+				area = mesopotamian_marshes_area
 			}
 		}
 		trigger = {
 			basra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mesopotamian_marshes_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -64,14 +64,14 @@ nestorian_seat_triggered_modifier = {
 }
 
 #Exarch-related modifiers.
-exarch_territory_modifier = {
-	potential = { exarches_territory_modifier_trigger = yes }
-	trigger = { exarches_territory_modifier_trigger = yes }
-	
-	picture = "exarch_seat_modifier"
-	min_local_autonomy = 33
-	local_unrest = -2
-}
+#exarch_territory_modifier = {
+#	potential = { exarches_territory_modifier_trigger = yes }
+#	trigger = { exarches_territory_modifier_trigger = yes }
+#	
+#	picture = "exarch_seat_modifier"
+#	min_local_autonomy = 33
+#	local_unrest = -2
+#}
 
 exarch_seat_modifier_med_dev = {
 	potential = { has_estate = estate_exarches NOT = { development = 10 } }
