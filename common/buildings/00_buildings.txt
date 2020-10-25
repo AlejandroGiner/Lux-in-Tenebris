@@ -545,7 +545,7 @@ fort_15th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 5
 		modifier = {
 			factor = 25
 			is_capital = yes
@@ -566,11 +566,11 @@ fort_15th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			OR = {
 				owner = { government = tribal }
 				owner = { government = native }
-				FROM = { num_of_cities = 2 }
+				FROM = { NOT = { num_of_cities = 2 } }
 			}
 		}
 		modifier = {
@@ -959,7 +959,7 @@ fort_16th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 5
 		modifier = {
 			factor = 25
 			is_capital = yes
@@ -980,11 +980,11 @@ fort_16th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			OR = {
 				owner = { government = tribal }
 				owner = { government = native }
-				FROM = { num_of_cities = 2 }
+				FROM = { NOT = { num_of_cities = 2 } }
 			}
 		}
 		modifier = {
@@ -1556,7 +1556,7 @@ fort_17th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 5
 		modifier = {
 			factor = 25
 			is_capital = yes
@@ -1577,11 +1577,11 @@ fort_17th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			OR = {
 				owner = { government = tribal }
 				owner = { government = native }
-				FROM = { num_of_cities = 2 }
+				FROM = { NOT = { num_of_cities = 2 } }
 			}
 		}
 		modifier = {
@@ -2204,7 +2204,7 @@ fort_18th = {
 	influencing_fort = yes
 	
 	ai_will_do = {
-		factor = 10
+		factor = 5
 		modifier = {
 			factor = 25
 			is_capital = yes
@@ -2225,11 +2225,11 @@ fort_18th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			OR = {
 				owner = { government = tribal }
 				owner = { government = native }
-				FROM = { num_of_cities = 2 }
+				FROM = { NOT = { num_of_cities = 2 } }
 			}
 		}
 		modifier = {
@@ -3109,7 +3109,7 @@ state_house = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 300
+		factor = 25
 		modifier = {
 			factor = 0
 			OR = {
