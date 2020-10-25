@@ -44,6 +44,13 @@ EMP_crusader_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			hims_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			tripoli_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -71,6 +78,8 @@ EMP_crusader_1 = {
 				area = trans_jordan_area
 				area = aleppo_area
 				area = tripoli_area
+				area = hims_area
+				area = galilea_area
 			}
 			NOT = { religion = ROOT }
 		}
@@ -79,11 +88,19 @@ EMP_crusader_1 = {
 				type = all
 				religion = ROOT
 			}
+			hims_area = {
+				type = all
+				religion = ROOT
+			}
 			tripoli_area = {
 				type = all
 				religion = ROOT
 			}
 			palestine_area = {
+				type = all
+				religion = ROOT
+			}
+			galilea_area = {
 				type = all
 				religion = ROOT
 			}
@@ -160,6 +177,13 @@ EMP_crusader_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			galilea_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	
@@ -199,11 +223,16 @@ EMP_crusader_2 = {
 				area = tripoli_area
 				area = syrian_desert_area
 				area = trans_jordan_area
+				area = hims_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hims_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

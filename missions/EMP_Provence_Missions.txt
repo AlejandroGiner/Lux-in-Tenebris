@@ -328,7 +328,21 @@ provence_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			galilea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			syria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hims_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -352,6 +366,8 @@ provence_missions_2 = {
 				area = palestine_area
 				area = syria_area
 				area = trans_jordan_area
+				area = hims_area
+				area = galilea_area
 			}
 			OR = {
 				AND = {
@@ -367,11 +383,13 @@ provence_missions_2 = {
 		trigger = {
 			owns = 379
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
+				value = 8
 				OR = {
 					area = palestine_area
 					area = syria_area
+					area = galilea_area
 					area = trans_jordan_area
+					area = hims_area
 				}
 			}
 		}

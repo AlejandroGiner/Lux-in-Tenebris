@@ -1445,7 +1445,7 @@ emp_ita_overseas_branch = {
 			}
 		}
 		effect = {
-			add_mercantilism = 2
+			add_mercantilism = 5
 			358 = {
 				add_trade_modifier = {
 					who = root
@@ -1467,7 +1467,9 @@ emp_ita_overseas_branch = {
 				area = palestine_area
 				area = syria_area
 				area = aleppo_area
+				area = hims_area
 				area = tripolitania_area
+				area = galilea_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -1476,7 +1478,15 @@ emp_ita_overseas_branch = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			galilea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			syria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hims_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

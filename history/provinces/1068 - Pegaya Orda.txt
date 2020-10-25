@@ -1,7 +1,5 @@
 #1068 - Pegaya Orda
 
-owner = OST
-controller = OST
 culture = ostyaki
 religion = tengri_pagan_reformed
 capital = "Ket"
@@ -10,11 +8,20 @@ hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = yes
-add_core = OST
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
 
 discovered_by = siberian_btc
 
+1444.11.12 = {
+	is_city = yes
+	owner = OST
+	controller = OST
+	add_core = OST
+	trade_goods = iron
+}
 1450.1.1 = { discovered_by = SIB }
 1585.1.1 = { discovered_by = RUS }
 
@@ -23,7 +30,5 @@ discovered_by = siberian_btc
 	controller = RUS
 	religion = orthodox
 	culture = russian
-	is_city = yes
-	trade_goods = iron
 } # Yermak Timofeevich
 1611.1.1 = { add_core = RUS }

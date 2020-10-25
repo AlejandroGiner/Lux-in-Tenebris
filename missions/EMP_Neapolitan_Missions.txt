@@ -396,6 +396,13 @@ emp_naples_3 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			galilea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			trans_jordan_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -420,25 +427,27 @@ emp_naples_3 = {
 				area = palestine_area
 				area = syria_area
 				area = aleppo_area
+				area = hims_area
 				area = trans_jordan_area
 				area = tripoli_area
+				area = galilea_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 10
+				value = 15
 				OR = {
 					area = palestine_area
 					area = syria_area
+					area = hims_area
 					area = aleppo_area
 					area = trans_jordan_area
 					area = tripoli_area
+					area = galilea_area
 				}
 			}
-			379 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			379 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		effect = {
 			country_event = { id = knights_missions.2 }
@@ -527,6 +536,13 @@ emp_naples_4 = {
 				add_permanent_claim = ROOT
 			}
 			syria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			hims_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }

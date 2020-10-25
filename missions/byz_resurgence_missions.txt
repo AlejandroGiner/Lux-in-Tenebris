@@ -3526,14 +3526,24 @@ byz_crusade_1_plus_egypt = {
 					}
 					add_permanent_claim = ROOT
 				}
+				palmyra_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				syria_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
-						NOT = { province_id = 381 }
-						NOT = { province_id = 5847 }
-						NOT = { province_id = 5813 }
-						NOT = { province_id = 380 }
+					}
+					add_permanent_claim = ROOT
+				}
+				hims_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -3593,19 +3603,17 @@ byz_crusade_1_plus_egypt = {
 					}
 				}
 			}
+			palmyra_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			tripoli_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
-			382 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			4297 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
-			1849 = {
-				country_or_non_sovereign_subject_holds = ROOT	
-			}
+			382 = { country_or_non_sovereign_subject_holds = ROOT }
+			4297 = { country_or_non_sovereign_subject_holds = ROOT }
+			1849 = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		effect = {
@@ -3618,6 +3626,13 @@ byz_crusade_1_plus_egypt = {
 			custom_tooltip = byz_palestine_claims
 			hidden_effect = { #Palestine
 				palestine_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
+				galilea_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
 						NOT = { is_core = ROOT }
@@ -3659,6 +3674,7 @@ byz_crusade_1_plus_egypt = {
 		provinces_to_highlight = {
 			OR = {
 				area = palestine_area
+				area = galilea_area
 				province_id = 364
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -3666,6 +3682,10 @@ byz_crusade_1_plus_egypt = {
 		
 		trigger = {
 			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			galilea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

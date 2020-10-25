@@ -1395,6 +1395,7 @@ gc_aragon_4 = {
 				area = caria_area
 				area = aleppo_area
 				area = palestine_area
+				area = galilea_area
 				province_id = 364
 				area = aegean_archipelago_area
 				area = northern_aegean_islands_area
@@ -1458,6 +1459,10 @@ gc_aragon_4 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			galilea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

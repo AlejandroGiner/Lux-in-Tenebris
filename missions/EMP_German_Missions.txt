@@ -415,6 +415,13 @@ emp_germany_hlr_2_hlr = {
 				}
 				add_permanent_claim = ROOT
 			}
+			galilea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	emp_ger_hlr_roman_politics = {

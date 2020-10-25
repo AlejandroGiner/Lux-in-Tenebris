@@ -757,6 +757,7 @@ tur_conquest_of_middle_east = {
 							area = iraq_arabi_area
 							area = al_jazira_area
 							area = rakka_area
+							area = palmyra_area
 						}
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
@@ -776,11 +777,16 @@ tur_conquest_of_middle_east = {
 				area = iraq_arabi_area
 				area = al_jazira_area
 				area = rakka_area
+				area = palmyra_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			rakka_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			palmyra_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

@@ -817,7 +817,21 @@ swabian_group_3 = { #crusader group
 				}
 				add_permanent_claim = root
 			}
+			hims_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
 			palestine_area = {
+				limit = {
+					NOT = { owned_by = root }
+					NOT = { is_permanent_claim = root }
+				}
+				add_permanent_claim = root
+			}
+			galilea_area = {
 				limit = {
 					NOT = { owned_by = root }
 					NOT = { is_permanent_claim = root }
@@ -842,7 +856,15 @@ swabian_group_3 = { #crusader group
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}
+			hims_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
 			palestine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = root
+			}
+			galilea_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = root
 			}

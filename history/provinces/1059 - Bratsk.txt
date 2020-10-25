@@ -4,20 +4,28 @@ latent_trade_goods = {
 	coal
 }
 
-owner = TSA
-controller = TSA
 culture = tungus
 religion = tengri_pagan_reformed
 capital = "Kezemskoe"
 trade_goods = unknown
 hre = no
-is_city = yes
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-add_core = TSA
+
+native_size = 10
+native_ferocity = 1
+native_hostileness = 3
 
 discovered_by = siberian_btc
+
+1444.11.12 = {
+	is_city = yes
+	owner = TSA
+	controller = TSA
+	add_core = TSA
+	trade_goods = fur
+}
 
 1631.1.1 = { discovered_by = RUS }
 
@@ -26,7 +34,5 @@ discovered_by = siberian_btc
 	controller = RUS
 	religion = orthodox
 	culture = russian
-	is_city = yes
-	trade_goods = fur
 }
 1657.1.1 = { add_core = RUS }

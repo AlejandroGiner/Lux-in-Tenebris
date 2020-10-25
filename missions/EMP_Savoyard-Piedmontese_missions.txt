@@ -28,8 +28,8 @@ emp_sav_missions_conquest = {
 				province_id = 2981
 			}
 			OR = {
-				NOT = { is_core = root }
-				NOT = { owned_by = root }
+				NOT = { is_core = ROOT }
+				NOT = { owned_by = ROOT }
 			}
 		}
 		trigger = {
@@ -44,10 +44,10 @@ emp_sav_missions_conquest = {
 			}
 			liguria_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -57,28 +57,28 @@ emp_sav_missions_conquest = {
 		position = 3
 		provinces_to_highlight = {
 			area = liguria_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			liguria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			lombardy_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			po_valley_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			if = {
 				limit = {
@@ -122,18 +122,18 @@ emp_sav_missions_conquest = {
 				}
 				corsica_sardinia_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			else = {
 				every_province = {
 					limit = {
 						area = corsica_sardinia_area
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 						OR = {
 							NOT = {
 								OR = {
@@ -149,7 +149,7 @@ emp_sav_missions_conquest = {
 							}
 						}
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -159,7 +159,7 @@ emp_sav_missions_conquest = {
 		required_missions = { emp_sav_conquer_genoa }
 		provinces_to_highlight = {
 			area = corsica_sardinia_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -194,17 +194,17 @@ emp_sav_missions_conquest = {
 			else = {
 				western_sicily_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				sicily_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -217,7 +217,7 @@ emp_sav_missions_conquest = {
 				area = western_sicily_area
 				area = sicily_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -271,24 +271,24 @@ emp_sav_missions_conquest = {
 			else = {
 				naples_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				apulia_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				calabria_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			add_country_modifier = {
@@ -323,7 +323,7 @@ emp_sav_missions_conquest = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 121
@@ -368,8 +368,8 @@ emp_sav_missions_conquest_north = {
 		provinces_to_highlight = {
 			province_id = 4720
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		trigger = {
@@ -378,17 +378,17 @@ emp_sav_missions_conquest_north = {
 		effect = {
 			romandie_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			switzerland_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -401,7 +401,7 @@ emp_sav_missions_conquest_north = {
 				area = romandie_area
 				area = switzerland_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -426,24 +426,24 @@ emp_sav_missions_conquest_north = {
 		effect = {
 			west_burgundy_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			bourgogne_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			lorraine_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -457,7 +457,7 @@ emp_sav_missions_conquest_north = {
 				area = west_burgundy_area
 				area = lorraine_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -519,7 +519,7 @@ emp_sav_missions_conquest_italia = {
 						area = lombardy_area
 						area = po_valley_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -534,7 +534,7 @@ emp_sav_missions_conquest_italia = {
 				}
 				AND = {
 					province_id = 104
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 		}
@@ -555,24 +555,24 @@ emp_sav_missions_conquest_italia = {
 			}
 			venetia_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			emilia_romagna_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			tuscany_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -584,7 +584,7 @@ emp_sav_missions_conquest_italia = {
 				area = tuscany_area
 				area = emilia_romagna_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -640,7 +640,7 @@ emp_sav_missions_conquest_west = {
 				area = provence_area
 				area = savoy_dauphine_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -667,12 +667,12 @@ emp_sav_missions_conquest_west = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 						continent = europe
 						culture = occitain
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -690,7 +690,7 @@ emp_sav_missions_conquest_west = {
 				province_id = 199
 				province_id = 4777
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -737,20 +737,20 @@ emp_sav_missions_conquest_west = {
 			hidden_effect = {
 				every_province = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 						continent = europe
 						culture = gascon
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			ile_de_france_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -762,8 +762,8 @@ emp_sav_missions_conquest_west = {
 		provinces_to_highlight = {
 			province_id = 183
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 			ROOT = { NOT = { succession_claim = FRA } }
 		}
@@ -806,31 +806,31 @@ emp_sav_missions_conquest_west = {
 			else = {
 				loire_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				orleans_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				poitou_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				champagne_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -860,12 +860,12 @@ emp_sav_missions_conquest_italia_2 = {
 		position = 5
 		provinces_to_highlight = {
 			area = venetia_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -873,7 +873,7 @@ emp_sav_missions_conquest_italia_2 = {
 			add_dip_power = 50
 			112 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 50
 					key = sav_trade_in_venice
@@ -907,11 +907,11 @@ emp_sav_missions_security = {
 			army_size = 10
 			any_ally = {
 				army_strength = {
-					who = root
+					who = ROOT
 					value = 1.5
 				}
 				has_opinion = {
-					who = root
+					who = ROOT
 					value = 150
 				}
 			}
@@ -933,23 +933,23 @@ emp_sav_missions_security = {
 					limit = { ROOT = { NOT = { army_size = 60 } } }
 					army_size = ROOT
 					has_opinion = {
-						who = root
+						who = ROOT
 						value = 120
 					}
 				}
 				else = {
 					army_size = 60
 					has_opinion = {
-						who = root
+						who = ROOT
 						value = 120
 					}
 				}
 				custom_trigger_tooltip = {
-					tooltip = any_rival_allied_with_root_and_120_opinion
+					tooltip = any_rival_allied_with_ROOT_and_120_opinion
 					any_rival_country = {
-						alliance_with = root
+						alliance_with = ROOT
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 120
 						}
 					}
@@ -960,8 +960,8 @@ emp_sav_missions_security = {
 				amount = 5
 				all_country = {
 					OR = {
-						alliance_with = root
-						is_subject_of = root
+						alliance_with = ROOT
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -987,22 +987,22 @@ emp_sav_missions_security = {
 				area = switzerland_area
 				area = romandie_area
 			}
-			owned_by = root
+			owned_by = ROOT
 			if = {
 				limit = {
-					root = { mil_tech = 24 }
+					ROOT = { mil_tech = 24 }
 				}
 				NOT = { has_building = fort_18th }
 			}
 			else_if = {
 				limit = {
-					root = { mil_tech = 19 }
+					ROOT = { mil_tech = 19 }
 				}
 				NOT = { has_building = fort_17th }
 			}
 			else_if = {
 				limit = {
-					root = { mil_tech = 14 }
+					ROOT = { mil_tech = 14 }
 				}
 				NOT = { has_building = fort_16th }
 			}
@@ -1015,19 +1015,19 @@ emp_sav_missions_security = {
 						value = 4
 						if = {
 							limit = {
-								root = { mil_tech = 24 }
+								ROOT = { mil_tech = 24 }
 							}
 							has_building = fort_18th
 						}
 						else_if = {
 							limit = {
-								root = { mil_tech = 19 }
+								ROOT = { mil_tech = 19 }
 							}
 							has_building = fort_17th
 						}
 						else_if = {
 							limit = {
-								root = { mil_tech = 14 }
+								ROOT = { mil_tech = 14 }
 							}
 							has_building = fort_16th
 						}
@@ -1050,19 +1050,19 @@ emp_sav_missions_security = {
 				value = 4
 				if = {
 					limit = {
-						root = { mil_tech = 24 }
+						ROOT = { mil_tech = 24 }
 					}
 					has_building = fort_18th
 				}
 				else_if = {
 					limit = {
-						root = { mil_tech = 19 }
+						ROOT = { mil_tech = 19 }
 					}
 					has_building = fort_17th
 				}
 				else_if = {
 					limit = {
-						root = { mil_tech = 14 }
+						ROOT = { mil_tech = 14 }
 					}
 					has_building = fort_16th
 				}
@@ -1182,28 +1182,28 @@ emp_sav_missions_economy = {
 		provinces_to_highlight = {
 			province_id = 103
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { owned_by = ROOT }
 				NOT = { development = 20 }
 			}
 		}
 		trigger = {
 			if = {
 				limit = {
-					103 = { NOT = { is_capital_of = root } }
+					103 = { NOT = { is_capital_of = ROOT } }
 				}
 				is_at_war = no
 			}
 			has_institution = renaissance
 			total_development = 120
 			103 = {
-				owned_by = root
+				owned_by = ROOT
 				development = 20
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					103 = { NOT = { is_capital_of = root } }
+					103 = { NOT = { is_capital_of = ROOT } }
 				}
 				country_event = { id = new_flavour_sav.1 }
 			}
@@ -1222,7 +1222,7 @@ emp_sav_missions_economy = {
 		required_missions = { emp_sav_wealth_of_the_alps }
 		position = 4
 		provinces_to_highlight = {
-			is_capital_of = root
+			is_capital_of = ROOT
 			OR = {
 				NOT = { development = 30 }
 				NOT = { num_of_buildings_in_province = 5 }
@@ -1257,7 +1257,7 @@ emp_sav_missions_economy = {
 				area = {
 					if = {
 						limit = {
-							owned_by = root
+							owned_by = ROOT
 						}
 						add_province_modifier = {
 							name = sav_prosperous_homelands
@@ -1326,7 +1326,7 @@ emp_sav_missions_papacy = {
 					limit = { exists = PAP }
 					PAP = {
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 150
 						}
 					}
@@ -1372,8 +1372,8 @@ emp_sav_missions_papacy = {
 			if = {
 				limit = {
 					321 = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 				}
 				add_permanent_claim = 321
@@ -1388,8 +1388,8 @@ emp_sav_missions_papacy = {
 		provinces_to_highlight = {
 			province_id = 321
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 
@@ -1404,24 +1404,38 @@ emp_sav_missions_papacy = {
 			}
 			palestine_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
+			}
+			galilea_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			syria_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
+			}
+			hims_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
 			}
 			aleppo_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
