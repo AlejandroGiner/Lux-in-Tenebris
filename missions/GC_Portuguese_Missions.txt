@@ -421,7 +421,7 @@ gc_por_2 = {
 			}
 			4097 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 5475
 					power = 20
 					key = ivory_coast_ambition
@@ -628,7 +628,7 @@ gc_por_2_c = {
 		effect = {
 			1343 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 50
 					key = burmese_trade
@@ -700,12 +700,12 @@ gc_por_3 = {
 				}
 				ENG = {
 					add_opinion = {
-						who = root
+						who = ROOT
 						modifier = anglo_portuguese_alliance
 					}
 				}
                 hidden_effect = {
-					root = {
+					ROOT = {
 						add_opinion = {
 							who = ENG
 							modifier = anglo_portuguese_alliance
@@ -1229,7 +1229,7 @@ gc_por_4 = {
 		effect = {
 			1201 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 5475
 					power = 20
 					key = horn_africa_ambition
@@ -1346,7 +1346,7 @@ gc_por_4 = {
 				}
 			}
 			668 = {
-				add_claim = root
+				add_claim = ROOT
 			}
 		}
 	}

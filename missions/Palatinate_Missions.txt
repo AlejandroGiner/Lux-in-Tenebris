@@ -23,43 +23,43 @@ palatinate_conquest_group = {
 		effect = {
 			franconia_area = {
 				limit = {
-					NOT = { is_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			upper_franconia_area = {
 				limit = {
-					NOT = { is_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			70 = {
 				if = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_claim = root
+					add_claim = ROOT
 				}
 			}
 			2955 = {
 				if = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_claim = root
+					add_claim = ROOT
 				}
 			}
 			4711 = {
 				if = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_claim = root
+					add_claim = ROOT
 				}
 			}
 		}
@@ -74,18 +74,18 @@ palatinate_conquest_group = {
 				province_id = 1757
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { owned_by = ROOT }
 				is_in_capital_area = no
 			}
 		}
 		
 		trigger = {
 			77 = {
-				owned_by = root
+				owned_by = ROOT
 				is_in_capital_area = yes
 			}
 			1757 = {
-				owned_by = root
+				owned_by = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -175,24 +175,24 @@ palatinate_conquest_group = {
 			else = {
 				upper_bavaria_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				lower_bavaria_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				east_bavaria_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -219,7 +219,7 @@ palatinate_conquest_group = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -237,7 +237,7 @@ palatinate_conquest_group = {
 				}
 				BAV = {
 					OR = {
-						is_subject_of = root
+						is_subject_of = ROOT
 						exists = no
 					}
 				}
@@ -248,7 +248,7 @@ palatinate_conquest_group = {
 				}
 				UBV = {
 					OR = {
-						is_subject_of = root
+						is_subject_of = ROOT
 						exists = no
 					}
 				}
@@ -259,7 +259,7 @@ palatinate_conquest_group = {
 				}
 				LBV = {
 					OR = {
-						is_subject_of = root
+						is_subject_of = ROOT
 						exists = no
 					}
 				}
@@ -270,7 +270,7 @@ palatinate_conquest_group = {
 				}
 				ING = {
 					OR = {
-						is_subject_of = root
+						is_subject_of = ROOT
 						exists = no
 					}
 				}
@@ -280,31 +280,31 @@ palatinate_conquest_group = {
 		effect = {
 			north_rhine_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			lower_rhineland_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			upper_rhineland_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			alsace_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -334,7 +334,7 @@ palatinate_conquest_group = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -397,8 +397,8 @@ palatinate_other_group = {
 				}
 			}
 			owner = {
-				is_neighbor_of = root
-				NOT = { religion = root }
+				is_neighbor_of = ROOT
+				NOT = { religion = ROOT }
 			}
 		}
 		
@@ -422,7 +422,7 @@ palatinate_other_group = {
 							hre_religion_locked = yes
 							custom_trigger_tooltip = {
 								tooltip = hre_religion_is_root_tooltip
-								hre_religion = root
+								hre_religion = ROOT
 							}
 						}
 					}
@@ -439,7 +439,7 @@ palatinate_other_group = {
 						desc = pal_religious_leadership_trigger_tooltip
 						amount = 5
 						all_neighbor_country = {
-							religion = root
+							religion = ROOT
 						}
 					}
 				}
@@ -464,31 +464,31 @@ palatinate_other_group = {
 			else = {
 				bohemia_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				moravia_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				erzgebirge_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				sudety_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -510,19 +510,19 @@ palatinate_other_group = {
 		trigger = {
 			bohemia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			sudety_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			moravia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			erzgebirge_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		
@@ -540,11 +540,11 @@ palatinate_other_group = {
 
 		provinces_to_highlight = {
 			owner = {
-				NOT = { tag = root }
+				NOT = { tag = ROOT }
 				capital_scope = {
 					region = france_region
 				}
-				army_size = root
+				army_size = ROOT
 			}
 		}
 		
@@ -562,13 +562,13 @@ palatinate_other_group = {
 					}
 				}
 				FRA = {
-					religion = root
+					religion = ROOT
 					OR = {
-						alliance_with = root
-						is_subject_of = root
+						alliance_with = ROOT
+						is_subject_of = ROOT
 					}
 					has_opinion = {
-						who = root
+						who = ROOT
 						value = 150
 					}
 				}
@@ -591,13 +591,13 @@ palatinate_other_group = {
 							}
 						}
 						FRA = {
-							religion = root
+							religion = ROOT
 							OR = {
-								alliance_with = root
-								is_subject_of = root
+								alliance_with = ROOT
+								is_subject_of = ROOT
 							}
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 150
 							}
 						}
@@ -607,13 +607,13 @@ palatinate_other_group = {
 					limit = {
 						NOT = {
 							FRA = {
-								religion = root
+								religion = ROOT
 								OR = {
-									alliance_with = root
-									is_subject_of = root
+									alliance_with = ROOT
+									is_subject_of = ROOT
 								}
 								has_opinion = {
-									who = root
+									who = ROOT
 									value = 150
 								}
 							}
@@ -621,31 +621,31 @@ palatinate_other_group = {
 					}
 					wallonia_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					lorraine_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					bourgogne_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					champagne_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					if = {
 						limit = {
@@ -656,8 +656,8 @@ palatinate_other_group = {
 									NOT = { area = lorraine_area }
 									NOT = { area = bourgogne_area }
 									NOT = { area = champagne_area }
-									NOT = { is_permanent_claim = root }
-									NOT = { is_core = root }
+									NOT = { is_permanent_claim = ROOT }
+									NOT = { is_core = ROOT }
 								}
 							}
 						}
@@ -668,13 +668,13 @@ palatinate_other_group = {
 								NOT = { area = lorraine_area }
 								NOT = { area = bourgogne_area }
 								NOT = { area = champagne_area }
-								NOT = { is_permanent_claim = root }
-								NOT = { is_core = root }
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT }
 								any_neighbor_province = {
-									owned_by = root
+									owned_by = ROOT
 								}
 							}
-							add_permanent_claim = root
+							add_permanent_claim = ROOT
 						}
 					}
 				}
@@ -693,31 +693,31 @@ palatinate_other_group = {
 				tooltip = {
 					wallonia_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					lorraine_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					bourgogne_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					champagne_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					if = {
 						limit = {
@@ -728,8 +728,8 @@ palatinate_other_group = {
 									NOT = { area = lorraine_area }
 									NOT = { area = bourgogne_area }
 									NOT = { area = champagne_area }
-									NOT = { is_permanent_claim = root }
-									NOT = { is_core = root }
+									NOT = { is_permanent_claim = ROOT }
+									NOT = { is_core = ROOT }
 								}
 							}
 						}
@@ -740,13 +740,13 @@ palatinate_other_group = {
 								NOT = { area = lorraine_area }
 								NOT = { area = bourgogne_area }
 								NOT = { area = champagne_area }
-								NOT = { is_permanent_claim = root }
-								NOT = { is_core = root }
+								NOT = { is_permanent_claim = ROOT }
+								NOT = { is_core = ROOT }
 								any_neighbor_province = {
-									owned_by = root
+									owned_by = ROOT
 								}
 							}
-							add_permanent_claim = root
+							add_permanent_claim = ROOT
 						}
 					}
 				}

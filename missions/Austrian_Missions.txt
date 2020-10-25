@@ -18,7 +18,7 @@ hab_holy_roman_ambitions = {
 			OR = {
 				AND = {
 					owner = { is_emperor = yes }
-					root = { is_emperor = no }
+					ROOT = { is_emperor = no }
 				}
 				AND = {
 					owner = {
@@ -849,17 +849,17 @@ hab_italian_ambitions = {
 				else = {
 					lombardy_area = {
 						limit = {
-							NOT = { is_core = root }
-							NOT = { is_permanent_claim = root }
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					po_valley_area = {
 						limit = {
-							NOT = { is_core = root }
-							NOT = { is_permanent_claim = root }
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 				}
 			}

@@ -27,8 +27,8 @@ swabian_group_1 = {
 		provinces_to_highlight = {
 			owner = {
 				primary_culture = swabian
-				total_development = root
-				NOT = { tag = root }
+				total_development = ROOT
+				NOT = { tag = ROOT }
 			}
 		}
 		
@@ -39,7 +39,7 @@ swabian_group_1 = {
 				NOT = {
 					any_country = {
 						primary_culture = swabian
-						total_development = root
+						total_development = ROOT
 					}
 				}
 			}
@@ -60,11 +60,11 @@ swabian_group_1 = {
 		provinces_to_highlight = {
 			culture = swabian
 			region = south_german_region
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				owner = {
 					primary_culture = swabian
-					alliance_with = root
+					alliance_with = ROOT
 				}
 			}
 		}
@@ -76,10 +76,10 @@ swabian_group_1 = {
 					region = south_german_region
 					culture = swabian
 					OR = {
-						country_or_non_sovereign_subject_holds = root
+						country_or_non_sovereign_subject_holds = ROOT
 						owner = {
 							primary_culture = swabian
-							alliance_with = root
+							alliance_with = ROOT
 						}
 					}
 				}
@@ -94,7 +94,7 @@ swabian_group_1 = {
 					culture = swabian
 					NOT = { owner = { primary_culture = swabian } }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 				hidden_effect = {
 					add_named_unrest = {
 						name = swabian_unification_unrest
@@ -105,16 +105,16 @@ swabian_group_1 = {
 			}
 			every_country = {
 				limit = {
-					alliance_with = root
+					alliance_with = ROOT
 					primary_culture = swabian
 				}
 				add_opinion = {
-					who = root
+					who = ROOT
 					modifier = opinion_swabian_league
 				}
 				hidden_effect = {
 					reverse_add_opinion = {
-						who = root
+						who = ROOT
 						modifier = opinion_swabian_league
 					}
 				}
@@ -160,7 +160,7 @@ swabian_group_1 = {
 				limit = {
 					NOT = {
 						any_country = {
-							alliance_with = root
+							alliance_with = ROOT
 							primary_culture = swabian
 						}
 					}
@@ -170,7 +170,7 @@ swabian_group_1 = {
 			else = {
 				every_country = {
 					limit = {
-						alliance_with = root
+						alliance_with = ROOT
 						primary_culture = swabian
 					}
 					country_event = { id = emp_mission_events.11 days = 5 }
@@ -178,25 +178,25 @@ swabian_group_1 = {
 			}
 			switzerland_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			romandie_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			4710 = {
 				if = {
 					limit = {
-						NOT = { owned_by = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -232,25 +232,25 @@ swabian_group_1 = {
 					}
 				}
 			}
-			NOT = { owned_by = root }
+			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
 			upper_swabia_area = {
 				type = all
-				owned_by = root
+				owned_by = ROOT
 			}
 			lower_swabia_area = {
 				type = all
-				owned_by = root
+				owned_by = ROOT
 			}
 			upper_rhineland_area = {
 				type = all
-				owned_by = root
+				owned_by = ROOT
 			}
 			alsace_area = {
 				type = all
-				owned_by = root
+				owned_by = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 8 #of 11
@@ -269,10 +269,10 @@ swabian_group_1 = {
 			}
 			tirol_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -301,12 +301,12 @@ swabian_group_2 = {
 						owned_by = HAB
 						is_core = HAB
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 				AND = {
 					is_capital = yes
 					owner = { is_emperor = yes }
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 				}
 			}
 		}
@@ -337,39 +337,39 @@ swabian_group_2 = {
 			}
 			inner_austria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			austria_proper_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			#Northern Lombardy
 			lombardy_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			po_valley_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			venetia_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -384,7 +384,7 @@ swabian_group_2 = {
 				area = po_valley_area
 				area = venetia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -413,24 +413,24 @@ swabian_group_2 = {
 		effect = {
 			piedmont_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			liguria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			emilia_romagna_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -448,7 +448,7 @@ swabian_group_2 = {
 				area = liguria_area
 				area = emilia_romagna_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -487,38 +487,38 @@ swabian_group_2 = {
 			}
 			western_sicily_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			sicily_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			calabria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			apulia_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			naples_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -550,21 +550,21 @@ swabian_group_2 = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			naples_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			calabria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			apulia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
@@ -588,17 +588,17 @@ swabian_group_2 = {
 			}
 			south_german_region = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			italy_region = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -612,8 +612,8 @@ swabian_group_2 = {
 				AND = {
 					province_id = 118
 					OR = {
-						NOT = { owned_by = root }
-						NOT = { is_core = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
 					}
 				}
 				AND = {
@@ -623,7 +623,7 @@ swabian_group_2 = {
 						owner = {
 							NOT = {
 								has_opinion = {
-									who = root
+									who = ROOT
 									value = 0
 								}
 							}
@@ -645,7 +645,7 @@ swabian_group_2 = {
 							}
 						}
 					}
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 				}
 			}
 		}
@@ -667,7 +667,7 @@ swabian_group_2 = {
 					any_country = {
 						NOT = {
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 0
 							}
 						}
@@ -732,7 +732,7 @@ swabian_group_3 = { #crusader group
 						religion_group = muslim
 						total_development = 300
 						is_in_war = {
-							attacker_leader = root
+							attacker_leader = ROOT
 							defender_leader = this
 						}
 					}
@@ -758,7 +758,7 @@ swabian_group_3 = { #crusader group
 							NOT = { religion_group = christian }
 						}
 					}
-					add_claim = root
+					add_claim = ROOT
 				}
 			}
 		}
@@ -787,9 +787,9 @@ swabian_group_3 = { #crusader group
 				balkan_region = {
 					type = all
 					OR = {
-						owned_by = root
-						owner = { is_subject_of = root }
-						owner = { alliance_with = root }
+						owned_by = ROOT
+						owner = { is_subject_of = ROOT }
+						owner = { alliance_with = ROOT }
 					}
 				}
 			}
@@ -805,38 +805,38 @@ swabian_group_3 = { #crusader group
 			}
 			aleppo_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			syria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			hims_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			palestine_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			galilea_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -847,26 +847,26 @@ swabian_group_3 = { #crusader group
 		
 		trigger = {
 			owns_core_province = 379 #Jerusalem
-			379 = { religion = root }
+			379 = { religion = ROOT }
 			aleppo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			syria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			hims_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			palestine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			galilea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		

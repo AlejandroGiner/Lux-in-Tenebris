@@ -389,7 +389,7 @@ emp_ita_war_branch = {
 				province_id = 110
 				province_id = 1769
 			}
-			owned_by = root
+			owned_by = ROOT
 
 			if = {
 				limit = {
@@ -1448,7 +1448,7 @@ emp_ita_overseas_branch = {
 			add_mercantilism = 5
 			358 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 50
 					key = alexandria_ambition

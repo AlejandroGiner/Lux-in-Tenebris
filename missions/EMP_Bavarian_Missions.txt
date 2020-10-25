@@ -23,7 +23,7 @@ emp_bav_prestige_branch = {
 		icon = develop_our_capital
 		required_missions = { }
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			is_capital = yes
 			OR = {
 				NOT = { development = 25 }
@@ -108,7 +108,7 @@ emp_bav_prestige_branch = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					owned_by = root
+					owned_by = ROOT
 					OR = {	
 						trade_goods = grain
 						trade_goods = livestock
@@ -260,7 +260,7 @@ emp_bav_missions_conquest = {
 						PAL = { is_elector = yes }
 						OR = {
 							hre_religion_locked = no
-							hre_religion = root
+							hre_religion = ROOT
 						}
 					}
 					custom_tooltip = emp_bav_union_with_palatinate_effect_tooltip
@@ -306,7 +306,7 @@ emp_bav_missions_conquest = {
 					senior_union_with = PAL
 					OR = {
 						hre_religion_locked = no
-						hre_religion = root
+						hre_religion = ROOT
 					}
 				}
 				hidden_effect = {
@@ -345,14 +345,14 @@ emp_bav_missions_conquest = {
 			province_id = 85
 			OR = {
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
-				NOT = { owner = { religion_group = root } }
+				NOT = { owner = { religion_group = ROOT } }
 			}
 		}
 		trigger = {
 			85 = {
 				country_or_non_sovereign_subject_holds = ROOT
 				owner = {
-					religion_group = root
+					religion_group = ROOT
 				}
 			}
 		}
@@ -399,7 +399,7 @@ emp_bav_missions_conquest = {
 						KOL = {
 							government = theocracy
 							is_elector = yes
-							religion_group = root
+							religion_group = ROOT
 						}
 						government = monarchy
 						has_government_attribute = heir
@@ -431,7 +431,7 @@ emp_bav_missions_conquest = {
 					KOL = {
 						government = theocracy
 						is_elector = yes
-						religion_group = root
+						religion_group = ROOT
 					}
 					government = monarchy
 					has_government_attribute = heir
@@ -522,7 +522,7 @@ emp_bav_missions_military = {
 		position = 2
 		required_missions = { emp_bav_cultural_center }
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			has_forcelimit_building_trigger = no
 			has_manpower_building_trigger = no
 			ROOT = {
@@ -604,7 +604,7 @@ emp_bav_cultural_dominance_branch = {
 			OR = {
 				culture = bavarian
 				any_province = {
-					is_capital_of = root
+					is_capital_of = ROOT
 					NOT = { higher_development_than = prev }
 				}
 			}
@@ -616,7 +616,7 @@ emp_bav_cultural_dominance_branch = {
 				culture = bavarian
 			}
 			capital_scope = {
-				is_strongest_trade_power = root
+				is_strongest_trade_power = ROOT
 			}
 			capital_scope = {
 				culture = bavarian
@@ -680,7 +680,7 @@ emp_bav_missions_religious = {
 				papal_influence = 100
 				PAP = {
 					has_opinion = {
-						who = root
+						who = ROOT
 						value = 150
 					}
 				}
@@ -734,9 +734,9 @@ emp_bav_missions_religious = {
 		provinces_to_highlight = {
 			OR = {
 				owner = {
-					is_neighbor_of = root
-					NOT = { religion = root }
-					religion_group = root
+					is_neighbor_of = ROOT
+					NOT = { religion = ROOT }
+					religion_group = ROOT
 				}
 			}
 		}
@@ -760,8 +760,8 @@ emp_bav_missions_religious = {
 				tooltip = emp_bav_center_of_counter_reformation_tooltip
 				NOT = {
 					any_neighbor_country = {
-						NOT = { religion = root }
-						religion_group = root
+						NOT = { religion = ROOT }
+						religion_group = ROOT
 					}
 				}
 			}
@@ -773,7 +773,7 @@ emp_bav_missions_religious = {
 			}
 			every_neighbor_country = {
 				add_opinion = {
-					who = root
+					who = ROOT
 					modifier = opinion_bav_center_of_religion
 				}
 			}
@@ -1044,7 +1044,7 @@ emp_bav_missions_conquer_austria = {
 						}
 					}
 				}
-				HAB = { is_subject_of = root }
+				HAB = { is_subject_of = ROOT }
 			}
 		}
 		effect = {
@@ -1095,16 +1095,16 @@ emp_bav_missions_conquer_austria = {
 				area = austria_proper_area
 				area = inner_austria_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			austria_proper_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			inner_austria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1210,7 +1210,7 @@ emp_bav_missions_conquer_italy = {
 					}
 				}
 			}
-			NOT = { owned_by = root }
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1290,7 +1290,7 @@ emp_bav_missions_netherlands = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

@@ -60,7 +60,7 @@ emp_gen_missions_general = {
 				any_owned_province = {
 					region = italy_region
 				}
-				army_size = root
+				army_size = ROOT
 			}
 		}
 		trigger = {
@@ -129,7 +129,7 @@ emp_gen_missions_general_2 = {
 					101 = { NOT = { higher_development_than = prev } }
 				}
 				owner = {
-					root = {
+					ROOT = {
 						is_subject_of = prev
 					}
 				}
@@ -173,7 +173,7 @@ emp_gen_missions_general_2 = {
 			OR = {
 				AND = {
 					is_capital = yes
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 					owner = {
 						any_owned_province = {
 							has_port = yes
@@ -530,7 +530,7 @@ emp_gen_missions_western_med = {
 					}
 					1295 = {
 						add_trade_modifier = {
-							who = root
+							who = ROOT
 							duration = 7300
 							power = 30
 							key = gen_trade_spanish_alliance
@@ -558,7 +558,7 @@ emp_gen_missions_western_med = {
 					}
 					1295 = {
 						add_trade_modifier = {
-							who = root
+							who = ROOT
 							duration = 7300
 							power = 30
 							key = gen_trade_spanish_alliance
@@ -593,7 +593,7 @@ emp_gen_missions_western_med = {
 					}
 					1295 = {
 						add_trade_modifier = {
-							who = root
+							who = ROOT
 							duration = 7300
 							power = 30
 							key = gen_trade_spanish_conquest
@@ -642,7 +642,7 @@ emp_gen_missions_western_med = {
 					}
 					1295 = {
 						add_trade_modifier = {
-							who = root
+							who = ROOT
 							duration = 7300
 							power = 30
 							key = gen_trade_spanish_alliance
@@ -686,7 +686,7 @@ emp_gen_missions_western_med = {
 					}
 					1295 = {
 						add_trade_modifier = {
-							who = root
+							who = ROOT
 							duration = 7300
 							power = 30
 							key = gen_trade_spanish_conquest
@@ -723,7 +723,7 @@ emp_gen_missions_western_med = {
 					}
 					1295 = {
 						add_trade_modifier = {
-							who = root
+							who = ROOT
 							duration = 7300
 							power = 30
 							key = gen_trade_spanish_conquest
@@ -811,7 +811,7 @@ emp_gen_missions_western_med_2 = {
 			}
 			NOT = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 65
 				}
 			}
@@ -819,13 +819,13 @@ emp_gen_missions_western_med_2 = {
 		trigger = {
 			1298 = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 65
 				}
 			}
 			1308 = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 65
 				}
 			}

@@ -243,11 +243,11 @@ emp_hun_black_army_branch = {
 		provinces_to_highlight = {
 			is_capital = yes
 			owner = {
-				is_neighbor_of = root
-				land_morale = root
-				NOT = { is_subject_of = root }
+				is_neighbor_of = ROOT
+				land_morale = ROOT
+				NOT = { is_subject_of = ROOT }
 			}
-			NOT = { owned_by = root }
+			NOT = { owned_by = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -265,8 +265,8 @@ emp_hun_black_army_branch = {
 			land_morale = 4
 			all_neighbor_country = {
 				OR = {
-					NOT = { land_morale = root }
-					is_subject_of = root
+					NOT = { land_morale = ROOT }
+					is_subject_of = ROOT
 				}
 			}
 		}
@@ -330,8 +330,8 @@ emp_hun_economy_branch = {
 			province_id = 1772
 			NOT = {
 				AND = {
-					owned_by = root
-					is_state_core = root
+					owned_by = ROOT
+					is_state_core = ROOT
 					development = 25
 					has_building = university
 				}
@@ -662,7 +662,7 @@ emp_hun_bohemia_austria_branch = {
 					BOH = { is_elector = yes }
 					OR = {
 						hre_religion_locked = no
-						hre_religion = root
+						hre_religion = ROOT
 					}
 				}
 				if = {
@@ -856,12 +856,12 @@ emp_hun_bulwark_of_christianity_branch = {
 				religion_group = muslim
 				OR = {
 					culture_group = turko_semitic
-					is_neighbor_of = root
+					is_neighbor_of = ROOT
 					capital_scope = {
 						continent = europe
 					}
 				}
-				army_size = root
+				army_size = ROOT
 			}
 			ROOT = {
 				religion_group = christian
@@ -879,18 +879,18 @@ emp_hun_bulwark_of_christianity_branch = {
 							religion_group = muslim
 							OR = {
 								culture_group = turko_semitic
-								is_neighbor_of = root
+								is_neighbor_of = ROOT
 								capital_scope = {
 									continent = europe
 								}
 							}
-							army_size = root
+							army_size = ROOT
 						}
 					}
 				}
 			}
 			else = { #congrats, you've broken it.
-				religion_group = root
+				religion_group = ROOT
 			}
 			is_subject = no
 		}

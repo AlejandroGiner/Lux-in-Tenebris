@@ -61,15 +61,15 @@ hanseatic_expansion_tree = {
 			25 = { # Gotland
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 			capital_scope = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 20
 					key = hsa_lubeck_ascendant
@@ -127,7 +127,7 @@ hanseatic_return_visby_tree = {
 				}
 				else = {
 					25 = {
-						country_or_non_sovereign_subject_holds = root
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 			}
@@ -138,19 +138,19 @@ hanseatic_return_visby_tree = {
 			310 = { # Novgorod
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			43 = { #Danzig
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -188,7 +188,7 @@ hanseatic_return_visby_tree = {
 				}
 				else = {
 					310 = {
-						country_or_non_sovereign_subject_holds = root
+						country_or_non_sovereign_subject_holds = ROOT
 					}
 				}
 			}
@@ -198,7 +198,7 @@ hanseatic_return_visby_tree = {
 			add_mercantilism = 5
 			310 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 50
 					key = hsa_hansa_in_novgorod
@@ -322,7 +322,7 @@ hanseatic_united_tree = {
 		trigger = {
 			home_trade_node = {
 				trade_share = {
-					country = root
+					country = ROOT
 					share = 70
 				}
 			}
@@ -379,14 +379,14 @@ hanseatic_london_tree = {
 				limit = { has_dlc = "Mare Nostrum" }
 				236 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = root
-						owner = { is_in_trade_league_with = root }
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { is_in_trade_league_with = ROOT }
 					}
 				}
 			}
 			else = {
 				236 = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_non_sovereign_subject_holds = ROOT
 				}
 			}
 		}
@@ -395,7 +395,7 @@ hanseatic_london_tree = {
 			add_dip_power = 50
 			236 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = -1
 					power = 30
 					key = hsa_london_steelyard
@@ -505,22 +505,22 @@ hanseatic_sound_toll_tree = {
 			else = {
 				western_norway = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
 				eastern_norway = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
 				northern_norway = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
 					add_permanent_claim = ROOT
 				}
@@ -542,10 +542,10 @@ hanseatic_sound_toll_tree = {
 						province_id = 370
 						NOT = {
 							371 = {
-								NOT = { country_or_non_sovereign_subject_holds = root }
+								NOT = { country_or_non_sovereign_subject_holds = ROOT }
 								NOT = {
 									owner = {
-										is_in_trade_league_with = root
+										is_in_trade_league_with = ROOT
 									}
 								}
 							}
@@ -555,10 +555,10 @@ hanseatic_sound_toll_tree = {
 						province_id = 371
 						NOT = {
 							370 = {
-								NOT = { country_or_non_sovereign_subject_holds = root }
+								NOT = { country_or_non_sovereign_subject_holds = ROOT }
 								NOT = {
 									owner = {
-										is_in_trade_league_with = root
+										is_in_trade_league_with = ROOT
 									}
 								}
 							}
@@ -566,10 +566,10 @@ hanseatic_sound_toll_tree = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				owner = {
-					is_in_trade_league_with = root
+					is_in_trade_league_with = ROOT
 				}
 			}
 		}
@@ -581,7 +581,7 @@ hanseatic_sound_toll_tree = {
 					OR = {
 						country_or_non_sovereign_subject_holds = ROOT
 						owner = {
-							is_in_trade_league_with = root
+							is_in_trade_league_with = ROOT
 						}
 					}
 				}
@@ -589,7 +589,7 @@ hanseatic_sound_toll_tree = {
 					OR = {
 						country_or_non_sovereign_subject_holds = ROOT
 						owner = {
-							is_in_trade_league_with = root
+							is_in_trade_league_with = ROOT
 						}
 					}
 				}
@@ -597,7 +597,7 @@ hanseatic_sound_toll_tree = {
 					OR = {
 						country_or_non_sovereign_subject_holds = ROOT
 						owner = {
-							is_in_trade_league_with = root
+							is_in_trade_league_with = ROOT
 						}
 					}
 				}
@@ -619,7 +619,7 @@ hanseatic_sound_toll_tree = {
 			add_prestige = 20
 			if = {
 				limit = {
-					NOR = { is_subject_of = root }
+					NOR = { is_subject_of = ROOT }
 				}
 				add_mil_power = 100
 			}
@@ -632,8 +632,8 @@ hanseatic_sound_toll_tree = {
 
 			subarctic_islands_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -677,21 +677,21 @@ hanseatic_britain_tree = {
 				}
 				OR = {
 					ENG = {
-						alliance_with = root
+						alliance_with = ROOT
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 125
 						}
 					}
 					1269 = {
 						trade_share = {
-							country = root
+							country = ROOT
 							share = 25
 						}
 					}
 					1269 = {
 						privateer_power = {
-							country = root
+							country = ROOT
 							share = 25
 						}
 					}
@@ -701,11 +701,11 @@ hanseatic_britain_tree = {
 				1269 = {
 					OR = {
 						trade_share = {
-							country = root
+							country = ROOT
 							share = 25
 						}
 						privateer_power = {
-							country = root
+							country = ROOT
 							share = 25
 						}
 					}
@@ -716,7 +716,7 @@ hanseatic_britain_tree = {
 		effect = {
 			1269 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 25
 					key = hsa_hanseatic_channel
@@ -726,28 +726,28 @@ hanseatic_britain_tree = {
 			236 = { #London
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			248 = { #Lothian
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			249 = { #Ayr
 				if = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -762,10 +762,10 @@ hanseatic_britain_tree = {
 				province_id = 248
 				province_id = 249
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
 				owner = {
-					is_in_trade_league_with = root
+					is_in_trade_league_with = ROOT
 				}
 			}
 		}
@@ -775,20 +775,20 @@ hanseatic_britain_tree = {
 				limit = { has_dlc = "Mare Nostrum" }
 				248 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = root
-						owner = { is_in_trade_league_with = root }
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { is_in_trade_league_with = ROOT }
 					}
 				}
 				249 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = root
-						owner = { is_in_trade_league_with = root }
+						country_or_non_sovereign_subject_holds = ROOT
+						owner = { is_in_trade_league_with = ROOT }
 					}
 				}
 			}
 			else = {
-				248 = { country_or_non_sovereign_subject_holds = root }
-				249 = { country_or_non_sovereign_subject_holds = root }
+				248 = { country_or_non_sovereign_subject_holds = ROOT }
+				249 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
 
@@ -799,7 +799,7 @@ hanseatic_britain_tree = {
 					exists = SCO
 					SCO = {
 						is_subject = no
-						NOT = { is_in_trade_league_with = root }
+						NOT = { is_in_trade_league_with = ROOT }
 					}
 				}
 				add_casus_belli = {
@@ -823,7 +823,7 @@ hanseatic_britain_tree = {
 
 		trigger = {
 			1975 = {
-				is_strongest_trade_power = root
+				is_strongest_trade_power = ROOT
 			}
 		}
 
@@ -861,7 +861,7 @@ hanseatic_colonisation_tree = {
 			
 		provinces_to_highlight = {
 			area = newfoundland_area
-			has_discovered = root
+			has_discovered = ROOT
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
@@ -888,7 +888,7 @@ hanseatic_colonisation_tree = {
 					province_id = 965 # Manhattan
 					NOT = {
 						owner = {
-							is_colonial_nation_of = root
+							is_colonial_nation_of = ROOT
 						}
 					}
 				}
@@ -908,18 +908,18 @@ hanseatic_colonisation_tree = {
 					OR = {
 						has_port = yes
 						any_neighbor_province = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_non_sovereign_subject_holds = ROOT
 						}
 					}
 				}
 			}
-			has_discovered = root
+			has_discovered = ROOT
 		}
 	
 		trigger = {
 			965 = {
 				owner = {
-					is_colonial_nation_of = root
+					is_colonial_nation_of = ROOT
 					num_of_cities = 10
 				}
 			}
@@ -982,15 +982,15 @@ hanseatic_shipwright_tree = {
 				AND = {
 					province_id = 45
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						has_shipyard_building_trigger = no
 					}
 				}
 				AND = {
-					owned_by = root
+					owned_by = ROOT
 					has_port = yes
 					has_shipyard_building_trigger = no
-					root = {
+					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								value = 5
@@ -1007,7 +1007,7 @@ hanseatic_shipwright_tree = {
 
 		trigger = {
 			45 = {
-				owned_by = root
+				owned_by = ROOT
 				OR = {
 					has_building = shipyard
 					has_building = grand_shipyard
@@ -1040,7 +1040,7 @@ hanseatic_shipwright_tree = {
 		provinces_to_highlight = {
 			is_capital = yes
 			owner = {
-				NOT = { tag = root }
+				NOT = { tag = ROOT }
 				any_owned_province = {
 					sea_zone = {
 						OR = {
@@ -1049,7 +1049,7 @@ hanseatic_shipwright_tree = {
 						}
 					}
 				}
-				num_of_heavy_ship = root
+				num_of_heavy_ship = ROOT
 			}
 		}
 
@@ -1071,7 +1071,7 @@ hanseatic_shipwright_tree = {
 								}
 							}
 						}
-						num_of_heavy_ship = root
+						num_of_heavy_ship = ROOT
 					}
 				}
 			}
@@ -1135,7 +1135,7 @@ hanseatic_united_tree_2 = {
 					has_dlc = "Mare Nostrum"
 				}
 				every_country = {
-					limit = { is_in_trade_league_with = root }
+					limit = { is_in_trade_league_with = ROOT }
 					ROOT = { vassalize = PREV }
 					hidden_effect = { country_event = { id = emp_mission_events.14 } }
 				}

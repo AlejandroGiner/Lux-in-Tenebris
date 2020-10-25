@@ -103,7 +103,7 @@ por_african_ambitions = {
 			}
 			4097 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 5475
 					power = 20
 					key = ivory_coast_ambition
@@ -404,7 +404,7 @@ por_east_african_ambitions = {
 		effect = {
 			1201 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 5475
 					power = 20
 					key = horn_africa_ambition
@@ -500,7 +500,7 @@ por_east_african_ambitions = {
 				}
 			}
 			668 = {
-				add_claim = root
+				add_claim = ROOT
 			}
 		}
 	}
@@ -533,7 +533,7 @@ por_south_africa_mission = {
 		trigger = { 
 			cape_of_good_hope_area = {
 				type = all
-				owned_by = root
+				owned_by = ROOT
 			}
 		}
 	

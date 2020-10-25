@@ -41,7 +41,7 @@ hun_north_group = {
 					}
 				}
 				OR = { 
-					POL = { dynasty = root }
+					POL = { dynasty = ROOT }
 					AND = {
 						alliance_with = POL
 						POL = {
@@ -460,31 +460,31 @@ hun_south_group = {
 				else = {
 					naples_area = {
 						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_claim = root
+						add_claim = ROOT
 					}
 					apulia_area = {
 						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_claim = root
+						add_claim = ROOT
 					}
 					calabria_area = {
 						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_claim = root
+						add_claim = ROOT
 					}
 					abruzzo_area = {
 						limit = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_claim = root
+						add_claim = ROOT
 					}
 				}
 			}

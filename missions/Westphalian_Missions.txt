@@ -70,8 +70,8 @@ westfalian_group_1 = {
 				limit = {
 					82 = {
 						OR = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
 					}
 				}
@@ -88,8 +88,8 @@ westfalian_group_1 = {
 									culture = hessian
 								}
 							}
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
 						area = { add_permanent_claim = ROOT }
 					}
@@ -126,8 +126,8 @@ westfalian_group_1 = {
 			82 = {
 				area = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
 					add_permanent_claim = ROOT 
 				}
@@ -432,8 +432,8 @@ westfalian_group_3 = {
 				limit = {
 					75 = {
 						OR = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
 					}
 				}
@@ -443,8 +443,8 @@ westfalian_group_3 = {
 				limit = {
 					67 = {
 						OR = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
 					}
 				}

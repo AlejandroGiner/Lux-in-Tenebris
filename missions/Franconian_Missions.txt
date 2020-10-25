@@ -27,8 +27,8 @@ franconia_conquest_group_1 = {
 				area = upper_franconia_area
 			}
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 			ROOT = {
 				NOT = {
@@ -38,7 +38,7 @@ franconia_conquest_group_1 = {
 							area = franconia_area
 							area = upper_franconia_area
 						}
-						is_core = root
+						is_core = ROOT
 					}
 				}
 			}
@@ -51,24 +51,24 @@ franconia_conquest_group_1 = {
 					area = franconia_area
 					area = upper_franconia_area
 				}
-				is_core = root
+				is_core = ROOT
 			}
 		}
 		
 		effect = {
 			franconia_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			upper_franconia_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -98,25 +98,25 @@ franconia_conquest_group_1 = {
 		effect = {
 			hesse_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			palatinate_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			83 = {
 				if = {
 					limit = {
-						NOT = { owned_by = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -130,8 +130,8 @@ franconia_conquest_group_1 = {
 				AND = {
 					province_id = 1876
 					OR = {
-						NOT = { owned_by = root }
-						NOT = { is_core = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
 					}
 				}
 				AND = {
@@ -140,7 +140,7 @@ franconia_conquest_group_1 = {
 						area = palatinate_area
 						province_id = 83
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
@@ -160,7 +160,7 @@ franconia_conquest_group_1 = {
 				area = palatinate_area
 				province_id = 83
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -183,24 +183,24 @@ franconia_conquest_group_1 = {
 
 			upper_bavaria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			lower_bavaria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			east_bavaria_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			every_province = {
 				limit = {
@@ -213,10 +213,10 @@ franconia_conquest_group_1 = {
 					NOT = { area = upper_bavaria_area }
 					NOT = { area = lower_bavaria_area }
 					NOT = { area = east_bavaria_area }
-					NOT = { is_claim = root }
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { is_claim = ROOT }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
-				add_claim = root
+				add_claim = ROOT
 			}
 		}
 	}
@@ -232,7 +232,7 @@ franconia_conquest_group_1 = {
 						area = lower_bavaria_area
 						area = east_bavaria_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -253,7 +253,7 @@ franconia_conquest_group_1 = {
 						owned_by = UBV
 						owned_by = BAV
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
 			}
 		}
@@ -266,7 +266,7 @@ franconia_conquest_group_1 = {
 				ING = {
 					OR = {
 						exists = no
-						is_subject_of = root
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -277,7 +277,7 @@ franconia_conquest_group_1 = {
 				UBV = {
 					OR = {
 						exists = no
-						is_subject_of = root
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -288,7 +288,7 @@ franconia_conquest_group_1 = {
 				LBV = {
 					OR = {
 						exists = no
-						is_subject_of = root
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -299,7 +299,7 @@ franconia_conquest_group_1 = {
 				BAV = {
 					OR = {
 						exists = no
-						is_subject_of = root
+						is_subject_of = ROOT
 					}
 				}
 			}
@@ -318,31 +318,31 @@ franconia_conquest_group_1 = {
 			
 			lorraine_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			champagne_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			ile_de_france_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			orleans_area = {
 				limit = {
-					NOT = { owned_by = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { owned_by = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -366,8 +366,8 @@ franconia_conquest_group_2 = {
 		provinces_to_highlight = {
 			province_id = 183
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		
@@ -409,10 +409,10 @@ franconia_conquest_group_2 = {
 			else = {
 				france_region = {
 					limit = {
-						NOT = { owned_by = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -443,7 +443,7 @@ franconia_splendour_group = {
 		required_missions = {  }
 
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			OR = {
 				AND = {
 					is_capital = yes
@@ -495,7 +495,7 @@ franconia_splendour_group = {
 		required_missions = { fkn_patronage_of_the_arts }
 
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -587,7 +587,7 @@ franconia_splendour_group_2 = {
 		required_missions = { fkn_industrial_revolution }
 
 		provinces_to_highlight = {
-			is_capital_of = root
+			is_capital_of = ROOT
 			NOT = { num_of_buildings_in_province = 5 }
 		}
 		
@@ -652,17 +652,17 @@ franconia_splendour_group_2 = {
 			else = {
 				mittelmark_area = {
 					limit = {
-						NOT = { owned_by = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				neumark_area = {
 					limit = {
-						NOT = { owned_by = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -676,17 +676,17 @@ franconia_splendour_group_2 = {
 				area = mittelmark_area
 				area = neumark_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			neumark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		

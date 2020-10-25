@@ -24,10 +24,10 @@ bishop_elector_group_3 = {
 			owned_by = emperor
 			emperor = {
 				OR = {
-					NOT = { alliance_with = root }
+					NOT = { alliance_with = ROOT }
 					NOT = {
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 150
 						}
 					}
@@ -37,9 +37,9 @@ bishop_elector_group_3 = {
 
 		trigger = {
 			emperor = {
-				alliance_with = root
+				alliance_with = ROOT
 				has_opinion = {
-					who = root
+					who = ROOT
 					value = 150
 				}
 			}
@@ -73,7 +73,7 @@ bishop_elector_group_3 = {
 			}
 			emperor = {
 				add_opinion = {
-					who = root
+					who = ROOT
 					modifier = opinion_I_like_my_bishop_electors
 				}
 			}
@@ -109,8 +109,8 @@ bishop_elector_group_2 = {
 			NOT = {
 				OR = {
 					AND = {
-						owned_by = root
-						is_core = root
+						owned_by = ROOT
+						is_core = ROOT
 					}
 					owner = {
 						OR = {
@@ -119,8 +119,8 @@ bishop_elector_group_2 = {
 							tag = MAI
 						}
 						OR = {
-							alliance_with = root
-							is_subject_of = root
+							alliance_with = ROOT
+							is_subject_of = ROOT
 						}
 					}
 				}
@@ -189,9 +189,9 @@ bishop_elector_group_2 = {
 			NOT = {
 				OR = {
 					AND = {
-						owned_by = root
-						is_core = root
-						religion = root
+						owned_by = ROOT
+						is_core = ROOT
+						religion = ROOT
 					}
 					owner = {
 						OR = {
@@ -200,10 +200,10 @@ bishop_elector_group_2 = {
 							tag = MAI
 						}
 						OR = {
-							alliance_with = root
-							is_subject_of = root
+							alliance_with = ROOT
+							is_subject_of = ROOT
 						}
-						religion = root
+						religion = ROOT
 					}
 				}
 			}
@@ -227,14 +227,14 @@ bishop_elector_group_2 = {
 					overlord_of = KOL
 				}
 				KOL = {
-					religion = root
+					religion = ROOT
 					same_govt_as_root_trigger = yes
 				}
 			}
 			else = {
 				owns_core_province = 85
 				85 = {
-					religion = root
+					religion = ROOT
 				}
 			}
 			if = {
@@ -247,14 +247,14 @@ bishop_elector_group_2 = {
 					overlord_of = TRI
 				}
 				TRI = {
-					religion = root
+					religion = ROOT
 					same_govt_as_root_trigger = yes
 				}
 			}
 			else = {
 				owns_core_province = 80
 				80 = {
-					religion = root
+					religion = ROOT
 				}
 			}
 			if = {
@@ -267,14 +267,14 @@ bishop_elector_group_2 = {
 					overlord_of = MAI
 				}
 				MAI = {
-					religion = root
+					religion = ROOT
 					same_govt_as_root_trigger = yes
 				}
 			}
 			else = {
 				owns_core_province = 78
 				78 = {
-					religion = root
+					religion = ROOT
 				}
 			}
 		}
@@ -313,7 +313,7 @@ mai_group_1 = {
 		trigger = {
 			63 = { development = 12 }
 			3643 = {
-				owned_by = root
+				owned_by = ROOT
 			}
 		}
 
@@ -322,27 +322,27 @@ mai_group_1 = {
 			add_mil_power = 100
 			hesse_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			79 = {
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			4716 = {
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -370,18 +370,18 @@ kol_group_1 = {
 				province_id = 82
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { owned_by = ROOT }
 				is_in_capital_area = no
 			}
 		}
 
 		trigger = {
 			85 = {
-				owned_by = root
+				owned_by = ROOT
 				is_in_capital_area = yes
 			}
 			82 = {
-				owned_by = root
+				owned_by = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -389,10 +389,10 @@ kol_group_1 = {
 		effect = {
 			westphalia_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -402,13 +402,13 @@ kol_group_1 = {
 
 		provinces_to_highlight = {
 			area = westphalia_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 
 		trigger = {
 			westphalia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 
@@ -418,17 +418,17 @@ kol_group_1 = {
 			add_legitimacy = 10
 			north_rhine_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			hesse_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -455,14 +455,14 @@ tri_group_1 = {
 				AND = {
 					province_id = 80
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						NOT = { development = 15 }
 						has_tax_building_trigger = no
 						has_courthouse_building_trigger = no
 					}
 				}
 				AND = {
-					is_capital_of = root
+					is_capital_of = ROOT
 					ROOT = { NOT = { has_institution = renaissance } }
 				}
 			}
@@ -470,7 +470,7 @@ tri_group_1 = {
 		trigger = {
 			has_institution = renaissance
 			80 = {
-				owned_by = root
+				owned_by = ROOT
 				development = 15
 				has_tax_building_trigger = yes
 				has_courthouse_building_trigger = yes

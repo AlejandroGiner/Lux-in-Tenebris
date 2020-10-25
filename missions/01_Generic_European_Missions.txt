@@ -232,7 +232,7 @@ gen_europe_hre_theocracy = {
 		position = 3
 
 		provinces_to_highlight = {
-			owned_by = root
+			owned_by = ROOT
 			has_tax_building_trigger = no
 		}
 
@@ -282,10 +282,10 @@ gen_europe_hre_theocracy = {
 
 		provinces_to_highlight = {
 			owner = {
-				is_neighbor_of = root
-				army_size = root
+				is_neighbor_of = ROOT
+				army_size = ROOT
 			}
-			root = {
+			ROOT = {
 				NOT = { army_size = 30 }
 			}
 		}
@@ -294,7 +294,7 @@ gen_europe_hre_theocracy = {
 			OR = {
 				army_size = 30
 				all_neighbor_country = {
-					NOT = { army_size = root }
+					NOT = { army_size = ROOT }
 				}
 			}
 		}
@@ -316,9 +316,9 @@ gen_europe_hre_theocracy = {
 				region = north_german_region
 				region = south_german_region
 			}
-			NOT = { religion = root }
+			NOT = { religion = ROOT }
 			NOT = {
-				root = {
+				ROOT = {
 					calc_true_if = {
 						amount = 50
 						all_province = {
@@ -326,7 +326,7 @@ gen_europe_hre_theocracy = {
 								region = north_german_region
 								region = south_german_region
 							}
-							religion = root
+							religion = ROOT
 						}
 					}
 				}
@@ -349,7 +349,7 @@ gen_europe_hre_theocracy = {
 						region = north_german_region
 						region = south_german_region
 					}
-					religion = root
+					religion = ROOT
 				}
 			}
 		}
@@ -393,7 +393,7 @@ gen_europe_hre_republic = {
 			alliance_with = emperor
 			emperor = {
 				has_opinion = {
-					who = root
+					who = ROOT
 					value = 120
 				}
 			}
@@ -412,7 +412,7 @@ gen_europe_hre_republic = {
 		position = 4
 
 		provinces_to_highlight = {
-			is_capital_of = root
+			is_capital_of = ROOT
 		}
 
 		trigger = {

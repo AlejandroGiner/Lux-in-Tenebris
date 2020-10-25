@@ -399,7 +399,7 @@ emp_burgundy_2 = {
 		effect = {
 			add_dip_power = 50
 			low_countries_region = {
-				limit = { owned_by = root }
+				limit = { owned_by = ROOT }
 				add_province_modifier = {
 					name = bur_realm_united_mod
 					duration = 7300
@@ -414,8 +414,8 @@ emp_burgundy_2 = {
 		provinces_to_highlight = {
 			region = low_countries_region
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		trigger = {
@@ -431,8 +431,8 @@ emp_burgundy_2 = {
 			}
 			low_countries_region = {
 				type = all
-				owned_by = root
-				is_core = root
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -452,7 +452,7 @@ emp_burgundy_2 = {
 			OR = {
 				AND = {
 					province_id = 1269
-					NOT = { is_strongest_trade_power = root }
+					NOT = { is_strongest_trade_power = ROOT }
 				}
 				AND = {
 					ROOT = { has_dlc = "Dharma" }
@@ -463,7 +463,7 @@ emp_burgundy_2 = {
 					}
 					province_has_center_of_trade_of_level = 1
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						NOT = { province_has_center_of_trade_of_level = 2 }
 					}
 					ROOT = {
@@ -485,7 +485,7 @@ emp_burgundy_2 = {
 					}
 					province_has_center_of_trade_of_level = 1
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						AND = {
 							NOT = { has_building = trade_depot }
 							NOT = { has_building = stock_exchange }
@@ -509,7 +509,7 @@ emp_burgundy_2 = {
 		}
 		trigger = {
 			1269 = {
-				is_strongest_trade_power = root
+				is_strongest_trade_power = ROOT
 			}
 			if = {
 				limit = {
@@ -705,7 +705,7 @@ emp_burgundy_3 = {
 			add_mil_power = 100
 			1975 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 20
 					key = bur_channel_ambition
@@ -849,8 +849,8 @@ emp_burgundy_4 = {
 					NOT = {
 						GBR = {
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 							OR = {
 								has_opinion_modifier = {
@@ -872,8 +872,8 @@ emp_burgundy_4 = {
 					NOT = {
 						ENG = {
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 							OR = {
 								has_opinion_modifier = {
@@ -896,8 +896,8 @@ emp_burgundy_4 = {
 					NOT = {
 						SCO = {
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 							OR = {
 								has_opinion_modifier = {
@@ -917,8 +917,8 @@ emp_burgundy_4 = {
 					NOT = {
 						FRA = {
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 							OR = {
 								has_opinion_modifier = {
@@ -945,8 +945,8 @@ emp_burgundy_4 = {
 						custom_trigger_tooltip = {
 							tooltip = rivalled_or_rival_of
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 						}
 						custom_trigger_tooltip = {
@@ -973,8 +973,8 @@ emp_burgundy_4 = {
 						custom_trigger_tooltip = {
 							tooltip = rivalled_or_rival_of
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 						}
 						custom_trigger_tooltip = {
@@ -1001,8 +1001,8 @@ emp_burgundy_4 = {
 						custom_trigger_tooltip = {
 							tooltip = rivalled_or_rival_of
 							OR = {
-								is_rival = root
-								root = { is_rival = prev }
+								is_rival = ROOT
+								ROOT = { is_rival = prev }
 							}
 						}
 						custom_trigger_tooltip = {
@@ -1026,8 +1026,8 @@ emp_burgundy_4 = {
 					custom_trigger_tooltip = {
 						tooltip = rivalled_or_rival_of
 						OR = {
-							is_rival = root
-							root = { is_rival = prev }
+							is_rival = ROOT
+							ROOT = { is_rival = prev }
 						}
 					}
 					custom_trigger_tooltip = {
@@ -1093,7 +1093,7 @@ emp_burgundy_4 = {
 					is_subject_of = FRA
 					NOT = {
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 100
 						}
 					}
@@ -1148,7 +1148,7 @@ emp_burgundy_4 = {
 							}
 							is_subject_of = FRA
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 100
 							}
 						}
@@ -1197,31 +1197,31 @@ emp_burgundy_4 = {
 				}
 				ile_de_france_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				champagne_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				south_champagne_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				loire_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				FRA = {
 					country_event = { id = new_flavour_bur.6 }
@@ -1234,31 +1234,31 @@ emp_burgundy_4 = {
 			else = {
 				ile_de_france_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				champagne_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				south_champagne_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				loire_area = {
 					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -1309,10 +1309,10 @@ emp_burgundy_4 = {
 					france_region = {
 						limit = {
 							owned_by = FRA
-							NOT = { is_core = root }
-							NOT = { is_permanent_claim = root }
+							NOT = { is_core = ROOT }
+							NOT = { is_permanent_claim = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 				}	
 			}
@@ -1376,7 +1376,7 @@ emp_burgundy_4 = {
 						region = south_german_region
 					}
 					owner = {
-						NOT = { tag = root }
+						NOT = { tag = ROOT }
 						NOT = { has_opinion = { who = ROOT value = 60 } }
 					}
 				}
@@ -1385,7 +1385,7 @@ emp_burgundy_4 = {
 					is_capital = yes
 					owner = {
 						is_part_of_hre = yes
-						NOT = { tag = root }
+						NOT = { tag = ROOT }
 						NOT = { has_opinion = { who = ROOT value = 60 } }
 					}
 					OR = {
@@ -1422,7 +1422,7 @@ emp_burgundy_4 = {
 						OR = {
 							NOT = { preferred_emperor = ROOT }
 							AND = {
-								NOT = { tag = root }
+								NOT = { tag = ROOT }
 								NOT = { has_opinion = { who = ROOT value = 100 } }
 							}
 						}
@@ -1488,7 +1488,7 @@ emp_burgundy_4 = {
 					all_elector = {
 						preferred_emperor = ROOT
 						OR = {
-							tag = root #in case this works
+							tag = ROOT #in case this works
 							has_opinion = { who = ROOT value = 100 }
 						}
 					}
@@ -1523,7 +1523,7 @@ emp_burgundy_4 = {
 				region = north_german_region
 				region = south_german_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -1681,7 +1681,7 @@ emp_burgundy_5 = {
 					papal_influence = 50
 					PAP = {
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 100
 						}
 					}
@@ -1694,8 +1694,8 @@ emp_burgundy_5 = {
 							custom_trigger_tooltip = {
 								tooltip = rivalled_or_rival_of
 								OR = {
-									is_rival = root
-									root = { is_rival = prev }
+									is_rival = ROOT
+									ROOT = { is_rival = prev }
 								}
 							}
 							custom_trigger_tooltip = {
@@ -1737,7 +1737,7 @@ emp_burgundy_5 = {
 		required_missions = { emp_bur_papal_relations }
 		provinces_to_highlight = {
 			is_capital = yes
-			NOT = { owned_by = root }
+			NOT = { owned_by = ROOT }
 			owner = {
 				OR = {
 					is_rival = TUR
@@ -1781,11 +1781,11 @@ emp_burgundy_5 = {
 					country_event = { id = new_flavour_bur.2 }
 					every_country = {
 						limit = {
-							religion = root
+							religion = ROOT
 							capital_scope = { continent = europe }
 							NOT = { tag = BUR }
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 0
 							}
 							NOT = {
@@ -1958,7 +1958,7 @@ emp_burgundy_5 = {
 						ROOT = {
 							num_of_owned_provinces_with = {
 								value = 25 #out of 34
-								is_core = root
+								is_core = ROOT
 								OR = {
 									area = lower_rhineland_area
 									area = north_rhine_area
@@ -1993,7 +1993,7 @@ emp_burgundy_5 = {
 			owns_core_province = 189
 			num_of_owned_provinces_with = {
 				value = 34
-				is_core = root
+				is_core = ROOT
 				OR = {
 					area = lower_rhineland_area
 					area = north_rhine_area

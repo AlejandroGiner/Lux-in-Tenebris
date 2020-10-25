@@ -35,24 +35,24 @@ hannoverian_group_1 = {
 				province_id = 4773
 				AND = {
 					owned_by = BRU
-					root = { NOT = { tag = BRU } }
+					ROOT = { NOT = { tag = BRU } }
 				}
 				AND = {
 					owned_by = LUN
-					root = { NOT = { tag = LUN } }
+					ROOT = { NOT = { tag = LUN } }
 				}
 				AND = {
 					owned_by = CLB
-					root = { NOT = { tag = CLB } }
+					ROOT = { NOT = { tag = CLB } }
 				}
 				AND = {
 					owned_by = HAN
-					root = { NOT = { tag = HAN } }
+					ROOT = { NOT = { tag = HAN } }
 				}
 			}
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		
@@ -96,17 +96,17 @@ hannoverian_group_1 = {
 			add_prestige = 15
 			weser_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			lower_saxony_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -124,7 +124,7 @@ hannoverian_group_1 = {
 			}
 			is_capital = yes
 			owner = {
-				root = {
+				ROOT = {
 					NOT = { army_size = prev }
 				}
 			}
@@ -169,24 +169,24 @@ hannoverian_group_1 = {
 		effect = {
 			northern_saxony_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			south_saxony_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			thuringia_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -201,9 +201,9 @@ hannoverian_group_1 = {
 				area = south_saxony_area
 				area = thuringia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			NOT = {
-				root = {
+				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 						value = 10 #out of 12
 						OR = {
@@ -230,17 +230,17 @@ hannoverian_group_1 = {
 		effect = {
 			mittelmark_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			neumark_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			if = {
 				limit = {
@@ -251,10 +251,10 @@ hannoverian_group_1 = {
 						limit = {
 							NOT = { area = mittelmark_area }
 							NOT = { area = neumark_area }
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_claim = root
+						add_claim = ROOT
 					}
 				}
 			}
@@ -267,10 +267,10 @@ hannoverian_group_1 = {
 						limit = {
 							NOT = { area = mittelmark_area }
 							NOT = { area = neumark_area }
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_claim = root
+						add_claim = ROOT
 					}
 				}
 			}
@@ -288,17 +288,17 @@ hannoverian_group_1 = {
 				owned_by = BRA
 				owned_by = PRU
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			neumark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 			if = {
 				limit = {
@@ -306,7 +306,7 @@ hannoverian_group_1 = {
 				}
 				OR = {
 					NOT = { exists = BRA }
-					BRA = { is_subject_of = root }
+					BRA = { is_subject_of = ROOT }
 				}
 			}
 			if = {
@@ -315,7 +315,7 @@ hannoverian_group_1 = {
 				}
 				OR = {
 					NOT = { exists = PRU }
-					PRU = { is_subject_of = root }
+					PRU = { is_subject_of = ROOT }
 				}
 			}
 		}
@@ -345,7 +345,7 @@ hannoverian_group_2 = {
 		required_missions = { }
 
 		provinces_to_highlight = {
-			is_capital_of = root
+			is_capital_of = ROOT
 			NOT = { development = 25 }
 		}
 		
@@ -376,7 +376,7 @@ hannoverian_group_2 = {
 						mission_completed = han_rule_the_waves
 						GBR = {
 							OR = {
-								religion = root
+								religion = ROOT
 								AND = {
 									religion = anglican
 									ROOT = { religion = protestant }
@@ -413,7 +413,7 @@ hannoverian_group_2 = {
 						mission_completed = han_rule_the_waves
 						ENG = {
 							OR = {
-								religion = root
+								religion = ROOT
 								AND = {
 									religion = anglican
 									ROOT = { religion = protestant }
@@ -448,7 +448,7 @@ hannoverian_group_2 = {
 									OR = {
 										valid_for_personal_unions_trigger = no
 										AND = {
-											NOT = { religion = root }
+											NOT = { religion = ROOT }
 											NOT = {
 												AND = {
 													religion = anglican
@@ -465,7 +465,7 @@ hannoverian_group_2 = {
 									OR = {
 										valid_for_personal_unions_trigger = no
 										AND = {
-											NOT = { religion = root }
+											NOT = { religion = ROOT }
 											NOT = {
 												AND = {
 													religion = anglican
@@ -485,45 +485,45 @@ hannoverian_group_2 = {
 					}
 					east_anglia_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					home_counties_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					wessex_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					east_midlands_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					west_midlands_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					yorkshire_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 				}
 				else_if = {
@@ -577,8 +577,8 @@ hannoverian_group_3 = {
 				province_id = 45 #Lubeck
 			}
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		
@@ -630,7 +630,7 @@ hannoverian_group_4 = {
 						area = north_sea_area
 					}
 				}
-				navy_size = root
+				navy_size = ROOT
 				NOT = { tag = HAN }
 			}
 		}
@@ -646,7 +646,7 @@ hannoverian_group_4 = {
 								area = north_sea_area
 							}
 						}
-						navy_size = root
+						navy_size = ROOT
 					}
 				}
 			}
@@ -655,7 +655,7 @@ hannoverian_group_4 = {
 		effect = {
 			45 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 35
 					key = han_naval_dominance_trade_mod
@@ -674,7 +674,7 @@ hannoverian_group_4 = {
 						mission_completed = han_herrenhausen_gardens_mission
 						GBR = {
 							OR = {
-								religion = root
+								religion = ROOT
 								AND = {
 									religion = anglican
 									ROOT = { religion = protestant }
@@ -711,7 +711,7 @@ hannoverian_group_4 = {
 						mission_completed = han_herrenhausen_gardens_mission
 						ENG = {
 							OR = {
-								religion = root
+								religion = ROOT
 								AND = {
 									religion = anglican
 									ROOT = { religion = protestant }
@@ -746,7 +746,7 @@ hannoverian_group_4 = {
 									OR = {
 										valid_for_personal_unions_trigger = no
 										AND = {
-											NOT = { religion = root }
+											NOT = { religion = ROOT }
 											NOT = {
 												AND = {
 													religion = anglican
@@ -763,7 +763,7 @@ hannoverian_group_4 = {
 									OR = {
 										valid_for_personal_unions_trigger = no
 										AND = {
-											NOT = { religion = root }
+											NOT = { religion = ROOT }
 											NOT = {
 												AND = {
 													religion = anglican
@@ -783,45 +783,45 @@ hannoverian_group_4 = {
 					}
 					east_anglia_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					home_counties_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					wessex_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					east_midlands_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					west_midlands_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 					yorkshire_area = {
 						limit = {
-							NOT = { is_permanent_claim = root }
-							NOT = { is_core = root }
+							NOT = { is_permanent_claim = ROOT }
+							NOT = { is_core = ROOT }
 						}
-						add_permanent_claim = root
+						add_permanent_claim = ROOT
 					}
 				}
 				else_if = {
@@ -879,7 +879,7 @@ hannoverian_group_4 = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -919,7 +919,7 @@ hannoverian_group_4 = {
 				AND = {
 					region = north_german_region
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						unrest = 1
 					}
 					ROOT = {
@@ -935,7 +935,7 @@ hannoverian_group_4 = {
 				AND = {
 					region = british_isles_region
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						unrest = 1
 					}
 					ROOT = {

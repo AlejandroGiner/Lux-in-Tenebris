@@ -83,37 +83,37 @@ bavarian_missions_main = {
 			1757 = { #Oberpfalz
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			76 = { #Salzburg
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			2957 = { #Regensburg
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 			
 			ingolstadt_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			
 			add_country_modifier = {
@@ -176,10 +176,10 @@ bavarian_missions_main = {
 			else = {
 				palatinate_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				if = {
 					limit = {
@@ -191,10 +191,10 @@ bavarian_missions_main = {
 							every_owned_province = {
 								limit = {
 									NOT = { area = palatinate_area }
-									NOT = { is_permanent_claim = root }
-									NOT = { is_core = root }
+									NOT = { is_permanent_claim = ROOT }
+									NOT = { is_core = ROOT }
 								}
-								add_permanent_claim = root
+								add_permanent_claim = ROOT
 							}
 						}
 					}

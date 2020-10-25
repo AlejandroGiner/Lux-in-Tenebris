@@ -32,7 +32,7 @@ emp_sax_missions_conquest = {
 				area = erzgebirge_area
 				area = lusatia_area
 			}
-			NOT = { owned_by = root }
+			NOT = { owned_by = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -56,7 +56,7 @@ emp_sax_missions_conquest = {
 		}
 		effect = {
 			erzgebirge_area = {
-				limit = { owned_by = root }
+				limit = { owned_by = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -64,7 +64,7 @@ emp_sax_missions_conquest = {
 				}
 			}
 			lusatia_area = {
-				limit = { owned_by = root }
+				limit = { owned_by = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -105,7 +105,7 @@ emp_sax_missions_conquest = {
 				area = legnica_area
 				area = opole_area
 			}
-			NOT = { owned_by = root }
+			NOT = { owned_by = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -131,7 +131,7 @@ emp_sax_missions_conquest = {
 		}
 		effect = {
 			silesia_area = {
-				limit = { owned_by = root }
+				limit = { owned_by = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -139,7 +139,7 @@ emp_sax_missions_conquest = {
 				}
 			}
 			opole_area = {
-				limit = { owned_by = root }
+				limit = { owned_by = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -147,7 +147,7 @@ emp_sax_missions_conquest = {
 				}
 			}
 			legnica_area = {
-				limit = { owned_by = root }
+				limit = { owned_by = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -225,7 +225,7 @@ emp_sax_missions_defragment_and_go_east = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -288,7 +288,7 @@ emp_sax_missions_defragment_and_go_east = {
 				area = north_westphalia_area
 				area = muenster_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -333,7 +333,7 @@ emp_sax_missions_defragment_and_go_east = {
 				area = mittelmark_area
 				area = neumark_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			OR = {
 				province_id = 50
 				ROOT = {
@@ -350,7 +350,7 @@ emp_sax_missions_defragment_and_go_east = {
 			}
 		}
 		trigger = {
-			50 = { country_or_non_sovereign_subject_holds = root }
+			50 = { country_or_non_sovereign_subject_holds = ROOT }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
 				OR = {
@@ -401,11 +401,11 @@ emp_sax_missions_conquer_franconia = {
 			OR = {
 				AND = {
 					owned_by = THU
-					root = { tag = SAX }
+					ROOT = { tag = SAX }
 				}
 				AND = {
 					owned_by = SAX
-					root = { tag = THU }
+					ROOT = { tag = THU }
 				}
 				AND = {
 					OR = {
@@ -413,8 +413,8 @@ emp_sax_missions_conquer_franconia = {
 						area = thuringia_area
 					}
 					OR = {
-						NOT = { owned_by = root }
-						NOT = { is_core = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
 					}
 				}
 			}
@@ -432,13 +432,13 @@ emp_sax_missions_conquer_franconia = {
 			}
 			south_saxony_area = {
 				type = all
-				owned_by = root
-				is_core = root
+				owned_by = ROOT
+				is_core = ROOT
 			}
 			thuringia_area = {
 				type = all
-				owned_by = root
-				is_core = root
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
 		effect = {
@@ -508,7 +508,7 @@ emp_sax_missions_conquer_franconia = {
 				area = franconia_area
 				area = upper_franconia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -568,14 +568,14 @@ emp_sax_missions_religion = {
 				AND = {
 					province_id = 59
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						NOT = { development = 15 }
 						has_tax_building_trigger = no
 						has_courthouse_building_trigger = no
 					}
 				}
 				AND = {
-					is_capital_of = root
+					is_capital_of = ROOT
 					ROOT = { NOT = { has_institution = renaissance } }
 				}
 			}
@@ -583,7 +583,7 @@ emp_sax_missions_religion = {
 		trigger = {
 			has_institution = renaissance
 			59 = {
-				owned_by = root
+				owned_by = ROOT
 				development = 15
 				has_tax_building_trigger = yes
 				has_courthouse_building_trigger = yes
@@ -612,9 +612,9 @@ emp_sax_missions_religion = {
 		provinces_to_highlight = {
 			OR = {
 				owner = {
-					is_neighbor_of = root
-					NOT = { religion = root }
-					religion_group = root
+					is_neighbor_of = ROOT
+					NOT = { religion = ROOT }
+					religion_group = ROOT
 				}
 			}
 		}
@@ -629,7 +629,7 @@ emp_sax_missions_religion = {
 						hre_religion_locked = yes
 						custom_trigger_tooltip = {
 							tooltip = hre_religion_is_root_tooltip
-							hre_religion = root
+							hre_religion = ROOT
 						}
 					}
 					AND = {
@@ -644,8 +644,8 @@ emp_sax_missions_religion = {
 							tooltip = emp_bav_center_of_counter_reformation_tooltip
 							NOT = {
 								any_neighbor_country = {
-									NOT = { religion = root }
-									religion_group = root
+									NOT = { religion = ROOT }
+									religion_group = ROOT
 								}
 							}
 						}
@@ -664,8 +664,8 @@ emp_sax_missions_religion = {
 					tooltip = emp_bav_center_of_counter_reformation_tooltip
 					NOT = {
 						any_neighbor_country = {
-							NOT = { religion = root }
-							religion_group = root
+							NOT = { religion = ROOT }
+							religion_group = ROOT
 						}
 					}
 				}
@@ -688,7 +688,7 @@ emp_sax_missions_religion = {
 				area = kalisz_area
 				area = malopolska_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -794,11 +794,11 @@ emp_sax_missions_culture_2 = {
 						amount = 4
 						all_country = {
 							OR = {
-								junior_union_with = root
-								dynasty = root
+								junior_union_with = ROOT
+								dynasty = ROOT
 							}
 							has_opinion = {
-								who = root
+								who = ROOT
 								value = 120
 							}
 						}
@@ -810,16 +810,16 @@ emp_sax_missions_culture_2 = {
 							europe = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -829,16 +829,16 @@ emp_sax_missions_culture_2 = {
 							asia = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -848,16 +848,16 @@ emp_sax_missions_culture_2 = {
 							africa = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -867,16 +867,16 @@ emp_sax_missions_culture_2 = {
 							south_america = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -886,16 +886,16 @@ emp_sax_missions_culture_2 = {
 							north_america = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -905,16 +905,16 @@ emp_sax_missions_culture_2 = {
 							oceania = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -924,16 +924,16 @@ emp_sax_missions_culture_2 = {
 							new_world = {
 								owner = {
 									OR = {
-										tag = root
-										junior_union_with = root
-										dynasty = root
+										tag = ROOT
+										junior_union_with = ROOT
+										dynasty = ROOT
 										AND = {
 											is_colonial_nation = yes
 											overlord = {
 												OR = {
-													tag = root
-													junior_union_with = root
-													dynasty = root
+													tag = ROOT
+													junior_union_with = ROOT
+													dynasty = ROOT
 												}
 											}
 										}
@@ -949,11 +949,11 @@ emp_sax_missions_culture_2 = {
 					amount = 5
 					all_country = {
 						OR = {
-							is_subject_of = root
-							alliance_with = root
+							is_subject_of = ROOT
+							alliance_with = ROOT
 						}
 						has_opinion = {
-							who = root
+							who = ROOT
 							value = 120
 						}
 						custom_trigger_tooltip = {
@@ -1105,8 +1105,8 @@ emp_sax_missions_economic = {
 		provinces_to_highlight = {
 			province_id = 62
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
 			}
 		}
 		trigger = {
@@ -1132,8 +1132,8 @@ emp_sax_missions_economic = {
 				province_id = 59
 			}
 			OR = {
-				NOT = { is_strongest_trade_power = root }
-				NOT = { owned_by = root }
+				NOT = { is_strongest_trade_power = ROOT }
+				NOT = { owned_by = ROOT }
 				has_production_building_trigger = no
 			}
 		}
@@ -1146,12 +1146,12 @@ emp_sax_missions_economic = {
 				is_year = 1700
 			}
 			61 = {
-				owned_by = root
+				owned_by = ROOT
 				has_production_building_trigger = yes
 				development = 20
 			}
 			59 = {
-				is_strongest_trade_power = root
+				is_strongest_trade_power = ROOT
 			}
 			share_of_starting_income = 3
 		}
@@ -1180,7 +1180,7 @@ emp_sax_missions_economic = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					owned_by = root
+					owned_by = ROOT
 					OR = {
 						AND = {
 							has_manufactory_trigger = yes
@@ -1202,9 +1202,9 @@ emp_sax_missions_economic = {
 					}
 				}
 				AND = {
-					NOT = { owned_by = root }
+					NOT = { owned_by = ROOT }
 					any_neighbor_province = {
-						owned_by = root
+						owned_by = ROOT
 					}
 					has_manufactory_trigger = yes
 					development = 20
@@ -1224,11 +1224,11 @@ emp_sax_missions_economic = {
 						province_id = 62
 						AND = {
 							province_id = 1763
-							owned_by = root
+							owned_by = ROOT
 						}
 					}
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						has_manufactory_trigger = no
 						NOT = { development = 20 }
 					}
@@ -1246,16 +1246,16 @@ emp_sax_missions_economic = {
 					has_dlc = "Rule Britannia"
 				}
 				62 = {
-					owned_by = root
+					owned_by = ROOT
 					has_manufactory_trigger = yes
 					development = 20
 				}
 				if = {
 					limit = {
-						1763 = { owned_by = root }
+						1763 = { owned_by = ROOT }
 					}
 					1763 = {
-						owned_by = root
+						owned_by = ROOT
 						has_manufactory_trigger = yes
 						development = 20
 					}

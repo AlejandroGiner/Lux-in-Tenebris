@@ -30,7 +30,7 @@ emp_hab_netherlands_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -89,19 +89,19 @@ emp_hab_netherlands_branch = {
 					limit = {
 						province_has_center_of_trade_of_level = 1
 						has_port = yes
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 				east_indies_superregion = {
 					limit = {
 						province_has_center_of_trade_of_level = 1
 						has_port = yes
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
+						NOT = { is_core = ROOT }
+						NOT = { is_permanent_claim = ROOT }
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -127,7 +127,7 @@ emp_hab_netherlands_branch = {
 					}
 					else = {
 						OR = {
-							NOT = { is_core = root }
+							NOT = { is_core = ROOT }
 							unrest = 1
 						}
 					}
@@ -148,7 +148,7 @@ emp_hab_netherlands_branch = {
 									is_owned_by_trade_company = yes
 								}
 								else = {
-									is_core = root
+									is_core = ROOT
 									NOT = { unrest = 1 }
 								}
 							}
@@ -170,7 +170,7 @@ emp_hab_netherlands_branch = {
 					}
 					else = {
 						OR = {
-							NOT = { is_core = root }
+							NOT = { is_core = ROOT }
 							unrest = 1
 						}
 					}
@@ -191,7 +191,7 @@ emp_hab_netherlands_branch = {
 									is_owned_by_trade_company = yes
 								}
 								else = {
-									is_core = root
+									is_core = ROOT
 									NOT = { unrest = 1 }
 								}
 							}
@@ -213,7 +213,7 @@ emp_hab_netherlands_branch = {
 					}
 					else = {
 						OR = {
-							NOT = { is_core = root }
+							NOT = { is_core = ROOT }
 							unrest = 1
 						}
 					}
@@ -234,7 +234,7 @@ emp_hab_netherlands_branch = {
 									is_owned_by_trade_company = yes
 								}
 								else = {
-									is_core = root
+									is_core = ROOT
 									NOT = { unrest = 1 }
 								}
 							}
@@ -256,7 +256,7 @@ emp_hab_netherlands_branch = {
 					}
 					else = {
 						OR = {
-							NOT = { is_core = root }
+							NOT = { is_core = ROOT }
 							unrest = 1
 						}
 					}
@@ -277,7 +277,7 @@ emp_hab_netherlands_branch = {
 									is_owned_by_trade_company = yes
 								}
 								else = {
-									is_core = root
+									is_core = ROOT
 									NOT = { unrest = 1 }
 								}
 							}
@@ -320,25 +320,25 @@ emp_hab_netherlands_branch = {
 				num_of_owned_provinces_with = {
 					value = 5
 					trade_company_region = trade_company_west_india
-					is_core = root
+					is_core = ROOT
 					NOT = { unrest = 1 }
 				}
 				num_of_owned_provinces_with = {
 					value = 5
 					trade_company_region = trade_company_coromandel
-					is_core = root
+					is_core = ROOT
 					NOT = { unrest = 1 }
 				}
 				num_of_owned_provinces_with = {
 					value = 5
 					trade_company_region = trade_company_east_india
-					is_core = root
+					is_core = ROOT
 					NOT = { unrest = 1 }
 				}
 				num_of_owned_provinces_with = {
 					value = 5
 					trade_company_region = trade_company_indonesia
-					is_core = root
+					is_core = ROOT
 					NOT = { unrest = 1 }
 				}
 			}
@@ -346,38 +346,38 @@ emp_hab_netherlands_branch = {
 		effect = {
 			west_guangdong_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			guangdong_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			fujian_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			zhejiang_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			south_zhejiang_area = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			custom_tooltip = emp_hab_indian_trading_effect_tooltip
 			hidden_effect = {
@@ -387,14 +387,14 @@ emp_hab_netherlands_branch = {
 							superregion = india_superregion
 							superregion = east_indies_superregion
 						}
-						NOT = { owned_by = root }
-						NOT = { is_core = root }
-						NOT = { is_claim = root }
+						NOT = { owned_by = ROOT }
+						NOT = { is_core = ROOT }
+						NOT = { is_claim = ROOT }
 						any_neighbor_province = {
-							owned_by = root
+							owned_by = ROOT
 						}
 					}
-					add_permanent_claim = root
+					add_permanent_claim = ROOT
 				}
 			}
 		}
@@ -420,23 +420,23 @@ emp_hab_netherlands_branch = {
 		effect = {
 			south_china_region = {
 				limit = {
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			australia_region = {
 				limit = {
 					is_city = yes
-					NOT = { is_core = root }
-					NOT = { is_claim = root }
+					NOT = { is_core = ROOT }
+					NOT = { is_claim = ROOT }
 					NOT = {
 						owner = {
-							is_subject_of = root
+							is_subject_of = ROOT
 						}
 					}
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 			add_country_modifier = {
 				name = hab_chinese_riches
@@ -518,7 +518,7 @@ emp_hab_develop_hungary_bohemia_branch = {
 						area = alfold_area
 					}
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { owned_by = ROOT }
 						NOT = { development = 10 }
 					}
 				}

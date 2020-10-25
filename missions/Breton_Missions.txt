@@ -26,9 +26,9 @@ bri_1 = {
 				alliance_with = BUR
 				any_country = {
 					NOT = { tag = FRA }
-					alliance_with = root
+					alliance_with = ROOT
 					army_strength = {
-						who = root
+						who = ROOT
 						value = 1.5
 					}
 				}
@@ -118,10 +118,10 @@ bri_1 = {
 			}
 			cornwall_area = {
 				limit = {
-					NOT = { is_permanent_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_permanent_claim = root
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -211,10 +211,10 @@ bri_2 = {
 			}
 			munster_area = {
 				limit = {
-					NOT = { is_claim = root }
-					NOT = { is_core = root }
+					NOT = { is_claim = ROOT }
+					NOT = { is_core = ROOT }
 				}
-				add_claim = root
+				add_claim = ROOT
 			}
 		}
 	}
@@ -223,16 +223,16 @@ bri_2 = {
 		required_missions = { bri_brest }
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			has_port = yes
-			has_discovered = root
+			has_discovered = ROOT
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = has_colony_in_colonial_canada
 				colonial_canada = {
 					owner = {
-						is_colonial_nation_of = root
+						is_colonial_nation_of = ROOT
 					}
 				}
 			}
@@ -249,15 +249,15 @@ bri_2 = {
 		required_missions = { bri_new_brittany }
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
-			NOT = { country_or_non_sovereign_subject_holds = root }
-			has_discovered = root
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			has_discovered = ROOT
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = has_colony_in_colonial_caribbean
 				colonial_the_carribean = {
 					owner = {
-						is_colonial_nation_of = root
+						is_colonial_nation_of = ROOT
 					}
 				}
 			}
@@ -265,7 +265,7 @@ bri_2 = {
 		effect = {
 			1516 = {
 				add_trade_modifier = {
-					who = root
+					who = ROOT
 					duration = 7300
 					power = 30
 					key = bri_breton_better_weather
@@ -283,16 +283,16 @@ bri_2 = {
 				province_id = 1490
 				province_id = 1516
 			}
-			NOT = { is_strongest_trade_power = root }
-			has_discovered = root
+			NOT = { is_strongest_trade_power = ROOT }
+			has_discovered = ROOT
 		}
 		trigger = {
-			1490 = { is_strongest_trade_power = root }
-			1516 = { is_strongest_trade_power = root }
+			1490 = { is_strongest_trade_power = ROOT }
+			1516 = { is_strongest_trade_power = ROOT }
 			calc_true_if = {
 				amount = 2
 				all_subject_country = {
-					is_colonial_nation_of = root
+					is_colonial_nation_of = ROOT
 					num_of_cities = 10
 				}
 			}
