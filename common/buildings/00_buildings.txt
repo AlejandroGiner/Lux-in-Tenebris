@@ -146,7 +146,7 @@ workshop = {
 			NOT = { base_production = 3 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { base_production = 4 }
 			OR = {
 				trade_goods = grain
@@ -549,6 +549,12 @@ fort_15th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -560,8 +566,12 @@ fort_15th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.25
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { num_of_cities = 2 }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -953,6 +963,12 @@ fort_16th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -964,8 +980,12 @@ fort_16th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.25
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { num_of_cities = 2 }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1540,6 +1560,12 @@ fort_17th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -1551,8 +1577,12 @@ fort_17th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.25
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { num_of_cities = 2 }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -1743,7 +1773,7 @@ counting_house = {
 			NOT = { base_production = 3 }
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			NOT = { base_production = 4 }
 			OR = {
 				trade_goods = grain
@@ -2178,6 +2208,12 @@ fort_18th = {
 		modifier = {
 			factor = 25
 			is_capital = yes
+			FROM = { num_of_cities = 2 }
+			OR = {
+				owner = { government = monarchy }
+				owner = { government = republic }
+				owner = { government = theocracy }
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -2189,8 +2225,12 @@ fort_18th = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.5
-			owner = { government = tribal }
+			factor = 0.25
+			OR = {
+				owner = { government = tribal }
+				owner = { government = native }
+				FROM = { num_of_cities = 2 }
+			}
 		}
 		modifier = {
 			factor = 0
@@ -2833,11 +2873,12 @@ soldier_households = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 15
+		factor = 17.5
 		modifier = {
 			factor = 0.1
 			NOT = {
 				OR = {
+					trade_goods = gold
 					trade_goods = grain
 					trade_goods = fish
 					trade_goods = livestock
@@ -3168,7 +3209,7 @@ state_house = {
 			}
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			is_owned_by_trade_company = no
 			NOT = {
 				FROM = { 
