@@ -1012,7 +1012,7 @@ on_province_owner_change_estate_privileges_effect = {
 			duration = -1
 		}
 	}
-    #BTC
+    #BTC monopolies
 	if = {
 		limit = {
 			owner = {
@@ -1046,6 +1046,67 @@ on_province_owner_change_estate_privileges_effect = {
 		}
 		add_province_modifier = {
 			name = estate_brahmins_monopoly_of_apiculture_mod
+			duration = -1
+		}
+	}
+	#BTC mamluks
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_red_sea_trading_posts
+			}
+			sea_zone = {
+				area = red_sea_area
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_red_sea_ports_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_entrenched_syrian_governors
+			}
+			region = mashriq_region
+			NOT = { area = syrian_desert_area }
+		}
+		add_province_modifier = {
+			name = estate_mamluks_entrenched_syrian_governors_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_enforce_recruitment_levant
+			}
+			culture = al_suryah_arabic
+			religion_group = muslim
+			OR = {
+				region = mashriq_region
+				area = rakka_area
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_forced_recruitment_mod
+			duration = -1
+		}
+	}
+	if = {
+		limit = {
+			owner = {
+				has_estate_privilege = estate_btc_mamluks_relax_ownership_laws
+			}
+			OR = {
+				trade_goods = grain
+				trade_goods = cotton
+				trade_goods = livestock
+			}
+		}
+		add_province_modifier = {
+			name = estate_mamluks_relax_ownership_mod
 			duration = -1
 		}
 	}
