@@ -34,3 +34,39 @@ estate_btc_mamluks = {
 		}
 	}
 }
+
+estate_btc_janissaries = {
+	modifier_definition = {
+		type = loyalty
+		key = btc_janissaries_loyalty_modifier
+		trigger = {
+			has_estate = estate_btc_janissaries
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = btc_janissaries_influence_modifier
+		trigger = {
+			has_estate = estate_btc_janissaries
+		}
+	}
+}
+
+estate_btc_qizilbash = {
+	modifier_definition = {
+		type = loyalty
+		key = btc_qizilbash_loyalty_modifier
+		trigger = {
+			has_estate = estate_btc_qizilbash
+		}
+	}
+
+	modifier_definition = {
+		type = influence
+		key = btc_qizilbash_influence_modifier
+		trigger = {
+			has_estate = estate_btc_qizilbash
+		}
+	}
+}

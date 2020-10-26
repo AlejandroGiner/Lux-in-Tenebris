@@ -1,0 +1,166 @@
+estate_btc_qizilbash = {
+	
+	icon = 15
+	
+	trigger = {
+		tag = ARL
+		is_nomad = no
+		is_colonial_nation = no
+	}
+	
+	country_modifier_happy = {
+		land_morale = 0.05
+		manpower_in_true_faith_provinces = 0.15
+	}
+	
+	country_modifier_neutral = {
+		manpower_in_true_faith_provinces = 0.15
+	}
+	
+	country_modifier_angry = {
+		global_autonomy = 0.1
+		manpower_in_true_faith_provinces = -0.25
+		global_unrest = 4
+	}
+	
+	land_ownership_modifier = {
+		btc_qizilbash_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 2
+			culture = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 1.5
+			region = mesopotamia_region
+		}
+		modifier = {
+			factor = 2
+			region = khorasan_region
+		}
+		modifier = {
+			factor = 3
+			region = persia_region
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	influence_from_dev_modifier = 1.0
+	
+	#Medium army
+	influence_modifier = {	
+		desc = EST_VAL_MID_ARMY_INF
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		influence = -5
+	}
+	#Small army
+	influence_modifier = {	
+		desc = EST_VAL_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		influence = -10
+	}
+	#Very small army
+	influence_modifier = {	
+		desc = EST_VAL_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		influence = -15
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
+			}
+		}
+		influence = -40
+	}
+	
+	#Loyalty Modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
+			}
+		}
+		loyalty = -20
+	}
+	#Medium army
+	loyalty_modifier = {	
+		desc = EST_MAM_MID_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		loyalty = -2.5
+	}
+	#Small army
+	loyalty_modifier = {	
+		desc = EST_MAM_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		loyalty = -5
+	}
+	#Very small army
+	loyalty_modifier = {	
+		desc = EST_MAM_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		loyalty = -10
+	}
+
+	color = { 37 104 30 }
+	
+	privileges = {
+		
+	}
+	
+	agendas = {
+		estate_church_develop_x
+	}
+	
+}

@@ -1,0 +1,251 @@
+estate_btc_janissaries = {
+	
+	icon = 16
+	
+	trigger = {
+		has_reform = ottoman_government
+		is_nomad = no
+		is_colonial_nation = no
+	}
+	
+	country_modifier_happy = {
+		yearly_army_professionalism = 0.005
+		drill_decay_modifier = -0.25
+		prestige = 1
+	}
+	
+	country_modifier_neutral = {
+		prestige = 1
+	}
+	
+	country_modifier_angry = {
+		discipline = -0.025
+		reinforce_speed = 0.30
+		global_unrest = 4
+	}
+	
+	land_ownership_modifier = {
+		btc_janissaries_loyalty_modifier = 0.2
+	}
+	
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 2
+			culture = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 2
+			region = anatolia_region
+		}
+		modifier = {
+			factor = 3
+			region = greece_region_btc
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { is_state_core = owner }
+		}
+	}
+	
+	# Influence modifiers
+	base_influence = 10
+	influence_from_dev_modifier = 1.0
+	
+	#Medium army
+	influence_modifier = {	
+		desc = EST_VAL_MID_ARMY_INF
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		influence = -5
+	}
+	#Small army
+	influence_modifier = {	
+		desc = EST_VAL_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		influence = -10
+	}
+	#Very small army
+	influence_modifier = {	
+		desc = EST_VAL_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		influence = -15
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
+			}
+		}
+		influence = -40
+	}
+	
+	#Loyalty Modifiers
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
+			}
+		}
+		loyalty = -20
+	}
+	#Army reformer advisor
+	loyalty_modifier = {
+		desc = EST_MAM_MIL_ADV_REF
+		trigger = {
+			advisor = army_reformer
+		}
+		loyalty = -5
+	}
+	#Medium army
+	loyalty_modifier = {	
+		desc = EST_MAM_MID_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		loyalty = -2.5
+	}
+	#Small army
+	loyalty_modifier = {	
+		desc = EST_MAM_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		loyalty = -5
+	}
+	#Very small army
+	loyalty_modifier = {	
+		desc = EST_MAM_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		loyalty = -10
+	}
+	# 1% loyalty per 5% cavalry ratio to infantry, starting at 10% ratio and ending at +10% loyalty with 55% ratio, just below 60% sunni ratio, but above base ratio
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.1
+			NOT = { janissary_percentage = 0.15 }
+		}
+		loyalty = 1
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.15
+			NOT = { janissary_percentage = 0.2 }
+		}
+		loyalty = 2
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.2
+			NOT = { janissary_percentage = 0.25 }
+		}
+		loyalty = 3
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.25
+			NOT = { janissary_percentage = 0.3 }
+		}
+		loyalty = 4
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.3
+			NOT = { janissary_percentage = 0.35 }
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.35
+			NOT = { janissary_percentage = 0.4 }
+		}
+		loyalty = 6
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.4
+			NOT = { janissary_percentage = 0.45 }
+		}
+		loyalty = 7
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.45
+			NOT = { janissary_percentage = 0.5 }
+		}
+		loyalty = 8
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.5
+			NOT = { janissary_percentage = 0.55 }
+		}
+		loyalty = 9
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			janissary_percentage = 0.55
+		}
+		loyalty = 10
+	}
+
+	color = { 51 153 51 }
+	
+	privileges = {
+		
+	}
+	
+	agendas = {
+		estate_church_develop_x
+	}
+	
+}

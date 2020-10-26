@@ -9,6 +9,18 @@
  estate_btc_mamluks_ownership:0 "Mamluks Land Ownership"
  btc_mamluks_loyalty_modifier:0 "Mamluks Loyalty Equilibrium"
  btc_mamluks_influence_modifier:0 "Mamluks Influence"
+ #Janissaries
+ estate_btc_janissaries:0 "Janissaries"
+ estate_btc_janissaries_desc:0 "This estate represents the Janissary caste, an elite military unit originating in the Ottoman Empire which was instituted through the devsirme system of child slavery, by which young Christian boys were forcibly taken from their families, enslaved and converted to Islam, and incorporated into the Ottoman army.\n\nThey became famed for internal cohesion cemented by strict discipline and order. Unlike typical slaves, they were paid regular salaries. Forbidden to marry before the age of 40 or engage in trade, their complete loyalty to the Sultan was expected.\n\nAs the years went on many of them became powerful governors and landowners, and strongly opposed any attempts at curbing their autonomy and privileges."
+ estate_btc_janissaries_ownership:0 "Janissaries Land Ownership"
+ btc_janissaries_loyalty_modifier:0 "Janissaries Loyalty Equilibrium"
+ btc_janissaries_influence_modifier:0 "Janissaries Influence"
+ #Qizilbash
+ estate_btc_qizilbash:0 "Qizilbash"
+ estate_btc_qizilbash_desc:0 "This estate represents the Qizilbash caste, a powerful militant Shi'i organization that flourished in Azerbaijan and Eastern Anatolia from the 15th century, largely made up of members of Turkic tribes that had converted to Shia Islam.\n\nArdent followers of the leaders of the Safavid Order and later Dynasty, the Qizilbash owed implicit obedience to their leader in his capacity as their murshid-e kamil "supreme spiritual director" and, after the establishment of the Empire, as their padishah, changing the purely religious pir – murid relationship into a political one.\n\nApart from being a formidable military force they thus also became important governors and advisors in Persia and beyond, although this rising importance frequently led to clashes with other established political forces in the region as well as infighting."
+ estate_btc_qizilbash_ownership:0 "Qizilbash Land Ownership"
+ btc_qizilbash_loyalty_modifier:0 "Qizilbash Loyalty Equilibrium"
+ btc_qizilbash_influence_modifier:0 "Qizilbash Influence"
  
  #Loyalty and influence modifiers
  EST_MAM_MIL_ADV_REF:0 "Army Reformer recruited: §R$VAL$§!"
@@ -18,9 +30,9 @@
  EST_MAM_SMALL_ARMY:0 "Standing army less than half of the force-limit: §R$VAL$§!"
  EST_MAM_VERY_SMALL_ARMY:0 "Standing army less than a quarter of the force-limit: §R$VAL$§!"
  
- #Privileges
+ #Mamluks Privileges
  estate_btc_mamluks_land_rights:0 "Mamluks Land Rights"
- estate_btc_mamluks_land_rights_desc:0 "The different Mamluk factions are all as greedy as scheming. To keep them happier they all need to have their own piece of ground to operate in."
+ estate_btc_mamluks_land_rights_desc:0 "The different Mamluk factions are as greedy as they are scheming. To keep them in line they all need to have their own piece of land to operate in."
  
  estate_btc_mamluks_mamluk_primacy:0 "Primacy of the Mamluks"
  estate_btc_mamluks_mamluk_primacy_desc:0 "Giving the Mamluks free rein over our military would strengthen our capacities considerably, even if it may cost us dearly in compensating their contributions."
@@ -70,3 +82,23 @@
  estate_btc_mamluks_entrenched_syrian_governors_tooltip:0 "Every province owned in the §YLevant§! region except §YSinai§! area gains §YEntrenched Governor§!:\nLocal Unrest: §R+5.00§!\nMinimum Autonomy: §R+35.00§!"
  estate_mamluks_entrenched_syrian_governors_mod:0 "Entrenched Governor"
  estate_mamluks_entrenched_syrian_governors_mod_desc:0 "The corruption and independentist mindset of the local governor and population is badly damaging this province's output."
+
+ #Janissaries Privileges
+ estate_btc_janissaries_land_rights:0 "Janissaries Land Rights"
+ estate_btc_janissaries_land_rights_desc:0 "Janissaries, despite their ultimate loyalty to the Sultan, face a harsh early life that might give seed to wrong ideas about their status compared to the Ümera. If we allow some of the older units to become landed aristocrats, they will forget future squabbles about their rights."
+
+ estate_btc_janissaries_janissary_primacy:0 "Primacy of the Janissaries"
+ estate_btc_janissaries_janissary_primacy_desc:0 "Giving the Janissaries free rein over our military would strengthen our capacities considerably, even if it may cost us dearly in compensating their contributions."
+ 
+ estate_btc_janissaries_autonomy:0 "Secure Audiences with Sultan"
+ estate_btc_janissaries_autonomy_desc:0 "By tradition, the Sultan himself, after authorizing the payments to the Janissaries, visited the barracks dressed as a janissary trooper, and received his pay alongside the other men of the First Division. Securing this tradition for all new Sultans will strengthen the units' relation with the Sultan and make them happier."
+ 
+ #Qizilbash Privileges
+ estate_btc_qizilbash_land_rights:0 "Qizilbash Land Rights"
+ estate_btc_qizilbash_land_rights_desc:0 "Being tribal units originally, the Qizilbash have direct control over several settlements that used to belong to their forefathers, but conflict between them and other factions of our realm abounds. To solve these conflicts it would be prudent to give them land rights and privileges to institutionalize their claims."
+ 
+ estate_btc_qizilbash_qizilbash_primacy:0 "Primacy of the Qizilbash"
+ estate_btc_qizilbash_qizilbash_primacy_desc:0 "Giving the Qizilbash free rein over our military would strengthen our capacities considerably, even if it may cost us dearly in compensating their contributions."
+ 
+ estate_btc_qizilbash_autonomy:0 "Secure Autonomy"
+ estate_btc_qizilbash_autonomy_desc:0 "The Qizilbash, devout to our cause as they are, have fiercely resisted attempts at reducing their authority in favor of other factions in the realm, and even though their defiant and unruly character proves concerning for us, guaranteeing autonomy over their internal affairs should hopefully make them less quarrelsome."

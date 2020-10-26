@@ -82,6 +82,8 @@ estate_btc_mamluks_mamluk_primacy = {
 			NOT = { has_estate_privilege = estate_rajput_military }
 			NOT = { has_estate_privilege = estate_maratha_military }
 			NOT = { has_estate_privilege = estate_nobles_nobility_primacy }
+			NOT = { has_estate_privilege = estate_btc_janissaries_janissary_primacy }
+			NOT = { has_estate_privilege = estate_btc_qizilbash_qizilbash_primacy }
 		}
 	}
 	on_granted = {
