@@ -1173,7 +1173,7 @@ university = {
 	}
 	
 	ai_will_do = {
-		factor = 320 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
+		factor = 420 	# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
 		modifier = {
 			factor = 1.2
 			development = 20
@@ -2873,7 +2873,7 @@ soldier_households = {
 	show_separate = yes # Means as a manufactory it will be shown according to the old way
 
 	ai_will_do = {
-		factor = 17.5
+		factor = 20
 		modifier = {
 			factor = 0.1
 			NOT = {
