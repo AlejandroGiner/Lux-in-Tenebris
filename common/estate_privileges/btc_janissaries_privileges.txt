@@ -149,3 +149,52 @@ estate_btc_janissaries_autonomy = {
 		}
 	}
 }
+
+estate_btc_janissaries_share_of_the_spoils = {
+	icon = privilege_supply_arms
+	max_absolutism = -5
+	loyalty = 0.05
+	penalties = {
+		available_province_loot = -0.2
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_btc_janissaries_garrisoned_janissaries = {
+	icon = privilege_autonomous_defences
+	max_absolutism = 0
+	land_share = 5
+	influence = 0.1
+	penalties = {
+		land_maintenance_modifier = 0.05
+	}
+	benefits = {
+		fort_maintenance_modifier = -0.1
+		defensiveness = 0.15
+		garrison_size = 0.25
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_btc_janissaries_increase_wages = {
+	icon = privilege_give_money
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.05
+	penalties = {
+	}
+	benefits = {
+	}
+	on_granted = {
+		custom_tooltip = btc_janissaries_increased_wages_tooltip
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}

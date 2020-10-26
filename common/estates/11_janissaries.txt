@@ -20,7 +20,7 @@ estate_btc_janissaries = {
 	
 	country_modifier_angry = {
 		discipline = -0.025
-		reinforce_speed = 0.30
+		reinforce_speed = -0.30
 		global_unrest = 4
 	}
 	
@@ -244,6 +244,9 @@ estate_btc_janissaries = {
 		estate_btc_janissaries_land_rights
 		estate_btc_janissaries_janissary_primacy
 		estate_btc_janissaries_autonomy
+		estate_btc_janissaries_share_of_the_spoils
+		estate_btc_janissaries_garrisoned_janissaries
+		estate_btc_janissaries_increase_wages
 	}
 	
 	agendas = {
