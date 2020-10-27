@@ -1851,13 +1851,9 @@ country_event = {
 		has_reform = ottoman_government
 		NOT = { has_disaster = janissary_decadence }
 		if = {
-			limit = {
-				NOT = { has_dlc = "Cradle of Civilization" }
-			}
+			limit = { NOT = { has_dlc = "Cradle of Civilization" } }
 			has_country_modifier = tur_janissary
-			else = {
-				num_of_janissaries = 3
-			}
+			else = { num_of_janissaries = 3 }
 		}
 		has_regency = no
 	}
@@ -1866,12 +1862,22 @@ country_event = {
 	
 	option = {		# Give a reward and higher wages
 		name = "flavor_tur.EVTOPTA102"
+		trigger = { NOT = { has_estate_privilege = estate_btc_janissaries_increase_wages } }
 		add_years_of_income = -0.5
+		hidden_effect = { set_ruler_flag = paid_higher_janissary_wages_flag }
+	}
+	option = {		# Give a reward and higher wages
+		name = "flavor_tur.EVTOPTA102"
+		trigger = { has_estate_privilege = estate_btc_janissaries_increase_wages }
+		add_years_of_income = -1
+		hidden_effect = { set_ruler_flag = paid_higher_janissary_wages_flag }
 	}
 	option = {		# Refuse such blackmail
 		name = "flavor_tur.EVTOPTB102"
-		add_ruler_modifier = {
-			name = janissaries_denied_reward
+		add_stability = -1
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = -30
 		}
 	}
 }
@@ -1888,44 +1894,48 @@ country_event = {
 		OR = {
 			has_country_modifier = tur_janissary
 			num_of_janissaries = 10
+			has_estate = estate_btc_janissaries
 		}
 		NOT = { has_disaster = janissary_decadence }
-		NOT = {
-			has_country_modifier = tur_janissaries_timer
-		}
+		NOT = { has_country_modifier = tur_janissaries_timer }
 		num_of_owned_provinces_with = {
 			value = 30
 			is_core = ROOT
 		}
 		is_at_war = no
-		NOT = {
-			war_exhaustion = 1
-		}
-		NOT = {
-			adm = 6
-		}
-		NOT = {
-			mil = 6
-		}
+		NOT = { war_exhaustion = 1 }
+		NOT = { mil = 6 }
 	}
 	
-	mean_time_to_happen = {
-		months = 700
-	}
+	mean_time_to_happen = { months = 120 }
 	
 	immediate = {
 		hidden_effect = {
 			add_country_modifier = {
 				name = tur_janissaries_timer
-				duration = 18250
+				duration = 3650
 				hidden = yes
 			}
 		}
 	}
 	
-	option = {
+	option = {		# Give a reward and higher wages
 		name = "flavor_tur.EVTOPTA111"
+		trigger = { NOT = { has_estate_privilege = estate_btc_janissaries_increase_wages } }
 		add_years_of_income = -0.5
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = 5
+		}
+	}
+	option = {		# Give a reward and higher wages
+		name = "flavor_tur.EVTOPTA111"
+		trigger = { has_estate_privilege = estate_btc_janissaries_increase_wages }
+		add_years_of_income = -0.75
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = 5
+		}
 	}
 	option = {
 		name = "flavor_tur.EVTOPTB111"
@@ -1936,10 +1946,14 @@ country_event = {
 	option = {
 		name = "flavor_tur.EVTOPTC111"
 		add_stability = -1
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = -10
+		}
 	}
 }
 
-# Civilianization
+# Civilianization - last phase
 country_event = {
 	id = flavor_tur.105
 	title = "flavor_tur.EVTNAME105"
@@ -1955,9 +1969,7 @@ country_event = {
 			janissary_percentage = 0.1
 		}
 		if = {
-			limit = {
-				NOT = { has_dlc = "Cradle of Civilization" }
-			}
+			limit = { NOT = { has_dlc = "Cradle of Civilization" } }
 			has_country_modifier = tur_janissary
 		}
 		NOT = { current_age = age_of_discovery }
@@ -1966,17 +1978,13 @@ country_event = {
 		NOT = { has_disaster = janissary_decadence }
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	mean_time_to_happen = { months = 500 }
 	
 	option = {		# Everyone needs to make a living.
 		name = "flavor_tur.EVTOPTA105"
 		if = {
 			limit = { NOT = { has_dlc = "Cradle of Civilization" } }
-			add_ruler_modifier = {
-				name = janissary_landholders
-			}
+			add_ruler_modifier = { name = janissary_landholders }
 		}
 		else = {
 			add_ruler_modifier = {
@@ -1984,18 +1992,14 @@ country_event = {
 				duration = 3650
 			}
 		}
-		add_mercantilism = 1
+		add_mercantilism = 3
 		add_estate_burghers_loyalty_effect = yes
 	}
 	option = {		# Let us increase drilling and salaries instead.
 		name = "flavor_tur.EVTOPTB105"
 		if = {
-			limit = {
-				NOT = { has_dlc = "Cradle of Civilization" }
-			}
-			add_ruler_modifier = {
-				name = janissaries_upset
-			}
+			limit = { NOT = { has_dlc = "Cradle of Civilization" } }
+			add_ruler_modifier = { name = janissaries_upset }
 			set_country_flag = had_janissary_civilianization
 		}
 		else = {
@@ -2004,7 +2008,7 @@ country_event = {
 				duration = 3650
 			}
 		}
-		add_mercantilism = -1
+		add_mercantilism = -3
 		reduce_estate_burghers_loyalty_effect = yes
 	}
 }
@@ -2023,21 +2027,16 @@ country_event = {
 		NOT = { has_reform = ottoman_government }
   }
 	
-	mean_time_to_happen = {
-		months = 10
-		
-	}
+	mean_time_to_happen = { months = 10 }
 	
-	immediate = {
-		remove_country_modifier = tur_janissary
-	}
+	immediate = { remove_country_modifier = tur_janissary }
 	
 	option = {		# Ok.
 		name = "flavor_tur.106.a"
 	}
 }
 
-# Muslims in the Janissary rolls
+# Muslims in the Janissary rolls - Civilianization phase 1
 country_event = {
 	id = flavor_tur.107
 	title = "flavor_tur.107.t"
@@ -2056,11 +2055,13 @@ country_event = {
 				janissary_percentage = 0.1
 			}
 		}
+		OR = {
+			has_estate_privilege = estate_btc_janissaries_increase_wages
+			has_ruler_flag = paid_higher_janissary_wages_flag
+		}
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	mean_time_to_happen = { months = 450 }
 	
 	immediate = {
 		hidden_effect = {
@@ -2068,22 +2069,139 @@ country_event = {
 				limit = { NOT = { has_country_flag = had_muslim_janissaries } }
 				set_country_flag = had_muslim_janissaries
 			}
+			set_country_flag = civilianization_start_flag
 		}
 	}
 	
 	
-	option = {		# 
+	option = {
 		name = "flavor_tur.107.a"
 		add_country_modifier = {
 			name = "strictly_enforced_janissary_discipline"
 			duration = 3650
 		}
 	}
-	option = {		# 
+	option = {
 		name = "flavor_tur.107.b"
 		add_country_modifier = {
 			name = "non_christian_janissaries"
 			duration = 3650
+		}
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = -10
+		}
+		add_estate_influence_modifier = {
+			estate = estate_btc_janissaries
+			desc = EST_VAL_NON_CHRISTIAN_JANISSARIES
+			influence = 10
+			duration = 7300
+		}
+	}
+}
+
+# Tensions between Christian and Muslim Janissaries - Civilianization phase 2
+country_event = {
+	id = flavor_tur.150
+	title = "flavor_tur.150.t"
+	desc = "flavor_tur.150.d"
+	picture = {
+	   trigger = { has_dlc = "Star and Crescent" }
+	   picture = muslimgfx_ACCUSATION_eventPicture
+	}
+	picture = {
+	   trigger = { NOT = { has_dlc = "Star and Crescent" } }
+	   picture = ACCUSATION_eventPicture
+	}
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_disaster = janissary_decadence }
+		OR = {
+			has_country_modifier = tur_janissary
+			AND = {
+				num_of_janissaries = 10
+				janissary_percentage = 0.1
+			}
+		}
+		has_country_flag = civilianization_start_flag
+	}
+	
+	mean_time_to_happen = { months = 240 }
+	
+	immediate = {
+		hidden_effect = {
+			clr_country_flag = civilianization_start_flag
+			if = { 
+				NOT = { has_country_flag = civilianization_phase_two }
+				set_country_flag = civilianization_phase_two
+			}
+		}
+	}
+	
+	option = {
+		name = "flavor_tur.150.b" #Stop complaining
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = -20
+		}
+	}
+	option = {
+		name = "flavor_tur.150.a" #Leave clear that Christian Janissaries have preference
+		add_country_modifier = {
+			name = "btc_confirmed_janissary_priority"
+			duration = 3650
+		}
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_btc_janissaries
+			share = 5
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -10
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -2.5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -10
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = -2.5
+		}
+	}
+	option = {
+		name = "flavor_tur.150.c" #This madness ends once and for all, return to old devshirme
+		add_estate_loyalty = {
+			estate = estate_btc_janissaries
+			loyalty = 20
+		}
+		change_estate_land_share = {
+			estate = estate_btc_janissaries
+			share = 15
+		}
+		add_estate_loyalty = {
+			estate = estate_nobles
+			loyalty = -20
+		}
+		change_estate_land_share = {
+			estate = estate_nobles
+			share = -5
+		}
+		add_estate_loyalty = {
+			estate = estate_burghers
+			loyalty = -20
+		}
+		change_estate_land_share = {
+			estate = estate_burghers
+			share = -5
 		}
 	}
 }
@@ -2102,17 +2220,15 @@ country_event = {
 		NOT = { current_age = age_of_reformation }
 		NOT = { has_disaster = janissary_decadence }
 		has_country_modifier = the_devshirme_system
-		num_of_cities = 50
+		num_of_cities = 120
 		has_country_flag = had_muslim_janissaries
 		NOT = { has_country_flag = lapse_of_devshirme }
 	}
 	
-	mean_time_to_happen = {
-		months = 500
-	}
+	mean_time_to_happen = { months = 500 }
 	
 	
-	option = {		# 
+	option = {
 		name = "flavor_tur.108.a"
 		remove_country_modifier = the_devshirme_system
 		set_country_flag = lapse_of_devshirme

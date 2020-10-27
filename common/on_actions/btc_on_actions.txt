@@ -131,6 +131,11 @@ on_new_monarch = {
 		50 = dynastic_events.5	
 		25 = harem_events.7		#Failed Policy of Fratricide
 	}
+	#BTC
+	if = {
+		limit = { has_ruler_flag = paid_higher_janissary_wages_flag }
+		clr_ruler_flag = paid_higher_janissary_wages_flag
+	}
 	#BT
 	if = {
 		limit = {
