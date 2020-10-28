@@ -531,8 +531,8 @@ FRA_ideas = {
 
 TUR_ideas = {
 	start = {
-		infantry_fire = 0.35
-		tolerance_heathen = 3
+		cav_to_inf_ratio = 0.25
+		cavalry_power = 0.15
 	}
 	
 	bonus = {
@@ -552,7 +552,7 @@ TUR_ideas = {
 		manpower_recovery_speed = 0.2
 	}		
 	timariot_system = {
-		cavalry_power = 0.15
+		cavalry_cost = -0.2
 	}
 	gunpowder_empire_tur = {
 		artillery_fire = 1
