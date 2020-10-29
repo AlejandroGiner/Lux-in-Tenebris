@@ -1,25 +1,32 @@
-# 2363 - Atakent
 
-owner = SHY
-controller = SHY
+owner = TIM
+controller = TIM
 culture = khazak
 religion = sunni
-capital = "Atakent"
+capital = "Jizzax"
 trade_goods = livestock
 hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+base_tax = 1
+base_production = 2
+base_manpower = 2
 is_city = yes
-add_core = KZH
-add_core = SHY
+add_core = TIM
 add_core = TRS
+
 discovered_by = KAS
 discovered_by = muslim
 discovered_by = persian_btc
 discovered_by = ottoman
 discovered_by = nomad_group
 
+1409.5.13 = { #Ulugh Beg is made Governor of Samarkand
+	owner = TRS
+	controller = TRS
+}
+1448.3.1 = { #Ulugh Beg takes Herat and reunites the core of the Timurid Empire
+	owner = TIM
+	controller = TIM
+}
 1502.1.1 = { 
 	owner = BUK 
 	add_core = BUK 
