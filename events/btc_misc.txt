@@ -15,9 +15,7 @@ country_event = {
 		owns_or_non_sovereign_subject_of = 151
 	}
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	mean_time_to_happen = { days = 1 }
 
 	option = {
 		name = "btc_misc.1.a"
@@ -47,9 +45,7 @@ country_event = {
 	
 	option = { #Invite him to court
 		name = btc_misc.2.a
-		ai_chance = {
-			factor = 30
-		}
+		ai_chance = { factor = 30 }
 		define_advisor = {
 			type = commandant
 			culture = english
@@ -60,9 +56,7 @@ country_event = {
 	}
 	option = { #Make him commander
 		name = btc_misc.2.b
-		ai_chance = {
-			factor = 60
-		}
+		ai_chance = { factor = 60 }
 		add_years_of_income = -0.15
 		add_mil_power = 15
 		define_general = {
@@ -75,9 +69,7 @@ country_event = {
 	}
 	option = { #Wave him away
 		name = btc_misc.2.c
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 10 }
 		add_prestige = -5
 		add_legitimacy = -5
 	}
@@ -146,9 +138,7 @@ country_event = {
 	trigger = {
 		tag = TUR
 		is_year = 1500
-		NOT = {
-			is_year = 1550
-		}
+		NOT = { is_year = 1550 }
 	}
 	
 	mean_time_to_happen = { years = 5 }
@@ -393,11 +383,7 @@ country_event = {
 			}
 		}
 		add_years_of_income = -1.5
-		capital_scope = {
-			ROOT = {
-				bombard = PREV
-			}
-		}
+		capital_scope = { ROOT = { bombard = PREV } }
 	}
 	
 	option = {		# Reject his proposal
@@ -406,12 +392,8 @@ country_event = {
 			factor = 25
 		}
 		if = {
-			limit = {
-				exists = TUR
-			}
-			TUR = {
-				country_event = { id = btc_misc.10 days = 15 }
-			}
+			limit = { exists = TUR }
+			TUR = { country_event = { id = btc_misc.10 days = 15 } }
 		}
 	}
 }
@@ -428,11 +410,7 @@ country_event = {
 		name = btc_misc.10.a
 		ai_chance = { factor = 90 }
 		add_years_of_income = -0.25
-		capital_scope = {
-			ROOT = {
-				bombard = PREV
-				}
-		}
+		capital_scope = { ROOT = { bombard = PREV } }
 	}
 	
 	option = {		# Reject his proposal
@@ -1251,7 +1229,7 @@ country_event = {
 	}
 }
 
-#Cinque Ports 
+#Cinque Ports, coded by Alejandro, written and designed by Helena
 province_event = {
 	id = btc_misc.24
 	title = btc_misc.24.t
@@ -1472,5 +1450,114 @@ country_event = {
 			}
 		}
 		add_prestige = -10
+	}
+}
+
+#Uzboy dries up, coded, written and designed by Helena
+province_event = {
+	id = btc_misc.26
+	title = btc_misc.26.t
+	desc = btc_misc.26.d
+	picture = {
+	   trigger = { 
+			has_dlc = "Star and Crescent"
+			religion_group = muslim
+		}
+	   picture = muslimgfx_FAMINE_eventPicture
+	}
+	picture = {
+	   trigger = {
+			OR = {
+				NOT = { has_dlc = "Star and Crescent" }
+				NOT = { religion_group = muslim }
+			}
+		}
+	   picture = FAMINE_eventPicture
+	}
+	
+	major = yes
+	fire_only_once = yes
+	
+	trigger = {
+		province_id = 2362
+		is_year = 1565
+		NOT = { has_province_modifier = uzboy_dried_mod }
+	}
+	
+	mean_time_to_happen = { years = 25 }
+	
+	option = {
+		name = btc_misc.26.a
+		add_center_of_trade_level = -2
+		add_base_tax = -2
+		add_base_production = -2
+		add_base_manpower = -2
+		change_trade_goods = grain
+		add_province_modifier = {
+			name = uzboy_dried_mod
+			duration = -1
+		}
+		3133 = {
+			add_base_tax = -2
+			add_base_production = -2
+			add_base_manpower = -2
+			change_trade_goods = livestock
+			add_province_modifier = {
+				name = uzboy_dried_mod
+				duration = -1
+			}
+		}
+		441 = {
+			center_of_trade = 1
+			add_base_tax = 1
+			add_base_production = 1
+			add_base_manpower = 1
+		}
+		hidden_effect = {
+			2349 = {
+				province_event = { 
+					id = btc_misc.27
+					days = 45
+					random = 45
+				}
+			}
+		}
+	}
+}
+
+#Uzboy delta dries up, coded, written and designed by Helena
+province_event = {
+	id = btc_misc.27
+	title = btc_misc.27.t
+	desc = btc_misc.27.d
+	picture = {
+	   trigger = { 
+			has_dlc = "Star and Crescent"
+			religion_group = muslim
+		}
+	   picture = muslimgfx_FAMINE_eventPicture
+	}
+	picture = {
+	   trigger = {
+			OR = {
+				NOT = { has_dlc = "Star and Crescent" }
+				NOT = { religion_group = muslim }
+			}
+		}
+	   picture = FAMINE_eventPicture
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = btc_misc.27.a
+		remove_province_modifier = uzboy_estuary_modifier
+		add_base_tax = -2
+		add_base_production = -2
+		add_base_manpower = -2
+		add_province_modifier = {
+			name = uzboy_dried_mod
+			duration = -1
+		}
 	}
 }
