@@ -1457,7 +1457,7 @@ country_decisions = {
 				primary_culture = flemish
 			}
 			if = {
-				ai = no
+				limit = { ai = yes }
 				NOT = { num_of_cities = 35 }			#With more than 35 cities, we want the tag to be trying to form something else, like NED or FRA
 			}
 			OR = {
@@ -2275,7 +2275,7 @@ country_decisions = {
 						NOT = { government = monarchy }
 					}
 					change_government = monarchy
-					set_legacy_government = feudal_monarchy
+					#set_legacy_government = feudal_monarchy
 				}
 				if = {
 					limit = {
