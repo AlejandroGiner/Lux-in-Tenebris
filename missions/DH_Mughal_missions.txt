@@ -221,6 +221,13 @@ mug_timurid_resurgence = {
 				}
 				add_claim = ROOT
 			}
+			bukhara_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
 			arys_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -235,7 +242,21 @@ mug_timurid_resurgence = {
 				}
 				add_claim = ROOT
 			}
+			turkmenistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
 			khiva_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT }
+					NOT = { is_core = ROOT }
+				}
+				add_claim = ROOT
+			}
+			aral_sea_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
 					NOT = { is_core = ROOT }

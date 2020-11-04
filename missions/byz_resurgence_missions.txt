@@ -7024,6 +7024,13 @@ byz_far_east_2 = {
 					}
 					add_permanent_claim = ROOT
 				}
+				bukhara_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT }
+					}
+					add_permanent_claim = ROOT
+				}
 				merv_area = {
 					limit = {
 						NOT = { is_permanent_claim = ROOT }
@@ -7060,6 +7067,7 @@ byz_far_east_2 = {
 				area = transoxiana_area
 				area = merv_area
 				area = ferghana_area
+				area = bukhara_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
@@ -7070,6 +7078,10 @@ byz_far_east_2 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 			}
 			transoxiana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			bukhara_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

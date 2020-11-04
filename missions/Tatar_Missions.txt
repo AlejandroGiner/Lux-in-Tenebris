@@ -383,7 +383,21 @@ tatar_missions_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			bukhara_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			khiva_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			aral_sea_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
@@ -404,6 +418,13 @@ tatar_missions_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			turkmenistan_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 		}
 	}
 	mission_conquer_samarkand = {
@@ -415,7 +436,10 @@ tatar_missions_slot_2 = {
 				area = transoxiana_area
 				area = khiva_area
 				area = transcaspia_area
+				area = turkmenistan_area
 				area = merv_area
+				area = bukhara_area
+				area = aral_sea_area
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -426,11 +450,23 @@ tatar_missions_slot_2 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			bukhara_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			khiva_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			aral_sea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			transcaspia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			turkmenistan_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}

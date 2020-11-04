@@ -476,6 +476,13 @@ tim_reconquest_transoxiana = {
 				}
 				add_permanent_claim = ROOT
 			}
+			bukhara_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			termez_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -509,6 +516,7 @@ tim_reconquest_transoxiana = {
 			OR = {
 				area = transoxiana_area
 				area = termez_area
+				area = bukhara_area
 				province_id = 458
 				province_id = 1967
 				province_id = 457
@@ -519,6 +527,10 @@ tim_reconquest_transoxiana = {
 		
 		trigger = {
 			transoxiana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			bukhara_area = {
 				type = all
 				owned_by = ROOT
 			}
