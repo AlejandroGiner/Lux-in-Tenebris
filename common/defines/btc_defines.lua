@@ -12,6 +12,11 @@ NDefines.NAI.ESTATE_MAX_PRIVILEDGES = 3
 NDefines.NAI.ESTATE_MIN_WANTED_CROWNLAND = 30.1
 NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 50.1
 
+--AI Army movements section. AI moves to a Province with the lowest score. Console command for testing: mapmode aieval.
+NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
+NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	            --Army <-> province distance impact on province evaluation / divides total score by this amount
+NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	25.0        --Border <-> province distance impact on province evaluation / actual distance penalty
+
 NDefines.NDiplomacy.MAX_FREE_CITIES = 20			-- from original BtP increased from 8
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 45			-- from original BtP increased from 25
 NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075			-- from original BtP reduced from 01
