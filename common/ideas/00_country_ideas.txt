@@ -8201,7 +8201,7 @@ KAS_ideas = {
 	}
 	
 	trigger = {
-		tag = KAS
+		tag = YKD
 	}
 	free = yes
 	
@@ -15147,7 +15147,10 @@ CHG_ideas = {
 	}
 	
 	trigger = {
-		tag = CHG
+		OR = {
+			tag = CHG
+			tag = USI
+		}
 	}
 	free = yes
 	
