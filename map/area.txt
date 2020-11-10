@@ -2542,11 +2542,11 @@ kalat_area = { #3
 }
 
 ferghana_area = { #3
-	458 460 1967 3184 3187
+	458 460 1967 3184 3187 3272
 }
 
 arys_area = { #3
-	457 2364 2356 3202 3641
+	457 2356 3202 3641
 }
 
 kyzylkum_area = { #3
@@ -2591,7 +2591,7 @@ mashhad_area = { #4 - Northern Khorasan
 }
 
 herat_area = {	#3 - Eastern Khorasan
-	446 4324 4325
+	446 4324 4325 3163
 }
 
 birjand_area = { #3 - Western Khorasan
@@ -2605,7 +2605,7 @@ ghor_area = { #3
 
 merv_area = { #3
 	color = { 60 186 134 }
-	444 445 3171 3163 5884
+	444 445 3171 5884
 }
 
 balkh_area = { #3
@@ -3423,7 +3423,7 @@ perm_area = { #4
 }
 
 balchasj_area = { #4
-	477 478 2355 2360 4685 5095
+	477 478 2355 2360 4685 5095 2361 2368
 }
 
 kazakhstan_area = { #5
@@ -3431,7 +3431,7 @@ kazakhstan_area = { #5
 }
 
 syr_darya_area = { #4
-	456 1969 2361 1970 3210 5132
+	456 1969 1970 3210 5132
 }
 
 yrtesh_area = { #5
@@ -3539,11 +3539,19 @@ uliastai_area = {#3
 
 jetysuu_area = { #5
 	color = { 56 37 169 }
-	459 461 2125 2126 2368 5090 5566 5719
+	459 461 2126 5090 2364
+}
+
+issyk_kul_area = {
+	5719 2125 5566
 }
 
 kashgaria_area = { #5 #Just Kashgar & Yarkand
-	739 2124 2127 4209 4210
+	739 2124 4209 4210
+}
+
+pamir_area = {
+	2127 7019 7000 7440
 }
 
 tarim_basin_area = { #3 #The rest of the Seven Cities
@@ -3560,7 +3568,11 @@ turpan_kumul_area = { #4
 
 zungaria_area = { #4
 	color = { 65 220 28 }
-	713 715 2120 4208 4683
+	713 715 4208 4683 7595
+}
+
+ili_valley_area = {
+	2120 7506 3061
 }
 
 amdo_area = { #4
@@ -3572,7 +3584,7 @@ tsang_area = { #5
 }
 
 north_zungaria = { #3
-	714 2118 2119 4681 4684
+	714 2118 2119 4681 4684 5886
 }
 
 kham_area = { #5
@@ -5063,9 +5075,9 @@ unused_area = {
 #BTC working on
 4799 4822
 4807 4805 4815
-4794 4792 7000 6666
-7440 7506 7595 5886 3625 3299
-3061 3272 4155 5098 7019
+4794 4792
+3299
+5098
 
 #RNW Sea provinces
 1928

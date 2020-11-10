@@ -144,6 +144,13 @@ tib_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pamir_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			ferghana_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -172,6 +179,13 @@ tib_slot_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
+			issyk_kul_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
 			arys_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
@@ -193,12 +207,12 @@ tib_slot_2 = {
 				area = turpan_kumul_area
 				area = zungaria_area
 				area = jetysuu_area
+				area = issyk_kul_area
 				area = arys_area
+				area = pamir_area
 			}
 			OR = {
-				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
-				}
+				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				NOT = { religion = ROOT }
 			}
 		}
@@ -218,6 +232,11 @@ tib_slot_2 = {
 				country_or_non_sovereign_subject_holds = ROOT	
 				religion = ROOT
 			}
+			pamir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+				religion = ROOT
+			}
 			ferghana_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
@@ -229,6 +248,10 @@ tib_slot_2 = {
 				religion = ROOT
 			}
 			jetysuu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT	
+			}
+			issyk_kul_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT	
 			}

@@ -390,6 +390,13 @@ manchu_missions_1_b = {
 				}
 				add_permanent_claim = ROOT
 			}
+			pamir_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
 			tarim_basin_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1209,6 +1216,7 @@ manchu_missions_3_b = {
 				area = shanshan_area
 				area = kashgaria_area
 				area = tarim_basin_area
+				area = pamir_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -1223,6 +1231,10 @@ manchu_missions_3_b = {
 				owned_by = ROOT
 			}
 			kashgaria_area = {
+				type = all
+				owned_by = ROOT
+			}
+			pamir_area = {
 				type = all
 				owned_by = ROOT
 			}
