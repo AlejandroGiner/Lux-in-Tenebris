@@ -1344,6 +1344,46 @@ QJR_ideas = {
     }
 }
 
+FGE_ideas = {
+	start = {
+		cavalry_power = 0.1
+        defensiveness = 0.2
+	}
+
+	bonus = {
+        tolerance_heathen = 1
+	}
+
+	trigger = {
+		tag = FGE
+	}
+	free = yes		# will be added at load
+	
+	FGE_idea1 = {
+		development_cost = -0.1
+	}
+	FGE_idea2 = {
+		diplomatic_reputation = 1
+	}
+	FGE_idea3 = {
+		cavalry_shock = 1
+	}
+	FGE_idea4 = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		devotion = 0.5
+	}
+	FGE_idea5 = {
+		caravan_power = 0.1
+	}
+	FGE_idea6 = {
+		artillery_power = 0.1
+	}
+	FGE_idea7 = {
+		global_tax_modifier = 0.1
+	}
+}
+
 PDV_ideas = {
 	start = {
 		state_maintenance_modifier = -0.25
@@ -1382,3 +1422,5 @@ PDV_ideas = {
 		core_creation = -0.10
 	}
 }
+
+
