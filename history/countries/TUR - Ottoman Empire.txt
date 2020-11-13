@@ -5,35 +5,35 @@ add_accepted_culture = bulgarian
 add_accepted_culture = greek
 religion = sunni
 technology_group = ottoman
+capital = 149 # Edirne
+national_focus = MIL
+add_army_professionalism = 0.15
+religious_school = hanafi_school
+
 historical_friend = TUN
 historical_friend = ATJ
 historical_rival = MAM
 historical_rival = BYZ
 historical_rival = HAB
 historical_rival = HUN
-historical_rival = KAR
-historical_rival = CND
-historical_rival = CIK
-historical_rival = DUL
-historical_rival = RAM
 historical_rival = LTE
 historical_rival = PER
 historical_rival = AFS
 historical_rival = QJR
 historical_rival = PLC
 historical_rival = RUS
-capital = 149 # Edirne
-national_focus = MIL
-add_army_professionalism = 0.1
-religious_school = hanafi_school
 
 change_estate_land_share = {
 	estate = estate_church
 	share = -10
 }
 change_estate_land_share = {
-	estate = estate_nobles
+	estate = estate_btc_janissaries
 	share = 10
+}
+change_estate_land_share = {
+	estate = estate_dhimmi
+	share = -15
 }
 
 1444.10.1 = {

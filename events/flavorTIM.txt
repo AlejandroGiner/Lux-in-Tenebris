@@ -152,39 +152,6 @@ country_event = {
 	}
 }
 
-# Ismail's Resurrection of Persia
-# Removed as the Safavids are in control of a tag in Ardabil from 1.22.
-# country_event = {
-	# id = flavor_tim.2
-	# title = "flavor_tim.EVTNAME2"
-	# desc = "flavor_tim.EVTDESC2"
-	# picture = ANGRY_MOB_eventPicture
-	
-	# fire_only_once = yes
-	
-	# trigger = {
-		# tag = TIM
-		# any_owned_province = { is_core = PER }
-		# NOT = { exists = PER }
-		# NOT = { is_year = 1550 }
-	# }
-
-	# mean_time_to_happen = {
-		# months = 2000
-	# }
-	
-	# option = {
-		# name = "flavor_tim.EVTOPTA2" # Crush the Shiite rebels
-		# every_owned_province = {
-			# limit = { is_core = PER }
-			# add_province_modifier = {
-				# name = add_unrest_10_modifier
-				# duration = 1825
-			# }
-		# }
-	# }
-# }
-
 # Ulugh Beg's Observatory
 country_event = {
 	id = flavor_tim.3

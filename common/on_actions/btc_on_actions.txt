@@ -22,7 +22,98 @@ on_startup = {
 		remove_country_modifier = tur_janissary
 	}
 	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
-    
+	if = {
+		limit = { tag = MOS }
+		add_yearly_manpower = 3
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = HAB
+				tag = LIT
+				tag = ASK
+				tag = HUN
+				tag = CAS
+				tag = ENG
+				tag = TUR
+				tag = MAM
+				tag = KOR
+				tag = MNG
+				tag = GOL
+				tag = SHY
+				tag = ARL
+				tag = VEN
+				tag = TIM
+				tag = BAH
+			}
+		}
+		add_yearly_manpower = 2
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = FRA
+				tag = JNP
+				tag = POL
+				tag = ARA
+				tag = VIJ
+				tag = USI
+				tag = CRI
+				tag = OIR
+				tag = QAR
+				tag = BNG
+				tag = NOV
+				tag = SCO
+				tag = MOR
+				tag = DAN
+				tag = AYU
+				tag = QOM
+				tag = KHM
+				tag = TUN
+				tag = POR
+				tag = BOH
+				tag = LXA
+				tag = DAI
+				tag = ETH
+				tag = SAV
+				tag = MAJ
+				tag = TEU
+				tag = ORI
+				tag = TRS
+			}
+		}
+		add_yearly_manpower = 1
+	}
+	if = {
+		limit = {
+			OR = {
+				tag = MYI
+				tag = CEP
+				tag = TGS
+				tag = JER
+				tag = HAW
+				tag = CDA
+				tag = YMN
+				tag = LIG
+				tag = MHX
+				tag = MYR
+				tag = KOI
+				tag = GDW
+				tag = SBA
+				tag = WMC
+				tag = LDU
+				tag = HTK
+				tag = TLG
+				tag = DBD
+				tag = FAD
+				tag = TFL
+				tag = OCN
+				tag = SFA
+				tag = KHA
+			}
+		}
+		add_yearly_manpower = -3
+	}
     if = {
 		limit = {
 			NOT = { has_country_flag = new_flavour_bav_13_has_been_triggered }
