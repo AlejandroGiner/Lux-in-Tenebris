@@ -2247,7 +2247,7 @@ country_event = {
 		hidden_effect = {
 			clr_country_flag = civilianization_start_flag
 			if = { 
-				NOT = { has_country_flag = civilianization_phase_two }
+				limit = { NOT = { has_country_flag = civilianization_phase_two } }
 				set_country_flag = civilianization_phase_two
 			}
 		}

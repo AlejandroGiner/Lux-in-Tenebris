@@ -47,7 +47,7 @@ mamluk_succession_disaster = {
 		OR = {
 			custom_trigger_tooltip = {
 				tooltip = disaster_active_for_7_years_tooltip
-				had_country_flag = { flag = mamluk_succession_started days = 2555 #7 years }
+				had_country_flag = { flag = mamluk_succession_started days = 2555 } #7 years
 			}
 			NOT = {
 				num_of_rebel_armies = 1

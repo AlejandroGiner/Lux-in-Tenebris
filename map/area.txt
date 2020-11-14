@@ -2534,7 +2534,7 @@ makran_area = { #5
 }
 
 sistan_area = { #4
-	435 2224 2229 2230 447 3389 3390 3395 3392
+	435 2224 2229 2230 447 3389 3390 3395 3392 3408
 }
 
 kalat_area = { #3
@@ -2591,11 +2591,11 @@ mashhad_area = { #4 - Northern Khorasan
 }
 
 herat_area = {	#3 - Eastern Khorasan
-	446 4324 4325 3163
+	446 4324 4325 3163 3403 3404
 }
 
 birjand_area = { #3 - Western Khorasan
-	436 4334 4336
+	436 4334 4336 3405 3406 3407
 }
 
 ghor_area = { #Hazarajat
@@ -2614,7 +2614,7 @@ balkh_area = { #3
 
 kerman_area = { #4
 	color = { 219 30 57 }
-	432 2220 2234 4345
+	432 2220 2234 4345 3409 3412 3413 3414
 }
 
 persian_gulf_coast = { #4
@@ -2622,7 +2622,7 @@ persian_gulf_coast = { #4
 }
 
 mogostan_area = { #3
-	431 4327 2999 5255
+	431 4327 2999 5255 3410
 }
 
 farsistan_area = { #4
@@ -2638,7 +2638,7 @@ azerbaijan_area = { #5 #Southern Azerbaijan
 }
 
 isfahan_area = { #3
-	429 433 2222 4335 4171
+	429 433 2222 4335 4171 3415 3416
 }
 
 tabriz_area = { #4 Central Azerbaijan
@@ -5079,8 +5079,8 @@ unused_area = {
 
 #RNW Sea provinces
 1928
-#RNW Land provinces
-3402 3403 3404 3405 3406 3407 3408 3409 3410 3411 3412 3413 3414
+#RNW Wasteland provinces
+3417 3418 3419
 
 3712 3713 3714 3715 3716 3717 3718 3719
 3720 3721 3722 3723 3724 3725 3726 3727 3728 3729 3730 3731 3732 3733 3734 3735 3736 3737 3738 3739
@@ -5099,9 +5099,6 @@ unused_area = {
 3940 3941 3942 3943 3944 3945 3946 3947 3948 3949 3950 3951 3952 3953 3954 3955 3956 3957 3958 3959
 3960 3961 3962 3963 3964 3965 3966 3967 3968 3969 3970 3971 3972 3973 3974 3975 3976 3977 3978 3979
 3980 3981 3982 3983 3984 3985 3986 3987 3988 3989 3990 3991 3992 3993 3994 3995 3996 3997 3998 3999
-
-#RNW Wasteland provinces
-3415 3416 3417 3418 3419
 
 #Beyond Typus's Second Buffer (in case Paradox adds enough new provinces to start messing with BT's IDs, and I need to start migrating to new IDs.
 #Note the exactly 1000 higher number is intentional for ease of updating)
