@@ -36,12 +36,11 @@ NDefines.NCountry.PS_BOOST_MILITARIZATION = 150
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							-- More development in LiT in general 210 development needed to reach max 35
 NDefines.NEconomy.TRADE_ADDED_VALUE_MODIFER = 0.02			-- from 0 5 many more nodes in LiT
-
-NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.0,				-- How much a missionary costs in itself
-NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0,	-- How much this is ncreased from development
-NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0,		-- How much this is ncreased from local autonomy
-NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_BASE = 1.0,		-- The local autonomy is added to this base in the formula.
-NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 100,		-- Where dev will get capped by the system for calculations.
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.0,			-- How much a missionary costs in itself
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0,			-- How much this is ncreased from development
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0,			-- How much this is ncreased from local autonomy
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_BASE = 1.0,			-- The local autonomy is added to this base in the formula.
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 100,			-- Where dev will get capped by the system for calculations.
 
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.65			-- from 0 75
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_PRESTIGE = 0.2			-- from 0 25
