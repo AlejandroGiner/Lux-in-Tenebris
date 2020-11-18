@@ -16,7 +16,7 @@ NDefines.NAI.ESTATE_INTERACTION_THRESHOLD = 50.1
 NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 10 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	            --Army <-> province distance impact on province evaluation / divides total score by this amount
 NDefines.NAI.BORDER_DISTANCE_SCORE_IMPACT =	25.0        --Border <-> province distance impact on province evaluation / actual distance penalty
-NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.1							-- The most an AI will spend of its income on a missionary
+NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.01							-- The most an AI will spend of its income on a missionary
 
 NDefines.NDiplomacy.MAX_FREE_CITIES = 20			-- from original BtP increased from 8
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 45			-- from original BtP increased from 25
@@ -37,7 +37,7 @@ NDefines.NCountry.PS_BOOST_MILITARIZATION = 150
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							-- More development in LiT in general 210 development needed to reach max 35
 NDefines.NEconomy.TRADE_ADDED_VALUE_MODIFER = 0.02			-- from 0 5 many more nodes in LiT
-NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 0.0			-- How much a missionary costs in itself
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 1.0			-- How much a missionary costs in itself
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0			-- How much this is ncreased from development
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0			-- How much this is ncreased from local autonomy
 NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_BASE = 1.0			-- The local autonomy is added to this base in the formula.
