@@ -258,6 +258,43 @@ btc_chartered_companies_reform = {
 	ai = { factor = 2 }
 }
 
+btc_persian_administration_reform = {
+	icon = "persian_administration_icon"
+	allow_normal_conversion = yes
+	potential = {
+       calc_true_if = {
+			all_owned_province = {
+				OR = {
+					culture = persian
+					culture = mazandarani
+					culture = afghani
+					culture = sistani
+					culture = luri
+					culture = tajik
+				}
+			}
+			amount = 3
+		}
+		OR = {
+			culture_group = turkish_g
+			culture_group = karluk
+			culture_group = altaic
+			culture_group = tartar
+			culture_group = siberian_turkic
+			culture_group = turko_semitic
+			tag = MUG
+		}
+	}
+	trigger = {
+		has_estate_privilege = estate_nobles_persianate_society
+	}
+	modifiers = {
+		reform_progress_growth = 0.15
+		state_maintenance_modifier = -0.15
+	}
+	ai = { factor = 5 }
+}
+
 # Holy State for Jerusalem
 holy_state_reform = {
 	allow_normal_conversion = no
@@ -274,6 +311,34 @@ holy_state_reform = {
 				NOT = { map_setup = map_setup_random }
 			}
 			AND = {
+				tag = CYP
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = KNI
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = ATH
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = LTE
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = OUT
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = CPH
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
+				tag = LES
+				NOT = { map_setup = map_setup_random }
+			}
+			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = holy_state_reform
 			}
@@ -282,10 +347,11 @@ holy_state_reform = {
 	trigger = {
 		religion = catholic
 	}
-	nation_designer_cost = 50
+	nation_designer_cost = 65
 	modifiers = {
 		cb_on_religious_enemies = yes
 		manpower_recovery_speed = 0.15
+		tolerance_heretic = 4
 	}
 	rulers_can_be_generals = yes
 	heirs_can_be_generals = yes

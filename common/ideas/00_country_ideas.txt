@@ -4320,7 +4320,7 @@ CRO_ideas = {
 CYP_ideas = {
 	start = {
 		galley_cost = -0.2
-		tolerance_heretic = 4
+		fort_maintenance_modifier = -0.1
 	}
 	bonus = {
 		naval_forcelimit_modifier = 0.33
@@ -5387,7 +5387,7 @@ RMN_ideas = {
 ATH_ideas = {
 	start = {
 		defensiveness = 0.1
-		tolerance_heretic = 4
+		fort_maintenance_modifier = -0.15
 	}
 	bonus = {
 		land_morale = 0.1
@@ -5997,7 +5997,6 @@ NAX_ideas = {
 		OR = {
 			tag = NAX
 			tag = CDA
-			tag = CPH
 		}
 	}
 	free = yes
@@ -9354,14 +9353,17 @@ KAF_ideas = {
 
 CEP_ideas = {
 	start = {
-		galley_cost = -0.2
+		tolerance_heretic = 4
 		galley_power = 0.2
 	}
 	bonus = {
 		merchants = 1
 	}
 	trigger = {
-		tag = CEP
+		OR = {
+			tag = CPH
+			tag = CEP
+		}
 	}
 	free = yes
 	
@@ -9379,6 +9381,7 @@ CEP_ideas = {
 	}
 	cep_govian_arsenal = {
 		naval_forcelimit_modifier = 0.25
+		galley_cost = -0.1
 	}
 	cep_entrepot_of_eastern_med = {
 		global_foreign_trade_power = 0.1

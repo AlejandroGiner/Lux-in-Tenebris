@@ -1,0 +1,497 @@
+ ## Strategoi, from Byzantine Resurgence
+ 
+estate_generals_land_rights = {
+	icon = privilege_grant_autonomy
+	land_share = 5
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	can_select = {
+	}
+	on_granted = {
+	}
+	penalties = {
+	}
+	benefits = {
+		governing_capacity = 150
+	}
+	ai_will_do = {
+		factor = 5
+		modifier = {
+			factor = 1.4
+			num_of_territories = 5
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 10
+		}
+		modifier = {
+			factor = 1.5
+			num_of_territories = 15
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { crown_land_share = 25 }
+				estate_influence = {
+					estate = estate_generals
+					influence = 75
+				}
+			}
+			NOT = { has_estate_privilege = estate_generals_land_rights }
+		}
+		modifier = {
+			factor = 0
+			NOT = { num_of_territories = 1 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 40 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 60 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_generals_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			OR = {
+				NOT = { crown_land_share = 30 }
+				AND = {
+					is_absolutism_active = yes
+					NOT = { crown_land_share = 50 }
+				}
+			}
+			NOT = { has_estate_privilege = estate_generals_land_rights }
+		}
+		modifier = {
+			factor = 0.8
+			is_absolutism_active = yes
+		}
+	}
+}
+
+estate_generals_autonomous_defences = {
+	icon = privilege_autonomous_defences
+	max_absolutism = -5
+	loyalty = 0.05
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 15 }
+	}
+	on_granted = {
+		custom_tooltip = estate_generals_autonomous_defences_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				add_province_modifier = {
+					name = estate_generals_autonomous_defences_privilege_mod
+					duration = -1
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_generals_autonomous_defences_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_generals_autonomous_defences_privilege_mod
+				}
+				remove_province_modifier = estate_generals_autonomous_defences_privilege_mod
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_generals_autonomous_defences_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = estate_generals_autonomous_defences_privilege_mod
+				}
+				remove_province_modifier = estate_generals_autonomous_defences_privilege_mod
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_generals_settled_armies = {
+	icon = privilege_settled_armies
+	land_share = 5
+	max_absolutism = -5
+	influence = 0.1
+	is_valid = {
+	}
+	can_select = {
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 5 }
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	modifier_by_land_ownership = {
+		global_tax_modifier = 0.5
+		global_manpower_modifier = 0.5
+	}
+	penalties = {
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_generals_promote_to_katepano = {
+	icon = privilege_promote_to_katepano
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 30 }
+	}
+	on_granted = {
+		custom_tooltip = estate_generals_promote_to_katepano_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					estate_generals_is_theme_capital_trigger = yes
+				}
+				random_list = {
+					20 = {
+						add_province_modifier = {
+							name = byz_katepano_rule
+							duration = -1
+						}
+					}
+					80 = { set_province_flag = byz_no_katepano_rule }
+				}
+			}
+		}
+	}
+	on_revoked = {
+		custom_tooltip = estate_generals_promote_to_katepano_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = byz_katepano_rule
+				}
+				remove_province_modifier = byz_katepano_rule
+			}
+			every_owned_province = {
+				limit = {
+					has_province_flag = byz_no_katepano_rule
+				}
+				clr_province_flag = byz_no_katepano_rule
+			}
+		}
+	}
+	on_invalid = {
+		custom_tooltip = estate_generals_promote_to_katepano_revoke_effect_tooltip
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					has_province_modifier = byz_katepano_rule
+				}
+				remove_province_modifier = byz_katepano_rule
+			}
+			every_owned_province = {
+				limit = {
+					has_province_flag = byz_no_katepano_rule
+				}
+				clr_province_flag = byz_no_katepano_rule
+			}
+		}
+	}
+	penalties = {
+	}
+	benefits = {
+		land_morale = 0.1
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_generals_military_parades = {
+	icon = privilege_settled_armies
+	#land_share = 0
+	#max_absolutism = -5
+	influence = 0.1
+	is_valid = {
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 5 }
+	}
+	on_granted = {
+		custom_tooltip = estate_generals_military_parades_effect_tooltip
+		set_country_flag = br_military_parades_mechanic_active
+	}
+	on_revoked = {
+		custom_tooltip = estate_generals_military_parades_revoke_effect_tooltip
+		clr_country_flag = br_military_parades_mechanic_active
+	}
+	on_invalid = {
+		custom_tooltip = estate_generals_military_parades_revoke_effect_tooltip
+		clr_country_flag = br_military_parades_mechanic_active
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+		army_tradition_decay = -0.005
+	}
+	benefits = {
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
+
+estate_generals_dynastic_support = {
+	icon = privilege_royal_authority
+	#land_share = 0
+	max_absolutism = -5
+	influence = 0.05
+	is_valid = {
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+		yearly_corruption = 0.1
+	}
+	benefits = {
+		legitimacy = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+estate_generals_pike_formation_training = {
+	icon = privilege_limited_war_support
+	land_share = 5
+	max_absolutism = -10
+	influence = 0.10
+	is_valid = {
+		NOT = { mil_tech = 12 }
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+		if = { #If being invalidated by tech and you apply for the next tier.
+			limit = {
+				mil_tech = 12
+				estate_influence = {
+					estate = estate_generals
+					influence = 40
+				}
+				estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+			}
+			set_estate_privilege = estate_generals_combined_arms_training
+		}
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+	}
+	benefits = {
+		leader_land_shock = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+estate_generals_combined_arms_training = {
+	icon = privilege_supply_arms
+	land_share = 5
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		mil_tech = 12
+		NOT = { mil_tech = 21 }
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+		if = { #If being invalidated by tech and you apply for the next tier.
+			limit = {
+				mil_tech = 21
+				estate_influence = {
+					estate = estate_generals
+					influence = 40
+				}
+				estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+			}
+			set_estate_privilege = estate_generals_flintlock_musket_training
+		}
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+	}
+	benefits = {
+		leader_land_fire = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+estate_generals_flintlock_musket_training = {
+	icon = privilege_promote_purbias
+	land_share = 5
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+		mil_tech = 21
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 1 }
+	}
+	on_granted = {
+	}
+	on_revoked = {
+	}
+	on_invalid = {
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+		
+	}
+	benefits = { #Double bonus because at this point Absolutism is a thing and you now have to pay for the privilege.
+		leader_land_shock = 1
+		leader_land_fire = 1
+	}
+	ai_will_do = {
+		factor = 0
+	}	
+}
+
+estate_generals_bring_to_court = {
+	icon = privilege_bring_to_court
+	land_share = 5
+	max_absolutism = -10
+	influence = 0.1
+	is_valid = {
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+		estate_generals_country_has_num_of_theme_capitals_trigger = { value = 15 }
+	}
+	on_granted = {
+		custom_tooltip = estate_generals_bring_to_court_effect_tooltip
+	}
+	on_revoked = {
+		custom_tooltip = estate_generals_bring_to_court_revoke_effect_tooltip
+	}
+	on_invalid = {
+		custom_tooltip = estate_generals_bring_to_court_revoke_effect_tooltip
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+	}
+	benefits = { 
+		nobles_influence_modifier = -0.05
+	}
+	ai_will_do = {
+		factor = 0
+	}	
+	
+}
+
+estate_generals_court_advisors = {
+	icon = privilege_bring_to_court
+	land_share = 0
+	max_absolutism = -5
+	loyalty = 0.1
+	influence = 0.1
+	is_valid = {
+	}
+	can_select = {
+		estate_influence = {
+			estate = estate_generals
+			influence = 40
+		}
+	}
+	on_granted = {
+		custom_tooltip = estate_generals_court_advisors_effect_tooltip
+	}
+	on_revoked = {
+		custom_tooltip = estate_generals_court_advisors_revoke_effect_tooltip
+	}
+	on_invalid = {
+		custom_tooltip = estate_generals_court_advisors_revoke_effect_tooltip
+	}
+	modifier_by_land_ownership = {
+	}
+	penalties = {
+	}
+	benefits = {
+		nobles_influence_modifier = -0.05
+	}
+	ai_will_do = {
+		factor = 0
+	}
+}
