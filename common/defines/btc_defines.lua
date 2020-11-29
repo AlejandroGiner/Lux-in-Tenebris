@@ -35,6 +35,8 @@ NDefines.NAI.UPGRADE_CENTER_OF_TRADE_BASE_AI_DESIRE = 25.0  -- AI scoring for up
 NDefines.NAI.TRADE_COMPANY_INVESTMENT_COST_THRESHOLD = 2    -- How many times the cost of the investment must be in the treasury to consider buying it
 NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, multiplied by (MAX(budget - other loans, 0) * number_of_loans)/cost
 
+NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.01							-- The most an AI will spend of its income on a missionary
+
 --AI Army movements section. AI moves to a Province with the lowest score. Console command for testing: mapmode aieval.
 NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 7.5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	            --Army <-> province distance impact on province evaluation / divides total score by this amount
@@ -59,6 +61,12 @@ NDefines.NCountry.PS_BOOST_MILITARIZATION = 150
 NDefines.NEconomy.CARAVAN_POWER_MAX = 35
 NDefines.NEconomy.CARAVAN_FACTOR = 6.0							-- More development in LiT in general 210 development needed to reach max 35
 NDefines.NEconomy.TRADE_ADDED_VALUE_MODIFER = 0.02			-- from 0 5 many more nodes in LiT
+
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_FACTOR = 1.0			-- How much a missionary costs in itself
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_FACTOR = 1.0			-- How much this is ncreased from development
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_FACTOR = 1.0			-- How much this is ncreased from local autonomy
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_AUTONOMY_BASE = 1.0			-- The local autonomy is added to this base in the formula.
+NDefines.NEconomy.MISSIONARY_MAINTENANCE_DEVELOPMENT_CAP = 100			-- Where dev will get capped by the system for calculations.
 
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_AE = 0.65			-- from 0 75
 NDefines.NDiplomacy.PO_DEMAND_PROVINCES_PRESTIGE = 0.2			-- from 0 25
