@@ -1,0 +1,140 @@
+########################################
+# Major Flavor Events                  #
+########################################
+
+namespace = btc_flavor_tur
+normal_or_historical_nations = yes
+
+#Hajj Pilgrim Complains event chain, designed written and coded by Helena
+country_event = {
+	id = btc_flavor_tur.1
+	title = "btc_flavor_tur.1.t"
+	desc = "btc_flavor_tur.1.d"
+	picture = {
+	   trigger = { has_dlc = "Star and Crescent" }
+	   picture = muslimgfx_BAD_WITH_MONARCH_eventPicture
+	}
+	picture = {
+	   trigger = { NOT = { has_dlc = "Star and Crescent" } }
+	   picture = BAD_WITH_MONARCH_eventPicture
+	}
+
+	fire_only_once = yes
+
+	trigger ={
+		tag = TUR
+		is_year = 1444
+		exists = MAM
+		owns = 151
+		prestige = 50
+		prestige = MAM
+    }
+	
+	mean_time_to_happen = { months = 100 }
+	
+	
+	option = { #Send envoys to local governors across Syria and Hejaz, ignoring Cairo
+		name = "btc_flavor_tur.a"
+		ai_chance = { factor = 85 }
+		add_piety = 0.1
+		country_event = {
+			id = btc_flavor_tur.2
+			days = 120
+			random = 90
+			tooltip = tur_hajj_aid_tooltip
+		}
+	}
+	option = { #Send envoys to Cairo, with token of respect
+		name = "btc_flavor_tur.b"
+		ai_chance = { factor = 10 }
+		reverse_add_opinion = {
+			who = MAM
+			modifier = btc_presented_token_respect
+		}
+		add_country_modifier = {
+			name = foreign_contacts
+			duration = 1825
+		}
+		add_piety = 0.15
+		add_treasury = -100
+		#country_event = {
+		#	id = btc_flavor_tur.3
+		#	days = 40
+		#	random = 40
+		#	tooltip = tur_hajj_aid_tooltip
+		#}
+	}
+	option = { #Ignore the issue
+		name = "btc_flavor_tur.c"
+		ai_chance = { factor = 5 }
+		add_prestige = -5
+		add_piety = -0.10
+	}
+}
+
+#Hajj Pilgrim Complains event chain part 2, designed written and coded by Helena
+country_event = {
+	id = btc_flavor_tur.2
+	title = "btc_flavor_tur.2.t"
+	desc = "btc_flavor_tur.2.d"
+	picture = {
+	   trigger = { has_dlc = "Star and Crescent" }
+	   picture = muslimgfx_SPY_eventPicture
+	}
+	picture = {
+	   trigger = { NOT = { has_dlc = "Star and Crescent" } }
+	   picture = SPY_eventPicture
+	}
+
+	is_triggered_only = yes
+	
+	trigger ={
+		tag = MAM
+    }
+
+	option = { #Punish those involved in the "conspiracy"
+		name = "btc_flavor_tur.2.a"
+		add_piety = -0.20
+		random_owned_province = {
+			limit = { area = hims_area }
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		random_owned_province = {
+			limit = { area = syria_area }
+			spawn_rebels = {
+				type = noble_rebels
+				size = 2
+			}
+		}
+		if = {
+			limit = { mecca_area = { owned_by = ROOT } }
+			random_owned_province = {
+				limit = { area = mecca_area }
+				spawn_rebels = {
+					type = noble_rebels
+					size = 1
+				}
+			}
+		}
+		else = {
+			every_subject_country = {
+				limit = {
+					OR = {
+						owns = 385
+						owns = 384
+					}
+				}
+				add_liberty_desire = 50
+			}
+		}
+		#country_event = {
+		#	id = btc_flavor_tur.4
+		#	days = 120
+		#	random = 90
+		#	tooltip = tur_hajj_aid_tooltip
+		#}
+	}
+}
