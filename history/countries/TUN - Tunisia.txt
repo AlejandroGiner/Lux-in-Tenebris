@@ -25,10 +25,13 @@ change_estate_land_share = {
 	monarch = {
 		name = "'Uthman"
 		dynasty = "Hafsid"
-		adm = 1
-		dip = 3
-		mil = 3
+		birth_date = 1419.1.1 
+		adm = 3
+		dip = 4
+		mil = 4
 	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = silver_tongue_personality
 }
 
 1435.9.18 = {
