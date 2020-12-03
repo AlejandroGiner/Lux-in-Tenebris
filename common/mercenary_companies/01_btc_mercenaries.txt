@@ -56,3 +56,20 @@ br_varangian_guard_rowdy = {
 		land_morale = 0.1
 	}
 }
+
+merc_rejestr_kozacki = {
+    regiments_per_development = 0.05
+    home_province = 283 # Zaporozhia
+	cavalry_weight = 0.4 # lots of cavalry relative to other units
+	artillery_weight = 0 # no artillery
+	cavalry_cap = 6
+	sprites = { dlc047_zaz_sprite_pack easterngfx_sprite_pack }
+	trigger = {
+		has_idea = btc_rejestr_kozacki
+	}
+    modifier = {
+		shock_damage = 0.1
+		movement_speed = 0.1
+		global_regiment_cost = -0.5
+	}
+}
