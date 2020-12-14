@@ -377,6 +377,10 @@ religious_ideas = {
 			OR = {
 				technology_group = indian
 				technology_group = chinese
+				technology_group = nomad_group
+				technology_group = korean_btc
+				technology_group = japanese_btc
+				technology_group = indochinese
 			}
 		}
 	}
@@ -544,16 +548,6 @@ offensive_ideas = {
 		modifier = {
 			factor = 1.5
 			is_absolutism_active = yes
-		}
-		modifier = {
-			factor = 2.5
-			has_idea_group = aristocracy_ideas
-			OR = {
-				has_reform = tribal_federation
-				has_reform = khanate_monarchy
-				has_reform = nomad_empire 
-				is_nomad = yes
-			}
 		}
 	}
 }
@@ -1419,9 +1413,13 @@ humanist_ideas = {
 		}
 		modifier = {
 			factor = 1.5
-			OR = { 
+			OR = {
 				technology_group = indian
 				technology_group = chinese
+				technology_group = nomad_group
+				technology_group = korean_btc
+				technology_group = japanese_btc
+				technology_group = indochinese
 			}
 		}
 		modifier = {
@@ -1602,6 +1600,7 @@ naval_ideas = {
 				tag = DAN
 				tag = NOR
 				tag = VEN
+				tag = UNK
 			}
 		}
 		modifier = {
