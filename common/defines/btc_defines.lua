@@ -37,6 +37,8 @@ NDefines.NAI.REPAY_LOAN_BASE_AI_DESIRE = 10	-- AI scoring for repaying loans, mu
 
 NDefines.NAI.MISSIONARY_MAINTENANCE_SHARE = 0.01							-- The most an AI will spend of its income on a missionary
 
+NDefines.NAIEconomy.FORT_FRACTION_CAPITALIST = 0.5
+
 --AI Army movements section. AI moves to a Province with the lowest score. Console command for testing: mapmode aieval.
 NDefines.NAI.REGION_PLANNING_HOMELAND_PRIORIZATION = 7.5 --Homeland priorization when assigning armies to regions (only applied when actually threatened)
 NDefines.NAI.ARMY_DISTANCE_SCORE_IMPACT	= 1	            --Army <-> province distance impact on province evaluation / divides total score by this amount
