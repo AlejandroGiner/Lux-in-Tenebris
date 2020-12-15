@@ -52,7 +52,7 @@ aristocracy_ideas = {
 	
 
 	ai_will_do = {
-		factor = 0.75
+		factor = 0.5
 		
 		modifier = {
 			factor = 0.5
@@ -111,7 +111,7 @@ aristocracy_ideas = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			OR = {
 				tag = POL
 				tag = PLC
@@ -177,7 +177,7 @@ plutocracy_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1
+		factor = 1.5
 
 		modifier = {
 			factor = 2.5
@@ -527,7 +527,7 @@ offensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 2
 
 		modifier = {
 			factor = 1.5
@@ -585,7 +585,7 @@ defensive_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 2
 
 		modifier = {
 			factor = 1.5
@@ -1061,7 +1061,7 @@ quality_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 2
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -1135,7 +1135,7 @@ quantity_ideas = {
 	}
 
 	ai_will_do = {
-		factor = 1.5
+		factor = 2
 
 		modifier = {
 			factor = 1.25
@@ -1303,8 +1303,22 @@ administrative_ideas = {
 			}
 		}
 		modifier = {
-			factor = 0.25
-			NOT = { num_of_states = 25 }
+			factor = 0.75
+			NOT = { num_of_states = 5 }
+		}
+		modifier = {
+			factor = 0.75
+			NOT = { num_of_states = 10 }
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				tag = TUR
+				tag = TIM
+				tag = MUG
+				tag = MOS
+				tag = RUS
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -1317,11 +1331,7 @@ administrative_ideas = {
 		modifier = {
 			factor = 1.5
 			num_of_states = 50
-		}		
-		modifier = {
-			factor = 0.5
-			NOT = { adm_tech = 15 }
-		}		
+		}				
 	}
 }
 

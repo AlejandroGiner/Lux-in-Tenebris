@@ -236,6 +236,28 @@ feudalism = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = feudalism
+					}
+				}
+			}
+		}
 	}
 	
 	ai_will_do = { #Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
@@ -501,6 +523,44 @@ renaissance = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = renaissance
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = renaissance
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.25
+			scale = yes
+			potential = {
+				owner = {
+					has_country_modifier = byzantine_influx
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = byzantine_influx_spread_of_renaissance
+				is_capital = yes
+				owner = {
+					has_country_modifier = byzantine_influx
 				}
 			}
 		}
@@ -772,6 +832,28 @@ new_world_i = {
 				is_owned_by_trade_company = no
 				owner = {
 					has_institution = new_world_i
+				}
+			}
+		}
+		modifier = {
+			factor = 0.15
+			scale = yes
+			potential = {
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = OVERLORD_INFLUENCE
+				is_capital = yes
+				owner = {
+					is_subject = yes
+					is_subject_of_type = tributary_state
+					overlord = { 
+						is_emperor_of_china = yes
+						has_institution = new_world_i
+					}
 				}
 			}
 		}
