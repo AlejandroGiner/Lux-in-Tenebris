@@ -677,7 +677,7 @@ country_decisions = {
 				value = 30			#requires roughly two thirds of Ireland to form, so ANI can be formed without the west or IRE can be formed without the Pale and the NE plantations
 			}
 			total_development = 150			#Special discount. Normal requirement for rank 2 is 500 dev, so this is 70 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = ANI
@@ -1195,7 +1195,7 @@ country_decisions = {
 				}
 			}
 			total_development = 300			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 70 percent discounted. Note base dev in 1444 Ireland and Scotland is around 180 total
-			prestige = 25			#Special discount. Normal requirement for rank 2 is 75 prestige, so this is 2/3rds discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 			}
 		effect = {
 			change_tag = TNA
@@ -1293,7 +1293,7 @@ country_decisions = {
 				}
 			}
 			total_development = 350			#Special discount for cultural union of a small group. Normal requirement for rank 3 is 1000 dev, so this is 65 percent discounted. Note base dev in 1444 for southern Britain is around 293, plus 83 more in Brittany.
-			prestige = 25			#Special discount. Normal requirement for rank 2 is 75 prestige, so this is 2/3rds discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = YYK
@@ -1482,7 +1482,7 @@ country_decisions = {
 					is_core = ROOT
 				}
 			}
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = BEL
@@ -2363,7 +2363,7 @@ country_decisions = {
 				amount = 7			#At least 2/3 of lmv's 11 provinces (approximate)
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = LMV
@@ -2808,7 +2808,7 @@ country_decisions = {
 				}
 			}
 			total_development = 30			#Normal requirement for rank 2 is 300 dev, so this is 90 percent discounted.
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = NAJ

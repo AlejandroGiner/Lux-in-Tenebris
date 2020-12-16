@@ -8,6 +8,7 @@ country_decisions = {
 				tag = YUA
 				tag = GLH
 				tag = ILK
+				tag = CHG
 				was_never_end_game_tag_trigger = yes
 			}
 			OR = {
@@ -56,6 +57,7 @@ country_decisions = {
 				tag = YUA
 				tag = GLH
 				tag = ILK
+				tag = CHG
 			}
 			custom_trigger_tooltip = {
 				tooltip = mongolia_decision_tooltip
@@ -198,12 +200,16 @@ country_decisions = {
 			}
 			has_reform = steppe_horde
 			NOT = { tag = TIM }
+			NOT = { tag = MUG }
 			NOT = { tag = PER }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
 			NOT = { tag = MUG }
 			NOT = { tag = ARB }
+			NOT = { tag = AFS }
+			NOT = { tag = QJR }
+			NOT = { tag = ZDY }
 			NOT = { dynasty = "Timurid" }
 		}
 		provinces_to_highlight = {
@@ -231,6 +237,87 @@ country_decisions = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = formed_ilkhanate_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	restore_chagatai_decision = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = { has_country_flag = formed_chagatai_flag }
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				culture_group = mongolian
+				culture_group = karluk
+			}
+			
+			capital_scope = {
+				region = central_asia_region
+			}
+			has_reform = steppe_horde
+			NOT = { tag = TIM }
+			NOT = { tag = MUG }
+			NOT = { tag = PER }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			NOT = { tag = ROM }
+			NOT = { tag = MUG }
+			NOT = { tag = ARB }
+			NOT = { tag = AFS }
+			NOT = { tag = QJR }
+			NOT = { tag = ZDY }
+			NOT = { dynasty = "Timurid" }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 3061	# Almaliq
+				province_id = 739	# Kashgar
+				province_id = 2124	# Yarkant
+				province_id = 710	# Hotan
+				province_id = 454	# Samarkand
+				province_id = 453	# Qarshi
+				province_id = 4207	# Turfan
+				province_id = 451	# Kabul
+				province_id = 442	# Bukhara
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			NOT = { exists = CHG }
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 3061	# Almaliq
+			owns_core_province = 739	# Kashgar
+			owns_core_province = 2124	# Yarkant
+			owns_core_province = 710	# Hotan
+			owns_core_province = 454	# Samarkand
+			owns_core_province = 453	# Qarshi
+			owns_core_province = 4207	# Turfan
+			owns_core_province = 451	# Kabul
+			owns_core_province = 442	# Bukhara
+		}
+		effect = {
+			change_tag = CHG
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			set_country_flag = formed_chagatai_flag
 		}
 		ai_will_do = {
 			factor = 0

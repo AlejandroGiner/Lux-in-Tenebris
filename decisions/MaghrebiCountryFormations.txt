@@ -71,7 +71,7 @@ country_decisions = {
 				amount = 19			#At least 2/3 of Morocco's 28 provinces
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = MOR
@@ -191,7 +191,7 @@ country_decisions = {
 				amount = 19			#At least 2/3 of Algeria's 28 provinces
 			}
 			total_development = 250			#Normal requirement for rank 2 is 500 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = ALG
@@ -285,7 +285,7 @@ country_decisions = {
 				amount = 10			#At least 2/3 of Tunisia's 15 provinces
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = OTN
@@ -395,7 +395,7 @@ country_decisions = {
 				amount = 13			#At least 2/3 of Libya's 19 provinces
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = TRP

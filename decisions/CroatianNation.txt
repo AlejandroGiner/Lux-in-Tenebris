@@ -55,7 +55,7 @@ country_decisions = {
 				amount = 7			#At least 2/3 of Croatia's 10 provinces (approximate)
 			}
 			total_development = 60			#Normal requirement for rank 2 is 300 dev, so this is 80 percent discounted.
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = CRO

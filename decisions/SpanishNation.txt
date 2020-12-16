@@ -58,7 +58,7 @@ country_decisions = {
 					amount = 68			#At least 2/3 of Iberia's 102 provinces
 				}
 			}
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still spain can be formed
 		}
 		effect = {
@@ -182,7 +182,7 @@ country_decisions = {
 				}
 			}
 			total_development = 150			#Normal requirement for rank 2 is 300 dev, so this is 50 percent discounted.
-			prestige = 25			#Normal requirement for rank 2 is 50 prestige, so this is 50 percent discounted
+			#prestige = 25			Either disable this entirely or remove it for the AI
 			iberia_region = { type = all NOT = { owner = { religion_group = muslim } } }			#Eventually make it so Portgual can fail and still Spain can be formed
 		}
 		effect = {
