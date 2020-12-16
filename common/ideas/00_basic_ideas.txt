@@ -1165,6 +1165,10 @@ quantity_ideas = {
 			factor = 1.5
 			has_idea_group = religious_ideas
 		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = expansion_ideas
+		}
 	}
 }
 
@@ -1214,11 +1218,18 @@ expansion_ideas = {
 		}
 		modifier = {
 			factor = 5
+			tag = POR
+		}
+		modifier = {
+			factor = 4
 			OR = {
 				tag = CAS
-				tag = POR
 				tag = SPA
 			}
+		}
+		modifier = {
+			factor = 1.5
+			has_idea_group = quantity_ideas
 		}
 		modifier = {
 			factor = 0.3
@@ -1595,9 +1606,10 @@ naval_ideas = {
 			capital_scope = { island = yes }
 		}
 		modifier = {
-			factor = 2.5
+			factor = 5
 			OR = { 
 				tag = GBR
+				tag = ENG
 				tag = POR
 				tag = NED
 				tag = MAJ
