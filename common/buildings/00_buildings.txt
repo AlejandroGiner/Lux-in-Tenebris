@@ -369,7 +369,13 @@ barracks = {
 		modifier = {
 			factor = 1.2
 			is_in_capital_area = yes
-		}	
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				NOT = { manpower_percentage = 0.1 }
+			}
+		}
 		modifier = {
 			factor = 1.25
 			FROM = {
@@ -1474,6 +1480,12 @@ training_fields = {
 		modifier = {
 			factor = 1.2
 			is_in_capital_area = yes
+		}
+		modifier = {
+			factor = 2
+			FROM = {
+				NOT = { manpower_percentage = 0.1 }
+			}
 		}	
 		modifier = {
 			factor = 1.25
@@ -2921,6 +2933,12 @@ soldier_households = {
 				has_latent_trade_goods = coal
 				has_latent_trade_goods = rubber
 				has_latent_trade_goods = oil
+			}
+		}
+		modifier = {
+			factor = 1.5
+			FROM = {
+				NOT = { manpower_percentage = 0.1 }
 			}
 		}
 		modifier = {
