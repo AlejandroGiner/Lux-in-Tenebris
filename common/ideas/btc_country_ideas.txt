@@ -1384,6 +1384,46 @@ FGE_ideas = {
 	}
 }
 
+KGZ_ideas = {
+	start = {
+        cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+
+	bonus = {
+		shock_damage = 0.15
+	}
+
+	trigger = {
+		tag = KGZ
+	}
+	free = yes		# will be added at load
+
+	KGZ_idea1 = {
+        movement_speed = 0.15
+	}
+	KGZ_idea2 = {
+		land_attrition = -0.15
+	}
+	KGZ_idea3 = {
+		global_unrest = -1
+	}
+	KGZ_idea4 = {
+		land_morale = 0.10
+	}
+	KGZ_idea5 = {
+		state_maintenance_modifier = -0.25
+	}
+	KGZ_idea6 = {
+		prestige = 1
+	}
+	KGZ_idea7 = {
+		core_creation = -0.25
+		discipline = 0.05
+	}
+}
+
+
 PDV_ideas = {
 	start = {
 		state_maintenance_modifier = -0.25
