@@ -540,6 +540,7 @@ offensive_ideas = {
 		modifier = {
 			factor = 1.5
 			has_idea_group = economic_ideas
+			mil_tech = 16
 		}
 		modifier = {
 			factor = 1.5
@@ -746,6 +747,10 @@ economic_ideas = {
 		modifier ={
 			factor = 2.5
 			gold = 2
+		}
+		modifier = {
+			factor = 3
+			has_idea_group = exploration_ideas
 		}
 		modifier = {
 			factor = 1.5
@@ -1078,6 +1083,10 @@ quality_ideas = {
 			}
 		}
 		modifier = {
+			factor = 2.5
+			is_subject_of_type = march
+		}
+		modifier = {
 			factor = 1.5
 			has_idea_group = economic_ideas
 		}
@@ -1210,7 +1219,7 @@ expansion_ideas = {
 	ai_will_do = {
 		factor = 0.48
 		modifier = {
-			factor = 10
+			factor = 7.5
 			OR = {
 				has_idea_group = exploration_ideas
 				is_colonial_nation = yes
@@ -1221,7 +1230,7 @@ expansion_ideas = {
 			tag = POR
 		}
 		modifier = {
-			factor = 4
+			factor = 1.5
 			OR = {
 				tag = CAS
 				tag = SPA
