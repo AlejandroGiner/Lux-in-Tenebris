@@ -12,7 +12,7 @@ base_production = 2
 base_manpower = 1
 is_city = yes
 add_core = HUN
-add_core = TRA
+add_core = ERD
 
 discovered_by = KAZ
 discovered_by = CRI
@@ -32,8 +32,8 @@ discovered_by = ottoman
 1517.1.1 = { revolt = { type = anti_tax_rebels size = 1 } controller = REB } # Szekely rebellion
 1518.1.1 = { revolt = {} controller = HUN }
 1526.8.30 = {
-	owner = TRA
-	controller = TRA
+	owner = ERD
+	controller = ERD
 	add_core = HAB
 } # Battle of Mohács, the end of the independent Kingdom of Hungary
 1540.1.1 = { religion = reformed }
@@ -41,14 +41,14 @@ discovered_by = ottoman
 	owner = HAB
 	controller = HAB
 } # Ferdinand gains Transylvania from Treaty of Weissenburg
-1556.10.1 = { owner = TRA controller = TRA } # Isabella Jagiello is restored as queen of Transylvania
+1556.10.1 = { owner = ERD controller = ERD } # Isabella Jagiello is restored as queen of Transylvania
 1562.1.1 = { revolt = { type = nationalist_rebels size = 1 } controller = REB } # Szekely rebellion
-1563.1.1 = { revolt = {} controller = TRA }
+1563.1.1 = { revolt = {} controller = ERD }
 1567.1.1 = { religion = reformed } # Synod of Debrecen
 1570.1.1 = { remove_core = HAB } # Treaty of Speyer, Habsburgs drop claims
 1604.1.1 = { owner = HAB controller = HAB }
 1604.10.1 = { revolt = { type = nationalist_rebels size = 2 } controller = REB }
-1606.6.23 = { revolt = {} owner = TRA controller = TRA } # Stephen becomes prince of Transylvania
+1606.6.23 = { revolt = {} owner = ERD controller = ERD } # Stephen becomes prince of Transylvania
 1660.1.1 = {
 	owner = TUR
 	controller = TUR
@@ -56,7 +56,7 @@ discovered_by = ottoman
 } # Overrun by Ottoman troops
 1678.1.1 = { revolt = { type = nationalist_rebels size = 1 } controller = REB } # Kuruc rebellion
 1684.1.1 = { revolt = {} controller = TUR }
-1690.1.1 = { owner = TRA controller = TRA }
+1690.1.1 = { owner = ERD controller = ERD }
 1703.1.1 = { unrest = 6 } # Kuruc rebellion, lead by Francisc Rakoczy
 1711.1.1 = {
 	unrest = 0
@@ -64,6 +64,6 @@ discovered_by = ottoman
 	controller = HAB
 	add_core = HAB
 	remove_core = TUR
-	remove_core = TRA
+	remove_core = ERD
 } # The treaty of Szatmar
 
