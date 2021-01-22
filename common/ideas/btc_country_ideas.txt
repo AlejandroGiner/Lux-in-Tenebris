@@ -1506,3 +1506,41 @@ PDV_ideas = {
 }
 
 
+SYL_ideas = {
+	start = {
+		ae_impact = -0.1
+		num_accepted_cultures = 2
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = TRA
+	}
+	free = yes		# will be added at load
+
+	SYL_idea1 = {
+		war_exhaustion = -0.02
+	}
+	SYL_idea2 = {
+		hostile_attrition = 1
+	}
+	SYL_idea3 = {
+		production_efficiency = 0.15
+	}
+	SYL_idea4 = {
+		improve_relation_modifier = 0.2
+	}
+	SYL_idea5 = {
+		stability_cost_modifier = -0.2
+	}
+	SYL_idea6 = {
+		discipline = 0.05
+	}
+	SYL_idea7 = {
+		technology_cost = -0.05
+	}
+}
+
