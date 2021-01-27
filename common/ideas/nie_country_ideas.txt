@@ -637,9 +637,12 @@ SHY_ideas = {
 	bonus = {
 		land_forcelimit_modifier = 0.25
 	}
-	
+
 	trigger = {
-		tag = SHY
+		OR = {
+			tag = SHY
+			tag = KOK
+		}
 	}
 	free = yes
 	
@@ -668,6 +671,47 @@ SHY_ideas = {
 	}
 	ascend_from_nomadic_life = {
 		technology_cost = -0.075
+	}
+}
+
+
+BUK_ideas = {  #Bukhara
+	start = {
+		trade_steering = 0.15
+		cavalry_power = 0.20
+	}
+	
+	bonus = {
+		advisor_cost = -0.15
+	}
+	
+	trigger = {
+		tag = BUK
+	}
+	free = yes
+	
+	recovery_from_the_mongol_invasion = {
+		development_cost = -0.10
+	}
+	intellect_center_of_the_islamic_world = {
+		religious_unity = 0.15
+		technology_cost = -0.075
+	}
+	improve_public_education = {
+		global_institution_spread = 0.20
+	}
+	settling_from_the_steppe = {
+		free_adm_policy = 1
+	}
+	utilizing_fire_and_shock = {
+		shock_damage = 0.05
+		fire_damage = 0.05
+	}
+	persian_cannoneer_experience = {
+		artillery_power = 0.10
+	}
+	patronize_learning_and_arts = {
+		idea_cost = -0.10
 	}
 }
 
@@ -795,6 +839,83 @@ SIB_ideas = {  #Sibir
 	}
 }
 
+ZUN_ideas = {  #Zunghar
+	start = {
+		cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		leader_land_fire = 1
+	}
+	
+	trigger = {
+		tag = ZUN
+	}
+	free = yes
+	
+	dzungaria = {
+		core_creation = -0.25
+	}
+	oirat_roots = {
+		army_tradition_decay = -0.01
+	}
+	rivalry_against_the_khalkhas = { 
+		years_of_nationalism = -5
+	}
+	cut_down_pretenders = {
+		harsh_treatment_cost = -0.25
+	}
+	influences_in_tibet = {
+        tolerance_own = 1
+		legitimacy = 0.5
+		horde_unity = 0.5
+	}
+	buying_new_weaponry = {
+		fire_damage = 0.10
+	}
+	take_the_throne_of_the_steppe = {
+		manpower_recovery_speed = 0.10
+	}
+}
+
+CHH_ideas = {  #Chahar
+	start = {
+		cavalry_power = 0.20 
+		cavalry_cost = -0.15
+	}
+	
+	bonus = {
+		manpower_recovery_speed = 0.10
+	}
+	
+	trigger = {
+		tag = CHH
+	}
+	free = yes
+	
+	mongol_estate_heritage = {
+		core_creation = -0.25
+	}
+	one_of_the_six_tumens = {
+		global_regiment_recruit_speed = -0.10
+	}
+	fighting_for_rightful_land = { 
+		army_tradition = 0.5
+	}
+	northern_yuan_assistance = {
+		mercenary_cost = -0.10
+	}
+	crossroads_of_mongols_and_chinese = {
+        diplomatic_upkeep = 1
+	}
+	blood_of_a_chahar_state = {
+		land_morale = 0.10
+	}
+	sweat_of_a_chahar_state = {
+		land_maintenance_modifier = -0.10
+	}
+}
 
 JIN_ideas = {
 	start = {

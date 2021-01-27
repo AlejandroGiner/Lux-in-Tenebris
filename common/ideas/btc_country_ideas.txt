@@ -1384,6 +1384,88 @@ FGE_ideas = {
 	}
 }
 
+KGZ_ideas = {
+	start = {
+        cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+
+	bonus = {
+		shock_damage = 0.15
+	}
+
+	trigger = {
+		tag = KGZ
+	}
+	free = yes		# will be added at load
+
+	KGZ_idea1 = {
+        movement_speed = 0.15
+	}
+	KGZ_idea2 = {
+		land_attrition = -0.15
+	}
+	KGZ_idea3 = {
+		global_unrest = -1
+	}
+	KGZ_idea4 = {
+		land_morale = 0.10
+	}
+	KGZ_idea5 = {
+		state_maintenance_modifier = -0.25
+	}
+	KGZ_idea6 = {
+		prestige = 1
+	}
+	KGZ_idea7 = {
+		core_creation = -0.25
+		discipline = 0.05
+	}
+}
+
+USI_ideas = {
+	start = {
+        cavalry_power = 0.20
+		cavalry_cost = -0.15
+	}
+
+	bonus = {
+		merchants = 1
+	}
+
+	trigger = {
+		OR = {
+			tag = USI
+			tag = KAS
+			tag = TUP
+		}
+	}
+	free = yes		# will be added at load
+
+	USI_idea1 = {
+		tolerance_own = 1
+	}
+	USI_idea2 = {
+		trade_efficiency = 0.10
+	}
+	USI_idea3 = {
+		defensiveness = 0.10
+	}
+	USI_idea4 = {
+		land_morale = 0.10
+	}
+	USI_idea5 = {
+		stability_cost_modifier = -0.15
+	}
+	USI_idea6 = {
+		prestige_decay = -0.02
+	}
+	USI_idea7 = {
+		land_morale = 0.1
+	}
+}
+
+
 PDV_ideas = {
 	start = {
 		state_maintenance_modifier = -0.25
@@ -1423,4 +1505,42 @@ PDV_ideas = {
 	}
 }
 
+
+SYL_ideas = {
+	start = {
+		ae_impact = -0.1
+		num_accepted_cultures = 2
+	}
+
+	bonus = {
+		land_morale = 0.15
+	}
+
+	trigger = {
+		tag = TRA
+	}
+	free = yes		# will be added at load
+
+	SYL_idea1 = {
+		war_exhaustion = -0.02
+	}
+	SYL_idea2 = {
+		hostile_attrition = 1
+	}
+	SYL_idea3 = {
+		production_efficiency = 0.15
+	}
+	SYL_idea4 = {
+		improve_relation_modifier = 0.2
+	}
+	SYL_idea5 = {
+		stability_cost_modifier = -0.2
+	}
+	SYL_idea6 = {
+		discipline = 0.05
+	}
+	SYL_idea7 = {
+		technology_cost = -0.05
+	}
+}
 
