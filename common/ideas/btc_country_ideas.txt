@@ -797,7 +797,7 @@ SZK_ideas = {
 	}
 
 	bonus = {
-		defensiveness = 0.15
+		merc_maintenance_modifier = -0.15
 	}
 
 	trigger = {
@@ -1544,3 +1544,40 @@ SYL_ideas = {
 	}
 }
 
+BHK_ideas = {
+	start = {
+		defensiveness = 0.1
+		leader_land_manuever = 1
+	}
+
+	bonus = {
+		tolerance_own = 1
+	}
+
+	trigger = {
+		tag = BHK
+	}
+	free = yes		# will be added at load
+
+	BHK_idea1 = {
+		prestige = 1
+	}
+	BHK_idea2 = {
+		land_attrition = -0.15
+	}
+	BHK_idea3 = {
+		production_efficiency = 0.10
+	}
+	BHK_idea4 = {
+		global_trade_power = 0.1
+	}
+	BHK_idea5 = {
+		recover_army_morale_speed = 0.2
+	}
+	BHK_idea6 = {
+		stability_cost_modifier = -0.15
+	}
+	BHK_idea7 = {
+		land_morale = 0.10
+	}
+}
