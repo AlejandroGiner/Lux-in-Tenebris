@@ -1,0 +1,40 @@
+#######################################
+# Timurid Empire
+#######################################
+technology_group = muslim
+primary_culture = uzbehk
+add_accepted_culture = hazara
+add_accepted_culture = tajik
+religion = sunni
+government = monarchy
+add_government_reform = iqta
+capital = 450 # Balkh
+religious_school = hanafi_school
+
+1430.5.13 = {
+	monarch = {
+		name = "Muhammad Juki"
+		dynasty = "Timurid"
+		birth_date = 1402.27.4
+		claim = 50
+		adm = 4
+		dip = 5
+		mil = 4
+	}
+	clear_scripted_personalities = yes
+	add_ruler_personality = bold_fighter_personality
+	add_ruler_personality = righteous_personality
+	add_ruler_personality = naive_personality
+	heir = {
+		name = "Mirza Abu Bakr"
+		monarch_name = "Mirza Abu Bakr"
+		dynasty = "Timurid"
+		birth_date = 1415.1.1
+		death_date = 1455.1.1
+		claim = 75
+		adm = 3
+		dip = 4
+		mil = 2
+	}
+}
+
