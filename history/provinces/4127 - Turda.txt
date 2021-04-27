@@ -1,7 +1,7 @@
 #3153 - Beszterce
 
-owner = TRA
-controller = TRA 
+owner = ERD
+controller = ERD 
 culture = saksesch
 religion = catholic
 capital = "Beszterce"
@@ -11,7 +11,7 @@ base_tax = 2
 base_production = 1
 base_manpower = 1
 is_city = yes
-add_core = TRA
+add_core = ERD
 
 discovered_by = KAZ
 discovered_by = CRI
@@ -29,8 +29,8 @@ discovered_by = ottoman
 1514.4.1 = { revolt = { type = anti_tax_rebels size = 0 } controller = REB } # Peasant rebellion against Hungary's magnates
 1514.10.1 = { revolt = {} controller = HUN }
 1526.8.30 = { 
-	owner = TRA 
-	controller = TRA
+	owner = ERD 
+	controller = ERD
 } #Hungary fractured after Battle of Mohacs
 1528.1.1 = { add_core = TUR }
 1551.7.19 = {
@@ -38,23 +38,23 @@ discovered_by = ottoman
 	controller = HAB
 	add_core = HAB
 } # Ferdinand gains Transylvania from Treaty of Weissenburg
-1556.10.1 = { owner = TRA controller = TRA } # Isabella Jagiello is restored as queen of Transylvania
+1556.10.1 = { owner = ERD controller = ERD } # Isabella Jagiello is restored as queen of Transylvania
 1562.1.1 = { revolt = { type = nationalist_rebels size = 1 } controller = REB } # Szekely rebellion
 1562.6.1 = { remove_core = HAB } # End of Ottoman-Habsburg War
-1563.1.1 = { revolt = {} controller = TRA }
+1563.1.1 = { revolt = {} controller = ERD }
 1599.1.1 = {
 	owner = WAL
 	controller = WAL
 	add_core = WAL
 } # Battle of Selimbar, Michael the brave gained control
 1601.1.1 = {
-	owner = TRA
-	controller = TRA
+	owner = ERD
+	controller = ERD
 	remove_core = WAL
 } # Michael is assasinated
 1604.1.1 = { owner = HAB controller = HAB }
 1604.10.1 = { revolt = { type = nationalist_rebels size = 1 } controller = REB }
-1606.6.23 = { revolt = {} owner = TRA controller = TRA } # Stephen becomes prince of Transylvania
+1606.6.23 = { revolt = {} owner = ERD controller = ERD } # Stephen becomes prince of Transylvania
 1699.1.1 = {
 	owner = HAB 
 	controller = HAB
