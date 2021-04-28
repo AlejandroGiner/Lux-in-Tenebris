@@ -894,8 +894,8 @@ estate_nobles_levies = {
 		NOT = { has_estate_privilege = estate_nobles_golden_liberty }
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.25
-		global_manpower_modifier = 1
+		global_tax_modifier = -0.15
+		global_manpower_modifier = 0.5
 	}
 	penalties = {
 	}
@@ -2696,8 +2696,8 @@ estate_maratha_levies = {
 		NOT = { religion_group = muslim }
 	}
 	modifier_by_land_ownership = {
-		global_tax_modifier = -0.25
-		global_manpower_modifier = 1
+		global_tax_modifier = -0.15
+		global_manpower_modifier = 0.5
 	}
 	penalties = {
 	}

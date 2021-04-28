@@ -45,6 +45,7 @@ swiss_missions_1 = {
 			}
 		}
 		trigger = {
+			SWI = { NOT = { is_subject_of = GNV } }
 			OR = {
 				4720 = { country_or_non_sovereign_subject_holds = ROOT }
 				GNV = {

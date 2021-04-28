@@ -30,7 +30,6 @@ country_event = {
 	
 	option = { 
 		name = flavor_mlc.1.a #Raja Ibrahim will not be forgotten.
-		add_stability = -1
 		kill_ruler = yes
 		set_ruler_flag = mlc_death_or_raja_ibrahim
 	}
@@ -338,5 +337,37 @@ country_event = {
 				months = 24 #Not displayed in tooltip.
 			}
 		}
+	}
+}
+
+# Pick a name and capital for Malaya
+country_event = {
+	id = flavor_mlc.9
+	title = flavor_mlc.9.t
+	desc = flavor_mlc.9.desc
+	picture = ANGRY_MOB_eventPicture
+
+	is_triggered_only = yes
+
+	option = {
+		name = flavor_mlc.9.a
+		trigger = { dynasty = "Srivijaya" }
+		override_country_name = SRIVIJAYA
+		ai_chance = { factor = 1000 }
+	}
+	option = {
+		name = flavor_mlc.9.b
+		trigger = { primary_culture = javanese }
+		override_country_name = MAJAPAHIT_EMPIRE
+		ai_chance = { factor = 100 }
+	}
+	option = {
+		name = flavor_mlc.9.c
+		override_country_name = NUSANTARA
+		ai_chance = { factor = 5 }
+	}
+	option = {
+		name = flavor_mlc.9.d
+		ai_chance = { factor = 1 }
 	}
 }

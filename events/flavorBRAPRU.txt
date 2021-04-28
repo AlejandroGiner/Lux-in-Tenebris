@@ -608,15 +608,9 @@ country_event = {
 		name = "flavor_brapru.16.a" #We need the money.
 		ai_chance = { factor = 100 }
 		tooltip = {
-			49 = {
-				cede_province = BRA
-			}
-			4747 = {
-				cede_province = BRA
-			}
-			7794 = {
-				cede_province = BRA
-			}
+			49 = { cede_province = BRA }
+			4747 = { cede_province = BRA }
+			7794 = { cede_province = BRA }
 		}
 		add_treasury = 150
 		FROM = {

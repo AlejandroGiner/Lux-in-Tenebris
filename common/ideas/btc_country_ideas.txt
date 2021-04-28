@@ -1188,7 +1188,7 @@ GTA_ideas = {
 	}
 }
 
-HAW_ideas = {
+HWW_ideas = {
 	start = {
 		num_accepted_cultures = 2
 		diplomatic_reputation = 1
@@ -1199,29 +1199,29 @@ HAW_ideas = {
 	}
 
 	trigger = {
-		tag = HAW
+		tag = HWW
 	}
 	free = yes		# will be added at load
 
-	HAW_idea1 = {
+	HWW_idea1 = {
 		global_autonomy = -0.05
 	}
-	HAW_idea2 = {
+	HWW_idea2 = {
 		global_unrest = -1
 	}
-	HAW_idea3 = {
+	HWW_idea3 = {
 		global_trade_power = 0.10
 	}
-	HAW_idea4 = {
+	HWW_idea4 = {
 		cavalry_power = 0.15
 	}
-	HAW_idea5 = {
+	HWW_idea5 = {
 		hostile_attrition = 1
 	}
-	HAW_idea6 = {
+	HWW_idea6 = {
 		improve_relation_modifier = 0.15
 	}
-	HAW_idea7 = {
+	HWW_idea7 = {
         defensiveness = 0.15
 	}
 }

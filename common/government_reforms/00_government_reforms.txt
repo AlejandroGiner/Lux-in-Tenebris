@@ -47,6 +47,7 @@ defaults_reform = {
 	foreign_slave_rulers = no
 	royal_marriage = yes
 	nomad = no
+	raze_province = no
 	assimilation_cultures = { }
 	states_general_mechanic = { }
 	valid_for_nation_designer = yes
@@ -60,6 +61,8 @@ defaults_reform = {
     uses_revolutionary_zeal = no
 	revolutionary = no
 	revolutionary_client_state = no
+	allow_draft_transport_ships = no
+	free_concentrate_development = no
 	disallowed_trade_goods = {}
 }
 
@@ -1352,6 +1355,7 @@ steppe_horde_legacy = {
 	allow_convert = no
 	tribal = yes
 	nomad = yes
+	raze_province = yes
 
 	nation_designer_cost = 0
 	nation_designer_trigger = {
@@ -1389,6 +1393,7 @@ great_mongol_state_legacy = {
 	allow_convert = no
 	tribal = yes
 	nomad = yes
+	raze_province = yes
 
 	nation_designer_cost = 0
 	nation_designer_trigger = {

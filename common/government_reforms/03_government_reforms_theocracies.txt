@@ -198,7 +198,7 @@ kingdom_of_god_reform = {
 		land_morale = 0.1
 		prestige = 1
 		devotion = 1
-		appoint_cardinal_cost = -0.5
+		appoint_cardinal_cost = -0.3
 		papal_influence_from_cardinals = 1.0
 	}
 	allow_normal_conversion = yes
@@ -409,7 +409,7 @@ conciliarism_reform = {
 		tag = PAP
 	}
 	modifiers = {
-		appoint_cardinal_cost = -0.5
+		appoint_cardinal_cost = -0.3
 	}
 	ai = {
 		factor = 3
@@ -529,9 +529,12 @@ theocratic_democracy_reform = {
 
 	trigger = {
 		NOT = { has_reform = monastic_order_reform }
-		OR = {
-			NOT = { has_estate = estate_nobles }
-			crown_stronger_than_estate = { estate = estate_nobles }
+		if = {
+			limit = { has_dlc = "Common Sense" }
+			OR = {
+				NOT = { has_estate = estate_nobles }
+				crown_stronger_than_estate = { estate = estate_nobles }
+			}
 		}
 	}
 
@@ -588,9 +591,12 @@ regionally_elected_commanders = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
-		OR = {
-			NOT = { has_estate = estate_nobles }
-			crown_stronger_than_estate = { estate = estate_nobles }
+		if = {
+			limit = { has_dlc = "Common Sense" }
+			OR = {
+				NOT = { has_estate = estate_nobles }
+				crown_stronger_than_estate = { estate = estate_nobles }
+			}
 		}
 	}
 
@@ -741,6 +747,8 @@ admiral_king_reform = {
 		admirals_become_rulers = yes
 	}
 	has_term_election = no
+	queen = yes
+	royal_marriage = yes
 	heir = no
 	ai = {
 		factor = 0.1
@@ -860,7 +868,7 @@ religious_permanent_revolution_reform = {
 		custom_tooltip = world_crusade_tt
 	}
 	modifiers = {
-		enforce_religion_cost = -0.4
+		enforce_religion_cost = -0.25
 	}
 	ai = {
 		factor = 3
