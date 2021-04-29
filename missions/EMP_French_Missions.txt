@@ -2264,7 +2264,7 @@ emp_france_missions_5 = {
 			}
 			monthly_adm = 10
 			if = {
-				has_reform = french_crown
+				limit = { has_reform = french_crown }
 				NOT = { average_autonomy = 35 }
 			}
 			else = {

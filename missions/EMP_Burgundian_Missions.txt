@@ -604,7 +604,7 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_subjects }
 		
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = lorraine_area
 				area = luxembourg_area
 				area = verdun_area
@@ -682,7 +682,7 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_liege }
 		
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = frisia_area
 				area = guelders_area
 			}

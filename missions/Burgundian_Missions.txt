@@ -57,7 +57,7 @@ bur_conquest = {
 		required_missions = { emp_bur_subjects }
 		
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = lorraine_area
 				area = luxembourg_area
 				area = verdun_area
@@ -135,7 +135,7 @@ bur_conquest = {
 		required_missions = { emp_bur_liege }
 		
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = frisia_area
 				area = guelders_area
 			}

@@ -110,8 +110,8 @@ fla_reconquest_group = {
       culture = wallonian
 			NOT = { owned_by = ROOT }
 		}
-    trigger {
-      custom_trigger_tooltip {
+    trigger = {
+      custom_trigger_tooltip = {
         tooltip = fla_lowlands_two_tt
       }
       hidden_trigger = {
