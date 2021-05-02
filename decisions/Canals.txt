@@ -13,10 +13,10 @@ country_decisions = {
 			has_discovered = 1775
 			1775 = {
 				range = ROOT
-				NOT = { has_great_project = kiel_canal }
-				NOT = { has_construction = canal }
+				NOT = { has_great_project = { type = kiel_canal } }
+				NOT = { has_construction = kiel_canal }
 			}
-			adm_tech = 20
+			adm_tech = 18
 		}
 		allow = {
 			owns_or_vassal_of = 1775
@@ -24,18 +24,13 @@ country_decisions = {
 			owns_or_vassal_of = 3135
 			owns_or_vassal_of = 4141
 			is_subject = no			
-			adm_tech = 26
+			adm_tech = 22
 			treasury = 10000
 		}
 		effect = {
-			add_treasury = -10000
-			1775 = {	# Holstein
-				add_great_project = kiel_canal
-			}
+			1775 = { add_great_project = kiel_canal }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	construct_suez_canal = {
@@ -51,27 +46,22 @@ country_decisions = {
 			has_discovered = 363
 			363 = {
 				range = ROOT
-				NOT = { has_great_project = suez_canal }
-				NOT = { has_construction = canal }
+				NOT = { has_great_project = { type = suez_canal } }
+				NOT = { has_construction = suez_canal }
 			}
-			adm_tech = 20
+			adm_tech = 18
 		}
 		allow = {
 			owns_or_vassal_of = 363
 			owns_or_vassal_of = 2315
 			is_subject = no
-			adm_tech = 26
+			adm_tech = 22
 			treasury = 20000
 		}
 		effect = {
-			add_treasury = -20000
-			363 = {	# Dumyat
-				add_great_project = suez_canal
-			}
+			363 = { add_great_project = suez_canal }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	construct_panama_canal = {
@@ -88,26 +78,21 @@ country_decisions = {
 			has_discovered = 835
 			835 = {
 				range = ROOT
-				NOT = { has_great_project = panama_canal }
-				NOT = { has_construction = canal }
+				NOT = { has_great_project = { type = panama_canal } }
+				NOT = { has_construction = panama_canal }
 			}
-			adm_tech = 20
+			adm_tech = 18
 		}
 		allow = {
 			owns_or_vassal_of = 835
 			is_subject = no
-			adm_tech = 26
+			adm_tech = 22
 			treasury = 30000
 		}
 		effect = {
-			add_treasury = -30000
-			835 = {	# Panama
-				add_great_project = panama_canal
-			}
+			835 = { add_great_project = panama_canal }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 
 	cancel_kiel_canal = {
@@ -116,23 +101,15 @@ country_decisions = {
 			ai = no
 			owns_or_vassal_of = 1775
 			is_subject = no
-			1775 = {
-				has_construction = canal
-			}
+			1775 = { has_construction = kiel_canal }
 		}
 		allow = {
-			1775 = {
-				has_construction = canal
-			}
+			1775 = { has_construction = kiel_canal }
 		}
 		effect = {
-			1775 = {	# Holstein
-				cancel_construction = yes
-			}
+			1775 = { cancel_construction = yes }
 		}
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 	}
 	
 	cancel_suez_canal = {
@@ -141,23 +118,15 @@ country_decisions = {
 			ai = no
 			owns_or_vassal_of = 363
 			is_subject = no
-			363 = {
-				has_construction = canal
-			}
+			363 = { has_construction = suez_canal }
 		}
 		allow = {
-			363 = {
-				has_construction = canal
-			}
+			363 = { has_construction = suez_canal }
 		}
 		effect = {
-			363 = {	# Diamientia
-				cancel_construction = yes
-			}
+			363 = { cancel_construction = yes }
 		}
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 	}
 	
 	cancel_panama_canal = {
@@ -166,23 +135,15 @@ country_decisions = {
 			ai = no
 			owns_or_vassal_of = 835
 			is_subject = no
-			835 = {
-				has_construction = canal
-			}
+			835 = { has_construction = panama_canal }
 		}
 		allow = {
-			835 = {
-				has_construction = canal
-			}
+			835 = { has_construction = panama_canal }
 		}
 		effect = {
-			835 = {	# Panama
-				cancel_construction = yes
-			}
+			835 = { cancel_construction = yes }
 		}
-		ai_will_do = {
-			factor = 0
-		}
+		ai_will_do = { factor = 0 }
 	}
 
 }

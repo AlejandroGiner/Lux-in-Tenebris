@@ -7,6 +7,10 @@ capital = 596	# Malacca
 fixed_capital = 596 # Cannot move capital away from this province & no power cost to move to it
 religious_school = shafii_school
 
+1390.1.1 = {
+	set_estate_privilege = estate_burghers_orang_laut_alliances
+}
+
 1399.1.1 = {
 	monarch = {
 		name = "Sam Agi"
@@ -112,6 +116,7 @@ religious_school = shafii_school
 		adm = 1
 		dip = 2
 		mil = 1
+		religion = hinduism
 	}
 }
 
