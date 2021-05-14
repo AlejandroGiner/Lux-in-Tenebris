@@ -3,7 +3,12 @@ country_decisions = {
 	move_the_court_to_versailles = {
 	
 		potential = {
-			NOT = { has_dlc = "Emperor" }
+			NOT = { 
+				OR = {
+					has_dlc = "Emperor"
+					has_dlc = "Leviathan"
+				}
+			}
 			tag = FRA
 			normal_or_historical_nations = yes
 			OR = {

@@ -168,6 +168,18 @@ lost_province_to_rival = {
 	min = -100
 }
 
+capital_state_pillaged_by_rival = {
+	power = -0.5 #multiplied by dev lost
+	yearly_decay = 1
+	min = -100
+}
+
+pillaged_rival_capital_state = {
+	power = 0.5 #multiplied by dev lost
+	yearly_decay = 1
+	min = -100
+}
+
 rival_lost_province = {
 	power = 0.5			# multiplied with basetax
 	yearly_decay = 1

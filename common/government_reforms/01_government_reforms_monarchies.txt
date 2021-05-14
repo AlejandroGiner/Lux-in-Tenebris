@@ -308,6 +308,7 @@ daimyo = {
 		NOT = { has_country_flag = formed_japan_flag }
 		overlord = { has_reform = shogunate }
 	}
+	replacement_on_independence_war = indep_daimyo
 	legacy_equivalent = daimyo_legacy
 	fixed_rank = 1
 	maintain_dynasty = yes
@@ -1070,6 +1071,10 @@ mandala_reform = {
 			technology_group = indochinese
 			technology_group = malay_group
 		}
+		OR = {
+			has_dlc = "Leviathan"
+			has_dlc = "Dharma"
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
@@ -1085,6 +1090,10 @@ mandala_reform = {
 			technology_group = chinese
 			technology_group = indochinese
 			technology_group = malay_group
+		}
+		OR = {
+			has_dlc = "Leviathan"
+			has_dlc = "Dharma"
 		}
 	}
 	legacy_equivalent = despotic_monarchy
@@ -1249,7 +1258,7 @@ confucian_bureaucracy = {
 }
 
 sakdina_system_reform = {
-	icon = "warrior_monks_reform" #TODO
+	icon = "sakdina_system_reform"
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -1276,7 +1285,7 @@ sakdina_system_reform = {
 }
 
 uparaja_reform = {
-	icon = "warrior_monks_reform" #TODO
+	icon = "uparaja_reform"
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0

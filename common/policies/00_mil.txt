@@ -1048,3 +1048,313 @@ deserteur_act = {
 		}
 	}
 }
+
+war_horses_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = expansion_ideas
+	}
+
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = expansion_ideas
+	}
+
+	army_tradition = 0.3
+	shock_damage = 0.05
+
+	ai_will_do = {
+		factor = 0.75
+		modifier = {
+			factor = 0
+			NOT = { army_tradition = 2 }
+		}			
+		modifier = {
+			factor = 1.5
+			army_tradition = 30
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 50
+		}
+		modifier = {
+			factor = 1.5
+			army_tradition = 80
+		}
+	}
+}
+
+the_best_defense_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = innovativeness_ideas
+	}
+
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = innovativeness_ideas
+	}
+
+	shock_damage_received = -0.05
+	fire_damage_received = -0.05
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+omne_datum_optimum_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = administrative_ideas
+	}
+
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = administrative_ideas
+	}
+
+	manpower_in_true_faith_provinces = 0.1
+	recover_army_morale_speed = 0.05
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+wielders_of_the_flaming_sword_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = religious_ideas
+	}
+
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = religious_ideas
+	}
+
+	shock_damage = 0.1
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+the_three_sisters_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = economic_ideas
+	}
+
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = economic_ideas
+	}
+
+	land_morale = 0.05
+	infantry_cost = -0.1
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+by_the_people_for_the_people_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = humanist_ideas
+	}
+
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = humanist_ideas
+	}
+
+	defensiveness = 0.15
+	garrison_size = 0.1
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+war_on_our_terms_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = indigenous_ideas
+		has_idea_group = exploration_ideas
+	}
+
+	allow = {
+		full_idea_group = indigenous_ideas
+		full_idea_group = exploration_ideas
+	}
+
+	discipline = 0.025
+	land_morale = 0.05
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 2.5
+			is_at_war = yes
+		}
+	}
+}
+
+fear_tactics_policy = {
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = diplomatic_ideas
+	}
+
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = diplomatic_ideas
+	}
+
+	shock_damage = 0.1
+	siege_ability = 0.1
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+psychological_warfare_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = spy_ideas
+	}
+
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = spy_ideas
+	}
+
+	cavalry_flanking = 0.3
+	cavalry_power = 0.1
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+kharash_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = horde_gov_ideas
+		has_idea_group = influence_ideas
+	}
+
+	allow = {
+		full_idea_group = horde_gov_ideas
+		full_idea_group = influence_ideas
+	}
+
+	land_morale = 0.05
+	vassal_forcelimit_bonus = 0.5
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+my_word_is_my_bond_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = spy_ideas
+	}
+
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = spy_ideas
+	}
+
+	siege_ability = 0.2
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}
+
+render_unto_caesar_policy = { 
+	monarch_power = MIL
+
+	potential = {
+		has_idea_group = theocracy_gov_ideas
+		has_idea_group = exploration_ideas
+	}
+
+	allow = {
+		full_idea_group = theocracy_gov_ideas
+		full_idea_group = exploration_ideas
+	}
+
+	global_manpower_modifier = 0.15
+	land_forcelimit_modifier = 0.05
+
+	ai_will_do = {
+		factor = 1.0
+		modifier = {
+			factor = 1.5
+			is_at_war = yes
+		}
+	}
+}

@@ -607,6 +607,7 @@ has_manufactory_no_custom_tooltip_trigger = { #Province Scope
 				trade_goods = ivory
 				trade_goods = slaves
 				trade_goods = spices
+				trade_goods = cloves
 				trade_goods = fur
 				trade_goods = incense
 			}
@@ -737,6 +738,7 @@ root_can_build_manufactory_here_trigger = {
                 trade_goods = ivory
                 trade_goods = slaves
                 trade_goods = spices
+				trade_goods = cloves
                 trade_goods = fur
                 trade_goods = incense
             }
@@ -810,6 +812,7 @@ has_burghers_trade_good_trigger = {
 		trade_goods = dyes
 		trade_goods = coal
 		trade_goods = spices
+		trade_goods = cloves
 		trade_goods = tropical_wood
 		trade_goods = glass
 		trade_goods = chinaware
@@ -1304,12 +1307,11 @@ revolution_event_can_happen_trigger = {
 	OR = {
 		capital_scope = { 
 #			continent = europe 
-			controlled_by = REB
+			controlled_by = revolutionary_rebels
 		}
 		has_country_modifier = just_lost_to_revolutionary_rebels
 		has_country_flag = revolution_disaster_immediate_revolution
 	}
-	num_of_cities = 10
 	is_revolutionary = no
 }
 #country scope, used in election events to check whether generated rulers may be female
@@ -1325,5 +1327,85 @@ is_absolutism_active = {
 	OR = {
 		current_age = age_of_absolutism
 		current_age = age_of_revolutions
+	}
+}
+
+is_southeast_tribe = {
+	OR =  {
+		tag = HNI
+		tag = ALT
+		tag = ICH
+		tag = COF
+		tag = JOA
+		tag = ETO
+		tag = SAT
+		tag = CIA
+		tag = COO
+		tag = ABI
+		tag = COW
+		tag = NTZ
+		tag = CAQ
+		tag = PCH
+		tag = QUI
+		tag = CCA
+		tag = ATA
+		tag = KSI
+		tag = OEO
+		tag = ANL
+		tag = NTC
+		tag = OSA
+		tag = CAD
+		tag = POW
+		tag = CLG
+		tag = HWK
+		tag = CHO
+	}
+}
+
+is_iroquois = {
+	OR = {
+		tag = TIO
+		tag = TAH
+		tag = ATT
+		tag = AGG
+		tag = ATW
+		tag = ARN
+		tag = OSH
+		tag = STA
+		tag = ERI
+		tag = WEN
+		tag = MOH
+		tag = ONE
+		tag = ONO
+		tag = CAY
+		tag = SEN
+		tag = TSC
+		tag = IRO
+	}
+}
+
+is_volcanic_area = { #polynesia and indonesia
+	OR = {
+		area = north_sumatra_area #aceh
+		area = batak_area
+		area = minangkabau_area
+		area = south_sumatra_area #lampung
+		area = banten_area
+		area = east_java_area
+		area = central_java_area
+		area = west_java_area
+		area = lesser_sunda_islands_area
+		area = mindanao_area #east mindanao
+		area = west_mindanao_area
+		area = visayas_area
+		area = luzon_area #northern luzon
+		area = southern_luzon_area
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = eastern_polynesia_area #tahiti
+		area = northern_polynesia_area #hawaii
+		area = polynesia_area
+		area = melanesia_area
+		area = papua_area
 	}
 }

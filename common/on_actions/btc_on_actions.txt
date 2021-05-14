@@ -1,5 +1,33 @@
 # country
 on_startup = {
+	if = {
+		limit = { current_age = age_of_discovery }
+		KHM = {
+			add_disaster_progress = {
+				disaster = dark_age_of_cambodia
+				value = 100
+			}
+		}
+		LXA = {
+			if = {
+				limit = { NOT = { has_country_flag = lxa_loyalty_flag } }
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -10
+				}
+				set_country_flag = lxa_loyalty_flag
+			}
+		}
+	}
+	if = {
+		limit = { current_age = age_of_discovery }
+		MAJ = {
+			add_disaster_progress = {
+				disaster = fall_of_majapahit
+				value = 100
+			}
+		}
+	}
     emperor = {
 		save_global_event_target_as = Emperor
 	}
@@ -47,6 +75,11 @@ on_startup = {
 			disaster = french_revolution
 		}
 	}
+	if = {
+		limit = { exists = SUK }
+		SUK = { set_ruler_flag = suk_monarch_flag }
+		AYU = { set_country_flag = ayu_monarch_flag }
+	}
 }
 
 # country 
@@ -61,7 +94,7 @@ on_new_monarch = {
 				has_province_modifier = domain_of_spouses_family
 			}
 		}
-		random_owned_province = {
+		every_owned_province = {
 			limit = { has_province_modifier = domain_of_spouses_family }
 			remove_province_modifier = domain_of_spouses_family
 		}
@@ -73,7 +106,7 @@ on_new_monarch = {
 				has_province_modifier = home_of_consort
 			}
 		}
-		random_owned_province = {
+		every_owned_province = {
 			limit = { has_province_modifier = home_of_consort }
 			remove_province_modifier = home_of_consort
 		}
@@ -200,6 +233,18 @@ on_monarch_death = {
 		}
 		clr_country_flag = sax_thuringen_split_to_happen
 	}
+	if = {
+		limit = { tag = SAM }
+		country_event = { id = polynesian.35 }
+	}
+	if = {
+		limit = { tag = TOG }
+		country_event = { id = polynesian.36 }
+	}
+	if = {	# Ascension of Trailokanat	
+		limit = { tag = AYU }
+		country_event = { id = flavor_suk.1 }		 			
+	}
 	burgundian_inheritance_start_effect = yes
 	ladislaus_postumus_king_died_effect = yes
 	events = {
@@ -210,6 +255,7 @@ on_monarch_death = {
 		flavor_pap.19 # death of borgia pope
 		flavor_tus.22 # Medici Pope
 		flavor_tus.24 # death of the Medici Pope
+		majapahit.8 # Majapahit pretenders
 		integrated_byz_events.16 # The Rebellion of Demetrios Palaiologos
 	}
 	if = { #Making the ruler a general if you've got the Basileus Protostrategos reform.
@@ -279,6 +325,10 @@ on_heir_death = {
 		clr_ruler_flag = returned_from_sancaga_sikma_province
 	}
 	ladislaus_postumus_heir_died_effect = yes
+	if = {
+		limit = { primary_culture = maori }
+		country_event = { id = polynesian.26 }
+	}
 	#BT
 	if = {
 		limit = {
@@ -434,67 +484,6 @@ on_bi_yearly_pulse = {
 		125 = culture_religion_events.22
 		125 = culture_religion_events.23
 
-		#Mamluk Events
-
-		175 = mamluk_events.1
-		175 = mamluk_events.2
-		175 = mamluk_events.3
-		235 = mamluk_events.4
-		185 = mamluk_events.5
-		175 = mamluk_events.6
-		250 = mamluk_events.7
-		185 = mamluk_events.10
-		185 = mamluk_events.11
-		235 = mamluk_events.12
-
-		#Colonization of Siberia
-		125 = siberian_events.2
-		125 = siberian_events.3
-		125 = siberian_events.4
-		125 = siberian_events.5
-		125 = siberian_events.6
-
-		#Russian Principalities
-
-		100 = russian_principality_events.1
-		125 = russian_principality_events.2
-		125 = russian_principality_events.3
-		125 = russian_principality_events.4
-		125 = russian_principality_events.6
-		125 = russian_principality_events.5
-		125 = russian_principality_events.7
-		100 = russian_principality_events.8
-		75 = russian_principality_events.9
-		125 = russian_principality_events.10
-
-		#Tsardoms
-
-		125 = russian_tsardom_events.1
-		125 = russian_tsardom_events.2
-		125 = russian_tsardom_events.3
-		100 = russian_tsardom_events.4
-		125 = russian_tsardom_events.5
-		100 = russian_tsardom_events.6
-		100 = russian_tsardom_events.7
-		100 = russian_tsardom_events.8
-		125 = russian_tsardom_events.9
-		125 = russian_tsardom_events.10
-		100 = russian_tsardom_events.11
-
-		#Streltsy Events
-		125 = streltsy_events.1
-		125 = streltsy_events.3
-		125 = streltsy_events.4
-		125 = streltsy_events.5
-		100 = streltsy_events.6
-
-		#Orthodox Metropolitans
-		125 = patriarch_events.1
-		125 = patriarch_events.2
-		125 = patriarch_events.3
-		75 = patriarch_events.4
-		75 = patriarch_events.5
-
 		# Old Centralisation/Decentralisation
 		100 = 806
 
@@ -517,15 +506,6 @@ on_bi_yearly_pulse = {
 		100 = trade.10
 		100 = trade.11
 		100 = trade.12
-
-		# Catholic  Events
-		100 = catholic_flavor.4
-		100 = catholic_flavor.5
-		100 = catholic_flavor.6
-		100 = catholic_flavor.7
-		100 = catholic_flavor.8
-		100 = catholic_flavor.9
-		100 = catholic_flavor.10
 
 		# Tradegoods events
 		100 = 6418
@@ -582,20 +562,6 @@ on_bi_yearly_pulse = {
 		100 = corruption_event.18
 		100 = corruption_event.19
 		100 = corruption_event.20
-
-		# Trade League Events
-		100 = trade_league.1
-		100 = trade_league.2
-		100 = trade_league.3
-		100 = trade_league.4
-		100 = trade_league.7
-		100 = trade_league.8
-		100 = trade_league.9
-		100 = trade_league.10
-		100 = trade_league.11
-		100 = trade_league.12
-		100 = trade_league.13
-		100 = trade_league.14
 
 		# Institution Events
 		#Feudalism Spread Events:
@@ -663,6 +629,20 @@ on_bi_yearly_pulse = {
 		50 = personality_events.56
 		50 = personality_events.57
 		50 = personality_events.58
+
+		# Trade League Events
+		100 = trade_league.1
+		100 = trade_league.2
+		100 = trade_league.3
+		100 = trade_league.4
+		100 = trade_league.7
+		100 = trade_league.8
+		100 = trade_league.9
+		100 = trade_league.10
+		100 = trade_league.11
+		100 = trade_league.12
+		100 = trade_league.13
+		100 = trade_league.14
 
 		#Industrial Revolution
 
@@ -798,29 +778,38 @@ on_four_year_pulse = {
 		100 = colonial_nation.132
 		100 = colonial_nation.134
 		100 = colonial_nation.182
+		100 = colonial_nation.183
 		100 = colonial_nation.184
+		100 = colonial_nation.185
 		100 = colonial_nation.186
+		100 = colonial_nation.187
 		100 = colonial_nation.188
-		100 = colonial_nation.190
-		100 = colonial_nation.192
-		100 = colonial_nation.194
-		100 = colonial_nation.196
-		100 = colonial_nation.198
-		100 = colonial_nation.200
-		100 = colonial_nation.202
-		100 = colonial_nation.204
-		100 = colonial_nation.206
-		100 = colonial_nation.208
-		100 = colonial_nation.210
-		100 = colonial_nation.212
-		100 = colonial_nation.214
-		100 = colonial_nation.216
-		100 = colonial_nation.218
-		100 = colonial_nation.220
-		100 = colonial_nation.222
-		100 = colonial_nation.224
-		100 = colonial_nation.226
-		100 = colonial_nation.228
+		100 = colonial_nation.189
+		100 = btc_colonial_tariffs.182
+		100 = btc_colonial_tariffs.184
+		100 = btc_colonial_tariffs.186
+		100 = btc_colonial_tariffs.188
+		100 = btc_colonial_tariffs.190
+		100 = btc_colonial_tariffs.192
+		100 = btc_colonial_tariffs.194
+		100 = btc_colonial_tariffs.196
+		100 = btc_colonial_tariffs.198
+		100 = btc_colonial_tariffs.200
+		100 = btc_colonial_tariffs.202
+		100 = btc_colonial_tariffs.204
+		100 = btc_colonial_tariffs.206
+		100 = btc_colonial_tariffs.208
+		100 = btc_colonial_tariffs.210
+		100 = btc_colonial_tariffs.212
+		100 = btc_colonial_tariffs.214
+		100 = btc_colonial_tariffs.216
+		100 = btc_colonial_tariffs.218
+		100 = btc_colonial_tariffs.220
+		100 = btc_colonial_tariffs.222
+		100 = btc_colonial_tariffs.224
+		100 = btc_colonial_tariffs.226
+		100 = btc_colonial_tariffs.228
+		100 = btc_colonial_tariffs.230
 		10 = colonial_nation.140
 		10 = colonial_nation.142
 		10 = colonial_nation.144
@@ -1004,6 +993,24 @@ on_four_year_pulse = {
 		100 = china_events.44
 
 		10 = tortoise.1 # Galapagos Island Tortoises
+		
+		100 = flavor_pue.5
+
+		#Totemism Events
+		100 = totemism_flavor.1
+		100 = totemism_flavor.7
+		100 = totemism_flavor.8
+		100 = totemism_flavor.10
+		100 = totemism_flavor.11
+		100 = totemism_flavor.13
+		100 = totemism_flavor.14
+		100 = totemism_flavor.15
+		100 = totemism_flavor.16
+		100 = totemism_flavor.17
+		100 = totemism_flavor.18
+
+		#Volcano Events
+		75 = volcano_events.2
 
 		1000 = 0
 	}
@@ -1484,6 +1491,27 @@ on_province_owner_change = {
 		remove_province_modifier = sufi_shrine
 	}
 	on_province_owner_change_estate_privileges_effect = yes
+	
+	if = {
+		limit = {
+			region = indo_china_region
+			has_building = farm_estate
+			trade_goods = grain
+			owner = {
+				has_mission = mnd_khm_irrigation 
+				NOT = {
+					OR = {
+						has_estate = estate_vaisyas
+						has_estate = estate_burghers
+					}
+				}
+			}
+		}
+		add_province_modifier = {
+			name = grain_production_improved
+			duration = 7300
+		}
+	}
 }
 
 # province

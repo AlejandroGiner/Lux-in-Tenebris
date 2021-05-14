@@ -590,7 +590,7 @@ country_event = {
 
 		is_year = 1500
 		NOT = { is_year = 1600 }
-		colony = 3
+		num_of_colonies = 3
 		
 	}
 
@@ -735,7 +735,7 @@ country_event = {
 				tag = SPA
 
 				owns = 224	# Andalucia
-				colony = 3
+				num_of_colonies = 3
 			}
 			has_country_flag = sevilla_trade_center_flag
 		}
@@ -1756,7 +1756,7 @@ country_event = {
 		religion = catholic
 		is_year = 1540
 		NOT = { is_year = 1570 }
-		colony = 3 #colonial aristocracy exists
+		num_of_colonies = 3 #colonial aristocracy exists
 		OR = {
 			north_america = {
 				country_or_vassal_holds = ROOT
@@ -2495,7 +2495,7 @@ country_event = {
 		tag = SPA
 		is_year = 1700
 		government = monarchy
-		colony = 3
+		num_of_colonies = 3
 	}
 	
 	mean_time_to_happen = {
@@ -2563,7 +2563,7 @@ country_event = {
 	trigger = {
 		tag = SPA 
 		religion = catholic
-		colony = 3
+		num_of_colonies = 3
 		is_year = 1750
 		government = monarchy
 		has_country_modifier = the_societas_jesu

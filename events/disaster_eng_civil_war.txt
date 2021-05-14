@@ -134,7 +134,7 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_ruler_personality = strict_personality }
+			hidden_effect = { add_ruler_personality_ancestor = { key = strict } }
 		}
 		set_ruler_flag = cromwell_flag
 	}

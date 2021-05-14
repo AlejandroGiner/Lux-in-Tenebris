@@ -148,11 +148,13 @@ native_land_tradition_reform = {
 		modifier = {
 			factor = 2
 
-			any_neighbor_province = { # We have land that is still not claimed.
-				is_city = no
-				is_wasteland = no
-				tribal_owner = {
-					exists = no
+			capital_scope = {
+				any_neighbor_province = { # We have land that is still not claimed.
+					is_city = no
+					is_wasteland = no
+					tribal_owner = {
+						exists = no
+					}
 				}
 			}
 		}

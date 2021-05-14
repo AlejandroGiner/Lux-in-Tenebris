@@ -1318,41 +1318,18 @@ emp_burgundy_4 = {
 			}
 
 			if = {
-				limit = {
-					NOT = {
-						FRA = {
-							any_subject_country = {
-								capital_scope = {
-									region = france_region
-								}
-								liberty_desire = 50
-							}
-						}
-					}
-				}
+				limit = { NOT = { FRA = { any_subject_country = { capital_scope = { region = france_region } } } } }
 				custom_tooltip = emp_bur_king_of_the_franks_effect_tooltip
 			}
 			if = {
-				limit = {
-					FRA = {
-						any_subject_country = {
-							capital_scope = {
-								region = france_region
-							}
-							liberty_desire = 50
-						}
-					}
-				}
+				limit = { FRA = { any_subject_country = { capital_scope = { region = france_region } } } }
 				FRA = { country_event = { id = new_flavour_bur.7 } }
 			}
 			tooltip = {
 				every_country = {
 					limit = {
 						is_subject_of = FRA
-						capital_scope = {
-							region = france_region
-						}
-						liberty_desire = 50
+						capital_scope = { region = france_region }
 					}
 					hidden_effect = { FRA = { free_vassal = prev } }
 					ROOT = { vassalize = prev }

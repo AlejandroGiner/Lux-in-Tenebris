@@ -5796,7 +5796,7 @@ mongolian = {
 
 evenks = {
 	graphical_culture = mongolgfx
-
+	second_graphical_culture = asiangfx
 	evenk = {
 		primary = SOL
 		dynasty_names = {
@@ -7083,7 +7083,8 @@ japanese_g = {
 }
 
 pacific = {
-	graphical_culture = asiangfx
+	graphical_culture = polynesiangfx
+	second_graphical_culture = northamericagfx
 
 	papuan = {
 		male_names = {
@@ -8801,6 +8802,21 @@ oceanic = {
 	}
 	maori = {
 		primary = MAO
+		male_names = {
+			Aata Ahika Akahata Amahau Anewa Apera Aperahama Arapeta Ari Atama Atawhai Etera Hahona Haimona Harata Hau Hehu 
+			Heketoro Henare Hohepa Huatare Hunapo Hunu Iarere Iehohapata Ieni Ietepere Ietoro Ihaia Ihaka Ihu Ikaroa Iorama
+			Iorangi Iotama Iraia Irirangi Iwi Kahurangi Kai Kaihautu Kamaka Kauri Koraka Mahaka Manaaki Manaia Manawa Matiu 
+			Moana Nikau Purta Puta Rangi Rapata Rawiri Rongo Ropata Ruru Tai Taika Tama Tane Tanemahuta Tangaroa Tawera Tawhiri 
+			Tayn Te-Ariki Tia Tui
+		}
+		female_names = {
+			Aaria Amaia Ana Anahera Aroha Ataahua Awhina Hana Kahurangi Kaia Kara Kora Maia Manaia Manawa Moana Rui Te-Ao Te-Aroha Tia Tui
+		}
+		dynasty_names = {
+			"Ngati Kahu" "Ngati Kuri" "Ngai Takoto" "Whaingaroa" "Muriwhenua" "Ngati Hine" "Ngapuhi" "Ngati Whatua" "Ngati Manuhiri"
+			"Ngati Tamaoho" "Waikato" "Maniapoto" "Ngati Maru" "Ngati Paoa" "Ngai Ta ki Tamaki" "Ngati Tamatera" "Ngati Whanaunga" "Ngati Te Ata"
+			"Ngati Pukenga" "Ngati Te Rangi" "Ngati Toa" "Ngati Makino" "Ngati Pikiao"
+		}
 	}
 	micronesian = {
 		primary = NMD
@@ -10905,7 +10921,8 @@ salish_group = {
 }
 
 eskaleut = {
-	graphical_culture = northamericagfx
+	graphical_culture = inuitgfx
+	second_graphical_culture = northamericagfx
 
 	aleutian = {
 		primary = YYB

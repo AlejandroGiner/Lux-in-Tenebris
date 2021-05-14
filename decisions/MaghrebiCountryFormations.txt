@@ -385,6 +385,7 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			owns_core_province = 354 #Tripoli
+			354 = {	is_state = yes }
 			calc_true_if = {
 				all_owned_province = {
 					is_core = ROOT

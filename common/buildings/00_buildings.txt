@@ -64,6 +64,59 @@ temple = {
 		local_state_maintenance_modifier = 0.15
 	}
 	
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
+				}
+			}
+			FROM = {
+				add_karma = 3
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = {
+				add_papal_influence = 3
+			}
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
+				}
+			}
+			FROM = { add_karma = -3 }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = { add_papal_influence = -3 }
+		}
+	}
+	
 	ai_will_do = {
 		factor = 1
 	}
@@ -77,28 +130,30 @@ barracks = {
 		local_state_maintenance_modifier = 0.15
 	}
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.005
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.005
-#			}
-#		}
-#	}
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_manpower = 1
+			}
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					has_reform = corvee_reform
+				}
+			}
+			FROM = {
+				add_manpower = -1
+			}
+		}
+	}
 	
 	ai_will_do = {
 		factor = 1
@@ -124,7 +179,7 @@ shipyard = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 105 # Little above build cost
+			factor = 1.5 # Little above build cost
 			FROM = { navy_size_percentage = 0.95 }
 		}
 		modifier = {
@@ -186,6 +241,7 @@ coastal_defence = {
 	modifier = {
 		blockade_force_required = 0.5
 		hostile_disembark_speed = 1.0
+		block_slave_raid = yes
 		local_state_maintenance_modifier = 0.15
 	}
 
@@ -224,6 +280,20 @@ dock = {
 	modifier = {
 		local_sailors_modifier = 0.5
 		local_state_maintenance_modifier = 0.15
+	}
+	
+	on_built = {
+		if = {
+			limit = { FROM = { has_reform = corvee_reform } }
+			FROM = { add_sailors = 200 }
+		}
+	}
+
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_reform = corvee_reform } }
+			FROM = { add_sailors = -200 }
+		}
 	}
 	
 	ai_will_do = {
@@ -269,7 +339,7 @@ regimental_camp = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 215 # Little above build cost
+			factor = 1.5 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
 		}
 		modifier = {
@@ -332,6 +402,7 @@ naval_battery = {
 		hostile_disembark_speed = 2.0
 		hostile_fleet_attrition = 5
 		local_state_maintenance_modifier = 0.2
+		block_slave_raid = yes
 	}
 
 	ai_will_do = {
@@ -351,6 +422,55 @@ cathedral = {
 		local_missionary_strength = 0.03
 		local_tax_modifier = 0.6
 		local_state_maintenance_modifier = 0.2
+	}
+	
+	on_built = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
+				}
+			}
+			FROM = { add_karma = 3 }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = { add_papal_influence = 3 }
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						religion = buddhism
+						religion = mahayana
+						religion = vajrayana
+					}
+					has_estate_privilege = estate_church_karma_temples
+				}
+			}
+			FROM = { add_karma = -3 }
+		}
+		if = {
+			limit = {
+				FROM = {
+					religion = catholic
+					has_estate_privilege = estate_church_influence_temples
+				}
+			}
+			FROM = { add_papal_influence = -3 }
+		}
 	}
 	
 	ai_will_do = {
@@ -444,7 +564,7 @@ grand_shipyard = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 320 # Little above build cost
+			factor = 1.5 # Little above build cost
 			FROM = { navy_size_percentage = 0.95 }
 		}
 		modifier = {
@@ -464,28 +584,18 @@ training_fields = {
 	
 	make_obsolete = barracks
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
+	on_built = {
+		if = {
+			limit = { FROM = { has_reform = corvee_reform } }
+			FROM = { add_manpower = 1 }
+		}
+	}
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_reform = corvee_reform } }
+			FROM = { add_manpower = -1 }
+		}
+	}
 	
 	modifier = {
 		local_manpower_modifier = 1
@@ -614,7 +724,21 @@ drydock = {
 	modifier = {
 		local_sailors_modifier = 1.0
 		local_state_maintenance_modifier = 0.2
-	}	
+	}
+	
+	on_built = {
+		if = {
+			limit = { FROM = { has_reform = corvee_reform } }
+			FROM = { add_sailors = 200 }
+		}
+	}
+
+	on_destroyed = {
+		if = {
+			limit = { FROM = { has_reform = corvee_reform } }
+			FROM = { add_sailors = -200 }
+		}
+	}
 	
 	ai_will_do = {
 		factor = 1
@@ -632,29 +756,6 @@ conscription_center = {
 	
 	make_obsolete = regimental_camp
 
-#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-#	on_built = {
-#		FROM = {
-#			add_army_professionalism = 0.01
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-#	on_destroyed = {
-#		FROM = {
-#			add_army_professionalism = -0.02
-#		}
-#	}
-#
-#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-#	on_obsolete = {
-#		hidden_effect = {
-#			FROM = {
-#				add_army_professionalism = -0.01
-#			}
-#		}
-#	}
-	
 	modifier = {
 		land_forcelimit = 2
 		local_state_maintenance_modifier = 0.2
@@ -663,7 +764,7 @@ conscription_center = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 435 # Little above build cost
+			factor = 1.5 # Little above build cost
 			FROM = { army_size_percentage = 0.95 }
 		}
 		modifier = {
@@ -743,7 +844,7 @@ wharf = {
 	onmap = yes
 	
 	ai_will_do = {
-		factor = 1750
+		factor = 1
 		
 		modifier = { 
 			factor = 0.4
@@ -824,6 +925,7 @@ tradecompany = {
 		ivory
 		slaves
 		spices
+		cloves
 		fur
 		incense
 	}

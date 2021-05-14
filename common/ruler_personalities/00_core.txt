@@ -1310,6 +1310,10 @@ expansionist_personality = {
 	chance = {
 		modifier = {
 			factor = 1
+			num_of_colonists = 1
+		}
+		modifier = {
+			factor = 1
 			OR = {
 				num_of_conquistadors = 1
 				num_of_explorers = 1

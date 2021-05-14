@@ -97,6 +97,14 @@ country_event = {
 			mil = 2
 			birth_date = 1440.2.22
 		}
+		hidden_effect = {
+			define_ruler = {
+				ADM = 0
+				DIP = 0
+				MIL = 0
+				regency = yes
+			}
+		}
         custom_tooltip = hun_ladislaus_postumus_warning_tooltip
 		hidden_effect = { set_country_flag = hun_ladislaus_postumus_heir }
 		add_estate_loyalty = {
