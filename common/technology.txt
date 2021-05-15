@@ -150,8 +150,25 @@ groups = {
 		start_cost_modifier = 1.5
 		nation_designer_unit_type = south_american
 		is_primitive = yes
-	}	
+	}
 	
+	aboriginal_tech = {
+		start_level = 1
+		start_cost_modifier = 2.5
+		is_primitive = yes
+		nation_designer_cost = {
+			value = 50
+		}
+	}
+	
+	polynesian_tech = {
+		start_level = 2
+		start_cost_modifier = 2
+		is_primitive = yes
+		nation_designer_cost = {
+			value = 50
+		}
+	}
 	
 	high_american = {
 		start_level = 3
@@ -205,22 +222,6 @@ groups = {
 				}
 			}
 			value = 75
-		}
-	}
-	oceanian = {
-		start_level = 2
-		start_cost_modifier = 1.00
-		nation_designer_cost = {
-			trigger = {
-				capital_scope = {
-					OR = {
-						continent = new_world
-						continent = north_america
-						continent = south_america
-					}
-				}
-			}
-			value = 35
 		}
 	}
 	japanese_btc = {

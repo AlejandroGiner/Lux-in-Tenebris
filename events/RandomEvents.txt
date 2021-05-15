@@ -12103,27 +12103,19 @@ province_event = {
 	}
 	
 	immediate = {
-		owner = {
-			set_country_flag = bible_translated
-		}
+		owner = { set_country_flag = bible_translated }
 	}
 	
 	option = {
 		name = "random_event.EVTOPTA21" # Heresy! Burn the priest and his books!
 		owner = {
-			add_reform_desire = -0.005
+			add_reform_desire = -0.01
 			if = {
-				limit = {
-					exists = PAP
-				}
-				PAP = {
-					add_opinion = { who = ROOT modifier = opinion_grateful }
-				}
+				limit = { exists = PAP }
+				PAP = { add_opinion = { who = ROOT modifier = opinion_grateful } }
 			}
 			every_neighbor_country = {
-				limit = {
-					religion = catholic
-				}
+				limit = { religion = catholic }
 				add_opinion = { who = ROOT modifier = opinion_grateful }
 			}
 			every_neighbor_country = {
@@ -12153,43 +12145,25 @@ province_event = {
 			change_religion = protestant
 		}
 		if = {
-			limit = {
-				owner = {
-					religion = reformed
-				}
-			}
+			limit = { owner = { religion = reformed } }
 			change_religion = reformed
 		}
         if = {
-			limit = {
-				owner = {
-					religion = anglican
-				}
-			}
+			limit = { owner = { religion = anglican } }
 			change_religion = anglican
 		}
 		if = {
-			limit = {
-				owner = {
-					religion = hussite
-				}
-			}
+			limit = { owner = { religion = hussite } }
 			change_religion = hussite
 		}
 		owner = {
 			add_reform_desire = 0.015
 			if = {
-				limit = {
-					exists = PAP
-				}
-				PAP = {
-					add_opinion = { who = ROOT modifier = opinion_angry }
-				}
+				limit = { exists = PAP }
+				PAP = { add_opinion = { who = ROOT modifier = opinion_angry } }
 			}
 			every_neighbor_country = {
-				limit = {
-					religion = catholic
-				}
+				limit = { religion = catholic }
 				add_opinion = { who = ROOT modifier = opinion_irritated }
 			}
 			every_neighbor_country = {
@@ -12232,9 +12206,7 @@ province_event = {
 	}
 	
 	immediate = {
-		owner = {
-			set_country_flag = has_penal_colony
-		}
+		owner = { set_country_flag = has_penal_colony }
 	}
 
 	option = {

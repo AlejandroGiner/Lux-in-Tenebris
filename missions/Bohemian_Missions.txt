@@ -39,10 +39,8 @@ boh_hussite_group = {
 				}
 			}
 			else_if = {
-				limit = {
-					religion = catholic
-				}
-				add_reform_desire = -0.02
+				limit = { religion = catholic }
+				add_reform_desire = -0.05
 				add_papal_influence = 20
 			}
 			else = {
