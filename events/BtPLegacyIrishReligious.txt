@@ -47,7 +47,7 @@ province_event = {
 			factor = 65
 			modifier = {
 				factor = 0.3
-				owner = { ruler_has_personality = zealot_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = zealot }}	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 2.0
@@ -153,11 +153,11 @@ province_event = {
 			factor = 10
 			modifier = {
 				factor = 0.5
-				owner = { ruler_has_personality = zealot_personality }
+				owner = { ruler_has_personality_ancestor = { key = zealot }}
 			}
 			modifier = {
 				factor = 0.5
-				owner = { ruler_has_personality = pious_personality }
+				owner = { ruler_has_personality_ancestor = { key = pious } }
 			}
 			modifier = {
 				factor = 3.0
@@ -205,7 +205,7 @@ province_event = {
 			factor = 65
 			modifier = {
 				factor = 0.3
-				owner = { ruler_has_personality = zealot_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = zealot }}	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 2.0

@@ -45,7 +45,7 @@ province_event = {
 	option = { # Personality specific event ii
 		name = "BtPLegacyColonial.EVTOPTD1"
 		highlight = yes
-		trigger = { owner = { ruler_has_personality = entrepreneur_personality } }
+		trigger = { owner = { ruler_has_personality_ancestor = { key = entrepreneur } } }
 		required_personality = entrepreneur_personality
 		ai_chance = { factor = 100 }
 		if = {
@@ -66,7 +66,7 @@ province_event = {
 	option = { # Personality specific event iii
 		name = "BtPLegacyColonial.EVTOPTE1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = benevolent_personality ruler_has_personality = charismatic_negotiator_personality ruler_has_personality = silver_tongue_personality } } }
+		trigger = { owner = { OR = { ruler_has_personality = benevolent_personality ruler_has_personality_ancestor = { key = charismatic_negotiator } ruler_has_personality_ancestor = { key = silver_tongue } } } }
 		required_personality = benevolent_personality
 		required_personality = charismatic_negotiator_personality
 		required_personality = silver_tongue_personality
@@ -78,7 +78,7 @@ province_event = {
 	option = { # Personality specific event iv
 		name = "BtPLegacyColonial.EVTOPTF1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = zealot_personality ruler_has_personality = pious_personality } } }
+		trigger = { owner = { OR = { ruler_has_personality_ancestor = { key = zealot }ruler_has_personality_ancestor = { key = pious } } } }
 		required_personality = zealot_personality
 		required_personality = pious_personality
 		ai_chance = { factor = 100 }
@@ -120,7 +120,7 @@ province_event = {
 	option = { # Personality specific event vi
 		name = "BtPLegacyColonial.EVTOPTH1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = benevolent_personality ruler_has_personality = kind_hearted_personality } } }
+		trigger = { owner = { OR = { ruler_has_personality = benevolent_personality ruler_has_personality_ancestor = { key = kind_hearted } } } }
 		required_personality = benevolent_personality
 		required_personality = kind_hearted_personality
 		ai_chance = { factor = 100 }
@@ -141,7 +141,7 @@ province_event = {
 	option = { # Personality specific event viii
 		name = "BtPLegacyColonial.EVTOPTJ1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = careful_personality ruler_has_personality = craven_personality } } }
+		trigger = { owner = { OR = { ruler_has_personality_ancestor = { key = careful } ruler_has_personality = craven_personality } } }
 		required_personality = careful_personality
 		required_personality = craven_personality
 		ai_chance = { factor = 100 }
@@ -158,8 +158,8 @@ province_event = {
 		trigger = {
 			owner = {
 				OR = {
-					ruler_has_personality = expansionist_personality 
-					ruler_has_personality = fierce_negotiator_personality
+					ruler_has_personality_ancestor = { key = expansionist } 
+					ruler_has_personality_ancestor = { key = fierce_negotiator }
 				}
 			}
 			has_empty_adjacent_province = yes
@@ -193,8 +193,8 @@ province_event = {
 		trigger = {
 			owner = {
 				OR = {
-					ruler_has_personality = expansionist_personality 
-					ruler_has_personality = fierce_negotiator_personality
+					ruler_has_personality_ancestor = { key = expansionist } 
+					ruler_has_personality_ancestor = { key = fierce_negotiator }
 				}
 			}
 			OR = {

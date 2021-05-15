@@ -117,7 +117,7 @@ province_event = {
 			}
 			modifier = {
 				factor = 2.0
-				owner = { ruler_has_personality = expansionist_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = expansionist } }	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 1.5
@@ -262,7 +262,7 @@ province_event = {
 			}
 			modifier = {
 				factor = 2.0
-				owner = { ruler_has_personality = expansionist_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = expansionist } }	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 1.5
@@ -406,7 +406,7 @@ province_event = {
 			}
 			modifier = {
 				factor = 2.0
-				owner = { ruler_has_personality = expansionist_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = expansionist } }	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 1.5

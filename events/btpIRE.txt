@@ -34,7 +34,7 @@ country_event = {
 			}	#Does this condition even work???
 			modifier = {
 				factor = 2.0
-				ruler_has_personality = fierce_negotiator_personality
+				ruler_has_personality_ancestor = { key = fierce_negotiator }
 			}	#Fierce Negotiaters don't accept defeat so easily
 		}
 		ENG = { country_event = { id = btpIRE.2 } }

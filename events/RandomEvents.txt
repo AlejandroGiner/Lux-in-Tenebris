@@ -135,7 +135,7 @@ country_event = {
 		name = "personality_options.5014.c"		# Luckily we're surrounded by people we can trust.
 		highlight = yes
 		trigger = {
-			ruler_has_personality =  
+			ruler_has_personality_ancestor = { key = well_advised }
 		}
 		ai_chance = { factor = 100 }
 		add_adm_power = 25
@@ -252,7 +252,7 @@ country_event = {
 		name = "personality_options.5015.c" # Let us extend his responsibilities
 		highlight = yes
 		trigger = {
-			ruler_has_personality =  
+			ruler_has_personality_ancestor = { key = well_advised }
 		}
 		ai_chance = { factor = 100 }
 		add_adm_power = 100
@@ -6641,7 +6641,7 @@ country_event = {
 		name = "personality_options.722.a"
 		highlight = yes
 		trigger = {
-			ruler_has_personality =  
+			ruler_has_personality_ancestor = { key = well_advised }
 		}
 		ai_chance = {
 			factor = 100
@@ -7798,7 +7798,7 @@ country_event = {
 		trigger = {
 			OR = {
 				ruler_has_personality_ancestor = { key = free_thinker }
-				ruler_has_personality =  
+				ruler_has_personality_ancestor = { key = well_advised }
 			}
 			hidden_trigger = {
 				NOT = {

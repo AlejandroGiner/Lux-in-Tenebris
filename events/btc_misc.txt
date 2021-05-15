@@ -117,9 +117,9 @@ province_event = {
 		ai_chance = { factor = 100 }
 		trigger = {
 			OR = {
-				ruler_has_personality = free_thinker_personality
-				ruler_has_personality = scholar_personality
-				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality_ancestor = { key = free_thinker }
+				ruler_has_personality_ancestor = { key = scholar }
+				ruler_has_personality_ancestor = { key = entrepreneur }
 			}
 		}
 		highlight = yes
@@ -700,9 +700,9 @@ country_event = {
 			OR = {
 				ruler_has_personality = sinner_personality
 				ruler_has_personality = benevolent_personality
-				ruler_has_personality = free_thinker_personality
+				ruler_has_personality_ancestor = { key = free_thinker }
 				ruler_has_personality = tolerant_personality
-				ruler_has_personality = scholar_personality
+				ruler_has_personality_ancestor = { key = scholar }
 			}
 		}
 		highlight = yes
@@ -885,8 +885,8 @@ country_event = {
 		name = btc_misc.15.a
 		trigger = {
 			OR = {
-				ruler_has_personality = free_thinker_personality
-				ruler_has_personality = scholar_personality
+				ruler_has_personality_ancestor = { key = free_thinker }
+				ruler_has_personality_ancestor = { key = scholar }
 			}
 		}
 		highlight = yes

@@ -1329,7 +1329,7 @@ country_event = {
 					}		
 				}
 				NOT = { ruler_has_personality = craven_personality }
-				NOT = { ruler_has_personality = kind_hearted_personality }
+				NOT = { ruler_has_personality_ancestor = { key = kind_hearted } }
 				NOT = { ruler_has_personality = naive_personality }
 			}
 		}
@@ -1348,7 +1348,7 @@ country_event = {
 				factor = 0
 				OR = {
 					ruler_has_personality = craven_personality
-					ruler_has_personality = kind_hearted_personality
+					ruler_has_personality_ancestor = { key = kind_hearted }
 					ruler_has_personality = naive_personality
 					
 					has_opinion = {
@@ -1359,7 +1359,7 @@ country_event = {
 				NOT = { ruler_has_personality = malevolent_personality }
 				NOT = { ruler_has_personality = cruel_personality }
 				NOT = { ruler_has_personality = bold_fighter_personality }
-				NOT = { ruler_has_personality = zealot_personality }
+				NOT = { ruler_has_personality_ancestor = { key = zealot }}
 			}
 		}
 	}
@@ -1406,7 +1406,7 @@ country_event = {
 					}
 				}
 				NOT = { ruler_has_personality = craven_personality }
-				NOT = { ruler_has_personality = kind_hearted_personality }
+				NOT = { ruler_has_personality_ancestor = { key = kind_hearted } }
 				NOT = { ruler_has_personality = naive_personality }
 			}
 		}
@@ -1436,7 +1436,7 @@ country_event = {
 				factor = 0
 				OR = {
 					ruler_has_personality = craven_personality
-					ruler_has_personality = kind_hearted_personality
+					ruler_has_personality_ancestor = { key = kind_hearted }
 					ruler_has_personality = naive_personality
 					has_opinion = {
 						who = FROM
@@ -1446,7 +1446,7 @@ country_event = {
 				NOT = { ruler_has_personality = malevolent_personality }
 				NOT = { ruler_has_personality = cruel_personality }
 				NOT = { ruler_has_personality = bold_fighter_personality }
-				NOT = { ruler_has_personality = zealot_personality }
+				NOT = { ruler_has_personality_ancestor = { key = zealot }}
 			}
 		}
 	}

@@ -449,7 +449,7 @@ country_event = {
 				fixed = yes
 			}
 			hidden_effect = {
-				add_ruler_personality_ancestor = { key = infertile }
+				add_ruler_personality = infertile_personality
 				add_ruler_personality_ancestor = { key = zealot }
 			}
 		}
@@ -1160,9 +1160,9 @@ country_event = {
 				save_global_event_target_as = medici_pope_home
 			}
 			random_list = {
-				25 = { add_ruler_personality_ancestor = { key = embezzler } }
-				25 = { add_ruler_personality_ancestor = { key = greedy } }
-				20 = { add_ruler_personality_ancestor = { key = sinner } }
+				25 = { add_ruler_personality = embezzler_personality }
+				25 = { add_ruler_personality = greedy_personality }
+				20 = { add_ruler_personality = sinner_personality }
 				15 = { add_ruler_personality_ancestor = { key = architectural_visionary } }
 				15 = { add_ruler_personality_ancestor = { key = scholar } }
 			}

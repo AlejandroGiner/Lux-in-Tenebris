@@ -125,7 +125,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetN
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = charismatic_negotiator_personality
+			ruler_has_personality_ancestor = { key = charismatic_negotiator }
 		}
 		required_personality = charismatic_negotiator_personality
 		
@@ -145,7 +145,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetN
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = fierce_negotiator_personality
+			ruler_has_personality_ancestor = { key = fierce_negotiator }
 		}
 		required_personality = fierce_negotiator_personality
 		
@@ -165,7 +165,7 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetN
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = silver_tongue_personality
+			ruler_has_personality_ancestor = { key = silver_tongue }
 		}
 		required_personality = silver_tongue_personality
 		
@@ -310,7 +310,7 @@ country_event = { #4 Promising strategos
 		}
 		modifier = {
 			factor = 4
-			ruler_has_personality = martial_educator_personality
+			ruler_has_personality_ancestor = { key = martial_educator }
 			has_heir = no
 			NOT = { has_idea = byz_formalize_succession_laws }
 		}
@@ -322,17 +322,17 @@ country_event = { #4 Promising strategos
 			factor = 50
 			modifier = {
 				factor = 0
-				ruler_has_personality = tactical_genius_personality
+				ruler_has_personality_ancestor = { key = tactical_genius }
 			}
 			modifier = {
 				factor = 0
-				ruler_has_personality = martial_educator_personality
+				ruler_has_personality_ancestor = { key = martial_educator }
 				has_heir = no
 				NOT = { has_idea = byz_formalize_succession_laws }
 			}
 			modifier = {
 				factor = 0
-				ruler_has_personality = strict_personality
+				ruler_has_personality_ancestor = { key = strict }
 				has_heir = no
 				NOT = { has_idea = byz_formalize_succession_laws }
 			}
@@ -350,7 +350,7 @@ country_event = { #4 Promising strategos
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = tactical_genius_personality
+			ruler_has_personality_ancestor = { key = tactical_genius }
 		}
 		required_personality = tactical_genius_personality
 		
@@ -368,7 +368,7 @@ country_event = { #4 Promising strategos
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = martial_educator_personality
+			ruler_has_personality_ancestor = { key = martial_educator }
 			has_heir = no
 			NOT = { has_idea = byz_formalize_succession_laws }
 		}
@@ -390,7 +390,7 @@ country_event = { #4 Promising strategos
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = strict_personality
+			ruler_has_personality_ancestor = { key = strict }
 			has_heir = no
 			NOT = { has_idea = byz_formalize_succession_laws }
 		}
@@ -557,7 +557,7 @@ country_event = { #5 [estate_generals.GetName] disagree on current military plan
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = tactical_genius_personality
+			ruler_has_personality_ancestor = { key = tactical_genius }
 		}
 		required_personality = tactical_genius_personality
 		
@@ -1031,7 +1031,7 @@ country_event = { #11 The [estate_generals.GetName] renounce the [Root.Monarch.G
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = calm_personality
+			ruler_has_personality_ancestor = { key = calm }
 		}
 		required_personality = calm_personality
 		
@@ -1290,7 +1290,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = charismatic_negotiator_personality
+			ruler_has_personality_ancestor = { key = charismatic_negotiator }
 		}
 		required_personality = charismatic_negotiator_personality
 		
@@ -1306,7 +1306,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = fierce_negotiator_personality
+			ruler_has_personality_ancestor = { key = fierce_negotiator }
 		}
 		required_personality = fierce_negotiator_personality
 		
@@ -1322,7 +1322,7 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = silver_tongue_personality
+			ruler_has_personality_ancestor = { key = silver_tongue }
 		}
 		required_personality = silver_tongue_personality
 		

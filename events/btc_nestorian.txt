@@ -52,7 +52,7 @@ country_event = {
     highlight = yes
     required_personality = architectural_visionary_personality
     trigger = {
-      ruler_has_personality = architectural_visionary_personality
+      ruler_has_personality_ancestor = { key = architectural_visionary }
     }
     name = nestorian_events.1.x
     add_years_of_income = -0.35
@@ -266,7 +266,7 @@ country_event = {
     highlight = yes
     required_personality = expansionist_personality
     trigger = {
-      ruler_has_personality = expansionist_personality
+      ruler_has_personality_ancestor = { key = expansionist }
     }
     add_dip_power = 50
     add_estate_loyalty = {
@@ -495,7 +495,7 @@ country_event = {
     highlight = yes
     required_personality = secretive_personality
     trigger = {
-      ruler_has_personality = secretive_personality
+      ruler_has_personality_ancestor = { key = secretive }
     }
     add_country_modifier = {
       name = covert_traders
@@ -609,7 +609,7 @@ country_event = {
     highlight = yes
     required_personality = fierce_negotiator_personality
     trigger = {
-      ruler_has_personality = fierce_negotiator_personality
+      ruler_has_personality_ancestor = { key = fierce_negotiator }
     }
     add_years_of_income = 1.2
   }

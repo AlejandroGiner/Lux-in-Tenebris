@@ -250,7 +250,7 @@ country_event = {
     highlight = yes
     required_personality = righteous_personality
     trigger = {
-      ruler_has_personality = righteous_personality
+      ruler_has_personality_ancestor = { key = righteous }
     }
     add_years_of_income = 0.1
     add_adm_power = 10
@@ -334,7 +334,7 @@ country_event = {
     highlight = yes
     required_personality = calm_personality
     trigger = {
-      ruler_has_personality = calm_personality
+      ruler_has_personality_ancestor = { key = calm }
     }
     add_prestige = 5
     add_mil_power = 50
@@ -422,7 +422,7 @@ country_event = {
     highlight = yes
     required_personality = entrepreneur_personality
     trigger = {
-      ruler_has_personality = entrepreneur_personality
+      ruler_has_personality_ancestor = { key = entrepreneur }
     }
     add_estate_loyalty = {
       estate = estate_burghers

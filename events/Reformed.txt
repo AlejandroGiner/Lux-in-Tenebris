@@ -228,15 +228,15 @@ country_event = {
 			}
 			modifier = {
 				factor = 3.0
-				owner = { ruler_has_personality = zealot_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = zealot }}	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 3.0
-				owner = { ruler_has_personality = pious_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = pious } }	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 0.5
-				owner = { ruler_has_personality = free_thinker_personality }	#1.18 ruler traits influence
+				owner = { ruler_has_personality_ancestor = { key = free_thinker } }	#1.18 ruler traits influence
 			}
 			modifier = {
 				factor = 0.5
