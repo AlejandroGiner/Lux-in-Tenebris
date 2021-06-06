@@ -2526,7 +2526,7 @@ ASN_ideas = {
 	}
 }
 
-TSC_ideas = {
+TSU_ideas = {
 	start = {
 		manpower_recovery_speed = 0.25
 		production_efficiency = 0.15
@@ -2535,7 +2535,7 @@ TSC_ideas = {
 		build_cost = -0.2
 	}
 	trigger = {
-		tag = TSC
+		tag = TSU
 	}
 	free = yes
 
@@ -2641,7 +2641,7 @@ KTK_ideas = {
 	}
 }
 
-KSI_ideas = {
+KSA_ideas = {
 	start = {
 		cavalry_power = 0.15
 		diplomatic_upkeep = 2
@@ -2651,7 +2651,7 @@ KSI_ideas = {
 	}
 	trigger = {
 		OR = {
-			tag = KSI
+			tag = KSA
 			tag = OSK
 		}
 	}
