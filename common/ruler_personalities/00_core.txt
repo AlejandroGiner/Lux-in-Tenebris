@@ -3049,7 +3049,7 @@ obsessive_perfectionist_personality = {
 malevolent_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = benevolent_personality }
+			NOT = { ruler_has_personality_ancestor = { key = benevolent } }
 			NOT = { ruler_has_personality_ancestor = { key = kind_hearted } }
 		}
 	

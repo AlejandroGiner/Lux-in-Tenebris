@@ -33,7 +33,6 @@ province_event = {
 		name = "BtPLegacyColonial.EVTOPTC1"
 		highlight = yes
 		trigger = { owner = { ruler_has_personality = conqueror_personality } }
-		required_personality = conqueror_personality
 		ai_chance = { factor = 100 }
 		add_province_modifier = {
 			name = "take_colonial_land_by_force"
@@ -46,7 +45,6 @@ province_event = {
 		name = "BtPLegacyColonial.EVTOPTD1"
 		highlight = yes
 		trigger = { owner = { ruler_has_personality_ancestor = { key = entrepreneur } } }
-		required_personality = entrepreneur_personality
 		ai_chance = { factor = 100 }
 		if = {
 			limit = { NOT = { has_dlc = "Common Sense" } }
@@ -66,10 +64,15 @@ province_event = {
 	option = { # Personality specific event iii
 		name = "BtPLegacyColonial.EVTOPTE1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = benevolent_personality ruler_has_personality_ancestor = { key = charismatic_negotiator } ruler_has_personality_ancestor = { key = silver_tongue } } } }
-		required_personality = benevolent_personality
-		required_personality = charismatic_negotiator_personality
-		required_personality = silver_tongue_personality
+		trigger = {
+			owner = {
+				OR = {
+					ruler_has_personality_ancestor = { key = benevolent }
+					ruler_has_personality_ancestor = { key = charismatic_negotiator }
+					ruler_has_personality_ancestor = { key = silver_tongue }
+				}
+			}
+		}
 		ai_chance = { factor = 100 }
 		add_colonysize = 50
 		change_native_hostileness = -3
@@ -78,9 +81,14 @@ province_event = {
 	option = { # Personality specific event iv
 		name = "BtPLegacyColonial.EVTOPTF1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality_ancestor = { key = zealot }ruler_has_personality_ancestor = { key = pious } } } }
-		required_personality = zealot_personality
-		required_personality = pious_personality
+		trigger = {
+			owner = {
+				OR = {
+					ruler_has_personality_ancestor = { key = zealot }
+					ruler_has_personality_ancestor = { key = pious }
+				}
+			}
+		}
 		ai_chance = { factor = 100 }
 		if = {
 			limit = { owner = { religion = catholic } }
@@ -108,9 +116,14 @@ province_event = {
 	option = { # Personality specific event v
 		name = "BtPLegacyColonial.EVTOPTG1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = cruel_personality ruler_has_personality = malevolent_personality } } }
-		required_personality = cruel_personality
-		required_personality = malevolent_personality
+		trigger = {
+			owner = {
+				OR = {
+					ruler_has_personality = cruel_personality
+					ruler_has_personality = malevolent_personality
+				}
+			}
+		}
 		ai_chance = { factor = 100 }
 		change_native_size = -10
 		change_native_hostileness = -3
@@ -120,9 +133,14 @@ province_event = {
 	option = { # Personality specific event vi
 		name = "BtPLegacyColonial.EVTOPTH1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality = benevolent_personality ruler_has_personality_ancestor = { key = kind_hearted } } } }
-		required_personality = benevolent_personality
-		required_personality = kind_hearted_personality
+		trigger = {
+			owner = {
+				OR = {
+					ruler_has_personality_ancestor = { key = benevolent }
+					ruler_has_personality_ancestor = { key = kind_hearted }
+				}
+			}
+		}
 		ai_chance = { factor = 100 }
 		add_years_of_income = -0.1
 		change_native_hostileness = -4
@@ -132,7 +150,6 @@ province_event = {
 		name = "BtPLegacyColonial.EVTOPTI1"
 		highlight = yes
 		trigger = { owner = { ruler_has_personality = greedy_personality } }
-		required_personality = greedy_personality
 		ai_chance = { factor = 100 }
 		add_years_of_income = 0.2
 		change_native_hostileness = 3
@@ -141,9 +158,14 @@ province_event = {
 	option = { # Personality specific event viii
 		name = "BtPLegacyColonial.EVTOPTJ1"
 		highlight = yes
-		trigger = { owner = { OR = { ruler_has_personality_ancestor = { key = careful } ruler_has_personality = craven_personality } } }
-		required_personality = careful_personality
-		required_personality = craven_personality
+		trigger = {
+			owner = {
+				OR = {
+					ruler_has_personality_ancestor = { key = careful }
+					ruler_has_personality = craven_personality
+				}
+			}
+		}
 		ai_chance = { factor = 100 }
 		add_province_modifier = {
 			name = "paranoid_defenses_at_colony"
@@ -168,8 +190,6 @@ province_event = {
 					area = newfoundland_area
 			}
 		}
-		required_personality = expansionist_personality
-		required_personality = fierce_negotiator_personality
 		ai_chance = { factor = 100 }
 		change_native_size = -5
 		change_native_hostileness = -3
@@ -202,8 +222,6 @@ province_event = {
 				NOT = { any_empty_neighbor_province = { has_discovered = ROOT } }
 			}
 		}
-		required_personality = expansionist_personality
-		required_personality = fierce_negotiator_personality
 		ai_chance = { factor = 100 }
 		change_native_size = -1
 		change_native_hostileness = -3

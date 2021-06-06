@@ -703,7 +703,6 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 		trigger = {
 			ruler_has_personality_ancestor = { key = calm }
 		}
-		required_personality = calm_personality
 		
 		add_years_of_income = -0.5
 		add_adm_power = -50
@@ -723,7 +722,6 @@ country_event = { #9 Expanding the Tyrian Purple Industry
 		trigger = {
 			ruler_has_personality_ancestor = { key = careful }
 		}
-		required_personality = careful_personality
 		
 		add_years_of_income = -0.5
 		add_adm_power = -50
@@ -1092,7 +1090,6 @@ country_event = { #14 The Purchase of Chios - Byzantine Proposal
 			ruler_has_personality_ancestor = { key = charismatic_negotiator }
 			GEN = { ai = yes } #To prevent the player getting gimped.
 		}
-		required_personality = charismatic_negotiator_personality
 		
 		add_years_of_income = -0.6
 		capital_scope = {
@@ -1197,7 +1194,6 @@ country_event = { #15 The Purchase of Chios - Genoese response
 			ruler_has_personality_ancestor = { key = entrepreneur }
 			GEN = { ai = yes } #To prevent the player getting gimped.
 		}
-		required_personality = entrepreneur_personality
 		
 		add_years_of_income = 1
 		
@@ -1616,7 +1612,6 @@ country_event = { #23 The Purchase of Amastris - Trebizonder Proposal
 			ruler_has_personality_ancestor = { key = charismatic_negotiator }
 			GEN = { ai = yes } #To prevent the player getting gimped.
 		}
-		required_personality = charismatic_negotiator_personality
 		
 		add_years_of_income = -0.35
 		capital_scope = {
@@ -1723,7 +1718,6 @@ country_event = { #24 The Purchase of Amastris - Genoese response
 			ruler_has_personality_ancestor = { key = entrepreneur }
 			GEN = { ai = yes } #To prevent the player getting gimped.
 		}
-		required_personality = entrepreneur_personality
 		
 		add_years_of_income = 1
 		

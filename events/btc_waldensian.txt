@@ -248,7 +248,6 @@ country_event = {
   option = {
     name = waldensian_events.4.c
     highlight = yes
-    required_personality = righteous_personality
     trigger = {
       ruler_has_personality_ancestor = { key = righteous }
     }
@@ -332,7 +331,6 @@ country_event = {
   option = {
     name = waldensian_events.5.y
     highlight = yes
-    required_personality = calm_personality
     trigger = {
       ruler_has_personality_ancestor = { key = calm }
     }
@@ -346,7 +344,6 @@ country_event = {
   option = {
     name = waldensian_events.5.z
     highlight = yes
-    required_personality = babbling_buffoon_personality
     trigger = {
       ruler_has_personality = babbling_buffoon_personality
     }
@@ -420,7 +417,6 @@ country_event = {
   option = {
     name = waldensian_events.6.c
     highlight = yes
-    required_personality = entrepreneur_personality
     trigger = {
       ruler_has_personality_ancestor = { key = entrepreneur }
     }
@@ -587,7 +583,6 @@ country_event = {
   option = {
     name = waldensian_events.10.c
     highlight = yes
-    required_personality = cruel_personality
     trigger = {
       ruler_has_personality = cruel_personality
     }
@@ -623,7 +618,6 @@ country_event = {
   option = {
     name = waldensian_events.11.b
     highlight = yes
-    required_personality = zealot_personality
     trigger = {
       ruler_has_personality = zealot_personality
     }
