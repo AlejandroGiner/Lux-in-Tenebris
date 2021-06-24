@@ -1,4 +1,4 @@
-#4617 - Bandung
+#4617 - Pangguyanan - formerly Bandung
 
 owner = SUN
 controller = SUN
@@ -6,7 +6,7 @@ add_core = SUN
 add_core = PGH
 culture = sundanese
 religion = hinduism
-capital = "Bandung"
+capital = "Pangguyanan"
 trade_goods = tea
 hre = no
 base_tax = 2
@@ -37,4 +37,40 @@ discovered_by = ottoman
 } # Conquered by the Cirebonese Army and Banten Sultanate was established
 1528.1.1 = { unrest = 0 }
 1602.1.1 = { discovered_by = ENG } # English settlement
+1644.1.1 = { 
+	add_core = NED
+	add_to_trade_company = NED
+	add_trade_company_investment = {
+		investment = permanent_quarters
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = officers_mess
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = company_depot
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = property_appraiser
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = brokers_exchange
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = district
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = governor_general_mansion
+		investor = NED
+	}
+	add_trade_company_investment = {
+		investment = military_administration
+		investor = NED
+	}	
+}
 1707.5.12 = { discovered_by = GBR }
