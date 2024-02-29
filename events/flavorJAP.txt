@@ -3349,17 +3349,29 @@ country_event = {
 	trigger = {
 		is_subject_of_type = daimyo_vassal
 		NOT = { has_reform = daimyo }
+		NOT = { tag = PAP }
 		NOT = {
-			AND = {
-				tag = SOO
-				OR = {
-					has_reform = pirate_republic_reform
-					has_reform = pirate_king_reform
-					has_reform = war_against_the_world_doctrine_reform
-					has_reform = black_market_consortium_reform
+			OR = {
+				AND = {
+					tag = SOO
+					OR = {
+						has_reform = pirate_republic_reform
+						has_reform = pirate_king_reform
+						has_reform = war_against_the_world_doctrine_reform
+						has_reform = black_market_consortium_reform
+					}
+				}
+				AND = {
+					has_country_flag = ikko_ikki_peasants_flag
+					OR = {
+						has_reform = leading_clergy_reform
+						has_reform = monastic_order_reform
+						has_reform = peasants_republic
+					}
 				}
 			}
 		}
+		is_reform_available = daimyo
 		NOT = { has_reform = shogunate }
 		is_revolutionary = no
 	}

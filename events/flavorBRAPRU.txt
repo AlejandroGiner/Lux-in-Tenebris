@@ -553,14 +553,18 @@ country_event = {
 			owned_by = TEU
 			controlled_by = TEU
 		}
-		7506 = {
+		4747 = {
+			owned_by = TEU
+			controlled_by = TEU
+        }
+		7794 = {
 			owned_by = TEU
 			controlled_by = TEU
 		}
 		TEU = { #The Teutonic order hasn't connected their lands to Neumark
 			NOT = { owns = 48 } #Kolberg
-			NOT = { owns = 2963 } #Notec
-			NOT = { owns = 7597 } #Kammin
+			NOT = { owns = 7783 } #Belgard
+			NOT = { owns = 7597 } #Walcz
 		}
 		NOT = { war_with = TEU }
 		NOT = { is_year = 1466 }
@@ -605,15 +609,9 @@ country_event = {
 		name = "flavor_brapru.16.a" #We need the money.
 		ai_chance = { factor = 100 }
 		tooltip = {
-			49 = {
-				cede_province = BRA
-			}
-			7506 = {
-				cede_province = BRA
-			}
-			7794 = {
-				cede_province = BRA
-			}
+			49 = { cede_province = BRA }
+			4747 = { cede_province = BRA }
+			7794 = { cede_province = BRA }
 		}
 		add_treasury = 150
 		FROM = {
@@ -653,7 +651,7 @@ country_event = {
 				add_core = BRA
 				remove_core = TEU
 			}
-			7506 = {
+			4747 = {
 				cede_province = BRA
 				add_core = BRA
 				remove_core = TEU

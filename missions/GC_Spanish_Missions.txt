@@ -286,9 +286,18 @@ gc_spain_1_b = {
 		}
 		
 		trigger = {
-			2021 = {
-				country_or_non_sovereign_subject_holds = ROOT
-				has_holy_order_trigger = yes
+			if = {
+				limit = { religion = catholic }
+				2021 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_holy_order_trigger = yes
+				}
+			}
+			else = {
+				2021 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					religion = ROOT
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_california
@@ -704,12 +713,25 @@ gc_spain_2_b = {
 		}
 		
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = mexico_holy_order_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					region = mexico_region
-					value = 5
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = mexico_holy_order_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						region = mexico_region
+						value = 5
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = mexico_holy_order_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						region = mexico_region
+						value = 25
+					}
 				}
 			}
 			mexico_region = {
@@ -1144,7 +1166,7 @@ btc_spain_3 = {
 				province_id = 2979
 				province_id = 3249
 				province_id = 3189
-				province_id = 3720
+				province_id = 4720
 				province_id = 4764
 				province_id = 193
 				province_id = 3092
@@ -1182,7 +1204,7 @@ btc_spain_3 = {
 				2979 = { country_or_non_sovereign_subject_holds = ROOT }
 				3249 = { country_or_non_sovereign_subject_holds = ROOT }
 				3189 = { country_or_non_sovereign_subject_holds = ROOT }
-				3720 = { country_or_non_sovereign_subject_holds = ROOT }
+				4720 = { country_or_non_sovereign_subject_holds = ROOT }
 				4764 = { country_or_non_sovereign_subject_holds = ROOT }
 				193 = { country_or_non_sovereign_subject_holds = ROOT }
 				3092 = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1224,7 +1246,7 @@ btc_spain_3 = {
 							province_id = 2979
 							province_id = 3249
 							province_id = 3189
-							province_id = 3720
+							province_id = 4720
 							province_id = 4764
 							province_id = 193
 							province_id = 3092
@@ -1497,15 +1519,31 @@ gc_spain_3_b = {
 		}
 		
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = native_reductions_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					OR = {
-						continent = north_america
-						continent = south_america
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = native_reductions_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						value = 15
 					}
-					value = 15
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = native_reductions_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						OR = {
+							continent = north_america
+							continent = south_america
+						}
+						value = 75
+					}
 				}
 			}
 			216 = { # school of salamanca
@@ -1514,9 +1552,7 @@ gc_spain_3_b = {
 		}
 		effect = {
 			if = {
-				limit = {
-					religion = catholic
-				}
+				limit = { religion = catholic }
 				add_papal_influence = 50
 			}
 			else = {
@@ -1606,9 +1642,7 @@ gc_spain_4 = {
 		
 		effect = {
 			if = {
-				limit = {
-					NOT = { NAP = { is_subject_of = ROOT } }
-				}
+				limit = { NOT = { NAP = { is_subject_of = ROOT } } }
 				naples_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1640,34 +1674,24 @@ gc_spain_4 = {
 			}
 			else = {
 				naples_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = NAP
 				}
 				apulia_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = NAP
 				}
 				calabria_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = NAP
 				}
 				abruzzo_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = NAP
 				}
 			}
 			if = {
-				limit = {
-					NOT = { SIC = { is_subject_of = ROOT } }
-				}
+				limit = { NOT = { SIC = { is_subject_of = ROOT } } }
 				sicily_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1692,28 +1716,20 @@ gc_spain_4 = {
 			}
 			else = {
 				sicily_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = SIC
 				}
 				western_sicily_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = SIC
 				}
 				sicily_islands_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = SIC
 				}
 			}
 			if = {
-				limit = {
-					NOT = { COR = { is_subject_of = ROOT } }
-				}
+				limit = { NOT = { COR = { is_subject_of = ROOT } } }
 				corsica_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1724,16 +1740,12 @@ gc_spain_4 = {
 			}
 			else = {
 				corsica_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = COR
 				}
 			}
 			if = {
-				limit = {
-					NOT = { SAR = { is_subject_of = ROOT } }
-				}
+				limit = { NOT = { SAR = { is_subject_of = ROOT } } }
 				corsica_sardinia_area = {
 					limit = {
 						NOT = { is_core = ROOT }
@@ -1744,9 +1756,7 @@ gc_spain_4 = {
 			}
 			else = {
 				corsica_sardinia_area = {
-					limit = {
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
-					}
+					limit = { NOT = { country_or_non_sovereign_subject_holds = ROOT } }
 					add_permanent_claim = SAR
 				}
 			}
@@ -2620,12 +2630,25 @@ gc_spain_5_c = {
 		}
 		
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = colombia_holy_order_tooltip
-				num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
-					has_holy_order_trigger = yes
-					colonial_region = colonial_colombia
-					value = 5
+			if = {
+				limit = { religion = catholic }
+				custom_trigger_tooltip = {
+					tooltip = colombia_holy_order_tooltip
+					num_of_states_owned_or_owned_by_non_sovereign_subjects_with = {
+						has_holy_order_trigger = yes
+						colonial_region = colonial_colombia
+						value = 5
+					}
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = colombia_holy_order_alternative_tooltip
+					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+						religion = ROOT
+						colonial_region = colonial_colombia
+						value = 25
+					}
 				}
 			}
 			colonial_colombia = {
@@ -2636,9 +2659,7 @@ gc_spain_5_c = {
 		effect = {
 			add_dip_power = 100
 			if = {
-				limit = {
-					government = monarchy
-				}
+				limit = { government = monarchy }
 				add_legitimacy = 25
 			}
 			add_country_modifier = {
@@ -2654,12 +2675,8 @@ gc_spain_5_c = {
 					825 = { is_capital = no }
 				}
 				every_subject_country = {
-					limit = {
-						owns = 825
-					}
-					825 = {
-						prev_move_capital_effect = yes
-					}
+					limit = { owns = 825 }
+					825 = { prev_move_capital_effect = yes }
 				}
 			}
 		}

@@ -1625,7 +1625,8 @@ country_decisions = {
 			change_religion = sikhism
 			if = {
 				limit = {
-					has_reform_level = 2
+					government = monarchy
+					reform_level = 2
 				}
 				add_government_reform = khalsa_reform
 			}
@@ -1736,6 +1737,81 @@ country_decisions = {
 					has_country_flag = a_kirishitan_realm
 				}
 			}
+		}
+	}
+	
+	renovate_emerald_buddha_shrine = {
+		potential = {
+			OR = {
+				religion = buddhism
+				religion = mahayana
+				religion = vajrayana
+			}
+			any_owned_province = {
+				has_province_modifier = emerald_buddha
+			}
+		}
+		allow = {
+			years_of_income = 0.25
+		}
+		effect = {
+			add_years_of_income = -0.25
+			if = {
+				limit = {
+					any_owned_province = {
+						has_province_modifier = emerald_buddha
+					}
+				}
+				every_owned_province = {
+					remove_province_modifier = emerald_buddha
+				}
+				capital_scope = {
+					add_permanent_province_modifier = {
+						name = "emerald_buddha_alternate"
+						duration = -1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}	
+	renovate_emerald_buddha_shrine_alternate = {
+		potential = {
+			OR = {
+				religion = buddhism
+				religion = mahayana
+				religion = vajrayana
+			}
+			any_owned_province = {
+				has_province_modifier = emerald_buddha_alternate
+			}
+		}
+		allow = {
+			years_of_income = 0.25
+		}
+		effect = {
+			add_years_of_income = -0.25
+			if = {
+				limit = {
+					any_owned_province = {
+						has_province_modifier = emerald_buddha_alternate
+					}
+				}
+				every_owned_province = {
+					remove_province_modifier = emerald_buddha_alternate
+				}
+				capital_scope = {
+					add_permanent_province_modifier = {
+						name = "emerald_buddha"
+						duration = -1
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	

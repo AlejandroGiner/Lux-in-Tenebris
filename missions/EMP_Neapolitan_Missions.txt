@@ -104,7 +104,7 @@ emp_naples_2 = {
 		required_missions = { emp_nap_independent_naples }
 		position = 2
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = tuscany_area
 				area = south_tuscany_area
 			}
@@ -113,7 +113,7 @@ emp_naples_2 = {
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 5
-				OR {
+				OR = {
 					area = tuscany_area
 					area = south_tuscany_area
 				}

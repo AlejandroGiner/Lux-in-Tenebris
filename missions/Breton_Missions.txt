@@ -85,7 +85,7 @@ bri_1 = {
 		icon = mission_landsknecht_soldier
 		required_missions = { bri_expand_up_the_loire }
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = normandy_area
 				area = west_normandy_area
 			}

@@ -727,7 +727,7 @@ gc_tunis_5 = {
 			cyrenaica_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						is_permanent_claim = ROOT
 						is_core = ROOT
 					}
 					is_city = yes

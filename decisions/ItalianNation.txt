@@ -44,6 +44,11 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ITA
+			#this is so that a tier 1 reform is always selected, preventing the user from just never selecting one and enjoying loads of absolutism
+			if = {
+				limit = { NOT = { has_reform_on_level = 0 } }
+				add_government_reform = signoria_reform
+			}
 			btc_new_nation_effects = yes
 			italy_region = {
 				limit = {

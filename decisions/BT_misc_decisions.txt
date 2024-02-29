@@ -298,7 +298,7 @@ country_decisions = {
 				factor = 0
 				NOT = {
 					OR = {
-						ruler_has_personality = expansionist_personality
+						ruler_has_personality_ancestor = { key = expansionist }
 						ruler_has_personality = conqueror_personality
 						ruler_has_personality = greedy_personality
 						any_province = {

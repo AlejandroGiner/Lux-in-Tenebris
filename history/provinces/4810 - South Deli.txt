@@ -1,0 +1,41 @@
+#4596 - Asahan
+
+owner = DLI
+controller = DLI
+culture = batak
+religion = sunni
+capital = "Asahan"
+trade_goods = spices
+hre = no
+base_tax = 2
+base_production = 2
+base_manpower = 2
+is_city = yes
+add_core = DLI
+
+
+
+discovered_by = chinese
+discovered_by = japanese_btc
+discovered_by = korean_btc
+discovered_by = indochinese
+discovered_by = malay_group
+discovered_by = indian
+discovered_by = muslim
+discovered_by = persian_btc
+discovered_by = ottoman
+
+1405.1.1 = { discovered_by = MNG }
+
+1509.1.1 = { discovered_by = POR }
+1523.1.1 = {
+	owner = ATJ
+	controller = ATJ
+	add_core = ATJ
+}
+
+1632.1.1 = {
+	owner = ARU
+	controller = ARU
+	remove_core = ATJ
+}

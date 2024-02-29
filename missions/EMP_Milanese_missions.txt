@@ -107,7 +107,7 @@ emp_mlo_conquest_branch = {
 		icon = conquer_tuscany
 		required_missions = { emp_mlo_emilia_romagna }
 		provinces_to_highlight = {
-      OR {
+      OR = {
         area = tuscany_area
         area = south_tuscany_area
       }

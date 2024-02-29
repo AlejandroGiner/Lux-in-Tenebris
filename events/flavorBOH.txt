@@ -93,13 +93,11 @@ country_event = {
 			change_statists_vs_orangists = 1
 		}
 		if = {
-			limit = {
-				has_dlc = "Rights of Man" 
-			}
-			hidden_effect = { add_ruler_personality = zealot_personality }
+			limit = { has_dlc = "Rights of Man" }
+			hidden_effect = { add_ruler_personality_ancestor = { key = zealot } }
 		}
-		add_reform_desire = 0.03
-        }
+		add_reform_desire = 0.02
+	}
 
 	option = { # Hussite King, Catholic nation - tolerance option
 		ai_chance = { factor = 90 }
@@ -130,9 +128,7 @@ country_event = {
 			fixed = yes
 		}
 		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
+			limit = { has_states_general_mechanic = yes }
 			change_statists_vs_orangists = 1
 		}
 		add_reform_desire = 0.01
@@ -140,9 +136,7 @@ country_event = {
 			name = "boh_hussite_king"
 			duration = -1
 		}
-		PAP = {
-			country_event = { id = flavor_boh.9 }
-		}
+		PAP = { country_event = { id = flavor_boh.9 } }
 	}
 	
 	option = { # Fight them
@@ -320,31 +314,23 @@ country_event = {
 	}
 	option = {
 		name = flavor_boh.2.b
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 10 }
 		add_ruler_modifier = {
 			name = "boh_hussite_king"
 			duration = -1
 		}
-        add_reform_desire = 0.01
+        add_reform_desire = 0.005
 		if = {
-			limit = {
-				religion = catholic
-			}
+			limit = { religion = catholic }
 			excommunicate = ROOT
 		}
 		else_if  = {
-			limit = {
-				religion = hussite
-			}
+			limit = { religion = hussite }
 			custom_tooltip = rejected_reconciliation_tt
 			set_ruler_flag = hussite_heretic # catholics can cleanse heresy against you for 15 years
 		}
         if = {
-			limit = {
-				exists = PAP
-			}
+			limit = { exists = PAP }
 			PAP = { country_event = { id = flavor_boh.9 } }
 		}
 	}

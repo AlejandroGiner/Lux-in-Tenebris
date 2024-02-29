@@ -6,7 +6,11 @@ tau_slot_1 = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = TAU
+		OR = {
+			tag = TAU
+			tag = BPR
+			tag = AVA
+		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -221,7 +225,11 @@ tau_slot_2 = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = TAU
+		OR = {
+			tag = TAU
+			tag = BPR
+			tag = AVA
+		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -232,13 +240,42 @@ tau_slot_2 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			province_id = 4396
-			NOT = {
-				owned_by = ROOT
+			OR = {
+				AND = {
+					ROOT = { tag = TAU }
+					province_id = 4396
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					ROOT = { tag = BPR }
+					province_id = 585
+					NOT = { owned_by = ROOT }
+				}
+				AND = {
+					ROOT = {
+						NOT = {
+							tag = TAU
+							tag = BPR
+						}
+					}
+					owner = { is_enemy = ROOT }
+				}
 			}
 		}
 		trigger = {
-			4396 = {
-				owned_by = ROOT
+			if = {
+				limit = { tag = TAU }
+				4396 = { owned_by = ROOT }
+			}
+			else_if = {
+				limit = { tag = BPR }
+				585 = { owned_by = ROOT }
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = obj_humiliate_rival_tooltip
+					has_country_flag = humiliated_rival
+				}
 			}
 		}
 		effect = {
@@ -424,9 +461,18 @@ tau_slot_2 = {
 			}
 		}
 		effect = {
+			if = {
+				limit = { is_revolutionary = no }
+				country_event = { id = flavor_lna.3 }
+			}
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = is_burma } } }
+				override_country_name = BURMA
+				set_country_flag = is_burma
+			}
 			add_country_modifier = {
 				name = "chakravarti"
-				duration = 7300
+				duration = -1
 			}
 		}
 	}
@@ -440,7 +486,11 @@ tau_slot_3 = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = TAU
+		OR = {
+			tag = TAU
+			tag = BPR
+			tag = AVA
+		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -573,7 +623,11 @@ tau_slot_4 = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = TAU
+		OR = {
+			tag = TAU
+			tag = BPR
+			tag = AVA
+		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}
@@ -585,9 +639,7 @@ tau_slot_4 = {
 		position = 2
 		provinces_to_highlight = {
 			area = arakan_area
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
 			arakan_area = {
@@ -750,7 +802,11 @@ tau_slot_5 = {
 		has_dlc = "Dharma"
 	}
 	potential = {
-		tag = TAU
+		OR = {
+			tag = TAU
+			tag = BPR
+			tag = AVA
+		}
 		has_dlc = "Dharma"
 		NOT = { map_setup = map_setup_random }
 	}

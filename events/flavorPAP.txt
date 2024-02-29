@@ -29,6 +29,15 @@ country_event = {
 	option = {
 		name = "flavor_pap.EVTOPTA1"
 		add_ruler_modifier = { name = pap_saint_peters_basilica }
+		if = {
+			limit = { has_dlc = "Leviathan" }
+			118 = {
+				add_great_project_tier = {
+					type = stpeters_cathedral
+					tier = 1
+				}
+			}
+		}
 	}
 	option = {
 		name = "flavor_pap.EVTOPTB1"
@@ -320,20 +329,14 @@ country_event = {
 	title = "flavor_pap.EVTNAME8"
 	desc = "flavor_pap.EVTDESC8"
 	picture = {	
-		trigger = {
-			has_dlc = "Emperor"
-		}
+		trigger = { has_dlc = "Emperor" }
 		picture = COUNCIL_TRENT_eventPicture
 	}
 	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
+		trigger = { NOT = { has_dlc = "Emperor" } }
 		picture = RELIGION_eventPicture
 	}
 	
-    
-    
 	is_triggered_only = yes
 	
 	option = {
@@ -342,6 +345,7 @@ country_event = {
 		PAP = {
 			add_opinion = {
 				who = ROOT
+				modifier = opinion_trent
 			}
 		}
 	}

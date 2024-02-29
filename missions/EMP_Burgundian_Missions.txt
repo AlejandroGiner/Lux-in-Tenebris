@@ -604,7 +604,7 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_subjects }
 		
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = lorraine_area
 				area = luxembourg_area
 				area = verdun_area
@@ -682,7 +682,7 @@ emp_burgundy_3 = {
 		required_missions = { emp_bur_liege }
 		
 		provinces_to_highlight = {
-			OR {
+			OR = {
 				area = frisia_area
 				area = guelders_area
 			}
@@ -1318,41 +1318,18 @@ emp_burgundy_4 = {
 			}
 
 			if = {
-				limit = {
-					NOT = {
-						FRA = {
-							any_subject_country = {
-								capital_scope = {
-									region = france_region
-								}
-								liberty_desire = 50
-							}
-						}
-					}
-				}
+				limit = { NOT = { FRA = { any_subject_country = { capital_scope = { region = france_region } } } } }
 				custom_tooltip = emp_bur_king_of_the_franks_effect_tooltip
 			}
 			if = {
-				limit = {
-					FRA = {
-						any_subject_country = {
-							capital_scope = {
-								region = france_region
-							}
-							liberty_desire = 50
-						}
-					}
-				}
+				limit = { FRA = { any_subject_country = { capital_scope = { region = france_region } } } }
 				FRA = { country_event = { id = new_flavour_bur.7 } }
 			}
 			tooltip = {
 				every_country = {
 					limit = {
 						is_subject_of = FRA
-						capital_scope = {
-							region = france_region
-						}
-						liberty_desire = 50
+						capital_scope = { region = france_region }
 					}
 					hidden_effect = { FRA = { free_vassal = prev } }
 					ROOT = { vassalize = prev }
@@ -1450,8 +1427,8 @@ emp_burgundy_4 = {
 				calc_true_if = {
 					desc = emp_bur_influence_the_princes_trigger_tooltip3
 					all_country = {
-						OR = {
-							capital_scope = {
+						capital_scope = {
+							OR = {
 								region = north_german_region
 								region = south_german_region
 							}

@@ -50,9 +50,8 @@ country_event = {
   }
   option = {
     highlight = yes
-    required_personality = architectural_visionary_personality
     trigger = {
-      ruler_has_personality = architectural_visionary_personality
+      ruler_has_personality_ancestor = { key = architectural_visionary }
     }
     name = nestorian_events.1.x
     add_years_of_income = -0.35
@@ -241,7 +240,6 @@ country_event = {
   option = {
     name = nestorian_events.3.x
     highlight = yes
-    required_personality = zealot_personality
     trigger = {
       ruler_has_personality = zealot_personality
     }
@@ -264,9 +262,8 @@ country_event = {
   option = {
     name = nestorian_events.3.y
     highlight = yes
-    required_personality = expansionist_personality
     trigger = {
-      ruler_has_personality = expansionist_personality
+      ruler_has_personality_ancestor = { key = expansionist }
     }
     add_dip_power = 50
     add_estate_loyalty = {
@@ -287,7 +284,6 @@ country_event = {
   option = {
     name = nestorian_events.3.z
     highlight = yes
-    required_personality = conqueror_personality
     trigger = {
       ruler_has_personality = conqueror_personality
     }
@@ -385,9 +381,8 @@ country_event = {
   option = {
     name = nestorian_events.5.c
     highlight = yes
-    required_personality = benevolent_personality
     trigger = {
-      ruler_has_personality = benevolent_personality
+      ruler_has_personality_ancestor = { key = benevolent }
     }
     add_years_of_income = -0.3
     add_adm_power = -10
@@ -493,9 +488,8 @@ country_event = {
   option = {
     name = nestorian_events.6.c
     highlight = yes
-    required_personality = secretive_personality
     trigger = {
-      ruler_has_personality = secretive_personality
+      ruler_has_personality_ancestor = { key = secretive }
     }
     add_country_modifier = {
       name = covert_traders
@@ -588,7 +582,6 @@ country_event = {
   option = {
     name = nestorian_events.7.x
     highlight = yes
-    required_personality = cruel_personality
     trigger = {
       ruler_has_personality = cruel_personality
     }
@@ -607,9 +600,8 @@ country_event = {
   option = {
     name = nestorian_events.7.y
     highlight = yes
-    required_personality = fierce_negotiator_personality
     trigger = {
-      ruler_has_personality = fierce_negotiator_personality
+      ruler_has_personality_ancestor = { key = fierce_negotiator }
     }
     add_years_of_income = 1.2
   }
@@ -687,7 +679,6 @@ country_event = {
   option = {
     name = nestorian_events.8.x
     highlight = yes
-    required_personality = well_advised_personality
     trigger = {
       ruler_has_personality = well_advised_personality
     }
@@ -699,7 +690,6 @@ country_event = {
   option = {
     name = nestorian_events.8.y
     highlight = yes
-    required_personality = babbling_buffoon_personality
     trigger = {
       ruler_has_personality = babbling_buffoon_personality
     }
@@ -787,7 +777,6 @@ country_event = {
   option = {
     name = nestorian_events.9.x
     highlight = yes
-    required_personality = lawgiver_personality
     trigger = {
       ruler_has_personality = lawgiver_personality
     }

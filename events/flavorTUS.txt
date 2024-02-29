@@ -450,7 +450,7 @@ country_event = {
 			}
 			hidden_effect = {
 				add_ruler_personality = infertile_personality
-				add_ruler_personality = zealot_personality
+				add_ruler_personality_ancestor = { key = zealot }
 			}
 		}
 		else = {
@@ -463,9 +463,8 @@ country_event = {
 				MIL = 3
 				fixed = yes
 			}
-			hidden_effect = {
-				add_ruler_personality = zealot_personality
-			}
+			hidden_effect = { add_ruler_personality_ancestor = { key = zealot } }
+			add_government_reform = millenarian_theocracy_reform
 		}
 		set_ruler_flag = savonarola_flag
 		add_republican_tradition = 20
@@ -829,9 +828,7 @@ country_event = {
 		picture = BONFIRE_OF_THE_VANITIES_eventPicture
 	}
 	picture = {	
-		trigger = {
-			NOT = { has_dlc = "Emperor" }
-		}
+		trigger = { NOT = { has_dlc = "Emperor" } }
 		picture = KING_SICK_IN_BED_eventPicture
 	}
 
@@ -846,31 +843,25 @@ country_event = {
 		}
 	}
 	
-	immediate = {
-		set_country_flag = savonarola_dead
-	}
+	immediate = { set_country_flag = savonarola_dead }
 
 	option = {
 		name = flavor_tus.16.a
-		trigger = {
-			government = republic
-		}
+		trigger = { government = republic }
 		set_ruler = flo_exiled_ruler
+		remove_government_reform = millenarian_theocracy_reform
 	}
 
 	option = {
 		name = flavor_tus.16.b
-		trigger = {
-			government = monarchy
-		}
+		trigger = { government = monarchy }
 		add_legitimacy = 10
 		set_ruler = flo_exiled_ruler
 		if = {
-			limit = {
-				has_country_flag = flo_exiled_heir_flag
-			}
+			limit = { has_country_flag = flo_exiled_heir_flag }
 			set_heir = flo_exiled_heir
 		}
+		remove_government_reform = millenarian_theocracy_reform
 	}
 }
 
@@ -1172,8 +1163,8 @@ country_event = {
 				25 = { add_ruler_personality = embezzler_personality }
 				25 = { add_ruler_personality = greedy_personality }
 				20 = { add_ruler_personality = sinner_personality }
-				15 = { add_ruler_personality = architectural_visionary_personality }
-				15 = { add_ruler_personality = scholar_personality }
+				15 = { add_ruler_personality_ancestor = { key = architectural_visionary } }
+				15 = { add_ruler_personality_ancestor = { key = scholar } }
 			}
 		}
 	}

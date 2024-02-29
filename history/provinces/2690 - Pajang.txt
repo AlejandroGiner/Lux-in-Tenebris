@@ -1,18 +1,18 @@
-#2690 - Pajang
+#2690 - Yogyakarta
 
 owner = MAJ
 controller = MAJ
 add_core = MAJ
 culture = javanese
 religion = sunni
-capital = "Pajang"
-trade_goods = rice
+capital = "Yogyakarta"
+trade_goods = spices
 hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 2
+base_tax = 5
+base_production = 5
+base_manpower = 3
 is_city = yes
-add_core = DMK
+add_core = YGK
 
 
 
@@ -39,4 +39,15 @@ discovered_by = ottoman
 	controller = MTR
 	add_core = MTR
 	remove_core = DMK
+} # Mataram Sultanate was established
+1613.1.1 = { discovered_by = NED } # The Dutch arrived
+1617.1.1 = { unrest = 5 } # Rebellion against Mataram rule
+1620.1.1 = { unrest = 2 }
+1627.1.1 = { unrest = 7 } # Rebellion
+1630.1.1 = { unrest = 0 }
+1755.2.13 = {
+	owner = YGK
+	controller = YGK
+	add_core = YGK
+	remove_core = MTR
 } # Mataram Sultanate was established

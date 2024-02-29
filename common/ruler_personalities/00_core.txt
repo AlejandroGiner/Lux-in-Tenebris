@@ -168,9 +168,9 @@ tolerant_personality = {
 	#personality_events.13
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = zealot_personality }
-			NOT = { ruler_has_personality = free_thinker_personality }
-			NOT = { ruler_has_personality = pious_personality }
+			NOT = { ruler_has_personality_ancestor = { key = zealot }}
+			NOT = { ruler_has_personality_ancestor = { key = free_thinker } }
+			NOT = { ruler_has_personality_ancestor = { key = pious } }
 		}
 	}
 
@@ -260,8 +260,8 @@ free_thinker_personality = {
 	#personality_events.15
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = careful_personality }
-			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality_ancestor = { key = careful } }
+			NOT = { ruler_has_personality_ancestor = { key = zealot }}
 			NOT = { ruler_has_personality = tolerant_personality }
 		}
 	
@@ -441,7 +441,7 @@ careful_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = naive_personality }
-			NOT = { ruler_has_personality = free_thinker_personality }
+			NOT = { ruler_has_personality_ancestor = { key = free_thinker } }
 			NOT = { ruler_has_personality = bold_fighter_personality }
 		}
 	
@@ -778,7 +778,7 @@ zealot_personality = {
 	ruler_allow = {
 		allow = {
 			NOT = { ruler_has_personality = tolerant_personality }
-			NOT = { ruler_has_personality = free_thinker_personality }
+			NOT = { ruler_has_personality_ancestor = { key = free_thinker } }
 			NOT = { ruler_has_personality = drunkard_personality }
 			NOT = { ruler_has_personality = sinner_personality }
 		}
@@ -1310,6 +1310,10 @@ expansionist_personality = {
 	chance = {
 		modifier = {
 			factor = 1
+			num_of_colonists = 1
+		}
+		modifier = {
+			factor = 1
 			OR = {
 				num_of_conquistadors = 1
 				num_of_explorers = 1
@@ -1604,7 +1608,7 @@ tactical_genius_personality = {
 bold_fighter_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = careful_personality }
+			NOT = { ruler_has_personality_ancestor = { key = careful } }
 			NOT = { ruler_has_personality = craven_personality }
 		}
 		chance = {
@@ -1942,8 +1946,8 @@ fierce_negotiator_personality = {
 babbling_buffoon_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = charismatic_negotiator_personality }
-			NOT = { ruler_has_personality = silver_tongue_personality }
+			NOT = { ruler_has_personality_ancestor = { key = charismatic_negotiator } }
+			NOT = { ruler_has_personality_ancestor = { key = silver_tongue } }
 		}
 	
 		chance = {
@@ -2038,7 +2042,7 @@ babbling_buffoon_personality = {
 embezzler_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = incorruptible_personality }
+			NOT = { ruler_has_personality_ancestor = { key = incorruptible } }
 		}
 	
 		chance = {
@@ -2239,9 +2243,9 @@ infertile_personality = {
 drunkard_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = pious_personality }
-			NOT = { ruler_has_personality = entrepreneur_personality }
-			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality_ancestor = { key = pious } }
+			NOT = { ruler_has_personality_ancestor = { key = entrepreneur } }
+			NOT = { ruler_has_personality_ancestor = { key = zealot }}
 		}
 	
 		chance = {
@@ -2338,8 +2342,8 @@ sinner_personality = {
 
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = pious_personality }
-			NOT = { ruler_has_personality = zealot_personality }
+			NOT = { ruler_has_personality_ancestor = { key = pious } }
+			NOT = { ruler_has_personality_ancestor = { key = zealot }}
 		}
 	
 		chance = {
@@ -2437,7 +2441,7 @@ sinner_personality = {
 greedy_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = midas_touched_personality }
+			NOT = { ruler_has_personality_ancestor = { key = midas_touched } }
 		}
 	
 		chance = {
@@ -2562,8 +2566,8 @@ cruel_personality = {
 
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = just_personality }
-			NOT = { ruler_has_personality = kind_hearted_personality }
+			NOT = { ruler_has_personality_ancestor = { key = just }}
+			NOT = { ruler_has_personality_ancestor = { key = kind_hearted } }
 		}
 	
 		chance = {
@@ -2652,14 +2656,14 @@ cruel_personality = {
 naive_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = silver_tongue_personality }
-			NOT = { ruler_has_personality = careful_personality }
+			NOT = { ruler_has_personality_ancestor = { key = silver_tongue } }
+			NOT = { ruler_has_personality_ancestor = { key = careful } }
 		}
 	
 		chance = {
 			modifier = {
 				factor = 1
-				ruler_has_personality = free_thinker_personality
+				ruler_has_personality_ancestor = { key = free_thinker }
 			}
 			modifier = {
 				factor = -0.5
@@ -2761,7 +2765,7 @@ naive_personality = {
 craven_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = inspiring_leader_personality }
+			NOT = { ruler_has_personality_ancestor = { key = inspiring_leader } }
 			NOT = { ruler_has_personality = bold_fighter_personality }
 		}
 	
@@ -2862,8 +2866,8 @@ craven_personality = {
 loose_lips_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = intricate_web_weaver_personality }
-			NOT = { ruler_has_personality = secretive_personality }
+			NOT = { ruler_has_personality_ancestor = { key = intricate_web_weaver }}
+			NOT = { ruler_has_personality_ancestor = { key = secretive } }
 		}
 	
 		chance = {
@@ -2955,7 +2959,7 @@ loose_lips_personality = {
 obsessive_perfectionist_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = architectural_visionary_personality }
+			NOT = { ruler_has_personality_ancestor = { key = architectural_visionary } }
 		}
 	
 		chance = {
@@ -3045,8 +3049,8 @@ obsessive_perfectionist_personality = {
 malevolent_personality = {
 	ruler_allow = {
 		allow = {
-			NOT = { ruler_has_personality = benevolent_personality }
-			NOT = { ruler_has_personality = kind_hearted_personality }
+			NOT = { ruler_has_personality_ancestor = { key = benevolent } }
+			NOT = { ruler_has_personality_ancestor = { key = kind_hearted } }
 		}
 	
 		chance = {

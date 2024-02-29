@@ -1962,8 +1962,8 @@ VIJ_ideas = {
 
 AYU_ideas = {
 	start = {
-		trade_steering = 0.20
-		cavalry_power = 0.10
+		liberty_desire_from_subject_development = -0.2
+		cavalry_power = 0.15
 	}
 	
 	bonus = {
@@ -1976,27 +1976,27 @@ AYU_ideas = {
 	free = yes
 	
 	ayu_bunga_mas = {
-		global_tax_modifier = 0.10
-		vassal_income = 0.15
+		global_tax_modifier = 0.05
+		vassal_income = 0.25
 	}
 	ayu_mueang = {
 		fort_maintenance_modifier = -0.1
 	}
 	corvee_system = {
-		global_manpower_modifier = 0.10
+		global_manpower_modifier = 0.15
 	}
 	ayu_trade_settlements = {
-                global_institution_spread = 0.1
+		global_institution_spread = 0.1
 		tolerance_heathen = 2
 	}
 	ayu_foreign_firepower = {
 		mil_tech_cost_modifier = -0.1
 	}
 	ayu_embassies = {
-		diplomats = 1
+		improve_relation_modifier = 0.25
 	}
 	phrai_luang = {
-		global_unrest = -1
+		development_cost = -0.1
 	}
 }
 
@@ -2982,7 +2982,7 @@ SER_ideas = {
 		cavalry_power = 0.15
 	}
 	gold_mines = {
-		production_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.1
 	}
 	mercenary_armies = {
 		merc_maintenance_modifier = -0.15
@@ -3761,13 +3761,12 @@ CHICK_ideas = {
 		hostile_attrition = 1.0
 	}
 	unconqured_and_unconquerable = {
-		enemy_core_creation = 0.5
+		advisor_cost = -0.1
 	}
 	slave_raids = {
 		trade_efficiency = 0.1
 		loot_amount = 0.10
 	}
-	
 	lessons_of_ackia = {
 		defensiveness = 0.2
 	}
@@ -3782,7 +3781,7 @@ CHICK_ideas = {
 CHE_ideas = {
 	start = {
 		advisor_cost = -0.10
-		enemy_core_creation = 0.25
+		core_creation = -0.15
 	}
 	
 	bonus = {
@@ -3838,7 +3837,7 @@ PUE_ideas = {
 	free = yes		# will be added at load
 	
 	ancient_pueblo_legacy = {
-		enemy_core_creation = 0.25
+		hostile_attrition = 1
 	}
 	adobe_architecture = {
 		build_cost = -0.1
@@ -4444,7 +4443,7 @@ AZT_ideas = {
 
 DAH_ideas = {
 	start = {
-		enemy_core_creation = 0.25
+		hostile_attrition = 1
 		defensiveness = 0.1
 	}
 
@@ -5857,7 +5856,7 @@ CYA_ideas = {
 		diplomatic_reputation = 1		
 	}
 	cya_idea_5 = {
-		enemy_core_creation = 0.25
+		defensiveness = 0.15
 	}
 	cya_idea_6 = {
 		prestige = 1
@@ -6032,7 +6031,7 @@ NAX_ideas = {
 
 TUA_ideas = {
 	start = {
-		migration_cooldown = -0.2
+		migration_cost = -0.2
 		tolerance_own = 2
 	}
 	
@@ -6331,7 +6330,7 @@ GUA_ideas = {
 CUA_ideas = {
 	start = {
 		stability_cost_modifier = -0.10
-		migration_cooldown = -0.2
+		migration_cost = -0.2
 	}
 	
 	bonus = {
@@ -6412,7 +6411,7 @@ CIR_ideas = {
 LXA_ideas = {
 	start = {
 		tolerance_own = 2
-		global_missionary_strength = 0.01
+		cav_to_inf_ratio = 0.2
 	}
 	
 	bonus = {
@@ -6428,7 +6427,7 @@ LXA_ideas = {
 		num_accepted_cultures = 2
 	}	
 	lxa_elephant_cavalry = {
-		cavalry_power = 0.1
+		cavalry_power = 0.15
 	}	
 	court_history_of_lang_xang = {
 		ae_impact = -0.1
@@ -7505,7 +7504,7 @@ THU_ideas = {
 BTI_ideas = {
 	start = {
 		tolerance_heathen = 3
-		enemy_core_creation = 0.25
+		core_creation = -0.15
 	}
 	bonus = {
 		global_manpower_modifier = 0.2

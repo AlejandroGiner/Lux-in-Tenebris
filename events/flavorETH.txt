@@ -1256,8 +1256,8 @@ country_event = {
 				female = yes
 			}
 			hidden_effect = {
-				add_queen_personality = righteous_personality
-				add_queen_personality = intricate_web_weaver_personality
+				add_queen_personality_ancestor = { key = righteous }
+				add_queen_personality_ancestor = { key = intricate_web_weaver }
 			}
 		}
 	}

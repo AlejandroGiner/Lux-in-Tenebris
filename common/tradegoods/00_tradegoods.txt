@@ -214,7 +214,7 @@ grain = {
 wine = {
 	color = { 0.36 0.13 0.28 }
 	modifier = {
-		global_unrest = -1
+		global_unrest = -0.5
 	}
 	province = {
 		local_unrest = -1
@@ -466,10 +466,10 @@ wool = {
 cloth = {
 	color = { 0.86 0.19 0.19 }
 	modifier = {
-		merc_maintenance_modifier = -0.15
+		merc_maintenance_modifier = -0.1
 	}
 	province = {
-		local_development_cost = -0.1
+		local_development_cost = -0.05
 	}
 	chance = {
 		factor = 10
@@ -519,7 +519,7 @@ cloth = {
 fish = {
 	color = { 0.55 0.82 0.97 }
 	modifier = {
-		global_sailors_modifier = 0.25
+		global_sailors_modifier = 0.2
 	}
 	province = {
 		local_sailors_modifier = 0.25
@@ -792,6 +792,12 @@ fur = {
 				province_id = 1216
 			}
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -880,7 +886,7 @@ salt = {
 naval_supplies = {
 	color = { 0.11 0.17 0.4 }
 	modifier = {
-		naval_forcelimit_modifier = 0.20
+		naval_forcelimit_modifier = 0.10
 	}
 	province = {
 		naval_forcelimit = 0.3
@@ -1497,7 +1503,7 @@ iron = {
 slaves = {
 	color = { 0.0 0.0 0.0 }
 	modifier = {
-		global_tariffs = 0.25
+		global_tariffs = 0.35
 	}
 	province = {
 		local_missionary_strength = 0.01
@@ -1553,13 +1559,19 @@ slaves = {
 				area = dongola_area
 			}
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
 ivory = {
 	color = { 0.75 0.7 0.63 }
 	modifier = {
-		diplomatic_reputation = 2
+		diplomatic_reputation = 1
 	}
 	province = {
 		local_state_maintenance_modifier = -0.2
@@ -1601,6 +1613,12 @@ ivory = {
 				region = malaya_region
 				region = moluccas_region
 				region = indonesia_region
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
 			}
 		}
 	}
@@ -1697,6 +1715,12 @@ tea = {
 				area = west_sao_paolo_area  #Yerba Mate
 			}
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -1724,7 +1748,13 @@ chinaware = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 8 }
+			NOT = { development_discounting_tribal = 8 }
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1780,6 +1810,17 @@ spices = {
 				region = indonesia_region
 			}
 		}
+		modifier = {
+			factor = 0
+			OR = {
+				area = molluca_area
+				area = spice_islands_area
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = { has_country_flag = encourage_cash_crops_flag }
+		}
 	}
 }
 
@@ -1788,7 +1829,7 @@ spices = {
 coffee = {
 	color = { 0.22 0.15 0.09 }
 	modifier = {
-		global_autonomy = -0.05
+		global_autonomy = -0.03
 	}
 	province = {
 		local_culture_conversion_cost = -0.1
@@ -1839,13 +1880,19 @@ coffee = {
 			factor = 0.5
 			region = carribeans_region
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
 cotton = {
 	color = { 0.52 0.68 0.6 }
 	modifier = {
-		global_colonial_growth = 30
+		global_colonial_growth = 35
 	}
 	province = {
 		local_development_cost = -0.1
@@ -1912,6 +1959,12 @@ cotton = {
 		modifier = {
 			factor = 10.0
 			area = lucayan_area			#But more in the Bahamas
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -1984,6 +2037,12 @@ sugar = {
 			factor = 0.1
 			area = lucayan_area
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -2055,6 +2114,12 @@ tobacco = {
 				area = upper_canada_area			#Tobacco people lesser
 				area = central_cuba_area
 				area = east_cuba_area
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
 			}
 		}
 	}
@@ -2166,7 +2231,13 @@ silk = {
 				region = deccan_region
 				region = coromandel_region
 			}
-			development = 20
+			development_discounting_tribal = 20
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -2205,6 +2276,12 @@ dyes = {
 			NOT = { region = mexico_region }
 			NOT = { region = carribeans_region }
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -2239,6 +2316,12 @@ tropical_wood = {
 		modifier = {
 			factor = 0
 			province_id = 4348
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
 		}
 	}
 }
@@ -2403,6 +2486,12 @@ incense = {
 			factor = 0.2
 			region = australia_region
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -2422,11 +2511,11 @@ glass = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 12 }	#Lower average dev in BT, so lowering from 18 to 12
+			NOT = { development_discounting_tribal = 12 }	#Lower average dev in BT, so lowering from 18 to 12
 		}
 		modifier = {
 			factor = 2.0
-			development = 16	#Lower average dev in BT, so lowering from 22 to 16
+			development_discounting_tribal = 16	#Lower average dev in BT, so lowering from 22 to 16
 		}
 	}
 }
@@ -2447,11 +2536,11 @@ paper = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { development = 12 }	#Lower average dev in BT, so lowering from 18 to 12
+			NOT = { development_discounting_tribal = 12 }	#Lower average dev in BT, so lowering from 18 to 12
 		}
 		modifier = {
 			factor = 2.0
-			development = 16	#Lower average dev in BT, so lowering from 22 to 16
+			development_discounting_tribal = 16	#Lower average dev in BT, so lowering from 22 to 16
 		}
 	}
 }
@@ -2544,16 +2633,6 @@ gems = {
 				has_terrain = marsh
 			}
 		}
-		#modifier = {
-		#	factor = 1.5
-		#	OR = {
-		#		has_terrain = mountain
-		#		has_terrain = jungle
-		#		has_terrain = hills
-		#		has_terrain = highlands
-		#		has_terrain = coastline #Pearls
-		#	}
-		#}
 		modifier = {			#Inverting above, disabling for the wrong terrain types like most other trade goods. Enabled terrains are now Forest, Coastline, Hills, Highlands, Mountains, Jungle, Deserts, Coastal Deserts, and Glacial
 			factor = 0
 			OR = {
@@ -2668,6 +2747,12 @@ gems = {
 				province_id = 5077			#Sivuqaq
 			}
 		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
 	}
 }
 
@@ -2680,7 +2765,7 @@ coal = {
 
 	trigger = {
 		OR = {
-			development = 20
+			development_discounting_tribal = 20
 			owner = { innovativeness = 20 }
 		}
 		provincial_institution_progress = {
@@ -2691,7 +2776,7 @@ coal = {
 	}
 
 	modifier = {
-		global_trade_goods_size_modifier = 0.1
+		global_trade_goods_size_modifier = 0.05
 	}
 
 	province = {
@@ -2702,6 +2787,35 @@ coal = {
 		factor = 1
 	}
 }
+
+cloves = {
+	color = { 1.0 0.5 0.85 }
+	modifier = {
+		trade_efficiency = 0.05
+	}
+	province = {
+		province_trade_power_modifier = 0.2
+	}
+	chance = {
+		factor = 150
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					area = molluca_area
+					area = spice_islands_area
+				}
+			}
+		}
+		modifier = {
+			factor = 2.0
+			FROM = {
+				has_country_flag = encourage_cash_crops_flag
+			}
+		}
+	}
+}
+
 unknown = {
 	color = { 0.5 0.5 0.5 }
 }

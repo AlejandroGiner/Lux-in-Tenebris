@@ -85,7 +85,7 @@ merc_black_army = {
     artillery_weight = 0.4
 	cavalry_cap = 4
 	home_province = 153
-	sprites = { easterngfx_sprite_pack }
+	sprites = { dlc102_hun_sprite_pack easterngfx_sprite_pack }
 	trigger = {
 		OR = {
 			has_country_modifier = hun_black_army
@@ -105,7 +105,7 @@ merc_black_army_2 = {
     artillery_weight = 0.4
 	cavalry_cap = 4
 	home_province = 153
-	sprites = { easterngfx_sprite_pack }
+	sprites = { dlc102_hun_sprite_pack easterngfx_sprite_pack }
 	trigger = {
 		has_reform = black_army_reform
 	}
@@ -120,7 +120,7 @@ merc_knights_templar = {
 	regiments_per_development = 0.01
 	home_province = 379
 	cavalry_weight = 0.5
-	sprites = { westerngfx_sprite_pack }
+	sprites = { dlc040_kni_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		custom_trigger_tooltip = {
 			tooltip = templars_tt
@@ -137,7 +137,7 @@ merc_knights_templar = {
 
 # Pontifical Swiss Guard
 merc_swiss_guard = {
-    regiments_per_development = 0.005
+    regiments_per_development = 0.02
 	home_province = 166
 	sprites = { dlc029_pap_sprite_pack dlc040_pap_sprite_pack westerngfx_sprite_pack }
     trigger = { 
@@ -235,7 +235,7 @@ merc_reislaufer = {
     regiments_per_development = 0.025
     home_province = 165 # 
 	artillery_weight = 0.3
-	sprites = { westerngfx_sprite_pack }
+	sprites = { dlc103_swi_sprite_pack westerngfx_sprite_pack }
     trigger = {
 		OR = {
 			capital_scope = { 
@@ -417,7 +417,7 @@ merc_hadjuks = {
 	cavalry_cap = 2
     home_province = 4128
     cost_modifier = 0.75
-	sprites = { easterngfx_sprite_pack }
+	sprites = { dlc102_wal_sprite_pack easterngfx_sprite_pack }
     trigger = {
 		religion_group = christian
 		capital_scope = {
@@ -532,7 +532,7 @@ merc_scottish_guard = {
 merc_seimeni = {
     regiments_per_development = 0.03
     home_province = 157
-	sprites = { easterngfx_sprite_pack }
+	sprites = { dlc102_wal_sprite_pack easterngfx_sprite_pack }
     trigger = { 
 		OR = {
 			primary_culture = romanian
@@ -1596,7 +1596,7 @@ merc_free_swiss_guard = {
     regiments_per_development = 0.025
     home_province = 165 # Bern
 	cost_modifier = 1.5
-	sprites = { westerngfx_sprite_pack }
+	sprites = { dlc103_swi_sprite_pack westerngfx_sprite_pack }
     trigger = { 
 		OR = {
 			capital_scope = {
@@ -2003,7 +2003,7 @@ merc_mongol_banner = {
 merc_swiss_canton_mercenaries = {
     regiments_per_development = 0.05
 	home_province = 165
-	sprites = { westerngfx_sprite_pack }
+	sprites = { dlc103_swi_sprite_pack westerngfx_sprite_pack }
 	trigger = {
 		tag = SWI
 		mission_completed = emp_swi_mercenaries
@@ -2012,4 +2012,39 @@ merc_swiss_canton_mercenaries = {
 	modifier = {
 		discipline = 0.05
 	}
+}
+
+merc_japanese_volunteers = {
+    regiments_per_development = 0.02
+	cavalry_weight = 0.1
+	artillery_weight = 0.3
+	cavalry_cap = 2
+    home_province = 600
+	sprites = { dlc068_jap_sprite_pack jap_base_sprite_pack }
+    trigger = {
+		mission_completed = mnd_siam_japan
+	}
+	modifier = {
+		infantry_power = 0.1
+        discipline = 0.025
+	}
+}
+
+merc_militant_order_of_saint_joan = {
+    regiments_per_development = 0.025
+    cavalry_weight = 0.1
+    artillery_weight = 0.2
+	cavalry_cap = 2
+    home_province = 184
+	cost_modifier = 0.5
+	sprites = { dlc001_orl_sprite_pack dlc049_FRA_sprite_pack dlc028_fra_sprite_pack dlc054_fra_sprite_pack fra_base_sprite_pack }
+	trigger = {
+		has_country_flag = militant_order_of_saint_joan
+	}
+    modifier = {
+        may_recruit_female_generals = yes
+        female_advisor_chance = 1.0
+        fire_damage = 0.2
+		discipline = 0.05
+    }
 }

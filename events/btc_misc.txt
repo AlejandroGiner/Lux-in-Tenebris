@@ -109,15 +109,12 @@ province_event = {
 		ai_chance = { factor = 100 }
 		trigger = {
 			OR = {
-				ruler_has_personality = free_thinker_personality
-				ruler_has_personality = scholar_personality
-				ruler_has_personality = entrepreneur_personality
+				ruler_has_personality_ancestor = { key = free_thinker }
+				ruler_has_personality_ancestor = { key = scholar }
+				ruler_has_personality_ancestor = { key = entrepreneur }
 			}
 		}
 		highlight = yes
-		required_personality = entrepreneur_personality
-		required_personality = free_thinker_personality
-		required_personality = scholar_personality
 		owner = { add_prestige = 10 }
 		add_splendor = 75
 		add_innovativeness_big_effect = yes
@@ -658,9 +655,6 @@ country_event = {
 			}
 		}
 		highlight = yes
-		required_personality = cruel_personality
-		required_personality = zealot_personality
-		required_personality = malevolent_personality
 		ai_chance = { factor = 100 }
 		
 		add_reform_desire  = 0.03
@@ -677,19 +671,14 @@ country_event = {
 		trigger = {
 			OR = {
 				ruler_has_personality = sinner_personality
-				ruler_has_personality = benevolent_personality
-				ruler_has_personality = free_thinker_personality
+				ruler_has_personality_ancestor = { key = benevolent }
+				ruler_has_personality_ancestor = { key = free_thinker }
 				ruler_has_personality = tolerant_personality
-				ruler_has_personality = scholar_personality
+				ruler_has_personality_ancestor = { key = scholar }
 			}
 		}
 		highlight = yes
 		
-		required_personality = sinner_personality
-		required_personality = benevolent_personality
-		required_personality = free_thinker_personality
-		required_personality = tolerant_personality
-		required_personality = scholar_personality
 		
 		ai_chance = { factor = 100 }
 		
@@ -863,13 +852,11 @@ country_event = {
 		name = btc_misc.15.a
 		trigger = {
 			OR = {
-				ruler_has_personality = free_thinker_personality
-				ruler_has_personality = scholar_personality
+				ruler_has_personality_ancestor = { key = free_thinker }
+				ruler_has_personality_ancestor = { key = scholar }
 			}
 		}
 		highlight = yes
-		required_personality = free_thinker_personality
-		required_personality = scholar_personality
 		ai_chance = { factor = 100 }
 		
 		add_years_of_income = -0.3

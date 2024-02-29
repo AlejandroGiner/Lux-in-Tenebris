@@ -406,8 +406,9 @@ counter_revolution = {
 		is_revolutionary = no
 		any_country = {
 			is_revolution_target = yes
-			capital_scope = {
-				continent = ROOT
+			OR = {
+				capital_scope = { continent = ROOT }
+				is_neighbor_of = ROOT
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = autocracy_reform
+add_government_reform = confucian_bureaucracy
 primary_culture = korean
 religion = confucianism
 add_harmonized_religion = mahayana
@@ -564,6 +564,16 @@ capital = 735	# Hanseong
 		mil = 1
 		birth_date = 1752.9.22
 		death_date = 1800.6.28
+	}
+	queen = {
+		country_of_origin = KOR
+		name = "Jung Soon"
+		birth_date = 1745.12.2
+		death_date = 1805.2.11
+		female = yes
+		adm = 3
+		dip = 3
+		mil = 1
 	}
 }
 

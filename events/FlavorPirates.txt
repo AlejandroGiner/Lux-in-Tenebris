@@ -134,6 +134,16 @@ country_event = {
 			swap_non_generic_missions = yes
 		}
 	}
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			NSS = {
+				country_event = {
+					id = pirates.25
+					days = 1
+				}
+			}
+		}
+	}
 }
 
 # Libertatia
@@ -272,6 +282,16 @@ country_event = {
 			set_ruler_flag = historical_pirate
 		}
 		create_march = LIB
+	}
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			LIB = {
+				country_event = {
+					id = pirates.25
+					days = 1
+				}
+			}
+		}
 	}
 }
 
@@ -680,6 +700,16 @@ country_event = {
 			set_ruler_flag = historical_pirate
 		}
 	}
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			PRY = {
+				country_event = {
+					id = pirates.25
+					days = 1
+				}
+			}
+		}
+	}
 }
 
 # Tortuga - Brethren of the Coast
@@ -809,13 +839,30 @@ country_event = {
 			set_ruler_flag = historical_pirate
 		}
 	}
+	after = { # Trigger an event, which will swap the national ideas of pirate tag with correct ideas
+		hidden_effect = {
+			TOR = {
+				country_event = {
+					id = pirates.25
+					days = 1
+				}
+			}
+		}
+	}
 }
 
 # Palembang - Return of Piracy
 country_event = {
 	id = pirates.8
 	title = "pirates.8.t"
-	picture = SMUGGLERS_eventPicture
+	picture = {
+		trigger = { has_dlc = "Leviathan" }
+		picture = MALAYAN_PORT_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Leviathan" } }
+		picture = SMUGGLERS_eventPicture
+	}
 	desc = "pirates.8.d"
 	
 	fire_only_once = yes
@@ -832,26 +879,29 @@ country_event = {
 	
 	option = {
 		name = "pirates.8.a"
-		if = {
-			limit = {
-				has_dlc = "Dharma"
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				MAJ = { ai = no }
 			}
+		}
+		grant_independence = yes
+		if = {
+			limit = { has_dlc = "Dharma" }
 			change_government = republic
 			add_government_reform = pirate_republic_reform
 		}
-		else = {
-			set_legacy_government = pirate_republic
-		}
-		define_ruler = {
-			culture = wu
-		}
+		else = { set_legacy_government = pirate_republic }
+		define_ruler = { culture = wu }
 		add_republican_tradition = 50
 		swap_non_generic_missions = yes
 	}
 	
 	option = {
 		name = "pirates.8.b"
-		add_stability = -1
+		ai_chance = { factor = 1 }
+		add_stability = 1
 	}
 }
 
@@ -859,7 +909,14 @@ country_event = {
 country_event = {
 	id = pirates.9
 	title = "pirates.9.t"
-	picture = SMUGGLERS_eventPicture
+	picture = {
+		trigger = { has_dlc = "Leviathan" }
+		picture = MALAYAN_PORT_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Leviathan" } }
+		picture = SMUGGLERS_eventPicture
+	}
 	desc = "pirates.9.d"
 	
 	fire_only_once = yes
@@ -1013,5 +1070,183 @@ country_event = {
 	option = {
 		name = "pirates.19.b"
 		add_stability = -1
+	}
+}
+
+# Pirates of Rugen
+country_event = {
+	id = pirates.22
+	title = "pirates.22.name"
+	picture = SMUGGLERS_eventPicture
+	desc = "pirates.22.desc"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUG
+		has_dlc = "Golden Century"
+		owns_core_province = 4745
+		NOT = { num_of_cities = 2 } #must be an OPM
+		OR = {
+			ai = no
+			is_subject = no
+		}
+		NOT = { has_reform = pirate_republic_reform }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "pirates.22.a"
+		change_government = republic
+		add_government_reform = pirate_republic_reform
+		define_ruler = {
+			dynasty = "St�rtebeker"
+			culture = pommeranian
+		}
+		add_republican_tradition = 50
+		swap_non_generic_missions = yes
+
+		capital_scope = {
+			galley = root
+			galley = root
+			galley = root
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "pirates.22.b"
+		add_stability = 1
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Pirates of Penzance (by James Beaumont)
+country_event = {
+	id = pirates.23
+	title = "pirates.23.t"
+	picture = SMUGGLERS_eventPicture
+	desc = "pirates.23.d"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CRN
+		has_dlc = "Golden Century"
+		num_ships_privateering = 3
+		NOT = { has_reform = pirate_republic_reform }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "pirates.23.a"
+		ai_chance = {
+			factor = 1
+		}
+		change_government = republic
+		add_government_reform = pirate_republic_reform
+		define_ruler = {
+			dynasty = "Carter"
+		}
+		233 = { rename_capital = "Penzance" }
+		add_republican_tradition = 50
+		set_ruler_flag = historical_pirate
+		swap_non_generic_missions = yes
+	}
+	
+	option = {
+		name = "pirates.23.b"
+		ai_chance = {
+			factor = 1
+		}
+		233 = { 
+			spawn_rebels = {
+				size = 1
+				type = particularist_rebels
+			}
+		}
+	}
+}
+
+# Gilbert and Sulivan references to appease Daniel (by James Beaumont)
+country_event = {
+	id = pirates.24
+	title = "pirates.24.t"
+	picture = SMUGGLERS_eventPicture
+	desc = "pirates.24.d"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = CRN
+			was_tag = CRN
+		}
+		has_dlc = "Golden Century"
+		has_reform = pirate_republic_reform
+		is_year = 1500
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "pirates.24.a"
+		ai_chance = {
+			factor = 1
+		}
+		define_advisor = {
+			type = naval_reformer
+			skill = 3
+			name = "Gilbert Patter"
+			cost_multiplier = 0.25
+		}
+	}
+	
+	option = {
+		name = "pirates.24.b"
+		ai_chance = {
+			factor = 1
+		}
+		define_ruler = {
+			name = "Gilbert"
+			dynasty = "Patter"
+			adm = 2
+			dip = 2
+			mil = 2
+		}
+	}
+}
+
+
+# Give the Pirate nations their righful ideas
+country_event = {
+	id = pirates.25
+	title = "pirates.25.t"
+	picture = SMUGGLERS_eventPicture
+	desc = "pirates.25.d"
+	
+	is_triggered_only = yes
+	hidden = yes
+	
+	option = {
+		name = "pirates.25.a"
+		ai_chance = {
+			factor = 1
+		}
+		swap_free_idea_group = yes
 	}
 }

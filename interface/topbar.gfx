@@ -8,7 +8,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_pause_banner"
 		texturefile = "gfx//interface//pause_banner.tga"
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 
 	spriteType = {
@@ -25,7 +25,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_topbar_big_frame"
 		texturefile = "gfx//interface//topbar_big_frame.tga"
-		allwaystransparent = yes
+		alwaystransparent = yes
 	}
 
 	spriteType = {
@@ -119,6 +119,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_icon_sailor_maintenance"
+		texturefile = "gfx//interface//sailor_maintenance.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_icon_sailors2"
 		texturefile = "gfx//interface//icon_sailors2.tga"
 	}	
@@ -133,9 +138,10 @@ spriteTypes = {
 		texturefile = "gfx//interface//icon_powerprojection.tga"
 	}	
 	
-
-
-
+	spriteType = {
+		name = "GFX_governing_capacity"
+		texturefile = "gfx//interface//governing_capacity_icon_small.dds"
+	}
 
 	spriteType = {
 		name = "GFX_icon_missionary"

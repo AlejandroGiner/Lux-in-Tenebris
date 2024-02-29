@@ -2,7 +2,7 @@
 
 NDefines.NGame.MAX_RANDOM_NEW_WORLD = "1000.1.1"
 NDefines.NGame.MAX_COLONIAL_NATIONS = 100				-- Max is 100
-NDefines.NGame.SIZE_LIMIT_FOR_ISLANDS = 100000			-- from 25000      Changing this to represent anything smaller than about Australia as an island   Different pixels in ToT projection could cause differences compared to vanilla such as Greenland
+NDefines.NGame.SIZE_LIMIT_FOR_ISLANDS = 100000			-- from 45000      Changing this to represent anything smaller than about Australia as an island   Different pixels in ToT projection could cause differences compared to vanilla such as Greenland
 
 NDefines.NGraphics.BORDER_WIDTH = 1			-- from 1p5
 

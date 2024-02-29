@@ -757,6 +757,7 @@ emp_pap_slot_3 = {
 						capital_scope = {
 							OR = {
 								region = balkan_region
+								region = greece_region_btc
 								region = anatolia_region
 								region = caucasia_region
 							}
@@ -770,6 +771,7 @@ emp_pap_slot_3 = {
 							capital_scope = {
 								OR = {
 									region = balkan_region
+									region = greece_region_btc
 									region = anatolia_region
 									region = caucasia_region
 								}
@@ -780,6 +782,7 @@ emp_pap_slot_3 = {
 							capital_scope = {
 								OR = {
 									region = balkan_region
+									region = greece_region_btc
 									region = anatolia_region
 									region = caucasia_region
 								}
@@ -794,6 +797,7 @@ emp_pap_slot_3 = {
 					value = 7
 					OR = {
 						region = balkan_region
+						region = greece_region_btc
 						region = anatolia_region
 						region = caucasia_region
 					}
@@ -808,6 +812,7 @@ emp_pap_slot_3 = {
 						capital_scope = {
 							OR = {
 								region = balkan_region
+								region = greece_region_btc
 								region = anatolia_region
 								region = caucasia_region
 							}
@@ -824,6 +829,7 @@ emp_pap_slot_3 = {
 						capital_scope = {
 							OR = {
 								region = balkan_region
+								region = greece_region_btc
 								region = anatolia_region
 								region = caucasia_region
 							}
@@ -1498,9 +1504,7 @@ emp_pap_slot_5 = {
 			if = {
 				limit = { 
 					has_dlc = "Art of War" 
-					any_country = {
-						is_emperor = yes
-					}
+					any_country = { is_emperor = yes }
 					NOT = {
 						hre_religion_locked = yes
 						hre_religion_treaty = yes
@@ -1523,11 +1527,7 @@ emp_pap_slot_5 = {
 				}
 			}
 			else_if = {
-				limit = {
-					any_country = {
-						is_emperor = yes
-					}
-				}
+				limit = { any_country = { is_emperor = yes } }
 				every_ally = {
 					limit = {
 						religion = catholic
@@ -1556,7 +1556,7 @@ emp_pap_slot_5 = {
 					}
 				}
 			}
-			add_stability = 1
+			add_stability_or_adm_power = yes
 			add_war_exhaustion = -2
 		}
 	}
@@ -1568,6 +1568,7 @@ emp_pap_slot_5 = {
 		
 		trigger = {
 			OR = {
+				is_religion_enabled = protestant
 				is_defender_of_faith_of_tier = 4
 				AND = {
 					hre_religion_locked = yes

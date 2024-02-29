@@ -34,9 +34,7 @@ country_event = {
 	
 	option = {
 		ai_chance = { factor = 50 }
-        trigger = {
-			HAB = { has_heir = "Ladislaus Postumus" }
-		}
+        trigger = { HAB = { has_heir = "Ladislaus Postumus" } }
 		name = flavor_hun.1.a
 		define_ruler = {
 			name = "János"
@@ -49,16 +47,12 @@ country_event = {
 			attach_leader = "János Hunyadi"
 		}
 		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
+			limit = { has_states_general_mechanic = yes }
 			change_statists_vs_orangists = 1
 		}
 		if = {
-			limit = {
-				has_dlc = "Rights of Man" 
-			}
-			hidden_effect = { add_ruler_personality = bold_fighter_personality }
+			limit = { has_dlc = "Rights of Man"  }
+			hidden_effect = { add_ruler_personality_ancestor = { key = bold_fighter } }
 		}
 		define_heir = {
 			name = "Ladislaus Postumus"
@@ -103,6 +97,14 @@ country_event = {
 			mil = 2
 			birth_date = 1440.2.22
 		}
+		hidden_effect = {
+			define_ruler = {
+				ADM = 0
+				DIP = 0
+				MIL = 0
+				regency = yes
+			}
+		}
         custom_tooltip = hun_ladislaus_postumus_warning_tooltip
 		hidden_effect = { set_country_flag = hun_ladislaus_postumus_heir }
 		add_estate_loyalty = {
@@ -137,20 +139,14 @@ country_event = {
 			claim = 50
 			birth_date = 1443.2.23
 		}
-		hidden_effect = {
-			set_country_flag = hun_matyas_already_existed
-		}
+		hidden_effect = { set_country_flag = hun_matyas_already_existed }
 		if = {
-			limit = {
-				has_states_general_mechanic = yes
-			}
+			limit = { has_states_general_mechanic = yes }
 			change_statists_vs_orangists = 1
 		}
 		if = {
-			limit = {
-				has_dlc = "Rights of Man" 
-			}
-			hidden_effect = { add_ruler_personality = bold_fighter_personality }
+			limit = { has_dlc = "Rights of Man" }
+			hidden_effect = { add_ruler_personality_ancestor = { key = bold_fighter } }
 		}
 		add_estate_loyalty = {
 			estate = estate_nobles
@@ -177,9 +173,7 @@ country_event = {
 			has_heir = no
 		}
         if = {
-			limit = {
-				has_heir = no
-			}
+			limit = { has_heir = no }
 			NOT = { has_country_flag = hun_matyas_already_existed }
 		}
 		has_regency = no
@@ -230,9 +224,16 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man" 
 			}
-			hidden_effect = { add_heir_personality = just_personality }
+			hidden_effect = { add_heir_personality_ancestor = { key = just } }
 		}
-		kill_ruler = yes
+		set_country_flag = hun_keep_ladislaus_alive
+		define_ruler = {
+			regency = yes
+			ADM = 2
+			DIP = 2
+			MIL = 2
+			fixed = yes
+		}
 		HAB = {
 			tooltip = {
 				add_casus_belli = {	
@@ -293,6 +294,152 @@ country_event = {
 			hidden_effect = {
 				country_event = { id = flavor_hun.10 days = 1 }
 			}
+		}
+	}
+}
+
+# Ladislaus Postumus dies of Leukemia (copy of flavor_hun.2 with adaptations)
+country_event = {
+	id = flavor_hun.201
+	title = flavor_hun.201.name
+	desc = {
+		trigger = {
+			has_ruler = "Ladislaus Postumus I"
+			has_heir = no
+		}
+		desc = flavor_hun.201.d.king_no_heir
+	}
+	desc = {
+		trigger = {
+			has_ruler = "Ladislaus Postumus I"
+			has_heir = yes
+		}
+		desc = flavor_hun.201.d.king
+	}
+	desc = {
+		trigger = { has_heir = "Ladislaus Postumus" }
+		desc = flavor_hun.201.d.heir
+	}
+	picture = DEATH_OF_HEIR_eventPicture
+
+	mean_time_to_happen = { years = 20 } #happens about a third of games
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HUN
+		is_year = 1450
+		NOT = { is_year = 1457 }
+		OR = {
+			has_heir = "Ladislaus Postumus"
+			has_ruler = "Ladislaus Postumus I"
+		}
+		HAB = {
+			OR = {
+				has_heir = "Ladislaus Postumus"
+				has_ruler = "Ladislaus Postumus"
+			}
+		}
+		NOT = { has_country_flag = hun_has_had_matthias_corvinus_event }
+		is_lesser_in_union = no
+	}
+
+	immediate = { set_country_flag = hun_has_had_matthias_corvinus_event }
+
+	option = { #Heir dies, get Matyas
+		name = flavor_hun.201.a
+		ai_chance = { factor = 1 }
+		trigger = { has_heir = "Ladislaus Postumus" }
+		remove_historical_friend = HAB
+		HAB = { remove_historical_friend = HUN }
+		kill_heir = yes
+		define_heir = {
+			name = "Mátyás"
+			culture = hungarian
+			dynasty = "Hunyadi"
+			adm = 4
+			dip = 5
+			mil = 6
+			claim = 50
+			birth_date = 1443.2.23
+		}
+		if = {
+			limit = { has_dlc = "Rights of Man" }
+			hidden_effect = { add_heir_personality_ancestor = { key = just } }
+		}
+		HAB = {
+			tooltip = {
+				add_casus_belli = {
+					target = HUN
+					type = cb_restore_personal_union
+					months = 60
+				}
+			}
+			hidden_effect = { country_event = { id = flavor_hun.10 days = 1 } }
+		}
+	}
+	option = { #Ruler dies, keep his heir
+		name = flavor_hun.201.b
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_ruler = "Ladislaus Postumus I"
+			has_heir = yes
+		}
+		kill_ruler = yes
+	}
+	option = { #Ruler dies with no heir, take a union
+		name = flavor_hun.201.c
+		ai_chance = { factor = 1 }
+		trigger = {
+			has_ruler = "Ladislaus Postumus I"
+			has_heir = no
+		}
+		add_stability_or_adm_power = yes
+		kill_ruler = yes
+		HUN = {
+			if = {
+				limit = { senior_union_with = CRO }
+				inherit = CRO
+			}
+		}
+		HAB = {
+			create_union = HUN
+			hidden_effect = { country_event = { id = flavor_hun.3 days = 1 } }
+		}
+	}
+	option = { #Ruler dies with no heir, take Matyas
+		name = flavor_hun.201.d
+		ai_chance = { factor = 3 }
+		trigger = {
+			has_ruler = "Ladislaus Postumus I"
+			has_heir = no
+		}
+		remove_historical_friend = HAB
+		HAB = { remove_historical_friend = HUN }
+		define_heir = {
+			name = "Mátyás"
+			culture = hungarian
+			dynasty = "Hunyadi"
+			adm = 4
+			dip = 5
+			mil = 6
+			claim = 50
+			birth_date = 1443.2.23
+		}
+		if = {
+			limit = { has_dlc = "Rights of Man" }
+			hidden_effect = { add_heir_personality_ancestor = { key = just } }
+		}
+		kill_ruler = yes
+		HAB = {
+			tooltip = {
+				add_casus_belli = {
+					target = HUN
+					type = cb_restore_personal_union
+					months = 60
+				}
+			}
+			hidden_effect = { country_event = { id = flavor_hun.10 days = 1 } }
 		}
 	}
 }
@@ -426,7 +573,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_hun.5.a	
+		name = flavor_hun.5.a
 		add_prestige = 10
 		if = {
 			limit = {
@@ -801,22 +948,14 @@ country_event = {
 			}
 		}
 		if = {
-			limit = {
-				opole_area = {
-					country_or_non_sovereign_subject_holds = BOH
-				}
-			}
+			limit = { opole_area = { country_or_non_sovereign_subject_holds = BOH } }
 			opole_area = {
 				limit = { country_or_non_sovereign_subject_holds = BOH }
 				add_permanent_claim = HUN
 			}
 		}
 		if = {
-			limit = {
-				legnica_area = {
-					country_or_non_sovereign_subject_holds = BOH
-				}
-			}
+			limit = { legnica_area = { country_or_non_sovereign_subject_holds = BOH } }
 			legnica_area = {
 				limit = { country_or_non_sovereign_subject_holds = BOH }
 				add_permanent_claim = HUN
@@ -837,16 +976,12 @@ country_event = {
 					friend = HUN
 				}
 			}
-			hidden_effect = {
-				country_event = { id = flavor_hun.14 }
-			}
+			hidden_effect = { country_event = { id = flavor_hun.14 } }
 		}
 	}
 	option = {
 		name = flavor_hun.13.b
-		ai_chance = {
-			factor = 10
-		}
+		ai_chance = { factor = 10 }
 		add_prestige = -10
 		reverse_add_opinion = {
 			who = BOH
@@ -889,49 +1024,29 @@ country_event = {
 		}
 		tooltip = {
 			if = {
-				limit = {
-					265 = { #Moravia
-						owned_by = BOH
-					}
-				}
+				limit = { 265 = { owned_by = BOH } }
 				265 = { add_permanent_claim = HUN }
 			}
 			if = {
-				limit = {
-					4237 = { #Moravia
-						owned_by = BOH
-					}
-				}
+				limit = { 4237 = { owned_by = BOH } }
 				4237 = { add_permanent_claim = HUN }
 			}
 			if = {
-				limit = {
-					silesia_area = {
-						country_or_non_sovereign_subject_holds = BOH
-					}
-				}
+				limit = { silesia_area = { country_or_non_sovereign_subject_holds = BOH } }
 				silesia_area = {
 					limit = { country_or_non_sovereign_subject_holds = BOH }
 					add_permanent_claim = HUN
 				}
 			}
 			if = {
-				limit = {
-					opole_area = {
-						country_or_non_sovereign_subject_holds = BOH
-					}
-				}
+				limit = { opole_area = { country_or_non_sovereign_subject_holds = BOH } }
 				opole_area = {
 					limit = { country_or_non_sovereign_subject_holds = BOH }
 					add_permanent_claim = HUN
 				}
 			}
 			if = {
-				limit = {
-					legnica_area = {
-						country_or_non_sovereign_subject_holds = BOH
-					}
-				}
+				limit = { legnica_area = { country_or_non_sovereign_subject_holds = BOH } }
 				legnica_area = {
 					limit = { country_or_non_sovereign_subject_holds = BOH }
 					add_permanent_claim = HUN
@@ -956,20 +1071,12 @@ country_event = {
 		tag = HUN
 		is_at_war = no
 		has_truce = no
-		slovakia_area = {
-			owned_by = ROOT
-		}
+		slovakia_area = { owned_by = ROOT }
 	}
 	
-	mean_time_to_happen = {
-		months = 39
-	}
+	mean_time_to_happen = { months = 39 }
 	
-	immediate = {
-		hidden_effect = {
-			set_country_flag = hun_had_mercenaries_in_slovakia
-		}
-	}
+	immediate = { hidden_effect = { set_country_flag = hun_had_mercenaries_in_slovakia } }
 	
 	option = {
 		name = flavor_hun.15.a #We must crush these bandits!
@@ -995,7 +1102,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_hun.15.b #Leave it to the local lords to handle.
-		slovakia_area = { 
+		slovakia_area = {
 			limit = { owned_by = ROOT }
 			add_province_modifier = {
 				name = "hun_banditry_in_upper_hungary"
@@ -1044,9 +1151,7 @@ country_event = {
 		}
 		custom_tooltip = flavor_hun.16.a.tt
 		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
+			limit = { has_estate = estate_nobles }
 			custom_tooltip = flavor_hun.16.a.cossacks.tt
 		}
 	}
@@ -1054,9 +1159,7 @@ country_event = {
 		name = flavor_hun.16.b
 		add_mil_power = 50
 		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
+			limit = { has_estate = estate_nobles }
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = 15
@@ -1086,9 +1189,7 @@ country_event = {
 		remove_country_modifier = hun_black_army
 		add_prestige = -10
 		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
+			limit = { has_estate = estate_nobles }
 			custom_tooltip = abolishing_black_army_tooltip
 			add_estate_loyalty = {
 				estate = estate_nobles
@@ -1108,9 +1209,7 @@ country_event = {
 		name = flavor_hun.17.b
 		add_prestige = 10
 		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
+			limit = { has_estate = estate_nobles }
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = -5
@@ -1134,9 +1233,7 @@ country_event = {
         NOT = { has_reform = black_army_reform }
 	}
 	
-	mean_time_to_happen = {
-		months = 12
-	}
+	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = flavor_hun.18.a
@@ -1145,9 +1242,7 @@ country_event = {
         add_absolutism = 10
 		add_mil_power = 75
 		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
+			limit = { has_estate = estate_nobles }
 			custom_tooltip = end_of_black_army_tooltip
 		}
 	}
@@ -1160,9 +1255,7 @@ country_event = {
 		set_country_flag = black_army_reform_flag
 		add_government_reform = black_army_reform
 		if = {
-			limit = {
-				has_estate = estate_nobles
-			}
+			limit = { has_estate = estate_nobles }
 			add_estate_loyalty = {
 				estate = estate_nobles
 				loyalty = -15

@@ -8,6 +8,7 @@ country_event = {
 	
 	
 	trigger = {
+		NOT = { has_country_flag = btc_doesnt_want_to_switch_ideagroup }
 		OR = {
 			AND = {
 				NOT = { has_government_attribute = enables_plutocratic_idea_group }
@@ -79,6 +80,7 @@ country_event = {
 	
 	option = {
 		name = btc_ideagroups.1.b
+		set_country_flag = btc_doesnt_want_to_switch_ideagroup
 		ai_chance = {
 			factor = 0
 		}

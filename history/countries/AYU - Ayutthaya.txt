@@ -35,9 +35,9 @@ capital = 600 # Ayutthaya
 		birth_date = 1408.1.1 # Actual unknown
 		death_date = 1448.1.1
 		claim = 95
-		adm = 1
+		adm = 3
 		dip = 2
-		mil = 3
+		mil = 4
 		leader = { 
 			name = "Sam Phraya"
 			type = general
@@ -54,9 +54,9 @@ capital = 600 # Ayutthaya
 	monarch = {
 		name = "Borommaracha II"
 		dynasty = "Suphannaphum"
-		adm = 1
+		adm = 3
 		dip = 2
-		mil = 3
+		mil = 4
 		leader = { name = "Borommaracha II"      	type = general	fire = 2	shock = 4	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes
@@ -67,14 +67,14 @@ capital = 600 # Ayutthaya
 1431.1.1 = {
 	heir = {
 		name = "Ramesuan"
-		monarch_name = "Trailokanat"
+		monarch_name = "Trailok"
 		dynasty = "Suphannaphum"
 		birth_date = 1431.1.1
 		death_date = 1488.1.1
 		claim = 95
 		adm = 6
-		dip = 2
-		mil = 2
+		dip = 3
+		mil = 3
 	}
 }
 
@@ -82,11 +82,11 @@ capital = 600 # Ayutthaya
 
 1448.1.1 = {
 	monarch = {
-		name = "Trailokanat"
+		name = "Trailok"
 		dynasty = "Suphannaphum"
 		adm = 6
-		dip = 2
-		mil = 2
+		dip = 3
+		mil = 3
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = midas_touched_personality

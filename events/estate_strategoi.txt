@@ -125,9 +125,8 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetN
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = charismatic_negotiator_personality
+			ruler_has_personality_ancestor = { key = charismatic_negotiator }
 		}
-		required_personality = charismatic_negotiator_personality
 		
 		add_estate_loyalty = {
 			estate = estate_generals
@@ -145,9 +144,8 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetN
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = fierce_negotiator_personality
+			ruler_has_personality_ancestor = { key = fierce_negotiator }
 		}
-		required_personality = fierce_negotiator_personality
 		
 		add_estate_loyalty = {
 			estate = estate_generals
@@ -165,9 +163,8 @@ country_event = { #1 The [estate_nobles.GetName] think the [estate_generals.GetN
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = silver_tongue_personality
+			ruler_has_personality_ancestor = { key = silver_tongue }
 		}
-		required_personality = silver_tongue_personality
 		
 		add_years_of_income = -0.25
 		add_estate_loyalty = {
@@ -310,7 +307,7 @@ country_event = { #4 Promising strategos
 		}
 		modifier = {
 			factor = 4
-			ruler_has_personality = martial_educator_personality
+			ruler_has_personality_ancestor = { key = martial_educator }
 			has_heir = no
 			NOT = { has_idea = byz_formalize_succession_laws }
 		}
@@ -322,17 +319,17 @@ country_event = { #4 Promising strategos
 			factor = 50
 			modifier = {
 				factor = 0
-				ruler_has_personality = tactical_genius_personality
+				ruler_has_personality_ancestor = { key = tactical_genius }
 			}
 			modifier = {
 				factor = 0
-				ruler_has_personality = martial_educator_personality
+				ruler_has_personality_ancestor = { key = martial_educator }
 				has_heir = no
 				NOT = { has_idea = byz_formalize_succession_laws }
 			}
 			modifier = {
 				factor = 0
-				ruler_has_personality = strict_personality
+				ruler_has_personality_ancestor = { key = strict }
 				has_heir = no
 				NOT = { has_idea = byz_formalize_succession_laws }
 			}
@@ -350,9 +347,8 @@ country_event = { #4 Promising strategos
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = tactical_genius_personality
+			ruler_has_personality_ancestor = { key = tactical_genius }
 		}
-		required_personality = tactical_genius_personality
 		
 		event_target:supreme_commander_fort = {
 			add_province_modifier = {
@@ -368,11 +364,10 @@ country_event = { #4 Promising strategos
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = martial_educator_personality
+			ruler_has_personality_ancestor = { key = martial_educator }
 			has_heir = no
 			NOT = { has_idea = byz_formalize_succession_laws }
 		}
-		required_personality = martial_educator_personality
 		
 		define_heir = { #I figure this is so rare to come across that should you do, you deserve it.
 			age = 16
@@ -390,11 +385,10 @@ country_event = { #4 Promising strategos
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = strict_personality
+			ruler_has_personality_ancestor = { key = strict }
 			has_heir = no
 			NOT = { has_idea = byz_formalize_succession_laws }
 		}
-		required_personality = strict_personality
 		
 		define_heir = { #I figure this is so rare to come across that should you do, you deserve it.
 			age = 16
@@ -557,9 +551,8 @@ country_event = { #5 [estate_generals.GetName] disagree on current military plan
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = tactical_genius_personality
+			ruler_has_personality_ancestor = { key = tactical_genius }
 		}
-		required_personality = tactical_genius_personality
 		
 		random_list = {
 			80 = {
@@ -751,7 +744,6 @@ country_event = { #7 [estate_generals.GetName] wish to use the local Basilica
 		trigger = {
 			ruler_has_personality = zealot_personality
 		}
-		required_personality = zealot_personality
 		add_patriarch_authority = 0.1
 		add_estate_loyalty = {
 			estate = estate_generals
@@ -975,7 +967,6 @@ country_event = { #10 No taxes to be collected in [failed_taxing_province.GetNam
 		trigger = {
 			ruler_has_personality = embezzler_personality
 		}
-		required_personality = embezzler_personality
 		
 		add_years_of_income = -1
 		add_estate_loyalty = {
@@ -1031,9 +1022,8 @@ country_event = { #11 The [estate_generals.GetName] renounce the [Root.Monarch.G
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = calm_personality
+			ruler_has_personality_ancestor = { key = calm }
 		}
-		required_personality = calm_personality
 		
 		add_legitimacy = -15
 		add_heir_claim = -25
@@ -1047,7 +1037,6 @@ country_event = { #11 The [estate_generals.GetName] renounce the [Root.Monarch.G
 		trigger = {
 			ruler_has_personality = just_personality
 		}
-		required_personality = just_personality
 		
 		random_list = {
 			75 = {
@@ -1069,7 +1058,6 @@ country_event = { #11 The [estate_generals.GetName] renounce the [Root.Monarch.G
 		trigger = {
 			ruler_has_personality = lawgiver_personality
 		}
-		required_personality = lawgiver_personality
 		
 		random_list = {
 			75 = {
@@ -1174,7 +1162,6 @@ country_event = { #12 The [estate_generals.GetName] demand higher status
 		trigger = {
 			ruler_has_personality = naive_personality
 		}
-		required_personality = naive_personality
 		
 		add_estate_loyalty = {
 			estate = estate_generals
@@ -1290,9 +1277,8 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = charismatic_negotiator_personality
+			ruler_has_personality_ancestor = { key = charismatic_negotiator }
 		}
-		required_personality = charismatic_negotiator_personality
 		
 		add_estate_loyalty = {
 			estate = estate_generals
@@ -1306,9 +1292,8 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = fierce_negotiator_personality
+			ruler_has_personality_ancestor = { key = fierce_negotiator }
 		}
-		required_personality = fierce_negotiator_personality
 		
 		add_estate_loyalty = {
 			estate = estate_nobles
@@ -1322,9 +1307,8 @@ country_event = { #13 Conflicts between the [estate_nobles.GetName] & the [estat
 		}
 		highlight = yes
 		trigger = {
-			ruler_has_personality = silver_tongue_personality
+			ruler_has_personality_ancestor = { key = silver_tongue }
 		}
-		required_personality = silver_tongue_personality
 		
 		add_years_of_income = -0.25
 		add_estate_loyalty = {

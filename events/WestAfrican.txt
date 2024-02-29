@@ -1157,13 +1157,14 @@ country_event = {
 				has_climate = tropical
 			}
         }
-        manpower = 3
-        monthly_income = 5
-        NOT = { num_of_loans = 5 }
-        OR = {
-            years_of_income = 1
-            is_in_deficit = no
-        }
+		manpower = 3
+		is_bankrupt = no
+        #monthly_income = 5
+        #NOT = { num_of_loans = 5 }
+        #OR = {
+        #    years_of_income = 1
+        #    is_in_deficit = no
+        #}
     }
 
 	mean_time_to_happen = {
@@ -1182,22 +1183,18 @@ country_event = {
 			}
 			random_empty_neighbor_province = {
 				limit = { has_climate = tropical }
-				create_colony = 300
-				add_province_modifier = {
-					name = "used_to_tropical"
-					duration = -1
-				}
+				add_siberian_construction = 1
+				#add_province_modifier = {
+				#	name = "used_to_tropical"
+				#	duration = -1
+				#}
 			}
 		}
         ai_chance = {
 			factor = 2
 			modifier = {
 				factor = 0
-				OR = {
-					is_in_deficit = yes
-					num_of_loans = 1
-					NOT = { monthly_income = 10 }
-				}
+				NOT = { manpower_percentage = 0.15 }
 			}
 		}
 	}
@@ -1296,6 +1293,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Art of War"
+		has_regency = no
 		OR = {
 			culture_group = sahelian
 			culture_group = mande

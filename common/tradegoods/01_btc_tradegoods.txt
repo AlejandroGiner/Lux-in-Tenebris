@@ -1,7 +1,7 @@
 beer = {
 	color = { 200 145 35 }
 	modifier = {
-		global_unrest = -1
+		global_unrest = -0.5
 	}
 	province = {
 		local_unrest = -1
@@ -43,7 +43,7 @@ books = {
 rice = {
 	color = { 203 188 158 }
 	modifier = {
-		reinforce_speed = 0.2
+		reinforce_speed = 0.15
 	}
 	province = {
 		land_forcelimit = 0.25
@@ -125,7 +125,7 @@ rice = {
 whales = {
 	color = { 0.45 0.92 0.97 }
 	modifier = {
-		global_trade_power = 0.1
+		global_trade_power = 0.05
 	}
 	province = {
 		province_trade_power_modifier = 0.2
@@ -222,7 +222,7 @@ potatoes = {
 maize = {
 	color = { 0.16 0.61 0.09 }
 	modifier = {
-		global_manpower_modifier = 0.1
+		global_manpower_modifier = 0.05
 	}
 	province = {
 		local_manpower_modifier = 0.1
@@ -441,7 +441,7 @@ apiculture = {
 olives = {
 	color = { 0.9 0.9 0.2 }
 	modifier = {
-		improve_relation_modifier = 0.2
+		improve_relation_modifier = 0.15
 	}
 	province = {
 		supply_limit_modifier = 0.35
@@ -533,7 +533,7 @@ dates = {
 marble = {
 	color = { 0.85 0.9 0.85 }
 	modifier = {
-		prestige = 1.0
+		prestige = 0.5
 	}
 	province = {
 		local_build_cost = -0.1
@@ -593,7 +593,6 @@ oil = {
 
 	modifier = {
 		naval_maintenance_modifier = -0.20
-		global_trade_goods_size_modifier = 0.1
 	}
 
 	province = {
@@ -622,8 +621,7 @@ rubber = {
 	}
 
 	modifier = {
-		development_cost = -0.20
-		global_trade_goods_size_modifier = 0.05
+		development_cost = -0.1
 	}
 
 	province = {
@@ -638,7 +636,7 @@ rubber = {
 amaranth = {
 	color = { 193 147 83 }
 	modifier = {
-		land_maintenance_modifier = -0.05
+		reinforce_cost_modifier = -0.05
 	}
 	province = {
 		local_manpower_modifier = 0.1
@@ -746,7 +744,7 @@ legumes = {
 teff = {
 	color = { 58 165 133 }
 	modifier = {
-		infantry_cost = -0.05
+		land_attrition = -0.05
 	}
 	province = {
 		local_regiment_cost = -0.1
@@ -785,10 +783,10 @@ teff = {
 pearls = {
 	color = { 136 101 137 }
 	modifier = {
-		diplomatic_reputation = 2
+		interest = -0.3
 	}
 	province = {
-		local_tax_modifier = 0.20
+		local_tax_modifier = 0.15
 	}
 	chance = {
 		factor = 3
