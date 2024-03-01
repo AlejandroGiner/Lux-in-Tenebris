@@ -1145,10 +1145,6 @@ copper = {
 			factor = 4.0
 			area = arizona_area
 		}
-		modifier = { #Cooper River
-			factor = 4.0
-			province_id = 4936		# Copper River
-		}
 		modifier = { #Copper still pretty rare elsewhere
 			factor = 0.5
 			OR = {
@@ -1340,7 +1336,6 @@ gold = {
 		modifier = {	#Specific province bonuses
 			factor = 8.0
 			OR = {
-				province_id = 4937		# Klondike
 				province_id = 1109		# Otago
 				province_id = 5599		# Westland (NZ)
 			}

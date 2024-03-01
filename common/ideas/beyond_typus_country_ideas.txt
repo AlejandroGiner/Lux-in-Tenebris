@@ -3164,46 +3164,6 @@ BEI_ideas = {
 	}
 }
 
-SIA_ideas = {
-	start = {
-		trade_efficiency = 0.10
-		enemy_core_creation = 0.5
-	}
-	
-	bonus = {
-		global_institution_spread = 0.15
-	}
-	
-	trigger = {
-		tag = SIA
-	}
-	free = yes
-	
-	sia_chinese_immigration = {
-		merchants = 1
-	}
-	sia_tax_reforms = {
-		global_tax_modifier = 0.15
-	}
-	sia_a_diplomatic_approach = {
-		diplomats = 1
-		envoy_travel_time = -0.25
-	}
-	sia_trade_tax_reduction = {
-		global_own_trade_power = 0.25
-	}
-	sia_centralization_effort = {
-		global_autonomy = -0.05
-	}
-	sia_succession_reforms = {
-		heir_chance = 0.50
-	}
-	sia_protect_greater_siam = {
-		land_morale = 0.1
-		global_manpower_modifier = 0.15
-	}
-}
-
 BRM_ideas = {
 	start = {
 		discipline = 0.05
