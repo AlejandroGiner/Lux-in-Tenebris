@@ -4717,48 +4717,6 @@ taino_ideas = {
 	}
 }
 
-YZW_ideas = {
-	start = {
-		naval_morale = 0.15
-		naval_forcelimit_modifier = 0.25
-	}
-
-	bonus = {
-		light_ship_cost = -0.20
-	}
-
-	trigger = {
-		tag = HAW
-	}
-	free = yes
-
-	hawaii_settlers = {
-		colonists = 1
-	}
-	great_mahele = {
-		stability_cost_modifier = -0.15
-	}
-	iolani_palace = {
-		prestige = 1
-	}
-	hawaiian_neutrality = {
-		diplomatic_upkeep = 1
-	}
-	edict_of_toleration = {
-		tolerance_heretic = 2
-	}
-	kamehameha_the_great = {
-		legitimacy = 1
-		devotion = 1
-		horde_unity = 1
-		meritocracy = 1
-		republican_tradition = 0.3
-	}
-	kanawai_mamalahoe = {
-		global_unrest = -2
-	}
-}
-
 ALN_ideas = {
 	start = {
 		tolerance_own = 2

@@ -2454,7 +2454,7 @@ NOV_ideas = {
 ETH_ideas = {
 	start = {
 		global_autonomy = -0.05
-		land_attrition = -0.10
+		land_attrition = -0.2
 	}
 	
 	bonus = {
@@ -2486,10 +2486,10 @@ ETH_ideas = {
 		missionaries = 1
 	}
 	eth_expansionist_policy = {
-		core_creation = -0.10
+		core_creation = -0.15
 	}
 	eth_reformed_armies = {
-		infantry_power = 0.1
+		infantry_power = 0.15
 	}
 }
 
@@ -3832,6 +3832,10 @@ PUE_ideas = {
 			tag = PUE
 			tag = KER
 			tag = ZNI
+			tag = NAH
+			tag = HOP
+			tag = AOM
+			tag = ZIA
 		}
 	}
 	free = yes		# will be added at load

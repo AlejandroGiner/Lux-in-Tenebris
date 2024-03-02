@@ -16,6 +16,22 @@ dependency = { #Murad's treaty with the Byzantines after a failed siege on Const
 	end_date = 1453.4.06
 }
 
+dependency = {
+	subject_type = "tributary_state"
+	first = ETH
+	second = DHL
+	start_date = 1444.1.1
+	end_date = 1465.1.1
+}
+
+dependency = {
+	subject_type = "tributary_state"
+	first = ETH
+	second = MED
+	start_date = 1444.1.1
+	end_date = 1465.1.1
+}
+
 alliance = {
 	first = OJI
 	second = POT
@@ -297,7 +313,7 @@ union = {
 #Middle East
 march = {
 	first = MAM
-	second = HAW
+	second = HWW
 	start_date = 1444.1.1
 	end_date = 1517.1.1
 }
