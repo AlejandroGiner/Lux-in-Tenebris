@@ -1059,7 +1059,6 @@ btc_spain_3 = {
 						province_id = 116
 						province_id = 106
 						province_id = 3045
-						province_id = 4803
 					}
 					NOT = { owner = { OR = { tag = ROOT alliance_with = ROOT } } }
 				}
@@ -1103,12 +1102,6 @@ btc_spain_3 = {
 						owner = { alliance_with = ROOT }
 					}
 				}
-				4803 = {
-					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
-						owner = { alliance_with = ROOT }
-					}
-				}
 			}
 		}
 		effect = {
@@ -1130,7 +1123,6 @@ btc_spain_3 = {
 							province_id = 116
 							province_id = 106
 							province_id = 3045
-							province_id = 4803
 						}
 					}
 					add_province_modifier = {
@@ -1153,7 +1145,6 @@ btc_spain_3 = {
 				province_id = 116
 				province_id = 106
 				province_id = 3045
-				province_id = 4803
 				#Towns part of the road
 				province_id = 3295
 				province_id = 5128
@@ -1176,9 +1167,9 @@ btc_spain_3 = {
 				province_id = 5538
 				province_id = 3130
 				province_id = 1880
-				province_id = 4804
-				province_id = 4801
-				province_id = 4802
+				province_id = 5942
+				province_id = 5946
+				province_id = 5943
 				province_id = 3198
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1191,7 +1182,6 @@ btc_spain_3 = {
 				116 = { country_or_non_sovereign_subject_holds = ROOT }
 				106 = { country_or_non_sovereign_subject_holds = ROOT }
 				3045 = { country_or_non_sovereign_subject_holds = ROOT }
-				4803 = { country_or_non_sovereign_subject_holds = ROOT }
 				3295 = { country_or_non_sovereign_subject_holds = ROOT }
 				5128 = { country_or_non_sovereign_subject_holds = ROOT }
 				2978 = { country_or_non_sovereign_subject_holds = ROOT }
@@ -1214,9 +1204,9 @@ btc_spain_3 = {
 				5538 = { country_or_non_sovereign_subject_holds = ROOT }
 				3130 = { country_or_non_sovereign_subject_holds = ROOT }
 				1880 = { country_or_non_sovereign_subject_holds = ROOT }
-				4804 = { country_or_non_sovereign_subject_holds = ROOT }
-				4801 = { country_or_non_sovereign_subject_holds = ROOT }
-				4802 = { country_or_non_sovereign_subject_holds = ROOT }
+				5942 = { country_or_non_sovereign_subject_holds = ROOT }
+				5946 = { country_or_non_sovereign_subject_holds = ROOT }
+				5943 = { country_or_non_sovereign_subject_holds = ROOT }
 				3198 = { country_or_non_sovereign_subject_holds = ROOT }
 			}
 		}
@@ -1233,7 +1223,6 @@ btc_spain_3 = {
 							province_id = 116
 							province_id = 106
 							province_id = 3045
-							province_id = 4803
 							#Towns part of the road
 							province_id = 3295
 							province_id = 5128
@@ -1256,9 +1245,9 @@ btc_spain_3 = {
 							province_id = 5538
 							province_id = 3130
 							province_id = 1880
-							province_id = 4804
-							province_id = 4801
-							province_id = 4802
+							province_id = 5942
+							province_id = 5946
+							province_id = 5943
 							province_id = 3198
 						}
 					}
