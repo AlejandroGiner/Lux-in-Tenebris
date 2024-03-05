@@ -1,45 +1,31 @@
-# No previous file for Mississage
+# No previous file for Placentia
 
-owner = YZH			#Missisauga
-controller = YZH
-add_core = YZH
-is_city = yes
 culture = anishinabe
 religion = totemism
-capital = "Missisage"
-trade_goods = fur
+capital = "Waanabidebiing"
+trade_goods = unknown
 hre = no
-base_tax = 1
+base_tax = 1 
 base_production = 1
 base_manpower = 1
 native_size = 5
 native_ferocity = 1
 native_hostileness = 3
 
+
+
 discovered_by = north_american
 
 
-1444.11.15 = { #BeyondTypus batch edit shortcut no native start date begin
-	owner = XXX
-	controller = XXX
-	is_city = no
-	trade_goods = unknown
-}
-1444.11.17 = { #BeyondTypus batch edit shortcut no native start date end
-	owner = YZH
-	controller = YZH
-	add_core = YZH
-	is_city = yes
-	trade_goods = fur
-}
-#1611.1.1 = { discovered_by = ENG } # Henry Hudson # bt notes when did Hudson make it this far
 1611.6.13 = { discovered_by = FRA } # Samuel de Champlain via Étienne Brûlé
-1701.7.19 = {
+
+1649.1.1 = {
 	owner = OTT
 	controller = OTT
 	add_core = OTT
-	remove_core = YZH
-} #Odawa move in as Missisauga expand south
+	is_city = yes
+	trade_goods = fur
+} #Odawa pushed north by Iroquois
 
 1707.5.12 = { discovered_by = GBR }
 
@@ -49,10 +35,3 @@ discovered_by = north_american
 	remove_core = FRA 
 	add_core = GBR
 }
-
-1783.9.4 = {
- 	owner = GBR
-	controller = GBR
-	is_city = yes
-	trade_goods = fur		#Beaver pelts obviously
-} # Following the American War of Independance British look more seriously into the viability of settlements north of the Severn and seek to create travel lanes between Great Lakes
