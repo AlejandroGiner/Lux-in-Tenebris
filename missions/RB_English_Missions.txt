@@ -1412,12 +1412,12 @@ gbr_rb_spice_islands_group = {
 			}
 			if = {
 				limit = {
-					4900 = {
+					3719 = {
 						NOT = { is_core = ROOT }
 						NOT = { owned_by = ROOT }
 					}
 				}
-				4900 = { add_claim = ROOT }
+				3719 = { add_claim = ROOT }
 			}
 			if = {
 				limit = {
