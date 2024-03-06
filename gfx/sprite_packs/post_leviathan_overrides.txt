@@ -1,0 +1,30 @@
+lit_balten_sprite_pack = {
+    country_trigger = {
+        OR = {
+            tag = RIG
+            tag = DRP
+            tag = KUR 
+            tag = OSL
+        }
+    }
+    sprite_infantry = {
+		0 = RIG_INFANTRY_1
+		1 = RIG_INFANTRY_2
+		2 = RIG_INFANTRY_3
+		3 = RIG_INFANTRY_4
+	}
+
+	sprite_cavalry = {
+		0 = RIG_CAVALRY_1
+		1 = RIG_CAVALRY_2
+		2 = RIG_CAVALRY_3
+		3 = RIG_CAVALRY_4
+	}
+
+	sprite_artillery = {
+		0 = RIG_ARTILLERY_1
+		1 = RIG_ARTILLERY_2
+		2 = RIG_ARTILLERY_3
+		3 = RIG_ARTILLERY_4
+	}
+}

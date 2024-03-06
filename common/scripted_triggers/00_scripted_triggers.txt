@@ -1412,3 +1412,32 @@ is_volcanic_area = { #polynesia and indonesia
 		area = papua_area
 	}
 }
+
+#King of Kings triggers
+
+ARB_hedjaz_najd_bedouin_potential = {
+	OR = {
+		tag = ARB
+		tag = NAJ
+		tag = DAW
+		tag = SHM 
+		tag = HED
+		tag = MDA
+		tag = MFL 
+		tag = ANZ
+		tag = FAD
+	}
+	NOT = { map_setup = map_setup_random }
+}
+
+YEM_is_yemeni_nation ={
+	OR = { 
+		tag = YEM
+		tag = ADE
+		tag = HDR
+		tag = NJR
+		tag = MHR
+		tag = RAS
+		# tag = MFL technically Hedjazi
+	}
+}
