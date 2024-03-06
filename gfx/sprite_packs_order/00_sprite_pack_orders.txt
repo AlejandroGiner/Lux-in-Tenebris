@@ -10,10 +10,13 @@
 # 70: even more specific
 # 80: LiT Overrides
 
+############### LiT Overrides ###############
+############### LiT Overrides ###############
+############### LiT Overrides ###############
+############### LiT Overrides ###############
 
-
-# LiT Overrides
-
+#Deus Vult
+btc_implemented_crusader_states = 60
 
 #Aegean Christians
 btc_greek_states_sprite_pack = 75
@@ -39,41 +42,12 @@ irish_clanns_thomond_sprite_pack = 75
 irish_clanns_tyrone_sprite_pack = 75 
 irish_clanns_ulster_sprite_pack = 75
 
-#Crusaders
-btc_implemented_crusader_states = 75
+#Baltics
+lit_balten_sprite_pack = 80
 
-#Balkans & Anatolia
-btc_beyliks_sprite_pack = 75
-btc_croatian_yugoslav_sprite_pack = 75
-btc_serbian_yugoslavia_also_its_illyria_sprite_pack = 75
-
-
-#East Asia (Korea & Japan)
-basic_japan_btc_sprite_pack = 75
-btc_uesugi_sprite_pack = 75
-btc_imagawa_sprite_pack = 75 
-btc_date_sprite_pack = 75 
-btc_hosokawa_sprite_pack = 75 
-btc_hatakeyama_sprite_pack = 75 
-btc_otomo_sprite_pack = 75
-btc_ouchi_sprite_pack = 75
-btc_shiba_sprite_pack = 75
-btc_shimazu_sprite_pack = 75
-btc_takeda_sprite_pack = 75
-btc_nanbu_sprite_pack = 75
-btc_yamana_sprite_pack = 75 
-btc_korea_sprite_pack = 75
-
-#Maghreb
-btc_maghreb_algeria_sprite_pack = 75
-btc_maghreb_moroccan_sprite_pack = 75 
-btc_maghreb_tunisian_sprite_pack = 75
-btc_maghreb_mamluk_sprite_pack = 75
-
-##################### BASE GAME BELOW #####################
-
-
-
+# BASE GAME #
+# BASE GAME #
+# BASE GAME #
 
 # 100 Years War
 dlc001_orl_sprite_pack = 60
@@ -92,6 +66,8 @@ dlc001_amg_sprite_pack = 60
 dlc002_per_sprite_pack = 70
 dlc002_mam_sprite_pack = 70
 dlc002_tur_sprite_pack = 71 # to be higher than dlc002_mam_sprite_pack
+dlc002_mam_sprite_pack_culture = 19
+dlc002_tur_sprite_pack_culture = 39
 
 # Winged Hussars
 dlc003_pol_sprite_pack = 70
@@ -108,8 +84,8 @@ dlc006_byz_sprite_pack = 20
 dlc011_spa_sprite_pack = 70
 dlc011_por_sprite_pack = 71 # to override iberian culture group stuff
 
-dlc016_eng_sprite_pack = 12
-dlc016_fra_sprite_pack = 12
+dlc016_eng_sprite_pack = 22
+dlc016_fra_sprite_pack = 21
 
 # Native Americans
 dlc012_apa_sprite_pack = 20
@@ -153,6 +129,7 @@ dlc028_bra_sprite_pack = 50
 dlc028_bra_sprite_pack_bra = 60
 dlc028_hes_sprite_pack = 40
 dlc028_eng_sprite_pack = 10
+dlc028_eng_sprite_pack_anglois = 40
 dlc028_sax_sprite_pack = 40
 dlc028_wur_sprite_pack = 40
 dlc028_ned_sprite_pack = 30
@@ -203,9 +180,11 @@ dlc041_lxa_unique_sprite_pack = 60
 # Great Nations
 dlc042_rus_sprite_pack = 20
 dlc042_eng_sprite_pack = 10
+dlc042_eng_sprite_pack_anglois = 40
 dlc042_ned_sprite_pack = 30
 dlc042_por_sprite_pack = 30
-dlc042_tur_sprite_pack = 40
+dlc042_tur_sprite_pack = 50
+dlc042_tur_sprite_pack_turkish_culture = 38
 
 # Free Cities
 dlc043_frn_sprite_pack = 60
@@ -228,13 +207,9 @@ dlc048_tim_sprite_pack = 30
 
 # European Cavalry
 dlc049_ENG_sprite_pack = 11 # to override culture group units, but be overrided by culture specifics
+dlc049_ENG_sprite_pack_anglois = 40
 dlc049_FRA_sprite_pack = 21 # to override culture group units, but be overrided by specifics
 dlc049_SPA_sprite_pack = 21 # to override culture group units, but be overrided by specifics
-
-# Catholic Majors
-dlc053_spa_sprite_pack = 20
-dlc053_hab_sprite_pack = 40
-dlc053_pol_sprite_pack = 20
 
 # Catholic Majors
 dlc053_spa_sprite_pack = 20
@@ -248,16 +223,22 @@ dlc054_pru_sprite_pack = 40
 dlc054_pru_sprite_pack_bra = 60
 
 # Italian 
-dlc056_lan_sprite_pack = 40
+dlc056_lan_sprite_pack = 60
+dlc056_sie_sprite_pack = 40
 dlc056_mlo_sprite_pack = 40
 dlc056_nap_sprite_pack = 30
-dlc056_ven_sprite_pack = 40
+dlc056_ven_sprite_pack = 60
+dlc056_aqu_sprite_pack = 40
 
 # East African
-dlc057_nub_sprite_pack = 20
-dlc057_mdi_sprite_pack = 20
-dlc057_zan_sprite_pack = 10
+dlc057_nub_sprite_pack = 60
+dlc057_mak_sprite_pack = 20
+dlc057_mdi_sprite_pack = 60
+dlc057_aju_sprite_pack = 20
 dlc057_eth_sprite_pack = 30
+dlc057_zan_sprite_pack = 60
+dlc057_mba_sprite_pack = 20
+dlc057_mba_unique_sprite_pack = 40
 
 # German Princes
 dlc061_aug_sprite_pack = 60
@@ -299,7 +280,7 @@ dlc067_ymn_sprite_pack = 50
 
 # Asian Minors
 dlc068_jap_sprite_pack = 20
-dlc068_kor_sprite_pack = 20
+dlc068_kor_sprite_pack = 40
 dlc068_mng_sprite_pack = 20
 dlc068_qng_sprite_pack = 40
 
@@ -393,6 +374,7 @@ dlc098_gal_sprite_pack = 40
 dlc098_nav_sprite_pack = 40
 dlc098_sle_sprite_pack = 50
 dlc098_nss_sprite_pack = 50
+dlc098_nss_sprite_pack_western = 70 # pirate government reform
 
 
 #Imperator
@@ -406,11 +388,13 @@ dlc102_wal_sprite_pack = 30
 
 # Emperor Beyond the Alps
 dlc103_sav_sprite_pack = 40
+dlc103_sav_unique_sprite_pack = 60
 dlc103_sic_sprite_pack = 40
 dlc103_swi_sprite_pack = 40
 
 # Emperor Unifiers
 dlc104_ger_sprite_pack = 70
+dlc104_ger_sprite_pack_lotharingia = 41
 dlc104_ita_sprite_pack = 70
 
 # Leviathan
@@ -424,3 +408,48 @@ dlc107_AYU_sprite_pack = 45
 dlc107_CHA_sprite_pack = 40
 dlc107_LNA_sprite_pack = 40
 dlc107_LUA_sprite_pack = 40
+
+# Sub Saharan
+dlc111_KON_sprite_pack = 20
+dlc111_RWA_sprite_pack = 20
+dlc111_SKA_sprite_pack = 20
+dlc111_ZIM_sprite_pack = 20
+
+
+# Scandinavian 
+dlc116_ICE_sprite_pack = 30
+dlc116_EST_sprite_pack = 30
+dlc116_SMI_sprite_pack = 40
+dlc116_RIG_sprite_pack = 70
+dlc116_NOR_sprite_pack = 40
+dlc116_NOR_b_sprite_pack = 60
+dlc116_DAN_sprite_pack = 100
+dlc116_FIN_sprite_pack = 100
+dlc116_SHL_sprite_pack = 60
+dlc116_DIT_sprite_pack = 60
+dlc116_DIT_sprite_pack_western = 70 # peasant government reform
+
+# Domination
+dlc120_AIN_sprite_pack = 20
+dlc120_CDL_sprite_pack = 40
+dlc120_CHP_sprite_pack = 21
+dlc120_LIE_sprite_pack = 40
+dlc120_LOR_sprite_pack = 42 # to override dlc104_ger_sprite_pack_lotharingia
+dlc120_SUL_sprite_pack = 40
+dlc120_TOU_sprite_pack = 30
+dlc120_WUU_sprite_pack = 30
+dlc120_SUL_sprite_pack_malay_group = 19 # override by Leviathan unit pack
+dlc120_WUU_sprite_pack_chinese = 19 # override by Ming units
+dlc120_CDL_sprite_pack_tibetan_group = 19 # override by earlier tibetan pack
+dlc120_LIE_sprite_pack_dutch = 29 # override by earlier dutch pack
+dlc120_CHP_sprite_pack_french = 9 # override by earlier french pack
+
+#King of Kings
+dlc129_ARM_sprite_pack = 50
+dlc129_CYP_sprite_pack = 70
+dlc129_GEO_sprite_pack = 40
+dlc129_ISR_sprite_pack = 60
+dlc129_KAR_sprite_pack = 40 
+dlc129_SYR_sprite_pack = 40
+dlc129_TLC_sprite_pack = 40
+dlc129_TRE_sprite_pack = 40
