@@ -4,8 +4,11 @@ latent_trade_goods = {
 	coal
 }
 
+add_core = EOR
+owner = EOR
+controller = EOR
 culture = aboriginal
-religion = animism
+religion = dreamtime
 capital = "Eora"
 trade_goods = unknown
 hre = no
@@ -18,6 +21,7 @@ native_hostileness = 2
 extra_cost = 8
 center_of_trade = 1
 
+discovered_by = aboriginal_tech
 1770.1.1 = { discovered_by = GBR } # James Cook
 1788.1.26 = {
 	discovered_by = GBR
