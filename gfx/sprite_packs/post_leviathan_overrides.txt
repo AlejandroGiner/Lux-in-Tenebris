@@ -28,3 +28,34 @@ lit_balten_sprite_pack = {
 		3 = RIG_ARTILLERY_4
 	}
 }
+dlc107_polynesian_sprite_pack = {
+	# Tests against every tag in game	
+	country_trigger = {
+		OR = {
+			culture = papuan
+			culture_group = oceanic
+		}
+		
+	}
+
+	sprite_infantry = {
+		0 = polynesian_INFANTRY_1
+		1 = polynesian_INFANTRY_2
+		2 = polynesian_INFANTRY_2
+		3 = polynesian_INFANTRY_2
+	}
+
+	sprite_cavalry = {
+		0 = polynesian_CAVALRY_1
+		1 = polynesian_CAVALRY_1
+		2 = polynesian_CAVALRY_1
+		3 = polynesian_CAVALRY_1
+	}
+	
+	sprite_artillery = {
+		0 = polynesian_ARTILLERY_1
+		1 = polynesian_ARTILLERY_2
+		2 = polynesian_ARTILLERY_2
+		3 = polynesian_ARTILLERY_2
+	}
+}
