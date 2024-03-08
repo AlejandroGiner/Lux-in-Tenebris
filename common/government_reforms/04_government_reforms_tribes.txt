@@ -313,7 +313,7 @@ polynesian_tribe = {
 	icon = "tribal_council"
 	allow_normal_conversion = no
 	potential = {
-		culture_group = pacific
+		culture_group = oceanic
 		has_reform = polynesian_tribe
 	}
 	valid_for_nation_designer = yes
@@ -325,13 +325,16 @@ polynesian_tribe = {
 	modifiers = {
 		global_manpower_modifier = 0.2
 	}
+	ai = {
+		factor = 1
+	}
 }
 
 polynesian_kingdom = {
 	icon = "tribal_council"
 	allow_normal_conversion = no
 	potential = {
-		culture_group = pacific
+		culture_group = oceanic
 		has_reform = polynesian_kingdom
 	}
 	valid_for_nation_designer = yes
@@ -342,6 +345,9 @@ polynesian_kingdom = {
 		vassal_income = 0.2
 		reduced_liberty_desire = 20
 		governing_capacity_modifier = -0.5
+	}
+	ai = {
+		factor = 1
 	}
 }
 
