@@ -51,6 +51,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_theocrats_statists"
+		texturefile = "gfx/interface/theocrats_statists.dds"
+	}
+
+	spriteType = {
 		name = "GFX_statist_vs_orangist_frame"
 		texturefile = "gfx/interface/statist_vs_orangist_frame.dds"
 	}
@@ -93,8 +98,8 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_disinherit_button"
 		texturefile = "gfx/interface/abdicate_button.dds"
-	}	
-    
+	}
+	
     spriteType = {
 		name = "GFX_assign_heir_button"
 		texturefile = "gfx/interface/support_heir_button.dds"
@@ -193,26 +198,33 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_local_government_view_bg"
-		texturefile = "gfx//interface//country_local_government_view_bg.dds"
+		texturefile = "gfx//interface/government_view/country_local_government_view_bg.dds"
 		loadType = "INGAME"
 		transparencecheck = yes	
 	}	
 	
 	spriteType = {
 		name = "GFX_local_government_view_bg_large"
-		texturefile = "gfx//interface//country_local_government_view_bg_large.dds"
+		texturefile = "gfx//interface/government_view/country_local_government_view_bg_large.dds"
 		loadType = "INGAME"
 		transparencecheck = yes	
 	}
 
 	spriteType = {
 		name = "GFX_local_government_view_bg_huge"
-		texturefile = "gfx//interface//country_local_government_view_bg_huge.dds"
+		texturefile = "gfx//interface/government_view/country_local_government_view_bg_huge.dds"
 		loadType = "INGAME"
 		transparencecheck = yes	
-	}	
+	}
 
 	spriteType = {
+		name = "GFX_government_mechanics_bg"
+		texturefile = "gfx//interface/government_view/government_mechanics_bg.dds"
+		loadType = "INGAME"
+		transparencecheck = yes	
+	}
+
+	spriteType = {								
 		name = "GFX_primary_culture_icon"
 		texturefile = "gfx//interface//primary_culture_icon.dds"
 	}	
