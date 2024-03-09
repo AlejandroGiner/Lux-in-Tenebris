@@ -126,6 +126,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_remove_parliament_icon"
+		texturefile = "gfx/interface/remove_parliament_icon.dds"
+	}
+
+	spriteType = {
 		name = "GFX_have_parliament_icon"
 		texturefile = "gfx/interface/have_parliament_icon.dds"
 	}
@@ -514,6 +519,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_cawa_slot"
+		texturefile = "gfx/interface/cawa_slot.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_patriarchy_slot"
 		texturefile = "gfx/interface/patriarchy_slot.dds"
 	}	
@@ -543,6 +553,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_amount_of_banners"
 		texturefile = "gfx/interface/ideas_EU4/amount_of_banners.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_amount_of_cawa"
+		texturefile = "gfx/interface/ideas_EU4/amount_of_cawa.dds"
 	}	
 	
 	spriteType = {
@@ -1334,7 +1349,7 @@ spriteTypes = {
 	}	
 	
 	spriteType = {
-		name = "GFX_settlement_growth_button"
+		name = "GFX_settlement_g_button"
 		#texturefile = "gfx/interface/settlement_growth_button.dds"
 		texturefile = "gfx/interface/development_button_tax.dds"
 	}
@@ -1420,5 +1435,9 @@ spriteTypes = {
 		name = "GFX_autonomy_increased"
 		texturefile = "gfx/interface/ideas_EU4/autonomy_increased.dds"
 	}
-    
+	spriteType = {
+		name = "GFX_state_view_invisible_button_114x20"
+		texturefile = "gfx\interface\state_view_invisible_button_114x20.dds"
+		transparencecheck = no
+	}
 }

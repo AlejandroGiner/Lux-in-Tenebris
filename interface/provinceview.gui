@@ -1,5 +1,194 @@
 guiTypes = {
 
+	#Janissaries
+	windowType = {
+		name = "janissaries_state_view"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 390 y = 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		guiButtonType = {
+			name ="create_janissaries_button"
+			quadTextureSprite = "button_type_8"
+			buttonFont = "vic_18"
+			buttonText = "CREATE_JANISSARIES_BUTTON"
+
+			position = { x = 18 y = 0 }
+		}
+	}
+	
+	# Ottoman Pasha
+	windowType = {
+		name = "pasha_state_view"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 390 y = 50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name = "pasha_bg"
+			spriteType = "GFX_patriarchy_slot"
+			position = { x = 0 y = 0 }
+		}
+
+		guiButtonType = {
+			name ="add_pasha_button"
+			quadTextureSprite = "button_type_8"
+			buttonFont = "vic_18"
+			buttonText = "ADD_PASHA_BUTTON"
+
+			position = { x = 18 y = 8 }
+		}
+
+		iconType =
+		{
+			name = "add_pasha"
+			spriteType = "GFX_pasha_icon"
+			position = { x = 222 y = 7 }
+		}
+	}
+	
+	# Orthodox Patriarch
+	windowType = {
+		name = "patriarch_state_view"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 390 y = 50 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+	
+		iconType = {
+			name = "patriarch_bg"
+			spriteType = "GFX_patriarchy_slot"
+			position = { x = 0 y = 0 }
+		}
+
+		guiButtonType = {
+			name ="consecrate_patriarch_button"
+			quadTextureSprite = "button_type_8"
+			buttonFont = "vic_18"
+			buttonText = "CONSECRATE_BUTTON"
+
+			position = { x = 18 y = 8 }
+		}
+
+		iconType =
+		{
+			name = "consecrate_patriarch"
+			spriteType = "GFX_patriarch_icon"
+			position = { x = 222 y = 7 }
+		}
+	}
+	
+	# Manchu banners
+	windowType = {
+		name = "banners_state_view"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 390 y = 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+
+		iconType = {
+			name = "banner_bg"
+			spriteType = "GFX_banners_slot"
+			position = { x = 0 y = 0 }
+		}
+
+		guiButtonType = {
+			name ="raise_banners_button"
+			quadTextureSprite = "button_type_4"
+			buttonFont = "vic_18"
+			buttonText = "RAISE_MANCHU_BANNERS"
+
+			position = { x = 12 y = 8 }
+		}
+
+		iconType =
+		{
+			name = "manchu_banner"
+			spriteType = "GFX_amount_of_banners"
+			position = { x = 238 y = -3 }
+			scale = 0.85
+		}
+
+		instantTextBoxType = {
+			name = "banner_number"
+			position = { x = 290 y = 12 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = {x = 2 y = 2}
+			text = "x of y"
+			maxWidth = 100
+			maxHeight = 20
+			format = right
+		}
+	}
+	
+	# Cawa
+	windowType = {
+		name = "cawa_state_view"
+		backGround=""
+		position = { x = 0 y = 0 }
+		size = { x = 390 y = 32 }
+		moveable = 0
+		dontRender = ""
+		horizontalBorder= ""
+		verticalBorder= ""
+		fullScreen = no
+		
+		iconType = {
+			name = "cawa_bg"
+			spriteType = "GFX_cawa_slot"
+			position = { x = 0 y = 0 }
+		}
+
+		guiButtonType = {
+			name ="raise_cawa_button"
+			quadTextureSprite = "button_type_4"
+			buttonFont = "vic_18"
+			buttonText = "CREATECAWA"
+
+			position = { x = 12 y = 8 }
+		}
+
+		iconType =
+		{
+			name = "cawa_icon"
+			spriteType = "GFX_amount_of_cawa"
+			position = { x = 238 y = -3 }
+			scale = 0.85
+		}
+
+		instantTextBoxType = {
+			name = "cawa_number"
+			position = { x = 290 y = 12 }
+			textureFile = ""
+			font = "vic_22"
+			borderSize = { x = 2 y = 2 }
+			text = "x of y"
+			maxWidth = 100
+			maxHeight = 20
+			format = right
+		}
+
+	}
+	
 	#For adjusting the vertical position of the edicts list
 	positionType = {
 		name ="edicts_position"
@@ -240,6 +429,13 @@ guiTypes = {
 			{
 				name = "add_parliament"
 				quadTextureSprite = "GFX_add_parliament_icon"
+				position = { x = 73 y = 1 }
+			}
+
+			guiButtonType =
+			{
+				name = "remove_parliament"
+				quadTextureSprite = "GFX_remove_parliament_icon"
 				position = { x = 73 y = 1 }
 			}
 
@@ -1192,7 +1388,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "LEDGER_SAILORS"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1218,7 +1414,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "LEDGER_MANPOWER"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1243,7 +1439,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "SUPPLY_LIMIT"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1443,7 +1639,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_POWER"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1468,7 +1664,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_VALUE"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1493,7 +1689,7 @@ guiTypes = {
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_GOODS_LBL"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -2592,7 +2788,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "sort_state_province_culture"
-				quadTextureSprite = "GFX_sort_94"
+				quadTextureSprite = "GFX_sort_button_90"
 				position = { x = 265 y = 230 }
 				buttonFont = "vic_18"
 				buttonText = "CULTURE"
@@ -2600,17 +2796,17 @@ guiTypes = {
 			guiButtonType = {
 				name = "sort_state_unrest"
 				quadTextureSprite = "GFX_sort_state_unrest"
-				position = { x = 361 y = 231 }
+				position = { x = 357 y = 231 }
 			}
 			guiButtonType = {
 				name = "sort_state_fort"
 				quadTextureSprite = "GFX_sort_state_fort"
-				position = { x = 399 y = 231 }
+				position = { x = 415 y = 231 }
 			}
 			guiButtonType = {
 				name = "sort_state_devastation"
 				quadTextureSprite = "GFX_sort_state_devastation"
-				position = { x = 432 y = 231 }
+				position = { x = 448 y = 231 }
 			}
 
 
@@ -2618,129 +2814,29 @@ guiTypes = {
 				name = "provinces_listbox"
 				backGround = ""
 				position = { x= 20 y = 250 }
-				size = { x=450 y=160 }
+				size = { x=220 y=250 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
 			}
 
-
-			# Manchu banners
-			iconType = {
-				name = "banner_bg"
-				spriteType = "GFX_banners_slot"
-				position = { x = 12 y = 419 }
-			}
-
-			guiButtonType = {
-				name ="raise_banners_button"
-				quadTextureSprite = "button_type_4"
-				buttonFont = "vic_18"
-				buttonText = "RAISE_MANCHU_BANNERS"
-
-				position = { x = 24 y = 427 }
-			}
-
-			iconType =
-			{
-				name = "manchu_banner"
-				spriteType = "GFX_amount_of_banners"
-				position = { x = 250 y = 416 }
-				scale = 0.85
-			}
-
-			instantTextBoxType = {
-				name = "banner_number"
-				position = { x = 302 y = 431 }
-				textureFile = ""
-				font = "vic_22"
-				borderSize = {x = 2 y = 2}
-				text = "x of y"
-				maxWidth = 100
-				maxHeight = 20
-				format = right
-			}
-
-
-			# Orthodox Patriarch - TODO
-			iconType = {
-				name = "patriarch_bg"
-				spriteType = "GFX_patriarchy_slot"
-				position = { x = 12 y = 419 }
-			}
-
-			guiButtonType = {
-				name ="consecrate_patriarch_button"
-				quadTextureSprite = "button_type_8"
-				buttonFont = "vic_18"
-				buttonText = "CONSECRATE_BUTTON"
-
-				position = { x = 30 y = 427 }
-			}
-
-			iconType =
-			{
-				name = "consecrate_patriarch"
-				spriteType = "GFX_patriarch_icon"
-				position = { x = 234 y = 426 }
-			}
-
-			# Ottoman Pasha
-			iconType = {
-				name = "pasha_bg"
-				spriteType = "GFX_patriarchy_slot"
-				position = { x = 12 y = 419 }
-			}
-
-			guiButtonType = {
-				name ="add_pasha_button"
-				quadTextureSprite = "button_type_8"
-				buttonFont = "vic_18"
-				buttonText = "ADD_PASHA_BUTTON"
-
-				position = { x = 30 y = 427 }
-			}
-
-			iconType =
-			{
-				name = "add_pasha"
-				spriteType = "GFX_pasha_icon"
-				position = { x = 234 y = 426 }
-			}
-
-			guiButtonType = {
-				name ="create_janissaries_button"
-				quadTextureSprite = "button_type_8"
-				buttonFont = "vic_18"
-				buttonText = "CREATE_JANISSARIES_BUTTON"
-
-				position = { x = 283 y = 427 }
-			}
-
-			windowType = {
-				name = "investment_offset"
-				backGround=""
-				position = { x=12 y=419 }
+			smoothListboxType = {
+				name = "stateviews_listbox"
+				backGround = ""
+				position = { x = 12 y = 414 }
 				if_resolution = {
-					max_height = 800
-					size= { x=458 y=150 }
+					max_height = 899
+					size = { x = 458 y = 155 }
 				}
 				if_resolution = {
-					max_height = 1047
-					min_height = 801
-					size = { x=458 y=230}
-				}
-				if_resolution = {
-					min_height = 1048
-					size = { x=458 y=240}
-				}
-				dontRender = ""
-				horizontalBorder= ""
-				verticalBorder= ""
-				fullScreen = no
-				moveable = 0
+					min_height = 900
+					size = { x = 458 y = 246 }
+				}			
 				Orientation = "UPPER_LEFT"
+				horizontal = 0
+				scrollbartype = "standardlistbox_slider"
+				borderSize = { x = 0 y = 0 }
 			}
 		}
 
@@ -2937,6 +3033,26 @@ guiTypes = {
 				
 				iconType =
 				{
+					name = "province_governing_cost_icon"
+					spriteType = "GFX_province_governing_cost"
+					position = { x= 224 y = 82  }
+					Orientation = "UPPER_LEFT"
+				}
+				
+				instantTextBoxType = {
+					name = "capacity_value"
+					position = { x = 253 y = 87 }
+					textureFile = ""
+					font = "vic_18"
+					borderSize = {x = 2 y = 2}
+					text = "200"
+					maxWidth = 50
+					maxHeight = 20
+					format = right
+				}
+
+				iconType =
+				{
 					name = "center_of_revolution"
 					spriteType = "GFX_center_of_revolution"
 					position = { x = 28 y = 141 }
@@ -3024,29 +3140,6 @@ guiTypes = {
 					format = left
 				}
 	
-				
-				
-				iconType =
-				{
-					name ="province_governing_cost_icon"
-					spriteType = "GFX_province_governing_cost"
-					position = { x= 224 y = 181  }
-					Orientation = "UPPER_LEFT"
-				}
-				
-				instantTextBoxType = {
-					name = "capacity_value"
-					position = { x = 253 y = 187 }
-					textureFile = ""
-					font = "vic_18"
-					borderSize = {x = 2 y = 2}
-					text = "200"
-					maxWidth = 50
-					maxHeight = 20
-					format = right
-				}
-
-
 				iconType =
 				{
 					name ="build_allowed_icon"
@@ -3456,8 +3549,8 @@ guiTypes = {
 			windowType = {
 				name = "natives_buildings_window_large"
 				backGround=""
-				position = {  x=1 y=-105 }
-				size = { x=475 y=480 }
+				position = {  x=1 y=150 }
+				size = { x=475 y=270 }
 				dontRender = ""
 				horizontalBorder= ""
 				verticalBorder= ""
@@ -3468,7 +3561,7 @@ guiTypes = {
 				iconType =
 				{
 					name ="provinceview_native_building_bg_large"
-					spriteType = "GFX_select_building_large_bg"
+					spriteType = "GFX_select_building_small_bg2"
 					position = { x= 6 y = 0 }
 				}
 
@@ -3512,7 +3605,7 @@ guiTypes = {
 					name = "buildings"
 					position = { x = 12 y = 67 }
 					backGround=""
-					size = { x=365 y = 572}
+					size = { x=365 y = 210}
 					Orientation = "UPPER_LEFT"
 					horizontal = 0
 					spacing = 0
@@ -3525,7 +3618,7 @@ guiTypes = {
 				windowType = {
 					name = "province_values_window"
 					backGround=""
-					position = { x=0 y=0 }
+					position = { x=0 y=-310 }
 					size = { x=475 y=586 }
 					dontRender = ""
 					horizontalBorder= ""
@@ -3593,9 +3686,8 @@ guiTypes = {
 					{
 						name ="governing_capacity_icon"
 						spriteType = "GFX_governing_capacity"
-						position = { x= 212 y = 599  }
+						position = { x= 212 y = 599 }
 						Orientation = "UPPER_LEFT"
-						scale = 0.75
 					}
 					
 					instantTextBoxType = {
@@ -3675,7 +3767,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "building_close_button"
-				position = { x = 304 y = 123 }
+				position = { x = 304 y = 120 }
 				quadTextureSprite ="GFX_closebutton2"
 				clicksound = close_window
 			}
@@ -4522,7 +4614,7 @@ guiTypes = {
 
 	positionType = {
 		name = "building_close_button_natives_large"
-		position = { x = 382 y = -112 }
+		position = { x = 382 y = 140 }
 	}
 
 	positionType = {
@@ -4551,6 +4643,7 @@ guiTypes = {
 		position = { x=-32 y = 0}
 	}
 
+
 	#### GREAT PROJECT ENTRY
 	windowType = 
 	{
@@ -4576,7 +4669,7 @@ guiTypes = {
 			name = "name_label"
 			position = { x = 17 y = 11 }
 			textureFile = ""
-			font = "vic_20"
+			font = "standard_font"
 			borderSize = { x = 0 y = 0 }
 			text = "NAME HERE"
 			maxWidth = 300
@@ -4601,28 +4694,28 @@ guiTypes = {
 			{
 				name ="great_project_cancel"
 				quadTextureSprite = "GFX_alerticon_dismiss_always"
-				position = { x = 110 y = 5 }
+				position = { x = 110 y = 11 }
 			}
 
 			iconType =
 			{
 				name ="great_project_progress"
 				spriteType = "GFX_provinceView_progressbar"
-				position = { x = 8 y = 13 }
+				position = { x = 10 y = 19 }
 			}
 
 			iconType =
 			{
 				name ="great_project_progress_frame"
 				spriteType = "GFX_provinceView_morale_frame_long"
-				position = { x = 0 y = 9 }
+				position = { x = 0 y = 15 }
 			}
 		}
 
 		guiButtonType =
 		{
 			name ="build_upgrade_button"
-			position = { x= 193 y = 7 }
+			position = { x= 221 y = 7 }
 			quadTextureSprite ="GFX_great_project_level_icon_upgrade_build"
 			tooltip = ""
 			tooltipText =""
@@ -4635,7 +4728,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="use_money_to_boost_button"
-			position = { x= 193 y = 42 }
+			position = { x= 221 y = 42 }
 			quadTextureSprite ="GFX_great_project_level_icon_upgrade_money"
 			tooltip = ""
 			tooltipText =""
@@ -4648,7 +4741,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="use_manpower_to_boost_button"
-			position = { x= 193 y = 77 }
+			position = { x= 221 y = 77 }
 			quadTextureSprite ="GFX_great_project_level_icon_upgrade_manpower"
 			tooltip = ""
 			tooltipText =""
@@ -6628,6 +6721,11 @@ guiTypes = {
 			maxHeight = 20
 			format = left
 		}
+		guiButtonType = {
+			name = "name_overlay"
+			position = { x = 31 y = 6 }
+			quadTextureSprite = "GFX_state_view_invisible_button_114x20"
+		}
 
 		guiButtonType =
 		{
@@ -6683,19 +6781,19 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "sp_unrest"
-			position = { x = 340 y = 8 }
+			position = { x = 338 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "99.9%"
-			maxWidth = 36
+			maxWidth = 56
 			maxHeight = 20
 			format = center
 		}
 
 		instantTextBoxType = {
 			name = "fort_level"
-			position = { x = 375 y = 6 }
+			position = { x = 395 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
@@ -6707,7 +6805,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "sp_devastation"
-			position = { x = 410 y = 8 }
+			position = { x = 430 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -6797,7 +6895,7 @@ guiTypes = {
 				name = "edicts_listbox"
 				backGround = ""
 				position = { x = 500 y = 51 }
-				size = { x = 380 y = 400 }
+				size = { x = 380 y = 450 }
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"
 				borderSize = {x = 0 y = 0}
