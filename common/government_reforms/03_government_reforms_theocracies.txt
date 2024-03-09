@@ -58,7 +58,7 @@ papacy_reform = {
 	modifiers = {
 		prestige_per_development_from_conversion = 0.33
 		tolerance_own = 1
-        church_influence_modifier = 0.2
+		church_influence_modifier = 0.2
 	}
 	valid_for_nation_designer = no
 	icon = "papacy"
@@ -953,4 +953,37 @@ all_under_tengri_reform = {
 	ai = {
 		factor = 3
 	}
+}
+
+crusading_kingdom_reform = {
+	icon = "soldiers"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_unlocked_government_reform = {
+				government_reform = crusading_kingdom_reform
+			}
+			have_had_reform = crusading_kingdom_reform
+		}
+	}
+	trigger = {
+		OR = {
+			religion = catholic
+			is_playing_custom_nation = yes
+		}
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 75
+	modifiers = {
+		global_missionary_strength = 0.01
+		army_tradition_from_battle = 0.25
+		discipline = 0.025
+	}
+	monastic = yes
+	custom_attributes = {
+		monastic_order = yes
+	}
+	fixed_rank = 2
 }
