@@ -2792,13 +2792,14 @@ cloves = {
 		province_trade_power_modifier = 0.2
 	}
 	chance = {
-		factor = 150
+		factor = 180
 		modifier = {
 			factor = 0
 			NOT = {
 				OR = {
-					area = molluca_area
+					area = ceram_area
 					area = spice_islands_area
+					area = halmahera_area
 				}
 			}
 		}
