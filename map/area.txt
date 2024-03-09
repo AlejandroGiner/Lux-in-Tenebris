@@ -393,7 +393,7 @@ south_champagne_area = {
 ########################################
 
 wallonia_area = { #Hainaut
-	91 1743 4831 4832 5531
+	91 1743 3581 4832 5531
 }
 
 flanders_area = { #8
@@ -877,7 +877,7 @@ west_prussia_area = { #5
 }
 
 wielkopolska_area = { #5
-   254 2963 4526 4836 4837
+   254 2963 4526 5050 3592
 }
 
 malopolska_area = { #5
@@ -914,7 +914,7 @@ kuyavia_area = {
 }
 
 kalisz_area = {
-	4533 255 4838 1939 258
+	4533 255 3558 1939 258
 }
 
 samogitia_area = { #4
@@ -1276,11 +1276,11 @@ palatinate_area = { #3
 }
 
 north_rhine_area = { #3
-	84 85 2975 4820 4768 1878
+	84 85 2975 3732 4768 1878
 }
 
 lower_rhineland_area = { #3
-	80 4821 1760 3198 6467 83 4767
+	80 3729 1760 3198 6467 83 4767
 }
 
 north_westphalia_area = {
@@ -2329,11 +2329,15 @@ west_micronesia_area = { #3
 }
 
 western_australia_area = { #4
-	1084 2726 2727 4865 4866 4864 4863
+	1084 2727 4864 4863
 }
 
 top_end_area = { #2
-	2728 3418 4867 3586 2729 3727 3724 5818 4846 4847 4848
+	2728 2729 3727 3724 4846
+}
+
+bonaparte_gulf_area = {
+	4867 3418 3586
 }
 
 northern_australia_area = { #3
@@ -2341,15 +2345,39 @@ northern_australia_area = { #3
 }
 
 eastern_australia_area = { #5
-	1091 1092 1093 1094 2733 4850 4851 4855 4852 4853 4857 4854
+	1091 1092 4855 4856 
 }
 
 southern_australia_area = { #3
-	1089 1090 2734 1085 4868 4869 4861 4859 4860 4858 4856
+	1089 2734 4861 1087 3728
+}
+
+north_queensland_area = { #4
+	1094 2733 4850 1093
+}
+
+carpentaria_gulf_area = {
+	4847 5818 4848
+}
+
+pilbara_area = { #4
+	2726 4865 4866
+}
+
+south_queensland_area = { #4
+	4851 4852 4853 4854
+}
+
+illawara_area = { #5
+	1090 4857 4858 4859 4860
 }
 
 murray_river_area = { #5
-	1086 1087 1088 2735 2736 4862 3728
+	1086 1088 2735 2736 4862
+}
+
+tasmania_area = { #3
+	1085 4868 4869
 }
 
 northern_polynesia_area = { #3
@@ -2967,7 +2995,7 @@ phnom_dangrek_area = {
 }
 
 khorat_area = { #5
-	2386 5954 5930 5964 612
+	2386 4838 5930 4836 612
 }
 
 sakon_nakhon_area = {
@@ -2979,7 +3007,7 @@ inner_cambodia_area = {
 }
 
 champa_area = { #5
-	606 607 2374 3722 3592
+	606 607 2374 3722 4822
 }
 
 central_highlands_area = {
@@ -2987,7 +3015,7 @@ central_highlands_area = {
 }
 
 eastern_cambodia_area = {
-	4882 4885 1823 2378
+	7454 7428 1823 2378
 }
 
 cardamom_area = {
@@ -2995,7 +3023,7 @@ cardamom_area = {
 }
 
 cambodia_area = { #5
-	5971 5972 609 2379 5962
+	5971 5972 609 2379 5962 4825
 }
 
 lower_burma_area = { #5
@@ -3016,7 +3044,7 @@ mekong_area = { #4
 }
 
 mekong_lowlands_area = {
-	2380 4883 3589 4884 604 4825
+	2380 7431 3589 4884 604
 }
 
 tenasserim_area = { #4
@@ -3029,7 +3057,7 @@ north_tenasserim_area = { #4
 }
 
 vietnam_area = { #3
-	1016 2373 3558 1022 3723
+	1016 2373 4821 1022 3723
 }
 
 red_river_delta_area = { #3
@@ -3037,7 +3065,7 @@ red_river_delta_area = { #3
 }
 
 cao_bac_area = {
-	616 5974 5975 3729
+	616 5974 5975 4820
 }
 
 sipsongchautai_area = { #5
@@ -3049,7 +3077,7 @@ south_laos_area = { #3
 }
 
 north_laos_area = { #4
-	615 3582 5817 3562 1844 3581
+	615 3582 5817 3562 1844 4837
 }
 
 central_thai_area = { #4
@@ -3057,7 +3085,7 @@ central_thai_area = { #4
 }
 
 gulf_siam_area = {
-	3601 4842 5938 592 2387
+	3601 4842 4831 592 2387
 }
 
 northern_thai_area = { #4
@@ -3077,11 +3105,11 @@ mindanao_area = { #East
 }
 
 west_mindanao_area = {
-	4354 5927 653 652 4915
+	4354 5927 653 652 3731
 }
 
 visayas_area = { #5
-	654 4353 4913 2700 4351 4352
+	654 4353 7480 2700 4351 4352
 }
 
 palawan_area = { #3
@@ -4079,7 +4107,7 @@ south_appalachia_area = {
 }
 
 south_carolina_area = { #Midlands
-	7449 7451 7452 2541 7454 933 7450
+	7449 7451 7452 2541 4882 933 7450
 }
 
 carolinas_area = { 
@@ -4179,7 +4207,7 @@ upper_chattahoochee_area = {
 }
 
 northeast_louisiana_area = { 
-	7428 7403 7425 7426 2515 7486 2529
+	4885 7403 7425 7426 2515 7486 2529
 }
 
 grand_strand_area = { 
@@ -4195,11 +4223,11 @@ western_tennessee_area = {
 }
 
 south_tennessee_area = {
-	7471 7431 7470 7423 2527
+	7471 4883 7470 7423 2527
 }
 
 middle_tennessee_area = { 
-	934 7480 7478 7477 935
+	934 4913 7478 7477 935
 }
 
 eastern_tennessee_area = { 
@@ -4284,7 +4312,7 @@ wisconsin_area = { #3
 }
 
 central_plains_area = { #5
-    898 901 903 2508 2672 4916
+    898 901 903 2508 2672 4916 4915
 }
 
 high_plains_area = { #4
@@ -4362,7 +4390,7 @@ east_alaska_area = {
 }
 
 lower_acadia_area = {
-    984 2568 2569 5047 5048 5051 982 983
+    984 2568 2569 4891 5048 5051 982 983
 }
 
 straits_of_georgia_area = {
@@ -4372,7 +4400,7 @@ straits_of_georgia_area = {
 #New 1.20 straits_of_georgia_area cut in BT, superseeded by already present areas, I'm also slightly dubious about it as distinct from the Salih Sea in this period
 
 upper_acadia_area = {
-    2570 5046 985 2572 5049 2571 5050
+    2570 5046 985 2572 5049 4896 2571
 }
 
 newfoundland_area = {
@@ -5012,7 +5040,7 @@ yellowstone_area = {
 }
 
 lakota_area = {
-	2008 2009 5618
+	4918 2009 5618 2008
 }
 
 west_dakota_area = {
@@ -5075,10 +5103,10 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #BTC working on
-4822 4918 
+5954 5938
 
 #RNW Wasteland provinces
-3731 3732 3733 3734 3735 3736 3737 3738 3739
+3732 3733 3734 3735 3736 3737 3738 3739
 3740 3741 3742 3743 3744 3745 3746 3747 3748 3749 3750 3751 3752 3753 3754 3755 3756 3757 3758 3759
 3760 3761 3762 3763 3764 3765 3766 3767 3768 3769 3770 3771 3772 3773 3774 3775 3776 3777 3778 3779
 3780 3781 3782 3783 3784 3785 3786 3787 3788 3789 3790 3791 3792 3793 3794 3795 3796 3797 3798 3799
@@ -5120,7 +5148,7 @@ unused_area = {
 6570 6571 6572 6573 6574 6575 6576 6577 6578 6579 6580 6581 6582 6583 6584 6585 6586 6587 6588 6589 6590 6591 6592 6593 6594
 6595 6596 6597 6598 6599 6600 6601 6602 6603 6604 6605 6606 6607 6608 6609 6610 6611 6612 6613 6614 6615 6616 6617 6618 6619
 6620 6621 6622 6623 6624 6625 6626 6627 6628 6629 6630 6631 6632 6633 6634 6635 6636 6637 6638 6639 6640 6641 6642 6643 6644
-6645 6646 6647 6648 6649 6650 6651 6652 6653 6654 6655 6656 6657 6658 6659 4891 4896 3565 3566 3569 3559
+6645 6646 6647 6648 6649 6650 6651 6652 6653 6654 6655 6656 6657 6658 6659 4891 3565 3566 3569 3559
 
 #New Open provinces for BtP Legacy Project and Beyond Typus
 	7006 7007 7008 7009
