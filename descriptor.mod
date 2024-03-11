@@ -1,4 +1,4 @@
-version="1.0.1"
+version="1.1"
 tags={
 	"Expansion"
 	"Graphics"
@@ -19,4 +19,4 @@ tags={
 }
 name="Lux in Tenebris development version"
 picture="thumbnail.png"
-supported_version="1.30.*.*"
+supported_version="1.36.*.*"
