@@ -2788,7 +2788,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "sort_state_province_culture"
-				quadTextureSprite = "GFX_sort_button_90"
+				quadTextureSprite = "GFX_sort_94"
 				position = { x = 265 y = 230 }
 				buttonFont = "vic_18"
 				buttonText = "CULTURE"
@@ -6706,13 +6706,13 @@ guiTypes = {
 		iconType = {
 			name ="core_status"
 			spriteType = "GFX_core_icon"
-			position = { x = -1 y = 1 }
+			position = { x = -11 y = 1 }
 		}
 
 
 		instantTextBoxType = {
 			name = "name"
-			position = { x = 31 y = 6 }
+			position = { x = 21 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
@@ -6730,7 +6730,7 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="owner"
-			position = { x= 147 y = 0 }
+			position = { x= 137 y = 0 }
 			quadTextureSprite = "GFX_shield_small"
 			tooltip = ""
 			tooltipText =""
@@ -6743,13 +6743,13 @@ guiTypes = {
 		{
 			name ="trade_company_icon"
 			spriteType = "GFX_subject_trade_company_icon"
-			position = { x= 160 y = 15 }
+			position = { x= 150 y = 15 }
 			scale = 0.75
 		}
 
 		instantTextBoxType = {
 			name = "development"
-			position = { x = 180 y = 6 }
+			position = { x = 170 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
@@ -6763,12 +6763,12 @@ guiTypes = {
 		{
 			name ="religion"
 			spriteType = "GFX_icon_religion_small"
-			position = { x= 214 y = 0 }
+			position = { x= 204 y = 0 }
 		}
 
 		instantTextBoxType = {
 			name = "culture"
-			position = { x = 246 y = 6 }
+			position = { x = 236 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
