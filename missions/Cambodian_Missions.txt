@@ -16,7 +16,7 @@ cambodian_missions_1 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			OR = {
-				province_id = 3601
+				province_id = 4830
 				province_id = 4842
 				province_id = 603
 			}
@@ -25,20 +25,14 @@ cambodian_missions_1 = {
 			}
 		}
 		trigger = {
-			3601 = { owned_by = ROOT }
+			4830 = { owned_by = ROOT }
 			4842 = { owned_by = ROOT }
 			603 = { owned_by = ROOT }
 		}
 		effect = {
-			3601 = {
-				change_culture = ROOT
-			}
-			4842 = {
-				change_culture = ROOT
-			}
-			603 = {
-				change_culture = ROOT
-			}
+			4830 = { change_culture = ROOT }
+			4842 = { change_culture = ROOT }
+			603 = { change_culture = ROOT }
 			central_thai_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -93,7 +87,7 @@ cambodian_missions_1 = {
 		icon = mission_conquer_siam
 		required_missions = { khm_conquer_the_siamese_heartland }
 		provinces_to_highlight = {
-				area = sukhothai_area
+			area = sukhothai_area
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
