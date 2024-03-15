@@ -17,7 +17,7 @@ cambodian_missions_1 = {
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4830
-				province_id = 4842
+				province_id = 5957
 				province_id = 603
 			}
 			NOT = {
@@ -26,12 +26,12 @@ cambodian_missions_1 = {
 		}
 		trigger = {
 			4830 = { owned_by = ROOT }
-			4842 = { owned_by = ROOT }
+			5957 = { owned_by = ROOT }
 			603 = { owned_by = ROOT }
 		}
 		effect = {
 			4830 = { change_culture = ROOT }
-			4842 = { change_culture = ROOT }
+			5957 = { change_culture = ROOT }
 			603 = { change_culture = ROOT }
 			central_thai_area = {
 				limit = {
