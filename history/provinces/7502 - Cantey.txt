@@ -1,6 +1,7 @@
 #7502 - Cantey
 
 capital = "Na'izha" #Hodge's version of what the Lipan called themselves
+tribal_owner = LIP
 culture = lipan
 religion = totemism
 hre = no
@@ -15,31 +16,5 @@ native_hostileness = 5
 
 discovered_by = north_american
 
-1444.11.12 = { #BeyondTypus batch edit shortcut native start date begin
-	owner = P4L
-	controller = P4L
-	add_core = P4L
-	is_city = yes
-	trade_goods = livestock #Bison
-}
-
 1780.1.1 = { discovered_by = SPA } # generic
 1780.1.1 = { discovered_by = FRA } # generic
-1700.1.1 = {
-	owner = ---
-	controller = ---
-	remove_core = P4L
-	is_city = no
-	trade_goods = unknown
-}#generic date for Pelones Lipan moving south
-
-1720.1.1 = {
-	owner = T4V
-	controller = T4V
-	add_core = T4V
-	culture = wichita
-	religion = totemism
-	capital = "Taovayas"
-	is_city = yes
-	trade_goods = livestock#bison
-}#generic date for wichita migration

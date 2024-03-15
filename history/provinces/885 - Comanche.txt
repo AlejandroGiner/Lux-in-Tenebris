@@ -1,17 +1,14 @@
 #885 - Comanche
 
-owner = Y4D
-controller = Y4D
-add_core = Y4D
+tribal_owner = LIP
 culture = lipan
 religion = totemism
 capital = "Trementina"
-trade_goods = livestock
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = yes
 
 native_size = 10
 native_ferocity = 5
@@ -21,13 +18,6 @@ discovered_by = north_american
 
 1541.1.1 = { discovered_by = SPA } # Coronado
 
-1700.1.1 = {
-	owner = XXX
-	controller = XXX
-	remove_core = Y4D
-	is_city = no
-	trade_goods = unknown
-}#generic date for Ypandes Plains Lipan moving south
 1710.1.1 = {
 	owner = COM
 	controller = COM

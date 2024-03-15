@@ -2,24 +2,21 @@
 #de Soto probably found Talimeco here, if Cofitachequi was on the Congaree as Hudson argues. Other argue Cofitachequi was here
 #Camden District to the British and early US, later Kershaw County to US
 
-owner = C4F
-controller = C4F
-add_core = C4F
-is_city = yes
+tribal_owner = COF
 culture = yupaha
 religion = totemism
 capital = "Talimeco"
-trade_goods = maize
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+
 native_size = 2
 native_ferocity = 2
 native_hostileness = 3
-discovered_by = north_american
-extra_cost = 10
 
+discovered_by = north_american
 
 1540.1.1 = { discovered_by = SPA } # De Soto
 1670.1.1 = { discovered_by = ENG } #Woodward
@@ -28,7 +25,7 @@ extra_cost = 10
 	is_city = no
 	owner = ---
 	controller = ---
-	remove_core = C4F
+	remove_core = COF
 	capital = "Wateree"
 	culture = catawba
 } #arbitrary date for collapse of cofitachequi paramount chiefdom post De Soto

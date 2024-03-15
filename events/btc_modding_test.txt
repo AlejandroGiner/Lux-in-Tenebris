@@ -144,9 +144,9 @@ country_event = {
 			cede_province = IRO
 		}
 		southeast_america_region = {
-		limit = { NOT = { owned_by = U4C } }
-			add_core = U4C
-			cede_province = U4C
+		limit = { NOT = { owned_by = SAT } }
+			add_core = SAT
+			cede_province = SAT
 		}
 	}
 	option = {

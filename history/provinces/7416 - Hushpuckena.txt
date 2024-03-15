@@ -3,6 +3,7 @@
 #Coahoma is modern county. I can't find a tribe that lived here before it was choctaw land in late historic
 #Unclear if this was a part of quizqui or Pacaha, but for balance purposes leaving it blank. but it was inhabited
 
+tribal_owner = ANL
 culture = yazoo
 religion = totemism
 capital = "Hushpuckena"
@@ -11,41 +12,9 @@ hre = no
 base_tax = 1
 base_production = 1
 base_manpower = 1
+
 native_size = 4
 native_ferocity = 2
 native_hostileness = 2
 
-
-
 discovered_by = north_american
-
-1542.1.1 = { discovered_by = SPA } # Hernando De Soto
-1668.1.1 = { discovered_by = FRA } # Robert Cavelier de La Salle
-
-1660.1.1 = {
-	owner = Q4W
-	controller = Q4W
-	add_core = Q4W
-	culture = quapaw
-	trade_goods = maize
-	is_city = yes
-	capital = "Ugahpahti"
-}
-1710.1.1= {
-	add_core = CHO
-	owner = CHO
-	controller = CHO
-	remove_core = Q4W
-	culture = choctaw
-	capital = "Coahoma"
-} #Choctaw fill in spaces
-1830.9.27 = {
-	owner = USA
-	controller = USA
-	add_core = USA
-	remove_core = CHO
-	trade_goods = cotton
-	#low settlement pre TOT
-	#culture = american
-	#religion = protestant  
-} #Treaty of Dancing Rabbit Creek 
