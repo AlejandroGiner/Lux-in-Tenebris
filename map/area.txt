@@ -4252,11 +4252,11 @@ big_thicket_area = {
 }
 
 cross_timbers_area = { 
-	7514 7501 7500 886 4910 7502 7503 
+	7514 7501 7500 886 4910 7502 
 }
 
 edwards_plateau_area = { 
-	2500 883 2666 4909
+	2500 883 2666 4909 7503
 }
 
 virginia_tidewater_area = { 
@@ -4415,12 +4415,20 @@ cote_nord_area = {
     996 2576 2577 5011 5012 5055 2578
 }
 
+gaspesia_area = {
+	986 5054 2582 5053
+}
+
 lower_canada_area = {
-    994 2583 2584 2012 4893 5053 2582 5054 986
+    994 2583 2584 2012 4893
 }
 
 upper_canada_area = {
-    987 989 2670 988 4892 2586 2587 5037
+	987 988 2586 2587 5039
+}
+
+huronia_area = {
+	989 2670 4892 5037 2585
 }
 
 laurentian_area = {
@@ -4428,7 +4436,7 @@ laurentian_area = {
 }
 
 upper_ontario_area = {
-    1001 1007 2015 2585 5039 2671
+    1001 1007 2015 2671 7487
 }
 
 james_bay_area = {
@@ -5103,7 +5111,6 @@ true_north_atlantic_sea_area = {
 ##################################################################################
 unused_area = {
 #BTC working on
-7487
 
 #RNW Wasteland provinces
 3736 3737 3738 3739
