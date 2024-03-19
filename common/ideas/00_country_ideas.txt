@@ -2816,7 +2816,7 @@ TAU_ideas = {
 		cavalry_power = 0.20
 	}
 	nat_worship = {
-		religious_unity = 0.2
+		religious_unity = 0.25
 	}
 	chakravartin = {
 		army_tradition = 0.5
@@ -2878,7 +2878,7 @@ AVA_ideas = {
 GRA_ideas = {
 	start = {
 		global_tax_modifier = 0.15
-		religious_unity = 0.25
+		legitimacy = 1
 	}
 	
 	bonus = {
@@ -2891,7 +2891,8 @@ GRA_ideas = {
 	free = yes
 	
 	people_of_the_book = {
-		tolerance_heathen = 3
+		tolerance_heathen = 2
+		dhimmi_loyalty_modifier = 0.1
 	}
 	recover_al_andalus = {
 		core_creation = -0.15
@@ -3038,12 +3039,13 @@ ORI_ideas = {
 
 PUN_ideas = {
 	start = {
-		religious_unity = 0.25	#melting pot of religions
+		dhimmi_loyalty_modifier = 0.1	#melting pot of religions
+		brahmins_muslim_loyalty_modifier = 0.1
 		land_morale = 0.10
 	}
 
 	bonus = {
-		cavalry_power = 0.1
+		cavalry_power = 0.15
 	}
 	
 	trigger = {
@@ -4919,7 +4921,7 @@ SMO_ideas = {
 	free = yes
 	
 	smolenskian_resolve = {
-		religious_unity = 0.15
+		religious_unity = 0.25
 	}
 	armories_of_smolensk = {
 		fire_damage = 0.1	
@@ -5295,7 +5297,8 @@ KAR_ideas = {
 		development_cost = -0.1
 	}
 	home_of_the_whirling_dervishes = {
-		religious_unity = 0.2
+		monthly_piety = -0.001
+		dhimmi_loyalty_modifier = 0.1
 	}
 	true_heirs_seljuk_empire = {
 		legitimacy = 1
@@ -5596,7 +5599,7 @@ PLT_ideas = {
 PRM_ideas = {
 	start = {
 		prestige_decay = -0.01
-		tolerance_heathen = 2	
+		land_attrition = -0.2
 	}
 	
 	bonus = {
@@ -5615,7 +5618,7 @@ PRM_ideas = {
 		advisor_cost = -0.1
 	}
 	turkic_mercenaries = {
-		cavalry_cost = -0.1
+		cavalry_power = 0.1
 	}	
 	the_old_traditions = {
 		global_unrest = -1		
@@ -5628,6 +5631,7 @@ PRM_ideas = {
 	}
 	komi_tolerance = {
 		religious_unity = 0.25
+		tolerance_heathen = 2
 	}
 	permian_army_reform = {
 		land_forcelimit_modifier = 0.25
@@ -6512,8 +6516,9 @@ BAH_ideas = {
 		leader_cost = -0.1
 	}
 	legacy_of_gisu_daraz = {
-		religious_unity = 0.25
-		prestige = 0.5
+		dhimmi_loyalty_modifier = 0.1
+		brahmins_muslim_loyalty_modifier = 0.1
+		monthly_piety = -0.001
 	}
 	dakani_language = {
 		num_accepted_cultures = 2
@@ -6598,7 +6603,9 @@ JNP_ideas = {
 		global_institution_spread = 0.1
 	}
 	jnp_sants_and_sufis = {
-		religious_unity = 0.5
+		dhimmi_loyalty_modifier = 0.1
+		brahmins_muslim_loyalty_modifier = 0.1
+		monthly_piety = -0.001
 	}
 	jaunpuri_architecture = {
 		development_cost = -0.1
@@ -9263,7 +9270,8 @@ MLW_ideas = {
 		global_manpower_modifier = 0.15
 	}
 	mlw_nimatnama = {
-		religious_unity = 0.25
+		dhimmi_loyalty_modifier = 0.1
+		brahmins_muslim_loyalty_modifier = 0.1
 		prestige = 0.5
 	}
 	mlw_surat_delhi_route = {
@@ -9611,7 +9619,7 @@ ANS_ideas = {
 		ae_impact = -0.1
 	}
 	ans_franconian_reformers = {
-		religious_unity = 0.2
+		religious_unity = 0.25
 		papal_influence = 2
         church_power_modifier = 0.1
 		monthly_fervor_increase = 0.25
@@ -13812,7 +13820,7 @@ EFR_ideas = {
 		army_tradition_decay = -0.01
 	}
 	efr_religious_thought = {
-		religious_unity = 0.2
+		religious_unity = 0.25
 	}
 	efr_dutch_migrants = {
 		advisor_pool = 1
@@ -15995,6 +16003,10 @@ DAI_ideas = {
 	}
 	thuan_thien = {
 		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
 		imperial_mandate = 0.05
 	}
 	literary_reform = {
@@ -16006,6 +16018,10 @@ MAJ_ideas = {
 	start = {
 		ae_impact = -0.15
 		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
 	}
 	
 	bonus = {
@@ -16029,6 +16045,7 @@ MAJ_ideas = {
 	}
 	maj_nusa_tenggara = {
 		colonists = 1
+		effect = { remove_temporary_colonist = yes }
 	}
 	maj_gajah_madas_oath = {
 		land_morale = 0.1
@@ -16045,7 +16062,7 @@ MAJ_ideas = {
 ATJ_ideas = {
 	start = {
 		global_ship_cost = -0.1
-		global_missionary_strength = 0.02
+		discipline = 0.05
 	}
 	bonus = {
 		production_efficiency = 0.1
@@ -16061,7 +16078,7 @@ ATJ_ideas = {
 		global_trade_power = 0.1
 	}
 	islamise_sumatra = {
-		missionary_maintenance_cost = -0.25
+		global_missionary_strength = 0.02
 	}
 	rise_of_aceh = {
 		province_warscore_cost = -0.1
@@ -16117,21 +16134,21 @@ BLI_ideas = {
 
 SUN_ideas = {
 	start = {
-		tolerance_heretic = 1
+		tolerance_heretic = 2
 		manpower_recovery_speed = 0.2
 	}
 	bonus = {
-		land_morale = 0.20
+		land_morale = 0.15
 	}
 	trigger = {
 		tag = SUN
 	}
 	free = yes
 	candi_shrines = {
-		tolerance_own = 1
+		tolerance_own = 2
 	}
 	sunda_galuh = {
-		global_unrest = -1
+		diplomatic_annexation_cost = -0.15
 	}
 	defensive_moats = {
 		defensiveness = 0.2
@@ -16450,18 +16467,19 @@ BAN_ideas = {
 
 SUL_ideas = { 
 	start = {
-		light_ship_cost = -0.15
+		global_missionary_strength = 0.02
 		navy_tradition = 1
 	}
 	bonus = {
-		navy_tradition_decay = -0.01
+		capture_ship_chance = 0.15
 	}
 	trigger = {
 		tag = SUL
 	}
 	free = yes
-	sul_sultanate_of_sulu = { 
-		global_missionary_strength = 0.02
+	SUL_moro_piracy = {
+		may_perform_slave_raid = yes
+		privateer_efficiency = 0.25
 	}
 	sul_makhdum_teachings = { 
 		advisor_cost = -0.1
@@ -16474,14 +16492,20 @@ SUL_ideas = {
 		trade_efficiency = 0.10
 	}
 	sul_dagat_sulu = { 
-		sunk_ship_morale_hit_recieved = -0.2
+		sunk_ship_morale_hit_recieved = -0.1
+		galley_power = 0.15
 	}
 	sul_coconut_plantations = {
 		production_efficiency = 0.1
 		build_cost = -0.10
 	}
-	sul_pearl_farming = {
-		global_trade_goods_size_modifier = 0.1
+	SUL_three_kingdoms = {
+		prestige = 0.5
+		legitimacy = 1
+		devotion = 1
+		republican_tradition = 0.3
+		meritocracy = 1
+		horde_unity = 1
 	}
 }
 
