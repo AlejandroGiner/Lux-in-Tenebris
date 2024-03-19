@@ -1,31 +1,30 @@
-estate_btc_janissaries = {
+estate_btc_qizilbash = {
 	
-	icon = 16
+	icon = 1
 	
 	trigger = {
-		has_reform = ottoman_government
+		tag = ARL
 		is_nomad = no
 		is_colonial_nation = no
 	}
 	
 	country_modifier_happy = {
-		yearly_army_professionalism = 0.005
-		drill_decay_modifier = -0.25
-		prestige = 1
+		land_morale = 0.05
+		manpower_in_true_faith_provinces = 0.15
 	}
 	
 	country_modifier_neutral = {
-		prestige = 1
+		manpower_in_true_faith_provinces = 0.15
 	}
 	
 	country_modifier_angry = {
-		discipline = -0.025
-		reinforce_speed = -0.30
+		global_autonomy = 0.1
+		manpower_in_true_faith_provinces = -0.25
 		global_unrest = 4
 	}
 	
 	land_ownership_modifier = {
-		btc_janissaries_loyalty_modifier = 0.2
+		btc_qizilbash_loyalty_modifier = 0.2
 	}
 	
 	province_independence_weight = {
@@ -44,12 +43,16 @@ estate_btc_janissaries = {
 			base_manpower = 5
 		}
 		modifier = {
+			factor = 1.5
+			region = mesopotamia_region
+		}
+		modifier = {
 			factor = 2
-			region = anatolia_region
+			region = khorasan_region
 		}
 		modifier = {
 			factor = 3
-			region = greece_region_btc
+			region = persia_region
 		}
 		modifier = {
 			factor = 0.75
@@ -123,14 +126,6 @@ estate_btc_janissaries = {
 		}
 		loyalty = -20
 	}
-	#Army reformer advisor
-	loyalty_modifier = {
-		desc = EST_MAM_MIL_ADV_REF
-		trigger = {
-			advisor = army_reformer
-		}
-		loyalty = -5
-	}
 	#Medium army
 	loyalty_modifier = {	
 		desc = EST_MAM_MID_ARMY
@@ -157,96 +152,13 @@ estate_btc_janissaries = {
 		}
 		loyalty = -10
 	}
-	# 1% loyalty per 5% cavalry ratio to infantry, starting at 10% ratio and ending at +10% loyalty with 55% ratio, just below 60% sunni ratio, but above base ratio
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.1
-			NOT = { janissary_percentage = 0.15 }
-		}
-		loyalty = 1
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.15
-			NOT = { janissary_percentage = 0.2 }
-		}
-		loyalty = 2
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.2
-			NOT = { janissary_percentage = 0.25 }
-		}
-		loyalty = 3
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.25
-			NOT = { janissary_percentage = 0.3 }
-		}
-		loyalty = 4
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.3
-			NOT = { janissary_percentage = 0.35 }
-		}
-		loyalty = 5
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.35
-			NOT = { janissary_percentage = 0.4 }
-		}
-		loyalty = 6
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.4
-			NOT = { janissary_percentage = 0.45 }
-		}
-		loyalty = 7
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.45
-			NOT = { janissary_percentage = 0.5 }
-		}
-		loyalty = 8
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.5
-			NOT = { janissary_percentage = 0.55 }
-		}
-		loyalty = 9
-	}
-	loyalty_modifier = {
-		desc = EST_MAM_CAV_RATIO
-		trigger = {
-			janissary_percentage = 0.55
-		}
-		loyalty = 10
-	}
 
-	color = { 51 153 51 }
+	color = { 37 104 30 }
 	
 	privileges = {
-		estate_btc_janissaries_land_rights
-		estate_btc_janissaries_janissary_primacy
-		estate_btc_janissaries_autonomy
-		estate_btc_janissaries_share_of_the_spoils
-		estate_btc_janissaries_garrisoned_janissaries
-		estate_btc_janissaries_increase_wages
+		estate_btc_qizilbash_land_rights
+		estate_btc_qizilbash_qizilbash_primacy
+		estate_btc_qizilbash_autonomy
 	}
 	
 	agendas = {

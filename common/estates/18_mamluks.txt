@@ -1,13 +1,9 @@
-estate_generals =
-{
-	icon = 12
+estate_btc_mamluks = {
 	
-	# If true, country will get estate
-	trigger = {	
-		OR = {
-			has_idea = byz_exarch_themata
-			has_government_attribute = enables_strategoi_estate
-		}
+	icon = 18
+	
+	trigger = {
+		tag = MAM
 		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = pirate_republic_reform }
 		NOT = { has_reform = veche_republic }
@@ -20,32 +16,33 @@ estate_generals =
 		NOT = { has_reform = peasants_republic }
 		NOT = { has_reform = american_republic }
 		NOT = { has_reform = federal_republic }
+		is_nomad = no
+		is_colonial_nation = no
 		OR = {
 			NOT = { has_reform = celestial_empire }
 			has_dlc = "Mandate of Heaven"
 		}
 	}
-
+	
 	country_modifier_happy = {
-		shock_damage_received = -0.1
-		fire_damage_received = -0.1
-		garrison_size = 0.25
-	}
-	country_modifier_neutral = {
-		defensiveness = 0.2
-	}	
-	country_modifier_angry = {			
-		defensiveness = -0.4
-		shock_damage_received = 0.1
-		fire_damage_received = 0.1
-		garrison_size = -0.5
+		cavalry_cost = -0.2
+		state_maintenance_modifier = -0.15
 	}
 	
-	#New in 1.30. Seems to be a modifier scaled to the percentage of crown land.
-	land_ownership_modifier = {
-		generals_loyalty_modifier = 0.25 #Normal ones tend to be at 0.2
+	country_modifier_neutral = {
+		state_maintenance_modifier = -0.15
 	}
-
+	
+	country_modifier_angry = {
+		cavalry_cost = 0.2
+		yearly_corruption = 0.15
+		global_unrest = 4
+	}
+	
+	land_ownership_modifier = {
+		btc_mamluks_loyalty_modifier = 0.2
+	}
+	
 	province_independence_weight = {
 		factor = 1
 		modifier = {
@@ -54,8 +51,20 @@ estate_generals =
 			religion_group = owner
 		}
 		modifier = {
+			factor = 2
+			culture = owner
+		}
+		modifier = {
 			factor = 1.5
 			base_manpower = 5
+		}
+		modifier = {
+			factor = 2
+			region = mashriq_region
+		}
+		modifier = {
+			factor = 3
+			region = egypt_region
 		}
 		modifier = {
 			factor = 0.75
@@ -68,8 +77,36 @@ estate_generals =
 	}
 	
 	# Influence modifiers
-	base_influence = 20		
-	#Up to 50% influence from 9 generals that are NOT ruler/heir. That's the sole reason for the long-ass trigger for EVERY SINGLE ONE of them. Oh well.
+	base_influence = 20
+	influence_from_dev_modifier = 1.0
+	
+	#Medium army
+	influence_modifier = {	
+		desc = EST_VAL_MID_ARMY_INF
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		influence = -5
+	}
+	#Small army
+	influence_modifier = {	
+		desc = EST_VAL_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		influence = -10
+	}
+	#Very small army
+	influence_modifier = {	
+		desc = EST_VAL_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		influence = -15
+	}
+	#Up to 30% influence from 9 generals that are NOT ruler/heir. That's the sole reason for the long-ass trigger for EVERY SINGLE ONE of them
 	influence_modifier = { #1
 		desc = EST_VAL_NUM_OF_GENERALS_ONE
 		trigger = {
@@ -108,7 +145,7 @@ estate_generals =
 				NOT = { num_of_generals = 4 }
 			}
 		}
-		influence = 5
+		influence = 3
 	}
 	influence_modifier = { #2
 		desc = EST_VAL_NUM_OF_GENERALS_TWO
@@ -148,7 +185,7 @@ estate_generals =
 				NOT = { num_of_generals = 5 }
 			}
 		}
-		influence = 10
+		influence = 6
 	}
 	influence_modifier = { #3
 		desc = EST_VAL_NUM_OF_GENERALS_THREE
@@ -188,7 +225,7 @@ estate_generals =
 				NOT = { num_of_generals = 6 }
 			}
 		}
-		influence = 15
+		influence = 9
 	}
 	influence_modifier = { #4
 		desc = EST_VAL_NUM_OF_GENERALS_FOUR
@@ -228,7 +265,7 @@ estate_generals =
 				NOT = { num_of_generals = 7 }
 			}
 		}
-		influence = 20
+		influence = 12
 	}
 	influence_modifier = { #5
 		desc = EST_VAL_NUM_OF_GENERALS_FIVE
@@ -268,7 +305,7 @@ estate_generals =
 				NOT = { num_of_generals = 8 }
 			}
 		}
-		influence = 25
+		influence = 15
 	}
 	influence_modifier = { #6
 		desc = EST_VAL_NUM_OF_GENERALS_SIX
@@ -308,7 +345,7 @@ estate_generals =
 				NOT = { num_of_generals = 9 }
 			}
 		}
-		influence = 30
+		influence = 18
 	}
 	influence_modifier = { #7
 		desc = EST_VAL_NUM_OF_GENERALS_SEVEN
@@ -348,7 +385,7 @@ estate_generals =
 				NOT = { num_of_generals = 10 }
 			}
 		}
-		influence = 35
+		influence = 21
 	}
 	influence_modifier = { #8
 		desc = EST_VAL_NUM_OF_GENERALS_EIGHT
@@ -388,7 +425,7 @@ estate_generals =
 				NOT = { num_of_generals = 11 }
 			}
 		}
-		influence = 40
+		influence = 24
 	}
 	influence_modifier = { #9
 		desc = EST_VAL_NUM_OF_GENERALS_NINE_OR_MORE
@@ -424,199 +461,173 @@ estate_generals =
 				num_of_generals = 11
 			}
 		}
-		influence = 45
+		influence = 27
 	}
-	#Well-developed theme capital
-	influence_modifier = {	
-		desc = EST_VAL_HIGH_DEVELOPMENT_THEME_CAPITAL
-		trigger = {
-			any_owned_province = {
-				estate_generals_is_theme_capital_trigger = yes
-				development = 20
-			}
-			NOT = { #To prevent this existing when very-well developed theme capital is in effect
-				any_owned_province = {
-					estate_generals_is_theme_capital_trigger = yes
-					development = 30
-				}
-			}
-		}
-		influence = 5
-	}
-	#Very well-developed theme capital
-	influence_modifier = {	
-		desc = EST_VAL_VERY_HIGH_DEVELOPMENT_THEME_CAPITAL
-		trigger = {
-			any_owned_province = {
-				estate_generals_is_theme_capital_trigger = yes
-				development = 30
-			}
-		}
-		influence = 10
-	}
-	#Small army
-	influence_modifier = {	
-		desc = EST_VAL_SMALL_ARMY
-		trigger = {
-			NOT = { army_size_percentage = 0.5 }
-			army_size_percentage = 0.25
-		}
-		influence = -5
-	}
-	#Very small army
-	influence_modifier = {	
-		desc = EST_VAL_VERY_SMALL_ARMY
-		trigger = {
-			NOT = { army_size_percentage = 0.25 }
-		}
-		influence = -10
-	}
-	#Has established Varangian Guard
-	influence_modifier = {	
-		desc = EST_VAL_VARANGIAN_GUARD
-		trigger = {
-			has_country_flag = br_varangian_guard_enabled
-		}
-		influence = -5
-	}
-	#Very few Thema
-	influence_modifier = {	
-		desc = EST_VAL_VERY_FEW_THEMA
-		trigger = {
-			NOT = {
-				num_of_owned_provinces_with = {
-					value = 15
-					estate_generals_is_theme_capital_trigger = yes
-				}
-			}
-		}
-		influence = 20
-	}
-	#Few Thema
-	influence_modifier = {	
-		desc = EST_VAL_FEW_THEMA
-		trigger = {
-			num_of_owned_provinces_with = {
-				value = 15
-				estate_generals_is_theme_capital_trigger = yes
-			}
-			NOT = {
-				num_of_owned_provinces_with = {
-					value = 30
-					estate_generals_is_theme_capital_trigger = yes
-				}
-			}
-		}
-		influence = 10
-	}
-	#Many Thema
-	influence_modifier = {	
-		desc = EST_VAL_MANY_THEMA
-		trigger = {
-			num_of_owned_provinces_with = {
-				value = 45
-				estate_generals_is_theme_capital_trigger = yes
-			}
-			NOT = {
-				num_of_owned_provinces_with = {
-					value = 60
-					estate_generals_is_theme_capital_trigger = yes
-				}
-			}
-		}
-		influence = -10
-	}
-	#Very many Thema
-	influence_modifier = {	
-		desc = EST_VAL_VERY_MANY_THEMA
-		trigger = {
-			num_of_owned_provinces_with = {
-				value = 60
-				estate_generals_is_theme_capital_trigger = yes
-			}
-		}
-		influence = -20
-	}
-	#Established Exarch System
-	influence_modifier = {	
-		desc = EST_VAL_ESTABLISHED_EXARCH_SYSTEM
-		trigger = {
-			has_government_attribute = enables_exarches_estate
-		}
-		influence = -10
-	}
-	
-	
-	# Influence modifiers from Events:
 	influence_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER
 		trigger = {
 			OR = {
 				has_disaster = estate_nobility_disaster
 				has_disaster = estate_church_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_jains_disaster
-				has_disaster = estate_rajput_disaster
-				has_disaster = estate_nomadic_tribes_disaster
 				has_disaster = estate_burghers_disaster
-				has_disaster = estate_cossacks_disaster
-				has_disaster = estate_dhimmi_disaster
+				has_disaster = estate_brahmins_disaster
 				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_maratha_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
 			}
-		}	
+		}
 		influence = -40
 	}
 	
-	influence_from_dev_modifier = 0.667
-	
-	# Loyalty modifiers
+	#Loyalty Modifiers
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
 			OR = {
 				has_disaster = estate_nobility_disaster
 				has_disaster = estate_church_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_jains_disaster
-				has_disaster = estate_rajput_disaster
-				has_disaster = estate_nomadic_tribes_disaster
 				has_disaster = estate_burghers_disaster
-				has_disaster = estate_cossacks_disaster
-				has_disaster = estate_dhimmi_disaster
+				has_disaster = estate_brahmins_disaster
 				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_maratha_disaster
+				has_disaster = estate_jains_disaster
+				has_disaster = estate_generals_disaster
 			}
 		}
 		loyalty = -20
 	}
-	
-	# Alternative naming of estates
-	custom_name = {
-		desc = estate_strategoi
+	#Army reformer advisor
+	loyalty_modifier = {
+		desc = EST_MAM_MIL_ADV_REF
 		trigger = {
-			tag = BYZ
+			advisor = army_reformer
 		}
+		loyalty = -5
 	}
-	
-	color = { 50 0 100 }
+	#Medium army
+	loyalty_modifier = {	
+		desc = EST_MAM_MID_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.75 }
+			army_size_percentage = 0.5
+		}
+		loyalty = -2.5
+	}
+	#Small army
+	loyalty_modifier = {	
+		desc = EST_MAM_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.5 }
+			army_size_percentage = 0.25
+		}
+		loyalty = -5
+	}
+	#Very small army
+	loyalty_modifier = {	
+		desc = EST_MAM_VERY_SMALL_ARMY
+		trigger = {
+			NOT = { army_size_percentage = 0.25 }
+		}
+		loyalty = -10
+	}
+	# 1% loyalty per 5% cavalry ratio to infantry, starting at 10% ratio and ending at +10% loyalty with 55% ratio, just below 60% sunni ratio, but above base ratio
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.1
+			NOT = { cavalry_fraction = 0.15 }
+		}
+		loyalty = 1
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.15
+			NOT = { cavalry_fraction = 0.2 }
+		}
+		loyalty = 2
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.2
+			NOT = { cavalry_fraction = 0.25 }
+		}
+		loyalty = 3
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.25
+			NOT = { cavalry_fraction = 0.3 }
+		}
+		loyalty = 4
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.3
+			NOT = { cavalry_fraction = 0.35 }
+		}
+		loyalty = 5
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.35
+			NOT = { cavalry_fraction = 0.4 }
+		}
+		loyalty = 6
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.4
+			NOT = { cavalry_fraction = 0.45 }
+		}
+		loyalty = 7
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.45
+			NOT = { cavalry_fraction = 0.5 }
+		}
+		loyalty = 8
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.5
+			NOT = { cavalry_fraction = 0.55 }
+		}
+		loyalty = 9
+	}
+	loyalty_modifier = {
+		desc = EST_MAM_CAV_RATIO
+		trigger = {
+			cavalry_fraction = 0.55
+		}
+		loyalty = 10
+	}
+
+	color = { 230 145 20 }
 	
 	privileges = {
-		estate_generals_land_rights
-		estate_generals_autonomous_defences
-		estate_generals_settled_armies
-		estate_generals_promote_to_katepano
-		estate_generals_military_parades
-		estate_generals_dynastic_support
-		estate_generals_pike_formation_training
-		estate_generals_combined_arms_training
-		estate_generals_flintlock_musket_training
-		estate_generals_bring_to_court
-		estate_generals_court_advisors
+		estate_btc_mamluks_land_rights
+		estate_btc_mamluks_mamluk_primacy
+		estate_btc_mamluks_autonomy
+		estate_btc_mamluks_promote_leadership
+		estate_btc_mamluks_reduce_army_independence
+		estate_btc_mamluks_red_sea_trading_posts
+		estate_btc_mamluks_sudan_somalia_raids
+		estate_btc_mamluks_rotate_palace_guard
+		estate_btc_mamluks_relax_ownership_laws
+		estate_btc_mamluks_enforce_recruitment_levant
+		estate_btc_mamluks_entrenched_syrian_governors
 	}
 	
 	agendas = {
-		#None at the moment, TODO.
+		estate_church_develop_x
 	}
 	
 }
