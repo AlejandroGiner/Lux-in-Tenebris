@@ -177,6 +177,8 @@ grain = {
 			OR = {
 				area = lower_canada_area
 				area = upper_canada_area
+				area = huronia_area
+				area = gaspesia_area
 			}
 		}
 		modifier = { #Specific provinces which should get grain
@@ -753,6 +755,10 @@ fur = {
 		modifier = { #Fur less likely in the Lower Canada to encourage Tobacco and Grain
 			factor = 0.5
 			area = lower_canada_area
+		}
+		modifier = { #Fur less likely in the Lower Canada to encourage Tobacco and Grain
+			factor = 0.5
+			area = gaspesia_area
 		}
 		modifier = { #Newfoundland has the best fishing in the world but little else
 			factor = 0.2
@@ -2058,7 +2064,9 @@ tobacco = {
 			NOT = { region = northeast_america_region }
 			NOT = { region = southeast_america_region }
 			NOT = { area = upper_canada_area }			#BT New
+			NOT = { area = huronia_area }
 			NOT = { area = lower_canada_area }			#BT New
+			NOT = { area = gaspesia_area }
 			NOT = { region = brazil_region }
 			NOT = { region = carribeans_region }
 			NOT = { area = appalachia_area }
@@ -2086,7 +2094,12 @@ tobacco = {
 		modifier = {
 			factor = 0
 			has_winter = severe_winter
-			NOT = { area = lower_canada_area }
+			NOT = { 
+				OR = { 
+					area = lower_canada_area
+					area = gaspesia_area
+				} 
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -2100,6 +2113,7 @@ tobacco = {
 			OR = {
 				area = upper_canada_area			#Tobacco people
 				area = west_cuba_area
+				area = huronia_area
 				province_id = 5581
 			}
 		}
@@ -2109,6 +2123,7 @@ tobacco = {
 				area = upper_canada_area			#Tobacco people lesser
 				area = central_cuba_area
 				area = east_cuba_area
+				area = huronia_area
 			}
 		}
 		modifier = {

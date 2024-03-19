@@ -1,8 +1,8 @@
 #897 - Quapaw
 
-add_core = Y4Z
-owner = Y4Z
-controller = Y4Z
+add_core = ANL
+owner = ANL
+controller = ANL
 culture = yazoo
 religion = totemism
 capital = "Anilco"
@@ -11,37 +11,13 @@ hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
+is_city = yes
+
 native_size = 15
 native_ferocity = 6
 native_hostileness = 5
-is_city = yes
 
 discovered_by = north_american
 
 1542.1.1 = { discovered_by = SPA } # Hernando de Soto/Mocoso
 1673.1.1 = { discovered_by = FRA } #Marquette & Joliet
-
-1660.1.1 = {
-	owner = Q4W
-	controller = Q4W
-	add_core = Q4W
-	culture = quapaw
-	trade_goods = maize
-	is_city = yes
-	capital = "Uzutiuhi"
-}
-#French Arkansas Post, but the Quapaw were more important to represent for a while
-1824.11.15 = {
-	owner = USA
-	controller = USA
-	add_core = USA
-	culture = american
-	religion = reformed
-	capital = "Arkansas Post"
-} #Quapaw sign treaty to leave and go live with the Caddo. It doesn't work out and they all trickle back, but euro settlers have already moved in
-1832.10.1 = {
-	capital = "Pine Bluff"
-}
-1833.10.1 = {#sometime around here
-	remove_core = Q4W
-}#final treaty

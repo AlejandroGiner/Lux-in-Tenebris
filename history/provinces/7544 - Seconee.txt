@@ -2,38 +2,26 @@
 #Seconee is anglicization the probably Lenape name for the Guyandot river, which is a bastardization of Wyandotte since that remnant fled here after Iroquois invasion
 #Seconee is Narrow Bottom, allegedly. Apparently the Miami name for it is Lakeweketon-cepewe
 
+latent_trade_goods = {
+	coal
+}
+
+tribal_owner = HWK
 culture = tutelo
 religion = totemism
 capital = "Seconee"
 trade_goods = unknown
 hre = no
 base_tax = 1
-base_production = 1 
-base_manpower = 1 
+base_production = 1
+base_manpower = 1
+
 native_size = 5
 native_ferocity = 3
 native_hostileness = 3
 
-latent_trade_goods = {
-	coal
-}
-
 discovered_by = north_american
 
-
-#Come back and do shawnee movement
-#1650.1.1 = {
-#	owner = SHA
-#	controller = SHA
-#	add_core = SHA
-#	is_city = yes
-#	trade_goods = iron 
-#} #Extent of the Shawnee at start of the Beaver Wars
-#1700.1.1 = {
-#	owner = IRO
-#	controller = IRO
-#	culture = iroquois 
-#} #Driven off by Iroquois in Beaver Wars
 1775.1.1 = {
 	owner = GBR
 	controller = GBR

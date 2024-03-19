@@ -22,27 +22,3 @@ native_hostileness = 2
 discovered_by = north_american
 
 1540.1.1 = { discovered_by = SPA } # Hernando de Soto
-
-1720.1.1 = {
-	owner = U4C
-	controller = U4C
-	is_city = yes
-	add_core = U4C
-	trade_goods = cotton 
-} #adding lands to creeks to be ceded away
-1815.1.1 = {
-	owner = CRE
-	controller = CRE
-	add_core = CRE
-} #post civil war date to merge upper and lower creeks in face of american aggression, mostly for game reasons
-1821.1.8 = {
-	owner = USA
-	controller = USA
-	add_core = USA
-	remove_core = U4C
-	remove_core = CRE
-	#low settlement pre TOT
-	#culture = american
-	#religion = protestant 
-} #1821 treaty with the creeks
-

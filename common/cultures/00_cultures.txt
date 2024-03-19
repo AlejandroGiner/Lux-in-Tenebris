@@ -9783,6 +9783,23 @@ central_algonquian = {
 			Methoataske Tacumwah Moconnoquah Kickkesequah Oshawsequah 
 		}
 	}
+	miami = {
+		primary = MMI
+		dynasty_names = {
+			Kaskaskia Cahokia Peoria Tamaroa Moingwena Michigamea Albiui Amonokoa Chepoussa Chinkoa Coiracoentanon Espeminkia 
+			Maroa Matchinkoa Michibousa Negawichi Tapouara
+		}
+		male_names = {
+			Wahpeshakana Kenmahreneah Pakeeshama Allenepeshensha Wassacanga Naynawitwa Wissineeaw Ramisswnoa 
+			Whkahpesewah Kemonsah Wapesae Pemekawai Koongeepata Batticy Keemaranea Wecomakana Keeshammy 
+			Aramapingea Keemawassa Wackshingga Kitakimawa Manggonssa Mooyakacke Pemmikawatta Papenegisawa 
+			Meshiwiratta Mahkattamaweya Queckaawpeeta Chessagouasse Mamentouensa Chicagou Ninkanape Maressa
+			Shopinna Wapamahwhawa
+		}
+		female_names = {
+			Methoataske Tacumwah Moconnoquah Kickkesequah Oshawsequah 
+		}
+	}
 	anishinabe = {
 		primary = OJI
 		dynasty_names = {
@@ -9898,7 +9915,7 @@ central_algonquian = {
 	}
 	#Beyond Typus Culture
 	innu = {
-		primary = MGT
+		primary = INN
 		dynasty_names = {
 			Iyiyiw Chisasibi Wemindji Whapmagoostui Mistissini Nemaska "Ouje-Bougoumou" Waskaganish Waswanipi Mosoni Maskekowak 
 			Nehinawak Attawapiskat Chemawawin Kashechewan Misipawistik Missanabie Mosakahiken Neskntaga Opaskwayak Sapotaweyak 
@@ -10309,6 +10326,21 @@ eastern_algonquian = {
 			Mali Malian Maliazonis Azonis Malgelit
 		}
 	}
+	maliseet = {
+		primary = MLS
+		dynasty_names = {
+			Epekwik Epeggoitg Eskikewakik Esgigiag Kespek Gespegiag Kespukwitk Gespogoitg Siknikt Sigenitog sipeknekatik 
+			Segepenegatig Taqmkuk Tagamgoog Wunamakik Onamagig Aboushagan Antigonishe Bhicuctouche Chignecto Ekoupahag Jedaick 
+			Kigicapigiak Miramichi Nalkithoniash Nipigiguit Pohomoosh Shediac Tabogimkik Tabusintack Waycobah
+		}
+		male_names = {
+			Membectou Ounaginitish Eargamet Chickanicto Armquannott Attanas Rechibouctou Chichabenady Miductuk 
+			Spugonoit Nughquit Begamonit Chigaquisht Nelanoit
+		}
+		female_names = {
+			Mali Malian Maliazonis Azonis Malgelit
+		}
+	}
 	mahican = {
 		primary = MAH
 		dynasty_names = {
@@ -10373,7 +10405,6 @@ eastern_algonquian = {
 	}
 	#Beyond Typus Culture
 	beothuk = {
-		#primary = BTK
 		dynasty_names = {
 			Epekwik Epeggoitg Eskikewakik Esgigiag Kespek Gespegiag Kespukwitk Gespogoitg Siknikt Sigenitog sipeknekatik 
 			Segepenegatig Taqmkuk Tagamgoog Wunamakik Onamagig Aboushagan Antigonishe Bhicuctouche Chignecto Ekoupahag Jedaick 
@@ -10457,7 +10488,6 @@ eastern_algonquian = {
 		}
 	}
 	wampano = {#BTARG
-		primary = W5P
 		dynasty_names = {		
 			Metoac Manchaug Massomuck Menunkantuck Monashackotoog Pequannock
 			Quinebaug Quinnipiac Siwanoy Niantic Asupsuck Aukumbumsk Aushpook
@@ -10478,8 +10508,8 @@ eastern_algonquian = {
 			Quashawam Minnetinka Tatapanunum Shampishuh Pampenum Cheehums Mahweeyeuh Towwehashque
 		}
 	}
-	massachussett = {#BTARG
-		primary = W5M
+	massachusset = { #BTARG
+		primary = WAM
 		dynasty_names = {		
 			Metoac Manchaug Massomuck Menunkantuck Monashackotoog Pequannock
 			Quinebaug Quinnipiac Siwanoy Niantic Asupsuck Aukumbumsk Aushpook
@@ -10504,7 +10534,7 @@ eastern_algonquian = {
 		}
 	}
 	wabenaki = { #BTARG
-		primary = P5N
+		primary = S5K
 		dynasty_names = {
 			Amoskeay Cocheco Cowasuck Koasek Masipskwoik Nashua Ossipee Pemigewasset Pennacook Pequaket	Piscataqua Souhegan
 			Winnibisauga Amaseconti Alessikantekw Kinipekw Odanak Ossipee Panawahpskek Apikwahki Rocameca Wawinak Wôlinak
@@ -10625,7 +10655,7 @@ iroquoian = {
 	}
 	#Beyond Typus Culture
 	laurentian = {
-		primary = YZG
+		primary = OSH
 		graphical_culture = northamericagfx
 		dynasty_names = {
 			Awegen Ahaouet
@@ -10661,7 +10691,7 @@ iroquoian = {
 	}
 	#BTARG
 	erie = {
-		primary = E5I
+		primary = ERI
 		dynasty_names = {
 			Awegen Ahaouet
 			Canajoharie Canastigaone Canienga Caughnawaga Cahunghage Canowaroghere
@@ -10747,7 +10777,7 @@ iroquoian = {
 		}
 	}
 	cayuga = {#BTARG
-		primary = C5Y
+		primary = CAY
 		dynasty_names = {
 			Awegen Ahaouet
 			Canajoharie Canastigaone Canienga Caughnawaga Cahunghage Canowaroghere
@@ -10781,7 +10811,7 @@ iroquoian = {
 		}
 	}
 	onondaga = {#BTARG
-		primary = O5D
+		primary = ONO
 		dynasty_names = {
 			Awegen Ahaouet
 			Canajoharie Canastigaone Canienga Caughnawaga Cahunghage Canowaroghere
@@ -10815,7 +10845,7 @@ iroquoian = {
 		}
 	}
 	oneida = {#BTARG
-		primary = O5N
+		primary = ONE
 		dynasty_names = {
 			Awegen Ahaouet
 			Canajoharie Canastigaone Canienga Caughnawaga Cahunghage Canowaroghere
@@ -10849,7 +10879,7 @@ iroquoian = {
 		}
 	}
 	mohawk = {#BTARG
-		primary = M5K
+		primary = MOH
 		dynasty_names = {
 			Awegen Ahaouet
 			Canajoharie Canastigaone Canienga Caughnawaga Cahunghage Canowaroghere
@@ -10956,7 +10986,7 @@ muskogean = {
 		}
 	}
 	#New NA from IR
-	yamassee = {
+	yamasee = {
 		primary = Y4M
 	}
 	apalachee = {
@@ -10969,7 +10999,7 @@ muskogean = {
 		primary = K4S
 	}
 	hitchiti = {
-		primary = H4I
+		primary = ICH
 	}
 	pensacola = {
 		primary = P4C
@@ -10981,7 +11011,7 @@ muskogean = {
 		primary = G4L
 	}
 	yupaha = {
-		primary = C4F
+		primary = COF
 	}
 	dynasty_names = {
 		Ackia Alaoute Amalahta Apeony Apilefaplimengo Ashukhuma Ayebisto Chatelaw
@@ -11117,7 +11147,7 @@ penutian = {
 		}
 	}
 	yokuts = {
-		primary = YKU
+		primary = YKT
 		dynasty_names = {
 			Wishram Wasco Atfalati Yamel Lakmiut Chepenafa Santiam Chelamela Calapooya Yoncalla
 		}
@@ -11532,7 +11562,6 @@ eskaleut = {
 	}
 	#Beyond Typus Culture
 	kalaallisut = {
-		primary = YZZ
 		male_names = {
 			Nauja Nirliq Nuniq Nuvuk Oki Pamiuq Patuktuq Pauloosie Petuwaq Pimniq Piqqaluyungmik Pittiulak Pukajaak Qajak 
 			Qammutiq Qamut Qannik Qaumaniq Qausiqtuk Qimmiabruk Qimmiq Qulitalik Sauri Sighna  Siluk Sivoy Sivuugun 
@@ -12440,10 +12469,7 @@ calusan = {#BTARG
 
 natchezean = {#BTARG
 	natchez = {
-		primary = N4C
-	}
-	taensa = {
-		primary = T4S
+		primary = NTZ
 	}
 	dynasty_names = {
 			Adai Cahinnio Doustioni Eyeish Hainai Hasinai Kadohadacho
@@ -13124,7 +13150,7 @@ tunican = {#BTARG
 		primary = T4N
 	}
 	yazoo = {
-		primary = Y4Z
+		primary = CAQ
 	}
 	koroa = {
 		primary = K4R
@@ -13147,7 +13173,7 @@ tunican = {#BTARG
 uchean = { #BTARG #copy of catawban
 	graphical_culture = northamericagfx
 	yuchi = {
-		primary = Y4U
+		primary = CIA
 		dynasty_names = {
 			Owasso Pawhuska Niukonska Doppike Neosho Chetopa Hominy Pahusan Mesquakie Wagosh Asakiwakie Kickapoo Blackhawk
 			Saukenuk Thakiwakie

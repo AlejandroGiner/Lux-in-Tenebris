@@ -1,13 +1,10 @@
 # No previous file for Satuskhdin
 
-add_core = K4H #Kadohadacho
-owner = K4H
-controller = K4H
+tribal_owner = CAD #Kadohadacho
 culture = caddo
 religion = totemism
 capital = "Cahinnio"
-trade_goods = maize
-is_city = yes
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1
@@ -21,16 +18,6 @@ discovered_by = north_american
 
 1554.1.1 = { discovered_by = SPA } #what is this?
 1687.1.1 = { discovered_by = FRA } #not sure who, just have date
-
-1700.1.1 = {
-	owner = XXX
-	controller = XXX
-	remove_core = K4H
-	trade_goods = unknown
-	is_city = no
-	religion = totemism
-	culture = quapaw
-} #just an estimate for the consolidation of Kadohadacho people on the Red River bend
 1782.11.10 = {
 	owner = SPA
 	controller = SPA

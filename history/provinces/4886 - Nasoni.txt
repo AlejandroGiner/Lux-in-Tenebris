@@ -6,22 +6,15 @@
 #Miller County Arkansas originally encompassed Texas counties including Bowie. Became an international disputed area between USA (Arkansas) and Republic of Texas in 1836, fixed by the annexation of Texas
 #Miller County at one time included what would be Red River County, TX, and Clarksville was the seat
 
-add_core = K4H #Kadohadacho
-owner = K4H
-controller = K4H
+tribal_owner = CAD #Kadohadacho
 capital = "Nasoni"
-culture = caddo
-
-#Upper Nasoni; Lower Nasoni were a Hasinai subtribe
+culture = caddo #Upper Nasoni; Lower Nasoni were a Hasinai subtribe
 religion = totemism
-
 hre = no
-
 base_tax = 1
 base_production = 1
 base_manpower = 1
-is_city = yes
-trade_goods = naval_supplies
+trade_goods = unknown
 
 native_size = 10
 native_ferocity = 5
@@ -31,19 +24,6 @@ native_hostileness = 5
 discovered_by = north_american
 1541.1.1 = { discovered_by = SPA } # Moscoso
 1687.1.1 = { discovered_by = FRA } # La Salle
-
-#French fort Le Poste des Cadodaquious, 1719-1770
-
-1795.1.1 = {
-	owner = ---
-	controller = ---
-	remove_core = K4H
-	trade_goods = unknown
-	is_city=no
-	religion = totemism
-} #Osage predation forced the Kadohadacho south
-
-
 1820.4.1 = {
 	owner = USA
 	controller = USA
@@ -53,7 +33,7 @@ discovered_by = north_american
 	religion = reformed
 	trade_goods = naval_supplies
 	capital = "Clear Creek"
-}#Miller County organized 1820.4.1
+} #Miller County organized 1820.4.1
 
 #The Gilliland settlement was apparently the county seat of Miller County for a time per TSHA but I can't find or corroborate that
 1836.4.21 = {
