@@ -14,10 +14,10 @@ country_event = {
 	option = {
 		name = btc_modding_test.1.a
 		japan_region = {
-				limit = { NOT = { owned_by = ROOT } }
-				add_core = ROOT
-				cede_province = ROOT
-			}
+			limit = { NOT = { owned_by = ROOT } }
+			add_core = ROOT
+			cede_province = ROOT
+		}
 		
 	}
 	option = {
