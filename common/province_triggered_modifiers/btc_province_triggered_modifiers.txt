@@ -42,6 +42,13 @@ orthodox_religious_center = {
 	local_missionary_strength = -0.05
 }
 
+shia_religious_center = {
+	potential = { }
+	trigger = { religion = shiite }
+	
+	local_missionary_strength = -0.05
+}
+
 center_of_waldensian_worship = {
 	potential = { NOT = { has_global_flag = false_waldo_flag } }
 	trigger = { owner = { religion = waldensian } }

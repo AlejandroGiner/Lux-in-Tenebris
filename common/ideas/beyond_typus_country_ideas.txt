@@ -3534,7 +3534,7 @@ NSA_ideas = {
     }
 }
 
-ZND_ideas = {
+ZDN_ideas = {
     start = {
         land_forcelimit_modifier = 0.2
         idea_cost = -0.1
@@ -3545,29 +3545,29 @@ ZND_ideas = {
     }
 
     trigger = {
-        tag = ZND
+        tag = ZDN
     }
     free = yes
 
-    ZND_idea_1 = {
+    ZDN_idea_1 = {
         stability_cost_modifier = -0.15
     }
-    ZND_idea_2 = {
+    ZDN_idea_2 = {
         defensiveness = 0.2
     }
-    ZND_idea_3 = {
+    ZDN_idea_3 = {
         shock_damage = 0.15
     }
-    ZND_idea_4 = {
+    ZDN_idea_4 = {
         infantry_power = 0.15
     }
-    ZND_idea_5 = {
+    ZDN_idea_5 = {
         global_autonomy = -0.05
     }
-    ZND_idea_6 = {
+    ZDN_idea_6 = {
         trade_efficiency = 0.1
     }
-    ZND_idea_7 = {
+    ZDN_idea_7 = {
         global_own_trade_power = 0.25
     }
 }
@@ -4954,7 +4954,7 @@ PSS_ideas = {
     }
 }
 
-EIC_ideas = {
+ECS_ideas = {
     start = {
         discipline = 0.05
         land_morale = 0.1
@@ -4965,29 +4965,29 @@ EIC_ideas = {
     }
 
     trigger = {
-        tag = EIC
+        tag = ECS
     }
     free = yes
-    EIC_idea_1 = {
+    ECS_idea_1 = {
         leader_land_manuever = 1
     }
-    EIC_idea_2 = {
+    ECS_idea_2 = {
         governing_capacity_modifier = 0.1
     }
-    EIC_idea_3 = {
+    ECS_idea_3 = {
         reinforce_speed = 0.15
     }
-    EIC_idea_4 = {
+    ECS_idea_4 = {
         global_regiment_recruit_speed = -0.1
     }
-    EIC_idea_5 = {
+    ECS_idea_5 = {
         diplomatic_upkeep = 1
     }
-    EIC_idea_6 = {
+    ECS_idea_6 = {
         global_missionary_strength = 0.01
         papal_influence = 1
     }
-    EIC_idea_7 = {
+    ECS_idea_7 = {
         build_time = -0.1
     }
 }

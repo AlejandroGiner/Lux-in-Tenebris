@@ -1,4 +1,4 @@
-default_II = { #Copied default because I'm not 100 percent certain I can refer to  00_subject_types in a mod file but I want to use a default as vanilla
+default_II = {
 	# Graphics:
 	sprite = GFX_icon_vassal
 	diplomacy_overlord_sprite = GFX_diplomacy_leadvassal # The one that the overlord sees
@@ -6,22 +6,29 @@ default_II = { #Copied default because I'm not 100 percent certain I can refer t
 
 	# Triggers:
 	is_potential_overlord = { always = no } 			# This part is not copied in copy_from. Actual default is equivalent to always = yes
-	can_be_established = { always = no }				# Ditto
 	
 	# Properties:
 	has_overlords_ruler = no
 	can_fight_independence_war = yes
-	is_voluntary = no											# Whether they can leave the relationship whenever they want
+	is_voluntary = no									# Whether they can leave the relationship whenever they want
 	transfer_trade_power = no
 	transfer_trade_if_merchant_republic = no
 	joins_overlords_wars = yes
+	can_be_co_belligerented =  no    #Enemies can force this subject to join its overlord into the defense war. Only used when the subject has the "joins_overlords_wars = no". By default it's "no".
+	must_accept_cta_from_overlord =  no    #Overlord can ask subject to join wars like it could ask allies to join. You would require favors  to call them to wars. Only used when the subject has the "joins_overlords_wars = no". By default it's "no"
+	favors_cost_to_join_offensive_wars = 0   #Defines how much favors the overlord need to invest to call the subject into an offensive war
+	favors_cost_to_join_defensive_wars = 0   #Defines how much favors the overlord need to invest to call the subject into a defensive war
+	opinion_cost_to_join_offensive_wars = 0   #Defines how much opinion the subject loses of the overlord to call the subject into an offensive war. Applied if you do not have Leviathan
+	opinion_cost_to_join_defensive_wars = 0   #Defines how much opinion the subject loses of the overlord to call the subject into a defensive war. Applied if you do not have Leviathan
+	opinion_cost_instead_of_favors_cost = no   #Determines if the subject requires favors or opinion to join a the war. If set "yes" then it requires the aforementioned opinion costs - regardless if Leviathan is active or not. "No" is the default setting
+	opinion_on_subject_integration = 30 #Determines how much opinion they actually lose when a fellow subject gets integrated.
 	joins_colonial_wars = no
 	can_be_integrated = no
 	can_release_and_play = no							# "Release Colony" in SubjectView
 	uses_tariffs = no
-	dynamically_created_during_history = no			# If the country is automatically created. ( Makes for special checks during history )
-	eats_overlords_colonies = no							# Wheter subject assumes control of overlord's colonies in same colonial region.
-	has_colonial_parent = no								# Regulates most rules that should hold only for colonies
+	dynamically_created_during_history = no				# If the country is automatically created. ( Makes for special checks during history )
+	eats_overlords_colonies = no						# Wheter subject assumes control of overlord's colonies in same colonial region.
+	has_colonial_parent = no							# Regulates most rules that should hold only for colonies
 	overlord_can_attack = yes
 	overlord_can_be_subject = no
 	can_have_subjects_of_other_types = no
@@ -31,9 +38,9 @@ default_II = { #Copied default because I'm not 100 percent certain I can refer t
 	can_release_in_peace = yes
 	uses_military_focus = yes
 	overlord_protects_external = no						# Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
-	counts_for_borders = yes								# Whether distance between borders counts this subject type as part of its overlord's borders.
-	overlord_enforce_peace_attacking = no			# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
-	can_use_claims = yes									# Whether the overlord can use the subject's claims and cores for declaring war
+	counts_for_borders = yes							# Whether distance between borders counts this subject type as part of its overlord's borders.
+	overlord_enforce_peace_attacking = no				# Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
+	can_use_claims = yes								# Whether the overlord can use the subject's claims and cores for declaring war
 	gives_daimyo_bonuses = no
 	gets_help_with_rebels = no							# Only for AI. Bidirectional.
 	share_rebel_popup = yes								# Whether the Overlord gets popups about Subject's rebels and sees them in Stability View.
@@ -41,21 +48,40 @@ default_II = { #Copied default because I'm not 100 percent certain I can refer t
 	allows_taking_land_without_independence = no
 	can_transfer_in_peace = yes							# Whether this subject type can be made into a vassal with the "Transfer Subject" Age Ability.
 	can_set_mil_focus = yes
+	can_send_missionary_to_subject = yes				# Requires Cradle of Civilization
+	can_union_break = no								# Only works together with has_overlords_ruler
+	overlord_can_fabricate_for = yes
+	
+	does_overlord_size_count_for_warscore_cost = yes
+	is_colony_subtype = no
+	is_march = no
+	forms_trade_companies = yes
+	can_concentrate_development = yes
+	can_have_great_projects_moved_by_overlord = yes
+	extend_trading_range = no
+	can_gain_favors = no
 	
 	max_government_rank = 0								# 0 means no limit
 	cities_required_for_bonuses = 0						# How many cities the subject needs before giving bonuses to overlord
-	trust_on_start = 35										# Overlord and subject will each get this much extra trust with each other at game start
+	trust_on_start = 35									# Overlord and subject will each get this much extra trust with each other at game start
 
 	base_liberty_desire = 0.0
 	liberty_desire_negative_prestige = 0.0
 	liberty_desire_development_ratio = 0.0
 	liberty_desire_same_dynasty = 0.0
-	pays_overlord = 0.0										# 1.0 represents the amount payed by vassals
-	forcelimit_bonus = 0.0									# 1.0 represents bonus from having a vassal
-	military_focus = 1.0										# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
+	liberty_desire_revolution = 30.0					# Liberty desire at 100% revolution spread in country
+	pays_overlord = 0.0									# 1.0 represents the amount payed by vassals
+	forcelimit_to_overlord = 0.0						# Percent of subject FL to use as base for modifiers
+	naval_forcelimit_to_overlord = 0.0					# Percent of subject FL to use as base for modifiers
+	manpower_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	sailors_to_overlord = 0.0							# Percent of subject FL to use as base for modifiers
+	military_focus = 1.0								# How much the AI subject should spend etc. on army and forts. 0 should make them spend nothing. Very high values will probably not make a big difference since there will be sanity checks.
+	annex_cost_per_development = 8.0					# annex/integrate cost per development
 
-	relative_power_class = 1 								# See description above
-	diplomacy_view_class = 1								# See description above
+	should_quit_wars_on_activation = yes
+	relative_power_class = 1 							# See description above
+	should_quit_wars_on_activation = yes
+	diplomacy_view_class = 1							# See description above
 
 	can_fight = {
 	}
@@ -103,6 +129,16 @@ default_II = { #Copied default because I'm not 100 percent certain I can refer t
 	return_land = no
 	conscript_general = no
 	knowledge_sharing = yes
+	block_settlement_growth = yes
+	allow_settlement_growth = yes
+	change_colonial_type = no
+	upgrade_subject_type = no
+	seize_court_resources = no
+	request_extra_levies = no
+	grant_administrative_autonomy = no
+
+	# disable_inheritance = yes # Use this for Personal Union types of subjects to disallow the inheriting mechanic
+	
 	# (special)
 	sword_hunt = no
 	sankin_kotai = no
@@ -134,7 +170,6 @@ viceroyalty_bt = {
 	has_power_projection = no
 	gets_help_with_rebels = yes
 	press_sailors = yes
-	forcelimit_bonus = 1.0
 
 	liberty_desire_development_ratio = 0.25
 	cities_required_for_bonuses = 10
@@ -236,5 +271,65 @@ papal_subject_bt = {
 	subject_opinion_modifier = bt_is_papal_subject
 }
 
+byz_exarch = {
+	copy_from = default
+	
+	# Graphics:
+	sprite = GFX_icon_march
+	diplomacy_overlord_sprite = GFX_diplomacy_leadmarch
+	diplomacy_subject_sprite = GFX_diplomacy_weakmarch
+
+	# Properties:
+	can_release_and_play = yes
+	overlord_can_attack = no
+	takes_diplo_slot = no
+	has_power_projection = no
+	gets_help_with_rebels = yes
+	press_sailors = yes
+	base_liberty_desire = 0.0
+	can_be_annexed = no
+
+	max_government_rank = 2
+	
+	liberty_desire_development_ratio = 0.10
+	base_liberty_desire = -50.0
+	pays_overlord = 0.0
+	military_focus = 1.5
+
+	relative_power_class = 1
+	
+	cities_required_for_bonuses = 20
+	
+	# Subject Interactions:
+	place_relative_on_throne = yes
+	divert_trade = yes
+	seize_territory = yes
+	subsidize_armies = yes
+	fortify_march = yes
+	
+	send_officers = yes
+
+	# Modifiers:
+	modifier_subject = {
+		modifier = march_bonus
+		trigger = {
+			NOT = {
+				development_of_overlord_fraction = 0.25
+			}
+		}
+		expiration_message_overlord = MARCHTOOLARGE
+		expiration_message_subject = MARCHTOOLARGEUS
+	}
+	modifier_overlord = {
+		modifier = large_exarch_modifier
+		trigger = {
+			num_of_cities = 20
+			total_development = 150
+		}
+	}
+
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
 
 
