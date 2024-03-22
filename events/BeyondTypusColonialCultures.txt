@@ -14,7 +14,7 @@ province_event = {
 			colonial_region = colonial_newfoundland
 		}
 		culture_group = french
-		NOT = { culture = canadien }
+		NOT = { culture = quebecois }
 	}
 
 	mean_time_to_happen = {
@@ -23,7 +23,7 @@ province_event = {
 		#Generic 7 factors
 		modifier = { #Colonial culture owner speeds it up dramatically
 			factor = 0.2
-			owner = { primary_culture = canadien }
+			owner = { primary_culture = quebecois }
 		}
 		modifier = { #More likely in later years
 			factor = 0.8
@@ -67,10 +67,10 @@ province_event = {
 	option = { # Okay
 		name = "BeyondTypusColonialCultures.EVTOPTA1"
 		add_local_autonomy = 10
-		change_culture = canadien
+		change_culture = quebecois
 		if = {
-			limit = { owner = { NOT = { accepted_culture = canadien } } }
-			add_accepted_culture = canadien
+			limit = { owner = { NOT = { accepted_culture = quebecois } } }
+			add_accepted_culture = quebecois
 		}			#Adding culture as an accepted culture to prevent AI flipping, and to not penalise player in a no-choice culture event
 		if = {
 			limit = {
@@ -78,7 +78,7 @@ province_event = {
 				is_overseas = no
 				owner = { culture_group = french }
 			}
-			change_primary_culture = canadien
+			change_primary_culture = quebecois
 		}			#If this event hits in a capital, make the national culture the colonial culture. Yes, it will have far reaching effects. This is WaD.
 	}
 }

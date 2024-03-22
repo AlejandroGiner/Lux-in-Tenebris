@@ -59,12 +59,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = CRO
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
+			btc_new_nation_effects = yes
 			if = {
 				limit = {
 					NOT = { primary_culture = croatian }
@@ -91,12 +86,6 @@ country_decisions = {
 				}
 				add_permanent_claim = CRO
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
 			set_country_flag = formed_croatia_flag_btp
 		}
 		ai_will_do = { factor = 1 }

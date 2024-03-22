@@ -5,7 +5,11 @@ btc_potential_trigger = {
 	OR = {
 		ai = no
 		is_playing_custom_nation = no
-	}	
+	}
+	OR = {
+		is_free_or_tributary_trigger = yes
+		ai = no
+	}
 }
 
 btc_was_not_colonial_nation_trigger = {

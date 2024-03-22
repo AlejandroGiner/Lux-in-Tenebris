@@ -70,7 +70,7 @@ country_decisions = {
 			set_country_flag = formed_ireland_flag
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 10
 			modifier = {
 				factor = 0
 				NOT = { capital_scope = { region = ireland_region } }

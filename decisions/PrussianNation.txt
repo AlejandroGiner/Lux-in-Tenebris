@@ -128,7 +128,7 @@ country_decisions = {
 			}
 			if =  {
 				limit = { NOT = { government = republic } }
-				change_government_to_monarchy = yes
+				change_government = monarchy
 				add_government_reform = prussian_monarchy
 			}
 			else = { add_government_reform = prussian_republic_reform }
@@ -299,7 +299,7 @@ country_decisions = {
 			}
 			if =  {
 				limit = { NOT = { government = republic } }
-				change_government_to_monarchy = yes
+				change_government = monarchy
 				add_government_reform = prussian_monarchy
 			}
 			else = { add_government_reform = prussian_republic_reform }
@@ -418,7 +418,7 @@ country_decisions = {
 			}
 			if =  {
 				limit = { NOT = { government = republic } }
-				change_government_to_monarchy = yes
+				change_government = monarchy
 				add_government_reform = prussian_monarchy
 			}
 			else = { add_government_reform = prussian_republic_reform }

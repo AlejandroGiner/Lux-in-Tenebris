@@ -20,6 +20,7 @@ country_decisions = {
 			NOT = { tag = GER }
 			NOT = { tag = IBE }
 			NOT = { tag = ITA }
+			NOT = { tag = AVE }		# Anglois is also valid
 			OR = {
 				ai = no
 				NOT = { exists = FRA }

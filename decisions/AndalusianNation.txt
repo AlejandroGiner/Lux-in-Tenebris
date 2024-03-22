@@ -77,14 +77,13 @@ country_decisions = {
 
 		}
 		effect = {
-			225 = {	#Cordoba
-				move_capital_effect = yes
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
-			}
+			set_capital = 225 # Cordoba
 			change_tag = ADU
 			btc_new_nation_effects = yes
+			if = {
+				limit = { is_revolutionary = no }
+				add_government_reform = al_andalusia_government
+			}
 			if = {
 				limit = {
 					culture_group = turko_semitic
@@ -196,7 +195,6 @@ country_decisions = {
 					add_permanent_claim = ROOT
 				}
 			}
-			swap_ideas = yes
 		}
 		ai_will_do = {
 			factor = 1

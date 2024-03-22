@@ -843,7 +843,7 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			add_government_reform = autocracy_reform
 			#set_legacy_government = despotic_monarchy
 		}
@@ -905,7 +905,7 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			add_government_reform = autocracy_reform
 			#set_legacy_government = despotic_monarchy
 		}
@@ -970,7 +970,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			if = {
 				limit = {
 					has_country_flag = civil_war_has_exiled_heir
@@ -1025,7 +1025,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			if = {
 				limit = {
 					has_country_flag = civil_war_has_exiled_heir

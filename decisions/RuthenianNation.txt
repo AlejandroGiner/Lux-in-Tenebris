@@ -113,7 +113,7 @@ country_decisions = {
 				set_government_rank = 3
 				if = {
 					limit = { is_revolutionary = no }
-					change_government_to_monarchy = yes
+					change_government = monarchy
 					add_government_reform = tsardom
 				}
 			}

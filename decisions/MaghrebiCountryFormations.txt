@@ -225,7 +225,7 @@ country_decisions = {
 				limit = {
 					is_tribal = yes	#Desert tribes settling down.
 				}
-				change_government_to_monarchy = yes #Desert tribes settling down, theocracies become monarchies.
+				change_government = monarchy #Desert tribes settling down, theocracies become monarchies.
 				#set_legacy_government = despotic_monarchy
 			}
 			add_prestige = 25

@@ -9,6 +9,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { exists = MSA }
 			culture_group = malay
 			NOT = { has_reform = steppe_horde }
@@ -63,6 +67,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MSA
+			on_change_tag_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 3 } }

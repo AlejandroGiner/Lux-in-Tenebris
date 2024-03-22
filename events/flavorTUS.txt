@@ -1084,7 +1084,7 @@ country_event = {
 		trigger = {
 			NOT = { government = monarchy }
 		}
-		change_government_to_monarchy = yes
+		change_government = monarchy
 		change_government_reform_progress = 100
 		add_government_reform = autocracy_reform
 	}

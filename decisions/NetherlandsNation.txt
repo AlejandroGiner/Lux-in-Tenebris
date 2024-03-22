@@ -15,13 +15,6 @@ country_decisions = {
 				primary_culture = frisian
 				tag = BUR
 			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 5
-				}
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -108,6 +101,8 @@ country_decisions = {
 				}
 	  		}
 			change_tag = NED
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			swap_non_generic_missions = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
@@ -142,6 +137,7 @@ country_decisions = {
 			modifier = {
 				factor = 0
 				tag = BUR
+				NOT = { is_year = 1500 }
 			}
 		}
 		ai_importance = 400

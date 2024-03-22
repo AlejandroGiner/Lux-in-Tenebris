@@ -1,29 +1,24 @@
 btc_new_nation_effects = {
+	on_change_tag_effect = yes
 	swap_non_generic_missions = yes
+	swap_ideas = yes
 	remove_non_electors_emperors_from_empire_effect = yes
-	add_prestige = 25
-	
 	if = {
-		limit = {
-			government = tribal
-		}
-		change_government = monarchy
-		set_legacy_government = despotic_monarchy
-	}
-	
-	if = {
-		limit = {
-			NOT = { government_rank = 2 }
-		}
+		limit = { NOT = { government_rank = 2 } }
 		set_government_rank = 2
 	}
-	
+	add_prestige = 25
 	add_country_modifier = {
 		name = "centralization_modifier"
 		duration = 7300
 	}
-	
-	swap_ideas = yes
+	if = {
+		limit = {
+			NOT = { government = monarchy }
+			is_revolutionary = no
+		}
+		change_government = monarchy
+	}
 }
 
 #Chariot event from Byz resurgence

@@ -14,6 +14,14 @@ country_decisions = {
 			NOT = { tag = TUR }
 			NOT = { tag = RMN }
 			primary_culture = bulgarian
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -35,25 +43,15 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
+			religion_group = christian
 			#prestige = 25			Either disable this entirely or remove it for the AI
 		}
 		effect = {
 			change_tag = BUL
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 3 } }
-				set_government_rank = 3
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 7300
-			}
+			btc_new_nation_effects = yes
 			150 = {	#Tarnovo
 				move_capital_effect = yes
 			}
-			add_prestige = 25
-			swap_ideas = yes
 			set_country_flag = formed_bulgaria_flag
 		}
 		ai_will_do = {
