@@ -1,5 +1,5 @@
 government = monarchy
-add_government_reform = confucian_bureaucracy
+add_government_reform = korean_monarchy
 primary_culture = korean
 religion = confucianism
 add_harmonized_religion = mahayana
@@ -89,9 +89,9 @@ capital = 735	# Hanseong
 		birth_date = 1414.11.15
 		death_date = 1452.6.1
 		claim = 95
-		adm = 2
-		dip = 1
-		mil = 1
+		adm = 3
+		dip = 2
+		mil = 2
 	}
 }
 
@@ -99,6 +99,21 @@ capital = 735	# Hanseong
 	clear_scripted_personalities = yes
 	add_ruler_personality = careful_personality
 	add_ruler_personality = well_advised_personality #hall of worthies
+	if = {
+		limit = { NOT = { has_dlc = "Domination" } }
+		set_estate_privilege = estate_church_inwards_perfection
+	}
+	if = {
+		limit = {
+			has_dlc = "Domination"
+		}
+		add_country_modifier = {
+			name = no_perfectionism_focus
+			duration = -1
+			desc = has_no_perfectionism_focus
+		}
+	}
+	set_country_flag = starts_with_inwards_perfection
 }
 
 1444.10.29 = { #stop them conquering early
@@ -108,16 +123,15 @@ capital = 735	# Hanseong
 		who = MJZ
 		modifier = opinion_KOR_supported_war_for_north
 	}
-	set_estate_privilege = estate_church_inwards_perfection
 }
 
 1450.5.18 = {
 	monarch = {
 		name = "Hyang" #Munjong
 		dynasty = "Yi"
-		adm = 2
-		dip = 1
-		mil = 1
+		adm = 3
+		dip = 2
+		mil = 2
 		birth_date = 1414.11.15
 		death_date = 1452.6.1
 	}

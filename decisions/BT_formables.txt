@@ -2102,7 +2102,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = formed_latinempire }
-			NOT = { exists = LTE }
+			NOT = { exists = LAE }
 			normal_or_historical_nations = yes
 			OR = {
 				ai = no
@@ -2204,22 +2204,22 @@ country_decisions = {
 		effect = {
 			add_prestige = 25
 			macedonia_area = {
-				add_core = LTE
+				add_core = LAE
 			}
 			thrace_area = {
-				add_core = LTE
+				add_core = LAE
 			}
 			eastern_thrace_area = {
-				add_core = LTE
+				add_core = LAE
 			}
 			western_aegean_area = {
-				add_permanent_claim = LTE
+				add_permanent_claim = LAE
 				}
 			east_adriatic_coast_area = {
-				add_permanent_claim = LTE
+				add_permanent_claim = LAE
 			}
 			ragusa_area = {
-				add_permanent_claim = LTE
+				add_permanent_claim = LAE
 			}
 			if = {
 				limit = {
@@ -2241,8 +2241,8 @@ country_decisions = {
 						was_never_end_game_tag_trigger = no
 					}
 				}
-				release = LTE
-				LTE = { change_primary_culture = ROOT }
+				release = LAE
+				LAE = { change_primary_culture = ROOT }
 			}
 			else_if = {
 				limit = {
@@ -2260,14 +2260,14 @@ country_decisions = {
 					}
 					was_never_end_game_tag_trigger = yes
 				}
-				change_tag = LTE
+				change_tag = LAE
 				swap_ideas = yes
 			}
 			if = {
 				limit = { tag = KNI }
 				set_country_flag = knights_formed_latinempire
 			}
-			LTE = {
+			LAE = {
 				set_capital = 151 #Constantinople
 				change_religion = catholic
 				if = {

@@ -66,6 +66,7 @@ add_army_professionalism = 0.05
 	clear_scripted_personalities = yes
 	add_ruler_personality = well_connected_personality
 	add_ruler_personality = architectural_visionary_personality
+	set_heir_flag = joan_trastamara_flag
 	heir = {
 		name = "Joan"
 		monarch_name = "Joan II"
@@ -90,7 +91,12 @@ add_army_professionalism = 0.05
 	}
 }
 
-1443.1.1 = { leader = {	name = "Bernat de Vilamarí"	type = admiral	fire = 3	shock = 2	manuever = 2	siege = 0	death_date = 1463.9.1 } }
+1443.1.1 = { 
+	leader = {	name = "Bernat de Vilamarí"	type = admiral	fire = 3	shock = 2	manuever = 2	siege = 0	death_date = 1463.9.1 } 
+	catalonia_area = {
+		add_local_autonomy = 90 
+	}
+}
 
 1458.6.29 = {
 	monarch = {

@@ -37,11 +37,23 @@ change_estate_land_share = { #compensates for lack of nobles, distributes 20 bet
 	clear_scripted_personalities = yes
 	add_ruler_personality = infertile_personality
 	add_ruler_personality = well_advised_personality
+	set_ruler_flag = henry_vi_lancaster
 }
 
 #1428.11.22 = { leader = {	name = "Richard Neville"	type = general	fire = 3	shock = 3	manuever = 3	siege = 0	death_date = 1471.4.14 } }
 
-1444.1.1 = { leader = {	name = "John Talbot"	type = general	fire = 2	shock = 4	manuever = 3	siege = 0	death_date = 1453.7.17 } }
+1444.1.1 = {
+	leader = {
+		name = "John Talbot"
+		type = general
+		fire = 2
+		shock = 4
+		manuever = 3
+		siege = 0
+		death_date = 1453.7.17
+	}
+	set_estate_privilege = estate_nobles_english_villeinage
+}
 
 1445.4.23 = {
 	queen = {
@@ -55,6 +67,7 @@ change_estate_land_share = { #compensates for lack of nobles, distributes 20 bet
 		dip = 4
 		mil = 4
 	}
+	remove_estate_privilege = estate_nobles_english_villeinage
 }
 
 1450.1.1 = { leader = {	name = "John Mowbray"		type = general	fire = 2	shock = 3	manuever = 3	siege = 0	death_date = 1461.3.4 } }

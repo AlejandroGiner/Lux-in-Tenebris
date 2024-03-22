@@ -6,7 +6,8 @@ add_accepted_culture = greek
 add_accepted_culture = laz_culture
 religion = orthodox
 technology_group = eastern
-historical_friend = FEO
+add_historical_friend = FEO
+add_historical_friend = GEO
 capital = 330	# Trebizond
 fixed_capital = 330 # Cannot move capital away from this province & no power cost to move to it
 
@@ -18,6 +19,12 @@ fixed_capital = 330 # Cannot move capital away from this province & no power cos
 		dip = 0
 		mil = 2
 	}
+	every_province = {
+		limit = { region = persia_region }
+		ROOT = { discover_province = PREV }
+	}
+	discover_province = 4170 
+	discover_province = 4172
 }
 
 1390.1.1 = {
