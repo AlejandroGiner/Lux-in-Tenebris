@@ -3,14 +3,29 @@ emp_bra_pru_1 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 	}
 	potential = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -247,12 +262,27 @@ emp_bra_pru_1_b = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 	}
 	potential = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 		NOT = { map_setup = map_setup_random }
-		tag = PRU
+		AND = {
+			OR = {
+				NOT = { has_dlc = "Lions of the North" }
+				AND = {
+					NOT = { was_tag = TEU }
+					NOT = { was_tag = DNZ }
+				}
+			}
+			tag = PRU
+		}
 	}
 	has_country_shield = yes
 	emp_brapru_army_reforms_2 = {
@@ -316,14 +346,29 @@ emp_bra_pru_2 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 	}
 	potential = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -569,14 +614,29 @@ emp_bra_pru_3 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 	}
 	potential = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
@@ -828,14 +888,29 @@ emp_bra_pru_4 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 	}
 	potential = {
-		has_dlc = "Emperor"
+		OR = { 
+			has_dlc = "Domination"
+			has_dlc = "Emperor"
+		}
 		NOT = { map_setup = map_setup_random }
 		OR = {
 			tag = BRA
-			tag = PRU
+			AND = {
+				OR = {
+					NOT = { has_dlc = "Lions of the North" }
+					AND = {
+						NOT = { was_tag = TEU }
+						NOT = { was_tag = DNZ }
+					}
+				}
+				tag = PRU
+			}
 		}
 	}
 	has_country_shield = yes
