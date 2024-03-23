@@ -5,12 +5,13 @@ country_decisions = {
 		potential = {
 			btc_potential_trigger = yes
 			NOT = { has_country_flag = formed_england_flag }
-			NOT = {
-                tag = ENG
-                was_tag = ENG
-				exists = GBR
-				exists = UNK
-			}
+			NOT = { was_tag = ENG }
+			NOT = { tag = AVE }
+			NOT = { tag = ENG }
+			NOT = { exists = GBR }
+			NOT = { exists = UNK }
+			NOT = { tag = HLR }
+			NOT = { tag = PAP }
             OR = {
                 primary_culture = northumbrian
                 primary_culture = english
@@ -53,12 +54,6 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = ENG
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
-			}
 			custom_tooltip = england_permaclaims_tooltip
 			hidden_effect = {
 				england_province_group = {
@@ -72,13 +67,25 @@ country_decisions = {
 					add_permanent_claim = ENG
 				}
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
+			btc_new_nation_effects = yes
+			if = {
+				limit = {
+					NOT = { government = monarchy }
+					NOT = { has_government_attribute = locked_government_type }
+				}
+				change_government = monarchy
 			}
-			add_prestige = 25
+			if = {
+				limit = {
+					OR = {
+						government = monarchy
+						NOT = { has_government_attribute = locked_government_type }
+					}
+					has_not_locked_first_tier_reform = yes
+				}
+				add_government_reform = english_monarchy 
+			}
 			set_country_flag = formed_england_flag
-			swap_ideas = yes
 		}
 		ai_will_do = {
 			factor = 1

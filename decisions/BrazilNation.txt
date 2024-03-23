@@ -72,6 +72,7 @@ country_decisions = {
 						NOT = { is_former_colonial_nation = yes }
 					}
 					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
 				}
 			}
 			change_tag = BRZ
@@ -82,12 +83,7 @@ country_decisions = {
 				restore_old_nation_on_formation_effect = yes
 				remove_non_electors_emperors_from_empire_effect = yes
 			}
-			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
+			btc_new_nation_effects = yes
 			if = {
 				limit = {
 					culture_group = iberian
@@ -100,15 +96,6 @@ country_decisions = {
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = BRZ
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			set_country_flag = changed_from_colonial_nation
 		}

@@ -4,8 +4,8 @@ latent_trade_goods = {
 	oil
 }
 
-owner = UDI
-controller = UDI
+owner = SRV
+controller = SRV
 culture = udi_culture
 religion = coptic
 capital = "Gabala"
@@ -16,6 +16,9 @@ base_production = 3
 base_manpower = 2
 is_city = yes
 add_core = UDI
+add_core = SRV
+
+add_local_autonomy = 60		#Although some embraced Armenian and Turkic identities, they largely remained united and christian
 
 discovered_by = muslim
 discovered_by = persian_btc

@@ -70,22 +70,9 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = DLH
-			swap_non_generic_missions = yes
-			remove_non_electors_emperors_from_empire_effect = yes
+			btc_new_nation_effects = yes
 			if = {
-				limit = {
-					NOT = { government_rank = 2 }
-				}
-				set_government_rank = 2
-			}
-			add_country_modifier = {
-				name = centralization_modifier
-				duration = 3650
-			}
-			if = {
-				limit = {
-					NOT = { primary_culture = kanauji }
-				}
+				limit = { NOT = { primary_culture = kanauji } }
 				change_primary_culture = kanauji
 			}
 			upper_doab_area = {
@@ -137,14 +124,32 @@ country_decisions = {
 				}
 				add_permanent_claim = DLH
 			}
-			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
-			}
 			set_country_flag = formed_delhi
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0
+				exists = DLH
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					calc_true_if = {
+						owns_core_province = 522 	#Delhi
+						OR = {
+							owns_core_province = 510 #Sirhind
+							owns_core_province = 524 #Agra
+						}
+						OR = {
+							owns_core_province = 507 #Lahore
+							owns_core_province = 555 #Jaunpur
+						}
+						amount = 2
+					}
+				}
+			}
 		}
+		ai_importance = 200
 	}
 }

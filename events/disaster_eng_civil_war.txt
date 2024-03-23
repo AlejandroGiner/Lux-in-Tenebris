@@ -121,7 +121,7 @@ country_event = {
 		}
 		
 		
-		change_government_to_republic = yes
+		change_government = republic
 		add_government_reform = protectorate_parliament_reform
 		define_ruler = {
 			name = "Oliver Cromwell"
@@ -843,7 +843,7 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			add_government_reform = autocracy_reform
 			#set_legacy_government = despotic_monarchy
 		}
@@ -905,7 +905,7 @@ country_event = {
 		}
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			add_government_reform = autocracy_reform
 			#set_legacy_government = despotic_monarchy
 		}
@@ -926,7 +926,7 @@ country_event = {
 		if = {
 			limit = { dynasty = "Cromwell" }
 			set_country_flag = english_civil_war_won_by_parliamentarians
-			change_government_to_republic = yes
+			change_government = republic
 			add_government_reform = protectorate_parliament_reform
 			set_country_flag = english_civil_war_won_by_parliamentarians
 		}
@@ -960,7 +960,7 @@ country_event = {
 		ai_chance = { factor = 25 }
 		if = {
 			limit = { NOT = { government = republic } }
-			change_government_to_republic = yes
+			change_government = republic
 		}
 		change_government_reform_progress = 100
 		#set_legacy_government = constitutional_republic
@@ -970,7 +970,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			if = {
 				limit = {
 					has_country_flag = civil_war_has_exiled_heir
@@ -1015,7 +1015,7 @@ country_event = {
 		ai_chance = { factor = 25 }
 		if = {
 			limit = { NOT = { government = republic } }
-			change_government_to_republic = yes
+			change_government = republic
 		}
 		change_government_reform_progress = 100
 		#set_legacy_government = constitutional_republic
@@ -1025,7 +1025,7 @@ country_event = {
 		ai_chance = { factor = 75 }
 		if = {
 			limit = { NOT = { government = monarchy } }
-			change_government_to_monarchy = yes
+			change_government = monarchy
 			if = {
 				limit = {
 					has_country_flag = civil_war_has_exiled_heir

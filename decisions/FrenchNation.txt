@@ -10,7 +10,7 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = LTE }
+			NOT = { tag = LAE }
 			NOT = { tag = FRA }
 			NOT = { tag = OUT }
 			NOT = { tag = SPA }
@@ -20,6 +20,7 @@ country_decisions = {
 			NOT = { tag = GER }
 			NOT = { tag = IBE }
 			NOT = { tag = ITA }
+			NOT = { tag = AVE }		# Anglois is also valid
 			OR = {
 				ai = no
 				NOT = { exists = FRA }

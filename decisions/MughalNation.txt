@@ -11,6 +11,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { tag = PER }
 			NOT = { tag = AFS }
 			NOT = { tag = QJR }
@@ -73,6 +77,8 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = MUG
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			change_primary_culture = kanauji
@@ -99,17 +105,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						government = monarchy
-					}
+					NOT = { government = monarchy }
 				}
 				change_government = monarchy
 			}
 			add_government_reform = indian_sultanate_reform
 			if = {
-				limit = {
-					has_dlc = "Dharma"
-				}
+				limit = { has_dlc = "Dharma" }
 				add_government_reform = mughal_government
 			}
 			if = {
@@ -127,9 +129,7 @@ country_decisions = {
 				add_government_reform = zabt_reform
 			}
 			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
+				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
 			if = {

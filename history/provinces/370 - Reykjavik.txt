@@ -11,10 +11,14 @@ base_production = 1
 trade_goods = fish
 base_manpower = 1
 capital = "Reykjavik"
-is_city = yes 	
+is_city = yes
+
+add_permanent_province_modifier = {
+	name = icelanding_fisher_sea
+	duration = -1
+}
 
 discovered_by = western
-
 
 1444.11.16 = { #BeyondTypus batch edit shortcut no vassal start date begin
 	owner = NOR

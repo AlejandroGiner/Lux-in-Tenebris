@@ -104,7 +104,7 @@ HAI_ideas = {
 TKY_ideas = {
 	start = {
 		shock_damage_received = -0.15
-		artillery_bonus_vs_fort = 2
+		artillery_levels_available_vs_fort = 2
 	}
 	
 	bonus = {
@@ -516,7 +516,7 @@ KTG_ideas = {
 LEK_ideas = {
 	start = {
 		production_efficiency = 0.2
-		hostile_attrition = 1.0
+		female_advisor_chance = 0.5
 	}
 
 	bonus = {
@@ -530,6 +530,7 @@ LEK_ideas = {
 
 	LEK_idea1 = {
 		land_attrition = -0.15
+		hostile_attrition = 1.0
 	}
 	LEK_idea2 = {
 		global_unrest = -2

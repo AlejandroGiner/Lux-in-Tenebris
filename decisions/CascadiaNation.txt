@@ -69,6 +69,7 @@ country_decisions = {
 						NOT = { is_former_colonial_nation = yes }
 					}
 					ROOT = { save_event_target_as = old_tag_target }
+					set_country_flag = was_not_former_colonial_nation
 				}
 			}
 			change_tag = CSC
@@ -78,10 +79,6 @@ country_decisions = {
 				}
 				restore_old_nation_on_formation_effect = yes
 				remove_non_electors_emperors_from_empire_effect = yes
-			}
-			if = {
-				limit = { NOT = { government_rank = 2 } }
-				set_government_rank = 2
 			}
 			colonial_cascadia = {
 				limit = {
@@ -99,12 +96,7 @@ country_decisions = {
 				}
 				change_primary_culture = mexican
 			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 25
-			swap_ideas = yes
+			btc_new_nation_effects = yes
 			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = { factor = 1 }

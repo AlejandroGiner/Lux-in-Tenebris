@@ -63,6 +63,8 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SPA
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			if = {
 				limit = {
 					NOT = {
@@ -206,6 +208,8 @@ country_decisions = {
 				ROOT = { inherit = PREV }
 			}
 			change_tag = SPA
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			if = {
 				limit = {
 					NOT = {

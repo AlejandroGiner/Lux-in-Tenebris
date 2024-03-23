@@ -1,23 +1,26 @@
 #1131 - Massina
 
-owner = ZAF
-controller = ZAF
+owner = JNN
+controller = JNN
 culture = bambara
 is_city = yes
-base_manpower = 1
 religion = shamanism #Fetishism
 capital = "Macina"
 trade_goods = millet
 hre = no
 base_tax = 4 
 base_production = 4
+base_manpower = 1
+add_core = JNN
+add_core = SOF
+
 native_ferocity = 4
 native_hostileness = 9
-add_core = ZAF
-discovered_by = sub_saharan
+
 extra_cost = 8
 center_of_trade = 1
 
+discovered_by = sub_saharan
 
 1471.1.1 = { owner = SON controller = SON add_core = SON } #Conquered by Sunni Ali Ber of Songhai
 1481.1.1 = { unrest = 3 } #Mossi Raid led by Nasere I devastates region

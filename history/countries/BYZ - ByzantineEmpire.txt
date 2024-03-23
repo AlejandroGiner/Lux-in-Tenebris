@@ -1,18 +1,24 @@
 government = monarchy
-add_government_reform = autocracy_reform_btc #Was Byzantium feudal or despotic? Well, they did have a feudal-esque system by 1444, but that was mostly in terms of hereditary land grants. The ruling family still had most of the power. I'll go for this for now with very influential nobles. They styled themselves autocrats either way, so I'll go for despotic for now.
+add_government_reform = byzantine_autocracy_reform #Was Byzantium feudal or despotic? Well, they did have a feudal-esque system by 1444, but that was mostly in terms of hereditary land grants. The ruling family still had most of the power. I'll go for this for now with very influential nobles. They styled themselves autocrats either way, so I'll go for despotic for now.
 government_rank = 3
 primary_culture = greek
 religion = orthodox
 technology_group = eastern
 historical_rival = TUR
-historical_rival = LTE
+historical_rival = LAE
 capital = 151 # Constantinople
 fixed_capital = 151 # Cannot move capital away from this province & no power cost to move to it
+
+set_estate_privilege = estate_nobles_deteriorating_army
+set_estate_privilege = estate_church_union_of_the_churches
+set_estate_privilege = estate_burghers_reliance_on_republics
+set_estate_privilege = estate_burghers_exkousseiai_for_latins
 
 #To allow for the conversion to Catholic if draining Patriarch Authority.
 patriarch_authority = 0.15
 
 1391.2.16 = {
+	mashriq_region = { discover_country = BYZ }
 	monarch = {
 		name = "Manuel II"
 		dynasty = "Palaiologos"
@@ -57,10 +63,10 @@ patriarch_authority = 0.15
 		dynasty = "Palaiologos"
 		birth_date = 1405.2.8
 		death_date = 1453.5.29
-		claim = 95
-		adm = 3
-		dip = 4
-		mil = 4 
+		claim = 60 #he did not go on the throne without a pretender
+		adm = 5 #previous experience as despot of morea
+		dip = 2 #uneventful campaigns to garner western support
+		mil = 3 #Experience campaigning against the Ottomans in thessaly. Event will bump it up to 4. 
 	}
 	#To add ruler trait to Konstantinos XI
 	add_heir_personality = well_connected_personality
@@ -81,10 +87,10 @@ patriarch_authority = 0.15
 		name = "Konstantinos XI"
 		dynasty = "Palaiologos"
 		birth_date = 1405.2.8
-		adm = 3 
-		dip = 4
-		mil = 4 
-		leader = {	name = "Konstantinos XI"	type = general	fire = 3	shock = 3	manuever = 4	siege = 0 }
+		adm = 5 
+		dip = 2 
+		mil = 3 
+		#leader = {	name = "Konstantinos XI"	type = general	fire = 3	shock = 3	manuever = 4	siege = 0 } via event now
 	}
 	#To add 2nd ruler trait to Konstantinos XI
 	add_ruler_personality = inspiring_leader_personality

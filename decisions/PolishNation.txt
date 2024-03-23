@@ -52,21 +52,40 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = POL
+			set_country_flag = pol_chose_pu_flag
+			change_tag = POL
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			swap_non_generic_missions = yes
+			complete_mission = pol_leverage_magnates
+			complete_mission = pol_great_sejm
+			complete_mission = plc_articles_agreement
+			complete_mission = pol_varna_aftermath
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = { NOT = { government_rank = 2 } }
 				set_government_rank = 2
 			}
 			poland_region = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = POL
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
+			}
+			if = {
+				limit = { has_updated_culture = { culture = slavic } }
+				if = {
+					limit = { NOT = { primary_culture = polish_new } }
+					change_primary_culture = polish_new
+				}
+			}
+			else = {
+				if = {
+					limit = { NOT = { primary_culture = polish } }
+					change_primary_culture = polish
+				}
 			}
 			add_prestige = 25
 			swap_ideas = yes

@@ -11,6 +11,10 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
+			OR = {
 				ai = no
 				NOT = { exists = SWI }
 			}
@@ -57,31 +61,24 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SWI
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			# add swiss government reform if you don't already have it
 			switzerland_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = SWI
 			}
 			west_switzerland_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = SWI
 			}
 			romandie_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = SWI
 			}
 			add_prestige = 25
 			if = {
-				limit = {
-					has_custom_ideas = no
-				}
+				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 			if = {
@@ -98,7 +95,7 @@ country_decisions = {
 			else = {
 				if = {
 					limit = { is_revolutionary = no }
-					change_government_to_republic = yes
+					change_government = republic
 					add_government_reform = united_cantons_reform
 				}
 			}

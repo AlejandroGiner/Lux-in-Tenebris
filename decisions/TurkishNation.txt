@@ -17,7 +17,7 @@ country_decisions = {
 			NOT = { tag = HLR }
 			NOT = { tag = PAP }
 			NOT = { tag = BYZ }
-			NOT = { tag = LTE }
+			NOT = { tag = LAE }
 			NOT = { tag = OUT }
 			NOT = { tag = RUS }
 			NOT = { tag = TKY }
@@ -72,7 +72,7 @@ country_decisions = {
 						NOT = { government = monarchy }
 						is_revolutionary = no
 					}
-					change_government_to_monarchy = yes
+					change_government = monarchy
 				}
 				if = {
 					limit = { is_revolutionary = no }

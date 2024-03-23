@@ -213,7 +213,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		if = {
 			limit = { NOT = { government = republic } }
-			change_government_to_republic = yes
+			change_government = republic
 		}
 		if = {
 			limit = {

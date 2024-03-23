@@ -22,7 +22,7 @@ country_event = {
       set_country_flag = imereti_rebels_happened
     }
     if = {
-      limit = { exists = GUR }
+      limit = { exists = GRI }
       set_country_flag = guria_rebels_happened
     }
     if = {
@@ -209,7 +209,7 @@ country_event = {
   
   trigger = {
     NOT = { has_country_flag = guria_rebels_happened }
-    NOT = { exists = GUR }
+    NOT = { exists = GRI }
     owns = 2196
     OR = {
       NOT = { has_country_flag = georgian_rebels }
@@ -228,8 +228,8 @@ country_event = {
   
   option = {  #Strike them down!
     name = btc_georgian_civil_war.5.a
-    release = GUR
-    GUR = {
+    release = GRI
+    GRI = {
       declare_war_with_cb = {
         who = GEO
         casus_belli = cb_independence_war
@@ -626,7 +626,7 @@ country_event = {
       limit = {
         NOT = { has_country_flag = guria_rebels_happened }
         OR = {
-          exists = GUR
+          exists = GRI
           NOT = { owns = 2196 }
         }
       }
