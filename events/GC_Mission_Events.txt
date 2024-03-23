@@ -85,7 +85,7 @@ country_event = {
 	option = {
 		name = more_flavor_por.EVTOPTB1
 		ai_chance = { factor = 0 }
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -150,7 +150,7 @@ country_event = {
 	option = {
 		name = more_flavor_por.EVTOPTB3
 		ai_chance = { factor = 0 }
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -186,7 +186,7 @@ country_event = {
 
 	option = {
 		name = "more_flavor_por.EVTOPTA5"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_papal_influence = 10
 		random_list = {
 			70 = { }

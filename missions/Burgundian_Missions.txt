@@ -108,7 +108,7 @@ bur_conquest = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_country_modifier = {
 				name = "bur_diplo_mod"
 				duration = 5475
@@ -154,7 +154,7 @@ bur_conquest = {
 		}
 		
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_mil_power = 100
 			1975 = {
 				add_trade_modifier = {

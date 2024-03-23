@@ -59,7 +59,7 @@ emp_naples_1 = {
 				add_papal_influence = 50
 			}
 			else = {
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 			}
 		}
 	}
@@ -276,7 +276,7 @@ emp_naples_3 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			morea_area = {
 				limit = {
 					NOT = { is_core = ROOT }

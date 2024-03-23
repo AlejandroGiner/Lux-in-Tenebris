@@ -97,7 +97,7 @@ province_event = {
 	option = { #Leave the City alone
 		name = grand_centers_of_trade.1.c
 		ai_chance = {factor = 70}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 	
 }

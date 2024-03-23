@@ -418,7 +418,7 @@ country_event = {
 
 	option = { # Queen proves herself
 		name = "BeyondTypusCelticFlavour.EVTOPTA7"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		hidden_effect = {
 			clr_country_flag = bt_tanistry_high_queen_reigning
 			set_country_flag = bt_girl_power

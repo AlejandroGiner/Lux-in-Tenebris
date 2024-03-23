@@ -36,7 +36,7 @@ new_world_natives_missions = {
 		}
 		effect = {
 			add_innovativeness_big_effect = yes
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 		}
 	}
 	new_world_remove_euro = {

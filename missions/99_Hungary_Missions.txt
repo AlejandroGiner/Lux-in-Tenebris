@@ -604,7 +604,7 @@ hun_ottoman_group = {
 		
 		effect = {
 			add_adm_power = 100
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			macedonia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -649,7 +649,7 @@ hun_ottoman_group = {
 		
 		effect = {
 			add_adm_power = 100
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			thrace_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -702,7 +702,7 @@ hun_ottoman_group = {
 		
 		effect = {
 			add_adm_power = 100
-			add_prestige = 30
+			add_prestige_or_monarch_power = { amount = 30 }
 			add_country_modifier = {
 				name = "hun_constantinople"
 				duration = 10950

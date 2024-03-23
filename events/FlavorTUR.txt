@@ -806,7 +806,7 @@ country_event = {
 	option = {		# Assume the title of Khadim al-Haramayn.
 		name = "flavor_tur.EVTOPTA3371"
 		add_adm_power = 400
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		add_legitimacy = 25
 		add_piety = 0.25
 	}
@@ -1227,7 +1227,7 @@ country_event = {
 				NOT = { army_size = PER }
 			}
 		}
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -1296,7 +1296,7 @@ country_event = {
 				NOT = { army_size = TUR }
 			}
 		}
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		hidden_effect = {
 			clr_country_flag = full_reconciliation
 			clr_country_flag = moderate_treaty

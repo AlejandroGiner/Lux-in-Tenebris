@@ -197,7 +197,7 @@ ori_missions_south = {
 			}
 		}
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			south_carnatic_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}

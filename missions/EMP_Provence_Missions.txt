@@ -401,7 +401,7 @@ provence_missions_2 = {
 				country_event = { id = knights_missions.2 }
 			}
 			else = {
-				add_prestige = 50
+				add_prestige_or_monarch_power = { amount = 50 }
 			}
 		}
 	}

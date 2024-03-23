@@ -448,7 +448,7 @@ country_event = {
 	}
 	option = {
 		name = "flavor_jap.EVTOPTB4" # Crack down on piracy
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		if = {
 			limit = { exists = KOR }
 			KOR = {
@@ -805,7 +805,7 @@ country_event = {
 	
 	option = { # There shall be no mercy for this dishonorable act!
 		name = "flavor_jap.EVTOPTA10"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		kill_leader = {
 			type = general
 		}
@@ -1046,7 +1046,7 @@ country_event = {
 	}
 	option = {
 		name = "flavor_jap.EVTOPTB14"
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 }
 
@@ -1285,7 +1285,7 @@ country_event = {
 	}
 	option = {
 		name = "flavor_jap.EVTOPTB18"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		set_country_flag = jap_ginkakuji
 	}
 }
@@ -2178,7 +2178,7 @@ country_event = {
 	option = {
 		name = "flavor_jap.EVTOPTB31"
 		add_army_tradition = -10
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -2242,7 +2242,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTA33"
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 }
 
@@ -2339,7 +2339,7 @@ country_event = {
 		}
 		random_list = {
 			50 = { 
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 				every_neighbor_country = {
 					limit = { has_country_modifier = ninjas	}
 					country_event = { id = flavor_jap.37 } 
@@ -2397,7 +2397,7 @@ country_event = {
 
 	option = {
 		name = "flavor_jap.EVTOPTA38"
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		add_opinion = { who = FROM modifier = opinion_irritated }
 		add_casus_belli = {
 			target = FROM
@@ -2484,7 +2484,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTA40"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -2519,7 +2519,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTA41"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 	
 	option = {
@@ -2671,7 +2671,7 @@ country_event = {
 				}
 			}
 		}
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 	
 	option = {
@@ -2758,7 +2758,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTA46"
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		overlord = {
 			add_opinion = {
 				who = ROOT
@@ -2833,7 +2833,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTC47"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -3275,7 +3275,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_jap.EVTOPTA55"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_corruption = 1
 	}
 	

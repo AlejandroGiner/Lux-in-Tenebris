@@ -41,7 +41,7 @@ country_event = {
 	}
 	option = {
 		name = "muslim_dlc.EVTOPTB1"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		hidden_effect = {
 			add_country_modifier = { 
 				name = ignored_ramadan_timer
@@ -197,7 +197,7 @@ country_event = {
 				hidden = yes 
 			}
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		if = {
 			limit = {
 				has_adopted_cult = islam_cult
@@ -236,7 +236,7 @@ country_event = {
 			limit = {
 				has_adopted_cult = islam_cult
 			}
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -271,7 +271,7 @@ country_event = {
 				years = 10
 			}
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		clr_country_flag = hajj_almost_completed
 		clr_country_flag = hajj_flag
 	}
@@ -905,7 +905,7 @@ country_event = {
 	}
 	option = {
 		name = "muslim_dlc.EVTOPTC12"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -1259,7 +1259,7 @@ country_event = {
 	}
 	option = {
 		name = "muslim_dlc.EVTOPTC18"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -1339,7 +1339,7 @@ country_event = {
 		show_ambient_object = hagia_sophia_minarets
 		hide_ambient_object = hagia_sophia
 		add_piety = 0.2
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		add_years_of_income = -0.1
 		set_global_flag = hagia_sophia_now_mosque
 		if = {
@@ -1682,7 +1682,7 @@ province_event = {
 		name = "muslim_dlc.EVTOPTB25"
 		owner = {
 			add_piety = -0.2
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		}
 		add_unrest = 2
 	}

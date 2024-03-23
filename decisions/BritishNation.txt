@@ -318,7 +318,7 @@ country_decisions = {
 					custom_tooltip = english_scottish_act_of_union_bt
 				}
 				change_tag = GBR
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 		}
 		ai_will_do = {
@@ -401,7 +401,7 @@ country_decisions = {
 					custom_tooltip = english_french_act_of_union_ct
 				}
 				change_tag = AVE
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 		}
 		ai_will_do = {

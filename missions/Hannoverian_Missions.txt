@@ -93,7 +93,7 @@ hannoverian_group_1 = {
 		}
 
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			weser_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }

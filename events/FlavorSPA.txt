@@ -430,7 +430,7 @@ country_event = {
 
 	option = {		# Now so have we!
 		name = "flavor_spa.EVTOPTA1005"
-		add_prestige = 35
+		add_prestige_or_monarch_power = { amount = 35 }
 		add_splendor = 100
 		add_innovativeness_small_effect = yes
 	}
@@ -565,7 +565,7 @@ country_event = {
 
 	option = {		# Expansion in North Africa seems prosperous
 		name = "flavor_spa.EVTOPTA1000"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_years_of_income = 0.05
 	}
 }
@@ -622,7 +622,7 @@ country_event = {
 	option = { # We rule by the right of Conqueror!
 		name = "flavor_spa.EVTOPTB1001"
 		ai_chance = { factor = 25 }
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 }
 
@@ -712,7 +712,7 @@ country_event = {
 
 	option = {		# We truly rule the world!
 		name = "flavor_spa.EVTOPTA1004"
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		add_legitimacy = 15
 		add_splendor = 50
 		add_papal_influence = 100
@@ -1108,7 +1108,7 @@ country_event = {
 	option = {		# The extra burden is not worth it
 		name = "flavor_spa.EVTOPTC3162"
 		ai_chance = { factor = 10 }
-		add_prestige = 1
+		add_prestige_or_monarch_power = { amount = 1 }
 	}
 }
 
@@ -1522,7 +1522,7 @@ country_event = {
 	
 	option = {		# Excellent
 		name = "EXCELLENT"
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		add_splendor = 50
 		add_years_of_income = -0.15
 		if = {
@@ -1578,7 +1578,7 @@ country_event = {
 
 	option = {		# Excellent
 		name = "EXCELLENT"
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		add_splendor = 50
 	}
 }
@@ -1806,7 +1806,7 @@ country_event = {
 	option = {		# Inconclusive result
 		name = "flavor_spa.2.b"
 		ai_chance = { factor = 70 }
-		add_prestige = 10 #For holding the debate
+		add_prestige_or_monarch_power = { amount = 10 } #For holding the debate
 	}
 	option = {		# Let Las Casas Arguments shape our policies
 		name = "flavor_spa.2.c"
@@ -1897,7 +1897,7 @@ country_event = {
 				has_idea_group = humanist_ideas
 			}
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -2600,7 +2600,7 @@ country_event = {
 	}
 	option = {		# Their contributions to our Society has been too great to measure.
 		name = "flavor_spa.12.b"
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		ai_chance = {
 			factor = 0
 		}
@@ -2699,7 +2699,7 @@ country_event = {
 	
 	option = {
 		name = flavor_spa.14.a
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 

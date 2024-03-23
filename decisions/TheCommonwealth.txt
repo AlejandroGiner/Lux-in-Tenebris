@@ -122,7 +122,7 @@ country_decisions = {
 				add_base_tax = 1
 			}
 			set_country_flag = formed_plc_flag
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -250,7 +250,7 @@ country_decisions = {
 				add_base_tax = 1
 			}
 			set_country_flag = formed_plc_flag
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -394,7 +394,7 @@ country_decisions = {
 				add_base_tax = 1
 			}
 			set_country_flag = formed_plc_flag
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 		ai_will_do = {
 			factor = 1

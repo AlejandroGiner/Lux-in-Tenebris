@@ -97,7 +97,7 @@ country_event = {
 			add_base_production = 6
 			add_base_manpower = 3
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		if = {
 			limit = {
 				ROOT = {
@@ -253,7 +253,7 @@ country_event = {
 			add_base_production = 6
 			add_base_manpower = 3
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 

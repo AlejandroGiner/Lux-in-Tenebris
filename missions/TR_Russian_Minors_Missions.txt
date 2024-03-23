@@ -512,7 +512,7 @@ tr_russian_minors_4 = {
 			num_of_states = 3
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_adm_power = 50
 			east_dniepr_area = {
 				limit = {
@@ -692,7 +692,7 @@ tr_russian_minors_5 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			country_event = { id = flavor_rus.2002 }
 			ruthenia_region = {
 				limit = {

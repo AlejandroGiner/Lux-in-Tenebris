@@ -63,7 +63,7 @@ spa_colonial_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_country_modifier = {
 				name = "the_unknown_frontier"
 				duration = 5475
@@ -770,7 +770,7 @@ spa_reconquista = {
 		
 		effect = {
 			add_dip_power = 100
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 	}
 	
@@ -857,7 +857,7 @@ spa_reconquista_por = {
 		}
 		
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_adm_power = 100
 		}
 	}

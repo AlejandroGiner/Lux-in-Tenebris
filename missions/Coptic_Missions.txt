@@ -30,7 +30,7 @@ coptic_missions = {
 		effect = {
 			set_country_flag = alexandria_mission_flag
 			tooltip = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 				delta_area = {
 					add_province_modifier = {
 						name = "the_faithful_liberated"
@@ -60,7 +60,7 @@ coptic_missions = {
 		}
 		effect = {
 			set_country_flag = yerevan_mission_flag
-			tooltip = { add_prestige = 10 }
+			tooltip = { add_prestige_or_monarch_power = { amount = 10 } }
 			hidden_effect = {
 				country_event = { id = coptic_flavor.5 }
 			}
@@ -83,7 +83,7 @@ coptic_missions = {
 		}
 		effect = {
 			set_country_flag = antioch_mission_flag
-			tooltip = { add_prestige = 10 }
+			tooltip = { add_prestige_or_monarch_power = { amount = 10 } }
 			hidden_effect = {
 				country_event = { id = coptic_flavor.7 }
 			}
@@ -108,7 +108,7 @@ coptic_missions = {
 		effect = {
 			set_country_flag = qasr_ibrim_flag
 			tooltip = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 				lower_nubia_area = {
 					add_province_modifier = {
 						name = the_faithful_liberated
@@ -145,7 +145,7 @@ coptic_missions = {
 		effect = {
 			set_country_flag = cairo_mission_flag
 			tooltip = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 				bahari_area = {
 					add_province_modifier = {
 						name = "the_faithful_liberated"

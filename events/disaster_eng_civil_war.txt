@@ -853,7 +853,7 @@ country_event = {
 			#set_legacy_government = despotic_monarchy
 		}			
 		clr_country_flag = supports_royalists
-		add_prestige = 50
+		add_prestige_or_monarch_power = { amount = 50 }
 		add_absolutism = 10
 		if = {
 			limit = {
@@ -873,7 +873,7 @@ country_event = {
 			NOT = { has_country_modifier = just_lost_to_rebels }
 		}
 		clr_country_flag = supports_parliamentarians
-		add_prestige = 50
+		add_prestige_or_monarch_power = { amount = 50 }
 		if = {
 			limit = {
 				NOT = {

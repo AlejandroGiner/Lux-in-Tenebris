@@ -139,7 +139,7 @@ country_event = {
 	
 	option = {
 		name = "btpIRE.EVTOPTA3"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		if = {
 			limit = { has_dlc = "Res Publica" }
 			set_country_flag = independent_ireland_reorganisation_underway

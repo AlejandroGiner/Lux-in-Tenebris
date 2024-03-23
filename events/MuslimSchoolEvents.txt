@@ -1246,12 +1246,12 @@ country_event = {
 						big_influx = { 
 							clr_country_flag = big_influx
 							add_years_of_income = 1
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
 							add_years_of_income = 0.5
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1266,12 +1266,12 @@ country_event = {
 						big_influx = { 
 							clr_country_flag = big_influx
 							add_dip_power = 35
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
 							add_dip_power = 25
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1292,7 +1292,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
@@ -1303,7 +1303,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1330,7 +1330,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
@@ -1341,7 +1341,7 @@ country_event = {
 								discount = yes
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1372,12 +1372,12 @@ country_event = {
 						big_influx = { 
 							clr_country_flag = big_influx
 							add_years_of_income = 0.5
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
 							add_years_of_income = 0.25
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1392,12 +1392,12 @@ country_event = {
 						big_influx = { 
 							clr_country_flag = big_influx
 							add_dip_power = 25
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
 							add_dip_power = 15
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1418,7 +1418,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
@@ -1429,7 +1429,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1456,7 +1456,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
@@ -1467,7 +1467,7 @@ country_event = {
 								name = advisor_from_afar
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1493,12 +1493,12 @@ country_event = {
 						big_influx = { 
 							clr_country_flag = big_influx
 							add_years_of_income = 0.75
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
 							add_years_of_income = 0.40
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1513,12 +1513,12 @@ country_event = {
 						big_influx = { 
 							clr_country_flag = big_influx
 							add_dip_power = 30
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
 							add_dip_power = 20
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1539,7 +1539,7 @@ country_event = {
 								discount = yes
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
@@ -1550,7 +1550,7 @@ country_event = {
 								discount = yes
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -1577,7 +1577,7 @@ country_event = {
 								discount = yes
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 10
+							add_prestige_or_monarch_power = { amount = 10 }
 						}
 						medium_influx = { 
 							clr_country_flag = medium_influx
@@ -1588,7 +1588,7 @@ country_event = {
 								discount = yes
 								culture = event_target:origin_of_advisor
 							}
-							add_prestige = 5
+							add_prestige_or_monarch_power = { amount = 5 }
 						}
 						low_influx = {
 							clr_country_flag = low_influx
@@ -2586,7 +2586,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		event_target:urbanization_province = {
 			add_province_modifier = {
 				name = "waqfs_donated"
@@ -2878,7 +2878,7 @@ country_event = {
 				NOT = { num_of_cities = 20 }
 			}
 		}
-		add_prestige = 10 #You get Prestige regardless for the famous scholarship.
+		add_prestige_or_monarch_power = { amount = 10 } #You get Prestige regardless for the famous scholarship.
 		event_target:madrasa_province = {
 			add_base_tax = 1
 			add_base_production = 1
@@ -2898,7 +2898,7 @@ country_event = {
 		ai_chance = {
 			factor = 25
 		}
-		add_prestige = 10 #You get Prestige regardless for the famous scholarship.
+		add_prestige_or_monarch_power = { amount = 10 } #You get Prestige regardless for the famous scholarship.
 		event_target:madrasa_province = {
 			area = {
 				limit = {
@@ -3069,7 +3069,7 @@ country_event = {
 		ai_chance = {
 			factor = 75
 		}
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 

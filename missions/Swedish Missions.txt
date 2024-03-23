@@ -1103,7 +1103,7 @@ swedish_missions_baltic = {
 				set_government_rank = 3
 			}
 			else = { #Lithuania has been absorbed, create the PU.
-				add_prestige = 50
+				add_prestige_or_monarch_power = { amount = 50 }
 				hidden_effect = {
 					every_owned_province = {
 						limit = {

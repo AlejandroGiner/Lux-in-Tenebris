@@ -850,7 +850,7 @@ gc_tunis_5 = {
 			num_accepted_cultures = 4
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					religion_group = muslim

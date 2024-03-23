@@ -119,7 +119,7 @@ country_event = {
 		
 	option = {
 		name = "btc_cir_flavor.2.c"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_legitimacy = 10
 		add_stability_or_adm_power = yes
 		RUS = {
@@ -181,7 +181,7 @@ country_event = {
 				modifier = opinion_good_relations
 			}
 		}
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_country_modifier = {
 			name = adyghe_allowed_slave
 			duration = 9125

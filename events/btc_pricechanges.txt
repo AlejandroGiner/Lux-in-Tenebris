@@ -26,7 +26,7 @@ province_event = {
     ai_chance = { factor = 1 }
     set_global_flag = massa_marble
     add_base_production = 3
-    owner = { add_prestige = 5 }
+    owner = { add_prestige_or_monarch_power = { amount = 5 } }
     add_province_modifier = {
       name = btc_renaissance_marble_modifier
       duration = -1
@@ -66,7 +66,7 @@ province_event = {
     name = "PriceChangesBTC.2.a"
     ai_chance = { factor = 1 }
     set_global_flag = carrara_marble
-    owner = { add_prestige = 15 }
+    owner = { add_prestige_or_monarch_power = { amount = 15 } }
     add_province_modifier = {
       name = btc_carrara_marble_modifier
       duration = 3650
@@ -156,7 +156,7 @@ country_event = {
       value = 0.25 #2.0 -> 2.5
       duration = -1
     }
-	add_prestige = 5
+	add_prestige_or_monarch_power = { amount = 5 }
   }
 }
 

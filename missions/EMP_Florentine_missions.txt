@@ -585,7 +585,7 @@ emp_tusc_renaissance_4 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 		}
 	}
 	
@@ -642,7 +642,7 @@ emp_tusc_renaissance_4 = {
 				PAP = { set_country_flag = medici_pope_next }
 			}
 			else = {
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 		}
 	}

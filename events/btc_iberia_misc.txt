@@ -115,7 +115,7 @@ country_event = {
 	option = {
 		name = iberia_misc_events.2.b
 		ai_chance = { factor = 10 }
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -165,7 +165,7 @@ country_event = {
 	option = {
 		name = iberia_misc_events.4.a
 		add_years_of_income = 0.3
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		baetica_area = {
 			limit = {
 				owned_by = ROOT

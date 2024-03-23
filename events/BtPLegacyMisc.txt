@@ -429,7 +429,7 @@ country_event = {
 	option = {		# Nope
 		name = "BtPLegacyMisc.EVTOPTB9"
 		ai_chance = { factor = 1 }
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		if = {
 			limit = { HOL = { is_part_of_hre = yes } }
 			1931 = { add_claim = HOL }

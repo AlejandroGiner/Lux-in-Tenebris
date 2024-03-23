@@ -352,7 +352,7 @@ country_event = {
 			alliance_with = PAP
 		}
 	}
-	add_prestige = 5
+	add_prestige_or_monarch_power = { amount = 5 }
 	add_estate_loyalty = {
 		estate = estate_church
 		loyalty = -10

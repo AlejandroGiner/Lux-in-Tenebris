@@ -176,7 +176,7 @@ emp_sav_missions_conquest = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					exists = SIC
@@ -869,7 +869,7 @@ emp_sav_missions_conquest_italia_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_dip_power = 50
 			112 = {
 				add_trade_modifier = {
@@ -1235,7 +1235,7 @@ emp_sav_missions_economy = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			
 			capital_scope = {
 				if = {

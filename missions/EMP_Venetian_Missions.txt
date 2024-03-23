@@ -144,7 +144,7 @@ emp_ven_slot_2 = {
 			legitimacy_equivalent = 90
 		}
 		effect = {
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 		}
 	}
 	

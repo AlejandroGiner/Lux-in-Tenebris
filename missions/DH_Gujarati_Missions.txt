@@ -278,7 +278,7 @@ guj_rajputana_frontier_series = {
 				add_estate_nobles_loyalty_effect = yes
 			}
 			else = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 			}
 		}
 	}
@@ -534,7 +534,7 @@ guj_rajputana_conquest = {
 		}
 
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_estate_nobles_loyalty_effect = yes
 			2087 = {
 				add_base_manpower = 1
@@ -637,7 +637,7 @@ guj_rajputana_conquest = {
 				add_estate_nobles_loyalty_effect = yes
 			}
 			else = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 			}
 			2087 = {
 				add_base_production = 1
@@ -1122,7 +1122,7 @@ guj_into_africa = {
 		}
 		effect = {
 			add_treasury = 1000
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		}
 	}
 }

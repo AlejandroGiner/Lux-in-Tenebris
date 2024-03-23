@@ -288,7 +288,7 @@ lithuanian_missions_2 = {
 			has_institution = printing_press
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_country_modifier = {
 				name = "renovated_jag_uni"
 				duration = 7300

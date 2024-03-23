@@ -453,7 +453,7 @@ byz_economic_1 = {
 					duration = -1
 				}
 			}
-			add_prestige = 35
+			add_prestige_or_monarch_power = { amount = 35 }
 			add_splendor = 50
 		}
 	}
@@ -535,7 +535,7 @@ byz_economic_2_plus_military_bonus = {
 					duration = -1
 				}
 			}
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_splendor = 50
 		}
 	}
@@ -1874,7 +1874,7 @@ byz_brings_venice_to_the_ring_and_knocks_them_out_third_round = {
 		}
 		
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_adm_power = 100
 			country_event = { id = flavor_byz.1 }
 			112 = {
@@ -4103,7 +4103,7 @@ byz_crusade_2 = {
 		
 		effect = {
 			#Misc
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_patriarch_authority = 0.1
 		}
 	}
@@ -4267,7 +4267,7 @@ byz_exarches = {
 		}
 		
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			
 			#Claims
 			custom_tooltip = byz_numidia_claims

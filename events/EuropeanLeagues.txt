@@ -51,7 +51,7 @@ country_event = {
 	}
 	option = {
 		name = league_events.1.a
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		every_country = {
 			limit = {
 				OR = {
@@ -218,7 +218,7 @@ country_event = {
 		emperor = {
 			add_opinion = { who = ROOT modifier = schmalkaldic_league_catholic }
 		}
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		
 	}
 	option = {
@@ -411,7 +411,7 @@ country_event = {
 	}
 	option = {
 		name = league_events.8.a
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		every_country = {
 			limit = {
 				NOT = { tag = VEN }

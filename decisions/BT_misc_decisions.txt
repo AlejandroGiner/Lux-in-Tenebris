@@ -49,7 +49,7 @@ country_decisions = {
 				add_base_production = 2
 			 	add_base_manpower = 1
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -126,8 +126,8 @@ country_decisions = {
 				name = "huzzah_for_devolution"
 				duration = 7300
 			}
-			add_dip_power = 300			#Little reward for founder in addition to dip rep
-			add_prestige = 10
+			add_dip_power = 150			#Little reward for founder in addition to dip rep
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -444,7 +444,7 @@ country_decisions = {
 			}
 			add_adm_power = -100
 			add_treasury = -500
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 
 		ai_will_do = {
@@ -516,7 +516,7 @@ country_decisions = {
 				}
 			}
 			add_dip_power = -50
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 		
 		ai_will_do = { factor = 1 }

@@ -1759,7 +1759,7 @@ country_event = {
 			}
 		}
 		set_ruler_flag = cities_offered_to_help
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 

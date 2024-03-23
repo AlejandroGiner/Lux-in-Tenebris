@@ -19,7 +19,7 @@ country_event = {
 
 	option = {
 		name = "btc_misc.1.a"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -98,7 +98,7 @@ province_event = {
 	option = {
 		name = "btc_misc.3.a"
 		ai_chance = { factor = 1 }
-		owner = { add_prestige = 5 }
+		owner = { add_prestige_or_monarch_power = { amount = 5 } }
 		add_splendor = 50
 		add_innovativeness_small_effect = yes
 		add_base_production = 1
@@ -115,7 +115,7 @@ province_event = {
 			}
 		}
 		highlight = yes
-		owner = { add_prestige = 10 }
+		owner = { add_prestige_or_monarch_power = { amount = 10 } }
 		add_splendor = 75
 		add_innovativeness_big_effect = yes
 		add_base_production = 3
@@ -642,7 +642,7 @@ country_event = {
 		name = btc_misc.12.a
 		add_reform_desire  = 0.01
 		add_papal_influence = 10
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		PAP = { add_opinion = { who = ROOT modifier = opinion_loyal_to_pope } }
 	}
 	option = { #Burn him at the stake
@@ -659,7 +659,7 @@ country_event = {
 		
 		add_reform_desire  = 0.03
 		add_papal_influence = 30
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		PAP = { add_opinion = { who = ROOT modifier = opinion_loyal_to_pope } }
 		add_country_modifier = {
 			name = "suppress_free_thinkers"
@@ -684,7 +684,7 @@ country_event = {
 		
 		add_reform_desire  = -0.05
 		add_papal_influence = -10
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 		add_innovativeness_big_effect = yes
 		PAP = { add_opinion = { who = ROOT modifier = opinion_pope_religious_tolerance } }
@@ -724,7 +724,7 @@ country_event = {
 	option = {		# Excellent
 		name = btc_misc.13.a
 		add_years_of_income = -0.2
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_splendor = 50
 		if = {
 			limit = { owns = 217 }
@@ -802,7 +802,7 @@ country_event = {
 	}
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 		ai_chance = { factor = 50 }
 	}
@@ -837,7 +837,7 @@ country_event = {
 	option = {		# Excellent
 		name = "EXCELLENT"
 		ai_chance = { factor = 1 }
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_innovativeness_small_effect = yes
 		if = {
 			limit = {
@@ -860,7 +860,7 @@ country_event = {
 		ai_chance = { factor = 100 }
 		
 		add_years_of_income = -0.3
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_innovativeness_big_effect = yes
 		if = {
 			limit = {
@@ -973,14 +973,14 @@ country_event = {
 
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 	}
 	
 	option = {
 		name = btc_misc.17.a
 		add_years_of_income = -0.2
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 		define_advisor = {
 			type = philosopher
@@ -1017,14 +1017,14 @@ country_event = {
 	
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 	}
 	
 	option = {
 		name = btc_misc.18.a
 		add_years_of_income = -0.2
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 		define_advisor = {
 			type = philosopher
@@ -1061,7 +1061,7 @@ country_event = {
 	
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_papal_influence = 10
 		add_splendor = 25
 	}
@@ -1069,7 +1069,7 @@ country_event = {
 	option = {
 		name = btc_misc.19.a
 		add_years_of_income = -0.2
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_papal_influence = 10
 		add_splendor = 25
 		define_advisor = {
@@ -1108,7 +1108,7 @@ country_event = {
 	
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_splendor = 75
 	}
 }
@@ -1138,7 +1138,7 @@ country_event = {
 	
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 50
 	}
 }
@@ -1168,7 +1168,7 @@ country_event = {
 	
 	option = {
 		name = "EXCELLENT"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 35
 	}
 }

@@ -109,7 +109,7 @@ country_decisions = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = MOR
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			if = {
 				limit = {
 					OR = {
@@ -228,7 +228,7 @@ country_decisions = {
 				change_government = monarchy #Desert tribes settling down, theocracies become monarchies.
 				#set_legacy_government = despotic_monarchy
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_algiers_flag
 			swap_ideas = yes
 		}
@@ -324,7 +324,7 @@ country_decisions = {
 				}
 				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			swap_ideas = yes
 			set_country_flag = formed_tunisia_flag
 		}
@@ -439,7 +439,7 @@ country_decisions = {
 				}
 				add_government_reform = autocracy_reform #Desert tribes settling down, theocracies become monarchies.
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			swap_ideas = yes
 			set_country_flag = formed_tripoli_flag
 		}

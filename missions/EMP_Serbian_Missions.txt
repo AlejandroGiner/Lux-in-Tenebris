@@ -60,7 +60,7 @@ emp_ser_economy_internal = {
 				limit = { NOT = { legitimacy = 80 } }
 				add_legitimacy = 20
 			}
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 		}
 	}
 	
@@ -207,7 +207,7 @@ emp_ser_danube = {
 				}
 			}
 			else = {
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 			}
 		}
 	}
@@ -699,7 +699,7 @@ emp_ser_east_branch = {
 			owns = 151
 		}
 		effect = {
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			if = {
 				limit = {
 					NOT = { stability = 3 }

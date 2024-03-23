@@ -46,6 +46,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = TUS
+			on_change_tag_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			TUS = {
 				if = {
@@ -79,6 +80,10 @@ country_decisions = {
 					has_custom_ideas = no
 				}
 				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			if = {
+				limit = { has_dlc = "Emperor" }
+				swap_non_generic_missions = yes
 			}
 			set_country_flag = formed_tuscany_flag
 			hidden_effect = {

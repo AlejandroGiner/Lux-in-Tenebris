@@ -277,7 +277,7 @@ province_event = {
 		name = seven_cities_events.3.b
 		FROM = {
 			set_country_flag = sce_end_cibola_flag
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -561,7 +561,7 @@ province_event = {
 		name = seven_cities_events.6.b
 		FROM = {
 			set_country_flag = sce_end_norumbega_flag
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -663,7 +663,7 @@ province_event = {
 		name = seven_cities_events.7.b
 		FROM = {
 			set_country_flag = sce_end_saguenay_flag
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -765,7 +765,7 @@ province_event = {
 		name = seven_cities_events.8.b
 		FROM = {
 			set_country_flag = sce_end_quivira_flag
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -2880,7 +2880,7 @@ province_event = {
 	option = {
 		name = seven_cities_events.300.b
 		FROM = {
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -3142,7 +3142,7 @@ province_event = {
 	option = {
 		name = seven_cities_events.304.a
 		FROM = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 		owner = {
 			add_opinion = {
@@ -3800,7 +3800,7 @@ province_event = {
 	option = {
 		name = seven_cities_events.402.b
 		FROM = {
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -3831,7 +3831,7 @@ country_event = {
 	
 	option = {
 		name = seven_cities_events.404.a
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -3893,7 +3893,7 @@ province_event = {
 	option = {
 		name = seven_cities_events.405.b
 		FROM = {
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 	}
 }
@@ -4169,7 +4169,7 @@ country_event = {
 	
 	option = {
 		name = seven_cities_events.411.a
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 

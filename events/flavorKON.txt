@@ -89,7 +89,7 @@ country_event = {
 		ai_chance = { factor = 10 }
 		
 		add_stability_or_adm_power = yes
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		
 		if = {
 			limit = { exists = POR }
@@ -238,7 +238,7 @@ country_event = {
 		
 	option = { # Another investment pays off.
 		name = flavor_kon.5.a
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		add_papal_influence = 25
 	}
 }

@@ -106,7 +106,7 @@ english_french_act_of_union = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 	
 	modifier = {
@@ -215,7 +215,7 @@ english_scottish_act_of_union = {
 				country_event = { id = ideagroups.1 } #Swap Ideas
 			}
 		}
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 	
 	modifier = {
@@ -809,9 +809,7 @@ french_english_reconciliation_act = {
 				modifier = french_english_reconciliation_act_opinion
 			}
 		}
-		add_prestige_or_monarch_power = {
-			amount = 75
-		}
+		add_prestige_or_monarch_power = { amount = 75 }
 		add_stability_or_adm_power = yes
 	}
 	

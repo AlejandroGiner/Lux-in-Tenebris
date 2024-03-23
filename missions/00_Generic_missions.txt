@@ -352,7 +352,7 @@ administrative_missions = {
 			total_development = 1000
 		}
 		effect = {
-			add_prestige = 30
+			add_prestige_or_monarch_power = { amount = 30 }
 			add_country_modifier = {
 				name = "imperial_ambition"
 				duration = 9125

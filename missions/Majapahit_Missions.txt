@@ -108,7 +108,7 @@ majapahit_missions_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
                         add_dip_power = 50
 			add_mil_power = 50
 		}
@@ -161,7 +161,7 @@ maj_missions_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_adm_power = 200
                         add_dip_power = 200
 		}

@@ -798,7 +798,7 @@ vij_religious_missions = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			capital_scope = {
 				add_province_modifier = {
 					name = vij_building
@@ -932,7 +932,7 @@ vij_religious_missions = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_navy_tradition = 25
 			1361 = {
 				add_trade_modifier = {

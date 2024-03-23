@@ -180,7 +180,7 @@ per_western_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			bahrain_area = {
 				limit = {
 					NOT = { is_core = ROOT }

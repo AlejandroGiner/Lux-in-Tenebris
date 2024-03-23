@@ -122,7 +122,7 @@ chinese_missions_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_adm_power = 100
 		}
 	}
@@ -154,7 +154,7 @@ chinese_missions_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_adm_power = 100
 		}
 	}

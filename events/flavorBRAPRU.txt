@@ -117,7 +117,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_brapru.EVTOPTA3523"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		create_explorer = {
 			tradition = 5
 		}
@@ -151,7 +151,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_brapru.EVTOPTOK"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		define_advisor = {
 			type = philosopher
 			culture = prussian
@@ -425,7 +425,7 @@ country_event = {
 	option = {
 		name = "flavor_brapru.EVTOPTA3" #Sponsor the University
 		add_years_of_income = -0.25
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_adm_power = 100
 	}
 	option = {
@@ -501,7 +501,7 @@ country_event = {
 	}
 	option = {
 		name = "flavor_brapru.EVTOPTB5"
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -1040,7 +1040,7 @@ country_event = {
                 NOT = { senior_union_with = BYT }
 			}
 			add_stability_or_adm_power = yes
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			every_known_country = {
 				limit = {
 					dynasty = ROOT
@@ -1498,7 +1498,7 @@ country_event = {
 
 	option = { #Great!
 		name = flavor_brapru.32.a
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		1759 = {
 			add_province_modifier = {
 				name = "pru_sanssouci_palace"
@@ -1756,7 +1756,7 @@ country_event = {
 	
 	option = {
 		name = "flavor_brapru.35.a"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		define_advisor = {
 			type = artist
 			name = "Johann Crüger"

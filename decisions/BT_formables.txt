@@ -80,7 +80,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_connacht_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -163,7 +163,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_munster_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -246,7 +246,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_leinster_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -329,7 +329,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_ulster_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -399,7 +399,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_connacht_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -472,7 +472,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_munster_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -545,7 +545,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_leinster_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -619,7 +619,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			set_country_flag = formed_ulster_flag_btp
 			set_country_flag = formed_irish_provincial_kingdom_btp
 		}
@@ -709,7 +709,7 @@ country_decisions = {
 				duration = 7300
 			}
 			#I decided to remove the development bonus from forming altogether. With the ability to build up provinces already there, this isn't really needed and can get out of hand quickly. Plus capital should move to Dublin anyway.
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			if = { limit = { NOT = { has_idea_group = ANI_ideas } }
 				swap_ideas = yes
 			}
@@ -1123,7 +1123,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			swap_ideas = yes
 			set_country_flag = formed_tir_na_gceilteach_btp
 		}
@@ -1243,7 +1243,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			swap_ideas = yes
 			set_country_flag = formed_tir_na_ngael_flag_bt
 		}
@@ -1314,7 +1314,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 35		#Extra prestige for Albion. Long live King Arthur!
+			add_prestige_or_monarch_power = { amount = 35 }		#Extra prestige for Albion. Long live King Arthur!
 			set_country_flag = formed_ynys_y_cedyrn_flag_bt
 		}
 		ai_will_do = { factor = 1 }
@@ -1407,7 +1407,7 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			add_prestige = 50			#Doubled prestige due to special formation.
+			add_prestige_or_monarch_power = { amount = 50 }			#Doubled prestige due to special formation.
 			british_isles_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -1495,7 +1495,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			custom_tooltip = belgium_formable_claims_tooltip
 			hidden_effect = {
 				every_province = {
@@ -1629,7 +1629,7 @@ country_decisions = {
 			2041 = {
 				add_permanent_claim = BRM
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_burma_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -1682,7 +1682,7 @@ country_decisions = {
 				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			iberia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
@@ -1886,7 +1886,7 @@ country_decisions = {
 				duration = 3650
 			}
 			set_country_flag = formed_malaya_flag
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 		ai_will_do = { factor = 1 }
 		ai_importance = 400
@@ -1937,7 +1937,7 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			swap_ideas = yes
 			set_country_flag = formed_kabylia_flag
 		}
@@ -2084,7 +2084,7 @@ country_decisions = {
 				}
 				add_permanent_claim = KME
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_khmer_empire_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -2202,7 +2202,7 @@ country_decisions = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			macedonia_area = {
 				add_core = LAE
 			}
@@ -2376,7 +2376,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			swap_ideas = yes
 			set_country_flag = formed_lombardy_venetia_flag_btp
 		}
@@ -2460,7 +2460,7 @@ country_decisions = {
 				}
 				set_government_rank = 3
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 3650
@@ -2564,7 +2564,7 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_country_modifier = {
 				name = centralization_modifier
 				duration = 3650
@@ -2687,7 +2687,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			#Cutting this because there are currently no unique Moravian ideas
 			#if = {
 			#	limit = { has_custom_ideas = no }
@@ -2761,7 +2761,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_mountaineers_flag_btp
 		}
 		ai_will_do = { factor = 1 }
@@ -2831,7 +2831,7 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			swap_ideas = yes
 			set_country_flag = formed_najd_bt
 		}
@@ -2912,7 +2912,7 @@ country_decisions = {
 			add_government_reform = feudalism_reform
 			set_government_rank = 3
 			183 = { move_capital_effect = yes }
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			if = {
 				limit = { NOT = { accepted_culture = cosmopolitan_french } }
 				add_accepted_culture = cosmopolitan_french
@@ -3103,7 +3103,7 @@ country_decisions = {
 				add_base_production = 2
 				add_base_manpower = 1
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			change_religion = sunni
 			add_piety = -0.30
 			swap_ideas = yes
@@ -3236,7 +3236,7 @@ country_decisions = {
 				}
 				add_permanent_claim = SIA
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_siam_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -3349,7 +3349,7 @@ country_decisions = {
 				}
 				add_permanent_claim = SVJ
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_srivijaya_flag
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -3515,7 +3515,7 @@ country_decisions = {
 				}
 				add_permanent_claim = VTM
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = formed_vietnam_flag
 			add_country_modifier = {
 				name = "centralization_modifier"

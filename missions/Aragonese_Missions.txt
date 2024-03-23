@@ -140,7 +140,7 @@ aragonese_missions_1 = {
 		}
 		effect = {
 			add_adm_power = 100
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_legitimacy = 20
 			lower_andalucia_area = {
 				limit = {

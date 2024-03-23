@@ -303,7 +303,7 @@ gen_north_india_2 = {
 		}
 		
 		effect = {
-			add_prestige = 30
+			add_prestige_or_monarch_power = { amount = 30 }
 			if = {
 				limit = {
 					NOT = {
@@ -560,7 +560,7 @@ gen_south_india_2 = {
 		}
 		
 		effect = {
-			add_prestige = 30
+			add_prestige_or_monarch_power = { amount = 30 }
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
@@ -629,7 +629,7 @@ gen_hindu = {
 		}
 		
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					has_estate = estate_brahmins

@@ -204,7 +204,7 @@ hsn_religious_group = {
 		}
 		
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_piety = -0.25
 		}
 	}
@@ -249,7 +249,7 @@ hsn_revenge_on_crusaders_group = {
 		}
 		
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_navy_tradition = 25
 			cyprus_area = {
 				limit = {
@@ -307,7 +307,7 @@ hsn_revenge_on_crusaders_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_country_modifier = {
 				name = "bt_hsn_crusaders_conquered"
 				duration = 5475
@@ -438,7 +438,7 @@ hsn_conquest_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_army_tradition = 20
 			aleppo_area = {
 				limit = {
@@ -498,7 +498,7 @@ hsn_conquest_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			382 = { #From 12/12/8 (32) to 16/16/12 (44)
 				add_base_tax = 2
 				add_base_production = 2
@@ -611,7 +611,7 @@ hsn_conquest_group = {
 		}
 		
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_legitimacy = 25
 			add_country_modifier = {
 				name = "bt_hsn_egypt_reclaimed" #+10% governing capacity
@@ -680,7 +680,7 @@ hsn_conquest_group = {
 				limit = { NOT = { dynasty = "Ayyubid" } }
 				set_dynasty = original_dynasty
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_legitimacy = 25
 			add_government_reform = bt_ayyubid_sultanate_reform
 			override_country_name = AYB #Using BT's old country names still in the localisation files.
@@ -717,7 +717,7 @@ hsn_conquest_group_east = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			iraq_arabi_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -872,7 +872,7 @@ hsn_conquest_group_east = {
 					duration = 7300
 				}
 			}
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		}
 	}
 	
@@ -901,7 +901,7 @@ hsn_conquest_group_east = {
 				name = "bt_hsn_new_caliphate"
 				duration = 7300
 			}
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		}
 	}
 	
@@ -974,7 +974,7 @@ hsn_tech_internal_group = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 	}
 }

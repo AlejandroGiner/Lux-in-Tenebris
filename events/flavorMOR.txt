@@ -94,7 +94,7 @@ country_event = {
 	option = {
 		name = flavor_mor.3.a #Ok
 		add_piety = -0.25
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 

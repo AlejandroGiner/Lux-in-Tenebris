@@ -55,7 +55,7 @@ country_event = {
 	# Don't seek support
 	option = {
 		name = "west_african.1.b"
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 	}
 }
 
@@ -296,7 +296,7 @@ province_event = {
 			owner = { has_regency = no }
 		}
 		owner = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_adm_power = -25
 		}
 		set_province_flag = desert_border_patrols
@@ -675,7 +675,7 @@ country_event = {
 	option = {
 		name = "west_african.14.a"
 		add_adm_power = 40
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 	}
 }
 
@@ -711,7 +711,7 @@ country_event = {
 	option = {
 		name = "west_african.15.a"
 		add_adm_power = 40
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		set_country_flag = tropical_botany
 	}
 }
@@ -1264,7 +1264,7 @@ country_event = {
 	# Have a countrywide animist celebration
 	option = {
 		name = "west_african.26.a"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_legitimacy = 10
 		every_neighbor_country = {
 			limit = {
@@ -1312,7 +1312,7 @@ country_event = {
 	option = {
 		name = "west_african.27.a"
 		add_years_of_income = -0.1
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_legitimacy = 5
 	}
 
@@ -1320,7 +1320,7 @@ country_event = {
 	option = {
 		name = "west_african.27.b"
 		add_years_of_income = -0.2
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_legitimacy = 5
 	}
 
@@ -1331,7 +1331,7 @@ country_event = {
 			any_owned_province = { trade_goods = ivory }
 		}
 		add_years_of_income = -0.3
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		add_legitimacy = 10
 	}
 
@@ -1342,7 +1342,7 @@ country_event = {
 			any_owned_province = { trade_goods = gold }
 		}
 		add_years_of_income = -0.4
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		add_legitimacy = 10
 	}
 

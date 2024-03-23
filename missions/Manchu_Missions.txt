@@ -841,7 +841,7 @@ manchu_missions_2_b = {
 			}
 			else = {
 				add_legitimacy = 20
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 			}
 		}
 	}
@@ -955,7 +955,7 @@ manchu_missions_2_b = {
 				}
 			}
 			else = {
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 				add_army_tradition = 10
 			}
 			if = {
@@ -1141,7 +1141,7 @@ manchu_missions_3 = {
 			}
 		}
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_country_modifier = {
 				name = "mch_korean_subjugation"
 				duration = 7300
@@ -1256,7 +1256,7 @@ manchu_missions_3_b = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					has_dlc = "Dharma"

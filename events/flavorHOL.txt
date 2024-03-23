@@ -549,7 +549,7 @@ country_event = {
 	option = {
 		name = "flavor_hol.EVTOPTA1" #Sponsor the university
 		add_years_of_income = -0.25
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_adm_power = 100
 		add_innovativeness_small_effect = yes
 	}
@@ -772,7 +772,7 @@ country_event = {
 	option = {
 		name = flavor_hol.7.a
 		add_dip_power = 100
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		4383 = {
 			change_trade_goods = paper
 			add_province_modifier = {
@@ -885,7 +885,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_hol.8.b #No, the international community would hate us.
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -911,7 +911,7 @@ country_event = {
 	
 	option = {
 		name = flavor_hol.9.a #Ok.
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		97 = {
 			add_province_modifier = {
 				name = "ned_shipbuilding_industry"
@@ -1425,7 +1425,7 @@ country_event = {
 	}
 	option = {
 		name = flavor_hol.20.b #All Westerners must go.
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -1544,7 +1544,7 @@ country_event = {
 	option = {
 		name = flavor_hol.24.a #Ok.
 		add_adm_power = 100
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		if = {
 			limit = {
 				NOT = { advisor_exists = 922 }

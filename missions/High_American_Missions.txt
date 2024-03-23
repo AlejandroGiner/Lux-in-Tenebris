@@ -72,7 +72,7 @@ ha_sunset_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			british_isles_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -173,7 +173,7 @@ ha_sunset_group_two = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			france_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }
@@ -260,7 +260,7 @@ ha_sunset_group_three = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			iberia_region = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT }

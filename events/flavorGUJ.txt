@@ -93,7 +93,7 @@ country_event = {
 				}
 			}
 		}
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 	option = {
 		name = flavor_guj.2.b #We will not fund more vanity projects
@@ -133,7 +133,7 @@ country_event = {
 	
 	option = {
 		name = flavor_guj.3.a #Great!
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		2056 = {
 			add_province_modifier = {
 				name = guj_champaner
@@ -224,7 +224,7 @@ country_event = {
 	option = {
 		name = flavor_guj.6.a #Great to Hear.
 		ai_chance = { factor = 90 }
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_country_modifier = {
 			name = guj_merchants_doing_well
 			duration = 3650
@@ -236,7 +236,7 @@ country_event = {
 	option = {
 		name = flavor_guj.6.b #Blasphemy!
 		ai_chance = { factor = 10 }
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_country_modifier = {
 			name = guj_hardline_rel_policy
 			duration = 3650
@@ -430,7 +430,7 @@ country_event = {
 	option = { 
 		name = flavor_guj.12.a
 		add_dip_power = 10
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -458,6 +458,6 @@ country_event = {
 	option = { 
 		name = flavor_guj.13.a
 		add_adm_power = 10
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }

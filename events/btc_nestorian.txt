@@ -537,7 +537,7 @@ country_event = {
   
   option = {
     name = nestorian_events.7.a
-    add_prestige = 5
+    add_prestige_or_monarch_power = { amount = 5 }
     add_legitimacy = 5
     reverse_add_opinion = {
       who = event_target:neighbor_heathen
@@ -594,7 +594,7 @@ country_event = {
       type = cb_insult
       months = 12
     }
-    add_prestige = 10
+    add_prestige_or_monarch_power = { amount = 10 }
     add_legitimacy = 10
   }
   option = {
@@ -807,7 +807,7 @@ country_event = {
   
   option = {
     name = nestorian_events.10.a
-    add_prestige = 5
+    add_prestige_or_monarch_power = { amount = 5 }
     add_country_modifier = {
       name = pleased_catholicos_patriarch
       duration = 1825

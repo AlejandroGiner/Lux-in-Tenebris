@@ -616,7 +616,7 @@ hanseatic_sound_toll_tree = {
 		}
 
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					NOR = { is_subject_of = ROOT }
@@ -793,7 +793,7 @@ hanseatic_britain_tree = {
 		}
 
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					exists = SCO

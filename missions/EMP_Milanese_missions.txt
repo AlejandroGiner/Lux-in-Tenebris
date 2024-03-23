@@ -129,7 +129,7 @@ emp_mlo_conquest_branch = {
 				limit = {
 					NOT = { is_year = 1505 }
 				}
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 			else = {
 				capital_scope = {
@@ -289,7 +289,7 @@ emp_mlo_venice_branch = {
 			is_subject = no
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_legitimacy = 20
 			add_devotion = 20
 			add_republican_tradition = 10
@@ -619,7 +619,7 @@ emp_mlo_security_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_country_modifier = {
 				name = mlo_has_friends
 				duration = 7300
@@ -1170,7 +1170,7 @@ emp_mlo_security_branch_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_dip_power = 50
 
 			add_country_modifier = {

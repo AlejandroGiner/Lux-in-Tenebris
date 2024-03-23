@@ -734,7 +734,7 @@ emp_ita_war_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			add_army_tradition = 10
 		}
 	}
@@ -1004,7 +1004,7 @@ emp_ita_unification_branch = {
 				add_devotion = 10
 			}
 			else = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 			}
 		}
 	}
@@ -1531,7 +1531,7 @@ emp_ita_overseas_branch = {
 					change_religion = ROOT
 				}
 			}
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 		}
 	}
 }

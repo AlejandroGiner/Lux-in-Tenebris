@@ -41,7 +41,7 @@ province_event = {
 	option = { # Huzzah
 		name = "BtPLegacyHellasAnatolia.EVTOPTA1"
 		add_legitimacy = 5
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_splendor = 30
 		if = {
 			limit = {

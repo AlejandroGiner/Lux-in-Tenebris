@@ -264,7 +264,7 @@ granada_slot_2_missions = {
 				}
 				custom_tooltip = gra_friends_in_high_places_tooltip
 				tooltip = {
-					add_prestige = 25
+					add_prestige_or_monarch_power = { amount = 25 }
 				}
 			}
 			else_if = {
@@ -276,7 +276,7 @@ granada_slot_2_missions = {
 					name = gra_bolstered_morale
 					duration = 7300
 				}
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 			else = {
 				add_country_modifier = {
@@ -1174,7 +1174,7 @@ andalusia_slot_3_missions_b = {
 		}
 
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_country_modifier = {
 				name = "the_unknown_frontier"
 				duration = 7300

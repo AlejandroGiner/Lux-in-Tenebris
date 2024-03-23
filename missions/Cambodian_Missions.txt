@@ -99,7 +99,7 @@ cambodian_missions_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			add_adm_power = 100
 		}
 	}
@@ -146,7 +146,7 @@ cambodian_missions_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_adm_power = 100
 		}
 	}

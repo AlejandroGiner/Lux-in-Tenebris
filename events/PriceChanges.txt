@@ -49,7 +49,7 @@ country_event = {
 			duration = -1
 		}
 		add_years_of_income  = 0.25
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		set_global_flag = triangle_happened
 	}
 }
@@ -104,7 +104,7 @@ country_event = {
 			duration = -1
 		}
 		add_years_of_income  = 0.25
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 	}
 }
 
@@ -159,7 +159,7 @@ country_event = {
 			value = -0.5
 			duration = -1
 		}
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 	}
 }
 
@@ -253,7 +253,7 @@ country_event = {
 			duration = -1
 		}
 		add_years_of_income  = 0.25
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 	}
 }
 
@@ -478,7 +478,7 @@ country_event = {
 			duration = -1
 		}
 		add_years_of_income  = 0.25
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 	}
 }
 
@@ -536,7 +536,7 @@ country_event = {
 			duration = -1
 		}
 		add_years_of_income  = 0.25
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 	}
 }
 
@@ -569,7 +569,7 @@ country_event = {
 			value = -0.4
 			duration = -1
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -1726,7 +1726,7 @@ country_event = {
 	option = {
 		name = prices.31.a
 		add_years_of_income  = 1
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		change_price = {
 			trade_goods = coffee
 			key = JAVA_COFFEE
@@ -2393,7 +2393,7 @@ country_event = {
 	option = {
 		name = prices.39.a
 		add_years_of_income = 1.5
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		change_price = {
 			trade_goods = gems
 			key = BRAZILIAN_DIAMONDS
@@ -2648,7 +2648,7 @@ country_event = {
     
 	option = {
 		name = prices.43.a
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		change_price = {
 			trade_goods = glass
 			key = BOHEMIAN_GLASS
