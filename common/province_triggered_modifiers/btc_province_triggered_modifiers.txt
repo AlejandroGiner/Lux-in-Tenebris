@@ -110,3 +110,82 @@ exarch_seat_modifier_very_high_dev = {
 	
 	}
 }
+
+## Updating Rigan Missions ## 
+cathedral_of_riga = {
+	potential = {
+		owner = { has_country_flag = tall_riga_mission_flag }
+	}
+	trigger = {
+		is_capital = yes
+		has_tax_building_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = not_more_than_6_provinces_outside_europe
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						continent = europe
+						value = 10
+					}
+				}
+			}
+		}
+	}
+	local_development_cost = -0.25
+	tax_income = 60
+	local_governing_cost = -0.25
+	church_loyalty_modifier = 0.1
+}
+
+market_of_riga = {
+	potential = {
+		owner = { has_country_flag = tall_riga_mission_flag }
+	}
+	trigger = {
+		is_capital = yes
+		has_trade_building_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = not_more_than_6_provinces_outside_europe
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						continent = europe
+						value = 10
+					}
+				}
+			}
+		}
+	}
+	trade_goods_size = 3
+	province_trade_power_value = 5
+	naval_forcelimit = 20
+	local_sailors = 5000
+	burghers_loyalty_modifier = 0.1
+}
+
+fortification_of_riga = {
+	potential = {
+		owner = { has_country_flag = tall_riga_mission_flag }
+	}
+	trigger = {
+		is_capital = yes
+		has_manpower_building_trigger = yes
+		province_has_current_tech_fort_trigger = yes
+		custom_trigger_tooltip = {
+			tooltip = not_more_than_6_provinces_outside_europe
+			owner = {
+				NOT = {
+					num_of_owned_provinces_with = {
+						continent = europe
+						value = 10
+					}
+				}
+			}
+		}
+	}
+	local_manpower = 6
+	land_forcelimit = 20
+	local_fort_maintenance_modifier = -0.9
+	local_defensiveness = 0.5
+	nobles_loyalty_modifier = 0.1
+}

@@ -21,6 +21,15 @@ set_estate_privilege = estate_church_bishopric_of_osel_wiek
 set_estate_privilege = estate_church_bishopric_of_courland
 set_estate_privilege = estate_church_bishopric_of_reval
 
+change_estate_land_share = {
+	estate = estate_burghers
+	share = 10
+}
+change_estate_land_share = {
+	estate = estate_nobles
+	share = -10
+}
+
 1389.1.1 = {
 	monarch = {
 		name = "Wennemar Hasenkamp"
@@ -204,3 +213,4 @@ set_estate_privilege = estate_church_bishopric_of_reval
 		mil = 2
 	}
 }
+
