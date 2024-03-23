@@ -74,6 +74,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = TTS
+			on_change_tag_effect = yes
 			if = {
 				limit = {
 					NOT = { tag = NAP }
@@ -91,7 +92,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			sicily_area = {
 				limit = {
 					NOT = {
@@ -239,7 +240,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige_or_monarch_power = { amount = 25 }
+			add_prestige = 25
 			sicily_area = {
 				limit = {
 					NOT = {
