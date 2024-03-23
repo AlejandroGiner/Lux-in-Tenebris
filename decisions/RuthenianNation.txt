@@ -10,6 +10,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }			
 			NOT = { exists = UKR }
@@ -39,7 +43,7 @@ country_decisions = {
 					ROOT = { DIP = 5 }
 					OR = {
 						province_id = 280		#Kiev -center
-					province_id = 283		#Zaporozhie -eastern/southern center of rebellions
+						province_id = 283		#Zaporozhie -eastern/southern center of rebellions
 					}
 				}
 				AND = {
@@ -84,38 +88,30 @@ country_decisions = {
 			ruthenia_region = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = UKR
 			}
 			red_ruthenia_area = {
 				limit = {
 					NOT = { owned_by = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = { is_permanent_claim = ROOT }
 				}
 				add_permanent_claim = UKR
 			}
 			add_prestige = 25
 			change_tag = UKR
+			on_change_tag_effect = yes
 			hidden_effect = {
 				add_historical_rival = RUS
 				remove_historical_rival = MOS
 			}
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			set_government_rank = 3
 			if = {
-				limit = {
-					OR = {
-						has_reform = veche_republic
-						has_reform = principality
-					}
-				}
-				set_government_rank = 3
-				if = {
-					limit = { is_revolutionary = no }
-					change_government = monarchy
-					add_government_reform = tsardom
-				}
+				limit = { is_revolutionary = no government = monarchy }
+				add_government_reform = ruthenian_tsardom
 			}
 			set_country_flag = formed_ruthenia_flag
 			if = {

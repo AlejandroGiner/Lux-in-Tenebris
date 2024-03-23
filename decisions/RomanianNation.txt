@@ -46,6 +46,7 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = RMN
+			on_change_tag_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -58,27 +59,19 @@ country_decisions = {
 			}
 			add_prestige = 25
 			wallachia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = RMN
 			}
 			oltenia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = RMN
 			}
 			moldavia_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = RMN
 			}
 			transylvania_area = {
-				limit = {
-					NOT = { owned_by = ROOT }
-				}
+				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = RMN
 			}
 			swap_ideas = yes

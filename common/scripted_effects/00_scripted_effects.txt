@@ -365,7 +365,7 @@ enact_revolution_effect = {
 	}
 	if = {
 		limit = { NOT = { government = republic } }
-		change_government_to_republic = yes
+		change_government = republic
 	}
 	if = {
 		limit = {

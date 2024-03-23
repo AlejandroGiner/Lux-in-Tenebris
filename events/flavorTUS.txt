@@ -1103,7 +1103,7 @@ country_event = {
 			limit = {
 				NOT = { government = republic }
 			}
-			change_government_to_republic = yes
+			change_government = republic
 			change_government_reform_progress = 100
 		}
 		if = {

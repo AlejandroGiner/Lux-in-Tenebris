@@ -10,6 +10,10 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			OR = {
+				is_free_or_tributary_trigger = yes
+				ai = no
+			}
 			NOT = { tag = POL }
 			NOT = { tag = RUS }
 			OR = {
@@ -94,13 +98,13 @@ country_decisions = {
 		}
 		effect = {
 			if = {
-				limit = {
-					tag = NOV
-				}
+				limit = { tag = NOV }
 				complete_mission = tr_invade_novgorod_mission
 				complete_mission = tr_subjugate_novgorod
 			}
 			change_tag = RUS
+			on_change_tag_effect = yes
+			restore_country_name = yes
 			hidden_effect = {
 				add_historical_rival = UKR
 				remove_historical_rival = KIE
@@ -108,17 +112,20 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = {
-					NOT = { government = monarchy }
-					is_revolutionary = no
+				limit = { is_revolutionary = no }
+				if = {
+					limit = { government = republic }
+					add_government_reform = great_veche_republic
 				}
-				change_government = monarchy
+				else = {
+					if = {
+						limit = { NOT = { government = monarchy } }
+						change_government = monarchy
+					}
+					add_government_reform = tsardom
+				}
 			}
 			set_government_rank = 3
-			if = {
-				limit = { is_revolutionary = no }
-				add_government_reform = tsardom
-			}
 			russia_region = {
 				limit = {
 					NOT = {
