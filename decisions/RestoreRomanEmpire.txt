@@ -100,7 +100,7 @@ country_decisions = {
 				}
 			}
 			set_government_rank = 3
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			add_core = 118 # Rome
 			swap_ideas = yes
 			add_country_modifier = {
@@ -200,7 +200,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			set_global_flag = roman_empire_restored
 		}
 		ai_will_do = { factor = 1 }

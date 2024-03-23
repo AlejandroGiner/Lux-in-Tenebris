@@ -873,7 +873,7 @@ country_event = {
 	option = {		# The Crown should not get involved
 		name = "flavor_por.EVTOPTB2"
 		ai_chance = { factor = 10 }
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -1042,7 +1042,7 @@ country_event = {
 	option = {		# Request the return of the cargo!
 		name = "flavor_por.EVTOPTA5"
 		ai_chance = { factor = 90 }
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		hidden_effect = {
 			NED = { country_event = { id = flavor_por.6 days = 10 } }
 		}
@@ -1257,12 +1257,12 @@ country_event = {
 		}
 		2030 = { cede_province = ROOT }
 		add_claim = 2030
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 	option = {		# Glorious!
 		name = "flavor_por.EVTOPTB11"
 		ai_chance = { factor = 10 }
 		add_claim = 2030
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }

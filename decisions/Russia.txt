@@ -24,7 +24,7 @@ country_decisions = {
 				change_culture = capital
 			}
 			set_country_flag = relocated_capital_st_petersburg
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			33 = {
 				move_capital_effect = yes
 			}

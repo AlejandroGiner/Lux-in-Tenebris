@@ -41,7 +41,7 @@ tr_russia_religious_missions = {
 						religion = orthodox
 					}
 				}
-				add_prestige = 15
+				add_prestige_or_monarch_power = { amount = 15 }
 			}
 		}
 	}
@@ -1137,7 +1137,7 @@ tr_russia_exclusive_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			# gov reform mana if dharma
 		}
 	}

@@ -36,7 +36,7 @@ emp_hun_religion_branch_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_country_modifier = {
 				name = hun_funded_paulines
 				duration = 7300
@@ -478,7 +478,7 @@ emp_hun_bohemia_austria_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			moravia_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -654,7 +654,7 @@ emp_hun_bohemia_austria_branch = {
 			NOT = { active_imperial_incident = any }
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 
 			if = {
 				limit = {
@@ -732,7 +732,7 @@ emp_hun_bohemia_austria_branch_2 = {
 			is_subject = no
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			
 			if = {
 				limit = {
@@ -823,7 +823,7 @@ emp_hun_bohemia_austria_branch_2 = {
 				}
 				set_government_rank = 3
 			}
-			else = { add_prestige = 50 }
+			else = { add_prestige_or_monarch_power = { amount = 50 } }
 
 			add_country_modifier = {
 				name = hun_hungarian_austria

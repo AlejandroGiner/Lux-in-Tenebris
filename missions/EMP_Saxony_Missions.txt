@@ -713,7 +713,7 @@ emp_sax_missions_religion = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_dip_power = 50
 			add_country_modifier = {
 				name = sax_king_of_poland
@@ -752,7 +752,7 @@ emp_sax_missions_culture_1 = {
 			is_in_deficit = no
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_country_modifier = {
 				name = sax_weimar_classicism
 				duration = 7300
@@ -1073,7 +1073,7 @@ emp_sax_missions_culture_2 = {
 				set_government_rank = 2
 			}
 			else = {
-				add_prestige = 33
+				add_prestige_or_monarch_power = { amount = 33 }
 			}
 			add_adm_power = 50
 			add_dip_power = 50

@@ -413,7 +413,7 @@ japanse_missions_china = {
 				custom_tooltip = tau_dragon_throne_fake_mandate
 			}
 			else = {
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 				add_stability_or_adm_power = yes
 			}
 			add_adm_power = 50
@@ -569,7 +569,7 @@ japanse_missions_the_empire = {
 			}
 		}
 		effect = {
-			add_prestige = 35
+			add_prestige_or_monarch_power = { amount = 35 }
 			south_korea_area = {
 				limit = {
 					NOT = { is_core = ROOT }

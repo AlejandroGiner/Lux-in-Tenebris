@@ -789,7 +789,7 @@ emp_gen_missions_western_med_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			1308 = {
 				add_trade_modifier = {
 					who = GEN

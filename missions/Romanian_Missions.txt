@@ -253,7 +253,7 @@ romanian_missions_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_mil_power = 100
 			northern_greece_area = {
 				limit = {

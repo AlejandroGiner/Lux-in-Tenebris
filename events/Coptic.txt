@@ -40,7 +40,7 @@ country_event = {
 	option = {
 		name = coptic_flavor.1.a
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		hidden_effect = {
 			every_known_country = {
@@ -112,7 +112,7 @@ country_event = {
 		name = coptic_flavor.3.a
 		custom_tooltip = coptic_flavor.3.a.tt
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		every_owned_province = {
 			limit = { has_province_flag = copts_liberated }
@@ -208,7 +208,7 @@ country_event = {
 	option = {
 		name = coptic_flavor.5.a
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		hidden_effect = {
 			every_known_country = {
@@ -266,7 +266,7 @@ country_event = {
 	option = {
 		name = coptic_flavor.7.a
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		hidden_effect = {
 			set_global_flag = coptic_conquest_of_antioch
@@ -349,7 +349,7 @@ country_event = {
 		name = coptic_flavor.9.a
 		custom_tooltip = coptic_flavor.9.a.tt
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		if = {
 			limit = {
@@ -446,7 +446,7 @@ country_event = {
 		name = coptic_flavor.11.a
 		custom_tooltip = coptic_flavor.11.a.tt
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		every_owned_province = {
 			limit = { has_province_flag = copts_liberated }
@@ -537,7 +537,7 @@ country_event = {
 		name = coptic_flavor.13.a
 		custom_tooltip = coptic_flavor.11.a.tt
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		every_owned_province = {
 			limit = { has_province_flag = copts_liberated }
@@ -627,7 +627,7 @@ country_event = {
 		name = coptic_flavor.15.a
 		custom_tooltip = coptic_flavor.15.a.tt
 
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 
 		every_owned_province = {
 			limit = { has_province_flag = copts_liberated }
@@ -854,7 +854,7 @@ country_event = {
   option = {
     name = coptic_flavor.30.c
     custom_tooltip = coptic_flavor.30.c.tt
-    add_prestige = 15
+    add_prestige_or_monarch_power = { amount = 15 }
     ai_chance = {
 		factor = 10
 	}
@@ -1338,7 +1338,7 @@ country_event = {
 	option = { # Coptic nation is reminded that the current owner of Cairo is super POWERFUL
 		name = coptic_flavor.40.b
 		custom_tooltip = coptic_flavor.40.b.tt
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		hidden_effect = {
 			event_target:ally_to_patriarch = { country_event = { id = coptic_flavor.42 days = 2 } }
 		}

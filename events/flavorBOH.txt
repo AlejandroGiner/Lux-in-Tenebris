@@ -460,7 +460,7 @@ country_event = {
 	
 	option = {
 		name = flavor_boh.4.a
-		add_prestige = 50
+		add_prestige_or_monarch_power = { amount = 50 }
 	}
 }
 
@@ -600,7 +600,7 @@ country_event = {
 			}
 			custom_tooltip = remain_hussite_tt # warning that you won't get a side for the league war
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_church_power = 10
 	}
 	

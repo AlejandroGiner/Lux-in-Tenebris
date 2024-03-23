@@ -82,7 +82,7 @@ emp_bav_prestige_branch = {
 			legitimacy_equivalent = 95
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 
 			add_country_modifier = {
 				name = bav_splendorous_bavaria
@@ -269,7 +269,7 @@ emp_bav_missions_conquest = {
 					}
 					custom_tooltip = emp_bav_union_with_palatinate_effect_tooltip3
 					tooltip = {
-						add_prestige = 10
+						add_prestige_or_monarch_power = { amount = 10 }
 						add_legitimacy = 10
 						add_devotion = 10
 						add_republican_tradition = 5
@@ -284,7 +284,7 @@ emp_bav_missions_conquest = {
 				}
 				else = {
 					tooltip = {
-						add_prestige = 10
+						add_prestige_or_monarch_power = { amount = 10 }
 						add_legitimacy = 10
 						add_devotion = 10
 						add_republican_tradition = 5
@@ -322,7 +322,7 @@ emp_bav_missions_conquest = {
 				custom_tooltip = emp_bav_union_with_palatinate_effect_tooltip2
 			}
 			else = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 				add_legitimacy = 10
 				add_devotion = 10
 				add_republican_tradition = 5
@@ -411,7 +411,7 @@ emp_bav_missions_conquest = {
 					custom_tooltip = emp_bav_sway_cologne_effect_tooltip2
 	
 					tooltip = {
-						add_prestige = 10
+						add_prestige_or_monarch_power = { amount = 10 }
 						add_legitimacy = 10
 						add_devotion = 10
 						add_republican_tradition = 5
@@ -419,7 +419,7 @@ emp_bav_missions_conquest = {
 				}
 				else = {
 					tooltip = {
-						add_prestige = 10
+						add_prestige_or_monarch_power = { amount = 10 }
 						add_legitimacy = 10
 						add_devotion = 10
 						add_republican_tradition = 5
@@ -440,7 +440,7 @@ emp_bav_missions_conquest = {
 				country_event = { id = new_flavour_bav.11 }
 			}
 			else = {
-				add_prestige = 10
+				add_prestige_or_monarch_power = { amount = 10 }
 				add_legitimacy = 10
 				add_devotion = 10
 				add_republican_tradition = 5
@@ -1108,7 +1108,7 @@ emp_bav_missions_conquer_austria = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 
 			frisia_area = {
 				limit = {

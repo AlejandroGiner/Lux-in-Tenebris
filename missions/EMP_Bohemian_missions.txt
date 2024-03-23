@@ -228,7 +228,7 @@ emp_bohemia_1 = {
 				}
 				country_event = { id = prices.43 }
 			}
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 		}
 	}
 	emp_boh_development_one = {
@@ -936,7 +936,7 @@ emp_bohemia_4 = {
 				country_event = { id = emp_mission_events.8 }
 			}
 			else = {
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 			if = {
 				limit = {
@@ -1005,7 +1005,7 @@ emp_bohemia_4 = {
 				country_event = { id = emp_mission_events.9 }
 			}
 			else = {
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 		}
 	}

@@ -70,7 +70,7 @@ country_decisions = {
 			}
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
-			add_prestige = 10	
+			add_prestige_or_monarch_power = { amount = 10 }	
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
@@ -189,7 +189,7 @@ country_decisions = {
 				limit = { has_dlc = "Lions of the North" }
 				swap_non_generic_missions = yes
 			}
-			add_prestige = 10	
+			add_prestige_or_monarch_power = { amount = 10 }	
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas

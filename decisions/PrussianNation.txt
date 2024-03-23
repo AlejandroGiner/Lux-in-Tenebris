@@ -101,7 +101,7 @@ country_decisions = {
 				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			change_primary_culture = prussian
 			capital_scope = { change_culture = prussian }
 			custom_tooltip = prussia_change_culture_provinces_tooltip
@@ -272,7 +272,7 @@ country_decisions = {
 				name = centralization_modifier
 				duration = 7300
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			hidden_effect = {
 				if = {
 					limit = {
@@ -475,7 +475,7 @@ country_decisions = {
 				limit = { has_reform = states_general_reform }
 				remove_government_reform = states_general_reform
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			change_primary_culture = prussian
 			capital_scope = { change_culture = prussian }
 			custom_tooltip = prussia_change_culture_provinces_tooltip

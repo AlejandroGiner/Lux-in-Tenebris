@@ -155,7 +155,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
-			add_prestige = 25			#10 to 25 prestige, this is quite an accomplishment -Draiocht
+			add_prestige_or_monarch_power = { amount = 25 }			#10 to 25 prestige, this is quite an accomplishment -Draiocht
 			BYZ = {
 				add_core = 151 # Constantinople
 				change_primary_culture = greek			#Culture turns to greek now, instead of BYZ changing to culture. Works better for events, and represents that standard 'greek' is whoever controls Constantinople

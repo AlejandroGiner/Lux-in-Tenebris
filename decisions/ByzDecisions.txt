@@ -65,7 +65,7 @@ country_decisions = {
 			mil_power = 100
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_mil_power = -100
 			if = { #If Alania is owned by Byzantium
 				limit = {
@@ -702,7 +702,7 @@ country_decisions = {
 				name = "the_exarch_system"
 				duration = -1
 			}
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -759,7 +759,7 @@ country_decisions = {
 		effect = {
 			add_adm_power = -100
 			add_mil_power = -100
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			set_country_flag = revoked_exarch_autonomy
 			custom_tooltip = byz_revoke_exarch_autonomy_tooltip
 			hidden_effect = {
@@ -880,7 +880,7 @@ country_decisions = {
 				name = "br_theme_system"
 				duration = -1
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			custom_tooltip = byz_themata_tooltip
 		}
 		ai_will_do = {
@@ -982,7 +982,7 @@ country_decisions = {
 			stability = 1
 		}
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_patriarch_authority = 0.1
 			385 = {
 				add_province_modifier = {

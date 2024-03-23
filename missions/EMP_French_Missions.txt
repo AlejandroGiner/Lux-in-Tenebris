@@ -537,7 +537,7 @@ emp_france_missions_2 = {
 				country_event = { id = emp_mission_events.7 }
 			}
 			else = {
-				add_prestige = 15
+				add_prestige_or_monarch_power = { amount = 15 }
 			}
 		}
 	}
@@ -916,7 +916,7 @@ emp_france_missions_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			hidden_effect = {
 				remove_casus_belli = {
 					type = cb_restore_personal_union
@@ -1137,7 +1137,7 @@ emp_france_missions_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_dip_power = 100
 		}
 	}
@@ -2297,7 +2297,7 @@ emp_france_missions_5 = {
 			owns_core_province = 183
 		}
 		effect = {
-			add_prestige = 33
+			add_prestige_or_monarch_power = { amount = 33 }
 			183 = { add_base_tax = 2 }
 			set_country_flag = versailles_flag
 			country_event = { id = flavor_fra.3125 }
@@ -2389,7 +2389,7 @@ emp_france_missions_5 = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
-			add_prestige = 50
+			add_prestige_or_monarch_power = { amount = 50 }
 			if = {
 				limit = {
 					NOT = {

@@ -25,7 +25,7 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = versailles_court
-			add_prestige = 33
+			add_prestige_or_monarch_power = { amount = 33 }
 			183 = { add_base_tax = 2 }
 		}
 		ai_will_do = {
@@ -139,7 +139,7 @@ country_decisions = {
 		effect = {
 			remove_country_modifier = edict_de_nantes
 			set_country_flag = revoked_the_edict_of_nantes
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 		ai_will_do = { factor = 1 }
 	}

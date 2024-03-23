@@ -177,7 +177,7 @@ gc_spain_1_b = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_country_modifier = {
 				name = "the_unknown_frontier"
 				duration = 5475
@@ -400,7 +400,7 @@ gc_spain_2 = {
 		}
 		
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_army_tradition = 10
 		}
 	}
@@ -2144,7 +2144,7 @@ gc_spain_4_b = {
 				}
 			}
 			else = {
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 			if = {
 				limit = {

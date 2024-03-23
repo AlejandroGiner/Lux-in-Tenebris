@@ -25,7 +25,7 @@ gen_europe = {
 		}
 		
 		effect = {
-			add_prestige = 30
+			add_prestige_or_monarch_power = { amount = 30 }
 			add_country_modifier = {
 				name = "gen_eur_trade_node_mod"
 				duration = 7300
@@ -96,7 +96,7 @@ gen_europe_hre = {
 		}
 		
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			add_country_modifier = {
 				name = "gen_hre_diplomacy_mod"
 				duration = 5475
@@ -195,7 +195,7 @@ gen_europe_hre_ban = {
 		}
 		
 		effect = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			if = {
 				limit = {
 					hre_size = 1

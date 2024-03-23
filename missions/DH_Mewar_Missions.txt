@@ -750,7 +750,7 @@ mer_indus = {
 			}
 		}
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			1337 = {
 				add_trade_modifier = {
 					who = ROOT
@@ -797,7 +797,7 @@ mer_restore_kannauj_empire = {
 		}
 		effect = {
 			set_capital = 4497
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = { NOT = { government_rank = 3 } }
 				set_government_rank = 3

@@ -43,7 +43,7 @@ country_event = { #1 Mending the East-Oriental schism
 	
 	option = { #The wound has finally been healed!
 		name = "resurgent_BYZ.1.a"
-		add_prestige = 15
+		add_prestige_or_monarch_power = { amount = 15 }
 		add_legitimacy = 15
 	}
 }
@@ -387,7 +387,7 @@ country_event = { #6 Rebuilding the Great Palace
 		ai_chance = { factor = 75 }
 		
 		add_years_of_income = -2
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_splendor = 50
 		151 = {
 			add_base_tax = 1
@@ -844,7 +844,7 @@ country_event = { #11 City of the World's Desire
 			}
 		}
 		
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		thrace_area = {
 			add_claim = TUR
 		}
@@ -906,7 +906,7 @@ country_event = { #12 Growth of Constantinople
 		name = "resurgent_BYZ.12.a"
 		ai_chance = { factor = 1 }
 		
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		151 = {
 			add_base_tax = 1
 			add_base_production = 1
@@ -973,7 +973,7 @@ country_event = { #13 The Hippodrome of Constantinople
 		ai_chance = { factor = 85 }
 		
 		add_years_of_income = -1.0
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		if = { #Venice has been chastised
 			limit = {
 				112 = {
@@ -1448,7 +1448,7 @@ country_event = { #20 The Fall of Constantinople? - Byzantine response
 		name = "resurgent_BYZ.20.c"
 		ai_chance = { factor = 10 }
 		
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 

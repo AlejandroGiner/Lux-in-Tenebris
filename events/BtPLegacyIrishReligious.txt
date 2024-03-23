@@ -105,7 +105,7 @@ province_event = {
 				duration = 10950
 			}
 		}
-		owner = { add_prestige = 5 }
+		owner = { add_prestige_or_monarch_power = { amount = 5 } }
 	}
 }
 

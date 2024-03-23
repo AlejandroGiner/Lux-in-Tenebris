@@ -175,7 +175,7 @@ country_event = {
 	
 	option = {
 		name = papacy_events.6.a
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_devotion = 5
 	}
 	
@@ -241,7 +241,7 @@ province_event = {
 	option = {
 		name = papacy_events.7.b
 		owner = {
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 			PAP = {
 				country_event = {
 					id = papacy_events.9

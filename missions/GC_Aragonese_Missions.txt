@@ -425,7 +425,7 @@ gc_aragon_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					exists = POR

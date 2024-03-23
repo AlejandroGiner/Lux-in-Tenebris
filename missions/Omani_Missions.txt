@@ -47,7 +47,7 @@ oman_conquest_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_adm_power = 100
 			dhofar_area = {
 				limit = {
@@ -84,7 +84,7 @@ oman_conquest_group = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_adm_power = 100
 			add_country_modifier = {
 				name = "oma_maritime_mod"

@@ -1172,7 +1172,7 @@ emp_pap_slot_4 = {
 			curia_treasury_size = 2000
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 		}
 	}
 	
@@ -1430,7 +1430,7 @@ emp_pap_slot_5 = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 		}
 	}
 	

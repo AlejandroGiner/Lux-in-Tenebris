@@ -124,7 +124,7 @@ country_event = {
 	
 	option = {
 		name = "purple_phoenix.2.a"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_legitimacy = 10
 	}
 }
@@ -152,7 +152,7 @@ country_event = {
 	
 	option = {
 		name = "purple_phoenix.3.a"
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_legitimacy = 10
 	}
 }
@@ -244,7 +244,7 @@ country_event = {
 	
 	option = {
 		name = "purple_phoenix.6.a"
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 		add_legitimacy = 10
 	}
 }
@@ -318,7 +318,7 @@ country_event = {
 	
 	option = {
 		name = "purple_phoenix.8.a"
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		add_legitimacy = 10
 		add_army_tradition = 10
 		#I seriously do not like the huge amount of extra points these events give.
@@ -374,7 +374,7 @@ country_event = {
 	
 	option = {
 		name = "purple_phoenix.9.a"
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		add_legitimacy = 10
 		add_army_tradition = 10
 	}
@@ -407,7 +407,7 @@ country_event = {
 	
 	option = {
 		name = "purple_phoenix.10.a"
-		add_prestige = 35
+		add_prestige_or_monarch_power = { amount = 35 }
 		add_legitimacy = 10
 		add_army_tradition = 10
 	}

@@ -713,7 +713,7 @@ province_event = {
   
 	option = {
 		name = btc_tradegoods.9.a
-		owner = { add_prestige = 5 }
+		owner = { add_prestige_or_monarch_power = { amount = 5 } }
 		add_base_production = 1
 		change_trade_goods = marble
 	}

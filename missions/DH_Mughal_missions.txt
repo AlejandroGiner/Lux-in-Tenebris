@@ -1244,7 +1244,7 @@ mug_hindustan_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_country_modifier = {
 				name = "western_trade_relations"
 				duration = 7300
@@ -1467,7 +1467,7 @@ mug_sufis = {
 				}
 			}
 			else = {
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 			}
 		}
 	}
@@ -2224,7 +2224,7 @@ mug_deccan_branch = {
 		effect = {
 			country_event = { id = mug_mission_events.2 }
 			tooltip = {
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 				add_treasury = 1000
 			}
 			add_country_modifier = {

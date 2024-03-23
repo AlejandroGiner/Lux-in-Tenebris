@@ -625,7 +625,7 @@ tatar_missions_slot_2 = {
 				add_horde_unity = 20
 			}
 			else = {
-				add_prestige = 25
+				add_prestige_or_monarch_power = { amount = 25 }
 			}
 			add_country_modifier = {
 				name = "fall_of_china"
@@ -769,7 +769,7 @@ tatar_missions_2 = {
 		effect = {
 			add_adm_power = 100
 			add_mil_power = 100
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_horde_unity = 25
 		}
 	}
@@ -878,7 +878,7 @@ tatar_missions_2 = {
 		effect = {
 			add_adm_power = 100
 			add_mil_power = 100
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_horde_unity = 25
 		}
 	}

@@ -71,7 +71,7 @@ ori_conquest = {
 		}
 		
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			telingana_area = {
 				limit = {
 					NOT = { is_core = ROOT }

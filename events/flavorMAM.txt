@@ -126,7 +126,7 @@ country_event = {
 	option = {
 		name = flavor_mam.3.b
 		ai_chance = { factor = 10 }
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -179,7 +179,7 @@ country_event = {
 	option = {		
 		name = flavor_mam.4.c		#Refuse the demands!
 		ai_chance = { factor = 0 }
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		MAM = {
 			country_event = { 
 				id = flavor_mam.7
@@ -213,7 +213,7 @@ country_event = {
 			}		
 		}	
 		vassalize = CYP
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 	}
 }
 
@@ -229,7 +229,7 @@ country_event = {
 	option = {	
 		name = flavor_mam.6.a
 		add_years_of_income = 0.25
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }
 
@@ -271,7 +271,7 @@ country_event = {
 		add_dip_power = -20
 		add_years_of_income = -0.25
 		add_legitimacy = 10
-		add_prestige = 25
+		add_prestige_or_monarch_power = { amount = 25 }
 	}
 	option = {
 		name = flavor_mam.8.b
@@ -789,7 +789,7 @@ country_event = {
 	
 	option = {	
 		name = flavor_mam.21.a
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}	
 }
 
@@ -844,7 +844,7 @@ country_event = {
 		HED = {
 			inherit = MDA
 		}
-		add_prestige = 20
+		add_prestige_or_monarch_power = { amount = 20 }
 		385 = {
 			add_base_tax = 2
 			add_base_production = 2
@@ -865,7 +865,7 @@ country_event = {
 			
 		}
 		name = flavor_mam.23.b
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		385 = {
 			add_base_tax = 2
 			add_base_production = 2

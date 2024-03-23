@@ -446,7 +446,7 @@ country_event = {
 	option = {
 		name = btc_mamluk_succession_disaster.8.a
 		add_stability_or_adm_power = yes
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 		add_legitimacy = 20
 	}
 }
@@ -462,6 +462,6 @@ country_event = {
 	
 	option = {
 		name = btc_mamluk_succession_disaster.9.a
-		add_prestige = 5
+		add_prestige_or_monarch_power = { amount = 5 }
 	}
 }

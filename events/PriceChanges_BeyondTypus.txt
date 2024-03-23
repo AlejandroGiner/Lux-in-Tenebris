@@ -46,7 +46,7 @@ province_event = {
 		ai_chance = { factor = 1 }
 		set_global_flag = BT_reinheitsgebot_happened
 		owner = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 		add_base_production = 3
 		change_price = {
@@ -110,7 +110,7 @@ province_event = {
 	option = { #Ok.
 		name = "PriceChanges_BeyondTypus.EVTOPTA2"
 		ai_chance = { factor = 1 }
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		add_base_production = 2	#Temporarily replaces below. I (Draiocht) am having some stupid problem with this modifier.
 		#add_province_modifier = {
 		#	name = "bt_birthplace_lager"
@@ -216,6 +216,6 @@ country_event = {
 				duration = -1
 			}
 		}
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }

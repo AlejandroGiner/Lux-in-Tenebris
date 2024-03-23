@@ -408,7 +408,7 @@ polish_missions_branch_slot = {
 		}
 		effect = {
 			add_mil_power = 100
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_country_modifier = {
 				name = "varna_avenged"
 				duration = 7300

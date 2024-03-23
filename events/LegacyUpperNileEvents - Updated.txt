@@ -61,7 +61,7 @@ country_event = {
 	option = { # Resist the Shilluk
 		name = "BtPLegacyUpperNileEvents.EVTOPTB1"
 		ai_chance = { factor = 5 }
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 		5290 = { add_core = SLK }
 		capital_scope = {
 			spawn_rebels = {

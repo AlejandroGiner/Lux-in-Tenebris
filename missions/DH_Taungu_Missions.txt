@@ -935,7 +935,7 @@ tau_slot_5 = {
 				custom_tooltip = tau_dragon_throne_fake_mandate # Mandate effects normally don't appear for countries that don't have the Mandate mechanic enabled, as in they're not the current Emperor of China
 			}
 			else = {
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 				add_stability_or_adm_power = yes
 			}
 			add_adm_power = 100

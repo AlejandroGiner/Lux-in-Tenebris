@@ -1109,7 +1109,7 @@ country_event = {
 		name = mamluk_events.9.a #
 		if = {
 			limit = { has_country_modifier = bedouin_amir_al_hajj }
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 		else_if = {
 			limit = { has_country_modifier = warrior_amir_al_hajj }
@@ -1122,10 +1122,10 @@ country_event = {
 		else_if = {
 			limit = { has_country_modifier = mamluk_amir_al_hajj }
 			add_legitimacy = 5
-			add_prestige = 5
+			add_prestige_or_monarch_power = { amount = 5 }
 		}
 		else = {
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 		}
 	}
 }

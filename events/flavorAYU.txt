@@ -314,7 +314,7 @@ country_event = {
 	option = {
 		name = "flavor_ayu.EVTOPTB6" #Send help
 		add_adm_power = -20
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }
 
@@ -481,6 +481,6 @@ country_event = {
 	option = {
 		name = "flavor_ayu.EVTOPTB10" #Send help
 		add_adm_power = -20
-		add_prestige = 10
+		add_prestige_or_monarch_power = { amount = 10 }
 	}
 }

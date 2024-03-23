@@ -402,7 +402,7 @@ emp_hab_empire_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 33
+			add_prestige_or_monarch_power = { amount = 33 }
 			add_country_modifier = {
 				name = hab_empire_has_rome
 				duration = -1
@@ -711,7 +711,7 @@ emp_hab_prestige_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_country_modifier = {
 				name = hab_flourishing_in_empire
 				duration = 7300
@@ -1849,7 +1849,7 @@ emp_hab_balkans_2 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_country_modifier = {
 				name = hab_victory_over_ottomans
 				duration = -1
@@ -1928,7 +1928,7 @@ emp_hab_more_italy_branch = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			if = {
 				limit = {
 					exists = TTS

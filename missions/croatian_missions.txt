@@ -34,7 +34,7 @@ cro_1 = {
       5187 = { owned_by = ROOT }
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			137 = {
 				if = {
 					limit = {

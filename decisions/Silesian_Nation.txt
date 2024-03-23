@@ -68,7 +68,7 @@ country_decisions = {
 				limit = { NOT = { owned_by = ROOT } }
 				add_permanent_claim = SIL
 			}
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			if = {
 				limit = {
 					has_custom_ideas = no

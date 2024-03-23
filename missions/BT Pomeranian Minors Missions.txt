@@ -29,7 +29,7 @@ pom_recon_wlg = {
 		effect = {
 			add_mil_power = 50
 			add_adm_power = 50
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			#Claims
 			if = {
 				limit = {
@@ -97,7 +97,7 @@ pom_recon_stt = {
 		effect = {
 			add_mil_power = 50
 			add_adm_power = 50
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			#Claims
 			if = {
 				limit = {
@@ -165,7 +165,7 @@ pom_recon_stp = {
 		effect = {
 			add_mil_power = 50
 			add_adm_power = 50
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			#Claims
 			if = {
 				limit = {

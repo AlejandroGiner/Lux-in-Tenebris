@@ -318,7 +318,7 @@ mai_group_1 = {
 		}
 
 		effect = {
-			add_prestige = 25
+			add_prestige_or_monarch_power = { amount = 25 }
 			add_mil_power = 100
 			hesse_area = {
 				limit = {
@@ -413,7 +413,7 @@ kol_group_1 = {
 		}
 
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			add_devotion = 10
 			add_legitimacy = 10
 			north_rhine_area = {
@@ -477,7 +477,7 @@ tri_group_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 			80 = {
 				if = {
 					limit = {

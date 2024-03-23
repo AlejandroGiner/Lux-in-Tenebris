@@ -143,7 +143,7 @@ bng_slot_1 = {
 			}
 		}
 		effect = {
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_estate_influence_modifier = {
 				estate = estate_rajput
 				influence = -10
@@ -647,7 +647,7 @@ bng_slot_3 = {
 					}
 					set_government_rank = 3
 				}			
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 				capital_scope = {
 					add_base_tax = 4
 					add_base_production = 3

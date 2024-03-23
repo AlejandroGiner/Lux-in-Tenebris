@@ -83,7 +83,7 @@ yem_formation = {
 		effect = {
 			add_mil_power = 50
 			add_adm_power = 50
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		}
 	}
 	
@@ -109,7 +109,7 @@ yem_formation = {
 		effect = {
 			add_adm_power = 50
 			add_mil_power = 50
-			add_prestige = 15
+			add_prestige_or_monarch_power = { amount = 15 }
 		}
 	}
 }

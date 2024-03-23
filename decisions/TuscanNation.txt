@@ -72,7 +72,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			add_prestige = 10
+			add_prestige_or_monarch_power = { amount = 10 }
 			if = {
 				limit = {
 					NOT = { has_idea_group = TUS_ideas }

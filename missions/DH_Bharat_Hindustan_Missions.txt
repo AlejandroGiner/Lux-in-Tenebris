@@ -144,7 +144,7 @@ hin_slot_2 = {
 						religion_group = muslim
 					}
 				}
-				add_prestige = 20
+				add_prestige_or_monarch_power = { amount = 20 }
 				add_yearly_manpower = 5
 			}
 		}
@@ -321,7 +321,7 @@ hin_slot_3 = {
 		}
 		effect = {
 			country_event = { id = india_mission_events.2 }
-			add_prestige = 20
+			add_prestige_or_monarch_power = { amount = 20 }
 			add_army_tradition = 15
 		}
 	}

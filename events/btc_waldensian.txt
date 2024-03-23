@@ -334,7 +334,7 @@ country_event = {
     trigger = {
       ruler_has_personality_ancestor = { key = calm }
     }
-    add_prestige = 5
+    add_prestige_or_monarch_power = { amount = 5 }
     add_mil_power = 50
     reverse_add_opinion = {
       who = event_target:insult_country
@@ -412,7 +412,7 @@ country_event = {
       desc = opposed_trade_attempts
       duration = 7300
     }
-    add_prestige = 10
+    add_prestige_or_monarch_power = { amount = 10 }
   }
   option = {
     name = waldensian_events.6.c
@@ -446,7 +446,7 @@ country_event = {
   
   option = {
     name = waldensian_events.7.a
-    add_prestige = 15
+    add_prestige_or_monarch_power = { amount = 15 }
     add_estate_loyalty = {
       estate = estate_church
       loyalty = 10
@@ -557,7 +557,7 @@ country_event = {
     name = waldensian_events.10.a
     add_years_of_income = -0.2
     add_adm_power = -15
-    add_prestige = 5
+    add_prestige_or_monarch_power = { amount = 5 }
     event_target:waldensian_province = {
       add_province_modifier = {
         name = waldensian_reconstruction
@@ -726,14 +726,14 @@ country_event = {
     add_years_of_income = -1
     add_adm_power = -75
     add_dip_power = -50
-    add_prestige = 15
+    add_prestige_or_monarch_power = { amount = 15 }
     203 = { add_reform_center = waldensian }
   }
   option = {
     name = waldensian_events.21.b
     add_years_of_income = -0.75
     add_adm_power = -20
-    add_prestige = 10
+    add_prestige_or_monarch_power = { amount = 10 }
     add_country_modifier = {
       name = held_great_feast
       duration = 3650
